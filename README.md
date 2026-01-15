@@ -385,6 +385,11 @@ func main() {
 * [RemoveAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [UpdateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
+### [Carrier](docs/sdks/carrier/README.md)
+
+* [GetShippingCarrier](docs/sdks/carrier/README.md#getshippingcarrier) - Retrieve a carrier
+* [ListShippingCarriers](docs/sdks/carrier/README.md#listshippingcarriers) - List all carriers
+
 ### [Cashflow](docs/sdks/cashflow/README.md)
 
 * [GetAccountingCashflow](docs/sdks/cashflow/README.md#getaccountingcashflow) - Retrieve a cashflow
@@ -928,6 +933,13 @@ func main() {
 * [UpdateKmsPage](docs/sdks/kms/README.md#updatekmspage) - Update a page
 * [UpdateKmsSpace](docs/sdks/kms/README.md#updatekmsspace) - Update a space
 
+### [Label](docs/sdks/label/README.md)
+
+* [CreateShippingLabel](docs/sdks/label/README.md#createshippinglabel) - Create a label
+* [GetShippingLabel](docs/sdks/label/README.md#getshippinglabel) - Retrieve a label
+* [ListShippingLabels](docs/sdks/label/README.md#listshippinglabels) - List all labels
+* [RemoveShippingLabel](docs/sdks/label/README.md#removeshippinglabel) - Remove a label
+
 ### [Lead](docs/sdks/lead/README.md)
 
 * [CreateCrmLead](docs/sdks/lead/README.md#createcrmlead) - Create a lead
@@ -1211,6 +1223,11 @@ func main() {
 * [RemoveAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [UpdateAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
 
+### [Rate](docs/sdks/rate/README.md)
+
+* [CreateShippingRate](docs/sdks/rate/README.md#createshippingrate) - Create a rate
+* [GetShippingRate](docs/sdks/rate/README.md#getshippingrate) - Retrieve a rate
+
 ### [Recording](docs/sdks/recording/README.md)
 
 * [CreateUcRecording](docs/sdks/recording/README.md#createucrecording) - Create a recording
@@ -1335,6 +1352,35 @@ func main() {
 * [RemoveAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [UpdateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
+### [Shipment](docs/sdks/shipment/README.md)
+
+* [CreateShippingShipment](docs/sdks/shipment/README.md#createshippingshipment) - Create a shipment
+* [GetShippingShipment](docs/sdks/shipment/README.md#getshippingshipment) - Retrieve a shipment
+* [ListShippingShipments](docs/sdks/shipment/README.md#listshippingshipments) - List all shipments
+* [PatchShippingShipment](docs/sdks/shipment/README.md#patchshippingshipment) - Update a shipment
+* [RemoveShippingShipment](docs/sdks/shipment/README.md#removeshippingshipment) - Remove a shipment
+* [UpdateShippingShipment](docs/sdks/shipment/README.md#updateshippingshipment) - Update a shipment
+
+### [Shipping](docs/sdks/shipping/README.md)
+
+* [CreateShippingLabel](docs/sdks/shipping/README.md#createshippinglabel) - Create a label
+* [CreateShippingRate](docs/sdks/shipping/README.md#createshippingrate) - Create a rate
+* [CreateShippingShipment](docs/sdks/shipping/README.md#createshippingshipment) - Create a shipment
+* [CreateShippingTracking](docs/sdks/shipping/README.md#createshippingtracking) - Create a tracking
+* [GetShippingCarrier](docs/sdks/shipping/README.md#getshippingcarrier) - Retrieve a carrier
+* [GetShippingLabel](docs/sdks/shipping/README.md#getshippinglabel) - Retrieve a label
+* [GetShippingRate](docs/sdks/shipping/README.md#getshippingrate) - Retrieve a rate
+* [GetShippingShipment](docs/sdks/shipping/README.md#getshippingshipment) - Retrieve a shipment
+* [GetShippingTracking](docs/sdks/shipping/README.md#getshippingtracking) - Retrieve a tracking
+* [ListShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
+* [ListShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
+* [ListShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
+* [ListShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
+* [PatchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
+* [RemoveShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
+* [RemoveShippingShipment](docs/sdks/shipping/README.md#removeshippingshipment) - Remove a shipment
+* [UpdateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
+
 ### [Space](docs/sdks/space/README.md)
 
 * [CreateKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
@@ -1457,6 +1503,12 @@ func main() {
 * [PatchHrisTimeshift](docs/sdks/timeshift/README.md#patchhristimeshift) - Update a timeshift
 * [RemoveHrisTimeshift](docs/sdks/timeshift/README.md#removehristimeshift) - Remove a timeshift
 * [UpdateHrisTimeshift](docs/sdks/timeshift/README.md#updatehristimeshift) - Update a timeshift
+
+### [Tracking](docs/sdks/tracking/README.md)
+
+* [CreateShippingTracking](docs/sdks/tracking/README.md#createshippingtracking) - Create a tracking
+* [GetShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
+* [ListShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

@@ -12,14 +12,15 @@ import (
 type PatchMessagingEventQueryParamFields string
 
 const (
-	PatchMessagingEventQueryParamFieldsID        PatchMessagingEventQueryParamFields = "id"
-	PatchMessagingEventQueryParamFieldsCreatedAt PatchMessagingEventQueryParamFields = "created_at"
-	PatchMessagingEventQueryParamFieldsType      PatchMessagingEventQueryParamFields = "type"
-	PatchMessagingEventQueryParamFieldsChannel   PatchMessagingEventQueryParamFields = "channel"
-	PatchMessagingEventQueryParamFieldsMessage   PatchMessagingEventQueryParamFields = "message"
-	PatchMessagingEventQueryParamFieldsButton    PatchMessagingEventQueryParamFields = "button"
-	PatchMessagingEventQueryParamFieldsUser      PatchMessagingEventQueryParamFields = "user"
-	PatchMessagingEventQueryParamFieldsRaw       PatchMessagingEventQueryParamFields = "raw"
+	PatchMessagingEventQueryParamFieldsID                  PatchMessagingEventQueryParamFields = "id"
+	PatchMessagingEventQueryParamFieldsCreatedAt           PatchMessagingEventQueryParamFields = "created_at"
+	PatchMessagingEventQueryParamFieldsType                PatchMessagingEventQueryParamFields = "type"
+	PatchMessagingEventQueryParamFieldsChannel             PatchMessagingEventQueryParamFields = "channel"
+	PatchMessagingEventQueryParamFieldsMessage             PatchMessagingEventQueryParamFields = "message"
+	PatchMessagingEventQueryParamFieldsButton              PatchMessagingEventQueryParamFields = "button"
+	PatchMessagingEventQueryParamFieldsUser                PatchMessagingEventQueryParamFields = "user"
+	PatchMessagingEventQueryParamFieldsIsReplacingOriginal PatchMessagingEventQueryParamFields = "is_replacing_original"
+	PatchMessagingEventQueryParamFieldsRaw                 PatchMessagingEventQueryParamFields = "raw"
 )
 
 func (e PatchMessagingEventQueryParamFields) ToPointer() *PatchMessagingEventQueryParamFields {
@@ -44,6 +45,8 @@ func (e *PatchMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "button":
 		fallthrough
 	case "user":
+		fallthrough
+	case "is_replacing_original":
 		fallthrough
 	case "raw":
 		*e = PatchMessagingEventQueryParamFields(v)

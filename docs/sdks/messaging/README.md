@@ -315,9 +315,7 @@ func main() {
     )
 
     res, err := s.Messaging.PatchMessagingEvent(ctx, operations.PatchMessagingEventRequest{
-        MessagingEvent: shared.MessagingEvent{
-            Type: shared.MessagingEventTypeChannelJoined,
-        },
+        MessagingEvent: shared.MessagingEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -486,9 +484,7 @@ func main() {
     )
 
     res, err := s.Messaging.UpdateMessagingEvent(ctx, operations.UpdateMessagingEventRequest{
-        MessagingEvent: shared.MessagingEvent{
-            Type: shared.MessagingEventTypeChannelJoined,
-        },
+        MessagingEvent: shared.MessagingEvent{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

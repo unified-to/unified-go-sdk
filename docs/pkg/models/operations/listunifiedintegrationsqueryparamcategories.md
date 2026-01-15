@@ -30,3 +30,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesVerification` | verification                                              |
 | `ListUnifiedIntegrationsQueryParamCategoriesAds`          | ads                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesForms`        | forms                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesShipping`     | shipping                                                  |

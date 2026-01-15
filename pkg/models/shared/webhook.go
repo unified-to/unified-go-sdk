@@ -84,12 +84,12 @@ const (
 	ObjectTypePaymentRefund           ObjectType = "payment_refund"
 	ObjectTypePaymentSubscription     ObjectType = "payment_subscription"
 	ObjectTypeCommerceItem            ObjectType = "commerce_item"
-	ObjectTypeCommerceItemvariant     ObjectType = "commerce_itemvariant"
 	ObjectTypeCommerceCollection      ObjectType = "commerce_collection"
 	ObjectTypeCommerceInventory       ObjectType = "commerce_inventory"
 	ObjectTypeCommerceLocation        ObjectType = "commerce_location"
 	ObjectTypeCommerceReview          ObjectType = "commerce_review"
 	ObjectTypeCommerceSaleschannel    ObjectType = "commerce_saleschannel"
+	ObjectTypeCommerceItemvariant     ObjectType = "commerce_itemvariant"
 	ObjectTypeVerificationPackage     ObjectType = "verification_package"
 	ObjectTypeVerificationRequest     ObjectType = "verification_request"
 	ObjectTypeAtsActivity             ObjectType = "ats_activity"
@@ -168,6 +168,11 @@ const (
 	ObjectTypeAdsGroup                ObjectType = "ads_group"
 	ObjectTypeFormsForm               ObjectType = "forms_form"
 	ObjectTypeFormsSubmission         ObjectType = "forms_submission"
+	ObjectTypeShippingCarrier         ObjectType = "shipping_carrier"
+	ObjectTypeShippingRate            ObjectType = "shipping_rate"
+	ObjectTypeShippingShipment        ObjectType = "shipping_shipment"
+	ObjectTypeShippingLabel           ObjectType = "shipping_label"
+	ObjectTypeShippingTracking        ObjectType = "shipping_tracking"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -178,7 +183,7 @@ func (e ObjectType) ToPointer() *ObjectType {
 func (e *ObjectType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_creditmemo", "accounting_taxrate", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_purchaseorder", "accounting_report", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_cashflow", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_itemvariant", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "verification_package", "verification_request", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_deduction", "hris_benefit", "martech_list", "martech_member", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "forms_form", "forms_submission":
+		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_creditmemo", "accounting_taxrate", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_purchaseorder", "accounting_report", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_cashflow", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "commerce_itemvariant", "verification_package", "verification_request", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_deduction", "hris_benefit", "martech_list", "martech_member", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "forms_form", "forms_submission", "shipping_carrier", "shipping_rate", "shipping_shipment", "shipping_label", "shipping_tracking":
 			return true
 		}
 	}

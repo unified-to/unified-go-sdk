@@ -40,14 +40,15 @@ func (e *MessagingEventType) IsExact() bool {
 }
 
 type MessagingEvent struct {
-	Button    *PropertyMessagingEventButton  `json:"button,omitempty"`
-	Channel   *PropertyMessagingEventChannel `json:"channel,omitempty"`
-	CreatedAt *time.Time                     `json:"created_at,omitempty"`
-	ID        *string                        `json:"id,omitempty"`
-	Message   *PropertyMessagingEventMessage `json:"message,omitempty"`
-	Raw       map[string]any                 `json:"raw,omitempty"`
-	Type      MessagingEventType             `json:"type"`
-	User      *PropertyMessagingEventUser    `json:"user,omitempty"`
+	Button              *PropertyMessagingEventButton  `json:"button,omitempty"`
+	Channel             *PropertyMessagingEventChannel `json:"channel,omitempty"`
+	CreatedAt           *time.Time                     `json:"created_at,omitempty"`
+	ID                  *string                        `json:"id,omitempty"`
+	IsReplacingOriginal *bool                          `json:"is_replacing_original,omitempty"`
+	Message             *PropertyMessagingEventMessage `json:"message,omitempty"`
+	Raw                 map[string]any                 `json:"raw,omitempty"`
+	Type                *MessagingEventType            `json:"type,omitempty"`
+	User                *PropertyMessagingEventUser    `json:"user,omitempty"`
 }
 
 func (m MessagingEvent) MarshalJSON() ([]byte, error) {
@@ -89,6 +90,13 @@ func (m *MessagingEvent) GetID() *string {
 	return m.ID
 }
 
+func (m *MessagingEvent) GetIsReplacingOriginal() *bool {
+	if m == nil {
+		return nil
+	}
+	return m.IsReplacingOriginal
+}
+
 func (m *MessagingEvent) GetMessage() *PropertyMessagingEventMessage {
 	if m == nil {
 		return nil
@@ -103,9 +111,9 @@ func (m *MessagingEvent) GetRaw() map[string]any {
 	return m.Raw
 }
 
-func (m *MessagingEvent) GetType() MessagingEventType {
+func (m *MessagingEvent) GetType() *MessagingEventType {
 	if m == nil {
-		return MessagingEventType("")
+		return nil
 	}
 	return m.Type
 }

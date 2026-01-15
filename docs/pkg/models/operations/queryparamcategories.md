@@ -30,3 +30,4 @@
 | `QueryParamCategoriesVerification` | verification                       |
 | `QueryParamCategoriesAds`          | ads                                |
 | `QueryParamCategoriesForms`        | forms                              |
+| `QueryParamCategoriesShipping`     | shipping                           |

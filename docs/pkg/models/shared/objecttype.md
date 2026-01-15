@@ -30,12 +30,12 @@
 | `ObjectTypePaymentRefund`           | payment_refund                      |
 | `ObjectTypePaymentSubscription`     | payment_subscription                |
 | `ObjectTypeCommerceItem`            | commerce_item                       |
-| `ObjectTypeCommerceItemvariant`     | commerce_itemvariant                |
 | `ObjectTypeCommerceCollection`      | commerce_collection                 |
 | `ObjectTypeCommerceInventory`       | commerce_inventory                  |
 | `ObjectTypeCommerceLocation`        | commerce_location                   |
 | `ObjectTypeCommerceReview`          | commerce_review                     |
 | `ObjectTypeCommerceSaleschannel`    | commerce_saleschannel               |
+| `ObjectTypeCommerceItemvariant`     | commerce_itemvariant                |
 | `ObjectTypeVerificationPackage`     | verification_package                |
 | `ObjectTypeVerificationRequest`     | verification_request                |
 | `ObjectTypeAtsActivity`             | ats_activity                        |
@@ -114,3 +114,8 @@
 | `ObjectTypeAdsGroup`                | ads_group                           |
 | `ObjectTypeFormsForm`               | forms_form                          |
 | `ObjectTypeFormsSubmission`         | forms_submission                    |
+| `ObjectTypeShippingCarrier`         | shipping_carrier                    |
+| `ObjectTypeShippingRate`            | shipping_rate                       |
+| `ObjectTypeShippingShipment`        | shipping_shipment                   |
+| `ObjectTypeShippingLabel`           | shipping_label                      |
+| `ObjectTypeShippingTracking`        | shipping_tracking                   |

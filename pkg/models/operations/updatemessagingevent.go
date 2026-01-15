@@ -12,14 +12,15 @@ import (
 type UpdateMessagingEventQueryParamFields string
 
 const (
-	UpdateMessagingEventQueryParamFieldsID        UpdateMessagingEventQueryParamFields = "id"
-	UpdateMessagingEventQueryParamFieldsCreatedAt UpdateMessagingEventQueryParamFields = "created_at"
-	UpdateMessagingEventQueryParamFieldsType      UpdateMessagingEventQueryParamFields = "type"
-	UpdateMessagingEventQueryParamFieldsChannel   UpdateMessagingEventQueryParamFields = "channel"
-	UpdateMessagingEventQueryParamFieldsMessage   UpdateMessagingEventQueryParamFields = "message"
-	UpdateMessagingEventQueryParamFieldsButton    UpdateMessagingEventQueryParamFields = "button"
-	UpdateMessagingEventQueryParamFieldsUser      UpdateMessagingEventQueryParamFields = "user"
-	UpdateMessagingEventQueryParamFieldsRaw       UpdateMessagingEventQueryParamFields = "raw"
+	UpdateMessagingEventQueryParamFieldsID                  UpdateMessagingEventQueryParamFields = "id"
+	UpdateMessagingEventQueryParamFieldsCreatedAt           UpdateMessagingEventQueryParamFields = "created_at"
+	UpdateMessagingEventQueryParamFieldsType                UpdateMessagingEventQueryParamFields = "type"
+	UpdateMessagingEventQueryParamFieldsChannel             UpdateMessagingEventQueryParamFields = "channel"
+	UpdateMessagingEventQueryParamFieldsMessage             UpdateMessagingEventQueryParamFields = "message"
+	UpdateMessagingEventQueryParamFieldsButton              UpdateMessagingEventQueryParamFields = "button"
+	UpdateMessagingEventQueryParamFieldsUser                UpdateMessagingEventQueryParamFields = "user"
+	UpdateMessagingEventQueryParamFieldsIsReplacingOriginal UpdateMessagingEventQueryParamFields = "is_replacing_original"
+	UpdateMessagingEventQueryParamFieldsRaw                 UpdateMessagingEventQueryParamFields = "raw"
 )
 
 func (e UpdateMessagingEventQueryParamFields) ToPointer() *UpdateMessagingEventQueryParamFields {
@@ -44,6 +45,8 @@ func (e *UpdateMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "button":
 		fallthrough
 	case "user":
+		fallthrough
+	case "is_replacing_original":
 		fallthrough
 	case "raw":
 		*e = UpdateMessagingEventQueryParamFields(v)

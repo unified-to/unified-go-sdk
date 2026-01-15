@@ -52,8 +52,6 @@
 | `PropertyConnectionPermissionsPaymentSubscriptionWrite`     | payment_subscription_write                                  |
 | `PropertyConnectionPermissionsCommerceItemRead`             | commerce_item_read                                          |
 | `PropertyConnectionPermissionsCommerceItemWrite`            | commerce_item_write                                         |
-| `PropertyConnectionPermissionsCommerceItemvariantRead`      | commerce_itemvariant_read                                   |
-| `PropertyConnectionPermissionsCommerceItemvariantWrite`     | commerce_itemvariant_write                                  |
 | `PropertyConnectionPermissionsCommerceCollectionRead`       | commerce_collection_read                                    |
 | `PropertyConnectionPermissionsCommerceCollectionWrite`      | commerce_collection_write                                   |
 | `PropertyConnectionPermissionsCommerceInventoryRead`        | commerce_inventory_read                                     |
@@ -64,6 +62,8 @@
 | `PropertyConnectionPermissionsCommerceReviewWrite`          | commerce_review_write                                       |
 | `PropertyConnectionPermissionsCommerceSaleschannelRead`     | commerce_saleschannel_read                                  |
 | `PropertyConnectionPermissionsCommerceSaleschannelWrite`    | commerce_saleschannel_write                                 |
+| `PropertyConnectionPermissionsCommerceItemvariantRead`      | commerce_itemvariant_read                                   |
+| `PropertyConnectionPermissionsCommerceItemvariantWrite`     | commerce_itemvariant_write                                  |
 | `PropertyConnectionPermissionsVerificationPackageRead`      | verification_package_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestRead`      | verification_request_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestWrite`     | verification_request_write                                  |
@@ -208,3 +208,10 @@
 | `PropertyConnectionPermissionsFormsFormWrite`               | forms_form_write                                            |
 | `PropertyConnectionPermissionsFormsSubmissionRead`          | forms_submission_read                                       |
 | `PropertyConnectionPermissionsFormsSubmissionWrite`         | forms_submission_write                                      |
+| `PropertyConnectionPermissionsShippingShipmentRead`         | shipping_shipment_read                                      |
+| `PropertyConnectionPermissionsShippingShipmentWrite`        | shipping_shipment_write                                     |
+| `PropertyConnectionPermissionsShippingLabelRead`            | shipping_label_read                                         |
+| `PropertyConnectionPermissionsShippingLabelWrite`           | shipping_label_write                                        |
+| `PropertyConnectionPermissionsShippingTrackingRead`         | shipping_tracking_read                                      |
+| `PropertyConnectionPermissionsShippingRateRead`             | shipping_rate_read                                          |
+| `PropertyConnectionPermissionsShippingCarrierRead`          | shipping_carrier_read                                       |

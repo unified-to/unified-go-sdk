@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.793.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.795.6
 
 import (
 	"context"
@@ -153,6 +153,12 @@ type UnifiedTo struct {
 	Repository        *Repository
 	Scim              *Scim
 	User              *User
+	Shipping          *Shipping
+	Carrier           *Carrier
+	Label             *Label
+	Rate              *Rate
+	Shipment          *Shipment
+	Tracking          *Tracking
 	Storage           *Storage
 	File              *File
 	Task              *Task
@@ -252,9 +258,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.15",
+		SDKVersion: "0.36.16",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.15 2.793.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.16 2.795.6 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -371,6 +377,12 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Repository = newRepository(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Scim = newScim(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.User = newUser(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Shipping = newShipping(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Carrier = newCarrier(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Label = newLabel(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Rate = newRate(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Shipment = newShipment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Tracking = newTracking(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)

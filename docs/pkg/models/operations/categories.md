@@ -30,3 +30,4 @@
 | `CategoriesVerification` | verification             |
 | `CategoriesAds`          | ads                      |
 | `CategoriesForms`        | forms                    |
+| `CategoriesShipping`     | shipping                 |

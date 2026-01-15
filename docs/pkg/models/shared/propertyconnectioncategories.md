@@ -30,3 +30,4 @@
 | `PropertyConnectionCategoriesVerification` | verification                               |
 | `PropertyConnectionCategoriesAds`          | ads                                        |
 | `PropertyConnectionCategoriesForms`        | forms                                      |
+| `PropertyConnectionCategoriesShipping`     | shipping                                   |

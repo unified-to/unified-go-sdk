@@ -232,6 +232,29 @@ func (e *ListCandidateID) IsExact() bool {
 	return false
 }
 
+type ListCarrierID string
+
+const (
+	ListCarrierIDSupportedRequired ListCarrierID = "supported-required"
+	ListCarrierIDSupported         ListCarrierID = "supported"
+	ListCarrierIDNotSupported      ListCarrierID = "not-supported"
+)
+
+func (e ListCarrierID) ToPointer() *ListCarrierID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCarrierID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCategoryID string
 
 const (
@@ -715,6 +738,29 @@ func (e *ListJobID) IsExact() bool {
 	return false
 }
 
+type ListLabelID string
+
+const (
+	ListLabelIDSupportedRequired ListLabelID = "supported-required"
+	ListLabelIDSupported         ListLabelID = "supported"
+	ListLabelIDNotSupported      ListLabelID = "not-supported"
+)
+
+func (e ListLabelID) ToPointer() *ListLabelID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListLabelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListLeadID string
 
 const (
@@ -867,6 +913,29 @@ func (e ListOrder) ToPointer() *ListOrder {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListOrder) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type ListOrderID string
+
+const (
+	ListOrderIDSupportedRequired ListOrderID = "supported-required"
+	ListOrderIDSupported         ListOrderID = "supported"
+	ListOrderIDNotSupported      ListOrderID = "not-supported"
+)
+
+func (e ListOrderID) ToPointer() *ListOrderID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListOrderID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -1166,6 +1235,29 @@ func (e ListSaleschannelID) ToPointer() *ListSaleschannelID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListSaleschannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type ListShipmentID string
+
+const (
+	ListShipmentIDSupportedRequired ListShipmentID = "supported-required"
+	ListShipmentIDSupported         ListShipmentID = "supported"
+	ListShipmentIDNotSupported      ListShipmentID = "not-supported"
+)
+
+func (e ListShipmentID) ToPointer() *ListShipmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListShipmentID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -1520,6 +1612,29 @@ func (e *NativeWebhookCalendarID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookCarrierID string
+
+const (
+	NativeWebhookCarrierIDSupportedRequired NativeWebhookCarrierID = "supported-required"
+	NativeWebhookCarrierIDSupported         NativeWebhookCarrierID = "supported"
+	NativeWebhookCarrierIDNotSupported      NativeWebhookCarrierID = "not-supported"
+)
+
+func (e NativeWebhookCarrierID) ToPointer() *NativeWebhookCarrierID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookCarrierID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookChannelID string
 
 const (
@@ -1612,6 +1727,52 @@ func (e *NativeWebhookFormID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookLabelID string
+
+const (
+	NativeWebhookLabelIDSupportedRequired NativeWebhookLabelID = "supported-required"
+	NativeWebhookLabelIDSupported         NativeWebhookLabelID = "supported"
+	NativeWebhookLabelIDNotSupported      NativeWebhookLabelID = "not-supported"
+)
+
+func (e NativeWebhookLabelID) ToPointer() *NativeWebhookLabelID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookLabelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type NativeWebhookOrderID string
+
+const (
+	NativeWebhookOrderIDSupportedRequired NativeWebhookOrderID = "supported-required"
+	NativeWebhookOrderIDSupported         NativeWebhookOrderID = "supported"
+	NativeWebhookOrderIDNotSupported      NativeWebhookOrderID = "not-supported"
+)
+
+func (e NativeWebhookOrderID) ToPointer() *NativeWebhookOrderID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookOrderID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookParentID string
 
 const (
@@ -1649,6 +1810,29 @@ func (e NativeWebhookProjectID) ToPointer() *NativeWebhookProjectID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookProjectID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type NativeWebhookShipmentID string
+
+const (
+	NativeWebhookShipmentIDSupportedRequired NativeWebhookShipmentID = "supported-required"
+	NativeWebhookShipmentIDSupported         NativeWebhookShipmentID = "supported"
+	NativeWebhookShipmentIDNotSupported      NativeWebhookShipmentID = "not-supported"
+)
+
+func (e NativeWebhookShipmentID) ToPointer() *NativeWebhookShipmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookShipmentID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -1948,6 +2132,29 @@ func (e VirtualWebhookCandidateID) ToPointer() *VirtualWebhookCandidateID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookCandidateID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookCarrierID string
+
+const (
+	VirtualWebhookCarrierIDSupportedRequired VirtualWebhookCarrierID = "supported-required"
+	VirtualWebhookCarrierIDSupported         VirtualWebhookCarrierID = "supported"
+	VirtualWebhookCarrierIDNotSupported      VirtualWebhookCarrierID = "not-supported"
+)
+
+func (e VirtualWebhookCarrierID) ToPointer() *VirtualWebhookCarrierID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCarrierID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2302,6 +2509,29 @@ func (e *VirtualWebhookJobID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookLabelID string
+
+const (
+	VirtualWebhookLabelIDSupportedRequired VirtualWebhookLabelID = "supported-required"
+	VirtualWebhookLabelIDSupported         VirtualWebhookLabelID = "supported"
+	VirtualWebhookLabelIDNotSupported      VirtualWebhookLabelID = "not-supported"
+)
+
+func (e VirtualWebhookLabelID) ToPointer() *VirtualWebhookLabelID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookLabelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookLeadID string
 
 const (
@@ -2385,6 +2615,29 @@ func (e VirtualWebhookLocationID) ToPointer() *VirtualWebhookLocationID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookLocationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookOrderID string
+
+const (
+	VirtualWebhookOrderIDSupportedRequired VirtualWebhookOrderID = "supported-required"
+	VirtualWebhookOrderIDSupported         VirtualWebhookOrderID = "supported"
+	VirtualWebhookOrderIDNotSupported      VirtualWebhookOrderID = "not-supported"
+)
+
+func (e VirtualWebhookOrderID) ToPointer() *VirtualWebhookOrderID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookOrderID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2546,6 +2799,29 @@ func (e VirtualWebhookSaleschannelID) ToPointer() *VirtualWebhookSaleschannelID 
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookSaleschannelID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookShipmentID string
+
+const (
+	VirtualWebhookShipmentIDSupportedRequired VirtualWebhookShipmentID = "supported-required"
+	VirtualWebhookShipmentIDSupported         VirtualWebhookShipmentID = "supported"
+	VirtualWebhookShipmentIDNotSupported      VirtualWebhookShipmentID = "not-supported"
+)
+
+func (e VirtualWebhookShipmentID) ToPointer() *VirtualWebhookShipmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookShipmentID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2774,6 +3050,7 @@ type IntegrationSupport struct {
 	ListCallID              *ListCallID              `json:"list_call_id,omitempty"`
 	ListCampaignID          *ListCampaignID          `json:"list_campaign_id,omitempty"`
 	ListCandidateID         *ListCandidateID         `json:"list_candidate_id,omitempty"`
+	ListCarrierID           *ListCarrierID           `json:"list_carrier_id,omitempty"`
 	ListCategoryID          *ListCategoryID          `json:"list_category_id,omitempty"`
 	ListChannelID           *ListChannelID           `json:"list_channel_id,omitempty"`
 	ListClassID             *ListClassID             `json:"list_class_id,omitempty"`
@@ -2795,6 +3072,7 @@ type IntegrationSupport struct {
 	ListItemID              *ListItemID              `json:"list_item_id,omitempty"`
 	ListItemVariantID       *ListItemVariantID       `json:"list_item_variant_id,omitempty"`
 	ListJobID               *ListJobID               `json:"list_job_id,omitempty"`
+	ListLabelID             *ListLabelID             `json:"list_label_id,omitempty"`
 	ListLeadID              *ListLeadID              `json:"list_lead_id,omitempty"`
 	ListLimit               *ListLimit               `json:"list_limit,omitempty"`
 	ListLinkID              *ListLinkID              `json:"list_link_id,omitempty"`
@@ -2802,6 +3080,7 @@ type IntegrationSupport struct {
 	ListLocationID          *ListLocationID          `json:"list_location_id,omitempty"`
 	ListOffset              *ListOffset              `json:"list_offset,omitempty"`
 	ListOrder               *ListOrder               `json:"list_order,omitempty"`
+	ListOrderID             *ListOrderID             `json:"list_order_id,omitempty"`
 	ListOrgID               *ListOrgID               `json:"list_org_id,omitempty"`
 	ListPackageID           *ListPackageID           `json:"list_package_id,omitempty"`
 	ListPageID              *ListPageID              `json:"list_page_id,omitempty"`
@@ -2815,6 +3094,7 @@ type IntegrationSupport struct {
 	ListRepoID              *ListRepoID              `json:"list_repo_id,omitempty"`
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
+	ListShipmentID          *ListShipmentID          `json:"list_shipment_id,omitempty"`
 	ListSortByCreatedAt     *ListSortByCreatedAt     `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName          *ListSortByName          `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt     *ListSortByUpdatedAt     `json:"list_sort_by_updated_at,omitempty"`
@@ -2831,12 +3111,16 @@ type IntegrationSupport struct {
 	ListUserMentionedID     *ListUserMentionedID     `json:"list_user_mentioned_id,omitempty"`
 	Methods                 map[string]bool          `json:"methods,omitempty"`
 	NativeWebhookCalendarID *NativeWebhookCalendarID `json:"native_webhook_calendar_id,omitempty"`
+	NativeWebhookCarrierID  *NativeWebhookCarrierID  `json:"native_webhook_carrier_id,omitempty"`
 	NativeWebhookChannelID  *NativeWebhookChannelID  `json:"native_webhook_channel_id,omitempty"`
 	NativeWebhookCompanyID  *NativeWebhookCompanyID  `json:"native_webhook_company_id,omitempty"`
 	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
 	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
+	NativeWebhookLabelID    *NativeWebhookLabelID    `json:"native_webhook_label_id,omitempty"`
+	NativeWebhookOrderID    *NativeWebhookOrderID    `json:"native_webhook_order_id,omitempty"`
 	NativeWebhookParentID   *NativeWebhookParentID   `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID  *NativeWebhookProjectID  `json:"native_webhook_project_id,omitempty"`
+	NativeWebhookShipmentID *NativeWebhookShipmentID `json:"native_webhook_shipment_id,omitempty"`
 	NativeWebhookTaskID     *NativeWebhookTaskID     `json:"native_webhook_task_id,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
@@ -2854,6 +3138,7 @@ type IntegrationSupport struct {
 	VirtualWebhookCallID          *VirtualWebhookCallID                    `json:"virtual_webhook_call_id,omitempty"`
 	VirtualWebhookCampaignID      *VirtualWebhookCampaignID                `json:"virtual_webhook_campaign_id,omitempty"`
 	VirtualWebhookCandidateID     *VirtualWebhookCandidateID               `json:"virtual_webhook_candidate_id,omitempty"`
+	VirtualWebhookCarrierID       *VirtualWebhookCarrierID                 `json:"virtual_webhook_carrier_id,omitempty"`
 	VirtualWebhookChannelID       *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
 	VirtualWebhookCollectionID    *VirtualWebhookCollectionID              `json:"virtual_webhook_collection_id,omitempty"`
 	VirtualWebhookCompanyID       *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
@@ -2869,10 +3154,12 @@ type IntegrationSupport struct {
 	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID           *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
+	VirtualWebhookLabelID         *VirtualWebhookLabelID                   `json:"virtual_webhook_label_id,omitempty"`
 	VirtualWebhookLeadID          *VirtualWebhookLeadID                    `json:"virtual_webhook_lead_id,omitempty"`
 	VirtualWebhookLimit           *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
 	VirtualWebhookListID          *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
 	VirtualWebhookLocationID      *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
+	VirtualWebhookOrderID         *VirtualWebhookOrderID                   `json:"virtual_webhook_order_id,omitempty"`
 	VirtualWebhookOrgID           *VirtualWebhookOrgID                     `json:"virtual_webhook_org_id,omitempty"`
 	VirtualWebhookPageID          *VirtualWebhookPageID                    `json:"virtual_webhook_page_id,omitempty"`
 	VirtualWebhookParentID        *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
@@ -2880,6 +3167,7 @@ type IntegrationSupport struct {
 	VirtualWebhookProjectID       *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
 	VirtualWebhookRepoID          *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
 	VirtualWebhookSaleschannelID  *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
+	VirtualWebhookShipmentID      *VirtualWebhookShipmentID                `json:"virtual_webhook_shipment_id,omitempty"`
 	VirtualWebhookSpaceID         *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
 	VirtualWebhookStartGte        *VirtualWebhookStartGte                  `json:"virtual_webhook_start_gte,omitempty"`
 	VirtualWebhookStatus          *VirtualWebhookStatus                    `json:"virtual_webhook_status,omitempty"`
@@ -2967,6 +3255,13 @@ func (i *IntegrationSupport) GetListCandidateID() *ListCandidateID {
 		return nil
 	}
 	return i.ListCandidateID
+}
+
+func (i *IntegrationSupport) GetListCarrierID() *ListCarrierID {
+	if i == nil {
+		return nil
+	}
+	return i.ListCarrierID
 }
 
 func (i *IntegrationSupport) GetListCategoryID() *ListCategoryID {
@@ -3116,6 +3411,13 @@ func (i *IntegrationSupport) GetListJobID() *ListJobID {
 	return i.ListJobID
 }
 
+func (i *IntegrationSupport) GetListLabelID() *ListLabelID {
+	if i == nil {
+		return nil
+	}
+	return i.ListLabelID
+}
+
 func (i *IntegrationSupport) GetListLeadID() *ListLeadID {
 	if i == nil {
 		return nil
@@ -3163,6 +3465,13 @@ func (i *IntegrationSupport) GetListOrder() *ListOrder {
 		return nil
 	}
 	return i.ListOrder
+}
+
+func (i *IntegrationSupport) GetListOrderID() *ListOrderID {
+	if i == nil {
+		return nil
+	}
+	return i.ListOrderID
 }
 
 func (i *IntegrationSupport) GetListOrgID() *ListOrgID {
@@ -3254,6 +3563,13 @@ func (i *IntegrationSupport) GetListSaleschannelID() *ListSaleschannelID {
 		return nil
 	}
 	return i.ListSaleschannelID
+}
+
+func (i *IntegrationSupport) GetListShipmentID() *ListShipmentID {
+	if i == nil {
+		return nil
+	}
+	return i.ListShipmentID
 }
 
 func (i *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {
@@ -3368,6 +3684,13 @@ func (i *IntegrationSupport) GetNativeWebhookCalendarID() *NativeWebhookCalendar
 	return i.NativeWebhookCalendarID
 }
 
+func (i *IntegrationSupport) GetNativeWebhookCarrierID() *NativeWebhookCarrierID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookCarrierID
+}
+
 func (i *IntegrationSupport) GetNativeWebhookChannelID() *NativeWebhookChannelID {
 	if i == nil {
 		return nil
@@ -3396,6 +3719,20 @@ func (i *IntegrationSupport) GetNativeWebhookFormID() *NativeWebhookFormID {
 	return i.NativeWebhookFormID
 }
 
+func (i *IntegrationSupport) GetNativeWebhookLabelID() *NativeWebhookLabelID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookLabelID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookOrderID() *NativeWebhookOrderID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookOrderID
+}
+
 func (i *IntegrationSupport) GetNativeWebhookParentID() *NativeWebhookParentID {
 	if i == nil {
 		return nil
@@ -3408,6 +3745,13 @@ func (i *IntegrationSupport) GetNativeWebhookProjectID() *NativeWebhookProjectID
 		return nil
 	}
 	return i.NativeWebhookProjectID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookShipmentID() *NativeWebhookShipmentID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookShipmentID
 }
 
 func (i *IntegrationSupport) GetNativeWebhookTaskID() *NativeWebhookTaskID {
@@ -3522,6 +3866,13 @@ func (i *IntegrationSupport) GetVirtualWebhookCandidateID() *VirtualWebhookCandi
 	return i.VirtualWebhookCandidateID
 }
 
+func (i *IntegrationSupport) GetVirtualWebhookCarrierID() *VirtualWebhookCarrierID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookCarrierID
+}
+
 func (i *IntegrationSupport) GetVirtualWebhookChannelID() *VirtualWebhookChannelID {
 	if i == nil {
 		return nil
@@ -3627,6 +3978,13 @@ func (i *IntegrationSupport) GetVirtualWebhookJobID() *VirtualWebhookJobID {
 	return i.VirtualWebhookJobID
 }
 
+func (i *IntegrationSupport) GetVirtualWebhookLabelID() *VirtualWebhookLabelID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookLabelID
+}
+
 func (i *IntegrationSupport) GetVirtualWebhookLeadID() *VirtualWebhookLeadID {
 	if i == nil {
 		return nil
@@ -3653,6 +4011,13 @@ func (i *IntegrationSupport) GetVirtualWebhookLocationID() *VirtualWebhookLocati
 		return nil
 	}
 	return i.VirtualWebhookLocationID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookOrderID() *VirtualWebhookOrderID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookOrderID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookOrgID() *VirtualWebhookOrgID {
@@ -3702,6 +4067,13 @@ func (i *IntegrationSupport) GetVirtualWebhookSaleschannelID() *VirtualWebhookSa
 		return nil
 	}
 	return i.VirtualWebhookSaleschannelID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookShipmentID() *VirtualWebhookShipmentID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookShipmentID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookSpaceID() *VirtualWebhookSpaceID {
