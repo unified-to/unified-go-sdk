@@ -2,6 +2,7 @@
 
 package shared
 
+// PropertyMessagingMessageAuthorMember - for email systems, this field represents the From value
 type PropertyMessagingMessageAuthorMember struct {
 	Email    *string `json:"email,omitempty"`
 	ImageURL *string `json:"image_url,omitempty"`

@@ -19,8 +19,8 @@ const (
 	UpdateMessagingEventQueryParamFieldsMessage             UpdateMessagingEventQueryParamFields = "message"
 	UpdateMessagingEventQueryParamFieldsButton              UpdateMessagingEventQueryParamFields = "button"
 	UpdateMessagingEventQueryParamFieldsUser                UpdateMessagingEventQueryParamFields = "user"
-	UpdateMessagingEventQueryParamFieldsIsReplacingOriginal UpdateMessagingEventQueryParamFields = "is_replacing_original"
 	UpdateMessagingEventQueryParamFieldsRaw                 UpdateMessagingEventQueryParamFields = "raw"
+	UpdateMessagingEventQueryParamFieldsIsReplacingOriginal UpdateMessagingEventQueryParamFields = "is_replacing_original"
 )
 
 func (e UpdateMessagingEventQueryParamFields) ToPointer() *UpdateMessagingEventQueryParamFields {
@@ -46,9 +46,9 @@ func (e *UpdateMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "user":
 		fallthrough
-	case "is_replacing_original":
-		fallthrough
 	case "raw":
+		fallthrough
+	case "is_replacing_original":
 		*e = UpdateMessagingEventQueryParamFields(v)
 		return nil
 	default:

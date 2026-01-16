@@ -19,8 +19,8 @@ const (
 	PatchMessagingEventQueryParamFieldsMessage             PatchMessagingEventQueryParamFields = "message"
 	PatchMessagingEventQueryParamFieldsButton              PatchMessagingEventQueryParamFields = "button"
 	PatchMessagingEventQueryParamFieldsUser                PatchMessagingEventQueryParamFields = "user"
-	PatchMessagingEventQueryParamFieldsIsReplacingOriginal PatchMessagingEventQueryParamFields = "is_replacing_original"
 	PatchMessagingEventQueryParamFieldsRaw                 PatchMessagingEventQueryParamFields = "raw"
+	PatchMessagingEventQueryParamFieldsIsReplacingOriginal PatchMessagingEventQueryParamFields = "is_replacing_original"
 )
 
 func (e PatchMessagingEventQueryParamFields) ToPointer() *PatchMessagingEventQueryParamFields {
@@ -46,9 +46,9 @@ func (e *PatchMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "user":
 		fallthrough
-	case "is_replacing_original":
-		fallthrough
 	case "raw":
+		fallthrough
+	case "is_replacing_original":
 		*e = PatchMessagingEventQueryParamFields(v)
 		return nil
 	default:

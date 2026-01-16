@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: fc328f365075899265a9857aed41aa46
+  docChecksum: 091d7b9c5c8337ec015b0663ff6edb22
   docVersion: "1.0"
-  speakeasyVersion: 1.685.2
-  generationVersion: 2.795.6
-  releaseVersion: 0.36.16
-  configChecksum: 38cca2218ed779972323a0b23e9ee1a0
+  speakeasyVersion: 1.686.0
+  generationVersion: 2.796.1
+  releaseVersion: 0.36.17
+  configChecksum: c9d83111595b584cb635b41f9e22a169
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 46b10b79-b490-4e51-8357-c7d84d5f09ec
-  pristine_commit_hash: d4a9463815b09e5206d680d5ba029949fa4a5601
-  pristine_tree_hash: 2740c609f854b9c7b72f5bfd15fad0556f15ba8e
+  generation_id: a963879d-7020-43f9-a2e2-d0e027176d7c
+  pristine_commit_hash: 943667c4775d6f6f662c385ff4247d0811ee643f
+  pristine_tree_hash: 3adde583d567054e2da19a7f3347869e1dd68254
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4663,8 +4663,8 @@ trackedFiles:
     pristine_git_object: a176209962259a74ecc2ed3dae8bce3cc36f8356
   docs/pkg/models/operations/patchmessagingeventqueryparamfields.md:
     id: 63409b4bc35f
-    last_write_checksum: sha1:5bd617e2cb50f41737a2dfde10ff324e29a411fb
-    pristine_git_object: 143569cba40c935bba28ed2ce3fae9b8dabcfaed
+    last_write_checksum: sha1:b72119d68992d1a4e58c431a651d4bf73b01d50a
+    pristine_git_object: 940530961626197afb3983f05ee9230cedc15362
   docs/pkg/models/operations/patchmessagingeventrequest.md:
     id: 1ddf15bd7b26
     last_write_checksum: sha1:55c59d60308cca7002197b7fb3890e7f0cf00f0f
@@ -6435,8 +6435,8 @@ trackedFiles:
     pristine_git_object: 59ca3ff6527eadfb28adf7ca3ee11674bdfad8f3
   docs/pkg/models/operations/updatemessagingeventqueryparamfields.md:
     id: 8352afbaccb1
-    last_write_checksum: sha1:b6e3a386b2d062b706afd08d071600e2ae66f223
-    pristine_git_object: c0cbedd681130ee700c73c8e44eb9f59818bb541
+    last_write_checksum: sha1:ca866ad7d8052fd2d546c44305b47a7353553609
+    pristine_git_object: 69a9132d71688329c30d906128ccee29a4848bca
   docs/pkg/models/operations/updatemessagingeventrequest.md:
     id: b9df28493d31
     last_write_checksum: sha1:49e785c64842b8565ab528b0436d7f28f4309b01
@@ -8199,8 +8199,8 @@ trackedFiles:
     pristine_git_object: 56c253443393951a82e742c242f5f4cedd018d88
   docs/pkg/models/shared/messagingmessage.md:
     id: 99ee936010af
-    last_write_checksum: sha1:6fcac77e2808a9156689ad945bf43fb20948169d
-    pristine_git_object: 0e80d6e81fff25e35ed5b39272dfb06afb787c1a
+    last_write_checksum: sha1:5bfa7b6d3f1937b4b0c9236bf3198d0023da972b
+    pristine_git_object: 866888599292c77a97445b1ba2f134861b9a104d
   docs/pkg/models/shared/messagingreaction.md:
     id: 099f489957c8
     last_write_checksum: sha1:5d4ff7444d3deead6748fc4bd384d7798d18f26b
@@ -8619,20 +8619,20 @@ trackedFiles:
     pristine_git_object: f99cd7242c5031b0ea7ed3733244f26358a7eefd
   docs/pkg/models/shared/propertymessagingeventmessage.md:
     id: a0c7d9ecd9b0
-    last_write_checksum: sha1:ffb62df8d704a9c9059cac3c04c13f04d88f0593
-    pristine_git_object: 7d4e51bb27041612b487edaecb6309e0db529ba5
+    last_write_checksum: sha1:4ec860fcb33713447461168d544d1d150c501216
+    pristine_git_object: ca255714304c970b953d378d949da18291bef17b
   docs/pkg/models/shared/propertymessagingeventmessageauthormember.md:
     id: af617ab8eaad
-    last_write_checksum: sha1:e288f9b06710fb1cc2bab95569b1e6857589eb4c
-    pristine_git_object: cc94143d19c0e8ec325837c73abf989d9c182f9f
+    last_write_checksum: sha1:2f4acee21ae8ea48774a24e2544aa910cafff96e
+    pristine_git_object: 390b6383d36ff00ed17a464d19686fdcd9372c8b
   docs/pkg/models/shared/propertymessagingeventuser.md:
     id: 7bad1308ace1
     last_write_checksum: sha1:cbbe780a590b6002c0e05d433fa99e41ac94fb7d
     pristine_git_object: d2d3b0de1f5b273a282486bd50689a7c31c27540
   docs/pkg/models/shared/propertymessagingmessageauthormember.md:
     id: 1184758dcfa9
-    last_write_checksum: sha1:7a949124699b25c76b5e6f98106ca1a1dcfa9e4c
-    pristine_git_object: 2e520fbbf1cfa7b672c8b85d218fdef337719654
+    last_write_checksum: sha1:3ea008dfcc646bea02e94df115b2745073053407
+    pristine_git_object: 32486a3baa46969f505a4f47de6af82d770f00ae
   docs/pkg/models/shared/propertymessagingreactionmember.md:
     id: b40d42d8a5ba
     last_write_checksum: sha1:eea9a95eb988833841cc6c02f995ab377206c207
@@ -11607,8 +11607,8 @@ trackedFiles:
     pristine_git_object: 9c7336ac11c784552cca4f828ee7531a8eecc45c
   pkg/models/operations/patchmessagingevent.go:
     id: 546aa8e70948
-    last_write_checksum: sha1:66c578448fd09bede6ed43c365ef34a38252f6bc
-    pristine_git_object: dc9528d48d3aa9fd3b876a91a7321b60ac2a3822
+    last_write_checksum: sha1:98664dbb298263cf60008991244b3f49325db35f
+    pristine_git_object: 42efa2fbafae62115fb229951fc3089161e131bf
   pkg/models/operations/patchmessagingmessage.go:
     id: 71d89676340c
     last_write_checksum: sha1:22f436c775c79c52920fc05e1d7c64c6dcd809e3
@@ -12323,8 +12323,8 @@ trackedFiles:
     pristine_git_object: 0983554ef59d25aaec42ebd7ed4b275867e15e3a
   pkg/models/operations/updatemessagingevent.go:
     id: 3558380398d1
-    last_write_checksum: sha1:194be8cd1f1db04f1fc35bbf73edf5301bf4142a
-    pristine_git_object: 442f365104b9e8d31bde247d68dabaa252f8f7cb
+    last_write_checksum: sha1:ba22541a6646fdb847b1000eea9430d6aacd6f4e
+    pristine_git_object: b802fee4a30f42522ed57b77019df3c9652d701e
   pkg/models/operations/updatemessagingmessage.go:
     id: 8152ba2a139a
     last_write_checksum: sha1:488cfa8a5a06b20359d0c5642b7a060331236987
@@ -13079,8 +13079,8 @@ trackedFiles:
     pristine_git_object: 6056d13621516fd43c5995c28e5a146e6ab33a0d
   pkg/models/shared/messagingmessage.go:
     id: fe7a044e3100
-    last_write_checksum: sha1:cc22e3672eb44dc445ab61788f434dac06aa9361
-    pristine_git_object: afd533c0192d275428de5c3fcbb259dad36c32dd
+    last_write_checksum: sha1:b0772f500606b9b428dcbda9641646bfdf4bde4b
+    pristine_git_object: 18bcab4fdc0ee2c3af7711ffadb0820009eb2838
   pkg/models/shared/messagingreaction.go:
     id: 0c60ae7d13a4
     last_write_checksum: sha1:bfce48516a13545cf23c79779474430d0ea679f7
@@ -13355,20 +13355,20 @@ trackedFiles:
     pristine_git_object: 6e25aca026e8e794cfbf951fd04498df306022d6
   pkg/models/shared/propertymessagingeventmessage.go:
     id: 1b0400d173fa
-    last_write_checksum: sha1:1ead25e87d3c07f458ab62341b11adc7f42ff397
-    pristine_git_object: 159d1380d4124f851243a3d0b3117d91eea59dd3
+    last_write_checksum: sha1:a2b68e2e4abafe59bfc7fc84e8b9a994bdff4421
+    pristine_git_object: df353272e1e6ca1a51ac3fc290839b4b74fdf44b
   pkg/models/shared/propertymessagingeventmessageauthormember.go:
     id: ab509035a642
-    last_write_checksum: sha1:8700ad9e8034f80a769a2495b5234a561b1b32fd
-    pristine_git_object: 1e80d1d7f5cc98ba61dad22a627bd75c78bcff0c
+    last_write_checksum: sha1:7b260a956fa210e475224e06f485a28561910207
+    pristine_git_object: 7a7918cff891628cbb86bede9408f452977c8109
   pkg/models/shared/propertymessagingeventuser.go:
     id: 5277b915d0ec
     last_write_checksum: sha1:432b39f0ce24b0ba7f620baf2db31dfa8e687bee
     pristine_git_object: 290fa323bc0cde3e1f0984bf29a8f80b17cbea06
   pkg/models/shared/propertymessagingmessageauthormember.go:
     id: 50b0df23aac2
-    last_write_checksum: sha1:5e9b669df1eabc88189946abe9758396d7ae20c4
-    pristine_git_object: 7cda74341813da82054944a1416f63e87ed24f40
+    last_write_checksum: sha1:43838a020d7d897848fa3eb75ca9e91196c2bbbf
+    pristine_git_object: 95bb9e01a013db4100176df7d61c86c853b6fe48
   pkg/models/shared/propertymessagingreactionmember.go:
     id: 47063d589464
     last_write_checksum: sha1:a33570013a71fc0dcf84de4b87a7052447fc6e85
@@ -13903,8 +13903,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:9be0dc0af73f843fbb114a42bf2b90c327470724
-    pristine_git_object: 9ab62b103288c6e8c5ee2a5633267473ba4c8135
+    last_write_checksum: sha1:53208cfdee54b5cd1a3fcc00d1053a96acfde760
+    pristine_git_object: fd02b3589f4d39640786106f62e7944c713e819a
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -19285,7 +19285,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Shipping.CreateShippingLabel()`: **Added**\n* `UnifiedTo.Shipping.CreateShippingRate()`: **Added**\n* `UnifiedTo.Shipping.CreateShippingShipment()`: **Added**\n* `UnifiedTo.Shipping.CreateShippingTracking()`: **Added**\n* `UnifiedTo.Shipping.GetShippingCarrier()`: **Added**\n* `UnifiedTo.Shipping.GetShippingLabel()`: **Added**\n* `UnifiedTo.Shipping.GetShippingRate()`: **Added**\n* `UnifiedTo.Shipping.GetShippingShipment()`: **Added**\n* `UnifiedTo.Shipping.GetShippingTracking()`: **Added**\n* `UnifiedTo.Shipping.ListShippingCarriers()`: **Added**\n* `UnifiedTo.Shipping.ListShippingLabels()`: **Added**\n* `UnifiedTo.Shipping.ListShippingShipments()`: **Added**\n* `UnifiedTo.Shipping.ListShippingTrackings()`: **Added**\n* `UnifiedTo.Shipping.PatchShippingShipment()`: **Added**\n* `UnifiedTo.Shipping.RemoveShippingLabel()`: **Added**\n* `UnifiedTo.Shipping.RemoveShippingShipment()`: **Added**\n* `UnifiedTo.Shipping.UpdateShippingShipment()`: **Added**\n* `UnifiedTo.Carrier.GetShippingCarrier()`: **Added**\n* `UnifiedTo.Carrier.ListShippingCarriers()`: **Added**\n* `UnifiedTo.Label.CreateShippingLabel()`: **Added**\n* `UnifiedTo.Label.GetShippingLabel()`: **Added**\n* `UnifiedTo.Label.ListShippingLabels()`: **Added**\n* `UnifiedTo.Label.RemoveShippingLabel()`: **Added**\n* `UnifiedTo.Rate.CreateShippingRate()`: **Added**\n* `UnifiedTo.Rate.GetShippingRate()`: **Added**\n* `UnifiedTo.Shipment.CreateShippingShipment()`: **Added**\n* `UnifiedTo.Shipment.GetShippingShipment()`: **Added**\n* `UnifiedTo.Shipment.ListShippingShipments()`: **Added**\n* `UnifiedTo.Shipment.PatchShippingShipment()`: **Added**\n* `UnifiedTo.Shipment.RemoveShippingShipment()`: **Added**\n* `UnifiedTo.Shipment.UpdateShippingShipment()`: **Added**\n* `UnifiedTo.Tracking.CreateShippingTracking()`: **Added**\n* `UnifiedTo.Tracking.GetShippingTracking()`: **Added**\n* `UnifiedTo.Tracking.ListShippingTrackings()`: **Added**\n* `UnifiedTo.Event.PatchMessagingEvent()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Event.UpdateMessagingEvent()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Messaging.PatchMessagingEvent()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Messaging.UpdateMessagingEvent()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[].Support.{}` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[].Support.{}` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Event.PatchMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Event.UpdateMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Messaging.PatchMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Messaging.UpdateMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

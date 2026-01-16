@@ -12,5 +12,5 @@
 | `UpdateMessagingEventQueryParamFieldsMessage`             | message                                                   |
 | `UpdateMessagingEventQueryParamFieldsButton`              | button                                                    |
 | `UpdateMessagingEventQueryParamFieldsUser`                | user                                                      |
-| `UpdateMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                     |
 | `UpdateMessagingEventQueryParamFieldsRaw`                 | raw                                                       |
+| `UpdateMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                     |

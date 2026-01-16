@@ -12,5 +12,5 @@
 | `PatchMessagingEventQueryParamFieldsMessage`             | message                                                  |
 | `PatchMessagingEventQueryParamFieldsButton`              | button                                                   |
 | `PatchMessagingEventQueryParamFieldsUser`                | user                                                     |
-| `PatchMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                    |
 | `PatchMessagingEventQueryParamFieldsRaw`                 | raw                                                      |
+| `PatchMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                    |
