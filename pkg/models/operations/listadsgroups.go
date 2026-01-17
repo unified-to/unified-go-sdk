@@ -83,6 +83,8 @@ type ListAdsGroupsRequest struct {
 	Order  *string                         `queryParam:"style=form,explode=true,name=order"`
 	// The org ID to filter by (reference to AdsOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
+	// The parent ID to filter by
+	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -139,6 +141,13 @@ func (l *ListAdsGroupsRequest) GetOrgID() *string {
 		return nil
 	}
 	return l.OrgID
+}
+
+func (l *ListAdsGroupsRequest) GetParentID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ParentID
 }
 
 func (l *ListAdsGroupsRequest) GetQuery() *string {

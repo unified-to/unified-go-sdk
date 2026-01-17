@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 091d7b9c5c8337ec015b0663ff6edb22
+  docChecksum: efb9a6c3665234f4ced6bdd175a6f17e
   docVersion: "1.0"
-  speakeasyVersion: 1.686.0
+  speakeasyVersion: 1.687.1
   generationVersion: 2.796.1
-  releaseVersion: 0.36.17
-  configChecksum: c9d83111595b584cb635b41f9e22a169
+  releaseVersion: 0.36.18
+  configChecksum: 5e86d2f58691eea2925339782e3df138
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: a963879d-7020-43f9-a2e2-d0e027176d7c
-  pristine_commit_hash: 943667c4775d6f6f662c385ff4247d0811ee643f
-  pristine_tree_hash: 3adde583d567054e2da19a7f3347869e1dd68254
+  generation_id: 69b889e9-7cb1-4a17-b4a1-92848df176e7
+  pristine_commit_hash: ff12130559f54feec68968202bc6aa6d380e0846
+  pristine_tree_hash: 2375f199e90c1423a06b70fc8dc1dd8036a2aa73
 features:
   go:
     acceptHeaders: 2.81.2
@@ -2683,8 +2683,8 @@ trackedFiles:
     pristine_git_object: d631b8beed08975eff15d57865f47cfacdb5ab80
   docs/pkg/models/operations/listaccountingexpensesrequest.md:
     id: c7baf906a196
-    last_write_checksum: sha1:93c3174bc2167eacd9259befe05cc28ffcf5d27e
-    pristine_git_object: ae455fcc16b73e22122ee4607c1e198a29e7f6a6
+    last_write_checksum: sha1:31ba4151449d2cba44f34da3722c8b83f83eab1a
+    pristine_git_object: 6cca02dc20682027aa6f5f4505d6e516137299c6
   docs/pkg/models/operations/listaccountingexpensesresponse.md:
     id: f8158732c9ed
     last_write_checksum: sha1:67c3ed031661bd7330563e1b166c69c7f68dc84f
@@ -2851,8 +2851,8 @@ trackedFiles:
     pristine_git_object: eecdc8ca7a56acf3496e3c0efbcbba2695b37d55
   docs/pkg/models/operations/listadsgroupsrequest.md:
     id: 7e5e98f63bf3
-    last_write_checksum: sha1:212164aa0308517a87a72f36a4ae71299bf384a0
-    pristine_git_object: 4c0c387ed132a34b0efc8c19da6a0536c9d0976f
+    last_write_checksum: sha1:7e574fbdb77f4636a7b429575eff404390dbff39
+    pristine_git_object: 18636206312e110739340222f1bc79ba9f135331
   docs/pkg/models/operations/listadsgroupsresponse.md:
     id: ce5f859027e3
     last_write_checksum: sha1:4ac84ac3d7b760769109ec119ecc7bcecce9290a
@@ -10927,8 +10927,8 @@ trackedFiles:
     pristine_git_object: d82e6b0020d2214d8bbd13a2d43a21c3489ab2d0
   pkg/models/operations/listaccountingexpenses.go:
     id: 50a465dc3440
-    last_write_checksum: sha1:b798765fce62c068ac03d24d08e52fbd5b18c769
-    pristine_git_object: 7233fc22aec82bf37edf9e538029bd9bcfed115b
+    last_write_checksum: sha1:1736648752f98c4b9ac0af138eec42df74c68cd2
+    pristine_git_object: ef5e17978db7b00054e023ff70828bf34d7eb966
   pkg/models/operations/listaccountinginvoices.go:
     id: e8df9bea15e4
     last_write_checksum: sha1:14c70341674c991b58a69674d2debdfe23e53164
@@ -10983,8 +10983,8 @@ trackedFiles:
     pristine_git_object: 329180f6a93c37ad4d999f0bb0aa607db0e73676
   pkg/models/operations/listadsgroups.go:
     id: fdbcba35f3f4
-    last_write_checksum: sha1:4638263a3e16a92ba8031fe828e4e12a8d3a6a14
-    pristine_git_object: a479d8d9ce9502055abc1483fdb44ff7251c1246
+    last_write_checksum: sha1:cbb08c1f17e0cf18baa5a6797ceb4c5a2caff64a
+    pristine_git_object: 0625beb37b83f9b0a67109f77ece820a3a3a51d7
   pkg/models/operations/listadsorganizations.go:
     id: 4dd62ce1a864
     last_write_checksum: sha1:a89974579122b39ab72d219c62b4b09d04f1c4f0
@@ -13903,8 +13903,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:53208cfdee54b5cd1a3fcc00d1053a96acfde760
-    pristine_git_object: fd02b3589f4d39640786106f62e7944c713e819a
+    last_write_checksum: sha1:d150436433057e6f7764f69dd358bbe45eabc459
+    pristine_git_object: a845885839a0d4b83fda138c21755ef4e4352abb
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -19285,7 +19285,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Event.PatchMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Event.UpdateMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Messaging.PatchMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Messaging.UpdateMessagingEvent()`: \n  *  `request.Request.Fields` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.ListAccountingExpenses()`:  `request.Request` **Changed**\n* `UnifiedTo.Expense.ListAccountingExpenses()`:  `request.Request` **Changed**\n* `UnifiedTo.Ads.ListAdsGroups()`: \n  *  `request.Request.ParentId` **Added**\n* `UnifiedTo.Group.ListAdsGroups()`: \n  *  `request.Request.ParentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
