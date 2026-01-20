@@ -17,6 +17,7 @@
 | `ListCrmDealsQueryParamFieldsStageID`     | stage_id                                  |
 | `ListCrmDealsQueryParamFieldsPipeline`    | pipeline                                  |
 | `ListCrmDealsQueryParamFieldsPipelineID`  | pipeline_id                               |
+| `ListCrmDealsQueryParamFieldsStages`      | stages                                    |
 | `ListCrmDealsQueryParamFieldsSource`      | source                                    |
 | `ListCrmDealsQueryParamFieldsProbability` | probability                               |
 | `ListCrmDealsQueryParamFieldsTags`        | tags                                      |
@@ -27,3 +28,4 @@
 | `ListCrmDealsQueryParamFieldsCompanyIds`  | company_ids                               |
 | `ListCrmDealsQueryParamFieldsMetadata`    | metadata                                  |
 | `ListCrmDealsQueryParamFieldsRaw`         | raw                                       |
+| `ListCrmDealsQueryParamFieldsPipelines`   | pipelines                                 |

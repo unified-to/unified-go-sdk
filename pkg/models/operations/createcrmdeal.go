@@ -24,6 +24,7 @@ const (
 	CreateCrmDealQueryParamFieldsStageID     CreateCrmDealQueryParamFields = "stage_id"
 	CreateCrmDealQueryParamFieldsPipeline    CreateCrmDealQueryParamFields = "pipeline"
 	CreateCrmDealQueryParamFieldsPipelineID  CreateCrmDealQueryParamFields = "pipeline_id"
+	CreateCrmDealQueryParamFieldsStages      CreateCrmDealQueryParamFields = "stages"
 	CreateCrmDealQueryParamFieldsSource      CreateCrmDealQueryParamFields = "source"
 	CreateCrmDealQueryParamFieldsProbability CreateCrmDealQueryParamFields = "probability"
 	CreateCrmDealQueryParamFieldsTags        CreateCrmDealQueryParamFields = "tags"
@@ -34,6 +35,7 @@ const (
 	CreateCrmDealQueryParamFieldsCompanyIds  CreateCrmDealQueryParamFields = "company_ids"
 	CreateCrmDealQueryParamFieldsMetadata    CreateCrmDealQueryParamFields = "metadata"
 	CreateCrmDealQueryParamFieldsRaw         CreateCrmDealQueryParamFields = "raw"
+	CreateCrmDealQueryParamFieldsPipelines   CreateCrmDealQueryParamFields = "pipelines"
 )
 
 func (e CreateCrmDealQueryParamFields) ToPointer() *CreateCrmDealQueryParamFields {
@@ -69,6 +71,8 @@ func (e *CreateCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "pipeline_id":
 		fallthrough
+	case "stages":
+		fallthrough
 	case "source":
 		fallthrough
 	case "probability":
@@ -88,6 +92,8 @@ func (e *CreateCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "pipelines":
 		*e = CreateCrmDealQueryParamFields(v)
 		return nil
 	default:
