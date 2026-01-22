@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: ffa471bd7fa4f3990f03aef2cc210f38
+  docChecksum: 8871ab86c0b3e5ad56d0c55ebdf768e9
   docVersion: "1.0"
-  speakeasyVersion: 1.689.0
-  generationVersion: 2.796.4
-  releaseVersion: 0.36.19
-  configChecksum: 414a5118c32c7d2e3b58106fa9b2b1dc
+  speakeasyVersion: 1.692.0
+  generationVersion: 2.797.1
+  releaseVersion: 0.36.20
+  configChecksum: 5396290fef8e77b8f3a259b297af7f81
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 20234951-121e-49b8-9783-fb4528890d94
-  pristine_commit_hash: 8d66a8f03871c26cb907bbafc744de2d66946e17
-  pristine_tree_hash: 6120513683faa7c8914c6402149f9163c07f6fd1
+  generation_id: 67566bd8-ea0f-43ce-81f4-38f66aab1919
+  pristine_commit_hash: f9be93fcb85177d7d9798b21e81d1013c73cee54
+  pristine_tree_hash: 073891ca86027b8a54d3b8937332f57d3db3e0c7
 features:
   go:
     acceptHeaders: 2.81.2
@@ -2571,8 +2571,8 @@ trackedFiles:
     pristine_git_object: cf7962021baa3bb5be3eb399dd5b4cef2644fd0a
   docs/pkg/models/operations/getverificationpackagequeryparamfields.md:
     id: 5a195837d3f1
-    last_write_checksum: sha1:df2f5403e4d8610851fef7133ccb45396ed648ec
-    pristine_git_object: e1624b725c4b979004ca9525e1120204468059ee
+    last_write_checksum: sha1:4100a7700ffb763bcf57259120821f9f987ba5a9
+    pristine_git_object: 53732a40236920010d026a9ac304dac00ece978c
   docs/pkg/models/operations/getverificationpackagerequest.md:
     id: 07ef57190ea5
     last_write_checksum: sha1:71e07b9c25fb327e7acd121af73a1e89db9e411a
@@ -3927,8 +3927,8 @@ trackedFiles:
     pristine_git_object: ed6a3ce03c617d8eb8a161fb8596dcd4e1ff1370
   docs/pkg/models/operations/listverificationpackagesqueryparamfields.md:
     id: 485bd02b7c9d
-    last_write_checksum: sha1:897f2a683ec1069eb233e932bd4f58dd15ea42fe
-    pristine_git_object: 7af681dd4d432d96d0a71d780878acb8914b2eb5
+    last_write_checksum: sha1:3122420273d5de8e9948b0adc1e7fbd1dec19379
+    pristine_git_object: 9476ee3f3ff412a3fc086047fc695d452a7d0c31
   docs/pkg/models/operations/listverificationpackagesrequest.md:
     id: 99d67cae09d8
     last_write_checksum: sha1:206dbf5bd26490eb15e0daa95ac7bad32d38d60b
@@ -9147,8 +9147,8 @@ trackedFiles:
     pristine_git_object: 6be1432fa0fb511650f94652cd36b642b931c016
   docs/pkg/models/shared/verificationpackage.md:
     id: d45fdc8554a3
-    last_write_checksum: sha1:446d8c0b8dcfe612519ff87942cd9be29866e6ab
-    pristine_git_object: dd2d2e63977ac50fc1bdc8edbb4f64c923301662
+    last_write_checksum: sha1:44499831db0e67b84fcbcc917cd93badeb281815
+    pristine_git_object: e350e66791048efbb05008b754c11478929109b2
   docs/pkg/models/shared/verificationpackagetype.md:
     id: b0ebbf9c0467
     last_write_checksum: sha1:7ccdbde9cfecdd6e86d0d4a9327e2d211c976321
@@ -10895,8 +10895,8 @@ trackedFiles:
     pristine_git_object: 0ab428d2967079b26def2c0c50c7fdc6e42e350a
   pkg/models/operations/getverificationpackage.go:
     id: 968e5954eb44
-    last_write_checksum: sha1:075a1f97f74df57d48ee74b8f5797959daeaeadf
-    pristine_git_object: c09728c57eb6482c67eeddae5a724435fe65f6a2
+    last_write_checksum: sha1:fd595c323ecf80c8fb2932d9ecfaeb3c7b2ece58
+    pristine_git_object: 28d72405433406479750a3cbaef6951e634adc51
   pkg/models/operations/getverificationrequest.go:
     id: 26c57fd582db
     last_write_checksum: sha1:471cad78a6d2d24f60379c2c22cdfe55fa69919a
@@ -11363,8 +11363,8 @@ trackedFiles:
     pristine_git_object: e8fd14c85ecc2535183aaced4338adf8193f7bd5
   pkg/models/operations/listverificationpackages.go:
     id: 69473c0554d8
-    last_write_checksum: sha1:c582898ec21e37701eae62c2e3805d259b576d3a
-    pristine_git_object: 8e69d0ef4959e98e4704f8b4533769c4871827f0
+    last_write_checksum: sha1:cc3a459788f4d2c5e5d06afa2cb10accfee628b3
+    pristine_git_object: 987f35e14e481d741386fa482ab6e6eda8c9c93c
   pkg/models/operations/listverificationrequests.go:
     id: 9791c943746c
     last_write_checksum: sha1:b310e1830c56ae0533b5e12808bd0862139e180b
@@ -13663,8 +13663,8 @@ trackedFiles:
     pristine_git_object: 358e9c846a47e5f277c420c5ca2079930b957532
   pkg/models/shared/verificationpackage.go:
     id: de920c05a1b7
-    last_write_checksum: sha1:7f8eca42883373ffde21544de2e5342a6353d572
-    pristine_git_object: 17a3cb659eafbdee8b1839593c95b6580029c361
+    last_write_checksum: sha1:c6b50351c43a89c806b5ca5ab8f643425a1144b5
+    pristine_git_object: b94e4364555a1bfe34a1bb1ec18ecc8a573aca7b
   pkg/models/shared/verificationparameter.go:
     id: 631adbdc1685
     last_write_checksum: sha1:984e327b4ab06bb40fe767a707a81aaf88332c5a
@@ -13911,8 +13911,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:c0e9d5b6fc4247a6c1b3abe8f67cf618796a7f23
-    pristine_git_object: 324f5b138fcd37fa12b8b5da8434b4265e5501b4
+    last_write_checksum: sha1:ea63d32899819420c5d684f88343887f1f1cb872
+    pristine_git_object: b24240bd3b77a6a89db7b6d089bff4cc0d15bad2
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -19293,7 +19293,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Crm.CreateCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Crm.GetCrmDeal()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Crm.ListCrmDeals()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Crm.PatchCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Crm.UpdateCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Deal.CreateCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Deal.GetCrmDeal()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Deal.ListCrmDeals()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Deal.PatchCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Deal.UpdateCrmDeal()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Verification.GetVerificationPackage()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.ValidRegions` **Added**\n* `UnifiedTo.Verification.ListVerificationPackages()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].ValidRegions` **Added**\n* `UnifiedTo.Package.GetVerificationPackage()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.ValidRegions` **Added**\n* `UnifiedTo.Package.ListVerificationPackages()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].ValidRegions` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

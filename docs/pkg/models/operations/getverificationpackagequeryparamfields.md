@@ -22,4 +22,5 @@
 | `GetVerificationPackageQueryParamFieldsCurrency`               | currency                                                       |
 | `GetVerificationPackageQueryParamFieldsMaxScore`               | max_score                                                      |
 | `GetVerificationPackageQueryParamFieldsInfoURL`                | info_url                                                       |
+| `GetVerificationPackageQueryParamFieldsValidRegions`           | valid_regions                                                  |
 | `GetVerificationPackageQueryParamFieldsRaw`                    | raw                                                            |

@@ -22,4 +22,5 @@
 | `ListVerificationPackagesQueryParamFieldsCurrency`               | currency                                                         |
 | `ListVerificationPackagesQueryParamFieldsMaxScore`               | max_score                                                        |
 | `ListVerificationPackagesQueryParamFieldsInfoURL`                | info_url                                                         |
+| `ListVerificationPackagesQueryParamFieldsValidRegions`           | valid_regions                                                    |
 | `ListVerificationPackagesQueryParamFieldsRaw`                    | raw                                                              |

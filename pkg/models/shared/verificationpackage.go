@@ -57,6 +57,8 @@ type VerificationPackage struct {
 	Tags      []string                `json:"tags,omitempty"`
 	Type      VerificationPackageType `json:"type"`
 	UpdatedAt *time.Time              `json:"updated_at,omitempty"`
+	// {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+	ValidRegions []string `json:"valid_regions,omitempty"`
 }
 
 func (v VerificationPackage) MarshalJSON() ([]byte, error) {
@@ -194,4 +196,11 @@ func (v *VerificationPackage) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return v.UpdatedAt
+}
+
+func (v *VerificationPackage) GetValidRegions() []string {
+	if v == nil {
+		return nil
+	}
+	return v.ValidRegions
 }
