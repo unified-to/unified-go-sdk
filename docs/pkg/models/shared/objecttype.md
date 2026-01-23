@@ -112,6 +112,8 @@
 | `ObjectTypeAdsCampaign`             | ads_campaign                        |
 | `ObjectTypeAdsReport`               | ads_report                          |
 | `ObjectTypeAdsGroup`                | ads_group                           |
+| `ObjectTypeAdsCreative`             | ads_creative                        |
+| `ObjectTypeAdsInsertionorder`       | ads_insertionorder                  |
 | `ObjectTypeFormsForm`               | forms_form                          |
 | `ObjectTypeFormsSubmission`         | forms_submission                    |
 | `ObjectTypeShippingCarrier`         | shipping_carrier                    |

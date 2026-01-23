@@ -12,19 +12,23 @@ import (
 type PatchAdsCampaignQueryParamFields string
 
 const (
-	PatchAdsCampaignQueryParamFieldsID               PatchAdsCampaignQueryParamFields = "id"
-	PatchAdsCampaignQueryParamFieldsCreatedAt        PatchAdsCampaignQueryParamFields = "created_at"
-	PatchAdsCampaignQueryParamFieldsUpdatedAt        PatchAdsCampaignQueryParamFields = "updated_at"
-	PatchAdsCampaignQueryParamFieldsName             PatchAdsCampaignQueryParamFields = "name"
-	PatchAdsCampaignQueryParamFieldsOrganizationID   PatchAdsCampaignQueryParamFields = "organization_id"
-	PatchAdsCampaignQueryParamFieldsIsActive         PatchAdsCampaignQueryParamFields = "is_active"
-	PatchAdsCampaignQueryParamFieldsStartAt          PatchAdsCampaignQueryParamFields = "start_at"
-	PatchAdsCampaignQueryParamFieldsEndAt            PatchAdsCampaignQueryParamFields = "end_at"
-	PatchAdsCampaignQueryParamFieldsBudgetAmount     PatchAdsCampaignQueryParamFields = "budget_amount"
-	PatchAdsCampaignQueryParamFieldsBudgetPeriod     PatchAdsCampaignQueryParamFields = "budget_period"
-	PatchAdsCampaignQueryParamFieldsTotalSpendAmount PatchAdsCampaignQueryParamFields = "total_spend_amount"
-	PatchAdsCampaignQueryParamFieldsTargeting        PatchAdsCampaignQueryParamFields = "targeting"
-	PatchAdsCampaignQueryParamFieldsRaw              PatchAdsCampaignQueryParamFields = "raw"
+	PatchAdsCampaignQueryParamFieldsID                 PatchAdsCampaignQueryParamFields = "id"
+	PatchAdsCampaignQueryParamFieldsCreatedAt          PatchAdsCampaignQueryParamFields = "created_at"
+	PatchAdsCampaignQueryParamFieldsUpdatedAt          PatchAdsCampaignQueryParamFields = "updated_at"
+	PatchAdsCampaignQueryParamFieldsName               PatchAdsCampaignQueryParamFields = "name"
+	PatchAdsCampaignQueryParamFieldsOrganizationID     PatchAdsCampaignQueryParamFields = "organization_id"
+	PatchAdsCampaignQueryParamFieldsStatus             PatchAdsCampaignQueryParamFields = "status"
+	PatchAdsCampaignQueryParamFieldsStartAt            PatchAdsCampaignQueryParamFields = "start_at"
+	PatchAdsCampaignQueryParamFieldsEndAt              PatchAdsCampaignQueryParamFields = "end_at"
+	PatchAdsCampaignQueryParamFieldsBudgetAmount       PatchAdsCampaignQueryParamFields = "budget_amount"
+	PatchAdsCampaignQueryParamFieldsBudgetPeriod       PatchAdsCampaignQueryParamFields = "budget_period"
+	PatchAdsCampaignQueryParamFieldsTotalSpendAmount   PatchAdsCampaignQueryParamFields = "total_spend_amount"
+	PatchAdsCampaignQueryParamFieldsTargeting          PatchAdsCampaignQueryParamFields = "targeting"
+	PatchAdsCampaignQueryParamFieldsRaw                PatchAdsCampaignQueryParamFields = "raw"
+	PatchAdsCampaignQueryParamFieldsGoal               PatchAdsCampaignQueryParamFields = "goal"
+	PatchAdsCampaignQueryParamFieldsPlannedSpendAmount PatchAdsCampaignQueryParamFields = "planned_spend_amount"
+	PatchAdsCampaignQueryParamFieldsFrequencyCap       PatchAdsCampaignQueryParamFields = "frequency_cap"
+	PatchAdsCampaignQueryParamFieldsIsActive           PatchAdsCampaignQueryParamFields = "is_active"
 )
 
 func (e PatchAdsCampaignQueryParamFields) ToPointer() *PatchAdsCampaignQueryParamFields {
@@ -46,7 +50,7 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "status":
 		fallthrough
 	case "start_at":
 		fallthrough
@@ -61,6 +65,14 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "targeting":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "goal":
+		fallthrough
+	case "planned_spend_amount":
+		fallthrough
+	case "frequency_cap":
+		fallthrough
+	case "is_active":
 		*e = PatchAdsCampaignQueryParamFields(v)
 		return nil
 	default:

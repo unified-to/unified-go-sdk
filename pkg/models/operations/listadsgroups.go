@@ -12,20 +12,32 @@ import (
 type ListAdsGroupsQueryParamFields string
 
 const (
-	ListAdsGroupsQueryParamFieldsID             ListAdsGroupsQueryParamFields = "id"
-	ListAdsGroupsQueryParamFieldsCreatedAt      ListAdsGroupsQueryParamFields = "created_at"
-	ListAdsGroupsQueryParamFieldsUpdatedAt      ListAdsGroupsQueryParamFields = "updated_at"
-	ListAdsGroupsQueryParamFieldsName           ListAdsGroupsQueryParamFields = "name"
-	ListAdsGroupsQueryParamFieldsCampaignID     ListAdsGroupsQueryParamFields = "campaign_id"
-	ListAdsGroupsQueryParamFieldsOrganizationID ListAdsGroupsQueryParamFields = "organization_id"
-	ListAdsGroupsQueryParamFieldsIsActive       ListAdsGroupsQueryParamFields = "is_active"
-	ListAdsGroupsQueryParamFieldsTargeting      ListAdsGroupsQueryParamFields = "targeting"
-	ListAdsGroupsQueryParamFieldsBidAmount      ListAdsGroupsQueryParamFields = "bid_amount"
-	ListAdsGroupsQueryParamFieldsBudgetAmount   ListAdsGroupsQueryParamFields = "budget_amount"
-	ListAdsGroupsQueryParamFieldsBudgetPeriod   ListAdsGroupsQueryParamFields = "budget_period"
-	ListAdsGroupsQueryParamFieldsStartAt        ListAdsGroupsQueryParamFields = "start_at"
-	ListAdsGroupsQueryParamFieldsEndAt          ListAdsGroupsQueryParamFields = "end_at"
-	ListAdsGroupsQueryParamFieldsRaw            ListAdsGroupsQueryParamFields = "raw"
+	ListAdsGroupsQueryParamFieldsID                   ListAdsGroupsQueryParamFields = "id"
+	ListAdsGroupsQueryParamFieldsCreatedAt            ListAdsGroupsQueryParamFields = "created_at"
+	ListAdsGroupsQueryParamFieldsUpdatedAt            ListAdsGroupsQueryParamFields = "updated_at"
+	ListAdsGroupsQueryParamFieldsName                 ListAdsGroupsQueryParamFields = "name"
+	ListAdsGroupsQueryParamFieldsParentID             ListAdsGroupsQueryParamFields = "parent_id"
+	ListAdsGroupsQueryParamFieldsCampaignID           ListAdsGroupsQueryParamFields = "campaign_id"
+	ListAdsGroupsQueryParamFieldsOrganizationID       ListAdsGroupsQueryParamFields = "organization_id"
+	ListAdsGroupsQueryParamFieldsInsertionorderID     ListAdsGroupsQueryParamFields = "insertionorder_id"
+	ListAdsGroupsQueryParamFieldsStatus               ListAdsGroupsQueryParamFields = "status"
+	ListAdsGroupsQueryParamFieldsTargeting            ListAdsGroupsQueryParamFields = "targeting"
+	ListAdsGroupsQueryParamFieldsBidAmount            ListAdsGroupsQueryParamFields = "bid_amount"
+	ListAdsGroupsQueryParamFieldsBidStrategy          ListAdsGroupsQueryParamFields = "bid_strategy"
+	ListAdsGroupsQueryParamFieldsBudgetAmount         ListAdsGroupsQueryParamFields = "budget_amount"
+	ListAdsGroupsQueryParamFieldsBudgetPeriod         ListAdsGroupsQueryParamFields = "budget_period"
+	ListAdsGroupsQueryParamFieldsBudgetAllocationType ListAdsGroupsQueryParamFields = "budget_allocation_type"
+	ListAdsGroupsQueryParamFieldsStartAt              ListAdsGroupsQueryParamFields = "start_at"
+	ListAdsGroupsQueryParamFieldsEndAt                ListAdsGroupsQueryParamFields = "end_at"
+	ListAdsGroupsQueryParamFieldsBudgetUnit           ListAdsGroupsQueryParamFields = "budget_unit"
+	ListAdsGroupsQueryParamFieldsBudgetMaxAmount      ListAdsGroupsQueryParamFields = "budget_max_amount"
+	ListAdsGroupsQueryParamFieldsType                 ListAdsGroupsQueryParamFields = "type"
+	ListAdsGroupsQueryParamFieldsHasEuPoliticalAds    ListAdsGroupsQueryParamFields = "has_eu_political_ads"
+	ListAdsGroupsQueryParamFieldsPacing               ListAdsGroupsQueryParamFields = "pacing"
+	ListAdsGroupsQueryParamFieldsFrequencyCap         ListAdsGroupsQueryParamFields = "frequency_cap"
+	ListAdsGroupsQueryParamFieldsCreativeIds          ListAdsGroupsQueryParamFields = "creative_ids"
+	ListAdsGroupsQueryParamFieldsIsActive             ListAdsGroupsQueryParamFields = "is_active"
+	ListAdsGroupsQueryParamFieldsRaw                  ListAdsGroupsQueryParamFields = "raw"
 )
 
 func (e ListAdsGroupsQueryParamFields) ToPointer() *ListAdsGroupsQueryParamFields {
@@ -45,23 +57,47 @@ func (e *ListAdsGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "name":
 		fallthrough
+	case "parent_id":
+		fallthrough
 	case "campaign_id":
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "insertionorder_id":
+		fallthrough
+	case "status":
 		fallthrough
 	case "targeting":
 		fallthrough
 	case "bid_amount":
 		fallthrough
+	case "bid_strategy":
+		fallthrough
 	case "budget_amount":
 		fallthrough
 	case "budget_period":
 		fallthrough
+	case "budget_allocation_type":
+		fallthrough
 	case "start_at":
 		fallthrough
 	case "end_at":
+		fallthrough
+	case "budget_unit":
+		fallthrough
+	case "budget_max_amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "has_eu_political_ads":
+		fallthrough
+	case "pacing":
+		fallthrough
+	case "frequency_cap":
+		fallthrough
+	case "creative_ids":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = ListAdsGroupsQueryParamFields(v)

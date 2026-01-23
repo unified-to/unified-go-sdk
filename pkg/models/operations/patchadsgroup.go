@@ -12,20 +12,32 @@ import (
 type PatchAdsGroupQueryParamFields string
 
 const (
-	PatchAdsGroupQueryParamFieldsID             PatchAdsGroupQueryParamFields = "id"
-	PatchAdsGroupQueryParamFieldsCreatedAt      PatchAdsGroupQueryParamFields = "created_at"
-	PatchAdsGroupQueryParamFieldsUpdatedAt      PatchAdsGroupQueryParamFields = "updated_at"
-	PatchAdsGroupQueryParamFieldsName           PatchAdsGroupQueryParamFields = "name"
-	PatchAdsGroupQueryParamFieldsCampaignID     PatchAdsGroupQueryParamFields = "campaign_id"
-	PatchAdsGroupQueryParamFieldsOrganizationID PatchAdsGroupQueryParamFields = "organization_id"
-	PatchAdsGroupQueryParamFieldsIsActive       PatchAdsGroupQueryParamFields = "is_active"
-	PatchAdsGroupQueryParamFieldsTargeting      PatchAdsGroupQueryParamFields = "targeting"
-	PatchAdsGroupQueryParamFieldsBidAmount      PatchAdsGroupQueryParamFields = "bid_amount"
-	PatchAdsGroupQueryParamFieldsBudgetAmount   PatchAdsGroupQueryParamFields = "budget_amount"
-	PatchAdsGroupQueryParamFieldsBudgetPeriod   PatchAdsGroupQueryParamFields = "budget_period"
-	PatchAdsGroupQueryParamFieldsStartAt        PatchAdsGroupQueryParamFields = "start_at"
-	PatchAdsGroupQueryParamFieldsEndAt          PatchAdsGroupQueryParamFields = "end_at"
-	PatchAdsGroupQueryParamFieldsRaw            PatchAdsGroupQueryParamFields = "raw"
+	PatchAdsGroupQueryParamFieldsID                   PatchAdsGroupQueryParamFields = "id"
+	PatchAdsGroupQueryParamFieldsCreatedAt            PatchAdsGroupQueryParamFields = "created_at"
+	PatchAdsGroupQueryParamFieldsUpdatedAt            PatchAdsGroupQueryParamFields = "updated_at"
+	PatchAdsGroupQueryParamFieldsName                 PatchAdsGroupQueryParamFields = "name"
+	PatchAdsGroupQueryParamFieldsParentID             PatchAdsGroupQueryParamFields = "parent_id"
+	PatchAdsGroupQueryParamFieldsCampaignID           PatchAdsGroupQueryParamFields = "campaign_id"
+	PatchAdsGroupQueryParamFieldsOrganizationID       PatchAdsGroupQueryParamFields = "organization_id"
+	PatchAdsGroupQueryParamFieldsInsertionorderID     PatchAdsGroupQueryParamFields = "insertionorder_id"
+	PatchAdsGroupQueryParamFieldsStatus               PatchAdsGroupQueryParamFields = "status"
+	PatchAdsGroupQueryParamFieldsTargeting            PatchAdsGroupQueryParamFields = "targeting"
+	PatchAdsGroupQueryParamFieldsBidAmount            PatchAdsGroupQueryParamFields = "bid_amount"
+	PatchAdsGroupQueryParamFieldsBidStrategy          PatchAdsGroupQueryParamFields = "bid_strategy"
+	PatchAdsGroupQueryParamFieldsBudgetAmount         PatchAdsGroupQueryParamFields = "budget_amount"
+	PatchAdsGroupQueryParamFieldsBudgetPeriod         PatchAdsGroupQueryParamFields = "budget_period"
+	PatchAdsGroupQueryParamFieldsBudgetAllocationType PatchAdsGroupQueryParamFields = "budget_allocation_type"
+	PatchAdsGroupQueryParamFieldsStartAt              PatchAdsGroupQueryParamFields = "start_at"
+	PatchAdsGroupQueryParamFieldsEndAt                PatchAdsGroupQueryParamFields = "end_at"
+	PatchAdsGroupQueryParamFieldsBudgetUnit           PatchAdsGroupQueryParamFields = "budget_unit"
+	PatchAdsGroupQueryParamFieldsBudgetMaxAmount      PatchAdsGroupQueryParamFields = "budget_max_amount"
+	PatchAdsGroupQueryParamFieldsType                 PatchAdsGroupQueryParamFields = "type"
+	PatchAdsGroupQueryParamFieldsHasEuPoliticalAds    PatchAdsGroupQueryParamFields = "has_eu_political_ads"
+	PatchAdsGroupQueryParamFieldsPacing               PatchAdsGroupQueryParamFields = "pacing"
+	PatchAdsGroupQueryParamFieldsFrequencyCap         PatchAdsGroupQueryParamFields = "frequency_cap"
+	PatchAdsGroupQueryParamFieldsCreativeIds          PatchAdsGroupQueryParamFields = "creative_ids"
+	PatchAdsGroupQueryParamFieldsIsActive             PatchAdsGroupQueryParamFields = "is_active"
+	PatchAdsGroupQueryParamFieldsRaw                  PatchAdsGroupQueryParamFields = "raw"
 )
 
 func (e PatchAdsGroupQueryParamFields) ToPointer() *PatchAdsGroupQueryParamFields {
@@ -45,23 +57,47 @@ func (e *PatchAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "name":
 		fallthrough
+	case "parent_id":
+		fallthrough
 	case "campaign_id":
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "insertionorder_id":
+		fallthrough
+	case "status":
 		fallthrough
 	case "targeting":
 		fallthrough
 	case "bid_amount":
 		fallthrough
+	case "bid_strategy":
+		fallthrough
 	case "budget_amount":
 		fallthrough
 	case "budget_period":
 		fallthrough
+	case "budget_allocation_type":
+		fallthrough
 	case "start_at":
 		fallthrough
 	case "end_at":
+		fallthrough
+	case "budget_unit":
+		fallthrough
+	case "budget_max_amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "has_eu_political_ads":
+		fallthrough
+	case "pacing":
+		fallthrough
+	case "frequency_cap":
+		fallthrough
+	case "creative_ids":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = PatchAdsGroupQueryParamFields(v)

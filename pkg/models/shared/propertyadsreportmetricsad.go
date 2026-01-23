@@ -36,12 +36,39 @@ func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsAdStatus string
+
+const (
+	PropertyAdsReportMetricsAdStatusUnspecified          PropertyAdsReportMetricsAdStatus = "UNSPECIFIED"
+	PropertyAdsReportMetricsAdStatusActive               PropertyAdsReportMetricsAdStatus = "ACTIVE"
+	PropertyAdsReportMetricsAdStatusPaused               PropertyAdsReportMetricsAdStatus = "PAUSED"
+	PropertyAdsReportMetricsAdStatusArchived             PropertyAdsReportMetricsAdStatus = "ARCHIVED"
+	PropertyAdsReportMetricsAdStatusDraft                PropertyAdsReportMetricsAdStatus = "DRAFT"
+	PropertyAdsReportMetricsAdStatusScheduledForDeletion PropertyAdsReportMetricsAdStatus = "SCHEDULED_FOR_DELETION"
+)
+
+func (e PropertyAdsReportMetricsAdStatus) ToPointer() *PropertyAdsReportMetricsAdStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsAdStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsAd struct {
 	AdCopy           *string                              `json:"ad_copy,omitempty"`
 	AdType           *PropertyAdsReportMetricsAdAdType    `json:"ad_type,omitempty"`
 	CampaignID       *string                              `json:"campaign_id,omitempty"`
 	CreatedAt        *time.Time                           `json:"created_at,omitempty"`
 	CreativeAssetURL *string                              `json:"creative_asset_url,omitempty"`
+	CreativeIds      []string                             `json:"creative_ids,omitempty"`
 	Cta              *string                              `json:"cta,omitempty"`
 	Description      *string                              `json:"description,omitempty"`
 	FinalURL         *string                              `json:"final_url,omitempty"`
@@ -49,9 +76,11 @@ type PropertyAdsReportMetricsAd struct {
 	Headline         *string                              `json:"headline,omitempty"`
 	ID               *string                              `json:"id,omitempty"`
 	IsActive         *bool                                `json:"is_active,omitempty"`
+	ItemID           *string                              `json:"item_id,omitempty"`
 	Name             *string                              `json:"name,omitempty"`
 	OrganizationID   *string                              `json:"organization_id,omitempty"`
 	Raw              map[string]any                       `json:"raw,omitempty"`
+	Status           *PropertyAdsReportMetricsAdStatus    `json:"status,omitempty"`
 	Targeting        *PropertyAdsReportMetricsAdTargeting `json:"targeting,omitempty"`
 	UpdatedAt        *time.Time                           `json:"updated_at,omitempty"`
 }
@@ -100,6 +129,13 @@ func (p *PropertyAdsReportMetricsAd) GetCreativeAssetURL() *string {
 		return nil
 	}
 	return p.CreativeAssetURL
+}
+
+func (p *PropertyAdsReportMetricsAd) GetCreativeIds() []string {
+	if p == nil {
+		return nil
+	}
+	return p.CreativeIds
 }
 
 func (p *PropertyAdsReportMetricsAd) GetCta() *string {
@@ -151,6 +187,13 @@ func (p *PropertyAdsReportMetricsAd) GetIsActive() *bool {
 	return p.IsActive
 }
 
+func (p *PropertyAdsReportMetricsAd) GetItemID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.ItemID
+}
+
 func (p *PropertyAdsReportMetricsAd) GetName() *string {
 	if p == nil {
 		return nil
@@ -170,6 +213,13 @@ func (p *PropertyAdsReportMetricsAd) GetRaw() map[string]any {
 		return nil
 	}
 	return p.Raw
+}
+
+func (p *PropertyAdsReportMetricsAd) GetStatus() *PropertyAdsReportMetricsAdStatus {
+	if p == nil {
+		return nil
+	}
+	return p.Status
 }
 
 func (p *PropertyAdsReportMetricsAd) GetTargeting() *PropertyAdsReportMetricsAdTargeting {

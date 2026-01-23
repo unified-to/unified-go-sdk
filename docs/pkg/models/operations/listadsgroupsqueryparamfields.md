@@ -3,19 +3,31 @@
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `ListAdsGroupsQueryParamFieldsID`             | id                                            |
-| `ListAdsGroupsQueryParamFieldsCreatedAt`      | created_at                                    |
-| `ListAdsGroupsQueryParamFieldsUpdatedAt`      | updated_at                                    |
-| `ListAdsGroupsQueryParamFieldsName`           | name                                          |
-| `ListAdsGroupsQueryParamFieldsCampaignID`     | campaign_id                                   |
-| `ListAdsGroupsQueryParamFieldsOrganizationID` | organization_id                               |
-| `ListAdsGroupsQueryParamFieldsIsActive`       | is_active                                     |
-| `ListAdsGroupsQueryParamFieldsTargeting`      | targeting                                     |
-| `ListAdsGroupsQueryParamFieldsBidAmount`      | bid_amount                                    |
-| `ListAdsGroupsQueryParamFieldsBudgetAmount`   | budget_amount                                 |
-| `ListAdsGroupsQueryParamFieldsBudgetPeriod`   | budget_period                                 |
-| `ListAdsGroupsQueryParamFieldsStartAt`        | start_at                                      |
-| `ListAdsGroupsQueryParamFieldsEndAt`          | end_at                                        |
-| `ListAdsGroupsQueryParamFieldsRaw`            | raw                                           |
+| Name                                                | Value                                               |
+| --------------------------------------------------- | --------------------------------------------------- |
+| `ListAdsGroupsQueryParamFieldsID`                   | id                                                  |
+| `ListAdsGroupsQueryParamFieldsCreatedAt`            | created_at                                          |
+| `ListAdsGroupsQueryParamFieldsUpdatedAt`            | updated_at                                          |
+| `ListAdsGroupsQueryParamFieldsName`                 | name                                                |
+| `ListAdsGroupsQueryParamFieldsParentID`             | parent_id                                           |
+| `ListAdsGroupsQueryParamFieldsCampaignID`           | campaign_id                                         |
+| `ListAdsGroupsQueryParamFieldsOrganizationID`       | organization_id                                     |
+| `ListAdsGroupsQueryParamFieldsInsertionorderID`     | insertionorder_id                                   |
+| `ListAdsGroupsQueryParamFieldsStatus`               | status                                              |
+| `ListAdsGroupsQueryParamFieldsTargeting`            | targeting                                           |
+| `ListAdsGroupsQueryParamFieldsBidAmount`            | bid_amount                                          |
+| `ListAdsGroupsQueryParamFieldsBidStrategy`          | bid_strategy                                        |
+| `ListAdsGroupsQueryParamFieldsBudgetAmount`         | budget_amount                                       |
+| `ListAdsGroupsQueryParamFieldsBudgetPeriod`         | budget_period                                       |
+| `ListAdsGroupsQueryParamFieldsBudgetAllocationType` | budget_allocation_type                              |
+| `ListAdsGroupsQueryParamFieldsStartAt`              | start_at                                            |
+| `ListAdsGroupsQueryParamFieldsEndAt`                | end_at                                              |
+| `ListAdsGroupsQueryParamFieldsBudgetUnit`           | budget_unit                                         |
+| `ListAdsGroupsQueryParamFieldsBudgetMaxAmount`      | budget_max_amount                                   |
+| `ListAdsGroupsQueryParamFieldsType`                 | type                                                |
+| `ListAdsGroupsQueryParamFieldsHasEuPoliticalAds`    | has_eu_political_ads                                |
+| `ListAdsGroupsQueryParamFieldsPacing`               | pacing                                              |
+| `ListAdsGroupsQueryParamFieldsFrequencyCap`         | frequency_cap                                       |
+| `ListAdsGroupsQueryParamFieldsCreativeIds`          | creative_ids                                        |
+| `ListAdsGroupsQueryParamFieldsIsActive`             | is_active                                           |
+| `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

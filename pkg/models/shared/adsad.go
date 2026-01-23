@@ -36,12 +36,39 @@ func (e *AdType) IsExact() bool {
 	return false
 }
 
+type AdsAdStatus string
+
+const (
+	AdsAdStatusUnspecified          AdsAdStatus = "UNSPECIFIED"
+	AdsAdStatusActive               AdsAdStatus = "ACTIVE"
+	AdsAdStatusPaused               AdsAdStatus = "PAUSED"
+	AdsAdStatusArchived             AdsAdStatus = "ARCHIVED"
+	AdsAdStatusDraft                AdsAdStatus = "DRAFT"
+	AdsAdStatusScheduledForDeletion AdsAdStatus = "SCHEDULED_FOR_DELETION"
+)
+
+func (e AdsAdStatus) ToPointer() *AdsAdStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsAdStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsAd struct {
 	AdCopy           *string                 `json:"ad_copy,omitempty"`
 	AdType           *AdType                 `json:"ad_type,omitempty"`
 	CampaignID       *string                 `json:"campaign_id,omitempty"`
 	CreatedAt        *time.Time              `json:"created_at,omitempty"`
 	CreativeAssetURL *string                 `json:"creative_asset_url,omitempty"`
+	CreativeIds      []string                `json:"creative_ids,omitempty"`
 	Cta              *string                 `json:"cta,omitempty"`
 	Description      *string                 `json:"description,omitempty"`
 	FinalURL         *string                 `json:"final_url,omitempty"`
@@ -49,9 +76,11 @@ type AdsAd struct {
 	Headline         *string                 `json:"headline,omitempty"`
 	ID               *string                 `json:"id,omitempty"`
 	IsActive         *bool                   `json:"is_active,omitempty"`
+	ItemID           *string                 `json:"item_id,omitempty"`
 	Name             *string                 `json:"name,omitempty"`
 	OrganizationID   *string                 `json:"organization_id,omitempty"`
 	Raw              map[string]any          `json:"raw,omitempty"`
+	Status           *AdsAdStatus            `json:"status,omitempty"`
 	Targeting        *PropertyAdsAdTargeting `json:"targeting,omitempty"`
 	UpdatedAt        *time.Time              `json:"updated_at,omitempty"`
 }
@@ -100,6 +129,13 @@ func (a *AdsAd) GetCreativeAssetURL() *string {
 		return nil
 	}
 	return a.CreativeAssetURL
+}
+
+func (a *AdsAd) GetCreativeIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CreativeIds
 }
 
 func (a *AdsAd) GetCta() *string {
@@ -151,6 +187,13 @@ func (a *AdsAd) GetIsActive() *bool {
 	return a.IsActive
 }
 
+func (a *AdsAd) GetItemID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ItemID
+}
+
 func (a *AdsAd) GetName() *string {
 	if a == nil {
 		return nil
@@ -170,6 +213,13 @@ func (a *AdsAd) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsAd) GetStatus() *AdsAdStatus {
+	if a == nil {
+		return nil
+	}
+	return a.Status
 }
 
 func (a *AdsAd) GetTargeting() *PropertyAdsAdTargeting {

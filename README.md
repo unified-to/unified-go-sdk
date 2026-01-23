@@ -203,28 +203,40 @@ func main() {
 
 * [CreateAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
 * [CreateAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
+* [CreateAdsCreative](docs/sdks/ads/README.md#createadscreative) - Create a creative
 * [CreateAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
+* [CreateAdsInsertionorder](docs/sdks/ads/README.md#createadsinsertionorder) - Create an insertionorder
 * [CreateAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
 * [GetAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
 * [GetAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
+* [GetAdsCreative](docs/sdks/ads/README.md#getadscreative) - Retrieve a creative
 * [GetAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
+* [GetAdsInsertionorder](docs/sdks/ads/README.md#getadsinsertionorder) - Retrieve an insertionorder
 * [GetAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
 * [ListAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
 * [ListAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
+* [ListAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
 * [ListAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
+* [ListAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [ListAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
 * [ListAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
 * [PatchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
 * [PatchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
+* [PatchAdsCreative](docs/sdks/ads/README.md#patchadscreative) - Update a creative
 * [PatchAdsGroup](docs/sdks/ads/README.md#patchadsgroup) - Update a group
+* [PatchAdsInsertionorder](docs/sdks/ads/README.md#patchadsinsertionorder) - Update an insertionorder
 * [PatchAdsOrganization](docs/sdks/ads/README.md#patchadsorganization) - Update an organization
 * [RemoveAdsAd](docs/sdks/ads/README.md#removeadsad) - Remove an ad
 * [RemoveAdsCampaign](docs/sdks/ads/README.md#removeadscampaign) - Remove a campaign
+* [RemoveAdsCreative](docs/sdks/ads/README.md#removeadscreative) - Remove a creative
 * [RemoveAdsGroup](docs/sdks/ads/README.md#removeadsgroup) - Remove a group
+* [RemoveAdsInsertionorder](docs/sdks/ads/README.md#removeadsinsertionorder) - Remove an insertionorder
 * [RemoveAdsOrganization](docs/sdks/ads/README.md#removeadsorganization) - Remove an organization
 * [UpdateAdsAd](docs/sdks/ads/README.md#updateadsad) - Update an ad
 * [UpdateAdsCampaign](docs/sdks/ads/README.md#updateadscampaign) - Update a campaign
+* [UpdateAdsCreative](docs/sdks/ads/README.md#updateadscreative) - Update a creative
 * [UpdateAdsGroup](docs/sdks/ads/README.md#updateadsgroup) - Update a group
+* [UpdateAdsInsertionorder](docs/sdks/ads/README.md#updateadsinsertionorder) - Update an insertionorder
 * [UpdateAdsOrganization](docs/sdks/ads/README.md#updateadsorganization) - Update an organization
 
 ### [Apicall](docs/sdks/apicall/README.md)
@@ -574,6 +586,15 @@ func main() {
 * [RemoveLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
 * [UpdateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
+### [Creative](docs/sdks/creative/README.md)
+
+* [CreateAdsCreative](docs/sdks/creative/README.md#createadscreative) - Create a creative
+* [GetAdsCreative](docs/sdks/creative/README.md#getadscreative) - Retrieve a creative
+* [ListAdsCreatives](docs/sdks/creative/README.md#listadscreatives) - List all creatives
+* [PatchAdsCreative](docs/sdks/creative/README.md#patchadscreative) - Update a creative
+* [RemoveAdsCreative](docs/sdks/creative/README.md#removeadscreative) - Remove a creative
+* [UpdateAdsCreative](docs/sdks/creative/README.md#updateadscreative) - Update a creative
+
 ### [Creditmemo](docs/sdks/creditmemo/README.md)
 
 * [CreateAccountingCreditmemo](docs/sdks/creditmemo/README.md#createaccountingcreditmemo) - Create a creditmemo
@@ -828,6 +849,15 @@ func main() {
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
+
+### [Insertionorder](docs/sdks/insertionorder/README.md)
+
+* [CreateAdsInsertionorder](docs/sdks/insertionorder/README.md#createadsinsertionorder) - Create an insertionorder
+* [GetAdsInsertionorder](docs/sdks/insertionorder/README.md#getadsinsertionorder) - Retrieve an insertionorder
+* [ListAdsInsertionorders](docs/sdks/insertionorder/README.md#listadsinsertionorders) - List all insertionorders
+* [PatchAdsInsertionorder](docs/sdks/insertionorder/README.md#patchadsinsertionorder) - Update an insertionorder
+* [RemoveAdsInsertionorder](docs/sdks/insertionorder/README.md#removeadsinsertionorder) - Remove an insertionorder
+* [UpdateAdsInsertionorder](docs/sdks/insertionorder/README.md#updateadsinsertionorder) - Update an insertionorder
 
 ### [Instructor](docs/sdks/instructor/README.md)
 

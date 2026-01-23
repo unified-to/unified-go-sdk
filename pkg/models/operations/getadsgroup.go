@@ -12,20 +12,32 @@ import (
 type GetAdsGroupQueryParamFields string
 
 const (
-	GetAdsGroupQueryParamFieldsID             GetAdsGroupQueryParamFields = "id"
-	GetAdsGroupQueryParamFieldsCreatedAt      GetAdsGroupQueryParamFields = "created_at"
-	GetAdsGroupQueryParamFieldsUpdatedAt      GetAdsGroupQueryParamFields = "updated_at"
-	GetAdsGroupQueryParamFieldsName           GetAdsGroupQueryParamFields = "name"
-	GetAdsGroupQueryParamFieldsCampaignID     GetAdsGroupQueryParamFields = "campaign_id"
-	GetAdsGroupQueryParamFieldsOrganizationID GetAdsGroupQueryParamFields = "organization_id"
-	GetAdsGroupQueryParamFieldsIsActive       GetAdsGroupQueryParamFields = "is_active"
-	GetAdsGroupQueryParamFieldsTargeting      GetAdsGroupQueryParamFields = "targeting"
-	GetAdsGroupQueryParamFieldsBidAmount      GetAdsGroupQueryParamFields = "bid_amount"
-	GetAdsGroupQueryParamFieldsBudgetAmount   GetAdsGroupQueryParamFields = "budget_amount"
-	GetAdsGroupQueryParamFieldsBudgetPeriod   GetAdsGroupQueryParamFields = "budget_period"
-	GetAdsGroupQueryParamFieldsStartAt        GetAdsGroupQueryParamFields = "start_at"
-	GetAdsGroupQueryParamFieldsEndAt          GetAdsGroupQueryParamFields = "end_at"
-	GetAdsGroupQueryParamFieldsRaw            GetAdsGroupQueryParamFields = "raw"
+	GetAdsGroupQueryParamFieldsID                   GetAdsGroupQueryParamFields = "id"
+	GetAdsGroupQueryParamFieldsCreatedAt            GetAdsGroupQueryParamFields = "created_at"
+	GetAdsGroupQueryParamFieldsUpdatedAt            GetAdsGroupQueryParamFields = "updated_at"
+	GetAdsGroupQueryParamFieldsName                 GetAdsGroupQueryParamFields = "name"
+	GetAdsGroupQueryParamFieldsParentID             GetAdsGroupQueryParamFields = "parent_id"
+	GetAdsGroupQueryParamFieldsCampaignID           GetAdsGroupQueryParamFields = "campaign_id"
+	GetAdsGroupQueryParamFieldsOrganizationID       GetAdsGroupQueryParamFields = "organization_id"
+	GetAdsGroupQueryParamFieldsInsertionorderID     GetAdsGroupQueryParamFields = "insertionorder_id"
+	GetAdsGroupQueryParamFieldsStatus               GetAdsGroupQueryParamFields = "status"
+	GetAdsGroupQueryParamFieldsTargeting            GetAdsGroupQueryParamFields = "targeting"
+	GetAdsGroupQueryParamFieldsBidAmount            GetAdsGroupQueryParamFields = "bid_amount"
+	GetAdsGroupQueryParamFieldsBidStrategy          GetAdsGroupQueryParamFields = "bid_strategy"
+	GetAdsGroupQueryParamFieldsBudgetAmount         GetAdsGroupQueryParamFields = "budget_amount"
+	GetAdsGroupQueryParamFieldsBudgetPeriod         GetAdsGroupQueryParamFields = "budget_period"
+	GetAdsGroupQueryParamFieldsBudgetAllocationType GetAdsGroupQueryParamFields = "budget_allocation_type"
+	GetAdsGroupQueryParamFieldsStartAt              GetAdsGroupQueryParamFields = "start_at"
+	GetAdsGroupQueryParamFieldsEndAt                GetAdsGroupQueryParamFields = "end_at"
+	GetAdsGroupQueryParamFieldsBudgetUnit           GetAdsGroupQueryParamFields = "budget_unit"
+	GetAdsGroupQueryParamFieldsBudgetMaxAmount      GetAdsGroupQueryParamFields = "budget_max_amount"
+	GetAdsGroupQueryParamFieldsType                 GetAdsGroupQueryParamFields = "type"
+	GetAdsGroupQueryParamFieldsHasEuPoliticalAds    GetAdsGroupQueryParamFields = "has_eu_political_ads"
+	GetAdsGroupQueryParamFieldsPacing               GetAdsGroupQueryParamFields = "pacing"
+	GetAdsGroupQueryParamFieldsFrequencyCap         GetAdsGroupQueryParamFields = "frequency_cap"
+	GetAdsGroupQueryParamFieldsCreativeIds          GetAdsGroupQueryParamFields = "creative_ids"
+	GetAdsGroupQueryParamFieldsIsActive             GetAdsGroupQueryParamFields = "is_active"
+	GetAdsGroupQueryParamFieldsRaw                  GetAdsGroupQueryParamFields = "raw"
 )
 
 func (e GetAdsGroupQueryParamFields) ToPointer() *GetAdsGroupQueryParamFields {
@@ -45,23 +57,47 @@ func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "name":
 		fallthrough
+	case "parent_id":
+		fallthrough
 	case "campaign_id":
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "insertionorder_id":
+		fallthrough
+	case "status":
 		fallthrough
 	case "targeting":
 		fallthrough
 	case "bid_amount":
 		fallthrough
+	case "bid_strategy":
+		fallthrough
 	case "budget_amount":
 		fallthrough
 	case "budget_period":
 		fallthrough
+	case "budget_allocation_type":
+		fallthrough
 	case "start_at":
 		fallthrough
 	case "end_at":
+		fallthrough
+	case "budget_unit":
+		fallthrough
+	case "budget_max_amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "has_eu_political_ads":
+		fallthrough
+	case "pacing":
+		fallthrough
+	case "frequency_cap":
+		fallthrough
+	case "creative_ids":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = GetAdsGroupQueryParamFields(v)

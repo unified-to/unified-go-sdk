@@ -31,20 +31,77 @@ func (e *PropertyAdsReportMetricsCampaignBudgetPeriod) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsCampaignGoal string
+
+const (
+	PropertyAdsReportMetricsCampaignGoalUnspecified    PropertyAdsReportMetricsCampaignGoal = "UNSPECIFIED"
+	PropertyAdsReportMetricsCampaignGoalBrandAwareness PropertyAdsReportMetricsCampaignGoal = "BRAND_AWARENESS"
+	PropertyAdsReportMetricsCampaignGoalReach          PropertyAdsReportMetricsCampaignGoal = "REACH"
+	PropertyAdsReportMetricsCampaignGoalWebsiteTraffic PropertyAdsReportMetricsCampaignGoal = "WEBSITE_TRAFFIC"
+	PropertyAdsReportMetricsCampaignGoalLeads          PropertyAdsReportMetricsCampaignGoal = "LEADS"
+	PropertyAdsReportMetricsCampaignGoalSales          PropertyAdsReportMetricsCampaignGoal = "SALES"
+	PropertyAdsReportMetricsCampaignGoalAppPromotion   PropertyAdsReportMetricsCampaignGoal = "APP_PROMOTION"
+)
+
+func (e PropertyAdsReportMetricsCampaignGoal) ToPointer() *PropertyAdsReportMetricsCampaignGoal {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsCampaignGoal) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "BRAND_AWARENESS", "REACH", "WEBSITE_TRAFFIC", "LEADS", "SALES", "APP_PROMOTION":
+			return true
+		}
+	}
+	return false
+}
+
+type PropertyAdsReportMetricsCampaignStatus string
+
+const (
+	PropertyAdsReportMetricsCampaignStatusUnspecified          PropertyAdsReportMetricsCampaignStatus = "UNSPECIFIED"
+	PropertyAdsReportMetricsCampaignStatusActive               PropertyAdsReportMetricsCampaignStatus = "ACTIVE"
+	PropertyAdsReportMetricsCampaignStatusPaused               PropertyAdsReportMetricsCampaignStatus = "PAUSED"
+	PropertyAdsReportMetricsCampaignStatusArchived             PropertyAdsReportMetricsCampaignStatus = "ARCHIVED"
+	PropertyAdsReportMetricsCampaignStatusDraft                PropertyAdsReportMetricsCampaignStatus = "DRAFT"
+	PropertyAdsReportMetricsCampaignStatusScheduledForDeletion PropertyAdsReportMetricsCampaignStatus = "SCHEDULED_FOR_DELETION"
+)
+
+func (e PropertyAdsReportMetricsCampaignStatus) ToPointer() *PropertyAdsReportMetricsCampaignStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsCampaignStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsCampaign struct {
-	BudgetAmount     *float64                                      `json:"budget_amount,omitempty"`
-	BudgetPeriod     *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
-	CreatedAt        *time.Time                                    `json:"created_at,omitempty"`
-	EndAt            *time.Time                                    `json:"end_at,omitempty"`
-	ID               *string                                       `json:"id,omitempty"`
-	IsActive         *bool                                         `json:"is_active,omitempty"`
-	Name             *string                                       `json:"name,omitempty"`
-	OrganizationID   *string                                       `json:"organization_id,omitempty"`
-	Raw              map[string]any                                `json:"raw,omitempty"`
-	StartAt          *time.Time                                    `json:"start_at,omitempty"`
-	Targeting        *PropertyAdsReportMetricsCampaignTargeting    `json:"targeting,omitempty"`
-	TotalSpendAmount *float64                                      `json:"total_spend_amount,omitempty"`
-	UpdatedAt        *time.Time                                    `json:"updated_at,omitempty"`
+	BudgetAmount       *float64                                      `json:"budget_amount,omitempty"`
+	BudgetPeriod       *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
+	CreatedAt          *time.Time                                    `json:"created_at,omitempty"`
+	EndAt              *time.Time                                    `json:"end_at,omitempty"`
+	FrequencyCap       *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
+	Goal               *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
+	ID                 *string                                       `json:"id,omitempty"`
+	IsActive           *bool                                         `json:"is_active,omitempty"`
+	Name               *string                                       `json:"name,omitempty"`
+	OrganizationID     *string                                       `json:"organization_id,omitempty"`
+	PlannedSpendAmount *float64                                      `json:"planned_spend_amount,omitempty"`
+	Raw                map[string]any                                `json:"raw,omitempty"`
+	StartAt            *time.Time                                    `json:"start_at,omitempty"`
+	Status             *PropertyAdsReportMetricsCampaignStatus       `json:"status,omitempty"`
+	Targeting          *PropertyAdsReportMetricsCampaignTargeting    `json:"targeting,omitempty"`
+	TotalSpendAmount   *float64                                      `json:"total_spend_amount,omitempty"`
+	UpdatedAt          *time.Time                                    `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsCampaign) MarshalJSON() ([]byte, error) {
@@ -86,6 +143,20 @@ func (p *PropertyAdsReportMetricsCampaign) GetEndAt() *time.Time {
 	return p.EndAt
 }
 
+func (p *PropertyAdsReportMetricsCampaign) GetFrequencyCap() *PropertyAdsReportMetricsCampaignFrequencyCap {
+	if p == nil {
+		return nil
+	}
+	return p.FrequencyCap
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetGoal() *PropertyAdsReportMetricsCampaignGoal {
+	if p == nil {
+		return nil
+	}
+	return p.Goal
+}
+
 func (p *PropertyAdsReportMetricsCampaign) GetID() *string {
 	if p == nil {
 		return nil
@@ -114,6 +185,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetOrganizationID() *string {
 	return p.OrganizationID
 }
 
+func (p *PropertyAdsReportMetricsCampaign) GetPlannedSpendAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.PlannedSpendAmount
+}
+
 func (p *PropertyAdsReportMetricsCampaign) GetRaw() map[string]any {
 	if p == nil {
 		return nil
@@ -126,6 +204,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetStartAt() *time.Time {
 		return nil
 	}
 	return p.StartAt
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetStatus() *PropertyAdsReportMetricsCampaignStatus {
+	if p == nil {
+		return nil
+	}
+	return p.Status
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetTargeting() *PropertyAdsReportMetricsCampaignTargeting {

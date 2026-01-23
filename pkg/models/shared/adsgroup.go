@@ -7,6 +7,30 @@ import (
 	"time"
 )
 
+type BudgetAllocationType string
+
+const (
+	BudgetAllocationTypeUnspecified BudgetAllocationType = "UNSPECIFIED"
+	BudgetAllocationTypeAutomatic   BudgetAllocationType = "AUTOMATIC"
+	BudgetAllocationTypeFixed       BudgetAllocationType = "FIXED"
+	BudgetAllocationTypeUnlimited   BudgetAllocationType = "UNLIMITED"
+)
+
+func (e BudgetAllocationType) ToPointer() *BudgetAllocationType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *BudgetAllocationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "AUTOMATIC", "FIXED", "UNLIMITED":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsGroupBudgetPeriod string
 
 const (
@@ -31,21 +55,107 @@ func (e *AdsGroupBudgetPeriod) IsExact() bool {
 	return false
 }
 
+type BudgetUnit string
+
+const (
+	BudgetUnitUnspecified BudgetUnit = "UNSPECIFIED"
+	BudgetUnitCurrency    BudgetUnit = "CURRENCY"
+	BudgetUnitImpressions BudgetUnit = "IMPRESSIONS"
+)
+
+func (e BudgetUnit) ToPointer() *BudgetUnit {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *BudgetUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "CURRENCY", "IMPRESSIONS":
+			return true
+		}
+	}
+	return false
+}
+
+type AdsGroupStatus string
+
+const (
+	AdsGroupStatusUnspecified          AdsGroupStatus = "UNSPECIFIED"
+	AdsGroupStatusActive               AdsGroupStatus = "ACTIVE"
+	AdsGroupStatusPaused               AdsGroupStatus = "PAUSED"
+	AdsGroupStatusArchived             AdsGroupStatus = "ARCHIVED"
+	AdsGroupStatusDraft                AdsGroupStatus = "DRAFT"
+	AdsGroupStatusScheduledForDeletion AdsGroupStatus = "SCHEDULED_FOR_DELETION"
+)
+
+func (e AdsGroupStatus) ToPointer() *AdsGroupStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsGroupStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION":
+			return true
+		}
+	}
+	return false
+}
+
+type AdsGroupType string
+
+const (
+	AdsGroupTypeDisplay AdsGroupType = "DISPLAY"
+	AdsGroupTypeVideo   AdsGroupType = "VIDEO"
+	AdsGroupTypeAudio   AdsGroupType = "AUDIO"
+	AdsGroupTypeYoutube AdsGroupType = "YOUTUBE"
+)
+
+func (e AdsGroupType) ToPointer() *AdsGroupType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsGroupType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DISPLAY", "VIDEO", "AUDIO", "YOUTUBE":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsGroup struct {
-	BidAmount      *float64                   `json:"bid_amount,omitempty"`
-	BudgetAmount   *float64                   `json:"budget_amount,omitempty"`
-	BudgetPeriod   *AdsGroupBudgetPeriod      `json:"budget_period,omitempty"`
-	CampaignID     *string                    `json:"campaign_id,omitempty"`
-	CreatedAt      *time.Time                 `json:"created_at,omitempty"`
-	EndAt          *time.Time                 `json:"end_at,omitempty"`
-	ID             *string                    `json:"id,omitempty"`
-	IsActive       *bool                      `json:"is_active,omitempty"`
-	Name           *string                    `json:"name,omitempty"`
-	OrganizationID *string                    `json:"organization_id,omitempty"`
-	Raw            map[string]any             `json:"raw,omitempty"`
-	StartAt        *time.Time                 `json:"start_at,omitempty"`
-	Targeting      *PropertyAdsGroupTargeting `json:"targeting,omitempty"`
-	UpdatedAt      *time.Time                 `json:"updated_at,omitempty"`
+	BidAmount *float64 `json:"bid_amount,omitempty"`
+	// YOUTUBE_AND_PARTNERS
+	BidStrategy          *PropertyAdsGroupBidStrategy  `json:"bid_strategy,omitempty"`
+	BudgetAllocationType *BudgetAllocationType         `json:"budget_allocation_type,omitempty"`
+	BudgetAmount         *float64                      `json:"budget_amount,omitempty"`
+	BudgetMaxAmount      *float64                      `json:"budget_max_amount,omitempty"`
+	BudgetPeriod         *AdsGroupBudgetPeriod         `json:"budget_period,omitempty"`
+	BudgetUnit           *BudgetUnit                   `json:"budget_unit,omitempty"`
+	CampaignID           *string                       `json:"campaign_id,omitempty"`
+	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
+	CreativeIds          []string                      `json:"creative_ids,omitempty"`
+	EndAt                *time.Time                    `json:"end_at,omitempty"`
+	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
+	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
+	ID                   *string                       `json:"id,omitempty"`
+	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
+	IsActive             *bool                         `json:"is_active,omitempty"`
+	Name                 *string                       `json:"name,omitempty"`
+	OrganizationID       *string                       `json:"organization_id,omitempty"`
+	Pacing               *PropertyAdsGroupPacing       `json:"pacing,omitempty"`
+	ParentID             *string                       `json:"parent_id,omitempty"`
+	Raw                  map[string]any                `json:"raw,omitempty"`
+	StartAt              *time.Time                    `json:"start_at,omitempty"`
+	Status               *AdsGroupStatus               `json:"status,omitempty"`
+	Targeting            *PropertyAdsGroupTargeting    `json:"targeting,omitempty"`
+	Type                 *AdsGroupType                 `json:"type,omitempty"`
+	UpdatedAt            *time.Time                    `json:"updated_at,omitempty"`
 }
 
 func (a AdsGroup) MarshalJSON() ([]byte, error) {
@@ -66,6 +176,20 @@ func (a *AdsGroup) GetBidAmount() *float64 {
 	return a.BidAmount
 }
 
+func (a *AdsGroup) GetBidStrategy() *PropertyAdsGroupBidStrategy {
+	if a == nil {
+		return nil
+	}
+	return a.BidStrategy
+}
+
+func (a *AdsGroup) GetBudgetAllocationType() *BudgetAllocationType {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetAllocationType
+}
+
 func (a *AdsGroup) GetBudgetAmount() *float64 {
 	if a == nil {
 		return nil
@@ -73,11 +197,25 @@ func (a *AdsGroup) GetBudgetAmount() *float64 {
 	return a.BudgetAmount
 }
 
+func (a *AdsGroup) GetBudgetMaxAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetMaxAmount
+}
+
 func (a *AdsGroup) GetBudgetPeriod() *AdsGroupBudgetPeriod {
 	if a == nil {
 		return nil
 	}
 	return a.BudgetPeriod
+}
+
+func (a *AdsGroup) GetBudgetUnit() *BudgetUnit {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetUnit
 }
 
 func (a *AdsGroup) GetCampaignID() *string {
@@ -94,6 +232,13 @@ func (a *AdsGroup) GetCreatedAt() *time.Time {
 	return a.CreatedAt
 }
 
+func (a *AdsGroup) GetCreativeIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CreativeIds
+}
+
 func (a *AdsGroup) GetEndAt() *time.Time {
 	if a == nil {
 		return nil
@@ -101,11 +246,32 @@ func (a *AdsGroup) GetEndAt() *time.Time {
 	return a.EndAt
 }
 
+func (a *AdsGroup) GetFrequencyCap() *PropertyAdsGroupFrequencyCap {
+	if a == nil {
+		return nil
+	}
+	return a.FrequencyCap
+}
+
+func (a *AdsGroup) GetHasEuPoliticalAds() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.HasEuPoliticalAds
+}
+
 func (a *AdsGroup) GetID() *string {
 	if a == nil {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AdsGroup) GetInsertionorderID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.InsertionorderID
 }
 
 func (a *AdsGroup) GetIsActive() *bool {
@@ -129,6 +295,20 @@ func (a *AdsGroup) GetOrganizationID() *string {
 	return a.OrganizationID
 }
 
+func (a *AdsGroup) GetPacing() *PropertyAdsGroupPacing {
+	if a == nil {
+		return nil
+	}
+	return a.Pacing
+}
+
+func (a *AdsGroup) GetParentID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ParentID
+}
+
 func (a *AdsGroup) GetRaw() map[string]any {
 	if a == nil {
 		return nil
@@ -143,11 +323,25 @@ func (a *AdsGroup) GetStartAt() *time.Time {
 	return a.StartAt
 }
 
+func (a *AdsGroup) GetStatus() *AdsGroupStatus {
+	if a == nil {
+		return nil
+	}
+	return a.Status
+}
+
 func (a *AdsGroup) GetTargeting() *PropertyAdsGroupTargeting {
 	if a == nil {
 		return nil
 	}
 	return a.Targeting
+}
+
+func (a *AdsGroup) GetType() *AdsGroupType {
+	if a == nil {
+		return nil
+	}
+	return a.Type
 }
 
 func (a *AdsGroup) GetUpdatedAt() *time.Time {

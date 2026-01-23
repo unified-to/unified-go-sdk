@@ -18,9 +18,11 @@ const (
 	UpdateAdsAdQueryParamFieldsName             UpdateAdsAdQueryParamFields = "name"
 	UpdateAdsAdQueryParamFieldsCampaignID       UpdateAdsAdQueryParamFields = "campaign_id"
 	UpdateAdsAdQueryParamFieldsGroupID          UpdateAdsAdQueryParamFields = "group_id"
+	UpdateAdsAdQueryParamFieldsItemID           UpdateAdsAdQueryParamFields = "item_id"
 	UpdateAdsAdQueryParamFieldsOrganizationID   UpdateAdsAdQueryParamFields = "organization_id"
-	UpdateAdsAdQueryParamFieldsIsActive         UpdateAdsAdQueryParamFields = "is_active"
+	UpdateAdsAdQueryParamFieldsStatus           UpdateAdsAdQueryParamFields = "status"
 	UpdateAdsAdQueryParamFieldsAdType           UpdateAdsAdQueryParamFields = "ad_type"
+	UpdateAdsAdQueryParamFieldsCreativeIds      UpdateAdsAdQueryParamFields = "creative_ids"
 	UpdateAdsAdQueryParamFieldsCreativeAssetURL UpdateAdsAdQueryParamFields = "creative_asset_url"
 	UpdateAdsAdQueryParamFieldsAdCopy           UpdateAdsAdQueryParamFields = "ad_copy"
 	UpdateAdsAdQueryParamFieldsHeadline         UpdateAdsAdQueryParamFields = "headline"
@@ -28,6 +30,7 @@ const (
 	UpdateAdsAdQueryParamFieldsCta              UpdateAdsAdQueryParamFields = "cta"
 	UpdateAdsAdQueryParamFieldsFinalURL         UpdateAdsAdQueryParamFields = "final_url"
 	UpdateAdsAdQueryParamFieldsTargeting        UpdateAdsAdQueryParamFields = "targeting"
+	UpdateAdsAdQueryParamFieldsIsActive         UpdateAdsAdQueryParamFields = "is_active"
 	UpdateAdsAdQueryParamFieldsRaw              UpdateAdsAdQueryParamFields = "raw"
 )
 
@@ -52,11 +55,15 @@ func (e *UpdateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
+	case "item_id":
+		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "status":
 		fallthrough
 	case "ad_type":
+		fallthrough
+	case "creative_ids":
 		fallthrough
 	case "creative_asset_url":
 		fallthrough
@@ -71,6 +78,8 @@ func (e *UpdateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "final_url":
 		fallthrough
 	case "targeting":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = UpdateAdsAdQueryParamFields(v)

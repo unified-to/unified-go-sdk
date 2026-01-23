@@ -11,9 +11,11 @@
 | `PatchAdsAdQueryParamFieldsName`             | name                                         |
 | `PatchAdsAdQueryParamFieldsCampaignID`       | campaign_id                                  |
 | `PatchAdsAdQueryParamFieldsGroupID`          | group_id                                     |
+| `PatchAdsAdQueryParamFieldsItemID`           | item_id                                      |
 | `PatchAdsAdQueryParamFieldsOrganizationID`   | organization_id                              |
-| `PatchAdsAdQueryParamFieldsIsActive`         | is_active                                    |
+| `PatchAdsAdQueryParamFieldsStatus`           | status                                       |
 | `PatchAdsAdQueryParamFieldsAdType`           | ad_type                                      |
+| `PatchAdsAdQueryParamFieldsCreativeIds`      | creative_ids                                 |
 | `PatchAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                           |
 | `PatchAdsAdQueryParamFieldsAdCopy`           | ad_copy                                      |
 | `PatchAdsAdQueryParamFieldsHeadline`         | headline                                     |
@@ -21,4 +23,5 @@
 | `PatchAdsAdQueryParamFieldsCta`              | cta                                          |
 | `PatchAdsAdQueryParamFieldsFinalURL`         | final_url                                    |
 | `PatchAdsAdQueryParamFieldsTargeting`        | targeting                                    |
+| `PatchAdsAdQueryParamFieldsIsActive`         | is_active                                    |
 | `PatchAdsAdQueryParamFieldsRaw`              | raw                                          |

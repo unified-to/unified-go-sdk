@@ -12,20 +12,32 @@ import (
 type UpdateAdsGroupQueryParamFields string
 
 const (
-	UpdateAdsGroupQueryParamFieldsID             UpdateAdsGroupQueryParamFields = "id"
-	UpdateAdsGroupQueryParamFieldsCreatedAt      UpdateAdsGroupQueryParamFields = "created_at"
-	UpdateAdsGroupQueryParamFieldsUpdatedAt      UpdateAdsGroupQueryParamFields = "updated_at"
-	UpdateAdsGroupQueryParamFieldsName           UpdateAdsGroupQueryParamFields = "name"
-	UpdateAdsGroupQueryParamFieldsCampaignID     UpdateAdsGroupQueryParamFields = "campaign_id"
-	UpdateAdsGroupQueryParamFieldsOrganizationID UpdateAdsGroupQueryParamFields = "organization_id"
-	UpdateAdsGroupQueryParamFieldsIsActive       UpdateAdsGroupQueryParamFields = "is_active"
-	UpdateAdsGroupQueryParamFieldsTargeting      UpdateAdsGroupQueryParamFields = "targeting"
-	UpdateAdsGroupQueryParamFieldsBidAmount      UpdateAdsGroupQueryParamFields = "bid_amount"
-	UpdateAdsGroupQueryParamFieldsBudgetAmount   UpdateAdsGroupQueryParamFields = "budget_amount"
-	UpdateAdsGroupQueryParamFieldsBudgetPeriod   UpdateAdsGroupQueryParamFields = "budget_period"
-	UpdateAdsGroupQueryParamFieldsStartAt        UpdateAdsGroupQueryParamFields = "start_at"
-	UpdateAdsGroupQueryParamFieldsEndAt          UpdateAdsGroupQueryParamFields = "end_at"
-	UpdateAdsGroupQueryParamFieldsRaw            UpdateAdsGroupQueryParamFields = "raw"
+	UpdateAdsGroupQueryParamFieldsID                   UpdateAdsGroupQueryParamFields = "id"
+	UpdateAdsGroupQueryParamFieldsCreatedAt            UpdateAdsGroupQueryParamFields = "created_at"
+	UpdateAdsGroupQueryParamFieldsUpdatedAt            UpdateAdsGroupQueryParamFields = "updated_at"
+	UpdateAdsGroupQueryParamFieldsName                 UpdateAdsGroupQueryParamFields = "name"
+	UpdateAdsGroupQueryParamFieldsParentID             UpdateAdsGroupQueryParamFields = "parent_id"
+	UpdateAdsGroupQueryParamFieldsCampaignID           UpdateAdsGroupQueryParamFields = "campaign_id"
+	UpdateAdsGroupQueryParamFieldsOrganizationID       UpdateAdsGroupQueryParamFields = "organization_id"
+	UpdateAdsGroupQueryParamFieldsInsertionorderID     UpdateAdsGroupQueryParamFields = "insertionorder_id"
+	UpdateAdsGroupQueryParamFieldsStatus               UpdateAdsGroupQueryParamFields = "status"
+	UpdateAdsGroupQueryParamFieldsTargeting            UpdateAdsGroupQueryParamFields = "targeting"
+	UpdateAdsGroupQueryParamFieldsBidAmount            UpdateAdsGroupQueryParamFields = "bid_amount"
+	UpdateAdsGroupQueryParamFieldsBidStrategy          UpdateAdsGroupQueryParamFields = "bid_strategy"
+	UpdateAdsGroupQueryParamFieldsBudgetAmount         UpdateAdsGroupQueryParamFields = "budget_amount"
+	UpdateAdsGroupQueryParamFieldsBudgetPeriod         UpdateAdsGroupQueryParamFields = "budget_period"
+	UpdateAdsGroupQueryParamFieldsBudgetAllocationType UpdateAdsGroupQueryParamFields = "budget_allocation_type"
+	UpdateAdsGroupQueryParamFieldsStartAt              UpdateAdsGroupQueryParamFields = "start_at"
+	UpdateAdsGroupQueryParamFieldsEndAt                UpdateAdsGroupQueryParamFields = "end_at"
+	UpdateAdsGroupQueryParamFieldsBudgetUnit           UpdateAdsGroupQueryParamFields = "budget_unit"
+	UpdateAdsGroupQueryParamFieldsBudgetMaxAmount      UpdateAdsGroupQueryParamFields = "budget_max_amount"
+	UpdateAdsGroupQueryParamFieldsType                 UpdateAdsGroupQueryParamFields = "type"
+	UpdateAdsGroupQueryParamFieldsHasEuPoliticalAds    UpdateAdsGroupQueryParamFields = "has_eu_political_ads"
+	UpdateAdsGroupQueryParamFieldsPacing               UpdateAdsGroupQueryParamFields = "pacing"
+	UpdateAdsGroupQueryParamFieldsFrequencyCap         UpdateAdsGroupQueryParamFields = "frequency_cap"
+	UpdateAdsGroupQueryParamFieldsCreativeIds          UpdateAdsGroupQueryParamFields = "creative_ids"
+	UpdateAdsGroupQueryParamFieldsIsActive             UpdateAdsGroupQueryParamFields = "is_active"
+	UpdateAdsGroupQueryParamFieldsRaw                  UpdateAdsGroupQueryParamFields = "raw"
 )
 
 func (e UpdateAdsGroupQueryParamFields) ToPointer() *UpdateAdsGroupQueryParamFields {
@@ -45,23 +57,47 @@ func (e *UpdateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "name":
 		fallthrough
+	case "parent_id":
+		fallthrough
 	case "campaign_id":
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "insertionorder_id":
+		fallthrough
+	case "status":
 		fallthrough
 	case "targeting":
 		fallthrough
 	case "bid_amount":
 		fallthrough
+	case "bid_strategy":
+		fallthrough
 	case "budget_amount":
 		fallthrough
 	case "budget_period":
 		fallthrough
+	case "budget_allocation_type":
+		fallthrough
 	case "start_at":
 		fallthrough
 	case "end_at":
+		fallthrough
+	case "budget_unit":
+		fallthrough
+	case "budget_max_amount":
+		fallthrough
+	case "type":
+		fallthrough
+	case "has_eu_political_ads":
+		fallthrough
+	case "pacing":
+		fallthrough
+	case "frequency_cap":
+		fallthrough
+	case "creative_ids":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = UpdateAdsGroupQueryParamFields(v)

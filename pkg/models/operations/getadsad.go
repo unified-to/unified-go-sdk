@@ -18,9 +18,11 @@ const (
 	GetAdsAdQueryParamFieldsName             GetAdsAdQueryParamFields = "name"
 	GetAdsAdQueryParamFieldsCampaignID       GetAdsAdQueryParamFields = "campaign_id"
 	GetAdsAdQueryParamFieldsGroupID          GetAdsAdQueryParamFields = "group_id"
+	GetAdsAdQueryParamFieldsItemID           GetAdsAdQueryParamFields = "item_id"
 	GetAdsAdQueryParamFieldsOrganizationID   GetAdsAdQueryParamFields = "organization_id"
-	GetAdsAdQueryParamFieldsIsActive         GetAdsAdQueryParamFields = "is_active"
+	GetAdsAdQueryParamFieldsStatus           GetAdsAdQueryParamFields = "status"
 	GetAdsAdQueryParamFieldsAdType           GetAdsAdQueryParamFields = "ad_type"
+	GetAdsAdQueryParamFieldsCreativeIds      GetAdsAdQueryParamFields = "creative_ids"
 	GetAdsAdQueryParamFieldsCreativeAssetURL GetAdsAdQueryParamFields = "creative_asset_url"
 	GetAdsAdQueryParamFieldsAdCopy           GetAdsAdQueryParamFields = "ad_copy"
 	GetAdsAdQueryParamFieldsHeadline         GetAdsAdQueryParamFields = "headline"
@@ -28,6 +30,7 @@ const (
 	GetAdsAdQueryParamFieldsCta              GetAdsAdQueryParamFields = "cta"
 	GetAdsAdQueryParamFieldsFinalURL         GetAdsAdQueryParamFields = "final_url"
 	GetAdsAdQueryParamFieldsTargeting        GetAdsAdQueryParamFields = "targeting"
+	GetAdsAdQueryParamFieldsIsActive         GetAdsAdQueryParamFields = "is_active"
 	GetAdsAdQueryParamFieldsRaw              GetAdsAdQueryParamFields = "raw"
 )
 
@@ -52,11 +55,15 @@ func (e *GetAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
+	case "item_id":
+		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "status":
 		fallthrough
 	case "ad_type":
+		fallthrough
+	case "creative_ids":
 		fallthrough
 	case "creative_asset_url":
 		fallthrough
@@ -71,6 +78,8 @@ func (e *GetAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "final_url":
 		fallthrough
 	case "targeting":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = GetAdsAdQueryParamFields(v)

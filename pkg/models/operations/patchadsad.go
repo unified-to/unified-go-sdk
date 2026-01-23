@@ -18,9 +18,11 @@ const (
 	PatchAdsAdQueryParamFieldsName             PatchAdsAdQueryParamFields = "name"
 	PatchAdsAdQueryParamFieldsCampaignID       PatchAdsAdQueryParamFields = "campaign_id"
 	PatchAdsAdQueryParamFieldsGroupID          PatchAdsAdQueryParamFields = "group_id"
+	PatchAdsAdQueryParamFieldsItemID           PatchAdsAdQueryParamFields = "item_id"
 	PatchAdsAdQueryParamFieldsOrganizationID   PatchAdsAdQueryParamFields = "organization_id"
-	PatchAdsAdQueryParamFieldsIsActive         PatchAdsAdQueryParamFields = "is_active"
+	PatchAdsAdQueryParamFieldsStatus           PatchAdsAdQueryParamFields = "status"
 	PatchAdsAdQueryParamFieldsAdType           PatchAdsAdQueryParamFields = "ad_type"
+	PatchAdsAdQueryParamFieldsCreativeIds      PatchAdsAdQueryParamFields = "creative_ids"
 	PatchAdsAdQueryParamFieldsCreativeAssetURL PatchAdsAdQueryParamFields = "creative_asset_url"
 	PatchAdsAdQueryParamFieldsAdCopy           PatchAdsAdQueryParamFields = "ad_copy"
 	PatchAdsAdQueryParamFieldsHeadline         PatchAdsAdQueryParamFields = "headline"
@@ -28,6 +30,7 @@ const (
 	PatchAdsAdQueryParamFieldsCta              PatchAdsAdQueryParamFields = "cta"
 	PatchAdsAdQueryParamFieldsFinalURL         PatchAdsAdQueryParamFields = "final_url"
 	PatchAdsAdQueryParamFieldsTargeting        PatchAdsAdQueryParamFields = "targeting"
+	PatchAdsAdQueryParamFieldsIsActive         PatchAdsAdQueryParamFields = "is_active"
 	PatchAdsAdQueryParamFieldsRaw              PatchAdsAdQueryParamFields = "raw"
 )
 
@@ -52,11 +55,15 @@ func (e *PatchAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
+	case "item_id":
+		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "status":
 		fallthrough
 	case "ad_type":
+		fallthrough
+	case "creative_ids":
 		fallthrough
 	case "creative_asset_url":
 		fallthrough
@@ -71,6 +78,8 @@ func (e *PatchAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "final_url":
 		fallthrough
 	case "targeting":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = PatchAdsAdQueryParamFields(v)

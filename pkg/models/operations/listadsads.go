@@ -18,9 +18,11 @@ const (
 	ListAdsAdsQueryParamFieldsName             ListAdsAdsQueryParamFields = "name"
 	ListAdsAdsQueryParamFieldsCampaignID       ListAdsAdsQueryParamFields = "campaign_id"
 	ListAdsAdsQueryParamFieldsGroupID          ListAdsAdsQueryParamFields = "group_id"
+	ListAdsAdsQueryParamFieldsItemID           ListAdsAdsQueryParamFields = "item_id"
 	ListAdsAdsQueryParamFieldsOrganizationID   ListAdsAdsQueryParamFields = "organization_id"
-	ListAdsAdsQueryParamFieldsIsActive         ListAdsAdsQueryParamFields = "is_active"
+	ListAdsAdsQueryParamFieldsStatus           ListAdsAdsQueryParamFields = "status"
 	ListAdsAdsQueryParamFieldsAdType           ListAdsAdsQueryParamFields = "ad_type"
+	ListAdsAdsQueryParamFieldsCreativeIds      ListAdsAdsQueryParamFields = "creative_ids"
 	ListAdsAdsQueryParamFieldsCreativeAssetURL ListAdsAdsQueryParamFields = "creative_asset_url"
 	ListAdsAdsQueryParamFieldsAdCopy           ListAdsAdsQueryParamFields = "ad_copy"
 	ListAdsAdsQueryParamFieldsHeadline         ListAdsAdsQueryParamFields = "headline"
@@ -28,6 +30,7 @@ const (
 	ListAdsAdsQueryParamFieldsCta              ListAdsAdsQueryParamFields = "cta"
 	ListAdsAdsQueryParamFieldsFinalURL         ListAdsAdsQueryParamFields = "final_url"
 	ListAdsAdsQueryParamFieldsTargeting        ListAdsAdsQueryParamFields = "targeting"
+	ListAdsAdsQueryParamFieldsIsActive         ListAdsAdsQueryParamFields = "is_active"
 	ListAdsAdsQueryParamFieldsRaw              ListAdsAdsQueryParamFields = "raw"
 )
 
@@ -52,11 +55,15 @@ func (e *ListAdsAdsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
+	case "item_id":
+		fallthrough
 	case "organization_id":
 		fallthrough
-	case "is_active":
+	case "status":
 		fallthrough
 	case "ad_type":
+		fallthrough
+	case "creative_ids":
 		fallthrough
 	case "creative_asset_url":
 		fallthrough
@@ -71,6 +78,8 @@ func (e *ListAdsAdsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "final_url":
 		fallthrough
 	case "targeting":
+		fallthrough
+	case "is_active":
 		fallthrough
 	case "raw":
 		*e = ListAdsAdsQueryParamFields(v)

@@ -204,6 +204,10 @@
 | `PropertyConnectionPermissionsAdsReportRead`                | ads_report_read                                             |
 | `PropertyConnectionPermissionsAdsOrganizationRead`          | ads_organization_read                                       |
 | `PropertyConnectionPermissionsAdsOrganizationWrite`         | ads_organization_write                                      |
+| `PropertyConnectionPermissionsAdsCreativeRead`              | ads_creative_read                                           |
+| `PropertyConnectionPermissionsAdsCreativeWrite`             | ads_creative_write                                          |
+| `PropertyConnectionPermissionsAdsInsertionorderRead`        | ads_insertionorder_read                                     |
+| `PropertyConnectionPermissionsAdsInsertionorderWrite`       | ads_insertionorder_write                                    |
 | `PropertyConnectionPermissionsFormsFormRead`                | forms_form_read                                             |
 | `PropertyConnectionPermissionsFormsFormWrite`               | forms_form_write                                            |
 | `PropertyConnectionPermissionsFormsSubmissionRead`          | forms_submission_read                                       |

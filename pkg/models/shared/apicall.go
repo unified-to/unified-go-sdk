@@ -47,6 +47,7 @@ type APICall struct {
 	Size            *float64    `json:"size,omitempty"`
 	Status          string      `json:"status"`
 	Type            APICallType `json:"type"`
+	UserAgent       *string     `json:"user_agent,omitempty"`
 	WebhookID       *string     `json:"webhook_id,omitempty"`
 	WorkspaceID     *string     `json:"workspace_id,omitempty"`
 }
@@ -165,6 +166,13 @@ func (a *APICall) GetType() APICallType {
 		return APICallType("")
 	}
 	return a.Type
+}
+
+func (a *APICall) GetUserAgent() *string {
+	if a == nil {
+		return nil
+	}
+	return a.UserAgent
 }
 
 func (a *APICall) GetWebhookID() *string {

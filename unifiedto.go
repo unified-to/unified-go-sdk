@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.797.1
+// Generated from OpenAPI doc version 1.0 and generator version 2.799.0
 
 import (
 	"context"
@@ -80,7 +80,9 @@ type UnifiedTo struct {
 	Ads               *Ads
 	Ad                *Ad
 	Campaign          *Campaign
+	Creative          *Creative
 	Group             *Group
+	Insertionorder    *Insertionorder
 	Ats               *Ats
 	Activity          *Activity
 	Application       *Application
@@ -258,9 +260,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.20",
+		SDKVersion: "0.36.21",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.20 2.797.1 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.21 2.799.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -304,7 +306,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Ads = newAds(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ad = newAd(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Campaign = newCampaign(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Creative = newCreative(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Activity = newActivity(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Application = newApplication(sdk, sdk.sdkConfiguration, sdk.hooks)

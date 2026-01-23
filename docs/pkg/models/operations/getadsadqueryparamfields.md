@@ -11,9 +11,11 @@
 | `GetAdsAdQueryParamFieldsName`             | name                                       |
 | `GetAdsAdQueryParamFieldsCampaignID`       | campaign_id                                |
 | `GetAdsAdQueryParamFieldsGroupID`          | group_id                                   |
+| `GetAdsAdQueryParamFieldsItemID`           | item_id                                    |
 | `GetAdsAdQueryParamFieldsOrganizationID`   | organization_id                            |
-| `GetAdsAdQueryParamFieldsIsActive`         | is_active                                  |
+| `GetAdsAdQueryParamFieldsStatus`           | status                                     |
 | `GetAdsAdQueryParamFieldsAdType`           | ad_type                                    |
+| `GetAdsAdQueryParamFieldsCreativeIds`      | creative_ids                               |
 | `GetAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                         |
 | `GetAdsAdQueryParamFieldsAdCopy`           | ad_copy                                    |
 | `GetAdsAdQueryParamFieldsHeadline`         | headline                                   |
@@ -21,4 +23,5 @@
 | `GetAdsAdQueryParamFieldsCta`              | cta                                        |
 | `GetAdsAdQueryParamFieldsFinalURL`         | final_url                                  |
 | `GetAdsAdQueryParamFieldsTargeting`        | targeting                                  |
+| `GetAdsAdQueryParamFieldsIsActive`         | is_active                                  |
 | `GetAdsAdQueryParamFieldsRaw`              | raw                                        |
