@@ -32,24 +32,26 @@ func (e *APICallType) IsExact() bool {
 }
 
 type APICall struct {
-	ConnectionID    *string     `json:"connection_id,omitempty"`
-	CreatedAt       *time.Time  `json:"created_at,omitempty"`
-	Environment     *string     `default:"Production" json:"environment"`
-	Error           *string     `json:"error,omitempty"`
-	ExternalXref    *string     `json:"external_xref,omitempty"`
-	ID              *string     `json:"id,omitempty"`
-	IntegrationType string      `json:"integration_type"`
-	IPAddress       *string     `json:"ip_address,omitempty"`
-	IsBillable      *bool       `json:"is_billable,omitempty"`
-	Method          string      `json:"method"`
-	Name            string      `json:"name"`
-	Path            string      `json:"path"`
-	Size            *float64    `json:"size,omitempty"`
-	Status          string      `json:"status"`
-	Type            APICallType `json:"type"`
-	UserAgent       *string     `json:"user_agent,omitempty"`
-	WebhookID       *string     `json:"webhook_id,omitempty"`
-	WorkspaceID     *string     `json:"workspace_id,omitempty"`
+	ConnectionID        *string     `json:"connection_id,omitempty"`
+	CreatedAt           *time.Time  `json:"created_at,omitempty"`
+	EndapiResponseTime  *float64    `json:"endapi_response_time,omitempty"`
+	Environment         *string     `default:"Production" json:"environment"`
+	Error               *string     `json:"error,omitempty"`
+	ExternalXref        *string     `json:"external_xref,omitempty"`
+	ID                  *string     `json:"id,omitempty"`
+	IntegrationType     string      `json:"integration_type"`
+	IPAddress           *string     `json:"ip_address,omitempty"`
+	IsBillable          *bool       `json:"is_billable,omitempty"`
+	Method              string      `json:"method"`
+	Name                string      `json:"name"`
+	Path                string      `json:"path"`
+	Size                *float64    `json:"size,omitempty"`
+	Status              string      `json:"status"`
+	Type                APICallType `json:"type"`
+	UnifiedResponseTime *float64    `json:"unified_response_time,omitempty"`
+	UserAgent           *string     `json:"user_agent,omitempty"`
+	WebhookID           *string     `json:"webhook_id,omitempty"`
+	WorkspaceID         *string     `json:"workspace_id,omitempty"`
 }
 
 func (a APICall) MarshalJSON() ([]byte, error) {
@@ -75,6 +77,13 @@ func (a *APICall) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return a.CreatedAt
+}
+
+func (a *APICall) GetEndapiResponseTime() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.EndapiResponseTime
 }
 
 func (a *APICall) GetEnvironment() *string {
@@ -166,6 +175,13 @@ func (a *APICall) GetType() APICallType {
 		return APICallType("")
 	}
 	return a.Type
+}
+
+func (a *APICall) GetUnifiedResponseTime() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.UnifiedResponseTime
 }
 
 func (a *APICall) GetUserAgent() *string {

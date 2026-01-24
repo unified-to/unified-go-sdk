@@ -10,8 +10,11 @@ import (
 // Connection - A connection represents a specific authentication of an integration.
 type Connection struct {
 	// An authentication object that represents a specific authorized user's connection to an integration.
-	Auth       *PropertyConnectionAuth `json:"auth,omitempty"`
-	AuthAwsArn *string                 `json:"auth_aws_arn,omitempty"`
+	Auth                *PropertyConnectionAuth `json:"auth,omitempty"`
+	AuthAwsArn          *string                 `json:"auth_aws_arn,omitempty"`
+	AuthAzureKeyvaultID *string                 `json:"auth_azure_keyvault_id,omitempty"`
+	AuthGcpSecretName   *string                 `json:"auth_gcp_secret_name,omitempty"`
+	AuthHashiVaultPath  *string                 `json:"auth_hashi_vault_path,omitempty"`
 	// The Integration categories that this connection supports
 	Categories      []PropertyConnectionCategories  `json:"categories"`
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
@@ -51,6 +54,27 @@ func (c *Connection) GetAuthAwsArn() *string {
 		return nil
 	}
 	return c.AuthAwsArn
+}
+
+func (c *Connection) GetAuthAzureKeyvaultID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.AuthAzureKeyvaultID
+}
+
+func (c *Connection) GetAuthGcpSecretName() *string {
+	if c == nil {
+		return nil
+	}
+	return c.AuthGcpSecretName
+}
+
+func (c *Connection) GetAuthHashiVaultPath() *string {
+	if c == nil {
+		return nil
+	}
+	return c.AuthHashiVaultPath
 }
 
 func (c *Connection) GetCategories() []PropertyConnectionCategories {
