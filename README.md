@@ -968,7 +968,9 @@ func main() {
 * [CreateShippingLabel](docs/sdks/label/README.md#createshippinglabel) - Create a label
 * [GetShippingLabel](docs/sdks/label/README.md#getshippinglabel) - Retrieve a label
 * [ListShippingLabels](docs/sdks/label/README.md#listshippinglabels) - List all labels
+* [PatchShippingLabel](docs/sdks/label/README.md#patchshippinglabel) - Update a label
 * [RemoveShippingLabel](docs/sdks/label/README.md#removeshippinglabel) - Remove a label
+* [UpdateShippingLabel](docs/sdks/label/README.md#updateshippinglabel) - Update a label
 
 ### [Lead](docs/sdks/lead/README.md)
 
@@ -1256,7 +1258,6 @@ func main() {
 ### [Rate](docs/sdks/rate/README.md)
 
 * [CreateShippingRate](docs/sdks/rate/README.md#createshippingrate) - Create a rate
-* [GetShippingRate](docs/sdks/rate/README.md#getshippingrate) - Retrieve a rate
 
 ### [Recording](docs/sdks/recording/README.md)
 
@@ -1396,19 +1397,18 @@ func main() {
 * [CreateShippingLabel](docs/sdks/shipping/README.md#createshippinglabel) - Create a label
 * [CreateShippingRate](docs/sdks/shipping/README.md#createshippingrate) - Create a rate
 * [CreateShippingShipment](docs/sdks/shipping/README.md#createshippingshipment) - Create a shipment
-* [CreateShippingTracking](docs/sdks/shipping/README.md#createshippingtracking) - Create a tracking
 * [GetShippingCarrier](docs/sdks/shipping/README.md#getshippingcarrier) - Retrieve a carrier
 * [GetShippingLabel](docs/sdks/shipping/README.md#getshippinglabel) - Retrieve a label
-* [GetShippingRate](docs/sdks/shipping/README.md#getshippingrate) - Retrieve a rate
 * [GetShippingShipment](docs/sdks/shipping/README.md#getshippingshipment) - Retrieve a shipment
 * [GetShippingTracking](docs/sdks/shipping/README.md#getshippingtracking) - Retrieve a tracking
 * [ListShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
 * [ListShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
 * [ListShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
-* [ListShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
+* [PatchShippingLabel](docs/sdks/shipping/README.md#patchshippinglabel) - Update a label
 * [PatchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
 * [RemoveShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
 * [RemoveShippingShipment](docs/sdks/shipping/README.md#removeshippingshipment) - Remove a shipment
+* [UpdateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [UpdateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
 ### [Space](docs/sdks/space/README.md)
@@ -1536,9 +1536,7 @@ func main() {
 
 ### [Tracking](docs/sdks/tracking/README.md)
 
-* [CreateShippingTracking](docs/sdks/tracking/README.md#createshippingtracking) - Create a tracking
 * [GetShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
-* [ListShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

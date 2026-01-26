@@ -7,19 +7,18 @@
 * [CreateShippingLabel](#createshippinglabel) - Create a label
 * [CreateShippingRate](#createshippingrate) - Create a rate
 * [CreateShippingShipment](#createshippingshipment) - Create a shipment
-* [CreateShippingTracking](#createshippingtracking) - Create a tracking
 * [GetShippingCarrier](#getshippingcarrier) - Retrieve a carrier
 * [GetShippingLabel](#getshippinglabel) - Retrieve a label
-* [GetShippingRate](#getshippingrate) - Retrieve a rate
 * [GetShippingShipment](#getshippingshipment) - Retrieve a shipment
 * [GetShippingTracking](#getshippingtracking) - Retrieve a tracking
 * [ListShippingCarriers](#listshippingcarriers) - List all carriers
 * [ListShippingLabels](#listshippinglabels) - List all labels
 * [ListShippingShipments](#listshippingshipments) - List all shipments
-* [ListShippingTrackings](#listshippingtrackings) - List all trackings
+* [PatchShippingLabel](#patchshippinglabel) - Update a label
 * [PatchShippingShipment](#patchshippingshipment) - Update a shipment
 * [RemoveShippingLabel](#removeshippinglabel) - Remove a label
 * [RemoveShippingShipment](#removeshippingshipment) - Remove a shipment
+* [UpdateShippingLabel](#updateshippinglabel) - Update a label
 * [UpdateShippingShipment](#updateshippingshipment) - Update a shipment
 
 ## CreateShippingLabel
@@ -190,62 +189,6 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateShippingTracking
-
-Create a tracking
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="createShippingTracking" method="post" path="/shipping/{connection_id}/tracking" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Shipping.CreateShippingTracking(ctx, operations.CreateShippingTrackingRequest{
-        ShippingTracking: shared.ShippingTracking{},
-        ConnectionID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ShippingTracking != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.CreateShippingTrackingRequest](../../pkg/models/operations/createshippingtrackingrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.CreateShippingTrackingResponse](../../pkg/models/operations/createshippingtrackingresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
 ## GetShippingCarrier
 
 Retrieve a carrier
@@ -349,61 +292,6 @@ func main() {
 ### Response
 
 **[*operations.GetShippingLabelResponse](../../pkg/models/operations/getshippinglabelresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## GetShippingRate
-
-Retrieve a rate
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="getShippingRate" method="get" path="/shipping/{connection_id}/rate/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Shipping.GetShippingRate(ctx, operations.GetShippingRateRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ShippingRate != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetShippingRateRequest](../../pkg/models/operations/getshippingraterequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.GetShippingRateResponse](../../pkg/models/operations/getshippingrateresponse.md), error**
 
 ### Errors
 
@@ -683,19 +571,20 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListShippingTrackings
+## PatchShippingLabel
 
-List all trackings
+Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+<!-- UsageSnippet language="go" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -707,13 +596,15 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipping.ListShippingTrackings(ctx, operations.ListShippingTrackingsRequest{
+    res, err := s.Shipping.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
+        ShippingLabel: shared.ShippingLabel{},
         ConnectionID: "<id>",
+        ID: "<id>",
     })
     if err != nil {
         log.Fatal(err)
     }
-    if res.ShippingTrackings != nil {
+    if res.ShippingLabel != nil {
         // handle response
     }
 }
@@ -721,15 +612,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListShippingTrackingsRequest](../../pkg/models/operations/listshippingtrackingsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchShippingLabelRequest](../../pkg/models/operations/patchshippinglabelrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListShippingTrackingsResponse](../../pkg/models/operations/listshippingtrackingsresponse.md), error**
+**[*operations.PatchShippingLabelResponse](../../pkg/models/operations/patchshippinglabelresponse.md), error**
 
 ### Errors
 
@@ -897,6 +788,63 @@ func main() {
 ### Response
 
 **[*operations.RemoveShippingShipmentResponse](../../pkg/models/operations/removeshippingshipmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateShippingLabel
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Shipping.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
+        ShippingLabel: shared.ShippingLabel{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ShippingLabel != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.UpdateShippingLabelRequest](../../pkg/models/operations/updateshippinglabelrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.UpdateShippingLabelResponse](../../pkg/models/operations/updateshippinglabelresponse.md), error**
 
 ### Errors
 
