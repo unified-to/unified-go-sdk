@@ -16,6 +16,7 @@ const (
 	UpdateAccountingExpenseQueryParamFieldsCreatedAt        UpdateAccountingExpenseQueryParamFields = "created_at"
 	UpdateAccountingExpenseQueryParamFieldsUpdatedAt        UpdateAccountingExpenseQueryParamFields = "updated_at"
 	UpdateAccountingExpenseQueryParamFieldsUserID           UpdateAccountingExpenseQueryParamFields = "user_id"
+	UpdateAccountingExpenseQueryParamFieldsContactID        UpdateAccountingExpenseQueryParamFields = "contact_id"
 	UpdateAccountingExpenseQueryParamFieldsName             UpdateAccountingExpenseQueryParamFields = "name"
 	UpdateAccountingExpenseQueryParamFieldsTotalAmount      UpdateAccountingExpenseQueryParamFields = "total_amount"
 	UpdateAccountingExpenseQueryParamFieldsCurrency         UpdateAccountingExpenseQueryParamFields = "currency"
@@ -44,6 +45,8 @@ func (e *UpdateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) err
 	case "updated_at":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "contact_id":
 		fallthrough
 	case "name":
 		fallthrough

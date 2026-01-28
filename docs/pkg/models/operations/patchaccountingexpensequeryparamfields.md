@@ -9,6 +9,7 @@
 | `PatchAccountingExpenseQueryParamFieldsCreatedAt`        | created_at                                               |
 | `PatchAccountingExpenseQueryParamFieldsUpdatedAt`        | updated_at                                               |
 | `PatchAccountingExpenseQueryParamFieldsUserID`           | user_id                                                  |
+| `PatchAccountingExpenseQueryParamFieldsContactID`        | contact_id                                               |
 | `PatchAccountingExpenseQueryParamFieldsName`             | name                                                     |
 | `PatchAccountingExpenseQueryParamFieldsTotalAmount`      | total_amount                                             |
 | `PatchAccountingExpenseQueryParamFieldsCurrency`         | currency                                                 |

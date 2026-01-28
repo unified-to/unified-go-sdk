@@ -8,6 +8,8 @@
 | `AccountID`        | **string*          | :heavy_minus_sign: | N/A                |
 | `CategoryIds`      | []*string*         | :heavy_minus_sign: | N/A                |
 | `ContactID`        | **string*          | :heavy_minus_sign: | N/A                |
+| `CreditAmount`     | **float64*         | :heavy_minus_sign: | N/A                |
+| `DebitAmount`      | **float64*         | :heavy_minus_sign: | N/A                |
 | `Description`      | **string*          | :heavy_minus_sign: | N/A                |
 | `GroupID`          | **string*          | :heavy_minus_sign: | N/A                |
 | `ID`               | **string*          | :heavy_minus_sign: | N/A                |

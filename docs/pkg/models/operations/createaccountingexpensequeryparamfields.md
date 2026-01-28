@@ -9,6 +9,7 @@
 | `CreateAccountingExpenseQueryParamFieldsCreatedAt`        | created_at                                                |
 | `CreateAccountingExpenseQueryParamFieldsUpdatedAt`        | updated_at                                                |
 | `CreateAccountingExpenseQueryParamFieldsUserID`           | user_id                                                   |
+| `CreateAccountingExpenseQueryParamFieldsContactID`        | contact_id                                                |
 | `CreateAccountingExpenseQueryParamFieldsName`             | name                                                      |
 | `CreateAccountingExpenseQueryParamFieldsTotalAmount`      | total_amount                                              |
 | `CreateAccountingExpenseQueryParamFieldsCurrency`         | currency                                                  |

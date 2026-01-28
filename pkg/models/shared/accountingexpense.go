@@ -10,6 +10,7 @@ import (
 type AccountingExpense struct {
 	ApprovedAt       *time.Time           `json:"approved_at,omitempty"`
 	ApproverUserID   *string              `json:"approver_user_id,omitempty"`
+	ContactID        *string              `json:"contact_id,omitempty"`
 	CreatedAt        *time.Time           `json:"created_at,omitempty"`
 	Currency         *string              `json:"currency,omitempty"`
 	ID               *string              `json:"id,omitempty"`
@@ -47,6 +48,13 @@ func (a *AccountingExpense) GetApproverUserID() *string {
 		return nil
 	}
 	return a.ApproverUserID
+}
+
+func (a *AccountingExpense) GetContactID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ContactID
 }
 
 func (a *AccountingExpense) GetCreatedAt() *time.Time {

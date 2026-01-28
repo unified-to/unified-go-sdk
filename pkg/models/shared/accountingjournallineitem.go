@@ -3,17 +3,19 @@
 package shared
 
 type AccountingJournalLineitem struct {
-	AccountID   *string  `json:"account_id,omitempty"`
-	CategoryIds []string `json:"category_ids,omitempty"`
-	ContactID   *string  `json:"contact_id,omitempty"`
-	Description *string  `json:"description,omitempty"`
-	GroupID     *string  `json:"group_id,omitempty"`
-	ID          *string  `json:"id,omitempty"`
-	InvoiceID   *string  `json:"invoice_id,omitempty"`
-	PaymentID   *string  `json:"payment_id,omitempty"`
-	ProjectID   *string  `json:"project_id,omitempty"`
-	TaxAmount   *float64 `json:"tax_amount,omitempty"`
-	TotalAmount *float64 `json:"total_amount,omitempty"`
+	AccountID    *string  `json:"account_id,omitempty"`
+	CategoryIds  []string `json:"category_ids,omitempty"`
+	ContactID    *string  `json:"contact_id,omitempty"`
+	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	DebitAmount  *float64 `json:"debit_amount,omitempty"`
+	Description  *string  `json:"description,omitempty"`
+	GroupID      *string  `json:"group_id,omitempty"`
+	ID           *string  `json:"id,omitempty"`
+	InvoiceID    *string  `json:"invoice_id,omitempty"`
+	PaymentID    *string  `json:"payment_id,omitempty"`
+	ProjectID    *string  `json:"project_id,omitempty"`
+	TaxAmount    *float64 `json:"tax_amount,omitempty"`
+	TotalAmount  *float64 `json:"total_amount,omitempty"`
 }
 
 func (a *AccountingJournalLineitem) GetAccountID() *string {
@@ -35,6 +37,20 @@ func (a *AccountingJournalLineitem) GetContactID() *string {
 		return nil
 	}
 	return a.ContactID
+}
+
+func (a *AccountingJournalLineitem) GetCreditAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.CreditAmount
+}
+
+func (a *AccountingJournalLineitem) GetDebitAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.DebitAmount
 }
 
 func (a *AccountingJournalLineitem) GetDescription() *string {
