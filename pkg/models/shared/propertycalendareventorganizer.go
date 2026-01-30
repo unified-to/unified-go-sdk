@@ -27,6 +27,7 @@ func (e *PropertyCalendarEventOrganizerStatus) IsExact() bool {
 
 type PropertyCalendarEventOrganizer struct {
 	Email    *string                               `json:"email,omitempty"`
+	IsCohost *bool                                 `json:"is_cohost,omitempty"`
 	Name     *string                               `json:"name,omitempty"`
 	Required *bool                                 `json:"required,omitempty"`
 	Status   *PropertyCalendarEventOrganizerStatus `json:"status,omitempty"`
@@ -38,6 +39,13 @@ func (p *PropertyCalendarEventOrganizer) GetEmail() *string {
 		return nil
 	}
 	return p.Email
+}
+
+func (p *PropertyCalendarEventOrganizer) GetIsCohost() *bool {
+	if p == nil {
+		return nil
+	}
+	return p.IsCohost
 }
 
 func (p *PropertyCalendarEventOrganizer) GetName() *string {

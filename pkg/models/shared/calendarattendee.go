@@ -27,6 +27,7 @@ func (e *CalendarAttendeeStatus) IsExact() bool {
 
 type CalendarAttendee struct {
 	Email    *string                 `json:"email,omitempty"`
+	IsCohost *bool                   `json:"is_cohost,omitempty"`
 	Name     *string                 `json:"name,omitempty"`
 	Required *bool                   `json:"required,omitempty"`
 	Status   *CalendarAttendeeStatus `json:"status,omitempty"`
@@ -38,6 +39,13 @@ func (c *CalendarAttendee) GetEmail() *string {
 		return nil
 	}
 	return c.Email
+}
+
+func (c *CalendarAttendee) GetIsCohost() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsCohost
 }
 
 func (c *CalendarAttendee) GetName() *string {

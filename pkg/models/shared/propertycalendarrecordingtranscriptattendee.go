@@ -27,6 +27,7 @@ func (e *PropertyCalendarRecordingTranscriptAttendeeStatus) IsExact() bool {
 
 type PropertyCalendarRecordingTranscriptAttendee struct {
 	Email    *string                                            `json:"email,omitempty"`
+	IsCohost *bool                                              `json:"is_cohost,omitempty"`
 	Name     *string                                            `json:"name,omitempty"`
 	Required *bool                                              `json:"required,omitempty"`
 	Status   *PropertyCalendarRecordingTranscriptAttendeeStatus `json:"status,omitempty"`
@@ -38,6 +39,13 @@ func (p *PropertyCalendarRecordingTranscriptAttendee) GetEmail() *string {
 		return nil
 	}
 	return p.Email
+}
+
+func (p *PropertyCalendarRecordingTranscriptAttendee) GetIsCohost() *bool {
+	if p == nil {
+		return nil
+	}
+	return p.IsCohost
 }
 
 func (p *PropertyCalendarRecordingTranscriptAttendee) GetName() *string {

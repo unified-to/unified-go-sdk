@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 842cdb22961f557bcd41a4dc4569932b
+  docChecksum: 92ddc604425066fbaa39dfc01dd91097
   docVersion: "1.0"
-  speakeasyVersion: 1.700.1
-  generationVersion: 2.801.0
-  releaseVersion: 0.36.24
-  configChecksum: e1be99397880b8301b7321935cc6f10d
+  speakeasyVersion: 1.700.2
+  generationVersion: 2.801.2
+  releaseVersion: 0.36.25
+  configChecksum: 519749ffbbeb30674730d7773f8720f6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 6319b59b-34be-441d-b89f-f70c92d0c61c
-  pristine_commit_hash: 06660e76e093d0240ca1daa4f71540992f74a099
-  pristine_tree_hash: 553b13a6f5d31003691f15998640345f662f616a
+  generation_id: 6eda5c6e-edac-4053-a7d9-dc0f89c1cecb
+  pristine_commit_hash: db906d5726ffb248eeb2d4f6a3a22ddd4173cc5b
+  pristine_tree_hash: 0f4f355b32ebc4afb4849ebe8fde96f914ef40f3
 features:
   go:
     acceptHeaders: 2.81.2
@@ -7367,8 +7367,8 @@ trackedFiles:
     pristine_git_object: 0593848ade118ab9f65decd29dad8d0c68666eec
   docs/pkg/models/shared/calendarattendee.md:
     id: d318ffe1ceea
-    last_write_checksum: sha1:c551a98061bd0f85b054ed4556a4ee45315e0688
-    pristine_git_object: 818509603c9911a2ce4db5ffa318b5bc714ad9cc
+    last_write_checksum: sha1:4b217b0c8bca7f2659d22fbd5cd7c309eb3e1303
+    pristine_git_object: 8385615d3c0cf7a0483bfe5e2ccbec5544f1362e
   docs/pkg/models/shared/calendarattendeestatus.md:
     id: 0864fe031d00
     last_write_checksum: sha1:973eec349292bbed639e3e90dd1acfbfe6e64872
@@ -8791,8 +8791,8 @@ trackedFiles:
     pristine_git_object: 78784799de7525fa0da72c59ddf680bba9a303f4
   docs/pkg/models/shared/propertycalendareventorganizer.md:
     id: 2b28c1bfc7c4
-    last_write_checksum: sha1:0450411c4ce4756c4d24c7fa4d1aefc8bda5c750
-    pristine_git_object: 7ad85217c453dd25d4b945b9f89256afe381763f
+    last_write_checksum: sha1:caa499d3e827bcf255fda438204d02df2f557fb9
+    pristine_git_object: 5818ece60aaaeed8850ea5e6ebfd24209543ff12
   docs/pkg/models/shared/propertycalendareventorganizerstatus.md:
     id: d4b934a5f4d6
     last_write_checksum: sha1:8c1ca6d70be9884477fbfcfa0a83aa7f1572d6a2
@@ -8803,8 +8803,8 @@ trackedFiles:
     pristine_git_object: 89ed1f0e568e93c9a3d4332aac8bfdb5668a7f51
   docs/pkg/models/shared/propertycalendarrecordingtranscriptattendee.md:
     id: 6396f4c81f2c
-    last_write_checksum: sha1:6655cc93c83375c277b33a54cd752e217dd0359e
-    pristine_git_object: d2b2e3494cc2725beecc51e3f308c683758c176b
+    last_write_checksum: sha1:8c42ef63662ed4e4ab9d9d4ea2831916e5f8ff45
+    pristine_git_object: 4731c8d8fdc1bbe4538b20f56008ac37a393f916
   docs/pkg/models/shared/propertycalendarrecordingtranscriptattendeestatus.md:
     id: ed962974358e
     last_write_checksum: sha1:4de5895c9bb9f6e39117f91347623fad4ba33018
@@ -13131,8 +13131,8 @@ trackedFiles:
     pristine_git_object: 1b7820c43eed6446167f7e6837394057f05367a3
   pkg/models/shared/calendarattendee.go:
     id: a75331a27ac6
-    last_write_checksum: sha1:fd15dd8397fddbc7f8896c6a4da2d78aaf62e6c7
-    pristine_git_object: 9d59e8a487ab74ff98413b3ea8a1902eb5847e36
+    last_write_checksum: sha1:e300401e58fa4a0a656e5c703294753759650d8d
+    pristine_git_object: 068ace147b3a1b38ebc36509addc35378aa0eb7b
   pkg/models/shared/calendarbusy.go:
     id: 830715fdd0a2
     last_write_checksum: sha1:ae2735395589ac106984c5f93ee20332965f8b92
@@ -13679,16 +13679,16 @@ trackedFiles:
     pristine_git_object: 4a0e78008271fe405d5fc6d67f7c2c9657ca87c4
   pkg/models/shared/propertycalendareventorganizer.go:
     id: 92319addebb4
-    last_write_checksum: sha1:fe0d220ea7ce2b80af141601c518a31a44dc2820
-    pristine_git_object: 9168e4664c9fdeb1a9cdd68046dbde9cb96ca764
+    last_write_checksum: sha1:6b2963a1d4b06921327c9e8b29b9a2f3988d7003
+    pristine_git_object: a6f588f0b05e9dcafb614050d94ae3cd41b9a1bb
   pkg/models/shared/propertycalendareventrecurrenceondays.go:
     id: 966829fbf5db
     last_write_checksum: sha1:f7b6616e34eded8e1ea726e4ce6b19c8fcd2ffb7
     pristine_git_object: 0ea3649fafc74e1cc3b0b0bc7f363df799ef9151
   pkg/models/shared/propertycalendarrecordingtranscriptattendee.go:
     id: 2bb0cc2daf0b
-    last_write_checksum: sha1:b43d6b3c227fab48f2ea77d5eb83daffeb05f177
-    pristine_git_object: 72ab20e4d8652f4784a013f7403d011fdf5d83bd
+    last_write_checksum: sha1:23cefc95fdb4a8ac10445b41f9481bf13138d1eb
+    pristine_git_object: 224983a3a929296a1cff1c46c2c900f0d71ec2db
   pkg/models/shared/propertycommercelocationaddress.go:
     id: 90491ef20eb2
     last_write_checksum: sha1:1c877a2c7807a5d5c92d3f494485df3c1602f032
@@ -14363,8 +14363,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:239cd0c5e1933c5f37e1b5032410a9f84e8fb0f3
-    pristine_git_object: eb7a153456e9bdb6f13a89348584f4c9eaee2e52
+    last_write_checksum: sha1:4e1f87c0071435b53dc82ffe5ec6a9ba2554b7e9
+    pristine_git_object: da0bfb55a52f3bbda08b52e9f6982ab41e5b54ba
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -19877,7 +19877,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Accounting.CreateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Accounting.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Accounting.GetAccountingJournal()`:  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Accounting.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].ContactId` **Added**\n* `UnifiedTo.Accounting.ListAccountingJournals()`:  `response.[].Lineitems[]` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Accounting.PatchAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Expense.CreateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Expense.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Expense.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].ContactId` **Added**\n* `UnifiedTo.Expense.PatchAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Expense.UpdateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response.ContactId` **Added**\n* `UnifiedTo.Journal.CreateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Journal.GetAccountingJournal()`:  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Journal.ListAccountingJournals()`:  `response.[].Lineitems[]` **Changed**\n* `UnifiedTo.Journal.PatchAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n* `UnifiedTo.Journal.UpdateAccountingJournal()`: \n  *  `request.Request.AccountingJournal.Lineitems[]` **Changed**\n  *  `response.Lineitems[]` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Calendar.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Calendar.GetCalendarEvent()`:  `response` **Changed**\n* `UnifiedTo.Calendar.GetCalendarRecording()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Calendar.ListCalendarEvents()`:  `response.[]` **Changed**\n* `UnifiedTo.Calendar.ListCalendarRecordings()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Calendar.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Calendar.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Event.CreateCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Event.GetCalendarEvent()`:  `response` **Changed**\n* `UnifiedTo.Event.ListCalendarEvents()`:  `response.[]` **Changed**\n* `UnifiedTo.Event.PatchCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Event.UpdateCalendarEvent()`: \n  *  `request.Request.CalendarEvent` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Recording.GetCalendarRecording()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Recording.ListCalendarRecordings()`:  `response.[].Media[]` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
