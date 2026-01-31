@@ -355,24 +355,30 @@ func main() {
 * [CreateCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [CreateCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
 * [CreateCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
+* [CreateCalendarWebinar](docs/sdks/calendar/README.md#createcalendarwebinar) - Create a webinar
 * [GetCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [GetCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [GetCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
 * [GetCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [GetCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
 * [ListCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [ListCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [ListCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
 * [ListCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
 * [ListCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [ListCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
 * [PatchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [PatchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
 * [PatchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
+* [PatchCalendarWebinar](docs/sdks/calendar/README.md#patchcalendarwebinar) - Update a webinar
 * [RemoveCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
 * [RemoveCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
 * [RemoveCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
+* [RemoveCalendarWebinar](docs/sdks/calendar/README.md#removecalendarwebinar) - Remove a webinar
 * [UpdateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
 * [UpdateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [UpdateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
+* [UpdateCalendarWebinar](docs/sdks/calendar/README.md#updatecalendarwebinar) - Update a webinar
 
 ### [Call](docs/sdks/call/README.md)
 
@@ -1632,6 +1638,15 @@ func main() {
 * [RemoveUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [UpdateUnifiedWebhook](docs/sdks/webhook/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+
+### [Webinar](docs/sdks/webinar/README.md)
+
+* [CreateCalendarWebinar](docs/sdks/webinar/README.md#createcalendarwebinar) - Create a webinar
+* [GetCalendarWebinar](docs/sdks/webinar/README.md#getcalendarwebinar) - Retrieve a webinar
+* [ListCalendarWebinars](docs/sdks/webinar/README.md#listcalendarwebinars) - List all webinars
+* [PatchCalendarWebinar](docs/sdks/webinar/README.md#patchcalendarwebinar) - Update a webinar
+* [RemoveCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
+* [UpdateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

@@ -193,6 +193,8 @@
 | `PropertyConnectionPermissionsCalendarLinkWrite`            | calendar_link_write                                         |
 | `PropertyConnectionPermissionsCalendarRecordingRead`        | calendar_recording_read                                     |
 | `PropertyConnectionPermissionsCalendarRecordingWrite`       | calendar_recording_write                                    |
+| `PropertyConnectionPermissionsCalendarWebinarRead`          | calendar_webinar_read                                       |
+| `PropertyConnectionPermissionsCalendarWebinarWrite`         | calendar_webinar_write                                      |
 | `PropertyConnectionPermissionsEnrichPersonRead`             | enrich_person_read                                          |
 | `PropertyConnectionPermissionsEnrichCompanyRead`            | enrich_company_read                                         |
 | `PropertyConnectionPermissionsAdsAdRead`                    | ads_ad_read                                                 |

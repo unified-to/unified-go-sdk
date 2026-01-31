@@ -1,0 +1,12 @@
+# CalendarWebinarRegistrant
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `Email`                                                                        | **string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `Name`                                                                         | **string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `RegisteredAt`                                                                 | [*time.Time](https://pkg.go.dev/time#Time)                                     | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `RegistrationReference`                                                        | **string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `RegistrationStatus`                                                           | [*shared.RegistrationStatus](../../../pkg/models/shared/registrationstatus.md) | :heavy_minus_sign:                                                             | N/A                                                                            |

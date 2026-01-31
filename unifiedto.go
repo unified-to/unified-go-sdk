@@ -98,6 +98,7 @@ type UnifiedTo struct {
 	Event             *Event
 	Link              *Link
 	Recording         *Recording
+	Webinar           *Webinar
 	Commerce          *Commerce
 	Collection        *Collection
 	Inventory         *Inventory
@@ -260,9 +261,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.25",
+		SDKVersion: "0.36.26",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.25 2.801.2 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.26 2.801.2 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -324,6 +325,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Event = newEvent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Webinar = newWebinar(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commerce = newCommerce(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Collection = newCollection(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
