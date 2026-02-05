@@ -8,6 +8,7 @@ import (
 )
 
 type AccountingExpense struct {
+	AccountID        *string              `json:"account_id,omitempty"`
 	ApprovedAt       *time.Time           `json:"approved_at,omitempty"`
 	ApproverUserID   *string              `json:"approver_user_id,omitempty"`
 	ContactID        *string              `json:"contact_id,omitempty"`
@@ -16,6 +17,8 @@ type AccountingExpense struct {
 	ID               *string              `json:"id,omitempty"`
 	Lineitems        []AccountingLineitem `json:"lineitems,omitempty"`
 	Name             *string              `json:"name,omitempty"`
+	PaymentMethod    *string              `json:"payment_method,omitempty"`
+	PostedAt         *time.Time           `json:"posted_at,omitempty"`
 	Raw              map[string]any       `json:"raw,omitempty"`
 	ReimbursedAmount *float64             `json:"reimbursed_amount,omitempty"`
 	ReimbursedAt     *time.Time           `json:"reimbursed_at,omitempty"`
@@ -34,6 +37,13 @@ func (a *AccountingExpense) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingExpense) GetAccountID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.AccountID
 }
 
 func (a *AccountingExpense) GetApprovedAt() *time.Time {
@@ -90,6 +100,20 @@ func (a *AccountingExpense) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AccountingExpense) GetPaymentMethod() *string {
+	if a == nil {
+		return nil
+	}
+	return a.PaymentMethod
+}
+
+func (a *AccountingExpense) GetPostedAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.PostedAt
 }
 
 func (a *AccountingExpense) GetRaw() map[string]any {

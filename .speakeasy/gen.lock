@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: f1a8d59500c94e46966b2cfaf9ce5506
+  docChecksum: 920d3864f2302ad5f3efefc595c4d0d8
   docVersion: "1.0"
-  speakeasyVersion: 1.700.2
-  generationVersion: 2.801.2
-  releaseVersion: 0.36.26
-  configChecksum: 26804651ef0e05ccbade7c393d7d3f16
+  speakeasyVersion: 1.704.0
+  generationVersion: 2.806.4
+  releaseVersion: 0.36.27
+  configChecksum: 6c26e2264014740c0c7a1c7a32430216
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 7d34f37e-5e2f-47b1-b45e-94433ce90860
-  pristine_commit_hash: 52cb8c201a39e5865e92e44cf4db0f54180f7f8e
-  pristine_tree_hash: b9c46743fc12c40a60896cacc2c604458e5273e8
+  generation_id: 6d9e4ca7-8023-4d85-8cda-b468e075984b
+  pristine_commit_hash: bbd192cc0af6ddc6af48f14fcd12380b13dd1ee7
+  pristine_tree_hash: ee1db3648b1e8e4cf28e1101721c7e80bd5a66db
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.12
-    core: 3.13.10
+    constsAndDefaults: 0.1.13
+    core: 3.13.12
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -34,7 +34,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.3.0
-    unions: 2.87.2
+    unions: 2.87.3
     uploadStreams: 0.1.0
 trackedFiles:
   .gitattributes:
@@ -267,8 +267,8 @@ trackedFiles:
     pristine_git_object: cde0205dd3ca2c1e536db929aa5df44401e984e0
   docs/pkg/models/operations/createaccountingexpensequeryparamfields.md:
     id: 31d17de4fad1
-    last_write_checksum: sha1:0271aec88dfd835612df009c7d642626e6aa3df2
-    pristine_git_object: 9b88a050e061e9c48083e5db4130de0deb2828e4
+    last_write_checksum: sha1:afdb1c1c53b7372a3b76b7e75022688bbfb838be
+    pristine_git_object: 5d3d99fa56c6a38669887bf18523bc15a41d64a3
   docs/pkg/models/operations/createaccountingexpenserequest.md:
     id: cc0f980fdee5
     last_write_checksum: sha1:fb3acb6436c4ee21bf02ffcc9dfc3714c8a622a4
@@ -1407,8 +1407,8 @@ trackedFiles:
     pristine_git_object: 7f58cfb572b344daadcc39a97760bd686bc206af
   docs/pkg/models/operations/getaccountingexpensequeryparamfields.md:
     id: b6aefe18f3a3
-    last_write_checksum: sha1:d84cc70f1ca2cc523e238b9bcda8c381428219a3
-    pristine_git_object: 9598718532ff18e698748a2359431331ea033c62
+    last_write_checksum: sha1:c3f1743515aa1e755d773b4b4801f6935a20c741
+    pristine_git_object: 6a3e81f0a1c9e7c9c0429e6c2676b12d73667469
   docs/pkg/models/operations/getaccountingexpenserequest.md:
     id: c2d5ba3a4e2c
     last_write_checksum: sha1:7c0dd1f3c68d0e54bd8d82c791cda4505e848113
@@ -2731,8 +2731,8 @@ trackedFiles:
     pristine_git_object: d7dd83e904f08cfbf689a0b843e9fc636baa5c85
   docs/pkg/models/operations/listaccountingexpensesqueryparamfields.md:
     id: f187a85243f0
-    last_write_checksum: sha1:0d2504aa166b6ec54f1fc031f982f9661b86e49e
-    pristine_git_object: a50410ba744ee34caefa9627312a93babeff08e3
+    last_write_checksum: sha1:b9aff85545620d73bfc9e43ec21d5cd6479f1d19
+    pristine_git_object: 7511dd1161cd05833fd91db1cc3f51c66621384e
   docs/pkg/models/operations/listaccountingexpensesrequest.md:
     id: c7baf906a196
     last_write_checksum: sha1:31ba4151449d2cba44f34da3722c8b83f83eab1a
@@ -4091,8 +4091,8 @@ trackedFiles:
     pristine_git_object: db447326976bb4439955db30c396af9feca51fa0
   docs/pkg/models/operations/patchaccountingexpensequeryparamfields.md:
     id: a87fcba46623
-    last_write_checksum: sha1:bc3d0ac4a5572e6a9ad0e83dcf0925f6c092d3fe
-    pristine_git_object: 2c1eec0e1852046f28c8847c19e14362ae02b6f9
+    last_write_checksum: sha1:d1201b3f0839c87db0fb2cf23af9944d886fd0ca
+    pristine_git_object: 71c065c37e551a813ab4f667d6c46ec57506e5f6
   docs/pkg/models/operations/patchaccountingexpenserequest.md:
     id: e8523f86267c
     last_write_checksum: sha1:fc26682a3a5bd6ba847311e3369202fc634db007
@@ -5935,8 +5935,8 @@ trackedFiles:
     pristine_git_object: fd86e2bc0b238a434e14e82247245a9edd3cf400
   docs/pkg/models/operations/updateaccountingexpensequeryparamfields.md:
     id: 36ea2e08593c
-    last_write_checksum: sha1:89425f6e47624cb56bae394f750837a01b0116e4
-    pristine_git_object: 6081e5c36c56f19dd51212e7d1bb597e3740552d
+    last_write_checksum: sha1:e990abe1c261e917e4a5e883bd14aa3e8ba1f74d
+    pristine_git_object: a7096c1a5481e92931ac180785876979396419f5
   docs/pkg/models/operations/updateaccountingexpenserequest.md:
     id: 952eafdd2149
     last_write_checksum: sha1:a83c9429ac8236fbff9d6f65c49d29cbaf42a0dc
@@ -7051,8 +7051,8 @@ trackedFiles:
     pristine_git_object: 4983b9e7bc3cb91426787ef1ccaad282ac36c1e8
   docs/pkg/models/shared/accountingexpense.md:
     id: 2b53ce038bf2
-    last_write_checksum: sha1:ed638aa7c195bf699b239d5ee69896468d90d64e
-    pristine_git_object: 8e17ae6b21bb0dc69d84000ac2724562ee08e891
+    last_write_checksum: sha1:a81d92ff781a3f9b6655e38acc5aae3fe8cdfe26
+    pristine_git_object: 18c6cb2d08b2a419434ae79d6ff368fad07dec16
   docs/pkg/models/shared/accountinginvoice.md:
     id: d5a5e4c494ad
     last_write_checksum: sha1:bebb76a179d18cd4db959447a54f53efe14191cd
@@ -10555,8 +10555,8 @@ trackedFiles:
     pristine_git_object: 6df464d69419b56379f2a4beb82d5d4d32bd742a
   pkg/models/operations/createaccountingexpense.go:
     id: ce7cd00e51dd
-    last_write_checksum: sha1:ba216c5d02726aa27365d4d15323e7e58a1c8339
-    pristine_git_object: d10cf6ba8c2197f5ce2ebd9f5a45c3b4c047ee2f
+    last_write_checksum: sha1:a2cbb725dcc5651e3bbca8fdea70617f2e8c3f09
+    pristine_git_object: 416828ffe23065da7923ede50a15451fe659eec6
   pkg/models/operations/createaccountinginvoice.go:
     id: c724f2695804
     last_write_checksum: sha1:9950d9c39b07e8b4163a99419b9f661af07ace80
@@ -10947,8 +10947,8 @@ trackedFiles:
     pristine_git_object: 4f830dc032457daa1560b53aeffc58dc75d64c80
   pkg/models/operations/getaccountingexpense.go:
     id: 1fc51574d226
-    last_write_checksum: sha1:7cb38495ded0d92af70556035c1976e125b9c673
-    pristine_git_object: d1812b6cbb375b36a51d8df5a8e84e151ae9f154
+    last_write_checksum: sha1:40afa036cc2f3073838c49e3d9aa9b665afab812
+    pristine_git_object: c2d73c77937c8c848592b80b21c1eaaaeff10b04
   pkg/models/operations/getaccountinginvoice.go:
     id: 1fcb2c688388
     last_write_checksum: sha1:0dad41b1d333440d28400b62ac0aeb508898b62e
@@ -11399,8 +11399,8 @@ trackedFiles:
     pristine_git_object: d82e6b0020d2214d8bbd13a2d43a21c3489ab2d0
   pkg/models/operations/listaccountingexpenses.go:
     id: 50a465dc3440
-    last_write_checksum: sha1:29497924c516d4eae8a02f343ed18087cbf2a216
-    pristine_git_object: 9f9db93b1898d817db6bfc9e315e4d9a8f3e9ddd
+    last_write_checksum: sha1:f3e781638acd96b5fd33822bf325c54b1372132a
+    pristine_git_object: 3b76ea29651d01c4ed6eaa8b88a3d69b913abd06
   pkg/models/operations/listaccountinginvoices.go:
     id: e8df9bea15e4
     last_write_checksum: sha1:14c70341674c991b58a69674d2debdfe23e53164
@@ -11871,8 +11871,8 @@ trackedFiles:
     pristine_git_object: fa5baa4bf1c0c22876b56f3c5052e4a0d999be0b
   pkg/models/operations/patchaccountingexpense.go:
     id: f62f5e650a78
-    last_write_checksum: sha1:ef80974d7139882e258ab29fcfa24f04f6f4bb7a
-    pristine_git_object: fa44cf1864b7812819a8bcebfde575df340d7863
+    last_write_checksum: sha1:d4f95016e788e2c83c5ba94ac6257dbecf7f1959
+    pristine_git_object: 7c93d4f5e6b3320eb27854b4a9745a88ec628915
   pkg/models/operations/patchaccountinginvoice.go:
     id: 3f8dd1c04fac
     last_write_checksum: sha1:1a063509ca1157f0e2b6a7c2ed35b343834e7bb9
@@ -12615,8 +12615,8 @@ trackedFiles:
     pristine_git_object: e7667b92aa094cfc89a3ff879e0a2de08f3475d5
   pkg/models/operations/updateaccountingexpense.go:
     id: 7c8899f41f80
-    last_write_checksum: sha1:d811de9837e84ae25cb77fd52f72d39f58ca4a54
-    pristine_git_object: 699867c0f48c529022aaf1be3ee0aabca3af7ebd
+    last_write_checksum: sha1:6f1d17ab8114ba02f636711172da56e50f823e20
+    pristine_git_object: 4227fd4b50edd093deaad516f7972ec2fc5bd9ed
   pkg/models/operations/updateaccountinginvoice.go:
     id: 81d6483672f5
     last_write_checksum: sha1:d2eb595a921efe561bec0c12aa1920f793655758
@@ -13031,8 +13031,8 @@ trackedFiles:
     pristine_git_object: 033d719d06a0f3f53f87995a1a13574aa5e1793e
   pkg/models/shared/accountingexpense.go:
     id: 66825ac644ed
-    last_write_checksum: sha1:8b411f145201b6dc4f903fa2efd16e3b43d1ec7b
-    pristine_git_object: 10b28009f01cca6045ab64440e635b01500351d3
+    last_write_checksum: sha1:efda22238e95c1b440c6ead63b308a2964a2df31
+    pristine_git_object: 5bba1ba5e2549b311c6876ea453cad32dd0eb7bf
   pkg/models/shared/accountinginvoice.go:
     id: d99d2f160acd
     last_write_checksum: sha1:a07da6b2937bc576d6fae159b170577f97117ed2
@@ -14507,8 +14507,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:d04a1683846c13b76c32d10c20aba1672eca4931
-    pristine_git_object: e3f76985cf8336c32d6fd836cef9aa994f2f7732
+    last_write_checksum: sha1:9bdeb94a70b5cedddc4e6e10c48627934a66c189
+    pristine_git_object: 517a11c41f337adbf01f82f69856ccee46bf5df4
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -20080,7 +20080,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Calendar.CreateCalendarWebinar()`: **Added**\n* `UnifiedTo.Calendar.GetCalendarWebinar()`: **Added**\n* `UnifiedTo.Calendar.ListCalendarWebinars()`: **Added**\n* `UnifiedTo.Calendar.PatchCalendarWebinar()`: **Added**\n* `UnifiedTo.Calendar.RemoveCalendarWebinar()`: **Added**\n* `UnifiedTo.Calendar.UpdateCalendarWebinar()`: **Added**\n* `UnifiedTo.Webinar.CreateCalendarWebinar()`: **Added**\n* `UnifiedTo.Webinar.GetCalendarWebinar()`: **Added**\n* `UnifiedTo.Webinar.ListCalendarWebinars()`: **Added**\n* `UnifiedTo.Webinar.PatchCalendarWebinar()`: **Added**\n* `UnifiedTo.Webinar.RemoveCalendarWebinar()`: **Added**\n* `UnifiedTo.Webinar.UpdateCalendarWebinar()`: **Added**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType.Enum(calendarWebinar)` **Added**\n  *  `response.ObjectType.Enum(calendarWebinar)` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Accounting.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Accounting.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Expense.CreateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Expense.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Expense.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Expense.PatchAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Expense.UpdateAccountingExpense()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

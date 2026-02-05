@@ -10,7 +10,10 @@
 | `PatchAccountingExpenseQueryParamFieldsUpdatedAt`        | updated_at                                               |
 | `PatchAccountingExpenseQueryParamFieldsUserID`           | user_id                                                  |
 | `PatchAccountingExpenseQueryParamFieldsContactID`        | contact_id                                               |
+| `PatchAccountingExpenseQueryParamFieldsAccountID`        | account_id                                               |
 | `PatchAccountingExpenseQueryParamFieldsName`             | name                                                     |
+| `PatchAccountingExpenseQueryParamFieldsPaymentMethod`    | payment_method                                           |
+| `PatchAccountingExpenseQueryParamFieldsPostedAt`         | posted_at                                                |
 | `PatchAccountingExpenseQueryParamFieldsTotalAmount`      | total_amount                                             |
 | `PatchAccountingExpenseQueryParamFieldsCurrency`         | currency                                                 |
 | `PatchAccountingExpenseQueryParamFieldsTaxAmount`        | tax_amount                                               |

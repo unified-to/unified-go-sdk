@@ -17,7 +17,10 @@ const (
 	PatchAccountingExpenseQueryParamFieldsUpdatedAt        PatchAccountingExpenseQueryParamFields = "updated_at"
 	PatchAccountingExpenseQueryParamFieldsUserID           PatchAccountingExpenseQueryParamFields = "user_id"
 	PatchAccountingExpenseQueryParamFieldsContactID        PatchAccountingExpenseQueryParamFields = "contact_id"
+	PatchAccountingExpenseQueryParamFieldsAccountID        PatchAccountingExpenseQueryParamFields = "account_id"
 	PatchAccountingExpenseQueryParamFieldsName             PatchAccountingExpenseQueryParamFields = "name"
+	PatchAccountingExpenseQueryParamFieldsPaymentMethod    PatchAccountingExpenseQueryParamFields = "payment_method"
+	PatchAccountingExpenseQueryParamFieldsPostedAt         PatchAccountingExpenseQueryParamFields = "posted_at"
 	PatchAccountingExpenseQueryParamFieldsTotalAmount      PatchAccountingExpenseQueryParamFields = "total_amount"
 	PatchAccountingExpenseQueryParamFieldsCurrency         PatchAccountingExpenseQueryParamFields = "currency"
 	PatchAccountingExpenseQueryParamFieldsTaxAmount        PatchAccountingExpenseQueryParamFields = "tax_amount"
@@ -48,7 +51,13 @@ func (e *PatchAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "contact_id":
 		fallthrough
+	case "account_id":
+		fallthrough
 	case "name":
+		fallthrough
+	case "payment_method":
+		fallthrough
+	case "posted_at":
 		fallthrough
 	case "total_amount":
 		fallthrough

@@ -10,7 +10,10 @@
 | `CreateAccountingExpenseQueryParamFieldsUpdatedAt`        | updated_at                                                |
 | `CreateAccountingExpenseQueryParamFieldsUserID`           | user_id                                                   |
 | `CreateAccountingExpenseQueryParamFieldsContactID`        | contact_id                                                |
+| `CreateAccountingExpenseQueryParamFieldsAccountID`        | account_id                                                |
 | `CreateAccountingExpenseQueryParamFieldsName`             | name                                                      |
+| `CreateAccountingExpenseQueryParamFieldsPaymentMethod`    | payment_method                                            |
+| `CreateAccountingExpenseQueryParamFieldsPostedAt`         | posted_at                                                 |
 | `CreateAccountingExpenseQueryParamFieldsTotalAmount`      | total_amount                                              |
 | `CreateAccountingExpenseQueryParamFieldsCurrency`         | currency                                                  |
 | `CreateAccountingExpenseQueryParamFieldsTaxAmount`        | tax_amount                                                |

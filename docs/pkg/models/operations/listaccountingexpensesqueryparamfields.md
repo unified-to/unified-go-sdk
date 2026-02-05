@@ -10,7 +10,10 @@
 | `ListAccountingExpensesQueryParamFieldsUpdatedAt`        | updated_at                                               |
 | `ListAccountingExpensesQueryParamFieldsUserID`           | user_id                                                  |
 | `ListAccountingExpensesQueryParamFieldsContactID`        | contact_id                                               |
+| `ListAccountingExpensesQueryParamFieldsAccountID`        | account_id                                               |
 | `ListAccountingExpensesQueryParamFieldsName`             | name                                                     |
+| `ListAccountingExpensesQueryParamFieldsPaymentMethod`    | payment_method                                           |
+| `ListAccountingExpensesQueryParamFieldsPostedAt`         | posted_at                                                |
 | `ListAccountingExpensesQueryParamFieldsTotalAmount`      | total_amount                                             |
 | `ListAccountingExpensesQueryParamFieldsCurrency`         | currency                                                 |
 | `ListAccountingExpensesQueryParamFieldsTaxAmount`        | tax_amount                                               |
