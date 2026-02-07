@@ -388,11 +388,17 @@ func main() {
 ### [Campaign](docs/sdks/campaign/README.md)
 
 * [CreateAdsCampaign](docs/sdks/campaign/README.md#createadscampaign) - Create a campaign
+* [CreateMartechCampaign](docs/sdks/campaign/README.md#createmartechcampaign) - Create a campaign
 * [GetAdsCampaign](docs/sdks/campaign/README.md#getadscampaign) - Retrieve a campaign
+* [GetMartechCampaign](docs/sdks/campaign/README.md#getmartechcampaign) - Retrieve a campaign
 * [ListAdsCampaigns](docs/sdks/campaign/README.md#listadscampaigns) - List all campaigns
+* [ListMartechCampaigns](docs/sdks/campaign/README.md#listmartechcampaigns) - List all campaigns
 * [PatchAdsCampaign](docs/sdks/campaign/README.md#patchadscampaign) - Update a campaign
+* [PatchMartechCampaign](docs/sdks/campaign/README.md#patchmartechcampaign) - Update a campaign
 * [RemoveAdsCampaign](docs/sdks/campaign/README.md#removeadscampaign) - Remove a campaign
+* [RemoveMartechCampaign](docs/sdks/campaign/README.md#removemartechcampaign) - Remove a campaign
 * [UpdateAdsCampaign](docs/sdks/campaign/README.md#updateadscampaign) - Update a campaign
+* [UpdateMartechCampaign](docs/sdks/campaign/README.md#updatemartechcampaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -1059,16 +1065,23 @@ func main() {
 
 ### [Martech](docs/sdks/martech/README.md)
 
+* [CreateMartechCampaign](docs/sdks/martech/README.md#createmartechcampaign) - Create a campaign
 * [CreateMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [CreateMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
+* [GetMartechCampaign](docs/sdks/martech/README.md#getmartechcampaign) - Retrieve a campaign
 * [GetMartechList](docs/sdks/martech/README.md#getmartechlist) - Retrieve a list
 * [GetMartechMember](docs/sdks/martech/README.md#getmartechmember) - Retrieve a member
+* [ListMartechCampaigns](docs/sdks/martech/README.md#listmartechcampaigns) - List all campaigns
 * [ListMartechLists](docs/sdks/martech/README.md#listmartechlists) - List all lists
 * [ListMartechMembers](docs/sdks/martech/README.md#listmartechmembers) - List all members
+* [ListMartechReports](docs/sdks/martech/README.md#listmartechreports) - List all reports
+* [PatchMartechCampaign](docs/sdks/martech/README.md#patchmartechcampaign) - Update a campaign
 * [PatchMartechList](docs/sdks/martech/README.md#patchmartechlist) - Update a list
 * [PatchMartechMember](docs/sdks/martech/README.md#patchmartechmember) - Update a member
+* [RemoveMartechCampaign](docs/sdks/martech/README.md#removemartechcampaign) - Remove a campaign
 * [RemoveMartechList](docs/sdks/martech/README.md#removemartechlist) - Remove a list
 * [RemoveMartechMember](docs/sdks/martech/README.md#removemartechmember) - Remove a member
+* [UpdateMartechCampaign](docs/sdks/martech/README.md#updatemartechcampaign) - Update a campaign
 * [UpdateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [UpdateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
@@ -1319,6 +1332,7 @@ func main() {
 * [GetAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [ListAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 * [ListAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
+* [ListMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 

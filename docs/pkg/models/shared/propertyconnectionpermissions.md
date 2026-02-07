@@ -96,10 +96,14 @@
 | `PropertyConnectionPermissionsCrmLeadWrite`                 | crm_lead_write                                              |
 | `PropertyConnectionPermissionsCrmPipelineRead`              | crm_pipeline_read                                           |
 | `PropertyConnectionPermissionsCrmPipelineWrite`             | crm_pipeline_write                                          |
+| `PropertyConnectionPermissionsMartechCampaignRead`          | martech_campaign_read                                       |
+| `PropertyConnectionPermissionsMartechCampaignWrite`         | martech_campaign_write                                      |
 | `PropertyConnectionPermissionsMartechListRead`              | martech_list_read                                           |
 | `PropertyConnectionPermissionsMartechListWrite`             | martech_list_write                                          |
 | `PropertyConnectionPermissionsMartechMemberRead`            | martech_member_read                                         |
 | `PropertyConnectionPermissionsMartechMemberWrite`           | martech_member_write                                        |
+| `PropertyConnectionPermissionsMartechReportRead`            | martech_report_read                                         |
+| `PropertyConnectionPermissionsMartechReportWrite`           | martech_report_write                                        |
 | `PropertyConnectionPermissionsTicketingCustomerRead`        | ticketing_customer_read                                     |
 | `PropertyConnectionPermissionsTicketingCustomerWrite`       | ticketing_customer_write                                    |
 | `PropertyConnectionPermissionsTicketingTicketRead`          | ticketing_ticket_read                                       |

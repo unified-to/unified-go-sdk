@@ -4,18 +4,81 @@
 
 ### Available Operations
 
+* [CreateMartechCampaign](#createmartechcampaign) - Create a campaign
 * [CreateMartechList](#createmartechlist) - Create a list
 * [CreateMartechMember](#createmartechmember) - Create a member
+* [GetMartechCampaign](#getmartechcampaign) - Retrieve a campaign
 * [GetMartechList](#getmartechlist) - Retrieve a list
 * [GetMartechMember](#getmartechmember) - Retrieve a member
+* [ListMartechCampaigns](#listmartechcampaigns) - List all campaigns
 * [ListMartechLists](#listmartechlists) - List all lists
 * [ListMartechMembers](#listmartechmembers) - List all members
+* [ListMartechReports](#listmartechreports) - List all reports
+* [PatchMartechCampaign](#patchmartechcampaign) - Update a campaign
 * [PatchMartechList](#patchmartechlist) - Update a list
 * [PatchMartechMember](#patchmartechmember) - Update a member
+* [RemoveMartechCampaign](#removemartechcampaign) - Remove a campaign
 * [RemoveMartechList](#removemartechlist) - Remove a list
 * [RemoveMartechMember](#removemartechmember) - Remove a member
+* [UpdateMartechCampaign](#updatemartechcampaign) - Update a campaign
 * [UpdateMartechList](#updatemartechlist) - Update a list
 * [UpdateMartechMember](#updatemartechmember) - Update a member
+
+## CreateMartechCampaign
+
+Create a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.CreateMartechCampaign(ctx, operations.CreateMartechCampaignRequest{
+        MarketingCampaign: shared.MarketingCampaign{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingCampaign != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.CreateMartechCampaignRequest](../../pkg/models/operations/createmartechcampaignrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.CreateMartechCampaignResponse](../../pkg/models/operations/createmartechcampaignresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreateMartechList
 
@@ -122,6 +185,61 @@ func main() {
 ### Response
 
 **[*operations.CreateMartechMemberResponse](../../pkg/models/operations/createmartechmemberresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetMartechCampaign
+
+Retrieve a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getMartechCampaign" method="get" path="/martech/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.GetMartechCampaign(ctx, operations.GetMartechCampaignRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingCampaign != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetMartechCampaignRequest](../../pkg/models/operations/getmartechcampaignrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.GetMartechCampaignResponse](../../pkg/models/operations/getmartechcampaignresponse.md), error**
 
 ### Errors
 
@@ -239,6 +357,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListMartechCampaigns
+
+List all campaigns
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listMartechCampaigns" method="get" path="/martech/{connection_id}/campaign" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.ListMartechCampaigns(ctx, operations.ListMartechCampaignsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingCampaigns != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListMartechCampaignsRequest](../../pkg/models/operations/listmartechcampaignsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.ListMartechCampaignsResponse](../../pkg/models/operations/listmartechcampaignsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListMartechLists
 
 List all lists
@@ -340,6 +512,117 @@ func main() {
 ### Response
 
 **[*operations.ListMartechMembersResponse](../../pkg/models/operations/listmartechmembersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListMartechReports
+
+List all reports
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.ListMartechReports(ctx, operations.ListMartechReportsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingReports != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListMartechReportsRequest](../../pkg/models/operations/listmartechreportsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListMartechReportsResponse](../../pkg/models/operations/listmartechreportsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchMartechCampaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.PatchMartechCampaign(ctx, operations.PatchMartechCampaignRequest{
+        MarketingCampaign: shared.MarketingCampaign{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingCampaign != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchMartechCampaignRequest](../../pkg/models/operations/patchmartechcampaignrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.PatchMartechCampaignResponse](../../pkg/models/operations/patchmartechcampaignresponse.md), error**
 
 ### Errors
 
@@ -461,6 +744,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveMartechCampaign
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeMartechCampaign" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.RemoveMartechCampaign(ctx, operations.RemoveMartechCampaignRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.RemoveMartechCampaignRequest](../../pkg/models/operations/removemartechcampaignrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.RemoveMartechCampaignResponse](../../pkg/models/operations/removemartechcampaignresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveMartechList
 
 Remove a list
@@ -564,6 +902,63 @@ func main() {
 ### Response
 
 **[*operations.RemoveMartechMemberResponse](../../pkg/models/operations/removemartechmemberresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateMartechCampaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Martech.UpdateMartechCampaign(ctx, operations.UpdateMartechCampaignRequest{
+        MarketingCampaign: shared.MarketingCampaign{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.MarketingCampaign != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdateMartechCampaignRequest](../../pkg/models/operations/updatemartechcampaignrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.UpdateMartechCampaignResponse](../../pkg/models/operations/updatemartechcampaignresponse.md), error**
 
 ### Errors
 

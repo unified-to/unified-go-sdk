@@ -876,6 +876,29 @@ func (e *ListLocationID) IsExact() bool {
 	return false
 }
 
+type ListMemberID string
+
+const (
+	ListMemberIDSupportedRequired ListMemberID = "supported-required"
+	ListMemberIDSupported         ListMemberID = "supported"
+	ListMemberIDNotSupported      ListMemberID = "not-supported"
+)
+
+func (e ListMemberID) ToPointer() *ListMemberID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListMemberID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListOffset string
 
 const (
@@ -2624,6 +2647,29 @@ func (e *VirtualWebhookLocationID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookMemberID string
+
+const (
+	VirtualWebhookMemberIDSupportedRequired VirtualWebhookMemberID = "supported-required"
+	VirtualWebhookMemberIDSupported         VirtualWebhookMemberID = "supported"
+	VirtualWebhookMemberIDNotSupported      VirtualWebhookMemberID = "not-supported"
+)
+
+func (e VirtualWebhookMemberID) ToPointer() *VirtualWebhookMemberID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookMemberID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookOrderID string
 
 const (
@@ -3078,6 +3124,7 @@ type IntegrationSupport struct {
 	ListLinkID              *ListLinkID              `json:"list_link_id,omitempty"`
 	ListListID              *ListListID              `json:"list_list_id,omitempty"`
 	ListLocationID          *ListLocationID          `json:"list_location_id,omitempty"`
+	ListMemberID            *ListMemberID            `json:"list_member_id,omitempty"`
 	ListOffset              *ListOffset              `json:"list_offset,omitempty"`
 	ListOrder               *ListOrder               `json:"list_order,omitempty"`
 	ListOrderID             *ListOrderID             `json:"list_order_id,omitempty"`
@@ -3159,6 +3206,7 @@ type IntegrationSupport struct {
 	VirtualWebhookLimit           *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
 	VirtualWebhookListID          *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
 	VirtualWebhookLocationID      *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
+	VirtualWebhookMemberID        *VirtualWebhookMemberID                  `json:"virtual_webhook_member_id,omitempty"`
 	VirtualWebhookOrderID         *VirtualWebhookOrderID                   `json:"virtual_webhook_order_id,omitempty"`
 	VirtualWebhookOrgID           *VirtualWebhookOrgID                     `json:"virtual_webhook_org_id,omitempty"`
 	VirtualWebhookPageID          *VirtualWebhookPageID                    `json:"virtual_webhook_page_id,omitempty"`
@@ -3451,6 +3499,13 @@ func (i *IntegrationSupport) GetListLocationID() *ListLocationID {
 		return nil
 	}
 	return i.ListLocationID
+}
+
+func (i *IntegrationSupport) GetListMemberID() *ListMemberID {
+	if i == nil {
+		return nil
+	}
+	return i.ListMemberID
 }
 
 func (i *IntegrationSupport) GetListOffset() *ListOffset {
@@ -4011,6 +4066,13 @@ func (i *IntegrationSupport) GetVirtualWebhookLocationID() *VirtualWebhookLocati
 		return nil
 	}
 	return i.VirtualWebhookLocationID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookMemberID() *VirtualWebhookMemberID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookMemberID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookOrderID() *VirtualWebhookOrderID {
