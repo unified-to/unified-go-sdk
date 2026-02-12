@@ -31,3 +31,4 @@
 | `QueryParamCategoriesAds`          | ads                                |
 | `QueryParamCategoriesForms`        | forms                              |
 | `QueryParamCategoriesShipping`     | shipping                           |
+| `QueryParamCategoriesAssessment`   | assessment                         |

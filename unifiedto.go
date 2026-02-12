@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.811.4
+// Generated from OpenAPI doc version 1.0 and generator version 2.818.4
 
 import (
 	"context"
@@ -83,6 +83,8 @@ type UnifiedTo struct {
 	Creative          *Creative
 	Group             *Group
 	Insertionorder    *Insertionorder
+	Assessment        *Assessment
+	Package           *Package
 	Ats               *Ats
 	Activity          *Activity
 	Application       *Application
@@ -183,7 +185,6 @@ type UnifiedTo struct {
 	Issue             *Issue
 	Webhook           *Webhook
 	Verification      *Verification
-	Package           *Package
 	Request           *Request
 
 	sdkConfiguration config.SDKConfiguration
@@ -261,9 +262,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.28",
+		SDKVersion: "0.36.29",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.28 2.811.4 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.29 2.818.4 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -310,6 +311,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Creative = newCreative(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Assessment = newAssessment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Package = newPackage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Activity = newActivity(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Application = newApplication(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -410,7 +413,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Verification = newVerification(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Package = newPackage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Request = newRequest(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk

@@ -31,3 +31,4 @@
 | `CategoriesAds`          | ads                      |
 | `CategoriesForms`        | forms                    |
 | `CategoriesShipping`     | shipping                 |
+| `CategoriesAssessment`   | assessment               |

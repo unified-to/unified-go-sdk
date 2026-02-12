@@ -3,9 +3,10 @@
 
 ## Values
 
-| Name                      | Value                     |
-| ------------------------- | ------------------------- |
-| `ResponseStatusCompleted` | COMPLETED                 |
-| `ResponseStatusFailed`    | FAILED                    |
-| `ResponseStatusPassed`    | PASSED                    |
-| `ResponseStatusPending`   | PENDING                   |
+| Name                       | Value                      |
+| -------------------------- | -------------------------- |
+| `ResponseStatusOpen`       | OPEN                       |
+| `ResponseStatusInProgress` | IN_PROGRESS                |
+| `ResponseStatusCompleted`  | COMPLETED                  |
+| `ResponseStatusFailed`     | FAILED                     |
+| `ResponseStatusRejected`   | REJECTED                   |

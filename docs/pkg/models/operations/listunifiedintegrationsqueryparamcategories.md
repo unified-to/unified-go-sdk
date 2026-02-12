@@ -31,3 +31,4 @@
 | `ListUnifiedIntegrationsQueryParamCategoriesAds`          | ads                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesForms`        | forms                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesShipping`     | shipping                                                  |
+| `ListUnifiedIntegrationsQueryParamCategoriesAssessment`   | assessment                                                |

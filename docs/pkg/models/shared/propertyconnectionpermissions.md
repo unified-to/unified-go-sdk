@@ -67,6 +67,9 @@
 | `PropertyConnectionPermissionsVerificationPackageRead`      | verification_package_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestRead`      | verification_request_read                                   |
 | `PropertyConnectionPermissionsVerificationRequestWrite`     | verification_request_write                                  |
+| `PropertyConnectionPermissionsAssessmentPackageRead`        | assessment_package_read                                     |
+| `PropertyConnectionPermissionsAssessmentPackageWrite`       | assessment_package_write                                    |
+| `PropertyConnectionPermissionsAssessmentOrderWrite`         | assessment_order_write                                      |
 | `PropertyConnectionPermissionsAtsActivityRead`              | ats_activity_read                                           |
 | `PropertyConnectionPermissionsAtsActivityWrite`             | ats_activity_write                                          |
 | `PropertyConnectionPermissionsAtsApplicationRead`           | ats_application_read                                        |
@@ -96,12 +99,12 @@
 | `PropertyConnectionPermissionsCrmLeadWrite`                 | crm_lead_write                                              |
 | `PropertyConnectionPermissionsCrmPipelineRead`              | crm_pipeline_read                                           |
 | `PropertyConnectionPermissionsCrmPipelineWrite`             | crm_pipeline_write                                          |
-| `PropertyConnectionPermissionsMartechCampaignRead`          | martech_campaign_read                                       |
-| `PropertyConnectionPermissionsMartechCampaignWrite`         | martech_campaign_write                                      |
 | `PropertyConnectionPermissionsMartechListRead`              | martech_list_read                                           |
 | `PropertyConnectionPermissionsMartechListWrite`             | martech_list_write                                          |
 | `PropertyConnectionPermissionsMartechMemberRead`            | martech_member_read                                         |
 | `PropertyConnectionPermissionsMartechMemberWrite`           | martech_member_write                                        |
+| `PropertyConnectionPermissionsMartechCampaignRead`          | martech_campaign_read                                       |
+| `PropertyConnectionPermissionsMartechCampaignWrite`         | martech_campaign_write                                      |
 | `PropertyConnectionPermissionsMartechReportRead`            | martech_report_read                                         |
 | `PropertyConnectionPermissionsMartechReportWrite`           | martech_report_write                                        |
 | `PropertyConnectionPermissionsTicketingCustomerRead`        | ticketing_customer_read                                     |

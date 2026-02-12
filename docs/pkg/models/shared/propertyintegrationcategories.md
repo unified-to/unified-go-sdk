@@ -31,3 +31,4 @@
 | `PropertyIntegrationCategoriesAds`          | ads                                         |
 | `PropertyIntegrationCategoriesForms`        | forms                                       |
 | `PropertyIntegrationCategoriesShipping`     | shipping                                    |
+| `PropertyIntegrationCategoriesAssessment`   | assessment                                  |

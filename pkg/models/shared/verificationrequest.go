@@ -7,22 +7,22 @@ import (
 	"time"
 )
 
-type ProfileGender string
+type VerificationRequestProfileGender string
 
 const (
-	ProfileGenderMale      ProfileGender = "MALE"
-	ProfileGenderFemale    ProfileGender = "FEMALE"
-	ProfileGenderIntersex  ProfileGender = "INTERSEX"
-	ProfileGenderTrans     ProfileGender = "TRANS"
-	ProfileGenderNonBinary ProfileGender = "NON_BINARY"
+	VerificationRequestProfileGenderMale      VerificationRequestProfileGender = "MALE"
+	VerificationRequestProfileGenderFemale    VerificationRequestProfileGender = "FEMALE"
+	VerificationRequestProfileGenderIntersex  VerificationRequestProfileGender = "INTERSEX"
+	VerificationRequestProfileGenderTrans     VerificationRequestProfileGender = "TRANS"
+	VerificationRequestProfileGenderNonBinary VerificationRequestProfileGender = "NON_BINARY"
 )
 
-func (e ProfileGender) ToPointer() *ProfileGender {
+func (e VerificationRequestProfileGender) ToPointer() *VerificationRequestProfileGender {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *ProfileGender) IsExact() bool {
+func (e *VerificationRequestProfileGender) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "MALE", "FEMALE", "INTERSEX", "TRANS", "NON_BINARY":
@@ -32,21 +32,21 @@ func (e *ProfileGender) IsExact() bool {
 	return false
 }
 
-type ResponseStatus string
+type VerificationRequestResponseStatus string
 
 const (
-	ResponseStatusCompleted ResponseStatus = "COMPLETED"
-	ResponseStatusFailed    ResponseStatus = "FAILED"
-	ResponseStatusPassed    ResponseStatus = "PASSED"
-	ResponseStatusPending   ResponseStatus = "PENDING"
+	VerificationRequestResponseStatusCompleted VerificationRequestResponseStatus = "COMPLETED"
+	VerificationRequestResponseStatusFailed    VerificationRequestResponseStatus = "FAILED"
+	VerificationRequestResponseStatusPassed    VerificationRequestResponseStatus = "PASSED"
+	VerificationRequestResponseStatusPending   VerificationRequestResponseStatus = "PENDING"
 )
 
-func (e ResponseStatus) ToPointer() *ResponseStatus {
+func (e VerificationRequestResponseStatus) ToPointer() *VerificationRequestResponseStatus {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *ResponseStatus) IsExact() bool {
+func (e *VerificationRequestResponseStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "COMPLETED", "FAILED", "PASSED", "PENDING":
@@ -57,32 +57,32 @@ func (e *ResponseStatus) IsExact() bool {
 }
 
 type VerificationRequest struct {
-	CandidateID               *string                      `json:"candidate_id,omitempty"`
-	CreatedAt                 *time.Time                   `json:"created_at,omitempty"`
-	ID                        *string                      `json:"id,omitempty"`
-	PackageID                 *string                      `json:"package_id,omitempty"`
-	Parameters                []VerificationParameterInput `json:"parameters,omitempty"`
-	ProfileAddresses          []VerificationAddress        `json:"profile_addresses,omitempty"`
-	ProfileDateOfBirth        *string                      `json:"profile_date_of_birth,omitempty"`
-	ProfileEmails             []string                     `json:"profile_emails,omitempty"`
-	ProfileGender             *ProfileGender               `json:"profile_gender,omitempty"`
-	ProfileIPAddress          *string                      `json:"profile_ip_address,omitempty"`
-	ProfileName               *string                      `json:"profile_name,omitempty"`
-	ProfileNationalIdentifier *string                      `json:"profile_national_identifier,omitempty"`
-	ProfileTelephones         []string                     `json:"profile_telephones,omitempty"`
-	Raw                       map[string]any               `json:"raw,omitempty"`
-	ResponseCompletedAt       *time.Time                   `json:"response_completed_at,omitempty"`
-	ResponseDetails           []VerificationResponseDetail `json:"response_details,omitempty"`
+	CandidateID               *string                           `json:"candidate_id,omitempty"`
+	CreatedAt                 *time.Time                        `json:"created_at,omitempty"`
+	ID                        *string                           `json:"id,omitempty"`
+	PackageID                 *string                           `json:"package_id,omitempty"`
+	Parameters                []VerificationParameterInput      `json:"parameters,omitempty"`
+	ProfileAddresses          []VerificationAddress             `json:"profile_addresses,omitempty"`
+	ProfileDateOfBirth        *string                           `json:"profile_date_of_birth,omitempty"`
+	ProfileEmails             []string                          `json:"profile_emails,omitempty"`
+	ProfileGender             *VerificationRequestProfileGender `json:"profile_gender,omitempty"`
+	ProfileIPAddress          *string                           `json:"profile_ip_address,omitempty"`
+	ProfileName               *string                           `json:"profile_name,omitempty"`
+	ProfileNationalIdentifier *string                           `json:"profile_national_identifier,omitempty"`
+	ProfileTelephones         []string                          `json:"profile_telephones,omitempty"`
+	Raw                       map[string]any                    `json:"raw,omitempty"`
+	ResponseCompletedAt       *time.Time                        `json:"response_completed_at,omitempty"`
+	ResponseDetails           []VerificationResponseDetail      `json:"response_details,omitempty"`
 	// report download
-	ResponseDownloadUrls []string        `json:"response_download_urls,omitempty"`
-	ResponseExpiresAt    *time.Time      `json:"response_expires_at,omitempty"`
-	ResponseIssuedAt     *time.Time      `json:"response_issued_at,omitempty"`
-	ResponseRedirectURL  *string         `json:"response_redirect_url,omitempty"`
-	ResponseScore        *float64        `json:"response_score,omitempty"`
-	ResponseSource       *string         `json:"response_source,omitempty"`
-	ResponseStatus       *ResponseStatus `json:"response_status,omitempty"`
-	TargetURL            *string         `json:"target_url,omitempty"`
-	UpdatedAt            *time.Time      `json:"updated_at,omitempty"`
+	ResponseDownloadUrls []string                           `json:"response_download_urls,omitempty"`
+	ResponseExpiresAt    *time.Time                         `json:"response_expires_at,omitempty"`
+	ResponseIssuedAt     *time.Time                         `json:"response_issued_at,omitempty"`
+	ResponseRedirectURL  *string                            `json:"response_redirect_url,omitempty"`
+	ResponseScore        *float64                           `json:"response_score,omitempty"`
+	ResponseSource       *string                            `json:"response_source,omitempty"`
+	ResponseStatus       *VerificationRequestResponseStatus `json:"response_status,omitempty"`
+	TargetURL            *string                            `json:"target_url,omitempty"`
+	UpdatedAt            *time.Time                         `json:"updated_at,omitempty"`
 }
 
 func (v VerificationRequest) MarshalJSON() ([]byte, error) {
@@ -152,7 +152,7 @@ func (v *VerificationRequest) GetProfileEmails() []string {
 	return v.ProfileEmails
 }
 
-func (v *VerificationRequest) GetProfileGender() *ProfileGender {
+func (v *VerificationRequest) GetProfileGender() *VerificationRequestProfileGender {
 	if v == nil {
 		return nil
 	}
@@ -250,7 +250,7 @@ func (v *VerificationRequest) GetResponseSource() *string {
 	return v.ResponseSource
 }
 
-func (v *VerificationRequest) GetResponseStatus() *ResponseStatus {
+func (v *VerificationRequest) GetResponseStatus() *VerificationRequestResponseStatus {
 	if v == nil {
 		return nil
 	}

@@ -257,6 +257,17 @@ func main() {
 
 * [ListAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
+### [Assessment](docs/sdks/assessment/README.md)
+
+* [CreateAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [GetAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
+* [ListAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
+* [PatchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
+* [PatchAssessmentPackage](docs/sdks/assessment/README.md#patchassessmentpackage) - Update an assessment package
+* [RemoveAssessmentPackage](docs/sdks/assessment/README.md#removeassessmentpackage) - Delete an assessment package
+* [UpdateAssessmentOrder](docs/sdks/assessment/README.md#updateassessmentorder) - Update an order
+* [UpdateAssessmentPackage](docs/sdks/assessment/README.md#updateassessmentpackage) - Update an assessment package
+
 ### [Ats](docs/sdks/ats/README.md)
 
 * [CreateAtsActivity](docs/sdks/ats/README.md#createatsactivity) - Create an activity
@@ -1145,8 +1156,10 @@ func main() {
 * [GetAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
 * [ListAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [PatchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [PatchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
 * [RemoveAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
 * [UpdateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [UpdateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -1167,8 +1180,14 @@ func main() {
 
 ### [Package](docs/sdks/package/README.md)
 
+* [CreateAssessmentPackage](docs/sdks/package/README.md#createassessmentpackage) - Create an assessment package
+* [GetAssessmentPackage](docs/sdks/package/README.md#getassessmentpackage) - Get an assessment package
 * [GetVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
+* [ListAssessmentPackages](docs/sdks/package/README.md#listassessmentpackages) - List assessment packages
 * [ListVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
+* [PatchAssessmentPackage](docs/sdks/package/README.md#patchassessmentpackage) - Update an assessment package
+* [RemoveAssessmentPackage](docs/sdks/package/README.md#removeassessmentpackage) - Delete an assessment package
+* [UpdateAssessmentPackage](docs/sdks/package/README.md#updateassessmentpackage) - Update an assessment package
 
 ### [Page](docs/sdks/page/README.md)
 

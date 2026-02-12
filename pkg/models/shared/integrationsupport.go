@@ -1773,6 +1773,29 @@ func (e *NativeWebhookLabelID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookMemberID string
+
+const (
+	NativeWebhookMemberIDSupportedRequired NativeWebhookMemberID = "supported-required"
+	NativeWebhookMemberIDSupported         NativeWebhookMemberID = "supported"
+	NativeWebhookMemberIDNotSupported      NativeWebhookMemberID = "not-supported"
+)
+
+func (e NativeWebhookMemberID) ToPointer() *NativeWebhookMemberID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookMemberID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookOrderID string
 
 const (
@@ -3164,6 +3187,7 @@ type IntegrationSupport struct {
 	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
 	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
 	NativeWebhookLabelID    *NativeWebhookLabelID    `json:"native_webhook_label_id,omitempty"`
+	NativeWebhookMemberID   *NativeWebhookMemberID   `json:"native_webhook_member_id,omitempty"`
 	NativeWebhookOrderID    *NativeWebhookOrderID    `json:"native_webhook_order_id,omitempty"`
 	NativeWebhookParentID   *NativeWebhookParentID   `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID  *NativeWebhookProjectID  `json:"native_webhook_project_id,omitempty"`
@@ -3779,6 +3803,13 @@ func (i *IntegrationSupport) GetNativeWebhookLabelID() *NativeWebhookLabelID {
 		return nil
 	}
 	return i.NativeWebhookLabelID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookMemberID() *NativeWebhookMemberID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookMemberID
 }
 
 func (i *IntegrationSupport) GetNativeWebhookOrderID() *NativeWebhookOrderID {
