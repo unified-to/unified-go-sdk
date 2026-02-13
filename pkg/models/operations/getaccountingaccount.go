@@ -28,6 +28,7 @@ const (
 	QueryParamFieldsGroup               QueryParamFields = "group"
 	QueryParamFieldsSubgroup            QueryParamFields = "subgroup"
 	QueryParamFieldsParentID            QueryParamFields = "parent_id"
+	QueryParamFieldsTaxonomy            QueryParamFields = "taxonomy"
 	QueryParamFieldsRaw                 QueryParamFields = "raw"
 )
 
@@ -71,6 +72,8 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 	case "subgroup":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "taxonomy":
 		fallthrough
 	case "raw":
 		*e = QueryParamFields(v)

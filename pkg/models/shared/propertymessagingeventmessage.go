@@ -32,7 +32,6 @@ type PropertyMessagingEventMessage struct {
 	MessageMarkdown         *string             `json:"message_markdown,omitempty"`
 	MessageThreadIdentifier *string             `json:"message_thread_identifier,omitempty"`
 	ParentID                *string             `json:"parent_id,omitempty"`
-	ParentMessageID         *string             `json:"parent_message_id,omitempty"`
 	Raw                     map[string]any      `json:"raw,omitempty"`
 	Reactions               []MessagingReaction `json:"reactions,omitempty"`
 	Reference               *string             `json:"reference,omitempty"`
@@ -177,13 +176,6 @@ func (p *PropertyMessagingEventMessage) GetParentID() *string {
 		return nil
 	}
 	return p.ParentID
-}
-
-func (p *PropertyMessagingEventMessage) GetParentMessageID() *string {
-	if p == nil {
-		return nil
-	}
-	return p.ParentMessageID
 }
 
 func (p *PropertyMessagingEventMessage) GetRaw() map[string]any {

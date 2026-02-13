@@ -61,23 +61,24 @@ func (e *Type) IsExact() bool {
 
 // AccountingAccount - Chart of accounts
 type AccountingAccount struct {
-	Balance             *float64       `json:"balance,omitempty"`
-	CreatedAt           *time.Time     `json:"created_at,omitempty"`
-	Currency            *string        `json:"currency,omitempty"`
-	CustomerDefinedCode *string        `json:"customer_defined_code,omitempty"`
-	Description         *string        `json:"description,omitempty"`
-	Group               *string        `json:"group,omitempty"`
-	ID                  *string        `json:"id,omitempty"`
-	IsPayable           *bool          `json:"is_payable,omitempty"`
-	Name                *string        `json:"name,omitempty"`
-	ParentID            *string        `json:"parent_id,omitempty"`
-	Raw                 map[string]any `json:"raw,omitempty"`
-	Section             *string        `json:"section,omitempty"`
-	Status              *Status        `json:"status,omitempty"`
-	Subgroup            *string        `json:"subgroup,omitempty"`
-	Subsection          *string        `json:"subsection,omitempty"`
-	Type                *Type          `json:"type,omitempty"`
-	UpdatedAt           *time.Time     `json:"updated_at,omitempty"`
+	Balance             *float64                    `json:"balance,omitempty"`
+	CreatedAt           *time.Time                  `json:"created_at,omitempty"`
+	Currency            *string                     `json:"currency,omitempty"`
+	CustomerDefinedCode *string                     `json:"customer_defined_code,omitempty"`
+	Description         *string                     `json:"description,omitempty"`
+	Group               *string                     `json:"group,omitempty"`
+	ID                  *string                     `json:"id,omitempty"`
+	IsPayable           *bool                       `json:"is_payable,omitempty"`
+	Name                *string                     `json:"name,omitempty"`
+	ParentID            *string                     `json:"parent_id,omitempty"`
+	Raw                 map[string]any              `json:"raw,omitempty"`
+	Section             *string                     `json:"section,omitempty"`
+	Status              *Status                     `json:"status,omitempty"`
+	Subgroup            *string                     `json:"subgroup,omitempty"`
+	Subsection          *string                     `json:"subsection,omitempty"`
+	Taxonomy            []AccountingAccountTaxonomy `json:"taxonomy,omitempty"`
+	Type                *Type                       `json:"type,omitempty"`
+	UpdatedAt           *time.Time                  `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {
@@ -194,6 +195,13 @@ func (a *AccountingAccount) GetSubsection() *string {
 		return nil
 	}
 	return a.Subsection
+}
+
+func (a *AccountingAccount) GetTaxonomy() []AccountingAccountTaxonomy {
+	if a == nil {
+		return nil
+	}
+	return a.Taxonomy
 }
 
 func (a *AccountingAccount) GetType() *Type {

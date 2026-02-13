@@ -12,7 +12,6 @@
 | `PatchMessagingMessageQueryParamFieldsChannelIds`              | channel_ids                                                    |
 | `PatchMessagingMessageQueryParamFieldsChannels`                | channels                                                       |
 | `PatchMessagingMessageQueryParamFieldsParentID`                | parent_id                                                      |
-| `PatchMessagingMessageQueryParamFieldsParentMessageID`         | parent_message_id                                              |
 | `PatchMessagingMessageQueryParamFieldsRootMessageID`           | root_message_id                                                |
 | `PatchMessagingMessageQueryParamFieldsMessageThreadIdentifier` | message_thread_identifier                                      |
 | `PatchMessagingMessageQueryParamFieldsAuthorMember`            | author_member                                                  |

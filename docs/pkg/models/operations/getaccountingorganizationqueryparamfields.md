@@ -15,6 +15,7 @@
 | `GetAccountingOrganizationQueryParamFieldsTaxNumber`          | tax_number                                                    |
 | `GetAccountingOrganizationQueryParamFieldsTimezone`           | timezone                                                      |
 | `GetAccountingOrganizationQueryParamFieldsWebsite`            | website                                                       |
+| `GetAccountingOrganizationQueryParamFieldsParentID`           | parent_id                                                     |
 | `GetAccountingOrganizationQueryParamFieldsFiscalYearEndMonth` | fiscal_year_end_month                                         |
 | `GetAccountingOrganizationQueryParamFieldsOrganizationCode`   | organization_code                                             |
 | `GetAccountingOrganizationQueryParamFieldsRaw`                | raw                                                           |

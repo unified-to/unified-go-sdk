@@ -19,7 +19,6 @@ const (
 	GetMessagingMessageQueryParamFieldsChannelIds              GetMessagingMessageQueryParamFields = "channel_ids"
 	GetMessagingMessageQueryParamFieldsChannels                GetMessagingMessageQueryParamFields = "channels"
 	GetMessagingMessageQueryParamFieldsParentID                GetMessagingMessageQueryParamFields = "parent_id"
-	GetMessagingMessageQueryParamFieldsParentMessageID         GetMessagingMessageQueryParamFields = "parent_message_id"
 	GetMessagingMessageQueryParamFieldsRootMessageID           GetMessagingMessageQueryParamFields = "root_message_id"
 	GetMessagingMessageQueryParamFieldsMessageThreadIdentifier GetMessagingMessageQueryParamFields = "message_thread_identifier"
 	GetMessagingMessageQueryParamFieldsAuthorMember            GetMessagingMessageQueryParamFields = "author_member"
@@ -62,8 +61,6 @@ func (e *GetMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "channels":
 		fallthrough
 	case "parent_id":
-		fallthrough
-	case "parent_message_id":
 		fallthrough
 	case "root_message_id":
 		fallthrough

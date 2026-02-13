@@ -21,4 +21,5 @@
 | `UpdateAccountingAccountQueryParamFieldsGroup`               | group                                                        |
 | `UpdateAccountingAccountQueryParamFieldsSubgroup`            | subgroup                                                     |
 | `UpdateAccountingAccountQueryParamFieldsParentID`            | parent_id                                                    |
+| `UpdateAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                     |
 | `UpdateAccountingAccountQueryParamFieldsRaw`                 | raw                                                          |

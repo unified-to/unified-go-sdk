@@ -28,6 +28,7 @@ const (
 	FieldsGroup               Fields = "group"
 	FieldsSubgroup            Fields = "subgroup"
 	FieldsParentID            Fields = "parent_id"
+	FieldsTaxonomy            Fields = "taxonomy"
 	FieldsRaw                 Fields = "raw"
 )
 
@@ -71,6 +72,8 @@ func (e *Fields) UnmarshalJSON(data []byte) error {
 	case "subgroup":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "taxonomy":
 		fallthrough
 	case "raw":
 		*e = Fields(v)

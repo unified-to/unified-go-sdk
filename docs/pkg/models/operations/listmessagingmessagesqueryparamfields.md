@@ -12,7 +12,6 @@
 | `ListMessagingMessagesQueryParamFieldsChannelIds`              | channel_ids                                                    |
 | `ListMessagingMessagesQueryParamFieldsChannels`                | channels                                                       |
 | `ListMessagingMessagesQueryParamFieldsParentID`                | parent_id                                                      |
-| `ListMessagingMessagesQueryParamFieldsParentMessageID`         | parent_message_id                                              |
 | `ListMessagingMessagesQueryParamFieldsRootMessageID`           | root_message_id                                                |
 | `ListMessagingMessagesQueryParamFieldsMessageThreadIdentifier` | message_thread_identifier                                      |
 | `ListMessagingMessagesQueryParamFieldsAuthorMember`            | author_member                                                  |

@@ -21,4 +21,5 @@
 | `QueryParamFieldsGroup`               | group                                 |
 | `QueryParamFieldsSubgroup`            | subgroup                              |
 | `QueryParamFieldsParentID`            | parent_id                             |
+| `QueryParamFieldsTaxonomy`            | taxonomy                              |
 | `QueryParamFieldsRaw`                 | raw                                   |

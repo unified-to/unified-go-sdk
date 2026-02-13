@@ -21,4 +21,5 @@
 | `ListAccountingAccountsQueryParamFieldsGroup`               | group                                                       |
 | `ListAccountingAccountsQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `ListAccountingAccountsQueryParamFieldsParentID`            | parent_id                                                   |
+| `ListAccountingAccountsQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `ListAccountingAccountsQueryParamFieldsRaw`                 | raw                                                         |

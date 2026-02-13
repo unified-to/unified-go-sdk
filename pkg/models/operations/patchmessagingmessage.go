@@ -19,7 +19,6 @@ const (
 	PatchMessagingMessageQueryParamFieldsChannelIds              PatchMessagingMessageQueryParamFields = "channel_ids"
 	PatchMessagingMessageQueryParamFieldsChannels                PatchMessagingMessageQueryParamFields = "channels"
 	PatchMessagingMessageQueryParamFieldsParentID                PatchMessagingMessageQueryParamFields = "parent_id"
-	PatchMessagingMessageQueryParamFieldsParentMessageID         PatchMessagingMessageQueryParamFields = "parent_message_id"
 	PatchMessagingMessageQueryParamFieldsRootMessageID           PatchMessagingMessageQueryParamFields = "root_message_id"
 	PatchMessagingMessageQueryParamFieldsMessageThreadIdentifier PatchMessagingMessageQueryParamFields = "message_thread_identifier"
 	PatchMessagingMessageQueryParamFieldsAuthorMember            PatchMessagingMessageQueryParamFields = "author_member"
@@ -62,8 +61,6 @@ func (e *PatchMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error
 	case "channels":
 		fallthrough
 	case "parent_id":
-		fallthrough
-	case "parent_message_id":
 		fallthrough
 	case "root_message_id":
 		fallthrough

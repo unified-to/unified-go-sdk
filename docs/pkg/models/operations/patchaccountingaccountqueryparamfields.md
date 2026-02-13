@@ -21,4 +21,5 @@
 | `PatchAccountingAccountQueryParamFieldsGroup`               | group                                                       |
 | `PatchAccountingAccountQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `PatchAccountingAccountQueryParamFieldsParentID`            | parent_id                                                   |
+| `PatchAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `PatchAccountingAccountQueryParamFieldsRaw`                 | raw                                                         |

@@ -21,4 +21,5 @@
 | `FieldsGroup`               | group                       |
 | `FieldsSubgroup`            | subgroup                    |
 | `FieldsParentID`            | parent_id                   |
+| `FieldsTaxonomy`            | taxonomy                    |
 | `FieldsRaw`                 | raw                         |
