@@ -100,6 +100,9 @@
 | `ObjectTypeLmsClass`                | lms_class                           |
 | `ObjectTypeLmsStudent`              | lms_student                         |
 | `ObjectTypeLmsInstructor`           | lms_instructor                      |
+| `ObjectTypeLmsContent`              | lms_content                         |
+| `ObjectTypeLmsCollection`           | lms_collection                      |
+| `ObjectTypeLmsActivity`             | lms_activity                        |
 | `ObjectTypeRepoOrganization`        | repo_organization                   |
 | `ObjectTypeRepoRepository`          | repo_repository                     |
 | `ObjectTypeRepoBranch`              | repo_branch                         |

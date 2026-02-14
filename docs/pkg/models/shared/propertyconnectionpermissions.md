@@ -179,6 +179,12 @@
 | `PropertyConnectionPermissionsLmsStudentWrite`              | lms_student_write                                           |
 | `PropertyConnectionPermissionsLmsInstructorRead`            | lms_instructor_read                                         |
 | `PropertyConnectionPermissionsLmsInstructorWrite`           | lms_instructor_write                                        |
+| `PropertyConnectionPermissionsLmsContentRead`               | lms_content_read                                            |
+| `PropertyConnectionPermissionsLmsContentWrite`              | lms_content_write                                           |
+| `PropertyConnectionPermissionsLmsCollectionRead`            | lms_collection_read                                         |
+| `PropertyConnectionPermissionsLmsCollectionWrite`           | lms_collection_write                                        |
+| `PropertyConnectionPermissionsLmsActivityRead`              | lms_activity_read                                           |
+| `PropertyConnectionPermissionsLmsActivityWrite`             | lms_activity_write                                          |
 | `PropertyConnectionPermissionsRepoOrganizationRead`         | repo_organization_read                                      |
 | `PropertyConnectionPermissionsRepoOrganizationWrite`        | repo_organization_write                                     |
 | `PropertyConnectionPermissionsRepoRepositoryRead`           | repo_repository_read                                        |

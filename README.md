@@ -184,11 +184,17 @@ func main() {
 ### [Activity](docs/sdks/activity/README.md)
 
 * [CreateAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
+* [CreateLmsActivity](docs/sdks/activity/README.md#createlmsactivity) - Create an activity
 * [GetAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
+* [GetLmsActivity](docs/sdks/activity/README.md#getlmsactivity) - Retrieve an activity
 * [ListAtsActivities](docs/sdks/activity/README.md#listatsactivities) - List all activities
+* [ListLmsActivities](docs/sdks/activity/README.md#listlmsactivities) - List all activities
 * [PatchAtsActivity](docs/sdks/activity/README.md#patchatsactivity) - Update an activity
+* [PatchLmsActivity](docs/sdks/activity/README.md#patchlmsactivity) - Update an activity
 * [RemoveAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
+* [RemoveLmsActivity](docs/sdks/activity/README.md#removelmsactivity) - Remove an activity
 * [UpdateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
+* [UpdateLmsActivity](docs/sdks/activity/README.md#updatelmsactivity) - Update an activity
 
 ### [Ad](docs/sdks/ad/README.md)
 
@@ -467,11 +473,17 @@ func main() {
 ### [Collection](docs/sdks/collection/README.md)
 
 * [CreateCommerceCollection](docs/sdks/collection/README.md#createcommercecollection) - Create a collection
+* [CreateLmsCollection](docs/sdks/collection/README.md#createlmscollection) - Create a collection
 * [GetCommerceCollection](docs/sdks/collection/README.md#getcommercecollection) - Retrieve a collection
+* [GetLmsCollection](docs/sdks/collection/README.md#getlmscollection) - Retrieve a collection
 * [ListCommerceCollections](docs/sdks/collection/README.md#listcommercecollections) - List all collections
+* [ListLmsCollections](docs/sdks/collection/README.md#listlmscollections) - List all collections
 * [PatchCommerceCollection](docs/sdks/collection/README.md#patchcommercecollection) - Update a collection
+* [PatchLmsCollection](docs/sdks/collection/README.md#patchlmscollection) - Update a collection
 * [RemoveCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
+* [RemoveLmsCollection](docs/sdks/collection/README.md#removelmscollection) - Remove a collection
 * [UpdateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
+* [UpdateLmsCollection](docs/sdks/collection/README.md#updatelmscollection) - Update a collection
 
 ### [Comment](docs/sdks/comment/README.md)
 
@@ -599,6 +611,15 @@ func main() {
 * [UpdateAccountingContact](docs/sdks/contact/README.md#updateaccountingcontact) - Update a contact
 * [UpdateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [UpdateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
+
+### [Content](docs/sdks/content/README.md)
+
+* [CreateLmsContent](docs/sdks/content/README.md#createlmscontent) - Create a content
+* [GetLmsContent](docs/sdks/content/README.md#getlmscontent) - Retrieve a content
+* [ListLmsContents](docs/sdks/content/README.md#listlmscontents) - List all contents
+* [PatchLmsContent](docs/sdks/content/README.md#patchlmscontent) - Update a content
+* [RemoveLmsContent](docs/sdks/content/README.md#removelmscontent) - Remove a content
+* [UpdateLmsContent](docs/sdks/content/README.md#updatelmscontent) - Update a content
 
 ### [Course](docs/sdks/course/README.md)
 
@@ -1030,27 +1051,45 @@ func main() {
 
 ### [Lms](docs/sdks/lms/README.md)
 
+* [CreateLmsActivity](docs/sdks/lms/README.md#createlmsactivity) - Create an activity
 * [CreateLmsClass](docs/sdks/lms/README.md#createlmsclass) - Create a class
+* [CreateLmsCollection](docs/sdks/lms/README.md#createlmscollection) - Create a collection
+* [CreateLmsContent](docs/sdks/lms/README.md#createlmscontent) - Create a content
 * [CreateLmsCourse](docs/sdks/lms/README.md#createlmscourse) - Create a course
 * [CreateLmsInstructor](docs/sdks/lms/README.md#createlmsinstructor) - Create an instructor
 * [CreateLmsStudent](docs/sdks/lms/README.md#createlmsstudent) - Create a student
+* [GetLmsActivity](docs/sdks/lms/README.md#getlmsactivity) - Retrieve an activity
 * [GetLmsClass](docs/sdks/lms/README.md#getlmsclass) - Retrieve a class
+* [GetLmsCollection](docs/sdks/lms/README.md#getlmscollection) - Retrieve a collection
+* [GetLmsContent](docs/sdks/lms/README.md#getlmscontent) - Retrieve a content
 * [GetLmsCourse](docs/sdks/lms/README.md#getlmscourse) - Retrieve a course
 * [GetLmsInstructor](docs/sdks/lms/README.md#getlmsinstructor) - Retrieve an instructor
 * [GetLmsStudent](docs/sdks/lms/README.md#getlmsstudent) - Retrieve a student
+* [ListLmsActivities](docs/sdks/lms/README.md#listlmsactivities) - List all activities
 * [ListLmsClasses](docs/sdks/lms/README.md#listlmsclasses) - List all classes
+* [ListLmsCollections](docs/sdks/lms/README.md#listlmscollections) - List all collections
+* [ListLmsContents](docs/sdks/lms/README.md#listlmscontents) - List all contents
 * [ListLmsCourses](docs/sdks/lms/README.md#listlmscourses) - List all courses
 * [ListLmsInstructors](docs/sdks/lms/README.md#listlmsinstructors) - List all instructors
 * [ListLmsStudents](docs/sdks/lms/README.md#listlmsstudents) - List all students
+* [PatchLmsActivity](docs/sdks/lms/README.md#patchlmsactivity) - Update an activity
 * [PatchLmsClass](docs/sdks/lms/README.md#patchlmsclass) - Update a class
+* [PatchLmsCollection](docs/sdks/lms/README.md#patchlmscollection) - Update a collection
+* [PatchLmsContent](docs/sdks/lms/README.md#patchlmscontent) - Update a content
 * [PatchLmsCourse](docs/sdks/lms/README.md#patchlmscourse) - Update a course
 * [PatchLmsInstructor](docs/sdks/lms/README.md#patchlmsinstructor) - Update an instructor
 * [PatchLmsStudent](docs/sdks/lms/README.md#patchlmsstudent) - Update a student
+* [RemoveLmsActivity](docs/sdks/lms/README.md#removelmsactivity) - Remove an activity
 * [RemoveLmsClass](docs/sdks/lms/README.md#removelmsclass) - Remove a class
+* [RemoveLmsCollection](docs/sdks/lms/README.md#removelmscollection) - Remove a collection
+* [RemoveLmsContent](docs/sdks/lms/README.md#removelmscontent) - Remove a content
 * [RemoveLmsCourse](docs/sdks/lms/README.md#removelmscourse) - Remove a course
 * [RemoveLmsInstructor](docs/sdks/lms/README.md#removelmsinstructor) - Remove an instructor
 * [RemoveLmsStudent](docs/sdks/lms/README.md#removelmsstudent) - Remove a student
+* [UpdateLmsActivity](docs/sdks/lms/README.md#updatelmsactivity) - Update an activity
 * [UpdateLmsClass](docs/sdks/lms/README.md#updatelmsclass) - Update a class
+* [UpdateLmsCollection](docs/sdks/lms/README.md#updatelmscollection) - Update a collection
+* [UpdateLmsContent](docs/sdks/lms/README.md#updatelmscontent) - Update a content
 * [UpdateLmsCourse](docs/sdks/lms/README.md#updatelmscourse) - Update a course
 * [UpdateLmsInstructor](docs/sdks/lms/README.md#updatelmsinstructor) - Update an instructor
 * [UpdateLmsStudent](docs/sdks/lms/README.md#updatelmsstudent) - Update a student

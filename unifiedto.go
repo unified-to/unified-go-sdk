@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.821.6
+// Generated from OpenAPI doc version 1.0 and generator version 2.823.1
 
 import (
 	"context"
@@ -136,6 +136,7 @@ type UnifiedTo struct {
 	Space             *Space
 	Lms               *Lms
 	Class             *Class
+	Content           *Content
 	Course            *Course
 	Instructor        *Instructor
 	Student           *Student
@@ -262,9 +263,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.30",
+		SDKVersion: "0.36.31",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.30 2.821.6 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.31 2.823.1 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -364,6 +365,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Space = newSpace(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lms = newLms(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Class = newClass(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Content = newContent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Course = newCourse(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Instructor = newInstructor(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Student = newStudent(sdk, sdk.sdkConfiguration, sdk.hooks)

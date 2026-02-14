@@ -10,6 +10,9 @@ const (
 	LmsMediaTypeVideo    LmsMediaType = "VIDEO"
 	LmsMediaTypeWeb      LmsMediaType = "WEB"
 	LmsMediaTypeDocument LmsMediaType = "DOCUMENT"
+	LmsMediaTypeText     LmsMediaType = "TEXT"
+	LmsMediaTypeHTML     LmsMediaType = "HTML"
+	LmsMediaTypeMarkdown LmsMediaType = "MARKDOWN"
 	LmsMediaTypeOther    LmsMediaType = "OTHER"
 )
 
@@ -21,7 +24,7 @@ func (e LmsMediaType) ToPointer() *LmsMediaType {
 func (e *LmsMediaType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "IMAGE", "HEADSHOT", "VIDEO", "WEB", "DOCUMENT", "OTHER":
+		case "IMAGE", "HEADSHOT", "VIDEO", "WEB", "DOCUMENT", "TEXT", "HTML", "MARKDOWN", "OTHER":
 			return true
 		}
 	}
@@ -29,11 +32,19 @@ func (e *LmsMediaType) IsExact() bool {
 }
 
 type LmsMedia struct {
+	Content      *string       `json:"content,omitempty"`
 	Description  *string       `json:"description,omitempty"`
 	Name         *string       `json:"name,omitempty"`
 	ThumbnailURL *string       `json:"thumbnail_url,omitempty"`
 	Type         *LmsMediaType `json:"type,omitempty"`
 	URL          string        `json:"url"`
+}
+
+func (l *LmsMedia) GetContent() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Content
 }
 
 func (l *LmsMedia) GetDescription() *string {

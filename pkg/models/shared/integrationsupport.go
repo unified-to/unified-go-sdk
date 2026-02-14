@@ -393,6 +393,29 @@ func (e *ListContactID) IsExact() bool {
 	return false
 }
 
+type ListContentID string
+
+const (
+	ListContentIDSupportedRequired ListContentID = "supported-required"
+	ListContentIDSupported         ListContentID = "supported"
+	ListContentIDNotSupported      ListContentID = "not-supported"
+)
+
+func (e ListContentID) ToPointer() *ListContentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListContentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListCourseID string
 
 const (
@@ -1704,6 +1727,29 @@ func (e *NativeWebhookCompanyID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookCourseID string
+
+const (
+	NativeWebhookCourseIDSupportedRequired NativeWebhookCourseID = "supported-required"
+	NativeWebhookCourseIDSupported         NativeWebhookCourseID = "supported"
+	NativeWebhookCourseIDNotSupported      NativeWebhookCourseID = "not-supported"
+)
+
+func (e NativeWebhookCourseID) ToPointer() *NativeWebhookCourseID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookCourseID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookEventID string
 
 const (
@@ -1879,6 +1925,29 @@ func (e NativeWebhookShipmentID) ToPointer() *NativeWebhookShipmentID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookShipmentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type NativeWebhookStudentID string
+
+const (
+	NativeWebhookStudentIDSupportedRequired NativeWebhookStudentID = "supported-required"
+	NativeWebhookStudentIDSupported         NativeWebhookStudentID = "supported"
+	NativeWebhookStudentIDNotSupported      NativeWebhookStudentID = "not-supported"
+)
+
+func (e NativeWebhookStudentID) ToPointer() *NativeWebhookStudentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookStudentID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2293,6 +2362,29 @@ func (e VirtualWebhookContactID) ToPointer() *VirtualWebhookContactID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookContactID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookCourseID string
+
+const (
+	VirtualWebhookCourseIDSupportedRequired VirtualWebhookCourseID = "supported-required"
+	VirtualWebhookCourseIDSupported         VirtualWebhookCourseID = "supported"
+	VirtualWebhookCourseIDNotSupported      VirtualWebhookCourseID = "not-supported"
+)
+
+func (e VirtualWebhookCourseID) ToPointer() *VirtualWebhookCourseID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCourseID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -2969,6 +3061,29 @@ func (e *VirtualWebhookStatus) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookStudentID string
+
+const (
+	VirtualWebhookStudentIDSupportedRequired VirtualWebhookStudentID = "supported-required"
+	VirtualWebhookStudentIDSupported         VirtualWebhookStudentID = "supported"
+	VirtualWebhookStudentIDNotSupported      VirtualWebhookStudentID = "not-supported"
+)
+
+func (e VirtualWebhookStudentID) ToPointer() *VirtualWebhookStudentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookStudentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookTaskID string
 
 const (
@@ -3126,6 +3241,7 @@ type IntegrationSupport struct {
 	ListCollectionID        *ListCollectionID        `json:"list_collection_id,omitempty"`
 	ListCompanyID           *ListCompanyID           `json:"list_company_id,omitempty"`
 	ListContactID           *ListContactID           `json:"list_contact_id,omitempty"`
+	ListContentID           *ListContentID           `json:"list_content_id,omitempty"`
 	ListCourseID            *ListCourseID            `json:"list_course_id,omitempty"`
 	ListCustomerID          *ListCustomerID          `json:"list_customer_id,omitempty"`
 	ListDealID              *ListDealID              `json:"list_deal_id,omitempty"`
@@ -3184,6 +3300,7 @@ type IntegrationSupport struct {
 	NativeWebhookCarrierID  *NativeWebhookCarrierID  `json:"native_webhook_carrier_id,omitempty"`
 	NativeWebhookChannelID  *NativeWebhookChannelID  `json:"native_webhook_channel_id,omitempty"`
 	NativeWebhookCompanyID  *NativeWebhookCompanyID  `json:"native_webhook_company_id,omitempty"`
+	NativeWebhookCourseID   *NativeWebhookCourseID   `json:"native_webhook_course_id,omitempty"`
 	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
 	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
 	NativeWebhookLabelID    *NativeWebhookLabelID    `json:"native_webhook_label_id,omitempty"`
@@ -3192,6 +3309,7 @@ type IntegrationSupport struct {
 	NativeWebhookParentID   *NativeWebhookParentID   `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID  *NativeWebhookProjectID  `json:"native_webhook_project_id,omitempty"`
 	NativeWebhookShipmentID *NativeWebhookShipmentID `json:"native_webhook_shipment_id,omitempty"`
+	NativeWebhookStudentID  *NativeWebhookStudentID  `json:"native_webhook_student_id,omitempty"`
 	NativeWebhookTaskID     *NativeWebhookTaskID     `json:"native_webhook_task_id,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
@@ -3214,6 +3332,7 @@ type IntegrationSupport struct {
 	VirtualWebhookCollectionID    *VirtualWebhookCollectionID              `json:"virtual_webhook_collection_id,omitempty"`
 	VirtualWebhookCompanyID       *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
 	VirtualWebhookContactID       *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
+	VirtualWebhookCourseID        *VirtualWebhookCourseID                  `json:"virtual_webhook_course_id,omitempty"`
 	VirtualWebhookCustomerID      *VirtualWebhookCustomerID                `json:"virtual_webhook_customer_id,omitempty"`
 	VirtualWebhookDealID          *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
 	VirtualWebhookEndLt           *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
@@ -3243,6 +3362,7 @@ type IntegrationSupport struct {
 	VirtualWebhookSpaceID         *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
 	VirtualWebhookStartGte        *VirtualWebhookStartGte                  `json:"virtual_webhook_start_gte,omitempty"`
 	VirtualWebhookStatus          *VirtualWebhookStatus                    `json:"virtual_webhook_status,omitempty"`
+	VirtualWebhookStudentID       *VirtualWebhookStudentID                 `json:"virtual_webhook_student_id,omitempty"`
 	VirtualWebhookTaskID          *VirtualWebhookTaskID                    `json:"virtual_webhook_task_id,omitempty"`
 	VirtualWebhookTicketID        *VirtualWebhookTicketID                  `json:"virtual_webhook_ticket_id,omitempty"`
 	VirtualWebhookType            *VirtualWebhookType                      `json:"virtual_webhook_type,omitempty"`
@@ -3376,6 +3496,13 @@ func (i *IntegrationSupport) GetListContactID() *ListContactID {
 		return nil
 	}
 	return i.ListContactID
+}
+
+func (i *IntegrationSupport) GetListContentID() *ListContentID {
+	if i == nil {
+		return nil
+	}
+	return i.ListContentID
 }
 
 func (i *IntegrationSupport) GetListCourseID() *ListCourseID {
@@ -3784,6 +3911,13 @@ func (i *IntegrationSupport) GetNativeWebhookCompanyID() *NativeWebhookCompanyID
 	return i.NativeWebhookCompanyID
 }
 
+func (i *IntegrationSupport) GetNativeWebhookCourseID() *NativeWebhookCourseID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookCourseID
+}
+
 func (i *IntegrationSupport) GetNativeWebhookEventID() *NativeWebhookEventID {
 	if i == nil {
 		return nil
@@ -3838,6 +3972,13 @@ func (i *IntegrationSupport) GetNativeWebhookShipmentID() *NativeWebhookShipment
 		return nil
 	}
 	return i.NativeWebhookShipmentID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookStudentID() *NativeWebhookStudentID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookStudentID
 }
 
 func (i *IntegrationSupport) GetNativeWebhookTaskID() *NativeWebhookTaskID {
@@ -3985,6 +4126,13 @@ func (i *IntegrationSupport) GetVirtualWebhookContactID() *VirtualWebhookContact
 		return nil
 	}
 	return i.VirtualWebhookContactID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookCourseID() *VirtualWebhookCourseID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookCourseID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookCustomerID() *VirtualWebhookCustomerID {
@@ -4188,6 +4336,13 @@ func (i *IntegrationSupport) GetVirtualWebhookStatus() *VirtualWebhookStatus {
 		return nil
 	}
 	return i.VirtualWebhookStatus
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookStudentID() *VirtualWebhookStudentID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookStudentID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookTaskID() *VirtualWebhookTaskID {
