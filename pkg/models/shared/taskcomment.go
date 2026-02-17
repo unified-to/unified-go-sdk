@@ -11,7 +11,7 @@ type TaskComment struct {
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
-	TaskID    string         `json:"task_id"`
+	TaskID    *string        `json:"task_id,omitempty"`
 	Text      string         `json:"text"`
 	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
 	UserID    *string        `json:"user_id,omitempty"`
@@ -50,9 +50,9 @@ func (t *TaskComment) GetRaw() map[string]any {
 	return t.Raw
 }
 
-func (t *TaskComment) GetTaskID() string {
+func (t *TaskComment) GetTaskID() *string {
 	if t == nil {
-		return ""
+		return nil
 	}
 	return t.TaskID
 }

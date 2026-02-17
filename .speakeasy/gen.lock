@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
+  docChecksum: d121c23b689164804bad4c9617517509
   docVersion: "1.0"
-  speakeasyVersion: 1.716.0
-  generationVersion: 2.823.1
-  releaseVersion: 0.36.31
-  configChecksum: 641b72ffad2ca19d767d694b92eb5ecd
+  speakeasyVersion: 1.719.0
+  generationVersion: 2.824.1
+  releaseVersion: 0.36.32
+  configChecksum: 99d018e3411d0dfb00fc690e3d1a6a1c
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: cfcc105d-71e3-4502-820a-f789bece7d29
-  pristine_commit_hash: 37246e609d80d15c3ed47a79c2cce143639c2ef7
-  pristine_tree_hash: a4551bcff94888f06e2eee678a92076fdb72b9c4
+  generation_id: 8aad505c-d778-454a-b4fd-d024397f6066
+  pristine_commit_hash: d30c8ff3c5e95891b6f65ba645cb01f45481ddbe
+  pristine_tree_hash: 30981be1b107317d7f0c61c996a8ee2196499537
 features:
   go:
     acceptHeaders: 2.81.2
@@ -34,7 +34,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.3.0
-    unions: 2.87.3
+    unions: 2.87.4
     uploadStreams: 0.1.0
 trackedFiles:
   .gitattributes:
@@ -3071,8 +3071,8 @@ trackedFiles:
     pristine_git_object: f86acbf00ff70d6245631bb1d5eef9c2ec2ac057
   docs/pkg/models/operations/listadsreportsrequest.md:
     id: e331a58dc9e9
-    last_write_checksum: sha1:c762821fd60062e171ecca2321f6a7d93574d9c0
-    pristine_git_object: 490433b2942f25e468e5a8601a55307d268aa2c1
+    last_write_checksum: sha1:99fd6c848a5b8d0d3a04df9da5bc69f3ca87867f
+    pristine_git_object: f7e1fe180f89bd6b116cb2564e604c85f06d6f27
   docs/pkg/models/operations/listadsreportsresponse.md:
     id: a4914297aa36
     last_write_checksum: sha1:4247ccd68f1f1a523e6842b2a8d1707c7404033d
@@ -9903,8 +9903,8 @@ trackedFiles:
     pristine_git_object: 13c6b1e2630ebee86511fe6e8b5f0bc1703917de
   docs/pkg/models/shared/taskcomment.md:
     id: a7603c78bd0e
-    last_write_checksum: sha1:e9acf89896ecd78c18bf6a2bb6efb09731cce3fe
-    pristine_git_object: ed910846e5152a9c9f824e24c84e64c8b0320139
+    last_write_checksum: sha1:0dfc24d6b66ee0ae13c3f358f0a3678277654b7c
+    pristine_git_object: d75056e53d1ab0ec4add4ca3a15e0018161fc6c1
   docs/pkg/models/shared/taskmetadata.md:
     id: 2f8dbbce0f01
     last_write_checksum: sha1:b77a378c808fa11452864645ded3becd237ef24b
@@ -10419,8 +10419,8 @@ trackedFiles:
     pristine_git_object: f5707c2d40488a625013b0050c724624d794ad45
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:f5dab604ca74e7329eaa4266075613f17bb5bd4b
-    pristine_git_object: dc470a3dfdab4e982119d6f97b52168e044530d7
+    last_write_checksum: sha1:14b3ddece612742f8c6714346c3d6ba3adf2666d
+    pristine_git_object: bf9246cdb275238bb93b7377076f89d5b3a53e3e
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
     last_write_checksum: sha1:b57a36b9e2381115adc23d6c70e862337dcfac5d
@@ -10771,8 +10771,8 @@ trackedFiles:
     pristine_git_object: 717de2188005c83b52cd93f9c698c18d05d7ac87
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:363eb76c6d5ce63f515385133b38e04e83fad383
-    pristine_git_object: 941dedafcd87ee47c5f8260a43642dbacc9d6d1c
+    last_write_checksum: sha1:559d948dbcef23f325e4c519c944556addeba5bf
+    pristine_git_object: c46334256ac3ef593ec30718eb7ec6229310860b
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:a7ee201cad7731b6b803d8e82ddd525c80dbcd21
@@ -12015,8 +12015,8 @@ trackedFiles:
     pristine_git_object: 5110730f4d87a6ce03f70a2c0ce7ef447e55971f
   pkg/models/operations/listadsreports.go:
     id: d97542f258fb
-    last_write_checksum: sha1:734b00e06aff3cf2fb87d943e96f6e2c6cf73a8a
-    pristine_git_object: eb97352be3f83dc937fcfd9786cf43649f08c42c
+    last_write_checksum: sha1:e2e6a275036583498a5c4629fb428dec5cb77557
+    pristine_git_object: 77e7945c69763f2e0ed3032ba498ba829926ddb7
   pkg/models/operations/listassessmentpackages.go:
     id: a154827bae58
     last_write_checksum: sha1:941d17b25c030bdc752007273e67c8fd91b4612b
@@ -14883,8 +14883,8 @@ trackedFiles:
     pristine_git_object: 4b6115ec70899a86861bc29b5697c374d01708ac
   pkg/models/shared/taskcomment.go:
     id: 8d0f736790f2
-    last_write_checksum: sha1:44cb6d89bf9d51f999c1709ba370112c3069ddd5
-    pristine_git_object: 91f44b09fa1fa0b28d5e75077be35b7c5947c7e1
+    last_write_checksum: sha1:e5bb4831716df63c06e2e79f568fb4a558b79ec9
+    pristine_git_object: 650725d3b9992b183e22d239eb8d376f7e0d8268
   pkg/models/shared/taskmetadata.go:
     id: 32ed96c9c5dd
     last_write_checksum: sha1:f45873ae4f13f473018b6ad0293fb2c3e72ded23
@@ -15207,8 +15207,8 @@ trackedFiles:
     pristine_git_object: d0bc6a48bf17d3c06a95dd4dd47a441d712de450
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:f7b189d795682397193d0e7f045a9a6daa78f4e8
-    pristine_git_object: 90d4108be339b5242800a4160ef4a4e92e272447
+    last_write_checksum: sha1:5ba31bed78c5031413f3fc0258b07b81652953f2
+    pristine_git_object: 479d592c4208ade5b16dd34313e1c03a41ad6612
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:49703165535b5ffca952086e60ae0a474ffabfc6
@@ -17639,10 +17639,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
@@ -17661,7 +17661,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -17694,10 +17694,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -17728,10 +17728,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -21085,7 +21085,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Activity.CreateLmsActivity()`: **Added**\n* `UnifiedTo.Activity.GetLmsActivity()`: **Added**\n* `UnifiedTo.Activity.ListLmsActivities()`: **Added**\n* `UnifiedTo.Activity.PatchLmsActivity()`: **Added**\n* `UnifiedTo.Activity.RemoveLmsActivity()`: **Added**\n* `UnifiedTo.Activity.UpdateLmsActivity()`: **Added**\n* `UnifiedTo.Collection.CreateLmsCollection()`: **Added**\n* `UnifiedTo.Collection.GetLmsCollection()`: **Added**\n* `UnifiedTo.Collection.ListLmsCollections()`: **Added**\n* `UnifiedTo.Collection.PatchLmsCollection()`: **Added**\n* `UnifiedTo.Collection.RemoveLmsCollection()`: **Added**\n* `UnifiedTo.Collection.UpdateLmsCollection()`: **Added**\n* `UnifiedTo.Lms.CreateLmsActivity()`: **Added**\n* `UnifiedTo.Lms.CreateLmsCollection()`: **Added**\n* `UnifiedTo.Lms.CreateLmsContent()`: **Added**\n* `UnifiedTo.Lms.GetLmsActivity()`: **Added**\n* `UnifiedTo.Lms.GetLmsCollection()`: **Added**\n* `UnifiedTo.Lms.GetLmsContent()`: **Added**\n* `UnifiedTo.Lms.ListLmsActivities()`: **Added**\n* `UnifiedTo.Lms.ListLmsCollections()`: **Added**\n* `UnifiedTo.Lms.ListLmsContents()`: **Added**\n* `UnifiedTo.Lms.PatchLmsActivity()`: **Added**\n* `UnifiedTo.Lms.PatchLmsCollection()`: **Added**\n* `UnifiedTo.Lms.PatchLmsContent()`: **Added**\n* `UnifiedTo.Lms.RemoveLmsActivity()`: **Added**\n* `UnifiedTo.Lms.RemoveLmsCollection()`: **Added**\n* `UnifiedTo.Lms.RemoveLmsContent()`: **Added**\n* `UnifiedTo.Lms.UpdateLmsActivity()`: **Added**\n* `UnifiedTo.Lms.UpdateLmsCollection()`: **Added**\n* `UnifiedTo.Lms.UpdateLmsContent()`: **Added**\n* `UnifiedTo.Content.CreateLmsContent()`: **Added**\n* `UnifiedTo.Content.GetLmsContent()`: **Added**\n* `UnifiedTo.Content.ListLmsContents()`: **Added**\n* `UnifiedTo.Content.PatchLmsContent()`: **Added**\n* `UnifiedTo.Content.RemoveLmsContent()`: **Added**\n* `UnifiedTo.Content.UpdateLmsContent()`: **Added**\n* `UnifiedTo.Lms.CreateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.CreateLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.GetLmsClass()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.GetLmsCourse()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.ListLmsClasses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Lms.ListLmsCourses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.UpdateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.UpdateLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Class.CreateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Class.GetLmsClass()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Class.ListLmsClasses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Class.PatchLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Class.UpdateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Course.CreateLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Course.GetLmsCourse()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Course.ListLmsCourses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Course.PatchLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Course.UpdateLmsCourse()`: \n  *  `request.Request.LmsCourse.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `request.Request` **Changed**\n* `UnifiedTo.Ads.ListAdsReports()`:  `request.Request` **Changed**\n* `UnifiedTo.Comment.CreateTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n* `UnifiedTo.Comment.GetTaskComment()`:  `response.TaskId` **Changed**\n* `UnifiedTo.Comment.ListTaskComments()`:  `response.[].TaskId` **Changed**\n* `UnifiedTo.Comment.PatchTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n* `UnifiedTo.Comment.UpdateTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n* `UnifiedTo.Task.CreateTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n* `UnifiedTo.Task.GetTaskComment()`:  `response.TaskId` **Changed**\n* `UnifiedTo.Task.ListTaskComments()`:  `response.[].TaskId` **Changed**\n* `UnifiedTo.Task.PatchTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n* `UnifiedTo.Task.UpdateTaskComment()`: \n  *  `request.Request.TaskComment.TaskId` **Changed**\n  *  `response.TaskId` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

@@ -108,7 +108,6 @@ func main() {
 
     res, err := s.Comment.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
         TaskComment: shared.TaskComment{
-            TaskID: "<id>",
             Text: "<value>",
         },
         ConnectionID: "<id>",
@@ -611,7 +610,6 @@ func main() {
 
     res, err := s.Comment.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
         TaskComment: shared.TaskComment{
-            TaskID: "<id>",
             Text: "<value>",
         },
         ConnectionID: "<id>",
@@ -954,7 +952,6 @@ func main() {
 
     res, err := s.Comment.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
         TaskComment: shared.TaskComment{
-            TaskID: "<id>",
             Text: "<value>",
         },
         ConnectionID: "<id>",
