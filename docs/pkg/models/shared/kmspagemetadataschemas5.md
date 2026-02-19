@@ -27,3 +27,19 @@ kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5Number(float64{/*
 kmsPageMetadataSchemas5 := shared.CreateKmsPageMetadataSchemas5Boolean(bool{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch kmsPageMetadataSchemas5.Type {
+	case shared.KmsPageMetadataSchemas5TypeKmsPageMetadataSchemas1:
+		// kmsPageMetadataSchemas5.KmsPageMetadataSchemas1 is populated
+	case shared.KmsPageMetadataSchemas5TypeStr:
+		// kmsPageMetadataSchemas5.Str is populated
+	case shared.KmsPageMetadataSchemas5TypeNumber:
+		// kmsPageMetadataSchemas5.Number is populated
+	case shared.KmsPageMetadataSchemas5TypeBoolean:
+		// kmsPageMetadataSchemas5.Boolean is populated
+}
+```

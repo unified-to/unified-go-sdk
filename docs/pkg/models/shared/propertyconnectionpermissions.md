@@ -135,6 +135,8 @@
 | `PropertyConnectionPermissionsHrisDeductionWrite`           | hris_deduction_write                                        |
 | `PropertyConnectionPermissionsHrisBenefitRead`              | hris_benefit_read                                           |
 | `PropertyConnectionPermissionsHrisBenefitWrite`             | hris_benefit_write                                          |
+| `PropertyConnectionPermissionsHrisBankaccountRead`          | hris_bankaccount_read                                       |
+| `PropertyConnectionPermissionsHrisBankaccountWrite`         | hris_bankaccount_write                                      |
 | `PropertyConnectionPermissionsUcCallRead`                   | uc_call_read                                                |
 | `PropertyConnectionPermissionsUcContactRead`                | uc_contact_read                                             |
 | `PropertyConnectionPermissionsUcContactWrite`               | uc_contact_write                                            |

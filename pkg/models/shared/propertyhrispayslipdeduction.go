@@ -83,7 +83,7 @@ func (e *PropertyHrisPayslipDeductionType) IsExact() bool {
 	return false
 }
 
-// PropertyHrisPayslipDeduction - // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+// PropertyHrisPayslipDeduction - The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
 type PropertyHrisPayslipDeduction struct {
 	Amount        *float64                                   `json:"amount,omitempty"`
 	BenefitID     *string                                    `json:"benefit_id,omitempty"`
@@ -94,6 +94,7 @@ type PropertyHrisPayslipDeduction struct {
 	Frequency     *PropertyHrisPayslipDeductionFrequency     `json:"frequency,omitempty"`
 	ID            *string                                    `json:"id,omitempty"`
 	IsActive      *bool                                      `json:"is_active,omitempty"`
+	Notes         *string                                    `json:"notes,omitempty"`
 	Raw           map[string]any                             `json:"raw,omitempty"`
 	StartAt       *time.Time                                 `json:"start_at,omitempty"`
 	Type          *PropertyHrisPayslipDeductionType          `json:"type,omitempty"`
@@ -173,6 +174,13 @@ func (p *PropertyHrisPayslipDeduction) GetIsActive() *bool {
 		return nil
 	}
 	return p.IsActive
+}
+
+func (p *PropertyHrisPayslipDeduction) GetNotes() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Notes
 }
 
 func (p *PropertyHrisPayslipDeduction) GetRaw() map[string]any {

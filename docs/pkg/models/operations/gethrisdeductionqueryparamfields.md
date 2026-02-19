@@ -18,4 +18,5 @@
 | `GetHrisDeductionQueryParamFieldsStartAt`       | start_at                                        |
 | `GetHrisDeductionQueryParamFieldsEndAt`         | end_at                                          |
 | `GetHrisDeductionQueryParamFieldsIsActive`      | is_active                                       |
+| `GetHrisDeductionQueryParamFieldsNotes`         | notes                                           |
 | `GetHrisDeductionQueryParamFieldsRaw`           | raw                                             |

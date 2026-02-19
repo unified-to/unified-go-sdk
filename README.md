@@ -336,6 +336,15 @@ func main() {
 * [GetAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
 * [ListAccountingBalancesheets](docs/sdks/balancesheet/README.md#listaccountingbalancesheets) - List all balancesheets
 
+### [Bankaccount](docs/sdks/bankaccount/README.md)
+
+* [CreateHrisBankaccount](docs/sdks/bankaccount/README.md#createhrisbankaccount) - Create a bankaccount
+* [GetHrisBankaccount](docs/sdks/bankaccount/README.md#gethrisbankaccount) - Retrieve a bankaccount
+* [ListHrisBankaccounts](docs/sdks/bankaccount/README.md#listhrisbankaccounts) - List all bankaccounts
+* [PatchHrisBankaccount](docs/sdks/bankaccount/README.md#patchhrisbankaccount) - Update a bankaccount
+* [RemoveHrisBankaccount](docs/sdks/bankaccount/README.md#removehrisbankaccount) - Remove a bankaccount
+* [UpdateHrisBankaccount](docs/sdks/bankaccount/README.md#updatehrisbankaccount) - Update a bankaccount
+
 ### [Benefit](docs/sdks/benefit/README.md)
 
 * [CreateHrisBenefit](docs/sdks/benefit/README.md#createhrisbenefit) - Create a benefit
@@ -841,6 +850,7 @@ func main() {
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [CreateHrisBankaccount](docs/sdks/hris/README.md#createhrisbankaccount) - Create a bankaccount
 * [CreateHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [CreateHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
@@ -849,6 +859,7 @@ func main() {
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [GetHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [GetHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [GetHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
@@ -859,6 +870,7 @@ func main() {
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [ListHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
 * [ListHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [ListHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
@@ -869,6 +881,7 @@ func main() {
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [PatchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
 * [PatchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [PatchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
@@ -877,6 +890,7 @@ func main() {
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [RemoveHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [RemoveHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [RemoveHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
@@ -885,6 +899,7 @@ func main() {
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [UpdateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [UpdateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [UpdateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction

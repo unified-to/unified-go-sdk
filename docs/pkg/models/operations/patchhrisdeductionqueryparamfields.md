@@ -18,4 +18,5 @@
 | `PatchHrisDeductionQueryParamFieldsStartAt`       | start_at                                          |
 | `PatchHrisDeductionQueryParamFieldsEndAt`         | end_at                                            |
 | `PatchHrisDeductionQueryParamFieldsIsActive`      | is_active                                         |
+| `PatchHrisDeductionQueryParamFieldsNotes`         | notes                                             |
 | `PatchHrisDeductionQueryParamFieldsRaw`           | raw                                               |

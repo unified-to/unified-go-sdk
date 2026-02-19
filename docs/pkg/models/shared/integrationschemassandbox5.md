@@ -27,3 +27,19 @@ integrationSchemasSandbox5 := shared.CreateIntegrationSchemasSandbox5Number(floa
 integrationSchemasSandbox5 := shared.CreateIntegrationSchemasSandbox5Boolean(bool{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch integrationSchemasSandbox5.Type {
+	case shared.IntegrationSchemasSandbox5TypeIntegrationSchemasSandbox1:
+		// integrationSchemasSandbox5.IntegrationSchemasSandbox1 is populated
+	case shared.IntegrationSchemasSandbox5TypeStr:
+		// integrationSchemasSandbox5.Str is populated
+	case shared.IntegrationSchemasSandbox5TypeNumber:
+		// integrationSchemasSandbox5.Number is populated
+	case shared.IntegrationSchemasSandbox5TypeBoolean:
+		// integrationSchemasSandbox5.Boolean is populated
+}
+```

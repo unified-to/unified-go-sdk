@@ -25,6 +25,7 @@ const (
 	PatchHrisDeductionQueryParamFieldsStartAt       PatchHrisDeductionQueryParamFields = "start_at"
 	PatchHrisDeductionQueryParamFieldsEndAt         PatchHrisDeductionQueryParamFields = "end_at"
 	PatchHrisDeductionQueryParamFieldsIsActive      PatchHrisDeductionQueryParamFields = "is_active"
+	PatchHrisDeductionQueryParamFieldsNotes         PatchHrisDeductionQueryParamFields = "notes"
 	PatchHrisDeductionQueryParamFieldsRaw           PatchHrisDeductionQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *PatchHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "end_at":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "notes":
 		fallthrough
 	case "raw":
 		*e = PatchHrisDeductionQueryParamFields(v)

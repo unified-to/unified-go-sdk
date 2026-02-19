@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.824.1
+// Generated from OpenAPI doc version 1.0 and generator version 2.832.2
 
 import (
 	"context"
@@ -123,6 +123,7 @@ type UnifiedTo struct {
 	Model             *Model
 	Prompt            *Prompt
 	Hris              *Hris
+	Bankaccount       *Bankaccount
 	Benefit           *Benefit
 	Deduction         *Deduction
 	Device            *Device
@@ -263,9 +264,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.32",
+		SDKVersion: "0.36.33",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.32 2.824.1 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.33 2.832.2 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -352,6 +353,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Bankaccount = newBankaccount(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Benefit = newBenefit(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deduction = newDeduction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -34,7 +34,7 @@ type HrisPayslip struct {
 	CompanyID *string    `json:"company_id,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
-	// // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+	// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
 	Deduction   *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
 	Details     []HrisPayslipDetail           `json:"details,omitempty"`
 	EndAt       *time.Time                    `json:"end_at,omitempty"`

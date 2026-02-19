@@ -33,3 +33,21 @@ extraData := shared.CreateExtraDataBoolean(bool{/* values here */})
 extraData := shared.CreateExtraDataArrayOf5([]shared.Five{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch extraData.Type {
+	case shared.ExtraDataTypeMapOfAny:
+		// extraData.MapOfAny is populated
+	case shared.ExtraDataTypeStr:
+		// extraData.Str is populated
+	case shared.ExtraDataTypeNumber:
+		// extraData.Number is populated
+	case shared.ExtraDataTypeBoolean:
+		// extraData.Boolean is populated
+	case shared.ExtraDataTypeArrayOf5:
+		// extraData.ArrayOf5 is populated
+}
+```

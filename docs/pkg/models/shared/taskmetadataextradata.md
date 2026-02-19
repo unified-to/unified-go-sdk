@@ -33,3 +33,21 @@ taskMetadataExtraData := shared.CreateTaskMetadataExtraDataBoolean(bool{/* value
 taskMetadataExtraData := shared.CreateTaskMetadataExtraDataArrayOfTaskMetadata5([]shared.TaskMetadata5{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch taskMetadataExtraData.Type {
+	case shared.TaskMetadataExtraDataTypeMapOfAny:
+		// taskMetadataExtraData.MapOfAny is populated
+	case shared.TaskMetadataExtraDataTypeStr:
+		// taskMetadataExtraData.Str is populated
+	case shared.TaskMetadataExtraDataTypeNumber:
+		// taskMetadataExtraData.Number is populated
+	case shared.TaskMetadataExtraDataTypeBoolean:
+		// taskMetadataExtraData.Boolean is populated
+	case shared.TaskMetadataExtraDataTypeArrayOfTaskMetadata5:
+		// taskMetadataExtraData.ArrayOfTaskMetadata5 is populated
+}
+```

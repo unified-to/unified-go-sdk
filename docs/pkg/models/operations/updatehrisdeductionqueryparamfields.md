@@ -18,4 +18,5 @@
 | `UpdateHrisDeductionQueryParamFieldsStartAt`       | start_at                                           |
 | `UpdateHrisDeductionQueryParamFieldsEndAt`         | end_at                                             |
 | `UpdateHrisDeductionQueryParamFieldsIsActive`      | is_active                                          |
+| `UpdateHrisDeductionQueryParamFieldsNotes`         | notes                                              |
 | `UpdateHrisDeductionQueryParamFieldsRaw`           | raw                                                |

@@ -94,6 +94,7 @@ type HrisDeduction struct {
 	Frequency     *HrisDeductionFrequency     `json:"frequency,omitempty"`
 	ID            *string                     `json:"id,omitempty"`
 	IsActive      *bool                       `json:"is_active,omitempty"`
+	Notes         *string                     `json:"notes,omitempty"`
 	Raw           map[string]any              `json:"raw,omitempty"`
 	StartAt       *time.Time                  `json:"start_at,omitempty"`
 	Type          *HrisDeductionType          `json:"type,omitempty"`
@@ -173,6 +174,13 @@ func (h *HrisDeduction) GetIsActive() *bool {
 		return nil
 	}
 	return h.IsActive
+}
+
+func (h *HrisDeduction) GetNotes() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Notes
 }
 
 func (h *HrisDeduction) GetRaw() map[string]any {

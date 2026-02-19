@@ -25,6 +25,7 @@ const (
 	CreateHrisDeductionQueryParamFieldsStartAt       CreateHrisDeductionQueryParamFields = "start_at"
 	CreateHrisDeductionQueryParamFieldsEndAt         CreateHrisDeductionQueryParamFields = "end_at"
 	CreateHrisDeductionQueryParamFieldsIsActive      CreateHrisDeductionQueryParamFields = "is_active"
+	CreateHrisDeductionQueryParamFieldsNotes         CreateHrisDeductionQueryParamFields = "notes"
 	CreateHrisDeductionQueryParamFieldsRaw           CreateHrisDeductionQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *CreateHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "end_at":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "notes":
 		fallthrough
 	case "raw":
 		*e = CreateHrisDeductionQueryParamFields(v)

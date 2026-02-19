@@ -59,6 +59,7 @@ type HrisCompensation struct {
 	Currency  *string                    `json:"currency,omitempty"`
 	Frequency *HrisCompensationFrequency `json:"frequency,omitempty"`
 	GroupID   *string                    `json:"group_id,omitempty"`
+	Notes     *string                    `json:"notes,omitempty"`
 	Type      *HrisCompensationType      `json:"type,omitempty"`
 }
 
@@ -88,6 +89,13 @@ func (h *HrisCompensation) GetGroupID() *string {
 		return nil
 	}
 	return h.GroupID
+}
+
+func (h *HrisCompensation) GetNotes() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Notes
 }
 
 func (h *HrisCompensation) GetType() *HrisCompensationType {

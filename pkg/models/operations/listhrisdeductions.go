@@ -25,6 +25,7 @@ const (
 	ListHrisDeductionsQueryParamFieldsStartAt       ListHrisDeductionsQueryParamFields = "start_at"
 	ListHrisDeductionsQueryParamFieldsEndAt         ListHrisDeductionsQueryParamFields = "end_at"
 	ListHrisDeductionsQueryParamFieldsIsActive      ListHrisDeductionsQueryParamFields = "is_active"
+	ListHrisDeductionsQueryParamFieldsNotes         ListHrisDeductionsQueryParamFields = "notes"
 	ListHrisDeductionsQueryParamFieldsRaw           ListHrisDeductionsQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *ListHrisDeductionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "end_at":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "notes":
 		fallthrough
 	case "raw":
 		*e = ListHrisDeductionsQueryParamFields(v)

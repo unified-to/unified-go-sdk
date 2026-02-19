@@ -33,3 +33,21 @@ kmsPageMetadataValue := shared.CreateKmsPageMetadataValueBoolean(bool{/* values 
 kmsPageMetadataValue := shared.CreateKmsPageMetadataValueArrayOfKmsPageMetadataSchemas5([]shared.KmsPageMetadataSchemas5{/* values here */})
 ```
 
+## Union Discrimination
+
+Use the `Type` field to determine which variant is active, then access the corresponding field:
+
+```go
+switch kmsPageMetadataValue.Type {
+	case shared.KmsPageMetadataValueTypeMapOfAny:
+		// kmsPageMetadataValue.MapOfAny is populated
+	case shared.KmsPageMetadataValueTypeStr:
+		// kmsPageMetadataValue.Str is populated
+	case shared.KmsPageMetadataValueTypeNumber:
+		// kmsPageMetadataValue.Number is populated
+	case shared.KmsPageMetadataValueTypeBoolean:
+		// kmsPageMetadataValue.Boolean is populated
+	case shared.KmsPageMetadataValueTypeArrayOfKmsPageMetadataSchemas5:
+		// kmsPageMetadataValue.ArrayOfKmsPageMetadataSchemas5 is populated
+}
+```
