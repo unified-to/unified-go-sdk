@@ -140,6 +140,7 @@ type AdsGroup struct {
 	CampaignID           *string                       `json:"campaign_id,omitempty"`
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
+	Currency             *string                       `json:"currency,omitempty"`
 	EndAt                *time.Time                    `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
@@ -237,6 +238,13 @@ func (a *AdsGroup) GetCreativeIds() []string {
 		return nil
 	}
 	return a.CreativeIds
+}
+
+func (a *AdsGroup) GetCurrency() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Currency
 }
 
 func (a *AdsGroup) GetEndAt() *time.Time {

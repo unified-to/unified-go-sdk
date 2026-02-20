@@ -8595,6 +8595,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -8609,7 +8610,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -8775,6 +8776,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -8789,7 +8791,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -8955,6 +8957,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -8969,7 +8972,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -9135,6 +9138,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -9149,7 +9153,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -9315,6 +9319,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -9329,7 +9334,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -9495,6 +9500,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -9509,7 +9515,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -9675,6 +9681,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -9689,7 +9696,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -9855,6 +9862,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -9869,7 +9877,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -10035,6 +10043,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -10049,7 +10058,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil

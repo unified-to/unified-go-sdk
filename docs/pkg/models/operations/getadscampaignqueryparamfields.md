@@ -15,6 +15,7 @@
 | `GetAdsCampaignQueryParamFieldsEndAt`              | end_at                                             |
 | `GetAdsCampaignQueryParamFieldsBudgetAmount`       | budget_amount                                      |
 | `GetAdsCampaignQueryParamFieldsBudgetPeriod`       | budget_period                                      |
+| `GetAdsCampaignQueryParamFieldsCurrency`           | currency                                           |
 | `GetAdsCampaignQueryParamFieldsTotalSpendAmount`   | total_spend_amount                                 |
 | `GetAdsCampaignQueryParamFieldsTargeting`          | targeting                                          |
 | `GetAdsCampaignQueryParamFieldsRaw`                | raw                                                |

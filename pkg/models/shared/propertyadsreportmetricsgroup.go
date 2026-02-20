@@ -140,6 +140,7 @@ type PropertyAdsReportMetricsGroup struct {
 	CampaignID           *string                                            `json:"campaign_id,omitempty"`
 	CreatedAt            *time.Time                                         `json:"created_at,omitempty"`
 	CreativeIds          []string                                           `json:"creative_ids,omitempty"`
+	Currency             *string                                            `json:"currency,omitempty"`
 	EndAt                *time.Time                                         `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsReportMetricsGroupFrequencyCap         `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
@@ -237,6 +238,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCreativeIds() []string {
 		return nil
 	}
 	return p.CreativeIds
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetCurrency() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Currency
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetEndAt() *time.Time {

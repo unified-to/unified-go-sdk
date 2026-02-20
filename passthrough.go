@@ -208,10 +208,10 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -460,10 +460,10 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -705,10 +705,10 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -957,10 +957,10 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1209,10 +1209,10 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1454,10 +1454,10 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1706,10 +1706,10 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1958,10 +1958,10 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 		fallthrough
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 304:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {

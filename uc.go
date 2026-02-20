@@ -3129,6 +3129,7 @@ func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCom
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3143,7 +3144,7 @@ func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCom
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -3309,6 +3310,7 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3323,7 +3325,7 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil
@@ -3489,6 +3491,7 @@ func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcR
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -3503,7 +3506,7 @@ func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcR
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil

@@ -1445,6 +1445,7 @@ func (s *Recording) RemoveUcRecording(ctx context.Context, request operations.Re
 
 	switch {
 	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
 		if err != nil {
@@ -1459,7 +1460,7 @@ func (s *Recording) RemoveUcRecording(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
-
+		utils.DrainBody(httpRes)
 	}
 
 	return res, nil

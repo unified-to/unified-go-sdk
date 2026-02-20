@@ -1980,6 +1980,29 @@ func (e *NativeWebhookTaskID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookType string
+
+const (
+	NativeWebhookTypeSupportedRequired NativeWebhookType = "supported-required"
+	NativeWebhookTypeSupported         NativeWebhookType = "supported"
+	NativeWebhookTypeNotSupported      NativeWebhookType = "not-supported"
+)
+
+func (e NativeWebhookType) ToPointer() *NativeWebhookType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type SearchDomain string
 
 const (
@@ -3311,6 +3334,7 @@ type IntegrationSupport struct {
 	NativeWebhookShipmentID *NativeWebhookShipmentID `json:"native_webhook_shipment_id,omitempty"`
 	NativeWebhookStudentID  *NativeWebhookStudentID  `json:"native_webhook_student_id,omitempty"`
 	NativeWebhookTaskID     *NativeWebhookTaskID     `json:"native_webhook_task_id,omitempty"`
+	NativeWebhookType       *NativeWebhookType       `json:"native_webhook_type,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
 	RawObjects                    []string                                 `json:"raw_objects,omitempty"`
@@ -3986,6 +4010,13 @@ func (i *IntegrationSupport) GetNativeWebhookTaskID() *NativeWebhookTaskID {
 		return nil
 	}
 	return i.NativeWebhookTaskID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookType() *NativeWebhookType {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookType
 }
 
 func (i *IntegrationSupport) GetOutboundFields() map[string]string {

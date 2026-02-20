@@ -15,6 +15,7 @@
 | `ListAdsCampaignsQueryParamFieldsEndAt`              | end_at                                               |
 | `ListAdsCampaignsQueryParamFieldsBudgetAmount`       | budget_amount                                        |
 | `ListAdsCampaignsQueryParamFieldsBudgetPeriod`       | budget_period                                        |
+| `ListAdsCampaignsQueryParamFieldsCurrency`           | currency                                             |
 | `ListAdsCampaignsQueryParamFieldsTotalSpendAmount`   | total_spend_amount                                   |
 | `ListAdsCampaignsQueryParamFieldsTargeting`          | targeting                                            |
 | `ListAdsCampaignsQueryParamFieldsRaw`                | raw                                                  |

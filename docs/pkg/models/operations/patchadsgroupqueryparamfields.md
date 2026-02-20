@@ -16,6 +16,7 @@
 | `PatchAdsGroupQueryParamFieldsStatus`               | status                                              |
 | `PatchAdsGroupQueryParamFieldsTargeting`            | targeting                                           |
 | `PatchAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                          |
+| `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
 | `PatchAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                        |
 | `PatchAdsGroupQueryParamFieldsBudgetAmount`         | budget_amount                                       |
 | `PatchAdsGroupQueryParamFieldsBudgetPeriod`         | budget_period                                       |

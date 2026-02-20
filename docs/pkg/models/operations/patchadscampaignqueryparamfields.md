@@ -15,6 +15,7 @@
 | `PatchAdsCampaignQueryParamFieldsEndAt`              | end_at                                               |
 | `PatchAdsCampaignQueryParamFieldsBudgetAmount`       | budget_amount                                        |
 | `PatchAdsCampaignQueryParamFieldsBudgetPeriod`       | budget_period                                        |
+| `PatchAdsCampaignQueryParamFieldsCurrency`           | currency                                             |
 | `PatchAdsCampaignQueryParamFieldsTotalSpendAmount`   | total_spend_amount                                   |
 | `PatchAdsCampaignQueryParamFieldsTargeting`          | targeting                                            |
 | `PatchAdsCampaignQueryParamFieldsRaw`                | raw                                                  |

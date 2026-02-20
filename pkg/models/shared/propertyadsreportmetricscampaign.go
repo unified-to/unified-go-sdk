@@ -88,6 +88,7 @@ type PropertyAdsReportMetricsCampaign struct {
 	BudgetAmount       *float64                                      `json:"budget_amount,omitempty"`
 	BudgetPeriod       *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
 	CreatedAt          *time.Time                                    `json:"created_at,omitempty"`
+	Currency           *string                                       `json:"currency,omitempty"`
 	EndAt              *time.Time                                    `json:"end_at,omitempty"`
 	FrequencyCap       *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
 	Goal               *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
@@ -134,6 +135,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return p.CreatedAt
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetCurrency() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Currency
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetEndAt() *time.Time {

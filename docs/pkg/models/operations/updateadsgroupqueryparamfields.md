@@ -16,6 +16,7 @@
 | `UpdateAdsGroupQueryParamFieldsStatus`               | status                                               |
 | `UpdateAdsGroupQueryParamFieldsTargeting`            | targeting                                            |
 | `UpdateAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                           |
+| `UpdateAdsGroupQueryParamFieldsCurrency`             | currency                                             |
 | `UpdateAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                         |
 | `UpdateAdsGroupQueryParamFieldsBudgetAmount`         | budget_amount                                        |
 | `UpdateAdsGroupQueryParamFieldsBudgetPeriod`         | budget_period                                        |
