@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0016420ba460156764e16b3acba7913d
+  docChecksum: 064bed284f2f86435722fec67549e099
   docVersion: "1.0"
-  speakeasyVersion: 1.722.7
-  generationVersion: 2.832.9
-  releaseVersion: 0.36.34
-  configChecksum: c126f23878e2388ef1b1098412304fe7
+  speakeasyVersion: 1.723.0
+  generationVersion: 2.835.2
+  releaseVersion: 0.36.35
+  configChecksum: 5c679fc80677cbb05564b5a602f8221b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: f58a23c3-ba8b-45d5-b61a-1392439669da
-  pristine_commit_hash: 0e8827a888e2b27ae52f1074bff6ba238d53d6bf
-  pristine_tree_hash: 1b3b4f99ca0f1eb02d9b4fd7f4637d72ff1c67f2
+  generation_id: dfbee138-d05c-40f5-a9f5-2eab68126595
+  pristine_commit_hash: af8caf9240022f3ca7c2e39632532c41263b901d
+  pristine_tree_hash: 8474ce115418c9e46d1e22353757492f70e0d802
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4131,8 +4131,8 @@ trackedFiles:
     pristine_git_object: 3f5c54037989f3a893cd69f21e718205a44f319e
   docs/pkg/models/operations/listuccallsrequest.md:
     id: 0d0541215deb
-    last_write_checksum: sha1:56e978f2a424d7b360ab1c3c8aaa6d5de4b94e57
-    pristine_git_object: 61be6e94aafbc3b210f7e689fa713d20afcfaefc
+    last_write_checksum: sha1:53e3206bb7219484688372109830082a7a83adb0
+    pristine_git_object: 8425f726c35a91c768a448235e60def0345a7f49
   docs/pkg/models/operations/listuccallsresponse.md:
     id: 19a7495603f9
     last_write_checksum: sha1:e5d8ca37993981b823efe40ce415adee9ec7bdac
@@ -12463,8 +12463,8 @@ trackedFiles:
     pristine_git_object: 14e50f4a64a7539ab4d15e57013fc642da0f7aca
   pkg/models/operations/listuccalls.go:
     id: d2cd0d413ef4
-    last_write_checksum: sha1:48437837f1b0b07aa77cb7846b833caa29ca2a4d
-    pristine_git_object: 63fde2244bf952e8387c54f7b80585d114c0fe4c
+    last_write_checksum: sha1:b5caab061290a6412e808c1d6b8a29760ca01c82
+    pristine_git_object: 130d444ed02a8426d42cb79dc85bd4063dd23fc3
   pkg/models/operations/listuccomments.go:
     id: 0cf8671be606
     last_write_checksum: sha1:33d4e61c013f30d44ac9fb8ec63383d6ea071631
@@ -15323,8 +15323,8 @@ trackedFiles:
     pristine_git_object: 7fc35e29b72e05d2e4942edc2703cdb6356310a7
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:87f17026ffef7f816fbd4e0fe11fe44f873e665b
-    pristine_git_object: edb5b7805f469b7962144be71ce3d768cc0469d6
+    last_write_checksum: sha1:9c8048a37743fb378ec1b9343b8c185bd410880e
+    pristine_git_object: ad158b299cd3b5167756c0148a155afb331893d3
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:c679aaf135e5beb3cb73f54be0ec3f3be434500a
@@ -21256,7 +21256,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[]` **Changed**\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Currency` **Added**\n* `UnifiedTo.Ads.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Currency` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[]` **Changed**\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Currency` **Added**\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Group.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Group.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Currency` **Added**\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.Currency` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookType` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookType` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookType` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookType` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Uc.ListUcCalls()`:  `request.Request` **Changed**
+  * `UnifiedTo.Call.ListUcCalls()`:  `request.Request` **Changed**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
