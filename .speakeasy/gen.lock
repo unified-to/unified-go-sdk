@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 064bed284f2f86435722fec67549e099
+  docChecksum: 652ace824dae629e23fe1566cb364efb
   docVersion: "1.0"
   speakeasyVersion: 1.723.0
   generationVersion: 2.835.2
-  releaseVersion: 0.36.35
-  configChecksum: 5c679fc80677cbb05564b5a602f8221b
+  releaseVersion: 0.36.36
+  configChecksum: ff10726ee16e521dccd76a208afcd062
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: dfbee138-d05c-40f5-a9f5-2eab68126595
-  pristine_commit_hash: af8caf9240022f3ca7c2e39632532c41263b901d
-  pristine_tree_hash: 8474ce115418c9e46d1e22353757492f70e0d802
+  generation_id: 30d11433-ea10-4e65-8f77-64831d65e814
+  pristine_commit_hash: 6bb9900a6a955f986a6c04de9a974ccd6d8c3b08
+  pristine_tree_hash: d632025975936a0f58d8d7880bd4a0a407238eac
 features:
   go:
     acceptHeaders: 2.81.2
@@ -8523,8 +8523,8 @@ trackedFiles:
     pristine_git_object: d55a513f55096eda3cdd82596a35b3668d456468
   docs/pkg/models/shared/integration.md:
     id: f13a2794979a
-    last_write_checksum: sha1:ce219faecd1befca52dd35787ef52bb85635a6f5
-    pristine_git_object: 67fe6e69fe5390f35308fa6d5759d944fe8e4b58
+    last_write_checksum: sha1:d61c8aa06197007bb13c0c5f2fc1f234322a763a
+    pristine_git_object: 230c4be026d24dc0bd18f29b2234e535ad410f29
   docs/pkg/models/shared/integration1.md:
     id: 2ef5766e56de
     last_write_checksum: sha1:8fa2168f55ebf3a760dcbc8d79327a19444b042f
@@ -14331,8 +14331,8 @@ trackedFiles:
     pristine_git_object: 580813a62d9620cbaa7be9db2ec16369866ed6c4
   pkg/models/shared/integration.go:
     id: c1654ef744d4
-    last_write_checksum: sha1:ddef041e9f54250a31e986013e2cf16c08a840c7
-    pristine_git_object: 3be70624fae89ed8c7f9af56c6da5362a69a5216
+    last_write_checksum: sha1:428789e045fef1460e648e7ee0e0ca55a303bd33
+    pristine_git_object: c25de9ce7f0d8d0e446c8bbf1dfdcfa8d6dfc126
   pkg/models/shared/integrationsupport.go:
     id: b3cca4d8ed48
     last_write_checksum: sha1:0dff8c501b38110d3afd8facb1cd73f27ebd721a
@@ -15323,8 +15323,8 @@ trackedFiles:
     pristine_git_object: 7fc35e29b72e05d2e4942edc2703cdb6356310a7
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:9c8048a37743fb378ec1b9343b8c185bd410880e
-    pristine_git_object: ad158b299cd3b5167756c0148a155afb331893d3
+    last_write_checksum: sha1:37ecaf03e749845c4ffdfbafe2317d981cd46a74
+    pristine_git_object: 84e28c1ccca652ab52032c33b0d89e1502ad6a3e
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:c679aaf135e5beb3cb73f54be0ec3f3be434500a
@@ -21258,8 +21258,10 @@ examplesVersion: 1.0.2
 generatedTests: {}
 releaseNotes: |
   ## Go SDK Changes:
-  * `UnifiedTo.Uc.ListUcCalls()`:  `request.Request` **Changed**
-  * `UnifiedTo.Call.ListUcCalls()`:  `request.Request` **Changed**
+  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].IsHidden` **Added**
+  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].IsHidden` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].IsHidden` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].IsHidden` **Added**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

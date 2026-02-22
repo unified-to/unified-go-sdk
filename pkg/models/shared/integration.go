@@ -1024,6 +1024,7 @@ type Integration struct {
 	Featured             *bool                           `json:"featured,omitempty"`
 	InProgress           *bool                           `json:"in_progress,omitempty"`
 	IsActive             *bool                           `json:"is_active,omitempty"`
+	IsHidden             *bool                           `json:"is_hidden,omitempty"`
 	LogoURL              *string                         `json:"logo_url,omitempty"`
 	Name                 string                          `json:"name"`
 	Partnership          *Partnership                    `json:"partnership,omitempty"`
@@ -1136,6 +1137,13 @@ func (i *Integration) GetIsActive() *bool {
 		return nil
 	}
 	return i.IsActive
+}
+
+func (i *Integration) GetIsHidden() *bool {
+	if i == nil {
+		return nil
+	}
+	return i.IsHidden
 }
 
 func (i *Integration) GetLogoURL() *string {
