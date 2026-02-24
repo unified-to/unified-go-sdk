@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 652ace824dae629e23fe1566cb364efb
+  docChecksum: 10d21384d59617a5ae23a76cc75e1339
   docVersion: "1.0"
-  speakeasyVersion: 1.723.0
-  generationVersion: 2.835.2
-  releaseVersion: 0.36.36
-  configChecksum: ff10726ee16e521dccd76a208afcd062
+  speakeasyVersion: 1.725.0
+  generationVersion: 2.836.5
+  releaseVersion: 0.36.37
+  configChecksum: 7bac767c2285fc945bede0af6dabafe5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 30d11433-ea10-4e65-8f77-64831d65e814
-  pristine_commit_hash: 6bb9900a6a955f986a6c04de9a974ccd6d8c3b08
-  pristine_tree_hash: d632025975936a0f58d8d7880bd4a0a407238eac
+  generation_id: b6d09fe1-0414-4fa5-931d-02ad9ecfde81
+  pristine_commit_hash: 7e83bb7c8dba72ca4f6098dd8b9f138467b2a9eb
+  pristine_tree_hash: 24709f78b51eb529b82cdea3c2bba10e51c809ce
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.13
-    core: 3.13.15
+    core: 3.13.16
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -779,8 +779,8 @@ trackedFiles:
     pristine_git_object: b38bace40203aa4442ef7fc4593e2177c4e91900
   docs/pkg/models/operations/creategenaipromptqueryparamfields.md:
     id: 588a76767cd0
-    last_write_checksum: sha1:730b56e10302b0be863b40320202ea44c7141d53
-    pristine_git_object: b083313418b253499e8da52eba257247a3468b8a
+    last_write_checksum: sha1:ed3b41cd10af1c2f0bd5ea572fb601bae17f2ac9
+    pristine_git_object: 0d4b0b43732b91bedf354558836c4e06f403fb7c
   docs/pkg/models/operations/creategenaipromptrequest.md:
     id: 915b8ba618c3
     last_write_checksum: sha1:cd1b816fbee1633e8ad64ceafecdf4cb733e8b3d
@@ -8351,8 +8351,8 @@ trackedFiles:
     pristine_git_object: 529ec98b436107ee6c19dadef2815659bbaa5b9c
   docs/pkg/models/shared/genaiprompt.md:
     id: 0cd637547dd5
-    last_write_checksum: sha1:6b499fb76f14caa8e576a39c5fe8ecf2ec5f384b
-    pristine_git_object: bda91714277627b71de2de4c59a555816f2ed094
+    last_write_checksum: sha1:4940f7b0b294a5162042e4e7e3f5f4a089cb1412
+    pristine_git_object: 034ee5442a269f2f41ba2b5d9fa7d33e189c810a
   docs/pkg/models/shared/gender.md:
     id: f5a0360bdf9c
     last_write_checksum: sha1:26dce053947eab9ab718eee90a3bd44b56068882
@@ -11315,8 +11315,8 @@ trackedFiles:
     pristine_git_object: da8686d417403ef1bc0edc6108364b99d6b7d5d3
   pkg/models/operations/creategenaiprompt.go:
     id: 9104a51d8e75
-    last_write_checksum: sha1:37e527dd0662815635df29b2f0fbc821d3aa78c4
-    pristine_git_object: 6ec66647cd83f4bf4abc4f482c3e27c64522dbce
+    last_write_checksum: sha1:c13283a3b4face8266fc16263f927fd0b1663aac
+    pristine_git_object: ac010af2c3c4e3aca0cc7d4cd65cb3785f5b335b
   pkg/models/operations/createhrisbankaccount.go:
     id: 5d37f8bcf3a6
     last_write_checksum: sha1:463bceba4f66639dc7cb234269f49b510d51ba5d
@@ -14259,8 +14259,8 @@ trackedFiles:
     pristine_git_object: f27a261f668c7ad474ab7ea58096db9dbb30f32d
   pkg/models/shared/genaiprompt.go:
     id: 6479b073e490
-    last_write_checksum: sha1:a0443fb3cbd8cbcda27256f16346c5538773acc4
-    pristine_git_object: 6f1451703a5673e5a0e5d3766609af4c4ee9fbe0
+    last_write_checksum: sha1:a6d6d933f79f8a533887e1c7b24b278431e1ef22
+    pristine_git_object: f37e077704db87cf45ac4a15a0664b32d772b788
   pkg/models/shared/hrisbankaccount.go:
     id: 662b933b525b
     last_write_checksum: sha1:703a1019904a2876e942d2f85843e868a7574165
@@ -15147,8 +15147,8 @@ trackedFiles:
     pristine_git_object: 28826a6478aebe22e8d737df6c5c2570ddbcc515
   pkg/utils/json.go:
     id: e8e4f815695f
-    last_write_checksum: sha1:9b84cd6926eb936aa809de6d842cd28a907e9f4a
-    pristine_git_object: 6c8ee04ebacbd8cf2a696accc45d3687a4a9dbdc
+    last_write_checksum: sha1:add3f275553664468d3629a1aba80bcd46d8a019
+    pristine_git_object: d407db258cc17821f9414c7fed6abced5d402e47
   pkg/utils/pathparams.go:
     id: fdb5a5d8984b
     last_write_checksum: sha1:c8dd97042f297fcea522d53e0377f9a2b556e19d
@@ -15323,8 +15323,8 @@ trackedFiles:
     pristine_git_object: 7fc35e29b72e05d2e4942edc2703cdb6356310a7
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:37ecaf03e749845c4ffdfbafe2317d981cd46a74
-    pristine_git_object: 84e28c1ccca652ab52032c33b0d89e1502ad6a3e
+    last_write_checksum: sha1:c1c49c492986b9aaf401a63c2b87519b6944cf5b
+    pristine_git_object: 31e26896ad2b67aa85c0cf807c86ded6e92dadf1
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:c679aaf135e5beb3cb73f54be0ec3f3be434500a
@@ -21256,12 +21256,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes:
-  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].IsHidden` **Added**
-  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].IsHidden` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].IsHidden` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].IsHidden` **Added**
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Genai.CreateGenaiPrompt()`: \n  *  `request.Request` **Changed**\n  *  `response.McpAuthorizationToken` **Added**\n* `UnifiedTo.Prompt.CreateGenaiPrompt()`: \n  *  `request.Request` **Changed**\n  *  `response.McpAuthorizationToken` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

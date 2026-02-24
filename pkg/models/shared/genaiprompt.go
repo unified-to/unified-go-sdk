@@ -3,15 +3,16 @@
 package shared
 
 type GenaiPrompt struct {
-	MaxTokens        *float64       `json:"max_tokens,omitempty"`
-	McpDeferredTools []string       `json:"mcp_deferred_tools,omitempty"`
-	McpURL           *string        `json:"mcp_url,omitempty"`
-	Messages         []GenaiContent `json:"messages,omitempty"`
-	ModelID          *string        `json:"model_id,omitempty"`
-	Raw              map[string]any `json:"raw,omitempty"`
-	Responses        []string       `json:"responses,omitempty"`
-	Temperature      *float64       `json:"temperature,omitempty"`
-	TokensUsed       *float64       `json:"tokens_used,omitempty"`
+	MaxTokens             *float64       `json:"max_tokens,omitempty"`
+	McpAuthorizationToken *string        `json:"mcp_authorization_token,omitempty"`
+	McpDeferredTools      []string       `json:"mcp_deferred_tools,omitempty"`
+	McpURL                *string        `json:"mcp_url,omitempty"`
+	Messages              []GenaiContent `json:"messages,omitempty"`
+	ModelID               *string        `json:"model_id,omitempty"`
+	Raw                   map[string]any `json:"raw,omitempty"`
+	Responses             []string       `json:"responses,omitempty"`
+	Temperature           *float64       `json:"temperature,omitempty"`
+	TokensUsed            *float64       `json:"tokens_used,omitempty"`
 }
 
 func (g *GenaiPrompt) GetMaxTokens() *float64 {
@@ -19,6 +20,13 @@ func (g *GenaiPrompt) GetMaxTokens() *float64 {
 		return nil
 	}
 	return g.MaxTokens
+}
+
+func (g *GenaiPrompt) GetMcpAuthorizationToken() *string {
+	if g == nil {
+		return nil
+	}
+	return g.McpAuthorizationToken
 }
 
 func (g *GenaiPrompt) GetMcpDeferredTools() []string {

@@ -12,15 +12,16 @@ import (
 type CreateGenaiPromptQueryParamFields string
 
 const (
-	CreateGenaiPromptQueryParamFieldsModelID          CreateGenaiPromptQueryParamFields = "model_id"
-	CreateGenaiPromptQueryParamFieldsMessages         CreateGenaiPromptQueryParamFields = "messages"
-	CreateGenaiPromptQueryParamFieldsTemperature      CreateGenaiPromptQueryParamFields = "temperature"
-	CreateGenaiPromptQueryParamFieldsMaxTokens        CreateGenaiPromptQueryParamFields = "max_tokens"
-	CreateGenaiPromptQueryParamFieldsResponses        CreateGenaiPromptQueryParamFields = "responses"
-	CreateGenaiPromptQueryParamFieldsTokensUsed       CreateGenaiPromptQueryParamFields = "tokens_used"
-	CreateGenaiPromptQueryParamFieldsMcpURL           CreateGenaiPromptQueryParamFields = "mcp_url"
-	CreateGenaiPromptQueryParamFieldsMcpDeferredTools CreateGenaiPromptQueryParamFields = "mcp_deferred_tools"
-	CreateGenaiPromptQueryParamFieldsRaw              CreateGenaiPromptQueryParamFields = "raw"
+	CreateGenaiPromptQueryParamFieldsModelID               CreateGenaiPromptQueryParamFields = "model_id"
+	CreateGenaiPromptQueryParamFieldsMessages              CreateGenaiPromptQueryParamFields = "messages"
+	CreateGenaiPromptQueryParamFieldsTemperature           CreateGenaiPromptQueryParamFields = "temperature"
+	CreateGenaiPromptQueryParamFieldsMaxTokens             CreateGenaiPromptQueryParamFields = "max_tokens"
+	CreateGenaiPromptQueryParamFieldsResponses             CreateGenaiPromptQueryParamFields = "responses"
+	CreateGenaiPromptQueryParamFieldsTokensUsed            CreateGenaiPromptQueryParamFields = "tokens_used"
+	CreateGenaiPromptQueryParamFieldsMcpURL                CreateGenaiPromptQueryParamFields = "mcp_url"
+	CreateGenaiPromptQueryParamFieldsMcpDeferredTools      CreateGenaiPromptQueryParamFields = "mcp_deferred_tools"
+	CreateGenaiPromptQueryParamFieldsMcpAuthorizationToken CreateGenaiPromptQueryParamFields = "mcp_authorization_token"
+	CreateGenaiPromptQueryParamFieldsRaw                   CreateGenaiPromptQueryParamFields = "raw"
 )
 
 func (e CreateGenaiPromptQueryParamFields) ToPointer() *CreateGenaiPromptQueryParamFields {
@@ -47,6 +48,8 @@ func (e *CreateGenaiPromptQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "mcp_url":
 		fallthrough
 	case "mcp_deferred_tools":
+		fallthrough
+	case "mcp_authorization_token":
 		fallthrough
 	case "raw":
 		*e = CreateGenaiPromptQueryParamFields(v)
