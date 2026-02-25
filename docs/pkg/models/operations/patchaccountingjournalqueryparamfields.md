@@ -15,4 +15,5 @@
 | `PatchAccountingJournalQueryParamFieldsTaxrateID`   | taxrate_id                                          |
 | `PatchAccountingJournalQueryParamFieldsDescription` | description                                         |
 | `PatchAccountingJournalQueryParamFieldsPostedAt`    | posted_at                                           |
+| `PatchAccountingJournalQueryParamFieldsSource`      | source                                              |
 | `PatchAccountingJournalQueryParamFieldsRaw`         | raw                                                 |

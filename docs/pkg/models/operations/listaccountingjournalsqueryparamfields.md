@@ -15,4 +15,5 @@
 | `ListAccountingJournalsQueryParamFieldsTaxrateID`   | taxrate_id                                          |
 | `ListAccountingJournalsQueryParamFieldsDescription` | description                                         |
 | `ListAccountingJournalsQueryParamFieldsPostedAt`    | posted_at                                           |
+| `ListAccountingJournalsQueryParamFieldsSource`      | source                                              |
 | `ListAccountingJournalsQueryParamFieldsRaw`         | raw                                                 |

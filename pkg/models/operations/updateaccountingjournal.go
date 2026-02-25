@@ -22,6 +22,7 @@ const (
 	UpdateAccountingJournalQueryParamFieldsTaxrateID   UpdateAccountingJournalQueryParamFields = "taxrate_id"
 	UpdateAccountingJournalQueryParamFieldsDescription UpdateAccountingJournalQueryParamFields = "description"
 	UpdateAccountingJournalQueryParamFieldsPostedAt    UpdateAccountingJournalQueryParamFields = "posted_at"
+	UpdateAccountingJournalQueryParamFieldsSource      UpdateAccountingJournalQueryParamFields = "source"
 	UpdateAccountingJournalQueryParamFieldsRaw         UpdateAccountingJournalQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *UpdateAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) err
 	case "description":
 		fallthrough
 	case "posted_at":
+		fallthrough
+	case "source":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingJournalQueryParamFields(v)

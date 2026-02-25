@@ -17,6 +17,7 @@ type AccountingJournal struct {
 	PostedAt  *time.Time                  `json:"posted_at,omitempty"`
 	Raw       map[string]any              `json:"raw,omitempty"`
 	Reference *string                     `json:"reference,omitempty"`
+	Source    *string                     `json:"source,omitempty"`
 	TaxAmount *float64                    `json:"tax_amount,omitempty"`
 	TaxrateID *string                     `json:"taxrate_id,omitempty"`
 	UpdatedAt *time.Time                  `json:"updated_at,omitempty"`
@@ -87,6 +88,13 @@ func (a *AccountingJournal) GetReference() *string {
 		return nil
 	}
 	return a.Reference
+}
+
+func (a *AccountingJournal) GetSource() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Source
 }
 
 func (a *AccountingJournal) GetTaxAmount() *float64 {
