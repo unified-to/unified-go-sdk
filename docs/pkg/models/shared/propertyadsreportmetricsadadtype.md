@@ -14,3 +14,7 @@
 | `PropertyAdsReportMetricsAdAdTypeCall`       | CALL                                         |
 | `PropertyAdsReportMetricsAdAdTypeCarousel`   | CAROUSEL                                     |
 | `PropertyAdsReportMetricsAdAdTypeSocial`     | SOCIAL                                       |
+| `PropertyAdsReportMetricsAdAdTypeDisplay`    | DISPLAY                                      |
+| `PropertyAdsReportMetricsAdAdTypeSearch`     | SEARCH                                       |
+| `PropertyAdsReportMetricsAdAdTypeAudio`      | AUDIO                                        |
+| `PropertyAdsReportMetricsAdAdTypeYoutube`    | YOUTUBE                                      |

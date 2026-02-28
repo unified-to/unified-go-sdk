@@ -7,6 +7,39 @@ import (
 	"time"
 )
 
+type PropertyAdsReportMetricsCampaignAdvertisingChannelType string
+
+const (
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeText       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "TEXT"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeImage      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "IMAGE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeVideo      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "VIDEO"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeResponsive PropertyAdsReportMetricsCampaignAdvertisingChannelType = "RESPONSIVE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeShopping   PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SHOPPING"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeApp        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "APP"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCall       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CALL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCarousel   PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CAROUSEL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSocial     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SOCIAL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDisplay    PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DISPLAY"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SEARCH"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "AUDIO"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube    PropertyAdsReportMetricsCampaignAdvertisingChannelType = "YOUTUBE"
+)
+
+func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *PropertyAdsReportMetricsCampaignAdvertisingChannelType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsCampaignAdvertisingChannelType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsCampaignBudgetPeriod string
 
 const (
@@ -85,24 +118,28 @@ func (e *PropertyAdsReportMetricsCampaignStatus) IsExact() bool {
 }
 
 type PropertyAdsReportMetricsCampaign struct {
-	BudgetAmount       *float64                                      `json:"budget_amount,omitempty"`
-	BudgetPeriod       *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
-	CreatedAt          *time.Time                                    `json:"created_at,omitempty"`
-	Currency           *string                                       `json:"currency,omitempty"`
-	EndAt              *time.Time                                    `json:"end_at,omitempty"`
-	FrequencyCap       *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
-	Goal               *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
-	ID                 *string                                       `json:"id,omitempty"`
-	IsActive           *bool                                         `json:"is_active,omitempty"`
-	Name               *string                                       `json:"name,omitempty"`
-	OrganizationID     *string                                       `json:"organization_id,omitempty"`
-	PlannedSpendAmount *float64                                      `json:"planned_spend_amount,omitempty"`
-	Raw                map[string]any                                `json:"raw,omitempty"`
-	StartAt            *time.Time                                    `json:"start_at,omitempty"`
-	Status             *PropertyAdsReportMetricsCampaignStatus       `json:"status,omitempty"`
-	Targeting          *PropertyAdsReportMetricsCampaignTargeting    `json:"targeting,omitempty"`
-	TotalSpendAmount   *float64                                      `json:"total_spend_amount,omitempty"`
-	UpdatedAt          *time.Time                                    `json:"updated_at,omitempty"`
+	AdvertisingChannelType *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
+	// YOUTUBE_AND_PARTNERS
+	BidStrategy              *PropertyAdsReportMetricsCampaignBidStrategy  `json:"bid_strategy,omitempty"`
+	BudgetAmount             *float64                                      `json:"budget_amount,omitempty"`
+	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
+	CampaignBudgetIdentifier *string                                       `json:"campaign_budget_identifier,omitempty"`
+	CreatedAt                *time.Time                                    `json:"created_at,omitempty"`
+	Currency                 *string                                       `json:"currency,omitempty"`
+	EndAt                    *time.Time                                    `json:"end_at,omitempty"`
+	FrequencyCap             *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
+	Goal                     *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
+	ID                       *string                                       `json:"id,omitempty"`
+	Name                     *string                                       `json:"name,omitempty"`
+	OrganizationID           *string                                       `json:"organization_id,omitempty"`
+	PlannedSpendAmount       *float64                                      `json:"planned_spend_amount,omitempty"`
+	Raw                      map[string]any                                `json:"raw,omitempty"`
+	SpecialAdCategories      []string                                      `json:"special_ad_categories,omitempty"`
+	StartAt                  *time.Time                                    `json:"start_at,omitempty"`
+	Status                   *PropertyAdsReportMetricsCampaignStatus       `json:"status,omitempty"`
+	Targeting                *PropertyAdsReportMetricsCampaignTargeting    `json:"targeting,omitempty"`
+	TotalSpendAmount         *float64                                      `json:"total_spend_amount,omitempty"`
+	UpdatedAt                *time.Time                                    `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsCampaign) MarshalJSON() ([]byte, error) {
@@ -114,6 +151,20 @@ func (p *PropertyAdsReportMetricsCampaign) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetAdvertisingChannelType() *PropertyAdsReportMetricsCampaignAdvertisingChannelType {
+	if p == nil {
+		return nil
+	}
+	return p.AdvertisingChannelType
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetBidStrategy() *PropertyAdsReportMetricsCampaignBidStrategy {
+	if p == nil {
+		return nil
+	}
+	return p.BidStrategy
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetBudgetAmount() *float64 {
@@ -128,6 +179,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetBudgetPeriod() *PropertyAdsReportM
 		return nil
 	}
 	return p.BudgetPeriod
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetCampaignBudgetIdentifier() *string {
+	if p == nil {
+		return nil
+	}
+	return p.CampaignBudgetIdentifier
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetCreatedAt() *time.Time {
@@ -172,13 +230,6 @@ func (p *PropertyAdsReportMetricsCampaign) GetID() *string {
 	return p.ID
 }
 
-func (p *PropertyAdsReportMetricsCampaign) GetIsActive() *bool {
-	if p == nil {
-		return nil
-	}
-	return p.IsActive
-}
-
 func (p *PropertyAdsReportMetricsCampaign) GetName() *string {
 	if p == nil {
 		return nil
@@ -205,6 +256,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetRaw() map[string]any {
 		return nil
 	}
 	return p.Raw
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetSpecialAdCategories() []string {
+	if p == nil {
+		return nil
+	}
+	return p.SpecialAdCategories
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetStartAt() *time.Time {

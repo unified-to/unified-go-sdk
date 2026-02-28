@@ -7,6 +7,39 @@ import (
 	"time"
 )
 
+type AdvertisingChannelType string
+
+const (
+	AdvertisingChannelTypeText       AdvertisingChannelType = "TEXT"
+	AdvertisingChannelTypeImage      AdvertisingChannelType = "IMAGE"
+	AdvertisingChannelTypeVideo      AdvertisingChannelType = "VIDEO"
+	AdvertisingChannelTypeResponsive AdvertisingChannelType = "RESPONSIVE"
+	AdvertisingChannelTypeShopping   AdvertisingChannelType = "SHOPPING"
+	AdvertisingChannelTypeApp        AdvertisingChannelType = "APP"
+	AdvertisingChannelTypeCall       AdvertisingChannelType = "CALL"
+	AdvertisingChannelTypeCarousel   AdvertisingChannelType = "CAROUSEL"
+	AdvertisingChannelTypeSocial     AdvertisingChannelType = "SOCIAL"
+	AdvertisingChannelTypeDisplay    AdvertisingChannelType = "DISPLAY"
+	AdvertisingChannelTypeSearch     AdvertisingChannelType = "SEARCH"
+	AdvertisingChannelTypeAudio      AdvertisingChannelType = "AUDIO"
+	AdvertisingChannelTypeYoutube    AdvertisingChannelType = "YOUTUBE"
+)
+
+func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdvertisingChannelType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+			return true
+		}
+	}
+	return false
+}
+
 type BudgetPeriod string
 
 const (
@@ -85,24 +118,28 @@ func (e *AdsCampaignStatus) IsExact() bool {
 }
 
 type AdsCampaign struct {
-	BudgetAmount       *float64                         `json:"budget_amount,omitempty"`
-	BudgetPeriod       *BudgetPeriod                    `json:"budget_period,omitempty"`
-	CreatedAt          *time.Time                       `json:"created_at,omitempty"`
-	Currency           *string                          `json:"currency,omitempty"`
-	EndAt              *time.Time                       `json:"end_at,omitempty"`
-	FrequencyCap       *PropertyAdsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
-	Goal               *Goal                            `json:"goal,omitempty"`
-	ID                 *string                          `json:"id,omitempty"`
-	IsActive           *bool                            `json:"is_active,omitempty"`
-	Name               *string                          `json:"name,omitempty"`
-	OrganizationID     *string                          `json:"organization_id,omitempty"`
-	PlannedSpendAmount *float64                         `json:"planned_spend_amount,omitempty"`
-	Raw                map[string]any                   `json:"raw,omitempty"`
-	StartAt            *time.Time                       `json:"start_at,omitempty"`
-	Status             *AdsCampaignStatus               `json:"status,omitempty"`
-	Targeting          *PropertyAdsCampaignTargeting    `json:"targeting,omitempty"`
-	TotalSpendAmount   *float64                         `json:"total_spend_amount,omitempty"`
-	UpdatedAt          *time.Time                       `json:"updated_at,omitempty"`
+	AdvertisingChannelType *AdvertisingChannelType `json:"advertising_channel_type,omitempty"`
+	// YOUTUBE_AND_PARTNERS
+	BidStrategy              *PropertyAdsCampaignBidStrategy  `json:"bid_strategy,omitempty"`
+	BudgetAmount             *float64                         `json:"budget_amount,omitempty"`
+	BudgetPeriod             *BudgetPeriod                    `json:"budget_period,omitempty"`
+	CampaignBudgetIdentifier *string                          `json:"campaign_budget_identifier,omitempty"`
+	CreatedAt                *time.Time                       `json:"created_at,omitempty"`
+	Currency                 *string                          `json:"currency,omitempty"`
+	EndAt                    *time.Time                       `json:"end_at,omitempty"`
+	FrequencyCap             *PropertyAdsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
+	Goal                     *Goal                            `json:"goal,omitempty"`
+	ID                       *string                          `json:"id,omitempty"`
+	Name                     *string                          `json:"name,omitempty"`
+	OrganizationID           *string                          `json:"organization_id,omitempty"`
+	PlannedSpendAmount       *float64                         `json:"planned_spend_amount,omitempty"`
+	Raw                      map[string]any                   `json:"raw,omitempty"`
+	SpecialAdCategories      []string                         `json:"special_ad_categories,omitempty"`
+	StartAt                  *time.Time                       `json:"start_at,omitempty"`
+	Status                   *AdsCampaignStatus               `json:"status,omitempty"`
+	Targeting                *PropertyAdsCampaignTargeting    `json:"targeting,omitempty"`
+	TotalSpendAmount         *float64                         `json:"total_spend_amount,omitempty"`
+	UpdatedAt                *time.Time                       `json:"updated_at,omitempty"`
 }
 
 func (a AdsCampaign) MarshalJSON() ([]byte, error) {
@@ -114,6 +151,20 @@ func (a *AdsCampaign) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AdsCampaign) GetAdvertisingChannelType() *AdvertisingChannelType {
+	if a == nil {
+		return nil
+	}
+	return a.AdvertisingChannelType
+}
+
+func (a *AdsCampaign) GetBidStrategy() *PropertyAdsCampaignBidStrategy {
+	if a == nil {
+		return nil
+	}
+	return a.BidStrategy
 }
 
 func (a *AdsCampaign) GetBudgetAmount() *float64 {
@@ -128,6 +179,13 @@ func (a *AdsCampaign) GetBudgetPeriod() *BudgetPeriod {
 		return nil
 	}
 	return a.BudgetPeriod
+}
+
+func (a *AdsCampaign) GetCampaignBudgetIdentifier() *string {
+	if a == nil {
+		return nil
+	}
+	return a.CampaignBudgetIdentifier
 }
 
 func (a *AdsCampaign) GetCreatedAt() *time.Time {
@@ -172,13 +230,6 @@ func (a *AdsCampaign) GetID() *string {
 	return a.ID
 }
 
-func (a *AdsCampaign) GetIsActive() *bool {
-	if a == nil {
-		return nil
-	}
-	return a.IsActive
-}
-
 func (a *AdsCampaign) GetName() *string {
 	if a == nil {
 		return nil
@@ -205,6 +256,13 @@ func (a *AdsCampaign) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsCampaign) GetSpecialAdCategories() []string {
+	if a == nil {
+		return nil
+	}
+	return a.SpecialAdCategories
 }
 
 func (a *AdsCampaign) GetStartAt() *time.Time {

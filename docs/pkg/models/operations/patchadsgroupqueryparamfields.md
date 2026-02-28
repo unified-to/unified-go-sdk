@@ -16,7 +16,6 @@
 | `PatchAdsGroupQueryParamFieldsStatus`               | status                                              |
 | `PatchAdsGroupQueryParamFieldsTargeting`            | targeting                                           |
 | `PatchAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                          |
-| `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
 | `PatchAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                        |
 | `PatchAdsGroupQueryParamFieldsBudgetAmount`         | budget_amount                                       |
 | `PatchAdsGroupQueryParamFieldsBudgetPeriod`         | budget_period                                       |
@@ -30,5 +29,11 @@
 | `PatchAdsGroupQueryParamFieldsPacing`               | pacing                                              |
 | `PatchAdsGroupQueryParamFieldsFrequencyCap`         | frequency_cap                                       |
 | `PatchAdsGroupQueryParamFieldsCreativeIds`          | creative_ids                                        |
-| `PatchAdsGroupQueryParamFieldsIsActive`             | is_active                                           |
+| `PatchAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
+| `PatchAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                       |
+| `PatchAdsGroupQueryParamFieldsDailySpendCap`        | daily_spend_cap                                     |
+| `PatchAdsGroupQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                  |
+| `PatchAdsGroupQueryParamFieldsAdGroupType`          | ad_group_type                                       |
+| `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
+| `PatchAdsGroupQueryParamFieldsMetadata`             | metadata                                            |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |

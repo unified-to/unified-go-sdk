@@ -19,6 +19,10 @@ const (
 	PropertyAdsReportMetricsAdAdTypeCall       PropertyAdsReportMetricsAdAdType = "CALL"
 	PropertyAdsReportMetricsAdAdTypeCarousel   PropertyAdsReportMetricsAdAdType = "CAROUSEL"
 	PropertyAdsReportMetricsAdAdTypeSocial     PropertyAdsReportMetricsAdAdType = "SOCIAL"
+	PropertyAdsReportMetricsAdAdTypeDisplay    PropertyAdsReportMetricsAdAdType = "DISPLAY"
+	PropertyAdsReportMetricsAdAdTypeSearch     PropertyAdsReportMetricsAdAdType = "SEARCH"
+	PropertyAdsReportMetricsAdAdTypeAudio      PropertyAdsReportMetricsAdAdType = "AUDIO"
+	PropertyAdsReportMetricsAdAdTypeYoutube    PropertyAdsReportMetricsAdAdType = "YOUTUBE"
 )
 
 func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsAdAdType {
@@ -29,7 +33,7 @@ func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsA
 func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
 			return true
 		}
 	}
@@ -71,15 +75,21 @@ type PropertyAdsReportMetricsAd struct {
 	CreativeIds      []string                             `json:"creative_ids,omitempty"`
 	Cta              *string                              `json:"cta,omitempty"`
 	Description      *string                              `json:"description,omitempty"`
+	DisplayURL       *string                              `json:"display_url,omitempty"`
+	EndAt            *time.Time                           `json:"end_at,omitempty"`
 	FinalURL         *string                              `json:"final_url,omitempty"`
 	GroupID          *string                              `json:"group_id,omitempty"`
 	Headline         *string                              `json:"headline,omitempty"`
 	ID               *string                              `json:"id,omitempty"`
 	IsActive         *bool                                `json:"is_active,omitempty"`
 	ItemID           *string                              `json:"item_id,omitempty"`
+	Metadata         []AdsMetadata                        `json:"metadata,omitempty"`
 	Name             *string                              `json:"name,omitempty"`
 	OrganizationID   *string                              `json:"organization_id,omitempty"`
+	Path1            *string                              `json:"path1,omitempty"`
+	Path2            *string                              `json:"path2,omitempty"`
 	Raw              map[string]any                       `json:"raw,omitempty"`
+	StartAt          *time.Time                           `json:"start_at,omitempty"`
 	Status           *PropertyAdsReportMetricsAdStatus    `json:"status,omitempty"`
 	Targeting        *PropertyAdsReportMetricsAdTargeting `json:"targeting,omitempty"`
 	UpdatedAt        *time.Time                           `json:"updated_at,omitempty"`
@@ -152,6 +162,20 @@ func (p *PropertyAdsReportMetricsAd) GetDescription() *string {
 	return p.Description
 }
 
+func (p *PropertyAdsReportMetricsAd) GetDisplayURL() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DisplayURL
+}
+
+func (p *PropertyAdsReportMetricsAd) GetEndAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.EndAt
+}
+
 func (p *PropertyAdsReportMetricsAd) GetFinalURL() *string {
 	if p == nil {
 		return nil
@@ -194,6 +218,13 @@ func (p *PropertyAdsReportMetricsAd) GetItemID() *string {
 	return p.ItemID
 }
 
+func (p *PropertyAdsReportMetricsAd) GetMetadata() []AdsMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
+}
+
 func (p *PropertyAdsReportMetricsAd) GetName() *string {
 	if p == nil {
 		return nil
@@ -208,11 +239,32 @@ func (p *PropertyAdsReportMetricsAd) GetOrganizationID() *string {
 	return p.OrganizationID
 }
 
+func (p *PropertyAdsReportMetricsAd) GetPath1() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Path1
+}
+
+func (p *PropertyAdsReportMetricsAd) GetPath2() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Path2
+}
+
 func (p *PropertyAdsReportMetricsAd) GetRaw() map[string]any {
 	if p == nil {
 		return nil
 	}
 	return p.Raw
+}
+
+func (p *PropertyAdsReportMetricsAd) GetStartAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.StartAt
 }
 
 func (p *PropertyAdsReportMetricsAd) GetStatus() *PropertyAdsReportMetricsAdStatus {

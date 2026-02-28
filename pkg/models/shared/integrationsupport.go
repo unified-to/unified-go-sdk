@@ -117,6 +117,29 @@ func (e *ListBenefitID) IsExact() bool {
 	return false
 }
 
+type ListBillID string
+
+const (
+	ListBillIDSupportedRequired ListBillID = "supported-required"
+	ListBillIDSupported         ListBillID = "supported"
+	ListBillIDNotSupported      ListBillID = "not-supported"
+)
+
+func (e ListBillID) ToPointer() *ListBillID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListBillID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListBranchID string
 
 const (
@@ -2164,6 +2187,29 @@ func (e *VirtualWebhookApplicationID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookBillID string
+
+const (
+	VirtualWebhookBillIDSupportedRequired VirtualWebhookBillID = "supported-required"
+	VirtualWebhookBillIDSupported         VirtualWebhookBillID = "supported"
+	VirtualWebhookBillIDNotSupported      VirtualWebhookBillID = "not-supported"
+)
+
+func (e VirtualWebhookBillID) ToPointer() *VirtualWebhookBillID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBillID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookBranchID string
 
 const (
@@ -2601,6 +2647,29 @@ func (e *VirtualWebhookGroupID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookInvoiceID string
+
+const (
+	VirtualWebhookInvoiceIDSupportedRequired VirtualWebhookInvoiceID = "supported-required"
+	VirtualWebhookInvoiceIDSupported         VirtualWebhookInvoiceID = "supported"
+	VirtualWebhookInvoiceIDNotSupported      VirtualWebhookInvoiceID = "not-supported"
+)
+
+func (e VirtualWebhookInvoiceID) ToPointer() *VirtualWebhookInvoiceID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookInvoiceID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookItemID string
 
 const (
@@ -2730,6 +2799,29 @@ func (e VirtualWebhookLimit) ToPointer() *VirtualWebhookLimit {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookLimit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookLinkID string
+
+const (
+	VirtualWebhookLinkIDSupportedRequired VirtualWebhookLinkID = "supported-required"
+	VirtualWebhookLinkIDSupported         VirtualWebhookLinkID = "supported"
+	VirtualWebhookLinkIDNotSupported      VirtualWebhookLinkID = "not-supported"
+)
+
+func (e VirtualWebhookLinkID) ToPointer() *VirtualWebhookLinkID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookLinkID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -3252,6 +3344,7 @@ type IntegrationSupport struct {
 	ListAdID                *ListAdID                `json:"list_ad_id,omitempty"`
 	ListApplicationID       *ListApplicationID       `json:"list_application_id,omitempty"`
 	ListBenefitID           *ListBenefitID           `json:"list_benefit_id,omitempty"`
+	ListBillID              *ListBillID              `json:"list_bill_id,omitempty"`
 	ListBranchID            *ListBranchID            `json:"list_branch_id,omitempty"`
 	ListCalendarID          *ListCalendarID          `json:"list_calendar_id,omitempty"`
 	ListCallID              *ListCallID              `json:"list_call_id,omitempty"`
@@ -3346,6 +3439,8 @@ type IntegrationSupport struct {
 	SlowFields                    []string                                 `json:"slow_fields,omitempty"`
 	VirtualWebhookAdID            *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
 	VirtualWebhookApplicationID   *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
+	VirtualWebhookBenefitID       *string                                  `json:"virtual_webhook_benefit_id,omitempty"`
+	VirtualWebhookBillID          *VirtualWebhookBillID                    `json:"virtual_webhook_bill_id,omitempty"`
 	VirtualWebhookBranchID        *VirtualWebhookBranchID                  `json:"virtual_webhook_branch_id,omitempty"`
 	VirtualWebhookCalendarID      *VirtualWebhookCalendarID                `json:"virtual_webhook_calendar_id,omitempty"`
 	VirtualWebhookCallID          *VirtualWebhookCallID                    `json:"virtual_webhook_call_id,omitempty"`
@@ -3365,12 +3460,14 @@ type IntegrationSupport struct {
 	VirtualWebhookFields          *VirtualWebhookFields                    `json:"virtual_webhook_fields,omitempty"`
 	VirtualWebhookFormID          *VirtualWebhookFormID                    `json:"virtual_webhook_form_id,omitempty"`
 	VirtualWebhookGroupID         *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
+	VirtualWebhookInvoiceID       *VirtualWebhookInvoiceID                 `json:"virtual_webhook_invoice_id,omitempty"`
 	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID           *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
 	VirtualWebhookLabelID         *VirtualWebhookLabelID                   `json:"virtual_webhook_label_id,omitempty"`
 	VirtualWebhookLeadID          *VirtualWebhookLeadID                    `json:"virtual_webhook_lead_id,omitempty"`
 	VirtualWebhookLimit           *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
+	VirtualWebhookLinkID          *VirtualWebhookLinkID                    `json:"virtual_webhook_link_id,omitempty"`
 	VirtualWebhookListID          *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
 	VirtualWebhookLocationID      *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
 	VirtualWebhookMemberID        *VirtualWebhookMemberID                  `json:"virtual_webhook_member_id,omitempty"`
@@ -3436,6 +3533,13 @@ func (i *IntegrationSupport) GetListBenefitID() *ListBenefitID {
 		return nil
 	}
 	return i.ListBenefitID
+}
+
+func (i *IntegrationSupport) GetListBillID() *ListBillID {
+	if i == nil {
+		return nil
+	}
+	return i.ListBillID
 }
 
 func (i *IntegrationSupport) GetListBranchID() *ListBranchID {
@@ -4089,6 +4193,20 @@ func (i *IntegrationSupport) GetVirtualWebhookApplicationID() *VirtualWebhookApp
 	return i.VirtualWebhookApplicationID
 }
 
+func (i *IntegrationSupport) GetVirtualWebhookBenefitID() *string {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookBenefitID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookBillID() *VirtualWebhookBillID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookBillID
+}
+
 func (i *IntegrationSupport) GetVirtualWebhookBranchID() *VirtualWebhookBranchID {
 	if i == nil {
 		return nil
@@ -4222,6 +4340,13 @@ func (i *IntegrationSupport) GetVirtualWebhookGroupID() *VirtualWebhookGroupID {
 	return i.VirtualWebhookGroupID
 }
 
+func (i *IntegrationSupport) GetVirtualWebhookInvoiceID() *VirtualWebhookInvoiceID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookInvoiceID
+}
+
 func (i *IntegrationSupport) GetVirtualWebhookItemID() *VirtualWebhookItemID {
 	if i == nil {
 		return nil
@@ -4262,6 +4387,13 @@ func (i *IntegrationSupport) GetVirtualWebhookLimit() *VirtualWebhookLimit {
 		return nil
 	}
 	return i.VirtualWebhookLimit
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookLinkID() *VirtualWebhookLinkID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookLinkID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookListID() *VirtualWebhookListID {

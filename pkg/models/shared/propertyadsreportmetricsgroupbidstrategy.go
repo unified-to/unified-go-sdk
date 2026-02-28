@@ -94,6 +94,7 @@ type PropertyAdsReportMetricsGroupBidStrategy struct {
 	PerformanceGoalAmount    *float64                                                        `json:"performance_goal_amount,omitempty"`
 	PerformanceGoalType      *PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType    `json:"performance_goal_type,omitempty"`
 	RaiseBidForDeals         *bool                                                           `json:"raise_bid_for_deals,omitempty"`
+	TargetRoas               *float64                                                        `json:"target_roas,omitempty"`
 	Type                     PropertyAdsReportMetricsGroupBidStrategyType                    `json:"type"`
 	YoutubeAndPartnersType   *PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType `json:"youtube_and_partners_type,omitempty"`
 	YoutubeAndPartnersValue  *string                                                         `json:"youtube_and_partners_value,omitempty"`
@@ -139,6 +140,13 @@ func (p *PropertyAdsReportMetricsGroupBidStrategy) GetRaiseBidForDeals() *bool {
 		return nil
 	}
 	return p.RaiseBidForDeals
+}
+
+func (p *PropertyAdsReportMetricsGroupBidStrategy) GetTargetRoas() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.TargetRoas
 }
 
 func (p *PropertyAdsReportMetricsGroupBidStrategy) GetType() PropertyAdsReportMetricsGroupBidStrategyType {

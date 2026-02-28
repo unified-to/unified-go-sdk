@@ -17,10 +17,12 @@ const (
 	ListPaymentPaymentsQueryParamFieldsUpdatedAt     ListPaymentPaymentsQueryParamFields = "updated_at"
 	ListPaymentPaymentsQueryParamFieldsTotalAmount   ListPaymentPaymentsQueryParamFields = "total_amount"
 	ListPaymentPaymentsQueryParamFieldsContactID     ListPaymentPaymentsQueryParamFields = "contact_id"
+	ListPaymentPaymentsQueryParamFieldsType          ListPaymentPaymentsQueryParamFields = "type"
 	ListPaymentPaymentsQueryParamFieldsPaymentMethod ListPaymentPaymentsQueryParamFields = "payment_method"
 	ListPaymentPaymentsQueryParamFieldsCurrency      ListPaymentPaymentsQueryParamFields = "currency"
 	ListPaymentPaymentsQueryParamFieldsNotes         ListPaymentPaymentsQueryParamFields = "notes"
 	ListPaymentPaymentsQueryParamFieldsInvoiceID     ListPaymentPaymentsQueryParamFields = "invoice_id"
+	ListPaymentPaymentsQueryParamFieldsBillID        ListPaymentPaymentsQueryParamFields = "bill_id"
 	ListPaymentPaymentsQueryParamFieldsAccountID     ListPaymentPaymentsQueryParamFields = "account_id"
 	ListPaymentPaymentsQueryParamFieldsReference     ListPaymentPaymentsQueryParamFields = "reference"
 	ListPaymentPaymentsQueryParamFieldsRaw           ListPaymentPaymentsQueryParamFields = "raw"
@@ -45,6 +47,8 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "contact_id":
 		fallthrough
+	case "type":
+		fallthrough
 	case "payment_method":
 		fallthrough
 	case "currency":
@@ -52,6 +56,8 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "notes":
 		fallthrough
 	case "invoice_id":
+		fallthrough
+	case "bill_id":
 		fallthrough
 	case "account_id":
 		fallthrough
@@ -66,6 +72,8 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 }
 
 type ListPaymentPaymentsRequest struct {
+	// The bill ID to filter by
+	BillID *string `queryParam:"style=form,explode=true,name=bill_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
@@ -75,15 +83,26 @@ type ListPaymentPaymentsRequest struct {
 	// The invoice ID to filter by (reference to AccountingInvoice)
 	InvoiceID *string  `queryParam:"style=form,explode=true,name=invoice_id"`
 	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset    *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order     *string  `queryParam:"style=form,explode=true,name=order"`
+	// The link ID to filter by
+	LinkID *string  `queryParam:"style=form,explode=true,name=link_id"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The type to filter by
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (l *ListPaymentPaymentsRequest) GetBillID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.BillID
 }
 
 func (l *ListPaymentPaymentsRequest) GetConnectionID() string {
@@ -121,6 +140,13 @@ func (l *ListPaymentPaymentsRequest) GetLimit() *float64 {
 	return l.Limit
 }
 
+func (l *ListPaymentPaymentsRequest) GetLinkID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.LinkID
+}
+
 func (l *ListPaymentPaymentsRequest) GetOffset() *float64 {
 	if l == nil {
 		return nil
@@ -154,6 +180,13 @@ func (l *ListPaymentPaymentsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListPaymentPaymentsRequest) GetType() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Type
 }
 
 func (l *ListPaymentPaymentsRequest) GetUpdatedGte() *string {

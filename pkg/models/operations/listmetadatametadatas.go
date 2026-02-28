@@ -22,6 +22,7 @@ const (
 	ListMetadataMetadatasQueryParamFieldsOptions        ListMetadataMetadatasQueryParamFields = "options"
 	ListMetadataMetadatasQueryParamFieldsObjectType     ListMetadataMetadatasQueryParamFields = "object_type"
 	ListMetadataMetadatasQueryParamFieldsObjects        ListMetadataMetadatasQueryParamFields = "objects"
+	ListMetadataMetadatasQueryParamFieldsIsRequired     ListMetadataMetadatasQueryParamFields = "is_required"
 	ListMetadataMetadatasQueryParamFieldsRaw            ListMetadataMetadatasQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListMetadataMetadatasQueryParamFields) UnmarshalJSON(data []byte) error
 	case "object_type":
 		fallthrough
 	case "objects":
+		fallthrough
+	case "is_required":
 		fallthrough
 	case "raw":
 		*e = ListMetadataMetadatasQueryParamFields(v)

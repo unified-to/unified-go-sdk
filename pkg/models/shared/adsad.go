@@ -19,6 +19,10 @@ const (
 	AdTypeCall       AdType = "CALL"
 	AdTypeCarousel   AdType = "CAROUSEL"
 	AdTypeSocial     AdType = "SOCIAL"
+	AdTypeDisplay    AdType = "DISPLAY"
+	AdTypeSearch     AdType = "SEARCH"
+	AdTypeAudio      AdType = "AUDIO"
+	AdTypeYoutube    AdType = "YOUTUBE"
 )
 
 func (e AdType) ToPointer() *AdType {
@@ -29,7 +33,7 @@ func (e AdType) ToPointer() *AdType {
 func (e *AdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
 			return true
 		}
 	}
@@ -71,15 +75,21 @@ type AdsAd struct {
 	CreativeIds      []string                `json:"creative_ids,omitempty"`
 	Cta              *string                 `json:"cta,omitempty"`
 	Description      *string                 `json:"description,omitempty"`
+	DisplayURL       *string                 `json:"display_url,omitempty"`
+	EndAt            *time.Time              `json:"end_at,omitempty"`
 	FinalURL         *string                 `json:"final_url,omitempty"`
 	GroupID          *string                 `json:"group_id,omitempty"`
 	Headline         *string                 `json:"headline,omitempty"`
 	ID               *string                 `json:"id,omitempty"`
 	IsActive         *bool                   `json:"is_active,omitempty"`
 	ItemID           *string                 `json:"item_id,omitempty"`
+	Metadata         []AdsMetadata           `json:"metadata,omitempty"`
 	Name             *string                 `json:"name,omitempty"`
 	OrganizationID   *string                 `json:"organization_id,omitempty"`
+	Path1            *string                 `json:"path1,omitempty"`
+	Path2            *string                 `json:"path2,omitempty"`
 	Raw              map[string]any          `json:"raw,omitempty"`
+	StartAt          *time.Time              `json:"start_at,omitempty"`
 	Status           *AdsAdStatus            `json:"status,omitempty"`
 	Targeting        *PropertyAdsAdTargeting `json:"targeting,omitempty"`
 	UpdatedAt        *time.Time              `json:"updated_at,omitempty"`
@@ -152,6 +162,20 @@ func (a *AdsAd) GetDescription() *string {
 	return a.Description
 }
 
+func (a *AdsAd) GetDisplayURL() *string {
+	if a == nil {
+		return nil
+	}
+	return a.DisplayURL
+}
+
+func (a *AdsAd) GetEndAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.EndAt
+}
+
 func (a *AdsAd) GetFinalURL() *string {
 	if a == nil {
 		return nil
@@ -194,6 +218,13 @@ func (a *AdsAd) GetItemID() *string {
 	return a.ItemID
 }
 
+func (a *AdsAd) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
+}
+
 func (a *AdsAd) GetName() *string {
 	if a == nil {
 		return nil
@@ -208,11 +239,32 @@ func (a *AdsAd) GetOrganizationID() *string {
 	return a.OrganizationID
 }
 
+func (a *AdsAd) GetPath1() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Path1
+}
+
+func (a *AdsAd) GetPath2() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Path2
+}
+
 func (a *AdsAd) GetRaw() map[string]any {
 	if a == nil {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsAd) GetStartAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.StartAt
 }
 
 func (a *AdsAd) GetStatus() *AdsAdStatus {

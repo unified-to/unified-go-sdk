@@ -12,24 +12,27 @@ import (
 type UpdateAdsCampaignQueryParamFields string
 
 const (
-	UpdateAdsCampaignQueryParamFieldsID                 UpdateAdsCampaignQueryParamFields = "id"
-	UpdateAdsCampaignQueryParamFieldsCreatedAt          UpdateAdsCampaignQueryParamFields = "created_at"
-	UpdateAdsCampaignQueryParamFieldsUpdatedAt          UpdateAdsCampaignQueryParamFields = "updated_at"
-	UpdateAdsCampaignQueryParamFieldsName               UpdateAdsCampaignQueryParamFields = "name"
-	UpdateAdsCampaignQueryParamFieldsOrganizationID     UpdateAdsCampaignQueryParamFields = "organization_id"
-	UpdateAdsCampaignQueryParamFieldsStatus             UpdateAdsCampaignQueryParamFields = "status"
-	UpdateAdsCampaignQueryParamFieldsStartAt            UpdateAdsCampaignQueryParamFields = "start_at"
-	UpdateAdsCampaignQueryParamFieldsEndAt              UpdateAdsCampaignQueryParamFields = "end_at"
-	UpdateAdsCampaignQueryParamFieldsBudgetAmount       UpdateAdsCampaignQueryParamFields = "budget_amount"
-	UpdateAdsCampaignQueryParamFieldsBudgetPeriod       UpdateAdsCampaignQueryParamFields = "budget_period"
-	UpdateAdsCampaignQueryParamFieldsCurrency           UpdateAdsCampaignQueryParamFields = "currency"
-	UpdateAdsCampaignQueryParamFieldsTotalSpendAmount   UpdateAdsCampaignQueryParamFields = "total_spend_amount"
-	UpdateAdsCampaignQueryParamFieldsTargeting          UpdateAdsCampaignQueryParamFields = "targeting"
-	UpdateAdsCampaignQueryParamFieldsRaw                UpdateAdsCampaignQueryParamFields = "raw"
-	UpdateAdsCampaignQueryParamFieldsGoal               UpdateAdsCampaignQueryParamFields = "goal"
-	UpdateAdsCampaignQueryParamFieldsPlannedSpendAmount UpdateAdsCampaignQueryParamFields = "planned_spend_amount"
-	UpdateAdsCampaignQueryParamFieldsFrequencyCap       UpdateAdsCampaignQueryParamFields = "frequency_cap"
-	UpdateAdsCampaignQueryParamFieldsIsActive           UpdateAdsCampaignQueryParamFields = "is_active"
+	UpdateAdsCampaignQueryParamFieldsID                       UpdateAdsCampaignQueryParamFields = "id"
+	UpdateAdsCampaignQueryParamFieldsCreatedAt                UpdateAdsCampaignQueryParamFields = "created_at"
+	UpdateAdsCampaignQueryParamFieldsUpdatedAt                UpdateAdsCampaignQueryParamFields = "updated_at"
+	UpdateAdsCampaignQueryParamFieldsName                     UpdateAdsCampaignQueryParamFields = "name"
+	UpdateAdsCampaignQueryParamFieldsOrganizationID           UpdateAdsCampaignQueryParamFields = "organization_id"
+	UpdateAdsCampaignQueryParamFieldsStatus                   UpdateAdsCampaignQueryParamFields = "status"
+	UpdateAdsCampaignQueryParamFieldsStartAt                  UpdateAdsCampaignQueryParamFields = "start_at"
+	UpdateAdsCampaignQueryParamFieldsEndAt                    UpdateAdsCampaignQueryParamFields = "end_at"
+	UpdateAdsCampaignQueryParamFieldsBudgetAmount             UpdateAdsCampaignQueryParamFields = "budget_amount"
+	UpdateAdsCampaignQueryParamFieldsBudgetPeriod             UpdateAdsCampaignQueryParamFields = "budget_period"
+	UpdateAdsCampaignQueryParamFieldsTotalSpendAmount         UpdateAdsCampaignQueryParamFields = "total_spend_amount"
+	UpdateAdsCampaignQueryParamFieldsTargeting                UpdateAdsCampaignQueryParamFields = "targeting"
+	UpdateAdsCampaignQueryParamFieldsGoal                     UpdateAdsCampaignQueryParamFields = "goal"
+	UpdateAdsCampaignQueryParamFieldsPlannedSpendAmount       UpdateAdsCampaignQueryParamFields = "planned_spend_amount"
+	UpdateAdsCampaignQueryParamFieldsFrequencyCap             UpdateAdsCampaignQueryParamFields = "frequency_cap"
+	UpdateAdsCampaignQueryParamFieldsBidStrategy              UpdateAdsCampaignQueryParamFields = "bid_strategy"
+	UpdateAdsCampaignQueryParamFieldsSpecialAdCategories      UpdateAdsCampaignQueryParamFields = "special_ad_categories"
+	UpdateAdsCampaignQueryParamFieldsAdvertisingChannelType   UpdateAdsCampaignQueryParamFields = "advertising_channel_type"
+	UpdateAdsCampaignQueryParamFieldsCampaignBudgetIdentifier UpdateAdsCampaignQueryParamFields = "campaign_budget_identifier"
+	UpdateAdsCampaignQueryParamFieldsCurrency                 UpdateAdsCampaignQueryParamFields = "currency"
+	UpdateAdsCampaignQueryParamFieldsRaw                      UpdateAdsCampaignQueryParamFields = "raw"
 )
 
 func (e UpdateAdsCampaignQueryParamFields) ToPointer() *UpdateAdsCampaignQueryParamFields {
@@ -61,13 +64,9 @@ func (e *UpdateAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "budget_period":
 		fallthrough
-	case "currency":
-		fallthrough
 	case "total_spend_amount":
 		fallthrough
 	case "targeting":
-		fallthrough
-	case "raw":
 		fallthrough
 	case "goal":
 		fallthrough
@@ -75,7 +74,17 @@ func (e *UpdateAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "frequency_cap":
 		fallthrough
-	case "is_active":
+	case "bid_strategy":
+		fallthrough
+	case "special_ad_categories":
+		fallthrough
+	case "advertising_channel_type":
+		fallthrough
+	case "campaign_budget_identifier":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
 		*e = UpdateAdsCampaignQueryParamFields(v)
 		return nil
 	default:

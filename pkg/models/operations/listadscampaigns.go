@@ -12,24 +12,27 @@ import (
 type ListAdsCampaignsQueryParamFields string
 
 const (
-	ListAdsCampaignsQueryParamFieldsID                 ListAdsCampaignsQueryParamFields = "id"
-	ListAdsCampaignsQueryParamFieldsCreatedAt          ListAdsCampaignsQueryParamFields = "created_at"
-	ListAdsCampaignsQueryParamFieldsUpdatedAt          ListAdsCampaignsQueryParamFields = "updated_at"
-	ListAdsCampaignsQueryParamFieldsName               ListAdsCampaignsQueryParamFields = "name"
-	ListAdsCampaignsQueryParamFieldsOrganizationID     ListAdsCampaignsQueryParamFields = "organization_id"
-	ListAdsCampaignsQueryParamFieldsStatus             ListAdsCampaignsQueryParamFields = "status"
-	ListAdsCampaignsQueryParamFieldsStartAt            ListAdsCampaignsQueryParamFields = "start_at"
-	ListAdsCampaignsQueryParamFieldsEndAt              ListAdsCampaignsQueryParamFields = "end_at"
-	ListAdsCampaignsQueryParamFieldsBudgetAmount       ListAdsCampaignsQueryParamFields = "budget_amount"
-	ListAdsCampaignsQueryParamFieldsBudgetPeriod       ListAdsCampaignsQueryParamFields = "budget_period"
-	ListAdsCampaignsQueryParamFieldsCurrency           ListAdsCampaignsQueryParamFields = "currency"
-	ListAdsCampaignsQueryParamFieldsTotalSpendAmount   ListAdsCampaignsQueryParamFields = "total_spend_amount"
-	ListAdsCampaignsQueryParamFieldsTargeting          ListAdsCampaignsQueryParamFields = "targeting"
-	ListAdsCampaignsQueryParamFieldsRaw                ListAdsCampaignsQueryParamFields = "raw"
-	ListAdsCampaignsQueryParamFieldsGoal               ListAdsCampaignsQueryParamFields = "goal"
-	ListAdsCampaignsQueryParamFieldsPlannedSpendAmount ListAdsCampaignsQueryParamFields = "planned_spend_amount"
-	ListAdsCampaignsQueryParamFieldsFrequencyCap       ListAdsCampaignsQueryParamFields = "frequency_cap"
-	ListAdsCampaignsQueryParamFieldsIsActive           ListAdsCampaignsQueryParamFields = "is_active"
+	ListAdsCampaignsQueryParamFieldsID                       ListAdsCampaignsQueryParamFields = "id"
+	ListAdsCampaignsQueryParamFieldsCreatedAt                ListAdsCampaignsQueryParamFields = "created_at"
+	ListAdsCampaignsQueryParamFieldsUpdatedAt                ListAdsCampaignsQueryParamFields = "updated_at"
+	ListAdsCampaignsQueryParamFieldsName                     ListAdsCampaignsQueryParamFields = "name"
+	ListAdsCampaignsQueryParamFieldsOrganizationID           ListAdsCampaignsQueryParamFields = "organization_id"
+	ListAdsCampaignsQueryParamFieldsStatus                   ListAdsCampaignsQueryParamFields = "status"
+	ListAdsCampaignsQueryParamFieldsStartAt                  ListAdsCampaignsQueryParamFields = "start_at"
+	ListAdsCampaignsQueryParamFieldsEndAt                    ListAdsCampaignsQueryParamFields = "end_at"
+	ListAdsCampaignsQueryParamFieldsBudgetAmount             ListAdsCampaignsQueryParamFields = "budget_amount"
+	ListAdsCampaignsQueryParamFieldsBudgetPeriod             ListAdsCampaignsQueryParamFields = "budget_period"
+	ListAdsCampaignsQueryParamFieldsTotalSpendAmount         ListAdsCampaignsQueryParamFields = "total_spend_amount"
+	ListAdsCampaignsQueryParamFieldsTargeting                ListAdsCampaignsQueryParamFields = "targeting"
+	ListAdsCampaignsQueryParamFieldsGoal                     ListAdsCampaignsQueryParamFields = "goal"
+	ListAdsCampaignsQueryParamFieldsPlannedSpendAmount       ListAdsCampaignsQueryParamFields = "planned_spend_amount"
+	ListAdsCampaignsQueryParamFieldsFrequencyCap             ListAdsCampaignsQueryParamFields = "frequency_cap"
+	ListAdsCampaignsQueryParamFieldsBidStrategy              ListAdsCampaignsQueryParamFields = "bid_strategy"
+	ListAdsCampaignsQueryParamFieldsSpecialAdCategories      ListAdsCampaignsQueryParamFields = "special_ad_categories"
+	ListAdsCampaignsQueryParamFieldsAdvertisingChannelType   ListAdsCampaignsQueryParamFields = "advertising_channel_type"
+	ListAdsCampaignsQueryParamFieldsCampaignBudgetIdentifier ListAdsCampaignsQueryParamFields = "campaign_budget_identifier"
+	ListAdsCampaignsQueryParamFieldsCurrency                 ListAdsCampaignsQueryParamFields = "currency"
+	ListAdsCampaignsQueryParamFieldsRaw                      ListAdsCampaignsQueryParamFields = "raw"
 )
 
 func (e ListAdsCampaignsQueryParamFields) ToPointer() *ListAdsCampaignsQueryParamFields {
@@ -61,13 +64,9 @@ func (e *ListAdsCampaignsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "budget_period":
 		fallthrough
-	case "currency":
-		fallthrough
 	case "total_spend_amount":
 		fallthrough
 	case "targeting":
-		fallthrough
-	case "raw":
 		fallthrough
 	case "goal":
 		fallthrough
@@ -75,7 +74,17 @@ func (e *ListAdsCampaignsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "frequency_cap":
 		fallthrough
-	case "is_active":
+	case "bid_strategy":
+		fallthrough
+	case "special_ad_categories":
+		fallthrough
+	case "advertising_channel_type":
+		fallthrough
+	case "campaign_budget_identifier":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "raw":
 		*e = ListAdsCampaignsQueryParamFields(v)
 		return nil
 	default:

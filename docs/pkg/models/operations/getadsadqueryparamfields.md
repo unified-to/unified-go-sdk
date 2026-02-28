@@ -24,4 +24,10 @@
 | `GetAdsAdQueryParamFieldsFinalURL`         | final_url                                  |
 | `GetAdsAdQueryParamFieldsTargeting`        | targeting                                  |
 | `GetAdsAdQueryParamFieldsIsActive`         | is_active                                  |
+| `GetAdsAdQueryParamFieldsEndAt`            | end_at                                     |
+| `GetAdsAdQueryParamFieldsStartAt`          | start_at                                   |
+| `GetAdsAdQueryParamFieldsDisplayURL`       | display_url                                |
+| `GetAdsAdQueryParamFieldsPath1`            | path1                                      |
+| `GetAdsAdQueryParamFieldsPath2`            | path2                                      |
+| `GetAdsAdQueryParamFieldsMetadata`         | metadata                                   |
 | `GetAdsAdQueryParamFieldsRaw`              | raw                                        |

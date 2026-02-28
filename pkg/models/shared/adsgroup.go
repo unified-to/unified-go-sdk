@@ -107,10 +107,19 @@ func (e *AdsGroupStatus) IsExact() bool {
 type AdsGroupType string
 
 const (
-	AdsGroupTypeDisplay AdsGroupType = "DISPLAY"
-	AdsGroupTypeVideo   AdsGroupType = "VIDEO"
-	AdsGroupTypeAudio   AdsGroupType = "AUDIO"
-	AdsGroupTypeYoutube AdsGroupType = "YOUTUBE"
+	AdsGroupTypeText       AdsGroupType = "TEXT"
+	AdsGroupTypeImage      AdsGroupType = "IMAGE"
+	AdsGroupTypeVideo      AdsGroupType = "VIDEO"
+	AdsGroupTypeResponsive AdsGroupType = "RESPONSIVE"
+	AdsGroupTypeShopping   AdsGroupType = "SHOPPING"
+	AdsGroupTypeApp        AdsGroupType = "APP"
+	AdsGroupTypeCall       AdsGroupType = "CALL"
+	AdsGroupTypeCarousel   AdsGroupType = "CAROUSEL"
+	AdsGroupTypeSocial     AdsGroupType = "SOCIAL"
+	AdsGroupTypeDisplay    AdsGroupType = "DISPLAY"
+	AdsGroupTypeSearch     AdsGroupType = "SEARCH"
+	AdsGroupTypeAudio      AdsGroupType = "AUDIO"
+	AdsGroupTypeYoutube    AdsGroupType = "YOUTUBE"
 )
 
 func (e AdsGroupType) ToPointer() *AdsGroupType {
@@ -121,7 +130,7 @@ func (e AdsGroupType) ToPointer() *AdsGroupType {
 func (e *AdsGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DISPLAY", "VIDEO", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
 			return true
 		}
 	}
@@ -129,9 +138,11 @@ func (e *AdsGroupType) IsExact() bool {
 }
 
 type AdsGroup struct {
-	BidAmount *float64 `json:"bid_amount,omitempty"`
+	AdGroupType *string  `json:"ad_group_type,omitempty"`
+	BidAmount   *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
 	BidStrategy          *PropertyAdsGroupBidStrategy  `json:"bid_strategy,omitempty"`
+	BillingEvent         *string                       `json:"billing_event,omitempty"`
 	BudgetAllocationType *BudgetAllocationType         `json:"budget_allocation_type,omitempty"`
 	BudgetAmount         *float64                      `json:"budget_amount,omitempty"`
 	BudgetMaxAmount      *float64                      `json:"budget_max_amount,omitempty"`
@@ -141,13 +152,16 @@ type AdsGroup struct {
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
 	Currency             *string                       `json:"currency,omitempty"`
+	DailySpendCap        *float64                      `json:"daily_spend_cap,omitempty"`
 	EndAt                *time.Time                    `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                       `json:"id,omitempty"`
 	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
-	IsActive             *bool                         `json:"is_active,omitempty"`
+	LifetimeSpendCap     *float64                      `json:"lifetime_spend_cap,omitempty"`
+	Metadata             []AdsMetadata                 `json:"metadata,omitempty"`
 	Name                 *string                       `json:"name,omitempty"`
+	OptimizationGoal     *string                       `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                       `json:"organization_id,omitempty"`
 	Pacing               *PropertyAdsGroupPacing       `json:"pacing,omitempty"`
 	ParentID             *string                       `json:"parent_id,omitempty"`
@@ -170,6 +184,13 @@ func (a *AdsGroup) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+func (a *AdsGroup) GetAdGroupType() *string {
+	if a == nil {
+		return nil
+	}
+	return a.AdGroupType
+}
+
 func (a *AdsGroup) GetBidAmount() *float64 {
 	if a == nil {
 		return nil
@@ -182,6 +203,13 @@ func (a *AdsGroup) GetBidStrategy() *PropertyAdsGroupBidStrategy {
 		return nil
 	}
 	return a.BidStrategy
+}
+
+func (a *AdsGroup) GetBillingEvent() *string {
+	if a == nil {
+		return nil
+	}
+	return a.BillingEvent
 }
 
 func (a *AdsGroup) GetBudgetAllocationType() *BudgetAllocationType {
@@ -247,6 +275,13 @@ func (a *AdsGroup) GetCurrency() *string {
 	return a.Currency
 }
 
+func (a *AdsGroup) GetDailySpendCap() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.DailySpendCap
+}
+
 func (a *AdsGroup) GetEndAt() *time.Time {
 	if a == nil {
 		return nil
@@ -282,11 +317,18 @@ func (a *AdsGroup) GetInsertionorderID() *string {
 	return a.InsertionorderID
 }
 
-func (a *AdsGroup) GetIsActive() *bool {
+func (a *AdsGroup) GetLifetimeSpendCap() *float64 {
 	if a == nil {
 		return nil
 	}
-	return a.IsActive
+	return a.LifetimeSpendCap
+}
+
+func (a *AdsGroup) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsGroup) GetName() *string {
@@ -294,6 +336,13 @@ func (a *AdsGroup) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AdsGroup) GetOptimizationGoal() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OptimizationGoal
 }
 
 func (a *AdsGroup) GetOrganizationID() *string {

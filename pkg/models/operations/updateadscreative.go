@@ -26,11 +26,22 @@ const (
 	UpdateAdsCreativeQueryParamFieldsWidth                      UpdateAdsCreativeQueryParamFields = "width"
 	UpdateAdsCreativeQueryParamFieldsHeight                     UpdateAdsCreativeQueryParamFields = "height"
 	UpdateAdsCreativeQueryParamFieldsAssetUrls                  UpdateAdsCreativeQueryParamFields = "asset_urls"
+	UpdateAdsCreativeQueryParamFieldsPageIdentifier             UpdateAdsCreativeQueryParamFields = "page_identifier"
+	UpdateAdsCreativeQueryParamFieldsLinkURL                    UpdateAdsCreativeQueryParamFields = "link_url"
+	UpdateAdsCreativeQueryParamFieldsBody                       UpdateAdsCreativeQueryParamFields = "body"
+	UpdateAdsCreativeQueryParamFieldsTitle                      UpdateAdsCreativeQueryParamFields = "title"
+	UpdateAdsCreativeQueryParamFieldsCta                        UpdateAdsCreativeQueryParamFields = "cta"
+	UpdateAdsCreativeQueryParamFieldsThumbnailURL               UpdateAdsCreativeQueryParamFields = "thumbnail_url"
+	UpdateAdsCreativeQueryParamFieldsImageHash                  UpdateAdsCreativeQueryParamFields = "image_hash"
+	UpdateAdsCreativeQueryParamFieldsVideoID                    UpdateAdsCreativeQueryParamFields = "video_id"
 	UpdateAdsCreativeQueryParamFieldsThirdPartyTag              UpdateAdsCreativeQueryParamFields = "third_party_tag"
 	UpdateAdsCreativeQueryParamFieldsVastTagURL                 UpdateAdsCreativeQueryParamFields = "vast_tag_url"
 	UpdateAdsCreativeQueryParamFieldsExternalCreativeReference  UpdateAdsCreativeQueryParamFields = "external_creative_reference"
 	UpdateAdsCreativeQueryParamFieldsExternalPlacementReference UpdateAdsCreativeQueryParamFields = "external_placement_reference"
 	UpdateAdsCreativeQueryParamFieldsExternalAdReference        UpdateAdsCreativeQueryParamFields = "external_ad_reference"
+	UpdateAdsCreativeQueryParamFieldsMetadata                   UpdateAdsCreativeQueryParamFields = "metadata"
+	UpdateAdsCreativeQueryParamFieldsPath1                      UpdateAdsCreativeQueryParamFields = "path1"
+	UpdateAdsCreativeQueryParamFieldsPath2                      UpdateAdsCreativeQueryParamFields = "path2"
 	UpdateAdsCreativeQueryParamFieldsRaw                        UpdateAdsCreativeQueryParamFields = "raw"
 )
 
@@ -71,6 +82,22 @@ func (e *UpdateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "asset_urls":
 		fallthrough
+	case "page_identifier":
+		fallthrough
+	case "link_url":
+		fallthrough
+	case "body":
+		fallthrough
+	case "title":
+		fallthrough
+	case "cta":
+		fallthrough
+	case "thumbnail_url":
+		fallthrough
+	case "image_hash":
+		fallthrough
+	case "video_id":
+		fallthrough
 	case "third_party_tag":
 		fallthrough
 	case "vast_tag_url":
@@ -80,6 +107,12 @@ func (e *UpdateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "external_placement_reference":
 		fallthrough
 	case "external_ad_reference":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "path1":
+		fallthrough
+	case "path2":
 		fallthrough
 	case "raw":
 		*e = UpdateAdsCreativeQueryParamFields(v)

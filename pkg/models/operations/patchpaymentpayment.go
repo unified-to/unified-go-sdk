@@ -17,10 +17,12 @@ const (
 	PatchPaymentPaymentQueryParamFieldsUpdatedAt     PatchPaymentPaymentQueryParamFields = "updated_at"
 	PatchPaymentPaymentQueryParamFieldsTotalAmount   PatchPaymentPaymentQueryParamFields = "total_amount"
 	PatchPaymentPaymentQueryParamFieldsContactID     PatchPaymentPaymentQueryParamFields = "contact_id"
+	PatchPaymentPaymentQueryParamFieldsType          PatchPaymentPaymentQueryParamFields = "type"
 	PatchPaymentPaymentQueryParamFieldsPaymentMethod PatchPaymentPaymentQueryParamFields = "payment_method"
 	PatchPaymentPaymentQueryParamFieldsCurrency      PatchPaymentPaymentQueryParamFields = "currency"
 	PatchPaymentPaymentQueryParamFieldsNotes         PatchPaymentPaymentQueryParamFields = "notes"
 	PatchPaymentPaymentQueryParamFieldsInvoiceID     PatchPaymentPaymentQueryParamFields = "invoice_id"
+	PatchPaymentPaymentQueryParamFieldsBillID        PatchPaymentPaymentQueryParamFields = "bill_id"
 	PatchPaymentPaymentQueryParamFieldsAccountID     PatchPaymentPaymentQueryParamFields = "account_id"
 	PatchPaymentPaymentQueryParamFieldsReference     PatchPaymentPaymentQueryParamFields = "reference"
 	PatchPaymentPaymentQueryParamFieldsRaw           PatchPaymentPaymentQueryParamFields = "raw"
@@ -45,6 +47,8 @@ func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "contact_id":
 		fallthrough
+	case "type":
+		fallthrough
 	case "payment_method":
 		fallthrough
 	case "currency":
@@ -52,6 +56,8 @@ func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "notes":
 		fallthrough
 	case "invoice_id":
+		fallthrough
+	case "bill_id":
 		fallthrough
 	case "account_id":
 		fallthrough

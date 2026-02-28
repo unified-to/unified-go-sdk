@@ -107,10 +107,19 @@ func (e *PropertyAdsReportMetricsGroupStatus) IsExact() bool {
 type PropertyAdsReportMetricsGroupType string
 
 const (
-	PropertyAdsReportMetricsGroupTypeDisplay PropertyAdsReportMetricsGroupType = "DISPLAY"
-	PropertyAdsReportMetricsGroupTypeVideo   PropertyAdsReportMetricsGroupType = "VIDEO"
-	PropertyAdsReportMetricsGroupTypeAudio   PropertyAdsReportMetricsGroupType = "AUDIO"
-	PropertyAdsReportMetricsGroupTypeYoutube PropertyAdsReportMetricsGroupType = "YOUTUBE"
+	PropertyAdsReportMetricsGroupTypeText       PropertyAdsReportMetricsGroupType = "TEXT"
+	PropertyAdsReportMetricsGroupTypeImage      PropertyAdsReportMetricsGroupType = "IMAGE"
+	PropertyAdsReportMetricsGroupTypeVideo      PropertyAdsReportMetricsGroupType = "VIDEO"
+	PropertyAdsReportMetricsGroupTypeResponsive PropertyAdsReportMetricsGroupType = "RESPONSIVE"
+	PropertyAdsReportMetricsGroupTypeShopping   PropertyAdsReportMetricsGroupType = "SHOPPING"
+	PropertyAdsReportMetricsGroupTypeApp        PropertyAdsReportMetricsGroupType = "APP"
+	PropertyAdsReportMetricsGroupTypeCall       PropertyAdsReportMetricsGroupType = "CALL"
+	PropertyAdsReportMetricsGroupTypeCarousel   PropertyAdsReportMetricsGroupType = "CAROUSEL"
+	PropertyAdsReportMetricsGroupTypeSocial     PropertyAdsReportMetricsGroupType = "SOCIAL"
+	PropertyAdsReportMetricsGroupTypeDisplay    PropertyAdsReportMetricsGroupType = "DISPLAY"
+	PropertyAdsReportMetricsGroupTypeSearch     PropertyAdsReportMetricsGroupType = "SEARCH"
+	PropertyAdsReportMetricsGroupTypeAudio      PropertyAdsReportMetricsGroupType = "AUDIO"
+	PropertyAdsReportMetricsGroupTypeYoutube    PropertyAdsReportMetricsGroupType = "YOUTUBE"
 )
 
 func (e PropertyAdsReportMetricsGroupType) ToPointer() *PropertyAdsReportMetricsGroupType {
@@ -121,7 +130,7 @@ func (e PropertyAdsReportMetricsGroupType) ToPointer() *PropertyAdsReportMetrics
 func (e *PropertyAdsReportMetricsGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DISPLAY", "VIDEO", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
 			return true
 		}
 	}
@@ -129,9 +138,11 @@ func (e *PropertyAdsReportMetricsGroupType) IsExact() bool {
 }
 
 type PropertyAdsReportMetricsGroup struct {
-	BidAmount *float64 `json:"bid_amount,omitempty"`
+	AdGroupType *string  `json:"ad_group_type,omitempty"`
+	BidAmount   *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
 	BidStrategy          *PropertyAdsReportMetricsGroupBidStrategy          `json:"bid_strategy,omitempty"`
+	BillingEvent         *string                                            `json:"billing_event,omitempty"`
 	BudgetAllocationType *PropertyAdsReportMetricsGroupBudgetAllocationType `json:"budget_allocation_type,omitempty"`
 	BudgetAmount         *float64                                           `json:"budget_amount,omitempty"`
 	BudgetMaxAmount      *float64                                           `json:"budget_max_amount,omitempty"`
@@ -141,13 +152,16 @@ type PropertyAdsReportMetricsGroup struct {
 	CreatedAt            *time.Time                                         `json:"created_at,omitempty"`
 	CreativeIds          []string                                           `json:"creative_ids,omitempty"`
 	Currency             *string                                            `json:"currency,omitempty"`
+	DailySpendCap        *float64                                           `json:"daily_spend_cap,omitempty"`
 	EndAt                *time.Time                                         `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsReportMetricsGroupFrequencyCap         `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                                            `json:"id,omitempty"`
 	InsertionorderID     *string                                            `json:"insertionorder_id,omitempty"`
-	IsActive             *bool                                              `json:"is_active,omitempty"`
+	LifetimeSpendCap     *float64                                           `json:"lifetime_spend_cap,omitempty"`
+	Metadata             []AdsMetadata                                      `json:"metadata,omitempty"`
 	Name                 *string                                            `json:"name,omitempty"`
+	OptimizationGoal     *string                                            `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                                            `json:"organization_id,omitempty"`
 	Pacing               *PropertyAdsReportMetricsGroupPacing               `json:"pacing,omitempty"`
 	ParentID             *string                                            `json:"parent_id,omitempty"`
@@ -170,6 +184,13 @@ func (p *PropertyAdsReportMetricsGroup) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+func (p *PropertyAdsReportMetricsGroup) GetAdGroupType() *string {
+	if p == nil {
+		return nil
+	}
+	return p.AdGroupType
+}
+
 func (p *PropertyAdsReportMetricsGroup) GetBidAmount() *float64 {
 	if p == nil {
 		return nil
@@ -182,6 +203,13 @@ func (p *PropertyAdsReportMetricsGroup) GetBidStrategy() *PropertyAdsReportMetri
 		return nil
 	}
 	return p.BidStrategy
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetBillingEvent() *string {
+	if p == nil {
+		return nil
+	}
+	return p.BillingEvent
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetBudgetAllocationType() *PropertyAdsReportMetricsGroupBudgetAllocationType {
@@ -247,6 +275,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCurrency() *string {
 	return p.Currency
 }
 
+func (p *PropertyAdsReportMetricsGroup) GetDailySpendCap() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.DailySpendCap
+}
+
 func (p *PropertyAdsReportMetricsGroup) GetEndAt() *time.Time {
 	if p == nil {
 		return nil
@@ -282,11 +317,18 @@ func (p *PropertyAdsReportMetricsGroup) GetInsertionorderID() *string {
 	return p.InsertionorderID
 }
 
-func (p *PropertyAdsReportMetricsGroup) GetIsActive() *bool {
+func (p *PropertyAdsReportMetricsGroup) GetLifetimeSpendCap() *float64 {
 	if p == nil {
 		return nil
 	}
-	return p.IsActive
+	return p.LifetimeSpendCap
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetMetadata() []AdsMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetName() *string {
@@ -294,6 +336,13 @@ func (p *PropertyAdsReportMetricsGroup) GetName() *string {
 		return nil
 	}
 	return p.Name
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetOptimizationGoal() *string {
+	if p == nil {
+		return nil
+	}
+	return p.OptimizationGoal
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetOrganizationID() *string {

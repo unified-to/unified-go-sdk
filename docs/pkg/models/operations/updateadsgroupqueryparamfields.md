@@ -16,7 +16,6 @@
 | `UpdateAdsGroupQueryParamFieldsStatus`               | status                                               |
 | `UpdateAdsGroupQueryParamFieldsTargeting`            | targeting                                            |
 | `UpdateAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                           |
-| `UpdateAdsGroupQueryParamFieldsCurrency`             | currency                                             |
 | `UpdateAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                         |
 | `UpdateAdsGroupQueryParamFieldsBudgetAmount`         | budget_amount                                        |
 | `UpdateAdsGroupQueryParamFieldsBudgetPeriod`         | budget_period                                        |
@@ -30,5 +29,11 @@
 | `UpdateAdsGroupQueryParamFieldsPacing`               | pacing                                               |
 | `UpdateAdsGroupQueryParamFieldsFrequencyCap`         | frequency_cap                                        |
 | `UpdateAdsGroupQueryParamFieldsCreativeIds`          | creative_ids                                         |
-| `UpdateAdsGroupQueryParamFieldsIsActive`             | is_active                                            |
+| `UpdateAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                    |
+| `UpdateAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                        |
+| `UpdateAdsGroupQueryParamFieldsDailySpendCap`        | daily_spend_cap                                      |
+| `UpdateAdsGroupQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                   |
+| `UpdateAdsGroupQueryParamFieldsAdGroupType`          | ad_group_type                                        |
+| `UpdateAdsGroupQueryParamFieldsCurrency`             | currency                                             |
+| `UpdateAdsGroupQueryParamFieldsMetadata`             | metadata                                             |
 | `UpdateAdsGroupQueryParamFieldsRaw`                  | raw                                                  |

@@ -16,7 +16,6 @@
 | `ListAdsGroupsQueryParamFieldsStatus`               | status                                              |
 | `ListAdsGroupsQueryParamFieldsTargeting`            | targeting                                           |
 | `ListAdsGroupsQueryParamFieldsBidAmount`            | bid_amount                                          |
-| `ListAdsGroupsQueryParamFieldsCurrency`             | currency                                            |
 | `ListAdsGroupsQueryParamFieldsBidStrategy`          | bid_strategy                                        |
 | `ListAdsGroupsQueryParamFieldsBudgetAmount`         | budget_amount                                       |
 | `ListAdsGroupsQueryParamFieldsBudgetPeriod`         | budget_period                                       |
@@ -30,5 +29,11 @@
 | `ListAdsGroupsQueryParamFieldsPacing`               | pacing                                              |
 | `ListAdsGroupsQueryParamFieldsFrequencyCap`         | frequency_cap                                       |
 | `ListAdsGroupsQueryParamFieldsCreativeIds`          | creative_ids                                        |
-| `ListAdsGroupsQueryParamFieldsIsActive`             | is_active                                           |
+| `ListAdsGroupsQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
+| `ListAdsGroupsQueryParamFieldsBillingEvent`         | billing_event                                       |
+| `ListAdsGroupsQueryParamFieldsDailySpendCap`        | daily_spend_cap                                     |
+| `ListAdsGroupsQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                  |
+| `ListAdsGroupsQueryParamFieldsAdGroupType`          | ad_group_type                                       |
+| `ListAdsGroupsQueryParamFieldsCurrency`             | currency                                            |
+| `ListAdsGroupsQueryParamFieldsMetadata`             | metadata                                            |
 | `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

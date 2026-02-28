@@ -26,11 +26,22 @@ const (
 	ListAdsCreativesQueryParamFieldsWidth                      ListAdsCreativesQueryParamFields = "width"
 	ListAdsCreativesQueryParamFieldsHeight                     ListAdsCreativesQueryParamFields = "height"
 	ListAdsCreativesQueryParamFieldsAssetUrls                  ListAdsCreativesQueryParamFields = "asset_urls"
+	ListAdsCreativesQueryParamFieldsPageIdentifier             ListAdsCreativesQueryParamFields = "page_identifier"
+	ListAdsCreativesQueryParamFieldsLinkURL                    ListAdsCreativesQueryParamFields = "link_url"
+	ListAdsCreativesQueryParamFieldsBody                       ListAdsCreativesQueryParamFields = "body"
+	ListAdsCreativesQueryParamFieldsTitle                      ListAdsCreativesQueryParamFields = "title"
+	ListAdsCreativesQueryParamFieldsCta                        ListAdsCreativesQueryParamFields = "cta"
+	ListAdsCreativesQueryParamFieldsThumbnailURL               ListAdsCreativesQueryParamFields = "thumbnail_url"
+	ListAdsCreativesQueryParamFieldsImageHash                  ListAdsCreativesQueryParamFields = "image_hash"
+	ListAdsCreativesQueryParamFieldsVideoID                    ListAdsCreativesQueryParamFields = "video_id"
 	ListAdsCreativesQueryParamFieldsThirdPartyTag              ListAdsCreativesQueryParamFields = "third_party_tag"
 	ListAdsCreativesQueryParamFieldsVastTagURL                 ListAdsCreativesQueryParamFields = "vast_tag_url"
 	ListAdsCreativesQueryParamFieldsExternalCreativeReference  ListAdsCreativesQueryParamFields = "external_creative_reference"
 	ListAdsCreativesQueryParamFieldsExternalPlacementReference ListAdsCreativesQueryParamFields = "external_placement_reference"
 	ListAdsCreativesQueryParamFieldsExternalAdReference        ListAdsCreativesQueryParamFields = "external_ad_reference"
+	ListAdsCreativesQueryParamFieldsMetadata                   ListAdsCreativesQueryParamFields = "metadata"
+	ListAdsCreativesQueryParamFieldsPath1                      ListAdsCreativesQueryParamFields = "path1"
+	ListAdsCreativesQueryParamFieldsPath2                      ListAdsCreativesQueryParamFields = "path2"
 	ListAdsCreativesQueryParamFieldsRaw                        ListAdsCreativesQueryParamFields = "raw"
 )
 
@@ -71,6 +82,22 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "asset_urls":
 		fallthrough
+	case "page_identifier":
+		fallthrough
+	case "link_url":
+		fallthrough
+	case "body":
+		fallthrough
+	case "title":
+		fallthrough
+	case "cta":
+		fallthrough
+	case "thumbnail_url":
+		fallthrough
+	case "image_hash":
+		fallthrough
+	case "video_id":
+		fallthrough
 	case "third_party_tag":
 		fallthrough
 	case "vast_tag_url":
@@ -80,6 +107,12 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "external_placement_reference":
 		fallthrough
 	case "external_ad_reference":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "path1":
+		fallthrough
+	case "path2":
 		fallthrough
 	case "raw":
 		*e = ListAdsCreativesQueryParamFields(v)

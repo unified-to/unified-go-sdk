@@ -24,4 +24,10 @@
 | `PatchAdsAdQueryParamFieldsFinalURL`         | final_url                                    |
 | `PatchAdsAdQueryParamFieldsTargeting`        | targeting                                    |
 | `PatchAdsAdQueryParamFieldsIsActive`         | is_active                                    |
+| `PatchAdsAdQueryParamFieldsEndAt`            | end_at                                       |
+| `PatchAdsAdQueryParamFieldsStartAt`          | start_at                                     |
+| `PatchAdsAdQueryParamFieldsDisplayURL`       | display_url                                  |
+| `PatchAdsAdQueryParamFieldsPath1`            | path1                                        |
+| `PatchAdsAdQueryParamFieldsPath2`            | path2                                        |
+| `PatchAdsAdQueryParamFieldsMetadata`         | metadata                                     |
 | `PatchAdsAdQueryParamFieldsRaw`              | raw                                          |

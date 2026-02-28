@@ -7,19 +7,43 @@ import (
 	"time"
 )
 
+type PaymentPaymentType string
+
+const (
+	PaymentPaymentTypeInvoice PaymentPaymentType = "INVOICE"
+	PaymentPaymentTypeBill    PaymentPaymentType = "BILL"
+)
+
+func (e PaymentPaymentType) ToPointer() *PaymentPaymentType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentPaymentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "INVOICE", "BILL":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentPayment struct {
-	AccountID     *string        `json:"account_id,omitempty"`
-	ContactID     *string        `json:"contact_id,omitempty"`
-	CreatedAt     *time.Time     `json:"created_at,omitempty"`
-	Currency      *string        `default:"USD" json:"currency"`
-	ID            *string        `json:"id,omitempty"`
-	InvoiceID     *string        `json:"invoice_id,omitempty"`
-	Notes         *string        `json:"notes,omitempty"`
-	PaymentMethod *string        `json:"payment_method,omitempty"`
-	Raw           map[string]any `json:"raw,omitempty"`
-	Reference     *string        `json:"reference,omitempty"`
-	TotalAmount   *float64       `json:"total_amount,omitempty"`
-	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
+	AccountID     *string             `json:"account_id,omitempty"`
+	BillID        *string             `json:"bill_id,omitempty"`
+	ContactID     *string             `json:"contact_id,omitempty"`
+	CreatedAt     *time.Time          `json:"created_at,omitempty"`
+	Currency      *string             `default:"USD" json:"currency"`
+	ID            *string             `json:"id,omitempty"`
+	InvoiceID     *string             `json:"invoice_id,omitempty"`
+	Notes         *string             `json:"notes,omitempty"`
+	PaymentMethod *string             `json:"payment_method,omitempty"`
+	Raw           map[string]any      `json:"raw,omitempty"`
+	Reference     *string             `json:"reference,omitempty"`
+	TotalAmount   *float64            `json:"total_amount,omitempty"`
+	Type          *PaymentPaymentType `json:"type,omitempty"`
+	UpdatedAt     *time.Time          `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayment) MarshalJSON() ([]byte, error) {
@@ -38,6 +62,13 @@ func (p *PaymentPayment) GetAccountID() *string {
 		return nil
 	}
 	return p.AccountID
+}
+
+func (p *PaymentPayment) GetBillID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.BillID
 }
 
 func (p *PaymentPayment) GetContactID() *string {
@@ -108,6 +139,13 @@ func (p *PaymentPayment) GetTotalAmount() *float64 {
 		return nil
 	}
 	return p.TotalAmount
+}
+
+func (p *PaymentPayment) GetType() *PaymentPaymentType {
+	if p == nil {
+		return nil
+	}
+	return p.Type
 }
 
 func (p *PaymentPayment) GetUpdatedAt() *time.Time {

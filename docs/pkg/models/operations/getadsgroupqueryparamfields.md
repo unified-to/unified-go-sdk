@@ -16,7 +16,6 @@
 | `GetAdsGroupQueryParamFieldsStatus`               | status                                            |
 | `GetAdsGroupQueryParamFieldsTargeting`            | targeting                                         |
 | `GetAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                        |
-| `GetAdsGroupQueryParamFieldsCurrency`             | currency                                          |
 | `GetAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                      |
 | `GetAdsGroupQueryParamFieldsBudgetAmount`         | budget_amount                                     |
 | `GetAdsGroupQueryParamFieldsBudgetPeriod`         | budget_period                                     |
@@ -30,5 +29,11 @@
 | `GetAdsGroupQueryParamFieldsPacing`               | pacing                                            |
 | `GetAdsGroupQueryParamFieldsFrequencyCap`         | frequency_cap                                     |
 | `GetAdsGroupQueryParamFieldsCreativeIds`          | creative_ids                                      |
-| `GetAdsGroupQueryParamFieldsIsActive`             | is_active                                         |
+| `GetAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                 |
+| `GetAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                     |
+| `GetAdsGroupQueryParamFieldsDailySpendCap`        | daily_spend_cap                                   |
+| `GetAdsGroupQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                |
+| `GetAdsGroupQueryParamFieldsAdGroupType`          | ad_group_type                                     |
+| `GetAdsGroupQueryParamFieldsCurrency`             | currency                                          |
+| `GetAdsGroupQueryParamFieldsMetadata`             | metadata                                          |
 | `GetAdsGroupQueryParamFieldsRaw`                  | raw                                               |

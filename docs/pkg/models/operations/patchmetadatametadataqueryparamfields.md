@@ -15,4 +15,5 @@
 | `PatchMetadataMetadataQueryParamFieldsOptions`        | options                                               |
 | `PatchMetadataMetadataQueryParamFieldsObjectType`     | object_type                                           |
 | `PatchMetadataMetadataQueryParamFieldsObjects`        | objects                                               |
+| `PatchMetadataMetadataQueryParamFieldsIsRequired`     | is_required                                           |
 | `PatchMetadataMetadataQueryParamFieldsRaw`            | raw                                                   |

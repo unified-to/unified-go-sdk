@@ -94,6 +94,7 @@ type PropertyAdsInsertionorderBidStrategy struct {
 	PerformanceGoalAmount    *float64                                                    `json:"performance_goal_amount,omitempty"`
 	PerformanceGoalType      *PropertyAdsInsertionorderBidStrategyPerformanceGoalType    `json:"performance_goal_type,omitempty"`
 	RaiseBidForDeals         *bool                                                       `json:"raise_bid_for_deals,omitempty"`
+	TargetRoas               *float64                                                    `json:"target_roas,omitempty"`
 	Type                     PropertyAdsInsertionorderBidStrategyType                    `json:"type"`
 	YoutubeAndPartnersType   *PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType `json:"youtube_and_partners_type,omitempty"`
 	YoutubeAndPartnersValue  *string                                                     `json:"youtube_and_partners_value,omitempty"`
@@ -139,6 +140,13 @@ func (p *PropertyAdsInsertionorderBidStrategy) GetRaiseBidForDeals() *bool {
 		return nil
 	}
 	return p.RaiseBidForDeals
+}
+
+func (p *PropertyAdsInsertionorderBidStrategy) GetTargetRoas() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.TargetRoas
 }
 
 func (p *PropertyAdsInsertionorderBidStrategy) GetType() PropertyAdsInsertionorderBidStrategyType {

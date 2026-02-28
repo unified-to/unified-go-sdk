@@ -23,7 +23,6 @@ const (
 	CreateAdsGroupQueryParamFieldsStatus               CreateAdsGroupQueryParamFields = "status"
 	CreateAdsGroupQueryParamFieldsTargeting            CreateAdsGroupQueryParamFields = "targeting"
 	CreateAdsGroupQueryParamFieldsBidAmount            CreateAdsGroupQueryParamFields = "bid_amount"
-	CreateAdsGroupQueryParamFieldsCurrency             CreateAdsGroupQueryParamFields = "currency"
 	CreateAdsGroupQueryParamFieldsBidStrategy          CreateAdsGroupQueryParamFields = "bid_strategy"
 	CreateAdsGroupQueryParamFieldsBudgetAmount         CreateAdsGroupQueryParamFields = "budget_amount"
 	CreateAdsGroupQueryParamFieldsBudgetPeriod         CreateAdsGroupQueryParamFields = "budget_period"
@@ -37,7 +36,13 @@ const (
 	CreateAdsGroupQueryParamFieldsPacing               CreateAdsGroupQueryParamFields = "pacing"
 	CreateAdsGroupQueryParamFieldsFrequencyCap         CreateAdsGroupQueryParamFields = "frequency_cap"
 	CreateAdsGroupQueryParamFieldsCreativeIds          CreateAdsGroupQueryParamFields = "creative_ids"
-	CreateAdsGroupQueryParamFieldsIsActive             CreateAdsGroupQueryParamFields = "is_active"
+	CreateAdsGroupQueryParamFieldsOptimizationGoal     CreateAdsGroupQueryParamFields = "optimization_goal"
+	CreateAdsGroupQueryParamFieldsBillingEvent         CreateAdsGroupQueryParamFields = "billing_event"
+	CreateAdsGroupQueryParamFieldsDailySpendCap        CreateAdsGroupQueryParamFields = "daily_spend_cap"
+	CreateAdsGroupQueryParamFieldsLifetimeSpendCap     CreateAdsGroupQueryParamFields = "lifetime_spend_cap"
+	CreateAdsGroupQueryParamFieldsAdGroupType          CreateAdsGroupQueryParamFields = "ad_group_type"
+	CreateAdsGroupQueryParamFieldsCurrency             CreateAdsGroupQueryParamFields = "currency"
+	CreateAdsGroupQueryParamFieldsMetadata             CreateAdsGroupQueryParamFields = "metadata"
 	CreateAdsGroupQueryParamFieldsRaw                  CreateAdsGroupQueryParamFields = "raw"
 )
 
@@ -72,8 +77,6 @@ func (e *CreateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "bid_amount":
 		fallthrough
-	case "currency":
-		fallthrough
 	case "bid_strategy":
 		fallthrough
 	case "budget_amount":
@@ -100,7 +103,19 @@ func (e *CreateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "creative_ids":
 		fallthrough
-	case "is_active":
+	case "optimization_goal":
+		fallthrough
+	case "billing_event":
+		fallthrough
+	case "daily_spend_cap":
+		fallthrough
+	case "lifetime_spend_cap":
+		fallthrough
+	case "ad_group_type":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateAdsGroupQueryParamFields(v)

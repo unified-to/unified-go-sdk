@@ -30,7 +30,7 @@ value := shared.CreateValueBoolean(bool{/* values here */})
 ### 
 
 ```go
-value := shared.CreateValueArrayOfAtsMetadata5([]shared.AtsMetadata5{/* values here */})
+value := shared.CreateValueArrayOf5([]shared.Five{/* values here */})
 ```
 
 ## Union Discrimination
@@ -47,7 +47,7 @@ switch value.Type {
 		// value.Number is populated
 	case shared.ValueTypeBoolean:
 		// value.Boolean is populated
-	case shared.ValueTypeArrayOfAtsMetadata5:
-		// value.ArrayOfAtsMetadata5 is populated
+	case shared.ValueTypeArrayOf5:
+		// value.ArrayOf5 is populated
 }
 ```

@@ -3,24 +3,28 @@
 package shared
 
 type PropertyAdsAdTargeting struct {
-	AgeRanges    []string `json:"age_ranges,omitempty"`
-	Audiences    []string `json:"audiences,omitempty"`
-	Companies    []string `json:"companies,omitempty"`
-	CompanySizes []string `json:"company_sizes,omitempty"`
-	Degrees      []string `json:"degrees,omitempty"`
-	Devices      []string `json:"devices,omitempty"`
-	Genders      []string `json:"genders,omitempty"`
-	Industries   []string `json:"industries,omitempty"`
-	Interests    []string `json:"interests,omitempty"`
-	JobFunctions []string `json:"job_functions,omitempty"`
-	JobTitles    []string `json:"job_titles,omitempty"`
-	Keywords     []string `json:"keywords,omitempty"`
-	Languages    []string `json:"languages,omitempty"`
-	Locations    []string `json:"locations,omitempty"`
-	Placements   []string `json:"placements,omitempty"`
-	Schools      []string `json:"schools,omitempty"`
-	Seniorities  []string `json:"seniorities,omitempty"`
-	Skills       []string `json:"skills,omitempty"`
+	AgeRanges         []string `json:"age_ranges,omitempty"`
+	Audiences         []string `json:"audiences,omitempty"`
+	Behaviors         []string `json:"behaviors,omitempty"`
+	Companies         []string `json:"companies,omitempty"`
+	CompanySizes      []string `json:"company_sizes,omitempty"`
+	CustomAudiences   []string `json:"custom_audiences,omitempty"`
+	Degrees           []string `json:"degrees,omitempty"`
+	Devices           []string `json:"devices,omitempty"`
+	ExcludedAudiences []string `json:"excluded_audiences,omitempty"`
+	ExcludedLocations []string `json:"excluded_locations,omitempty"`
+	Genders           []string `json:"genders,omitempty"`
+	Industries        []string `json:"industries,omitempty"`
+	Interests         []string `json:"interests,omitempty"`
+	JobFunctions      []string `json:"job_functions,omitempty"`
+	JobTitles         []string `json:"job_titles,omitempty"`
+	Keywords          []string `json:"keywords,omitempty"`
+	Languages         []string `json:"languages,omitempty"`
+	Locations         []string `json:"locations,omitempty"`
+	Placements        []string `json:"placements,omitempty"`
+	Schools           []string `json:"schools,omitempty"`
+	Seniorities       []string `json:"seniorities,omitempty"`
+	Skills            []string `json:"skills,omitempty"`
 }
 
 func (p *PropertyAdsAdTargeting) GetAgeRanges() []string {
@@ -37,6 +41,13 @@ func (p *PropertyAdsAdTargeting) GetAudiences() []string {
 	return p.Audiences
 }
 
+func (p *PropertyAdsAdTargeting) GetBehaviors() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Behaviors
+}
+
 func (p *PropertyAdsAdTargeting) GetCompanies() []string {
 	if p == nil {
 		return nil
@@ -51,6 +62,13 @@ func (p *PropertyAdsAdTargeting) GetCompanySizes() []string {
 	return p.CompanySizes
 }
 
+func (p *PropertyAdsAdTargeting) GetCustomAudiences() []string {
+	if p == nil {
+		return nil
+	}
+	return p.CustomAudiences
+}
+
 func (p *PropertyAdsAdTargeting) GetDegrees() []string {
 	if p == nil {
 		return nil
@@ -63,6 +81,20 @@ func (p *PropertyAdsAdTargeting) GetDevices() []string {
 		return nil
 	}
 	return p.Devices
+}
+
+func (p *PropertyAdsAdTargeting) GetExcludedAudiences() []string {
+	if p == nil {
+		return nil
+	}
+	return p.ExcludedAudiences
+}
+
+func (p *PropertyAdsAdTargeting) GetExcludedLocations() []string {
+	if p == nil {
+		return nil
+	}
+	return p.ExcludedLocations
 }
 
 func (p *PropertyAdsAdTargeting) GetGenders() []string {

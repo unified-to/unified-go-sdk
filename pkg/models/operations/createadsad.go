@@ -31,6 +31,12 @@ const (
 	CreateAdsAdQueryParamFieldsFinalURL         CreateAdsAdQueryParamFields = "final_url"
 	CreateAdsAdQueryParamFieldsTargeting        CreateAdsAdQueryParamFields = "targeting"
 	CreateAdsAdQueryParamFieldsIsActive         CreateAdsAdQueryParamFields = "is_active"
+	CreateAdsAdQueryParamFieldsEndAt            CreateAdsAdQueryParamFields = "end_at"
+	CreateAdsAdQueryParamFieldsStartAt          CreateAdsAdQueryParamFields = "start_at"
+	CreateAdsAdQueryParamFieldsDisplayURL       CreateAdsAdQueryParamFields = "display_url"
+	CreateAdsAdQueryParamFieldsPath1            CreateAdsAdQueryParamFields = "path1"
+	CreateAdsAdQueryParamFieldsPath2            CreateAdsAdQueryParamFields = "path2"
+	CreateAdsAdQueryParamFieldsMetadata         CreateAdsAdQueryParamFields = "metadata"
 	CreateAdsAdQueryParamFieldsRaw              CreateAdsAdQueryParamFields = "raw"
 )
 
@@ -80,6 +86,18 @@ func (e *CreateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "targeting":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "end_at":
+		fallthrough
+	case "start_at":
+		fallthrough
+	case "display_url":
+		fallthrough
+	case "path1":
+		fallthrough
+	case "path2":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateAdsAdQueryParamFields(v)

@@ -90,9 +90,11 @@ func (e *AdsCreativeStatus) IsExact() bool {
 type AdsCreative struct {
 	// Hosted asset mode (best-effort, provider-specific
 	AssetUrls                  []string           `json:"asset_urls,omitempty"`
+	Body                       *string            `json:"body,omitempty"`
 	CampaignID                 *string            `json:"campaign_id,omitempty"`
 	CreatedAt                  *time.Time         `json:"created_at,omitempty"`
 	CreativeType               *CreativeType      `json:"creative_type,omitempty"`
+	Cta                        *string            `json:"cta,omitempty"`
 	ExternalAdReference        *string            `json:"external_ad_reference,omitempty"`
 	ExternalCreativeReference  *string            `json:"external_creative_reference,omitempty"`
 	ExternalPlacementReference *string            `json:"external_placement_reference,omitempty"`
@@ -100,14 +102,23 @@ type AdsCreative struct {
 	Height                     *float64           `json:"height,omitempty"`
 	HostingSource              *HostingSource     `json:"hosting_source,omitempty"`
 	ID                         *string            `json:"id,omitempty"`
+	ImageHash                  *string            `json:"image_hash,omitempty"`
 	ItemID                     *string            `json:"item_id,omitempty"`
+	LinkURL                    *string            `json:"link_url,omitempty"`
+	Metadata                   []AdsMetadata      `json:"metadata,omitempty"`
 	Name                       *string            `json:"name,omitempty"`
 	OrganizationID             *string            `json:"organization_id,omitempty"`
+	PageIdentifier             *string            `json:"page_identifier,omitempty"`
+	Path1                      *string            `json:"path1,omitempty"`
+	Path2                      *string            `json:"path2,omitempty"`
 	Raw                        map[string]any     `json:"raw,omitempty"`
 	Status                     *AdsCreativeStatus `json:"status,omitempty"`
 	ThirdPartyTag              *string            `json:"third_party_tag,omitempty"`
+	ThumbnailURL               *string            `json:"thumbnail_url,omitempty"`
+	Title                      *string            `json:"title,omitempty"`
 	UpdatedAt                  *time.Time         `json:"updated_at,omitempty"`
 	VastTagURL                 *string            `json:"vast_tag_url,omitempty"`
+	VideoID                    *string            `json:"video_id,omitempty"`
 	Width                      *float64           `json:"width,omitempty"`
 }
 
@@ -129,6 +140,13 @@ func (a *AdsCreative) GetAssetUrls() []string {
 	return a.AssetUrls
 }
 
+func (a *AdsCreative) GetBody() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Body
+}
+
 func (a *AdsCreative) GetCampaignID() *string {
 	if a == nil {
 		return nil
@@ -148,6 +166,13 @@ func (a *AdsCreative) GetCreativeType() *CreativeType {
 		return nil
 	}
 	return a.CreativeType
+}
+
+func (a *AdsCreative) GetCta() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Cta
 }
 
 func (a *AdsCreative) GetExternalAdReference() *string {
@@ -199,11 +224,32 @@ func (a *AdsCreative) GetID() *string {
 	return a.ID
 }
 
+func (a *AdsCreative) GetImageHash() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ImageHash
+}
+
 func (a *AdsCreative) GetItemID() *string {
 	if a == nil {
 		return nil
 	}
 	return a.ItemID
+}
+
+func (a *AdsCreative) GetLinkURL() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LinkURL
+}
+
+func (a *AdsCreative) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsCreative) GetName() *string {
@@ -218,6 +264,27 @@ func (a *AdsCreative) GetOrganizationID() *string {
 		return nil
 	}
 	return a.OrganizationID
+}
+
+func (a *AdsCreative) GetPageIdentifier() *string {
+	if a == nil {
+		return nil
+	}
+	return a.PageIdentifier
+}
+
+func (a *AdsCreative) GetPath1() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Path1
+}
+
+func (a *AdsCreative) GetPath2() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Path2
 }
 
 func (a *AdsCreative) GetRaw() map[string]any {
@@ -241,6 +308,20 @@ func (a *AdsCreative) GetThirdPartyTag() *string {
 	return a.ThirdPartyTag
 }
 
+func (a *AdsCreative) GetThumbnailURL() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ThumbnailURL
+}
+
+func (a *AdsCreative) GetTitle() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Title
+}
+
 func (a *AdsCreative) GetUpdatedAt() *time.Time {
 	if a == nil {
 		return nil
@@ -253,6 +334,13 @@ func (a *AdsCreative) GetVastTagURL() *string {
 		return nil
 	}
 	return a.VastTagURL
+}
+
+func (a *AdsCreative) GetVideoID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.VideoID
 }
 
 func (a *AdsCreative) GetWidth() *float64 {

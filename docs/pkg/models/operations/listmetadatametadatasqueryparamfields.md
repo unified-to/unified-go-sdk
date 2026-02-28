@@ -15,4 +15,5 @@
 | `ListMetadataMetadatasQueryParamFieldsOptions`        | options                                               |
 | `ListMetadataMetadatasQueryParamFieldsObjectType`     | object_type                                           |
 | `ListMetadataMetadatasQueryParamFieldsObjects`        | objects                                               |
+| `ListMetadataMetadatasQueryParamFieldsIsRequired`     | is_required                                           |
 | `ListMetadataMetadatasQueryParamFieldsRaw`            | raw                                                   |

@@ -44,6 +44,7 @@ type MetadataMetadata struct {
 	CreatedAt      *time.Time              `json:"created_at,omitempty"`
 	Format         *MetadataMetadataFormat `json:"format,omitempty"`
 	ID             *string                 `json:"id,omitempty"`
+	IsRequired     *bool                   `json:"is_required,omitempty"`
 	Name           string                  `json:"name"`
 	ObjectType     string                  `json:"object_type"`
 	Objects        map[string]any          `json:"objects,omitempty"`
@@ -84,6 +85,13 @@ func (m *MetadataMetadata) GetID() *string {
 		return nil
 	}
 	return m.ID
+}
+
+func (m *MetadataMetadata) GetIsRequired() *bool {
+	if m == nil {
+		return nil
+	}
+	return m.IsRequired
 }
 
 func (m *MetadataMetadata) GetName() string {

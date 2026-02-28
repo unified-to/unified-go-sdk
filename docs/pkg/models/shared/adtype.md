@@ -14,3 +14,7 @@
 | `AdTypeCall`       | CALL               |
 | `AdTypeCarousel`   | CAROUSEL           |
 | `AdTypeSocial`     | SOCIAL             |
+| `AdTypeDisplay`    | DISPLAY            |
+| `AdTypeSearch`     | SEARCH             |
+| `AdTypeAudio`      | AUDIO              |
+| `AdTypeYoutube`    | YOUTUBE            |

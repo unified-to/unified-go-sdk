@@ -30,7 +30,7 @@ extraData := shared.CreateExtraDataBoolean(bool{/* values here */})
 ### 
 
 ```go
-extraData := shared.CreateExtraDataArrayOf5([]shared.Five{/* values here */})
+extraData := shared.CreateExtraDataArrayOfAtsMetadata5([]shared.AtsMetadata5{/* values here */})
 ```
 
 ## Union Discrimination
@@ -47,7 +47,7 @@ switch extraData.Type {
 		// extraData.Number is populated
 	case shared.ExtraDataTypeBoolean:
 		// extraData.Boolean is populated
-	case shared.ExtraDataTypeArrayOf5:
-		// extraData.ArrayOf5 is populated
+	case shared.ExtraDataTypeArrayOfAtsMetadata5:
+		// extraData.ArrayOfAtsMetadata5 is populated
 }
 ```
