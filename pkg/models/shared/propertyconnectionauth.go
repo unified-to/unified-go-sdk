@@ -12,6 +12,7 @@ type PropertyConnectionAuth struct {
 	AccessToken    *string        `json:"access_token,omitempty"`
 	APIURL         *string        `json:"api_url,omitempty"`
 	AppID          *string        `json:"app_id,omitempty"`
+	Audience       *string        `json:"audience,omitempty"`
 	AuthorizeURL   *string        `json:"authorize_url,omitempty"`
 	ClientID       *string        `json:"client_id,omitempty"`
 	ClientSecret   *string        `json:"client_secret,omitempty"`
@@ -67,6 +68,13 @@ func (p *PropertyConnectionAuth) GetAppID() *string {
 		return nil
 	}
 	return p.AppID
+}
+
+func (p *PropertyConnectionAuth) GetAudience() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Audience
 }
 
 func (p *PropertyConnectionAuth) GetAuthorizeURL() *string {

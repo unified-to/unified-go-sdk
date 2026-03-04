@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: c49ff261f475ff6eee95b4805bd5de3f
+  docChecksum: d0897cf78de3efc63587534d3e4d713b
   docVersion: "1.0"
-  speakeasyVersion: 1.734.1
-  generationVersion: 2.845.12
-  releaseVersion: 0.36.39
-  configChecksum: d3ccc0c1397f1b30fdd7f692614e36bc
+  speakeasyVersion: 1.739.2
+  generationVersion: 2.846.4
+  releaseVersion: 0.36.40
+  configChecksum: 31306977c739e59c7a5aa41d0c242a93
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 818815e7-dcda-4e76-b34b-472b1d29bf64
-  pristine_commit_hash: 293fa54162c09afcd107cfd4c261e0245b47f420
-  pristine_tree_hash: 9473452dccfc99c0beccb3e2ea3b801371725da1
+  generation_id: 7290a761-a109-4356-b518-4001922b194f
+  pristine_commit_hash: 36d7cfdfe6a01947eede14f3ca2ad743e041d208
+  pristine_tree_hash: 3323e17785d2d08068855dbf41e263ec6fc0cb1c
 features:
   go:
     acceptHeaders: 2.81.2
@@ -9535,8 +9535,8 @@ trackedFiles:
     pristine_git_object: 3e0bac23295a9f83f170bb4edd450039f719829f
   docs/pkg/models/shared/propertyconnectionauth.md:
     id: 034e461e289d
-    last_write_checksum: sha1:1936b2fe26130be8fabf06ca6f74b79a19f98173
-    pristine_git_object: 506416a996bd8166ee5fbdb1b3c00c70b5fb4435
+    last_write_checksum: sha1:efa70399059705f02c7f89f4b44ddd1dc6a19beb
+    pristine_git_object: acb066dd36e574c9bd1ba18f6b05bae47a48376b
   docs/pkg/models/shared/propertyconnectioncategories.md:
     id: 89f9bf064f57
     last_write_checksum: sha1:9a22a7bec029f35c43f6105b744d04ae5dc3b427
@@ -14743,8 +14743,8 @@ trackedFiles:
     pristine_git_object: 79747316cd63812bc0c0a49e01cef7c77f392ace
   pkg/models/shared/propertyconnectionauth.go:
     id: c1dd60b14e32
-    last_write_checksum: sha1:3cdf03a4544df2144f8e9d52fd09b0f67f3bd6eb
-    pristine_git_object: 3b1ffaae5350b0f3882fc61ec0b4b21d3ea09ae4
+    last_write_checksum: sha1:ae3f46997c2ed417641bc5e12d6e94be1fcb5c84
+    pristine_git_object: 53508219bf0f3feac06eb61a7f4c1bb344ddedff
   pkg/models/shared/propertyconnectioncategories.go:
     id: 69c7d3a6a22d
     last_write_checksum: sha1:65f31ef46d9093b90c39e1df33ac3aa539c271c1
@@ -15411,8 +15411,8 @@ trackedFiles:
     pristine_git_object: 7fc35e29b72e05d2e4942edc2703cdb6356310a7
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:f24238934e848be75b31253ef2a1cb531c48227c
-    pristine_git_object: 4bd1b949105382a27de81e70406bfb55db280d5c
+    last_write_checksum: sha1:8b6de57c19813df01e8ea7fb7100117c1f54e274
+    pristine_git_object: 6f31920d24c2f4284a29ab1fd1b8809079dba429
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:c679aaf135e5beb3cb73f54be0ec3f3be434500a
@@ -21344,7 +21344,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsInsertionorders()`:  `response.[].BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Ads.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.UpdateAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.PatchAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Ads.UpdateAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Ad.CreateAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ad.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ad.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Ad.PatchAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ad.UpdateAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.PatchAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.PatchAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.ListAdsCreatives()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Ads.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Ads.GetAdsInsertionorder()`:  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Creative.CreateAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Creative.GetAdsCreative()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Creative.ListAdsCreatives()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Creative.PatchAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Creative.UpdateAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.GetAdsCreative()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.UpdateAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.CreateAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Ads.CreateAdsCreative()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Ads.CreateAdsAd()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Insertionorder.CreateAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Insertionorder.GetAdsInsertionorder()`:  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Insertionorder.ListAdsInsertionorders()`:  `response.[].BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Insertionorder.PatchAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Insertionorder.UpdateAdsInsertionorder()`: \n  *  `request.Request.AdsInsertionorder.BidStrategy.TargetRoas` **Added**\n  *  `response.BidStrategy.TargetRoas` **Added**\n* `UnifiedTo.Metadata.CreateMetadataMetadata()`: \n  *  `request.Request` **Changed**\n  *  `response.IsRequired` **Added**\n* `UnifiedTo.Metadata.GetMetadataMetadata()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.IsRequired` **Added**\n* `UnifiedTo.Metadata.ListMetadataMetadatas()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].IsRequired` **Added**\n* `UnifiedTo.Metadata.PatchMetadataMetadata()`: \n  *  `request.Request` **Changed**\n  *  `response.IsRequired` **Added**\n* `UnifiedTo.Metadata.UpdateMetadataMetadata()`: \n  *  `request.Request` **Changed**\n  *  `response.IsRequired` **Added**\n* `UnifiedTo.Payment.CreatePaymentPayment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Payment.GetPaymentPayment()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Payment.ListPaymentPayments()`: \n  *  `request.Request` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Payment.PatchPaymentPayment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Payment.UpdatePaymentPayment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Auth.Audience` **Added**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Auth.Audience` **Added**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Auth.Audience` **Added**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Auth.Audience` **Added**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Auth.Audience` **Added**\n  *  `response.Auth.Audience` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
