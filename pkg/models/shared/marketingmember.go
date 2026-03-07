@@ -7,6 +7,31 @@ import (
 	"time"
 )
 
+type MarketingMemberStatus string
+
+const (
+	MarketingMemberStatusSubscribed    MarketingMemberStatus = "SUBSCRIBED"
+	MarketingMemberStatusUnsubscribed  MarketingMemberStatus = "UNSUBSCRIBED"
+	MarketingMemberStatusCleaned       MarketingMemberStatus = "CLEANED"
+	MarketingMemberStatusPending       MarketingMemberStatus = "PENDING"
+	MarketingMemberStatusTransactional MarketingMemberStatus = "TRANSACTIONAL"
+)
+
+func (e MarketingMemberStatus) ToPointer() *MarketingMemberStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *MarketingMemberStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SUBSCRIBED", "UNSUBSCRIBED", "CLEANED", "PENDING", "TRANSACTIONAL":
+			return true
+		}
+	}
+	return false
+}
+
 // MarketingMember - A member represents a person
 type MarketingMember struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
@@ -16,9 +41,10 @@ type MarketingMember struct {
 	ID        *string          `json:"id,omitempty"`
 	LastName  *string          `json:"last_name,omitempty"`
 	// An array of list IDs associated with this member
-	ListIds []string       `json:"list_ids,omitempty"`
-	Name    *string        `json:"name,omitempty"`
-	Raw     map[string]any `json:"raw,omitempty"`
+	ListIds []string               `json:"list_ids,omitempty"`
+	Name    *string                `json:"name,omitempty"`
+	Raw     map[string]any         `json:"raw,omitempty"`
+	Status  *MarketingMemberStatus `json:"status,omitempty"`
 	// An array of tags associated with this member
 	Tags      []string   `json:"tags,omitempty"`
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
@@ -89,6 +115,13 @@ func (m *MarketingMember) GetRaw() map[string]any {
 		return nil
 	}
 	return m.Raw
+}
+
+func (m *MarketingMember) GetStatus() *MarketingMemberStatus {
+	if m == nil {
+		return nil
+	}
+	return m.Status
 }
 
 func (m *MarketingMember) GetTags() []string {

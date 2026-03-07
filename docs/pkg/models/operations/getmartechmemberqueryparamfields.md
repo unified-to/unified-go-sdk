@@ -1,5 +1,15 @@
 # GetMartechMemberQueryParamFields
 
+## Example Usage
+
+```go
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+value := operations.GetMartechMemberQueryParamFieldsID
+```
+
 
 ## Values
 
@@ -14,4 +24,5 @@
 | `GetMartechMemberQueryParamFieldsEmails`    | emails                                      |
 | `GetMartechMemberQueryParamFieldsListIds`   | list_ids                                    |
 | `GetMartechMemberQueryParamFieldsTags`      | tags                                        |
+| `GetMartechMemberQueryParamFieldsStatus`    | status                                      |
 | `GetMartechMemberQueryParamFieldsRaw`       | raw                                         |

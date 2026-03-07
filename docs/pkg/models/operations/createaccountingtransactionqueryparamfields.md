@@ -1,5 +1,15 @@
 # CreateAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```go
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+value := operations.CreateAccountingTransactionQueryParamFieldsID
+```
+
 
 ## Values
 

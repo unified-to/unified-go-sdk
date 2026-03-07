@@ -21,6 +21,7 @@ const (
 	PatchMartechMemberQueryParamFieldsEmails    PatchMartechMemberQueryParamFields = "emails"
 	PatchMartechMemberQueryParamFieldsListIds   PatchMartechMemberQueryParamFields = "list_ids"
 	PatchMartechMemberQueryParamFieldsTags      PatchMartechMemberQueryParamFields = "tags"
+	PatchMartechMemberQueryParamFieldsStatus    PatchMartechMemberQueryParamFields = "status"
 	PatchMartechMemberQueryParamFieldsRaw       PatchMartechMemberQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *PatchMartechMemberQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "list_ids":
 		fallthrough
 	case "tags":
+		fallthrough
+	case "status":
 		fallthrough
 	case "raw":
 		*e = PatchMartechMemberQueryParamFields(v)

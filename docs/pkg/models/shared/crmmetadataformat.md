@@ -1,5 +1,18 @@
 # CrmMetadataFormat
 
+## Example Usage
+
+```go
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+)
+
+value := shared.CrmMetadataFormatText
+
+// Open enum: custom values can be created with a direct type cast
+custom := shared.CrmMetadataFormat("custom_value")
+```
+
 
 ## Values
 

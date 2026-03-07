@@ -1,5 +1,15 @@
 # GetStorageFileQueryParamFields
 
+## Example Usage
+
+```go
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+)
+
+value := operations.GetStorageFileQueryParamFieldsID
+```
+
 
 ## Values
 
