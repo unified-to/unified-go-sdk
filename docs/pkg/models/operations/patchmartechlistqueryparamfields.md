@@ -24,4 +24,10 @@ value := operations.PatchMartechListQueryParamFieldsID
 | `PatchMartechListQueryParamFieldsEndAt`       | end_at                                        |
 | `PatchMartechListQueryParamFieldsUserID`      | user_id                                       |
 | `PatchMartechListQueryParamFieldsIsActive`    | is_active                                     |
+| `PatchMartechListQueryParamFieldsState`       | state                                         |
+| `PatchMartechListQueryParamFieldsFromName`    | from_name                                     |
+| `PatchMartechListQueryParamFieldsFromEmail`   | from_email                                    |
+| `PatchMartechListQueryParamFieldsSubject`     | subject                                       |
+| `PatchMartechListQueryParamFieldsLanguage`    | language                                      |
+| `PatchMartechListQueryParamFieldsAddress`     | address                                       |
 | `PatchMartechListQueryParamFieldsRaw`         | raw                                           |

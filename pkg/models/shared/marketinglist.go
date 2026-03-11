@@ -9,16 +9,22 @@ import (
 
 // MarketingList - Mailing List
 type MarketingList struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	EndAt       *time.Time     `json:"end_at,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	StartAt     *time.Time     `json:"start_at,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserID      *string        `json:"user_id,omitempty"`
+	Address     *PropertyMarketingListAddress `json:"address,omitempty"`
+	CreatedAt   *time.Time                    `json:"created_at,omitempty"`
+	Description *string                       `json:"description,omitempty"`
+	EndAt       *time.Time                    `json:"end_at,omitempty"`
+	FromEmail   *string                       `json:"from_email,omitempty"`
+	FromName    *string                       `json:"from_name,omitempty"`
+	ID          *string                       `json:"id,omitempty"`
+	IsActive    *bool                         `json:"is_active,omitempty"`
+	Language    *string                       `json:"language,omitempty"`
+	Name        *string                       `json:"name,omitempty"`
+	Raw         map[string]any                `json:"raw,omitempty"`
+	StartAt     *time.Time                    `json:"start_at,omitempty"`
+	State       *string                       `json:"state,omitempty"`
+	Subject     *string                       `json:"subject,omitempty"`
+	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
+	UserID      *string                       `json:"user_id,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {
@@ -30,6 +36,13 @@ func (m *MarketingList) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (m *MarketingList) GetAddress() *PropertyMarketingListAddress {
+	if m == nil {
+		return nil
+	}
+	return m.Address
 }
 
 func (m *MarketingList) GetCreatedAt() *time.Time {
@@ -53,6 +66,20 @@ func (m *MarketingList) GetEndAt() *time.Time {
 	return m.EndAt
 }
 
+func (m *MarketingList) GetFromEmail() *string {
+	if m == nil {
+		return nil
+	}
+	return m.FromEmail
+}
+
+func (m *MarketingList) GetFromName() *string {
+	if m == nil {
+		return nil
+	}
+	return m.FromName
+}
+
 func (m *MarketingList) GetID() *string {
 	if m == nil {
 		return nil
@@ -65,6 +92,13 @@ func (m *MarketingList) GetIsActive() *bool {
 		return nil
 	}
 	return m.IsActive
+}
+
+func (m *MarketingList) GetLanguage() *string {
+	if m == nil {
+		return nil
+	}
+	return m.Language
 }
 
 func (m *MarketingList) GetName() *string {
@@ -86,6 +120,20 @@ func (m *MarketingList) GetStartAt() *time.Time {
 		return nil
 	}
 	return m.StartAt
+}
+
+func (m *MarketingList) GetState() *string {
+	if m == nil {
+		return nil
+	}
+	return m.State
+}
+
+func (m *MarketingList) GetSubject() *string {
+	if m == nil {
+		return nil
+	}
+	return m.Subject
 }
 
 func (m *MarketingList) GetUpdatedAt() *time.Time {

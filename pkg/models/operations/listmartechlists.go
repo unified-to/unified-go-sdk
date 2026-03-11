@@ -21,6 +21,12 @@ const (
 	ListMartechListsQueryParamFieldsEndAt       ListMartechListsQueryParamFields = "end_at"
 	ListMartechListsQueryParamFieldsUserID      ListMartechListsQueryParamFields = "user_id"
 	ListMartechListsQueryParamFieldsIsActive    ListMartechListsQueryParamFields = "is_active"
+	ListMartechListsQueryParamFieldsState       ListMartechListsQueryParamFields = "state"
+	ListMartechListsQueryParamFieldsFromName    ListMartechListsQueryParamFields = "from_name"
+	ListMartechListsQueryParamFieldsFromEmail   ListMartechListsQueryParamFields = "from_email"
+	ListMartechListsQueryParamFieldsSubject     ListMartechListsQueryParamFields = "subject"
+	ListMartechListsQueryParamFieldsLanguage    ListMartechListsQueryParamFields = "language"
+	ListMartechListsQueryParamFieldsAddress     ListMartechListsQueryParamFields = "address"
 	ListMartechListsQueryParamFieldsRaw         ListMartechListsQueryParamFields = "raw"
 )
 
@@ -50,6 +56,18 @@ func (e *ListMartechListsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "state":
+		fallthrough
+	case "from_name":
+		fallthrough
+	case "from_email":
+		fallthrough
+	case "subject":
+		fallthrough
+	case "language":
+		fallthrough
+	case "address":
 		fallthrough
 	case "raw":
 		*e = ListMartechListsQueryParamFields(v)

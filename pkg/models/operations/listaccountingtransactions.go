@@ -88,6 +88,8 @@ type ListAccountingTransactionsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListAccountingTransactionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                     `queryParam:"style=form,explode=true,name=limit"`
@@ -98,6 +100,8 @@ type ListAccountingTransactionsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -114,6 +118,13 @@ func (l *ListAccountingTransactionsRequest) GetContactID() *string {
 		return nil
 	}
 	return l.ContactID
+}
+
+func (l *ListAccountingTransactionsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListAccountingTransactionsRequest) GetFields() []ListAccountingTransactionsQueryParamFields {
@@ -163,6 +174,13 @@ func (l *ListAccountingTransactionsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListAccountingTransactionsRequest) GetStartGte() *string {
+	if l == nil {
+		return nil
+	}
+	return l.StartGte
 }
 
 func (l *ListAccountingTransactionsRequest) GetUpdatedGte() *string {

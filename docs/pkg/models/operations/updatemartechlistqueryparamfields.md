@@ -24,4 +24,10 @@ value := operations.UpdateMartechListQueryParamFieldsID
 | `UpdateMartechListQueryParamFieldsEndAt`       | end_at                                         |
 | `UpdateMartechListQueryParamFieldsUserID`      | user_id                                        |
 | `UpdateMartechListQueryParamFieldsIsActive`    | is_active                                      |
+| `UpdateMartechListQueryParamFieldsState`       | state                                          |
+| `UpdateMartechListQueryParamFieldsFromName`    | from_name                                      |
+| `UpdateMartechListQueryParamFieldsFromEmail`   | from_email                                     |
+| `UpdateMartechListQueryParamFieldsSubject`     | subject                                        |
+| `UpdateMartechListQueryParamFieldsLanguage`    | language                                       |
+| `UpdateMartechListQueryParamFieldsAddress`     | address                                        |
 | `UpdateMartechListQueryParamFieldsRaw`         | raw                                            |

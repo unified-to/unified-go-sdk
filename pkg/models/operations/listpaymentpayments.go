@@ -78,6 +78,8 @@ type ListPaymentPaymentsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListPaymentPaymentsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The invoice ID to filter by (reference to AccountingInvoice)
@@ -92,6 +94,8 @@ type ListPaymentPaymentsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -117,6 +121,13 @@ func (l *ListPaymentPaymentsRequest) GetContactID() *string {
 		return nil
 	}
 	return l.ContactID
+}
+
+func (l *ListPaymentPaymentsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListPaymentPaymentsRequest) GetFields() []ListPaymentPaymentsQueryParamFields {
@@ -180,6 +191,13 @@ func (l *ListPaymentPaymentsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListPaymentPaymentsRequest) GetStartGte() *string {
+	if l == nil {
+		return nil
+	}
+	return l.StartGte
 }
 
 func (l *ListPaymentPaymentsRequest) GetType() *string {
