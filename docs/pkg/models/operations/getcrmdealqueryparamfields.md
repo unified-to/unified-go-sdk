@@ -28,6 +28,7 @@ value := operations.GetCrmDealQueryParamFieldsID
 | `GetCrmDealQueryParamFieldsPipeline`    | pipeline                                |
 | `GetCrmDealQueryParamFieldsPipelineID`  | pipeline_id                             |
 | `GetCrmDealQueryParamFieldsStages`      | stages                                  |
+| `GetCrmDealQueryParamFieldsPipelines`   | pipelines                               |
 | `GetCrmDealQueryParamFieldsSource`      | source                                  |
 | `GetCrmDealQueryParamFieldsProbability` | probability                             |
 | `GetCrmDealQueryParamFieldsTags`        | tags                                    |
@@ -38,4 +39,3 @@ value := operations.GetCrmDealQueryParamFieldsID
 | `GetCrmDealQueryParamFieldsCompanyIds`  | company_ids                             |
 | `GetCrmDealQueryParamFieldsMetadata`    | metadata                                |
 | `GetCrmDealQueryParamFieldsRaw`         | raw                                     |
-| `GetCrmDealQueryParamFieldsPipelines`   | pipelines                               |

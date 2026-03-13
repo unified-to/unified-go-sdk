@@ -118,28 +118,25 @@ func (e *PropertyAdsReportMetricsCampaignStatus) IsExact() bool {
 }
 
 type PropertyAdsReportMetricsCampaign struct {
-	AdvertisingChannelType *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
-	// YOUTUBE_AND_PARTNERS
-	BidStrategy              *PropertyAdsReportMetricsCampaignBidStrategy  `json:"bid_strategy,omitempty"`
-	BudgetAmount             *float64                                      `json:"budget_amount,omitempty"`
-	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod `json:"budget_period,omitempty"`
-	CampaignBudgetIdentifier *string                                       `json:"campaign_budget_identifier,omitempty"`
-	CreatedAt                *time.Time                                    `json:"created_at,omitempty"`
-	Currency                 *string                                       `json:"currency,omitempty"`
-	EndAt                    *time.Time                                    `json:"end_at,omitempty"`
-	FrequencyCap             *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
-	Goal                     *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
-	ID                       *string                                       `json:"id,omitempty"`
-	Name                     *string                                       `json:"name,omitempty"`
-	OrganizationID           *string                                       `json:"organization_id,omitempty"`
-	PlannedSpendAmount       *float64                                      `json:"planned_spend_amount,omitempty"`
-	Raw                      map[string]any                                `json:"raw,omitempty"`
-	SpecialAdCategories      []string                                      `json:"special_ad_categories,omitempty"`
-	StartAt                  *time.Time                                    `json:"start_at,omitempty"`
-	Status                   *PropertyAdsReportMetricsCampaignStatus       `json:"status,omitempty"`
-	Targeting                *PropertyAdsReportMetricsCampaignTargeting    `json:"targeting,omitempty"`
-	TotalSpendAmount         *float64                                      `json:"total_spend_amount,omitempty"`
-	UpdatedAt                *time.Time                                    `json:"updated_at,omitempty"`
+	AdvertisingChannelType   *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
+	BudgetAmount             *float64                                                `json:"budget_amount,omitempty"`
+	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod           `json:"budget_period,omitempty"`
+	CampaignBudgetIdentifier *string                                                 `json:"campaign_budget_identifier,omitempty"`
+	CreatedAt                *time.Time                                              `json:"created_at,omitempty"`
+	Currency                 *string                                                 `json:"currency,omitempty"`
+	EndAt                    *time.Time                                              `json:"end_at,omitempty"`
+	FrequencyCap             *PropertyAdsReportMetricsCampaignFrequencyCap           `json:"frequency_cap,omitempty"`
+	Goal                     *PropertyAdsReportMetricsCampaignGoal                   `json:"goal,omitempty"`
+	ID                       *string                                                 `json:"id,omitempty"`
+	Name                     *string                                                 `json:"name,omitempty"`
+	OrganizationID           *string                                                 `json:"organization_id,omitempty"`
+	PlannedSpendAmount       *float64                                                `json:"planned_spend_amount,omitempty"`
+	Raw                      map[string]any                                          `json:"raw,omitempty"`
+	StartAt                  *time.Time                                              `json:"start_at,omitempty"`
+	Status                   *PropertyAdsReportMetricsCampaignStatus                 `json:"status,omitempty"`
+	Targeting                *PropertyAdsReportMetricsCampaignTargeting              `json:"targeting,omitempty"`
+	TotalSpendAmount         *float64                                                `json:"total_spend_amount,omitempty"`
+	UpdatedAt                *time.Time                                              `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsCampaign) MarshalJSON() ([]byte, error) {
@@ -158,13 +155,6 @@ func (p *PropertyAdsReportMetricsCampaign) GetAdvertisingChannelType() *Property
 		return nil
 	}
 	return p.AdvertisingChannelType
-}
-
-func (p *PropertyAdsReportMetricsCampaign) GetBidStrategy() *PropertyAdsReportMetricsCampaignBidStrategy {
-	if p == nil {
-		return nil
-	}
-	return p.BidStrategy
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetBudgetAmount() *float64 {
@@ -256,13 +246,6 @@ func (p *PropertyAdsReportMetricsCampaign) GetRaw() map[string]any {
 		return nil
 	}
 	return p.Raw
-}
-
-func (p *PropertyAdsReportMetricsCampaign) GetSpecialAdCategories() []string {
-	if p == nil {
-		return nil
-	}
-	return p.SpecialAdCategories
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetStartAt() *time.Time {

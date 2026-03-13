@@ -2302,6 +2302,7 @@ func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operat
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2483,6 +2484,7 @@ func (s *Organization) RemoveRepoOrganization(ctx context.Context, request opera
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

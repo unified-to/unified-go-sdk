@@ -29,14 +29,10 @@ value := operations.GetAdsCreativeQueryParamFieldsID
 | `GetAdsCreativeQueryParamFieldsWidth`                      | width                                                      |
 | `GetAdsCreativeQueryParamFieldsHeight`                     | height                                                     |
 | `GetAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                 |
-| `GetAdsCreativeQueryParamFieldsPageIdentifier`             | page_identifier                                            |
 | `GetAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                   |
 | `GetAdsCreativeQueryParamFieldsBody`                       | body                                                       |
 | `GetAdsCreativeQueryParamFieldsTitle`                      | title                                                      |
 | `GetAdsCreativeQueryParamFieldsCta`                        | cta                                                        |
-| `GetAdsCreativeQueryParamFieldsThumbnailURL`               | thumbnail_url                                              |
-| `GetAdsCreativeQueryParamFieldsImageHash`                  | image_hash                                                 |
-| `GetAdsCreativeQueryParamFieldsVideoID`                    | video_id                                                   |
 | `GetAdsCreativeQueryParamFieldsThirdPartyTag`              | third_party_tag                                            |
 | `GetAdsCreativeQueryParamFieldsVastTagURL`                 | vast_tag_url                                               |
 | `GetAdsCreativeQueryParamFieldsExternalCreativeReference`  | external_creative_reference                                |

@@ -16,7 +16,6 @@ const (
 	UpdateCommerceItemvariantQueryParamFieldsCreatedAt         UpdateCommerceItemvariantQueryParamFields = "created_at"
 	UpdateCommerceItemvariantQueryParamFieldsUpdatedAt         UpdateCommerceItemvariantQueryParamFields = "updated_at"
 	UpdateCommerceItemvariantQueryParamFieldsName              UpdateCommerceItemvariantQueryParamFields = "name"
-	UpdateCommerceItemvariantQueryParamFieldsItems             UpdateCommerceItemvariantQueryParamFields = "items"
 	UpdateCommerceItemvariantQueryParamFieldsPublicName        UpdateCommerceItemvariantQueryParamFields = "public_name"
 	UpdateCommerceItemvariantQueryParamFieldsDescription       UpdateCommerceItemvariantQueryParamFields = "description"
 	UpdateCommerceItemvariantQueryParamFieldsPublicDescription UpdateCommerceItemvariantQueryParamFields = "public_description"
@@ -39,6 +38,7 @@ const (
 	UpdateCommerceItemvariantQueryParamFieldsInventoryID       UpdateCommerceItemvariantQueryParamFields = "inventory_id"
 	UpdateCommerceItemvariantQueryParamFieldsRequiresShipping  UpdateCommerceItemvariantQueryParamFields = "requires_shipping"
 	UpdateCommerceItemvariantQueryParamFieldsMetadata          UpdateCommerceItemvariantQueryParamFields = "metadata"
+	UpdateCommerceItemvariantQueryParamFieldsItems             UpdateCommerceItemvariantQueryParamFields = "items"
 	UpdateCommerceItemvariantQueryParamFieldsRaw               UpdateCommerceItemvariantQueryParamFields = "raw"
 )
 
@@ -58,8 +58,6 @@ func (e *UpdateCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) e
 	case "updated_at":
 		fallthrough
 	case "name":
-		fallthrough
-	case "items":
 		fallthrough
 	case "public_name":
 		fallthrough
@@ -105,6 +103,8 @@ func (e *UpdateCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "metadata":
 		fallthrough
+	case "items":
+		fallthrough
 	case "raw":
 		*e = UpdateCommerceItemvariantQueryParamFields(v)
 		return nil
@@ -114,7 +114,7 @@ func (e *UpdateCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) e
 }
 
 type UpdateCommerceItemvariantRequest struct {
-	CommerceItemvariant shared.CommerceItemvariant1 `request:"mediaType=application/json"`
+	CommerceItemvariant shared.CommerceItemvariant `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
@@ -125,9 +125,9 @@ type UpdateCommerceItemvariantRequest struct {
 	Raw *string `queryParam:"style=form,explode=true,name=raw"`
 }
 
-func (u *UpdateCommerceItemvariantRequest) GetCommerceItemvariant() shared.CommerceItemvariant1 {
+func (u *UpdateCommerceItemvariantRequest) GetCommerceItemvariant() shared.CommerceItemvariant {
 	if u == nil {
-		return shared.CommerceItemvariant1{}
+		return shared.CommerceItemvariant{}
 	}
 	return u.CommerceItemvariant
 }
@@ -162,7 +162,7 @@ func (u *UpdateCommerceItemvariantRequest) GetRaw() *string {
 
 type UpdateCommerceItemvariantResponse struct {
 	// Successful
-	CommerceItemvariant *shared.CommerceItemvariant1
+	CommerceItemvariant *shared.CommerceItemvariant
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -171,7 +171,7 @@ type UpdateCommerceItemvariantResponse struct {
 	RawResponse *http.Response
 }
 
-func (u *UpdateCommerceItemvariantResponse) GetCommerceItemvariant() *shared.CommerceItemvariant1 {
+func (u *UpdateCommerceItemvariantResponse) GetCommerceItemvariant() *shared.CommerceItemvariant {
 	if u == nil {
 		return nil
 	}

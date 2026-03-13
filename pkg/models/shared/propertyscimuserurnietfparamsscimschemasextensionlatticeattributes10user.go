@@ -175,3 +175,6 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10Use
 	}
 	return p.StartDate
 }
+
+// #region class-body-propertyscimuserurnietfparamsscimschemasextensionlatticeattributes10user
+// #endregion class-body-propertyscimuserurnietfparamsscimschemasextensionlatticeattributes10user

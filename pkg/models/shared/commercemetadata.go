@@ -22,6 +22,9 @@ func (c *CommerceMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-commercemetadata1
+// #endregion class-body-commercemetadata1
+
 type CommerceMetadata5Type string
 
 const (
@@ -304,6 +307,9 @@ func (c *CommerceMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-commercemetadataschemas1
+// #endregion class-body-commercemetadataschemas1
 
 type CommerceMetadataSchemas5Type string
 

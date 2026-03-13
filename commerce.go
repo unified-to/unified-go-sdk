@@ -849,7 +849,7 @@ func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operat
 				return nil, err
 			}
 
-			var out shared.CommerceItemvariant1
+			var out shared.CommerceItemvariant
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2319,7 +2319,7 @@ func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operation
 				return nil, err
 			}
 
-			var out shared.CommerceItemvariant1
+			var out shared.CommerceItemvariant
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -3768,7 +3768,7 @@ func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operati
 				return nil, err
 			}
 
-			var out []shared.CommerceItemvariant1
+			var out []shared.CommerceItemvariant
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -5245,7 +5245,7 @@ func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operati
 				return nil, err
 			}
 
-			var out shared.CommerceItemvariant1
+			var out shared.CommerceItemvariant
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6098,6 +6098,7 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6279,6 +6280,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6460,6 +6462,7 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6641,6 +6644,7 @@ func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operat
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6822,6 +6826,7 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -7003,6 +7008,7 @@ func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -7184,6 +7190,7 @@ func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request opera
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -8010,7 +8017,7 @@ func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operat
 				return nil, err
 			}
 
-			var out shared.CommerceItemvariant1
+			var out shared.CommerceItemvariant
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

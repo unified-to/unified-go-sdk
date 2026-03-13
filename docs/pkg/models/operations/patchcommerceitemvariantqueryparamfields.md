@@ -19,7 +19,6 @@ value := operations.PatchCommerceItemvariantQueryParamFieldsID
 | `PatchCommerceItemvariantQueryParamFieldsCreatedAt`         | created_at                                                  |
 | `PatchCommerceItemvariantQueryParamFieldsUpdatedAt`         | updated_at                                                  |
 | `PatchCommerceItemvariantQueryParamFieldsName`              | name                                                        |
-| `PatchCommerceItemvariantQueryParamFieldsItems`             | items                                                       |
 | `PatchCommerceItemvariantQueryParamFieldsPublicName`        | public_name                                                 |
 | `PatchCommerceItemvariantQueryParamFieldsDescription`       | description                                                 |
 | `PatchCommerceItemvariantQueryParamFieldsPublicDescription` | public_description                                          |
@@ -42,4 +41,5 @@ value := operations.PatchCommerceItemvariantQueryParamFieldsID
 | `PatchCommerceItemvariantQueryParamFieldsInventoryID`       | inventory_id                                                |
 | `PatchCommerceItemvariantQueryParamFieldsRequiresShipping`  | requires_shipping                                           |
 | `PatchCommerceItemvariantQueryParamFieldsMetadata`          | metadata                                                    |
+| `PatchCommerceItemvariantQueryParamFieldsItems`             | items                                                       |
 | `PatchCommerceItemvariantQueryParamFieldsRaw`               | raw                                                         |

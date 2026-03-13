@@ -118,9 +118,7 @@ func (e *AdsCampaignStatus) IsExact() bool {
 }
 
 type AdsCampaign struct {
-	AdvertisingChannelType *AdvertisingChannelType `json:"advertising_channel_type,omitempty"`
-	// YOUTUBE_AND_PARTNERS
-	BidStrategy              *PropertyAdsCampaignBidStrategy  `json:"bid_strategy,omitempty"`
+	AdvertisingChannelType   *AdvertisingChannelType          `json:"advertising_channel_type,omitempty"`
 	BudgetAmount             *float64                         `json:"budget_amount,omitempty"`
 	BudgetPeriod             *BudgetPeriod                    `json:"budget_period,omitempty"`
 	CampaignBudgetIdentifier *string                          `json:"campaign_budget_identifier,omitempty"`
@@ -134,7 +132,6 @@ type AdsCampaign struct {
 	OrganizationID           *string                          `json:"organization_id,omitempty"`
 	PlannedSpendAmount       *float64                         `json:"planned_spend_amount,omitempty"`
 	Raw                      map[string]any                   `json:"raw,omitempty"`
-	SpecialAdCategories      []string                         `json:"special_ad_categories,omitempty"`
 	StartAt                  *time.Time                       `json:"start_at,omitempty"`
 	Status                   *AdsCampaignStatus               `json:"status,omitempty"`
 	Targeting                *PropertyAdsCampaignTargeting    `json:"targeting,omitempty"`
@@ -158,13 +155,6 @@ func (a *AdsCampaign) GetAdvertisingChannelType() *AdvertisingChannelType {
 		return nil
 	}
 	return a.AdvertisingChannelType
-}
-
-func (a *AdsCampaign) GetBidStrategy() *PropertyAdsCampaignBidStrategy {
-	if a == nil {
-		return nil
-	}
-	return a.BidStrategy
 }
 
 func (a *AdsCampaign) GetBudgetAmount() *float64 {
@@ -256,13 +246,6 @@ func (a *AdsCampaign) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
-}
-
-func (a *AdsCampaign) GetSpecialAdCategories() []string {
-	if a == nil {
-		return nil
-	}
-	return a.SpecialAdCategories
 }
 
 func (a *AdsCampaign) GetStartAt() *time.Time {

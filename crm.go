@@ -5256,6 +5256,7 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5437,6 +5438,7 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5618,6 +5620,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5799,6 +5802,7 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5980,6 +5984,7 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6161,6 +6166,7 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

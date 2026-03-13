@@ -21,7 +21,6 @@ value := operations.UpdateAdsAdQueryParamFieldsID
 | `UpdateAdsAdQueryParamFieldsName`             | name                                          |
 | `UpdateAdsAdQueryParamFieldsCampaignID`       | campaign_id                                   |
 | `UpdateAdsAdQueryParamFieldsGroupID`          | group_id                                      |
-| `UpdateAdsAdQueryParamFieldsItemID`           | item_id                                       |
 | `UpdateAdsAdQueryParamFieldsOrganizationID`   | organization_id                               |
 | `UpdateAdsAdQueryParamFieldsStatus`           | status                                        |
 | `UpdateAdsAdQueryParamFieldsAdType`           | ad_type                                       |
@@ -32,10 +31,6 @@ value := operations.UpdateAdsAdQueryParamFieldsID
 | `UpdateAdsAdQueryParamFieldsDescription`      | description                                   |
 | `UpdateAdsAdQueryParamFieldsCta`              | cta                                           |
 | `UpdateAdsAdQueryParamFieldsFinalURL`         | final_url                                     |
-| `UpdateAdsAdQueryParamFieldsTargeting`        | targeting                                     |
-| `UpdateAdsAdQueryParamFieldsIsActive`         | is_active                                     |
-| `UpdateAdsAdQueryParamFieldsEndAt`            | end_at                                        |
-| `UpdateAdsAdQueryParamFieldsStartAt`          | start_at                                      |
 | `UpdateAdsAdQueryParamFieldsDisplayURL`       | display_url                                   |
 | `UpdateAdsAdQueryParamFieldsPath1`            | path1                                         |
 | `UpdateAdsAdQueryParamFieldsPath2`            | path2                                         |

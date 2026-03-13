@@ -1888,6 +1888,7 @@ func (s *Category) RemoveAccountingCategory(ctx context.Context, request operati
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2069,6 +2070,7 @@ func (s *Category) RemoveTicketingCategory(ctx context.Context, request operatio
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

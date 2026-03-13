@@ -13,6 +13,8 @@ type PatchMartechCampaignQueryParamFields string
 
 const (
 	PatchMartechCampaignQueryParamFieldsID           PatchMartechCampaignQueryParamFields = "id"
+	PatchMartechCampaignQueryParamFieldsCreatedAt    PatchMartechCampaignQueryParamFields = "created_at"
+	PatchMartechCampaignQueryParamFieldsUpdatedAt    PatchMartechCampaignQueryParamFields = "updated_at"
 	PatchMartechCampaignQueryParamFieldsName         PatchMartechCampaignQueryParamFields = "name"
 	PatchMartechCampaignQueryParamFieldsType         PatchMartechCampaignQueryParamFields = "type"
 	PatchMartechCampaignQueryParamFieldsStatus       PatchMartechCampaignQueryParamFields = "status"
@@ -23,8 +25,6 @@ const (
 	PatchMartechCampaignQueryParamFieldsFromEmail    PatchMartechCampaignQueryParamFields = "from_email"
 	PatchMartechCampaignQueryParamFieldsReplyToEmail PatchMartechCampaignQueryParamFields = "reply_to_email"
 	PatchMartechCampaignQueryParamFieldsSendAt       PatchMartechCampaignQueryParamFields = "send_at"
-	PatchMartechCampaignQueryParamFieldsCreatedAt    PatchMartechCampaignQueryParamFields = "created_at"
-	PatchMartechCampaignQueryParamFieldsUpdatedAt    PatchMartechCampaignQueryParamFields = "updated_at"
 	PatchMartechCampaignQueryParamFieldsRaw          PatchMartechCampaignQueryParamFields = "raw"
 )
 
@@ -38,6 +38,10 @@ func (e *PatchMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error 
 	}
 	switch v {
 	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
 		fallthrough
 	case "name":
 		fallthrough
@@ -59,10 +63,6 @@ func (e *PatchMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "send_at":
 		fallthrough
-	case "created_at":
-		fallthrough
-	case "updated_at":
-		fallthrough
 	case "raw":
 		*e = PatchMartechCampaignQueryParamFields(v)
 		return nil
@@ -72,7 +72,6 @@ func (e *PatchMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error 
 }
 
 type PatchMartechCampaignRequest struct {
-	// A marketing campaign or email send
 	MarketingCampaign shared.MarketingCampaign `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

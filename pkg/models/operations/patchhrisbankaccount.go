@@ -69,7 +69,6 @@ func (e *PatchHrisBankaccountQueryParamFields) UnmarshalJSON(data []byte) error 
 }
 
 type PatchHrisBankaccountRequest struct {
-	// Employee payroll bank account for direct deposit.
 	HrisBankaccount shared.HrisBankaccount `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

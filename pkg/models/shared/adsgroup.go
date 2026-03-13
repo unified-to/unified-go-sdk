@@ -138,8 +138,7 @@ func (e *AdsGroupType) IsExact() bool {
 }
 
 type AdsGroup struct {
-	AdGroupType *string  `json:"ad_group_type,omitempty"`
-	BidAmount   *float64 `json:"bid_amount,omitempty"`
+	BidAmount *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
 	BidStrategy          *PropertyAdsGroupBidStrategy  `json:"bid_strategy,omitempty"`
 	BillingEvent         *string                       `json:"billing_event,omitempty"`
@@ -152,13 +151,11 @@ type AdsGroup struct {
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
 	Currency             *string                       `json:"currency,omitempty"`
-	DailySpendCap        *float64                      `json:"daily_spend_cap,omitempty"`
 	EndAt                *time.Time                    `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                       `json:"id,omitempty"`
 	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
-	LifetimeSpendCap     *float64                      `json:"lifetime_spend_cap,omitempty"`
 	Metadata             []AdsMetadata                 `json:"metadata,omitempty"`
 	Name                 *string                       `json:"name,omitempty"`
 	OptimizationGoal     *string                       `json:"optimization_goal,omitempty"`
@@ -182,13 +179,6 @@ func (a *AdsGroup) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (a *AdsGroup) GetAdGroupType() *string {
-	if a == nil {
-		return nil
-	}
-	return a.AdGroupType
 }
 
 func (a *AdsGroup) GetBidAmount() *float64 {
@@ -275,13 +265,6 @@ func (a *AdsGroup) GetCurrency() *string {
 	return a.Currency
 }
 
-func (a *AdsGroup) GetDailySpendCap() *float64 {
-	if a == nil {
-		return nil
-	}
-	return a.DailySpendCap
-}
-
 func (a *AdsGroup) GetEndAt() *time.Time {
 	if a == nil {
 		return nil
@@ -315,13 +298,6 @@ func (a *AdsGroup) GetInsertionorderID() *string {
 		return nil
 	}
 	return a.InsertionorderID
-}
-
-func (a *AdsGroup) GetLifetimeSpendCap() *float64 {
-	if a == nil {
-		return nil
-	}
-	return a.LifetimeSpendCap
 }
 
 func (a *AdsGroup) GetMetadata() []AdsMetadata {

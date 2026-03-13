@@ -22,6 +22,9 @@ func (h *HrisMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-hrismetadata1
+// #endregion class-body-hrismetadata1
+
 type HrisMetadata5Type string
 
 const (
@@ -304,6 +307,9 @@ func (h *HrisMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-hrismetadataschemas1
+// #endregion class-body-hrismetadataschemas1
 
 type HrisMetadataSchemas5Type string
 

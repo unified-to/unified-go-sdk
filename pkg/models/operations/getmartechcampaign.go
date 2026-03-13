@@ -13,6 +13,8 @@ type GetMartechCampaignQueryParamFields string
 
 const (
 	GetMartechCampaignQueryParamFieldsID           GetMartechCampaignQueryParamFields = "id"
+	GetMartechCampaignQueryParamFieldsCreatedAt    GetMartechCampaignQueryParamFields = "created_at"
+	GetMartechCampaignQueryParamFieldsUpdatedAt    GetMartechCampaignQueryParamFields = "updated_at"
 	GetMartechCampaignQueryParamFieldsName         GetMartechCampaignQueryParamFields = "name"
 	GetMartechCampaignQueryParamFieldsType         GetMartechCampaignQueryParamFields = "type"
 	GetMartechCampaignQueryParamFieldsStatus       GetMartechCampaignQueryParamFields = "status"
@@ -23,8 +25,6 @@ const (
 	GetMartechCampaignQueryParamFieldsFromEmail    GetMartechCampaignQueryParamFields = "from_email"
 	GetMartechCampaignQueryParamFieldsReplyToEmail GetMartechCampaignQueryParamFields = "reply_to_email"
 	GetMartechCampaignQueryParamFieldsSendAt       GetMartechCampaignQueryParamFields = "send_at"
-	GetMartechCampaignQueryParamFieldsCreatedAt    GetMartechCampaignQueryParamFields = "created_at"
-	GetMartechCampaignQueryParamFieldsUpdatedAt    GetMartechCampaignQueryParamFields = "updated_at"
 	GetMartechCampaignQueryParamFieldsRaw          GetMartechCampaignQueryParamFields = "raw"
 )
 
@@ -38,6 +38,10 @@ func (e *GetMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	}
 	switch v {
 	case "id":
+		fallthrough
+	case "created_at":
+		fallthrough
+	case "updated_at":
 		fallthrough
 	case "name":
 		fallthrough
@@ -58,10 +62,6 @@ func (e *GetMartechCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "reply_to_email":
 		fallthrough
 	case "send_at":
-		fallthrough
-	case "created_at":
-		fallthrough
-	case "updated_at":
 		fallthrough
 	case "raw":
 		*e = GetMartechCampaignQueryParamFields(v)

@@ -16,7 +16,6 @@ const (
 	GetCommerceItemvariantQueryParamFieldsCreatedAt         GetCommerceItemvariantQueryParamFields = "created_at"
 	GetCommerceItemvariantQueryParamFieldsUpdatedAt         GetCommerceItemvariantQueryParamFields = "updated_at"
 	GetCommerceItemvariantQueryParamFieldsName              GetCommerceItemvariantQueryParamFields = "name"
-	GetCommerceItemvariantQueryParamFieldsItems             GetCommerceItemvariantQueryParamFields = "items"
 	GetCommerceItemvariantQueryParamFieldsPublicName        GetCommerceItemvariantQueryParamFields = "public_name"
 	GetCommerceItemvariantQueryParamFieldsDescription       GetCommerceItemvariantQueryParamFields = "description"
 	GetCommerceItemvariantQueryParamFieldsPublicDescription GetCommerceItemvariantQueryParamFields = "public_description"
@@ -39,6 +38,7 @@ const (
 	GetCommerceItemvariantQueryParamFieldsInventoryID       GetCommerceItemvariantQueryParamFields = "inventory_id"
 	GetCommerceItemvariantQueryParamFieldsRequiresShipping  GetCommerceItemvariantQueryParamFields = "requires_shipping"
 	GetCommerceItemvariantQueryParamFieldsMetadata          GetCommerceItemvariantQueryParamFields = "metadata"
+	GetCommerceItemvariantQueryParamFieldsItems             GetCommerceItemvariantQueryParamFields = "items"
 	GetCommerceItemvariantQueryParamFieldsRaw               GetCommerceItemvariantQueryParamFields = "raw"
 )
 
@@ -58,8 +58,6 @@ func (e *GetCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "updated_at":
 		fallthrough
 	case "name":
-		fallthrough
-	case "items":
 		fallthrough
 	case "public_name":
 		fallthrough
@@ -104,6 +102,8 @@ func (e *GetCommerceItemvariantQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "requires_shipping":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "items":
 		fallthrough
 	case "raw":
 		*e = GetCommerceItemvariantQueryParamFields(v)
@@ -154,7 +154,7 @@ func (g *GetCommerceItemvariantRequest) GetRaw() *string {
 
 type GetCommerceItemvariantResponse struct {
 	// Successful
-	CommerceItemvariant *shared.CommerceItemvariant1
+	CommerceItemvariant *shared.CommerceItemvariant
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -163,7 +163,7 @@ type GetCommerceItemvariantResponse struct {
 	RawResponse *http.Response
 }
 
-func (g *GetCommerceItemvariantResponse) GetCommerceItemvariant() *shared.CommerceItemvariant1 {
+func (g *GetCommerceItemvariantResponse) GetCommerceItemvariant() *shared.CommerceItemvariant {
 	if g == nil {
 		return nil
 	}

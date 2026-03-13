@@ -2937,6 +2937,7 @@ func (s *Martech) RemoveMartechCampaign(ctx context.Context, request operations.
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3118,6 +3119,7 @@ func (s *Martech) RemoveMartechList(ctx context.Context, request operations.Remo
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3299,6 +3301,7 @@ func (s *Martech) RemoveMartechMember(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

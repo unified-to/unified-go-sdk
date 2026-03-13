@@ -27,8 +27,6 @@ const (
 	PatchAdsCampaignQueryParamFieldsGoal                     PatchAdsCampaignQueryParamFields = "goal"
 	PatchAdsCampaignQueryParamFieldsPlannedSpendAmount       PatchAdsCampaignQueryParamFields = "planned_spend_amount"
 	PatchAdsCampaignQueryParamFieldsFrequencyCap             PatchAdsCampaignQueryParamFields = "frequency_cap"
-	PatchAdsCampaignQueryParamFieldsBidStrategy              PatchAdsCampaignQueryParamFields = "bid_strategy"
-	PatchAdsCampaignQueryParamFieldsSpecialAdCategories      PatchAdsCampaignQueryParamFields = "special_ad_categories"
 	PatchAdsCampaignQueryParamFieldsAdvertisingChannelType   PatchAdsCampaignQueryParamFields = "advertising_channel_type"
 	PatchAdsCampaignQueryParamFieldsCampaignBudgetIdentifier PatchAdsCampaignQueryParamFields = "campaign_budget_identifier"
 	PatchAdsCampaignQueryParamFieldsCurrency                 PatchAdsCampaignQueryParamFields = "currency"
@@ -73,10 +71,6 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "planned_spend_amount":
 		fallthrough
 	case "frequency_cap":
-		fallthrough
-	case "bid_strategy":
-		fallthrough
-	case "special_ad_categories":
 		fallthrough
 	case "advertising_channel_type":
 		fallthrough

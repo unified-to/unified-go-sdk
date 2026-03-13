@@ -37,7 +37,7 @@ func main() {
     )
 
     res, err := s.Itemvariant.CreateCommerceItemvariant(ctx, operations.CreateCommerceItemvariantRequest{
-        CommerceItemvariant: shared.CommerceItemvariant1{},
+        CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -202,7 +202,7 @@ func main() {
     )
 
     res, err := s.Itemvariant.PatchCommerceItemvariant(ctx, operations.PatchCommerceItemvariantRequest{
-        CommerceItemvariant: shared.CommerceItemvariant1{},
+        CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -314,7 +314,7 @@ func main() {
     )
 
     res, err := s.Itemvariant.UpdateCommerceItemvariant(ctx, operations.UpdateCommerceItemvariantRequest{
-        CommerceItemvariant: shared.CommerceItemvariant1{},
+        CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

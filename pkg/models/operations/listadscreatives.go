@@ -26,14 +26,10 @@ const (
 	ListAdsCreativesQueryParamFieldsWidth                      ListAdsCreativesQueryParamFields = "width"
 	ListAdsCreativesQueryParamFieldsHeight                     ListAdsCreativesQueryParamFields = "height"
 	ListAdsCreativesQueryParamFieldsAssetUrls                  ListAdsCreativesQueryParamFields = "asset_urls"
-	ListAdsCreativesQueryParamFieldsPageIdentifier             ListAdsCreativesQueryParamFields = "page_identifier"
 	ListAdsCreativesQueryParamFieldsLinkURL                    ListAdsCreativesQueryParamFields = "link_url"
 	ListAdsCreativesQueryParamFieldsBody                       ListAdsCreativesQueryParamFields = "body"
 	ListAdsCreativesQueryParamFieldsTitle                      ListAdsCreativesQueryParamFields = "title"
 	ListAdsCreativesQueryParamFieldsCta                        ListAdsCreativesQueryParamFields = "cta"
-	ListAdsCreativesQueryParamFieldsThumbnailURL               ListAdsCreativesQueryParamFields = "thumbnail_url"
-	ListAdsCreativesQueryParamFieldsImageHash                  ListAdsCreativesQueryParamFields = "image_hash"
-	ListAdsCreativesQueryParamFieldsVideoID                    ListAdsCreativesQueryParamFields = "video_id"
 	ListAdsCreativesQueryParamFieldsThirdPartyTag              ListAdsCreativesQueryParamFields = "third_party_tag"
 	ListAdsCreativesQueryParamFieldsVastTagURL                 ListAdsCreativesQueryParamFields = "vast_tag_url"
 	ListAdsCreativesQueryParamFieldsExternalCreativeReference  ListAdsCreativesQueryParamFields = "external_creative_reference"
@@ -82,8 +78,6 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "asset_urls":
 		fallthrough
-	case "page_identifier":
-		fallthrough
 	case "link_url":
 		fallthrough
 	case "body":
@@ -91,12 +85,6 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "title":
 		fallthrough
 	case "cta":
-		fallthrough
-	case "thumbnail_url":
-		fallthrough
-	case "image_hash":
-		fallthrough
-	case "video_id":
 		fallthrough
 	case "third_party_tag":
 		fallthrough

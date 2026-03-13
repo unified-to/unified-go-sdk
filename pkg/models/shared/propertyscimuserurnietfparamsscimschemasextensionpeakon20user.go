@@ -74,3 +74,6 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User) GetTeam(
 	}
 	return p.Team
 }
+
+// #region class-body-propertyscimuserurnietfparamsscimschemasextensionpeakon20user
+// #endregion class-body-propertyscimuserurnietfparamsscimschemasextensionpeakon20user

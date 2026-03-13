@@ -18,7 +18,6 @@ const (
 	CreateAdsAdQueryParamFieldsName             CreateAdsAdQueryParamFields = "name"
 	CreateAdsAdQueryParamFieldsCampaignID       CreateAdsAdQueryParamFields = "campaign_id"
 	CreateAdsAdQueryParamFieldsGroupID          CreateAdsAdQueryParamFields = "group_id"
-	CreateAdsAdQueryParamFieldsItemID           CreateAdsAdQueryParamFields = "item_id"
 	CreateAdsAdQueryParamFieldsOrganizationID   CreateAdsAdQueryParamFields = "organization_id"
 	CreateAdsAdQueryParamFieldsStatus           CreateAdsAdQueryParamFields = "status"
 	CreateAdsAdQueryParamFieldsAdType           CreateAdsAdQueryParamFields = "ad_type"
@@ -29,10 +28,6 @@ const (
 	CreateAdsAdQueryParamFieldsDescription      CreateAdsAdQueryParamFields = "description"
 	CreateAdsAdQueryParamFieldsCta              CreateAdsAdQueryParamFields = "cta"
 	CreateAdsAdQueryParamFieldsFinalURL         CreateAdsAdQueryParamFields = "final_url"
-	CreateAdsAdQueryParamFieldsTargeting        CreateAdsAdQueryParamFields = "targeting"
-	CreateAdsAdQueryParamFieldsIsActive         CreateAdsAdQueryParamFields = "is_active"
-	CreateAdsAdQueryParamFieldsEndAt            CreateAdsAdQueryParamFields = "end_at"
-	CreateAdsAdQueryParamFieldsStartAt          CreateAdsAdQueryParamFields = "start_at"
 	CreateAdsAdQueryParamFieldsDisplayURL       CreateAdsAdQueryParamFields = "display_url"
 	CreateAdsAdQueryParamFieldsPath1            CreateAdsAdQueryParamFields = "path1"
 	CreateAdsAdQueryParamFieldsPath2            CreateAdsAdQueryParamFields = "path2"
@@ -61,8 +56,6 @@ func (e *CreateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
-	case "item_id":
-		fallthrough
 	case "organization_id":
 		fallthrough
 	case "status":
@@ -82,14 +75,6 @@ func (e *CreateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "cta":
 		fallthrough
 	case "final_url":
-		fallthrough
-	case "targeting":
-		fallthrough
-	case "is_active":
-		fallthrough
-	case "end_at":
-		fallthrough
-	case "start_at":
 		fallthrough
 	case "display_url":
 		fallthrough

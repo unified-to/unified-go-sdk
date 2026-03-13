@@ -38,9 +38,6 @@ const (
 	GetAdsGroupQueryParamFieldsCreativeIds          GetAdsGroupQueryParamFields = "creative_ids"
 	GetAdsGroupQueryParamFieldsOptimizationGoal     GetAdsGroupQueryParamFields = "optimization_goal"
 	GetAdsGroupQueryParamFieldsBillingEvent         GetAdsGroupQueryParamFields = "billing_event"
-	GetAdsGroupQueryParamFieldsDailySpendCap        GetAdsGroupQueryParamFields = "daily_spend_cap"
-	GetAdsGroupQueryParamFieldsLifetimeSpendCap     GetAdsGroupQueryParamFields = "lifetime_spend_cap"
-	GetAdsGroupQueryParamFieldsAdGroupType          GetAdsGroupQueryParamFields = "ad_group_type"
 	GetAdsGroupQueryParamFieldsCurrency             GetAdsGroupQueryParamFields = "currency"
 	GetAdsGroupQueryParamFieldsMetadata             GetAdsGroupQueryParamFields = "metadata"
 	GetAdsGroupQueryParamFieldsRaw                  GetAdsGroupQueryParamFields = "raw"
@@ -106,12 +103,6 @@ func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "optimization_goal":
 		fallthrough
 	case "billing_event":
-		fallthrough
-	case "daily_spend_cap":
-		fallthrough
-	case "lifetime_spend_cap":
-		fallthrough
-	case "ad_group_type":
 		fallthrough
 	case "currency":
 		fallthrough

@@ -3,18 +3,13 @@
 package shared
 
 type PropertyMarketingListAddress struct {
-	Address1  *string `json:"address1,omitempty"`
-	Address2  *string `json:"address2,omitempty"`
-	City      *string `json:"city,omitempty"`
-	Company   *string `json:"company,omitempty"`
-	Country   *string `json:"country,omitempty"`
-	FromEmail *string `json:"from_email,omitempty"`
-	FromName  *string `json:"from_name,omitempty"`
-	Language  *string `json:"language,omitempty"`
-	Phone     *string `json:"phone,omitempty"`
-	State     *string `json:"state,omitempty"`
-	Subject   *string `json:"subject,omitempty"`
-	Zip       *string `json:"zip,omitempty"`
+	Address1    *string `json:"address1,omitempty"`
+	Address2    *string `json:"address2,omitempty"`
+	City        *string `json:"city,omitempty"`
+	Country     *string `json:"country,omitempty"`
+	CountryCode *string `json:"country_code,omitempty"`
+	PostalCode  *string `json:"postal_code,omitempty"`
+	Region      *string `json:"region,omitempty"`
 }
 
 func (p *PropertyMarketingListAddress) GetAddress1() *string {
@@ -38,13 +33,6 @@ func (p *PropertyMarketingListAddress) GetCity() *string {
 	return p.City
 }
 
-func (p *PropertyMarketingListAddress) GetCompany() *string {
-	if p == nil {
-		return nil
-	}
-	return p.Company
-}
-
 func (p *PropertyMarketingListAddress) GetCountry() *string {
 	if p == nil {
 		return nil
@@ -52,51 +40,23 @@ func (p *PropertyMarketingListAddress) GetCountry() *string {
 	return p.Country
 }
 
-func (p *PropertyMarketingListAddress) GetFromEmail() *string {
+func (p *PropertyMarketingListAddress) GetCountryCode() *string {
 	if p == nil {
 		return nil
 	}
-	return p.FromEmail
+	return p.CountryCode
 }
 
-func (p *PropertyMarketingListAddress) GetFromName() *string {
+func (p *PropertyMarketingListAddress) GetPostalCode() *string {
 	if p == nil {
 		return nil
 	}
-	return p.FromName
+	return p.PostalCode
 }
 
-func (p *PropertyMarketingListAddress) GetLanguage() *string {
+func (p *PropertyMarketingListAddress) GetRegion() *string {
 	if p == nil {
 		return nil
 	}
-	return p.Language
-}
-
-func (p *PropertyMarketingListAddress) GetPhone() *string {
-	if p == nil {
-		return nil
-	}
-	return p.Phone
-}
-
-func (p *PropertyMarketingListAddress) GetState() *string {
-	if p == nil {
-		return nil
-	}
-	return p.State
-}
-
-func (p *PropertyMarketingListAddress) GetSubject() *string {
-	if p == nil {
-		return nil
-	}
-	return p.Subject
-}
-
-func (p *PropertyMarketingListAddress) GetZip() *string {
-	if p == nil {
-		return nil
-	}
-	return p.Zip
+	return p.Region
 }

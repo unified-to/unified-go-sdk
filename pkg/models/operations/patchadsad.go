@@ -18,7 +18,6 @@ const (
 	PatchAdsAdQueryParamFieldsName             PatchAdsAdQueryParamFields = "name"
 	PatchAdsAdQueryParamFieldsCampaignID       PatchAdsAdQueryParamFields = "campaign_id"
 	PatchAdsAdQueryParamFieldsGroupID          PatchAdsAdQueryParamFields = "group_id"
-	PatchAdsAdQueryParamFieldsItemID           PatchAdsAdQueryParamFields = "item_id"
 	PatchAdsAdQueryParamFieldsOrganizationID   PatchAdsAdQueryParamFields = "organization_id"
 	PatchAdsAdQueryParamFieldsStatus           PatchAdsAdQueryParamFields = "status"
 	PatchAdsAdQueryParamFieldsAdType           PatchAdsAdQueryParamFields = "ad_type"
@@ -29,10 +28,6 @@ const (
 	PatchAdsAdQueryParamFieldsDescription      PatchAdsAdQueryParamFields = "description"
 	PatchAdsAdQueryParamFieldsCta              PatchAdsAdQueryParamFields = "cta"
 	PatchAdsAdQueryParamFieldsFinalURL         PatchAdsAdQueryParamFields = "final_url"
-	PatchAdsAdQueryParamFieldsTargeting        PatchAdsAdQueryParamFields = "targeting"
-	PatchAdsAdQueryParamFieldsIsActive         PatchAdsAdQueryParamFields = "is_active"
-	PatchAdsAdQueryParamFieldsEndAt            PatchAdsAdQueryParamFields = "end_at"
-	PatchAdsAdQueryParamFieldsStartAt          PatchAdsAdQueryParamFields = "start_at"
 	PatchAdsAdQueryParamFieldsDisplayURL       PatchAdsAdQueryParamFields = "display_url"
 	PatchAdsAdQueryParamFieldsPath1            PatchAdsAdQueryParamFields = "path1"
 	PatchAdsAdQueryParamFieldsPath2            PatchAdsAdQueryParamFields = "path2"
@@ -61,8 +56,6 @@ func (e *PatchAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
-	case "item_id":
-		fallthrough
 	case "organization_id":
 		fallthrough
 	case "status":
@@ -82,14 +75,6 @@ func (e *PatchAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "cta":
 		fallthrough
 	case "final_url":
-		fallthrough
-	case "targeting":
-		fallthrough
-	case "is_active":
-		fallthrough
-	case "end_at":
-		fallthrough
-	case "start_at":
 		fallthrough
 	case "display_url":
 		fallthrough

@@ -2723,6 +2723,7 @@ func (s *Shipping) RemoveShippingLabel(ctx context.Context, request operations.R
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2904,6 +2905,7 @@ func (s *Shipping) RemoveShippingShipment(ctx context.Context, request operation
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

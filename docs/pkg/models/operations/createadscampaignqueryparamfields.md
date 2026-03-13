@@ -30,8 +30,6 @@ value := operations.CreateAdsCampaignQueryParamFieldsID
 | `CreateAdsCampaignQueryParamFieldsGoal`                     | goal                                                        |
 | `CreateAdsCampaignQueryParamFieldsPlannedSpendAmount`       | planned_spend_amount                                        |
 | `CreateAdsCampaignQueryParamFieldsFrequencyCap`             | frequency_cap                                               |
-| `CreateAdsCampaignQueryParamFieldsBidStrategy`              | bid_strategy                                                |
-| `CreateAdsCampaignQueryParamFieldsSpecialAdCategories`      | special_ad_categories                                       |
 | `CreateAdsCampaignQueryParamFieldsAdvertisingChannelType`   | advertising_channel_type                                    |
 | `CreateAdsCampaignQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                  |
 | `CreateAdsCampaignQueryParamFieldsCurrency`                 | currency                                                    |

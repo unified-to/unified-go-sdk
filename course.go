@@ -1046,6 +1046,7 @@ func (s *Course) RemoveLmsCourse(ctx context.Context, request operations.RemoveL
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

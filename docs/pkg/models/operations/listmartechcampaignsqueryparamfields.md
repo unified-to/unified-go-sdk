@@ -16,6 +16,8 @@ value := operations.ListMartechCampaignsQueryParamFieldsID
 | Name                                               | Value                                              |
 | -------------------------------------------------- | -------------------------------------------------- |
 | `ListMartechCampaignsQueryParamFieldsID`           | id                                                 |
+| `ListMartechCampaignsQueryParamFieldsCreatedAt`    | created_at                                         |
+| `ListMartechCampaignsQueryParamFieldsUpdatedAt`    | updated_at                                         |
 | `ListMartechCampaignsQueryParamFieldsName`         | name                                               |
 | `ListMartechCampaignsQueryParamFieldsType`         | type                                               |
 | `ListMartechCampaignsQueryParamFieldsStatus`       | status                                             |
@@ -26,6 +28,4 @@ value := operations.ListMartechCampaignsQueryParamFieldsID
 | `ListMartechCampaignsQueryParamFieldsFromEmail`    | from_email                                         |
 | `ListMartechCampaignsQueryParamFieldsReplyToEmail` | reply_to_email                                     |
 | `ListMartechCampaignsQueryParamFieldsSendAt`       | send_at                                            |
-| `ListMartechCampaignsQueryParamFieldsCreatedAt`    | created_at                                         |
-| `ListMartechCampaignsQueryParamFieldsUpdatedAt`    | updated_at                                         |
 | `ListMartechCampaignsQueryParamFieldsRaw`          | raw                                                |

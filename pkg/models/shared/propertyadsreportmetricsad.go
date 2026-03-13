@@ -67,32 +67,27 @@ func (e *PropertyAdsReportMetricsAdStatus) IsExact() bool {
 }
 
 type PropertyAdsReportMetricsAd struct {
-	AdCopy           *string                              `json:"ad_copy,omitempty"`
-	AdType           *PropertyAdsReportMetricsAdAdType    `json:"ad_type,omitempty"`
-	CampaignID       *string                              `json:"campaign_id,omitempty"`
-	CreatedAt        *time.Time                           `json:"created_at,omitempty"`
-	CreativeAssetURL *string                              `json:"creative_asset_url,omitempty"`
-	CreativeIds      []string                             `json:"creative_ids,omitempty"`
-	Cta              *string                              `json:"cta,omitempty"`
-	Description      *string                              `json:"description,omitempty"`
-	DisplayURL       *string                              `json:"display_url,omitempty"`
-	EndAt            *time.Time                           `json:"end_at,omitempty"`
-	FinalURL         *string                              `json:"final_url,omitempty"`
-	GroupID          *string                              `json:"group_id,omitempty"`
-	Headline         *string                              `json:"headline,omitempty"`
-	ID               *string                              `json:"id,omitempty"`
-	IsActive         *bool                                `json:"is_active,omitempty"`
-	ItemID           *string                              `json:"item_id,omitempty"`
-	Metadata         []AdsMetadata                        `json:"metadata,omitempty"`
-	Name             *string                              `json:"name,omitempty"`
-	OrganizationID   *string                              `json:"organization_id,omitempty"`
-	Path1            *string                              `json:"path1,omitempty"`
-	Path2            *string                              `json:"path2,omitempty"`
-	Raw              map[string]any                       `json:"raw,omitempty"`
-	StartAt          *time.Time                           `json:"start_at,omitempty"`
-	Status           *PropertyAdsReportMetricsAdStatus    `json:"status,omitempty"`
-	Targeting        *PropertyAdsReportMetricsAdTargeting `json:"targeting,omitempty"`
-	UpdatedAt        *time.Time                           `json:"updated_at,omitempty"`
+	AdCopy           *string                           `json:"ad_copy,omitempty"`
+	AdType           *PropertyAdsReportMetricsAdAdType `json:"ad_type,omitempty"`
+	CampaignID       *string                           `json:"campaign_id,omitempty"`
+	CreatedAt        *time.Time                        `json:"created_at,omitempty"`
+	CreativeAssetURL *string                           `json:"creative_asset_url,omitempty"`
+	CreativeIds      []string                          `json:"creative_ids,omitempty"`
+	Cta              *string                           `json:"cta,omitempty"`
+	Description      *string                           `json:"description,omitempty"`
+	DisplayURL       *string                           `json:"display_url,omitempty"`
+	FinalURL         *string                           `json:"final_url,omitempty"`
+	GroupID          *string                           `json:"group_id,omitempty"`
+	Headline         *string                           `json:"headline,omitempty"`
+	ID               *string                           `json:"id,omitempty"`
+	Metadata         []AdsMetadata                     `json:"metadata,omitempty"`
+	Name             *string                           `json:"name,omitempty"`
+	OrganizationID   *string                           `json:"organization_id,omitempty"`
+	Path1            *string                           `json:"path1,omitempty"`
+	Path2            *string                           `json:"path2,omitempty"`
+	Raw              map[string]any                    `json:"raw,omitempty"`
+	Status           *PropertyAdsReportMetricsAdStatus `json:"status,omitempty"`
+	UpdatedAt        *time.Time                        `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsAd) MarshalJSON() ([]byte, error) {
@@ -169,13 +164,6 @@ func (p *PropertyAdsReportMetricsAd) GetDisplayURL() *string {
 	return p.DisplayURL
 }
 
-func (p *PropertyAdsReportMetricsAd) GetEndAt() *time.Time {
-	if p == nil {
-		return nil
-	}
-	return p.EndAt
-}
-
 func (p *PropertyAdsReportMetricsAd) GetFinalURL() *string {
 	if p == nil {
 		return nil
@@ -202,20 +190,6 @@ func (p *PropertyAdsReportMetricsAd) GetID() *string {
 		return nil
 	}
 	return p.ID
-}
-
-func (p *PropertyAdsReportMetricsAd) GetIsActive() *bool {
-	if p == nil {
-		return nil
-	}
-	return p.IsActive
-}
-
-func (p *PropertyAdsReportMetricsAd) GetItemID() *string {
-	if p == nil {
-		return nil
-	}
-	return p.ItemID
 }
 
 func (p *PropertyAdsReportMetricsAd) GetMetadata() []AdsMetadata {
@@ -260,25 +234,11 @@ func (p *PropertyAdsReportMetricsAd) GetRaw() map[string]any {
 	return p.Raw
 }
 
-func (p *PropertyAdsReportMetricsAd) GetStartAt() *time.Time {
-	if p == nil {
-		return nil
-	}
-	return p.StartAt
-}
-
 func (p *PropertyAdsReportMetricsAd) GetStatus() *PropertyAdsReportMetricsAdStatus {
 	if p == nil {
 		return nil
 	}
 	return p.Status
-}
-
-func (p *PropertyAdsReportMetricsAd) GetTargeting() *PropertyAdsReportMetricsAdTargeting {
-	if p == nil {
-		return nil
-	}
-	return p.Targeting
 }
 
 func (p *PropertyAdsReportMetricsAd) GetUpdatedAt() *time.Time {

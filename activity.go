@@ -1888,6 +1888,7 @@ func (s *Activity) RemoveAtsActivity(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2069,6 +2070,7 @@ func (s *Activity) RemoveLmsActivity(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

@@ -23,6 +23,9 @@ func (i *Integration1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-integration1
+// #endregion class-body-integration1
+
 type Integration5Type string
 
 const (
@@ -272,6 +275,9 @@ func (i *IntegrationSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-integrationschemas1
+// #endregion class-body-integrationschemas1
 
 type IntegrationSchemas5Type string
 
@@ -523,6 +529,9 @@ func (i *IntegrationSchemasSaml1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-integrationschemassaml1
+// #endregion class-body-integrationschemassaml1
+
 type IntegrationSchemasSaml5Type string
 
 const (
@@ -772,6 +781,9 @@ func (i *IntegrationSchemasSandbox1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-integrationschemassandbox1
+// #endregion class-body-integrationschemassandbox1
 
 type IntegrationSchemasSandbox5Type string
 

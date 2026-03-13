@@ -2730,6 +2730,7 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2911,6 +2912,7 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3092,6 +3094,7 @@ func (s *Comment) RemoveUcComment(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

@@ -12,22 +12,23 @@ import (
 type PatchMartechListQueryParamFields string
 
 const (
-	PatchMartechListQueryParamFieldsID          PatchMartechListQueryParamFields = "id"
-	PatchMartechListQueryParamFieldsCreatedAt   PatchMartechListQueryParamFields = "created_at"
-	PatchMartechListQueryParamFieldsUpdatedAt   PatchMartechListQueryParamFields = "updated_at"
-	PatchMartechListQueryParamFieldsName        PatchMartechListQueryParamFields = "name"
-	PatchMartechListQueryParamFieldsDescription PatchMartechListQueryParamFields = "description"
-	PatchMartechListQueryParamFieldsStartAt     PatchMartechListQueryParamFields = "start_at"
-	PatchMartechListQueryParamFieldsEndAt       PatchMartechListQueryParamFields = "end_at"
-	PatchMartechListQueryParamFieldsUserID      PatchMartechListQueryParamFields = "user_id"
-	PatchMartechListQueryParamFieldsIsActive    PatchMartechListQueryParamFields = "is_active"
-	PatchMartechListQueryParamFieldsState       PatchMartechListQueryParamFields = "state"
-	PatchMartechListQueryParamFieldsFromName    PatchMartechListQueryParamFields = "from_name"
-	PatchMartechListQueryParamFieldsFromEmail   PatchMartechListQueryParamFields = "from_email"
-	PatchMartechListQueryParamFieldsSubject     PatchMartechListQueryParamFields = "subject"
-	PatchMartechListQueryParamFieldsLanguage    PatchMartechListQueryParamFields = "language"
-	PatchMartechListQueryParamFieldsAddress     PatchMartechListQueryParamFields = "address"
-	PatchMartechListQueryParamFieldsRaw         PatchMartechListQueryParamFields = "raw"
+	PatchMartechListQueryParamFieldsID            PatchMartechListQueryParamFields = "id"
+	PatchMartechListQueryParamFieldsCreatedAt     PatchMartechListQueryParamFields = "created_at"
+	PatchMartechListQueryParamFieldsUpdatedAt     PatchMartechListQueryParamFields = "updated_at"
+	PatchMartechListQueryParamFieldsName          PatchMartechListQueryParamFields = "name"
+	PatchMartechListQueryParamFieldsDescription   PatchMartechListQueryParamFields = "description"
+	PatchMartechListQueryParamFieldsStartAt       PatchMartechListQueryParamFields = "start_at"
+	PatchMartechListQueryParamFieldsEndAt         PatchMartechListQueryParamFields = "end_at"
+	PatchMartechListQueryParamFieldsUserID        PatchMartechListQueryParamFields = "user_id"
+	PatchMartechListQueryParamFieldsIsActive      PatchMartechListQueryParamFields = "is_active"
+	PatchMartechListQueryParamFieldsAddress       PatchMartechListQueryParamFields = "address"
+	PatchMartechListQueryParamFieldsSubject       PatchMartechListQueryParamFields = "subject"
+	PatchMartechListQueryParamFieldsSenderName    PatchMartechListQueryParamFields = "sender_name"
+	PatchMartechListQueryParamFieldsSenderEmail   PatchMartechListQueryParamFields = "sender_email"
+	PatchMartechListQueryParamFieldsLanguage      PatchMartechListQueryParamFields = "language"
+	PatchMartechListQueryParamFieldsSenderCompany PatchMartechListQueryParamFields = "sender_company"
+	PatchMartechListQueryParamFieldsSenderPhone   PatchMartechListQueryParamFields = "sender_phone"
+	PatchMartechListQueryParamFieldsRaw           PatchMartechListQueryParamFields = "raw"
 )
 
 func (e PatchMartechListQueryParamFields) ToPointer() *PatchMartechListQueryParamFields {
@@ -57,17 +58,19 @@ func (e *PatchMartechListQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "is_active":
 		fallthrough
-	case "state":
-		fallthrough
-	case "from_name":
-		fallthrough
-	case "from_email":
+	case "address":
 		fallthrough
 	case "subject":
 		fallthrough
+	case "sender_name":
+		fallthrough
+	case "sender_email":
+		fallthrough
 	case "language":
 		fallthrough
-	case "address":
+	case "sender_company":
+		fallthrough
+	case "sender_phone":
 		fallthrough
 	case "raw":
 		*e = PatchMartechListQueryParamFields(v)

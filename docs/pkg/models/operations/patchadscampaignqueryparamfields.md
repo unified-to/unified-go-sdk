@@ -30,8 +30,6 @@ value := operations.PatchAdsCampaignQueryParamFieldsID
 | `PatchAdsCampaignQueryParamFieldsGoal`                     | goal                                                       |
 | `PatchAdsCampaignQueryParamFieldsPlannedSpendAmount`       | planned_spend_amount                                       |
 | `PatchAdsCampaignQueryParamFieldsFrequencyCap`             | frequency_cap                                              |
-| `PatchAdsCampaignQueryParamFieldsBidStrategy`              | bid_strategy                                               |
-| `PatchAdsCampaignQueryParamFieldsSpecialAdCategories`      | special_ad_categories                                      |
 | `PatchAdsCampaignQueryParamFieldsAdvertisingChannelType`   | advertising_channel_type                                   |
 | `PatchAdsCampaignQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                 |
 | `PatchAdsCampaignQueryParamFieldsCurrency`                 | currency                                                   |

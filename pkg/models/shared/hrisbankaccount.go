@@ -29,7 +29,6 @@ func (e *AccountType) IsExact() bool {
 	return false
 }
 
-// HrisBankaccount - Employee payroll bank account for direct deposit.
 type HrisBankaccount struct {
 	AccountNumber      *string        `json:"account_number,omitempty"`
 	AccountNumberLast4 *string        `json:"account_number_last4,omitempty"`

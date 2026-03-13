@@ -67,3 +67,6 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManage
 	}
 	return p.Value
 }
+
+// #region class-body-propertyscimuserurnietfparamsscimschemasextensionenterprise20usermanager
+// #endregion class-body-propertyscimuserurnietfparamsscimschemasextensionenterprise20usermanager

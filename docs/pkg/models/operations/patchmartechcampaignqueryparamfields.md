@@ -16,6 +16,8 @@ value := operations.PatchMartechCampaignQueryParamFieldsID
 | Name                                               | Value                                              |
 | -------------------------------------------------- | -------------------------------------------------- |
 | `PatchMartechCampaignQueryParamFieldsID`           | id                                                 |
+| `PatchMartechCampaignQueryParamFieldsCreatedAt`    | created_at                                         |
+| `PatchMartechCampaignQueryParamFieldsUpdatedAt`    | updated_at                                         |
 | `PatchMartechCampaignQueryParamFieldsName`         | name                                               |
 | `PatchMartechCampaignQueryParamFieldsType`         | type                                               |
 | `PatchMartechCampaignQueryParamFieldsStatus`       | status                                             |
@@ -26,6 +28,4 @@ value := operations.PatchMartechCampaignQueryParamFieldsID
 | `PatchMartechCampaignQueryParamFieldsFromEmail`    | from_email                                         |
 | `PatchMartechCampaignQueryParamFieldsReplyToEmail` | reply_to_email                                     |
 | `PatchMartechCampaignQueryParamFieldsSendAt`       | send_at                                            |
-| `PatchMartechCampaignQueryParamFieldsCreatedAt`    | created_at                                         |
-| `PatchMartechCampaignQueryParamFieldsUpdatedAt`    | updated_at                                         |
 | `PatchMartechCampaignQueryParamFieldsRaw`          | raw                                                |

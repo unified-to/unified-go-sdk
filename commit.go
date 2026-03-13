@@ -1046,6 +1046,7 @@ func (s *Commit) RemoveRepoCommit(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

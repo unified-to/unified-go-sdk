@@ -1046,6 +1046,7 @@ func (s *Request) RemoveVerificationRequest(ctx context.Context, request operati
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

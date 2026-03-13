@@ -1046,6 +1046,7 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

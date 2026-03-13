@@ -8610,6 +8610,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -8791,6 +8792,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -8972,6 +8974,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -9153,6 +9156,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -9334,6 +9338,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -9515,6 +9520,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -9696,6 +9702,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -9877,6 +9884,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -10058,6 +10066,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

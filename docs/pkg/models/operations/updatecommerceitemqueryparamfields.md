@@ -22,7 +22,6 @@ value := operations.UpdateCommerceItemQueryParamFieldsID
 | `UpdateCommerceItemQueryParamFieldsPublicName`        | public_name                                           |
 | `UpdateCommerceItemQueryParamFieldsSlug`              | slug                                                  |
 | `UpdateCommerceItemQueryParamFieldsDescription`       | description                                           |
-| `UpdateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
 | `UpdateCommerceItemQueryParamFieldsGlobalCode`        | global_code                                           |
 | `UpdateCommerceItemQueryParamFieldsPublicDescription` | public_description                                    |
 | `UpdateCommerceItemQueryParamFieldsIsActive`          | is_active                                             |
@@ -35,5 +34,6 @@ value := operations.UpdateCommerceItemQueryParamFieldsID
 | `UpdateCommerceItemQueryParamFieldsCollectionIds`     | collection_ids                                        |
 | `UpdateCommerceItemQueryParamFieldsAccountID`         | account_id                                            |
 | `UpdateCommerceItemQueryParamFieldsMetadata`          | metadata                                              |
-| `UpdateCommerceItemQueryParamFieldsRaw`               | raw                                                   |
 | `UpdateCommerceItemQueryParamFieldsCollections`       | collections                                           |
+| `UpdateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
+| `UpdateCommerceItemQueryParamFieldsRaw`               | raw                                                   |

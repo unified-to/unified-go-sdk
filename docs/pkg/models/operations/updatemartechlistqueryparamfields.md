@@ -13,21 +13,22 @@ value := operations.UpdateMartechListQueryParamFieldsID
 
 ## Values
 
-| Name                                           | Value                                          |
-| ---------------------------------------------- | ---------------------------------------------- |
-| `UpdateMartechListQueryParamFieldsID`          | id                                             |
-| `UpdateMartechListQueryParamFieldsCreatedAt`   | created_at                                     |
-| `UpdateMartechListQueryParamFieldsUpdatedAt`   | updated_at                                     |
-| `UpdateMartechListQueryParamFieldsName`        | name                                           |
-| `UpdateMartechListQueryParamFieldsDescription` | description                                    |
-| `UpdateMartechListQueryParamFieldsStartAt`     | start_at                                       |
-| `UpdateMartechListQueryParamFieldsEndAt`       | end_at                                         |
-| `UpdateMartechListQueryParamFieldsUserID`      | user_id                                        |
-| `UpdateMartechListQueryParamFieldsIsActive`    | is_active                                      |
-| `UpdateMartechListQueryParamFieldsState`       | state                                          |
-| `UpdateMartechListQueryParamFieldsFromName`    | from_name                                      |
-| `UpdateMartechListQueryParamFieldsFromEmail`   | from_email                                     |
-| `UpdateMartechListQueryParamFieldsSubject`     | subject                                        |
-| `UpdateMartechListQueryParamFieldsLanguage`    | language                                       |
-| `UpdateMartechListQueryParamFieldsAddress`     | address                                        |
-| `UpdateMartechListQueryParamFieldsRaw`         | raw                                            |
+| Name                                             | Value                                            |
+| ------------------------------------------------ | ------------------------------------------------ |
+| `UpdateMartechListQueryParamFieldsID`            | id                                               |
+| `UpdateMartechListQueryParamFieldsCreatedAt`     | created_at                                       |
+| `UpdateMartechListQueryParamFieldsUpdatedAt`     | updated_at                                       |
+| `UpdateMartechListQueryParamFieldsName`          | name                                             |
+| `UpdateMartechListQueryParamFieldsDescription`   | description                                      |
+| `UpdateMartechListQueryParamFieldsStartAt`       | start_at                                         |
+| `UpdateMartechListQueryParamFieldsEndAt`         | end_at                                           |
+| `UpdateMartechListQueryParamFieldsUserID`        | user_id                                          |
+| `UpdateMartechListQueryParamFieldsIsActive`      | is_active                                        |
+| `UpdateMartechListQueryParamFieldsAddress`       | address                                          |
+| `UpdateMartechListQueryParamFieldsSubject`       | subject                                          |
+| `UpdateMartechListQueryParamFieldsSenderName`    | sender_name                                      |
+| `UpdateMartechListQueryParamFieldsSenderEmail`   | sender_email                                     |
+| `UpdateMartechListQueryParamFieldsLanguage`      | language                                         |
+| `UpdateMartechListQueryParamFieldsSenderCompany` | sender_company                                   |
+| `UpdateMartechListQueryParamFieldsSenderPhone`   | sender_phone                                     |
+| `UpdateMartechListQueryParamFieldsRaw`           | raw                                              |

@@ -18,7 +18,6 @@ const (
 	GetAdsAdQueryParamFieldsName             GetAdsAdQueryParamFields = "name"
 	GetAdsAdQueryParamFieldsCampaignID       GetAdsAdQueryParamFields = "campaign_id"
 	GetAdsAdQueryParamFieldsGroupID          GetAdsAdQueryParamFields = "group_id"
-	GetAdsAdQueryParamFieldsItemID           GetAdsAdQueryParamFields = "item_id"
 	GetAdsAdQueryParamFieldsOrganizationID   GetAdsAdQueryParamFields = "organization_id"
 	GetAdsAdQueryParamFieldsStatus           GetAdsAdQueryParamFields = "status"
 	GetAdsAdQueryParamFieldsAdType           GetAdsAdQueryParamFields = "ad_type"
@@ -29,10 +28,6 @@ const (
 	GetAdsAdQueryParamFieldsDescription      GetAdsAdQueryParamFields = "description"
 	GetAdsAdQueryParamFieldsCta              GetAdsAdQueryParamFields = "cta"
 	GetAdsAdQueryParamFieldsFinalURL         GetAdsAdQueryParamFields = "final_url"
-	GetAdsAdQueryParamFieldsTargeting        GetAdsAdQueryParamFields = "targeting"
-	GetAdsAdQueryParamFieldsIsActive         GetAdsAdQueryParamFields = "is_active"
-	GetAdsAdQueryParamFieldsEndAt            GetAdsAdQueryParamFields = "end_at"
-	GetAdsAdQueryParamFieldsStartAt          GetAdsAdQueryParamFields = "start_at"
 	GetAdsAdQueryParamFieldsDisplayURL       GetAdsAdQueryParamFields = "display_url"
 	GetAdsAdQueryParamFieldsPath1            GetAdsAdQueryParamFields = "path1"
 	GetAdsAdQueryParamFieldsPath2            GetAdsAdQueryParamFields = "path2"
@@ -61,8 +56,6 @@ func (e *GetAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "group_id":
 		fallthrough
-	case "item_id":
-		fallthrough
 	case "organization_id":
 		fallthrough
 	case "status":
@@ -82,14 +75,6 @@ func (e *GetAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "cta":
 		fallthrough
 	case "final_url":
-		fallthrough
-	case "targeting":
-		fallthrough
-	case "is_active":
-		fallthrough
-	case "end_at":
-		fallthrough
-	case "start_at":
 		fallthrough
 	case "display_url":
 		fallthrough

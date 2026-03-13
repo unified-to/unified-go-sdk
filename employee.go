@@ -1046,6 +1046,7 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

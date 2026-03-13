@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// MarketingReport - Campaign performance report
 type MarketingReport struct {
 	AbuseReports  *float64   `json:"abuse_reports,omitempty"`
 	CampaignID    *string    `json:"campaign_id,omitempty"`

@@ -148,3 +148,6 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetS
 	}
 	return p.StartDate
 }
+
+// #region class-body-propertyscimuserurnietfparamsscimschemasextensionenterprise20user
+// #endregion class-body-propertyscimuserurnietfparamsscimschemasextensionenterprise20user

@@ -22,6 +22,9 @@ func (k *KmsPageMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-kmspagemetadata1
+// #endregion class-body-kmspagemetadata1
+
 type KmsPageMetadata5Type string
 
 const (
@@ -309,6 +312,9 @@ func (k *KmsPageMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-kmspagemetadataschemas1
+// #endregion class-body-kmspagemetadataschemas1
 
 type KmsPageMetadataSchemas5Type string
 

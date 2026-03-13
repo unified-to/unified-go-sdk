@@ -2102,6 +2102,7 @@ func (s *Event) RemoveCalendarEvent(ctx context.Context, request operations.Remo
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2283,6 +2284,7 @@ func (s *Event) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrm
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

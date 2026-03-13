@@ -3144,6 +3144,7 @@ func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCom
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3325,6 +3326,7 @@ func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcCon
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3506,6 +3508,7 @@ func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcR
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

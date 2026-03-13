@@ -22,7 +22,6 @@ value := operations.PatchCommerceItemQueryParamFieldsID
 | `PatchCommerceItemQueryParamFieldsPublicName`        | public_name                                          |
 | `PatchCommerceItemQueryParamFieldsSlug`              | slug                                                 |
 | `PatchCommerceItemQueryParamFieldsDescription`       | description                                          |
-| `PatchCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                           |
 | `PatchCommerceItemQueryParamFieldsGlobalCode`        | global_code                                          |
 | `PatchCommerceItemQueryParamFieldsPublicDescription` | public_description                                   |
 | `PatchCommerceItemQueryParamFieldsIsActive`          | is_active                                            |
@@ -35,5 +34,6 @@ value := operations.PatchCommerceItemQueryParamFieldsID
 | `PatchCommerceItemQueryParamFieldsCollectionIds`     | collection_ids                                       |
 | `PatchCommerceItemQueryParamFieldsAccountID`         | account_id                                           |
 | `PatchCommerceItemQueryParamFieldsMetadata`          | metadata                                             |
-| `PatchCommerceItemQueryParamFieldsRaw`               | raw                                                  |
 | `PatchCommerceItemQueryParamFieldsCollections`       | collections                                          |
+| `PatchCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                           |
+| `PatchCommerceItemQueryParamFieldsRaw`               | raw                                                  |

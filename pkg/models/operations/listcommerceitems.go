@@ -19,7 +19,6 @@ const (
 	ListCommerceItemsQueryParamFieldsPublicName        ListCommerceItemsQueryParamFields = "public_name"
 	ListCommerceItemsQueryParamFieldsSlug              ListCommerceItemsQueryParamFields = "slug"
 	ListCommerceItemsQueryParamFieldsDescription       ListCommerceItemsQueryParamFields = "description"
-	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
 	ListCommerceItemsQueryParamFieldsGlobalCode        ListCommerceItemsQueryParamFields = "global_code"
 	ListCommerceItemsQueryParamFieldsPublicDescription ListCommerceItemsQueryParamFields = "public_description"
 	ListCommerceItemsQueryParamFieldsIsActive          ListCommerceItemsQueryParamFields = "is_active"
@@ -32,8 +31,9 @@ const (
 	ListCommerceItemsQueryParamFieldsCollectionIds     ListCommerceItemsQueryParamFields = "collection_ids"
 	ListCommerceItemsQueryParamFieldsAccountID         ListCommerceItemsQueryParamFields = "account_id"
 	ListCommerceItemsQueryParamFieldsMetadata          ListCommerceItemsQueryParamFields = "metadata"
-	ListCommerceItemsQueryParamFieldsRaw               ListCommerceItemsQueryParamFields = "raw"
 	ListCommerceItemsQueryParamFieldsCollections       ListCommerceItemsQueryParamFields = "collections"
+	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
+	ListCommerceItemsQueryParamFieldsRaw               ListCommerceItemsQueryParamFields = "raw"
 )
 
 func (e ListCommerceItemsQueryParamFields) ToPointer() *ListCommerceItemsQueryParamFields {
@@ -59,8 +59,6 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "taxrate_id":
-		fallthrough
 	case "global_code":
 		fallthrough
 	case "public_description":
@@ -85,9 +83,11 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "metadata":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "collections":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "raw":
 		*e = ListCommerceItemsQueryParamFields(v)
 		return nil
 	default:

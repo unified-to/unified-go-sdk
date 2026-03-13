@@ -28,6 +28,7 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsPipeline`    | pipeline                                  |
 | `PatchCrmDealQueryParamFieldsPipelineID`  | pipeline_id                               |
 | `PatchCrmDealQueryParamFieldsStages`      | stages                                    |
+| `PatchCrmDealQueryParamFieldsPipelines`   | pipelines                                 |
 | `PatchCrmDealQueryParamFieldsSource`      | source                                    |
 | `PatchCrmDealQueryParamFieldsProbability` | probability                               |
 | `PatchCrmDealQueryParamFieldsTags`        | tags                                      |
@@ -38,4 +39,3 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsCompanyIds`  | company_ids                               |
 | `PatchCrmDealQueryParamFieldsMetadata`    | metadata                                  |
 | `PatchCrmDealQueryParamFieldsRaw`         | raw                                       |
-| `PatchCrmDealQueryParamFieldsPipelines`   | pipelines                                 |

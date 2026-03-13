@@ -26,14 +26,10 @@ const (
 	UpdateAdsCreativeQueryParamFieldsWidth                      UpdateAdsCreativeQueryParamFields = "width"
 	UpdateAdsCreativeQueryParamFieldsHeight                     UpdateAdsCreativeQueryParamFields = "height"
 	UpdateAdsCreativeQueryParamFieldsAssetUrls                  UpdateAdsCreativeQueryParamFields = "asset_urls"
-	UpdateAdsCreativeQueryParamFieldsPageIdentifier             UpdateAdsCreativeQueryParamFields = "page_identifier"
 	UpdateAdsCreativeQueryParamFieldsLinkURL                    UpdateAdsCreativeQueryParamFields = "link_url"
 	UpdateAdsCreativeQueryParamFieldsBody                       UpdateAdsCreativeQueryParamFields = "body"
 	UpdateAdsCreativeQueryParamFieldsTitle                      UpdateAdsCreativeQueryParamFields = "title"
 	UpdateAdsCreativeQueryParamFieldsCta                        UpdateAdsCreativeQueryParamFields = "cta"
-	UpdateAdsCreativeQueryParamFieldsThumbnailURL               UpdateAdsCreativeQueryParamFields = "thumbnail_url"
-	UpdateAdsCreativeQueryParamFieldsImageHash                  UpdateAdsCreativeQueryParamFields = "image_hash"
-	UpdateAdsCreativeQueryParamFieldsVideoID                    UpdateAdsCreativeQueryParamFields = "video_id"
 	UpdateAdsCreativeQueryParamFieldsThirdPartyTag              UpdateAdsCreativeQueryParamFields = "third_party_tag"
 	UpdateAdsCreativeQueryParamFieldsVastTagURL                 UpdateAdsCreativeQueryParamFields = "vast_tag_url"
 	UpdateAdsCreativeQueryParamFieldsExternalCreativeReference  UpdateAdsCreativeQueryParamFields = "external_creative_reference"
@@ -82,8 +78,6 @@ func (e *UpdateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "asset_urls":
 		fallthrough
-	case "page_identifier":
-		fallthrough
 	case "link_url":
 		fallthrough
 	case "body":
@@ -91,12 +85,6 @@ func (e *UpdateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "title":
 		fallthrough
 	case "cta":
-		fallthrough
-	case "thumbnail_url":
-		fallthrough
-	case "image_hash":
-		fallthrough
-	case "video_id":
 		fallthrough
 	case "third_party_tag":
 		fallthrough

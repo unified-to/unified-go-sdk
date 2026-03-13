@@ -41,9 +41,6 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsCreativeIds`          | creative_ids                                        |
 | `PatchAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
 | `PatchAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                       |
-| `PatchAdsGroupQueryParamFieldsDailySpendCap`        | daily_spend_cap                                     |
-| `PatchAdsGroupQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                  |
-| `PatchAdsGroupQueryParamFieldsAdGroupType`          | ad_group_type                                       |
 | `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
 | `PatchAdsGroupQueryParamFieldsMetadata`             | metadata                                            |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |

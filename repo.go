@@ -4414,6 +4414,7 @@ func (s *Repo) RemoveRepoBranch(ctx context.Context, request operations.RemoveRe
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -4595,6 +4596,7 @@ func (s *Repo) RemoveRepoCommit(ctx context.Context, request operations.RemoveRe
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -4776,6 +4778,7 @@ func (s *Repo) RemoveRepoOrganization(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -4957,6 +4960,7 @@ func (s *Repo) RemoveRepoPullrequest(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5138,6 +5142,7 @@ func (s *Repo) RemoveRepoRepository(ctx context.Context, request operations.Remo
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

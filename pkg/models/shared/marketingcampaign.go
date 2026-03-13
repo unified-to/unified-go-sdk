@@ -35,13 +35,12 @@ func (e *MarketingCampaignStatus) IsExact() bool {
 	return false
 }
 
-// MarketingCampaign - A marketing campaign or email send
 type MarketingCampaign struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	FromEmail *string    `json:"from_email,omitempty"`
 	FromName  *string    `json:"from_name,omitempty"`
 	ID        *string    `json:"id,omitempty"`
-	// Associated list/audience IDs
+	// Associated listaudience IDs
 	ListIds      []string                 `json:"list_ids,omitempty"`
 	Name         *string                  `json:"name,omitempty"`
 	PreviewText  *string                  `json:"preview_text,omitempty"`

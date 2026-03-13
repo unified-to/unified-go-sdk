@@ -1,53 +1,23 @@
 # VirtualWebhookBenefitID
 
-
-## Supported Types
-
-### 
+## Example Usage
 
 ```go
-virtualWebhookBenefitID := shared.CreateVirtualWebhookBenefitIDMapOfAny(map[string]any{/* values here */})
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+)
+
+value := shared.VirtualWebhookBenefitIDSupportedRequired
+
+// Open enum: custom values can be created with a direct type cast
+custom := shared.VirtualWebhookBenefitID("custom_value")
 ```
 
-### 
 
-```go
-virtualWebhookBenefitID := shared.CreateVirtualWebhookBenefitIDStr(string{/* values here */})
-```
+## Values
 
-### 
-
-```go
-virtualWebhookBenefitID := shared.CreateVirtualWebhookBenefitIDNumber(float64{/* values here */})
-```
-
-### 
-
-```go
-virtualWebhookBenefitID := shared.CreateVirtualWebhookBenefitIDBoolean(bool{/* values here */})
-```
-
-### 
-
-```go
-virtualWebhookBenefitID := shared.CreateVirtualWebhookBenefitIDArrayOfIntegrationSupport5([]shared.IntegrationSupport5{/* values here */})
-```
-
-## Union Discrimination
-
-Use the `Type` field to determine which variant is active, then access the corresponding field:
-
-```go
-switch virtualWebhookBenefitID.Type {
-	case shared.VirtualWebhookBenefitIDTypeMapOfAny:
-		// virtualWebhookBenefitID.MapOfAny is populated
-	case shared.VirtualWebhookBenefitIDTypeStr:
-		// virtualWebhookBenefitID.Str is populated
-	case shared.VirtualWebhookBenefitIDTypeNumber:
-		// virtualWebhookBenefitID.Number is populated
-	case shared.VirtualWebhookBenefitIDTypeBoolean:
-		// virtualWebhookBenefitID.Boolean is populated
-	case shared.VirtualWebhookBenefitIDTypeArrayOfIntegrationSupport5:
-		// virtualWebhookBenefitID.ArrayOfIntegrationSupport5 is populated
-}
-```
+| Name                                       | Value                                      |
+| ------------------------------------------ | ------------------------------------------ |
+| `VirtualWebhookBenefitIDSupportedRequired` | supported-required                         |
+| `VirtualWebhookBenefitIDSupported`         | supported                                  |
+| `VirtualWebhookBenefitIDNotSupported`      | not-supported                              |

@@ -102,23 +102,19 @@ type AdsCreative struct {
 	Height                     *float64           `json:"height,omitempty"`
 	HostingSource              *HostingSource     `json:"hosting_source,omitempty"`
 	ID                         *string            `json:"id,omitempty"`
-	ImageHash                  *string            `json:"image_hash,omitempty"`
 	ItemID                     *string            `json:"item_id,omitempty"`
 	LinkURL                    *string            `json:"link_url,omitempty"`
 	Metadata                   []AdsMetadata      `json:"metadata,omitempty"`
 	Name                       *string            `json:"name,omitempty"`
 	OrganizationID             *string            `json:"organization_id,omitempty"`
-	PageIdentifier             *string            `json:"page_identifier,omitempty"`
 	Path1                      *string            `json:"path1,omitempty"`
 	Path2                      *string            `json:"path2,omitempty"`
 	Raw                        map[string]any     `json:"raw,omitempty"`
 	Status                     *AdsCreativeStatus `json:"status,omitempty"`
 	ThirdPartyTag              *string            `json:"third_party_tag,omitempty"`
-	ThumbnailURL               *string            `json:"thumbnail_url,omitempty"`
 	Title                      *string            `json:"title,omitempty"`
 	UpdatedAt                  *time.Time         `json:"updated_at,omitempty"`
 	VastTagURL                 *string            `json:"vast_tag_url,omitempty"`
-	VideoID                    *string            `json:"video_id,omitempty"`
 	Width                      *float64           `json:"width,omitempty"`
 }
 
@@ -224,13 +220,6 @@ func (a *AdsCreative) GetID() *string {
 	return a.ID
 }
 
-func (a *AdsCreative) GetImageHash() *string {
-	if a == nil {
-		return nil
-	}
-	return a.ImageHash
-}
-
 func (a *AdsCreative) GetItemID() *string {
 	if a == nil {
 		return nil
@@ -264,13 +253,6 @@ func (a *AdsCreative) GetOrganizationID() *string {
 		return nil
 	}
 	return a.OrganizationID
-}
-
-func (a *AdsCreative) GetPageIdentifier() *string {
-	if a == nil {
-		return nil
-	}
-	return a.PageIdentifier
 }
 
 func (a *AdsCreative) GetPath1() *string {
@@ -308,13 +290,6 @@ func (a *AdsCreative) GetThirdPartyTag() *string {
 	return a.ThirdPartyTag
 }
 
-func (a *AdsCreative) GetThumbnailURL() *string {
-	if a == nil {
-		return nil
-	}
-	return a.ThumbnailURL
-}
-
 func (a *AdsCreative) GetTitle() *string {
 	if a == nil {
 		return nil
@@ -334,13 +309,6 @@ func (a *AdsCreative) GetVastTagURL() *string {
 		return nil
 	}
 	return a.VastTagURL
-}
-
-func (a *AdsCreative) GetVideoID() *string {
-	if a == nil {
-		return nil
-	}
-	return a.VideoID
 }
 
 func (a *AdsCreative) GetWidth() *float64 {

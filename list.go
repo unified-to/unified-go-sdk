@@ -1046,6 +1046,7 @@ func (s *List) RemoveMartechList(ctx context.Context, request operations.RemoveM
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

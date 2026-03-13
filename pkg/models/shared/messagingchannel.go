@@ -8,19 +8,18 @@ import (
 )
 
 type MessagingChannel struct {
-	CreatedAt       *time.Time        `json:"created_at,omitempty"`
-	Description     *string           `json:"description,omitempty"`
-	HasSubchannels  *bool             `json:"has_subchannels,omitempty"`
-	ID              *string           `json:"id,omitempty"`
-	IsActive        *bool             `json:"is_active,omitempty"`
-	IsPrivate       *bool             `json:"is_private,omitempty"`
-	Members         []MessagingMember `json:"members,omitempty"`
-	Name            string            `json:"name"`
-	ParentChannelID *string           `json:"parent_channel_id,omitempty"`
-	ParentID        *string           `json:"parent_id,omitempty"`
-	Raw             map[string]any    `json:"raw,omitempty"`
-	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
-	WebURL          *string           `json:"web_url,omitempty"`
+	CreatedAt      *time.Time        `json:"created_at,omitempty"`
+	Description    *string           `json:"description,omitempty"`
+	HasSubchannels *bool             `json:"has_subchannels,omitempty"`
+	ID             *string           `json:"id,omitempty"`
+	IsActive       *bool             `json:"is_active,omitempty"`
+	IsPrivate      *bool             `json:"is_private,omitempty"`
+	Members        []MessagingMember `json:"members,omitempty"`
+	Name           string            `json:"name"`
+	ParentID       *string           `json:"parent_id,omitempty"`
+	Raw            map[string]any    `json:"raw,omitempty"`
+	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
+	WebURL         *string           `json:"web_url,omitempty"`
 }
 
 func (m MessagingChannel) MarshalJSON() ([]byte, error) {
@@ -88,13 +87,6 @@ func (m *MessagingChannel) GetName() string {
 		return ""
 	}
 	return m.Name
-}
-
-func (m *MessagingChannel) GetParentChannelID() *string {
-	if m == nil {
-		return nil
-	}
-	return m.ParentChannelID
 }
 
 func (m *MessagingChannel) GetParentID() *string {

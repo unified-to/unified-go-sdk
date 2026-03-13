@@ -12,19 +12,18 @@ import (
 type GetMessagingChannelQueryParamFields string
 
 const (
-	GetMessagingChannelQueryParamFieldsID              GetMessagingChannelQueryParamFields = "id"
-	GetMessagingChannelQueryParamFieldsCreatedAt       GetMessagingChannelQueryParamFields = "created_at"
-	GetMessagingChannelQueryParamFieldsUpdatedAt       GetMessagingChannelQueryParamFields = "updated_at"
-	GetMessagingChannelQueryParamFieldsName            GetMessagingChannelQueryParamFields = "name"
-	GetMessagingChannelQueryParamFieldsDescription     GetMessagingChannelQueryParamFields = "description"
-	GetMessagingChannelQueryParamFieldsParentChannelID GetMessagingChannelQueryParamFields = "parent_channel_id"
-	GetMessagingChannelQueryParamFieldsParentID        GetMessagingChannelQueryParamFields = "parent_id"
-	GetMessagingChannelQueryParamFieldsHasSubchannels  GetMessagingChannelQueryParamFields = "has_subchannels"
-	GetMessagingChannelQueryParamFieldsMembers         GetMessagingChannelQueryParamFields = "members"
-	GetMessagingChannelQueryParamFieldsIsActive        GetMessagingChannelQueryParamFields = "is_active"
-	GetMessagingChannelQueryParamFieldsIsPrivate       GetMessagingChannelQueryParamFields = "is_private"
-	GetMessagingChannelQueryParamFieldsWebURL          GetMessagingChannelQueryParamFields = "web_url"
-	GetMessagingChannelQueryParamFieldsRaw             GetMessagingChannelQueryParamFields = "raw"
+	GetMessagingChannelQueryParamFieldsID             GetMessagingChannelQueryParamFields = "id"
+	GetMessagingChannelQueryParamFieldsCreatedAt      GetMessagingChannelQueryParamFields = "created_at"
+	GetMessagingChannelQueryParamFieldsUpdatedAt      GetMessagingChannelQueryParamFields = "updated_at"
+	GetMessagingChannelQueryParamFieldsName           GetMessagingChannelQueryParamFields = "name"
+	GetMessagingChannelQueryParamFieldsDescription    GetMessagingChannelQueryParamFields = "description"
+	GetMessagingChannelQueryParamFieldsParentID       GetMessagingChannelQueryParamFields = "parent_id"
+	GetMessagingChannelQueryParamFieldsHasSubchannels GetMessagingChannelQueryParamFields = "has_subchannels"
+	GetMessagingChannelQueryParamFieldsMembers        GetMessagingChannelQueryParamFields = "members"
+	GetMessagingChannelQueryParamFieldsIsActive       GetMessagingChannelQueryParamFields = "is_active"
+	GetMessagingChannelQueryParamFieldsIsPrivate      GetMessagingChannelQueryParamFields = "is_private"
+	GetMessagingChannelQueryParamFieldsWebURL         GetMessagingChannelQueryParamFields = "web_url"
+	GetMessagingChannelQueryParamFieldsRaw            GetMessagingChannelQueryParamFields = "raw"
 )
 
 func (e GetMessagingChannelQueryParamFields) ToPointer() *GetMessagingChannelQueryParamFields {
@@ -45,8 +44,6 @@ func (e *GetMessagingChannelQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "description":
-		fallthrough
-	case "parent_channel_id":
 		fallthrough
 	case "parent_id":
 		fallthrough

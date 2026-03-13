@@ -19,7 +19,6 @@ const (
 	UpdateCommerceItemQueryParamFieldsPublicName        UpdateCommerceItemQueryParamFields = "public_name"
 	UpdateCommerceItemQueryParamFieldsSlug              UpdateCommerceItemQueryParamFields = "slug"
 	UpdateCommerceItemQueryParamFieldsDescription       UpdateCommerceItemQueryParamFields = "description"
-	UpdateCommerceItemQueryParamFieldsTaxrateID         UpdateCommerceItemQueryParamFields = "taxrate_id"
 	UpdateCommerceItemQueryParamFieldsGlobalCode        UpdateCommerceItemQueryParamFields = "global_code"
 	UpdateCommerceItemQueryParamFieldsPublicDescription UpdateCommerceItemQueryParamFields = "public_description"
 	UpdateCommerceItemQueryParamFieldsIsActive          UpdateCommerceItemQueryParamFields = "is_active"
@@ -32,8 +31,9 @@ const (
 	UpdateCommerceItemQueryParamFieldsCollectionIds     UpdateCommerceItemQueryParamFields = "collection_ids"
 	UpdateCommerceItemQueryParamFieldsAccountID         UpdateCommerceItemQueryParamFields = "account_id"
 	UpdateCommerceItemQueryParamFieldsMetadata          UpdateCommerceItemQueryParamFields = "metadata"
-	UpdateCommerceItemQueryParamFieldsRaw               UpdateCommerceItemQueryParamFields = "raw"
 	UpdateCommerceItemQueryParamFieldsCollections       UpdateCommerceItemQueryParamFields = "collections"
+	UpdateCommerceItemQueryParamFieldsTaxrateID         UpdateCommerceItemQueryParamFields = "taxrate_id"
+	UpdateCommerceItemQueryParamFieldsRaw               UpdateCommerceItemQueryParamFields = "raw"
 )
 
 func (e UpdateCommerceItemQueryParamFields) ToPointer() *UpdateCommerceItemQueryParamFields {
@@ -59,8 +59,6 @@ func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "taxrate_id":
-		fallthrough
 	case "global_code":
 		fallthrough
 	case "public_description":
@@ -85,9 +83,11 @@ func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "metadata":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "collections":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "raw":
 		*e = UpdateCommerceItemQueryParamFields(v)
 		return nil
 	default:

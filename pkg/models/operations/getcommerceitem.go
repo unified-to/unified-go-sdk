@@ -19,7 +19,6 @@ const (
 	GetCommerceItemQueryParamFieldsPublicName        GetCommerceItemQueryParamFields = "public_name"
 	GetCommerceItemQueryParamFieldsSlug              GetCommerceItemQueryParamFields = "slug"
 	GetCommerceItemQueryParamFieldsDescription       GetCommerceItemQueryParamFields = "description"
-	GetCommerceItemQueryParamFieldsTaxrateID         GetCommerceItemQueryParamFields = "taxrate_id"
 	GetCommerceItemQueryParamFieldsGlobalCode        GetCommerceItemQueryParamFields = "global_code"
 	GetCommerceItemQueryParamFieldsPublicDescription GetCommerceItemQueryParamFields = "public_description"
 	GetCommerceItemQueryParamFieldsIsActive          GetCommerceItemQueryParamFields = "is_active"
@@ -32,8 +31,9 @@ const (
 	GetCommerceItemQueryParamFieldsCollectionIds     GetCommerceItemQueryParamFields = "collection_ids"
 	GetCommerceItemQueryParamFieldsAccountID         GetCommerceItemQueryParamFields = "account_id"
 	GetCommerceItemQueryParamFieldsMetadata          GetCommerceItemQueryParamFields = "metadata"
-	GetCommerceItemQueryParamFieldsRaw               GetCommerceItemQueryParamFields = "raw"
 	GetCommerceItemQueryParamFieldsCollections       GetCommerceItemQueryParamFields = "collections"
+	GetCommerceItemQueryParamFieldsTaxrateID         GetCommerceItemQueryParamFields = "taxrate_id"
+	GetCommerceItemQueryParamFieldsRaw               GetCommerceItemQueryParamFields = "raw"
 )
 
 func (e GetCommerceItemQueryParamFields) ToPointer() *GetCommerceItemQueryParamFields {
@@ -59,8 +59,6 @@ func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "taxrate_id":
-		fallthrough
 	case "global_code":
 		fallthrough
 	case "public_description":
@@ -85,9 +83,11 @@ func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "metadata":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "collections":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "raw":
 		*e = GetCommerceItemQueryParamFields(v)
 		return nil
 	default:

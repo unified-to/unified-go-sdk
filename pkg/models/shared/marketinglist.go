@@ -9,22 +9,23 @@ import (
 
 // MarketingList - Mailing List
 type MarketingList struct {
-	Address     *PropertyMarketingListAddress `json:"address,omitempty"`
-	CreatedAt   *time.Time                    `json:"created_at,omitempty"`
-	Description *string                       `json:"description,omitempty"`
-	EndAt       *time.Time                    `json:"end_at,omitempty"`
-	FromEmail   *string                       `json:"from_email,omitempty"`
-	FromName    *string                       `json:"from_name,omitempty"`
-	ID          *string                       `json:"id,omitempty"`
-	IsActive    *bool                         `json:"is_active,omitempty"`
-	Language    *string                       `json:"language,omitempty"`
-	Name        *string                       `json:"name,omitempty"`
-	Raw         map[string]any                `json:"raw,omitempty"`
-	StartAt     *time.Time                    `json:"start_at,omitempty"`
-	State       *string                       `json:"state,omitempty"`
-	Subject     *string                       `json:"subject,omitempty"`
-	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
-	UserID      *string                       `json:"user_id,omitempty"`
+	Address       *PropertyMarketingListAddress `json:"address,omitempty"`
+	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
+	Description   *string                       `json:"description,omitempty"`
+	EndAt         *time.Time                    `json:"end_at,omitempty"`
+	ID            *string                       `json:"id,omitempty"`
+	IsActive      *bool                         `json:"is_active,omitempty"`
+	Language      *string                       `json:"language,omitempty"`
+	Name          *string                       `json:"name,omitempty"`
+	Raw           map[string]any                `json:"raw,omitempty"`
+	SenderCompany *string                       `json:"sender_company,omitempty"`
+	SenderEmail   *string                       `json:"sender_email,omitempty"`
+	SenderName    *string                       `json:"sender_name,omitempty"`
+	SenderPhone   *string                       `json:"sender_phone,omitempty"`
+	StartAt       *time.Time                    `json:"start_at,omitempty"`
+	Subject       *string                       `json:"subject,omitempty"`
+	UpdatedAt     *time.Time                    `json:"updated_at,omitempty"`
+	UserID        *string                       `json:"user_id,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {
@@ -66,20 +67,6 @@ func (m *MarketingList) GetEndAt() *time.Time {
 	return m.EndAt
 }
 
-func (m *MarketingList) GetFromEmail() *string {
-	if m == nil {
-		return nil
-	}
-	return m.FromEmail
-}
-
-func (m *MarketingList) GetFromName() *string {
-	if m == nil {
-		return nil
-	}
-	return m.FromName
-}
-
 func (m *MarketingList) GetID() *string {
 	if m == nil {
 		return nil
@@ -115,18 +102,39 @@ func (m *MarketingList) GetRaw() map[string]any {
 	return m.Raw
 }
 
+func (m *MarketingList) GetSenderCompany() *string {
+	if m == nil {
+		return nil
+	}
+	return m.SenderCompany
+}
+
+func (m *MarketingList) GetSenderEmail() *string {
+	if m == nil {
+		return nil
+	}
+	return m.SenderEmail
+}
+
+func (m *MarketingList) GetSenderName() *string {
+	if m == nil {
+		return nil
+	}
+	return m.SenderName
+}
+
+func (m *MarketingList) GetSenderPhone() *string {
+	if m == nil {
+		return nil
+	}
+	return m.SenderPhone
+}
+
 func (m *MarketingList) GetStartAt() *time.Time {
 	if m == nil {
 		return nil
 	}
 	return m.StartAt
-}
-
-func (m *MarketingList) GetState() *string {
-	if m == nil {
-		return nil
-	}
-	return m.State
 }
 
 func (m *MarketingList) GetSubject() *string {

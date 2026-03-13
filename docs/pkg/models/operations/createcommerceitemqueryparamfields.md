@@ -22,7 +22,6 @@ value := operations.CreateCommerceItemQueryParamFieldsID
 | `CreateCommerceItemQueryParamFieldsPublicName`        | public_name                                           |
 | `CreateCommerceItemQueryParamFieldsSlug`              | slug                                                  |
 | `CreateCommerceItemQueryParamFieldsDescription`       | description                                           |
-| `CreateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
 | `CreateCommerceItemQueryParamFieldsGlobalCode`        | global_code                                           |
 | `CreateCommerceItemQueryParamFieldsPublicDescription` | public_description                                    |
 | `CreateCommerceItemQueryParamFieldsIsActive`          | is_active                                             |
@@ -35,5 +34,6 @@ value := operations.CreateCommerceItemQueryParamFieldsID
 | `CreateCommerceItemQueryParamFieldsCollectionIds`     | collection_ids                                        |
 | `CreateCommerceItemQueryParamFieldsAccountID`         | account_id                                            |
 | `CreateCommerceItemQueryParamFieldsMetadata`          | metadata                                              |
-| `CreateCommerceItemQueryParamFieldsRaw`               | raw                                                   |
 | `CreateCommerceItemQueryParamFieldsCollections`       | collections                                           |
+| `CreateCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                            |
+| `CreateCommerceItemQueryParamFieldsRaw`               | raw                                                   |

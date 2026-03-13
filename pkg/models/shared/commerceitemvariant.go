@@ -53,15 +53,18 @@ func (e *WeightUnit) IsExact() bool {
 	return false
 }
 
-type CommerceItemVariant struct {
-	AvailableAt       *time.Time           `json:"available_at,omitempty"`
-	Description       *string              `json:"description,omitempty"`
-	Height            *float64             `json:"height,omitempty"`
-	ID                *string              `json:"id,omitempty"`
-	InventoryID       *string              `json:"inventory_id,omitempty"`
-	IsActive          *bool                `json:"is_active,omitempty"`
-	IsFeatured        *bool                `json:"is_featured,omitempty"`
-	IsVisible         *bool                `json:"is_visible,omitempty"`
+type CommerceItemvariant struct {
+	AvailableAt *time.Time `json:"available_at,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	Height      *float64   `json:"height,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	InventoryID *string    `json:"inventory_id,omitempty"`
+	IsActive    *bool      `json:"is_active,omitempty"`
+	IsFeatured  *bool      `json:"is_featured,omitempty"`
+	IsVisible   *bool      `json:"is_visible,omitempty"`
+	// references CommerceItem
+	Items             []CommerceReference  `json:"items,omitempty"`
 	Length            *float64             `json:"length,omitempty"`
 	Media             []CommerceItemMedia  `json:"media,omitempty"`
 	Metadata          []CommerceMetadata   `json:"metadata,omitempty"`
@@ -70,189 +73,219 @@ type CommerceItemVariant struct {
 	Prices            []CommerceItemPrice  `json:"prices,omitempty"`
 	PublicDescription *string              `json:"public_description,omitempty"`
 	PublicName        *string              `json:"public_name,omitempty"`
+	Raw               map[string]any       `json:"raw,omitempty"`
 	RequiresShipping  *bool                `json:"requires_shipping,omitempty"`
 	SizeUnit          *SizeUnit            `json:"size_unit,omitempty"`
 	Sku               *string              `json:"sku,omitempty"`
 	Tags              []string             `json:"tags,omitempty"`
 	TotalStock        *float64             `json:"total_stock,omitempty"`
+	UpdatedAt         *time.Time           `json:"updated_at,omitempty"`
 	Weight            *float64             `json:"weight,omitempty"`
 	WeightUnit        *WeightUnit          `json:"weight_unit,omitempty"`
 	Width             *float64             `json:"width,omitempty"`
 }
 
-func (c CommerceItemVariant) MarshalJSON() ([]byte, error) {
+func (c CommerceItemvariant) MarshalJSON() ([]byte, error) {
 	return utils.MarshalJSON(c, "", false)
 }
 
-func (c *CommerceItemVariant) UnmarshalJSON(data []byte) error {
+func (c *CommerceItemvariant) UnmarshalJSON(data []byte) error {
 	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (c *CommerceItemVariant) GetAvailableAt() *time.Time {
+func (c *CommerceItemvariant) GetAvailableAt() *time.Time {
 	if c == nil {
 		return nil
 	}
 	return c.AvailableAt
 }
 
-func (c *CommerceItemVariant) GetDescription() *string {
+func (c *CommerceItemvariant) GetCreatedAt() *time.Time {
+	if c == nil {
+		return nil
+	}
+	return c.CreatedAt
+}
+
+func (c *CommerceItemvariant) GetDescription() *string {
 	if c == nil {
 		return nil
 	}
 	return c.Description
 }
 
-func (c *CommerceItemVariant) GetHeight() *float64 {
+func (c *CommerceItemvariant) GetHeight() *float64 {
 	if c == nil {
 		return nil
 	}
 	return c.Height
 }
 
-func (c *CommerceItemVariant) GetID() *string {
+func (c *CommerceItemvariant) GetID() *string {
 	if c == nil {
 		return nil
 	}
 	return c.ID
 }
 
-func (c *CommerceItemVariant) GetInventoryID() *string {
+func (c *CommerceItemvariant) GetInventoryID() *string {
 	if c == nil {
 		return nil
 	}
 	return c.InventoryID
 }
 
-func (c *CommerceItemVariant) GetIsActive() *bool {
+func (c *CommerceItemvariant) GetIsActive() *bool {
 	if c == nil {
 		return nil
 	}
 	return c.IsActive
 }
 
-func (c *CommerceItemVariant) GetIsFeatured() *bool {
+func (c *CommerceItemvariant) GetIsFeatured() *bool {
 	if c == nil {
 		return nil
 	}
 	return c.IsFeatured
 }
 
-func (c *CommerceItemVariant) GetIsVisible() *bool {
+func (c *CommerceItemvariant) GetIsVisible() *bool {
 	if c == nil {
 		return nil
 	}
 	return c.IsVisible
 }
 
-func (c *CommerceItemVariant) GetLength() *float64 {
+func (c *CommerceItemvariant) GetItems() []CommerceReference {
+	if c == nil {
+		return nil
+	}
+	return c.Items
+}
+
+func (c *CommerceItemvariant) GetLength() *float64 {
 	if c == nil {
 		return nil
 	}
 	return c.Length
 }
 
-func (c *CommerceItemVariant) GetMedia() []CommerceItemMedia {
+func (c *CommerceItemvariant) GetMedia() []CommerceItemMedia {
 	if c == nil {
 		return nil
 	}
 	return c.Media
 }
 
-func (c *CommerceItemVariant) GetMetadata() []CommerceMetadata {
+func (c *CommerceItemvariant) GetMetadata() []CommerceMetadata {
 	if c == nil {
 		return nil
 	}
 	return c.Metadata
 }
 
-func (c *CommerceItemVariant) GetName() *string {
+func (c *CommerceItemvariant) GetName() *string {
 	if c == nil {
 		return nil
 	}
 	return c.Name
 }
 
-func (c *CommerceItemVariant) GetOptions() []CommerceItemOption {
+func (c *CommerceItemvariant) GetOptions() []CommerceItemOption {
 	if c == nil {
 		return nil
 	}
 	return c.Options
 }
 
-func (c *CommerceItemVariant) GetPrices() []CommerceItemPrice {
+func (c *CommerceItemvariant) GetPrices() []CommerceItemPrice {
 	if c == nil {
 		return nil
 	}
 	return c.Prices
 }
 
-func (c *CommerceItemVariant) GetPublicDescription() *string {
+func (c *CommerceItemvariant) GetPublicDescription() *string {
 	if c == nil {
 		return nil
 	}
 	return c.PublicDescription
 }
 
-func (c *CommerceItemVariant) GetPublicName() *string {
+func (c *CommerceItemvariant) GetPublicName() *string {
 	if c == nil {
 		return nil
 	}
 	return c.PublicName
 }
 
-func (c *CommerceItemVariant) GetRequiresShipping() *bool {
+func (c *CommerceItemvariant) GetRaw() map[string]any {
+	if c == nil {
+		return nil
+	}
+	return c.Raw
+}
+
+func (c *CommerceItemvariant) GetRequiresShipping() *bool {
 	if c == nil {
 		return nil
 	}
 	return c.RequiresShipping
 }
 
-func (c *CommerceItemVariant) GetSizeUnit() *SizeUnit {
+func (c *CommerceItemvariant) GetSizeUnit() *SizeUnit {
 	if c == nil {
 		return nil
 	}
 	return c.SizeUnit
 }
 
-func (c *CommerceItemVariant) GetSku() *string {
+func (c *CommerceItemvariant) GetSku() *string {
 	if c == nil {
 		return nil
 	}
 	return c.Sku
 }
 
-func (c *CommerceItemVariant) GetTags() []string {
+func (c *CommerceItemvariant) GetTags() []string {
 	if c == nil {
 		return nil
 	}
 	return c.Tags
 }
 
-func (c *CommerceItemVariant) GetTotalStock() *float64 {
+func (c *CommerceItemvariant) GetTotalStock() *float64 {
 	if c == nil {
 		return nil
 	}
 	return c.TotalStock
 }
 
-func (c *CommerceItemVariant) GetWeight() *float64 {
+func (c *CommerceItemvariant) GetUpdatedAt() *time.Time {
+	if c == nil {
+		return nil
+	}
+	return c.UpdatedAt
+}
+
+func (c *CommerceItemvariant) GetWeight() *float64 {
 	if c == nil {
 		return nil
 	}
 	return c.Weight
 }
 
-func (c *CommerceItemVariant) GetWeightUnit() *WeightUnit {
+func (c *CommerceItemvariant) GetWeightUnit() *WeightUnit {
 	if c == nil {
 		return nil
 	}
 	return c.WeightUnit
 }
 
-func (c *CommerceItemVariant) GetWidth() *float64 {
+func (c *CommerceItemvariant) GetWidth() *float64 {
 	if c == nil {
 		return nil
 	}

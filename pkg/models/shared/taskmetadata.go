@@ -22,6 +22,9 @@ func (t *TaskMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-taskmetadata1
+// #endregion class-body-taskmetadata1
+
 type TaskMetadata5Type string
 
 const (
@@ -304,6 +307,9 @@ func (t *TaskMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-taskmetadataschemas1
+// #endregion class-body-taskmetadataschemas1
 
 type TaskMetadataSchemas5Type string
 

@@ -22,6 +22,9 @@ func (a *AtsMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-atsmetadata1
+// #endregion class-body-atsmetadata1
+
 type AtsMetadata5Type string
 
 const (
@@ -304,6 +307,9 @@ func (a *AtsMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-atsmetadataschemas1
+// #endregion class-body-atsmetadataschemas1
 
 type AtsMetadataSchemas5Type string
 

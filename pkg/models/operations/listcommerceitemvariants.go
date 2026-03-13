@@ -16,7 +16,6 @@ const (
 	ListCommerceItemvariantsQueryParamFieldsCreatedAt         ListCommerceItemvariantsQueryParamFields = "created_at"
 	ListCommerceItemvariantsQueryParamFieldsUpdatedAt         ListCommerceItemvariantsQueryParamFields = "updated_at"
 	ListCommerceItemvariantsQueryParamFieldsName              ListCommerceItemvariantsQueryParamFields = "name"
-	ListCommerceItemvariantsQueryParamFieldsItems             ListCommerceItemvariantsQueryParamFields = "items"
 	ListCommerceItemvariantsQueryParamFieldsPublicName        ListCommerceItemvariantsQueryParamFields = "public_name"
 	ListCommerceItemvariantsQueryParamFieldsDescription       ListCommerceItemvariantsQueryParamFields = "description"
 	ListCommerceItemvariantsQueryParamFieldsPublicDescription ListCommerceItemvariantsQueryParamFields = "public_description"
@@ -39,6 +38,7 @@ const (
 	ListCommerceItemvariantsQueryParamFieldsInventoryID       ListCommerceItemvariantsQueryParamFields = "inventory_id"
 	ListCommerceItemvariantsQueryParamFieldsRequiresShipping  ListCommerceItemvariantsQueryParamFields = "requires_shipping"
 	ListCommerceItemvariantsQueryParamFieldsMetadata          ListCommerceItemvariantsQueryParamFields = "metadata"
+	ListCommerceItemvariantsQueryParamFieldsItems             ListCommerceItemvariantsQueryParamFields = "items"
 	ListCommerceItemvariantsQueryParamFieldsRaw               ListCommerceItemvariantsQueryParamFields = "raw"
 )
 
@@ -58,8 +58,6 @@ func (e *ListCommerceItemvariantsQueryParamFields) UnmarshalJSON(data []byte) er
 	case "updated_at":
 		fallthrough
 	case "name":
-		fallthrough
-	case "items":
 		fallthrough
 	case "public_name":
 		fallthrough
@@ -104,6 +102,8 @@ func (e *ListCommerceItemvariantsQueryParamFields) UnmarshalJSON(data []byte) er
 	case "requires_shipping":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "items":
 		fallthrough
 	case "raw":
 		*e = ListCommerceItemvariantsQueryParamFields(v)
@@ -213,7 +213,7 @@ func (l *ListCommerceItemvariantsRequest) GetUpdatedGte() *string {
 
 type ListCommerceItemvariantsResponse struct {
 	// Successful
-	CommerceItemvariants []shared.CommerceItemvariant1
+	CommerceItemvariants []shared.CommerceItemvariant
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -222,7 +222,7 @@ type ListCommerceItemvariantsResponse struct {
 	RawResponse *http.Response
 }
 
-func (l *ListCommerceItemvariantsResponse) GetCommerceItemvariants() []shared.CommerceItemvariant1 {
+func (l *ListCommerceItemvariantsResponse) GetCommerceItemvariants() []shared.CommerceItemvariant {
 	if l == nil {
 		return nil
 	}

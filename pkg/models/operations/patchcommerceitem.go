@@ -19,7 +19,6 @@ const (
 	PatchCommerceItemQueryParamFieldsPublicName        PatchCommerceItemQueryParamFields = "public_name"
 	PatchCommerceItemQueryParamFieldsSlug              PatchCommerceItemQueryParamFields = "slug"
 	PatchCommerceItemQueryParamFieldsDescription       PatchCommerceItemQueryParamFields = "description"
-	PatchCommerceItemQueryParamFieldsTaxrateID         PatchCommerceItemQueryParamFields = "taxrate_id"
 	PatchCommerceItemQueryParamFieldsGlobalCode        PatchCommerceItemQueryParamFields = "global_code"
 	PatchCommerceItemQueryParamFieldsPublicDescription PatchCommerceItemQueryParamFields = "public_description"
 	PatchCommerceItemQueryParamFieldsIsActive          PatchCommerceItemQueryParamFields = "is_active"
@@ -32,8 +31,9 @@ const (
 	PatchCommerceItemQueryParamFieldsCollectionIds     PatchCommerceItemQueryParamFields = "collection_ids"
 	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
 	PatchCommerceItemQueryParamFieldsMetadata          PatchCommerceItemQueryParamFields = "metadata"
-	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
 	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
+	PatchCommerceItemQueryParamFieldsTaxrateID         PatchCommerceItemQueryParamFields = "taxrate_id"
+	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
 )
 
 func (e PatchCommerceItemQueryParamFields) ToPointer() *PatchCommerceItemQueryParamFields {
@@ -59,8 +59,6 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "description":
 		fallthrough
-	case "taxrate_id":
-		fallthrough
 	case "global_code":
 		fallthrough
 	case "public_description":
@@ -85,9 +83,11 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "metadata":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "collections":
+		fallthrough
+	case "taxrate_id":
+		fallthrough
+	case "raw":
 		*e = PatchCommerceItemQueryParamFields(v)
 		return nil
 	default:

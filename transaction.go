@@ -1046,6 +1046,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

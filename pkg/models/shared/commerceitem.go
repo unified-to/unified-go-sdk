@@ -31,7 +31,7 @@ type CommerceItem struct {
 	Type              *string             `json:"type,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
 	// first variant is the default variant
-	Variants   []CommerceItemVariant `json:"variants,omitempty"`
+	Variants   []CommerceItemvariant `json:"variants,omitempty"`
 	VendorName *string               `json:"vendor_name,omitempty"`
 }
 
@@ -186,7 +186,7 @@ func (c *CommerceItem) GetUpdatedAt() *time.Time {
 	return c.UpdatedAt
 }
 
-func (c *CommerceItem) GetVariants() []CommerceItemVariant {
+func (c *CommerceItem) GetVariants() []CommerceItemvariant {
 	if c == nil {
 		return nil
 	}

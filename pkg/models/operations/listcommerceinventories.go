@@ -58,7 +58,7 @@ type ListCommerceInventoriesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
 	Fields []ListCommerceInventoriesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	// The item variant ID to filter by (reference to CommerceItemVariant)
+	// The item variant ID to filter by (reference to CommerceCommerceItemvariant)
 	ItemVariantID *string  `queryParam:"style=form,explode=true,name=item_variant_id"`
 	Limit         *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// The location ID to filter by (reference to CommerceLocation)

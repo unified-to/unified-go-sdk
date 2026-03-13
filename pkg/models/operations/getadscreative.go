@@ -26,14 +26,10 @@ const (
 	GetAdsCreativeQueryParamFieldsWidth                      GetAdsCreativeQueryParamFields = "width"
 	GetAdsCreativeQueryParamFieldsHeight                     GetAdsCreativeQueryParamFields = "height"
 	GetAdsCreativeQueryParamFieldsAssetUrls                  GetAdsCreativeQueryParamFields = "asset_urls"
-	GetAdsCreativeQueryParamFieldsPageIdentifier             GetAdsCreativeQueryParamFields = "page_identifier"
 	GetAdsCreativeQueryParamFieldsLinkURL                    GetAdsCreativeQueryParamFields = "link_url"
 	GetAdsCreativeQueryParamFieldsBody                       GetAdsCreativeQueryParamFields = "body"
 	GetAdsCreativeQueryParamFieldsTitle                      GetAdsCreativeQueryParamFields = "title"
 	GetAdsCreativeQueryParamFieldsCta                        GetAdsCreativeQueryParamFields = "cta"
-	GetAdsCreativeQueryParamFieldsThumbnailURL               GetAdsCreativeQueryParamFields = "thumbnail_url"
-	GetAdsCreativeQueryParamFieldsImageHash                  GetAdsCreativeQueryParamFields = "image_hash"
-	GetAdsCreativeQueryParamFieldsVideoID                    GetAdsCreativeQueryParamFields = "video_id"
 	GetAdsCreativeQueryParamFieldsThirdPartyTag              GetAdsCreativeQueryParamFields = "third_party_tag"
 	GetAdsCreativeQueryParamFieldsVastTagURL                 GetAdsCreativeQueryParamFields = "vast_tag_url"
 	GetAdsCreativeQueryParamFieldsExternalCreativeReference  GetAdsCreativeQueryParamFields = "external_creative_reference"
@@ -82,8 +78,6 @@ func (e *GetAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "asset_urls":
 		fallthrough
-	case "page_identifier":
-		fallthrough
 	case "link_url":
 		fallthrough
 	case "body":
@@ -91,12 +85,6 @@ func (e *GetAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "title":
 		fallthrough
 	case "cta":
-		fallthrough
-	case "thumbnail_url":
-		fallthrough
-	case "image_hash":
-		fallthrough
-	case "video_id":
 		fallthrough
 	case "third_party_tag":
 		fallthrough

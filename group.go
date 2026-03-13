@@ -2718,6 +2718,7 @@ func (s *Group) RemoveAdsGroup(ctx context.Context, request operations.RemoveAds
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2899,6 +2900,7 @@ func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHr
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -3080,6 +3082,7 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

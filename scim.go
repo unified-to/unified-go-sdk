@@ -1868,6 +1868,7 @@ func (s *Scim) RemoveScimGroups(ctx context.Context, request operations.RemoveSc
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -2049,6 +2050,7 @@ func (s *Scim) RemoveScimUsers(ctx context.Context, request operations.RemoveSci
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

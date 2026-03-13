@@ -1046,6 +1046,7 @@ func (s *Subscription) RemovePaymentSubscription(ctx context.Context, request op
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

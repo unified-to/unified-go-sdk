@@ -41,9 +41,6 @@ value := operations.ListAdsGroupsQueryParamFieldsID
 | `ListAdsGroupsQueryParamFieldsCreativeIds`          | creative_ids                                        |
 | `ListAdsGroupsQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
 | `ListAdsGroupsQueryParamFieldsBillingEvent`         | billing_event                                       |
-| `ListAdsGroupsQueryParamFieldsDailySpendCap`        | daily_spend_cap                                     |
-| `ListAdsGroupsQueryParamFieldsLifetimeSpendCap`     | lifetime_spend_cap                                  |
-| `ListAdsGroupsQueryParamFieldsAdGroupType`          | ad_group_type                                       |
 | `ListAdsGroupsQueryParamFieldsCurrency`             | currency                                            |
 | `ListAdsGroupsQueryParamFieldsMetadata`             | metadata                                            |
 | `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

@@ -1040,6 +1040,7 @@ func (s *Webhook) PatchUnifiedWebhookTrigger(ctx context.Context, request operat
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -1221,6 +1222,7 @@ func (s *Webhook) RemoveUnifiedWebhook(ctx context.Context, request operations.R
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -1612,6 +1614,7 @@ func (s *Webhook) UpdateUnifiedWebhookTrigger(ctx context.Context, request opera
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

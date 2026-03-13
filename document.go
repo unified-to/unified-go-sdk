@@ -1046,6 +1046,7 @@ func (s *Document) RemoveAtsDocument(ctx context.Context, request operations.Rem
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

@@ -5463,6 +5463,7 @@ func (s *Ads) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdReq
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5644,6 +5645,7 @@ func (s *Ads) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAd
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -5825,6 +5827,7 @@ func (s *Ads) RemoveAdsCreative(ctx context.Context, request operations.RemoveAd
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6006,6 +6009,7 @@ func (s *Ads) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGr
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6187,6 +6191,7 @@ func (s *Ads) RemoveAdsInsertionorder(ctx context.Context, request operations.Re
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 
@@ -6368,6 +6373,7 @@ func (s *Ads) RemoveAdsOrganization(ctx context.Context, request operations.Remo
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

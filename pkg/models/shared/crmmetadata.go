@@ -22,6 +22,9 @@ func (c *CrmMetadata1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
+// #region class-body-crmmetadata1
+// #endregion class-body-crmmetadata1
+
 type CrmMetadata5Type string
 
 const (
@@ -304,6 +307,9 @@ func (c *CrmMetadataSchemas1) UnmarshalJSON(data []byte) error {
 	}
 	return nil
 }
+
+// #region class-body-crmmetadataschemas1
+// #endregion class-body-crmmetadataschemas1
 
 type CrmMetadataSchemas5Type string
 

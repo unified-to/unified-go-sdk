@@ -1,7 +1,5 @@
 # MarketingCampaign
 
-A marketing campaign or email send
-
 
 ## Fields
 
@@ -11,7 +9,7 @@ A marketing campaign or email send
 | `FromEmail`                                                                              | `*string`                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
 | `FromName`                                                                               | `*string`                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
 | `ID`                                                                                     | `*string`                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
-| `ListIds`                                                                                | []`string`                                                                               | :heavy_minus_sign:                                                                       | Associated list/audience IDs                                                             |
+| `ListIds`                                                                                | []`string`                                                                               | :heavy_minus_sign:                                                                       | Associated listaudience IDs                                                              |
 | `Name`                                                                                   | `*string`                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
 | `PreviewText`                                                                            | `*string`                                                                                | :heavy_minus_sign:                                                                       | N/A                                                                                      |
 | `Raw`                                                                                    | map[string]`any`                                                                         | :heavy_minus_sign:                                                                       | N/A                                                                                      |

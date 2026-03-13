@@ -1046,6 +1046,7 @@ func (s *Space) RemoveKmsSpace(ctx context.Context, request operations.RemoveKms
 		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
 	default:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	}
 

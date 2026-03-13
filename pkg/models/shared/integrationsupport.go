@@ -2,12 +2,6 @@
 
 package shared
 
-import (
-	"errors"
-	"fmt"
-	"github.com/unified-to/unified-go-sdk/pkg/utils"
-)
-
 type FromWebhook string
 
 const (
@@ -2193,254 +2187,27 @@ func (e *VirtualWebhookApplicationID) IsExact() bool {
 	return false
 }
 
-type IntegrationSupport1 struct {
-}
-
-func (i IntegrationSupport1) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(i, "", false)
-}
-
-func (i *IntegrationSupport1) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
-		return err
-	}
-	return nil
-}
-
-type IntegrationSupport5Type string
+type VirtualWebhookBenefitID string
 
 const (
-	IntegrationSupport5TypeIntegrationSupport1 IntegrationSupport5Type = "IntegrationSupport_1"
-	IntegrationSupport5TypeStr                 IntegrationSupport5Type = "str"
-	IntegrationSupport5TypeNumber              IntegrationSupport5Type = "number"
-	IntegrationSupport5TypeBoolean             IntegrationSupport5Type = "boolean"
+	VirtualWebhookBenefitIDSupportedRequired VirtualWebhookBenefitID = "supported-required"
+	VirtualWebhookBenefitIDSupported         VirtualWebhookBenefitID = "supported"
+	VirtualWebhookBenefitIDNotSupported      VirtualWebhookBenefitID = "not-supported"
 )
 
-type IntegrationSupport5 struct {
-	IntegrationSupport1 *IntegrationSupport1 `queryParam:"inline" union:"member"`
-	Str                 *string              `queryParam:"inline" union:"member"`
-	Number              *float64             `queryParam:"inline" union:"member"`
-	Boolean             *bool                `queryParam:"inline" union:"member"`
-
-	Type IntegrationSupport5Type
+func (e VirtualWebhookBenefitID) ToPointer() *VirtualWebhookBenefitID {
+	return &e
 }
 
-func CreateIntegrationSupport5IntegrationSupport1(integrationSupport1 IntegrationSupport1) IntegrationSupport5 {
-	typ := IntegrationSupport5TypeIntegrationSupport1
-
-	return IntegrationSupport5{
-		IntegrationSupport1: &integrationSupport1,
-		Type:                typ,
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBenefitID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
 	}
-}
-
-func CreateIntegrationSupport5Str(str string) IntegrationSupport5 {
-	typ := IntegrationSupport5TypeStr
-
-	return IntegrationSupport5{
-		Str:  &str,
-		Type: typ,
-	}
-}
-
-func CreateIntegrationSupport5Number(number float64) IntegrationSupport5 {
-	typ := IntegrationSupport5TypeNumber
-
-	return IntegrationSupport5{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateIntegrationSupport5Boolean(boolean bool) IntegrationSupport5 {
-	typ := IntegrationSupport5TypeBoolean
-
-	return IntegrationSupport5{
-		Boolean: &boolean,
-		Type:    typ,
-	}
-}
-
-func (u *IntegrationSupport5) UnmarshalJSON(data []byte) error {
-
-	var integrationSupport1 IntegrationSupport1 = IntegrationSupport1{}
-	if err := utils.UnmarshalJSON(data, &integrationSupport1, "", true, nil); err == nil {
-		u.IntegrationSupport1 = &integrationSupport1
-		u.Type = IntegrationSupport5TypeIntegrationSupport1
-		return nil
-	}
-
-	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
-		u.Str = &str
-		u.Type = IntegrationSupport5TypeStr
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
-		u.Number = &number
-		u.Type = IntegrationSupport5TypeNumber
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
-		u.Boolean = &boolean
-		u.Type = IntegrationSupport5TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSupport5", string(data))
-}
-
-func (u IntegrationSupport5) MarshalJSON() ([]byte, error) {
-	if u.IntegrationSupport1 != nil {
-		return utils.MarshalJSON(u.IntegrationSupport1, "", true)
-	}
-
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type IntegrationSupport5: all fields are null")
-}
-
-type VirtualWebhookBenefitIDType string
-
-const (
-	VirtualWebhookBenefitIDTypeMapOfAny                   VirtualWebhookBenefitIDType = "mapOfAny"
-	VirtualWebhookBenefitIDTypeStr                        VirtualWebhookBenefitIDType = "str"
-	VirtualWebhookBenefitIDTypeNumber                     VirtualWebhookBenefitIDType = "number"
-	VirtualWebhookBenefitIDTypeBoolean                    VirtualWebhookBenefitIDType = "boolean"
-	VirtualWebhookBenefitIDTypeArrayOfIntegrationSupport5 VirtualWebhookBenefitIDType = "arrayOfIntegrationSupport5"
-)
-
-type VirtualWebhookBenefitID struct {
-	MapOfAny                   map[string]any        `queryParam:"inline" union:"member"`
-	Str                        *string               `queryParam:"inline" union:"member"`
-	Number                     *float64              `queryParam:"inline" union:"member"`
-	Boolean                    *bool                 `queryParam:"inline" union:"member"`
-	ArrayOfIntegrationSupport5 []IntegrationSupport5 `queryParam:"inline" union:"member"`
-
-	Type VirtualWebhookBenefitIDType
-}
-
-func CreateVirtualWebhookBenefitIDMapOfAny(mapOfAny map[string]any) VirtualWebhookBenefitID {
-	typ := VirtualWebhookBenefitIDTypeMapOfAny
-
-	return VirtualWebhookBenefitID{
-		MapOfAny: mapOfAny,
-		Type:     typ,
-	}
-}
-
-func CreateVirtualWebhookBenefitIDStr(str string) VirtualWebhookBenefitID {
-	typ := VirtualWebhookBenefitIDTypeStr
-
-	return VirtualWebhookBenefitID{
-		Str:  &str,
-		Type: typ,
-	}
-}
-
-func CreateVirtualWebhookBenefitIDNumber(number float64) VirtualWebhookBenefitID {
-	typ := VirtualWebhookBenefitIDTypeNumber
-
-	return VirtualWebhookBenefitID{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateVirtualWebhookBenefitIDBoolean(boolean bool) VirtualWebhookBenefitID {
-	typ := VirtualWebhookBenefitIDTypeBoolean
-
-	return VirtualWebhookBenefitID{
-		Boolean: &boolean,
-		Type:    typ,
-	}
-}
-
-func CreateVirtualWebhookBenefitIDArrayOfIntegrationSupport5(arrayOfIntegrationSupport5 []IntegrationSupport5) VirtualWebhookBenefitID {
-	typ := VirtualWebhookBenefitIDTypeArrayOfIntegrationSupport5
-
-	return VirtualWebhookBenefitID{
-		ArrayOfIntegrationSupport5: arrayOfIntegrationSupport5,
-		Type:                       typ,
-	}
-}
-
-func (u *VirtualWebhookBenefitID) UnmarshalJSON(data []byte) error {
-
-	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
-		u.MapOfAny = mapOfAny
-		u.Type = VirtualWebhookBenefitIDTypeMapOfAny
-		return nil
-	}
-
-	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
-		u.Str = &str
-		u.Type = VirtualWebhookBenefitIDTypeStr
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
-		u.Number = &number
-		u.Type = VirtualWebhookBenefitIDTypeNumber
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
-		u.Boolean = &boolean
-		u.Type = VirtualWebhookBenefitIDTypeBoolean
-		return nil
-	}
-
-	var arrayOfIntegrationSupport5 []IntegrationSupport5 = []IntegrationSupport5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSupport5, "", true, nil); err == nil {
-		u.ArrayOfIntegrationSupport5 = arrayOfIntegrationSupport5
-		u.Type = VirtualWebhookBenefitIDTypeArrayOfIntegrationSupport5
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for VirtualWebhookBenefitID", string(data))
-}
-
-func (u VirtualWebhookBenefitID) MarshalJSON() ([]byte, error) {
-	if u.MapOfAny != nil {
-		return utils.MarshalJSON(u.MapOfAny, "", true)
-	}
-
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.ArrayOfIntegrationSupport5 != nil {
-		return utils.MarshalJSON(u.ArrayOfIntegrationSupport5, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type VirtualWebhookBenefitID: all fields are null")
+	return false
 }
 
 type VirtualWebhookBillID string
@@ -3248,254 +3015,27 @@ func (e *VirtualWebhookParentID) IsExact() bool {
 	return false
 }
 
-type IntegrationSupportSchemas1 struct {
-}
-
-func (i IntegrationSupportSchemas1) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(i, "", false)
-}
-
-func (i *IntegrationSupportSchemas1) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &i, "", false, nil); err != nil {
-		return err
-	}
-	return nil
-}
-
-type IntegrationSupportSchemas5Type string
+type VirtualWebhookPaymentID string
 
 const (
-	IntegrationSupportSchemas5TypeIntegrationSupportSchemas1 IntegrationSupportSchemas5Type = "IntegrationSupport_Schemas_1"
-	IntegrationSupportSchemas5TypeStr                        IntegrationSupportSchemas5Type = "str"
-	IntegrationSupportSchemas5TypeNumber                     IntegrationSupportSchemas5Type = "number"
-	IntegrationSupportSchemas5TypeBoolean                    IntegrationSupportSchemas5Type = "boolean"
+	VirtualWebhookPaymentIDSupportedRequired VirtualWebhookPaymentID = "supported-required"
+	VirtualWebhookPaymentIDSupported         VirtualWebhookPaymentID = "supported"
+	VirtualWebhookPaymentIDNotSupported      VirtualWebhookPaymentID = "not-supported"
 )
 
-type IntegrationSupportSchemas5 struct {
-	IntegrationSupportSchemas1 *IntegrationSupportSchemas1 `queryParam:"inline" union:"member"`
-	Str                        *string                     `queryParam:"inline" union:"member"`
-	Number                     *float64                    `queryParam:"inline" union:"member"`
-	Boolean                    *bool                       `queryParam:"inline" union:"member"`
-
-	Type IntegrationSupportSchemas5Type
+func (e VirtualWebhookPaymentID) ToPointer() *VirtualWebhookPaymentID {
+	return &e
 }
 
-func CreateIntegrationSupportSchemas5IntegrationSupportSchemas1(integrationSupportSchemas1 IntegrationSupportSchemas1) IntegrationSupportSchemas5 {
-	typ := IntegrationSupportSchemas5TypeIntegrationSupportSchemas1
-
-	return IntegrationSupportSchemas5{
-		IntegrationSupportSchemas1: &integrationSupportSchemas1,
-		Type:                       typ,
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookPaymentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
 	}
-}
-
-func CreateIntegrationSupportSchemas5Str(str string) IntegrationSupportSchemas5 {
-	typ := IntegrationSupportSchemas5TypeStr
-
-	return IntegrationSupportSchemas5{
-		Str:  &str,
-		Type: typ,
-	}
-}
-
-func CreateIntegrationSupportSchemas5Number(number float64) IntegrationSupportSchemas5 {
-	typ := IntegrationSupportSchemas5TypeNumber
-
-	return IntegrationSupportSchemas5{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateIntegrationSupportSchemas5Boolean(boolean bool) IntegrationSupportSchemas5 {
-	typ := IntegrationSupportSchemas5TypeBoolean
-
-	return IntegrationSupportSchemas5{
-		Boolean: &boolean,
-		Type:    typ,
-	}
-}
-
-func (u *IntegrationSupportSchemas5) UnmarshalJSON(data []byte) error {
-
-	var integrationSupportSchemas1 IntegrationSupportSchemas1 = IntegrationSupportSchemas1{}
-	if err := utils.UnmarshalJSON(data, &integrationSupportSchemas1, "", true, nil); err == nil {
-		u.IntegrationSupportSchemas1 = &integrationSupportSchemas1
-		u.Type = IntegrationSupportSchemas5TypeIntegrationSupportSchemas1
-		return nil
-	}
-
-	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
-		u.Str = &str
-		u.Type = IntegrationSupportSchemas5TypeStr
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
-		u.Number = &number
-		u.Type = IntegrationSupportSchemas5TypeNumber
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
-		u.Boolean = &boolean
-		u.Type = IntegrationSupportSchemas5TypeBoolean
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for IntegrationSupportSchemas5", string(data))
-}
-
-func (u IntegrationSupportSchemas5) MarshalJSON() ([]byte, error) {
-	if u.IntegrationSupportSchemas1 != nil {
-		return utils.MarshalJSON(u.IntegrationSupportSchemas1, "", true)
-	}
-
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type IntegrationSupportSchemas5: all fields are null")
-}
-
-type VirtualWebhookPaymentIDType string
-
-const (
-	VirtualWebhookPaymentIDTypeMapOfAny                          VirtualWebhookPaymentIDType = "mapOfAny"
-	VirtualWebhookPaymentIDTypeStr                               VirtualWebhookPaymentIDType = "str"
-	VirtualWebhookPaymentIDTypeNumber                            VirtualWebhookPaymentIDType = "number"
-	VirtualWebhookPaymentIDTypeBoolean                           VirtualWebhookPaymentIDType = "boolean"
-	VirtualWebhookPaymentIDTypeArrayOfIntegrationSupportSchemas5 VirtualWebhookPaymentIDType = "arrayOfIntegrationSupportSchemas5"
-)
-
-type VirtualWebhookPaymentID struct {
-	MapOfAny                          map[string]any               `queryParam:"inline" union:"member"`
-	Str                               *string                      `queryParam:"inline" union:"member"`
-	Number                            *float64                     `queryParam:"inline" union:"member"`
-	Boolean                           *bool                        `queryParam:"inline" union:"member"`
-	ArrayOfIntegrationSupportSchemas5 []IntegrationSupportSchemas5 `queryParam:"inline" union:"member"`
-
-	Type VirtualWebhookPaymentIDType
-}
-
-func CreateVirtualWebhookPaymentIDMapOfAny(mapOfAny map[string]any) VirtualWebhookPaymentID {
-	typ := VirtualWebhookPaymentIDTypeMapOfAny
-
-	return VirtualWebhookPaymentID{
-		MapOfAny: mapOfAny,
-		Type:     typ,
-	}
-}
-
-func CreateVirtualWebhookPaymentIDStr(str string) VirtualWebhookPaymentID {
-	typ := VirtualWebhookPaymentIDTypeStr
-
-	return VirtualWebhookPaymentID{
-		Str:  &str,
-		Type: typ,
-	}
-}
-
-func CreateVirtualWebhookPaymentIDNumber(number float64) VirtualWebhookPaymentID {
-	typ := VirtualWebhookPaymentIDTypeNumber
-
-	return VirtualWebhookPaymentID{
-		Number: &number,
-		Type:   typ,
-	}
-}
-
-func CreateVirtualWebhookPaymentIDBoolean(boolean bool) VirtualWebhookPaymentID {
-	typ := VirtualWebhookPaymentIDTypeBoolean
-
-	return VirtualWebhookPaymentID{
-		Boolean: &boolean,
-		Type:    typ,
-	}
-}
-
-func CreateVirtualWebhookPaymentIDArrayOfIntegrationSupportSchemas5(arrayOfIntegrationSupportSchemas5 []IntegrationSupportSchemas5) VirtualWebhookPaymentID {
-	typ := VirtualWebhookPaymentIDTypeArrayOfIntegrationSupportSchemas5
-
-	return VirtualWebhookPaymentID{
-		ArrayOfIntegrationSupportSchemas5: arrayOfIntegrationSupportSchemas5,
-		Type:                              typ,
-	}
-}
-
-func (u *VirtualWebhookPaymentID) UnmarshalJSON(data []byte) error {
-
-	var mapOfAny map[string]any = map[string]any{}
-	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
-		u.MapOfAny = mapOfAny
-		u.Type = VirtualWebhookPaymentIDTypeMapOfAny
-		return nil
-	}
-
-	var str string = ""
-	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
-		u.Str = &str
-		u.Type = VirtualWebhookPaymentIDTypeStr
-		return nil
-	}
-
-	var number float64 = float64(0)
-	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
-		u.Number = &number
-		u.Type = VirtualWebhookPaymentIDTypeNumber
-		return nil
-	}
-
-	var boolean bool = false
-	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
-		u.Boolean = &boolean
-		u.Type = VirtualWebhookPaymentIDTypeBoolean
-		return nil
-	}
-
-	var arrayOfIntegrationSupportSchemas5 []IntegrationSupportSchemas5 = []IntegrationSupportSchemas5{}
-	if err := utils.UnmarshalJSON(data, &arrayOfIntegrationSupportSchemas5, "", true, nil); err == nil {
-		u.ArrayOfIntegrationSupportSchemas5 = arrayOfIntegrationSupportSchemas5
-		u.Type = VirtualWebhookPaymentIDTypeArrayOfIntegrationSupportSchemas5
-		return nil
-	}
-
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for VirtualWebhookPaymentID", string(data))
-}
-
-func (u VirtualWebhookPaymentID) MarshalJSON() ([]byte, error) {
-	if u.MapOfAny != nil {
-		return utils.MarshalJSON(u.MapOfAny, "", true)
-	}
-
-	if u.Str != nil {
-		return utils.MarshalJSON(u.Str, "", true)
-	}
-
-	if u.Number != nil {
-		return utils.MarshalJSON(u.Number, "", true)
-	}
-
-	if u.Boolean != nil {
-		return utils.MarshalJSON(u.Boolean, "", true)
-	}
-
-	if u.ArrayOfIntegrationSupportSchemas5 != nil {
-		return utils.MarshalJSON(u.ArrayOfIntegrationSupportSchemas5, "", true)
-	}
-
-	return nil, errors.New("could not marshal union type VirtualWebhookPaymentID: all fields are null")
+	return false
 }
 
 type VirtualWebhookPipelineID string

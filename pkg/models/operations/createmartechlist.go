@@ -12,22 +12,23 @@ import (
 type CreateMartechListQueryParamFields string
 
 const (
-	CreateMartechListQueryParamFieldsID          CreateMartechListQueryParamFields = "id"
-	CreateMartechListQueryParamFieldsCreatedAt   CreateMartechListQueryParamFields = "created_at"
-	CreateMartechListQueryParamFieldsUpdatedAt   CreateMartechListQueryParamFields = "updated_at"
-	CreateMartechListQueryParamFieldsName        CreateMartechListQueryParamFields = "name"
-	CreateMartechListQueryParamFieldsDescription CreateMartechListQueryParamFields = "description"
-	CreateMartechListQueryParamFieldsStartAt     CreateMartechListQueryParamFields = "start_at"
-	CreateMartechListQueryParamFieldsEndAt       CreateMartechListQueryParamFields = "end_at"
-	CreateMartechListQueryParamFieldsUserID      CreateMartechListQueryParamFields = "user_id"
-	CreateMartechListQueryParamFieldsIsActive    CreateMartechListQueryParamFields = "is_active"
-	CreateMartechListQueryParamFieldsState       CreateMartechListQueryParamFields = "state"
-	CreateMartechListQueryParamFieldsFromName    CreateMartechListQueryParamFields = "from_name"
-	CreateMartechListQueryParamFieldsFromEmail   CreateMartechListQueryParamFields = "from_email"
-	CreateMartechListQueryParamFieldsSubject     CreateMartechListQueryParamFields = "subject"
-	CreateMartechListQueryParamFieldsLanguage    CreateMartechListQueryParamFields = "language"
-	CreateMartechListQueryParamFieldsAddress     CreateMartechListQueryParamFields = "address"
-	CreateMartechListQueryParamFieldsRaw         CreateMartechListQueryParamFields = "raw"
+	CreateMartechListQueryParamFieldsID            CreateMartechListQueryParamFields = "id"
+	CreateMartechListQueryParamFieldsCreatedAt     CreateMartechListQueryParamFields = "created_at"
+	CreateMartechListQueryParamFieldsUpdatedAt     CreateMartechListQueryParamFields = "updated_at"
+	CreateMartechListQueryParamFieldsName          CreateMartechListQueryParamFields = "name"
+	CreateMartechListQueryParamFieldsDescription   CreateMartechListQueryParamFields = "description"
+	CreateMartechListQueryParamFieldsStartAt       CreateMartechListQueryParamFields = "start_at"
+	CreateMartechListQueryParamFieldsEndAt         CreateMartechListQueryParamFields = "end_at"
+	CreateMartechListQueryParamFieldsUserID        CreateMartechListQueryParamFields = "user_id"
+	CreateMartechListQueryParamFieldsIsActive      CreateMartechListQueryParamFields = "is_active"
+	CreateMartechListQueryParamFieldsAddress       CreateMartechListQueryParamFields = "address"
+	CreateMartechListQueryParamFieldsSubject       CreateMartechListQueryParamFields = "subject"
+	CreateMartechListQueryParamFieldsSenderName    CreateMartechListQueryParamFields = "sender_name"
+	CreateMartechListQueryParamFieldsSenderEmail   CreateMartechListQueryParamFields = "sender_email"
+	CreateMartechListQueryParamFieldsLanguage      CreateMartechListQueryParamFields = "language"
+	CreateMartechListQueryParamFieldsSenderCompany CreateMartechListQueryParamFields = "sender_company"
+	CreateMartechListQueryParamFieldsSenderPhone   CreateMartechListQueryParamFields = "sender_phone"
+	CreateMartechListQueryParamFieldsRaw           CreateMartechListQueryParamFields = "raw"
 )
 
 func (e CreateMartechListQueryParamFields) ToPointer() *CreateMartechListQueryParamFields {
@@ -57,17 +58,19 @@ func (e *CreateMartechListQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "is_active":
 		fallthrough
-	case "state":
-		fallthrough
-	case "from_name":
-		fallthrough
-	case "from_email":
+	case "address":
 		fallthrough
 	case "subject":
 		fallthrough
+	case "sender_name":
+		fallthrough
+	case "sender_email":
+		fallthrough
 	case "language":
 		fallthrough
-	case "address":
+	case "sender_company":
+		fallthrough
+	case "sender_phone":
 		fallthrough
 	case "raw":
 		*e = CreateMartechListQueryParamFields(v)

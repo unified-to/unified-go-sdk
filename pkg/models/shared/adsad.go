@@ -67,32 +67,27 @@ func (e *AdsAdStatus) IsExact() bool {
 }
 
 type AdsAd struct {
-	AdCopy           *string                 `json:"ad_copy,omitempty"`
-	AdType           *AdType                 `json:"ad_type,omitempty"`
-	CampaignID       *string                 `json:"campaign_id,omitempty"`
-	CreatedAt        *time.Time              `json:"created_at,omitempty"`
-	CreativeAssetURL *string                 `json:"creative_asset_url,omitempty"`
-	CreativeIds      []string                `json:"creative_ids,omitempty"`
-	Cta              *string                 `json:"cta,omitempty"`
-	Description      *string                 `json:"description,omitempty"`
-	DisplayURL       *string                 `json:"display_url,omitempty"`
-	EndAt            *time.Time              `json:"end_at,omitempty"`
-	FinalURL         *string                 `json:"final_url,omitempty"`
-	GroupID          *string                 `json:"group_id,omitempty"`
-	Headline         *string                 `json:"headline,omitempty"`
-	ID               *string                 `json:"id,omitempty"`
-	IsActive         *bool                   `json:"is_active,omitempty"`
-	ItemID           *string                 `json:"item_id,omitempty"`
-	Metadata         []AdsMetadata           `json:"metadata,omitempty"`
-	Name             *string                 `json:"name,omitempty"`
-	OrganizationID   *string                 `json:"organization_id,omitempty"`
-	Path1            *string                 `json:"path1,omitempty"`
-	Path2            *string                 `json:"path2,omitempty"`
-	Raw              map[string]any          `json:"raw,omitempty"`
-	StartAt          *time.Time              `json:"start_at,omitempty"`
-	Status           *AdsAdStatus            `json:"status,omitempty"`
-	Targeting        *PropertyAdsAdTargeting `json:"targeting,omitempty"`
-	UpdatedAt        *time.Time              `json:"updated_at,omitempty"`
+	AdCopy           *string        `json:"ad_copy,omitempty"`
+	AdType           *AdType        `json:"ad_type,omitempty"`
+	CampaignID       *string        `json:"campaign_id,omitempty"`
+	CreatedAt        *time.Time     `json:"created_at,omitempty"`
+	CreativeAssetURL *string        `json:"creative_asset_url,omitempty"`
+	CreativeIds      []string       `json:"creative_ids,omitempty"`
+	Cta              *string        `json:"cta,omitempty"`
+	Description      *string        `json:"description,omitempty"`
+	DisplayURL       *string        `json:"display_url,omitempty"`
+	FinalURL         *string        `json:"final_url,omitempty"`
+	GroupID          *string        `json:"group_id,omitempty"`
+	Headline         *string        `json:"headline,omitempty"`
+	ID               *string        `json:"id,omitempty"`
+	Metadata         []AdsMetadata  `json:"metadata,omitempty"`
+	Name             *string        `json:"name,omitempty"`
+	OrganizationID   *string        `json:"organization_id,omitempty"`
+	Path1            *string        `json:"path1,omitempty"`
+	Path2            *string        `json:"path2,omitempty"`
+	Raw              map[string]any `json:"raw,omitempty"`
+	Status           *AdsAdStatus   `json:"status,omitempty"`
+	UpdatedAt        *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (a AdsAd) MarshalJSON() ([]byte, error) {
@@ -169,13 +164,6 @@ func (a *AdsAd) GetDisplayURL() *string {
 	return a.DisplayURL
 }
 
-func (a *AdsAd) GetEndAt() *time.Time {
-	if a == nil {
-		return nil
-	}
-	return a.EndAt
-}
-
 func (a *AdsAd) GetFinalURL() *string {
 	if a == nil {
 		return nil
@@ -202,20 +190,6 @@ func (a *AdsAd) GetID() *string {
 		return nil
 	}
 	return a.ID
-}
-
-func (a *AdsAd) GetIsActive() *bool {
-	if a == nil {
-		return nil
-	}
-	return a.IsActive
-}
-
-func (a *AdsAd) GetItemID() *string {
-	if a == nil {
-		return nil
-	}
-	return a.ItemID
 }
 
 func (a *AdsAd) GetMetadata() []AdsMetadata {
@@ -260,25 +234,11 @@ func (a *AdsAd) GetRaw() map[string]any {
 	return a.Raw
 }
 
-func (a *AdsAd) GetStartAt() *time.Time {
-	if a == nil {
-		return nil
-	}
-	return a.StartAt
-}
-
 func (a *AdsAd) GetStatus() *AdsAdStatus {
 	if a == nil {
 		return nil
 	}
 	return a.Status
-}
-
-func (a *AdsAd) GetTargeting() *PropertyAdsAdTargeting {
-	if a == nil {
-		return nil
-	}
-	return a.Targeting
 }
 
 func (a *AdsAd) GetUpdatedAt() *time.Time {

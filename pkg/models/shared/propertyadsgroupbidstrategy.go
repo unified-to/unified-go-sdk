@@ -2,26 +2,26 @@
 
 package shared
 
-type PropertyAdsGroupBidStrategyPerformanceGoalType string
+type PerformanceGoalType string
 
 const (
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeUnspecified PropertyAdsGroupBidStrategyPerformanceGoalType = "UNSPECIFIED"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeCpa         PropertyAdsGroupBidStrategyPerformanceGoalType = "CPA"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeCpc         PropertyAdsGroupBidStrategyPerformanceGoalType = "CPC"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeViewableCpm PropertyAdsGroupBidStrategyPerformanceGoalType = "VIEWABLE_CPM"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeCustomAlgo  PropertyAdsGroupBidStrategyPerformanceGoalType = "CUSTOM_ALGO"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeCiva        PropertyAdsGroupBidStrategyPerformanceGoalType = "CIVA"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeIvoTen      PropertyAdsGroupBidStrategyPerformanceGoalType = "IVO_TEN"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeAvViewed    PropertyAdsGroupBidStrategyPerformanceGoalType = "AV_VIEWED"
-	PropertyAdsGroupBidStrategyPerformanceGoalTypeReach       PropertyAdsGroupBidStrategyPerformanceGoalType = "REACH"
+	PerformanceGoalTypeUnspecified PerformanceGoalType = "UNSPECIFIED"
+	PerformanceGoalTypeCpa         PerformanceGoalType = "CPA"
+	PerformanceGoalTypeCpc         PerformanceGoalType = "CPC"
+	PerformanceGoalTypeViewableCpm PerformanceGoalType = "VIEWABLE_CPM"
+	PerformanceGoalTypeCustomAlgo  PerformanceGoalType = "CUSTOM_ALGO"
+	PerformanceGoalTypeCiva        PerformanceGoalType = "CIVA"
+	PerformanceGoalTypeIvoTen      PerformanceGoalType = "IVO_TEN"
+	PerformanceGoalTypeAvViewed    PerformanceGoalType = "AV_VIEWED"
+	PerformanceGoalTypeReach       PerformanceGoalType = "REACH"
 )
 
-func (e PropertyAdsGroupBidStrategyPerformanceGoalType) ToPointer() *PropertyAdsGroupBidStrategyPerformanceGoalType {
+func (e PerformanceGoalType) ToPointer() *PerformanceGoalType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *PropertyAdsGroupBidStrategyPerformanceGoalType) IsExact() bool {
+func (e *PerformanceGoalType) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "UNSPECIFIED", "CPA", "CPC", "VIEWABLE_CPM", "CUSTOM_ALGO", "CIVA", "IVO_TEN", "AV_VIEWED", "REACH":
@@ -55,28 +55,28 @@ func (e *PropertyAdsGroupBidStrategyType) IsExact() bool {
 	return false
 }
 
-type PropertyAdsGroupBidStrategyYoutubeAndPartnersType string
+type YoutubeAndPartnersType string
 
 const (
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeUnspecified             PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "UNSPECIFIED"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeManualCpv               PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "MANUAL_CPV"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeManualCpm               PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "MANUAL_CPM"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeTargetCpa               PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "TARGET_CPA"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeTargetCpm               PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "TARGET_CPM"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeReserveCpm              PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "RESERVE_CPM"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeMaximizeLift            PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "MAXIMIZE_LIFT"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeMaximizeConversions     PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "MAXIMIZE_CONVERSIONS"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeTargetCpv               PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "TARGET_CPV"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeTargetRoas              PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "TARGET_ROAS"
-	PropertyAdsGroupBidStrategyYoutubeAndPartnersTypeMaximizeConversionValue PropertyAdsGroupBidStrategyYoutubeAndPartnersType = "MAXIMIZE_CONVERSION_VALUE"
+	YoutubeAndPartnersTypeUnspecified             YoutubeAndPartnersType = "UNSPECIFIED"
+	YoutubeAndPartnersTypeManualCpv               YoutubeAndPartnersType = "MANUAL_CPV"
+	YoutubeAndPartnersTypeManualCpm               YoutubeAndPartnersType = "MANUAL_CPM"
+	YoutubeAndPartnersTypeTargetCpa               YoutubeAndPartnersType = "TARGET_CPA"
+	YoutubeAndPartnersTypeTargetCpm               YoutubeAndPartnersType = "TARGET_CPM"
+	YoutubeAndPartnersTypeReserveCpm              YoutubeAndPartnersType = "RESERVE_CPM"
+	YoutubeAndPartnersTypeMaximizeLift            YoutubeAndPartnersType = "MAXIMIZE_LIFT"
+	YoutubeAndPartnersTypeMaximizeConversions     YoutubeAndPartnersType = "MAXIMIZE_CONVERSIONS"
+	YoutubeAndPartnersTypeTargetCpv               YoutubeAndPartnersType = "TARGET_CPV"
+	YoutubeAndPartnersTypeTargetRoas              YoutubeAndPartnersType = "TARGET_ROAS"
+	YoutubeAndPartnersTypeMaximizeConversionValue YoutubeAndPartnersType = "MAXIMIZE_CONVERSION_VALUE"
 )
 
-func (e PropertyAdsGroupBidStrategyYoutubeAndPartnersType) ToPointer() *PropertyAdsGroupBidStrategyYoutubeAndPartnersType {
+func (e YoutubeAndPartnersType) ToPointer() *YoutubeAndPartnersType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *PropertyAdsGroupBidStrategyYoutubeAndPartnersType) IsExact() bool {
+func (e *YoutubeAndPartnersType) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "UNSPECIFIED", "MANUAL_CPV", "MANUAL_CPM", "TARGET_CPA", "TARGET_CPM", "RESERVE_CPM", "MAXIMIZE_LIFT", "MAXIMIZE_CONVERSIONS", "TARGET_CPV", "TARGET_ROAS", "MAXIMIZE_CONVERSION_VALUE":
@@ -88,16 +88,16 @@ func (e *PropertyAdsGroupBidStrategyYoutubeAndPartnersType) IsExact() bool {
 
 // PropertyAdsGroupBidStrategy - YOUTUBE_AND_PARTNERS
 type PropertyAdsGroupBidStrategy struct {
-	CustomBiddingAlgorithmID *string                                            `json:"custom_bidding_algorithm_id,omitempty"`
-	FixedBidAmount           *float64                                           `json:"fixed_bid_amount,omitempty"`
-	MaxAverageCpmBidAmount   *float64                                           `json:"max_average_cpm_bid_amount,omitempty"`
-	PerformanceGoalAmount    *float64                                           `json:"performance_goal_amount,omitempty"`
-	PerformanceGoalType      *PropertyAdsGroupBidStrategyPerformanceGoalType    `json:"performance_goal_type,omitempty"`
-	RaiseBidForDeals         *bool                                              `json:"raise_bid_for_deals,omitempty"`
-	TargetRoas               *float64                                           `json:"target_roas,omitempty"`
-	Type                     PropertyAdsGroupBidStrategyType                    `json:"type"`
-	YoutubeAndPartnersType   *PropertyAdsGroupBidStrategyYoutubeAndPartnersType `json:"youtube_and_partners_type,omitempty"`
-	YoutubeAndPartnersValue  *string                                            `json:"youtube_and_partners_value,omitempty"`
+	CustomBiddingAlgorithmID *string                         `json:"custom_bidding_algorithm_id,omitempty"`
+	FixedBidAmount           *float64                        `json:"fixed_bid_amount,omitempty"`
+	MaxAverageCpmBidAmount   *float64                        `json:"max_average_cpm_bid_amount,omitempty"`
+	PerformanceGoalAmount    *float64                        `json:"performance_goal_amount,omitempty"`
+	PerformanceGoalType      *PerformanceGoalType            `json:"performance_goal_type,omitempty"`
+	RaiseBidForDeals         *bool                           `json:"raise_bid_for_deals,omitempty"`
+	TargetRoas               *float64                        `json:"target_roas,omitempty"`
+	Type                     PropertyAdsGroupBidStrategyType `json:"type"`
+	YoutubeAndPartnersType   *YoutubeAndPartnersType         `json:"youtube_and_partners_type,omitempty"`
+	YoutubeAndPartnersValue  *string                         `json:"youtube_and_partners_value,omitempty"`
 }
 
 func (p *PropertyAdsGroupBidStrategy) GetCustomBiddingAlgorithmID() *string {
@@ -128,7 +128,7 @@ func (p *PropertyAdsGroupBidStrategy) GetPerformanceGoalAmount() *float64 {
 	return p.PerformanceGoalAmount
 }
 
-func (p *PropertyAdsGroupBidStrategy) GetPerformanceGoalType() *PropertyAdsGroupBidStrategyPerformanceGoalType {
+func (p *PropertyAdsGroupBidStrategy) GetPerformanceGoalType() *PerformanceGoalType {
 	if p == nil {
 		return nil
 	}
@@ -156,7 +156,7 @@ func (p *PropertyAdsGroupBidStrategy) GetType() PropertyAdsGroupBidStrategyType 
 	return p.Type
 }
 
-func (p *PropertyAdsGroupBidStrategy) GetYoutubeAndPartnersType() *PropertyAdsGroupBidStrategyYoutubeAndPartnersType {
+func (p *PropertyAdsGroupBidStrategy) GetYoutubeAndPartnersType() *YoutubeAndPartnersType {
 	if p == nil {
 		return nil
 	}

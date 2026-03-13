@@ -19,7 +19,6 @@ value := operations.UpdateCommerceItemvariantQueryParamFieldsID
 | `UpdateCommerceItemvariantQueryParamFieldsCreatedAt`         | created_at                                                   |
 | `UpdateCommerceItemvariantQueryParamFieldsUpdatedAt`         | updated_at                                                   |
 | `UpdateCommerceItemvariantQueryParamFieldsName`              | name                                                         |
-| `UpdateCommerceItemvariantQueryParamFieldsItems`             | items                                                        |
 | `UpdateCommerceItemvariantQueryParamFieldsPublicName`        | public_name                                                  |
 | `UpdateCommerceItemvariantQueryParamFieldsDescription`       | description                                                  |
 | `UpdateCommerceItemvariantQueryParamFieldsPublicDescription` | public_description                                           |
@@ -42,4 +41,5 @@ value := operations.UpdateCommerceItemvariantQueryParamFieldsID
 | `UpdateCommerceItemvariantQueryParamFieldsInventoryID`       | inventory_id                                                 |
 | `UpdateCommerceItemvariantQueryParamFieldsRequiresShipping`  | requires_shipping                                            |
 | `UpdateCommerceItemvariantQueryParamFieldsMetadata`          | metadata                                                     |
+| `UpdateCommerceItemvariantQueryParamFieldsItems`             | items                                                        |
 | `UpdateCommerceItemvariantQueryParamFieldsRaw`               | raw                                                          |

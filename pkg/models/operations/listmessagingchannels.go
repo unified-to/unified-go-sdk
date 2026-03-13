@@ -12,19 +12,18 @@ import (
 type ListMessagingChannelsQueryParamFields string
 
 const (
-	ListMessagingChannelsQueryParamFieldsID              ListMessagingChannelsQueryParamFields = "id"
-	ListMessagingChannelsQueryParamFieldsCreatedAt       ListMessagingChannelsQueryParamFields = "created_at"
-	ListMessagingChannelsQueryParamFieldsUpdatedAt       ListMessagingChannelsQueryParamFields = "updated_at"
-	ListMessagingChannelsQueryParamFieldsName            ListMessagingChannelsQueryParamFields = "name"
-	ListMessagingChannelsQueryParamFieldsDescription     ListMessagingChannelsQueryParamFields = "description"
-	ListMessagingChannelsQueryParamFieldsParentChannelID ListMessagingChannelsQueryParamFields = "parent_channel_id"
-	ListMessagingChannelsQueryParamFieldsParentID        ListMessagingChannelsQueryParamFields = "parent_id"
-	ListMessagingChannelsQueryParamFieldsHasSubchannels  ListMessagingChannelsQueryParamFields = "has_subchannels"
-	ListMessagingChannelsQueryParamFieldsMembers         ListMessagingChannelsQueryParamFields = "members"
-	ListMessagingChannelsQueryParamFieldsIsActive        ListMessagingChannelsQueryParamFields = "is_active"
-	ListMessagingChannelsQueryParamFieldsIsPrivate       ListMessagingChannelsQueryParamFields = "is_private"
-	ListMessagingChannelsQueryParamFieldsWebURL          ListMessagingChannelsQueryParamFields = "web_url"
-	ListMessagingChannelsQueryParamFieldsRaw             ListMessagingChannelsQueryParamFields = "raw"
+	ListMessagingChannelsQueryParamFieldsID             ListMessagingChannelsQueryParamFields = "id"
+	ListMessagingChannelsQueryParamFieldsCreatedAt      ListMessagingChannelsQueryParamFields = "created_at"
+	ListMessagingChannelsQueryParamFieldsUpdatedAt      ListMessagingChannelsQueryParamFields = "updated_at"
+	ListMessagingChannelsQueryParamFieldsName           ListMessagingChannelsQueryParamFields = "name"
+	ListMessagingChannelsQueryParamFieldsDescription    ListMessagingChannelsQueryParamFields = "description"
+	ListMessagingChannelsQueryParamFieldsParentID       ListMessagingChannelsQueryParamFields = "parent_id"
+	ListMessagingChannelsQueryParamFieldsHasSubchannels ListMessagingChannelsQueryParamFields = "has_subchannels"
+	ListMessagingChannelsQueryParamFieldsMembers        ListMessagingChannelsQueryParamFields = "members"
+	ListMessagingChannelsQueryParamFieldsIsActive       ListMessagingChannelsQueryParamFields = "is_active"
+	ListMessagingChannelsQueryParamFieldsIsPrivate      ListMessagingChannelsQueryParamFields = "is_private"
+	ListMessagingChannelsQueryParamFieldsWebURL         ListMessagingChannelsQueryParamFields = "web_url"
+	ListMessagingChannelsQueryParamFieldsRaw            ListMessagingChannelsQueryParamFields = "raw"
 )
 
 func (e ListMessagingChannelsQueryParamFields) ToPointer() *ListMessagingChannelsQueryParamFields {
@@ -45,8 +44,6 @@ func (e *ListMessagingChannelsQueryParamFields) UnmarshalJSON(data []byte) error
 	case "name":
 		fallthrough
 	case "description":
-		fallthrough
-	case "parent_channel_id":
 		fallthrough
 	case "parent_id":
 		fallthrough

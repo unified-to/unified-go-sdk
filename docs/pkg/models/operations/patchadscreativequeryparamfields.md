@@ -29,14 +29,10 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsWidth`                      | width                                                        |
 | `PatchAdsCreativeQueryParamFieldsHeight`                     | height                                                       |
 | `PatchAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                   |
-| `PatchAdsCreativeQueryParamFieldsPageIdentifier`             | page_identifier                                              |
 | `PatchAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                     |
 | `PatchAdsCreativeQueryParamFieldsBody`                       | body                                                         |
 | `PatchAdsCreativeQueryParamFieldsTitle`                      | title                                                        |
 | `PatchAdsCreativeQueryParamFieldsCta`                        | cta                                                          |
-| `PatchAdsCreativeQueryParamFieldsThumbnailURL`               | thumbnail_url                                                |
-| `PatchAdsCreativeQueryParamFieldsImageHash`                  | image_hash                                                   |
-| `PatchAdsCreativeQueryParamFieldsVideoID`                    | video_id                                                     |
 | `PatchAdsCreativeQueryParamFieldsThirdPartyTag`              | third_party_tag                                              |
 | `PatchAdsCreativeQueryParamFieldsVastTagURL`                 | vast_tag_url                                                 |
 | `PatchAdsCreativeQueryParamFieldsExternalCreativeReference`  | external_creative_reference                                  |
