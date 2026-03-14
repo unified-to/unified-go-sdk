@@ -623,6 +623,29 @@ func (e *ListFormID) IsExact() bool {
 	return false
 }
 
+type ListFulltext string
+
+const (
+	ListFulltextSupportedRequired ListFulltext = "supported-required"
+	ListFulltextSupported         ListFulltext = "supported"
+	ListFulltextNotSupported      ListFulltext = "not-supported"
+)
+
+func (e ListFulltext) ToPointer() *ListFulltext {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListFulltext) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListGroupID string
 
 const (
@@ -3412,6 +3435,7 @@ type IntegrationSupport struct {
 	ListEventID             *ListEventID             `json:"list_event_id,omitempty"`
 	ListExpand              *ListExpand              `json:"list_expand,omitempty"`
 	ListFormID              *ListFormID              `json:"list_form_id,omitempty"`
+	ListFulltext            *ListFulltext            `json:"list_fulltext,omitempty"`
 	ListGroupID             *ListGroupID             `json:"list_group_id,omitempty"`
 	ListInstructorID        *ListInstructorID        `json:"list_instructor_id,omitempty"`
 	ListInterviewID         *ListInterviewID         `json:"list_interview_id,omitempty"`
@@ -3734,6 +3758,13 @@ func (i *IntegrationSupport) GetListFormID() *ListFormID {
 		return nil
 	}
 	return i.ListFormID
+}
+
+func (i *IntegrationSupport) GetListFulltext() *ListFulltext {
+	if i == nil {
+		return nil
+	}
+	return i.ListFulltext
 }
 
 func (i *IntegrationSupport) GetListGroupID() *ListGroupID {

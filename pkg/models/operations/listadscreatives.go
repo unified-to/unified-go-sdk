@@ -115,7 +115,7 @@ type ListAdsCreativesRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
 	Fields []ListAdsCreativesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	// The group ID to filter by (reference to HrisGroup)
+	// The group ID to filter by (reference to AdsGroup)
 	GroupID *string  `queryParam:"style=form,explode=true,name=group_id"`
 	Limit   *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset  *float64 `queryParam:"style=form,explode=true,name=offset"`

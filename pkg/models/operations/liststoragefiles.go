@@ -83,11 +83,14 @@ func (e *ListStorageFilesQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListStorageFilesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// Whether to flatten grouped or recurring items into individual entries.
+	Expand *bool `queryParam:"style=form,explode=true,name=expand"`
 	// Fields to return
-	Fields []ListStorageFilesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
+	Fields   []ListStorageFilesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Fulltext *string                            `queryParam:"style=form,explode=true,name=fulltext"`
+	Limit    *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset   *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order    *string                            `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -108,11 +111,25 @@ func (l *ListStorageFilesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
+func (l *ListStorageFilesRequest) GetExpand() *bool {
+	if l == nil {
+		return nil
+	}
+	return l.Expand
+}
+
 func (l *ListStorageFilesRequest) GetFields() []ListStorageFilesQueryParamFields {
 	if l == nil {
 		return nil
 	}
 	return l.Fields
+}
+
+func (l *ListStorageFilesRequest) GetFulltext() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Fulltext
 }
 
 func (l *ListStorageFilesRequest) GetLimit() *float64 {

@@ -67,7 +67,7 @@ type ListAdsReportsRequest struct {
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListAdsReportsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	// The group ID to filter by (reference to HrisGroup)
+	// The group ID to filter by (reference to AdsGroup)
 	GroupID *string  `queryParam:"style=form,explode=true,name=group_id"`
 	Limit   *float64 `queryParam:"style=form,explode=true,name=limit"`
 	Offset  *float64 `queryParam:"style=form,explode=true,name=offset"`
