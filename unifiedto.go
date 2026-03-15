@@ -83,6 +83,8 @@ type UnifiedTo struct {
 	Creative          *Creative
 	Group             *Group
 	Insertionorder    *Insertionorder
+	Promoted          *Promoted
+	Target            *Target
 	Assessment        *Assessment
 	Package           *Package
 	Ats               *Ats
@@ -264,9 +266,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.45",
+		SDKVersion: "0.36.46",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.45 2.865.2 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.46 2.865.2 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -313,6 +315,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Creative = newCreative(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Promoted = newPromoted(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Target = newTarget(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Assessment = newAssessment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Package = newPackage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)

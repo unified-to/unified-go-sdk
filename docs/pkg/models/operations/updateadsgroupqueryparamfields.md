@@ -42,5 +42,5 @@ value := operations.UpdateAdsGroupQueryParamFieldsID
 | `UpdateAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                    |
 | `UpdateAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                        |
 | `UpdateAdsGroupQueryParamFieldsCurrency`             | currency                                             |
-| `UpdateAdsGroupQueryParamFieldsMetadata`             | metadata                                             |
+| `UpdateAdsGroupQueryParamFieldsPromoted`             | promoted                                             |
 | `UpdateAdsGroupQueryParamFieldsRaw`                  | raw                                                  |

@@ -104,11 +104,11 @@ type AdsCreative struct {
 	ID                         *string            `json:"id,omitempty"`
 	ItemID                     *string            `json:"item_id,omitempty"`
 	LinkURL                    *string            `json:"link_url,omitempty"`
-	Metadata                   []AdsMetadata      `json:"metadata,omitempty"`
 	Name                       *string            `json:"name,omitempty"`
 	OrganizationID             *string            `json:"organization_id,omitempty"`
 	Path1                      *string            `json:"path1,omitempty"`
 	Path2                      *string            `json:"path2,omitempty"`
+	Promoted                   []AdsPromoted      `json:"promoted,omitempty"`
 	Raw                        map[string]any     `json:"raw,omitempty"`
 	Status                     *AdsCreativeStatus `json:"status,omitempty"`
 	ThirdPartyTag              *string            `json:"third_party_tag,omitempty"`
@@ -234,13 +234,6 @@ func (a *AdsCreative) GetLinkURL() *string {
 	return a.LinkURL
 }
 
-func (a *AdsCreative) GetMetadata() []AdsMetadata {
-	if a == nil {
-		return nil
-	}
-	return a.Metadata
-}
-
 func (a *AdsCreative) GetName() *string {
 	if a == nil {
 		return nil
@@ -267,6 +260,13 @@ func (a *AdsCreative) GetPath2() *string {
 		return nil
 	}
 	return a.Path2
+}
+
+func (a *AdsCreative) GetPromoted() []AdsPromoted {
+	if a == nil {
+		return nil
+	}
+	return a.Promoted
 }
 
 func (a *AdsCreative) GetRaw() map[string]any {

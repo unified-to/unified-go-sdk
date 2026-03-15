@@ -136,6 +136,8 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeAdsGroup`                | ads_group                           |
 | `ObjectTypeAdsCreative`             | ads_creative                        |
 | `ObjectTypeAdsInsertionorder`       | ads_insertionorder                  |
+| `ObjectTypeAdsTarget`               | ads_target                          |
+| `ObjectTypeAdsPromoted`             | ads_promoted                        |
 | `ObjectTypeFormsForm`               | forms_form                          |
 | `ObjectTypeFormsSubmission`         | forms_submission                    |
 | `ObjectTypeShippingCarrier`         | shipping_carrier                    |

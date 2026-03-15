@@ -31,7 +31,7 @@ const (
 	ListAdsAdsQueryParamFieldsDisplayURL       ListAdsAdsQueryParamFields = "display_url"
 	ListAdsAdsQueryParamFieldsPath1            ListAdsAdsQueryParamFields = "path1"
 	ListAdsAdsQueryParamFieldsPath2            ListAdsAdsQueryParamFields = "path2"
-	ListAdsAdsQueryParamFieldsMetadata         ListAdsAdsQueryParamFields = "metadata"
+	ListAdsAdsQueryParamFieldsPromoted         ListAdsAdsQueryParamFields = "promoted"
 	ListAdsAdsQueryParamFieldsRaw              ListAdsAdsQueryParamFields = "raw"
 )
 
@@ -82,7 +82,7 @@ func (e *ListAdsAdsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "path2":
 		fallthrough
-	case "metadata":
+	case "promoted":
 		fallthrough
 	case "raw":
 		*e = ListAdsAdsQueryParamFields(v)

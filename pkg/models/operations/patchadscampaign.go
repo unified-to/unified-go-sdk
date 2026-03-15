@@ -30,6 +30,7 @@ const (
 	PatchAdsCampaignQueryParamFieldsAdvertisingChannelType   PatchAdsCampaignQueryParamFields = "advertising_channel_type"
 	PatchAdsCampaignQueryParamFieldsCampaignBudgetIdentifier PatchAdsCampaignQueryParamFields = "campaign_budget_identifier"
 	PatchAdsCampaignQueryParamFieldsCurrency                 PatchAdsCampaignQueryParamFields = "currency"
+	PatchAdsCampaignQueryParamFieldsCategory                 PatchAdsCampaignQueryParamFields = "category"
 	PatchAdsCampaignQueryParamFieldsRaw                      PatchAdsCampaignQueryParamFields = "raw"
 )
 
@@ -77,6 +78,8 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "campaign_budget_identifier":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "category":
 		fallthrough
 	case "raw":
 		*e = PatchAdsCampaignQueryParamFields(v)

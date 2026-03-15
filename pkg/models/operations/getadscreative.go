@@ -35,7 +35,7 @@ const (
 	GetAdsCreativeQueryParamFieldsExternalCreativeReference  GetAdsCreativeQueryParamFields = "external_creative_reference"
 	GetAdsCreativeQueryParamFieldsExternalPlacementReference GetAdsCreativeQueryParamFields = "external_placement_reference"
 	GetAdsCreativeQueryParamFieldsExternalAdReference        GetAdsCreativeQueryParamFields = "external_ad_reference"
-	GetAdsCreativeQueryParamFieldsMetadata                   GetAdsCreativeQueryParamFields = "metadata"
+	GetAdsCreativeQueryParamFieldsPromoted                   GetAdsCreativeQueryParamFields = "promoted"
 	GetAdsCreativeQueryParamFieldsPath1                      GetAdsCreativeQueryParamFields = "path1"
 	GetAdsCreativeQueryParamFieldsPath2                      GetAdsCreativeQueryParamFields = "path2"
 	GetAdsCreativeQueryParamFieldsRaw                        GetAdsCreativeQueryParamFields = "raw"
@@ -96,7 +96,7 @@ func (e *GetAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "external_ad_reference":
 		fallthrough
-	case "metadata":
+	case "promoted":
 		fallthrough
 	case "path1":
 		fallthrough

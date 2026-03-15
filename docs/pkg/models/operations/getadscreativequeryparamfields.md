@@ -38,7 +38,7 @@ value := operations.GetAdsCreativeQueryParamFieldsID
 | `GetAdsCreativeQueryParamFieldsExternalCreativeReference`  | external_creative_reference                                |
 | `GetAdsCreativeQueryParamFieldsExternalPlacementReference` | external_placement_reference                               |
 | `GetAdsCreativeQueryParamFieldsExternalAdReference`        | external_ad_reference                                      |
-| `GetAdsCreativeQueryParamFieldsMetadata`                   | metadata                                                   |
+| `GetAdsCreativeQueryParamFieldsPromoted`                   | promoted                                                   |
 | `GetAdsCreativeQueryParamFieldsPath1`                      | path1                                                      |
 | `GetAdsCreativeQueryParamFieldsPath2`                      | path2                                                      |
 | `GetAdsCreativeQueryParamFieldsRaw`                        | raw                                                        |

@@ -34,5 +34,5 @@ value := operations.CreateAdsAdQueryParamFieldsID
 | `CreateAdsAdQueryParamFieldsDisplayURL`       | display_url                                   |
 | `CreateAdsAdQueryParamFieldsPath1`            | path1                                         |
 | `CreateAdsAdQueryParamFieldsPath2`            | path2                                         |
-| `CreateAdsAdQueryParamFieldsMetadata`         | metadata                                      |
+| `CreateAdsAdQueryParamFieldsPromoted`         | promoted                                      |
 | `CreateAdsAdQueryParamFieldsRaw`              | raw                                           |

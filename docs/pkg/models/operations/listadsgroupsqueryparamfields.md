@@ -42,5 +42,5 @@ value := operations.ListAdsGroupsQueryParamFieldsID
 | `ListAdsGroupsQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
 | `ListAdsGroupsQueryParamFieldsBillingEvent`         | billing_event                                       |
 | `ListAdsGroupsQueryParamFieldsCurrency`             | currency                                            |
-| `ListAdsGroupsQueryParamFieldsMetadata`             | metadata                                            |
+| `ListAdsGroupsQueryParamFieldsPromoted`             | promoted                                            |
 | `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

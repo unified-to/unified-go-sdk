@@ -122,6 +122,7 @@ type PropertyAdsReportMetricsCampaign struct {
 	BudgetAmount             *float64                                                `json:"budget_amount,omitempty"`
 	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod           `json:"budget_period,omitempty"`
 	CampaignBudgetIdentifier *string                                                 `json:"campaign_budget_identifier,omitempty"`
+	Category                 *string                                                 `json:"category,omitempty"`
 	CreatedAt                *time.Time                                              `json:"created_at,omitempty"`
 	Currency                 *string                                                 `json:"currency,omitempty"`
 	EndAt                    *time.Time                                              `json:"end_at,omitempty"`
@@ -176,6 +177,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetCampaignBudgetIdentifier() *string
 		return nil
 	}
 	return p.CampaignBudgetIdentifier
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetCategory() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Category
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetCreatedAt() *time.Time {

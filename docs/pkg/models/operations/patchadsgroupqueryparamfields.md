@@ -42,5 +42,5 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsOptimizationGoal`     | optimization_goal                                   |
 | `PatchAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                       |
 | `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
-| `PatchAdsGroupQueryParamFieldsMetadata`             | metadata                                            |
+| `PatchAdsGroupQueryParamFieldsPromoted`             | promoted                                            |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |

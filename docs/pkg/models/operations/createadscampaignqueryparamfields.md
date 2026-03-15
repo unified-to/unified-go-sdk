@@ -33,4 +33,5 @@ value := operations.CreateAdsCampaignQueryParamFieldsID
 | `CreateAdsCampaignQueryParamFieldsAdvertisingChannelType`   | advertising_channel_type                                    |
 | `CreateAdsCampaignQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                  |
 | `CreateAdsCampaignQueryParamFieldsCurrency`                 | currency                                                    |
+| `CreateAdsCampaignQueryParamFieldsCategory`                 | category                                                    |
 | `CreateAdsCampaignQueryParamFieldsRaw`                      | raw                                                         |

@@ -39,7 +39,7 @@ const (
 	CreateAdsGroupQueryParamFieldsOptimizationGoal     CreateAdsGroupQueryParamFields = "optimization_goal"
 	CreateAdsGroupQueryParamFieldsBillingEvent         CreateAdsGroupQueryParamFields = "billing_event"
 	CreateAdsGroupQueryParamFieldsCurrency             CreateAdsGroupQueryParamFields = "currency"
-	CreateAdsGroupQueryParamFieldsMetadata             CreateAdsGroupQueryParamFields = "metadata"
+	CreateAdsGroupQueryParamFieldsPromoted             CreateAdsGroupQueryParamFields = "promoted"
 	CreateAdsGroupQueryParamFieldsRaw                  CreateAdsGroupQueryParamFields = "raw"
 )
 
@@ -106,7 +106,7 @@ func (e *CreateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "currency":
 		fallthrough
-	case "metadata":
+	case "promoted":
 		fallthrough
 	case "raw":
 		*e = CreateAdsGroupQueryParamFields(v)

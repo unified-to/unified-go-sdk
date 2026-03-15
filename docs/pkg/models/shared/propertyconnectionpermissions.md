@@ -238,6 +238,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAdsCreativeWrite`             | ads_creative_write                                          |
 | `PropertyConnectionPermissionsAdsInsertionorderRead`        | ads_insertionorder_read                                     |
 | `PropertyConnectionPermissionsAdsInsertionorderWrite`       | ads_insertionorder_write                                    |
+| `PropertyConnectionPermissionsAdsTargetRead`                | ads_target_read                                             |
+| `PropertyConnectionPermissionsAdsPromotedRead`              | ads_promoted_read                                           |
 | `PropertyConnectionPermissionsFormsFormRead`                | forms_form_read                                             |
 | `PropertyConnectionPermissionsFormsFormWrite`               | forms_form_write                                            |
 | `PropertyConnectionPermissionsFormsSubmissionRead`          | forms_submission_read                                       |

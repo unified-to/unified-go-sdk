@@ -34,5 +34,5 @@ value := operations.PatchAdsAdQueryParamFieldsID
 | `PatchAdsAdQueryParamFieldsDisplayURL`       | display_url                                  |
 | `PatchAdsAdQueryParamFieldsPath1`            | path1                                        |
 | `PatchAdsAdQueryParamFieldsPath2`            | path2                                        |
-| `PatchAdsAdQueryParamFieldsMetadata`         | metadata                                     |
+| `PatchAdsAdQueryParamFieldsPromoted`         | promoted                                     |
 | `PatchAdsAdQueryParamFieldsRaw`              | raw                                          |

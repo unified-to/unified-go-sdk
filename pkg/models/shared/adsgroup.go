@@ -7,6 +7,36 @@ import (
 	"time"
 )
 
+type BillingEvent string
+
+const (
+	BillingEventImpressions    BillingEvent = "IMPRESSIONS"
+	BillingEventLinkClicks     BillingEvent = "LINK_CLICKS"
+	BillingEventVideoViews     BillingEvent = "VIDEO_VIEWS"
+	BillingEventAppInstalls    BillingEvent = "APP_INSTALLS"
+	BillingEventEngagement     BillingEvent = "ENGAGEMENT"
+	BillingEventPageLikes      BillingEvent = "PAGE_LIKES"
+	BillingEventMessages       BillingEvent = "MESSAGES"
+	BillingEventPostEngagement BillingEvent = "POST_ENGAGEMENT"
+	BillingEventPurchase       BillingEvent = "PURCHASE"
+	BillingEventNone           BillingEvent = "NONE"
+)
+
+func (e BillingEvent) ToPointer() *BillingEvent {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *BillingEvent) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "IMPRESSIONS", "LINK_CLICKS", "VIDEO_VIEWS", "APP_INSTALLS", "ENGAGEMENT", "PAGE_LIKES", "MESSAGES", "POST_ENGAGEMENT", "PURCHASE", "NONE":
+			return true
+		}
+	}
+	return false
+}
+
 type BudgetAllocationType string
 
 const (
@@ -78,6 +108,38 @@ func (e *BudgetUnit) IsExact() bool {
 	return false
 }
 
+type OptimizationGoal string
+
+const (
+	OptimizationGoalReach            OptimizationGoal = "REACH"
+	OptimizationGoalImpressions      OptimizationGoal = "IMPRESSIONS"
+	OptimizationGoalLinkClicks       OptimizationGoal = "LINK_CLICKS"
+	OptimizationGoalLandingPageViews OptimizationGoal = "LANDING_PAGE_VIEWS"
+	OptimizationGoalConversions      OptimizationGoal = "CONVERSIONS"
+	OptimizationGoalLeadGeneration   OptimizationGoal = "LEAD_GENERATION"
+	OptimizationGoalAppInstalls      OptimizationGoal = "APP_INSTALLS"
+	OptimizationGoalAppEngagement    OptimizationGoal = "APP_ENGAGEMENT"
+	OptimizationGoalVideoViews       OptimizationGoal = "VIDEO_VIEWS"
+	OptimizationGoalEngagement       OptimizationGoal = "ENGAGEMENT"
+	OptimizationGoalPageLikes        OptimizationGoal = "PAGE_LIKES"
+	OptimizationGoalMessages         OptimizationGoal = "MESSAGES"
+)
+
+func (e OptimizationGoal) ToPointer() *OptimizationGoal {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *OptimizationGoal) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "REACH", "IMPRESSIONS", "LINK_CLICKS", "LANDING_PAGE_VIEWS", "CONVERSIONS", "LEAD_GENERATION", "APP_INSTALLS", "APP_ENGAGEMENT", "VIDEO_VIEWS", "ENGAGEMENT", "PAGE_LIKES", "MESSAGES":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsGroupStatus string
 
 const (
@@ -141,7 +203,7 @@ type AdsGroup struct {
 	BidAmount *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
 	BidStrategy          *PropertyAdsGroupBidStrategy  `json:"bid_strategy,omitempty"`
-	BillingEvent         *string                       `json:"billing_event,omitempty"`
+	BillingEvent         *BillingEvent                 `json:"billing_event,omitempty"`
 	BudgetAllocationType *BudgetAllocationType         `json:"budget_allocation_type,omitempty"`
 	BudgetAmount         *float64                      `json:"budget_amount,omitempty"`
 	BudgetMaxAmount      *float64                      `json:"budget_max_amount,omitempty"`
@@ -156,12 +218,12 @@ type AdsGroup struct {
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                       `json:"id,omitempty"`
 	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
-	Metadata             []AdsMetadata                 `json:"metadata,omitempty"`
 	Name                 *string                       `json:"name,omitempty"`
-	OptimizationGoal     *string                       `json:"optimization_goal,omitempty"`
+	OptimizationGoal     *OptimizationGoal             `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                       `json:"organization_id,omitempty"`
 	Pacing               *PropertyAdsGroupPacing       `json:"pacing,omitempty"`
 	ParentID             *string                       `json:"parent_id,omitempty"`
+	Promoted             []AdsPromoted                 `json:"promoted,omitempty"`
 	Raw                  map[string]any                `json:"raw,omitempty"`
 	StartAt              *time.Time                    `json:"start_at,omitempty"`
 	Status               *AdsGroupStatus               `json:"status,omitempty"`
@@ -195,7 +257,7 @@ func (a *AdsGroup) GetBidStrategy() *PropertyAdsGroupBidStrategy {
 	return a.BidStrategy
 }
 
-func (a *AdsGroup) GetBillingEvent() *string {
+func (a *AdsGroup) GetBillingEvent() *BillingEvent {
 	if a == nil {
 		return nil
 	}
@@ -300,13 +362,6 @@ func (a *AdsGroup) GetInsertionorderID() *string {
 	return a.InsertionorderID
 }
 
-func (a *AdsGroup) GetMetadata() []AdsMetadata {
-	if a == nil {
-		return nil
-	}
-	return a.Metadata
-}
-
 func (a *AdsGroup) GetName() *string {
 	if a == nil {
 		return nil
@@ -314,7 +369,7 @@ func (a *AdsGroup) GetName() *string {
 	return a.Name
 }
 
-func (a *AdsGroup) GetOptimizationGoal() *string {
+func (a *AdsGroup) GetOptimizationGoal() *OptimizationGoal {
 	if a == nil {
 		return nil
 	}
@@ -340,6 +395,13 @@ func (a *AdsGroup) GetParentID() *string {
 		return nil
 	}
 	return a.ParentID
+}
+
+func (a *AdsGroup) GetPromoted() []AdsPromoted {
+	if a == nil {
+		return nil
+	}
+	return a.Promoted
 }
 
 func (a *AdsGroup) GetRaw() map[string]any {

@@ -80,11 +80,11 @@ type PropertyAdsReportMetricsAd struct {
 	GroupID          *string                           `json:"group_id,omitempty"`
 	Headline         *string                           `json:"headline,omitempty"`
 	ID               *string                           `json:"id,omitempty"`
-	Metadata         []AdsMetadata                     `json:"metadata,omitempty"`
 	Name             *string                           `json:"name,omitempty"`
 	OrganizationID   *string                           `json:"organization_id,omitempty"`
 	Path1            *string                           `json:"path1,omitempty"`
 	Path2            *string                           `json:"path2,omitempty"`
+	Promoted         []AdsPromoted                     `json:"promoted,omitempty"`
 	Raw              map[string]any                    `json:"raw,omitempty"`
 	Status           *PropertyAdsReportMetricsAdStatus `json:"status,omitempty"`
 	UpdatedAt        *time.Time                        `json:"updated_at,omitempty"`
@@ -192,13 +192,6 @@ func (p *PropertyAdsReportMetricsAd) GetID() *string {
 	return p.ID
 }
 
-func (p *PropertyAdsReportMetricsAd) GetMetadata() []AdsMetadata {
-	if p == nil {
-		return nil
-	}
-	return p.Metadata
-}
-
 func (p *PropertyAdsReportMetricsAd) GetName() *string {
 	if p == nil {
 		return nil
@@ -225,6 +218,13 @@ func (p *PropertyAdsReportMetricsAd) GetPath2() *string {
 		return nil
 	}
 	return p.Path2
+}
+
+func (p *PropertyAdsReportMetricsAd) GetPromoted() []AdsPromoted {
+	if p == nil {
+		return nil
+	}
+	return p.Promoted
 }
 
 func (p *PropertyAdsReportMetricsAd) GetRaw() map[string]any {

@@ -34,5 +34,5 @@ value := operations.UpdateAdsAdQueryParamFieldsID
 | `UpdateAdsAdQueryParamFieldsDisplayURL`       | display_url                                   |
 | `UpdateAdsAdQueryParamFieldsPath1`            | path1                                         |
 | `UpdateAdsAdQueryParamFieldsPath2`            | path2                                         |
-| `UpdateAdsAdQueryParamFieldsMetadata`         | metadata                                      |
+| `UpdateAdsAdQueryParamFieldsPromoted`         | promoted                                      |
 | `UpdateAdsAdQueryParamFieldsRaw`              | raw                                           |

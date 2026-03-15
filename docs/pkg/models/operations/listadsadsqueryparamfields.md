@@ -34,5 +34,5 @@ value := operations.ListAdsAdsQueryParamFieldsID
 | `ListAdsAdsQueryParamFieldsDisplayURL`       | display_url                                  |
 | `ListAdsAdsQueryParamFieldsPath1`            | path1                                        |
 | `ListAdsAdsQueryParamFieldsPath2`            | path2                                        |
-| `ListAdsAdsQueryParamFieldsMetadata`         | metadata                                     |
+| `ListAdsAdsQueryParamFieldsPromoted`         | promoted                                     |
 | `ListAdsAdsQueryParamFieldsRaw`              | raw                                          |

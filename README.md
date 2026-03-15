@@ -225,7 +225,9 @@ func main() {
 * [ListAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
 * [ListAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [ListAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
+* [ListAdsPromotedes](docs/sdks/ads/README.md#listadspromotedes) - List all promotedes
 * [ListAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
+* [ListAdsTargets](docs/sdks/ads/README.md#listadstargets) - List all targets
 * [PatchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
 * [PatchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
 * [PatchAdsCreative](docs/sdks/ads/README.md#patchadscreative) - Update a creative
@@ -1325,6 +1327,10 @@ func main() {
 * [RemoveTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
 * [UpdateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
 
+### [Promoted](docs/sdks/promoted/README.md)
+
+* [ListAdsPromotedes](docs/sdks/promoted/README.md#listadspromotedes) - List all promotedes
+
 ### [Prompt](docs/sdks/prompt/README.md)
 
 * [CreateGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
@@ -1544,6 +1550,10 @@ func main() {
 * [PatchPaymentSubscription](docs/sdks/subscription/README.md#patchpaymentsubscription) - Update a subscription
 * [RemovePaymentSubscription](docs/sdks/subscription/README.md#removepaymentsubscription) - Remove a subscription
 * [UpdatePaymentSubscription](docs/sdks/subscription/README.md#updatepaymentsubscription) - Update a subscription
+
+### [Target](docs/sdks/target/README.md)
+
+* [ListAdsTargets](docs/sdks/target/README.md#listadstargets) - List all targets
 
 ### [Task](docs/sdks/task/README.md)
 

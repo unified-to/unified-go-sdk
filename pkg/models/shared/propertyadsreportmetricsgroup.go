@@ -7,6 +7,36 @@ import (
 	"time"
 )
 
+type PropertyAdsReportMetricsGroupBillingEvent string
+
+const (
+	PropertyAdsReportMetricsGroupBillingEventImpressions    PropertyAdsReportMetricsGroupBillingEvent = "IMPRESSIONS"
+	PropertyAdsReportMetricsGroupBillingEventLinkClicks     PropertyAdsReportMetricsGroupBillingEvent = "LINK_CLICKS"
+	PropertyAdsReportMetricsGroupBillingEventVideoViews     PropertyAdsReportMetricsGroupBillingEvent = "VIDEO_VIEWS"
+	PropertyAdsReportMetricsGroupBillingEventAppInstalls    PropertyAdsReportMetricsGroupBillingEvent = "APP_INSTALLS"
+	PropertyAdsReportMetricsGroupBillingEventEngagement     PropertyAdsReportMetricsGroupBillingEvent = "ENGAGEMENT"
+	PropertyAdsReportMetricsGroupBillingEventPageLikes      PropertyAdsReportMetricsGroupBillingEvent = "PAGE_LIKES"
+	PropertyAdsReportMetricsGroupBillingEventMessages       PropertyAdsReportMetricsGroupBillingEvent = "MESSAGES"
+	PropertyAdsReportMetricsGroupBillingEventPostEngagement PropertyAdsReportMetricsGroupBillingEvent = "POST_ENGAGEMENT"
+	PropertyAdsReportMetricsGroupBillingEventPurchase       PropertyAdsReportMetricsGroupBillingEvent = "PURCHASE"
+	PropertyAdsReportMetricsGroupBillingEventNone           PropertyAdsReportMetricsGroupBillingEvent = "NONE"
+)
+
+func (e PropertyAdsReportMetricsGroupBillingEvent) ToPointer() *PropertyAdsReportMetricsGroupBillingEvent {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupBillingEvent) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "IMPRESSIONS", "LINK_CLICKS", "VIDEO_VIEWS", "APP_INSTALLS", "ENGAGEMENT", "PAGE_LIKES", "MESSAGES", "POST_ENGAGEMENT", "PURCHASE", "NONE":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsGroupBudgetAllocationType string
 
 const (
@@ -78,6 +108,38 @@ func (e *PropertyAdsReportMetricsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsGroupOptimizationGoal string
+
+const (
+	PropertyAdsReportMetricsGroupOptimizationGoalReach            PropertyAdsReportMetricsGroupOptimizationGoal = "REACH"
+	PropertyAdsReportMetricsGroupOptimizationGoalImpressions      PropertyAdsReportMetricsGroupOptimizationGoal = "IMPRESSIONS"
+	PropertyAdsReportMetricsGroupOptimizationGoalLinkClicks       PropertyAdsReportMetricsGroupOptimizationGoal = "LINK_CLICKS"
+	PropertyAdsReportMetricsGroupOptimizationGoalLandingPageViews PropertyAdsReportMetricsGroupOptimizationGoal = "LANDING_PAGE_VIEWS"
+	PropertyAdsReportMetricsGroupOptimizationGoalConversions      PropertyAdsReportMetricsGroupOptimizationGoal = "CONVERSIONS"
+	PropertyAdsReportMetricsGroupOptimizationGoalLeadGeneration   PropertyAdsReportMetricsGroupOptimizationGoal = "LEAD_GENERATION"
+	PropertyAdsReportMetricsGroupOptimizationGoalAppInstalls      PropertyAdsReportMetricsGroupOptimizationGoal = "APP_INSTALLS"
+	PropertyAdsReportMetricsGroupOptimizationGoalAppEngagement    PropertyAdsReportMetricsGroupOptimizationGoal = "APP_ENGAGEMENT"
+	PropertyAdsReportMetricsGroupOptimizationGoalVideoViews       PropertyAdsReportMetricsGroupOptimizationGoal = "VIDEO_VIEWS"
+	PropertyAdsReportMetricsGroupOptimizationGoalEngagement       PropertyAdsReportMetricsGroupOptimizationGoal = "ENGAGEMENT"
+	PropertyAdsReportMetricsGroupOptimizationGoalPageLikes        PropertyAdsReportMetricsGroupOptimizationGoal = "PAGE_LIKES"
+	PropertyAdsReportMetricsGroupOptimizationGoalMessages         PropertyAdsReportMetricsGroupOptimizationGoal = "MESSAGES"
+)
+
+func (e PropertyAdsReportMetricsGroupOptimizationGoal) ToPointer() *PropertyAdsReportMetricsGroupOptimizationGoal {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupOptimizationGoal) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "REACH", "IMPRESSIONS", "LINK_CLICKS", "LANDING_PAGE_VIEWS", "CONVERSIONS", "LEAD_GENERATION", "APP_INSTALLS", "APP_ENGAGEMENT", "VIDEO_VIEWS", "ENGAGEMENT", "PAGE_LIKES", "MESSAGES":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsGroupStatus string
 
 const (
@@ -141,7 +203,7 @@ type PropertyAdsReportMetricsGroup struct {
 	BidAmount *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
 	BidStrategy          *PropertyAdsReportMetricsGroupBidStrategy          `json:"bid_strategy,omitempty"`
-	BillingEvent         *string                                            `json:"billing_event,omitempty"`
+	BillingEvent         *PropertyAdsReportMetricsGroupBillingEvent         `json:"billing_event,omitempty"`
 	BudgetAllocationType *PropertyAdsReportMetricsGroupBudgetAllocationType `json:"budget_allocation_type,omitempty"`
 	BudgetAmount         *float64                                           `json:"budget_amount,omitempty"`
 	BudgetMaxAmount      *float64                                           `json:"budget_max_amount,omitempty"`
@@ -156,12 +218,12 @@ type PropertyAdsReportMetricsGroup struct {
 	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                                            `json:"id,omitempty"`
 	InsertionorderID     *string                                            `json:"insertionorder_id,omitempty"`
-	Metadata             []AdsMetadata                                      `json:"metadata,omitempty"`
 	Name                 *string                                            `json:"name,omitempty"`
-	OptimizationGoal     *string                                            `json:"optimization_goal,omitempty"`
+	OptimizationGoal     *PropertyAdsReportMetricsGroupOptimizationGoal     `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                                            `json:"organization_id,omitempty"`
 	Pacing               *PropertyAdsReportMetricsGroupPacing               `json:"pacing,omitempty"`
 	ParentID             *string                                            `json:"parent_id,omitempty"`
+	Promoted             []AdsPromoted                                      `json:"promoted,omitempty"`
 	Raw                  map[string]any                                     `json:"raw,omitempty"`
 	StartAt              *time.Time                                         `json:"start_at,omitempty"`
 	Status               *PropertyAdsReportMetricsGroupStatus               `json:"status,omitempty"`
@@ -195,7 +257,7 @@ func (p *PropertyAdsReportMetricsGroup) GetBidStrategy() *PropertyAdsReportMetri
 	return p.BidStrategy
 }
 
-func (p *PropertyAdsReportMetricsGroup) GetBillingEvent() *string {
+func (p *PropertyAdsReportMetricsGroup) GetBillingEvent() *PropertyAdsReportMetricsGroupBillingEvent {
 	if p == nil {
 		return nil
 	}
@@ -300,13 +362,6 @@ func (p *PropertyAdsReportMetricsGroup) GetInsertionorderID() *string {
 	return p.InsertionorderID
 }
 
-func (p *PropertyAdsReportMetricsGroup) GetMetadata() []AdsMetadata {
-	if p == nil {
-		return nil
-	}
-	return p.Metadata
-}
-
 func (p *PropertyAdsReportMetricsGroup) GetName() *string {
 	if p == nil {
 		return nil
@@ -314,7 +369,7 @@ func (p *PropertyAdsReportMetricsGroup) GetName() *string {
 	return p.Name
 }
 
-func (p *PropertyAdsReportMetricsGroup) GetOptimizationGoal() *string {
+func (p *PropertyAdsReportMetricsGroup) GetOptimizationGoal() *PropertyAdsReportMetricsGroupOptimizationGoal {
 	if p == nil {
 		return nil
 	}
@@ -340,6 +395,13 @@ func (p *PropertyAdsReportMetricsGroup) GetParentID() *string {
 		return nil
 	}
 	return p.ParentID
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetPromoted() []AdsPromoted {
+	if p == nil {
+		return nil
+	}
+	return p.Promoted
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetRaw() map[string]any {

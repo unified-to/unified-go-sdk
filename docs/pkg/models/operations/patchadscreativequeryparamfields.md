@@ -38,7 +38,7 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsExternalCreativeReference`  | external_creative_reference                                  |
 | `PatchAdsCreativeQueryParamFieldsExternalPlacementReference` | external_placement_reference                                 |
 | `PatchAdsCreativeQueryParamFieldsExternalAdReference`        | external_ad_reference                                        |
-| `PatchAdsCreativeQueryParamFieldsMetadata`                   | metadata                                                     |
+| `PatchAdsCreativeQueryParamFieldsPromoted`                   | promoted                                                     |
 | `PatchAdsCreativeQueryParamFieldsPath1`                      | path1                                                        |
 | `PatchAdsCreativeQueryParamFieldsPath2`                      | path2                                                        |
 | `PatchAdsCreativeQueryParamFieldsRaw`                        | raw                                                          |

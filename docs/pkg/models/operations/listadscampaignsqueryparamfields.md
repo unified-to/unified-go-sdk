@@ -33,4 +33,5 @@ value := operations.ListAdsCampaignsQueryParamFieldsID
 | `ListAdsCampaignsQueryParamFieldsAdvertisingChannelType`   | advertising_channel_type                                   |
 | `ListAdsCampaignsQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                 |
 | `ListAdsCampaignsQueryParamFieldsCurrency`                 | currency                                                   |
+| `ListAdsCampaignsQueryParamFieldsCategory`                 | category                                                   |
 | `ListAdsCampaignsQueryParamFieldsRaw`                      | raw                                                        |

@@ -86,11 +86,12 @@ type ListStorageFilesRequest struct {
 	// Whether to flatten grouped or recurring items into individual entries.
 	Expand *bool `queryParam:"style=form,explode=true,name=expand"`
 	// Fields to return
-	Fields   []ListStorageFilesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Fulltext *string                            `queryParam:"style=form,explode=true,name=fulltext"`
-	Limit    *float64                           `queryParam:"style=form,explode=true,name=limit"`
-	Offset   *float64                           `queryParam:"style=form,explode=true,name=offset"`
-	Order    *string                            `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListStorageFilesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	// The fulltext to filter by
+	Fulltext *string  `queryParam:"style=form,explode=true,name=fulltext"`
+	Limit    *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset   *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name

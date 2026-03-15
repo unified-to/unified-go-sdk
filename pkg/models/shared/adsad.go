@@ -80,11 +80,11 @@ type AdsAd struct {
 	GroupID          *string        `json:"group_id,omitempty"`
 	Headline         *string        `json:"headline,omitempty"`
 	ID               *string        `json:"id,omitempty"`
-	Metadata         []AdsMetadata  `json:"metadata,omitempty"`
 	Name             *string        `json:"name,omitempty"`
 	OrganizationID   *string        `json:"organization_id,omitempty"`
 	Path1            *string        `json:"path1,omitempty"`
 	Path2            *string        `json:"path2,omitempty"`
+	Promoted         []AdsPromoted  `json:"promoted,omitempty"`
 	Raw              map[string]any `json:"raw,omitempty"`
 	Status           *AdsAdStatus   `json:"status,omitempty"`
 	UpdatedAt        *time.Time     `json:"updated_at,omitempty"`
@@ -192,13 +192,6 @@ func (a *AdsAd) GetID() *string {
 	return a.ID
 }
 
-func (a *AdsAd) GetMetadata() []AdsMetadata {
-	if a == nil {
-		return nil
-	}
-	return a.Metadata
-}
-
 func (a *AdsAd) GetName() *string {
 	if a == nil {
 		return nil
@@ -225,6 +218,13 @@ func (a *AdsAd) GetPath2() *string {
 		return nil
 	}
 	return a.Path2
+}
+
+func (a *AdsAd) GetPromoted() []AdsPromoted {
+	if a == nil {
+		return nil
+	}
+	return a.Promoted
 }
 
 func (a *AdsAd) GetRaw() map[string]any {

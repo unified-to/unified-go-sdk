@@ -3,180 +3,88 @@
 package shared
 
 type PropertyAdsReportMetricsGroupTargeting struct {
-	AgeRanges         []string `json:"age_ranges,omitempty"`
-	Audiences         []string `json:"audiences,omitempty"`
-	Behaviors         []string `json:"behaviors,omitempty"`
-	Companies         []string `json:"companies,omitempty"`
-	CompanySizes      []string `json:"company_sizes,omitempty"`
-	CustomAudiences   []string `json:"custom_audiences,omitempty"`
-	Degrees           []string `json:"degrees,omitempty"`
-	Devices           []string `json:"devices,omitempty"`
-	ExcludedAudiences []string `json:"excluded_audiences,omitempty"`
-	ExcludedLocations []string `json:"excluded_locations,omitempty"`
-	Genders           []string `json:"genders,omitempty"`
-	Industries        []string `json:"industries,omitempty"`
-	Interests         []string `json:"interests,omitempty"`
-	JobFunctions      []string `json:"job_functions,omitempty"`
-	JobTitles         []string `json:"job_titles,omitempty"`
-	Keywords          []string `json:"keywords,omitempty"`
-	Languages         []string `json:"languages,omitempty"`
-	Locations         []string `json:"locations,omitempty"`
-	Placements        []string `json:"placements,omitempty"`
-	Schools           []string `json:"schools,omitempty"`
-	Seniorities       []string `json:"seniorities,omitempty"`
-	Skills            []string `json:"skills,omitempty"`
+	Audience *PropertyAdsReportMetricsGroupTargetingAudience `json:"audience,omitempty"`
+	// Brand safety (Meta: excluded_publisher_categories, etc.; Google
+	BrandSafety *PropertyAdsReportMetricsGroupTargetingBrandSafety `json:"brand_safety,omitempty"`
+	Content     *PropertyAdsReportMetricsGroupTargetingContent     `json:"content,omitempty"`
+	// Demographic targeting (Meta: age_min, age_max, genders)
+	Demographic *PropertyAdsReportMetricsGroupTargetingDemographic `json:"demographic,omitempty"`
+	Device      *PropertyAdsReportMetricsGroupTargetingDevice      `json:"device,omitempty"`
+	Geographic  *PropertyAdsReportMetricsGroupTargetingGeographic  `json:"geographic,omitempty"`
+	// Language targeting (Meta
+	Language *PropertyAdsReportMetricsGroupTargetingLanguage `json:"language,omitempty"`
+	// Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+	Optimization *PropertyAdsReportMetricsGroupTargetingOptimization `json:"optimization,omitempty"`
+	Placement    *PropertyAdsReportMetricsGroupTargetingPlacement    `json:"placement,omitempty"`
+	Schedule     []AdSchedule                                        `json:"schedule,omitempty"`
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetAgeRanges() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetAudience() *PropertyAdsReportMetricsGroupTargetingAudience {
 	if p == nil {
 		return nil
 	}
-	return p.AgeRanges
+	return p.Audience
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetAudiences() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetBrandSafety() *PropertyAdsReportMetricsGroupTargetingBrandSafety {
 	if p == nil {
 		return nil
 	}
-	return p.Audiences
+	return p.BrandSafety
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetBehaviors() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetContent() *PropertyAdsReportMetricsGroupTargetingContent {
 	if p == nil {
 		return nil
 	}
-	return p.Behaviors
+	return p.Content
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetCompanies() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetDemographic() *PropertyAdsReportMetricsGroupTargetingDemographic {
 	if p == nil {
 		return nil
 	}
-	return p.Companies
+	return p.Demographic
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetCompanySizes() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetDevice() *PropertyAdsReportMetricsGroupTargetingDevice {
 	if p == nil {
 		return nil
 	}
-	return p.CompanySizes
+	return p.Device
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetCustomAudiences() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetGeographic() *PropertyAdsReportMetricsGroupTargetingGeographic {
 	if p == nil {
 		return nil
 	}
-	return p.CustomAudiences
+	return p.Geographic
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetDegrees() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetLanguage() *PropertyAdsReportMetricsGroupTargetingLanguage {
 	if p == nil {
 		return nil
 	}
-	return p.Degrees
+	return p.Language
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetDevices() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetOptimization() *PropertyAdsReportMetricsGroupTargetingOptimization {
 	if p == nil {
 		return nil
 	}
-	return p.Devices
+	return p.Optimization
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetExcludedAudiences() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetPlacement() *PropertyAdsReportMetricsGroupTargetingPlacement {
 	if p == nil {
 		return nil
 	}
-	return p.ExcludedAudiences
+	return p.Placement
 }
 
-func (p *PropertyAdsReportMetricsGroupTargeting) GetExcludedLocations() []string {
+func (p *PropertyAdsReportMetricsGroupTargeting) GetSchedule() []AdSchedule {
 	if p == nil {
 		return nil
 	}
-	return p.ExcludedLocations
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetGenders() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Genders
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetIndustries() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Industries
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetInterests() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Interests
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetJobFunctions() []string {
-	if p == nil {
-		return nil
-	}
-	return p.JobFunctions
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetJobTitles() []string {
-	if p == nil {
-		return nil
-	}
-	return p.JobTitles
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetKeywords() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Keywords
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetLanguages() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Languages
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetLocations() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Locations
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetPlacements() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Placements
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetSchools() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Schools
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetSeniorities() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Seniorities
-}
-
-func (p *PropertyAdsReportMetricsGroupTargeting) GetSkills() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Skills
+	return p.Schedule
 }

@@ -33,4 +33,5 @@ value := operations.PatchAdsCampaignQueryParamFieldsID
 | `PatchAdsCampaignQueryParamFieldsAdvertisingChannelType`   | advertising_channel_type                                   |
 | `PatchAdsCampaignQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                 |
 | `PatchAdsCampaignQueryParamFieldsCurrency`                 | currency                                                   |
+| `PatchAdsCampaignQueryParamFieldsCategory`                 | category                                                   |
 | `PatchAdsCampaignQueryParamFieldsRaw`                      | raw                                                        |

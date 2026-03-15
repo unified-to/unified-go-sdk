@@ -3,180 +3,88 @@
 package shared
 
 type PropertyAdsGroupTargeting struct {
-	AgeRanges         []string `json:"age_ranges,omitempty"`
-	Audiences         []string `json:"audiences,omitempty"`
-	Behaviors         []string `json:"behaviors,omitempty"`
-	Companies         []string `json:"companies,omitempty"`
-	CompanySizes      []string `json:"company_sizes,omitempty"`
-	CustomAudiences   []string `json:"custom_audiences,omitempty"`
-	Degrees           []string `json:"degrees,omitempty"`
-	Devices           []string `json:"devices,omitempty"`
-	ExcludedAudiences []string `json:"excluded_audiences,omitempty"`
-	ExcludedLocations []string `json:"excluded_locations,omitempty"`
-	Genders           []string `json:"genders,omitempty"`
-	Industries        []string `json:"industries,omitempty"`
-	Interests         []string `json:"interests,omitempty"`
-	JobFunctions      []string `json:"job_functions,omitempty"`
-	JobTitles         []string `json:"job_titles,omitempty"`
-	Keywords          []string `json:"keywords,omitempty"`
-	Languages         []string `json:"languages,omitempty"`
-	Locations         []string `json:"locations,omitempty"`
-	Placements        []string `json:"placements,omitempty"`
-	Schools           []string `json:"schools,omitempty"`
-	Seniorities       []string `json:"seniorities,omitempty"`
-	Skills            []string `json:"skills,omitempty"`
+	Audience *PropertyAdsGroupTargetingAudience `json:"audience,omitempty"`
+	// Brand safety (Meta: excluded_publisher_categories, etc.; Google
+	BrandSafety *PropertyAdsGroupTargetingBrandSafety `json:"brand_safety,omitempty"`
+	Content     *PropertyAdsGroupTargetingContent     `json:"content,omitempty"`
+	// Demographic targeting (Meta: age_min, age_max, genders)
+	Demographic *PropertyAdsGroupTargetingDemographic `json:"demographic,omitempty"`
+	Device      *PropertyAdsGroupTargetingDevice      `json:"device,omitempty"`
+	Geographic  *PropertyAdsGroupTargetingGeographic  `json:"geographic,omitempty"`
+	// Language targeting (Meta
+	Language *PropertyAdsGroupTargetingLanguage `json:"language,omitempty"`
+	// Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+	Optimization *PropertyAdsGroupTargetingOptimization `json:"optimization,omitempty"`
+	Placement    *PropertyAdsGroupTargetingPlacement    `json:"placement,omitempty"`
+	Schedule     []AdSchedule                           `json:"schedule,omitempty"`
 }
 
-func (p *PropertyAdsGroupTargeting) GetAgeRanges() []string {
+func (p *PropertyAdsGroupTargeting) GetAudience() *PropertyAdsGroupTargetingAudience {
 	if p == nil {
 		return nil
 	}
-	return p.AgeRanges
+	return p.Audience
 }
 
-func (p *PropertyAdsGroupTargeting) GetAudiences() []string {
+func (p *PropertyAdsGroupTargeting) GetBrandSafety() *PropertyAdsGroupTargetingBrandSafety {
 	if p == nil {
 		return nil
 	}
-	return p.Audiences
+	return p.BrandSafety
 }
 
-func (p *PropertyAdsGroupTargeting) GetBehaviors() []string {
+func (p *PropertyAdsGroupTargeting) GetContent() *PropertyAdsGroupTargetingContent {
 	if p == nil {
 		return nil
 	}
-	return p.Behaviors
+	return p.Content
 }
 
-func (p *PropertyAdsGroupTargeting) GetCompanies() []string {
+func (p *PropertyAdsGroupTargeting) GetDemographic() *PropertyAdsGroupTargetingDemographic {
 	if p == nil {
 		return nil
 	}
-	return p.Companies
+	return p.Demographic
 }
 
-func (p *PropertyAdsGroupTargeting) GetCompanySizes() []string {
+func (p *PropertyAdsGroupTargeting) GetDevice() *PropertyAdsGroupTargetingDevice {
 	if p == nil {
 		return nil
 	}
-	return p.CompanySizes
+	return p.Device
 }
 
-func (p *PropertyAdsGroupTargeting) GetCustomAudiences() []string {
+func (p *PropertyAdsGroupTargeting) GetGeographic() *PropertyAdsGroupTargetingGeographic {
 	if p == nil {
 		return nil
 	}
-	return p.CustomAudiences
+	return p.Geographic
 }
 
-func (p *PropertyAdsGroupTargeting) GetDegrees() []string {
+func (p *PropertyAdsGroupTargeting) GetLanguage() *PropertyAdsGroupTargetingLanguage {
 	if p == nil {
 		return nil
 	}
-	return p.Degrees
+	return p.Language
 }
 
-func (p *PropertyAdsGroupTargeting) GetDevices() []string {
+func (p *PropertyAdsGroupTargeting) GetOptimization() *PropertyAdsGroupTargetingOptimization {
 	if p == nil {
 		return nil
 	}
-	return p.Devices
+	return p.Optimization
 }
 
-func (p *PropertyAdsGroupTargeting) GetExcludedAudiences() []string {
+func (p *PropertyAdsGroupTargeting) GetPlacement() *PropertyAdsGroupTargetingPlacement {
 	if p == nil {
 		return nil
 	}
-	return p.ExcludedAudiences
+	return p.Placement
 }
 
-func (p *PropertyAdsGroupTargeting) GetExcludedLocations() []string {
+func (p *PropertyAdsGroupTargeting) GetSchedule() []AdSchedule {
 	if p == nil {
 		return nil
 	}
-	return p.ExcludedLocations
-}
-
-func (p *PropertyAdsGroupTargeting) GetGenders() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Genders
-}
-
-func (p *PropertyAdsGroupTargeting) GetIndustries() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Industries
-}
-
-func (p *PropertyAdsGroupTargeting) GetInterests() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Interests
-}
-
-func (p *PropertyAdsGroupTargeting) GetJobFunctions() []string {
-	if p == nil {
-		return nil
-	}
-	return p.JobFunctions
-}
-
-func (p *PropertyAdsGroupTargeting) GetJobTitles() []string {
-	if p == nil {
-		return nil
-	}
-	return p.JobTitles
-}
-
-func (p *PropertyAdsGroupTargeting) GetKeywords() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Keywords
-}
-
-func (p *PropertyAdsGroupTargeting) GetLanguages() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Languages
-}
-
-func (p *PropertyAdsGroupTargeting) GetLocations() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Locations
-}
-
-func (p *PropertyAdsGroupTargeting) GetPlacements() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Placements
-}
-
-func (p *PropertyAdsGroupTargeting) GetSchools() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Schools
-}
-
-func (p *PropertyAdsGroupTargeting) GetSeniorities() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Seniorities
-}
-
-func (p *PropertyAdsGroupTargeting) GetSkills() []string {
-	if p == nil {
-		return nil
-	}
-	return p.Skills
+	return p.Schedule
 }
