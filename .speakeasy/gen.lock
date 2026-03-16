@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 63ab4de5c2de6c20799399d339ad2b41
+  docChecksum: 6eefdfc44825d8c4165b112c6392dc3c
   docVersion: "1.0"
   speakeasyVersion: 1.755.0
   generationVersion: 2.865.2
-  releaseVersion: 0.36.46
-  configChecksum: 1343e3ae005937e08905647af62130b1
+  releaseVersion: 0.36.47
+  configChecksum: 3377a7fbc1c3376a6786f246569e8137
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 1fc6c078-fd3f-48e8-b313-64a40b5549a5
-  pristine_commit_hash: addf99f320abef8e5fd7937c92e885cac73b18a4
-  pristine_tree_hash: 2e580e0076edef5c2284c37417e72433285aed1a
+  generation_id: ac61291c-e1e0-4814-a309-16e416ab3886
+  pristine_commit_hash: decfe387959dc06fbf1563426cf123aaef142a00
+  pristine_tree_hash: a015061c6909cac33444f7dfdaf28383a8bb3d1b
 features:
   go:
     acceptHeaders: 2.81.2
@@ -63,8 +63,8 @@ trackedFiles:
     pristine_git_object: a91f0dd3d387bdf1d4127f1f56f095b69cbefa06
   ads.go:
     id: 923611d516c5
-    last_write_checksum: sha1:78bdf8e52ca46015bbfad195b1fa29fb79d0b70e
-    pristine_git_object: a6aaaaeacccf9c0a76f10fa1d12a9399ed6c2fc2
+    last_write_checksum: sha1:c64b4e4fe15613afacd4f4ee614e278efa2858a1
+    pristine_git_object: b47ab92e65053b237ef64e7db9f20e8d96debfed
   apicall.go:
     id: 38102d477600
     last_write_checksum: sha1:495baacda4a768363db93fb54657f63d6226b4df
@@ -3093,18 +3093,18 @@ trackedFiles:
     id: bc085f8a8ac6
     last_write_checksum: sha1:93ad4778fd5035182b3994857cfec62cf9653e6c
     pristine_git_object: 68da6e3ce9b6ceb1b613dc13c5a1650a01354c74
-  docs/pkg/models/operations/listadspromotedesqueryparamfields.md:
-    id: 96a499345ff7
-    last_write_checksum: sha1:8bcee37216c9389471a286ba06b1fef0e2bd9f36
-    pristine_git_object: 3776531d83b1231d2731c46e9ce460dbdcec7c83
-  docs/pkg/models/operations/listadspromotedesrequest.md:
-    id: 5fa8bd556a57
-    last_write_checksum: sha1:e3975cea1137dedf7ef9b111bdd5828866064667
-    pristine_git_object: 632b49cfe745964a3e9a3fb85aabbe690a69c90f
-  docs/pkg/models/operations/listadspromotedesresponse.md:
-    id: c0a38ee6e74c
-    last_write_checksum: sha1:c701ab1421f1d009c7055cea2d5ee65603352e61
-    pristine_git_object: cb5242a091b9c98dba954305bff92e9c9b07bc80
+  docs/pkg/models/operations/listadspromotedsqueryparamfields.md:
+    id: fac5daa2f24c
+    last_write_checksum: sha1:7fbe7d86d5865e0be1b4ffdedda22c3ae522d0c3
+    pristine_git_object: 47e982aab84e5738266dbf0647ffc059fab45232
+  docs/pkg/models/operations/listadspromotedsrequest.md:
+    id: 6b6b465803b6
+    last_write_checksum: sha1:037c88696d9f7f62a86d8d49ac46c6ceb92b2e77
+    pristine_git_object: 5bf000555eeb97d90a4b932d594cff1dcc2b74f3
+  docs/pkg/models/operations/listadspromotedsresponse.md:
+    id: 4a20c3ac9cde
+    last_write_checksum: sha1:109e50fc71c7b146e423adfe54265fc4198e2272
+    pristine_git_object: 18a9441fd560d21d12ab42ef2fe01f8e22eb91ee
   docs/pkg/models/operations/listadsreportsqueryparamfields.md:
     id: 74631f129029
     last_write_checksum: sha1:6bc235ba2e7c1ca00dba21fc570ed4bd0e896a51
@@ -10807,8 +10807,8 @@ trackedFiles:
     pristine_git_object: 1d78dba8c7fe8a4f1878958ea157544c2df36ff9
   docs/sdks/ads/README.md:
     id: 29d096aad48a
-    last_write_checksum: sha1:7bb1ea6da79105c7c59a753830232816413e115f
-    pristine_git_object: b2c0a5e5cbb3aecf6aec3946162a2761de0d05a5
+    last_write_checksum: sha1:6062631c03146d3a0d1f326aa4ca2b71c2917337
+    pristine_git_object: 203438184749f6c4e55b9aac6989ce5ab3be3e2c
   docs/sdks/apicall/README.md:
     id: 69cabc6c43ea
     last_write_checksum: sha1:0725be80e5186abce2c894f94465daa9a8ece541
@@ -11167,8 +11167,8 @@ trackedFiles:
     pristine_git_object: 4c82aa626ce5bc530d31cf87e53903410c88c68d
   docs/sdks/promoted/README.md:
     id: ac16717d95a8
-    last_write_checksum: sha1:1faead097a36be6762649bc31290e48376906825
-    pristine_git_object: 4278883e5beb99e92518d56f7ac73ae4e7066356
+    last_write_checksum: sha1:4d102c58b9f69b3533a5350d5663a716be548091
+    pristine_git_object: 4355494dd9be94bf44570bbd45fb04b5148c4212
   docs/sdks/prompt/README.md:
     id: 58101834a0c9
     last_write_checksum: sha1:f4747bcc45cf1c6aca7da90ad93a1bd10a05602d
@@ -12513,10 +12513,10 @@ trackedFiles:
     id: 4dd62ce1a864
     last_write_checksum: sha1:a89974579122b39ab72d219c62b4b09d04f1c4f0
     pristine_git_object: 5110730f4d87a6ce03f70a2c0ce7ef447e55971f
-  pkg/models/operations/listadspromotedes.go:
-    id: 96110b3c7799
-    last_write_checksum: sha1:e15d9ae54c835f4b4e80c30bd97a128d65d7b25d
-    pristine_git_object: 439e1b9d219c63a44ad6e34a1bfe8e73c70682d3
+  pkg/models/operations/listadspromoteds.go:
+    id: a4e6596a3dcf
+    last_write_checksum: sha1:6997b59bb004e07e757832a9df5adca1b7b052e3
+    pristine_git_object: 3d73f1f350658fa40fa91ea598e58af9ad31f958
   pkg/models/operations/listadsreports.go:
     id: d97542f258fb
     last_write_checksum: sha1:4273bcf9718a168f5759030dda8e0361767f2a85
@@ -15871,8 +15871,8 @@ trackedFiles:
     pristine_git_object: f6578d7f8af75b27b5c181a6b3b14af512064e69
   promoted.go:
     id: e00b5c8abd12
-    last_write_checksum: sha1:0d6a12e71362208349dab6daabe3c2227067c634
-    pristine_git_object: 453c4888329b006889ef7ffcb83e6fd8f4adcf7a
+    last_write_checksum: sha1:7346a18fb2e9dd4e81bc0859122ea423fcdc3009
+    pristine_git_object: 504a284ddac5a9b6adbf1bc1496daf2ea3cbfc0b
   prompt.go:
     id: 64722ebd608f
     last_write_checksum: sha1:84d5d10353e80989e77bd2aaebda295c6b831c9f
@@ -16011,8 +16011,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:3bb17907424ddbfabe9c1e976b54a7f543dd455c
-    pristine_git_object: c6c9ce32ca8a80368004ef23d76f8c35ecf6804f
+    last_write_checksum: sha1:abc0950ae068dffbf8793f80d9a501be8132df1c
+    pristine_git_object: cd50b9448d798b9d55066064405a3874535a9c2c
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -21958,9 +21958,22 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>", "value": "<value>"}]
+  listAdsPromoteds:
+    speakeasy-default-list-ads-promoteds:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsCreative()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsCreatives()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ad.CreateAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ad.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ad.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ad.PatchAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ad.UpdateAdsAd()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Creative.CreateAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Creative.GetAdsCreative()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Creative.ListAdsCreatives()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Creative.PatchAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Creative.UpdateAdsCreative()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.ListAdsGroups()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsPromotedes()`: **Added**\n* `UnifiedTo.Ads.ListAdsTargets()`: **Added**\n* `UnifiedTo.Promoted.ListAdsPromotedes()`: **Added**\n* `UnifiedTo.Target.ListAdsTargets()`: **Added**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Ads.ListAdsPromoteds()`: **Added**
+  * `UnifiedTo.Promoted.ListAdsPromoteds()`: **Added**
+  * `UnifiedTo.Ads.ListAdsPromotedes()`: **Removed** (Breaking ⚠️)
+  * `UnifiedTo.Promoted.ListAdsPromotedes()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

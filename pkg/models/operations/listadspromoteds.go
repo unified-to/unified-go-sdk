@@ -9,18 +9,18 @@ import (
 	"net/http"
 )
 
-type ListAdsPromotedesQueryParamFields string
+type ListAdsPromotedsQueryParamFields string
 
 const (
-	ListAdsPromotedesQueryParamFieldsID   ListAdsPromotedesQueryParamFields = "id"
-	ListAdsPromotedesQueryParamFieldsName ListAdsPromotedesQueryParamFields = "name"
-	ListAdsPromotedesQueryParamFieldsType ListAdsPromotedesQueryParamFields = "type"
+	ListAdsPromotedsQueryParamFieldsID   ListAdsPromotedsQueryParamFields = "id"
+	ListAdsPromotedsQueryParamFieldsName ListAdsPromotedsQueryParamFields = "name"
+	ListAdsPromotedsQueryParamFieldsType ListAdsPromotedsQueryParamFields = "type"
 )
 
-func (e ListAdsPromotedesQueryParamFields) ToPointer() *ListAdsPromotedesQueryParamFields {
+func (e ListAdsPromotedsQueryParamFields) ToPointer() *ListAdsPromotedsQueryParamFields {
 	return &e
 }
-func (e *ListAdsPromotedesQueryParamFields) UnmarshalJSON(data []byte) error {
+func (e *ListAdsPromotedsQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -31,21 +31,21 @@ func (e *ListAdsPromotedesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "type":
-		*e = ListAdsPromotedesQueryParamFields(v)
+		*e = ListAdsPromotedsQueryParamFields(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAdsPromotedesQueryParamFields: %v", v)
+		return fmt.Errorf("invalid value for ListAdsPromotedsQueryParamFields: %v", v)
 	}
 }
 
-type ListAdsPromotedesRequest struct {
+type ListAdsPromotedsRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
-	Fields []ListAdsPromotedesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAdsPromotedsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
 	// The org ID to filter by (reference to AdsOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
@@ -58,86 +58,86 @@ type ListAdsPromotedesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l *ListAdsPromotedesRequest) GetConnectionID() string {
+func (l *ListAdsPromotedsRequest) GetConnectionID() string {
 	if l == nil {
 		return ""
 	}
 	return l.ConnectionID
 }
 
-func (l *ListAdsPromotedesRequest) GetFields() []ListAdsPromotedesQueryParamFields {
+func (l *ListAdsPromotedsRequest) GetFields() []ListAdsPromotedsQueryParamFields {
 	if l == nil {
 		return nil
 	}
 	return l.Fields
 }
 
-func (l *ListAdsPromotedesRequest) GetLimit() *float64 {
+func (l *ListAdsPromotedsRequest) GetLimit() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Limit
 }
 
-func (l *ListAdsPromotedesRequest) GetOffset() *float64 {
+func (l *ListAdsPromotedsRequest) GetOffset() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Offset
 }
 
-func (l *ListAdsPromotedesRequest) GetOrder() *string {
+func (l *ListAdsPromotedsRequest) GetOrder() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Order
 }
 
-func (l *ListAdsPromotedesRequest) GetOrgID() *string {
+func (l *ListAdsPromotedsRequest) GetOrgID() *string {
 	if l == nil {
 		return nil
 	}
 	return l.OrgID
 }
 
-func (l *ListAdsPromotedesRequest) GetQuery() *string {
+func (l *ListAdsPromotedsRequest) GetQuery() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Query
 }
 
-func (l *ListAdsPromotedesRequest) GetRaw() *string {
+func (l *ListAdsPromotedsRequest) GetRaw() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Raw
 }
 
-func (l *ListAdsPromotedesRequest) GetSort() *string {
+func (l *ListAdsPromotedsRequest) GetSort() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Sort
 }
 
-func (l *ListAdsPromotedesRequest) GetType() *string {
+func (l *ListAdsPromotedsRequest) GetType() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Type
 }
 
-func (l *ListAdsPromotedesRequest) GetUpdatedGte() *string {
+func (l *ListAdsPromotedsRequest) GetUpdatedGte() *string {
 	if l == nil {
 		return nil
 	}
 	return l.UpdatedGte
 }
 
-type ListAdsPromotedesResponse struct {
+type ListAdsPromotedsResponse struct {
 	// Successful
-	AdsPromotedes []shared.AdsPromoted
+	AdsPromoteds []shared.AdsPromoted
 	// HTTP response content type for this operation
 	ContentType string
 	// HTTP response status code for this operation
@@ -146,28 +146,28 @@ type ListAdsPromotedesResponse struct {
 	RawResponse *http.Response
 }
 
-func (l *ListAdsPromotedesResponse) GetAdsPromotedes() []shared.AdsPromoted {
+func (l *ListAdsPromotedsResponse) GetAdsPromoteds() []shared.AdsPromoted {
 	if l == nil {
 		return nil
 	}
-	return l.AdsPromotedes
+	return l.AdsPromoteds
 }
 
-func (l *ListAdsPromotedesResponse) GetContentType() string {
+func (l *ListAdsPromotedsResponse) GetContentType() string {
 	if l == nil {
 		return ""
 	}
 	return l.ContentType
 }
 
-func (l *ListAdsPromotedesResponse) GetStatusCode() int {
+func (l *ListAdsPromotedsResponse) GetStatusCode() int {
 	if l == nil {
 		return 0
 	}
 	return l.StatusCode
 }
 
-func (l *ListAdsPromotedesResponse) GetRawResponse() *http.Response {
+func (l *ListAdsPromotedsResponse) GetRawResponse() *http.Response {
 	if l == nil {
 		return nil
 	}

@@ -225,7 +225,7 @@ func main() {
 * [ListAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
 * [ListAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [ListAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
-* [ListAdsPromotedes](docs/sdks/ads/README.md#listadspromotedes) - List all promotedes
+* [ListAdsPromoteds](docs/sdks/ads/README.md#listadspromoteds) - List all promoteds
 * [ListAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
 * [ListAdsTargets](docs/sdks/ads/README.md#listadstargets) - List all targets
 * [PatchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
@@ -1329,7 +1329,7 @@ func main() {
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
-* [ListAdsPromotedes](docs/sdks/promoted/README.md#listadspromotedes) - List all promotedes
+* [ListAdsPromoteds](docs/sdks/promoted/README.md#listadspromoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
 

@@ -30,8 +30,8 @@ func newPromoted(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// ListAdsPromotedes - List all promotedes
-func (s *Promoted) ListAdsPromotedes(ctx context.Context, request operations.ListAdsPromotedesRequest, opts ...operations.Option) (*operations.ListAdsPromotedesResponse, error) {
+// ListAdsPromoteds - List all promoteds
+func (s *Promoted) ListAdsPromoteds(ctx context.Context, request operations.ListAdsPromotedsRequest, opts ...operations.Option) (*operations.ListAdsPromotedsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Promoted) ListAdsPromotedes(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsPromotedes",
+		OperationID:      "listAdsPromoteds",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Promoted) ListAdsPromotedes(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListAdsPromotedesResponse{
+	res := &operations.ListAdsPromotedsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -205,7 +205,7 @@ func (s *Promoted) ListAdsPromotedes(ctx context.Context, request operations.Lis
 				return nil, err
 			}
 
-			res.AdsPromotedes = out
+			res.AdsPromoteds = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
