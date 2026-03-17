@@ -34,6 +34,14 @@ const (
 	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
 	PatchCommerceItemQueryParamFieldsTaxrateID         PatchCommerceItemQueryParamFields = "taxrate_id"
 	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
+	PatchCommerceItemQueryParamFieldsIsVisible         PatchCommerceItemQueryParamFields = "is_visible"
+	PatchCommerceItemQueryParamFieldsIsFeatured        PatchCommerceItemQueryParamFields = "is_featured"
+	PatchCommerceItemQueryParamFieldsWeight            PatchCommerceItemQueryParamFields = "weight"
+	PatchCommerceItemQueryParamFieldsWeightUnit        PatchCommerceItemQueryParamFields = "weight_unit"
+	PatchCommerceItemQueryParamFieldsRequiresShipping  PatchCommerceItemQueryParamFields = "requires_shipping"
+	PatchCommerceItemQueryParamFieldsPrices            PatchCommerceItemQueryParamFields = "prices"
+	PatchCommerceItemQueryParamFieldsInventoryID       PatchCommerceItemQueryParamFields = "inventory_id"
+	PatchCommerceItemQueryParamFieldsTotalStock        PatchCommerceItemQueryParamFields = "total_stock"
 )
 
 func (e PatchCommerceItemQueryParamFields) ToPointer() *PatchCommerceItemQueryParamFields {
@@ -88,6 +96,22 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "taxrate_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
 		*e = PatchCommerceItemQueryParamFields(v)
 		return nil
 	default:

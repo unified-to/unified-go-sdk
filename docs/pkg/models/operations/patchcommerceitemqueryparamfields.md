@@ -37,3 +37,11 @@ value := operations.PatchCommerceItemQueryParamFieldsID
 | `PatchCommerceItemQueryParamFieldsCollections`       | collections                                          |
 | `PatchCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                           |
 | `PatchCommerceItemQueryParamFieldsRaw`               | raw                                                  |
+| `PatchCommerceItemQueryParamFieldsIsVisible`         | is_visible                                           |
+| `PatchCommerceItemQueryParamFieldsIsFeatured`        | is_featured                                          |
+| `PatchCommerceItemQueryParamFieldsWeight`            | weight                                               |
+| `PatchCommerceItemQueryParamFieldsWeightUnit`        | weight_unit                                          |
+| `PatchCommerceItemQueryParamFieldsRequiresShipping`  | requires_shipping                                    |
+| `PatchCommerceItemQueryParamFieldsPrices`            | prices                                               |
+| `PatchCommerceItemQueryParamFieldsInventoryID`       | inventory_id                                         |
+| `PatchCommerceItemQueryParamFieldsTotalStock`        | total_stock                                          |

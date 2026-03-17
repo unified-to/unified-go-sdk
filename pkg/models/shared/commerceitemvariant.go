@@ -29,21 +29,21 @@ func (e *SizeUnit) IsExact() bool {
 	return false
 }
 
-type WeightUnit string
+type CommerceItemvariantWeightUnit string
 
 const (
-	WeightUnitG  WeightUnit = "g"
-	WeightUnitKg WeightUnit = "kg"
-	WeightUnitOz WeightUnit = "oz"
-	WeightUnitLb WeightUnit = "lb"
+	CommerceItemvariantWeightUnitG  CommerceItemvariantWeightUnit = "g"
+	CommerceItemvariantWeightUnitKg CommerceItemvariantWeightUnit = "kg"
+	CommerceItemvariantWeightUnitOz CommerceItemvariantWeightUnit = "oz"
+	CommerceItemvariantWeightUnitLb CommerceItemvariantWeightUnit = "lb"
 )
 
-func (e WeightUnit) ToPointer() *WeightUnit {
+func (e CommerceItemvariantWeightUnit) ToPointer() *CommerceItemvariantWeightUnit {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *WeightUnit) IsExact() bool {
+func (e *CommerceItemvariantWeightUnit) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "g", "kg", "oz", "lb":
@@ -64,25 +64,25 @@ type CommerceItemvariant struct {
 	IsFeatured  *bool      `json:"is_featured,omitempty"`
 	IsVisible   *bool      `json:"is_visible,omitempty"`
 	// references CommerceItem
-	Items             []CommerceReference  `json:"items,omitempty"`
-	Length            *float64             `json:"length,omitempty"`
-	Media             []CommerceItemMedia  `json:"media,omitempty"`
-	Metadata          []CommerceMetadata   `json:"metadata,omitempty"`
-	Name              *string              `json:"name,omitempty"`
-	Options           []CommerceItemOption `json:"options,omitempty"`
-	Prices            []CommerceItemPrice  `json:"prices,omitempty"`
-	PublicDescription *string              `json:"public_description,omitempty"`
-	PublicName        *string              `json:"public_name,omitempty"`
-	Raw               map[string]any       `json:"raw,omitempty"`
-	RequiresShipping  *bool                `json:"requires_shipping,omitempty"`
-	SizeUnit          *SizeUnit            `json:"size_unit,omitempty"`
-	Sku               *string              `json:"sku,omitempty"`
-	Tags              []string             `json:"tags,omitempty"`
-	TotalStock        *float64             `json:"total_stock,omitempty"`
-	UpdatedAt         *time.Time           `json:"updated_at,omitempty"`
-	Weight            *float64             `json:"weight,omitempty"`
-	WeightUnit        *WeightUnit          `json:"weight_unit,omitempty"`
-	Width             *float64             `json:"width,omitempty"`
+	Items             []CommerceReference            `json:"items,omitempty"`
+	Length            *float64                       `json:"length,omitempty"`
+	Media             []CommerceItemMedia            `json:"media,omitempty"`
+	Metadata          []CommerceMetadata             `json:"metadata,omitempty"`
+	Name              *string                        `json:"name,omitempty"`
+	Options           []CommerceItemOption           `json:"options,omitempty"`
+	Prices            []CommerceItemPrice            `json:"prices,omitempty"`
+	PublicDescription *string                        `json:"public_description,omitempty"`
+	PublicName        *string                        `json:"public_name,omitempty"`
+	Raw               map[string]any                 `json:"raw,omitempty"`
+	RequiresShipping  *bool                          `json:"requires_shipping,omitempty"`
+	SizeUnit          *SizeUnit                      `json:"size_unit,omitempty"`
+	Sku               *string                        `json:"sku,omitempty"`
+	Tags              []string                       `json:"tags,omitempty"`
+	TotalStock        *float64                       `json:"total_stock,omitempty"`
+	UpdatedAt         *time.Time                     `json:"updated_at,omitempty"`
+	Weight            *float64                       `json:"weight,omitempty"`
+	WeightUnit        *CommerceItemvariantWeightUnit `json:"weight_unit,omitempty"`
+	Width             *float64                       `json:"width,omitempty"`
 }
 
 func (c CommerceItemvariant) MarshalJSON() ([]byte, error) {
@@ -278,7 +278,7 @@ func (c *CommerceItemvariant) GetWeight() *float64 {
 	return c.Weight
 }
 
-func (c *CommerceItemvariant) GetWeightUnit() *WeightUnit {
+func (c *CommerceItemvariant) GetWeightUnit() *CommerceItemvariantWeightUnit {
 	if c == nil {
 		return nil
 	}

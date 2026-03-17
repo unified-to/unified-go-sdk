@@ -34,6 +34,14 @@ const (
 	ListCommerceItemsQueryParamFieldsCollections       ListCommerceItemsQueryParamFields = "collections"
 	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
 	ListCommerceItemsQueryParamFieldsRaw               ListCommerceItemsQueryParamFields = "raw"
+	ListCommerceItemsQueryParamFieldsIsVisible         ListCommerceItemsQueryParamFields = "is_visible"
+	ListCommerceItemsQueryParamFieldsIsFeatured        ListCommerceItemsQueryParamFields = "is_featured"
+	ListCommerceItemsQueryParamFieldsWeight            ListCommerceItemsQueryParamFields = "weight"
+	ListCommerceItemsQueryParamFieldsWeightUnit        ListCommerceItemsQueryParamFields = "weight_unit"
+	ListCommerceItemsQueryParamFieldsRequiresShipping  ListCommerceItemsQueryParamFields = "requires_shipping"
+	ListCommerceItemsQueryParamFieldsPrices            ListCommerceItemsQueryParamFields = "prices"
+	ListCommerceItemsQueryParamFieldsInventoryID       ListCommerceItemsQueryParamFields = "inventory_id"
+	ListCommerceItemsQueryParamFieldsTotalStock        ListCommerceItemsQueryParamFields = "total_stock"
 )
 
 func (e ListCommerceItemsQueryParamFields) ToPointer() *ListCommerceItemsQueryParamFields {
@@ -88,6 +96,22 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "taxrate_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
 		*e = ListCommerceItemsQueryParamFields(v)
 		return nil
 	default:

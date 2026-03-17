@@ -7,6 +7,30 @@ import (
 	"time"
 )
 
+type WeightUnit string
+
+const (
+	WeightUnitG  WeightUnit = "g"
+	WeightUnitKg WeightUnit = "kg"
+	WeightUnitOz WeightUnit = "oz"
+	WeightUnitLb WeightUnit = "lb"
+)
+
+func (e WeightUnit) ToPointer() *WeightUnit {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *WeightUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "g", "kg", "oz", "lb":
+			return true
+		}
+	}
+	return false
+}
+
 type CommerceItem struct {
 	AccountID *string `json:"account_id,omitempty"`
 	//  @deprecated; use collections instead
@@ -17,22 +41,30 @@ type CommerceItem struct {
 	Description       *string             `json:"description,omitempty"`
 	GlobalCode        *string             `json:"global_code,omitempty"`
 	ID                *string             `json:"id,omitempty"`
+	InventoryID       *string             `json:"inventory_id,omitempty"`
 	IsActive          *bool               `json:"is_active,omitempty"`
+	IsFeatured        *bool               `json:"is_featured,omitempty"`
 	IsTaxable         *bool               `json:"is_taxable,omitempty"`
+	IsVisible         *bool               `json:"is_visible,omitempty"`
 	Media             []CommerceItemMedia `json:"media,omitempty"`
 	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
 	Name              *string             `json:"name,omitempty"`
+	Prices            []CommerceItemPrice `json:"prices,omitempty"`
 	PublicDescription *string             `json:"public_description,omitempty"`
 	PublicName        *string             `json:"public_name,omitempty"`
 	Raw               map[string]any      `json:"raw,omitempty"`
+	RequiresShipping  *bool               `json:"requires_shipping,omitempty"`
 	Slug              *string             `json:"slug,omitempty"`
 	Tags              []string            `json:"tags,omitempty"`
 	TaxrateID         *string             `json:"taxrate_id,omitempty"`
+	TotalStock        *float64            `json:"total_stock,omitempty"`
 	Type              *string             `json:"type,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
 	// first variant is the default variant
 	Variants   []CommerceItemvariant `json:"variants,omitempty"`
 	VendorName *string               `json:"vendor_name,omitempty"`
+	Weight     *float64              `json:"weight,omitempty"`
+	WeightUnit *WeightUnit           `json:"weight_unit,omitempty"`
 }
 
 func (c CommerceItem) MarshalJSON() ([]byte, error) {
@@ -95,6 +127,13 @@ func (c *CommerceItem) GetID() *string {
 	return c.ID
 }
 
+func (c *CommerceItem) GetInventoryID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.InventoryID
+}
+
 func (c *CommerceItem) GetIsActive() *bool {
 	if c == nil {
 		return nil
@@ -102,11 +141,25 @@ func (c *CommerceItem) GetIsActive() *bool {
 	return c.IsActive
 }
 
+func (c *CommerceItem) GetIsFeatured() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsFeatured
+}
+
 func (c *CommerceItem) GetIsTaxable() *bool {
 	if c == nil {
 		return nil
 	}
 	return c.IsTaxable
+}
+
+func (c *CommerceItem) GetIsVisible() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.IsVisible
 }
 
 func (c *CommerceItem) GetMedia() []CommerceItemMedia {
@@ -130,6 +183,13 @@ func (c *CommerceItem) GetName() *string {
 	return c.Name
 }
 
+func (c *CommerceItem) GetPrices() []CommerceItemPrice {
+	if c == nil {
+		return nil
+	}
+	return c.Prices
+}
+
 func (c *CommerceItem) GetPublicDescription() *string {
 	if c == nil {
 		return nil
@@ -151,6 +211,13 @@ func (c *CommerceItem) GetRaw() map[string]any {
 	return c.Raw
 }
 
+func (c *CommerceItem) GetRequiresShipping() *bool {
+	if c == nil {
+		return nil
+	}
+	return c.RequiresShipping
+}
+
 func (c *CommerceItem) GetSlug() *string {
 	if c == nil {
 		return nil
@@ -170,6 +237,13 @@ func (c *CommerceItem) GetTaxrateID() *string {
 		return nil
 	}
 	return c.TaxrateID
+}
+
+func (c *CommerceItem) GetTotalStock() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.TotalStock
 }
 
 func (c *CommerceItem) GetType() *string {
@@ -198,4 +272,18 @@ func (c *CommerceItem) GetVendorName() *string {
 		return nil
 	}
 	return c.VendorName
+}
+
+func (c *CommerceItem) GetWeight() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.Weight
+}
+
+func (c *CommerceItem) GetWeightUnit() *WeightUnit {
+	if c == nil {
+		return nil
+	}
+	return c.WeightUnit
 }

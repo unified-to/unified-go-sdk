@@ -37,3 +37,11 @@ value := operations.GetCommerceItemQueryParamFieldsID
 | `GetCommerceItemQueryParamFieldsCollections`       | collections                                        |
 | `GetCommerceItemQueryParamFieldsTaxrateID`         | taxrate_id                                         |
 | `GetCommerceItemQueryParamFieldsRaw`               | raw                                                |
+| `GetCommerceItemQueryParamFieldsIsVisible`         | is_visible                                         |
+| `GetCommerceItemQueryParamFieldsIsFeatured`        | is_featured                                        |
+| `GetCommerceItemQueryParamFieldsWeight`            | weight                                             |
+| `GetCommerceItemQueryParamFieldsWeightUnit`        | weight_unit                                        |
+| `GetCommerceItemQueryParamFieldsRequiresShipping`  | requires_shipping                                  |
+| `GetCommerceItemQueryParamFieldsPrices`            | prices                                             |
+| `GetCommerceItemQueryParamFieldsInventoryID`       | inventory_id                                       |
+| `GetCommerceItemQueryParamFieldsTotalStock`        | total_stock                                        |
