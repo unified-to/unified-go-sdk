@@ -17,6 +17,7 @@ type AccountingExpense struct {
 	ID               *string              `json:"id,omitempty"`
 	Lineitems        []AccountingLineitem `json:"lineitems,omitempty"`
 	Name             *string              `json:"name,omitempty"`
+	OrganizationID   *string              `json:"organization_id,omitempty"`
 	PaymentMethod    *string              `json:"payment_method,omitempty"`
 	PostedAt         *time.Time           `json:"posted_at,omitempty"`
 	Raw              map[string]any       `json:"raw,omitempty"`
@@ -100,6 +101,13 @@ func (a *AccountingExpense) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AccountingExpense) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
 }
 
 func (a *AccountingExpense) GetPaymentMethod() *string {

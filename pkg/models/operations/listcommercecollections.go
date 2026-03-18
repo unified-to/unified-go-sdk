@@ -88,6 +88,8 @@ type ListCommerceCollectionsRequest struct {
 	Limit  *float64                                  `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                  `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                                   `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
+	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// The parent ID to filter by
 	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
@@ -135,6 +137,13 @@ func (l *ListCommerceCollectionsRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
+}
+
+func (l *ListCommerceCollectionsRequest) GetOrgID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.OrgID
 }
 
 func (l *ListCommerceCollectionsRequest) GetParentID() *string {

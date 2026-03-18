@@ -32,4 +32,5 @@ value := operations.CreateAccountingExpenseQueryParamFieldsID
 | `CreateAccountingExpenseQueryParamFieldsApprovedAt`       | approved_at                                               |
 | `CreateAccountingExpenseQueryParamFieldsApproverUserID`   | approver_user_id                                          |
 | `CreateAccountingExpenseQueryParamFieldsLineitems`        | lineitems                                                 |
+| `CreateAccountingExpenseQueryParamFieldsOrganizationID`   | organization_id                                           |
 | `CreateAccountingExpenseQueryParamFieldsRaw`              | raw                                                       |

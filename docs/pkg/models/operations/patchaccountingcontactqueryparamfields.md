@@ -36,4 +36,5 @@ value := operations.PatchAccountingContactQueryParamFieldsID
 | `PatchAccountingContactQueryParamFieldsCompanyName`        | company_name                                               |
 | `PatchAccountingContactQueryParamFieldsIdentification`     | identification                                             |
 | `PatchAccountingContactQueryParamFieldsAssociatedContacts` | associated_contacts                                        |
+| `PatchAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                            |
 | `PatchAccountingContactQueryParamFieldsRaw`                | raw                                                        |

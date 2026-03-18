@@ -123,9 +123,11 @@ type ListAdsGroupsRequest struct {
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
 	Fields []ListAdsGroupsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                        `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                        `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                         `queryParam:"style=form,explode=true,name=order"`
+	// The IO ID to filter by
+	IoID   *string  `queryParam:"style=form,explode=true,name=io_id"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// The org ID to filter by (reference to AdsOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// The parent ID to filter by
@@ -158,6 +160,13 @@ func (l *ListAdsGroupsRequest) GetFields() []ListAdsGroupsQueryParamFields {
 		return nil
 	}
 	return l.Fields
+}
+
+func (l *ListAdsGroupsRequest) GetIoID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.IoID
 }
 
 func (l *ListAdsGroupsRequest) GetLimit() *float64 {

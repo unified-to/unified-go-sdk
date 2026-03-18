@@ -42,4 +42,5 @@ value := operations.ListAccountingInvoicesQueryParamFieldsID
 | `ListAccountingInvoicesQueryParamFieldsType`                    | type                                                            |
 | `ListAccountingInvoicesQueryParamFieldsAttachments`             | attachments                                                     |
 | `ListAccountingInvoicesQueryParamFieldsSend`                    | send                                                            |
+| `ListAccountingInvoicesQueryParamFieldsOrganizationID`          | organization_id                                                 |
 | `ListAccountingInvoicesQueryParamFieldsRaw`                     | raw                                                             |

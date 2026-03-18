@@ -738,6 +738,29 @@ func (e *ListInvoiceID) IsExact() bool {
 	return false
 }
 
+type ListIoID string
+
+const (
+	ListIoIDSupportedRequired ListIoID = "supported-required"
+	ListIoIDSupported         ListIoID = "supported"
+	ListIoIDNotSupported      ListIoID = "not-supported"
+)
+
+func (e ListIoID) ToPointer() *ListIoID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListIoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListItemID string
 
 const (
@@ -1842,6 +1865,29 @@ func (e *NativeWebhookFormID) IsExact() bool {
 	return false
 }
 
+type NativeWebhookIoID string
+
+const (
+	NativeWebhookIoIDSupportedRequired NativeWebhookIoID = "supported-required"
+	NativeWebhookIoIDSupported         NativeWebhookIoID = "supported"
+	NativeWebhookIoIDNotSupported      NativeWebhookIoID = "not-supported"
+)
+
+func (e NativeWebhookIoID) ToPointer() *NativeWebhookIoID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookIoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookLabelID string
 
 const (
@@ -2716,6 +2762,29 @@ func (e *VirtualWebhookInvoiceID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookIoID string
+
+const (
+	VirtualWebhookIoIDSupportedRequired VirtualWebhookIoID = "supported-required"
+	VirtualWebhookIoIDSupported         VirtualWebhookIoID = "supported"
+	VirtualWebhookIoIDNotSupported      VirtualWebhookIoID = "not-supported"
+)
+
+func (e VirtualWebhookIoID) ToPointer() *VirtualWebhookIoID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookIoID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookItemID string
 
 const (
@@ -3440,6 +3509,7 @@ type IntegrationSupport struct {
 	ListInstructorID        *ListInstructorID        `json:"list_instructor_id,omitempty"`
 	ListInterviewID         *ListInterviewID         `json:"list_interview_id,omitempty"`
 	ListInvoiceID           *ListInvoiceID           `json:"list_invoice_id,omitempty"`
+	ListIoID                *ListIoID                `json:"list_io_id,omitempty"`
 	ListItemID              *ListItemID              `json:"list_item_id,omitempty"`
 	ListItemVariantID       *ListItemVariantID       `json:"list_item_variant_id,omitempty"`
 	ListJobID               *ListJobID               `json:"list_job_id,omitempty"`
@@ -3489,6 +3559,7 @@ type IntegrationSupport struct {
 	NativeWebhookCourseID   *NativeWebhookCourseID   `json:"native_webhook_course_id,omitempty"`
 	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
 	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
+	NativeWebhookIoID       *NativeWebhookIoID       `json:"native_webhook_io_id,omitempty"`
 	NativeWebhookLabelID    *NativeWebhookLabelID    `json:"native_webhook_label_id,omitempty"`
 	NativeWebhookMemberID   *NativeWebhookMemberID   `json:"native_webhook_member_id,omitempty"`
 	NativeWebhookOrderID    *NativeWebhookOrderID    `json:"native_webhook_order_id,omitempty"`
@@ -3531,6 +3602,7 @@ type IntegrationSupport struct {
 	VirtualWebhookFormID          *VirtualWebhookFormID                    `json:"virtual_webhook_form_id,omitempty"`
 	VirtualWebhookGroupID         *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
 	VirtualWebhookInvoiceID       *VirtualWebhookInvoiceID                 `json:"virtual_webhook_invoice_id,omitempty"`
+	VirtualWebhookIoID            *VirtualWebhookIoID                      `json:"virtual_webhook_io_id,omitempty"`
 	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
 	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
 	VirtualWebhookJobID           *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
@@ -3793,6 +3865,13 @@ func (i *IntegrationSupport) GetListInvoiceID() *ListInvoiceID {
 		return nil
 	}
 	return i.ListInvoiceID
+}
+
+func (i *IntegrationSupport) GetListIoID() *ListIoID {
+	if i == nil {
+		return nil
+	}
+	return i.ListIoID
 }
 
 func (i *IntegrationSupport) GetListItemID() *ListItemID {
@@ -4138,6 +4217,13 @@ func (i *IntegrationSupport) GetNativeWebhookFormID() *NativeWebhookFormID {
 	return i.NativeWebhookFormID
 }
 
+func (i *IntegrationSupport) GetNativeWebhookIoID() *NativeWebhookIoID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookIoID
+}
+
 func (i *IntegrationSupport) GetNativeWebhookLabelID() *NativeWebhookLabelID {
 	if i == nil {
 		return nil
@@ -4423,6 +4509,13 @@ func (i *IntegrationSupport) GetVirtualWebhookInvoiceID() *VirtualWebhookInvoice
 		return nil
 	}
 	return i.VirtualWebhookInvoiceID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookIoID() *VirtualWebhookIoID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookIoID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookItemID() *VirtualWebhookItemID {

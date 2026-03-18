@@ -33,6 +33,7 @@ const (
 	UpdateAccountingContactQueryParamFieldsCompanyName        UpdateAccountingContactQueryParamFields = "company_name"
 	UpdateAccountingContactQueryParamFieldsIdentification     UpdateAccountingContactQueryParamFields = "identification"
 	UpdateAccountingContactQueryParamFieldsAssociatedContacts UpdateAccountingContactQueryParamFields = "associated_contacts"
+	UpdateAccountingContactQueryParamFieldsOrganizationID     UpdateAccountingContactQueryParamFields = "organization_id"
 	UpdateAccountingContactQueryParamFieldsRaw                UpdateAccountingContactQueryParamFields = "raw"
 )
 
@@ -86,6 +87,8 @@ func (e *UpdateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) err
 	case "identification":
 		fallthrough
 	case "associated_contacts":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingContactQueryParamFields(v)

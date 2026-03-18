@@ -42,4 +42,5 @@ value := operations.UpdateAccountingInvoiceQueryParamFieldsID
 | `UpdateAccountingInvoiceQueryParamFieldsType`                    | type                                                             |
 | `UpdateAccountingInvoiceQueryParamFieldsAttachments`             | attachments                                                      |
 | `UpdateAccountingInvoiceQueryParamFieldsSend`                    | send                                                             |
+| `UpdateAccountingInvoiceQueryParamFieldsOrganizationID`          | organization_id                                                  |
 | `UpdateAccountingInvoiceQueryParamFieldsRaw`                     | raw                                                              |
