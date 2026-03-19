@@ -23,6 +23,8 @@ const (
 	ListUcCallsQueryParamFieldsContacts  ListUcCallsQueryParamFields = "contacts"
 	ListUcCallsQueryParamFieldsIsPrivate ListUcCallsQueryParamFields = "is_private"
 	ListUcCallsQueryParamFieldsRaw       ListUcCallsQueryParamFields = "raw"
+	ListUcCallsQueryParamFieldsUserName  ListUcCallsQueryParamFields = "user_name"
+	ListUcCallsQueryParamFieldsUserPhone ListUcCallsQueryParamFields = "user_phone"
 )
 
 func (e ListUcCallsQueryParamFields) ToPointer() *ListUcCallsQueryParamFields {
@@ -55,6 +57,10 @@ func (e *ListUcCallsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_private":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "user_phone":
 		*e = ListUcCallsQueryParamFields(v)
 		return nil
 	default:

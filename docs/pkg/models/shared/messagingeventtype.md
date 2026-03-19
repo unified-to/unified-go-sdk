@@ -27,6 +27,7 @@ custom := shared.MessagingEventType("custom_value")
 | `MessagingEventTypeChannelLeft`     | CHANNEL_LEFT                        |
 | `MessagingEventTypeChannelCreated`  | CHANNEL_CREATED                     |
 | `MessagingEventTypeChannelDeleted`  | CHANNEL_DELETED                     |
+| `MessagingEventTypeChannelRenamed`  | CHANNEL_RENAMED                     |
 | `MessagingEventTypeUserCreated`     | USER_CREATED                        |
 | `MessagingEventTypeUserDeleted`     | USER_DELETED                        |
 | `MessagingEventTypeUserUpdated`     | USER_UPDATED                        |

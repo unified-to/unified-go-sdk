@@ -84,6 +84,8 @@ func (e *ListAccountingTransactionsQueryParamFields) UnmarshalJSON(data []byte) 
 }
 
 type ListAccountingTransactionsRequest struct {
+	// The account ID to filter by (reference to AccountingAccount)
+	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The contact ID to filter by (reference to AccountingContact)
@@ -95,6 +97,8 @@ type ListAccountingTransactionsRequest struct {
 	Limit  *float64                                     `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                     `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                                      `queryParam:"style=form,explode=true,name=order"`
+	// The org ID to filter by (reference to AccountingOrganization)
+	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -104,6 +108,13 @@ type ListAccountingTransactionsRequest struct {
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (l *ListAccountingTransactionsRequest) GetAccountID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.AccountID
 }
 
 func (l *ListAccountingTransactionsRequest) GetConnectionID() string {
@@ -153,6 +164,13 @@ func (l *ListAccountingTransactionsRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
+}
+
+func (l *ListAccountingTransactionsRequest) GetOrgID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.OrgID
 }
 
 func (l *ListAccountingTransactionsRequest) GetQuery() *string {

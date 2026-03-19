@@ -21,6 +21,8 @@ type UcRecording struct {
 	StartAt      *time.Time         `json:"start_at,omitempty"`
 	UpdatedAt    *time.Time         `json:"updated_at,omitempty"`
 	UserID       *string            `json:"user_id,omitempty"`
+	UserName     *string            `json:"user_name,omitempty"`
+	UserPhone    *string            `json:"user_phone,omitempty"`
 	WebURL       *string            `json:"web_url,omitempty"`
 }
 
@@ -124,6 +126,20 @@ func (u *UcRecording) GetUserID() *string {
 		return nil
 	}
 	return u.UserID
+}
+
+func (u *UcRecording) GetUserName() *string {
+	if u == nil {
+		return nil
+	}
+	return u.UserName
+}
+
+func (u *UcRecording) GetUserPhone() *string {
+	if u == nil {
+		return nil
+	}
+	return u.UserPhone
 }
 
 func (u *UcRecording) GetWebURL() *string {

@@ -20,6 +20,8 @@ type UcCall struct {
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
 	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
 	UserID    *string                  `json:"user_id,omitempty"`
+	UserName  *string                  `json:"user_name,omitempty"`
+	UserPhone *string                  `json:"user_phone,omitempty"`
 }
 
 func (u UcCall) MarshalJSON() ([]byte, error) {
@@ -108,4 +110,18 @@ func (u *UcCall) GetUserID() *string {
 		return nil
 	}
 	return u.UserID
+}
+
+func (u *UcCall) GetUserName() *string {
+	if u == nil {
+		return nil
+	}
+	return u.UserName
+}
+
+func (u *UcCall) GetUserPhone() *string {
+	if u == nil {
+		return nil
+	}
+	return u.UserPhone
 }

@@ -29,3 +29,5 @@ value := operations.CreateUcRecordingQueryParamFieldsID
 | `CreateUcRecordingQueryParamFieldsUserID`       | user_id                                         |
 | `CreateUcRecordingQueryParamFieldsMedia`        | media                                           |
 | `CreateUcRecordingQueryParamFieldsRaw`          | raw                                             |
+| `CreateUcRecordingQueryParamFieldsUserName`     | user_name                                       |
+| `CreateUcRecordingQueryParamFieldsUserPhone`    | user_phone                                      |

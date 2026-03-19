@@ -26,3 +26,5 @@ value := operations.GetUcCallQueryParamFieldsID
 | `GetUcCallQueryParamFieldsContacts`  | contacts                             |
 | `GetUcCallQueryParamFieldsIsPrivate` | is_private                           |
 | `GetUcCallQueryParamFieldsRaw`       | raw                                  |
+| `GetUcCallQueryParamFieldsUserName`  | user_name                            |
+| `GetUcCallQueryParamFieldsUserPhone` | user_phone                           |

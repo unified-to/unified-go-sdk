@@ -19,6 +19,7 @@ const (
 	MessagingEventTypeChannelLeft     MessagingEventType = "CHANNEL_LEFT"
 	MessagingEventTypeChannelCreated  MessagingEventType = "CHANNEL_CREATED"
 	MessagingEventTypeChannelDeleted  MessagingEventType = "CHANNEL_DELETED"
+	MessagingEventTypeChannelRenamed  MessagingEventType = "CHANNEL_RENAMED"
 	MessagingEventTypeUserCreated     MessagingEventType = "USER_CREATED"
 	MessagingEventTypeUserDeleted     MessagingEventType = "USER_DELETED"
 	MessagingEventTypeUserUpdated     MessagingEventType = "USER_UPDATED"
@@ -32,7 +33,7 @@ func (e MessagingEventType) ToPointer() *MessagingEventType {
 func (e *MessagingEventType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "MESSAGE_RECEIVED", "REACTION_ADDED", "REACTION_REMOVED", "BUTTON_CLICK", "APP_MENTION", "CHANNEL_JOINED", "CHANNEL_LEFT", "CHANNEL_CREATED", "CHANNEL_DELETED", "USER_CREATED", "USER_DELETED", "USER_UPDATED":
+		case "MESSAGE_RECEIVED", "REACTION_ADDED", "REACTION_REMOVED", "BUTTON_CLICK", "APP_MENTION", "CHANNEL_JOINED", "CHANNEL_LEFT", "CHANNEL_CREATED", "CHANNEL_DELETED", "CHANNEL_RENAMED", "USER_CREATED", "USER_DELETED", "USER_UPDATED":
 			return true
 		}
 	}

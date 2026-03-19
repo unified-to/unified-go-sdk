@@ -26,6 +26,8 @@ const (
 	GetUcRecordingQueryParamFieldsUserID       GetUcRecordingQueryParamFields = "user_id"
 	GetUcRecordingQueryParamFieldsMedia        GetUcRecordingQueryParamFields = "media"
 	GetUcRecordingQueryParamFieldsRaw          GetUcRecordingQueryParamFields = "raw"
+	GetUcRecordingQueryParamFieldsUserName     GetUcRecordingQueryParamFields = "user_name"
+	GetUcRecordingQueryParamFieldsUserPhone    GetUcRecordingQueryParamFields = "user_phone"
 )
 
 func (e GetUcRecordingQueryParamFields) ToPointer() *GetUcRecordingQueryParamFields {
@@ -64,6 +66,10 @@ func (e *GetUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "media":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "user_phone":
 		*e = GetUcRecordingQueryParamFields(v)
 		return nil
 	default:
