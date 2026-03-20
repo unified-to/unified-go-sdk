@@ -28,6 +28,7 @@ const (
 	PatchAccountingAccountQueryParamFieldsGroup               PatchAccountingAccountQueryParamFields = "group"
 	PatchAccountingAccountQueryParamFieldsSubgroup            PatchAccountingAccountQueryParamFields = "subgroup"
 	PatchAccountingAccountQueryParamFieldsParentID            PatchAccountingAccountQueryParamFields = "parent_id"
+	PatchAccountingAccountQueryParamFieldsOrganizationID      PatchAccountingAccountQueryParamFields = "organization_id"
 	PatchAccountingAccountQueryParamFieldsTaxonomy            PatchAccountingAccountQueryParamFields = "taxonomy"
 	PatchAccountingAccountQueryParamFieldsRaw                 PatchAccountingAccountQueryParamFields = "raw"
 )
@@ -72,6 +73,8 @@ func (e *PatchAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "subgroup":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "taxonomy":
 		fallthrough

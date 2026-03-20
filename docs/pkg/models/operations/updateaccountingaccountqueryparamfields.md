@@ -31,5 +31,6 @@ value := operations.UpdateAccountingAccountQueryParamFieldsID
 | `UpdateAccountingAccountQueryParamFieldsGroup`               | group                                                        |
 | `UpdateAccountingAccountQueryParamFieldsSubgroup`            | subgroup                                                     |
 | `UpdateAccountingAccountQueryParamFieldsParentID`            | parent_id                                                    |
+| `UpdateAccountingAccountQueryParamFieldsOrganizationID`      | organization_id                                              |
 | `UpdateAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                     |
 | `UpdateAccountingAccountQueryParamFieldsRaw`                 | raw                                                          |

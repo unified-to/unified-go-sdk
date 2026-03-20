@@ -34,6 +34,7 @@ type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User struct {
 	AdditionalManagers []ScimManager                                                            `json:"additionalManagers,omitempty"`
 	Birthday           *time.Time                                                               `json:"birthday,omitempty"`
 	CostCenter         *string                                                                  `json:"costCenter,omitempty"`
+	Currency           *string                                                                  `json:"currency,omitempty"`
 	Department         *string                                                                  `json:"department,omitempty"`
 	Division           *string                                                                  `json:"division,omitempty"`
 	EmployeeNumber     *string                                                                  `json:"employeeNumber,omitempty"`
@@ -77,6 +78,13 @@ func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetC
 		return nil
 	}
 	return p.CostCenter
+}
+
+func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetCurrency() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Currency
 }
 
 func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) GetDepartment() *string {

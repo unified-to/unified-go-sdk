@@ -36,5 +36,5 @@ value := operations.CreateAccountingContactQueryParamFieldsID
 | `CreateAccountingContactQueryParamFieldsCompanyName`        | company_name                                                |
 | `CreateAccountingContactQueryParamFieldsIdentification`     | identification                                              |
 | `CreateAccountingContactQueryParamFieldsAssociatedContacts` | associated_contacts                                         |
-| `CreateAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                             |
 | `CreateAccountingContactQueryParamFieldsRaw`                | raw                                                         |
+| `CreateAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                             |

@@ -29,8 +29,8 @@ const (
 	CreateAccountingExpenseQueryParamFieldsApprovedAt       CreateAccountingExpenseQueryParamFields = "approved_at"
 	CreateAccountingExpenseQueryParamFieldsApproverUserID   CreateAccountingExpenseQueryParamFields = "approver_user_id"
 	CreateAccountingExpenseQueryParamFieldsLineitems        CreateAccountingExpenseQueryParamFields = "lineitems"
-	CreateAccountingExpenseQueryParamFieldsOrganizationID   CreateAccountingExpenseQueryParamFields = "organization_id"
 	CreateAccountingExpenseQueryParamFieldsRaw              CreateAccountingExpenseQueryParamFields = "raw"
+	CreateAccountingExpenseQueryParamFieldsOrganizationID   CreateAccountingExpenseQueryParamFields = "organization_id"
 )
 
 func (e CreateAccountingExpenseQueryParamFields) ToPointer() *CreateAccountingExpenseQueryParamFields {
@@ -76,9 +76,9 @@ func (e *CreateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "lineitems":
 		fallthrough
-	case "organization_id":
-		fallthrough
 	case "raw":
+		fallthrough
+	case "organization_id":
 		*e = CreateAccountingExpenseQueryParamFields(v)
 		return nil
 	default:

@@ -28,6 +28,7 @@ const (
 	UpdateAccountingAccountQueryParamFieldsGroup               UpdateAccountingAccountQueryParamFields = "group"
 	UpdateAccountingAccountQueryParamFieldsSubgroup            UpdateAccountingAccountQueryParamFields = "subgroup"
 	UpdateAccountingAccountQueryParamFieldsParentID            UpdateAccountingAccountQueryParamFields = "parent_id"
+	UpdateAccountingAccountQueryParamFieldsOrganizationID      UpdateAccountingAccountQueryParamFields = "organization_id"
 	UpdateAccountingAccountQueryParamFieldsTaxonomy            UpdateAccountingAccountQueryParamFields = "taxonomy"
 	UpdateAccountingAccountQueryParamFieldsRaw                 UpdateAccountingAccountQueryParamFields = "raw"
 )
@@ -72,6 +73,8 @@ func (e *UpdateAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) err
 	case "subgroup":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "taxonomy":
 		fallthrough
