@@ -16,6 +16,7 @@ const (
 	ListAdsTargetsQueryParamFieldsName  ListAdsTargetsQueryParamFields = "name"
 	ListAdsTargetsQueryParamFieldsValue ListAdsTargetsQueryParamFields = "value"
 	ListAdsTargetsQueryParamFieldsType  ListAdsTargetsQueryParamFields = "type"
+	ListAdsTargetsQueryParamFieldsRaw   ListAdsTargetsQueryParamFields = "raw"
 )
 
 func (e ListAdsTargetsQueryParamFields) ToPointer() *ListAdsTargetsQueryParamFields {
@@ -34,6 +35,8 @@ func (e *ListAdsTargetsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "value":
 		fallthrough
 	case "type":
+		fallthrough
+	case "raw":
 		*e = ListAdsTargetsQueryParamFields(v)
 		return nil
 	default:

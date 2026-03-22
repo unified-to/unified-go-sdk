@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 65ff6a93530ff3feaa46f9f447f149e7
+  docChecksum: ad0da19a48c2c6324b0575fb8bbcbe79
   docVersion: "1.0"
-  speakeasyVersion: 1.758.0
-  generationVersion: 2.866.2
-  releaseVersion: 0.36.51
-  configChecksum: ead1684814575abd6db552fc0844990f
+  speakeasyVersion: 1.759.0
+  generationVersion: 2.869.3
+  releaseVersion: 0.36.52
+  configChecksum: 93c1e08609b2f9b3d57e0ef05f31b564
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 9a9fbce9-fd12-4cd8-9495-a17f5320a4bf
-  pristine_commit_hash: 8dc41e1578278a14bbbf54c9327d9e4a52a01f28
-  pristine_tree_hash: d026756ce61dc8cddc7f0ea5840eff137a3928c4
+  generation_id: baa5f583-a5ea-40dc-9072-dc0b99a8a9c5
+  pristine_commit_hash: 0aa81478611f965bbc2223577221caa1e17ddd7f
+  pristine_tree_hash: 93954885e7095752e7ff38ea305eea3ca26d3c7c
 features:
   go:
     acceptHeaders: 2.81.2
@@ -387,8 +387,8 @@ trackedFiles:
     pristine_git_object: 828b9bb33538a876800909b4903ca4209fa0887e
   docs/pkg/models/operations/createadscampaignqueryparamfields.md:
     id: 978fa98adce9
-    last_write_checksum: sha1:bf0e37a15d41da404e9b7b110fd41aa5dfb71dd8
-    pristine_git_object: 44d08a5b38abcae47d5b66d2bd9816d97aaa4212
+    last_write_checksum: sha1:65b2e591515fd209c7ac003ad368bf8d5310f1bb
+    pristine_git_object: 174b9b2afd5d095181add1de81857ccdcdd92e93
   docs/pkg/models/operations/createadscampaignrequest.md:
     id: b634826059d2
     last_write_checksum: sha1:9553ded94ea930a495057864ca28ed197eae910f
@@ -1643,8 +1643,8 @@ trackedFiles:
     pristine_git_object: 96ffb80d4c7e1244f08b95919724d0186dd2e1a9
   docs/pkg/models/operations/getadscampaignqueryparamfields.md:
     id: ca394090bc4c
-    last_write_checksum: sha1:04e633f58b6a2d2e81a5133d838f10619b0bfed5
-    pristine_git_object: a3d295faa9895dfcb93d8a9035a6f5cb08d5945f
+    last_write_checksum: sha1:3619fbd17e306b9cdeb9b6e9f39b2c843ad9baa0
+    pristine_git_object: 782ffe4896e75519533eda37d1cbe972c6527a98
   docs/pkg/models/operations/getadscampaignrequest.md:
     id: 72aaf8e16598
     last_write_checksum: sha1:6fd94f1504e51c85b4fda1560d37f4094e0412f4
@@ -3035,8 +3035,8 @@ trackedFiles:
     pristine_git_object: 51cef9f18d19631f8ccdada1fa3a0cebd3bbe3f6
   docs/pkg/models/operations/listadscampaignsqueryparamfields.md:
     id: 017cdc6e1166
-    last_write_checksum: sha1:53cbea461f68e1c097a501dbb055d5c0c8dfd345
-    pristine_git_object: ad06d41c8cde2105b5e084dac683f464cbaade22
+    last_write_checksum: sha1:6c047dbc73d216fe0dcf82a7b19c4f908f54f1bf
+    pristine_git_object: fe2b55de90ba8896e18ea47169809dca19089381
   docs/pkg/models/operations/listadscampaignsrequest.md:
     id: fda09963a70c
     last_write_checksum: sha1:c2b60a8ea2a5186325abf3829481c79055a890bc
@@ -3119,8 +3119,8 @@ trackedFiles:
     pristine_git_object: eb4f2e66f0252e89be2fcf36a2a78deb5cd2441a
   docs/pkg/models/operations/listadstargetsqueryparamfields.md:
     id: ff0720bef539
-    last_write_checksum: sha1:9ccd2b5206ddc736eef8516f0e8f17a91a7878be
-    pristine_git_object: fe4dcea1172e73be09ea7687050415c6600e5b9c
+    last_write_checksum: sha1:489760a808fccc0cc2adce5ff14c2e6f526fa32e
+    pristine_git_object: 5616aa5c2d0f14b1def65a9c5ec5511efb22bd9e
   docs/pkg/models/operations/listadstargetsrequest.md:
     id: 2196bbc471da
     last_write_checksum: sha1:00303dd60a9691b0ddfb2e7977d786ba83b29413
@@ -4451,8 +4451,8 @@ trackedFiles:
     pristine_git_object: 1c464d350286381079a6fc28e23db84d7969f5af
   docs/pkg/models/operations/patchadscampaignqueryparamfields.md:
     id: 49de5cf299de
-    last_write_checksum: sha1:8e02cce054b9786ca2bcbdee73c8906e395b35c2
-    pristine_git_object: 890d751bc6ac94e90507d74b23b0a636ab8b03af
+    last_write_checksum: sha1:e260834c84af6f9aa9cc4cf7dd4197650893cfd2
+    pristine_git_object: 160f41cb7777b49be8d309d5f64813ecb692e9d2
   docs/pkg/models/operations/patchadscampaignrequest.md:
     id: bfdd44e587bc
     last_write_checksum: sha1:d0080a279a1ce9ff9835d66c7ca4c3edf3609288
@@ -6423,8 +6423,8 @@ trackedFiles:
     pristine_git_object: 6592366aca600dbcdcc008106ea4dce8c14caf6b
   docs/pkg/models/operations/updateadscampaignqueryparamfields.md:
     id: 4faad9699309
-    last_write_checksum: sha1:3eb4ab14823e8f1741a25ece717fd946c005cb26
-    pristine_git_object: c346916b7c454fdeed6fbda1006bdc27bdb107a8
+    last_write_checksum: sha1:8bad875b8d98e64d64e43b3a0ce3a83e0ca95c1a
+    pristine_git_object: 4fb065edc55f9538724cc66389b7983b87f3c51e
   docs/pkg/models/operations/updateadscampaignrequest.md:
     id: 30706aa93e38
     last_write_checksum: sha1:c41e5290e43a8aa5fd5d81f182e79e88245e4371
@@ -7659,8 +7659,8 @@ trackedFiles:
     pristine_git_object: cdc4f971ccc8c630162553181265c288d799b258
   docs/pkg/models/shared/adscampaign.md:
     id: 3922e3265fe8
-    last_write_checksum: sha1:9b05e32c4b6136a0788ffaad8ae967156192f304
-    pristine_git_object: a759c07b212555fef1850e64380bfb6f224b450d
+    last_write_checksum: sha1:bb7243e5bfe7f0686a4abb84f1e322fbe5c0732f
+    pristine_git_object: 8ca01c22927df555c4583ab54801ebed007c93cc
   docs/pkg/models/shared/adscampaignstatus.md:
     id: 7e0b03952caf
     last_write_checksum: sha1:8ca26cb5619b25a81dc9e62bf6b2b5868b6642e4
@@ -7739,8 +7739,8 @@ trackedFiles:
     pristine_git_object: 582438e9f3fb2828cc7acee3c88cb0de2f05ea32
   docs/pkg/models/shared/adstarget.md:
     id: c1640a6900c8
-    last_write_checksum: sha1:d27854505a20f8ed096bd0949bfb1362e7ecf8d7
-    pristine_git_object: 78a7dbb486646194c8997535c41000b4cc2c8df2
+    last_write_checksum: sha1:838433679562dcd92c3fc4cc6ed664738a3683e1
+    pristine_git_object: fa7898db914f715877c4eb0fe2b518fd4a6d19ee
   docs/pkg/models/shared/adstargettype.md:
     id: da7c0df33760
     last_write_checksum: sha1:857e12ab7be4d2b37194dae6b044c4e88556514f
@@ -9555,8 +9555,8 @@ trackedFiles:
     pristine_git_object: efdd2124b7cadbd53b256bbcb0e5bd4e6f2fb1fb
   docs/pkg/models/shared/propertyadsreportmetricscampaign.md:
     id: 073c78b0f3fe
-    last_write_checksum: sha1:0fff0cfbc39fa12424fd5702f7d9fb61fe53ce71
-    pristine_git_object: 1dd2e829124d89851d9cd15a6f3a5e3a6a843b47
+    last_write_checksum: sha1:05e224c9ccadcae74d9b37266053fc8d31880441
+    pristine_git_object: 19b5e30ac3ec728323fa9a70c6b8567d17b653ae
   docs/pkg/models/shared/propertyadsreportmetricscampaignadvertisingchanneltype.md:
     id: e2fd0f9b4688
     last_write_checksum: sha1:aaf5694c598077a619f9f13f3f88378d68352217
@@ -11599,8 +11599,8 @@ trackedFiles:
     pristine_git_object: 3fd16af2af8c3e9f05ee488a3e0e304ca6ccc9d8
   pkg/models/operations/createadscampaign.go:
     id: 67d826f52918
-    last_write_checksum: sha1:6a43b0acfcb274f248e25bf8382b85b3885595df
-    pristine_git_object: 322f2228938c95ea45d1b0ecc9da413165e91aa3
+    last_write_checksum: sha1:01f5965f4c8c2b0380e0558c8f530c7a67f1738f
+    pristine_git_object: 3653dfb24cfc450a3054c2794a7eb57822eceb14
   pkg/models/operations/createadscreative.go:
     id: db1746413e03
     last_write_checksum: sha1:3599da74ad959ac7074cef3eff326f712095f043
@@ -12031,8 +12031,8 @@ trackedFiles:
     pristine_git_object: e84eb6c3556c194f4f8d5da9ed004a733d838825
   pkg/models/operations/getadscampaign.go:
     id: eb518d871cf7
-    last_write_checksum: sha1:1e8f88a697b6cd3f72784fe1aed6d7d5b3cc7298
-    pristine_git_object: a2c8bd764e27c9059f9590c23cbeec4ce99d64ba
+    last_write_checksum: sha1:4dfa6205d244118f1e80c8850d898542c205ca09
+    pristine_git_object: bcb3d2df476b79dc5b631c14e51dcee5892a6c7c
   pkg/models/operations/getadscreative.go:
     id: 7133e62da55e
     last_write_checksum: sha1:b5caec860856d1e71c8cd6e3e16a0a62bf067bc9
@@ -12507,8 +12507,8 @@ trackedFiles:
     pristine_git_object: e287e8a82ba6dbc538a0a0014ed556da8ae2975a
   pkg/models/operations/listadscampaigns.go:
     id: a70e3b8490cd
-    last_write_checksum: sha1:e521365651701260747628eda3e9e695a9373e96
-    pristine_git_object: 873cf8c55c77434c4cef90e36c267e761428dd9f
+    last_write_checksum: sha1:95e1558865f8fcc3d557dab6a2aee9322188142b
+    pristine_git_object: f8c36cd0c8c0def653c440f2b35a231f9dd38c03
   pkg/models/operations/listadscreatives.go:
     id: 51fb15107e5b
     last_write_checksum: sha1:4aa18bd616e9f10bb253aca9afbaa6bd99279846
@@ -12535,8 +12535,8 @@ trackedFiles:
     pristine_git_object: 89e8525d37d825a79860af9582f139ece7712b4e
   pkg/models/operations/listadstargets.go:
     id: ec89288085b0
-    last_write_checksum: sha1:3584375a17609ca624dd2defdc3871e02f217abd
-    pristine_git_object: c93e2dd8c0f41a02b1495cf823b23565c12389a0
+    last_write_checksum: sha1:1b08a8c1dc0e1490421a983aab67c0a64d5fb893
+    pristine_git_object: c1c3cdf1ab0f4da92f4b0daf5686a32103074342
   pkg/models/operations/listassessmentpackages.go:
     id: a154827bae58
     last_write_checksum: sha1:941d17b25c030bdc752007273e67c8fd91b4612b
@@ -12999,8 +12999,8 @@ trackedFiles:
     pristine_git_object: c859a53e1b98d8c6d186b40988c8b27c0fadccf9
   pkg/models/operations/patchadscampaign.go:
     id: 79db5822e6b1
-    last_write_checksum: sha1:77e19b832d56b4bf8bf6fd4313ab06720f21f61f
-    pristine_git_object: f39a1d9d3ffac552744407c66af40d09648d3952
+    last_write_checksum: sha1:20d94fb0444627827c807581965c919f59894ed5
+    pristine_git_object: 9321c8dcca619b43f28817b768dbbeeeda7a4c45
   pkg/models/operations/patchadscreative.go:
     id: 27721fbd9abd
     last_write_checksum: sha1:a08743fdd606762c67e1dfb612e811957968c636
@@ -13795,8 +13795,8 @@ trackedFiles:
     pristine_git_object: 206680eec8d04bf44013d8b6989517f0f8916f71
   pkg/models/operations/updateadscampaign.go:
     id: 6b14316eca94
-    last_write_checksum: sha1:31244de0f7977960c5c0f8703f18e94d62217d6b
-    pristine_git_object: 96465d12f2f0b97ce26504c8bf6fb645fa64cdda
+    last_write_checksum: sha1:c5395f9c42c33effb5133c35fdc8c8f675cc8211
+    pristine_git_object: 50a809f8b2237103843850868b8548af2f224f6a
   pkg/models/operations/updateadscreative.go:
     id: 743da3d023a4
     last_write_checksum: sha1:8c9484776bbb86571c216687c53fbfd448b58dbe
@@ -14303,8 +14303,8 @@ trackedFiles:
     pristine_git_object: 15ed182c7ffac362679ae6b0d0a6118ffba8d62b
   pkg/models/shared/adscampaign.go:
     id: a571ad4de1ee
-    last_write_checksum: sha1:1013a7847890c1601df1193ded20d6b390af4cdd
-    pristine_git_object: 7e2bcb369db5f8d776f78240811adf12c9fa98cb
+    last_write_checksum: sha1:1d6c5cf046061de7155fa4284e2cb2c4a24aee30
+    pristine_git_object: f64c9fb46b0d4400575a2b82eae69cfffc9c3e2e
   pkg/models/shared/adschedule.go:
     id: c9497bc20be3
     last_write_checksum: sha1:f93599a2d4ec36c65c4dc500f7018282c6655fc9
@@ -14347,8 +14347,8 @@ trackedFiles:
     pristine_git_object: bad3a8d447e38bed0e5679a368a3187071612053
   pkg/models/shared/adstarget.go:
     id: 4574dd494c08
-    last_write_checksum: sha1:b8d8f0cf251477bab304c29840aea748fbd40334
-    pristine_git_object: a8867c1f9e3f9310d69ec605a4ee644f91429713
+    last_write_checksum: sha1:9fba0216643ccac636b0e00800350751f621eaa8
+    pristine_git_object: cba4671296a057f259df8f1665fef11824127cad
   pkg/models/shared/apicall.go:
     id: 40c59b73f4a6
     last_write_checksum: sha1:0506ac6b53f474bef8aa59770e61888b4e4e545d
@@ -15151,8 +15151,8 @@ trackedFiles:
     pristine_git_object: 73a379523feb90a69de33dc60a3d021760aca85f
   pkg/models/shared/propertyadsreportmetricscampaign.go:
     id: 635fd7dc53b1
-    last_write_checksum: sha1:4d6aea4c9dbad74f7497077cef90d237bd5c5935
-    pristine_git_object: 1a6978dcd84218464c082af117c04a6bb221d6bc
+    last_write_checksum: sha1:7b2106897e0f608d7c5fbfb84709391f4c54c403
+    pristine_git_object: 96b4fd644881cdcd5031f0c91665dd9b97982d08
   pkg/models/shared/propertyadsreportmetricscampaignfrequencycap.go:
     id: 4a1a0622d88b
     last_write_checksum: sha1:12373849c19161235fca98c30fc4818bcaae27aa
@@ -16023,8 +16023,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:6d87ab91705cd605235f39477374231b6a1df129
-    pristine_git_object: e099964479c5576358f6bd4369a0f054ac31cfb7
+    last_write_checksum: sha1:644e130f5c7026da56249b6edeb4529ce7dd8df0
+    pristine_git_object: 389f36e3310dcb638b154b6d8212c1cb43bac71a
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -21980,7 +21980,7 @@ examples:
           application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Accounting.CreateAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.CreateAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.GetAccountingAccount()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Accounting.GetAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.ListAccountingAccounts()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].OrganizationId` **Added**\n* `UnifiedTo.Accounting.ListAccountingContacts()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Accounting.PatchAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Account.CreateAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Account.GetAccountingAccount()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Account.ListAccountingAccounts()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].OrganizationId` **Added**\n* `UnifiedTo.Account.PatchAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Account.UpdateAccountingAccount()`: \n  *  `request.Request` **Changed**\n  *  `response.OrganizationId` **Added**\n* `UnifiedTo.Contact.CreateAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Contact.GetAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Contact.ListAccountingContacts()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Contact.PatchAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Contact.UpdateAccountingContact()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Expense.CreateAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Expense.GetAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Expense.ListAccountingExpenses()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Expense.PatchAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Expense.UpdateAccountingExpense()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Scim.CreateScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.Scim.GetScimUsers()`:  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.Scim.ListScimUsers()`:  `response.[].Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.Scim.PatchScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.Scim.UpdateScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.User.CreateScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.User.GetScimUsers()`:  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.User.ListScimUsers()`:  `response.[].Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.User.PatchScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n* `UnifiedTo.User.UpdateScimUsers()`: \n  *  `request.Request.ScimUser.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n  *  `response.Urn:ietf:params:scim:schemas:extension:enterprise:2.0:user.Currency` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[].Campaign.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[].Campaign.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Raw` **Added**\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Target.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Raw` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

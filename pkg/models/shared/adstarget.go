@@ -38,6 +38,7 @@ func (e *AdsTargetType) IsExact() bool {
 type AdsTarget struct {
 	ID    string         `json:"id"`
 	Name  *string        `json:"name,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
 	Type  *AdsTargetType `json:"type,omitempty"`
 	Value string         `json:"value"`
 }
@@ -54,6 +55,13 @@ func (a *AdsTarget) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AdsTarget) GetRaw() map[string]any {
+	if a == nil {
+		return nil
+	}
+	return a.Raw
 }
 
 func (a *AdsTarget) GetType() *AdsTargetType {

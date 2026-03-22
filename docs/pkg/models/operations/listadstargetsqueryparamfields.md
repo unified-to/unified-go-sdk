@@ -19,3 +19,4 @@ value := operations.ListAdsTargetsQueryParamFieldsID
 | `ListAdsTargetsQueryParamFieldsName`  | name                                  |
 | `ListAdsTargetsQueryParamFieldsValue` | value                                 |
 | `ListAdsTargetsQueryParamFieldsType`  | type                                  |
+| `ListAdsTargetsQueryParamFieldsRaw`   | raw                                   |

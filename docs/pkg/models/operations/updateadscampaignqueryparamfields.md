@@ -34,4 +34,5 @@ value := operations.UpdateAdsCampaignQueryParamFieldsID
 | `UpdateAdsCampaignQueryParamFieldsCampaignBudgetIdentifier` | campaign_budget_identifier                                  |
 | `UpdateAdsCampaignQueryParamFieldsCurrency`                 | currency                                                    |
 | `UpdateAdsCampaignQueryParamFieldsCategory`                 | category                                                    |
+| `UpdateAdsCampaignQueryParamFieldsHasEuPoliticalAds`        | has_eu_political_ads                                        |
 | `UpdateAdsCampaignQueryParamFieldsRaw`                      | raw                                                         |

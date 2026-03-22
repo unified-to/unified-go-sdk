@@ -128,6 +128,7 @@ type AdsCampaign struct {
 	EndAt                    *time.Time                       `json:"end_at,omitempty"`
 	FrequencyCap             *PropertyAdsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
 	Goal                     *Goal                            `json:"goal,omitempty"`
+	HasEuPoliticalAds        *bool                            `json:"has_eu_political_ads,omitempty"`
 	ID                       *string                          `json:"id,omitempty"`
 	Name                     *string                          `json:"name,omitempty"`
 	OrganizationID           *string                          `json:"organization_id,omitempty"`
@@ -219,6 +220,13 @@ func (a *AdsCampaign) GetGoal() *Goal {
 		return nil
 	}
 	return a.Goal
+}
+
+func (a *AdsCampaign) GetHasEuPoliticalAds() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.HasEuPoliticalAds
 }
 
 func (a *AdsCampaign) GetID() *string {
