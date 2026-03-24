@@ -20,6 +20,7 @@ value := operations.CreateCommerceReviewQueryParamFieldsID
 | `CreateCommerceReviewQueryParamFieldsUpdatedAt`        | updated_at                                             |
 | `CreateCommerceReviewQueryParamFieldsItemID`           | item_id                                                |
 | `CreateCommerceReviewQueryParamFieldsItemVariantID`    | item_variant_id                                        |
+| `CreateCommerceReviewQueryParamFieldsLocationID`       | location_id                                            |
 | `CreateCommerceReviewQueryParamFieldsRating`           | rating                                                 |
 | `CreateCommerceReviewQueryParamFieldsTitle`            | title                                                  |
 | `CreateCommerceReviewQueryParamFieldsContent`          | content                                                |
@@ -37,4 +38,5 @@ value := operations.CreateCommerceReviewQueryParamFieldsID
 | `CreateCommerceReviewQueryParamFieldsIsPublic`         | is_public                                              |
 | `CreateCommerceReviewQueryParamFieldsComments`         | comments                                               |
 | `CreateCommerceReviewQueryParamFieldsMetadata`         | metadata                                               |
+| `CreateCommerceReviewQueryParamFieldsURL`              | url                                                    |
 | `CreateCommerceReviewQueryParamFieldsRaw`              | raw                                                    |

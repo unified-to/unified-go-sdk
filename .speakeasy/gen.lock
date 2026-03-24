@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: ad0da19a48c2c6324b0575fb8bbcbe79
+  docChecksum: 4b6bb302afd17171c278cb7394f80ddb
   docVersion: "1.0"
-  speakeasyVersion: 1.759.0
-  generationVersion: 2.869.3
-  releaseVersion: 0.36.52
-  configChecksum: 93c1e08609b2f9b3d57e0ef05f31b564
+  speakeasyVersion: 1.759.1
+  generationVersion: 2.869.10
+  releaseVersion: 0.36.53
+  configChecksum: 72f80db59f8db70f67c59ead19c41ac3
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: baa5f583-a5ea-40dc-9072-dc0b99a8a9c5
-  pristine_commit_hash: 0aa81478611f965bbc2223577221caa1e17ddd7f
-  pristine_tree_hash: 93954885e7095752e7ff38ea305eea3ca26d3c7c
+  generation_id: 79e99794-33fd-4b70-9a1f-c1e3077d7bd6
+  pristine_commit_hash: c411452306415766f66ea4f7373bd075a8426d2e
+  pristine_tree_hash: 8390cdbd764804221da90a979b6b2e5254a8d96d
 features:
   go:
     acceptHeaders: 2.81.2
@@ -89,6 +89,10 @@ trackedFiles:
     id: 082b9e5329e5
     last_write_checksum: sha1:c0565d2388dcbd123fd1ae97a3f9b400ac3a4331
     pristine_git_object: 7110ffc70ca59c8741e3982d322ce46ce807a0a3
+  availability.go:
+    id: 423036eb67fe
+    last_write_checksum: sha1:0ba85d4a5ee34b4f19f4f687a34d36836cb55ccb
+    pristine_git_object: cb8bca9f8620e36829f9c7159913fd07f74e4027
   balancesheet.go:
     id: 5c317d34dd02
     last_write_checksum: sha1:1e87a4cccdc64283cbd5d217a3315308265b4cd9
@@ -163,8 +167,8 @@ trackedFiles:
     pristine_git_object: 1c6b47b0a4220506fa09f656af4291107772ea5e
   commerce.go:
     id: 7aefb418af3e
-    last_write_checksum: sha1:b4422146d0419849a1cf9a9ca6de4448f563ea5a
-    pristine_git_object: e5f08d4ad20003e3a94105be18e61474546f9f80
+    last_write_checksum: sha1:00950163581ab9e85cd8bd27f1c690e3d6fe4742
+    pristine_git_object: d852a3e024a5193244d6a56cbc3dd1596e3f9d08
   commit.go:
     id: cbbb1bd83161
     last_write_checksum: sha1:4ed0c6d8dd90facad79fef75fca2c4a21bd326a0
@@ -623,8 +627,8 @@ trackedFiles:
     pristine_git_object: 7fea819aa704ffe4c5594931eec30b7771bd8254
   docs/pkg/models/operations/createcommerceitemqueryparamfields.md:
     id: 3c2316e37964
-    last_write_checksum: sha1:01c45ab38ecb6176c44c460e7c974f5de298169f
-    pristine_git_object: 047241466016a2363f00aa411c5c8a95195de531
+    last_write_checksum: sha1:b7147a1a189e6051b9a5ed400d443bca62f91589
+    pristine_git_object: 62ec15414dc631bd4ba17c3637f16b22ee07e27b
   docs/pkg/models/operations/createcommerceitemrequest.md:
     id: a60dc632c8ed
     last_write_checksum: sha1:f8c16663290a120eafad387e6665a0b0a69b0d23
@@ -647,8 +651,8 @@ trackedFiles:
     pristine_git_object: 844333ba99fce4257979d45b0289e71c46515f44
   docs/pkg/models/operations/createcommercelocationqueryparamfields.md:
     id: db1ff7291870
-    last_write_checksum: sha1:277ead671f17143f4a8cf0e71deba37367584ea5
-    pristine_git_object: ac8171eba53b929bd0ff524f43fdc4e16856be69
+    last_write_checksum: sha1:b333cb09234146d2e6264d0aa12348ce665feba2
+    pristine_git_object: b344c6bd23629e78b8895017fb6b18da2a6b8159
   docs/pkg/models/operations/createcommercelocationrequest.md:
     id: 24f5e56e6b95
     last_write_checksum: sha1:f9cd77d8d957789b868044e756b64ca3c8ac9c08
@@ -657,10 +661,22 @@ trackedFiles:
     id: ea67bc00fdb1
     last_write_checksum: sha1:4c96c115a028e27710de58375af1fc9c4cb1498c
     pristine_git_object: 40353889883085269258833c8b49adf58b897f9e
+  docs/pkg/models/operations/createcommercereservationqueryparamfields.md:
+    id: 25bb60426d4c
+    last_write_checksum: sha1:5d1cccc9e398a6b0a51c7269e0abfb701604df2b
+    pristine_git_object: 88c45b70f82844faf6006ff57a8d0469b159212d
+  docs/pkg/models/operations/createcommercereservationrequest.md:
+    id: 86267d8e3859
+    last_write_checksum: sha1:2a299625de96ed5b9ed0045c07e119d9e41a838b
+    pristine_git_object: 271f9f9ea896967cd572f80d2d131de7efcdea66
+  docs/pkg/models/operations/createcommercereservationresponse.md:
+    id: 4995b1a26546
+    last_write_checksum: sha1:952badcbad131d41a0f9e9350226dca74b236370
+    pristine_git_object: b9a475d5993b08044e64dcd935a358cf4d431c38
   docs/pkg/models/operations/createcommercereviewqueryparamfields.md:
     id: 314b7f839aa7
-    last_write_checksum: sha1:be99a3b64fcfb5231d9cf812f500bcaa5eeabe13
-    pristine_git_object: 2c9415ec05c7a53d57e480027c31ee2547d425d7
+    last_write_checksum: sha1:b8188b016f0232cc486cf5d14a80cf728cfb78e3
+    pristine_git_object: a66933a6130e93c09be615bdf8718267a7c6b12e
   docs/pkg/models/operations/createcommercereviewrequest.md:
     id: 14e0b86ee6cb
     last_write_checksum: sha1:581a9fc4a33168d05ea1777bb9906c0a7c1b4880
@@ -1891,8 +1907,8 @@ trackedFiles:
     pristine_git_object: e0c88fa81702e79852a2c116970259e56bc04d15
   docs/pkg/models/operations/getcommerceitemqueryparamfields.md:
     id: 71c2771c15c4
-    last_write_checksum: sha1:6b4f7574eced6aa688f86b369a21a1de2dd17160
-    pristine_git_object: e783a65fad29cf356967bebe360010b56e8ec2ed
+    last_write_checksum: sha1:5814fd5bcdf0a46375d3a899486b0d29b187f12c
+    pristine_git_object: 264194cc676a80e54ff2d298d75a03483ce88ee9
   docs/pkg/models/operations/getcommerceitemrequest.md:
     id: 66e76f96f48f
     last_write_checksum: sha1:3c03acbdfd122295d5dfa84b02a9dc46baf3322b
@@ -1915,8 +1931,8 @@ trackedFiles:
     pristine_git_object: 39c89ce45abcadc25378501be4669c64d33176a4
   docs/pkg/models/operations/getcommercelocationqueryparamfields.md:
     id: f7bdb8b5d46c
-    last_write_checksum: sha1:73d919649ed835a5eeca9ea5e0a68f9fd6faa60d
-    pristine_git_object: c6cff3b2d026217b2e71b28d7e98e5af5e807e42
+    last_write_checksum: sha1:5b6a447e24c6f895f715aca1c24508a12fee758f
+    pristine_git_object: 68f9b62a69c7cc6b75053d440b1532c91584ecd6
   docs/pkg/models/operations/getcommercelocationrequest.md:
     id: c629baa756b7
     last_write_checksum: sha1:d76b1b59058bfac3879ba42a534a823b672dddb6
@@ -1925,10 +1941,22 @@ trackedFiles:
     id: add8cbe525f1
     last_write_checksum: sha1:d7fea139a36a85d4506df0b335a09eb63ba8c4d5
     pristine_git_object: 0150acd1f120b71b8456e0f29f7e6a7ec84dea5f
+  docs/pkg/models/operations/getcommercereservationqueryparamfields.md:
+    id: 3fa0635554a5
+    last_write_checksum: sha1:37e870e1fb0ee748be92b0fd196f2cc5ffb6b18e
+    pristine_git_object: f99391ff1284530ad415eecd75ff434617706fdc
+  docs/pkg/models/operations/getcommercereservationrequest.md:
+    id: 95f2478d2334
+    last_write_checksum: sha1:68a9ad89a3195f97d9a0352b6092b361e1020853
+    pristine_git_object: 5e745ff514d2c3a6d88221885e54ff1f0c788b3e
+  docs/pkg/models/operations/getcommercereservationresponse.md:
+    id: 95057cfbaeca
+    last_write_checksum: sha1:2dacd32526a980d83d5bf779fd060075ae2496fc
+    pristine_git_object: f3d8546eedf8239bb0acf71d171cf80e56355769
   docs/pkg/models/operations/getcommercereviewqueryparamfields.md:
     id: 9cdfa71b3235
-    last_write_checksum: sha1:933a2668d72a89a38a11015404673f0f1b63ef3a
-    pristine_git_object: 70c76e5acd1753574e1a1175f88bfabe857afca6
+    last_write_checksum: sha1:accbea874b39ecedff513f6663a1b3698354b085
+    pristine_git_object: d676c7f504f919a3c6c6dc4d232b73a6043ce1d0
   docs/pkg/models/operations/getcommercereviewrequest.md:
     id: 156fd8f1a877
     last_write_checksum: sha1:5e5bc342618696bdfa1530f18cc700f70a7a4012
@@ -3317,6 +3345,18 @@ trackedFiles:
     id: 31178074ce7b
     last_write_checksum: sha1:fd827944fde7c39ca1e97ab205374a77e4f3cdcf
     pristine_git_object: 7191570e3dee03e41572b5ecd2fcfb86eae6aa56
+  docs/pkg/models/operations/listcommerceavailabilitiesqueryparamfields.md:
+    id: 395e7607d5f8
+    last_write_checksum: sha1:4912c27f22a48bc74397edd26a63d884d6f472d6
+    pristine_git_object: 1a1d85ba4541fd08c589bd6f461412f226f4c6bd
+  docs/pkg/models/operations/listcommerceavailabilitiesrequest.md:
+    id: 1edbac7040e7
+    last_write_checksum: sha1:903be785b4c5956202cb7a648eae61d392d6de8f
+    pristine_git_object: 6938552205809e4c566721079fc8b2a316dd04d2
+  docs/pkg/models/operations/listcommerceavailabilitiesresponse.md:
+    id: 3d674ff4d7b6
+    last_write_checksum: sha1:ba5874b58ced6230e7bf067634aee3676e291817
+    pristine_git_object: f8ecacc8b13b3f022588cda0151c170fc8e29102
   docs/pkg/models/operations/listcommercecollectionsqueryparamfields.md:
     id: a9639e6e7d0f
     last_write_checksum: sha1:11fcb6bca998ae93fc87c48887f6c5d9e842ab5b
@@ -3343,8 +3383,8 @@ trackedFiles:
     pristine_git_object: 2af841abae6e96195f8c89e5546402453e8bf77e
   docs/pkg/models/operations/listcommerceitemsqueryparamfields.md:
     id: 67183c119358
-    last_write_checksum: sha1:66edf7ae103432af82914b799b3a2f52533c94d8
-    pristine_git_object: 3ea8faa8c2d97e11df2636a91da671d0d7539193
+    last_write_checksum: sha1:3d736723f71d0dfc0afbc99ba3c779121df3ad8d
+    pristine_git_object: 8c7e367bcde618d0fe5c8c22eb6e2d585b3bdee0
   docs/pkg/models/operations/listcommerceitemsrequest.md:
     id: 8c123dbde922
     last_write_checksum: sha1:7e2235f684a13e8d7ec09a87af2081855082e00b
@@ -3367,8 +3407,8 @@ trackedFiles:
     pristine_git_object: 8200574489179bc7af7c1e7810a33f21b7f3e56e
   docs/pkg/models/operations/listcommercelocationsqueryparamfields.md:
     id: dea33fbff96f
-    last_write_checksum: sha1:dd38fc670b1715140f52cd83ed055bd9b68d7638
-    pristine_git_object: 23b96fbee051cbec6e4d34215917bca7b5073e6d
+    last_write_checksum: sha1:5bfd2a9716b967fabeff6887fe5039d39c55e5af
+    pristine_git_object: 7f599f7886a95858aad417edb7014a59fd5c53a7
   docs/pkg/models/operations/listcommercelocationsrequest.md:
     id: 37d37f09b9a0
     last_write_checksum: sha1:0ac2d3cf0ff796ebf5dc645308f1b589b8d8242e
@@ -3377,14 +3417,26 @@ trackedFiles:
     id: 1518e5dfdf82
     last_write_checksum: sha1:418bd875b03ea6be69f4a256c0210a3bb7d9247b
     pristine_git_object: a7a4d80b43b639e4940238e09ca3d48af8d62ec5
+  docs/pkg/models/operations/listcommercereservationsqueryparamfields.md:
+    id: 943b7ff31e3b
+    last_write_checksum: sha1:5147c00216b118cfee0555d945a6b9d2b71e1fd5
+    pristine_git_object: 52d9e543f4c27dfab088a9c977204eb7114bce0c
+  docs/pkg/models/operations/listcommercereservationsrequest.md:
+    id: 00cf1dc6123b
+    last_write_checksum: sha1:fa0302853f195bf2a8390d16633192ddf8a9ad8d
+    pristine_git_object: 46d6bdcbc71b1d35a8503b316c6dd8f9ad945196
+  docs/pkg/models/operations/listcommercereservationsresponse.md:
+    id: df424bb254fb
+    last_write_checksum: sha1:c6d727f477f4e0160f195c9f5eb14a9440f77bc0
+    pristine_git_object: 8537ffd9c05144646a7bad48910b531e0326d95c
   docs/pkg/models/operations/listcommercereviewsqueryparamfields.md:
     id: 945a97522648
-    last_write_checksum: sha1:1120da793ac699788e0680c2ce5f94898734d756
-    pristine_git_object: e229e13d6a1e81c20e29147d632634e54dda0f89
+    last_write_checksum: sha1:a71159b0dbf15932deecf21b8594972441c79f4a
+    pristine_git_object: 4e44687cfd44197cf801a2324b9a73f89f2416e0
   docs/pkg/models/operations/listcommercereviewsrequest.md:
     id: 2d38b82156e6
-    last_write_checksum: sha1:7b7269873cbce24ebb19e37c86a748cdc1282584
-    pristine_git_object: b7b88ca0828601ea1ce3c9f96ba6c3277a4766f1
+    last_write_checksum: sha1:13f2b08cb80963da154ea6997ae4dcf93d550224
+    pristine_git_object: 48b57a66ae0548e28bc54f3266f35b8bafdb04b0
   docs/pkg/models/operations/listcommercereviewsresponse.md:
     id: bca123bdd07a
     last_write_checksum: sha1:aecc5297a18511d05bfc9b069c1e38dff220fcb1
@@ -4699,8 +4751,8 @@ trackedFiles:
     pristine_git_object: d45e5835cf670b616c1c26f079569aacb24dfa33
   docs/pkg/models/operations/patchcommerceitemqueryparamfields.md:
     id: 2c96b8849122
-    last_write_checksum: sha1:0a3d906d68bc8215e61b59ba7f2df3d2c0ea2d32
-    pristine_git_object: 8d3affc85cd9f469b3cf7fd706dd334976ba371b
+    last_write_checksum: sha1:04095cfe8ca61822100b5fc9b079f52023b387c3
+    pristine_git_object: aec48555b49c6b351d2d1d80a078906e5a811f34
   docs/pkg/models/operations/patchcommerceitemrequest.md:
     id: 08f7ed70300e
     last_write_checksum: sha1:7785cfb564bf3f6b655ec9b596f8c31402c61bd7
@@ -4723,8 +4775,8 @@ trackedFiles:
     pristine_git_object: 8d3a8010e559aa1951d3af529b8ab0f8507100f6
   docs/pkg/models/operations/patchcommercelocationqueryparamfields.md:
     id: 9d7358a000eb
-    last_write_checksum: sha1:44d186c6cbcb4bbbc0b5866e78672920dd080685
-    pristine_git_object: 522852a5b071b584b4acdf3e903d46143a3bbab8
+    last_write_checksum: sha1:ed5adef6eecc4c09b8587d981addadea1602e246
+    pristine_git_object: 4e9929ff96f798dc0820f9db0ae055d01c71ad4e
   docs/pkg/models/operations/patchcommercelocationrequest.md:
     id: 4441c03d2d03
     last_write_checksum: sha1:7fd697e9c3949570d7ae4f9723869d7b69bb1d1e
@@ -4733,10 +4785,22 @@ trackedFiles:
     id: 6606674839f5
     last_write_checksum: sha1:1f35f34ed739bea90a8cf73f48f3b4f833ace956
     pristine_git_object: 46bdf2a67bd08a514c2d8330a8ad0ca55375957e
+  docs/pkg/models/operations/patchcommercereservationqueryparamfields.md:
+    id: b57ccc5760f8
+    last_write_checksum: sha1:d717986b5f17809e493350887eb28e4be6b3487a
+    pristine_git_object: 2fdb1ac88853ab173b3b679e770310b72926aac4
+  docs/pkg/models/operations/patchcommercereservationrequest.md:
+    id: 41872cf9e6a9
+    last_write_checksum: sha1:39a4ce7c7841a81706698459db66d8b47e65e38d
+    pristine_git_object: 5ac96152c6710126adccd5bcf98927fde53e99f9
+  docs/pkg/models/operations/patchcommercereservationresponse.md:
+    id: df4d682ce9d9
+    last_write_checksum: sha1:70a026990ba966c9de15ffbb0090f16199de9647
+    pristine_git_object: 72a6e1ff2342dd34507da584f53566bea6e9201c
   docs/pkg/models/operations/patchcommercereviewqueryparamfields.md:
     id: 2507c18f5560
-    last_write_checksum: sha1:518d41e1d567dd449fcf7e2321885ab297c50087
-    pristine_git_object: f803c7d945879225c1ece7740f06793d1f55ffdf
+    last_write_checksum: sha1:f35c6046c33537c3822bd513a8638cbf34c120ec
+    pristine_git_object: 452211d0e1e5e3725ff61840e34554abffacdf2f
   docs/pkg/models/operations/patchcommercereviewrequest.md:
     id: 3f1a833401e0
     last_write_checksum: sha1:72dfcea6d3e78ab46b4b1ece64760ecd3af3aaac
@@ -5765,6 +5829,14 @@ trackedFiles:
     id: 066fceb6491b
     last_write_checksum: sha1:20cc6ed4ece1d48ec2db6b8d8ed7191f3ed04d17
     pristine_git_object: 5217b68f2122037319347c72f4fb1b3c607e1f07
+  docs/pkg/models/operations/removecommercereservationrequest.md:
+    id: 799e8f2e2c59
+    last_write_checksum: sha1:501f8a1de7f2b69817e79e5d40b0f726a638f32a
+    pristine_git_object: 73042df16855d245cd5f14978cb700a8e055acf4
+  docs/pkg/models/operations/removecommercereservationresponse.md:
+    id: f23db51d555a
+    last_write_checksum: sha1:353f16e82a4485bcd444a4b789bbc8abde8ffe92
+    pristine_git_object: 8abe544d97a3f56f5777c3e14790b0c716b03e22
   docs/pkg/models/operations/removecommercereviewrequest.md:
     id: 94ac087f8fe6
     last_write_checksum: sha1:85c6015c95c010d9badb1b762bd1aa88fbaa8960
@@ -6671,8 +6743,8 @@ trackedFiles:
     pristine_git_object: 5eb78b44b0f133f198efd7c73e4dded35c596e86
   docs/pkg/models/operations/updatecommerceitemqueryparamfields.md:
     id: fd4b71261fc6
-    last_write_checksum: sha1:abf5b303cce7d4c0d703b10b3cbc0056a199d140
-    pristine_git_object: 07d35a40383619fe003dc6b4ea2beec664fda1b6
+    last_write_checksum: sha1:a85d31cf35a2847fb445224d33051f9a78b694ee
+    pristine_git_object: cf687ea3090160427fa7977774935e04304af30b
   docs/pkg/models/operations/updatecommerceitemrequest.md:
     id: 0fa8e9c4d48b
     last_write_checksum: sha1:b1acee943b3b3bb24405ab058aac315eab4bb542
@@ -6695,8 +6767,8 @@ trackedFiles:
     pristine_git_object: 00cafae2d6f66607ea368a887c5190ab36ef21e4
   docs/pkg/models/operations/updatecommercelocationqueryparamfields.md:
     id: 91d59ff7830a
-    last_write_checksum: sha1:33ef8c7d37b59edf260f7603e97773f33b81bc66
-    pristine_git_object: e2628c1f1a90d469695c9c1e7e23e1b78e5230f9
+    last_write_checksum: sha1:5f3e10e3326ee333bdd2f1455ad0632405a87a2f
+    pristine_git_object: 2d075fbeb59f09d22fa1317592d75cdde23ca4e0
   docs/pkg/models/operations/updatecommercelocationrequest.md:
     id: e61e4e523432
     last_write_checksum: sha1:623e0f370f38e06b7d9f71e98214cc4ac16b04b0
@@ -6705,10 +6777,22 @@ trackedFiles:
     id: 967172975a2d
     last_write_checksum: sha1:79248bfd9c428a124d5ac7a958ea85d97b70abff
     pristine_git_object: ad503587f0e53ae3d21753fb3ab44448dcb69a5c
+  docs/pkg/models/operations/updatecommercereservationqueryparamfields.md:
+    id: 706a6add0423
+    last_write_checksum: sha1:0b5de8aea970e77b8b35e93b9654487bc56e912c
+    pristine_git_object: e74644eff412f7f954abe2c889aa2f12948d5a60
+  docs/pkg/models/operations/updatecommercereservationrequest.md:
+    id: 6932518e787b
+    last_write_checksum: sha1:dd6a3f509c830e490ba46821c7fce2e85ac0976e
+    pristine_git_object: 71bafd6e0fec7c08a49e4e195502917b51c2ea1b
+  docs/pkg/models/operations/updatecommercereservationresponse.md:
+    id: 9562d56ec36d
+    last_write_checksum: sha1:f6b1c6343b5e79776c50c6705b1e2675f3978794
+    pristine_git_object: 9d2135afe378fd0f5b38b06e6ace1955aa6710ef
   docs/pkg/models/operations/updatecommercereviewqueryparamfields.md:
     id: aa6a31c56a27
-    last_write_checksum: sha1:29fae96b32d421fb0c038d0678edcbaf1564b340
-    pristine_git_object: 4918b390b882367f4593ba16a5b2cd562a6d8b92
+    last_write_checksum: sha1:e56fd99a122edfc0313d6733e332a35145e6d079
+    pristine_git_object: 51ad108a9f93eccbfa8c8edefee5fb0094078563
   docs/pkg/models/operations/updatecommercereviewrequest.md:
     id: 9587d8389b6d
     last_write_checksum: sha1:27a70e561a5eb74c4bcce3068b7433b430eb70f5
@@ -8073,6 +8157,10 @@ trackedFiles:
     id: e94d02b6c8d4
     last_write_checksum: sha1:00a4b110b1eedabd208a5143dd08687fd366acd4
     pristine_git_object: 7c45562b7357fccbf978e7b7c750636dac444baf
+  docs/pkg/models/shared/commerceavailability.md:
+    id: 432266f57abb
+    last_write_checksum: sha1:e4828624b85e830e4b91517f039d6f5c3d6f46d5
+    pristine_git_object: 03b44753c1fae894569c82ef7191c2f8bac9ce2c
   docs/pkg/models/shared/commercecollection.md:
     id: ff001272fad1
     last_write_checksum: sha1:ebda8f215074cbc1e7d74e569f62609992388efd
@@ -8087,8 +8175,8 @@ trackedFiles:
     pristine_git_object: 59e1db95c669a843de232265fa58dc4d3d5f98d5
   docs/pkg/models/shared/commerceitem.md:
     id: 48344170d717
-    last_write_checksum: sha1:999ef506daa51e945d497f41c0a1addea523c922
-    pristine_git_object: 2186c6d04e2471009b26dbc2d0a9343226aebc9a
+    last_write_checksum: sha1:886666862a619f916293155421e12f1b92e44574
+    pristine_git_object: 2d19bcafbbad6668039f1134315425d9f57367e6
   docs/pkg/models/shared/commerceitemmedia.md:
     id: 2cb9cb3948db
     last_write_checksum: sha1:dcf41db7033c79a8ac0c45119f2f6e751dd89fc7
@@ -8115,8 +8203,8 @@ trackedFiles:
     pristine_git_object: 10dc5beaeb5cd2bd7ba97a23badfed4df19d8857
   docs/pkg/models/shared/commercelocation.md:
     id: 29290b3e3d0a
-    last_write_checksum: sha1:0fb984bbb735ed158b9a1394670738b8affe1f62
-    pristine_git_object: a13cb3fd2e9a43d9d4088d2ef85661dd229d9552
+    last_write_checksum: sha1:7328250a06c2edb1b7d6c4a78b3050413cba1d04
+    pristine_git_object: c9e29138c8d264b773cd72ea0e213367d7640d12
   docs/pkg/models/shared/commercemetadata.md:
     id: 4b94dfff5648
     last_write_checksum: sha1:fe478fb2b7ecdd544444d8e9fc25afcb82bd16ae
@@ -8153,10 +8241,18 @@ trackedFiles:
     id: 2a9174c4aa67
     last_write_checksum: sha1:9cefb34a961b18353080e6902814814a0c45f648
     pristine_git_object: 15fa499df976f8c99952ee5c3433de2448351eaf
+  docs/pkg/models/shared/commercereservation.md:
+    id: db3399713c36
+    last_write_checksum: sha1:465f50bf137899bac6455b6cae4df1808bf79efa
+    pristine_git_object: b72e89d784150a92f214a10272bf9051ff999bd5
+  docs/pkg/models/shared/commercereservationstatus.md:
+    id: 14efb81597b4
+    last_write_checksum: sha1:0caaf4a2df9dc52bf605575bb80a9a63c5f4215f
+    pristine_git_object: 753dce0ef3cea841d435320c1f53b77a1af6b329
   docs/pkg/models/shared/commercereview.md:
     id: 8981cda81c58
-    last_write_checksum: sha1:4aeff1d627472bc3cef8ddf53b723d1016bdd6f8
-    pristine_git_object: 589add24efc0e3f8f84a5bcf0821f428a0bc6761
+    last_write_checksum: sha1:dfbfb9fb0ad55320dba76f9e04763bff375eac53
+    pristine_git_object: 2700cae29a4b50b8004ba9875e4738e4242d4896
   docs/pkg/models/shared/commercereviewcomment.md:
     id: daf8fb70c521
     last_write_checksum: sha1:65a9ebe4fac99f94e750ff8494c181adeea07726
@@ -8173,6 +8269,14 @@ trackedFiles:
     id: e4bccac66b35
     last_write_checksum: sha1:f0207593d494cf796e80fb20a333b651270f50ba
     pristine_git_object: 86d2bddd1d36b0b982d824f63544feaeb86ac32a
+  docs/pkg/models/shared/commercetelephone.md:
+    id: fd6107857073
+    last_write_checksum: sha1:8ba8d4d0c52272fe6f3fc848e3a4a4ee36308840
+    pristine_git_object: e78611512dc8d0bb4b6c7593453e75946198a4b3
+  docs/pkg/models/shared/commercetelephonetype.md:
+    id: 3b6baafff3c6
+    last_write_checksum: sha1:4b98b4803de0ce6bdd4791e27c0c9bebef2e7ab1
+    pristine_git_object: 05ef7e08524515261d1569fd8e060b47fcdf27b4
   docs/pkg/models/shared/connection.md:
     id: 200b0cd3d8de
     last_write_checksum: sha1:400909d615b568cfcbe6ac7069649497849b3be8
@@ -8623,8 +8727,8 @@ trackedFiles:
     pristine_git_object: d25d6a890d6e8161f0a99004a984f8d9b5b3ddb9
   docs/pkg/models/shared/integrationsupport.md:
     id: de5c915a8590
-    last_write_checksum: sha1:0aca6a81d40310839a1ae934c94b4ee91877e823
-    pristine_git_object: f5a530900adf5fbdfc71e71810ab15efb0fda8b4
+    last_write_checksum: sha1:847bc2464c779e6d987c1c4b968a3035d17178dd
+    pristine_git_object: a32adc7aa57a92ca90d3fe4f9ca35540006c1277
   docs/pkg/models/shared/intervalunit.md:
     id: 6af2406d0f78
     last_write_checksum: sha1:8ebbd9c9f3cb2cab38321a41e3c38a65119aae15
@@ -8929,6 +9033,10 @@ trackedFiles:
     id: 77ab1d06b142
     last_write_checksum: sha1:fd0d011646ddf756a99a502704f30c10e0c68a2d
     pristine_git_object: 5bb1a6b657e880db5ca3666d5f7c86199b3e5b72
+  docs/pkg/models/shared/listsize.md:
+    id: 2eb842039b32
+    last_write_checksum: sha1:08da2ed082653ca5fd7362ff09a2878968fb01e9
+    pristine_git_object: 35ab3ca3dd999376aab35e2fdd59bc51203ddffc
   docs/pkg/models/shared/listsortbycreatedat.md:
     id: 8c7f47d83a68
     last_write_checksum: sha1:57672311f893e7524d235237834612c8ee440e94
@@ -9037,6 +9145,10 @@ trackedFiles:
     id: f8563eff74f3
     last_write_checksum: sha1:5ca759be62280dbddc36f33ad46712c3e6f208d4
     pristine_git_object: 6300bda8ec5ec27e026cc17a3734cebc13c08471
+  docs/pkg/models/shared/locationtype.md:
+    id: d448f37dbb4e
+    last_write_checksum: sha1:84536b8ce9bc82db3c4679f5c4f977683014e560
+    pristine_git_object: 6a568eec5abfbb37c30eb2a28d929df29f1d4e88
   docs/pkg/models/shared/lookalikeaudience.md:
     id: 101367e6492a
     last_write_checksum: sha1:2f36d8e7ba14ce3af28615c11aeb6c7c44cce501
@@ -9161,6 +9273,10 @@ trackedFiles:
     id: f2c6688d8cd2
     last_write_checksum: sha1:7391620c09c903b68ad9d9451050e5dfef67d5a7
     pristine_git_object: b37ae78b294ac0e1df4ef83e7b82fa7a55802191
+  docs/pkg/models/shared/nativewebhookioid.md:
+    id: f9d2a2167ec3
+    last_write_checksum: sha1:d56e22bded6472479ec2cdec08857dfab71f4b93
+    pristine_git_object: 2f31d4616dc6a28a6f9594cbb59747c638fb6097
   docs/pkg/models/shared/nativewebhooklabelid.md:
     id: 34b7ac836f0d
     last_write_checksum: sha1:d7cace388d7239c21543ca4765b097370d852d11
@@ -9203,8 +9319,8 @@ trackedFiles:
     pristine_git_object: 81d0103e88dc049b2f33e8ef7b517cdc28c94a6a
   docs/pkg/models/shared/objecttype.md:
     id: 96128d2f63b1
-    last_write_checksum: sha1:ca80093fdcbceaae2540861754b6ca883a392956
-    pristine_git_object: c554139aae89d89ba6c6438cbb414bc9f4dd9a1a
+    last_write_checksum: sha1:22f0451ee3bc48bca25820243bcd2823c84f15f8
+    pristine_git_object: 3201eeb6d9c0cfd288f31dfa81fe0cb4c3095aae
   docs/pkg/models/shared/one.md:
     id: f0c52d1947e2
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -9851,8 +9967,8 @@ trackedFiles:
     pristine_git_object: 8e23af855094ea5c2b2f9ef09ae1f67a0fd66088
   docs/pkg/models/shared/propertyconnectionpermissions.md:
     id: 91ecc1edb2f8
-    last_write_checksum: sha1:cacd9d4ecea3130acc40788b22202e76ee76e865
-    pristine_git_object: 0a9cc249b1e71d27aabc9668c1a0d45aac1a3a2c
+    last_write_checksum: sha1:0eda1f59c088c0da35f7357127165fd721cbe718
+    pristine_git_object: 3378f27bf3ddd4cc070953077ffcd406e66c8276
   docs/pkg/models/shared/propertycrmcompanyaddress.md:
     id: 4e66f1e6e9ae
     last_write_checksum: sha1:63910ed921ad49c794766e598099bb2cc36334af
@@ -10845,6 +10961,10 @@ trackedFiles:
     id: e9724f17945f
     last_write_checksum: sha1:fd5613dc2cafd62f1ae48199b4533d212339712c
     pristine_git_object: 1edf45bd6514864cb5a092ada62d8c23bf148280
+  docs/sdks/availability/README.md:
+    id: 2226d6a22b27
+    last_write_checksum: sha1:7876caed6c465bf664b8646fadd96e2a9d5a608d
+    pristine_git_object: 8eb39df1c08daa5880a8f0652b517b35f206c2e8
   docs/sdks/balancesheet/README.md:
     id: b360644f6413
     last_write_checksum: sha1:487edf006bbdf96ff8286d4cd3252d5e2f5d19d1
@@ -10919,8 +11039,8 @@ trackedFiles:
     pristine_git_object: bf9246cdb275238bb93b7377076f89d5b3a53e3e
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
-    last_write_checksum: sha1:e6d1663ac06bb2b00cbff127f9e33887f9323f0b
-    pristine_git_object: 88597a2d9c8106b4e43e2c1ed603041466d72035
+    last_write_checksum: sha1:4d33956ac02b6ef0d7b7211b7aa865cab59f6a43
+    pristine_git_object: 2e96b766c3d6ac91a874d9315dda0a7a8cb373cd
   docs/sdks/commit/README.md:
     id: bc22b8348fdb
     last_write_checksum: sha1:14acfe907e2b1de8c1fdcdeeac2cfb67378ca5c5
@@ -11221,6 +11341,10 @@ trackedFiles:
     id: 546a59bbcd5e
     last_write_checksum: sha1:ac4c0ad4721110c9d7cea13fd5a72e106d160445
     pristine_git_object: b5eaf9103dd1773d27f6989d56f897122f186994
+  docs/sdks/reservation/README.md:
+    id: 6b81448472cd
+    last_write_checksum: sha1:432e8e5e9549d112d7362b0519bee49e9a994e4f
+    pristine_git_object: 9b9575ff15d631a83e867da1239bd6de1c69ffbc
   docs/sdks/review/README.md:
     id: c8de80641188
     last_write_checksum: sha1:eb0ddce6555f7c72e5608248f3d557952a9c078c
@@ -11679,20 +11803,24 @@ trackedFiles:
     pristine_git_object: f908d434acca81ee81d44e774c06b9c67480aaff
   pkg/models/operations/createcommerceitem.go:
     id: 0f1ea0048a0f
-    last_write_checksum: sha1:3dd9d9b18b935547b58e01688e3d4f95356305d4
-    pristine_git_object: 83e9bf601868bcafc0948959d5e4b4bce68f2ba2
+    last_write_checksum: sha1:6829c99dfdb13ebc1f8cdfa9ebd8f388aba59b0e
+    pristine_git_object: aeccbc7540c0245a814557c8794e3421de4be2ed
   pkg/models/operations/createcommerceitemvariant.go:
     id: 37de55e3b89f
     last_write_checksum: sha1:0fc7df9a9d8be7c5e5a852c3bc19377ee02d13eb
     pristine_git_object: c973f84c12b5905b6dd51f859761566b261f9eda
   pkg/models/operations/createcommercelocation.go:
     id: 6725b98d48b4
-    last_write_checksum: sha1:0451aab8f4a9839465419ee153ea8cb1c36ec3ae
-    pristine_git_object: c09685656f66ab839df2578d295d3603a464d1fe
+    last_write_checksum: sha1:24707f7bab0ffe22891932513af5d64025add5e2
+    pristine_git_object: 5785dc6f3947b67293031992eaa453772e37b86e
+  pkg/models/operations/createcommercereservation.go:
+    id: b530b6851e8c
+    last_write_checksum: sha1:8ddedd0f71c6529c690b6eb3f53043312f161da7
+    pristine_git_object: 37e0677ec21fbdff4838f9a0825b46cf241922bb
   pkg/models/operations/createcommercereview.go:
     id: d863a5addd9a
-    last_write_checksum: sha1:1a2de2e28fb8ee19e614cfefd1e71d00ea6e2be2
-    pristine_git_object: 8f3e90a85e0abb22fe00cfab4c68e1a8ca5bbbb0
+    last_write_checksum: sha1:405ac43aede28bc58789e7dbefabe3d46b57d113
+    pristine_git_object: 713aa838eb8696760641a0f181f45383b708b305
   pkg/models/operations/createcommercesaleschannel.go:
     id: eb0038233e70
     last_write_checksum: sha1:d6e107823841035d71772a58ccf1cb4b5a5c335c
@@ -12115,20 +12243,24 @@ trackedFiles:
     pristine_git_object: 063d11cb3f1b6febde073fcac370438d01adee88
   pkg/models/operations/getcommerceitem.go:
     id: 5939e25a08cb
-    last_write_checksum: sha1:2f890bdc00a9308bf27e3ccfd39f19f8d4349071
-    pristine_git_object: 5bf9675c35561a92ed9dff16c4faab80bf7e670f
+    last_write_checksum: sha1:54af1e4ebe0e96815dbd04a7df27dfccbd63caba
+    pristine_git_object: 8d87486ad6c7158906ca50282fc50b79708c439e
   pkg/models/operations/getcommerceitemvariant.go:
     id: 01f86c530e3c
     last_write_checksum: sha1:c6834e0c994f10563692881e7b8d5f3b2785f131
     pristine_git_object: 116e2e9ee8474dd356ad1e0d458f7e57b267d586
   pkg/models/operations/getcommercelocation.go:
     id: cf3c1794b2d4
-    last_write_checksum: sha1:1fb09faadb0dbdc7b1b565eac8d2ddac91b0400b
-    pristine_git_object: 4fde99a4d79f3cb8771b54eee66f61c14546c900
+    last_write_checksum: sha1:6f260d0b5e83017bf811af602e8b912aed78bbe1
+    pristine_git_object: 5dd20331cee41810695b2a1ea680761530f5e1cc
+  pkg/models/operations/getcommercereservation.go:
+    id: 21cfc927a4ca
+    last_write_checksum: sha1:41421da003f3c450852b71191249cb636dccfc92
+    pristine_git_object: 62bc5d584310614de9616499d0a9f14a39671bf6
   pkg/models/operations/getcommercereview.go:
     id: 799cd2882d8e
-    last_write_checksum: sha1:b7f62bf2495dd607afc906c6fdd36206f6552e59
-    pristine_git_object: 5fa21686050b280ca905dbe502846670a1a5d075
+    last_write_checksum: sha1:927cdfca37ed13b99e7782a157f8e2c50dd962a4
+    pristine_git_object: 720b132226ebefa449e059d246e0469649a77a08
   pkg/models/operations/getcommercesaleschannel.go:
     id: 400b26a893cb
     last_write_checksum: sha1:07385e8c138abd96faea0c11264c8f08f5711550
@@ -12601,6 +12733,10 @@ trackedFiles:
     id: 9209037b58d5
     last_write_checksum: sha1:b7bf69cc260160e989d42a8b9014c30eb49c5404
     pristine_git_object: bd849d9ef2c14b55b0ff1c4302e0c185b6f6a71e
+  pkg/models/operations/listcommerceavailabilities.go:
+    id: e492ef33b87d
+    last_write_checksum: sha1:7e3d9f636a59bca94ec84453e0afc7947e14f8ce
+    pristine_git_object: d7bde7961699c9e979b2ab9f67093d8e20c86163
   pkg/models/operations/listcommercecollections.go:
     id: 32903e4f559f
     last_write_checksum: sha1:b1dbbf5126f98a542270a2d348f2ff9af49f2288
@@ -12611,20 +12747,24 @@ trackedFiles:
     pristine_git_object: a1b49755d19c1c95207136010b870904a7a58ab5
   pkg/models/operations/listcommerceitems.go:
     id: b3a3ed7a0cf2
-    last_write_checksum: sha1:8e6c6be8ad6cbc78f48e77fcd3d28c200a2c380f
-    pristine_git_object: 80de5dd59bd2d79e61276cb264729272ec91528d
+    last_write_checksum: sha1:3d9c15ec0138b130c36142bc6cda9bf5568e79fd
+    pristine_git_object: 5d689913119a61b885f03bbfe4d98fc798ebf94c
   pkg/models/operations/listcommerceitemvariants.go:
     id: b04e0dc2bf85
     last_write_checksum: sha1:a7344eab3e94311b636e3350c19f2d935178b95f
     pristine_git_object: 40837beb7d81710a40c52d40e50965270dacb71e
   pkg/models/operations/listcommercelocations.go:
     id: 42fb7c42e4aa
-    last_write_checksum: sha1:a1c322a364142a205e99860caace57dc8bc62f40
-    pristine_git_object: b79e360e38c4314cd1a206f6edb4c87a51820124
+    last_write_checksum: sha1:bc12e42d79a7f9c4d0fa6f69505941bbcabc6a3e
+    pristine_git_object: 79c073f4398bab049c6f2e41ac85ce7319539020
+  pkg/models/operations/listcommercereservations.go:
+    id: 7bc49cdaa7e9
+    last_write_checksum: sha1:86ffc5ef1021cbd43f410a5a8e8657dc6a4eba7a
+    pristine_git_object: b6a6c20baf621aa839edfb7e5bf64b78d0854666
   pkg/models/operations/listcommercereviews.go:
     id: d7a9e03f04ba
-    last_write_checksum: sha1:f3dc76b2238a1adf652b311fea370f3a1f0d076f
-    pristine_git_object: 0cca2ccace04c64ef5b0de49d4102a2b40d4e632
+    last_write_checksum: sha1:5284de1d1e75acdd44b512a3cab52b2687b93637
+    pristine_git_object: 21b5f7d7cbce8fae11edc150b68b132c17470037
   pkg/models/operations/listcommercesaleschannels.go:
     id: 8793386accf9
     last_write_checksum: sha1:6929bc1653d03bd7e80f5ca6851e3d40925d2d0c
@@ -13083,20 +13223,24 @@ trackedFiles:
     pristine_git_object: ed4906cc4485fe32523b75a641d20a25010f5c72
   pkg/models/operations/patchcommerceitem.go:
     id: 40da73a61e31
-    last_write_checksum: sha1:da0ac2e2d738c81ffa394fce6fb1fe80fb886445
-    pristine_git_object: e53c7bc61a7ef392c9858b90979a1e648ecc63df
+    last_write_checksum: sha1:7c478a3dfc7b3ecdb8524f6911a5372a356f74b1
+    pristine_git_object: ce47d9806c99fbb1c0459ed95ca22ba9c615f5cc
   pkg/models/operations/patchcommerceitemvariant.go:
     id: 4aecee43e280
     last_write_checksum: sha1:61880c5948c1b06d45ef7af4623836647fc8e61f
     pristine_git_object: c8868851fd2321eb3b6d6222e959b6224edd899e
   pkg/models/operations/patchcommercelocation.go:
     id: a1732e0109f1
-    last_write_checksum: sha1:66842ed4db85953bd149ca3b2b301ba1a57f2e23
-    pristine_git_object: 1087c7b7294b181bdacd78050fa788e6b6ccdd4f
+    last_write_checksum: sha1:686976656dcba59f2332a14e516bb265ee9a8d0c
+    pristine_git_object: a0203ea91ab626827e7430be71bee025c478ce59
+  pkg/models/operations/patchcommercereservation.go:
+    id: 641f731e3274
+    last_write_checksum: sha1:f62e641814d5f8d1aaf2a046af74fc2b879dae6f
+    pristine_git_object: 1a1d830a3c4813779c393edc016897516fa25e66
   pkg/models/operations/patchcommercereview.go:
     id: 823734df25c8
-    last_write_checksum: sha1:b63e0fd9b8b16ffd49572cd0071273264480e3b0
-    pristine_git_object: d512a8ea78ae8cf19954e5381f25988ab5afcbcf
+    last_write_checksum: sha1:479a09fdeb14e2746e6f272780112ae5e65214ce
+    pristine_git_object: 58f49dd84aba1120a7a653654fd36260698a5629
   pkg/models/operations/patchcommercesaleschannel.go:
     id: a8e2796e215e
     last_write_checksum: sha1:facb691491274678e804172b5f0f6e5de8ece57b
@@ -13493,6 +13637,10 @@ trackedFiles:
     id: bc524894e40d
     last_write_checksum: sha1:5612add2d81c5d3d2c88a91086f9b964dbb0c0c8
     pristine_git_object: 6365e8c4ccdf6665b8fddab8d0a139434fbc0514
+  pkg/models/operations/removecommercereservation.go:
+    id: cc4538a7e813
+    last_write_checksum: sha1:a0273c3a9ad62e26982b4d4354ca9a089d3603f1
+    pristine_git_object: beb5fab713920cfd6c2504a0ee65490a6e363bbc
   pkg/models/operations/removecommercereview.go:
     id: c3f977849a72
     last_write_checksum: sha1:4b35509af574f282edc175954fbfa16d5583ee2c
@@ -13879,20 +14027,24 @@ trackedFiles:
     pristine_git_object: 5d72c5ff26e6a601e612c3802ebb94fd3421f907
   pkg/models/operations/updatecommerceitem.go:
     id: eb251369044d
-    last_write_checksum: sha1:4579ecec9ecabd7980eed5e11118587967b29fa5
-    pristine_git_object: 1e7ed596e05c98559415a0054fa5e8032233c622
+    last_write_checksum: sha1:534f4679be1e82e4e9c3db761bd5c2312f9c516b
+    pristine_git_object: a7a42118077e536a93b04c891388920bc6aa78ed
   pkg/models/operations/updatecommerceitemvariant.go:
     id: 1593df868354
     last_write_checksum: sha1:0a1ea027bbaba0fe9d3f36c04146df5afc526119
     pristine_git_object: db71dd196405b29ded6c8d33c8cd32c85311ae9f
   pkg/models/operations/updatecommercelocation.go:
     id: eba845817cab
-    last_write_checksum: sha1:76c87067a1c5d6717074dc18133abec6ac65a7c6
-    pristine_git_object: a56318bcc3528090edf59c2720894a294d073bcb
+    last_write_checksum: sha1:3a84aa699f50fe666cba043b03e5a734ffdec3d0
+    pristine_git_object: 147d1ac144dffb060a95b425fc57e6bad1360ebe
+  pkg/models/operations/updatecommercereservation.go:
+    id: a29e5ecb97b7
+    last_write_checksum: sha1:e0bb51fa876e85c9e8698497d2952bd6ef25f310
+    pristine_git_object: 26dbedb262479b5b4016bb69f7072ed29bffa29d
   pkg/models/operations/updatecommercereview.go:
     id: def0f30185e1
-    last_write_checksum: sha1:03d458fd18a6a788c37aaf878560d37f942d2fa5
-    pristine_git_object: 78281666c1c3e3c7f4d83bdc3726013d1cca6cf3
+    last_write_checksum: sha1:c24c74a98f62d7b5d3cf02e665951c326c1ad3d5
+    pristine_git_object: 7c7b9987dff143756ab6be9e5e45188679a5da73
   pkg/models/operations/updatecommercesaleschannel.go:
     id: bfdfb8651797
     last_write_checksum: sha1:377b9c3df7c2d3e60e30ed64c41aecd7787395fe
@@ -14545,6 +14697,10 @@ trackedFiles:
     id: 28ff851c671e
     last_write_checksum: sha1:009d1daabfa22e0a39c91de02ead051b582be0b6
     pristine_git_object: 26cb4f363fddb59278e2a886543810c10d0aa3f1
+  pkg/models/shared/commerceavailability.go:
+    id: fecf876db10f
+    last_write_checksum: sha1:40151caca019e505fad3157440c3e9e5d2b3480f
+    pristine_git_object: ce5d946297de78bc6278ebba0e87ab43de415046
   pkg/models/shared/commercecollection.go:
     id: fb72800911e9
     last_write_checksum: sha1:d89e7f4ffad5eec6db225c73f3104a4f0805bf99
@@ -14555,8 +14711,8 @@ trackedFiles:
     pristine_git_object: 96d24b71bc7c9852a3aeab85fd7f36dd32ee4d48
   pkg/models/shared/commerceitem.go:
     id: 9fdece2092dd
-    last_write_checksum: sha1:66597a2c641b0c73f7b8daf15acc2147877089d5
-    pristine_git_object: 181e1b977cb991094339d83ba0e01067b407d280
+    last_write_checksum: sha1:0467326b09e67050ef38b37146a9515a3c26abf0
+    pristine_git_object: cae6772c734a2a3f80c513b002b5d6d36ad8131e
   pkg/models/shared/commerceitemmedia.go:
     id: e3c5b007557c
     last_write_checksum: sha1:21706e255fc1cbff8b137fa391189f3e16d44cac
@@ -14575,8 +14731,8 @@ trackedFiles:
     pristine_git_object: 3b7825af6b0d6dba42a755ace82ed66839af702b
   pkg/models/shared/commercelocation.go:
     id: a5930bf5dc40
-    last_write_checksum: sha1:d7b8035f0ed34d716e1a9b1ae5c601e72e2560bd
-    pristine_git_object: 8cc9121e54178bfa6dbb660b151b3a5ac12d1763
+    last_write_checksum: sha1:14aed1a9368b1d9dd30284a292fb11457e712f29
+    pristine_git_object: e805c8b39a08c806f14feca8c5b94dca536d8100
   pkg/models/shared/commercemetadata.go:
     id: 5ca97e8cf8e2
     last_write_checksum: sha1:c434b8c7e79cc4269ac1713f569a2973de0871e3
@@ -14585,10 +14741,14 @@ trackedFiles:
     id: f8d79ec49303
     last_write_checksum: sha1:6298d217abb27dca541c0033366505c3c08dd6b7
     pristine_git_object: 600157b5b3a8b6cc501aeb66eca1c908bfa035dc
+  pkg/models/shared/commercereservation.go:
+    id: 854f4a7f0508
+    last_write_checksum: sha1:b11c731bbd82626d5737d705a459f6d7a05c917d
+    pristine_git_object: 0dde57ebedaf0e6da48251018c5b18ab390965a7
   pkg/models/shared/commercereview.go:
     id: d48fd6c827a3
-    last_write_checksum: sha1:93149289d1748aab1dcad846392d0f294b872920
-    pristine_git_object: 6851b63e0a6547ca973227def027fba92efc2584
+    last_write_checksum: sha1:86700f577b8fd6ec77e1227f22e814149f36cf54
+    pristine_git_object: 2b3449d8e892b66db59bec19f2a7eccc02eb63b2
   pkg/models/shared/commercereviewcomment.go:
     id: a7108f1013f4
     last_write_checksum: sha1:debea1e4b3aaeba3c7a13bcdd0eb808adff4c822
@@ -14597,6 +14757,10 @@ trackedFiles:
     id: 6acb7691fada
     last_write_checksum: sha1:da950bf6802e1768223677e6160d8930aa4cb49b
     pristine_git_object: 6bfdc9170ce73c42340e055f19d9ddf751335fc7
+  pkg/models/shared/commercetelephone.go:
+    id: 912df3d46a83
+    last_write_checksum: sha1:82c83e573a6ef2d8ffa20d1da155da543c1c0a9d
+    pristine_git_object: 1856bba66ed02a6147b646ebfcacf11e1108f81d
   pkg/models/shared/connection.go:
     id: ca1fe549ed75
     last_write_checksum: sha1:6bb1a960c8581aaeeb442dbb518b44c202bc72e0
@@ -14783,8 +14947,8 @@ trackedFiles:
     pristine_git_object: 9dd3e35dbc0a1904db07dc18a39437f1b1d5b50d
   pkg/models/shared/integrationsupport.go:
     id: b3cca4d8ed48
-    last_write_checksum: sha1:15a46c2fe119aa45313961301c9d30b82bc66377
-    pristine_git_object: 44f823c5d5eb5df1f30da151a1fbae22b3ce426c
+    last_write_checksum: sha1:c72068bbde89fbc2f2e126a29caf2ca6daf734c6
+    pristine_git_object: 4c7dc50449f1f5a31d70174279f483b339f15c48
   pkg/models/shared/issue.go:
     id: b72881281f6d
     last_write_checksum: sha1:f7ca4a8cb1426571240908d80b0d81410dd6d982
@@ -15347,8 +15511,8 @@ trackedFiles:
     pristine_git_object: f1f9f22296df5458c20262c14236d586c41c65af
   pkg/models/shared/propertyconnectionpermissions.go:
     id: 88ab9d7b79f5
-    last_write_checksum: sha1:8ee0b457464daa0015544c93ff2f3babdf350875
-    pristine_git_object: 2e832728cd2ca96cc9725433889d5f936d5bb20e
+    last_write_checksum: sha1:3c958a1f2812c1abd84693193ce45c07cbb08cd9
+    pristine_git_object: ae17fa825ab03bdf1c8370fb7b95a2b54a9d2351
   pkg/models/shared/propertycrmcompanyaddress.go:
     id: 3f96e587bede
     last_write_checksum: sha1:bc8a562133a28ecf7f82a04f5827fb21b9bf0d46
@@ -15791,8 +15955,8 @@ trackedFiles:
     pristine_git_object: c959f88d1389aa538d9eca96874fefa11a23aeea
   pkg/models/shared/webhook.go:
     id: 5ade8debb6cb
-    last_write_checksum: sha1:190b32e5113e48f5a43ab7c5a2db5b72f8da29af
-    pristine_git_object: ccd80ead8547bff20888bb8653042bfc4a6b910f
+    last_write_checksum: sha1:8ad8b29cc398f266036f1c951f0161f0afdff57c
+    pristine_git_object: 9bb817e74718716fd053648d978aefa9b0e0de29
   pkg/optionalnullable/optionalnullable.go:
     id: 7520d2c4b109
     last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
@@ -15925,6 +16089,10 @@ trackedFiles:
     id: ca467c033b93
     last_write_checksum: sha1:92b3cd0587eb14895d57b263750fb16b731c0ef5
     pristine_git_object: 6a75845bb187cc9efe4a44ce66792902f456366f
+  reservation.go:
+    id: 6a5d0dda2f10
+    last_write_checksum: sha1:caa5d154a6e733676f4c1968fc49dbdc13b8360e
+    pristine_git_object: 0d2cdb3cb89beb0d9382785bf20b5c04738ac7b3
   review.go:
     id: 984e6722fe24
     last_write_checksum: sha1:d1c4dda15fe60ff7a1978af70dc2a77044ac284f
@@ -16023,8 +16191,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:644e130f5c7026da56249b6edeb4529ce7dd8df0
-    pristine_git_object: 389f36e3310dcb638b154b6d8212c1cb43bac71a
+    last_write_checksum: sha1:53708088dcddf50267d24391b620c57db08bfc14
+    pristine_git_object: a6c98b469bdae1b29a2817932924dd10e2edbcb6
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -21978,9 +22146,72 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>", "type": "CUSTOM_CONVERSION_ID"}]
+  createCommerceReservation:
+    speakeasy-default-create-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCommerceReservation:
+    speakeasy-default-get-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCommerceAvailabilities:
+    speakeasy-default-list-commerce-availabilities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCommerceReservations:
+    speakeasy-default-list-commerce-reservations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCommerceReservation:
+    speakeasy-default-patch-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCommerceReservation:
+    speakeasy-default-remove-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCommerceReservation:
+    speakeasy-default-update-commerce-reservation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[].Campaign.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[].Campaign.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Raw` **Added**\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.HasEuPoliticalAds` **Added**\n* `UnifiedTo.Target.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Raw` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Commerce.CreateCommerceReservation()`: **Added**\n* `UnifiedTo.Commerce.GetCommerceReservation()`: **Added**\n* `UnifiedTo.Commerce.ListCommerceAvailabilities()`: **Added**\n* `UnifiedTo.Commerce.ListCommerceReservations()`: **Added**\n* `UnifiedTo.Commerce.PatchCommerceReservation()`: **Added**\n* `UnifiedTo.Commerce.RemoveCommerceReservation()`: **Added**\n* `UnifiedTo.Commerce.UpdateCommerceReservation()`: **Added**\n* `UnifiedTo.Availability.ListCommerceAvailabilities()`: **Added**\n* `UnifiedTo.Reservation.CreateCommerceReservation()`: **Added**\n* `UnifiedTo.Reservation.GetCommerceReservation()`: **Added**\n* `UnifiedTo.Reservation.ListCommerceReservations()`: **Added**\n* `UnifiedTo.Reservation.PatchCommerceReservation()`: **Added**\n* `UnifiedTo.Reservation.RemoveCommerceReservation()`: **Added**\n* `UnifiedTo.Reservation.UpdateCommerceReservation()`: **Added**\n* `UnifiedTo.Commerce.CreateCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.CreateCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.CreateCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.GetCommerceItem()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.GetCommerceLocation()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.GetCommerceReview()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.ListCommerceItems()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Commerce.ListCommerceLocations()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Commerce.ListCommerceReviews()`: \n  *  `request.Request` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.PatchCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Commerce.UpdateCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Item.CreateCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Item.GetCommerceItem()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Item.ListCommerceItems()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Item.PatchCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Item.UpdateCommerceItem()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Location.CreateCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Location.GetCommerceLocation()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Location.ListCommerceLocations()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Location.PatchCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Location.UpdateCommerceLocation()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Review.CreateCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Review.GetCommerceReview()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Review.ListCommerceReviews()`: \n  *  `request.Request` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Review.PatchCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Review.UpdateCommerceReview()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

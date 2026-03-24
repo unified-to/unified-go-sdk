@@ -20,6 +20,7 @@ value := operations.PatchCommerceReviewQueryParamFieldsID
 | `PatchCommerceReviewQueryParamFieldsUpdatedAt`        | updated_at                                            |
 | `PatchCommerceReviewQueryParamFieldsItemID`           | item_id                                               |
 | `PatchCommerceReviewQueryParamFieldsItemVariantID`    | item_variant_id                                       |
+| `PatchCommerceReviewQueryParamFieldsLocationID`       | location_id                                           |
 | `PatchCommerceReviewQueryParamFieldsRating`           | rating                                                |
 | `PatchCommerceReviewQueryParamFieldsTitle`            | title                                                 |
 | `PatchCommerceReviewQueryParamFieldsContent`          | content                                               |
@@ -37,4 +38,5 @@ value := operations.PatchCommerceReviewQueryParamFieldsID
 | `PatchCommerceReviewQueryParamFieldsIsPublic`         | is_public                                             |
 | `PatchCommerceReviewQueryParamFieldsComments`         | comments                                              |
 | `PatchCommerceReviewQueryParamFieldsMetadata`         | metadata                                              |
+| `PatchCommerceReviewQueryParamFieldsURL`              | url                                                   |
 | `PatchCommerceReviewQueryParamFieldsRaw`              | raw                                                   |

@@ -17,6 +17,7 @@ const (
 	GetCommerceReviewQueryParamFieldsUpdatedAt        GetCommerceReviewQueryParamFields = "updated_at"
 	GetCommerceReviewQueryParamFieldsItemID           GetCommerceReviewQueryParamFields = "item_id"
 	GetCommerceReviewQueryParamFieldsItemVariantID    GetCommerceReviewQueryParamFields = "item_variant_id"
+	GetCommerceReviewQueryParamFieldsLocationID       GetCommerceReviewQueryParamFields = "location_id"
 	GetCommerceReviewQueryParamFieldsRating           GetCommerceReviewQueryParamFields = "rating"
 	GetCommerceReviewQueryParamFieldsTitle            GetCommerceReviewQueryParamFields = "title"
 	GetCommerceReviewQueryParamFieldsContent          GetCommerceReviewQueryParamFields = "content"
@@ -34,6 +35,7 @@ const (
 	GetCommerceReviewQueryParamFieldsIsPublic         GetCommerceReviewQueryParamFields = "is_public"
 	GetCommerceReviewQueryParamFieldsComments         GetCommerceReviewQueryParamFields = "comments"
 	GetCommerceReviewQueryParamFieldsMetadata         GetCommerceReviewQueryParamFields = "metadata"
+	GetCommerceReviewQueryParamFieldsURL              GetCommerceReviewQueryParamFields = "url"
 	GetCommerceReviewQueryParamFieldsRaw              GetCommerceReviewQueryParamFields = "raw"
 )
 
@@ -55,6 +57,8 @@ func (e *GetCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "item_id":
 		fallthrough
 	case "item_variant_id":
+		fallthrough
+	case "location_id":
 		fallthrough
 	case "rating":
 		fallthrough
@@ -89,6 +93,8 @@ func (e *GetCommerceReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "comments":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "url":
 		fallthrough
 	case "raw":
 		*e = GetCommerceReviewQueryParamFields(v)

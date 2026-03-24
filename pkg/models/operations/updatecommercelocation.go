@@ -22,7 +22,18 @@ const (
 	UpdateCommerceLocationQueryParamFieldsLanguageLocale UpdateCommerceLocationQueryParamFields = "language_locale"
 	UpdateCommerceLocationQueryParamFieldsParentID       UpdateCommerceLocationQueryParamFields = "parent_id"
 	UpdateCommerceLocationQueryParamFieldsCurrency       UpdateCommerceLocationQueryParamFields = "currency"
+	UpdateCommerceLocationQueryParamFieldsLocationType   UpdateCommerceLocationQueryParamFields = "location_type"
+	UpdateCommerceLocationQueryParamFieldsTelephones     UpdateCommerceLocationQueryParamFields = "telephones"
+	UpdateCommerceLocationQueryParamFieldsRating         UpdateCommerceLocationQueryParamFields = "rating"
+	UpdateCommerceLocationQueryParamFieldsReviewCount    UpdateCommerceLocationQueryParamFields = "review_count"
+	UpdateCommerceLocationQueryParamFieldsPriceLevel     UpdateCommerceLocationQueryParamFields = "price_level"
+	UpdateCommerceLocationQueryParamFieldsLatitude       UpdateCommerceLocationQueryParamFields = "latitude"
+	UpdateCommerceLocationQueryParamFieldsLongitude      UpdateCommerceLocationQueryParamFields = "longitude"
+	UpdateCommerceLocationQueryParamFieldsImageURL       UpdateCommerceLocationQueryParamFields = "image_url"
+	UpdateCommerceLocationQueryParamFieldsWebURL         UpdateCommerceLocationQueryParamFields = "web_url"
+	UpdateCommerceLocationQueryParamFieldsMedia          UpdateCommerceLocationQueryParamFields = "media"
 	UpdateCommerceLocationQueryParamFieldsRaw            UpdateCommerceLocationQueryParamFields = "raw"
+	UpdateCommerceLocationQueryParamFieldsCategories     UpdateCommerceLocationQueryParamFields = "categories"
 )
 
 func (e UpdateCommerceLocationQueryParamFields) ToPointer() *UpdateCommerceLocationQueryParamFields {
@@ -54,7 +65,29 @@ func (e *UpdateCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "currency":
 		fallthrough
+	case "location_type":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "review_count":
+		fallthrough
+	case "price_level":
+		fallthrough
+	case "latitude":
+		fallthrough
+	case "longitude":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "media":
+		fallthrough
 	case "raw":
+		fallthrough
+	case "categories":
 		*e = UpdateCommerceLocationQueryParamFields(v)
 		return nil
 	default:

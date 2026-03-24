@@ -39,6 +39,7 @@ type CommerceItem struct {
 	Collections       []CommerceReference `json:"collections,omitempty"`
 	CreatedAt         *time.Time          `json:"created_at,omitempty"`
 	Description       *string             `json:"description,omitempty"`
+	Duration          *float64            `json:"duration,omitempty"`
 	GlobalCode        *string             `json:"global_code,omitempty"`
 	ID                *string             `json:"id,omitempty"`
 	InventoryID       *string             `json:"inventory_id,omitempty"`
@@ -46,6 +47,7 @@ type CommerceItem struct {
 	IsFeatured        *bool               `json:"is_featured,omitempty"`
 	IsTaxable         *bool               `json:"is_taxable,omitempty"`
 	IsVisible         *bool               `json:"is_visible,omitempty"`
+	LocationID        *string             `json:"location_id,omitempty"`
 	Media             []CommerceItemMedia `json:"media,omitempty"`
 	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
 	Name              *string             `json:"name,omitempty"`
@@ -113,6 +115,13 @@ func (c *CommerceItem) GetDescription() *string {
 	return c.Description
 }
 
+func (c *CommerceItem) GetDuration() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.Duration
+}
+
 func (c *CommerceItem) GetGlobalCode() *string {
 	if c == nil {
 		return nil
@@ -160,6 +169,13 @@ func (c *CommerceItem) GetIsVisible() *bool {
 		return nil
 	}
 	return c.IsVisible
+}
+
+func (c *CommerceItem) GetLocationID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.LocationID
 }
 
 func (c *CommerceItem) GetMedia() []CommerceItemMedia {

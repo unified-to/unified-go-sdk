@@ -17,6 +17,7 @@ const (
 	ListCommerceReviewsQueryParamFieldsUpdatedAt        ListCommerceReviewsQueryParamFields = "updated_at"
 	ListCommerceReviewsQueryParamFieldsItemID           ListCommerceReviewsQueryParamFields = "item_id"
 	ListCommerceReviewsQueryParamFieldsItemVariantID    ListCommerceReviewsQueryParamFields = "item_variant_id"
+	ListCommerceReviewsQueryParamFieldsLocationID       ListCommerceReviewsQueryParamFields = "location_id"
 	ListCommerceReviewsQueryParamFieldsRating           ListCommerceReviewsQueryParamFields = "rating"
 	ListCommerceReviewsQueryParamFieldsTitle            ListCommerceReviewsQueryParamFields = "title"
 	ListCommerceReviewsQueryParamFieldsContent          ListCommerceReviewsQueryParamFields = "content"
@@ -34,6 +35,7 @@ const (
 	ListCommerceReviewsQueryParamFieldsIsPublic         ListCommerceReviewsQueryParamFields = "is_public"
 	ListCommerceReviewsQueryParamFieldsComments         ListCommerceReviewsQueryParamFields = "comments"
 	ListCommerceReviewsQueryParamFieldsMetadata         ListCommerceReviewsQueryParamFields = "metadata"
+	ListCommerceReviewsQueryParamFieldsURL              ListCommerceReviewsQueryParamFields = "url"
 	ListCommerceReviewsQueryParamFieldsRaw              ListCommerceReviewsQueryParamFields = "raw"
 )
 
@@ -55,6 +57,8 @@ func (e *ListCommerceReviewsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "item_id":
 		fallthrough
 	case "item_variant_id":
+		fallthrough
+	case "location_id":
 		fallthrough
 	case "rating":
 		fallthrough
@@ -90,6 +94,8 @@ func (e *ListCommerceReviewsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "metadata":
 		fallthrough
+	case "url":
+		fallthrough
 	case "raw":
 		*e = ListCommerceReviewsQueryParamFields(v)
 		return nil
@@ -108,8 +114,10 @@ type ListCommerceReviewsRequest struct {
 	// The item ID to filter by (reference to CommerceItem)
 	ItemID *string  `queryParam:"style=form,explode=true,name=item_id"`
 	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string  `queryParam:"style=form,explode=true,name=order"`
+	// The location ID to filter by (reference to CommerceLocation)
+	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
+	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order      *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -152,6 +160,13 @@ func (l *ListCommerceReviewsRequest) GetLimit() *float64 {
 		return nil
 	}
 	return l.Limit
+}
+
+func (l *ListCommerceReviewsRequest) GetLocationID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.LocationID
 }
 
 func (l *ListCommerceReviewsRequest) GetOffset() *float64 {

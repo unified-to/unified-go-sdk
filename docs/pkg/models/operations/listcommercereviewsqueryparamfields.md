@@ -20,6 +20,7 @@ value := operations.ListCommerceReviewsQueryParamFieldsID
 | `ListCommerceReviewsQueryParamFieldsUpdatedAt`        | updated_at                                            |
 | `ListCommerceReviewsQueryParamFieldsItemID`           | item_id                                               |
 | `ListCommerceReviewsQueryParamFieldsItemVariantID`    | item_variant_id                                       |
+| `ListCommerceReviewsQueryParamFieldsLocationID`       | location_id                                           |
 | `ListCommerceReviewsQueryParamFieldsRating`           | rating                                                |
 | `ListCommerceReviewsQueryParamFieldsTitle`            | title                                                 |
 | `ListCommerceReviewsQueryParamFieldsContent`          | content                                               |
@@ -37,4 +38,5 @@ value := operations.ListCommerceReviewsQueryParamFieldsID
 | `ListCommerceReviewsQueryParamFieldsIsPublic`         | is_public                                             |
 | `ListCommerceReviewsQueryParamFieldsComments`         | comments                                              |
 | `ListCommerceReviewsQueryParamFieldsMetadata`         | metadata                                              |
+| `ListCommerceReviewsQueryParamFieldsURL`              | url                                                   |
 | `ListCommerceReviewsQueryParamFieldsRaw`              | raw                                                   |

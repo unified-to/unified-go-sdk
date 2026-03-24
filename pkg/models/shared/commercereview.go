@@ -46,6 +46,7 @@ type CommerceReview struct {
 	IsVerified      *bool                   `json:"is_verified,omitempty"`
 	ItemID          string                  `json:"item_id"`
 	ItemVariantID   *string                 `json:"item_variant_id,omitempty"`
+	LocationID      *string                 `json:"location_id,omitempty"`
 	// Photosvideos attached to the review
 	Media            []CommerceItemMedia   `json:"media,omitempty"`
 	Metadata         []CommerceMetadata    `json:"metadata,omitempty"`
@@ -55,6 +56,7 @@ type CommerceReview struct {
 	Title            *string               `json:"title,omitempty"`
 	UnhelpfulVotes   *float64              `json:"unhelpful_votes,omitempty"`
 	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
+	URL              *string               `json:"url,omitempty"`
 	VerifiedPurchase *bool                 `json:"verified_purchase,omitempty"`
 }
 
@@ -167,6 +169,13 @@ func (c *CommerceReview) GetItemVariantID() *string {
 	return c.ItemVariantID
 }
 
+func (c *CommerceReview) GetLocationID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.LocationID
+}
+
 func (c *CommerceReview) GetMedia() []CommerceItemMedia {
 	if c == nil {
 		return nil
@@ -221,6 +230,13 @@ func (c *CommerceReview) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return c.UpdatedAt
+}
+
+func (c *CommerceReview) GetURL() *string {
+	if c == nil {
+		return nil
+	}
+	return c.URL
 }
 
 func (c *CommerceReview) GetVerifiedPurchase() *bool {

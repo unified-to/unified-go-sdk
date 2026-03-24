@@ -49,6 +49,8 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeCommerceReview`          | commerce_review                     |
 | `ObjectTypeCommerceSaleschannel`    | commerce_saleschannel               |
 | `ObjectTypeCommerceItemvariant`     | commerce_itemvariant                |
+| `ObjectTypeCommerceReservation`     | commerce_reservation                |
+| `ObjectTypeCommerceAvailability`    | commerce_availability               |
 | `ObjectTypeVerificationPackage`     | verification_package                |
 | `ObjectTypeVerificationRequest`     | verification_request                |
 | `ObjectTypeAssessmentPackage`       | assessment_package                  |

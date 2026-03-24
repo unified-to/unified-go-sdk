@@ -25,4 +25,15 @@ value := operations.UpdateCommerceLocationQueryParamFieldsID
 | `UpdateCommerceLocationQueryParamFieldsLanguageLocale` | language_locale                                        |
 | `UpdateCommerceLocationQueryParamFieldsParentID`       | parent_id                                              |
 | `UpdateCommerceLocationQueryParamFieldsCurrency`       | currency                                               |
+| `UpdateCommerceLocationQueryParamFieldsLocationType`   | location_type                                          |
+| `UpdateCommerceLocationQueryParamFieldsTelephones`     | telephones                                             |
+| `UpdateCommerceLocationQueryParamFieldsRating`         | rating                                                 |
+| `UpdateCommerceLocationQueryParamFieldsReviewCount`    | review_count                                           |
+| `UpdateCommerceLocationQueryParamFieldsPriceLevel`     | price_level                                            |
+| `UpdateCommerceLocationQueryParamFieldsLatitude`       | latitude                                               |
+| `UpdateCommerceLocationQueryParamFieldsLongitude`      | longitude                                              |
+| `UpdateCommerceLocationQueryParamFieldsImageURL`       | image_url                                              |
+| `UpdateCommerceLocationQueryParamFieldsWebURL`         | web_url                                                |
+| `UpdateCommerceLocationQueryParamFieldsMedia`          | media                                                  |
 | `UpdateCommerceLocationQueryParamFieldsRaw`            | raw                                                    |
+| `UpdateCommerceLocationQueryParamFieldsCategories`     | categories                                             |

@@ -7,18 +7,54 @@ import (
 	"time"
 )
 
+type LocationType string
+
+const (
+	LocationTypeRestaurant LocationType = "RESTAURANT"
+	LocationTypeSalon      LocationType = "SALON"
+	LocationTypeWarehouse  LocationType = "WAREHOUSE"
+	LocationTypeStore      LocationType = "STORE"
+	LocationTypeOther      LocationType = "OTHER"
+)
+
+func (e LocationType) ToPointer() *LocationType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *LocationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "RESTAURANT", "SALON", "WAREHOUSE", "STORE", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type CommerceLocation struct {
 	Address        *PropertyCommerceLocationAddress `json:"address,omitempty"`
+	Categories     []string                         `json:"categories,omitempty"`
 	CreatedAt      *time.Time                       `json:"created_at,omitempty"`
 	Currency       *string                          `json:"currency,omitempty"`
 	Description    *string                          `json:"description,omitempty"`
 	ID             *string                          `json:"id,omitempty"`
+	ImageURL       *string                          `json:"image_url,omitempty"`
 	IsActive       *bool                            `json:"is_active,omitempty"`
 	LanguageLocale *string                          `json:"language_locale,omitempty"`
+	Latitude       *float64                         `json:"latitude,omitempty"`
+	LocationType   *LocationType                    `json:"location_type,omitempty"`
+	Longitude      *float64                         `json:"longitude,omitempty"`
+	Media          []CommerceItemMedia              `json:"media,omitempty"`
 	Name           string                           `json:"name"`
 	ParentID       *string                          `json:"parent_id,omitempty"`
+	PriceLevel     *string                          `json:"price_level,omitempty"`
+	Rating         *float64                         `json:"rating,omitempty"`
 	Raw            map[string]any                   `json:"raw,omitempty"`
+	ReviewCount    *float64                         `json:"review_count,omitempty"`
+	Telephones     []CommerceTelephone              `json:"telephones,omitempty"`
 	UpdatedAt      *time.Time                       `json:"updated_at,omitempty"`
+	WebURL         *string                          `json:"web_url,omitempty"`
 }
 
 func (c CommerceLocation) MarshalJSON() ([]byte, error) {
@@ -37,6 +73,13 @@ func (c *CommerceLocation) GetAddress() *PropertyCommerceLocationAddress {
 		return nil
 	}
 	return c.Address
+}
+
+func (c *CommerceLocation) GetCategories() []string {
+	if c == nil {
+		return nil
+	}
+	return c.Categories
 }
 
 func (c *CommerceLocation) GetCreatedAt() *time.Time {
@@ -67,6 +110,13 @@ func (c *CommerceLocation) GetID() *string {
 	return c.ID
 }
 
+func (c *CommerceLocation) GetImageURL() *string {
+	if c == nil {
+		return nil
+	}
+	return c.ImageURL
+}
+
 func (c *CommerceLocation) GetIsActive() *bool {
 	if c == nil {
 		return nil
@@ -79,6 +129,34 @@ func (c *CommerceLocation) GetLanguageLocale() *string {
 		return nil
 	}
 	return c.LanguageLocale
+}
+
+func (c *CommerceLocation) GetLatitude() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.Latitude
+}
+
+func (c *CommerceLocation) GetLocationType() *LocationType {
+	if c == nil {
+		return nil
+	}
+	return c.LocationType
+}
+
+func (c *CommerceLocation) GetLongitude() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.Longitude
+}
+
+func (c *CommerceLocation) GetMedia() []CommerceItemMedia {
+	if c == nil {
+		return nil
+	}
+	return c.Media
 }
 
 func (c *CommerceLocation) GetName() string {
@@ -95,6 +173,20 @@ func (c *CommerceLocation) GetParentID() *string {
 	return c.ParentID
 }
 
+func (c *CommerceLocation) GetPriceLevel() *string {
+	if c == nil {
+		return nil
+	}
+	return c.PriceLevel
+}
+
+func (c *CommerceLocation) GetRating() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.Rating
+}
+
 func (c *CommerceLocation) GetRaw() map[string]any {
 	if c == nil {
 		return nil
@@ -102,9 +194,30 @@ func (c *CommerceLocation) GetRaw() map[string]any {
 	return c.Raw
 }
 
+func (c *CommerceLocation) GetReviewCount() *float64 {
+	if c == nil {
+		return nil
+	}
+	return c.ReviewCount
+}
+
+func (c *CommerceLocation) GetTelephones() []CommerceTelephone {
+	if c == nil {
+		return nil
+	}
+	return c.Telephones
+}
+
 func (c *CommerceLocation) GetUpdatedAt() *time.Time {
 	if c == nil {
 		return nil
 	}
 	return c.UpdatedAt
+}
+
+func (c *CommerceLocation) GetWebURL() *string {
+	if c == nil {
+		return nil
+	}
+	return c.WebURL
 }

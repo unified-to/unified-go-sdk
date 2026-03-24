@@ -1382,6 +1382,29 @@ func (e *ListShipmentID) IsExact() bool {
 	return false
 }
 
+type ListSize string
+
+const (
+	ListSizeSupportedRequired ListSize = "supported-required"
+	ListSizeSupported         ListSize = "supported"
+	ListSizeNotSupported      ListSize = "not-supported"
+)
+
+func (e ListSize) ToPointer() *ListSize {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSize) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListSortByCreatedAt string
 
 const (
@@ -1856,6 +1879,29 @@ func (e NativeWebhookFormID) ToPointer() *NativeWebhookFormID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookFormID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type NativeWebhookIoID string
+
+const (
+	NativeWebhookIoIDSupportedRequired NativeWebhookIoID = "supported-required"
+	NativeWebhookIoIDSupported         NativeWebhookIoID = "supported"
+	NativeWebhookIoIDNotSupported      NativeWebhookIoID = "not-supported"
+)
+
+func (e NativeWebhookIoID) ToPointer() *NativeWebhookIoID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookIoID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -3514,6 +3560,7 @@ type IntegrationSupport struct {
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
 	ListShipmentID          *ListShipmentID          `json:"list_shipment_id,omitempty"`
+	ListSize                *ListSize                `json:"list_size,omitempty"`
 	ListSortByCreatedAt     *ListSortByCreatedAt     `json:"list_sort_by_created_at,omitempty"`
 	ListSortByName          *ListSortByName          `json:"list_sort_by_name,omitempty"`
 	ListSortByUpdatedAt     *ListSortByUpdatedAt     `json:"list_sort_by_updated_at,omitempty"`
@@ -3536,6 +3583,7 @@ type IntegrationSupport struct {
 	NativeWebhookCourseID   *NativeWebhookCourseID   `json:"native_webhook_course_id,omitempty"`
 	NativeWebhookEventID    *NativeWebhookEventID    `json:"native_webhook_event_id,omitempty"`
 	NativeWebhookFormID     *NativeWebhookFormID     `json:"native_webhook_form_id,omitempty"`
+	NativeWebhookIoID       *NativeWebhookIoID       `json:"native_webhook_io_id,omitempty"`
 	NativeWebhookLabelID    *NativeWebhookLabelID    `json:"native_webhook_label_id,omitempty"`
 	NativeWebhookMemberID   *NativeWebhookMemberID   `json:"native_webhook_member_id,omitempty"`
 	NativeWebhookOrderID    *NativeWebhookOrderID    `json:"native_webhook_order_id,omitempty"`
@@ -4039,6 +4087,13 @@ func (i *IntegrationSupport) GetListShipmentID() *ListShipmentID {
 	return i.ListShipmentID
 }
 
+func (i *IntegrationSupport) GetListSize() *ListSize {
+	if i == nil {
+		return nil
+	}
+	return i.ListSize
+}
+
 func (i *IntegrationSupport) GetListSortByCreatedAt() *ListSortByCreatedAt {
 	if i == nil {
 		return nil
@@ -4191,6 +4246,13 @@ func (i *IntegrationSupport) GetNativeWebhookFormID() *NativeWebhookFormID {
 		return nil
 	}
 	return i.NativeWebhookFormID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookIoID() *NativeWebhookIoID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookIoID
 }
 
 func (i *IntegrationSupport) GetNativeWebhookLabelID() *NativeWebhookLabelID {

@@ -25,15 +25,6 @@ const (
 	PatchCommerceItemQueryParamFieldsIsTaxable         PatchCommerceItemQueryParamFields = "is_taxable"
 	PatchCommerceItemQueryParamFieldsVendorName        PatchCommerceItemQueryParamFields = "vendor_name"
 	PatchCommerceItemQueryParamFieldsType              PatchCommerceItemQueryParamFields = "type"
-	PatchCommerceItemQueryParamFieldsVariants          PatchCommerceItemQueryParamFields = "variants"
-	PatchCommerceItemQueryParamFieldsTags              PatchCommerceItemQueryParamFields = "tags"
-	PatchCommerceItemQueryParamFieldsMedia             PatchCommerceItemQueryParamFields = "media"
-	PatchCommerceItemQueryParamFieldsCollectionIds     PatchCommerceItemQueryParamFields = "collection_ids"
-	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
-	PatchCommerceItemQueryParamFieldsMetadata          PatchCommerceItemQueryParamFields = "metadata"
-	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
-	PatchCommerceItemQueryParamFieldsTaxrateID         PatchCommerceItemQueryParamFields = "taxrate_id"
-	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
 	PatchCommerceItemQueryParamFieldsIsVisible         PatchCommerceItemQueryParamFields = "is_visible"
 	PatchCommerceItemQueryParamFieldsIsFeatured        PatchCommerceItemQueryParamFields = "is_featured"
 	PatchCommerceItemQueryParamFieldsWeight            PatchCommerceItemQueryParamFields = "weight"
@@ -42,6 +33,17 @@ const (
 	PatchCommerceItemQueryParamFieldsPrices            PatchCommerceItemQueryParamFields = "prices"
 	PatchCommerceItemQueryParamFieldsInventoryID       PatchCommerceItemQueryParamFields = "inventory_id"
 	PatchCommerceItemQueryParamFieldsTotalStock        PatchCommerceItemQueryParamFields = "total_stock"
+	PatchCommerceItemQueryParamFieldsVariants          PatchCommerceItemQueryParamFields = "variants"
+	PatchCommerceItemQueryParamFieldsTags              PatchCommerceItemQueryParamFields = "tags"
+	PatchCommerceItemQueryParamFieldsMedia             PatchCommerceItemQueryParamFields = "media"
+	PatchCommerceItemQueryParamFieldsCollectionIds     PatchCommerceItemQueryParamFields = "collection_ids"
+	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
+	PatchCommerceItemQueryParamFieldsMetadata          PatchCommerceItemQueryParamFields = "metadata"
+	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
+	PatchCommerceItemQueryParamFieldsTaxrateID         PatchCommerceItemQueryParamFields = "taxrate_id"
+	PatchCommerceItemQueryParamFieldsLocationID        PatchCommerceItemQueryParamFields = "location_id"
+	PatchCommerceItemQueryParamFieldsDuration          PatchCommerceItemQueryParamFields = "duration"
+	PatchCommerceItemQueryParamFieldsRaw               PatchCommerceItemQueryParamFields = "raw"
 )
 
 func (e PatchCommerceItemQueryParamFields) ToPointer() *PatchCommerceItemQueryParamFields {
@@ -79,6 +81,22 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "type":
 		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
+		fallthrough
 	case "variants":
 		fallthrough
 	case "tags":
@@ -95,23 +113,11 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "taxrate_id":
 		fallthrough
+	case "location_id":
+		fallthrough
+	case "duration":
+		fallthrough
 	case "raw":
-		fallthrough
-	case "is_visible":
-		fallthrough
-	case "is_featured":
-		fallthrough
-	case "weight":
-		fallthrough
-	case "weight_unit":
-		fallthrough
-	case "requires_shipping":
-		fallthrough
-	case "prices":
-		fallthrough
-	case "inventory_id":
-		fallthrough
-	case "total_stock":
 		*e = PatchCommerceItemQueryParamFields(v)
 		return nil
 	default:

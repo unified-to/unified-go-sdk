@@ -25,4 +25,15 @@ value := operations.PatchCommerceLocationQueryParamFieldsID
 | `PatchCommerceLocationQueryParamFieldsLanguageLocale` | language_locale                                       |
 | `PatchCommerceLocationQueryParamFieldsParentID`       | parent_id                                             |
 | `PatchCommerceLocationQueryParamFieldsCurrency`       | currency                                              |
+| `PatchCommerceLocationQueryParamFieldsLocationType`   | location_type                                         |
+| `PatchCommerceLocationQueryParamFieldsTelephones`     | telephones                                            |
+| `PatchCommerceLocationQueryParamFieldsRating`         | rating                                                |
+| `PatchCommerceLocationQueryParamFieldsReviewCount`    | review_count                                          |
+| `PatchCommerceLocationQueryParamFieldsPriceLevel`     | price_level                                           |
+| `PatchCommerceLocationQueryParamFieldsLatitude`       | latitude                                              |
+| `PatchCommerceLocationQueryParamFieldsLongitude`      | longitude                                             |
+| `PatchCommerceLocationQueryParamFieldsImageURL`       | image_url                                             |
+| `PatchCommerceLocationQueryParamFieldsWebURL`         | web_url                                               |
+| `PatchCommerceLocationQueryParamFieldsMedia`          | media                                                 |
 | `PatchCommerceLocationQueryParamFieldsRaw`            | raw                                                   |
+| `PatchCommerceLocationQueryParamFieldsCategories`     | categories                                            |

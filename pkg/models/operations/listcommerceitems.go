@@ -25,15 +25,6 @@ const (
 	ListCommerceItemsQueryParamFieldsIsTaxable         ListCommerceItemsQueryParamFields = "is_taxable"
 	ListCommerceItemsQueryParamFieldsVendorName        ListCommerceItemsQueryParamFields = "vendor_name"
 	ListCommerceItemsQueryParamFieldsType              ListCommerceItemsQueryParamFields = "type"
-	ListCommerceItemsQueryParamFieldsVariants          ListCommerceItemsQueryParamFields = "variants"
-	ListCommerceItemsQueryParamFieldsTags              ListCommerceItemsQueryParamFields = "tags"
-	ListCommerceItemsQueryParamFieldsMedia             ListCommerceItemsQueryParamFields = "media"
-	ListCommerceItemsQueryParamFieldsCollectionIds     ListCommerceItemsQueryParamFields = "collection_ids"
-	ListCommerceItemsQueryParamFieldsAccountID         ListCommerceItemsQueryParamFields = "account_id"
-	ListCommerceItemsQueryParamFieldsMetadata          ListCommerceItemsQueryParamFields = "metadata"
-	ListCommerceItemsQueryParamFieldsCollections       ListCommerceItemsQueryParamFields = "collections"
-	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
-	ListCommerceItemsQueryParamFieldsRaw               ListCommerceItemsQueryParamFields = "raw"
 	ListCommerceItemsQueryParamFieldsIsVisible         ListCommerceItemsQueryParamFields = "is_visible"
 	ListCommerceItemsQueryParamFieldsIsFeatured        ListCommerceItemsQueryParamFields = "is_featured"
 	ListCommerceItemsQueryParamFieldsWeight            ListCommerceItemsQueryParamFields = "weight"
@@ -42,6 +33,17 @@ const (
 	ListCommerceItemsQueryParamFieldsPrices            ListCommerceItemsQueryParamFields = "prices"
 	ListCommerceItemsQueryParamFieldsInventoryID       ListCommerceItemsQueryParamFields = "inventory_id"
 	ListCommerceItemsQueryParamFieldsTotalStock        ListCommerceItemsQueryParamFields = "total_stock"
+	ListCommerceItemsQueryParamFieldsVariants          ListCommerceItemsQueryParamFields = "variants"
+	ListCommerceItemsQueryParamFieldsTags              ListCommerceItemsQueryParamFields = "tags"
+	ListCommerceItemsQueryParamFieldsMedia             ListCommerceItemsQueryParamFields = "media"
+	ListCommerceItemsQueryParamFieldsCollectionIds     ListCommerceItemsQueryParamFields = "collection_ids"
+	ListCommerceItemsQueryParamFieldsAccountID         ListCommerceItemsQueryParamFields = "account_id"
+	ListCommerceItemsQueryParamFieldsMetadata          ListCommerceItemsQueryParamFields = "metadata"
+	ListCommerceItemsQueryParamFieldsCollections       ListCommerceItemsQueryParamFields = "collections"
+	ListCommerceItemsQueryParamFieldsTaxrateID         ListCommerceItemsQueryParamFields = "taxrate_id"
+	ListCommerceItemsQueryParamFieldsLocationID        ListCommerceItemsQueryParamFields = "location_id"
+	ListCommerceItemsQueryParamFieldsDuration          ListCommerceItemsQueryParamFields = "duration"
+	ListCommerceItemsQueryParamFieldsRaw               ListCommerceItemsQueryParamFields = "raw"
 )
 
 func (e ListCommerceItemsQueryParamFields) ToPointer() *ListCommerceItemsQueryParamFields {
@@ -79,6 +81,22 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "type":
 		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
+		fallthrough
 	case "variants":
 		fallthrough
 	case "tags":
@@ -95,23 +113,11 @@ func (e *ListCommerceItemsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "taxrate_id":
 		fallthrough
+	case "location_id":
+		fallthrough
+	case "duration":
+		fallthrough
 	case "raw":
-		fallthrough
-	case "is_visible":
-		fallthrough
-	case "is_featured":
-		fallthrough
-	case "weight":
-		fallthrough
-	case "weight_unit":
-		fallthrough
-	case "requires_shipping":
-		fallthrough
-	case "prices":
-		fallthrough
-	case "inventory_id":
-		fallthrough
-	case "total_stock":
 		*e = ListCommerceItemsQueryParamFields(v)
 		return nil
 	default:

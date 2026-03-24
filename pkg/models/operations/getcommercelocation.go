@@ -22,7 +22,18 @@ const (
 	GetCommerceLocationQueryParamFieldsLanguageLocale GetCommerceLocationQueryParamFields = "language_locale"
 	GetCommerceLocationQueryParamFieldsParentID       GetCommerceLocationQueryParamFields = "parent_id"
 	GetCommerceLocationQueryParamFieldsCurrency       GetCommerceLocationQueryParamFields = "currency"
+	GetCommerceLocationQueryParamFieldsLocationType   GetCommerceLocationQueryParamFields = "location_type"
+	GetCommerceLocationQueryParamFieldsTelephones     GetCommerceLocationQueryParamFields = "telephones"
+	GetCommerceLocationQueryParamFieldsRating         GetCommerceLocationQueryParamFields = "rating"
+	GetCommerceLocationQueryParamFieldsReviewCount    GetCommerceLocationQueryParamFields = "review_count"
+	GetCommerceLocationQueryParamFieldsPriceLevel     GetCommerceLocationQueryParamFields = "price_level"
+	GetCommerceLocationQueryParamFieldsLatitude       GetCommerceLocationQueryParamFields = "latitude"
+	GetCommerceLocationQueryParamFieldsLongitude      GetCommerceLocationQueryParamFields = "longitude"
+	GetCommerceLocationQueryParamFieldsImageURL       GetCommerceLocationQueryParamFields = "image_url"
+	GetCommerceLocationQueryParamFieldsWebURL         GetCommerceLocationQueryParamFields = "web_url"
+	GetCommerceLocationQueryParamFieldsMedia          GetCommerceLocationQueryParamFields = "media"
 	GetCommerceLocationQueryParamFieldsRaw            GetCommerceLocationQueryParamFields = "raw"
+	GetCommerceLocationQueryParamFieldsCategories     GetCommerceLocationQueryParamFields = "categories"
 )
 
 func (e GetCommerceLocationQueryParamFields) ToPointer() *GetCommerceLocationQueryParamFields {
@@ -54,7 +65,29 @@ func (e *GetCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "currency":
 		fallthrough
+	case "location_type":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "review_count":
+		fallthrough
+	case "price_level":
+		fallthrough
+	case "latitude":
+		fallthrough
+	case "longitude":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "media":
+		fallthrough
 	case "raw":
+		fallthrough
+	case "categories":
 		*e = GetCommerceLocationQueryParamFields(v)
 		return nil
 	default:

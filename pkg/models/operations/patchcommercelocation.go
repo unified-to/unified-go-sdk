@@ -22,7 +22,18 @@ const (
 	PatchCommerceLocationQueryParamFieldsLanguageLocale PatchCommerceLocationQueryParamFields = "language_locale"
 	PatchCommerceLocationQueryParamFieldsParentID       PatchCommerceLocationQueryParamFields = "parent_id"
 	PatchCommerceLocationQueryParamFieldsCurrency       PatchCommerceLocationQueryParamFields = "currency"
+	PatchCommerceLocationQueryParamFieldsLocationType   PatchCommerceLocationQueryParamFields = "location_type"
+	PatchCommerceLocationQueryParamFieldsTelephones     PatchCommerceLocationQueryParamFields = "telephones"
+	PatchCommerceLocationQueryParamFieldsRating         PatchCommerceLocationQueryParamFields = "rating"
+	PatchCommerceLocationQueryParamFieldsReviewCount    PatchCommerceLocationQueryParamFields = "review_count"
+	PatchCommerceLocationQueryParamFieldsPriceLevel     PatchCommerceLocationQueryParamFields = "price_level"
+	PatchCommerceLocationQueryParamFieldsLatitude       PatchCommerceLocationQueryParamFields = "latitude"
+	PatchCommerceLocationQueryParamFieldsLongitude      PatchCommerceLocationQueryParamFields = "longitude"
+	PatchCommerceLocationQueryParamFieldsImageURL       PatchCommerceLocationQueryParamFields = "image_url"
+	PatchCommerceLocationQueryParamFieldsWebURL         PatchCommerceLocationQueryParamFields = "web_url"
+	PatchCommerceLocationQueryParamFieldsMedia          PatchCommerceLocationQueryParamFields = "media"
 	PatchCommerceLocationQueryParamFieldsRaw            PatchCommerceLocationQueryParamFields = "raw"
+	PatchCommerceLocationQueryParamFieldsCategories     PatchCommerceLocationQueryParamFields = "categories"
 )
 
 func (e PatchCommerceLocationQueryParamFields) ToPointer() *PatchCommerceLocationQueryParamFields {
@@ -54,7 +65,29 @@ func (e *PatchCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "currency":
 		fallthrough
+	case "location_type":
+		fallthrough
+	case "telephones":
+		fallthrough
+	case "rating":
+		fallthrough
+	case "review_count":
+		fallthrough
+	case "price_level":
+		fallthrough
+	case "latitude":
+		fallthrough
+	case "longitude":
+		fallthrough
+	case "image_url":
+		fallthrough
+	case "web_url":
+		fallthrough
+	case "media":
+		fallthrough
 	case "raw":
+		fallthrough
+	case "categories":
 		*e = PatchCommerceLocationQueryParamFields(v)
 		return nil
 	default:

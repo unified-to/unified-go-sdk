@@ -25,15 +25,6 @@ const (
 	GetCommerceItemQueryParamFieldsIsTaxable         GetCommerceItemQueryParamFields = "is_taxable"
 	GetCommerceItemQueryParamFieldsVendorName        GetCommerceItemQueryParamFields = "vendor_name"
 	GetCommerceItemQueryParamFieldsType              GetCommerceItemQueryParamFields = "type"
-	GetCommerceItemQueryParamFieldsVariants          GetCommerceItemQueryParamFields = "variants"
-	GetCommerceItemQueryParamFieldsTags              GetCommerceItemQueryParamFields = "tags"
-	GetCommerceItemQueryParamFieldsMedia             GetCommerceItemQueryParamFields = "media"
-	GetCommerceItemQueryParamFieldsCollectionIds     GetCommerceItemQueryParamFields = "collection_ids"
-	GetCommerceItemQueryParamFieldsAccountID         GetCommerceItemQueryParamFields = "account_id"
-	GetCommerceItemQueryParamFieldsMetadata          GetCommerceItemQueryParamFields = "metadata"
-	GetCommerceItemQueryParamFieldsCollections       GetCommerceItemQueryParamFields = "collections"
-	GetCommerceItemQueryParamFieldsTaxrateID         GetCommerceItemQueryParamFields = "taxrate_id"
-	GetCommerceItemQueryParamFieldsRaw               GetCommerceItemQueryParamFields = "raw"
 	GetCommerceItemQueryParamFieldsIsVisible         GetCommerceItemQueryParamFields = "is_visible"
 	GetCommerceItemQueryParamFieldsIsFeatured        GetCommerceItemQueryParamFields = "is_featured"
 	GetCommerceItemQueryParamFieldsWeight            GetCommerceItemQueryParamFields = "weight"
@@ -42,6 +33,17 @@ const (
 	GetCommerceItemQueryParamFieldsPrices            GetCommerceItemQueryParamFields = "prices"
 	GetCommerceItemQueryParamFieldsInventoryID       GetCommerceItemQueryParamFields = "inventory_id"
 	GetCommerceItemQueryParamFieldsTotalStock        GetCommerceItemQueryParamFields = "total_stock"
+	GetCommerceItemQueryParamFieldsVariants          GetCommerceItemQueryParamFields = "variants"
+	GetCommerceItemQueryParamFieldsTags              GetCommerceItemQueryParamFields = "tags"
+	GetCommerceItemQueryParamFieldsMedia             GetCommerceItemQueryParamFields = "media"
+	GetCommerceItemQueryParamFieldsCollectionIds     GetCommerceItemQueryParamFields = "collection_ids"
+	GetCommerceItemQueryParamFieldsAccountID         GetCommerceItemQueryParamFields = "account_id"
+	GetCommerceItemQueryParamFieldsMetadata          GetCommerceItemQueryParamFields = "metadata"
+	GetCommerceItemQueryParamFieldsCollections       GetCommerceItemQueryParamFields = "collections"
+	GetCommerceItemQueryParamFieldsTaxrateID         GetCommerceItemQueryParamFields = "taxrate_id"
+	GetCommerceItemQueryParamFieldsLocationID        GetCommerceItemQueryParamFields = "location_id"
+	GetCommerceItemQueryParamFieldsDuration          GetCommerceItemQueryParamFields = "duration"
+	GetCommerceItemQueryParamFieldsRaw               GetCommerceItemQueryParamFields = "raw"
 )
 
 func (e GetCommerceItemQueryParamFields) ToPointer() *GetCommerceItemQueryParamFields {
@@ -79,6 +81,22 @@ func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "type":
 		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
+		fallthrough
 	case "variants":
 		fallthrough
 	case "tags":
@@ -95,23 +113,11 @@ func (e *GetCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "taxrate_id":
 		fallthrough
+	case "location_id":
+		fallthrough
+	case "duration":
+		fallthrough
 	case "raw":
-		fallthrough
-	case "is_visible":
-		fallthrough
-	case "is_featured":
-		fallthrough
-	case "weight":
-		fallthrough
-	case "weight_unit":
-		fallthrough
-	case "requires_shipping":
-		fallthrough
-	case "prices":
-		fallthrough
-	case "inventory_id":
-		fallthrough
-	case "total_stock":
 		*e = GetCommerceItemQueryParamFields(v)
 		return nil
 	default:

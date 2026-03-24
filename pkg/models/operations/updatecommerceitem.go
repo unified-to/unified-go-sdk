@@ -25,15 +25,6 @@ const (
 	UpdateCommerceItemQueryParamFieldsIsTaxable         UpdateCommerceItemQueryParamFields = "is_taxable"
 	UpdateCommerceItemQueryParamFieldsVendorName        UpdateCommerceItemQueryParamFields = "vendor_name"
 	UpdateCommerceItemQueryParamFieldsType              UpdateCommerceItemQueryParamFields = "type"
-	UpdateCommerceItemQueryParamFieldsVariants          UpdateCommerceItemQueryParamFields = "variants"
-	UpdateCommerceItemQueryParamFieldsTags              UpdateCommerceItemQueryParamFields = "tags"
-	UpdateCommerceItemQueryParamFieldsMedia             UpdateCommerceItemQueryParamFields = "media"
-	UpdateCommerceItemQueryParamFieldsCollectionIds     UpdateCommerceItemQueryParamFields = "collection_ids"
-	UpdateCommerceItemQueryParamFieldsAccountID         UpdateCommerceItemQueryParamFields = "account_id"
-	UpdateCommerceItemQueryParamFieldsMetadata          UpdateCommerceItemQueryParamFields = "metadata"
-	UpdateCommerceItemQueryParamFieldsCollections       UpdateCommerceItemQueryParamFields = "collections"
-	UpdateCommerceItemQueryParamFieldsTaxrateID         UpdateCommerceItemQueryParamFields = "taxrate_id"
-	UpdateCommerceItemQueryParamFieldsRaw               UpdateCommerceItemQueryParamFields = "raw"
 	UpdateCommerceItemQueryParamFieldsIsVisible         UpdateCommerceItemQueryParamFields = "is_visible"
 	UpdateCommerceItemQueryParamFieldsIsFeatured        UpdateCommerceItemQueryParamFields = "is_featured"
 	UpdateCommerceItemQueryParamFieldsWeight            UpdateCommerceItemQueryParamFields = "weight"
@@ -42,6 +33,17 @@ const (
 	UpdateCommerceItemQueryParamFieldsPrices            UpdateCommerceItemQueryParamFields = "prices"
 	UpdateCommerceItemQueryParamFieldsInventoryID       UpdateCommerceItemQueryParamFields = "inventory_id"
 	UpdateCommerceItemQueryParamFieldsTotalStock        UpdateCommerceItemQueryParamFields = "total_stock"
+	UpdateCommerceItemQueryParamFieldsVariants          UpdateCommerceItemQueryParamFields = "variants"
+	UpdateCommerceItemQueryParamFieldsTags              UpdateCommerceItemQueryParamFields = "tags"
+	UpdateCommerceItemQueryParamFieldsMedia             UpdateCommerceItemQueryParamFields = "media"
+	UpdateCommerceItemQueryParamFieldsCollectionIds     UpdateCommerceItemQueryParamFields = "collection_ids"
+	UpdateCommerceItemQueryParamFieldsAccountID         UpdateCommerceItemQueryParamFields = "account_id"
+	UpdateCommerceItemQueryParamFieldsMetadata          UpdateCommerceItemQueryParamFields = "metadata"
+	UpdateCommerceItemQueryParamFieldsCollections       UpdateCommerceItemQueryParamFields = "collections"
+	UpdateCommerceItemQueryParamFieldsTaxrateID         UpdateCommerceItemQueryParamFields = "taxrate_id"
+	UpdateCommerceItemQueryParamFieldsLocationID        UpdateCommerceItemQueryParamFields = "location_id"
+	UpdateCommerceItemQueryParamFieldsDuration          UpdateCommerceItemQueryParamFields = "duration"
+	UpdateCommerceItemQueryParamFieldsRaw               UpdateCommerceItemQueryParamFields = "raw"
 )
 
 func (e UpdateCommerceItemQueryParamFields) ToPointer() *UpdateCommerceItemQueryParamFields {
@@ -79,6 +81,22 @@ func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "type":
 		fallthrough
+	case "is_visible":
+		fallthrough
+	case "is_featured":
+		fallthrough
+	case "weight":
+		fallthrough
+	case "weight_unit":
+		fallthrough
+	case "requires_shipping":
+		fallthrough
+	case "prices":
+		fallthrough
+	case "inventory_id":
+		fallthrough
+	case "total_stock":
+		fallthrough
 	case "variants":
 		fallthrough
 	case "tags":
@@ -95,23 +113,11 @@ func (e *UpdateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "taxrate_id":
 		fallthrough
+	case "location_id":
+		fallthrough
+	case "duration":
+		fallthrough
 	case "raw":
-		fallthrough
-	case "is_visible":
-		fallthrough
-	case "is_featured":
-		fallthrough
-	case "weight":
-		fallthrough
-	case "weight_unit":
-		fallthrough
-	case "requires_shipping":
-		fallthrough
-	case "prices":
-		fallthrough
-	case "inventory_id":
-		fallthrough
-	case "total_stock":
 		*e = UpdateCommerceItemQueryParamFields(v)
 		return nil
 	default:

@@ -333,6 +333,10 @@ func main() {
 * [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [GetUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 
+### [Availability](docs/sdks/availability/README.md)
+
+* [ListCommerceAvailabilities](docs/sdks/availability/README.md#listcommerceavailabilities) - List all availabilities
+
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
 * [GetAccountingBalancesheet](docs/sdks/balancesheet/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
@@ -524,6 +528,7 @@ func main() {
 * [CreateCommerceItem](docs/sdks/commerce/README.md#createcommerceitem) - Create an item
 * [CreateCommerceItemvariant](docs/sdks/commerce/README.md#createcommerceitemvariant) - Create an itemvariant
 * [CreateCommerceLocation](docs/sdks/commerce/README.md#createcommercelocation) - Create a location
+* [CreateCommerceReservation](docs/sdks/commerce/README.md#createcommercereservation) - Create a reservation
 * [CreateCommerceReview](docs/sdks/commerce/README.md#createcommercereview) - Create a review
 * [CreateCommerceSaleschannel](docs/sdks/commerce/README.md#createcommercesaleschannel) - Create a saleschannel
 * [GetCommerceCollection](docs/sdks/commerce/README.md#getcommercecollection) - Retrieve a collection
@@ -531,13 +536,16 @@ func main() {
 * [GetCommerceItem](docs/sdks/commerce/README.md#getcommerceitem) - Retrieve an item
 * [GetCommerceItemvariant](docs/sdks/commerce/README.md#getcommerceitemvariant) - Retrieve an itemvariant
 * [GetCommerceLocation](docs/sdks/commerce/README.md#getcommercelocation) - Retrieve a location
+* [GetCommerceReservation](docs/sdks/commerce/README.md#getcommercereservation) - Retrieve a reservation
 * [GetCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [GetCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
+* [ListCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
 * [ListCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [ListCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
 * [ListCommerceItems](docs/sdks/commerce/README.md#listcommerceitems) - List all items
 * [ListCommerceItemvariants](docs/sdks/commerce/README.md#listcommerceitemvariants) - List all itemvariants
 * [ListCommerceLocations](docs/sdks/commerce/README.md#listcommercelocations) - List all locations
+* [ListCommerceReservations](docs/sdks/commerce/README.md#listcommercereservations) - List all reservations
 * [ListCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [ListCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
 * [PatchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
@@ -545,6 +553,7 @@ func main() {
 * [PatchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
 * [PatchCommerceItemvariant](docs/sdks/commerce/README.md#patchcommerceitemvariant) - Update an itemvariant
 * [PatchCommerceLocation](docs/sdks/commerce/README.md#patchcommercelocation) - Update a location
+* [PatchCommerceReservation](docs/sdks/commerce/README.md#patchcommercereservation) - Update a reservation
 * [PatchCommerceReview](docs/sdks/commerce/README.md#patchcommercereview) - Update a review
 * [PatchCommerceSaleschannel](docs/sdks/commerce/README.md#patchcommercesaleschannel) - Update a saleschannel
 * [RemoveCommerceCollection](docs/sdks/commerce/README.md#removecommercecollection) - Remove a collection
@@ -552,6 +561,7 @@ func main() {
 * [RemoveCommerceItem](docs/sdks/commerce/README.md#removecommerceitem) - Remove an item
 * [RemoveCommerceItemvariant](docs/sdks/commerce/README.md#removecommerceitemvariant) - Remove an itemvariant
 * [RemoveCommerceLocation](docs/sdks/commerce/README.md#removecommercelocation) - Remove a location
+* [RemoveCommerceReservation](docs/sdks/commerce/README.md#removecommercereservation) - Remove a reservation
 * [RemoveCommerceReview](docs/sdks/commerce/README.md#removecommercereview) - Remove a review
 * [RemoveCommerceSaleschannel](docs/sdks/commerce/README.md#removecommercesaleschannel) - Remove a saleschannel
 * [UpdateCommerceCollection](docs/sdks/commerce/README.md#updatecommercecollection) - Update a collection
@@ -559,6 +569,7 @@ func main() {
 * [UpdateCommerceItem](docs/sdks/commerce/README.md#updatecommerceitem) - Update an item
 * [UpdateCommerceItemvariant](docs/sdks/commerce/README.md#updatecommerceitemvariant) - Update an itemvariant
 * [UpdateCommerceLocation](docs/sdks/commerce/README.md#updatecommercelocation) - Update a location
+* [UpdateCommerceReservation](docs/sdks/commerce/README.md#updatecommercereservation) - Update a reservation
 * [UpdateCommerceReview](docs/sdks/commerce/README.md#updatecommercereview) - Update a review
 * [UpdateCommerceSaleschannel](docs/sdks/commerce/README.md#updatecommercesaleschannel) - Update a saleschannel
 
@@ -1430,6 +1441,15 @@ func main() {
 * [PatchVerificationRequest](docs/sdks/request/README.md#patchverificationrequest) - Update a request
 * [RemoveVerificationRequest](docs/sdks/request/README.md#removeverificationrequest) - Remove a request
 * [UpdateVerificationRequest](docs/sdks/request/README.md#updateverificationrequest) - Update a request
+
+### [Reservation](docs/sdks/reservation/README.md)
+
+* [CreateCommerceReservation](docs/sdks/reservation/README.md#createcommercereservation) - Create a reservation
+* [GetCommerceReservation](docs/sdks/reservation/README.md#getcommercereservation) - Retrieve a reservation
+* [ListCommerceReservations](docs/sdks/reservation/README.md#listcommercereservations) - List all reservations
+* [PatchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
+* [RemoveCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
+* [UpdateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 
