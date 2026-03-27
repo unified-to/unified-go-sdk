@@ -7,6 +7,28 @@ import (
 	"time"
 )
 
+type UcRecordingType string
+
+const (
+	UcRecordingTypeInbound  UcRecordingType = "INBOUND"
+	UcRecordingTypeOutbound UcRecordingType = "OUTBOUND"
+)
+
+func (e UcRecordingType) ToPointer() *UcRecordingType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *UcRecordingType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "INBOUND", "OUTBOUND":
+			return true
+		}
+	}
+	return false
+}
+
 type UcRecording struct {
 	CallID       *string            `json:"call_id,omitempty"`
 	ContactID    *string            `json:"contact_id,omitempty"`
@@ -19,6 +41,7 @@ type UcRecording struct {
 	Media        []UcRecordingMedia `json:"media,omitempty"`
 	Raw          map[string]any     `json:"raw,omitempty"`
 	StartAt      *time.Time         `json:"start_at,omitempty"`
+	Type         *UcRecordingType   `json:"type,omitempty"`
 	UpdatedAt    *time.Time         `json:"updated_at,omitempty"`
 	UserID       *string            `json:"user_id,omitempty"`
 	UserName     *string            `json:"user_name,omitempty"`
@@ -112,6 +135,13 @@ func (u *UcRecording) GetStartAt() *time.Time {
 		return nil
 	}
 	return u.StartAt
+}
+
+func (u *UcRecording) GetType() *UcRecordingType {
+	if u == nil {
+		return nil
+	}
+	return u.Type
 }
 
 func (u *UcRecording) GetUpdatedAt() *time.Time {

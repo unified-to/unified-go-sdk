@@ -25,9 +25,10 @@ const (
 	PatchUcRecordingQueryParamFieldsContactPhone PatchUcRecordingQueryParamFields = "contact_phone"
 	PatchUcRecordingQueryParamFieldsUserID       PatchUcRecordingQueryParamFields = "user_id"
 	PatchUcRecordingQueryParamFieldsMedia        PatchUcRecordingQueryParamFields = "media"
-	PatchUcRecordingQueryParamFieldsRaw          PatchUcRecordingQueryParamFields = "raw"
 	PatchUcRecordingQueryParamFieldsUserName     PatchUcRecordingQueryParamFields = "user_name"
 	PatchUcRecordingQueryParamFieldsUserPhone    PatchUcRecordingQueryParamFields = "user_phone"
+	PatchUcRecordingQueryParamFieldsType         PatchUcRecordingQueryParamFields = "type"
+	PatchUcRecordingQueryParamFieldsRaw          PatchUcRecordingQueryParamFields = "raw"
 )
 
 func (e PatchUcRecordingQueryParamFields) ToPointer() *PatchUcRecordingQueryParamFields {
@@ -65,11 +66,13 @@ func (e *PatchUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "media":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "user_name":
 		fallthrough
 	case "user_phone":
+		fallthrough
+	case "type":
+		fallthrough
+	case "raw":
 		*e = PatchUcRecordingQueryParamFields(v)
 		return nil
 	default:

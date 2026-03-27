@@ -7,6 +7,28 @@ import (
 	"time"
 )
 
+type UcCallType string
+
+const (
+	UcCallTypeInbound  UcCallType = "INBOUND"
+	UcCallTypeOutbound UcCallType = "OUTBOUND"
+)
+
+func (e UcCallType) ToPointer() *UcCallType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *UcCallType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "INBOUND", "OUTBOUND":
+			return true
+		}
+	}
+	return false
+}
+
 type UcCall struct {
 	ContactID *string        `json:"contact_id,omitempty"`
 	Contacts  []UcContact    `json:"contacts,omitempty"`
@@ -18,6 +40,7 @@ type UcCall struct {
 	StartAt   *time.Time     `json:"start_at,omitempty"`
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
+	Type      *UcCallType              `json:"type,omitempty"`
 	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
 	UserID    *string                  `json:"user_id,omitempty"`
 	UserName  *string                  `json:"user_name,omitempty"`
@@ -96,6 +119,13 @@ func (u *UcCall) GetTelephone() *PropertyUcCallTelephone {
 		return nil
 	}
 	return u.Telephone
+}
+
+func (u *UcCall) GetType() *UcCallType {
+	if u == nil {
+		return nil
+	}
+	return u.Type
 }
 
 func (u *UcCall) GetUpdatedAt() *time.Time {

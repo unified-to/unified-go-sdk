@@ -28,6 +28,7 @@ value := operations.PatchUcRecordingQueryParamFieldsID
 | `PatchUcRecordingQueryParamFieldsContactPhone` | contact_phone                                  |
 | `PatchUcRecordingQueryParamFieldsUserID`       | user_id                                        |
 | `PatchUcRecordingQueryParamFieldsMedia`        | media                                          |
-| `PatchUcRecordingQueryParamFieldsRaw`          | raw                                            |
 | `PatchUcRecordingQueryParamFieldsUserName`     | user_name                                      |
 | `PatchUcRecordingQueryParamFieldsUserPhone`    | user_phone                                     |
+| `PatchUcRecordingQueryParamFieldsType`         | type                                           |
+| `PatchUcRecordingQueryParamFieldsRaw`          | raw                                            |
