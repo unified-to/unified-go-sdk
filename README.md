@@ -871,6 +871,7 @@ func main() {
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [CreateHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [GetHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [GetHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
@@ -902,6 +903,7 @@ func main() {
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [PatchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [RemoveHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [RemoveHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
@@ -911,6 +913,7 @@ func main() {
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [RemoveHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [UpdateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [UpdateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
@@ -920,6 +923,7 @@ func main() {
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [UpdateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1645,8 +1649,12 @@ func main() {
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
+* [CreateHrisTimeoff](docs/sdks/timeoff/README.md#createhristimeoff) - Create a timeoff
 * [GetHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [ListHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
+* [PatchHrisTimeoff](docs/sdks/timeoff/README.md#patchhristimeoff) - Update a timeoff
+* [RemoveHrisTimeoff](docs/sdks/timeoff/README.md#removehristimeoff) - Remove a timeoff
+* [UpdateHrisTimeoff](docs/sdks/timeoff/README.md#updatehristimeoff) - Update a timeoff
 
 ### [Timeshift](docs/sdks/timeshift/README.md)
 

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: f77412ae0427c7004cdb97ca98cb5828
+  docChecksum: 5123fef2d7f9f12ba6135b87f82ae573
   docVersion: "1.0"
   speakeasyVersion: 1.759.3
   generationVersion: 2.869.25
-  releaseVersion: 0.36.54
-  configChecksum: f5bff2adde62d5b77289277280d96a8b
+  releaseVersion: 0.36.55
+  configChecksum: a91113ac061057173311f9a783c0c278
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 2f954e18-586b-46a3-8ce2-c55a5821a40b
-  pristine_commit_hash: bf31a3ab9425fd42b42367353c34fc0ad95384da
-  pristine_tree_hash: dd87ede124225a72d12c79c857b8c5953aef5333
+  generation_id: ccd22655-7ae2-4d5f-8fd9-79496049901d
+  pristine_commit_hash: 59e0b69f98ed001c69545da10559d67795f1547c
+  pristine_tree_hash: b44ed2e0827bcde646359124ab394ff55d83d0d4
 features:
   go:
     acceptHeaders: 2.81.2
@@ -901,6 +901,18 @@ trackedFiles:
     id: 036f9076039a
     last_write_checksum: sha1:8d33541c3ab232cbd96517d1d404d73cd4b87b76
     pristine_git_object: 5be53f7b743c767702ab83638e9d2f6e5320fdd3
+  docs/pkg/models/operations/createhristimeoffqueryparamfields.md:
+    id: 3319152fe3d1
+    last_write_checksum: sha1:2cec4c6d5b5cda9c0c99aba222c320f953d5a52c
+    pristine_git_object: 1f5f0b85f7a98af4c0281d17eb3323eedc6f7fb6
+  docs/pkg/models/operations/createhristimeoffrequest.md:
+    id: ef4c9ac6a82a
+    last_write_checksum: sha1:1ec8472094f1aa8c534ab8e7beb80ded38c8f7be
+    pristine_git_object: 780ec1f5c8db15e38607623d6a43ec4c11998a5c
+  docs/pkg/models/operations/createhristimeoffresponse.md:
+    id: e4f131b835f7
+    last_write_checksum: sha1:43d9d258b9795968e0d2aaad3af214c766a375d8
+    pristine_git_object: 1b79e1e68106ed084bdb107c61a1493a07442ccb
   docs/pkg/models/operations/createhristimeshiftqueryparamfields.md:
     id: 0042202ee989
     last_write_checksum: sha1:7500f5c16a0f774162d5a42c6d8ec9e04413498a
@@ -5001,6 +5013,18 @@ trackedFiles:
     id: a57e3007ff98
     last_write_checksum: sha1:b9629b01f65612fe1e5cc20eb856fc82c94495ac
     pristine_git_object: 2a479337b31ffe0d96a112fe75f957dd9fa0b72c
+  docs/pkg/models/operations/patchhristimeoffqueryparamfields.md:
+    id: 921ca0a57b76
+    last_write_checksum: sha1:5cdbe324c00518c4d1e67bafd03de21072cf956d
+    pristine_git_object: 914c9d129b574e7b8e603ad919a5d46b807b20f7
+  docs/pkg/models/operations/patchhristimeoffrequest.md:
+    id: 13d8e19131ef
+    last_write_checksum: sha1:dbc9c25de41cb270a1a7805457b75cb37413944e
+    pristine_git_object: 960943a85c2f5de0ba3c14f97b157ff422021a86
+  docs/pkg/models/operations/patchhristimeoffresponse.md:
+    id: 3353ac592e04
+    last_write_checksum: sha1:3c22d7576acffbfa3d6aeff0d1034a362946c4bf
+    pristine_git_object: c2de5e29374f8eda0c2e08968d7a2d1a11ca7579
   docs/pkg/models/operations/patchhristimeshiftqueryparamfields.md:
     id: e3f89c3e5545
     last_write_checksum: sha1:4024905c3a396af23812bd6dfd8a2f5d72cf9112
@@ -5973,6 +5997,14 @@ trackedFiles:
     id: 437d74b78239
     last_write_checksum: sha1:739d6944c55e3699ab28b05571feae2410e6f3be
     pristine_git_object: c2c4a467582fce1ff3712171351dbc96d9cdfc20
+  docs/pkg/models/operations/removehristimeoffrequest.md:
+    id: ea8aa32162a6
+    last_write_checksum: sha1:2e92ba50866549267e9b412f5c90aeea9740a987
+    pristine_git_object: 846582f68bf8d8dc6ca39df42ba017e8010cbf42
+  docs/pkg/models/operations/removehristimeoffresponse.md:
+    id: a5a8a5c1a9cb
+    last_write_checksum: sha1:9d8c85b772d0c1cd11b009a48508b3efd7cb5138
+    pristine_git_object: 50350e161993a80600c406eda2b9f61f3a308022
   docs/pkg/models/operations/removehristimeshiftrequest.md:
     id: 0f5a799d4351
     last_write_checksum: sha1:d26d302cfa486aa993b877fe45f92b03557be2c7
@@ -6993,6 +7025,18 @@ trackedFiles:
     id: 2592457a7804
     last_write_checksum: sha1:884e08a9f8049a016571c40c518ee54ce178bbf3
     pristine_git_object: 01dcd7d8ffeabaaf32c91c07a84fda27e6d30d90
+  docs/pkg/models/operations/updatehristimeoffqueryparamfields.md:
+    id: f777e226d6e4
+    last_write_checksum: sha1:5adcfc04466bbf2743ffb0f074daac64aca58246
+    pristine_git_object: 6ba4a99e4705f0e13f4020be3a4fbacb09bc59dd
+  docs/pkg/models/operations/updatehristimeoffrequest.md:
+    id: c621ea8ac9bc
+    last_write_checksum: sha1:c873a2a71eeacd22521f628663a69bb207a22e85
+    pristine_git_object: 48f1572813f18ac87dd7bfb44828d6c0e342c8c2
+  docs/pkg/models/operations/updatehristimeoffresponse.md:
+    id: 28edd99007cf
+    last_write_checksum: sha1:4400fc9a74160a500b47bb85351eff588ab6e6dd
+    pristine_git_object: a45e0e7f0ba1c7a7cadba3d155bf50554c739a97
   docs/pkg/models/operations/updatehristimeshiftqueryparamfields.md:
     id: 46bee978d274
     last_write_checksum: sha1:d1259567268f26445ffcb04b57aaefc843baf76d
@@ -8679,8 +8723,8 @@ trackedFiles:
     pristine_git_object: 5681e45743ee369ca87518de415616fcad4d28b4
   docs/pkg/models/shared/hristimeoff.md:
     id: 7065c7e5ebcf
-    last_write_checksum: sha1:c7c76d5690a6b1ffd3e8aad1a247f407b4d02f38
-    pristine_git_object: 4902984edbcfc669de4fa0415b76421a8c5c4aa9
+    last_write_checksum: sha1:c2bb5b679be500a16ee63b13ea6e3f5ba2d87ce7
+    pristine_git_object: c9c5eda32ee9a97f1346b5861cda4b494bf6235d
   docs/pkg/models/shared/hristimeoffstatus.md:
     id: e2da42fd642f
     last_write_checksum: sha1:547449dd8dca4281a34ae11f4fcf6b7aaaae8808
@@ -11151,8 +11195,8 @@ trackedFiles:
     pristine_git_object: 7a5940effc2e55ccb968cd139389b02d34f5e116
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:22f2b52c6db18f4598159db3678959d1b40c3ee5
-    pristine_git_object: 013a828081ead9d26963040ff59c1f015c269123
+    last_write_checksum: sha1:060b4353ab6b5c7048dd76d751b3c7315d14feea
+    pristine_git_object: 6346a12397ec60f4c942f08e542f5e99d1a0b143
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:06ccd0864cac38bd8afb9dbcdfcc07e5773b045d
@@ -11423,8 +11467,8 @@ trackedFiles:
     pristine_git_object: b5fffdb4bf736d0723ba96b5cc64966f1425d864
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:850ee4e15c3f43fbed2d67a5e8fd0b565665607a
-    pristine_git_object: 4c7bfe98c2d2a819aadaa97ed99eb785f965b467
+    last_write_checksum: sha1:6821dbb08137fabd33589012af576f7ac5d3dfa7
+    pristine_git_object: c6d36db0e14459ccb47695de19ed0bb0afb024a2
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
     last_write_checksum: sha1:7ee97d96ac54b1a7948895c8916dbaa20012c515
@@ -11519,8 +11563,8 @@ trackedFiles:
     pristine_git_object: 5d20ca9cdbf75f43890ac10cef471bf8e5ea3c34
   hris.go:
     id: 9fa102e985f2
-    last_write_checksum: sha1:85d5bfd7a2a1fa674337156809c9358d3806d398
-    pristine_git_object: 375c132ddd915bfa2f5c6743060b82bf02706329
+    last_write_checksum: sha1:995bf0a4b464bff9d174e0a00f9ab436d6296816
+    pristine_git_object: a0591bf3bad6fd8d86c1da9848755053e8b387b2
   insertionorder.go:
     id: 5ce5a5687c51
     last_write_checksum: sha1:bf6bbaac7ff49a38557574faf3e92153d07cd424
@@ -11901,6 +11945,10 @@ trackedFiles:
     id: a78c7bef8eef
     last_write_checksum: sha1:7eafe5fde674bcd56b0966b068849d1b2e0368d4
     pristine_git_object: 75e4826e5e4d3d2184cc3c2b8be5511b59fb074e
+  pkg/models/operations/createhristimeoff.go:
+    id: 2bbfa4de3fe9
+    last_write_checksum: sha1:805acfb1d6edeb352ebf425ddd4cd8a3bff62c52
+    pristine_git_object: c29c514a5956dd9d9a02f05b91445dea691d8700
   pkg/models/operations/createhristimeshift.go:
     id: 283d77a8a366
     last_write_checksum: sha1:8b1f95725724d63017d4eaa9920fc392c029d357
@@ -13313,6 +13361,10 @@ trackedFiles:
     id: 7becb26f9f40
     last_write_checksum: sha1:5187a25e39721f1d25fdd85e7a1899771c0c968b
     pristine_git_object: f9fce8a408c03dea8849156cf7df6de10e299055
+  pkg/models/operations/patchhristimeoff.go:
+    id: f36b68755866
+    last_write_checksum: sha1:c5a91728b1875fd2a88b6a85b2499c83929713e9
+    pristine_git_object: 768012455fdc85f65037d6d60385746ca296085e
   pkg/models/operations/patchhristimeshift.go:
     id: 4c34d5aff164
     last_write_checksum: sha1:00070fc892ed2e901bb236e539fdc7e6dc9fd3d6
@@ -13717,6 +13769,10 @@ trackedFiles:
     id: 8663ab256318
     last_write_checksum: sha1:cbb33a087a30dd81f0fec113fa5b1e41ccb1194f
     pristine_git_object: 3ac814ecfce4a30ba78f1088ae25355fd5c56777
+  pkg/models/operations/removehristimeoff.go:
+    id: 4f5566cc04bf
+    last_write_checksum: sha1:d6e85b40150f658eedc14f8640b80eec9f4d2137
+    pristine_git_object: 5b2727970c04df130c11327ea4371d476d229f71
   pkg/models/operations/removehristimeshift.go:
     id: ae00b4172134
     last_write_checksum: sha1:0608f17f1291f8085d661b0142d68fc26d1f7c69
@@ -14117,6 +14173,10 @@ trackedFiles:
     id: a5dcbd34f880
     last_write_checksum: sha1:5506e842d289127524d5b945d3fc0f8de50c561f
     pristine_git_object: a2cbcd483cede962642e9da1e1d1d39d8a5b062c
+  pkg/models/operations/updatehristimeoff.go:
+    id: aa0e1ac6d445
+    last_write_checksum: sha1:b12db72a876b34078c926d932e5120386a96cfaf
+    pristine_git_object: d7b95a3753e3bcce88f03a33337e34cac8c80014
   pkg/models/operations/updatehristimeshift.go:
     id: 7ddf6183dcad
     last_write_checksum: sha1:45587f033b51f18d1eee50b867661c86ed61e61a
@@ -14943,8 +15003,8 @@ trackedFiles:
     pristine_git_object: 25096ec7dd3c895039d0cc5ab3ec74430879e49d
   pkg/models/shared/hristimeoff.go:
     id: d1db4647d1f5
-    last_write_checksum: sha1:bb45601c88da00c8b47d415e44fe6c4408e8bc86
-    pristine_git_object: de05f2210c58746b96ac970b6ee7f6738b70f900
+    last_write_checksum: sha1:1f3fbd77a86c35f27d3709f74b7da3978c2266a8
+    pristine_git_object: 4037840249f48e21028285eee7990010cbea3eee
   pkg/models/shared/hristimeshift.go:
     id: b946e03fbeb5
     last_write_checksum: sha1:de0a3f9748c8b6376f1620275f4643fc68d7a6d4
@@ -16171,8 +16231,8 @@ trackedFiles:
     pristine_git_object: 1357f1851705596cc1b77d1b03f3ebe1d2e57f7c
   timeoff.go:
     id: 5ad767eb87c6
-    last_write_checksum: sha1:00bcad4bb9d3fcfe856c12ae4f1ad0caf1ec6eb5
-    pristine_git_object: 8c61fb5d06aef9147facdba9310b743c389466a8
+    last_write_checksum: sha1:b6c86e395e299ed25adef43bced2c4abdb14b3d4
+    pristine_git_object: df84aa0bc40b463a1975a49a481abb2376508e81
   timeshift.go:
     id: 744e127372c8
     last_write_checksum: sha1:d42b1e18d0f51e5e98e37654cd2b80f443ec8388
@@ -16199,8 +16259,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:d05baad22c6592ac3da75d7ffc26f448696c2382
-    pristine_git_object: 0b643bbbe40bdc83d5119f15223fd41282331a21
+    last_write_checksum: sha1:924ec1707b80e17cd2a164175de8ca3f03543725
+    pristine_git_object: 40c52351e3642b0860376b6bf0602092023b2b82
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -18280,7 +18340,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2024-10-20T08:12:47.408Z"}
+          application/json: {}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -22217,9 +22277,60 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisTimeoff:
+    speakeasy-default-create-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchHrisTimeoff:
+    speakeasy-default-patch-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisTimeoff:
+    speakeasy-default-remove-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisTimeoff:
+    speakeasy-default-update-hris-timeoff:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Recording.CreateUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Recording.GetUcRecording()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Recording.ListUcRecordings()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n* `UnifiedTo.Recording.PatchUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Recording.UpdateUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Uc.CreateUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Uc.GetUcCall()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Uc.GetUcRecording()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Uc.ListUcCalls()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n* `UnifiedTo.Uc.ListUcRecordings()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n* `UnifiedTo.Uc.PatchUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Uc.UpdateUcRecording()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Call.GetUcCall()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Call.ListUcCalls()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Hris.CreateHrisTimeoff()`: **Added**
+  * `UnifiedTo.Hris.PatchHrisTimeoff()`: **Added**
+  * `UnifiedTo.Hris.RemoveHrisTimeoff()`: **Added**
+  * `UnifiedTo.Hris.UpdateHrisTimeoff()`: **Added**
+  * `UnifiedTo.Timeoff.CreateHrisTimeoff()`: **Added**
+  * `UnifiedTo.Timeoff.PatchHrisTimeoff()`: **Added**
+  * `UnifiedTo.Timeoff.RemoveHrisTimeoff()`: **Added**
+  * `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: **Added**
+  * `UnifiedTo.Hris.GetHrisTimeoff()`:  `response.StartAt` **Changed**
+  * `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**
+  * `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response.StartAt` **Changed**
+  * `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
