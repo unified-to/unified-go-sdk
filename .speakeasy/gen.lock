@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5123fef2d7f9f12ba6135b87f82ae573
+  docChecksum: 4b271fa62ae0cc77a25c0a077d2a284f
   docVersion: "1.0"
-  speakeasyVersion: 1.759.3
-  generationVersion: 2.869.25
-  releaseVersion: 0.36.55
-  configChecksum: a91113ac061057173311f9a783c0c278
+  speakeasyVersion: 1.760.0
+  generationVersion: 2.873.1
+  releaseVersion: 0.36.56
+  configChecksum: fd5b714ae758104f8d2ea6c4a6da4a09
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: ccd22655-7ae2-4d5f-8fd9-79496049901d
-  pristine_commit_hash: 59e0b69f98ed001c69545da10559d67795f1547c
-  pristine_tree_hash: b44ed2e0827bcde646359124ab394ff55d83d0d4
+  generation_id: 0e85b648-b0a5-4287-bd5a-6fe45e3b5f13
+  pristine_commit_hash: 67fe7a51326201dfe3f85c2a2314dd9a218c9903
+  pristine_tree_hash: 018f72463f64279f322621e178e13871fae3f740
 features:
   go:
     acceptHeaders: 2.81.2
@@ -24,7 +24,7 @@ features:
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
-    globalSecurity: 2.82.13
+    globalSecurity: 2.82.15
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.83.1
@@ -3667,8 +3667,8 @@ trackedFiles:
     pristine_git_object: 8f5968301c89b24e7fd585418911712c785b1aba
   docs/pkg/models/operations/listhrisgroupsrequest.md:
     id: 72671b673a5a
-    last_write_checksum: sha1:722fb8b5300d3041f70894d8e3462701233a04dd
-    pristine_git_object: 9031158e45b437064f30a4b984c3eec741e33f9b
+    last_write_checksum: sha1:b8d48f9ef3fda8740e8d485bdd1c6260491f29b3
+    pristine_git_object: 514ed25854eb335f642eaf9b852e637594398098
   docs/pkg/models/operations/listhrisgroupsresponse.md:
     id: 36269a1b9f19
     last_write_checksum: sha1:0fa7b4f9ae6abdfca1b8a83bb8522f5afdbd417e
@@ -12895,8 +12895,8 @@ trackedFiles:
     pristine_git_object: b1dea73162098a5031b980ed5dab96e947c64e05
   pkg/models/operations/listhrisgroups.go:
     id: f0f6d5add128
-    last_write_checksum: sha1:e0e999afb0f518e091c5af85dd71b0c4592c1b6a
-    pristine_git_object: 9b48746a44e198a49cc819672d80297f4b4d6ebb
+    last_write_checksum: sha1:821ae4ffe85b54412953dbd36154942a44328158
+    pristine_git_object: 9d6adf55d74343fb631fc9a059b0e82701fb7ff2
   pkg/models/operations/listhrislocations.go:
     id: a3b192af1153
     last_write_checksum: sha1:4b643f3b5022269b856b47e40f52439f2b5ac221
@@ -16091,8 +16091,8 @@ trackedFiles:
     pristine_git_object: 6f38da24ab6abd4d2ca63e652864bd7a75cec1cd
   pkg/utils/security.go:
     id: 657c246e641d
-    last_write_checksum: sha1:573140faaff017cb3bd31e579c6b3949f3d8365b
-    pristine_git_object: 77566aa2c1127569d9de4a1782b58f852d926d0a
+    last_write_checksum: sha1:49fee4e9252239953611e6de36f4682851499ab5
+    pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   pkg/utils/union.go:
     id: a5fde263f202
     last_write_checksum: sha1:fd37e66857324a2772505ad5ccdf439d84d1d0cf
@@ -16259,8 +16259,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:924ec1707b80e17cd2a164175de8ca3f03543725
-    pristine_git_object: 40c52351e3642b0860376b6bf0602092023b2b82
+    last_write_checksum: sha1:056c81acf7718034ae620de785c65cf03f043cdd
+    pristine_git_object: 65f47e128e8eb0bf025a337811b55e3ba3d59a22
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22317,20 +22317,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes:
-  * `UnifiedTo.Hris.CreateHrisTimeoff()`: **Added**
-  * `UnifiedTo.Hris.PatchHrisTimeoff()`: **Added**
-  * `UnifiedTo.Hris.RemoveHrisTimeoff()`: **Added**
-  * `UnifiedTo.Hris.UpdateHrisTimeoff()`: **Added**
-  * `UnifiedTo.Timeoff.CreateHrisTimeoff()`: **Added**
-  * `UnifiedTo.Timeoff.PatchHrisTimeoff()`: **Added**
-  * `UnifiedTo.Timeoff.RemoveHrisTimeoff()`: **Added**
-  * `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: **Added**
-  * `UnifiedTo.Hris.GetHrisTimeoff()`:  `response.StartAt` **Changed**
-  * `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**
-  * `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response.StartAt` **Changed**
-  * `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Group.ListHrisGroups()`: \n  *  `request.Request.Type` **Added**\n* `UnifiedTo.Hris.ListHrisGroups()`: \n  *  `request.Request.Type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

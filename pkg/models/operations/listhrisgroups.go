@@ -80,6 +80,8 @@ type ListHrisGroupsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The type to filter by
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -145,6 +147,13 @@ func (l *ListHrisGroupsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListHrisGroupsRequest) GetType() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Type
 }
 
 func (l *ListHrisGroupsRequest) GetUpdatedGte() *string {
