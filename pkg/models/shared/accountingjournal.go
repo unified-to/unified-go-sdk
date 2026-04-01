@@ -13,14 +13,15 @@ type AccountingJournal struct {
 	Description *string    `json:"description,omitempty"`
 	ID          *string    `json:"id,omitempty"`
 	// new field name
-	Lineitems []AccountingJournalLineitem `json:"lineitems,omitempty"`
-	PostedAt  *time.Time                  `json:"posted_at,omitempty"`
-	Raw       map[string]any              `json:"raw,omitempty"`
-	Reference *string                     `json:"reference,omitempty"`
-	Source    *string                     `json:"source,omitempty"`
-	TaxAmount *float64                    `json:"tax_amount,omitempty"`
-	TaxrateID *string                     `json:"taxrate_id,omitempty"`
-	UpdatedAt *time.Time                  `json:"updated_at,omitempty"`
+	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
+	OrganizationID *string                     `json:"organization_id,omitempty"`
+	PostedAt       *time.Time                  `json:"posted_at,omitempty"`
+	Raw            map[string]any              `json:"raw,omitempty"`
+	Reference      *string                     `json:"reference,omitempty"`
+	Source         *string                     `json:"source,omitempty"`
+	TaxAmount      *float64                    `json:"tax_amount,omitempty"`
+	TaxrateID      *string                     `json:"taxrate_id,omitempty"`
+	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
 }
 
 func (a AccountingJournal) MarshalJSON() ([]byte, error) {
@@ -67,6 +68,13 @@ func (a *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingJournal) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
 }
 
 func (a *AccountingJournal) GetPostedAt() *time.Time {

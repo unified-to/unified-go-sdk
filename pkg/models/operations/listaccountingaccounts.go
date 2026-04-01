@@ -28,9 +28,9 @@ const (
 	ListAccountingAccountsQueryParamFieldsGroup               ListAccountingAccountsQueryParamFields = "group"
 	ListAccountingAccountsQueryParamFieldsSubgroup            ListAccountingAccountsQueryParamFields = "subgroup"
 	ListAccountingAccountsQueryParamFieldsParentID            ListAccountingAccountsQueryParamFields = "parent_id"
-	ListAccountingAccountsQueryParamFieldsOrganizationID      ListAccountingAccountsQueryParamFields = "organization_id"
 	ListAccountingAccountsQueryParamFieldsTaxonomy            ListAccountingAccountsQueryParamFields = "taxonomy"
 	ListAccountingAccountsQueryParamFieldsRaw                 ListAccountingAccountsQueryParamFields = "raw"
+	ListAccountingAccountsQueryParamFieldsOrganizationID      ListAccountingAccountsQueryParamFields = "organization_id"
 )
 
 func (e ListAccountingAccountsQueryParamFields) ToPointer() *ListAccountingAccountsQueryParamFields {
@@ -74,11 +74,11 @@ func (e *ListAccountingAccountsQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "parent_id":
 		fallthrough
-	case "organization_id":
-		fallthrough
 	case "taxonomy":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "organization_id":
 		*e = ListAccountingAccountsQueryParamFields(v)
 		return nil
 	default:
@@ -101,6 +101,8 @@ type ListAccountingAccountsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The type to filter by
+	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -166,6 +168,13 @@ func (l *ListAccountingAccountsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListAccountingAccountsRequest) GetType() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Type
 }
 
 func (l *ListAccountingAccountsRequest) GetUpdatedGte() *string {

@@ -28,9 +28,9 @@ const (
 	QueryParamFieldsGroup               QueryParamFields = "group"
 	QueryParamFieldsSubgroup            QueryParamFields = "subgroup"
 	QueryParamFieldsParentID            QueryParamFields = "parent_id"
-	QueryParamFieldsOrganizationID      QueryParamFields = "organization_id"
 	QueryParamFieldsTaxonomy            QueryParamFields = "taxonomy"
 	QueryParamFieldsRaw                 QueryParamFields = "raw"
+	QueryParamFieldsOrganizationID      QueryParamFields = "organization_id"
 )
 
 func (e QueryParamFields) ToPointer() *QueryParamFields {
@@ -74,11 +74,11 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "parent_id":
 		fallthrough
-	case "organization_id":
-		fallthrough
 	case "taxonomy":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "organization_id":
 		*e = QueryParamFields(v)
 		return nil
 	default:

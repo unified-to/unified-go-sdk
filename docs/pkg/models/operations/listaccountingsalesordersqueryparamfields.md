@@ -28,4 +28,5 @@ value := operations.ListAccountingSalesordersQueryParamFieldsID
 | `ListAccountingSalesordersQueryParamFieldsStatus`          | status                                                     |
 | `ListAccountingSalesordersQueryParamFieldsLineitems`       | lineitems                                                  |
 | `ListAccountingSalesordersQueryParamFieldsSalesChannel`    | sales_channel                                              |
+| `ListAccountingSalesordersQueryParamFieldsOrganizationID`  | organization_id                                            |
 | `ListAccountingSalesordersQueryParamFieldsRaw`             | raw                                                        |

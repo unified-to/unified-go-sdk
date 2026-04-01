@@ -8,6 +8,7 @@ import (
 )
 
 type LmsActivity struct {
+	AssignedGrade      *string        `json:"assigned_grade,omitempty"`
 	CompletedAt        *time.Time     `json:"completed_at,omitempty"`
 	ContentID          *string        `json:"content_id,omitempty"`
 	CourseID           *string        `json:"course_id,omitempty"`
@@ -31,6 +32,13 @@ func (l *LmsActivity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (l *LmsActivity) GetAssignedGrade() *string {
+	if l == nil {
+		return nil
+	}
+	return l.AssignedGrade
 }
 
 func (l *LmsActivity) GetCompletedAt() *time.Time {

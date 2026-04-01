@@ -12,18 +12,19 @@ import (
 type ListAccountingJournalsQueryParamFields string
 
 const (
-	ListAccountingJournalsQueryParamFieldsID          ListAccountingJournalsQueryParamFields = "id"
-	ListAccountingJournalsQueryParamFieldsCreatedAt   ListAccountingJournalsQueryParamFields = "created_at"
-	ListAccountingJournalsQueryParamFieldsUpdatedAt   ListAccountingJournalsQueryParamFields = "updated_at"
-	ListAccountingJournalsQueryParamFieldsReference   ListAccountingJournalsQueryParamFields = "reference"
-	ListAccountingJournalsQueryParamFieldsTaxAmount   ListAccountingJournalsQueryParamFields = "tax_amount"
-	ListAccountingJournalsQueryParamFieldsCurrency    ListAccountingJournalsQueryParamFields = "currency"
-	ListAccountingJournalsQueryParamFieldsLineitems   ListAccountingJournalsQueryParamFields = "lineitems"
-	ListAccountingJournalsQueryParamFieldsTaxrateID   ListAccountingJournalsQueryParamFields = "taxrate_id"
-	ListAccountingJournalsQueryParamFieldsDescription ListAccountingJournalsQueryParamFields = "description"
-	ListAccountingJournalsQueryParamFieldsPostedAt    ListAccountingJournalsQueryParamFields = "posted_at"
-	ListAccountingJournalsQueryParamFieldsSource      ListAccountingJournalsQueryParamFields = "source"
-	ListAccountingJournalsQueryParamFieldsRaw         ListAccountingJournalsQueryParamFields = "raw"
+	ListAccountingJournalsQueryParamFieldsID             ListAccountingJournalsQueryParamFields = "id"
+	ListAccountingJournalsQueryParamFieldsCreatedAt      ListAccountingJournalsQueryParamFields = "created_at"
+	ListAccountingJournalsQueryParamFieldsUpdatedAt      ListAccountingJournalsQueryParamFields = "updated_at"
+	ListAccountingJournalsQueryParamFieldsReference      ListAccountingJournalsQueryParamFields = "reference"
+	ListAccountingJournalsQueryParamFieldsTaxAmount      ListAccountingJournalsQueryParamFields = "tax_amount"
+	ListAccountingJournalsQueryParamFieldsCurrency       ListAccountingJournalsQueryParamFields = "currency"
+	ListAccountingJournalsQueryParamFieldsLineitems      ListAccountingJournalsQueryParamFields = "lineitems"
+	ListAccountingJournalsQueryParamFieldsTaxrateID      ListAccountingJournalsQueryParamFields = "taxrate_id"
+	ListAccountingJournalsQueryParamFieldsDescription    ListAccountingJournalsQueryParamFields = "description"
+	ListAccountingJournalsQueryParamFieldsPostedAt       ListAccountingJournalsQueryParamFields = "posted_at"
+	ListAccountingJournalsQueryParamFieldsSource         ListAccountingJournalsQueryParamFields = "source"
+	ListAccountingJournalsQueryParamFieldsOrganizationID ListAccountingJournalsQueryParamFields = "organization_id"
+	ListAccountingJournalsQueryParamFieldsRaw            ListAccountingJournalsQueryParamFields = "raw"
 )
 
 func (e ListAccountingJournalsQueryParamFields) ToPointer() *ListAccountingJournalsQueryParamFields {
@@ -57,6 +58,8 @@ func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "source":
 		fallthrough
+	case "organization_id":
+		fallthrough
 	case "raw":
 		*e = ListAccountingJournalsQueryParamFields(v)
 		return nil
@@ -66,6 +69,8 @@ func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) erro
 }
 
 type ListAccountingJournalsRequest struct {
+	// The account ID to filter by (reference to AccountingAccount)
+	AccountID *string `queryParam:"style=form,explode=true,name=account_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
@@ -82,6 +87,13 @@ type ListAccountingJournalsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (l *ListAccountingJournalsRequest) GetAccountID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.AccountID
 }
 
 func (l *ListAccountingJournalsRequest) GetConnectionID() string {

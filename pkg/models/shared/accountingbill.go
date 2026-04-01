@@ -72,6 +72,7 @@ type AccountingBill struct {
 	ID                      *string                  `json:"id,omitempty"`
 	Lineitems               []AccountingLineitem     `json:"lineitems,omitempty"`
 	Notes                   *string                  `json:"notes,omitempty"`
+	OrganizationID          *string                  `json:"organization_id,omitempty"`
 	PaidAmount              *float64                 `json:"paid_amount,omitempty"`
 	PaidAt                  *time.Time               `json:"paid_at,omitempty"`
 	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
@@ -181,6 +182,13 @@ func (a *AccountingBill) GetNotes() *string {
 		return nil
 	}
 	return a.Notes
+}
+
+func (a *AccountingBill) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
 }
 
 func (a *AccountingBill) GetPaidAmount() *float64 {

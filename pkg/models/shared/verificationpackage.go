@@ -57,7 +57,7 @@ type VerificationPackage struct {
 	Tags      []string                `json:"tags,omitempty"`
 	Type      VerificationPackageType `json:"type"`
 	UpdatedAt *time.Time              `json:"updated_at,omitempty"`
-	// {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+	// {country}-{state/province/territory} or just {country} 2-digit ISO codes
 	ValidRegions []string `json:"valid_regions,omitempty"`
 }
 

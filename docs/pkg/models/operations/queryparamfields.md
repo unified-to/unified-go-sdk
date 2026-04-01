@@ -31,6 +31,6 @@ value := operations.QueryParamFieldsID
 | `QueryParamFieldsGroup`               | group                                 |
 | `QueryParamFieldsSubgroup`            | subgroup                              |
 | `QueryParamFieldsParentID`            | parent_id                             |
-| `QueryParamFieldsOrganizationID`      | organization_id                       |
 | `QueryParamFieldsTaxonomy`            | taxonomy                              |
 | `QueryParamFieldsRaw`                 | raw                                   |
+| `QueryParamFieldsOrganizationID`      | organization_id                       |

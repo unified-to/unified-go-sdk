@@ -22,6 +22,7 @@ value := operations.GetLmsActivityQueryParamFieldsID
 | `GetLmsActivityQueryParamFieldsCourseID`           | course_id                                          |
 | `GetLmsActivityQueryParamFieldsStudentID`          | student_id                                         |
 | `GetLmsActivityQueryParamFieldsDurationMinutes`    | duration_minutes                                   |
+| `GetLmsActivityQueryParamFieldsAssignedGrade`      | assigned_grade                                     |
 | `GetLmsActivityQueryParamFieldsIsCompleted`        | is_completed                                       |
 | `GetLmsActivityQueryParamFieldsProgressPercentage` | progress_percentage                                |
 | `GetLmsActivityQueryParamFieldsStartedAt`          | started_at                                         |

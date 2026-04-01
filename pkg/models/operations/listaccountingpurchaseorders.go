@@ -24,6 +24,7 @@ const (
 	ListAccountingPurchaseordersQueryParamFieldsBillingAddress  ListAccountingPurchaseordersQueryParamFields = "billing_address"
 	ListAccountingPurchaseordersQueryParamFieldsStatus          ListAccountingPurchaseordersQueryParamFields = "status"
 	ListAccountingPurchaseordersQueryParamFieldsLineitems       ListAccountingPurchaseordersQueryParamFields = "lineitems"
+	ListAccountingPurchaseordersQueryParamFieldsOrganizationID  ListAccountingPurchaseordersQueryParamFields = "organization_id"
 	ListAccountingPurchaseordersQueryParamFieldsRaw             ListAccountingPurchaseordersQueryParamFields = "raw"
 )
 
@@ -60,6 +61,8 @@ func (e *ListAccountingPurchaseordersQueryParamFields) UnmarshalJSON(data []byte
 		fallthrough
 	case "lineitems":
 		fallthrough
+	case "organization_id":
+		fallthrough
 	case "raw":
 		*e = ListAccountingPurchaseordersQueryParamFields(v)
 		return nil
@@ -71,6 +74,8 @@ func (e *ListAccountingPurchaseordersQueryParamFields) UnmarshalJSON(data []byte
 type ListAccountingPurchaseordersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by (reference to AccountingContact)
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Fields to return
 	Fields []ListAccountingPurchaseordersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                       `queryParam:"style=form,explode=true,name=limit"`
@@ -92,6 +97,13 @@ func (l *ListAccountingPurchaseordersRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAccountingPurchaseordersRequest) GetContactID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ContactID
 }
 
 func (l *ListAccountingPurchaseordersRequest) GetFields() []ListAccountingPurchaseordersQueryParamFields {

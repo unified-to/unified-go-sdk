@@ -25,6 +25,7 @@ const (
 	ListAccountingSalesordersQueryParamFieldsStatus          ListAccountingSalesordersQueryParamFields = "status"
 	ListAccountingSalesordersQueryParamFieldsLineitems       ListAccountingSalesordersQueryParamFields = "lineitems"
 	ListAccountingSalesordersQueryParamFieldsSalesChannel    ListAccountingSalesordersQueryParamFields = "sales_channel"
+	ListAccountingSalesordersQueryParamFieldsOrganizationID  ListAccountingSalesordersQueryParamFields = "organization_id"
 	ListAccountingSalesordersQueryParamFieldsRaw             ListAccountingSalesordersQueryParamFields = "raw"
 )
 
@@ -63,6 +64,8 @@ func (e *ListAccountingSalesordersQueryParamFields) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "sales_channel":
 		fallthrough
+	case "organization_id":
+		fallthrough
 	case "raw":
 		*e = ListAccountingSalesordersQueryParamFields(v)
 		return nil
@@ -74,6 +77,8 @@ func (e *ListAccountingSalesordersQueryParamFields) UnmarshalJSON(data []byte) e
 type ListAccountingSalesordersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by (reference to AccountingContact)
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Fields to return
 	Fields []ListAccountingSalesordersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                                    `queryParam:"style=form,explode=true,name=limit"`
@@ -95,6 +100,13 @@ func (l *ListAccountingSalesordersRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAccountingSalesordersRequest) GetContactID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ContactID
 }
 
 func (l *ListAccountingSalesordersRequest) GetFields() []ListAccountingSalesordersQueryParamFields {

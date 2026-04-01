@@ -19,6 +19,7 @@ const (
 	ListLmsActivitiesQueryParamFieldsCourseID           ListLmsActivitiesQueryParamFields = "course_id"
 	ListLmsActivitiesQueryParamFieldsStudentID          ListLmsActivitiesQueryParamFields = "student_id"
 	ListLmsActivitiesQueryParamFieldsDurationMinutes    ListLmsActivitiesQueryParamFields = "duration_minutes"
+	ListLmsActivitiesQueryParamFieldsAssignedGrade      ListLmsActivitiesQueryParamFields = "assigned_grade"
 	ListLmsActivitiesQueryParamFieldsIsCompleted        ListLmsActivitiesQueryParamFields = "is_completed"
 	ListLmsActivitiesQueryParamFieldsProgressPercentage ListLmsActivitiesQueryParamFields = "progress_percentage"
 	ListLmsActivitiesQueryParamFieldsStartedAt          ListLmsActivitiesQueryParamFields = "started_at"
@@ -48,6 +49,8 @@ func (e *ListLmsActivitiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "student_id":
 		fallthrough
 	case "duration_minutes":
+		fallthrough
+	case "assigned_grade":
 		fallthrough
 	case "is_completed":
 		fallthrough

@@ -5,6 +5,7 @@
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
+| `AssignedGrade`                            | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `CompletedAt`                              | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
 | `ContentID`                                | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `CourseID`                                 | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |

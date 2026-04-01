@@ -40,4 +40,5 @@ value := operations.ListAccountingBillsQueryParamFieldsID
 | `ListAccountingBillsQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                    |
 | `ListAccountingBillsQueryParamFieldsAttachments`             | attachments                                                  |
 | `ListAccountingBillsQueryParamFieldsSend`                    | send                                                         |
+| `ListAccountingBillsQueryParamFieldsOrganizationID`          | organization_id                                              |
 | `ListAccountingBillsQueryParamFieldsRaw`                     | raw                                                          |

@@ -37,6 +37,7 @@ const (
 	UpdateAccountingBillQueryParamFieldsPaymentCollectionMethod UpdateAccountingBillQueryParamFields = "payment_collection_method"
 	UpdateAccountingBillQueryParamFieldsAttachments             UpdateAccountingBillQueryParamFields = "attachments"
 	UpdateAccountingBillQueryParamFieldsSend                    UpdateAccountingBillQueryParamFields = "send"
+	UpdateAccountingBillQueryParamFieldsOrganizationID          UpdateAccountingBillQueryParamFields = "organization_id"
 	UpdateAccountingBillQueryParamFieldsRaw                     UpdateAccountingBillQueryParamFields = "raw"
 )
 
@@ -98,6 +99,8 @@ func (e *UpdateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "attachments":
 		fallthrough
 	case "send":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingBillQueryParamFields(v)

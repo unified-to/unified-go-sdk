@@ -40,4 +40,5 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | `PatchAccountingBillQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                    |
 | `PatchAccountingBillQueryParamFieldsAttachments`             | attachments                                                  |
 | `PatchAccountingBillQueryParamFieldsSend`                    | send                                                         |
+| `PatchAccountingBillQueryParamFieldsOrganizationID`          | organization_id                                              |
 | `PatchAccountingBillQueryParamFieldsRaw`                     | raw                                                          |

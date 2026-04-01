@@ -14,6 +14,7 @@ type TaskProject struct {
 	HasChildren *bool          `json:"has_children,omitempty"`
 	HasTasks    *bool          `json:"has_tasks,omitempty"`
 	ID          *string        `json:"id,omitempty"`
+	Metadata    []TaskMetadata `json:"metadata,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
@@ -72,6 +73,13 @@ func (t *TaskProject) GetID() *string {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TaskProject) GetMetadata() []TaskMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TaskProject) GetName() *string {

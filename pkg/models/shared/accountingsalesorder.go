@@ -44,6 +44,7 @@ type AccountingSalesorder struct {
 	Currency        *string                                      `json:"currency,omitempty"`
 	ID              *string                                      `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                         `json:"lineitems,omitempty"`
+	OrganizationID  *string                                      `json:"organization_id,omitempty"`
 	PostedAt        *time.Time                                   `json:"posted_at,omitempty"`
 	Raw             map[string]any                               `json:"raw,omitempty"`
 	SalesChannel    *string                                      `json:"sales_channel,omitempty"`
@@ -111,6 +112,13 @@ func (a *AccountingSalesorder) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingSalesorder) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
 }
 
 func (a *AccountingSalesorder) GetPostedAt() *time.Time {

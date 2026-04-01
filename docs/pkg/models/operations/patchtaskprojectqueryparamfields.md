@@ -25,4 +25,5 @@ value := operations.PatchTaskProjectQueryParamFieldsID
 | `PatchTaskProjectQueryParamFieldsDescription` | description                                   |
 | `PatchTaskProjectQueryParamFieldsHasTasks`    | has_tasks                                     |
 | `PatchTaskProjectQueryParamFieldsHasChildren` | has_children                                  |
+| `PatchTaskProjectQueryParamFieldsMetadata`    | metadata                                      |
 | `PatchTaskProjectQueryParamFieldsRaw`         | raw                                           |

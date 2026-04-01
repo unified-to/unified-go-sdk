@@ -22,6 +22,7 @@ value := operations.PatchLmsActivityQueryParamFieldsID
 | `PatchLmsActivityQueryParamFieldsCourseID`           | course_id                                            |
 | `PatchLmsActivityQueryParamFieldsStudentID`          | student_id                                           |
 | `PatchLmsActivityQueryParamFieldsDurationMinutes`    | duration_minutes                                     |
+| `PatchLmsActivityQueryParamFieldsAssignedGrade`      | assigned_grade                                       |
 | `PatchLmsActivityQueryParamFieldsIsCompleted`        | is_completed                                         |
 | `PatchLmsActivityQueryParamFieldsProgressPercentage` | progress_percentage                                  |
 | `PatchLmsActivityQueryParamFieldsStartedAt`          | started_at                                           |

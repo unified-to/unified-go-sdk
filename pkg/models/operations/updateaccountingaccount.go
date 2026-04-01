@@ -28,9 +28,9 @@ const (
 	UpdateAccountingAccountQueryParamFieldsGroup               UpdateAccountingAccountQueryParamFields = "group"
 	UpdateAccountingAccountQueryParamFieldsSubgroup            UpdateAccountingAccountQueryParamFields = "subgroup"
 	UpdateAccountingAccountQueryParamFieldsParentID            UpdateAccountingAccountQueryParamFields = "parent_id"
-	UpdateAccountingAccountQueryParamFieldsOrganizationID      UpdateAccountingAccountQueryParamFields = "organization_id"
 	UpdateAccountingAccountQueryParamFieldsTaxonomy            UpdateAccountingAccountQueryParamFields = "taxonomy"
 	UpdateAccountingAccountQueryParamFieldsRaw                 UpdateAccountingAccountQueryParamFields = "raw"
+	UpdateAccountingAccountQueryParamFieldsOrganizationID      UpdateAccountingAccountQueryParamFields = "organization_id"
 )
 
 func (e UpdateAccountingAccountQueryParamFields) ToPointer() *UpdateAccountingAccountQueryParamFields {
@@ -74,11 +74,11 @@ func (e *UpdateAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "parent_id":
 		fallthrough
-	case "organization_id":
-		fallthrough
 	case "taxonomy":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "organization_id":
 		*e = UpdateAccountingAccountQueryParamFields(v)
 		return nil
 	default:

@@ -74,6 +74,8 @@ func (e *ListAccountingOrdersQueryParamFields) UnmarshalJSON(data []byte) error 
 type ListAccountingOrdersRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The contact ID to filter by (reference to AccountingContact)
+	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Fields to return
 	Fields []ListAccountingOrdersQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                               `queryParam:"style=form,explode=true,name=limit"`
@@ -96,6 +98,13 @@ func (l *ListAccountingOrdersRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAccountingOrdersRequest) GetContactID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ContactID
 }
 
 func (l *ListAccountingOrdersRequest) GetFields() []ListAccountingOrdersQueryParamFields {

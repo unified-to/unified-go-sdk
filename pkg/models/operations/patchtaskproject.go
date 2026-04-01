@@ -22,6 +22,7 @@ const (
 	PatchTaskProjectQueryParamFieldsDescription PatchTaskProjectQueryParamFields = "description"
 	PatchTaskProjectQueryParamFieldsHasTasks    PatchTaskProjectQueryParamFields = "has_tasks"
 	PatchTaskProjectQueryParamFieldsHasChildren PatchTaskProjectQueryParamFields = "has_children"
+	PatchTaskProjectQueryParamFieldsMetadata    PatchTaskProjectQueryParamFields = "metadata"
 	PatchTaskProjectQueryParamFieldsRaw         PatchTaskProjectQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *PatchTaskProjectQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "has_tasks":
 		fallthrough
 	case "has_children":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchTaskProjectQueryParamFields(v)

@@ -25,5 +25,4 @@ custom := shared.LmsMediaType("custom_value")
 | `LmsMediaTypeDocument` | DOCUMENT               |
 | `LmsMediaTypeText`     | TEXT                   |
 | `LmsMediaTypeHTML`     | HTML                   |
-| `LmsMediaTypeMarkdown` | MARKDOWN               |
 | `LmsMediaTypeOther`    | OTHER                  |

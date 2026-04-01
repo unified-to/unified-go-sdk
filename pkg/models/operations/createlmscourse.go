@@ -12,21 +12,25 @@ import (
 type CreateLmsCourseQueryParamFields string
 
 const (
-	CreateLmsCourseQueryParamFieldsID            CreateLmsCourseQueryParamFields = "id"
-	CreateLmsCourseQueryParamFieldsCreatedAt     CreateLmsCourseQueryParamFields = "created_at"
-	CreateLmsCourseQueryParamFieldsUpdatedAt     CreateLmsCourseQueryParamFields = "updated_at"
-	CreateLmsCourseQueryParamFieldsName          CreateLmsCourseQueryParamFields = "name"
-	CreateLmsCourseQueryParamFieldsDescription   CreateLmsCourseQueryParamFields = "description"
-	CreateLmsCourseQueryParamFieldsIsPrivate     CreateLmsCourseQueryParamFields = "is_private"
-	CreateLmsCourseQueryParamFieldsIsActive      CreateLmsCourseQueryParamFields = "is_active"
-	CreateLmsCourseQueryParamFieldsPriceAmount   CreateLmsCourseQueryParamFields = "price_amount"
-	CreateLmsCourseQueryParamFieldsLanguages     CreateLmsCourseQueryParamFields = "languages"
-	CreateLmsCourseQueryParamFieldsCategories    CreateLmsCourseQueryParamFields = "categories"
-	CreateLmsCourseQueryParamFieldsCurrency      CreateLmsCourseQueryParamFields = "currency"
-	CreateLmsCourseQueryParamFieldsMedia         CreateLmsCourseQueryParamFields = "media"
-	CreateLmsCourseQueryParamFieldsInstructorIds CreateLmsCourseQueryParamFields = "instructor_ids"
-	CreateLmsCourseQueryParamFieldsStudentIds    CreateLmsCourseQueryParamFields = "student_ids"
-	CreateLmsCourseQueryParamFieldsRaw           CreateLmsCourseQueryParamFields = "raw"
+	CreateLmsCourseQueryParamFieldsID              CreateLmsCourseQueryParamFields = "id"
+	CreateLmsCourseQueryParamFieldsCreatedAt       CreateLmsCourseQueryParamFields = "created_at"
+	CreateLmsCourseQueryParamFieldsUpdatedAt       CreateLmsCourseQueryParamFields = "updated_at"
+	CreateLmsCourseQueryParamFieldsName            CreateLmsCourseQueryParamFields = "name"
+	CreateLmsCourseQueryParamFieldsDescription     CreateLmsCourseQueryParamFields = "description"
+	CreateLmsCourseQueryParamFieldsIsPrivate       CreateLmsCourseQueryParamFields = "is_private"
+	CreateLmsCourseQueryParamFieldsIsActive        CreateLmsCourseQueryParamFields = "is_active"
+	CreateLmsCourseQueryParamFieldsPriceAmount     CreateLmsCourseQueryParamFields = "price_amount"
+	CreateLmsCourseQueryParamFieldsLanguages       CreateLmsCourseQueryParamFields = "languages"
+	CreateLmsCourseQueryParamFieldsCategories      CreateLmsCourseQueryParamFields = "categories"
+	CreateLmsCourseQueryParamFieldsCurrency        CreateLmsCourseQueryParamFields = "currency"
+	CreateLmsCourseQueryParamFieldsMedia           CreateLmsCourseQueryParamFields = "media"
+	CreateLmsCourseQueryParamFieldsInstructorIds   CreateLmsCourseQueryParamFields = "instructor_ids"
+	CreateLmsCourseQueryParamFieldsStudentIds      CreateLmsCourseQueryParamFields = "student_ids"
+	CreateLmsCourseQueryParamFieldsContentIds      CreateLmsCourseQueryParamFields = "content_ids"
+	CreateLmsCourseQueryParamFieldsSkills          CreateLmsCourseQueryParamFields = "skills"
+	CreateLmsCourseQueryParamFieldsDurationMinutes CreateLmsCourseQueryParamFields = "duration_minutes"
+	CreateLmsCourseQueryParamFieldsProviderName    CreateLmsCourseQueryParamFields = "provider_name"
+	CreateLmsCourseQueryParamFieldsRaw             CreateLmsCourseQueryParamFields = "raw"
 )
 
 func (e CreateLmsCourseQueryParamFields) ToPointer() *CreateLmsCourseQueryParamFields {
@@ -65,6 +69,14 @@ func (e *CreateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "instructor_ids":
 		fallthrough
 	case "student_ids":
+		fallthrough
+	case "content_ids":
+		fallthrough
+	case "skills":
+		fallthrough
+	case "duration_minutes":
+		fallthrough
+	case "provider_name":
 		fallthrough
 	case "raw":
 		*e = CreateLmsCourseQueryParamFields(v)

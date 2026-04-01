@@ -8,21 +8,25 @@ import (
 )
 
 type LmsCourse struct {
-	Categories    []string       `json:"categories,omitempty"`
-	CreatedAt     *time.Time     `json:"created_at,omitempty"`
-	Currency      *string        `json:"currency,omitempty"`
-	Description   *string        `json:"description,omitempty"`
-	ID            *string        `json:"id,omitempty"`
-	InstructorIds []string       `json:"instructor_ids,omitempty"`
-	IsActive      *bool          `json:"is_active,omitempty"`
-	IsPrivate     *bool          `json:"is_private,omitempty"`
-	Languages     []string       `json:"languages,omitempty"`
-	Media         []LmsMedia     `json:"media,omitempty"`
-	Name          string         `json:"name"`
-	PriceAmount   *float64       `json:"price_amount,omitempty"`
-	Raw           map[string]any `json:"raw,omitempty"`
-	StudentIds    []string       `json:"student_ids,omitempty"`
-	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
+	Categories      []string       `json:"categories,omitempty"`
+	ContentIds      []string       `json:"content_ids,omitempty"`
+	CreatedAt       *time.Time     `json:"created_at,omitempty"`
+	Currency        *string        `json:"currency,omitempty"`
+	Description     *string        `json:"description,omitempty"`
+	DurationMinutes *float64       `json:"duration_minutes,omitempty"`
+	ID              *string        `json:"id,omitempty"`
+	InstructorIds   []string       `json:"instructor_ids,omitempty"`
+	IsActive        *bool          `json:"is_active,omitempty"`
+	IsPrivate       *bool          `json:"is_private,omitempty"`
+	Languages       []string       `json:"languages,omitempty"`
+	Media           []LmsMedia     `json:"media,omitempty"`
+	Name            string         `json:"name"`
+	PriceAmount     *float64       `json:"price_amount,omitempty"`
+	ProviderName    *string        `json:"provider_name,omitempty"`
+	Raw             map[string]any `json:"raw,omitempty"`
+	Skills          []string       `json:"skills,omitempty"`
+	StudentIds      []string       `json:"student_ids,omitempty"`
+	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (l LmsCourse) MarshalJSON() ([]byte, error) {
@@ -41,6 +45,13 @@ func (l *LmsCourse) GetCategories() []string {
 		return nil
 	}
 	return l.Categories
+}
+
+func (l *LmsCourse) GetContentIds() []string {
+	if l == nil {
+		return nil
+	}
+	return l.ContentIds
 }
 
 func (l *LmsCourse) GetCreatedAt() *time.Time {
@@ -62,6 +73,13 @@ func (l *LmsCourse) GetDescription() *string {
 		return nil
 	}
 	return l.Description
+}
+
+func (l *LmsCourse) GetDurationMinutes() *float64 {
+	if l == nil {
+		return nil
+	}
+	return l.DurationMinutes
 }
 
 func (l *LmsCourse) GetID() *string {
@@ -120,11 +138,25 @@ func (l *LmsCourse) GetPriceAmount() *float64 {
 	return l.PriceAmount
 }
 
+func (l *LmsCourse) GetProviderName() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ProviderName
+}
+
 func (l *LmsCourse) GetRaw() map[string]any {
 	if l == nil {
 		return nil
 	}
 	return l.Raw
+}
+
+func (l *LmsCourse) GetSkills() []string {
+	if l == nil {
+		return nil
+	}
+	return l.Skills
 }
 
 func (l *LmsCourse) GetStudentIds() []string {

@@ -19,6 +19,7 @@ const (
 	PatchLmsActivityQueryParamFieldsCourseID           PatchLmsActivityQueryParamFields = "course_id"
 	PatchLmsActivityQueryParamFieldsStudentID          PatchLmsActivityQueryParamFields = "student_id"
 	PatchLmsActivityQueryParamFieldsDurationMinutes    PatchLmsActivityQueryParamFields = "duration_minutes"
+	PatchLmsActivityQueryParamFieldsAssignedGrade      PatchLmsActivityQueryParamFields = "assigned_grade"
 	PatchLmsActivityQueryParamFieldsIsCompleted        PatchLmsActivityQueryParamFields = "is_completed"
 	PatchLmsActivityQueryParamFieldsProgressPercentage PatchLmsActivityQueryParamFields = "progress_percentage"
 	PatchLmsActivityQueryParamFieldsStartedAt          PatchLmsActivityQueryParamFields = "started_at"
@@ -48,6 +49,8 @@ func (e *PatchLmsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "student_id":
 		fallthrough
 	case "duration_minutes":
+		fallthrough
+	case "assigned_grade":
 		fallthrough
 	case "is_completed":
 		fallthrough

@@ -89,7 +89,7 @@ type ListPaymentPaymentsRequest struct {
 	LinkID *string  `queryParam:"style=form,explode=true,name=link_id"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string  `queryParam:"style=form,explode=true,name=order"`
-	// The org ID to filter by
+	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`

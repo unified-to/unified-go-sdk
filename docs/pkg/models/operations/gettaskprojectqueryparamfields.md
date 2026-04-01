@@ -25,4 +25,5 @@ value := operations.GetTaskProjectQueryParamFieldsID
 | `GetTaskProjectQueryParamFieldsDescription` | description                                 |
 | `GetTaskProjectQueryParamFieldsHasTasks`    | has_tasks                                   |
 | `GetTaskProjectQueryParamFieldsHasChildren` | has_children                                |
+| `GetTaskProjectQueryParamFieldsMetadata`    | metadata                                    |
 | `GetTaskProjectQueryParamFieldsRaw`         | raw                                         |

@@ -12,18 +12,19 @@ import (
 type PatchAccountingJournalQueryParamFields string
 
 const (
-	PatchAccountingJournalQueryParamFieldsID          PatchAccountingJournalQueryParamFields = "id"
-	PatchAccountingJournalQueryParamFieldsCreatedAt   PatchAccountingJournalQueryParamFields = "created_at"
-	PatchAccountingJournalQueryParamFieldsUpdatedAt   PatchAccountingJournalQueryParamFields = "updated_at"
-	PatchAccountingJournalQueryParamFieldsReference   PatchAccountingJournalQueryParamFields = "reference"
-	PatchAccountingJournalQueryParamFieldsTaxAmount   PatchAccountingJournalQueryParamFields = "tax_amount"
-	PatchAccountingJournalQueryParamFieldsCurrency    PatchAccountingJournalQueryParamFields = "currency"
-	PatchAccountingJournalQueryParamFieldsLineitems   PatchAccountingJournalQueryParamFields = "lineitems"
-	PatchAccountingJournalQueryParamFieldsTaxrateID   PatchAccountingJournalQueryParamFields = "taxrate_id"
-	PatchAccountingJournalQueryParamFieldsDescription PatchAccountingJournalQueryParamFields = "description"
-	PatchAccountingJournalQueryParamFieldsPostedAt    PatchAccountingJournalQueryParamFields = "posted_at"
-	PatchAccountingJournalQueryParamFieldsSource      PatchAccountingJournalQueryParamFields = "source"
-	PatchAccountingJournalQueryParamFieldsRaw         PatchAccountingJournalQueryParamFields = "raw"
+	PatchAccountingJournalQueryParamFieldsID             PatchAccountingJournalQueryParamFields = "id"
+	PatchAccountingJournalQueryParamFieldsCreatedAt      PatchAccountingJournalQueryParamFields = "created_at"
+	PatchAccountingJournalQueryParamFieldsUpdatedAt      PatchAccountingJournalQueryParamFields = "updated_at"
+	PatchAccountingJournalQueryParamFieldsReference      PatchAccountingJournalQueryParamFields = "reference"
+	PatchAccountingJournalQueryParamFieldsTaxAmount      PatchAccountingJournalQueryParamFields = "tax_amount"
+	PatchAccountingJournalQueryParamFieldsCurrency       PatchAccountingJournalQueryParamFields = "currency"
+	PatchAccountingJournalQueryParamFieldsLineitems      PatchAccountingJournalQueryParamFields = "lineitems"
+	PatchAccountingJournalQueryParamFieldsTaxrateID      PatchAccountingJournalQueryParamFields = "taxrate_id"
+	PatchAccountingJournalQueryParamFieldsDescription    PatchAccountingJournalQueryParamFields = "description"
+	PatchAccountingJournalQueryParamFieldsPostedAt       PatchAccountingJournalQueryParamFields = "posted_at"
+	PatchAccountingJournalQueryParamFieldsSource         PatchAccountingJournalQueryParamFields = "source"
+	PatchAccountingJournalQueryParamFieldsOrganizationID PatchAccountingJournalQueryParamFields = "organization_id"
+	PatchAccountingJournalQueryParamFieldsRaw            PatchAccountingJournalQueryParamFields = "raw"
 )
 
 func (e PatchAccountingJournalQueryParamFields) ToPointer() *PatchAccountingJournalQueryParamFields {
@@ -56,6 +57,8 @@ func (e *PatchAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "posted_at":
 		fallthrough
 	case "source":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingJournalQueryParamFields(v)

@@ -27,4 +27,5 @@ value := operations.CreateAccountingPurchaseorderQueryParamFieldsID
 | `CreateAccountingPurchaseorderQueryParamFieldsBillingAddress`  | billing_address                                                |
 | `CreateAccountingPurchaseorderQueryParamFieldsStatus`          | status                                                         |
 | `CreateAccountingPurchaseorderQueryParamFieldsLineitems`       | lineitems                                                      |
+| `CreateAccountingPurchaseorderQueryParamFieldsOrganizationID`  | organization_id                                                |
 | `CreateAccountingPurchaseorderQueryParamFieldsRaw`             | raw                                                            |

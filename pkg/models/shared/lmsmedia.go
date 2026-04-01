@@ -12,7 +12,6 @@ const (
 	LmsMediaTypeDocument LmsMediaType = "DOCUMENT"
 	LmsMediaTypeText     LmsMediaType = "TEXT"
 	LmsMediaTypeHTML     LmsMediaType = "HTML"
-	LmsMediaTypeMarkdown LmsMediaType = "MARKDOWN"
 	LmsMediaTypeOther    LmsMediaType = "OTHER"
 )
 
@@ -24,7 +23,7 @@ func (e LmsMediaType) ToPointer() *LmsMediaType {
 func (e *LmsMediaType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "IMAGE", "HEADSHOT", "VIDEO", "WEB", "DOCUMENT", "TEXT", "HTML", "MARKDOWN", "OTHER":
+		case "IMAGE", "HEADSHOT", "VIDEO", "WEB", "DOCUMENT", "TEXT", "HTML", "OTHER":
 			return true
 		}
 	}

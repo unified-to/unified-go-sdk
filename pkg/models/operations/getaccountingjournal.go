@@ -12,18 +12,19 @@ import (
 type GetAccountingJournalQueryParamFields string
 
 const (
-	GetAccountingJournalQueryParamFieldsID          GetAccountingJournalQueryParamFields = "id"
-	GetAccountingJournalQueryParamFieldsCreatedAt   GetAccountingJournalQueryParamFields = "created_at"
-	GetAccountingJournalQueryParamFieldsUpdatedAt   GetAccountingJournalQueryParamFields = "updated_at"
-	GetAccountingJournalQueryParamFieldsReference   GetAccountingJournalQueryParamFields = "reference"
-	GetAccountingJournalQueryParamFieldsTaxAmount   GetAccountingJournalQueryParamFields = "tax_amount"
-	GetAccountingJournalQueryParamFieldsCurrency    GetAccountingJournalQueryParamFields = "currency"
-	GetAccountingJournalQueryParamFieldsLineitems   GetAccountingJournalQueryParamFields = "lineitems"
-	GetAccountingJournalQueryParamFieldsTaxrateID   GetAccountingJournalQueryParamFields = "taxrate_id"
-	GetAccountingJournalQueryParamFieldsDescription GetAccountingJournalQueryParamFields = "description"
-	GetAccountingJournalQueryParamFieldsPostedAt    GetAccountingJournalQueryParamFields = "posted_at"
-	GetAccountingJournalQueryParamFieldsSource      GetAccountingJournalQueryParamFields = "source"
-	GetAccountingJournalQueryParamFieldsRaw         GetAccountingJournalQueryParamFields = "raw"
+	GetAccountingJournalQueryParamFieldsID             GetAccountingJournalQueryParamFields = "id"
+	GetAccountingJournalQueryParamFieldsCreatedAt      GetAccountingJournalQueryParamFields = "created_at"
+	GetAccountingJournalQueryParamFieldsUpdatedAt      GetAccountingJournalQueryParamFields = "updated_at"
+	GetAccountingJournalQueryParamFieldsReference      GetAccountingJournalQueryParamFields = "reference"
+	GetAccountingJournalQueryParamFieldsTaxAmount      GetAccountingJournalQueryParamFields = "tax_amount"
+	GetAccountingJournalQueryParamFieldsCurrency       GetAccountingJournalQueryParamFields = "currency"
+	GetAccountingJournalQueryParamFieldsLineitems      GetAccountingJournalQueryParamFields = "lineitems"
+	GetAccountingJournalQueryParamFieldsTaxrateID      GetAccountingJournalQueryParamFields = "taxrate_id"
+	GetAccountingJournalQueryParamFieldsDescription    GetAccountingJournalQueryParamFields = "description"
+	GetAccountingJournalQueryParamFieldsPostedAt       GetAccountingJournalQueryParamFields = "posted_at"
+	GetAccountingJournalQueryParamFieldsSource         GetAccountingJournalQueryParamFields = "source"
+	GetAccountingJournalQueryParamFieldsOrganizationID GetAccountingJournalQueryParamFields = "organization_id"
+	GetAccountingJournalQueryParamFieldsRaw            GetAccountingJournalQueryParamFields = "raw"
 )
 
 func (e GetAccountingJournalQueryParamFields) ToPointer() *GetAccountingJournalQueryParamFields {
@@ -56,6 +57,8 @@ func (e *GetAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "posted_at":
 		fallthrough
 	case "source":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = GetAccountingJournalQueryParamFields(v)
