@@ -10,6 +10,7 @@ type PropertyMarketingListAddress struct {
 	CountryCode *string `json:"country_code,omitempty"`
 	PostalCode  *string `json:"postal_code,omitempty"`
 	Region      *string `json:"region,omitempty"`
+	RegionCode  *string `json:"region_code,omitempty"`
 }
 
 func (p *PropertyMarketingListAddress) GetAddress1() *string {
@@ -59,4 +60,11 @@ func (p *PropertyMarketingListAddress) GetRegion() *string {
 		return nil
 	}
 	return p.Region
+}
+
+func (p *PropertyMarketingListAddress) GetRegionCode() *string {
+	if p == nil {
+		return nil
+	}
+	return p.RegionCode
 }
