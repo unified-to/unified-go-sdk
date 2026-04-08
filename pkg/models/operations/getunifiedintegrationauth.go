@@ -19,7 +19,8 @@ type GetUnifiedIntegrationAuthRequest struct {
 	Redirect *bool    `queryParam:"style=form,explode=true,name=redirect"`
 	Scopes   []string `queryParam:"style=form,explode=true,name=scopes"`
 	// Extra state to send back to your success URL
-	State     *string `queryParam:"style=form,explode=true,name=state"`
+	State *string `queryParam:"style=form,explode=true,name=state"`
+	// Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
 	Subdomain *string `queryParam:"style=form,explode=true,name=subdomain"`
 	// The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`

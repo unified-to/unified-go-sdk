@@ -81,6 +81,8 @@ type ListHrisDeductionsRequest struct {
 	CompanyID *string `queryParam:"style=form,explode=true,name=company_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListHrisDeductionsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
@@ -93,6 +95,8 @@ type ListHrisDeductionsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
@@ -118,6 +122,13 @@ func (l *ListHrisDeductionsRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListHrisDeductionsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListHrisDeductionsRequest) GetFields() []ListHrisDeductionsQueryParamFields {
@@ -174,6 +185,13 @@ func (l *ListHrisDeductionsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListHrisDeductionsRequest) GetStartGte() *string {
+	if l == nil {
+		return nil
+	}
+	return l.StartGte
 }
 
 func (l *ListHrisDeductionsRequest) GetUpdatedGte() *string {

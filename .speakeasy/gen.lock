@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 293e8f940db1edc64ea3bee29612e534
+  docChecksum: 5aadf962c09ceec8ee8c741b10920bd7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.0
-  generationVersion: 2.879.1
-  releaseVersion: 0.36.58
-  configChecksum: e3c1a0f12bf0fbfa5d52c9dbc1a13923
+  speakeasyVersion: 1.761.1
+  generationVersion: 2.879.6
+  releaseVersion: 0.36.59
+  configChecksum: 0985f106c0f5a7b3ef5764d5430fce96
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 3afcb612-637f-45d7-b6c2-41b89e2c5a52
-  pristine_commit_hash: 90c22693ca628684cfd0a6b46c3757b2c4347b6f
-  pristine_tree_hash: e83add61d08cdc6ed42d79aacf6ccc2b8e1c2669
+  generation_id: 6969642a-2e62-4f5d-afa2-0ba4d160327c
+  pristine_commit_hash: 09f6805142997f0413eb003fcec3787aafe1e841
+  pristine_tree_hash: 825a4894898a82fd08a34a65fdcf5f6d5774d4b5
 features:
   go:
     acceptHeaders: 2.81.2
@@ -2779,8 +2779,8 @@ trackedFiles:
     pristine_git_object: 0c8bc6f717ce1ef4f63cf0bd00d0d5352709e718
   docs/pkg/models/operations/getunifiedintegrationauthrequest.md:
     id: 79faaca11852
-    last_write_checksum: sha1:59af04052abd06329c8caa4b77d6467e98083590
-    pristine_git_object: 648f21721dd1e3f59057a6cca1217d17936ffed8
+    last_write_checksum: sha1:e5d26957b639a7271cd802abe37ea43cb7e64017
+    pristine_git_object: 7e39a71715b22d5dc865f2d80383ce772e8e2d24
   docs/pkg/models/operations/getunifiedintegrationauthresponse.md:
     id: a07dc4fb471d
     last_write_checksum: sha1:9e35ad3859167c802a8e4e97fd4a37cb2323dfa0
@@ -3631,8 +3631,8 @@ trackedFiles:
     pristine_git_object: eb7397def7738d4478f3e3b233eaaa3f52b5655e
   docs/pkg/models/operations/listhrisdeductionsrequest.md:
     id: 1f96c314c0bf
-    last_write_checksum: sha1:3182b8d6fdd898c03590fbb337c1367a66e17495
-    pristine_git_object: eb14f4213ff0a7bb7f9c18512eda47e5ab0544a0
+    last_write_checksum: sha1:7cb8f04675be274aea9f113d79fda64ce6f98440
+    pristine_git_object: 4491a30a8f530ae95ce139262d38967dd7541e8b
   docs/pkg/models/operations/listhrisdeductionsresponse.md:
     id: 56be82d1cd16
     last_write_checksum: sha1:3358e0038f4e72fe9dd893180ae83365b5ddf310
@@ -12591,8 +12591,8 @@ trackedFiles:
     pristine_git_object: 2421c1e92bc7a07b157c99fe475a753766f78f44
   pkg/models/operations/getunifiedintegrationauth.go:
     id: c3cb555a16ab
-    last_write_checksum: sha1:21422bc4b4d2758dd155a207a53fc190e4c8159f
-    pristine_git_object: cc096a52c3f7e0d2eadcb77305d692b7a05b6eeb
+    last_write_checksum: sha1:a86d655d9003f6d699396ca1fd236b4a48b59e73
+    pristine_git_object: 3ca69f4328585808d8acb3a2456184e154219ef4
   pkg/models/operations/getunifiedintegrationlogin.go:
     id: fa765e00a108
     last_write_checksum: sha1:4598f3fa4d260dc7a400fea5ad11c523fbbcd0f3
@@ -12883,8 +12883,8 @@ trackedFiles:
     pristine_git_object: 7f5aac751686b7103c2e88b162dfc215c222db78
   pkg/models/operations/listhrisdeductions.go:
     id: 1bb6c79abb08
-    last_write_checksum: sha1:e73b6461a85f8635031ed609ebe6576d3dd54a34
-    pristine_git_object: d4815d09c4c4ed3b20960634490b3825ffa18dc9
+    last_write_checksum: sha1:8df311829385fc5748e613d7088fae1cb04d8c1a
+    pristine_git_object: 703e8cee91b6d5bc9e4d104e680f25b9bdd2b6cf
   pkg/models/operations/listhrisdevices.go:
     id: 0e82b673dc4d
     last_write_checksum: sha1:c8e8f0a624cffc48365147c5208f387741371314
@@ -16259,8 +16259,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:3aa39746d00b2b4162316eb82dd81b75e9af3bf4
-    pristine_git_object: fc1aab0b9a8d9a9805be66c5227306493020458e
+    last_write_checksum: sha1:eddc0d0dbde8cd5b17ccf6f16f43ebd99ae908e2
+    pristine_git_object: 27e8750c61ea262dafbcd68af4cf5e6734d4ebb4
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22317,7 +22317,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Martech.CreateMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n* `UnifiedTo.Martech.GetMartechList()`:  `response.Address.RegionCode` **Added**\n* `UnifiedTo.Martech.ListMartechLists()`:  `response.[].Address.RegionCode` **Added**\n* `UnifiedTo.Martech.PatchMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n* `UnifiedTo.Martech.UpdateMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n* `UnifiedTo.List.CreateMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n* `UnifiedTo.List.GetMartechList()`:  `response.Address.RegionCode` **Added**\n* `UnifiedTo.List.ListMartechLists()`:  `response.[].Address.RegionCode` **Added**\n* `UnifiedTo.List.PatchMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n* `UnifiedTo.List.UpdateMartechList()`: \n  *  `request.Request.MarketingList.Address.RegionCode` **Added**\n  *  `response.Address.RegionCode` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Hris.ListHrisDeductions()`:  `request.Request` **Changed**
+  * `UnifiedTo.Deduction.ListHrisDeductions()`:  `request.Request` **Changed**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
