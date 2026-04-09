@@ -22,6 +22,7 @@ value := operations.UpdateAtsJobQueryParamFieldsID
 | `UpdateAtsJobQueryParamFieldsDescription`            | description                                          |
 | `UpdateAtsJobQueryParamFieldsRecruiterIds`           | recruiter_ids                                        |
 | `UpdateAtsJobQueryParamFieldsHiringManagerIds`       | hiring_manager_ids                                   |
+| `UpdateAtsJobQueryParamFieldsHiringManagers`         | hiring_managers                                      |
 | `UpdateAtsJobQueryParamFieldsStatus`                 | status                                               |
 | `UpdateAtsJobQueryParamFieldsClosedAt`               | closed_at                                            |
 | `UpdateAtsJobQueryParamFieldsAddresses`              | addresses                                            |

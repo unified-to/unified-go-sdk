@@ -22,6 +22,7 @@ value := operations.PatchAtsJobQueryParamFieldsID
 | `PatchAtsJobQueryParamFieldsDescription`            | description                                         |
 | `PatchAtsJobQueryParamFieldsRecruiterIds`           | recruiter_ids                                       |
 | `PatchAtsJobQueryParamFieldsHiringManagerIds`       | hiring_manager_ids                                  |
+| `PatchAtsJobQueryParamFieldsHiringManagers`         | hiring_managers                                     |
 | `PatchAtsJobQueryParamFieldsStatus`                 | status                                              |
 | `PatchAtsJobQueryParamFieldsClosedAt`               | closed_at                                           |
 | `PatchAtsJobQueryParamFieldsAddresses`              | addresses                                           |

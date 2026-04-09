@@ -19,6 +19,7 @@ const (
 	PatchAtsJobQueryParamFieldsDescription            PatchAtsJobQueryParamFields = "description"
 	PatchAtsJobQueryParamFieldsRecruiterIds           PatchAtsJobQueryParamFields = "recruiter_ids"
 	PatchAtsJobQueryParamFieldsHiringManagerIds       PatchAtsJobQueryParamFields = "hiring_manager_ids"
+	PatchAtsJobQueryParamFieldsHiringManagers         PatchAtsJobQueryParamFields = "hiring_managers"
 	PatchAtsJobQueryParamFieldsStatus                 PatchAtsJobQueryParamFields = "status"
 	PatchAtsJobQueryParamFieldsClosedAt               PatchAtsJobQueryParamFields = "closed_at"
 	PatchAtsJobQueryParamFieldsAddresses              PatchAtsJobQueryParamFields = "addresses"
@@ -62,6 +63,8 @@ func (e *PatchAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "recruiter_ids":
 		fallthrough
 	case "hiring_manager_ids":
+		fallthrough
+	case "hiring_managers":
 		fallthrough
 	case "status":
 		fallthrough

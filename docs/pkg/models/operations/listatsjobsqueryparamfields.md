@@ -22,6 +22,7 @@ value := operations.ListAtsJobsQueryParamFieldsID
 | `ListAtsJobsQueryParamFieldsDescription`            | description                                         |
 | `ListAtsJobsQueryParamFieldsRecruiterIds`           | recruiter_ids                                       |
 | `ListAtsJobsQueryParamFieldsHiringManagerIds`       | hiring_manager_ids                                  |
+| `ListAtsJobsQueryParamFieldsHiringManagers`         | hiring_managers                                     |
 | `ListAtsJobsQueryParamFieldsStatus`                 | status                                              |
 | `ListAtsJobsQueryParamFieldsClosedAt`               | closed_at                                           |
 | `ListAtsJobsQueryParamFieldsAddresses`              | addresses                                           |

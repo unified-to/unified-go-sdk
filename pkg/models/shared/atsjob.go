@@ -73,6 +73,7 @@ type AtsJob struct {
 	// The departments/divisions/teams that this job belongs to
 	Groups                 []AtsGroup      `json:"groups,omitempty"`
 	HiringManagerIds       []string        `json:"hiring_manager_ids,omitempty"`
+	HiringManagers         []AtsReference  `json:"hiring_managers,omitempty"`
 	ID                     *string         `json:"id,omitempty"`
 	LanguageLocale         *string         `json:"language_locale,omitempty"`
 	Metadata               []AtsMetadata   `json:"metadata,omitempty"`
@@ -166,6 +167,13 @@ func (a *AtsJob) GetHiringManagerIds() []string {
 		return nil
 	}
 	return a.HiringManagerIds
+}
+
+func (a *AtsJob) GetHiringManagers() []AtsReference {
+	if a == nil {
+		return nil
+	}
+	return a.HiringManagers
 }
 
 func (a *AtsJob) GetID() *string {

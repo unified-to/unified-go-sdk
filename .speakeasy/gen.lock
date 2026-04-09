@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5aadf962c09ceec8ee8c741b10920bd7
+  docChecksum: 185e3f9bf567bcfb80297100b1c48628
   docVersion: "1.0"
   speakeasyVersion: 1.761.1
   generationVersion: 2.879.6
-  releaseVersion: 0.36.59
-  configChecksum: 0985f106c0f5a7b3ef5764d5430fce96
+  releaseVersion: 0.36.60
+  configChecksum: c165794e11652b58117f49537d6cc1d0
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 6969642a-2e62-4f5d-afa2-0ba4d160327c
-  pristine_commit_hash: 09f6805142997f0413eb003fcec3787aafe1e841
-  pristine_tree_hash: 825a4894898a82fd08a34a65fdcf5f6d5774d4b5
+  generation_id: 9ff25928-8a5b-472a-b773-e32f4f12b8df
+  pristine_commit_hash: 26f6040fecfd44d716edb1aa78b84cc6a41af13f
+  pristine_tree_hash: 07bc6e15f694d533be94249eec2ec5936fdbc4ee
 features:
   go:
     acceptHeaders: 2.81.2
@@ -531,8 +531,8 @@ trackedFiles:
     pristine_git_object: 66817fef8e955b4a30498f065ebe839b2be56ccc
   docs/pkg/models/operations/createatsjobqueryparamfields.md:
     id: 86799fbef1ca
-    last_write_checksum: sha1:76979170f5859ef8cbea259ceed4b9a67aafef4b
-    pristine_git_object: 4d29199c6cb03008dca643ace553f6542404323a
+    last_write_checksum: sha1:48d385f0bfb8d12c185581e41def9a0e6c5e9958
+    pristine_git_object: b9fe479d2eaca62a755d9ba798fe188ddde573e4
   docs/pkg/models/operations/createatsjobrequest.md:
     id: 5ff663b7d6b8
     last_write_checksum: sha1:66a922aff062a2eceaa898ebc1b7daed4905cb95
@@ -1811,8 +1811,8 @@ trackedFiles:
     pristine_git_object: 9303c8604540556bb5db5b79bc14a1f91deda4b7
   docs/pkg/models/operations/getatsjobqueryparamfields.md:
     id: cf1560aa8ebc
-    last_write_checksum: sha1:3c9a2e691ecd7ed9d19515e300a1d1c3659a0b7a
-    pristine_git_object: b4b503b002b7666415568e003f8656c4aaa7a8f5
+    last_write_checksum: sha1:060b9ff473484a9c1869679efce8cef8f8758241
+    pristine_git_object: 4f15ef25065bf60084cd80b50b4159a695142a97
   docs/pkg/models/operations/getatsjobrequest.md:
     id: bcd2963b5bf1
     last_write_checksum: sha1:0926b5a77fa1a01535d6d4b1fa5a46f7b693e8a8
@@ -3263,8 +3263,8 @@ trackedFiles:
     pristine_git_object: c75a4d30f56527a5fabe4dbf37a10e3d7afdc968
   docs/pkg/models/operations/listatsjobsqueryparamfields.md:
     id: 06d6ecdc9254
-    last_write_checksum: sha1:84c860a53dd4ebb7acc0d3d1c9be0bef26b1a522
-    pristine_git_object: dc7fb2288104907b0551dc34ae311d6490ac72d7
+    last_write_checksum: sha1:aa21be0485140132f88c811eeb86bb9fbd56e19b
+    pristine_git_object: 89602563ffbf5d3fa0929ce84b7db1c38f1da717
   docs/pkg/models/operations/listatsjobsrequest.md:
     id: 83eb356068a5
     last_write_checksum: sha1:535199d678f2eb76409571f57d8b3353f272bc45
@@ -4667,8 +4667,8 @@ trackedFiles:
     pristine_git_object: bbd736ad9c23fd3da46e20fdc7042a5258daf393
   docs/pkg/models/operations/patchatsjobqueryparamfields.md:
     id: 6a4910af1059
-    last_write_checksum: sha1:5e289c1d4c6124ca948cdf33cf3a8dd4122226d0
-    pristine_git_object: a299dc7972969e84066e7d1be238717d864b67ec
+    last_write_checksum: sha1:0f2d537c8b9d57b647aa8c943e0117b72ed0cd6a
+    pristine_git_object: 1de4e83de8f44355065705279ad8df8df7ce59c1
   docs/pkg/models/operations/patchatsjobrequest.md:
     id: bad39b2791dd
     last_write_checksum: sha1:21e9cb22d50cbde4447ada2b68179eee837b40ff
@@ -6679,8 +6679,8 @@ trackedFiles:
     pristine_git_object: 543d6aa8c7a354d999596896ba1904030aee701e
   docs/pkg/models/operations/updateatsjobqueryparamfields.md:
     id: 60579afc07e3
-    last_write_checksum: sha1:770cb42415d245abedd8f8f4bd05f65b437ec751
-    pristine_git_object: c981b9511b1da693b51fd11ee5917a30ff596396
+    last_write_checksum: sha1:028ab2cb2c51cb5e3321ecda8d732d819894a5b3
+    pristine_git_object: b51fe1b6cc247289c0987f56cc79906c21da6671
   docs/pkg/models/operations/updateatsjobrequest.md:
     id: 79ec6fca9e25
     last_write_checksum: sha1:04c7da2c1eb3f94a13d97aeee8f694a4304fc990
@@ -8027,8 +8027,8 @@ trackedFiles:
     pristine_git_object: d89c3a946175f2d92187f12f00ea5fc60e5adfc3
   docs/pkg/models/shared/atsjob.md:
     id: d494e65ec389
-    last_write_checksum: sha1:726b590fafb28a70a11dac817de8a73b5528eea1
-    pristine_git_object: 46539656aeb113095f5fb306c34f037081b7fcb3
+    last_write_checksum: sha1:da33467ea80e6fed78d007c5785910c5635acd6c
+    pristine_git_object: 56b88eb480390ea7dfba271f41ae5a6a2adb17f9
   docs/pkg/models/shared/atsjobopening.md:
     id: 31c246a13f08
     last_write_checksum: sha1:1aa0f7bf8e9311833e01714feeef70fd76b60845
@@ -8073,6 +8073,10 @@ trackedFiles:
     id: 425200c17253
     last_write_checksum: sha1:49d96935b6d54c4cbb2ec1912d1625e6ae52f527
     pristine_git_object: 5ce12a6fe388a7200dc966ca60464e3f6edd6c57
+  docs/pkg/models/shared/atsreference.md:
+    id: a7abe59eac45
+    last_write_checksum: sha1:46f4f90b73ca963c0ce4df7145580a7e151b7ac4
+    pristine_git_object: 2a4883e0d88b4d6f22490aee730250ed2471eba0
   docs/pkg/models/shared/atsscorecard.md:
     id: dc5ce179e240
     last_write_checksum: sha1:16720ce80a89bfbf329efebdc59155d87635f748
@@ -11823,8 +11827,8 @@ trackedFiles:
     pristine_git_object: ba5dcc6b45e242821da8c6750a23aa1205790975
   pkg/models/operations/createatsjob.go:
     id: ae4e5801965a
-    last_write_checksum: sha1:4f7b005cd5658e507ac2e9e4459a30f7b977ef09
-    pristine_git_object: b84003ed43c130ee4f04441a0472eeab89e2a133
+    last_write_checksum: sha1:e43b623bb3b4ccf5cd7b142fb14d4610b10767cd
+    pristine_git_object: 195830c491ab2ae89f13499a57001f114e4bd933
   pkg/models/operations/createatsscorecard.go:
     id: cd590312afd2
     last_write_checksum: sha1:f3560b15ed226488a8775ef229252ee347a4300c
@@ -12263,8 +12267,8 @@ trackedFiles:
     pristine_git_object: cc556c840ac3125eb920d0290106ded635904cc9
   pkg/models/operations/getatsjob.go:
     id: 7eec193081ad
-    last_write_checksum: sha1:229f4bf2f4f10f7b35242d140aa28fe01deec756
-    pristine_git_object: 4348cefbb35bb4b66c0ae45daa9cf255e407004f
+    last_write_checksum: sha1:355b06f628973aefd5f22509dd9259140c9e8770
+    pristine_git_object: f36b34bb5c99b6dfb46a65d95d2a333773dceab1
   pkg/models/operations/getatsscorecard.go:
     id: 10234dd3b694
     last_write_checksum: sha1:c959be272492b2a0ece20e7b6c1a7bdd78341642
@@ -12759,8 +12763,8 @@ trackedFiles:
     pristine_git_object: 3754ce64eaea2528d33adc44b4f056e90b09e1f9
   pkg/models/operations/listatsjobs.go:
     id: 1226e7df98a4
-    last_write_checksum: sha1:3ad1a23c3f66bfc5253902728ad4ee035a8dfb1f
-    pristine_git_object: 6e86825f785b43f723bf95adecf8411fc867ec25
+    last_write_checksum: sha1:5b00e00c133df5c098b405157963e71ecd76e46e
+    pristine_git_object: 950aa1a6f5bc6fc7681d1ad3c9c39c86ff58a487
   pkg/models/operations/listatsscorecards.go:
     id: 0c04f41ebb66
     last_write_checksum: sha1:405579eed7358c677d2f583715fa00ee85206b69
@@ -13247,8 +13251,8 @@ trackedFiles:
     pristine_git_object: b529a094aed2dbf993b76614003c701cf59fd704
   pkg/models/operations/patchatsjob.go:
     id: 173c347586b6
-    last_write_checksum: sha1:182766886b92e7ea89e8f4288aff0401756a9f2a
-    pristine_git_object: 9d9b224c150ce410aa8a7c681bd381caf61e053b
+    last_write_checksum: sha1:b746b8eb48101c5993b6f9d93ce361a30846133a
+    pristine_git_object: 597a775d0c570b9a1de152ecdef293b3491a54c3
   pkg/models/operations/patchatsscorecard.go:
     id: 2ff124787c48
     last_write_checksum: sha1:3d2fb0a7f9016a7cef9636f97c77ad9edb22a2bd
@@ -14059,8 +14063,8 @@ trackedFiles:
     pristine_git_object: 59d02cf98f0a4cc55bb8328ff9b033ca77099cf4
   pkg/models/operations/updateatsjob.go:
     id: a23519eedca6
-    last_write_checksum: sha1:a0cf00a23b21bd025054bc459c5ac5e0996acd74
-    pristine_git_object: a9306022ed65f2ed770126edabd9ee012c257be1
+    last_write_checksum: sha1:8b4ad9f15052cb757b4dcb1ef9ea8786d166ec27
+    pristine_git_object: 39bed9b651e197b3ede21adaf7d603fb61ede348
   pkg/models/operations/updateatsscorecard.go:
     id: 2a61a2d83e9f
     last_write_checksum: sha1:02a1d8f590afa62dddc4304c77defd556ee79021
@@ -14659,8 +14663,8 @@ trackedFiles:
     pristine_git_object: 64ef5856c20b62ad986b7108b06d1374e00cfd32
   pkg/models/shared/atsjob.go:
     id: 0af17fd24b52
-    last_write_checksum: sha1:17a9fb5f3e35b362ee71a319a79373066348c156
-    pristine_git_object: 850df6dd514bf5ed6bc1321b7cd3dccfdbf231de
+    last_write_checksum: sha1:599c6295ce20fda7a2775ac90d36965fc6e240ca
+    pristine_git_object: 41418fe4310d479567218b6653e08464e70f8349
   pkg/models/shared/atsjobopening.go:
     id: b370d402865f
     last_write_checksum: sha1:c82760b6530e5a92d9e63b5a710793349179de31
@@ -14681,6 +14685,10 @@ trackedFiles:
     id: 66c5f088b615
     last_write_checksum: sha1:c4c614ee3e6c50647f3f5faf7cafbb2a18f48caf
     pristine_git_object: 3f100ec7cdf6bec2b519e94f1624689f758612ec
+  pkg/models/shared/atsreference.go:
+    id: 6a48d6cf3231
+    last_write_checksum: sha1:768476d58c08f4956217df5277c59823457e601b
+    pristine_git_object: 0e5f9711fecb30506ee1d8d0a9b8cf651922ca93
   pkg/models/shared/atsscorecard.go:
     id: 023820b6db96
     last_write_checksum: sha1:4a48471249796e7fecca98c50abd37030b9290d9
@@ -16259,8 +16267,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:eddc0d0dbde8cd5b17ccf6f16f43ebd99ae908e2
-    pristine_git_object: 27e8750c61ea262dafbcd68af4cf5e6734d4ebb4
+    last_write_checksum: sha1:c6882da4472ed02bd40fdc606180e7c9319e2319
+    pristine_git_object: 3fe6db1f3a82ebb0a480b6c0c49787159347ce0b
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22317,10 +22325,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes:
-  * `UnifiedTo.Hris.ListHrisDeductions()`:  `request.Request` **Changed**
-  * `UnifiedTo.Deduction.ListHrisDeductions()`:  `request.Request` **Changed**
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ats.CreateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.GetAtsJob()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.ListAtsJobs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HiringManagers` **Added**\n* `UnifiedTo.Ats.PatchAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.UpdateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.CreateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.GetAtsJob()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.ListAtsJobs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HiringManagers` **Added**\n* `UnifiedTo.Job.PatchAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.UpdateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

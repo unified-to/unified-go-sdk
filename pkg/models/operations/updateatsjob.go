@@ -19,6 +19,7 @@ const (
 	UpdateAtsJobQueryParamFieldsDescription            UpdateAtsJobQueryParamFields = "description"
 	UpdateAtsJobQueryParamFieldsRecruiterIds           UpdateAtsJobQueryParamFields = "recruiter_ids"
 	UpdateAtsJobQueryParamFieldsHiringManagerIds       UpdateAtsJobQueryParamFields = "hiring_manager_ids"
+	UpdateAtsJobQueryParamFieldsHiringManagers         UpdateAtsJobQueryParamFields = "hiring_managers"
 	UpdateAtsJobQueryParamFieldsStatus                 UpdateAtsJobQueryParamFields = "status"
 	UpdateAtsJobQueryParamFieldsClosedAt               UpdateAtsJobQueryParamFields = "closed_at"
 	UpdateAtsJobQueryParamFieldsAddresses              UpdateAtsJobQueryParamFields = "addresses"
@@ -62,6 +63,8 @@ func (e *UpdateAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "recruiter_ids":
 		fallthrough
 	case "hiring_manager_ids":
+		fallthrough
+	case "hiring_managers":
 		fallthrough
 	case "status":
 		fallthrough
