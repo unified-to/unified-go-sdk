@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 185e3f9bf567bcfb80297100b1c48628
+  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
   docVersion: "1.0"
   speakeasyVersion: 1.761.1
   generationVersion: 2.879.6
-  releaseVersion: 0.36.60
-  configChecksum: c165794e11652b58117f49537d6cc1d0
+  releaseVersion: 0.36.61
+  configChecksum: cec856d71f2e68da78784561fdcad5d5
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 9ff25928-8a5b-472a-b773-e32f4f12b8df
-  pristine_commit_hash: 26f6040fecfd44d716edb1aa78b84cc6a41af13f
-  pristine_tree_hash: 07bc6e15f694d533be94249eec2ec5936fdbc4ee
+  generation_id: 6f63e2e6-c039-4368-8cfa-81d9f3557efd
+  pristine_commit_hash: 45bb7230e6be1ac62db1d19a9a97a186bd425b3b
+  pristine_tree_hash: 0cdeff973cd87a0ecfd0faa0306eede178b44b1c
 features:
   go:
     acceptHeaders: 2.81.2
@@ -10955,8 +10955,8 @@ trackedFiles:
     pristine_git_object: 434b086c7d281b3e27f9d93442df7880b032b4b1
   docs/pkg/models/shared/webhook.md:
     id: f789bc5d34f7
-    last_write_checksum: sha1:0e090cec8077c60233c6c97fc70c5542b87f5d0a
-    pristine_git_object: 3d49008ede91234624958fbebec9a8fc2b0bf6ee
+    last_write_checksum: sha1:a7b6eaa6e1abc490f9550d99cc742ca43dfe3a8e
+    pristine_git_object: 2ff96f0e22acfe8789bd53ab2b0976524d384908
   docs/pkg/models/shared/webhooktype.md:
     id: 2a07b1ea7b3c
     last_write_checksum: sha1:d75023519a7e1eeac2a94e10d3efc7277f8252b8
@@ -16031,8 +16031,8 @@ trackedFiles:
     pristine_git_object: c959f88d1389aa538d9eca96874fefa11a23aeea
   pkg/models/shared/webhook.go:
     id: 5ade8debb6cb
-    last_write_checksum: sha1:8ad8b29cc398f266036f1c951f0161f0afdff57c
-    pristine_git_object: 9bb817e74718716fd053648d978aefa9b0e0de29
+    last_write_checksum: sha1:6e40ee01fad19cb2f141c67135ef6bdc7ed76acb
+    pristine_git_object: 8a73d74c911221d965f4de24e3e6c16f8fab3b12
   pkg/optionalnullable/optionalnullable.go:
     id: 7520d2c4b109
     last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
@@ -16267,8 +16267,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:c6882da4472ed02bd40fdc606180e7c9319e2319
-    pristine_git_object: 3fe6db1f3a82ebb0a480b6c0c49787159347ce0b
+    last_write_checksum: sha1:41574e65e23aadde2fd0b3c3a833f33d03b7fd51
+    pristine_git_object: c43cfb6acc2f9f7603c160407d3b1f8121f677f7
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22325,7 +22325,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ats.CreateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.GetAtsJob()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.ListAtsJobs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HiringManagers` **Added**\n* `UnifiedTo.Ats.PatchAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Ats.UpdateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.CreateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.GetAtsJob()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.ListAtsJobs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].HiringManagers` **Added**\n* `UnifiedTo.Job.PatchAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n* `UnifiedTo.Job.UpdateAtsJob()`: \n  *  `request.Request` **Changed**\n  *  `response.HiringManagers` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].IsBeta` **Added**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].IsBeta` **Added**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

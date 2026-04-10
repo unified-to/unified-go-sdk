@@ -244,6 +244,7 @@ type Webhook struct {
 	ID              *string           `json:"id,omitempty"`
 	IntegrationType *string           `json:"integration_type,omitempty"`
 	Interval        *float64          `json:"interval,omitempty"`
+	IsBeta          *bool             `json:"is_beta,omitempty"`
 	IsHealthy       *bool             `json:"is_healthy,omitempty"`
 	IsPaused        *bool             `json:"is_paused,omitempty"`
 	ObjectType      ObjectType        `json:"object_type"`
@@ -369,6 +370,13 @@ func (w *Webhook) GetInterval() *float64 {
 		return nil
 	}
 	return w.Interval
+}
+
+func (w *Webhook) GetIsBeta() *bool {
+	if w == nil {
+		return nil
+	}
+	return w.IsBeta
 }
 
 func (w *Webhook) GetIsHealthy() *bool {
