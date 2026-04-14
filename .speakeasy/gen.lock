@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 411f51acbf2ce7fbfc478c04772f380d
+  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
   docVersion: "1.0"
-  speakeasyVersion: 1.761.1
-  generationVersion: 2.879.6
-  releaseVersion: 0.36.61
-  configChecksum: cec856d71f2e68da78784561fdcad5d5
+  speakeasyVersion: 1.761.4
+  generationVersion: 2.879.13
+  releaseVersion: 0.36.62
+  configChecksum: 73d55b9dff8e9b895de1e47a5432963e
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 6f63e2e6-c039-4368-8cfa-81d9f3557efd
-  pristine_commit_hash: 45bb7230e6be1ac62db1d19a9a97a186bd425b3b
-  pristine_tree_hash: 0cdeff973cd87a0ecfd0faa0306eede178b44b1c
+  generation_id: f027f63a-8b9d-4429-8dc0-3399dbf1a09b
+  pristine_commit_hash: a08dee507646d3e2af6a68e8b6a30334c5580d9d
+  pristine_tree_hash: 8fb4259a5765844a456f662a31f6b6fbddbc4132
 features:
   go:
     acceptHeaders: 2.81.2
@@ -8775,8 +8775,8 @@ trackedFiles:
     pristine_git_object: d25d6a890d6e8161f0a99004a984f8d9b5b3ddb9
   docs/pkg/models/shared/integrationsupport.md:
     id: de5c915a8590
-    last_write_checksum: sha1:847bc2464c779e6d987c1c4b968a3035d17178dd
-    pristine_git_object: a32adc7aa57a92ca90d3fe4f9ca35540006c1277
+    last_write_checksum: sha1:0144c2f9286577bd8aa0b838bb0644046703ca4f
+    pristine_git_object: 5268cde23120b93a067ee170dc490ef501ebb773
   docs/pkg/models/shared/intervalunit.md:
     id: 6af2406d0f78
     last_write_checksum: sha1:8ebbd9c9f3cb2cab38321a41e3c38a65119aae15
@@ -9329,6 +9329,10 @@ trackedFiles:
     id: 34b7ac836f0d
     last_write_checksum: sha1:d7cace388d7239c21543ca4765b097370d852d11
     pristine_git_object: 6c96d2523e8ca1d408ebec9e1df82b6fb8520824
+  docs/pkg/models/shared/nativewebhooklistid.md:
+    id: 4ebad74b34da
+    last_write_checksum: sha1:0c1d81d4baa1dbd5285000b1f3da20d27b07f210
+    pristine_git_object: 983d1b125537807693626bb70ffdedcf0b8ce205
   docs/pkg/models/shared/nativewebhookmemberid.md:
     id: d0aa2f5acaa9
     last_write_checksum: sha1:43d4fbc448a312df56b9e6f8c0d17a5e258a7dcf
@@ -15023,8 +15027,8 @@ trackedFiles:
     pristine_git_object: 9dd3e35dbc0a1904db07dc18a39437f1b1d5b50d
   pkg/models/shared/integrationsupport.go:
     id: b3cca4d8ed48
-    last_write_checksum: sha1:c72068bbde89fbc2f2e126a29caf2ca6daf734c6
-    pristine_git_object: 4c7dc50449f1f5a31d70174279f483b339f15c48
+    last_write_checksum: sha1:6132b40c2e4a43383715702025925d93d4b6e20c
+    pristine_git_object: a76308f4ace6205a6eb3cdfe062ef9b32a8a228d
   pkg/models/shared/issue.go:
     id: b72881281f6d
     last_write_checksum: sha1:f7ca4a8cb1426571240908d80b0d81410dd6d982
@@ -16267,8 +16271,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:41574e65e23aadde2fd0b3c3a833f33d03b7fd51
-    pristine_git_object: c43cfb6acc2f9f7603c160407d3b1f8121f677f7
+    last_write_checksum: sha1:5888a6207b078b3bc40afd2905068500c34f4371
+    pristine_git_object: e501ba50294c1c90ecaeed2a6732922a6eff5d7d
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22325,7 +22329,12 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].IsBeta` **Added**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].IsBeta` **Added**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.IsBeta` **Added**\n  *  `response.IsBeta` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
+  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
