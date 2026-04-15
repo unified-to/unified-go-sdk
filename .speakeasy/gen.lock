@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d9d06ebf4f927b0b7aaabb635a00340f
+  docChecksum: 97059ed622bfecd9741a74a3557254e7
   docVersion: "1.0"
-  speakeasyVersion: 1.761.4
+  speakeasyVersion: 1.761.5
   generationVersion: 2.879.13
-  releaseVersion: 0.36.62
-  configChecksum: 73d55b9dff8e9b895de1e47a5432963e
+  releaseVersion: 0.36.63
+  configChecksum: c01db50f2a9ca7e85fc2a86a1d06538a
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: f027f63a-8b9d-4429-8dc0-3399dbf1a09b
-  pristine_commit_hash: a08dee507646d3e2af6a68e8b6a30334c5580d9d
-  pristine_tree_hash: 8fb4259a5765844a456f662a31f6b6fbddbc4132
+  generation_id: 26ff201c-77f2-45ba-b197-1c80e234758a
+  pristine_commit_hash: b7d99733a30cea2e1a988fea40fba1dd1d60fc9c
+  pristine_tree_hash: bf5c280a842d18c9c7bcb731e607d2a8c7a3c68b
 features:
   go:
     acceptHeaders: 2.81.2
@@ -7963,8 +7963,8 @@ trackedFiles:
     pristine_git_object: 7f5a8deb80bd5444916679b9dfc339cd78919669
   docs/pkg/models/shared/atsapplicationanswer.md:
     id: 7490c1aa04b3
-    last_write_checksum: sha1:1584cf65d008edca6c9548474a0e414c1441cba1
-    pristine_git_object: 0966a7621f7515e17b3838fd92d186b11208ecfc
+    last_write_checksum: sha1:8ccbd5bbd03f519163cccd4fa1ed944455f35203
+    pristine_git_object: dc44d3e67218f90038e89f2a9d999aa7d039285c
   docs/pkg/models/shared/atsapplicationstatus.md:
     id: 8c4a7dce3241
     last_write_checksum: sha1:61675707bde4899a27db9bf0d3db668d7d333665
@@ -14627,8 +14627,8 @@ trackedFiles:
     pristine_git_object: e12855a6737feb3de1013394cb1bbfb4e96bac27
   pkg/models/shared/atsapplicationanswer.go:
     id: 5b3a37564733
-    last_write_checksum: sha1:c467b1bcc600ec6445e20cc4a5545227bcb56eae
-    pristine_git_object: 4c0c298d176dd0d3e83ec24f8dd1523378827566
+    last_write_checksum: sha1:358d3287002157317dd64017b5f7773acb5324a9
+    pristine_git_object: fe4d4994088c9f6be8d8da7dc0b2478f105412bf
   pkg/models/shared/atscandidate.go:
     id: dbef2dccd038
     last_write_checksum: sha1:ead42b5c8ca6737e9ee658e7e5e312cb20e69f76
@@ -16271,8 +16271,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:5888a6207b078b3bc40afd2905068500c34f4371
-    pristine_git_object: e501ba50294c1c90ecaeed2a6732922a6eff5d7d
+    last_write_checksum: sha1:5c4534995634820f134e796cdf7a566adb5c2fd3
+    pristine_git_object: a480804163c1dd3afd41187943dc05b1ddc39387
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22329,12 +22329,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## Go SDK Changes:
-  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
-  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
-  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.NativeWebhookListId` **Added**
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ats.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n* `UnifiedTo.Ats.GetAtsApplication()`:  `response.Answers[].Question` **Added**\n* `UnifiedTo.Ats.ListAtsApplications()`:  `response.[].Answers[].Question` **Added**\n* `UnifiedTo.Ats.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n* `UnifiedTo.Ats.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n* `UnifiedTo.Application.CreateAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n* `UnifiedTo.Application.GetAtsApplication()`:  `response.Answers[].Question` **Added**\n* `UnifiedTo.Application.ListAtsApplications()`:  `response.[].Answers[].Question` **Added**\n* `UnifiedTo.Application.PatchAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n* `UnifiedTo.Application.UpdateAtsApplication()`: \n  *  `request.Request.AtsApplication.Answers[].Question` **Added**\n  *  `response.Answers[].Question` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

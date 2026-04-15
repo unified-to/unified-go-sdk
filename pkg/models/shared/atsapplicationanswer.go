@@ -4,6 +4,7 @@ package shared
 
 type AtsApplicationAnswer struct {
 	Answers    []string `json:"answers"`
+	Question   *string  `json:"question,omitempty"`
 	QuestionID string   `json:"question_id"`
 }
 
@@ -12,6 +13,13 @@ func (a *AtsApplicationAnswer) GetAnswers() []string {
 		return []string{}
 	}
 	return a.Answers
+}
+
+func (a *AtsApplicationAnswer) GetQuestion() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Question
 }
 
 func (a *AtsApplicationAnswer) GetQuestionID() string {
