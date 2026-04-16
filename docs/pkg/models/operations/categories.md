@@ -42,3 +42,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesForms`        | forms                    |
 | `CategoriesShipping`     | shipping                 |
 | `CategoriesAssessment`   | assessment               |
+| `CategoriesSigning`      | signing                  |

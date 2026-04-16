@@ -748,11 +748,17 @@ func main() {
 ### [Document](docs/sdks/document/README.md)
 
 * [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [CreateSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [GetAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [GetSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [ListSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [PatchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [PatchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [RemoveAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [RemoveSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [UpdateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
+* [UpdateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
 
@@ -1534,6 +1540,32 @@ func main() {
 * [UpdateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [UpdateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
+### [Signatory](docs/sdks/signatory/README.md)
+
+* [CreateSigningSignatory](docs/sdks/signatory/README.md#createsigningsignatory) - Create a signatory
+* [GetSigningSignatory](docs/sdks/signatory/README.md#getsigningsignatory) - Retrieve a signatory
+* [ListSigningSignatories](docs/sdks/signatory/README.md#listsigningsignatories) - List all signatories
+* [PatchSigningSignatory](docs/sdks/signatory/README.md#patchsigningsignatory) - Update a signatory
+* [RemoveSigningSignatory](docs/sdks/signatory/README.md#removesigningsignatory) - Remove a signatory
+* [UpdateSigningSignatory](docs/sdks/signatory/README.md#updatesigningsignatory) - Update a signatory
+
+### [Signing](docs/sdks/signing/README.md)
+
+* [CreateSigningDocument](docs/sdks/signing/README.md#createsigningdocument) - Create a document
+* [CreateSigningSignatory](docs/sdks/signing/README.md#createsigningsignatory) - Create a signatory
+* [GetSigningDocument](docs/sdks/signing/README.md#getsigningdocument) - Retrieve a document
+* [GetSigningSignatory](docs/sdks/signing/README.md#getsigningsignatory) - Retrieve a signatory
+* [GetSigningTemplate](docs/sdks/signing/README.md#getsigningtemplate) - Retrieve a template
+* [ListSigningDocuments](docs/sdks/signing/README.md#listsigningdocuments) - List all documents
+* [ListSigningSignatories](docs/sdks/signing/README.md#listsigningsignatories) - List all signatories
+* [ListSigningTemplates](docs/sdks/signing/README.md#listsigningtemplates) - List all templates
+* [PatchSigningDocument](docs/sdks/signing/README.md#patchsigningdocument) - Update a document
+* [PatchSigningSignatory](docs/sdks/signing/README.md#patchsigningsignatory) - Update a signatory
+* [RemoveSigningDocument](docs/sdks/signing/README.md#removesigningdocument) - Remove a document
+* [RemoveSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
+* [UpdateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
+* [UpdateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
 ### [Space](docs/sdks/space/README.md)
 
 * [CreateKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
@@ -1610,6 +1642,11 @@ func main() {
 * [PatchAccountingTaxrate](docs/sdks/taxrate/README.md#patchaccountingtaxrate) - Update a taxrate
 * [RemoveAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [UpdateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
+
+### [Template](docs/sdks/template/README.md)
+
+* [GetSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
+* [ListSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
 
 ### [Ticket](docs/sdks/ticket/README.md)
 

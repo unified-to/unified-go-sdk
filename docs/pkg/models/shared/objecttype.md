@@ -147,3 +147,6 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeShippingShipment`        | shipping_shipment                   |
 | `ObjectTypeShippingLabel`           | shipping_label                      |
 | `ObjectTypeShippingTracking`        | shipping_tracking                   |
+| `ObjectTypeSigningDocument`         | signing_document                    |
+| `ObjectTypeSigningSignatory`        | signing_signatory                   |
+| `ObjectTypeSigningTemplate`         | signing_template                    |

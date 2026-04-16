@@ -42,3 +42,4 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesForms`        | forms                              |
 | `QueryParamCategoriesShipping`     | shipping                           |
 | `QueryParamCategoriesAssessment`   | assessment                         |
+| `QueryParamCategoriesSigning`      | signing                            |

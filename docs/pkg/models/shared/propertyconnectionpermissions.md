@@ -255,3 +255,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsShippingTrackingRead`         | shipping_tracking_read                                      |
 | `PropertyConnectionPermissionsShippingRateRead`             | shipping_rate_read                                          |
 | `PropertyConnectionPermissionsShippingCarrierRead`          | shipping_carrier_read                                       |
+| `PropertyConnectionPermissionsSigningDocumentRead`          | signing_document_read                                       |
+| `PropertyConnectionPermissionsSigningDocumentWrite`         | signing_document_write                                      |
+| `PropertyConnectionPermissionsSigningSignatoryRead`         | signing_signatory_read                                      |
+| `PropertyConnectionPermissionsSigningSignatoryWrite`        | signing_signatory_write                                     |
+| `PropertyConnectionPermissionsSigningTemplateRead`          | signing_template_read                                       |

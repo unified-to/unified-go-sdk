@@ -42,3 +42,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesForms`        | forms                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesShipping`     | shipping                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesAssessment`   | assessment                                                |
+| `ListUnifiedIntegrationsQueryParamCategoriesSigning`      | signing                                                   |

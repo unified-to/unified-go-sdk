@@ -45,3 +45,4 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesForms`        | forms                                       |
 | `PropertyIntegrationCategoriesShipping`     | shipping                                    |
 | `PropertyIntegrationCategoriesAssessment`   | assessment                                  |
+| `PropertyIntegrationCategoriesSigning`      | signing                                     |

@@ -170,6 +170,9 @@ type UnifiedTo struct {
 	Rate              *Rate
 	Shipment          *Shipment
 	Tracking          *Tracking
+	Signing           *Signing
+	Signatory         *Signatory
+	Template          *Template
 	Storage           *Storage
 	File              *File
 	Task              *Task
@@ -268,9 +271,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.63",
+		SDKVersion: "0.36.64",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.63 2.879.13 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.64 2.879.13 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -404,6 +407,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Rate = newRate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Shipment = newShipment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Tracking = newTracking(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Signing = newSigning(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Signatory = newSignatory(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Template = newTemplate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)

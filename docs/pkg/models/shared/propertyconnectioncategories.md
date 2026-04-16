@@ -45,3 +45,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesForms`        | forms                                      |
 | `PropertyConnectionCategoriesShipping`     | shipping                                   |
 | `PropertyConnectionCategoriesAssessment`   | assessment                                 |
+| `PropertyConnectionCategoriesSigning`      | signing                                    |
