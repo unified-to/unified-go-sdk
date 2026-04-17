@@ -33,10 +33,11 @@ func (e *LmsMediaType) IsExact() bool {
 type LmsMedia struct {
 	Content      *string       `json:"content,omitempty"`
 	Description  *string       `json:"description,omitempty"`
+	Languages    []string      `json:"languages,omitempty"`
 	Name         *string       `json:"name,omitempty"`
 	ThumbnailURL *string       `json:"thumbnail_url,omitempty"`
 	Type         *LmsMediaType `json:"type,omitempty"`
-	URL          string        `json:"url"`
+	URL          *string       `json:"url,omitempty"`
 }
 
 func (l *LmsMedia) GetContent() *string {
@@ -51,6 +52,13 @@ func (l *LmsMedia) GetDescription() *string {
 		return nil
 	}
 	return l.Description
+}
+
+func (l *LmsMedia) GetLanguages() []string {
+	if l == nil {
+		return nil
+	}
+	return l.Languages
 }
 
 func (l *LmsMedia) GetName() *string {
@@ -74,9 +82,9 @@ func (l *LmsMedia) GetType() *LmsMediaType {
 	return l.Type
 }
 
-func (l *LmsMedia) GetURL() string {
+func (l *LmsMedia) GetURL() *string {
 	if l == nil {
-		return ""
+		return nil
 	}
 	return l.URL
 }

@@ -12,25 +12,29 @@ import (
 type ListLmsCoursesQueryParamFields string
 
 const (
-	ListLmsCoursesQueryParamFieldsID              ListLmsCoursesQueryParamFields = "id"
-	ListLmsCoursesQueryParamFieldsCreatedAt       ListLmsCoursesQueryParamFields = "created_at"
-	ListLmsCoursesQueryParamFieldsUpdatedAt       ListLmsCoursesQueryParamFields = "updated_at"
-	ListLmsCoursesQueryParamFieldsName            ListLmsCoursesQueryParamFields = "name"
-	ListLmsCoursesQueryParamFieldsDescription     ListLmsCoursesQueryParamFields = "description"
-	ListLmsCoursesQueryParamFieldsIsPrivate       ListLmsCoursesQueryParamFields = "is_private"
-	ListLmsCoursesQueryParamFieldsIsActive        ListLmsCoursesQueryParamFields = "is_active"
-	ListLmsCoursesQueryParamFieldsPriceAmount     ListLmsCoursesQueryParamFields = "price_amount"
-	ListLmsCoursesQueryParamFieldsLanguages       ListLmsCoursesQueryParamFields = "languages"
-	ListLmsCoursesQueryParamFieldsCategories      ListLmsCoursesQueryParamFields = "categories"
-	ListLmsCoursesQueryParamFieldsCurrency        ListLmsCoursesQueryParamFields = "currency"
-	ListLmsCoursesQueryParamFieldsMedia           ListLmsCoursesQueryParamFields = "media"
-	ListLmsCoursesQueryParamFieldsInstructorIds   ListLmsCoursesQueryParamFields = "instructor_ids"
-	ListLmsCoursesQueryParamFieldsStudentIds      ListLmsCoursesQueryParamFields = "student_ids"
-	ListLmsCoursesQueryParamFieldsContentIds      ListLmsCoursesQueryParamFields = "content_ids"
-	ListLmsCoursesQueryParamFieldsSkills          ListLmsCoursesQueryParamFields = "skills"
-	ListLmsCoursesQueryParamFieldsDurationMinutes ListLmsCoursesQueryParamFields = "duration_minutes"
-	ListLmsCoursesQueryParamFieldsProviderName    ListLmsCoursesQueryParamFields = "provider_name"
-	ListLmsCoursesQueryParamFieldsRaw             ListLmsCoursesQueryParamFields = "raw"
+	ListLmsCoursesQueryParamFieldsID                  ListLmsCoursesQueryParamFields = "id"
+	ListLmsCoursesQueryParamFieldsCreatedAt           ListLmsCoursesQueryParamFields = "created_at"
+	ListLmsCoursesQueryParamFieldsUpdatedAt           ListLmsCoursesQueryParamFields = "updated_at"
+	ListLmsCoursesQueryParamFieldsName                ListLmsCoursesQueryParamFields = "name"
+	ListLmsCoursesQueryParamFieldsDescription         ListLmsCoursesQueryParamFields = "description"
+	ListLmsCoursesQueryParamFieldsIsPrivate           ListLmsCoursesQueryParamFields = "is_private"
+	ListLmsCoursesQueryParamFieldsIsActive            ListLmsCoursesQueryParamFields = "is_active"
+	ListLmsCoursesQueryParamFieldsPriceAmount         ListLmsCoursesQueryParamFields = "price_amount"
+	ListLmsCoursesQueryParamFieldsLanguages           ListLmsCoursesQueryParamFields = "languages"
+	ListLmsCoursesQueryParamFieldsCategories          ListLmsCoursesQueryParamFields = "categories"
+	ListLmsCoursesQueryParamFieldsCurrency            ListLmsCoursesQueryParamFields = "currency"
+	ListLmsCoursesQueryParamFieldsMedia               ListLmsCoursesQueryParamFields = "media"
+	ListLmsCoursesQueryParamFieldsInstructorIds       ListLmsCoursesQueryParamFields = "instructor_ids"
+	ListLmsCoursesQueryParamFieldsInstructors         ListLmsCoursesQueryParamFields = "instructors"
+	ListLmsCoursesQueryParamFieldsStudentIds          ListLmsCoursesQueryParamFields = "student_ids"
+	ListLmsCoursesQueryParamFieldsStudents            ListLmsCoursesQueryParamFields = "students"
+	ListLmsCoursesQueryParamFieldsContentIds          ListLmsCoursesQueryParamFields = "content_ids"
+	ListLmsCoursesQueryParamFieldsSkills              ListLmsCoursesQueryParamFields = "skills"
+	ListLmsCoursesQueryParamFieldsDurationMinutes     ListLmsCoursesQueryParamFields = "duration_minutes"
+	ListLmsCoursesQueryParamFieldsProviderName        ListLmsCoursesQueryParamFields = "provider_name"
+	ListLmsCoursesQueryParamFieldsRaw                 ListLmsCoursesQueryParamFields = "raw"
+	ListLmsCoursesQueryParamFieldsPublishedAt         ListLmsCoursesQueryParamFields = "published_at"
+	ListLmsCoursesQueryParamFieldsTimeEstimateMinutes ListLmsCoursesQueryParamFields = "time_estimate_minutes"
 )
 
 func (e ListLmsCoursesQueryParamFields) ToPointer() *ListLmsCoursesQueryParamFields {
@@ -68,7 +72,11 @@ func (e *ListLmsCoursesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "instructor_ids":
 		fallthrough
+	case "instructors":
+		fallthrough
 	case "student_ids":
+		fallthrough
+	case "students":
 		fallthrough
 	case "content_ids":
 		fallthrough
@@ -79,6 +87,10 @@ func (e *ListLmsCoursesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "provider_name":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "published_at":
+		fallthrough
+	case "time_estimate_minutes":
 		*e = ListLmsCoursesQueryParamFields(v)
 		return nil
 	default:

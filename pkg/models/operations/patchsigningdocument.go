@@ -24,7 +24,6 @@ const (
 	PatchSigningDocumentQueryParamFieldsTemplateID  PatchSigningDocumentQueryParamFields = "template_id"
 	PatchSigningDocumentQueryParamFieldsDownloadURL PatchSigningDocumentQueryParamFields = "download_url"
 	PatchSigningDocumentQueryParamFieldsCreatorID   PatchSigningDocumentQueryParamFields = "creator_id"
-	PatchSigningDocumentQueryParamFieldsMetadata    PatchSigningDocumentQueryParamFields = "metadata"
 	PatchSigningDocumentQueryParamFieldsRaw         PatchSigningDocumentQueryParamFields = "raw"
 )
 
@@ -60,8 +59,6 @@ func (e *PatchSigningDocumentQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "download_url":
 		fallthrough
 	case "creator_id":
-		fallthrough
-	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchSigningDocumentQueryParamFields(v)

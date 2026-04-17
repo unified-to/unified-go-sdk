@@ -27,5 +27,4 @@ value := operations.GetSigningDocumentQueryParamFieldsID
 | `GetSigningDocumentQueryParamFieldsTemplateID`  | template_id                                     |
 | `GetSigningDocumentQueryParamFieldsDownloadURL` | download_url                                    |
 | `GetSigningDocumentQueryParamFieldsCreatorID`   | creator_id                                      |
-| `GetSigningDocumentQueryParamFieldsMetadata`    | metadata                                        |
 | `GetSigningDocumentQueryParamFieldsRaw`         | raw                                             |

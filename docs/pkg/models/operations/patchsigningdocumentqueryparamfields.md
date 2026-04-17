@@ -27,5 +27,4 @@ value := operations.PatchSigningDocumentQueryParamFieldsID
 | `PatchSigningDocumentQueryParamFieldsTemplateID`  | template_id                                       |
 | `PatchSigningDocumentQueryParamFieldsDownloadURL` | download_url                                      |
 | `PatchSigningDocumentQueryParamFieldsCreatorID`   | creator_id                                        |
-| `PatchSigningDocumentQueryParamFieldsMetadata`    | metadata                                          |
 | `PatchSigningDocumentQueryParamFieldsRaw`         | raw                                               |

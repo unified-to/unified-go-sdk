@@ -16,7 +16,8 @@ custom := shared.Role("custom_value")
 
 ## Values
 
-| Name         | Value        |
-| ------------ | ------------ |
-| `RoleSystem` | SYSTEM       |
-| `RoleUser`   | USER         |
+| Name            | Value           |
+| --------------- | --------------- |
+| `RoleSystem`    | SYSTEM          |
+| `RoleUser`      | USER            |
+| `RoleAssistant` | ASSISTANT       |

@@ -36,21 +36,19 @@ func (e *SigningDocumentStatus) IsExact() bool {
 }
 
 type SigningDocument struct {
-	CompletedAt *time.Time `json:"completed_at,omitempty"`
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	CreatorID   *string    `json:"creator_id,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	DownloadURL *string    `json:"download_url,omitempty"`
-	ExpiresAt   *time.Time `json:"expires_at,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	// Custom key-value pairs
-	Metadata   map[string]string      `json:"metadata,omitempty"`
-	Name       *string                `json:"name,omitempty"`
-	Raw        map[string]any         `json:"raw,omitempty"`
-	SentAt     *time.Time             `json:"sent_at,omitempty"`
-	Status     *SigningDocumentStatus `json:"status,omitempty"`
-	TemplateID *string                `json:"template_id,omitempty"`
-	UpdatedAt  *time.Time             `json:"updated_at,omitempty"`
+	CompletedAt *time.Time             `json:"completed_at,omitempty"`
+	CreatedAt   *time.Time             `json:"created_at,omitempty"`
+	CreatorID   *string                `json:"creator_id,omitempty"`
+	Description *string                `json:"description,omitempty"`
+	DownloadURL *string                `json:"download_url,omitempty"`
+	ExpiresAt   *time.Time             `json:"expires_at,omitempty"`
+	ID          *string                `json:"id,omitempty"`
+	Name        *string                `json:"name,omitempty"`
+	Raw         map[string]any         `json:"raw,omitempty"`
+	SentAt      *time.Time             `json:"sent_at,omitempty"`
+	Status      *SigningDocumentStatus `json:"status,omitempty"`
+	TemplateID  *string                `json:"template_id,omitempty"`
+	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (s SigningDocument) MarshalJSON() ([]byte, error) {
@@ -111,13 +109,6 @@ func (s *SigningDocument) GetID() *string {
 		return nil
 	}
 	return s.ID
-}
-
-func (s *SigningDocument) GetMetadata() map[string]string {
-	if s == nil {
-		return nil
-	}
-	return s.Metadata
 }
 
 func (s *SigningDocument) GetName() *string {

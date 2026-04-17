@@ -12,25 +12,29 @@ import (
 type PatchLmsCourseQueryParamFields string
 
 const (
-	PatchLmsCourseQueryParamFieldsID              PatchLmsCourseQueryParamFields = "id"
-	PatchLmsCourseQueryParamFieldsCreatedAt       PatchLmsCourseQueryParamFields = "created_at"
-	PatchLmsCourseQueryParamFieldsUpdatedAt       PatchLmsCourseQueryParamFields = "updated_at"
-	PatchLmsCourseQueryParamFieldsName            PatchLmsCourseQueryParamFields = "name"
-	PatchLmsCourseQueryParamFieldsDescription     PatchLmsCourseQueryParamFields = "description"
-	PatchLmsCourseQueryParamFieldsIsPrivate       PatchLmsCourseQueryParamFields = "is_private"
-	PatchLmsCourseQueryParamFieldsIsActive        PatchLmsCourseQueryParamFields = "is_active"
-	PatchLmsCourseQueryParamFieldsPriceAmount     PatchLmsCourseQueryParamFields = "price_amount"
-	PatchLmsCourseQueryParamFieldsLanguages       PatchLmsCourseQueryParamFields = "languages"
-	PatchLmsCourseQueryParamFieldsCategories      PatchLmsCourseQueryParamFields = "categories"
-	PatchLmsCourseQueryParamFieldsCurrency        PatchLmsCourseQueryParamFields = "currency"
-	PatchLmsCourseQueryParamFieldsMedia           PatchLmsCourseQueryParamFields = "media"
-	PatchLmsCourseQueryParamFieldsInstructorIds   PatchLmsCourseQueryParamFields = "instructor_ids"
-	PatchLmsCourseQueryParamFieldsStudentIds      PatchLmsCourseQueryParamFields = "student_ids"
-	PatchLmsCourseQueryParamFieldsContentIds      PatchLmsCourseQueryParamFields = "content_ids"
-	PatchLmsCourseQueryParamFieldsSkills          PatchLmsCourseQueryParamFields = "skills"
-	PatchLmsCourseQueryParamFieldsDurationMinutes PatchLmsCourseQueryParamFields = "duration_minutes"
-	PatchLmsCourseQueryParamFieldsProviderName    PatchLmsCourseQueryParamFields = "provider_name"
-	PatchLmsCourseQueryParamFieldsRaw             PatchLmsCourseQueryParamFields = "raw"
+	PatchLmsCourseQueryParamFieldsID                  PatchLmsCourseQueryParamFields = "id"
+	PatchLmsCourseQueryParamFieldsCreatedAt           PatchLmsCourseQueryParamFields = "created_at"
+	PatchLmsCourseQueryParamFieldsUpdatedAt           PatchLmsCourseQueryParamFields = "updated_at"
+	PatchLmsCourseQueryParamFieldsName                PatchLmsCourseQueryParamFields = "name"
+	PatchLmsCourseQueryParamFieldsDescription         PatchLmsCourseQueryParamFields = "description"
+	PatchLmsCourseQueryParamFieldsIsPrivate           PatchLmsCourseQueryParamFields = "is_private"
+	PatchLmsCourseQueryParamFieldsIsActive            PatchLmsCourseQueryParamFields = "is_active"
+	PatchLmsCourseQueryParamFieldsPriceAmount         PatchLmsCourseQueryParamFields = "price_amount"
+	PatchLmsCourseQueryParamFieldsLanguages           PatchLmsCourseQueryParamFields = "languages"
+	PatchLmsCourseQueryParamFieldsCategories          PatchLmsCourseQueryParamFields = "categories"
+	PatchLmsCourseQueryParamFieldsCurrency            PatchLmsCourseQueryParamFields = "currency"
+	PatchLmsCourseQueryParamFieldsMedia               PatchLmsCourseQueryParamFields = "media"
+	PatchLmsCourseQueryParamFieldsInstructorIds       PatchLmsCourseQueryParamFields = "instructor_ids"
+	PatchLmsCourseQueryParamFieldsInstructors         PatchLmsCourseQueryParamFields = "instructors"
+	PatchLmsCourseQueryParamFieldsStudentIds          PatchLmsCourseQueryParamFields = "student_ids"
+	PatchLmsCourseQueryParamFieldsStudents            PatchLmsCourseQueryParamFields = "students"
+	PatchLmsCourseQueryParamFieldsContentIds          PatchLmsCourseQueryParamFields = "content_ids"
+	PatchLmsCourseQueryParamFieldsSkills              PatchLmsCourseQueryParamFields = "skills"
+	PatchLmsCourseQueryParamFieldsDurationMinutes     PatchLmsCourseQueryParamFields = "duration_minutes"
+	PatchLmsCourseQueryParamFieldsProviderName        PatchLmsCourseQueryParamFields = "provider_name"
+	PatchLmsCourseQueryParamFieldsRaw                 PatchLmsCourseQueryParamFields = "raw"
+	PatchLmsCourseQueryParamFieldsPublishedAt         PatchLmsCourseQueryParamFields = "published_at"
+	PatchLmsCourseQueryParamFieldsTimeEstimateMinutes PatchLmsCourseQueryParamFields = "time_estimate_minutes"
 )
 
 func (e PatchLmsCourseQueryParamFields) ToPointer() *PatchLmsCourseQueryParamFields {
@@ -68,7 +72,11 @@ func (e *PatchLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "instructor_ids":
 		fallthrough
+	case "instructors":
+		fallthrough
 	case "student_ids":
+		fallthrough
+	case "students":
 		fallthrough
 	case "content_ids":
 		fallthrough
@@ -79,6 +87,10 @@ func (e *PatchLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "provider_name":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "published_at":
+		fallthrough
+	case "time_estimate_minutes":
 		*e = PatchLmsCourseQueryParamFields(v)
 		return nil
 	default:

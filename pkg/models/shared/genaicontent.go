@@ -5,8 +5,9 @@ package shared
 type Role string
 
 const (
-	RoleSystem Role = "SYSTEM"
-	RoleUser   Role = "USER"
+	RoleSystem    Role = "SYSTEM"
+	RoleUser      Role = "USER"
+	RoleAssistant Role = "ASSISTANT"
 )
 
 func (e Role) ToPointer() *Role {
@@ -17,7 +18,7 @@ func (e Role) ToPointer() *Role {
 func (e *Role) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "SYSTEM", "USER":
+		case "SYSTEM", "USER", "ASSISTANT":
 			return true
 		}
 	}

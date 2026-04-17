@@ -12,25 +12,29 @@ import (
 type GetLmsCourseQueryParamFields string
 
 const (
-	GetLmsCourseQueryParamFieldsID              GetLmsCourseQueryParamFields = "id"
-	GetLmsCourseQueryParamFieldsCreatedAt       GetLmsCourseQueryParamFields = "created_at"
-	GetLmsCourseQueryParamFieldsUpdatedAt       GetLmsCourseQueryParamFields = "updated_at"
-	GetLmsCourseQueryParamFieldsName            GetLmsCourseQueryParamFields = "name"
-	GetLmsCourseQueryParamFieldsDescription     GetLmsCourseQueryParamFields = "description"
-	GetLmsCourseQueryParamFieldsIsPrivate       GetLmsCourseQueryParamFields = "is_private"
-	GetLmsCourseQueryParamFieldsIsActive        GetLmsCourseQueryParamFields = "is_active"
-	GetLmsCourseQueryParamFieldsPriceAmount     GetLmsCourseQueryParamFields = "price_amount"
-	GetLmsCourseQueryParamFieldsLanguages       GetLmsCourseQueryParamFields = "languages"
-	GetLmsCourseQueryParamFieldsCategories      GetLmsCourseQueryParamFields = "categories"
-	GetLmsCourseQueryParamFieldsCurrency        GetLmsCourseQueryParamFields = "currency"
-	GetLmsCourseQueryParamFieldsMedia           GetLmsCourseQueryParamFields = "media"
-	GetLmsCourseQueryParamFieldsInstructorIds   GetLmsCourseQueryParamFields = "instructor_ids"
-	GetLmsCourseQueryParamFieldsStudentIds      GetLmsCourseQueryParamFields = "student_ids"
-	GetLmsCourseQueryParamFieldsContentIds      GetLmsCourseQueryParamFields = "content_ids"
-	GetLmsCourseQueryParamFieldsSkills          GetLmsCourseQueryParamFields = "skills"
-	GetLmsCourseQueryParamFieldsDurationMinutes GetLmsCourseQueryParamFields = "duration_minutes"
-	GetLmsCourseQueryParamFieldsProviderName    GetLmsCourseQueryParamFields = "provider_name"
-	GetLmsCourseQueryParamFieldsRaw             GetLmsCourseQueryParamFields = "raw"
+	GetLmsCourseQueryParamFieldsID                  GetLmsCourseQueryParamFields = "id"
+	GetLmsCourseQueryParamFieldsCreatedAt           GetLmsCourseQueryParamFields = "created_at"
+	GetLmsCourseQueryParamFieldsUpdatedAt           GetLmsCourseQueryParamFields = "updated_at"
+	GetLmsCourseQueryParamFieldsName                GetLmsCourseQueryParamFields = "name"
+	GetLmsCourseQueryParamFieldsDescription         GetLmsCourseQueryParamFields = "description"
+	GetLmsCourseQueryParamFieldsIsPrivate           GetLmsCourseQueryParamFields = "is_private"
+	GetLmsCourseQueryParamFieldsIsActive            GetLmsCourseQueryParamFields = "is_active"
+	GetLmsCourseQueryParamFieldsPriceAmount         GetLmsCourseQueryParamFields = "price_amount"
+	GetLmsCourseQueryParamFieldsLanguages           GetLmsCourseQueryParamFields = "languages"
+	GetLmsCourseQueryParamFieldsCategories          GetLmsCourseQueryParamFields = "categories"
+	GetLmsCourseQueryParamFieldsCurrency            GetLmsCourseQueryParamFields = "currency"
+	GetLmsCourseQueryParamFieldsMedia               GetLmsCourseQueryParamFields = "media"
+	GetLmsCourseQueryParamFieldsInstructorIds       GetLmsCourseQueryParamFields = "instructor_ids"
+	GetLmsCourseQueryParamFieldsInstructors         GetLmsCourseQueryParamFields = "instructors"
+	GetLmsCourseQueryParamFieldsStudentIds          GetLmsCourseQueryParamFields = "student_ids"
+	GetLmsCourseQueryParamFieldsStudents            GetLmsCourseQueryParamFields = "students"
+	GetLmsCourseQueryParamFieldsContentIds          GetLmsCourseQueryParamFields = "content_ids"
+	GetLmsCourseQueryParamFieldsSkills              GetLmsCourseQueryParamFields = "skills"
+	GetLmsCourseQueryParamFieldsDurationMinutes     GetLmsCourseQueryParamFields = "duration_minutes"
+	GetLmsCourseQueryParamFieldsProviderName        GetLmsCourseQueryParamFields = "provider_name"
+	GetLmsCourseQueryParamFieldsRaw                 GetLmsCourseQueryParamFields = "raw"
+	GetLmsCourseQueryParamFieldsPublishedAt         GetLmsCourseQueryParamFields = "published_at"
+	GetLmsCourseQueryParamFieldsTimeEstimateMinutes GetLmsCourseQueryParamFields = "time_estimate_minutes"
 )
 
 func (e GetLmsCourseQueryParamFields) ToPointer() *GetLmsCourseQueryParamFields {
@@ -68,7 +72,11 @@ func (e *GetLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "instructor_ids":
 		fallthrough
+	case "instructors":
+		fallthrough
 	case "student_ids":
+		fallthrough
+	case "students":
 		fallthrough
 	case "content_ids":
 		fallthrough
@@ -79,6 +87,10 @@ func (e *GetLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "provider_name":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "published_at":
+		fallthrough
+	case "time_estimate_minutes":
 		*e = GetLmsCourseQueryParamFields(v)
 		return nil
 	default:

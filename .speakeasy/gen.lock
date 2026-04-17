@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 58164d1126b2fb763cc3eb594b45f20d
+  docChecksum: efc57137c4f57a4f70fa46f0aef3548d
   docVersion: "1.0"
-  speakeasyVersion: 1.761.5
-  generationVersion: 2.879.13
-  releaseVersion: 0.36.64
-  configChecksum: d3bdc56d4774a621aad24bb7ac44a392
+  speakeasyVersion: 1.761.7
+  generationVersion: 2.881.0
+  releaseVersion: 0.36.65
+  configChecksum: ff5a9c57049206b479f4ceb69813cebf
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 87ff7c89-6a50-4be7-a5a8-7f9b20fe697f
-  pristine_commit_hash: 49539e32bc5d467bc95d75786b1f907bf1f84257
-  pristine_tree_hash: 0cdd997488ca586281517492f438e03db8d3a93c
+  generation_id: 5e3faa3e-e481-4a6e-ac55-7964a05aa172
+  pristine_commit_hash: 6681fbeef09c8998d4fc8c5988773c7c3270a113
+  pristine_tree_hash: 0f79028922fe9518d12e5fc6d0d4c97da96af25e
 features:
   go:
     acceptHeaders: 2.81.2
@@ -1011,8 +1011,8 @@ trackedFiles:
     pristine_git_object: e8932b2ae7b8de742b0d8bdcd4cbf38bd00cadc3
   docs/pkg/models/operations/createlmscoursequeryparamfields.md:
     id: 2f298ba9aa3d
-    last_write_checksum: sha1:3be631f68785c0c422f2d387789470f1ea34cb7e
-    pristine_git_object: 95fc71d1d8719da5c7c1a15736465cecd6ca22f1
+    last_write_checksum: sha1:4c6b45ca1713d6c4e8e626e2bfbac27851eb3705
+    pristine_git_object: cbd0c32a9a688e9c8ada07a2691a13759e09b02d
   docs/pkg/models/operations/createlmscourserequest.md:
     id: 7303c0ccfb15
     last_write_checksum: sha1:0bc33ba4f7d9b53da0b41ff42b3f68e0ad8845d5
@@ -1271,8 +1271,8 @@ trackedFiles:
     pristine_git_object: 735f903ffdc02848fd81266cdcbc1dbd672ef939
   docs/pkg/models/operations/createsigningdocumentqueryparamfields.md:
     id: 6f745db1d66a
-    last_write_checksum: sha1:962d592d36beeb723b53501bbab4749cfa7372bd
-    pristine_git_object: c44e4dd91f47c8ee40e2a9a277d447764cb3b12d
+    last_write_checksum: sha1:7725bc5d262bf45781f52be195e2c7b5cf03d82f
+    pristine_git_object: d167204619da95724c1131766abd23102637858f
   docs/pkg/models/operations/createsigningdocumentrequest.md:
     id: 232bced2be82
     last_write_checksum: sha1:447a49520dd06a183c6e54500ec1d85862af613a
@@ -2339,8 +2339,8 @@ trackedFiles:
     pristine_git_object: 1d92fcfceb12a6d53e5a812910095775932fd8c6
   docs/pkg/models/operations/getlmscoursequeryparamfields.md:
     id: 2868ba5906e6
-    last_write_checksum: sha1:4fc708ce42f48c2d8bd79b9ae9a0d060ac66e1ed
-    pristine_git_object: c09c234416341dadd4aa6e45eb6824eac9ecb153
+    last_write_checksum: sha1:c56e300e5a0fa5e9322cee7979968c08356a17a6
+    pristine_git_object: 6afdf46bdaddb588b9dcc90325848c08ff0a883c
   docs/pkg/models/operations/getlmscourserequest.md:
     id: 26bf8d9df9fc
     last_write_checksum: sha1:dea16f773fa1e7ef64510ebccfddbd8c8479237c
@@ -2631,8 +2631,8 @@ trackedFiles:
     pristine_git_object: 3a299353f2e60ee2f24f8e656ae32edd51d5b912
   docs/pkg/models/operations/getsigningdocumentqueryparamfields.md:
     id: 5c5595a91edf
-    last_write_checksum: sha1:fbbee561a669c72de42e1ea19fa9f5a41e1bee00
-    pristine_git_object: a1d4f35375ee97c8128e616a03d7abb9761b4d16
+    last_write_checksum: sha1:c4edea46b85782612ca612f585a69a5119e9eba7
+    pristine_git_object: e9a655ebaee4d97d08f11617de5cb060bde6beb9
   docs/pkg/models/operations/getsigningdocumentrequest.md:
     id: 3e13dc2479e3
     last_write_checksum: sha1:bc3a449b12ae97a96836d94c76b09ed628fba38c
@@ -3867,8 +3867,8 @@ trackedFiles:
     pristine_git_object: b8453f479fe905f32fd10837ec28b3a169f13622
   docs/pkg/models/operations/listlmscoursesqueryparamfields.md:
     id: cdad21fe56ce
-    last_write_checksum: sha1:03be58a1561880d0ecfb7fbbfb687dab8e07910c
-    pristine_git_object: 6a21e34a8c0113cca202a622456815218a481139
+    last_write_checksum: sha1:bc7320b2973a52f39571fafb517f0908dbd11f38
+    pristine_git_object: a594dbd37db1b112b9634f0b564eba12a7595182
   docs/pkg/models/operations/listlmscoursesrequest.md:
     id: bc56f5e34221
     last_write_checksum: sha1:eeb3dc57738a1677ed031de0b3323858d49ee060
@@ -4167,8 +4167,8 @@ trackedFiles:
     pristine_git_object: 16c63f8035b7a6f0157eeebf83bbedca6ae68ddd
   docs/pkg/models/operations/listsigningdocumentsqueryparamfields.md:
     id: ae8ef793564d
-    last_write_checksum: sha1:966415dbe65918f2f237d0224d11e79a075838c2
-    pristine_git_object: dd8aa326148cab96d1ffc90b6af0674b5f821805
+    last_write_checksum: sha1:32f49986f53841c6540c143573d30091ff518fc1
+    pristine_git_object: 70b66c2de4e4c3e8e6a27facdec890a53c53476a
   docs/pkg/models/operations/listsigningdocumentsrequest.md:
     id: a4e9d590377b
     last_write_checksum: sha1:9ed84fe64eddc8c0eaf21a135950c3e1f56263bb
@@ -5219,8 +5219,8 @@ trackedFiles:
     pristine_git_object: 14daa8c9be9ecc4fd0c553a19374f36558de2c13
   docs/pkg/models/operations/patchlmscoursequeryparamfields.md:
     id: 3402be4490d0
-    last_write_checksum: sha1:23fd5d6534c8b1f604c3be167de6fe1186586a91
-    pristine_git_object: d958af45039953783ee5cb808f7c79a83db5224d
+    last_write_checksum: sha1:eee8e42b9603a9f7fa11c03e21f9d36cd828f86b
+    pristine_git_object: b53eba47e2063ee0b7a98f4382c2ead110b7caf6
   docs/pkg/models/operations/patchlmscourserequest.md:
     id: e8d4e3880f8f
     last_write_checksum: sha1:26c85602919002d2ef56470c75898b39a6a2f44f
@@ -5479,8 +5479,8 @@ trackedFiles:
     pristine_git_object: 607b23f98c791ffd02f5d52784441d946842c351
   docs/pkg/models/operations/patchsigningdocumentqueryparamfields.md:
     id: a654fe7b6a41
-    last_write_checksum: sha1:2cc7c8e4dd8ee17c22426b5cd9a9a9626e27f2df
-    pristine_git_object: 2f3a324cfd85708f8ff226560e70440be56a09c5
+    last_write_checksum: sha1:5170fe15d139b4148aa3aab79a0240c51a48b18d
+    pristine_git_object: 97c499018402dc934725576d56db22dab423d12e
   docs/pkg/models/operations/patchsigningdocumentrequest.md:
     id: 21acf5505f39
     last_write_checksum: sha1:233c0afffa559406c14c7444ef252351abf1f844
@@ -7271,8 +7271,8 @@ trackedFiles:
     pristine_git_object: 1a516269b7946da454d63439281c122c3234ba3b
   docs/pkg/models/operations/updatelmscoursequeryparamfields.md:
     id: 5f24831c211d
-    last_write_checksum: sha1:afdb03a329d83d05f6d84ca4dc6aebba4db786c5
-    pristine_git_object: cf7f2a7a4ddbb186945df355e4e9868f3a0512d5
+    last_write_checksum: sha1:98c59e885fb41d8bcf3ca842d8eb18f56b6a019e
+    pristine_git_object: b10ff3a7a03270e8855fce1d061c7de6efda0a4a
   docs/pkg/models/operations/updatelmscourserequest.md:
     id: 55d147cd74b7
     last_write_checksum: sha1:9df53edd0164b7855b670c293cb200ef6efcd09e
@@ -7531,8 +7531,8 @@ trackedFiles:
     pristine_git_object: f0d5d9b6a68d98ed9d99dfec57c7067eac1ffcf3
   docs/pkg/models/operations/updatesigningdocumentqueryparamfields.md:
     id: fb53360da8d8
-    last_write_checksum: sha1:c91e862d9f0e18e2ae55253eeb34f190ce4e5b0e
-    pristine_git_object: e36a63f928e8e6a215f3d1b9d3f04d4f1cfae862
+    last_write_checksum: sha1:83dbb7d1ea89734d634c116335c2fc242cc726f2
+    pristine_git_object: ac28964c83db004f3dd02fb670cd392d95e02b6d
   docs/pkg/models/operations/updatesigningdocumentrequest.md:
     id: 22075d15f599
     last_write_checksum: sha1:22fab3e86ef7b12b6aba48a9df579cb9d6e008f0
@@ -9327,8 +9327,8 @@ trackedFiles:
     pristine_git_object: 1d7fc027261a0b9f38d588c95ff83fcf0f09e3c6
   docs/pkg/models/shared/lmscourse.md:
     id: d3ba36ac47af
-    last_write_checksum: sha1:7d798ca712ac4696508ed911ae4abba520e38ebc
-    pristine_git_object: 13a9cae5897e5a6023b5e81d82f35e274f290503
+    last_write_checksum: sha1:40c9ffb240b9aa4a19452a6fd0cbc037a8a54106
+    pristine_git_object: 915146ee83fb0b0a6b0121a2df1115883a323b8b
   docs/pkg/models/shared/lmsemail.md:
     id: 7b9a7bfe49fd
     last_write_checksum: sha1:2704f81f7b5a9c1bc98cc074693c921380fc3f05
@@ -9339,8 +9339,8 @@ trackedFiles:
     pristine_git_object: f928e03623b1336e68ec3ce147d2c49e93dc7e97
   docs/pkg/models/shared/lmsmedia.md:
     id: 4ce53746663f
-    last_write_checksum: sha1:36cab51f6afb1ca1472fde1389537b0f5ab515e0
-    pristine_git_object: 7fd4389fc666d3131e385c7847e8670de3441b6c
+    last_write_checksum: sha1:32040f937b2669d25454e3e50932b5189e169989
+    pristine_git_object: df0ed03a013a4429b9da87df8c0dd49de24847a5
   docs/pkg/models/shared/lmsmediatype.md:
     id: 95d658bfbd10
     last_write_checksum: sha1:ccde99582272982b79a7563f1201ab1315d33e38
@@ -10491,8 +10491,8 @@ trackedFiles:
     pristine_git_object: 4aeb1973c876ac1f0e6fde6dd2f22cb4830bbdd4
   docs/pkg/models/shared/role.md:
     id: cae6f352760e
-    last_write_checksum: sha1:420a8561e68eca69a1427fd8d3f9940361050197
-    pristine_git_object: a1a8a7095be33d4c03b4363903a61cb29796d89e
+    last_write_checksum: sha1:ad5398c0f20c4560a89569dd895f5c29bfd66ed0
+    pristine_git_object: 4520f8f248776d5d4450ab826fd7798627cef8e6
   docs/pkg/models/shared/saml.md:
     id: d5948d967cd9
     last_write_checksum: sha1:7517e97509a4ede50458e71b79fa948f921f125b
@@ -10679,8 +10679,8 @@ trackedFiles:
     pristine_git_object: f229aecf7ccefdf92b38f47b86b875f0f542d293
   docs/pkg/models/shared/signingdocument.md:
     id: 56e60de8283f
-    last_write_checksum: sha1:538c95b85a96b114a488fdefbe5266d4db7359fb
-    pristine_git_object: 1cf0c8a127167f58be80a4540c671b5c791ea35d
+    last_write_checksum: sha1:5719d137939c3dcb6dedb1d27a9ac239cc73c85c
+    pristine_git_object: 77e664bb73e907f1a158d465aad643f2dd0704ff
   docs/pkg/models/shared/signingdocumentstatus.md:
     id: f68ec3ce07d7
     last_write_checksum: sha1:24f1dbfaa7d76f2806a2cf9de9a537e847a1c34b
@@ -12199,8 +12199,8 @@ trackedFiles:
     pristine_git_object: 29c1a4f2e137121fbbcdf0a3eeee8225878c9966
   pkg/models/operations/createlmscourse.go:
     id: c4abce3beaec
-    last_write_checksum: sha1:db53b27557a1c9fd361e731c74118ebf8c7526a9
-    pristine_git_object: e17601784f4e020b855b22484e0aeccb49cf4214
+    last_write_checksum: sha1:61eaf5022f071b5cba2bff13c9158d6f56854369
+    pristine_git_object: bd722f57ee57978e5ee5d634754711b912ad5f8b
   pkg/models/operations/createlmsinstructor.go:
     id: 84a95551d615
     last_write_checksum: sha1:37f942b57468c185ff23532aab957cb28bbd3a4d
@@ -12291,8 +12291,8 @@ trackedFiles:
     pristine_git_object: 2e2c521334d902ecb74e38390795136d657cb0ea
   pkg/models/operations/createsigningdocument.go:
     id: bc463991ee56
-    last_write_checksum: sha1:4ab4de613df38efa0f107de6512fe703d8acdf98
-    pristine_git_object: a1d9d87185ab25144b2e91512bd1acfa99eae9a1
+    last_write_checksum: sha1:357fc0caab9aaa4f295a3bfa2bcf583dc58aab8f
+    pristine_git_object: 1f8b74cb96db7c693ce1c87c8919e843aa7c1857
   pkg/models/operations/createsigningsignatory.go:
     id: 9bdc0d724c84
     last_write_checksum: sha1:6623ef1b646815778e72fad1f9c56b9ffffaaef1
@@ -12655,8 +12655,8 @@ trackedFiles:
     pristine_git_object: 9344151e7a0969b18cbe0941513ff354e58cb8ef
   pkg/models/operations/getlmscourse.go:
     id: 63f3f593ea96
-    last_write_checksum: sha1:2792acdad1864d28b02d1ae66db5e79f771e2e9e
-    pristine_git_object: 5bdf89736456867b24d537529f8ccd518f852694
+    last_write_checksum: sha1:478b2e47afbc7dca3c72d5aa61b5ab728b23bddc
+    pristine_git_object: 7e5000a57a954d7046c5118f5cb09affa72660c9
   pkg/models/operations/getlmsinstructor.go:
     id: 0d98313976c4
     last_write_checksum: sha1:6b932947c75f67ff0376eb4e1f597f995be1ecb3
@@ -12755,8 +12755,8 @@ trackedFiles:
     pristine_git_object: 3a9512870b870f5e66fa40f8244e5462d23f56b3
   pkg/models/operations/getsigningdocument.go:
     id: e3f5061c4212
-    last_write_checksum: sha1:e3eef9145d513ea32b7a61771577233ffd95342a
-    pristine_git_object: 87ac786a5f1f9dad203ee7607ed08c491eef802f
+    last_write_checksum: sha1:ec4b1e091591085e4231fa46ae4fbb9af0d554cd
+    pristine_git_object: 5a643aa40a9006878636fcddf4199e713a4b2cda
   pkg/models/operations/getsigningsignatory.go:
     id: 9f63f22a3897
     last_write_checksum: sha1:19e986e807badf1d24022a70249918c9f9f11299
@@ -13179,8 +13179,8 @@ trackedFiles:
     pristine_git_object: 19cae021bccb5cc43c21449f8cc7630f0145551a
   pkg/models/operations/listlmscourses.go:
     id: 690bb68a6a5a
-    last_write_checksum: sha1:020afe3e98d9f6b052c1a0ce720fca3479087db3
-    pristine_git_object: e94bd6ea786098071ab34c3bfc5e278f1804a1b3
+    last_write_checksum: sha1:c2812b23fb04820896b3db8ccf195d1045ddef73
+    pristine_git_object: 351415af8f54e2a1dbaa00b06c116a2d3fcadad8
   pkg/models/operations/listlmsinstructors.go:
     id: d62cf1904723
     last_write_checksum: sha1:5066b1edefee45e18dc984e8e3d1159b140f0e93
@@ -13283,8 +13283,8 @@ trackedFiles:
     pristine_git_object: bdc641f81d4719f426c83b82da554f557fc3be5a
   pkg/models/operations/listsigningdocuments.go:
     id: 836be34dfed8
-    last_write_checksum: sha1:edeb821931f277618f582be17e41d4d2aca7842e
-    pristine_git_object: 06b366dc690dcde7155cb5bd8404c1027ec7bfbd
+    last_write_checksum: sha1:782b903d54ba656cfdfb6619263dba697bb0c466
+    pristine_git_object: 7faa94939fcca93c2adbe9a7da827e958848629f
   pkg/models/operations/listsigningsignatories.go:
     id: af2b11eefe77
     last_write_checksum: sha1:8fc5a3f4630795ef759e884bd963d043cbef1d45
@@ -13647,8 +13647,8 @@ trackedFiles:
     pristine_git_object: 4fc28d04d93061d1c6de71fabf7983e2d585e873
   pkg/models/operations/patchlmscourse.go:
     id: 87a7f916d053
-    last_write_checksum: sha1:869f642473bc79cfb58536b23b63099401cd1cb0
-    pristine_git_object: b5800d9cfd8c55aea01f2807bcc92ef274f9e5db
+    last_write_checksum: sha1:8be3312a09087f26d58526ee083380ac4e9e62ac
+    pristine_git_object: ff8a29cacbe3ca0fe2b761b037f3a4f3269bf0d0
   pkg/models/operations/patchlmsinstructor.go:
     id: eb2e5b780d03
     last_write_checksum: sha1:7a0df981d140063d7998e1108034edc005062cc9
@@ -13739,8 +13739,8 @@ trackedFiles:
     pristine_git_object: 4e1e9b3d3975f0384f0dbd033456ebe24824afef
   pkg/models/operations/patchsigningdocument.go:
     id: e9fe66dacb1b
-    last_write_checksum: sha1:c9d30ef799389188f5611717e1c8d035c657b0d3
-    pristine_git_object: 3408de54fa72e1a39620fb75b1ab9ff67d95313f
+    last_write_checksum: sha1:caee3248c6f1443288e958f3d7a937260a2af1a8
+    pristine_git_object: 4c80cb688c3fd8d8285397d564ff7bfc5d5a2340
   pkg/models/operations/patchsigningsignatory.go:
     id: 35870323a80d
     last_write_checksum: sha1:fb795086b690680e8ce95194c6c3bec0103b2b8f
@@ -14475,8 +14475,8 @@ trackedFiles:
     pristine_git_object: 7e734244e0cbc4a18df3aeaac87ca5ab957268cd
   pkg/models/operations/updatelmscourse.go:
     id: 5d11e24a38ca
-    last_write_checksum: sha1:a9720fbde7ee75941bf11fab62442ccb365640d7
-    pristine_git_object: 95ea3257740ca56ab84b1a6f2a7f43c18381637f
+    last_write_checksum: sha1:457c75d062cd2b688468222b0daa49615c4ea7e8
+    pristine_git_object: 7f4695f66b2c359af5be26754cddd399a78bb042
   pkg/models/operations/updatelmsinstructor.go:
     id: 02e2b803d661
     last_write_checksum: sha1:c52e426d296715f0d4dadb2a1d66474352292f8d
@@ -14567,8 +14567,8 @@ trackedFiles:
     pristine_git_object: 9c48cbfc354d158a374e3f7db78f6eaaf3976460
   pkg/models/operations/updatesigningdocument.go:
     id: 7ca6f010a357
-    last_write_checksum: sha1:d4098f9995d7097fb85df9da9c080b05a426d160
-    pristine_git_object: 4cf4eb9cd8f36b328593360178f4d92bb6f287a4
+    last_write_checksum: sha1:9140c23a4af5ab66f332a652b9e9f2ef404777b3
+    pristine_git_object: d03233e93ecbb2f643a4b2436bb036e52f011749
   pkg/models/operations/updatesigningsignatory.go:
     id: a52d26d6c330
     last_write_checksum: sha1:aec7ebcf1dcc70194e6f91b62527382698d45bfd
@@ -15199,8 +15199,8 @@ trackedFiles:
     pristine_git_object: 421e3f3f410e057ad89c65f78a27f63a64b3bef2
   pkg/models/shared/genaicontent.go:
     id: 1460da00bb8c
-    last_write_checksum: sha1:aa0c9e14e3dcbec5e6d3fb489ffd7044bc8b62a2
-    pristine_git_object: 9265eb6ea6dc9127963c6852a14ba943818af0f2
+    last_write_checksum: sha1:983aecdcfece31f85c1ca36f36e6f4c5036b9ba4
+    pristine_git_object: 4c032be726a277d7f6023c191e1cf0ba6fb6e14c
   pkg/models/shared/genaiembedding.go:
     id: 23e200433b92
     last_write_checksum: sha1:182817011c8699db463519653ddaeeeaebbf7be4
@@ -15335,8 +15335,8 @@ trackedFiles:
     pristine_git_object: ed202707ed9e213b67a84322f9bfc22136ec441f
   pkg/models/shared/lmscourse.go:
     id: d731010503e7
-    last_write_checksum: sha1:66f20b2ec1e6470ea619b3df0dbb9bfa7423ba28
-    pristine_git_object: ebba4ec31cd3e26b2d455d79851129835ea3c1b0
+    last_write_checksum: sha1:4a895e83f93398b8295ad1fcb1aeb2c8d0ba842f
+    pristine_git_object: 5ec85d8ead18c30f79463b3de54d055eaabe5065
   pkg/models/shared/lmsemail.go:
     id: f2f2f87a5c3b
     last_write_checksum: sha1:087554c090c15a66e885b51dd80c94f2e5d48803
@@ -15347,8 +15347,8 @@ trackedFiles:
     pristine_git_object: a54a0c0c3ef93205d12f5e80d14d126f61559607
   pkg/models/shared/lmsmedia.go:
     id: 2c6cd12bff84
-    last_write_checksum: sha1:e7cb69e248b9fa4c9b66f78c31e048c052e0e788
-    pristine_git_object: 05d8b1b09cd920147149d0fcd979fc955f497d2b
+    last_write_checksum: sha1:fcb5811d3b4ecddda6d438d912b9ea7d2d209b97
+    pristine_git_object: 7460732cf88bd19735b08a7624a605c114ba5509
   pkg/models/shared/lmsstudent.go:
     id: b3f1449d0525
     last_write_checksum: sha1:017b33e6d40503020b2229722a47bbcafb8fb69b
@@ -16183,8 +16183,8 @@ trackedFiles:
     pristine_git_object: ef0858b669f45c546e5d85c6ae0be5cac9afd644
   pkg/models/shared/signingdocument.go:
     id: aa6586f8bc80
-    last_write_checksum: sha1:d8c72fba9c214cad68b233fdd73ad7c0cd1a5c7e
-    pristine_git_object: 11f06ab96c10a1334e30d1d20df8b60f9f1a4bd7
+    last_write_checksum: sha1:c0076b1c2391d955f21577c3973c1201dab40408
+    pristine_git_object: bacd5a68b4c6cee7a5d084ccaeb65f859494f74d
   pkg/models/shared/signingsignatory.go:
     id: a7d4c915c633
     last_write_checksum: sha1:098a7a1a22c536e265628e7a1f17ee1c57445a6e
@@ -16559,8 +16559,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:1a261ff16cc56bbee43c40a34251e694966eb48d
-    pristine_git_object: 61e24ff88fe0c12570153743a7b3ca238c909882
+    last_write_checksum: sha1:697446f4671262c157284ed4564a36ba57c8cf23
+    pristine_git_object: 9ef9b65c2eec860adfe0a984a61861d4db39e01f
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22744,7 +22744,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Document.CreateSigningDocument()`: **Added**\n* `UnifiedTo.Document.GetSigningDocument()`: **Added**\n* `UnifiedTo.Document.ListSigningDocuments()`: **Added**\n* `UnifiedTo.Document.PatchSigningDocument()`: **Added**\n* `UnifiedTo.Document.RemoveSigningDocument()`: **Added**\n* `UnifiedTo.Document.UpdateSigningDocument()`: **Added**\n* `UnifiedTo.Signing.CreateSigningDocument()`: **Added**\n* `UnifiedTo.Signing.CreateSigningSignatory()`: **Added**\n* `UnifiedTo.Signing.GetSigningDocument()`: **Added**\n* `UnifiedTo.Signing.GetSigningSignatory()`: **Added**\n* `UnifiedTo.Signing.GetSigningTemplate()`: **Added**\n* `UnifiedTo.Signing.ListSigningDocuments()`: **Added**\n* `UnifiedTo.Signing.ListSigningSignatories()`: **Added**\n* `UnifiedTo.Signing.ListSigningTemplates()`: **Added**\n* `UnifiedTo.Signing.PatchSigningDocument()`: **Added**\n* `UnifiedTo.Signing.PatchSigningSignatory()`: **Added**\n* `UnifiedTo.Signing.RemoveSigningDocument()`: **Added**\n* `UnifiedTo.Signing.RemoveSigningSignatory()`: **Added**\n* `UnifiedTo.Signing.UpdateSigningDocument()`: **Added**\n* `UnifiedTo.Signing.UpdateSigningSignatory()`: **Added**\n* `UnifiedTo.Signatory.CreateSigningSignatory()`: **Added**\n* `UnifiedTo.Signatory.GetSigningSignatory()`: **Added**\n* `UnifiedTo.Signatory.ListSigningSignatories()`: **Added**\n* `UnifiedTo.Signatory.PatchSigningSignatory()`: **Added**\n* `UnifiedTo.Signatory.RemoveSigningSignatory()`: **Added**\n* `UnifiedTo.Signatory.UpdateSigningSignatory()`: **Added**\n* `UnifiedTo.Template.GetSigningTemplate()`: **Added**\n* `UnifiedTo.Template.ListSigningTemplates()`: **Added**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`: \n  *  `request.Request.Categories` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Document.CreateSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Document.GetSigningDocument()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Document.ListSigningDocuments()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[].Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Document.PatchSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Document.UpdateSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Signing.CreateSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Signing.GetSigningDocument()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Signing.ListSigningDocuments()`: \n  *  `request.Request.Fields` **Changed** (Breaking ⚠️)\n  *  `response.[].Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Signing.PatchSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Signing.UpdateSigningDocument()`: \n  *  `request.Request` **Changed** (Breaking ⚠️)\n  *  `response.Metadata` **Removed** (Breaking ⚠️)\n* `UnifiedTo.Lms.ListLmsCollections()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Collection.ListLmsCollections()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Collection.PatchLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Collection.UpdateLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Genai.CreateGenaiPrompt()`: \n  *  `request.Request.GenaiPrompt.Messages[].Role.Enum(assistant)` **Added**\n  *  `response.Messages[].Role.Enum(assistant)` **Added**\n* `UnifiedTo.Prompt.CreateGenaiPrompt()`: \n  *  `request.Request.GenaiPrompt.Messages[].Role.Enum(assistant)` **Added**\n  *  `response.Messages[].Role.Enum(assistant)` **Added**\n* `UnifiedTo.Lms.CreateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.CreateLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.CreateLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.CreateLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Lms.GetLmsClass()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.GetLmsCollection()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.GetLmsContent()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.GetLmsCourse()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Lms.ListLmsClasses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Collection.CreateLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.ListLmsContents()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Lms.ListLmsCourses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Collection.GetLmsCollection()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.PatchLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Lms.UpdateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.UpdateLmsCollection()`: \n  *  `request.Request.LmsCollection.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.UpdateLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Lms.UpdateLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Class.CreateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Class.GetLmsClass()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Class.ListLmsClasses()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Class.PatchLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Class.UpdateLmsClass()`: \n  *  `request.Request.LmsClass.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Content.CreateLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Content.GetLmsContent()`:  `response.Media[]` **Changed**\n* `UnifiedTo.Content.ListLmsContents()`:  `response.[].Media[]` **Changed**\n* `UnifiedTo.Content.PatchLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Content.UpdateLmsContent()`: \n  *  `request.Request.LmsContent.Media[]` **Changed**\n  *  `response.Media[]` **Changed**\n* `UnifiedTo.Course.CreateLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Course.GetLmsCourse()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Course.ListLmsCourses()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Course.PatchLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Course.UpdateLmsCourse()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

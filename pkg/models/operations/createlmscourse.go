@@ -12,25 +12,29 @@ import (
 type CreateLmsCourseQueryParamFields string
 
 const (
-	CreateLmsCourseQueryParamFieldsID              CreateLmsCourseQueryParamFields = "id"
-	CreateLmsCourseQueryParamFieldsCreatedAt       CreateLmsCourseQueryParamFields = "created_at"
-	CreateLmsCourseQueryParamFieldsUpdatedAt       CreateLmsCourseQueryParamFields = "updated_at"
-	CreateLmsCourseQueryParamFieldsName            CreateLmsCourseQueryParamFields = "name"
-	CreateLmsCourseQueryParamFieldsDescription     CreateLmsCourseQueryParamFields = "description"
-	CreateLmsCourseQueryParamFieldsIsPrivate       CreateLmsCourseQueryParamFields = "is_private"
-	CreateLmsCourseQueryParamFieldsIsActive        CreateLmsCourseQueryParamFields = "is_active"
-	CreateLmsCourseQueryParamFieldsPriceAmount     CreateLmsCourseQueryParamFields = "price_amount"
-	CreateLmsCourseQueryParamFieldsLanguages       CreateLmsCourseQueryParamFields = "languages"
-	CreateLmsCourseQueryParamFieldsCategories      CreateLmsCourseQueryParamFields = "categories"
-	CreateLmsCourseQueryParamFieldsCurrency        CreateLmsCourseQueryParamFields = "currency"
-	CreateLmsCourseQueryParamFieldsMedia           CreateLmsCourseQueryParamFields = "media"
-	CreateLmsCourseQueryParamFieldsInstructorIds   CreateLmsCourseQueryParamFields = "instructor_ids"
-	CreateLmsCourseQueryParamFieldsStudentIds      CreateLmsCourseQueryParamFields = "student_ids"
-	CreateLmsCourseQueryParamFieldsContentIds      CreateLmsCourseQueryParamFields = "content_ids"
-	CreateLmsCourseQueryParamFieldsSkills          CreateLmsCourseQueryParamFields = "skills"
-	CreateLmsCourseQueryParamFieldsDurationMinutes CreateLmsCourseQueryParamFields = "duration_minutes"
-	CreateLmsCourseQueryParamFieldsProviderName    CreateLmsCourseQueryParamFields = "provider_name"
-	CreateLmsCourseQueryParamFieldsRaw             CreateLmsCourseQueryParamFields = "raw"
+	CreateLmsCourseQueryParamFieldsID                  CreateLmsCourseQueryParamFields = "id"
+	CreateLmsCourseQueryParamFieldsCreatedAt           CreateLmsCourseQueryParamFields = "created_at"
+	CreateLmsCourseQueryParamFieldsUpdatedAt           CreateLmsCourseQueryParamFields = "updated_at"
+	CreateLmsCourseQueryParamFieldsName                CreateLmsCourseQueryParamFields = "name"
+	CreateLmsCourseQueryParamFieldsDescription         CreateLmsCourseQueryParamFields = "description"
+	CreateLmsCourseQueryParamFieldsIsPrivate           CreateLmsCourseQueryParamFields = "is_private"
+	CreateLmsCourseQueryParamFieldsIsActive            CreateLmsCourseQueryParamFields = "is_active"
+	CreateLmsCourseQueryParamFieldsPriceAmount         CreateLmsCourseQueryParamFields = "price_amount"
+	CreateLmsCourseQueryParamFieldsLanguages           CreateLmsCourseQueryParamFields = "languages"
+	CreateLmsCourseQueryParamFieldsCategories          CreateLmsCourseQueryParamFields = "categories"
+	CreateLmsCourseQueryParamFieldsCurrency            CreateLmsCourseQueryParamFields = "currency"
+	CreateLmsCourseQueryParamFieldsMedia               CreateLmsCourseQueryParamFields = "media"
+	CreateLmsCourseQueryParamFieldsInstructorIds       CreateLmsCourseQueryParamFields = "instructor_ids"
+	CreateLmsCourseQueryParamFieldsInstructors         CreateLmsCourseQueryParamFields = "instructors"
+	CreateLmsCourseQueryParamFieldsStudentIds          CreateLmsCourseQueryParamFields = "student_ids"
+	CreateLmsCourseQueryParamFieldsStudents            CreateLmsCourseQueryParamFields = "students"
+	CreateLmsCourseQueryParamFieldsContentIds          CreateLmsCourseQueryParamFields = "content_ids"
+	CreateLmsCourseQueryParamFieldsSkills              CreateLmsCourseQueryParamFields = "skills"
+	CreateLmsCourseQueryParamFieldsDurationMinutes     CreateLmsCourseQueryParamFields = "duration_minutes"
+	CreateLmsCourseQueryParamFieldsProviderName        CreateLmsCourseQueryParamFields = "provider_name"
+	CreateLmsCourseQueryParamFieldsRaw                 CreateLmsCourseQueryParamFields = "raw"
+	CreateLmsCourseQueryParamFieldsPublishedAt         CreateLmsCourseQueryParamFields = "published_at"
+	CreateLmsCourseQueryParamFieldsTimeEstimateMinutes CreateLmsCourseQueryParamFields = "time_estimate_minutes"
 )
 
 func (e CreateLmsCourseQueryParamFields) ToPointer() *CreateLmsCourseQueryParamFields {
@@ -68,7 +72,11 @@ func (e *CreateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "instructor_ids":
 		fallthrough
+	case "instructors":
+		fallthrough
 	case "student_ids":
+		fallthrough
+	case "students":
 		fallthrough
 	case "content_ids":
 		fallthrough
@@ -79,6 +87,10 @@ func (e *CreateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "provider_name":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "published_at":
+		fallthrough
+	case "time_estimate_minutes":
 		*e = CreateLmsCourseQueryParamFields(v)
 		return nil
 	default:

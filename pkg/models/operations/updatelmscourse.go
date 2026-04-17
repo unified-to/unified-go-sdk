@@ -12,25 +12,29 @@ import (
 type UpdateLmsCourseQueryParamFields string
 
 const (
-	UpdateLmsCourseQueryParamFieldsID              UpdateLmsCourseQueryParamFields = "id"
-	UpdateLmsCourseQueryParamFieldsCreatedAt       UpdateLmsCourseQueryParamFields = "created_at"
-	UpdateLmsCourseQueryParamFieldsUpdatedAt       UpdateLmsCourseQueryParamFields = "updated_at"
-	UpdateLmsCourseQueryParamFieldsName            UpdateLmsCourseQueryParamFields = "name"
-	UpdateLmsCourseQueryParamFieldsDescription     UpdateLmsCourseQueryParamFields = "description"
-	UpdateLmsCourseQueryParamFieldsIsPrivate       UpdateLmsCourseQueryParamFields = "is_private"
-	UpdateLmsCourseQueryParamFieldsIsActive        UpdateLmsCourseQueryParamFields = "is_active"
-	UpdateLmsCourseQueryParamFieldsPriceAmount     UpdateLmsCourseQueryParamFields = "price_amount"
-	UpdateLmsCourseQueryParamFieldsLanguages       UpdateLmsCourseQueryParamFields = "languages"
-	UpdateLmsCourseQueryParamFieldsCategories      UpdateLmsCourseQueryParamFields = "categories"
-	UpdateLmsCourseQueryParamFieldsCurrency        UpdateLmsCourseQueryParamFields = "currency"
-	UpdateLmsCourseQueryParamFieldsMedia           UpdateLmsCourseQueryParamFields = "media"
-	UpdateLmsCourseQueryParamFieldsInstructorIds   UpdateLmsCourseQueryParamFields = "instructor_ids"
-	UpdateLmsCourseQueryParamFieldsStudentIds      UpdateLmsCourseQueryParamFields = "student_ids"
-	UpdateLmsCourseQueryParamFieldsContentIds      UpdateLmsCourseQueryParamFields = "content_ids"
-	UpdateLmsCourseQueryParamFieldsSkills          UpdateLmsCourseQueryParamFields = "skills"
-	UpdateLmsCourseQueryParamFieldsDurationMinutes UpdateLmsCourseQueryParamFields = "duration_minutes"
-	UpdateLmsCourseQueryParamFieldsProviderName    UpdateLmsCourseQueryParamFields = "provider_name"
-	UpdateLmsCourseQueryParamFieldsRaw             UpdateLmsCourseQueryParamFields = "raw"
+	UpdateLmsCourseQueryParamFieldsID                  UpdateLmsCourseQueryParamFields = "id"
+	UpdateLmsCourseQueryParamFieldsCreatedAt           UpdateLmsCourseQueryParamFields = "created_at"
+	UpdateLmsCourseQueryParamFieldsUpdatedAt           UpdateLmsCourseQueryParamFields = "updated_at"
+	UpdateLmsCourseQueryParamFieldsName                UpdateLmsCourseQueryParamFields = "name"
+	UpdateLmsCourseQueryParamFieldsDescription         UpdateLmsCourseQueryParamFields = "description"
+	UpdateLmsCourseQueryParamFieldsIsPrivate           UpdateLmsCourseQueryParamFields = "is_private"
+	UpdateLmsCourseQueryParamFieldsIsActive            UpdateLmsCourseQueryParamFields = "is_active"
+	UpdateLmsCourseQueryParamFieldsPriceAmount         UpdateLmsCourseQueryParamFields = "price_amount"
+	UpdateLmsCourseQueryParamFieldsLanguages           UpdateLmsCourseQueryParamFields = "languages"
+	UpdateLmsCourseQueryParamFieldsCategories          UpdateLmsCourseQueryParamFields = "categories"
+	UpdateLmsCourseQueryParamFieldsCurrency            UpdateLmsCourseQueryParamFields = "currency"
+	UpdateLmsCourseQueryParamFieldsMedia               UpdateLmsCourseQueryParamFields = "media"
+	UpdateLmsCourseQueryParamFieldsInstructorIds       UpdateLmsCourseQueryParamFields = "instructor_ids"
+	UpdateLmsCourseQueryParamFieldsInstructors         UpdateLmsCourseQueryParamFields = "instructors"
+	UpdateLmsCourseQueryParamFieldsStudentIds          UpdateLmsCourseQueryParamFields = "student_ids"
+	UpdateLmsCourseQueryParamFieldsStudents            UpdateLmsCourseQueryParamFields = "students"
+	UpdateLmsCourseQueryParamFieldsContentIds          UpdateLmsCourseQueryParamFields = "content_ids"
+	UpdateLmsCourseQueryParamFieldsSkills              UpdateLmsCourseQueryParamFields = "skills"
+	UpdateLmsCourseQueryParamFieldsDurationMinutes     UpdateLmsCourseQueryParamFields = "duration_minutes"
+	UpdateLmsCourseQueryParamFieldsProviderName        UpdateLmsCourseQueryParamFields = "provider_name"
+	UpdateLmsCourseQueryParamFieldsRaw                 UpdateLmsCourseQueryParamFields = "raw"
+	UpdateLmsCourseQueryParamFieldsPublishedAt         UpdateLmsCourseQueryParamFields = "published_at"
+	UpdateLmsCourseQueryParamFieldsTimeEstimateMinutes UpdateLmsCourseQueryParamFields = "time_estimate_minutes"
 )
 
 func (e UpdateLmsCourseQueryParamFields) ToPointer() *UpdateLmsCourseQueryParamFields {
@@ -68,7 +72,11 @@ func (e *UpdateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "instructor_ids":
 		fallthrough
+	case "instructors":
+		fallthrough
 	case "student_ids":
+		fallthrough
+	case "students":
 		fallthrough
 	case "content_ids":
 		fallthrough
@@ -79,6 +87,10 @@ func (e *UpdateLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "provider_name":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "published_at":
+		fallthrough
+	case "time_estimate_minutes":
 		*e = UpdateLmsCourseQueryParamFields(v)
 		return nil
 	default:
