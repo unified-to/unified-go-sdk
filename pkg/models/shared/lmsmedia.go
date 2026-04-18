@@ -31,8 +31,9 @@ func (e *LmsMediaType) IsExact() bool {
 }
 
 type LmsMedia struct {
-	Content      *string       `json:"content,omitempty"`
-	Description  *string       `json:"description,omitempty"`
+	Content     *string `json:"content,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// ISO 2-digit language codes
 	Languages    []string      `json:"languages,omitempty"`
 	Name         *string       `json:"name,omitempty"`
 	ThumbnailURL *string       `json:"thumbnail_url,omitempty"`

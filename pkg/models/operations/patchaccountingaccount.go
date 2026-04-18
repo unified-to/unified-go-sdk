@@ -29,8 +29,8 @@ const (
 	PatchAccountingAccountQueryParamFieldsSubgroup            PatchAccountingAccountQueryParamFields = "subgroup"
 	PatchAccountingAccountQueryParamFieldsParentID            PatchAccountingAccountQueryParamFields = "parent_id"
 	PatchAccountingAccountQueryParamFieldsTaxonomy            PatchAccountingAccountQueryParamFields = "taxonomy"
-	PatchAccountingAccountQueryParamFieldsRaw                 PatchAccountingAccountQueryParamFields = "raw"
 	PatchAccountingAccountQueryParamFieldsOrganizationID      PatchAccountingAccountQueryParamFields = "organization_id"
+	PatchAccountingAccountQueryParamFieldsRaw                 PatchAccountingAccountQueryParamFields = "raw"
 )
 
 func (e PatchAccountingAccountQueryParamFields) ToPointer() *PatchAccountingAccountQueryParamFields {
@@ -76,9 +76,9 @@ func (e *PatchAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "taxonomy":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "organization_id":
+		fallthrough
+	case "raw":
 		*e = PatchAccountingAccountQueryParamFields(v)
 		return nil
 	default:

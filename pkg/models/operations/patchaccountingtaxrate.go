@@ -12,14 +12,15 @@ import (
 type PatchAccountingTaxrateQueryParamFields string
 
 const (
-	PatchAccountingTaxrateQueryParamFieldsID          PatchAccountingTaxrateQueryParamFields = "id"
-	PatchAccountingTaxrateQueryParamFieldsCreatedAt   PatchAccountingTaxrateQueryParamFields = "created_at"
-	PatchAccountingTaxrateQueryParamFieldsUpdatedAt   PatchAccountingTaxrateQueryParamFields = "updated_at"
-	PatchAccountingTaxrateQueryParamFieldsName        PatchAccountingTaxrateQueryParamFields = "name"
-	PatchAccountingTaxrateQueryParamFieldsDescription PatchAccountingTaxrateQueryParamFields = "description"
-	PatchAccountingTaxrateQueryParamFieldsRate        PatchAccountingTaxrateQueryParamFields = "rate"
-	PatchAccountingTaxrateQueryParamFieldsIsActive    PatchAccountingTaxrateQueryParamFields = "is_active"
-	PatchAccountingTaxrateQueryParamFieldsRaw         PatchAccountingTaxrateQueryParamFields = "raw"
+	PatchAccountingTaxrateQueryParamFieldsID             PatchAccountingTaxrateQueryParamFields = "id"
+	PatchAccountingTaxrateQueryParamFieldsCreatedAt      PatchAccountingTaxrateQueryParamFields = "created_at"
+	PatchAccountingTaxrateQueryParamFieldsUpdatedAt      PatchAccountingTaxrateQueryParamFields = "updated_at"
+	PatchAccountingTaxrateQueryParamFieldsName           PatchAccountingTaxrateQueryParamFields = "name"
+	PatchAccountingTaxrateQueryParamFieldsDescription    PatchAccountingTaxrateQueryParamFields = "description"
+	PatchAccountingTaxrateQueryParamFieldsRate           PatchAccountingTaxrateQueryParamFields = "rate"
+	PatchAccountingTaxrateQueryParamFieldsIsActive       PatchAccountingTaxrateQueryParamFields = "is_active"
+	PatchAccountingTaxrateQueryParamFieldsOrganizationID PatchAccountingTaxrateQueryParamFields = "organization_id"
+	PatchAccountingTaxrateQueryParamFieldsRaw            PatchAccountingTaxrateQueryParamFields = "raw"
 )
 
 func (e PatchAccountingTaxrateQueryParamFields) ToPointer() *PatchAccountingTaxrateQueryParamFields {
@@ -44,6 +45,8 @@ func (e *PatchAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "rate":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingTaxrateQueryParamFields(v)

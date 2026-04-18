@@ -32,5 +32,5 @@ value := operations.ListAccountingAccountsQueryParamFieldsID
 | `ListAccountingAccountsQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `ListAccountingAccountsQueryParamFieldsParentID`            | parent_id                                                   |
 | `ListAccountingAccountsQueryParamFieldsTaxonomy`            | taxonomy                                                    |
-| `ListAccountingAccountsQueryParamFieldsRaw`                 | raw                                                         |
 | `ListAccountingAccountsQueryParamFieldsOrganizationID`      | organization_id                                             |
+| `ListAccountingAccountsQueryParamFieldsRaw`                 | raw                                                         |

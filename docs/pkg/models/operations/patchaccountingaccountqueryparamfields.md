@@ -32,5 +32,5 @@ value := operations.PatchAccountingAccountQueryParamFieldsID
 | `PatchAccountingAccountQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `PatchAccountingAccountQueryParamFieldsParentID`            | parent_id                                                   |
 | `PatchAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                    |
-| `PatchAccountingAccountQueryParamFieldsRaw`                 | raw                                                         |
 | `PatchAccountingAccountQueryParamFieldsOrganizationID`      | organization_id                                             |
+| `PatchAccountingAccountQueryParamFieldsRaw`                 | raw                                                         |

@@ -33,8 +33,8 @@ const (
 	CreateAccountingContactQueryParamFieldsCompanyName        CreateAccountingContactQueryParamFields = "company_name"
 	CreateAccountingContactQueryParamFieldsIdentification     CreateAccountingContactQueryParamFields = "identification"
 	CreateAccountingContactQueryParamFieldsAssociatedContacts CreateAccountingContactQueryParamFields = "associated_contacts"
-	CreateAccountingContactQueryParamFieldsRaw                CreateAccountingContactQueryParamFields = "raw"
 	CreateAccountingContactQueryParamFieldsOrganizationID     CreateAccountingContactQueryParamFields = "organization_id"
+	CreateAccountingContactQueryParamFieldsRaw                CreateAccountingContactQueryParamFields = "raw"
 )
 
 func (e CreateAccountingContactQueryParamFields) ToPointer() *CreateAccountingContactQueryParamFields {
@@ -88,9 +88,9 @@ func (e *CreateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "associated_contacts":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "organization_id":
+		fallthrough
+	case "raw":
 		*e = CreateAccountingContactQueryParamFields(v)
 		return nil
 	default:

@@ -12,14 +12,15 @@ import (
 type GetAccountingTaxrateQueryParamFields string
 
 const (
-	GetAccountingTaxrateQueryParamFieldsID          GetAccountingTaxrateQueryParamFields = "id"
-	GetAccountingTaxrateQueryParamFieldsCreatedAt   GetAccountingTaxrateQueryParamFields = "created_at"
-	GetAccountingTaxrateQueryParamFieldsUpdatedAt   GetAccountingTaxrateQueryParamFields = "updated_at"
-	GetAccountingTaxrateQueryParamFieldsName        GetAccountingTaxrateQueryParamFields = "name"
-	GetAccountingTaxrateQueryParamFieldsDescription GetAccountingTaxrateQueryParamFields = "description"
-	GetAccountingTaxrateQueryParamFieldsRate        GetAccountingTaxrateQueryParamFields = "rate"
-	GetAccountingTaxrateQueryParamFieldsIsActive    GetAccountingTaxrateQueryParamFields = "is_active"
-	GetAccountingTaxrateQueryParamFieldsRaw         GetAccountingTaxrateQueryParamFields = "raw"
+	GetAccountingTaxrateQueryParamFieldsID             GetAccountingTaxrateQueryParamFields = "id"
+	GetAccountingTaxrateQueryParamFieldsCreatedAt      GetAccountingTaxrateQueryParamFields = "created_at"
+	GetAccountingTaxrateQueryParamFieldsUpdatedAt      GetAccountingTaxrateQueryParamFields = "updated_at"
+	GetAccountingTaxrateQueryParamFieldsName           GetAccountingTaxrateQueryParamFields = "name"
+	GetAccountingTaxrateQueryParamFieldsDescription    GetAccountingTaxrateQueryParamFields = "description"
+	GetAccountingTaxrateQueryParamFieldsRate           GetAccountingTaxrateQueryParamFields = "rate"
+	GetAccountingTaxrateQueryParamFieldsIsActive       GetAccountingTaxrateQueryParamFields = "is_active"
+	GetAccountingTaxrateQueryParamFieldsOrganizationID GetAccountingTaxrateQueryParamFields = "organization_id"
+	GetAccountingTaxrateQueryParamFieldsRaw            GetAccountingTaxrateQueryParamFields = "raw"
 )
 
 func (e GetAccountingTaxrateQueryParamFields) ToPointer() *GetAccountingTaxrateQueryParamFields {
@@ -44,6 +45,8 @@ func (e *GetAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "rate":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = GetAccountingTaxrateQueryParamFields(v)

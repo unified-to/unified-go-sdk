@@ -29,8 +29,8 @@ const (
 	FieldsSubgroup            Fields = "subgroup"
 	FieldsParentID            Fields = "parent_id"
 	FieldsTaxonomy            Fields = "taxonomy"
-	FieldsRaw                 Fields = "raw"
 	FieldsOrganizationID      Fields = "organization_id"
+	FieldsRaw                 Fields = "raw"
 )
 
 func (e Fields) ToPointer() *Fields {
@@ -76,9 +76,9 @@ func (e *Fields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "taxonomy":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "organization_id":
+		fallthrough
+	case "raw":
 		*e = Fields(v)
 		return nil
 	default:

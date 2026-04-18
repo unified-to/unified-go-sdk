@@ -8,14 +8,15 @@ import (
 )
 
 type AccountingTaxrate struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	Rate        *float64       `json:"rate,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	CreatedAt      *time.Time     `json:"created_at,omitempty"`
+	Description    *string        `json:"description,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	IsActive       *bool          `json:"is_active,omitempty"`
+	Name           *string        `json:"name,omitempty"`
+	OrganizationID *string        `json:"organization_id,omitempty"`
+	Rate           *float64       `json:"rate,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTaxrate) MarshalJSON() ([]byte, error) {
@@ -62,6 +63,13 @@ func (a *AccountingTaxrate) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AccountingTaxrate) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
 }
 
 func (a *AccountingTaxrate) GetRate() *float64 {

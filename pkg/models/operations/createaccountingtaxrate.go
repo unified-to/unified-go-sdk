@@ -12,14 +12,15 @@ import (
 type CreateAccountingTaxrateQueryParamFields string
 
 const (
-	CreateAccountingTaxrateQueryParamFieldsID          CreateAccountingTaxrateQueryParamFields = "id"
-	CreateAccountingTaxrateQueryParamFieldsCreatedAt   CreateAccountingTaxrateQueryParamFields = "created_at"
-	CreateAccountingTaxrateQueryParamFieldsUpdatedAt   CreateAccountingTaxrateQueryParamFields = "updated_at"
-	CreateAccountingTaxrateQueryParamFieldsName        CreateAccountingTaxrateQueryParamFields = "name"
-	CreateAccountingTaxrateQueryParamFieldsDescription CreateAccountingTaxrateQueryParamFields = "description"
-	CreateAccountingTaxrateQueryParamFieldsRate        CreateAccountingTaxrateQueryParamFields = "rate"
-	CreateAccountingTaxrateQueryParamFieldsIsActive    CreateAccountingTaxrateQueryParamFields = "is_active"
-	CreateAccountingTaxrateQueryParamFieldsRaw         CreateAccountingTaxrateQueryParamFields = "raw"
+	CreateAccountingTaxrateQueryParamFieldsID             CreateAccountingTaxrateQueryParamFields = "id"
+	CreateAccountingTaxrateQueryParamFieldsCreatedAt      CreateAccountingTaxrateQueryParamFields = "created_at"
+	CreateAccountingTaxrateQueryParamFieldsUpdatedAt      CreateAccountingTaxrateQueryParamFields = "updated_at"
+	CreateAccountingTaxrateQueryParamFieldsName           CreateAccountingTaxrateQueryParamFields = "name"
+	CreateAccountingTaxrateQueryParamFieldsDescription    CreateAccountingTaxrateQueryParamFields = "description"
+	CreateAccountingTaxrateQueryParamFieldsRate           CreateAccountingTaxrateQueryParamFields = "rate"
+	CreateAccountingTaxrateQueryParamFieldsIsActive       CreateAccountingTaxrateQueryParamFields = "is_active"
+	CreateAccountingTaxrateQueryParamFieldsOrganizationID CreateAccountingTaxrateQueryParamFields = "organization_id"
+	CreateAccountingTaxrateQueryParamFieldsRaw            CreateAccountingTaxrateQueryParamFields = "raw"
 )
 
 func (e CreateAccountingTaxrateQueryParamFields) ToPointer() *CreateAccountingTaxrateQueryParamFields {
@@ -44,6 +45,8 @@ func (e *CreateAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) err
 	case "rate":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingTaxrateQueryParamFields(v)

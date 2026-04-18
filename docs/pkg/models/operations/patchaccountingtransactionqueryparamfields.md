@@ -32,4 +32,5 @@ value := operations.PatchAccountingTransactionQueryParamFieldsID
 | `PatchAccountingTransactionQueryParamFieldsLineitems`       | lineitems                                                   |
 | `PatchAccountingTransactionQueryParamFieldsCurrency`        | currency                                                    |
 | `PatchAccountingTransactionQueryParamFieldsContacts`        | contacts                                                    |
+| `PatchAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                             |
 | `PatchAccountingTransactionQueryParamFieldsRaw`             | raw                                                         |

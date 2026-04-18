@@ -32,5 +32,5 @@ value := operations.FieldsID
 | `FieldsSubgroup`            | subgroup                    |
 | `FieldsParentID`            | parent_id                   |
 | `FieldsTaxonomy`            | taxonomy                    |
-| `FieldsRaw`                 | raw                         |
 | `FieldsOrganizationID`      | organization_id             |
+| `FieldsRaw`                 | raw                         |

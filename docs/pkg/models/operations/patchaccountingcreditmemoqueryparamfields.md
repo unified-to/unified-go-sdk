@@ -40,4 +40,5 @@ value := operations.PatchAccountingCreditmemoQueryParamFieldsID
 | `PatchAccountingCreditmemoQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                          |
 | `PatchAccountingCreditmemoQueryParamFieldsAttachments`             | attachments                                                        |
 | `PatchAccountingCreditmemoQueryParamFieldsSend`                    | send                                                               |
+| `PatchAccountingCreditmemoQueryParamFieldsOrganizationID`          | organization_id                                                    |
 | `PatchAccountingCreditmemoQueryParamFieldsRaw`                     | raw                                                                |

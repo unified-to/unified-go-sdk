@@ -33,8 +33,8 @@ const (
 	PatchAccountingContactQueryParamFieldsCompanyName        PatchAccountingContactQueryParamFields = "company_name"
 	PatchAccountingContactQueryParamFieldsIdentification     PatchAccountingContactQueryParamFields = "identification"
 	PatchAccountingContactQueryParamFieldsAssociatedContacts PatchAccountingContactQueryParamFields = "associated_contacts"
-	PatchAccountingContactQueryParamFieldsRaw                PatchAccountingContactQueryParamFields = "raw"
 	PatchAccountingContactQueryParamFieldsOrganizationID     PatchAccountingContactQueryParamFields = "organization_id"
+	PatchAccountingContactQueryParamFieldsRaw                PatchAccountingContactQueryParamFields = "raw"
 )
 
 func (e PatchAccountingContactQueryParamFields) ToPointer() *PatchAccountingContactQueryParamFields {
@@ -88,9 +88,9 @@ func (e *PatchAccountingContactQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "associated_contacts":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "organization_id":
+		fallthrough
+	case "raw":
 		*e = PatchAccountingContactQueryParamFields(v)
 		return nil
 	default:

@@ -12,14 +12,15 @@ import (
 type ListAccountingTaxratesQueryParamFields string
 
 const (
-	ListAccountingTaxratesQueryParamFieldsID          ListAccountingTaxratesQueryParamFields = "id"
-	ListAccountingTaxratesQueryParamFieldsCreatedAt   ListAccountingTaxratesQueryParamFields = "created_at"
-	ListAccountingTaxratesQueryParamFieldsUpdatedAt   ListAccountingTaxratesQueryParamFields = "updated_at"
-	ListAccountingTaxratesQueryParamFieldsName        ListAccountingTaxratesQueryParamFields = "name"
-	ListAccountingTaxratesQueryParamFieldsDescription ListAccountingTaxratesQueryParamFields = "description"
-	ListAccountingTaxratesQueryParamFieldsRate        ListAccountingTaxratesQueryParamFields = "rate"
-	ListAccountingTaxratesQueryParamFieldsIsActive    ListAccountingTaxratesQueryParamFields = "is_active"
-	ListAccountingTaxratesQueryParamFieldsRaw         ListAccountingTaxratesQueryParamFields = "raw"
+	ListAccountingTaxratesQueryParamFieldsID             ListAccountingTaxratesQueryParamFields = "id"
+	ListAccountingTaxratesQueryParamFieldsCreatedAt      ListAccountingTaxratesQueryParamFields = "created_at"
+	ListAccountingTaxratesQueryParamFieldsUpdatedAt      ListAccountingTaxratesQueryParamFields = "updated_at"
+	ListAccountingTaxratesQueryParamFieldsName           ListAccountingTaxratesQueryParamFields = "name"
+	ListAccountingTaxratesQueryParamFieldsDescription    ListAccountingTaxratesQueryParamFields = "description"
+	ListAccountingTaxratesQueryParamFieldsRate           ListAccountingTaxratesQueryParamFields = "rate"
+	ListAccountingTaxratesQueryParamFieldsIsActive       ListAccountingTaxratesQueryParamFields = "is_active"
+	ListAccountingTaxratesQueryParamFieldsOrganizationID ListAccountingTaxratesQueryParamFields = "organization_id"
+	ListAccountingTaxratesQueryParamFieldsRaw            ListAccountingTaxratesQueryParamFields = "raw"
 )
 
 func (e ListAccountingTaxratesQueryParamFields) ToPointer() *ListAccountingTaxratesQueryParamFields {
@@ -44,6 +45,8 @@ func (e *ListAccountingTaxratesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "rate":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = ListAccountingTaxratesQueryParamFields(v)

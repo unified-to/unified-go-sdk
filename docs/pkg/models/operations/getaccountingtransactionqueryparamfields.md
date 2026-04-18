@@ -32,4 +32,5 @@ value := operations.GetAccountingTransactionQueryParamFieldsID
 | `GetAccountingTransactionQueryParamFieldsLineitems`       | lineitems                                                 |
 | `GetAccountingTransactionQueryParamFieldsCurrency`        | currency                                                  |
 | `GetAccountingTransactionQueryParamFieldsContacts`        | contacts                                                  |
+| `GetAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                           |
 | `GetAccountingTransactionQueryParamFieldsRaw`             | raw                                                       |
