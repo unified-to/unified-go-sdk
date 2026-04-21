@@ -31,13 +31,13 @@ const (
 	ListAccountingCreditmemoesQueryParamFieldsCurrency                ListAccountingCreditmemoesQueryParamFields = "currency"
 	ListAccountingCreditmemoesQueryParamFieldsNotes                   ListAccountingCreditmemoesQueryParamFields = "notes"
 	ListAccountingCreditmemoesQueryParamFieldsRefundReason            ListAccountingCreditmemoesQueryParamFields = "refund_reason"
+	ListAccountingCreditmemoesQueryParamFieldsOrganizationID          ListAccountingCreditmemoesQueryParamFields = "organization_id"
 	ListAccountingCreditmemoesQueryParamFieldsLineitems               ListAccountingCreditmemoesQueryParamFields = "lineitems"
 	ListAccountingCreditmemoesQueryParamFieldsStatus                  ListAccountingCreditmemoesQueryParamFields = "status"
 	ListAccountingCreditmemoesQueryParamFieldsURL                     ListAccountingCreditmemoesQueryParamFields = "url"
 	ListAccountingCreditmemoesQueryParamFieldsPaymentCollectionMethod ListAccountingCreditmemoesQueryParamFields = "payment_collection_method"
 	ListAccountingCreditmemoesQueryParamFieldsAttachments             ListAccountingCreditmemoesQueryParamFields = "attachments"
 	ListAccountingCreditmemoesQueryParamFieldsSend                    ListAccountingCreditmemoesQueryParamFields = "send"
-	ListAccountingCreditmemoesQueryParamFieldsOrganizationID          ListAccountingCreditmemoesQueryParamFields = "organization_id"
 	ListAccountingCreditmemoesQueryParamFieldsRaw                     ListAccountingCreditmemoesQueryParamFields = "raw"
 )
 
@@ -88,6 +88,8 @@ func (e *ListAccountingCreditmemoesQueryParamFields) UnmarshalJSON(data []byte) 
 		fallthrough
 	case "refund_reason":
 		fallthrough
+	case "organization_id":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -99,8 +101,6 @@ func (e *ListAccountingCreditmemoesQueryParamFields) UnmarshalJSON(data []byte) 
 	case "attachments":
 		fallthrough
 	case "send":
-		fallthrough
-	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = ListAccountingCreditmemoesQueryParamFields(v)

@@ -31,13 +31,13 @@ const (
 	PatchAccountingCreditmemoQueryParamFieldsCurrency                PatchAccountingCreditmemoQueryParamFields = "currency"
 	PatchAccountingCreditmemoQueryParamFieldsNotes                   PatchAccountingCreditmemoQueryParamFields = "notes"
 	PatchAccountingCreditmemoQueryParamFieldsRefundReason            PatchAccountingCreditmemoQueryParamFields = "refund_reason"
+	PatchAccountingCreditmemoQueryParamFieldsOrganizationID          PatchAccountingCreditmemoQueryParamFields = "organization_id"
 	PatchAccountingCreditmemoQueryParamFieldsLineitems               PatchAccountingCreditmemoQueryParamFields = "lineitems"
 	PatchAccountingCreditmemoQueryParamFieldsStatus                  PatchAccountingCreditmemoQueryParamFields = "status"
 	PatchAccountingCreditmemoQueryParamFieldsURL                     PatchAccountingCreditmemoQueryParamFields = "url"
 	PatchAccountingCreditmemoQueryParamFieldsPaymentCollectionMethod PatchAccountingCreditmemoQueryParamFields = "payment_collection_method"
 	PatchAccountingCreditmemoQueryParamFieldsAttachments             PatchAccountingCreditmemoQueryParamFields = "attachments"
 	PatchAccountingCreditmemoQueryParamFieldsSend                    PatchAccountingCreditmemoQueryParamFields = "send"
-	PatchAccountingCreditmemoQueryParamFieldsOrganizationID          PatchAccountingCreditmemoQueryParamFields = "organization_id"
 	PatchAccountingCreditmemoQueryParamFieldsRaw                     PatchAccountingCreditmemoQueryParamFields = "raw"
 )
 
@@ -88,6 +88,8 @@ func (e *PatchAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "refund_reason":
 		fallthrough
+	case "organization_id":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -99,8 +101,6 @@ func (e *PatchAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) e
 	case "attachments":
 		fallthrough
 	case "send":
-		fallthrough
-	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingCreditmemoQueryParamFields(v)

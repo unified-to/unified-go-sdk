@@ -34,11 +34,11 @@ value := operations.CreateAccountingCreditmemoQueryParamFieldsID
 | `CreateAccountingCreditmemoQueryParamFieldsCurrency`                | currency                                                            |
 | `CreateAccountingCreditmemoQueryParamFieldsNotes`                   | notes                                                               |
 | `CreateAccountingCreditmemoQueryParamFieldsRefundReason`            | refund_reason                                                       |
+| `CreateAccountingCreditmemoQueryParamFieldsOrganizationID`          | organization_id                                                     |
 | `CreateAccountingCreditmemoQueryParamFieldsLineitems`               | lineitems                                                           |
 | `CreateAccountingCreditmemoQueryParamFieldsStatus`                  | status                                                              |
 | `CreateAccountingCreditmemoQueryParamFieldsURL`                     | url                                                                 |
 | `CreateAccountingCreditmemoQueryParamFieldsPaymentCollectionMethod` | payment_collection_method                                           |
 | `CreateAccountingCreditmemoQueryParamFieldsAttachments`             | attachments                                                         |
 | `CreateAccountingCreditmemoQueryParamFieldsSend`                    | send                                                                |
-| `CreateAccountingCreditmemoQueryParamFieldsOrganizationID`          | organization_id                                                     |
 | `CreateAccountingCreditmemoQueryParamFieldsRaw`                     | raw                                                                 |

@@ -31,4 +31,5 @@ value := operations.UpdateStorageFileQueryParamFieldsID
 | `UpdateStorageFileQueryParamFieldsData`        | data                                           |
 | `UpdateStorageFileQueryParamFieldsVersion`     | version                                        |
 | `UpdateStorageFileQueryParamFieldsWebURL`      | web_url                                        |
+| `UpdateStorageFileQueryParamFieldsReferences`  | references                                     |
 | `UpdateStorageFileQueryParamFieldsRaw`         | raw                                            |

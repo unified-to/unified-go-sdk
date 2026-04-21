@@ -1290,6 +1290,29 @@ func (e *ListRawFields) IsExact() bool {
 	return false
 }
 
+type ListReference string
+
+const (
+	ListReferenceSupportedRequired ListReference = "supported-required"
+	ListReferenceSupported         ListReference = "supported"
+	ListReferenceNotSupported      ListReference = "not-supported"
+)
+
+func (e ListReference) ToPointer() *ListReference {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListReference) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListRepoID string
 
 const (
@@ -3268,6 +3291,29 @@ func (e *VirtualWebhookProjectID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookReference string
+
+const (
+	VirtualWebhookReferenceSupportedRequired VirtualWebhookReference = "supported-required"
+	VirtualWebhookReferenceSupported         VirtualWebhookReference = "supported"
+	VirtualWebhookReferenceNotSupported      VirtualWebhookReference = "not-supported"
+)
+
+func (e VirtualWebhookReference) ToPointer() *VirtualWebhookReference {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookReference) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookRepoID string
 
 const (
@@ -3648,6 +3694,7 @@ type IntegrationSupport struct {
 	ListProjectID           *ListProjectID           `json:"list_project_id,omitempty"`
 	ListQuery               *ListQuery               `json:"list_query,omitempty"`
 	ListRawFields           *ListRawFields           `json:"list_raw_fields,omitempty"`
+	ListReference           *ListReference           `json:"list_reference,omitempty"`
 	ListRepoID              *ListRepoID              `json:"list_repo_id,omitempty"`
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
@@ -3739,6 +3786,7 @@ type IntegrationSupport struct {
 	VirtualWebhookPaymentID       *VirtualWebhookPaymentID                 `json:"virtual_webhook_payment_id,omitempty"`
 	VirtualWebhookPipelineID      *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
 	VirtualWebhookProjectID       *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
+	VirtualWebhookReference       *VirtualWebhookReference                 `json:"virtual_webhook_reference,omitempty"`
 	VirtualWebhookRepoID          *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
 	VirtualWebhookSaleschannelID  *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
 	VirtualWebhookShipmentID      *VirtualWebhookShipmentID                `json:"virtual_webhook_shipment_id,omitempty"`
@@ -4153,6 +4201,13 @@ func (i *IntegrationSupport) GetListRawFields() *ListRawFields {
 		return nil
 	}
 	return i.ListRawFields
+}
+
+func (i *IntegrationSupport) GetListReference() *ListReference {
+	if i == nil {
+		return nil
+	}
+	return i.ListReference
 }
 
 func (i *IntegrationSupport) GetListRepoID() *ListRepoID {
@@ -4783,6 +4838,13 @@ func (i *IntegrationSupport) GetVirtualWebhookProjectID() *VirtualWebhookProject
 		return nil
 	}
 	return i.VirtualWebhookProjectID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookReference() *VirtualWebhookReference {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookReference
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookRepoID() *VirtualWebhookRepoID {

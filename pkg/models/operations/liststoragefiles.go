@@ -28,6 +28,7 @@ const (
 	ListStorageFilesQueryParamFieldsData        ListStorageFilesQueryParamFields = "data"
 	ListStorageFilesQueryParamFieldsVersion     ListStorageFilesQueryParamFields = "version"
 	ListStorageFilesQueryParamFieldsWebURL      ListStorageFilesQueryParamFields = "web_url"
+	ListStorageFilesQueryParamFieldsReferences  ListStorageFilesQueryParamFields = "references"
 	ListStorageFilesQueryParamFieldsRaw         ListStorageFilesQueryParamFields = "raw"
 )
 
@@ -72,6 +73,8 @@ func (e *ListStorageFilesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "web_url":
 		fallthrough
+	case "references":
+		fallthrough
 	case "raw":
 		*e = ListStorageFilesQueryParamFields(v)
 		return nil
@@ -97,8 +100,10 @@ type ListStorageFilesRequest struct {
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
-	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
-	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	Raw *string `queryParam:"style=form,explode=true,name=raw"`
+	// The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+	Reference *string `queryParam:"style=form,explode=true,name=reference"`
+	Sort      *string `queryParam:"style=form,explode=true,name=sort"`
 	// The type to filter by
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -173,6 +178,13 @@ func (l *ListStorageFilesRequest) GetRaw() *string {
 		return nil
 	}
 	return l.Raw
+}
+
+func (l *ListStorageFilesRequest) GetReference() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Reference
 }
 
 func (l *ListStorageFilesRequest) GetSort() *string {

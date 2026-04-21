@@ -31,4 +31,5 @@ value := operations.CreateStorageFileQueryParamFieldsID
 | `CreateStorageFileQueryParamFieldsData`        | data                                           |
 | `CreateStorageFileQueryParamFieldsVersion`     | version                                        |
 | `CreateStorageFileQueryParamFieldsWebURL`      | web_url                                        |
+| `CreateStorageFileQueryParamFieldsReferences`  | references                                     |
 | `CreateStorageFileQueryParamFieldsRaw`         | raw                                            |

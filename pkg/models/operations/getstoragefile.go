@@ -28,6 +28,7 @@ const (
 	GetStorageFileQueryParamFieldsData        GetStorageFileQueryParamFields = "data"
 	GetStorageFileQueryParamFieldsVersion     GetStorageFileQueryParamFields = "version"
 	GetStorageFileQueryParamFieldsWebURL      GetStorageFileQueryParamFields = "web_url"
+	GetStorageFileQueryParamFieldsReferences  GetStorageFileQueryParamFields = "references"
 	GetStorageFileQueryParamFieldsRaw         GetStorageFileQueryParamFields = "raw"
 )
 
@@ -71,6 +72,8 @@ func (e *GetStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "version":
 		fallthrough
 	case "web_url":
+		fallthrough
+	case "references":
 		fallthrough
 	case "raw":
 		*e = GetStorageFileQueryParamFields(v)

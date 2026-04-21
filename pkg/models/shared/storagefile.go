@@ -41,6 +41,7 @@ type StorageFile struct {
 	ParentID    *string             `json:"parent_id,omitempty"`
 	Permissions []StoragePermission `json:"permissions,omitempty"`
 	Raw         map[string]any      `json:"raw,omitempty"`
+	References  []StorageReference  `json:"references,omitempty"`
 	Size        *float64            `json:"size,omitempty"`
 	Type        *StorageFileType    `json:"type,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
@@ -135,6 +136,13 @@ func (s *StorageFile) GetRaw() map[string]any {
 		return nil
 	}
 	return s.Raw
+}
+
+func (s *StorageFile) GetReferences() []StorageReference {
+	if s == nil {
+		return nil
+	}
+	return s.References
 }
 
 func (s *StorageFile) GetSize() *float64 {
