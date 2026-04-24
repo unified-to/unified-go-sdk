@@ -54,4 +54,6 @@ value := operations.PatchHrisEmployeeQueryParamFieldsID
 | `PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable` | storage_quota_available                                  |
 | `PatchHrisEmployeeQueryParamFieldsRelationships`         | relationships                                            |
 | `PatchHrisEmployeeQueryParamFieldsHasMfa`                | has_mfa                                                  |
+| `PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal`      | timeoff_days_total                                       |
+| `PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed`       | timeoff_days_used                                        |
 | `PatchHrisEmployeeQueryParamFieldsRaw`                   | raw                                                      |

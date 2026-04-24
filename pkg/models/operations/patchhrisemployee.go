@@ -51,6 +51,8 @@ const (
 	PatchHrisEmployeeQueryParamFieldsStorageQuotaAvailable PatchHrisEmployeeQueryParamFields = "storage_quota_available"
 	PatchHrisEmployeeQueryParamFieldsRelationships         PatchHrisEmployeeQueryParamFields = "relationships"
 	PatchHrisEmployeeQueryParamFieldsHasMfa                PatchHrisEmployeeQueryParamFields = "has_mfa"
+	PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal      PatchHrisEmployeeQueryParamFields = "timeoff_days_total"
+	PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed       PatchHrisEmployeeQueryParamFields = "timeoff_days_used"
 	PatchHrisEmployeeQueryParamFieldsRaw                   PatchHrisEmployeeQueryParamFields = "raw"
 )
 
@@ -140,6 +142,10 @@ func (e *PatchHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "relationships":
 		fallthrough
 	case "has_mfa":
+		fallthrough
+	case "timeoff_days_total":
+		fallthrough
+	case "timeoff_days_used":
 		fallthrough
 	case "raw":
 		*e = PatchHrisEmployeeQueryParamFields(v)

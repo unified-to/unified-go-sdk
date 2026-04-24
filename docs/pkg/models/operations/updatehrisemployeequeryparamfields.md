@@ -54,4 +54,6 @@ value := operations.UpdateHrisEmployeeQueryParamFieldsID
 | `UpdateHrisEmployeeQueryParamFieldsStorageQuotaAvailable` | storage_quota_available                                   |
 | `UpdateHrisEmployeeQueryParamFieldsRelationships`         | relationships                                             |
 | `UpdateHrisEmployeeQueryParamFieldsHasMfa`                | has_mfa                                                   |
+| `UpdateHrisEmployeeQueryParamFieldsTimeoffDaysTotal`      | timeoff_days_total                                        |
+| `UpdateHrisEmployeeQueryParamFieldsTimeoffDaysUsed`       | timeoff_days_used                                         |
 | `UpdateHrisEmployeeQueryParamFieldsRaw`                   | raw                                                       |

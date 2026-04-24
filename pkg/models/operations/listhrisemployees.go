@@ -51,6 +51,8 @@ const (
 	ListHrisEmployeesQueryParamFieldsStorageQuotaAvailable ListHrisEmployeesQueryParamFields = "storage_quota_available"
 	ListHrisEmployeesQueryParamFieldsRelationships         ListHrisEmployeesQueryParamFields = "relationships"
 	ListHrisEmployeesQueryParamFieldsHasMfa                ListHrisEmployeesQueryParamFields = "has_mfa"
+	ListHrisEmployeesQueryParamFieldsTimeoffDaysTotal      ListHrisEmployeesQueryParamFields = "timeoff_days_total"
+	ListHrisEmployeesQueryParamFieldsTimeoffDaysUsed       ListHrisEmployeesQueryParamFields = "timeoff_days_used"
 	ListHrisEmployeesQueryParamFieldsRaw                   ListHrisEmployeesQueryParamFields = "raw"
 )
 
@@ -140,6 +142,10 @@ func (e *ListHrisEmployeesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "relationships":
 		fallthrough
 	case "has_mfa":
+		fallthrough
+	case "timeoff_days_total":
+		fallthrough
+	case "timeoff_days_used":
 		fallthrough
 	case "raw":
 		*e = ListHrisEmployeesQueryParamFields(v)

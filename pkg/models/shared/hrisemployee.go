@@ -146,6 +146,8 @@ type HrisEmployee struct {
 	Telephones            []HrisTelephone            `json:"telephones,omitempty"`
 	TerminatedAt          *time.Time                 `json:"terminated_at,omitempty"`
 	TerminationReason     *string                    `json:"termination_reason,omitempty"`
+	TimeoffDaysTotal      *float64                   `json:"timeoff_days_total,omitempty"`
+	TimeoffDaysUsed       *float64                   `json:"timeoff_days_used,omitempty"`
 	Timezone              *string                    `json:"timezone,omitempty"`
 	Title                 *string                    `json:"title,omitempty"`
 	UpdatedAt             *time.Time                 `json:"updated_at,omitempty"`
@@ -419,6 +421,20 @@ func (h *HrisEmployee) GetTerminationReason() *string {
 		return nil
 	}
 	return h.TerminationReason
+}
+
+func (h *HrisEmployee) GetTimeoffDaysTotal() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.TimeoffDaysTotal
+}
+
+func (h *HrisEmployee) GetTimeoffDaysUsed() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.TimeoffDaysUsed
 }
 
 func (h *HrisEmployee) GetTimezone() *string {
