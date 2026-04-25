@@ -5,18 +5,18 @@ package shared
 type AdsTargetType string
 
 const (
-	AdsTargetTypeInterests AdsTargetType = "interests"
-	AdsTargetTypeBehaviors AdsTargetType = "behaviors"
-	AdsTargetTypeLocales   AdsTargetType = "locales"
-	AdsTargetTypeCountries AdsTargetType = "countries"
-	AdsTargetTypeRegions   AdsTargetType = "regions"
-	AdsTargetTypeCities    AdsTargetType = "cities"
-	AdsTargetTypeZips      AdsTargetType = "zips"
-	AdsTargetTypeUsDmas    AdsTargetType = "us_dmas"
-	AdsTargetTypeTopics    AdsTargetType = "topics"
-	AdsTargetTypeUserLists AdsTargetType = "user_lists"
-	AdsTargetTypeAgeRanges AdsTargetType = "age_ranges"
-	AdsTargetTypeGenders   AdsTargetType = "genders"
+	AdsTargetTypeInterests AdsTargetType = "INTERESTS"
+	AdsTargetTypeBehaviors AdsTargetType = "BEHAVIORS"
+	AdsTargetTypeLocales   AdsTargetType = "LOCALES"
+	AdsTargetTypeCountries AdsTargetType = "COUNTRIES"
+	AdsTargetTypeRegions   AdsTargetType = "REGIONS"
+	AdsTargetTypeCities    AdsTargetType = "CITIES"
+	AdsTargetTypeZips      AdsTargetType = "ZIPS"
+	AdsTargetTypeUsDmas    AdsTargetType = "US_DMAS"
+	AdsTargetTypeTopics    AdsTargetType = "TOPICS"
+	AdsTargetTypeUserLists AdsTargetType = "USER_LISTS"
+	AdsTargetTypeAgeRanges AdsTargetType = "AGE_RANGES"
+	AdsTargetTypeGenders   AdsTargetType = "GENDERS"
 )
 
 func (e AdsTargetType) ToPointer() *AdsTargetType {
@@ -27,7 +27,7 @@ func (e AdsTargetType) ToPointer() *AdsTargetType {
 func (e *AdsTargetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "interests", "behaviors", "locales", "countries", "regions", "cities", "zips", "us_dmas", "topics", "user_lists", "age_ranges", "genders":
+		case "INTERESTS", "BEHAVIORS", "LOCALES", "COUNTRIES", "REGIONS", "CITIES", "ZIPS", "US_DMAS", "TOPICS", "USER_LISTS", "AGE_RANGES", "GENDERS":
 			return true
 		}
 	}

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 2e65ff785fedef7765dc3a1ace699f58
+  docChecksum: a690f95a42bb9813e1ec1b14dce3b416
   docVersion: "1.0"
   speakeasyVersion: 1.761.9
   generationVersion: 2.881.4
-  releaseVersion: 0.36.68
-  configChecksum: 895f3616af962a4d525e63c7b079ae9c
+  releaseVersion: 0.36.69
+  configChecksum: d61ec0a7d2c8dc2b3fae426903bc018a
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: a013c282-fa2e-4879-b26a-14c2bb279360
-  pristine_commit_hash: c711862137fa5b69d64c5aa1807a01cbf2aac7da
-  pristine_tree_hash: b1b5f1ea0ad38a12fa2b61cb89fc2af3b42552d1
+  generation_id: a8206086-8180-452a-ad80-c3e5ebed35f0
+  pristine_commit_hash: c5643fe26ca24f6d69bfecc108b6e9f8364ff8d5
+  pristine_tree_hash: 86b5069a2b1a316f37b42bb3069aba621417de18
 features:
   go:
     acceptHeaders: 2.81.2
@@ -8031,8 +8031,8 @@ trackedFiles:
     pristine_git_object: fa7898db914f715877c4eb0fe2b518fd4a6d19ee
   docs/pkg/models/shared/adstargettype.md:
     id: da7c0df33760
-    last_write_checksum: sha1:857e12ab7be4d2b37194dae6b044c4e88556514f
-    pristine_git_object: 362e12dfb949105f6cf4ecf15a121b2300c1de7b
+    last_write_checksum: sha1:c6b9e312b61af0ed481d54d45d3986d88324158f
+    pristine_git_object: ae80ea04f476905042603e1f178cf08054872823
   docs/pkg/models/shared/adtype.md:
     id: 5a1ed4bc9b5f
     last_write_checksum: sha1:c0b132c08351edaa437442e3457117e3a9996b93
@@ -14851,8 +14851,8 @@ trackedFiles:
     pristine_git_object: bad3a8d447e38bed0e5679a368a3187071612053
   pkg/models/shared/adstarget.go:
     id: 4574dd494c08
-    last_write_checksum: sha1:9fba0216643ccac636b0e00800350751f621eaa8
-    pristine_git_object: cba4671296a057f259df8f1665fef11824127cad
+    last_write_checksum: sha1:cb93eba668a62e4d45c085c14ceee4eecf575ffe
+    pristine_git_object: d9d90734811802374e7a6e87432e22244af81253
   pkg/models/shared/apicall.go:
     id: 40c59b73f4a6
     last_write_checksum: sha1:0506ac6b53f474bef8aa59770e61888b4e4e545d
@@ -16575,8 +16575,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:ac2eda287fa7216d7ec5dce5521ad06c4f9a2f00
-    pristine_git_object: e0a108236d363260f338ab38690905fec5766a17
+    last_write_checksum: sha1:5c2bfbb1221cfc9066c0f09f2ad9aab72f080a6d
+    pristine_git_object: 5c99c00e52841205a767aaba6e92ec96896ab2ee
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22760,7 +22760,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Hris.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.UpdateHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Employee.GetHrisEmployee()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.PatchHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.ListHrisEmployees()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Accounting.ListAccountingInvoices()`:  `request.Request` **Changed**\n* `UnifiedTo.Hris.GetHrisTimeoff()`:  `response.StartAt` **Changed**\n* `UnifiedTo.Employee.CreateHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**\n* `UnifiedTo.Employee.ListHrisEmployees()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Employee.PatchHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Employee.UpdateHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.GetHrisEmployee()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**\n* `UnifiedTo.Hris.CreateHrisEmployee()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Invoice.ListAccountingInvoices()`:  `request.Request` **Changed**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Ads.ListAdsTargets()`:  `response.[].Type` **Changed** (Breaking ⚠️)
+  * `UnifiedTo.Target.ListAdsTargets()`:  `response.[].Type` **Changed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

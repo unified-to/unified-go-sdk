@@ -18,15 +18,15 @@ custom := shared.AdsTargetType("custom_value")
 
 | Name                     | Value                    |
 | ------------------------ | ------------------------ |
-| `AdsTargetTypeInterests` | interests                |
-| `AdsTargetTypeBehaviors` | behaviors                |
-| `AdsTargetTypeLocales`   | locales                  |
-| `AdsTargetTypeCountries` | countries                |
-| `AdsTargetTypeRegions`   | regions                  |
-| `AdsTargetTypeCities`    | cities                   |
-| `AdsTargetTypeZips`      | zips                     |
-| `AdsTargetTypeUsDmas`    | us_dmas                  |
-| `AdsTargetTypeTopics`    | topics                   |
-| `AdsTargetTypeUserLists` | user_lists               |
-| `AdsTargetTypeAgeRanges` | age_ranges               |
-| `AdsTargetTypeGenders`   | genders                  |
+| `AdsTargetTypeInterests` | INTERESTS                |
+| `AdsTargetTypeBehaviors` | BEHAVIORS                |
+| `AdsTargetTypeLocales`   | LOCALES                  |
+| `AdsTargetTypeCountries` | COUNTRIES                |
+| `AdsTargetTypeRegions`   | REGIONS                  |
+| `AdsTargetTypeCities`    | CITIES                   |
+| `AdsTargetTypeZips`      | ZIPS                     |
+| `AdsTargetTypeUsDmas`    | US_DMAS                  |
+| `AdsTargetTypeTopics`    | TOPICS                   |
+| `AdsTargetTypeUserLists` | USER_LISTS               |
+| `AdsTargetTypeAgeRanges` | AGE_RANGES               |
+| `AdsTargetTypeGenders`   | GENDERS                  |
