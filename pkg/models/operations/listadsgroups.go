@@ -121,6 +121,8 @@ type ListAdsGroupsRequest struct {
 	CampaignID *string `queryParam:"style=form,explode=true,name=campaign_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListAdsGroupsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The IO ID to filter by
@@ -137,6 +139,8 @@ type ListAdsGroupsRequest struct {
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
 	Raw  *string `queryParam:"style=form,explode=true,name=raw"`
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -153,6 +157,13 @@ func (l *ListAdsGroupsRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAdsGroupsRequest) GetEndLt() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EndLt
 }
 
 func (l *ListAdsGroupsRequest) GetFields() []ListAdsGroupsQueryParamFields {
@@ -223,6 +234,13 @@ func (l *ListAdsGroupsRequest) GetSort() *string {
 		return nil
 	}
 	return l.Sort
+}
+
+func (l *ListAdsGroupsRequest) GetStartGte() *string {
+	if l == nil {
+		return nil
+	}
+	return l.StartGte
 }
 
 func (l *ListAdsGroupsRequest) GetUpdatedGte() *string {

@@ -13,10 +13,11 @@ value := operations.ListAdsTargetsQueryParamFieldsID
 
 ## Values
 
-| Name                                  | Value                                 |
-| ------------------------------------- | ------------------------------------- |
-| `ListAdsTargetsQueryParamFieldsID`    | id                                    |
-| `ListAdsTargetsQueryParamFieldsName`  | name                                  |
-| `ListAdsTargetsQueryParamFieldsValue` | value                                 |
-| `ListAdsTargetsQueryParamFieldsType`  | type                                  |
-| `ListAdsTargetsQueryParamFieldsRaw`   | raw                                   |
+| Name                                     | Value                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| `ListAdsTargetsQueryParamFieldsID`       | id                                       |
+| `ListAdsTargetsQueryParamFieldsName`     | name                                     |
+| `ListAdsTargetsQueryParamFieldsType`     | type                                     |
+| `ListAdsTargetsQueryParamFieldsIsActive` | is_active                                |
+| `ListAdsTargetsQueryParamFieldsParentID` | parent_id                                |
+| `ListAdsTargetsQueryParamFieldsRaw`      | raw                                      |

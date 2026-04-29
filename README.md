@@ -219,6 +219,8 @@ func main() {
 * [GetAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
 * [GetAdsInsertionorder](docs/sdks/ads/README.md#getadsinsertionorder) - Retrieve an insertionorder
 * [GetAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
+* [GetAdsPromoted](docs/sdks/ads/README.md#getadspromoted) - Retrieve a promoted
+* [GetAdsTarget](docs/sdks/ads/README.md#getadstarget) - Retrieve a target
 * [ListAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
 * [ListAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
 * [ListAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
@@ -1350,6 +1352,7 @@ func main() {
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
+* [GetAdsPromoted](docs/sdks/promoted/README.md#getadspromoted) - Retrieve a promoted
 * [ListAdsPromoteds](docs/sdks/promoted/README.md#listadspromoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
@@ -1609,6 +1612,7 @@ func main() {
 
 ### [Target](docs/sdks/target/README.md)
 
+* [GetAdsTarget](docs/sdks/target/README.md#getadstarget) - Retrieve a target
 * [ListAdsTargets](docs/sdks/target/README.md#listadstargets) - List all targets
 
 ### [Task](docs/sdks/task/README.md)

@@ -12,11 +12,12 @@ import (
 type ListAdsTargetsQueryParamFields string
 
 const (
-	ListAdsTargetsQueryParamFieldsID    ListAdsTargetsQueryParamFields = "id"
-	ListAdsTargetsQueryParamFieldsName  ListAdsTargetsQueryParamFields = "name"
-	ListAdsTargetsQueryParamFieldsValue ListAdsTargetsQueryParamFields = "value"
-	ListAdsTargetsQueryParamFieldsType  ListAdsTargetsQueryParamFields = "type"
-	ListAdsTargetsQueryParamFieldsRaw   ListAdsTargetsQueryParamFields = "raw"
+	ListAdsTargetsQueryParamFieldsID       ListAdsTargetsQueryParamFields = "id"
+	ListAdsTargetsQueryParamFieldsName     ListAdsTargetsQueryParamFields = "name"
+	ListAdsTargetsQueryParamFieldsType     ListAdsTargetsQueryParamFields = "type"
+	ListAdsTargetsQueryParamFieldsIsActive ListAdsTargetsQueryParamFields = "is_active"
+	ListAdsTargetsQueryParamFieldsParentID ListAdsTargetsQueryParamFields = "parent_id"
+	ListAdsTargetsQueryParamFieldsRaw      ListAdsTargetsQueryParamFields = "raw"
 )
 
 func (e ListAdsTargetsQueryParamFields) ToPointer() *ListAdsTargetsQueryParamFields {
@@ -32,9 +33,11 @@ func (e *ListAdsTargetsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "name":
 		fallthrough
-	case "value":
-		fallthrough
 	case "type":
+		fallthrough
+	case "is_active":
+		fallthrough
+	case "parent_id":
 		fallthrough
 	case "raw":
 		*e = ListAdsTargetsQueryParamFields(v)

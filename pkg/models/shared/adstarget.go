@@ -5,18 +5,21 @@ package shared
 type AdsTargetType string
 
 const (
-	AdsTargetTypeInterests AdsTargetType = "INTERESTS"
-	AdsTargetTypeBehaviors AdsTargetType = "BEHAVIORS"
-	AdsTargetTypeLocales   AdsTargetType = "LOCALES"
-	AdsTargetTypeCountries AdsTargetType = "COUNTRIES"
-	AdsTargetTypeRegions   AdsTargetType = "REGIONS"
-	AdsTargetTypeCities    AdsTargetType = "CITIES"
-	AdsTargetTypeZips      AdsTargetType = "ZIPS"
-	AdsTargetTypeUsDmas    AdsTargetType = "US_DMAS"
-	AdsTargetTypeTopics    AdsTargetType = "TOPICS"
-	AdsTargetTypeUserLists AdsTargetType = "USER_LISTS"
-	AdsTargetTypeAgeRanges AdsTargetType = "AGE_RANGES"
-	AdsTargetTypeGenders   AdsTargetType = "GENDERS"
+	AdsTargetTypeInterest    AdsTargetType = "INTEREST"
+	AdsTargetTypeBehavior    AdsTargetType = "BEHAVIOR"
+	AdsTargetTypeLocale      AdsTargetType = "LOCALE"
+	AdsTargetTypeCountry     AdsTargetType = "COUNTRY"
+	AdsTargetTypeRegion      AdsTargetType = "REGION"
+	AdsTargetTypeCity        AdsTargetType = "CITY"
+	AdsTargetTypeZip         AdsTargetType = "ZIP"
+	AdsTargetTypeUsDma       AdsTargetType = "US_DMA"
+	AdsTargetTypeTopic       AdsTargetType = "TOPIC"
+	AdsTargetTypeUserList    AdsTargetType = "USER_LIST"
+	AdsTargetTypeAgeRange    AdsTargetType = "AGE_RANGE"
+	AdsTargetTypeGender      AdsTargetType = "GENDER"
+	AdsTargetTypeCarrier     AdsTargetType = "CARRIER"
+	AdsTargetTypeDeviceModel AdsTargetType = "DEVICE_MODEL"
+	AdsTargetTypeOsVersion   AdsTargetType = "OS_VERSION"
 )
 
 func (e AdsTargetType) ToPointer() *AdsTargetType {
@@ -27,7 +30,7 @@ func (e AdsTargetType) ToPointer() *AdsTargetType {
 func (e *AdsTargetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "INTERESTS", "BEHAVIORS", "LOCALES", "COUNTRIES", "REGIONS", "CITIES", "ZIPS", "US_DMAS", "TOPICS", "USER_LISTS", "AGE_RANGES", "GENDERS":
+		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "AGE_RANGE", "GENDER", "CARRIER", "DEVICE_MODEL", "OS_VERSION":
 			return true
 		}
 	}
@@ -36,11 +39,12 @@ func (e *AdsTargetType) IsExact() bool {
 
 // AdsTarget - Targeting search result (for ads_target list endpoint)
 type AdsTarget struct {
-	ID    string         `json:"id"`
-	Name  *string        `json:"name,omitempty"`
-	Raw   map[string]any `json:"raw,omitempty"`
-	Type  *AdsTargetType `json:"type,omitempty"`
-	Value string         `json:"value"`
+	ID       string         `json:"id"`
+	IsActive *bool          `json:"is_active,omitempty"`
+	Name     *string        `json:"name,omitempty"`
+	ParentID *string        `json:"parent_id,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	Type     *AdsTargetType `json:"type,omitempty"`
 }
 
 func (a *AdsTarget) GetID() string {
@@ -50,11 +54,25 @@ func (a *AdsTarget) GetID() string {
 	return a.ID
 }
 
+func (a *AdsTarget) GetIsActive() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsActive
+}
+
 func (a *AdsTarget) GetName() *string {
 	if a == nil {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AdsTarget) GetParentID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ParentID
 }
 
 func (a *AdsTarget) GetRaw() map[string]any {
@@ -69,11 +87,4 @@ func (a *AdsTarget) GetType() *AdsTargetType {
 		return nil
 	}
 	return a.Type
-}
-
-func (a *AdsTarget) GetValue() string {
-	if a == nil {
-		return ""
-	}
-	return a.Value
 }

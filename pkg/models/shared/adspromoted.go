@@ -41,6 +41,7 @@ func (e *AdsPromotedType) IsExact() bool {
 type AdsPromoted struct {
 	ID   string          `json:"id"`
 	Name *string         `json:"name,omitempty"`
+	Raw  map[string]any  `json:"raw,omitempty"`
 	Type AdsPromotedType `json:"type"`
 }
 
@@ -56,6 +57,13 @@ func (a *AdsPromoted) GetName() *string {
 		return nil
 	}
 	return a.Name
+}
+
+func (a *AdsPromoted) GetRaw() map[string]any {
+	if a == nil {
+		return nil
+	}
+	return a.Raw
 }
 
 func (a *AdsPromoted) GetType() AdsPromotedType {

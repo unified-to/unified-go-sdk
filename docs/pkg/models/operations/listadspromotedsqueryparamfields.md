@@ -18,3 +18,4 @@ value := operations.ListAdsPromotedsQueryParamFieldsID
 | `ListAdsPromotedsQueryParamFieldsID`   | id                                     |
 | `ListAdsPromotedsQueryParamFieldsName` | name                                   |
 | `ListAdsPromotedsQueryParamFieldsType` | type                                   |
+| `ListAdsPromotedsQueryParamFieldsRaw`  | raw                                    |

@@ -7,7 +7,7 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 )
 
-value := shared.AdsTargetTypeInterests
+value := shared.AdsTargetTypeInterest
 
 // Open enum: custom values can be created with a direct type cast
 custom := shared.AdsTargetType("custom_value")
@@ -16,17 +16,20 @@ custom := shared.AdsTargetType("custom_value")
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `AdsTargetTypeInterests` | INTERESTS                |
-| `AdsTargetTypeBehaviors` | BEHAVIORS                |
-| `AdsTargetTypeLocales`   | LOCALES                  |
-| `AdsTargetTypeCountries` | COUNTRIES                |
-| `AdsTargetTypeRegions`   | REGIONS                  |
-| `AdsTargetTypeCities`    | CITIES                   |
-| `AdsTargetTypeZips`      | ZIPS                     |
-| `AdsTargetTypeUsDmas`    | US_DMAS                  |
-| `AdsTargetTypeTopics`    | TOPICS                   |
-| `AdsTargetTypeUserLists` | USER_LISTS               |
-| `AdsTargetTypeAgeRanges` | AGE_RANGES               |
-| `AdsTargetTypeGenders`   | GENDERS                  |
+| Name                       | Value                      |
+| -------------------------- | -------------------------- |
+| `AdsTargetTypeInterest`    | INTEREST                   |
+| `AdsTargetTypeBehavior`    | BEHAVIOR                   |
+| `AdsTargetTypeLocale`      | LOCALE                     |
+| `AdsTargetTypeCountry`     | COUNTRY                    |
+| `AdsTargetTypeRegion`      | REGION                     |
+| `AdsTargetTypeCity`        | CITY                       |
+| `AdsTargetTypeZip`         | ZIP                        |
+| `AdsTargetTypeUsDma`       | US_DMA                     |
+| `AdsTargetTypeTopic`       | TOPIC                      |
+| `AdsTargetTypeUserList`    | USER_LIST                  |
+| `AdsTargetTypeAgeRange`    | AGE_RANGE                  |
+| `AdsTargetTypeGender`      | GENDER                     |
+| `AdsTargetTypeCarrier`     | CARRIER                    |
+| `AdsTargetTypeDeviceModel` | DEVICE_MODEL               |
+| `AdsTargetTypeOsVersion`   | OS_VERSION                 |

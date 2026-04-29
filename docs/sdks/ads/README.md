@@ -16,6 +16,8 @@
 * [GetAdsGroup](#getadsgroup) - Retrieve a group
 * [GetAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
 * [GetAdsOrganization](#getadsorganization) - Retrieve an organization
+* [GetAdsPromoted](#getadspromoted) - Retrieve a promoted
+* [GetAdsTarget](#getadstarget) - Retrieve a target
 * [ListAdsAds](#listadsads) - List all ads
 * [ListAdsCampaigns](#listadscampaigns) - List all campaigns
 * [ListAdsCreatives](#listadscreatives) - List all creatives
@@ -703,6 +705,116 @@ func main() {
 ### Response
 
 **[*operations.GetAdsOrganizationResponse](../../pkg/models/operations/getadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAdsPromoted
+
+Retrieve a promoted
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.GetAdsPromoted(ctx, operations.GetAdsPromotedRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsPromoted != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAdsPromotedRequest](../../pkg/models/operations/getadspromotedrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetAdsPromotedResponse](../../pkg/models/operations/getadspromotedresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAdsTarget
+
+Retrieve a target
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.GetAdsTarget(ctx, operations.GetAdsTargetRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsTarget != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetAdsTargetRequest](../../pkg/models/operations/getadstargetrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.GetAdsTargetResponse](../../pkg/models/operations/getadstargetresponse.md), error**
 
 ### Errors
 
