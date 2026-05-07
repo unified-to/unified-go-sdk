@@ -39,5 +39,6 @@ value := operations.GetAtsCandidateQueryParamFieldsID
 | `GetAtsCandidateQueryParamFieldsExperiences`        | experiences                                         |
 | `GetAtsCandidateQueryParamFieldsEducation`          | education                                           |
 | `GetAtsCandidateQueryParamFieldsSkills`             | skills                                              |
+| `GetAtsCandidateQueryParamFieldsJobIds`             | job_ids                                             |
 | `GetAtsCandidateQueryParamFieldsMetadata`           | metadata                                            |
 | `GetAtsCandidateQueryParamFieldsRaw`                | raw                                                 |

@@ -39,5 +39,6 @@ value := operations.PatchAtsCandidateQueryParamFieldsID
 | `PatchAtsCandidateQueryParamFieldsExperiences`        | experiences                                           |
 | `PatchAtsCandidateQueryParamFieldsEducation`          | education                                             |
 | `PatchAtsCandidateQueryParamFieldsSkills`             | skills                                                |
+| `PatchAtsCandidateQueryParamFieldsJobIds`             | job_ids                                               |
 | `PatchAtsCandidateQueryParamFieldsMetadata`           | metadata                                              |
 | `PatchAtsCandidateQueryParamFieldsRaw`                | raw                                                   |

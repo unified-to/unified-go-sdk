@@ -46,6 +46,7 @@ type AtsCandidate struct {
 	FirstName          *string                      `json:"first_name,omitempty"`
 	ID                 *string                      `json:"id,omitempty"`
 	ImageURL           *string                      `json:"image_url,omitempty"`
+	JobIds             []string                     `json:"job_ids,omitempty"`
 	LastName           *string                      `json:"last_name,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
 	LinkUrls   []string       `json:"link_urls,omitempty"`
@@ -156,6 +157,13 @@ func (a *AtsCandidate) GetImageURL() *string {
 		return nil
 	}
 	return a.ImageURL
+}
+
+func (a *AtsCandidate) GetJobIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.JobIds
 }
 
 func (a *AtsCandidate) GetLastName() *string {
