@@ -27,5 +27,6 @@ value := operations.CreateHrisTimeoffQueryParamFieldsID
 | `CreateHrisTimeoffQueryParamFieldsApproverUserID` | approver_user_id                                  |
 | `CreateHrisTimeoffQueryParamFieldsApprovedAt`     | approved_at                                       |
 | `CreateHrisTimeoffQueryParamFieldsComments`       | comments                                          |
-| `CreateHrisTimeoffQueryParamFieldsRaw`            | raw                                               |
 | `CreateHrisTimeoffQueryParamFieldsReason`         | reason                                            |
+| `CreateHrisTimeoffQueryParamFieldsType`           | type                                              |
+| `CreateHrisTimeoffQueryParamFieldsRaw`            | raw                                               |

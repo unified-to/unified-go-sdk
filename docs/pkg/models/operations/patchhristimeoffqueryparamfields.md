@@ -27,5 +27,6 @@ value := operations.PatchHrisTimeoffQueryParamFieldsID
 | `PatchHrisTimeoffQueryParamFieldsApproverUserID` | approver_user_id                                 |
 | `PatchHrisTimeoffQueryParamFieldsApprovedAt`     | approved_at                                      |
 | `PatchHrisTimeoffQueryParamFieldsComments`       | comments                                         |
-| `PatchHrisTimeoffQueryParamFieldsRaw`            | raw                                              |
 | `PatchHrisTimeoffQueryParamFieldsReason`         | reason                                           |
+| `PatchHrisTimeoffQueryParamFieldsType`           | type                                             |
+| `PatchHrisTimeoffQueryParamFieldsRaw`            | raw                                              |

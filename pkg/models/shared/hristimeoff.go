@@ -30,6 +30,34 @@ func (e *HrisTimeoffStatus) IsExact() bool {
 	return false
 }
 
+type HrisTimeoffType string
+
+const (
+	HrisTimeoffTypeVacation    HrisTimeoffType = "VACATION"
+	HrisTimeoffTypeSick        HrisTimeoffType = "SICK"
+	HrisTimeoffTypeHoliday     HrisTimeoffType = "HOLIDAY"
+	HrisTimeoffTypeBereavement HrisTimeoffType = "BEREAVEMENT"
+	HrisTimeoffTypeParental    HrisTimeoffType = "PARENTAL"
+	HrisTimeoffTypeUnpaid      HrisTimeoffType = "UNPAID"
+	HrisTimeoffTypeInLieu      HrisTimeoffType = "IN_LIEU"
+	HrisTimeoffTypeOther       HrisTimeoffType = "OTHER"
+)
+
+func (e HrisTimeoffType) ToPointer() *HrisTimeoffType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisTimeoffType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "VACATION", "SICK", "HOLIDAY", "BEREAVEMENT", "PARENTAL", "UNPAID", "IN_LIEU", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisTimeoff struct {
 	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
 	ApproverUserID *string            `json:"approver_user_id,omitempty"`
@@ -43,6 +71,7 @@ type HrisTimeoff struct {
 	Reason         *string            `json:"reason,omitempty"`
 	StartAt        time.Time          `json:"start_at"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
+	Type           *HrisTimeoffType   `json:"type,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
 	UserID         *string            `json:"user_id,omitempty"`
 }
@@ -140,6 +169,13 @@ func (h *HrisTimeoff) GetStatus() *HrisTimeoffStatus {
 		return nil
 	}
 	return h.Status
+}
+
+func (h *HrisTimeoff) GetType() *HrisTimeoffType {
+	if h == nil {
+		return nil
+	}
+	return h.Type
 }
 
 func (h *HrisTimeoff) GetUpdatedAt() *time.Time {

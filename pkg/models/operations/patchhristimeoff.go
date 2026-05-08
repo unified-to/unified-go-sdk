@@ -24,8 +24,9 @@ const (
 	PatchHrisTimeoffQueryParamFieldsApproverUserID PatchHrisTimeoffQueryParamFields = "approver_user_id"
 	PatchHrisTimeoffQueryParamFieldsApprovedAt     PatchHrisTimeoffQueryParamFields = "approved_at"
 	PatchHrisTimeoffQueryParamFieldsComments       PatchHrisTimeoffQueryParamFields = "comments"
-	PatchHrisTimeoffQueryParamFieldsRaw            PatchHrisTimeoffQueryParamFields = "raw"
 	PatchHrisTimeoffQueryParamFieldsReason         PatchHrisTimeoffQueryParamFields = "reason"
+	PatchHrisTimeoffQueryParamFieldsType           PatchHrisTimeoffQueryParamFields = "type"
+	PatchHrisTimeoffQueryParamFieldsRaw            PatchHrisTimeoffQueryParamFields = "raw"
 )
 
 func (e PatchHrisTimeoffQueryParamFields) ToPointer() *PatchHrisTimeoffQueryParamFields {
@@ -61,9 +62,11 @@ func (e *PatchHrisTimeoffQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "comments":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "reason":
+		fallthrough
+	case "type":
+		fallthrough
+	case "raw":
 		*e = PatchHrisTimeoffQueryParamFields(v)
 		return nil
 	default:
