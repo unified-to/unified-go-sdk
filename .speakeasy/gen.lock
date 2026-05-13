@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: b92ae9b53e2fd3c68f3300b3a8bec89d
+  docChecksum: 1a8d1590728cad21bdabd6d8e81d61e1
   docVersion: "1.0"
   speakeasyVersion: 1.762.0
   generationVersion: 2.882.0
-  releaseVersion: 0.36.72
-  configChecksum: 677e56e79008250b654dd38479638745
+  releaseVersion: 0.36.73
+  configChecksum: 0c32c643447fa65fe3227f43912367ee
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 1c14d2f0-c43e-4846-9782-3dc38bc31345
-  pristine_commit_hash: 7ac2f0a93f3726fbae990b0c5a0350cb500992ce
-  pristine_tree_hash: 85a82bf6ed351d44ca992f08a305d30fdcf5ff55
+  generation_id: 08cbd16d-8e21-4332-b89b-8ada6fc126c9
+  pristine_commit_hash: b0f5af0df7040bbe65e9cb292327ff2c7178f8c9
+  pristine_tree_hash: 6ce849e68a2a07f58cc30acaaf9d7eb46e91f009
 features:
   go:
     acceptHeaders: 2.81.2
@@ -3327,8 +3327,8 @@ trackedFiles:
     pristine_git_object: 7b59112bd09af835cc76287c1ed9b6c03325e135
   docs/pkg/models/operations/listatsdocumentsrequest.md:
     id: d733857a9e0c
-    last_write_checksum: sha1:8c129157d61bb53561fd50d90e7e6b7c775021e0
-    pristine_git_object: 0439b31af6c832e752b70c543bef23cf4297e21d
+    last_write_checksum: sha1:e8345b3d8e219d07c9f195d4cbe784fa865c91d8
+    pristine_git_object: dafa8422b79925d7c0f005ce323972adb06b52b9
   docs/pkg/models/operations/listatsdocumentsresponse.md:
     id: 7d1d0ac9dafc
     last_write_checksum: sha1:5f94286c9a2c59bd5907815cf30c7ce37d35a06f
@@ -13035,8 +13035,8 @@ trackedFiles:
     pristine_git_object: a116d94f2cba747618a92202075a9426d3fe8ab0
   pkg/models/operations/listatsdocuments.go:
     id: 3926b332355b
-    last_write_checksum: sha1:81adf20904ae43f7fe73eb80dcaf9516d724f02d
-    pristine_git_object: 537ebe78dba68e8e80e440025b3e344db3f1b0d1
+    last_write_checksum: sha1:dbcfcf1cdf3ad44c719d817545aa6a19c20d4acb
+    pristine_git_object: a1149ab8cd4aa6845597da32379c9faa3eed79ee
   pkg/models/operations/listatsinterviews.go:
     id: 15cce0e15cb8
     last_write_checksum: sha1:0094b58fba0b954773e9dab31dbdc0809b79f036
@@ -16611,8 +16611,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:bc070f1c05574e66f553a325b72ab3d574761f77
-    pristine_git_object: 28f712c21842f9fcd68ff443b9d23c09919e651e
+    last_write_checksum: sha1:1bb5dd80acc53d7c1c12f146597e053f974da6bd
+    pristine_git_object: 9cc588b6a9ca7868a527de8d67270ebf1705f5ad
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -22814,7 +22814,6 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Hris.CreateHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Hris.GetHrisTimeoff()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Hris.ListHrisTimeoffs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n* `UnifiedTo.Hris.PatchHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Hris.UpdateHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Timeoff.CreateHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Timeoff.GetHrisTimeoff()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Timeoff.ListHrisTimeoffs()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Type` **Added**\n* `UnifiedTo.Timeoff.PatchHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n* `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: \n  *  `request.Request` **Changed**\n  *  `response.Type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
