@@ -24,7 +24,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,9 +37,7 @@ func main() {
     )
 
     res, err := s.Timeoff.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
-        HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2024-09-03T22:31:51.863Z"),
-        },
+        HrisTimeoff: shared.HrisTimeoff{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -192,7 +189,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -206,9 +202,7 @@ func main() {
     )
 
     res, err := s.Timeoff.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
-        HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2024-01-26T05:49:44.056Z"),
-        },
+        HrisTimeoff: shared.HrisTimeoff{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -307,7 +301,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -321,9 +314,7 @@ func main() {
     )
 
     res, err := s.Timeoff.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
-        HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2026-02-26T01:59:20.061Z"),
-        },
+        HrisTimeoff: shared.HrisTimeoff{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

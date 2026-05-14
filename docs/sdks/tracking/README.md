@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [GetShippingTracking](#getshippingtracking) - Retrieve a tracking
+* [ListShippingTrackings](#listshippingtrackings) - List all trackings
 
 ## GetShippingTracking
 
@@ -54,6 +55,60 @@ func main() {
 ### Response
 
 **[*operations.GetShippingTrackingResponse](../../pkg/models/operations/getshippingtrackingresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListShippingTrackings
+
+List all trackings
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Tracking.ListShippingTrackings(ctx, operations.ListShippingTrackingsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ShippingTrackings != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListShippingTrackingsRequest](../../pkg/models/operations/listshippingtrackingsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.ListShippingTrackingsResponse](../../pkg/models/operations/listshippingtrackingsresponse.md), error**
 
 ### Errors
 

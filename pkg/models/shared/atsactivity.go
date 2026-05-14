@@ -35,6 +35,7 @@ type AtsActivity struct {
 	Bcc           []AtsEmail `json:"bcc,omitempty"`
 	CandidateID   *string    `json:"candidate_id,omitempty"`
 	Cc            []AtsEmail `json:"cc,omitempty"`
+	CompanyID     *string    `json:"company_id,omitempty"`
 	CreatedAt     *time.Time `json:"created_at,omitempty"`
 	Description   *string    `json:"description,omitempty"`
 	// IDs for AtsDocument.get
@@ -91,6 +92,13 @@ func (a *AtsActivity) GetCc() []AtsEmail {
 		return nil
 	}
 	return a.Cc
+}
+
+func (a *AtsActivity) GetCompanyID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.CompanyID
 }
 
 func (a *AtsActivity) GetCreatedAt() *time.Time {

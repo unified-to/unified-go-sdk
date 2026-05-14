@@ -2325,6 +2325,29 @@ func (e *SearchTwitter) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookAccountID string
+
+const (
+	VirtualWebhookAccountIDSupportedRequired VirtualWebhookAccountID = "supported-required"
+	VirtualWebhookAccountIDSupported         VirtualWebhookAccountID = "supported"
+	VirtualWebhookAccountIDNotSupported      VirtualWebhookAccountID = "not-supported"
+)
+
+func (e VirtualWebhookAccountID) ToPointer() *VirtualWebhookAccountID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookAccountID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookAdID string
 
 const (
@@ -3744,6 +3767,7 @@ type IntegrationSupport struct {
 	SearchName                    *SearchName                              `json:"search_name,omitempty"`
 	SearchTwitter                 *SearchTwitter                           `json:"search_twitter,omitempty"`
 	SlowFields                    []string                                 `json:"slow_fields,omitempty"`
+	VirtualWebhookAccountID       *VirtualWebhookAccountID                 `json:"virtual_webhook_account_id,omitempty"`
 	VirtualWebhookAdID            *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
 	VirtualWebhookApplicationID   *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
 	VirtualWebhookBenefitID       *VirtualWebhookBenefitID                 `json:"virtual_webhook_benefit_id,omitempty"`
@@ -4544,6 +4568,13 @@ func (i *IntegrationSupport) GetSlowFields() []string {
 		return nil
 	}
 	return i.SlowFields
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookAccountID() *VirtualWebhookAccountID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookAccountID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookAdID() *VirtualWebhookAdID {

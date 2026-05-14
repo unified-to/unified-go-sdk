@@ -41,4 +41,5 @@ value := operations.GetAtsJobQueryParamFieldsID
 | `GetAtsJobQueryParamFieldsMinimumDegree`          | minimum_degree                                    |
 | `GetAtsJobQueryParamFieldsSkills`                 | skills                                            |
 | `GetAtsJobQueryParamFieldsMetadata`               | metadata                                          |
+| `GetAtsJobQueryParamFieldsUserID`                 | user_id                                           |
 | `GetAtsJobQueryParamFieldsRaw`                    | raw                                               |

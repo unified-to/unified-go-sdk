@@ -41,4 +41,5 @@ value := operations.PatchAtsJobQueryParamFieldsID
 | `PatchAtsJobQueryParamFieldsMinimumDegree`          | minimum_degree                                      |
 | `PatchAtsJobQueryParamFieldsSkills`                 | skills                                              |
 | `PatchAtsJobQueryParamFieldsMetadata`               | metadata                                            |
+| `PatchAtsJobQueryParamFieldsUserID`                 | user_id                                             |
 | `PatchAtsJobQueryParamFieldsRaw`                    | raw                                                 |

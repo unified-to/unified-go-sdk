@@ -41,4 +41,5 @@ value := operations.CreateAtsJobQueryParamFieldsID
 | `CreateAtsJobQueryParamFieldsMinimumDegree`          | minimum_degree                                       |
 | `CreateAtsJobQueryParamFieldsSkills`                 | skills                                               |
 | `CreateAtsJobQueryParamFieldsMetadata`               | metadata                                             |
+| `CreateAtsJobQueryParamFieldsUserID`                 | user_id                                              |
 | `CreateAtsJobQueryParamFieldsRaw`                    | raw                                                  |

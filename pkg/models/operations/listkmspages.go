@@ -90,6 +90,8 @@ type ListKmsPagesRequest struct {
 	SpaceID *string `queryParam:"style=form,explode=true,name=space_id"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+	// The user/employee ID to filter by (reference to HrisEmployee)
+	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
 }
 
 func (l *ListKmsPagesRequest) GetConnectionID() string {
@@ -167,6 +169,13 @@ func (l *ListKmsPagesRequest) GetUpdatedGte() *string {
 		return nil
 	}
 	return l.UpdatedGte
+}
+
+func (l *ListKmsPagesRequest) GetUserID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.UserID
 }
 
 type ListKmsPagesResponse struct {

@@ -33,4 +33,5 @@ value := operations.ListAtsActivitiesQueryParamFieldsID
 | `ListAtsActivitiesQueryParamFieldsCc`            | cc                                               |
 | `ListAtsActivitiesQueryParamFieldsBcc`           | bcc                                              |
 | `ListAtsActivitiesQueryParamFieldsSubType`       | sub_type                                         |
+| `ListAtsActivitiesQueryParamFieldsCompanyID`     | company_id                                       |
 | `ListAtsActivitiesQueryParamFieldsRaw`           | raw                                              |

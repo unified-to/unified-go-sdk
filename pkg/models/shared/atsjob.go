@@ -93,6 +93,7 @@ type AtsJob struct {
 	Skills        []string         `json:"skills,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
 	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
+	UserID        *string          `json:"user_id,omitempty"`
 }
 
 func (a AtsJob) MarshalJSON() ([]byte, error) {
@@ -293,4 +294,11 @@ func (a *AtsJob) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return a.UpdatedAt
+}
+
+func (a *AtsJob) GetUserID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.UserID
 }

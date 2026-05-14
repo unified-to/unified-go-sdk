@@ -33,4 +33,5 @@ value := operations.PatchAtsActivityQueryParamFieldsID
 | `PatchAtsActivityQueryParamFieldsCc`            | cc                                              |
 | `PatchAtsActivityQueryParamFieldsBcc`           | bcc                                             |
 | `PatchAtsActivityQueryParamFieldsSubType`       | sub_type                                        |
+| `PatchAtsActivityQueryParamFieldsCompanyID`     | company_id                                      |
 | `PatchAtsActivityQueryParamFieldsRaw`           | raw                                             |
