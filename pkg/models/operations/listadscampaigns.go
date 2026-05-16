@@ -111,6 +111,8 @@ type ListAdsCampaignsRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
+	// The status to filter by
+	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
@@ -190,6 +192,13 @@ func (l *ListAdsCampaignsRequest) GetStartGte() *string {
 		return nil
 	}
 	return l.StartGte
+}
+
+func (l *ListAdsCampaignsRequest) GetStatus() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Status
 }
 
 func (l *ListAdsCampaignsRequest) GetUpdatedGte() *string {

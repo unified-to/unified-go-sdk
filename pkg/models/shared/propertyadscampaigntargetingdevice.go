@@ -3,34 +3,34 @@
 package shared
 
 type PropertyAdsCampaignTargetingDevice struct {
-	Carriers   []string `json:"carriers,omitempty"`
-	Types      []string `json:"types,omitempty"`
-	UserDevice []string `json:"user_device,omitempty"`
-	UserOs     []string `json:"user_os,omitempty"`
+	Carriers   []DeviceTarget `json:"carriers,omitempty"`
+	Types      []DeviceTarget `json:"types,omitempty"`
+	UserDevice []DeviceTarget `json:"user_device,omitempty"`
+	UserOs     []DeviceTarget `json:"user_os,omitempty"`
 }
 
-func (p *PropertyAdsCampaignTargetingDevice) GetCarriers() []string {
+func (p *PropertyAdsCampaignTargetingDevice) GetCarriers() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.Carriers
 }
 
-func (p *PropertyAdsCampaignTargetingDevice) GetTypes() []string {
+func (p *PropertyAdsCampaignTargetingDevice) GetTypes() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.Types
 }
 
-func (p *PropertyAdsCampaignTargetingDevice) GetUserDevice() []string {
+func (p *PropertyAdsCampaignTargetingDevice) GetUserDevice() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.UserDevice
 }
 
-func (p *PropertyAdsCampaignTargetingDevice) GetUserOs() []string {
+func (p *PropertyAdsCampaignTargetingDevice) GetUserOs() []DeviceTarget {
 	if p == nil {
 		return nil
 	}

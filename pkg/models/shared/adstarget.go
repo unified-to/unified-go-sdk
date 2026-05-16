@@ -15,8 +15,6 @@ const (
 	AdsTargetTypeUsDma       AdsTargetType = "US_DMA"
 	AdsTargetTypeTopic       AdsTargetType = "TOPIC"
 	AdsTargetTypeUserList    AdsTargetType = "USER_LIST"
-	AdsTargetTypeAgeRange    AdsTargetType = "AGE_RANGE"
-	AdsTargetTypeGender      AdsTargetType = "GENDER"
 	AdsTargetTypeCarrier     AdsTargetType = "CARRIER"
 	AdsTargetTypeDeviceModel AdsTargetType = "DEVICE_MODEL"
 	AdsTargetTypeOsVersion   AdsTargetType = "OS_VERSION"
@@ -30,7 +28,7 @@ func (e AdsTargetType) ToPointer() *AdsTargetType {
 func (e *AdsTargetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "AGE_RANGE", "GENDER", "CARRIER", "DEVICE_MODEL", "OS_VERSION":
+		case "INTEREST", "BEHAVIOR", "LOCALE", "COUNTRY", "REGION", "CITY", "ZIP", "US_DMA", "TOPIC", "USER_LIST", "CARRIER", "DEVICE_MODEL", "OS_VERSION":
 			return true
 		}
 	}

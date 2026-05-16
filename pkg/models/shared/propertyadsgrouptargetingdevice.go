@@ -3,34 +3,34 @@
 package shared
 
 type PropertyAdsGroupTargetingDevice struct {
-	Carriers   []string `json:"carriers,omitempty"`
-	Types      []string `json:"types,omitempty"`
-	UserDevice []string `json:"user_device,omitempty"`
-	UserOs     []string `json:"user_os,omitempty"`
+	Carriers   []DeviceTarget `json:"carriers,omitempty"`
+	Types      []DeviceTarget `json:"types,omitempty"`
+	UserDevice []DeviceTarget `json:"user_device,omitempty"`
+	UserOs     []DeviceTarget `json:"user_os,omitempty"`
 }
 
-func (p *PropertyAdsGroupTargetingDevice) GetCarriers() []string {
+func (p *PropertyAdsGroupTargetingDevice) GetCarriers() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.Carriers
 }
 
-func (p *PropertyAdsGroupTargetingDevice) GetTypes() []string {
+func (p *PropertyAdsGroupTargetingDevice) GetTypes() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.Types
 }
 
-func (p *PropertyAdsGroupTargetingDevice) GetUserDevice() []string {
+func (p *PropertyAdsGroupTargetingDevice) GetUserDevice() []DeviceTarget {
 	if p == nil {
 		return nil
 	}
 	return p.UserDevice
 }
 
-func (p *PropertyAdsGroupTargetingDevice) GetUserOs() []string {
+func (p *PropertyAdsGroupTargetingDevice) GetUserOs() []DeviceTarget {
 	if p == nil {
 		return nil
 	}

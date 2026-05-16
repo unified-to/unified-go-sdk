@@ -26,17 +26,17 @@ func (e *PropertyAdsGroupTargetingGeographicPresenceType) IsExact() bool {
 
 type PropertyAdsGroupTargetingGeographic struct {
 	Cities              []CityTarget                                       `json:"cities,omitempty"`
-	Countries           []string                                           `json:"countries,omitempty"`
+	Countries           []GeoTarget                                        `json:"countries,omitempty"`
 	ExcludedCities      []CityTarget                                       `json:"excluded_cities,omitempty"`
-	ExcludedCountries   []string                                           `json:"excluded_countries,omitempty"`
-	ExcludedPostalCodes []string                                           `json:"excluded_postal_codes,omitempty"`
+	ExcludedCountries   []GeoTarget                                        `json:"excluded_countries,omitempty"`
+	ExcludedPostalCodes []GeoTarget                                        `json:"excluded_postal_codes,omitempty"`
 	ExcludedRegions     []RegionTarget                                     `json:"excluded_regions,omitempty"`
-	ExcludedUsDmas      []string                                           `json:"excluded_us_dmas,omitempty"`
+	ExcludedUsDmas      []GeoTarget                                        `json:"excluded_us_dmas,omitempty"`
 	LocationTypes       []PropertyAdsGroupTargetingGeographicLocationTypes `json:"location_types,omitempty"`
-	PostalCodes         []string                                           `json:"postal_codes,omitempty"`
+	PostalCodes         []GeoTarget                                        `json:"postal_codes,omitempty"`
 	PresenceType        *PropertyAdsGroupTargetingGeographicPresenceType   `json:"presence_type,omitempty"`
 	Regions             []RegionTarget                                     `json:"regions,omitempty"`
-	UsDmas              []string                                           `json:"us_dmas,omitempty"`
+	UsDmas              []GeoTarget                                        `json:"us_dmas,omitempty"`
 }
 
 func (p *PropertyAdsGroupTargetingGeographic) GetCities() []CityTarget {
@@ -46,7 +46,7 @@ func (p *PropertyAdsGroupTargetingGeographic) GetCities() []CityTarget {
 	return p.Cities
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetCountries() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetCountries() []GeoTarget {
 	if p == nil {
 		return nil
 	}
@@ -60,14 +60,14 @@ func (p *PropertyAdsGroupTargetingGeographic) GetExcludedCities() []CityTarget {
 	return p.ExcludedCities
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetExcludedCountries() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetExcludedCountries() []GeoTarget {
 	if p == nil {
 		return nil
 	}
 	return p.ExcludedCountries
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetExcludedPostalCodes() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetExcludedPostalCodes() []GeoTarget {
 	if p == nil {
 		return nil
 	}
@@ -81,7 +81,7 @@ func (p *PropertyAdsGroupTargetingGeographic) GetExcludedRegions() []RegionTarge
 	return p.ExcludedRegions
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetExcludedUsDmas() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetExcludedUsDmas() []GeoTarget {
 	if p == nil {
 		return nil
 	}
@@ -95,7 +95,7 @@ func (p *PropertyAdsGroupTargetingGeographic) GetLocationTypes() []PropertyAdsGr
 	return p.LocationTypes
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetPostalCodes() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetPostalCodes() []GeoTarget {
 	if p == nil {
 		return nil
 	}
@@ -116,7 +116,7 @@ func (p *PropertyAdsGroupTargetingGeographic) GetRegions() []RegionTarget {
 	return p.Regions
 }
 
-func (p *PropertyAdsGroupTargetingGeographic) GetUsDmas() []string {
+func (p *PropertyAdsGroupTargetingGeographic) GetUsDmas() []GeoTarget {
 	if p == nil {
 		return nil
 	}

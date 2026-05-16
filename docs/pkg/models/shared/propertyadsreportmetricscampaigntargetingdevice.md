@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `Carriers`         | []`string`         | :heavy_minus_sign: | N/A                |
-| `Types`            | []`string`         | :heavy_minus_sign: | N/A                |
-| `UserDevice`       | []`string`         | :heavy_minus_sign: | N/A                |
-| `UserOs`           | []`string`         | :heavy_minus_sign: | N/A                |
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `Carriers`                                                          | [][shared.DeviceTarget](../../../pkg/models/shared/devicetarget.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Types`                                                             | [][shared.DeviceTarget](../../../pkg/models/shared/devicetarget.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `UserDevice`                                                        | [][shared.DeviceTarget](../../../pkg/models/shared/devicetarget.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `UserOs`                                                            | [][shared.DeviceTarget](../../../pkg/models/shared/devicetarget.md) | :heavy_minus_sign:                                                  | N/A                                                                 |

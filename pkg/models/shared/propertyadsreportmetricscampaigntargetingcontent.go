@@ -4,10 +4,10 @@ package shared
 
 type PropertyAdsReportMetricsCampaignTargetingContent struct {
 	ExcludedKeywords []AdsKeyword                                           `json:"excluded_keywords,omitempty"`
-	ExcludedTopics   []string                                               `json:"excluded_topics,omitempty"`
+	ExcludedTopics   []TopicTarget                                          `json:"excluded_topics,omitempty"`
 	ExcludedUrls     []string                                               `json:"excluded_urls,omitempty"`
 	Keywords         []AdsKeyword                                           `json:"keywords,omitempty"`
-	Topics           []string                                               `json:"topics,omitempty"`
+	Topics           []TopicTarget                                          `json:"topics,omitempty"`
 	Urls             []string                                               `json:"urls,omitempty"`
 	Video            *PropertyAdsReportMetricsCampaignTargetingContentVideo `json:"video,omitempty"`
 }
@@ -19,7 +19,7 @@ func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetExcludedKeywords()
 	return p.ExcludedKeywords
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetExcludedTopics() []string {
+func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetExcludedTopics() []TopicTarget {
 	if p == nil {
 		return nil
 	}
@@ -40,7 +40,7 @@ func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetKeywords() []AdsKe
 	return p.Keywords
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetTopics() []string {
+func (p *PropertyAdsReportMetricsCampaignTargetingContent) GetTopics() []TopicTarget {
 	if p == nil {
 		return nil
 	}

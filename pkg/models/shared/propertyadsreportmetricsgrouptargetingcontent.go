@@ -4,10 +4,10 @@ package shared
 
 type PropertyAdsReportMetricsGroupTargetingContent struct {
 	ExcludedKeywords []AdsKeyword                                        `json:"excluded_keywords,omitempty"`
-	ExcludedTopics   []string                                            `json:"excluded_topics,omitempty"`
+	ExcludedTopics   []TopicTarget                                       `json:"excluded_topics,omitempty"`
 	ExcludedUrls     []string                                            `json:"excluded_urls,omitempty"`
 	Keywords         []AdsKeyword                                        `json:"keywords,omitempty"`
-	Topics           []string                                            `json:"topics,omitempty"`
+	Topics           []TopicTarget                                       `json:"topics,omitempty"`
 	Urls             []string                                            `json:"urls,omitempty"`
 	Video            *PropertyAdsReportMetricsGroupTargetingContentVideo `json:"video,omitempty"`
 }
@@ -19,7 +19,7 @@ func (p *PropertyAdsReportMetricsGroupTargetingContent) GetExcludedKeywords() []
 	return p.ExcludedKeywords
 }
 
-func (p *PropertyAdsReportMetricsGroupTargetingContent) GetExcludedTopics() []string {
+func (p *PropertyAdsReportMetricsGroupTargetingContent) GetExcludedTopics() []TopicTarget {
 	if p == nil {
 		return nil
 	}
@@ -40,7 +40,7 @@ func (p *PropertyAdsReportMetricsGroupTargetingContent) GetKeywords() []AdsKeywo
 	return p.Keywords
 }
 
-func (p *PropertyAdsReportMetricsGroupTargetingContent) GetTopics() []string {
+func (p *PropertyAdsReportMetricsGroupTargetingContent) GetTopics() []TopicTarget {
 	if p == nil {
 		return nil
 	}

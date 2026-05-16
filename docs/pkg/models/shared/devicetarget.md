@@ -1,0 +1,11 @@
+# DeviceTarget
+
+device / OS / carrier id from ads_target list
+
+
+## Fields
+
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `ID`               | `string`           | :heavy_check_mark: | N/A                |
+| `Name`             | `*string`          | :heavy_minus_sign: | N/A                |

@@ -28,8 +28,6 @@ custom := shared.AdsTargetType("custom_value")
 | `AdsTargetTypeUsDma`       | US_DMA                     |
 | `AdsTargetTypeTopic`       | TOPIC                      |
 | `AdsTargetTypeUserList`    | USER_LIST                  |
-| `AdsTargetTypeAgeRange`    | AGE_RANGE                  |
-| `AdsTargetTypeGender`      | GENDER                     |
 | `AdsTargetTypeCarrier`     | CARRIER                    |
 | `AdsTargetTypeDeviceModel` | DEVICE_MODEL               |
 | `AdsTargetTypeOsVersion`   | OS_VERSION                 |
