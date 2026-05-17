@@ -3,17 +3,17 @@
 package shared
 
 type PropertyAdsReportMetricsCampaignTargetingAudience struct {
-	Behaviors               []AudienceSegment     `json:"behaviors,omitempty"`
+	Behaviors               []TargetRef           `json:"behaviors,omitempty"`
 	CombinationSpec         []AudienceCombination `json:"combination_spec,omitempty"`
-	CustomAudiences         []AudienceSegment     `json:"custom_audiences,omitempty"`
-	ExcludedBehaviors       []AudienceSegment     `json:"excluded_behaviors,omitempty"`
-	ExcludedCustomAudiences []AudienceSegment     `json:"excluded_custom_audiences,omitempty"`
-	ExcludedInterests       []AudienceSegment     `json:"excluded_interests,omitempty"`
-	Interests               []AudienceSegment     `json:"interests,omitempty"`
+	CustomAudiences         []TargetRef           `json:"custom_audiences,omitempty"`
+	ExcludedBehaviors       []TargetRef           `json:"excluded_behaviors,omitempty"`
+	ExcludedCustomAudiences []TargetRef           `json:"excluded_custom_audiences,omitempty"`
+	ExcludedInterests       []TargetRef           `json:"excluded_interests,omitempty"`
+	Interests               []TargetRef           `json:"interests,omitempty"`
 	LookalikeAudiences      []LookalikeAudience   `json:"lookalike_audiences,omitempty"`
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetBehaviors() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetBehaviors() []TargetRef {
 	if p == nil {
 		return nil
 	}
@@ -27,35 +27,35 @@ func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetCombinationSpec()
 	return p.CombinationSpec
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetCustomAudiences() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetCustomAudiences() []TargetRef {
 	if p == nil {
 		return nil
 	}
 	return p.CustomAudiences
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedBehaviors() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedBehaviors() []TargetRef {
 	if p == nil {
 		return nil
 	}
 	return p.ExcludedBehaviors
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedCustomAudiences() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedCustomAudiences() []TargetRef {
 	if p == nil {
 		return nil
 	}
 	return p.ExcludedCustomAudiences
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedInterests() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetExcludedInterests() []TargetRef {
 	if p == nil {
 		return nil
 	}
 	return p.ExcludedInterests
 }
 
-func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetInterests() []AudienceSegment {
+func (p *PropertyAdsReportMetricsCampaignTargetingAudience) GetInterests() []TargetRef {
 	if p == nil {
 		return nil
 	}

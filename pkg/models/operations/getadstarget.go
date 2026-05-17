@@ -12,12 +12,14 @@ import (
 type GetAdsTargetQueryParamFields string
 
 const (
-	GetAdsTargetQueryParamFieldsID       GetAdsTargetQueryParamFields = "id"
-	GetAdsTargetQueryParamFieldsName     GetAdsTargetQueryParamFields = "name"
-	GetAdsTargetQueryParamFieldsType     GetAdsTargetQueryParamFields = "type"
-	GetAdsTargetQueryParamFieldsIsActive GetAdsTargetQueryParamFields = "is_active"
-	GetAdsTargetQueryParamFieldsParentID GetAdsTargetQueryParamFields = "parent_id"
-	GetAdsTargetQueryParamFieldsRaw      GetAdsTargetQueryParamFields = "raw"
+	GetAdsTargetQueryParamFieldsID               GetAdsTargetQueryParamFields = "id"
+	GetAdsTargetQueryParamFieldsName             GetAdsTargetQueryParamFields = "name"
+	GetAdsTargetQueryParamFieldsType             GetAdsTargetQueryParamFields = "type"
+	GetAdsTargetQueryParamFieldsIsActive         GetAdsTargetQueryParamFields = "is_active"
+	GetAdsTargetQueryParamFieldsParentID         GetAdsTargetQueryParamFields = "parent_id"
+	GetAdsTargetQueryParamFieldsAudienceCountMin GetAdsTargetQueryParamFields = "audience_count_min"
+	GetAdsTargetQueryParamFieldsAudienceCountMax GetAdsTargetQueryParamFields = "audience_count_max"
+	GetAdsTargetQueryParamFieldsRaw              GetAdsTargetQueryParamFields = "raw"
 )
 
 func (e GetAdsTargetQueryParamFields) ToPointer() *GetAdsTargetQueryParamFields {
@@ -38,6 +40,10 @@ func (e *GetAdsTargetQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "audience_count_min":
+		fallthrough
+	case "audience_count_max":
 		fallthrough
 	case "raw":
 		*e = GetAdsTargetQueryParamFields(v)

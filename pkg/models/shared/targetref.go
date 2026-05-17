@@ -2,20 +2,19 @@
 
 package shared
 
-// TopicTarget - content topic id from ads_target list
-type TopicTarget struct {
-	ID   string  `json:"id"`
+type TargetRef struct {
+	ID   *string `json:"id,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
 
-func (t *TopicTarget) GetID() string {
+func (t *TargetRef) GetID() *string {
 	if t == nil {
-		return ""
+		return nil
 	}
 	return t.ID
 }
 
-func (t *TopicTarget) GetName() *string {
+func (t *TargetRef) GetName() *string {
 	if t == nil {
 		return nil
 	}

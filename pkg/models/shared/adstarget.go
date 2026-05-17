@@ -37,12 +37,28 @@ func (e *AdsTargetType) IsExact() bool {
 
 // AdsTarget - Targeting search result (for ads_target list endpoint)
 type AdsTarget struct {
-	ID       string         `json:"id"`
-	IsActive *bool          `json:"is_active,omitempty"`
-	Name     *string        `json:"name,omitempty"`
-	ParentID *string        `json:"parent_id,omitempty"`
-	Raw      map[string]any `json:"raw,omitempty"`
-	Type     *AdsTargetType `json:"type,omitempty"`
+	AudienceCountMax *float64       `json:"audience_count_max,omitempty"`
+	AudienceCountMin *float64       `json:"audience_count_min,omitempty"`
+	ID               string         `json:"id"`
+	IsActive         *bool          `json:"is_active,omitempty"`
+	Name             *string        `json:"name,omitempty"`
+	ParentID         *string        `json:"parent_id,omitempty"`
+	Raw              map[string]any `json:"raw,omitempty"`
+	Type             *AdsTargetType `json:"type,omitempty"`
+}
+
+func (a *AdsTarget) GetAudienceCountMax() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.AudienceCountMax
+}
+
+func (a *AdsTarget) GetAudienceCountMin() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.AudienceCountMin
 }
 
 func (a *AdsTarget) GetID() string {

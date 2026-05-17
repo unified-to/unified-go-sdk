@@ -3,36 +3,36 @@
 package shared
 
 type AudienceCombination struct {
-	Behaviors    []AudienceSegment `json:"behaviors,omitempty"`
-	Demographics []AudienceSegment `json:"demographics,omitempty"`
-	Interests    []AudienceSegment `json:"interests,omitempty"`
-	LifeEvents   []AudienceSegment `json:"life_events,omitempty"`
+	Behaviors  []TargetRef `json:"behaviors,omitempty"`
+	Interests  []TargetRef `json:"interests,omitempty"`
+	LifeEvents []TargetRef `json:"life_events,omitempty"`
+	References []TargetRef `json:"references,omitempty"`
 }
 
-func (a *AudienceCombination) GetBehaviors() []AudienceSegment {
+func (a *AudienceCombination) GetBehaviors() []TargetRef {
 	if a == nil {
 		return nil
 	}
 	return a.Behaviors
 }
 
-func (a *AudienceCombination) GetDemographics() []AudienceSegment {
-	if a == nil {
-		return nil
-	}
-	return a.Demographics
-}
-
-func (a *AudienceCombination) GetInterests() []AudienceSegment {
+func (a *AudienceCombination) GetInterests() []TargetRef {
 	if a == nil {
 		return nil
 	}
 	return a.Interests
 }
 
-func (a *AudienceCombination) GetLifeEvents() []AudienceSegment {
+func (a *AudienceCombination) GetLifeEvents() []TargetRef {
 	if a == nil {
 		return nil
 	}
 	return a.LifeEvents
+}
+
+func (a *AudienceCombination) GetReferences() []TargetRef {
+	if a == nil {
+		return nil
+	}
+	return a.References
 }

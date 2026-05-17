@@ -13,11 +13,13 @@ value := operations.GetAdsTargetQueryParamFieldsID
 
 ## Values
 
-| Name                                   | Value                                  |
-| -------------------------------------- | -------------------------------------- |
-| `GetAdsTargetQueryParamFieldsID`       | id                                     |
-| `GetAdsTargetQueryParamFieldsName`     | name                                   |
-| `GetAdsTargetQueryParamFieldsType`     | type                                   |
-| `GetAdsTargetQueryParamFieldsIsActive` | is_active                              |
-| `GetAdsTargetQueryParamFieldsParentID` | parent_id                              |
-| `GetAdsTargetQueryParamFieldsRaw`      | raw                                    |
+| Name                                           | Value                                          |
+| ---------------------------------------------- | ---------------------------------------------- |
+| `GetAdsTargetQueryParamFieldsID`               | id                                             |
+| `GetAdsTargetQueryParamFieldsName`             | name                                           |
+| `GetAdsTargetQueryParamFieldsType`             | type                                           |
+| `GetAdsTargetQueryParamFieldsIsActive`         | is_active                                      |
+| `GetAdsTargetQueryParamFieldsParentID`         | parent_id                                      |
+| `GetAdsTargetQueryParamFieldsAudienceCountMin` | audience_count_min                             |
+| `GetAdsTargetQueryParamFieldsAudienceCountMax` | audience_count_max                             |
+| `GetAdsTargetQueryParamFieldsRaw`              | raw                                            |

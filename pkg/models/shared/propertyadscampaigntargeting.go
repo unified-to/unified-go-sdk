@@ -11,8 +11,7 @@ type PropertyAdsCampaignTargeting struct {
 	Demographic *PropertyAdsCampaignTargetingDemographic `json:"demographic,omitempty"`
 	Device      *PropertyAdsCampaignTargetingDevice      `json:"device,omitempty"`
 	Geographic  *PropertyAdsCampaignTargetingGeographic  `json:"geographic,omitempty"`
-	// Language targeting (Meta
-	Language *PropertyAdsCampaignTargetingLanguage `json:"language,omitempty"`
+	Language    []TargetRef                              `json:"language,omitempty"`
 	// Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
 	Optimization *PropertyAdsCampaignTargetingOptimization `json:"optimization,omitempty"`
 	Placement    *PropertyAdsCampaignTargetingPlacement    `json:"placement,omitempty"`
@@ -61,7 +60,7 @@ func (p *PropertyAdsCampaignTargeting) GetGeographic() *PropertyAdsCampaignTarge
 	return p.Geographic
 }
 
-func (p *PropertyAdsCampaignTargeting) GetLanguage() *PropertyAdsCampaignTargetingLanguage {
+func (p *PropertyAdsCampaignTargeting) GetLanguage() []TargetRef {
 	if p == nil {
 		return nil
 	}

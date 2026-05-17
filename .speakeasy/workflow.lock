@@ -2,8 +2,8 @@ speakeasyVersion: 1.763.1
 sources:
     my-source:
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:931e693eecd43fff87acb502cfb09b3bbe6e019d07bf994bbf3c40554878f55e
-        sourceBlobDigest: sha256:6fbabbbbe6ba17e34a8326c246b390b08d0a526f08d6243afdf7431d05406682
+        sourceRevisionDigest: sha256:cee2b27c36ad5482a97c6fd84cc7b4f30f90491005cf6f346a6db3a0e08dfa87
+        sourceBlobDigest: sha256:9de67158fe6fdad0f4e3b7bbd8cfd945c609fd9d239e96005458e5b7da57fbda
         tags:
             - latest
             - "1.0"
@@ -11,10 +11,10 @@ targets:
     go-terget:
         source: my-source
         sourceNamespace: my-source
-        sourceRevisionDigest: sha256:931e693eecd43fff87acb502cfb09b3bbe6e019d07bf994bbf3c40554878f55e
-        sourceBlobDigest: sha256:6fbabbbbe6ba17e34a8326c246b390b08d0a526f08d6243afdf7431d05406682
+        sourceRevisionDigest: sha256:cee2b27c36ad5482a97c6fd84cc7b4f30f90491005cf6f346a6db3a0e08dfa87
+        sourceBlobDigest: sha256:9de67158fe6fdad0f4e3b7bbd8cfd945c609fd9d239e96005458e5b7da57fbda
         codeSamplesNamespace: my-source-go-code-samples
-        codeSamplesRevisionDigest: sha256:78f9f43c7f28fbcadd96b6600ba7b400596d7cac555791f792d4896c6f586d0f
+        codeSamplesRevisionDigest: sha256:1b2bd1dfca805697c33f564c47ba5c2d20c675d3877937a05e5e404919c26262
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
