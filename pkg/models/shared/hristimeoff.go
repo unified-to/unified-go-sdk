@@ -69,7 +69,7 @@ type HrisTimeoff struct {
 	IsPaid         *bool              `json:"is_paid,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
 	Reason         *string            `json:"reason,omitempty"`
-	StartAt        *time.Time         `json:"start_at,omitempty"`
+	StartAt        time.Time          `json:"start_at"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
 	Type           *HrisTimeoffType   `json:"type,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
@@ -157,9 +157,9 @@ func (h *HrisTimeoff) GetReason() *string {
 	return h.Reason
 }
 
-func (h *HrisTimeoff) GetStartAt() *time.Time {
+func (h *HrisTimeoff) GetStartAt() time.Time {
 	if h == nil {
-		return nil
+		return time.Time{}
 	}
 	return h.StartAt
 }

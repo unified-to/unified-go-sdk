@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 98553c5a9c26bbe1e089cc9d09e3a8f2
+  docChecksum: 389d12ddd497f44c9fc1e4755d3d9af5
   docVersion: "1.0"
-  speakeasyVersion: 1.763.1
+  speakeasyVersion: 1.763.2
   generationVersion: 2.884.4
-  releaseVersion: 0.36.76
-  configChecksum: 5e201271ec4c6e9edfaf4e005711afc8
+  releaseVersion: 0.36.77
+  configChecksum: aaa55fe0cf400157a630fe5c9700a56c
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 8b4f79b8-7114-407c-829b-cbbf1d9eadef
-  pristine_commit_hash: 913baa84aa3ce485ebd4d087f38d613872265d97
-  pristine_tree_hash: 23a0117cf39e194d52d341ccb2bfb066eea6d5ff
+  generation_id: 4a9551c7-34fa-4713-8a31-a116fe987398
+  pristine_commit_hash: ed623757013f78bb0238a4e7e263494e24a06086
+  pristine_tree_hash: 42a25fb43e9914a06780c8f235830843670f4664
 features:
   go:
     acceptHeaders: 2.81.2
@@ -8919,8 +8919,8 @@ trackedFiles:
     pristine_git_object: 5681e45743ee369ca87518de415616fcad4d28b4
   docs/pkg/models/shared/hristimeoff.md:
     id: 7065c7e5ebcf
-    last_write_checksum: sha1:bccba355b0492e0882402b07e6d7cfc66aa8e980
-    pristine_git_object: 3af2ddf06faaed58214a482ed29cbb591ce5ea2d
+    last_write_checksum: sha1:f54a6c1b526090c1956bbaddbd3ecb494df99dc2
+    pristine_git_object: aa81ca76b2ce8d2ef101790195d3ec7258ef7a87
   docs/pkg/models/shared/hristimeoffstatus.md:
     id: e2da42fd642f
     last_write_checksum: sha1:547449dd8dca4281a34ae11f4fcf6b7aaaae8808
@@ -8931,8 +8931,8 @@ trackedFiles:
     pristine_git_object: 2672e137298bc72766e3eef4b0203185fb743854
   docs/pkg/models/shared/hristimeshift.md:
     id: 588c0b9c9cf6
-    last_write_checksum: sha1:422982474ca3d7c9ceee0fa81311d430eb3a2ed4
-    pristine_git_object: 20649e3d9b429f6f344cc9da5cea01a6c3f4a5c8
+    last_write_checksum: sha1:e2a2712520ede9a6c8c7b0548256f9050deac228
+    pristine_git_object: b502d7daccd46b7e659f0050972e2b356d550cc3
   docs/pkg/models/shared/integration.md:
     id: f13a2794979a
     last_write_checksum: sha1:bf1487b8c06cd51c1419a435605d6f0838b6bb6b
@@ -11435,8 +11435,8 @@ trackedFiles:
     pristine_git_object: 7a5940effc2e55ccb968cd139389b02d34f5e116
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:060b4353ab6b5c7048dd76d751b3c7315d14feea
-    pristine_git_object: 6346a12397ec60f4c942f08e542f5e99d1a0b143
+    last_write_checksum: sha1:8cfa902e552159e1e2827b8847014186c3e275a9
+    pristine_git_object: 32f5b0dfb8b2d0573af58f530b7a04595aa057ea
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:06ccd0864cac38bd8afb9dbcdfcc07e5773b045d
@@ -11719,12 +11719,12 @@ trackedFiles:
     pristine_git_object: b5fffdb4bf736d0723ba96b5cc64966f1425d864
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:6821dbb08137fabd33589012af576f7ac5d3dfa7
-    pristine_git_object: c6d36db0e14459ccb47695de19ed0bb0afb024a2
+    last_write_checksum: sha1:4e7c83230f883e3ef8489896d72882d8411d8acb
+    pristine_git_object: 5787658faf9390259b4e3eea1b30218bf0a3d776
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
-    last_write_checksum: sha1:7ee97d96ac54b1a7948895c8916dbaa20012c515
-    pristine_git_object: 53f01f09078daf7b6ad4766d3abcf72943263fe1
+    last_write_checksum: sha1:0dfc41f15cc4afea8740bad5411d4075ec265a93
+    pristine_git_object: 2ecaae7b6178acfa3e9a193abdd061d0db361365
   docs/sdks/tracking/README.md:
     id: dea00ca28a69
     last_write_checksum: sha1:74350519b52cad7505e0badaefa0611fa6b69e3f
@@ -15323,12 +15323,12 @@ trackedFiles:
     pristine_git_object: 25096ec7dd3c895039d0cc5ab3ec74430879e49d
   pkg/models/shared/hristimeoff.go:
     id: d1db4647d1f5
-    last_write_checksum: sha1:7932237e43037b14b062628b48b9949276860287
-    pristine_git_object: ea983d73d3c9bc22ba11ab01a61d2b4ed94038bb
+    last_write_checksum: sha1:cea168948ae6696b2767e1f41b423ea4c5254de7
+    pristine_git_object: c6ec143330603f7fa30c4c01b53562a33d9aa799
   pkg/models/shared/hristimeshift.go:
     id: b946e03fbeb5
-    last_write_checksum: sha1:de0a3f9748c8b6376f1620275f4643fc68d7a6d4
-    pristine_git_object: 580813a62d9620cbaa7be9db2ec16369866ed6c4
+    last_write_checksum: sha1:8ca4d1d6f8398c958e83da2b73d811072697178e
+    pristine_git_object: 76b2baf78db2b648f80f1369713e28f5666e41d6
   pkg/models/shared/integration.go:
     id: c1654ef744d4
     last_write_checksum: sha1:6ba540d60cda7950f2aafce7bf664897ce4d0fb2
@@ -16591,8 +16591,8 @@ trackedFiles:
     pristine_git_object: 622bf654a86553f8ff63982126095830c349943e
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:71f85686a66e67038e53f41d0cba4f35f95368cc
-    pristine_git_object: 42ea07f3e99b9ed862b2f931db364cf35d2e4a88
+    last_write_checksum: sha1:8052429c6f2afd2b86a6aa26a8b5add34c2106b7
+    pristine_git_object: 53728b135a45c213056fa79f50f2647ab93360f6
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -18672,7 +18672,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
   listHrisDevices:
     speakeasy-default-list-hris-devices:
       parameters:
@@ -20597,10 +20597,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2025-10-18T00:03:45.822Z", "start_at": "2024-06-03T05:33:48.715Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2025-04-02T06:29:45.209Z", "start_at": "2025-05-03T19:13:33.398Z"}
+          application/json: {"employee_user_id": "<id>"}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -20609,7 +20609,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-02T20:47:43.029Z", "start_at": "2023-11-12T09:20:44.392Z"}
+          application/json: {"employee_user_id": "<id>"}
   listHrisTimeshifts:
     speakeasy-default-list-hris-timeshifts:
       parameters:
@@ -20625,10 +20625,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2023-11-17T18:53:02.172Z", "start_at": "2023-01-19T02:48:41.002Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2023-05-16T07:27:26.608Z", "start_at": "2024-07-25T03:16:34.281Z"}
+          application/json: {"employee_user_id": "<id>"}
   removeHrisTimeshift:
     speakeasy-default-remove-hris-timeshift:
       parameters:
@@ -20642,10 +20642,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"employee_user_id": "<id>", "end_at": "2025-03-03T22:04:09.340Z", "start_at": "2024-05-30T21:19:58.772Z"}
+        application/json: {"employee_user_id": "<id>"}
       responses:
         "200":
-          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-09T22:44:06.400Z", "start_at": "2023-11-14T18:28:16.870Z"}
+          application/json: {"employee_user_id": "<id>"}
   createAtsCompany:
     speakeasy-default-create-ats-company:
       parameters:
@@ -22615,10 +22615,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -22626,10 +22626,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -22643,10 +22643,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
   createSigningDocument:
     speakeasy-default-create-signing-document:
       parameters:
@@ -22794,7 +22794,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsCampaign()`:  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.GetAdsGroup()`:  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsCampaigns()`:  `response.[].Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsGroups()`:  `response.[].Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[]` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.GetAdsCampaign()`:  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.ListAdsCampaigns()`:  `response.[].Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request.AdsCampaign.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request.AdsGroup.Targeting` **Changed** (Breaking ⚠️)\n  *  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.GetAdsGroup()`:  `response.Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Group.ListAdsGroups()`:  `response.[].Targeting` **Changed** (Breaking ⚠️)\n* `UnifiedTo.Ads.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Ads.GetAdsTarget()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Target.GetAdsTarget()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Target.ListAdsTargets()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Hris.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.StartAt` **Changed** (Breaking ⚠️)\n  *  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Hris.GetHrisTimeoff()`:  `response.StartAt` **Changed**\n* `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**\n* `UnifiedTo.Hris.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response.StartAt` **Changed**\n* `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[].StartAt` **Changed**\n* `UnifiedTo.Hris.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Hris.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.CreateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.GetHrisTimeshift()`:  `response` **Changed**\n* `UnifiedTo.Timeshift.ListHrisTimeshifts()`:  `response.[]` **Changed**\n* `UnifiedTo.Timeshift.PatchHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Timeshift.UpdateHrisTimeshift()`: \n  *  `request.Request.HrisTimeshift` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

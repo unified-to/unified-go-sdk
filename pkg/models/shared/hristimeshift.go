@@ -14,14 +14,14 @@ type HrisTimeshift struct {
 	Compensation   []HrisCompensation `json:"compensation,omitempty"`
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
 	EmployeeUserID string             `json:"employee_user_id"`
-	EndAt          time.Time          `json:"end_at"`
+	EndAt          *time.Time         `json:"end_at,omitempty"`
 	GroupID        *string            `json:"group_id,omitempty"`
 	Hours          *float64           `json:"hours,omitempty"`
 	ID             *string            `json:"id,omitempty"`
 	IsApproved     *bool              `json:"is_approved,omitempty"`
 	LocationID     *string            `json:"location_id,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
-	StartAt        time.Time          `json:"start_at"`
+	StartAt        *time.Time         `json:"start_at,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
 }
 
@@ -78,9 +78,9 @@ func (h *HrisTimeshift) GetEmployeeUserID() string {
 	return h.EmployeeUserID
 }
 
-func (h *HrisTimeshift) GetEndAt() time.Time {
+func (h *HrisTimeshift) GetEndAt() *time.Time {
 	if h == nil {
-		return time.Time{}
+		return nil
 	}
 	return h.EndAt
 }
@@ -127,9 +127,9 @@ func (h *HrisTimeshift) GetRaw() map[string]any {
 	return h.Raw
 }
 
-func (h *HrisTimeshift) GetStartAt() time.Time {
+func (h *HrisTimeshift) GetStartAt() *time.Time {
 	if h == nil {
-		return time.Time{}
+		return nil
 	}
 	return h.StartAt
 }
