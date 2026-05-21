@@ -12,20 +12,22 @@ import (
 type PatchPaymentPaymentQueryParamFields string
 
 const (
-	PatchPaymentPaymentQueryParamFieldsID            PatchPaymentPaymentQueryParamFields = "id"
-	PatchPaymentPaymentQueryParamFieldsCreatedAt     PatchPaymentPaymentQueryParamFields = "created_at"
-	PatchPaymentPaymentQueryParamFieldsUpdatedAt     PatchPaymentPaymentQueryParamFields = "updated_at"
-	PatchPaymentPaymentQueryParamFieldsTotalAmount   PatchPaymentPaymentQueryParamFields = "total_amount"
-	PatchPaymentPaymentQueryParamFieldsContactID     PatchPaymentPaymentQueryParamFields = "contact_id"
-	PatchPaymentPaymentQueryParamFieldsType          PatchPaymentPaymentQueryParamFields = "type"
-	PatchPaymentPaymentQueryParamFieldsPaymentMethod PatchPaymentPaymentQueryParamFields = "payment_method"
-	PatchPaymentPaymentQueryParamFieldsCurrency      PatchPaymentPaymentQueryParamFields = "currency"
-	PatchPaymentPaymentQueryParamFieldsNotes         PatchPaymentPaymentQueryParamFields = "notes"
-	PatchPaymentPaymentQueryParamFieldsInvoiceID     PatchPaymentPaymentQueryParamFields = "invoice_id"
-	PatchPaymentPaymentQueryParamFieldsBillID        PatchPaymentPaymentQueryParamFields = "bill_id"
-	PatchPaymentPaymentQueryParamFieldsAccountID     PatchPaymentPaymentQueryParamFields = "account_id"
-	PatchPaymentPaymentQueryParamFieldsReference     PatchPaymentPaymentQueryParamFields = "reference"
-	PatchPaymentPaymentQueryParamFieldsRaw           PatchPaymentPaymentQueryParamFields = "raw"
+	PatchPaymentPaymentQueryParamFieldsID             PatchPaymentPaymentQueryParamFields = "id"
+	PatchPaymentPaymentQueryParamFieldsCreatedAt      PatchPaymentPaymentQueryParamFields = "created_at"
+	PatchPaymentPaymentQueryParamFieldsUpdatedAt      PatchPaymentPaymentQueryParamFields = "updated_at"
+	PatchPaymentPaymentQueryParamFieldsTotalAmount    PatchPaymentPaymentQueryParamFields = "total_amount"
+	PatchPaymentPaymentQueryParamFieldsContactID      PatchPaymentPaymentQueryParamFields = "contact_id"
+	PatchPaymentPaymentQueryParamFieldsPaymentMethod  PatchPaymentPaymentQueryParamFields = "payment_method"
+	PatchPaymentPaymentQueryParamFieldsType           PatchPaymentPaymentQueryParamFields = "type"
+	PatchPaymentPaymentQueryParamFieldsCurrency       PatchPaymentPaymentQueryParamFields = "currency"
+	PatchPaymentPaymentQueryParamFieldsNotes          PatchPaymentPaymentQueryParamFields = "notes"
+	PatchPaymentPaymentQueryParamFieldsInvoiceID      PatchPaymentPaymentQueryParamFields = "invoice_id"
+	PatchPaymentPaymentQueryParamFieldsBillID         PatchPaymentPaymentQueryParamFields = "bill_id"
+	PatchPaymentPaymentQueryParamFieldsLinkID         PatchPaymentPaymentQueryParamFields = "link_id"
+	PatchPaymentPaymentQueryParamFieldsAccountID      PatchPaymentPaymentQueryParamFields = "account_id"
+	PatchPaymentPaymentQueryParamFieldsReference      PatchPaymentPaymentQueryParamFields = "reference"
+	PatchPaymentPaymentQueryParamFieldsOrganizationID PatchPaymentPaymentQueryParamFields = "organization_id"
+	PatchPaymentPaymentQueryParamFieldsRaw            PatchPaymentPaymentQueryParamFields = "raw"
 )
 
 func (e PatchPaymentPaymentQueryParamFields) ToPointer() *PatchPaymentPaymentQueryParamFields {
@@ -47,9 +49,9 @@ func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "contact_id":
 		fallthrough
-	case "type":
-		fallthrough
 	case "payment_method":
+		fallthrough
+	case "type":
 		fallthrough
 	case "currency":
 		fallthrough
@@ -59,9 +61,13 @@ func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "bill_id":
 		fallthrough
+	case "link_id":
+		fallthrough
 	case "account_id":
 		fallthrough
 	case "reference":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = PatchPaymentPaymentQueryParamFields(v)

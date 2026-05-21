@@ -37,9 +37,7 @@ func main() {
     )
 
     res, err := s.Device.CreateHrisDevice(ctx, operations.CreateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -204,9 +202,7 @@ func main() {
     )
 
     res, err := s.Device.PatchHrisDevice(ctx, operations.PatchHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -318,9 +314,7 @@ func main() {
     )
 
     res, err := s.Device.UpdateHrisDevice(ctx, operations.UpdateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

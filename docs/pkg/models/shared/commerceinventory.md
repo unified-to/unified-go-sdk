@@ -5,7 +5,7 @@
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `Available`                                | `float64`                                  | :heavy_check_mark:                         | N/A                                        |
+| `Available`                                | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `ID`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `ItemID`                                   | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `ItemOptionID`                             | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |

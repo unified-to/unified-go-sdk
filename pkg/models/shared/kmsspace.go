@@ -12,7 +12,7 @@ type KmsSpace struct {
 	Description  *string        `json:"description,omitempty"`
 	ID           *string        `json:"id,omitempty"`
 	IsActive     *bool          `json:"is_active,omitempty"`
-	Name         string         `json:"name"`
+	Name         *string        `json:"name,omitempty"`
 	ParentID     *string        `json:"parent_id,omitempty"`
 	ParentPageID *string        `json:"parent_page_id,omitempty"`
 	Raw          map[string]any `json:"raw,omitempty"`
@@ -59,9 +59,9 @@ func (k *KmsSpace) GetIsActive() *bool {
 	return k.IsActive
 }
 
-func (k *KmsSpace) GetName() string {
+func (k *KmsSpace) GetName() *string {
 	if k == nil {
-		return ""
+		return nil
 	}
 	return k.Name
 }

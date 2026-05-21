@@ -44,7 +44,7 @@ type CommerceReview struct {
 	IsFeatured      *bool                   `json:"is_featured,omitempty"`
 	IsPublic        *bool                   `json:"is_public,omitempty"`
 	IsVerified      *bool                   `json:"is_verified,omitempty"`
-	ItemID          string                  `json:"item_id"`
+	ItemID          *string                 `json:"item_id,omitempty"`
 	ItemVariantID   *string                 `json:"item_variant_id,omitempty"`
 	LocationID      *string                 `json:"location_id,omitempty"`
 	// Photosvideos attached to the review
@@ -155,9 +155,9 @@ func (c *CommerceReview) GetIsVerified() *bool {
 	return c.IsVerified
 }
 
-func (c *CommerceReview) GetItemID() string {
+func (c *CommerceReview) GetItemID() *string {
 	if c == nil {
-		return ""
+		return nil
 	}
 	return c.ItemID
 }

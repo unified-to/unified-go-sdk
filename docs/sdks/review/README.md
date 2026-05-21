@@ -37,9 +37,7 @@ func main() {
     )
 
     res, err := s.Review.CreateCommerceReview(ctx, operations.CreateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -204,9 +202,7 @@ func main() {
     )
 
     res, err := s.Review.PatchCommerceReview(ctx, operations.PatchCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -318,9 +314,7 @@ func main() {
     )
 
     res, err := s.Review.UpdateCommerceReview(ctx, operations.UpdateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

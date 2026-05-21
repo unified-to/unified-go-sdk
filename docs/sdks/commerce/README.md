@@ -138,9 +138,7 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 7463.62,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -308,9 +306,7 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -422,9 +418,7 @@ func main() {
     )
 
     res, err := s.Commerce.CreateCommerceReview(ctx, operations.CreateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1521,9 +1515,7 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 7859.84,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1694,9 +1686,7 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1810,9 +1800,7 @@ func main() {
     )
 
     res, err := s.Commerce.PatchCommerceReview(ctx, operations.PatchCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2425,9 +2413,7 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 4497.29,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2598,9 +2584,7 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2714,9 +2698,7 @@ func main() {
     )
 
     res, err := s.Commerce.UpdateCommerceReview(ctx, operations.UpdateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{
-            ItemID: "<id>",
-        },
+        CommerceReview: shared.CommerceReview{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

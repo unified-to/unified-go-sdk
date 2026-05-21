@@ -45,7 +45,7 @@ type VerificationPackage struct {
 	Description            *string            `json:"description,omitempty"`
 	HasRedirectURL         *bool              `json:"has_redirect_url,omitempty"`
 	HasTargetURL           *bool              `json:"has_target_url,omitempty"`
-	ID                     string             `json:"id"`
+	ID                     *string            `json:"id,omitempty"`
 	InfoURL                *string            `json:"info_url,omitempty"`
 	MaxScore               *float64           `json:"max_score,omitempty"`
 	Name                   string             `json:"name"`
@@ -128,9 +128,9 @@ func (v *VerificationPackage) GetHasTargetURL() *bool {
 	return v.HasTargetURL
 }
 
-func (v *VerificationPackage) GetID() string {
+func (v *VerificationPackage) GetID() *string {
 	if v == nil {
-		return ""
+		return nil
 	}
 	return v.ID
 }

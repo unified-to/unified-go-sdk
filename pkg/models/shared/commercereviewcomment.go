@@ -36,7 +36,7 @@ type CommerceReviewComment struct {
 	AuthorEmail     *string                      `json:"author_email,omitempty"`
 	AuthorLocation  *string                      `json:"author_location,omitempty"`
 	AuthorName      *string                      `json:"author_name,omitempty"`
-	Content         string                       `json:"content"`
+	Content         *string                      `json:"content,omitempty"`
 	CreatedAt       *time.Time                   `json:"created_at,omitempty"`
 	HelpfulVotes    *float64                     `json:"helpful_votes,omitempty"`
 	ID              *string                      `json:"id,omitempty"`
@@ -88,9 +88,9 @@ func (c *CommerceReviewComment) GetAuthorName() *string {
 	return c.AuthorName
 }
 
-func (c *CommerceReviewComment) GetContent() string {
+func (c *CommerceReviewComment) GetContent() *string {
 	if c == nil {
-		return ""
+		return nil
 	}
 	return c.Content
 }

@@ -42,12 +42,12 @@ type AssessmentPackage struct {
 	Description    *string    `json:"description,omitempty"`
 	HasRedirectURL *bool      `json:"has_redirect_url,omitempty"`
 	HasTargetURL   *bool      `json:"has_target_url,omitempty"`
-	ID             string     `json:"id"`
+	ID             *string    `json:"id,omitempty"`
 	InfoURL        *string    `json:"info_url,omitempty"`
 	// Integration types that support this package
 	IntegrationTypes []string `json:"integration_types,omitempty"`
 	MaxScore         *float64 `json:"max_score,omitempty"`
-	Name             string   `json:"name"`
+	Name             *string  `json:"name,omitempty"`
 	NeedsIPAddress   *bool    `json:"needs_ip_address,omitempty"`
 	// Questionsinputs needed for this assessment (aligned with verification)
 	Parameters []AssessmentParameter     `json:"parameters,omitempty"`
@@ -113,9 +113,9 @@ func (a *AssessmentPackage) GetHasTargetURL() *bool {
 	return a.HasTargetURL
 }
 
-func (a *AssessmentPackage) GetID() string {
+func (a *AssessmentPackage) GetID() *string {
 	if a == nil {
-		return ""
+		return nil
 	}
 	return a.ID
 }
@@ -141,9 +141,9 @@ func (a *AssessmentPackage) GetMaxScore() *float64 {
 	return a.MaxScore
 }
 
-func (a *AssessmentPackage) GetName() string {
+func (a *AssessmentPackage) GetName() *string {
 	if a == nil {
-		return ""
+		return nil
 	}
 	return a.Name
 }

@@ -50,9 +50,7 @@ func main() {
     )
 
     res, err := s.Company.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -601,9 +599,7 @@ func main() {
     )
 
     res, err := s.Company.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -939,9 +935,7 @@ func main() {
     )
 
     res, err := s.Company.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

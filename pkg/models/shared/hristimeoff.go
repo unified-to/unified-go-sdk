@@ -69,11 +69,11 @@ type HrisTimeoff struct {
 	IsPaid         *bool              `json:"is_paid,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
 	Reason         *string            `json:"reason,omitempty"`
-	StartAt        time.Time          `json:"start_at"`
+	StartAt        *time.Time         `json:"start_at,omitempty"`
 	Status         *HrisTimeoffStatus `json:"status,omitempty"`
 	Type           *HrisTimeoffType   `json:"type,omitempty"`
 	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
-	UserID         *string            `json:"user_id,omitempty"`
+	UserID         string             `json:"user_id"`
 }
 
 func (h HrisTimeoff) MarshalJSON() ([]byte, error) {
@@ -157,9 +157,9 @@ func (h *HrisTimeoff) GetReason() *string {
 	return h.Reason
 }
 
-func (h *HrisTimeoff) GetStartAt() time.Time {
+func (h *HrisTimeoff) GetStartAt() *time.Time {
 	if h == nil {
-		return time.Time{}
+		return nil
 	}
 	return h.StartAt
 }
@@ -185,9 +185,9 @@ func (h *HrisTimeoff) GetUpdatedAt() *time.Time {
 	return h.UpdatedAt
 }
 
-func (h *HrisTimeoff) GetUserID() *string {
+func (h *HrisTimeoff) GetUserID() string {
 	if h == nil {
-		return nil
+		return ""
 	}
 	return h.UserID
 }

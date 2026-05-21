@@ -12,7 +12,7 @@ type AtsCompany struct {
 	CreatedAt    *time.Time                 `json:"created_at,omitempty"`
 	ID           *string                    `json:"id,omitempty"`
 	Metadata     []AtsMetadata              `json:"metadata,omitempty"`
-	Name         string                     `json:"name"`
+	Name         *string                    `json:"name,omitempty"`
 	ParentID     *string                    `json:"parent_id,omitempty"`
 	Phone        *string                    `json:"phone,omitempty"`
 	Raw          map[string]any             `json:"raw,omitempty"`
@@ -60,9 +60,9 @@ func (a *AtsCompany) GetMetadata() []AtsMetadata {
 	return a.Metadata
 }
 
-func (a *AtsCompany) GetName() string {
+func (a *AtsCompany) GetName() *string {
 	if a == nil {
-		return ""
+		return nil
 	}
 	return a.Name
 }

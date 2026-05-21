@@ -36,11 +36,11 @@ type PaymentRefund struct {
 	Currency    *string              `json:"currency,omitempty"`
 	ID          *string              `json:"id,omitempty"`
 	Notes       *string              `json:"notes,omitempty"`
-	PaymentID   string               `json:"payment_id"`
+	PaymentID   *string              `json:"payment_id,omitempty"`
 	Raw         map[string]any       `json:"raw,omitempty"`
 	Reference   *string              `json:"reference,omitempty"`
 	Status      *PaymentRefundStatus `json:"status,omitempty"`
-	TotalAmount float64              `json:"total_amount"`
+	TotalAmount *float64             `json:"total_amount,omitempty"`
 	UpdatedAt   *time.Time           `json:"updated_at,omitempty"`
 }
 
@@ -83,9 +83,9 @@ func (p *PaymentRefund) GetNotes() *string {
 	return p.Notes
 }
 
-func (p *PaymentRefund) GetPaymentID() string {
+func (p *PaymentRefund) GetPaymentID() *string {
 	if p == nil {
-		return ""
+		return nil
 	}
 	return p.PaymentID
 }
@@ -111,9 +111,9 @@ func (p *PaymentRefund) GetStatus() *PaymentRefundStatus {
 	return p.Status
 }
 
-func (p *PaymentRefund) GetTotalAmount() float64 {
+func (p *PaymentRefund) GetTotalAmount() *float64 {
 	if p == nil {
-		return 0.0
+		return nil
 	}
 	return p.TotalAmount
 }

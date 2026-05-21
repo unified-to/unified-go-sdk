@@ -43,7 +43,7 @@ type HrisPayslip struct {
 	NetAmount   *float64                      `json:"net_amount,omitempty"`
 	PaidAt      *time.Time                    `json:"paid_at,omitempty"`
 	PaymentType *PaymentType                  `json:"payment_type,omitempty"`
-	Raw         map[string]any                `json:"raw"`
+	Raw         map[string]any                `json:"raw,omitempty"`
 	StartAt     *time.Time                    `json:"start_at,omitempty"`
 	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
 	UserID      *string                       `json:"user_id,omitempty"`
@@ -139,7 +139,7 @@ func (h *HrisPayslip) GetPaymentType() *PaymentType {
 
 func (h *HrisPayslip) GetRaw() map[string]any {
 	if h == nil {
-		return map[string]any{}
+		return nil
 	}
 	return h.Raw
 }

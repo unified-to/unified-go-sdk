@@ -8,14 +8,14 @@ import (
 )
 
 type LmsClass struct {
-	CourseID      string         `json:"course_id"`
+	CourseID      *string        `json:"course_id,omitempty"`
 	CreatedAt     *time.Time     `json:"created_at,omitempty"`
 	Description   *string        `json:"description,omitempty"`
 	ID            *string        `json:"id,omitempty"`
 	InstructorIds []string       `json:"instructor_ids,omitempty"`
 	Languages     []string       `json:"languages,omitempty"`
 	Media         []LmsMedia     `json:"media,omitempty"`
-	Name          string         `json:"name"`
+	Name          *string        `json:"name,omitempty"`
 	Raw           map[string]any `json:"raw,omitempty"`
 	StudentIds    []string       `json:"student_ids,omitempty"`
 	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
@@ -32,9 +32,9 @@ func (l *LmsClass) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (l *LmsClass) GetCourseID() string {
+func (l *LmsClass) GetCourseID() *string {
 	if l == nil {
-		return ""
+		return nil
 	}
 	return l.CourseID
 }
@@ -81,9 +81,9 @@ func (l *LmsClass) GetMedia() []LmsMedia {
 	return l.Media
 }
 
-func (l *LmsClass) GetName() string {
+func (l *LmsClass) GetName() *string {
 	if l == nil {
-		return ""
+		return nil
 	}
 	return l.Name
 }

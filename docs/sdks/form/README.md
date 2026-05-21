@@ -37,9 +37,7 @@ func main() {
     )
 
     res, err := s.Form.CreateFormsForm(ctx, operations.CreateFormsFormRequest{
-        FormsForm: shared.FormsForm{
-            Name: "<value>",
-        },
+        FormsForm: shared.FormsForm{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -204,9 +202,7 @@ func main() {
     )
 
     res, err := s.Form.PatchFormsForm(ctx, operations.PatchFormsFormRequest{
-        FormsForm: shared.FormsForm{
-            Name: "<value>",
-        },
+        FormsForm: shared.FormsForm{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -318,9 +314,7 @@ func main() {
     )
 
     res, err := s.Form.UpdateFormsForm(ctx, operations.UpdateFormsFormRequest{
-        FormsForm: shared.FormsForm{
-            Name: "<value>",
-        },
+        FormsForm: shared.FormsForm{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

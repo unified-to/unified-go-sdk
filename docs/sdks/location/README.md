@@ -43,9 +43,7 @@ func main() {
     )
 
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -375,9 +373,7 @@ func main() {
     )
 
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -601,9 +597,7 @@ func main() {
     )
 
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{
-            Name: "<value>",
-        },
+        CommerceLocation: shared.CommerceLocation{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

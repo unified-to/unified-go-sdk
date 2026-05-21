@@ -38,7 +38,6 @@ func main() {
 
     res, err := s.Page.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Title: "<value>",
             Type: shared.KmsPageTypeText,
         },
         ConnectionID: "<id>",
@@ -206,7 +205,6 @@ func main() {
 
     res, err := s.Page.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Title: "<value>",
             Type: shared.KmsPageTypeOther,
         },
         ConnectionID: "<id>",
@@ -321,7 +319,6 @@ func main() {
 
     res, err := s.Page.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Title: "<value>",
             Type: shared.KmsPageTypeOther,
         },
         ConnectionID: "<id>",

@@ -49,9 +49,7 @@ func main() {
     )
 
     res, err := s.Comment.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
-        KmsComment: shared.KmsComment{
-            Content: "<value>",
-        },
+        KmsComment: shared.KmsComment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -107,9 +105,7 @@ func main() {
     )
 
     res, err := s.Comment.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -165,9 +161,7 @@ func main() {
     )
 
     res, err := s.Comment.CreateUcComment(ctx, operations.CreateUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -550,9 +544,7 @@ func main() {
     )
 
     res, err := s.Comment.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
-        KmsComment: shared.KmsComment{
-            Content: "<value>",
-        },
+        KmsComment: shared.KmsComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -609,9 +601,7 @@ func main() {
     )
 
     res, err := s.Comment.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -668,9 +658,7 @@ func main() {
     )
 
     res, err := s.Comment.PatchUcComment(ctx, operations.PatchUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -892,9 +880,7 @@ func main() {
     )
 
     res, err := s.Comment.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
-        KmsComment: shared.KmsComment{
-            Content: "<value>",
-        },
+        KmsComment: shared.KmsComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -951,9 +937,7 @@ func main() {
     )
 
     res, err := s.Comment.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1010,9 +994,7 @@ func main() {
     )
 
     res, err := s.Comment.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

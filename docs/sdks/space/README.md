@@ -37,9 +37,7 @@ func main() {
     )
 
     res, err := s.Space.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{
-            Name: "<value>",
-        },
+        KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -204,9 +202,7 @@ func main() {
     )
 
     res, err := s.Space.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{
-            Name: "<value>",
-        },
+        KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -318,9 +314,7 @@ func main() {
     )
 
     res, err := s.Space.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{
-            Name: "<value>",
-        },
+        KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

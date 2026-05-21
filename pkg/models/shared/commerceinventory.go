@@ -8,7 +8,7 @@ import (
 )
 
 type CommerceInventory struct {
-	Available     float64        `json:"available"`
+	Available     *float64       `json:"available,omitempty"`
 	ID            *string        `json:"id,omitempty"`
 	ItemID        *string        `json:"item_id,omitempty"`
 	ItemOptionID  *string        `json:"item_option_id,omitempty"`
@@ -29,9 +29,9 @@ func (c *CommerceInventory) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (c *CommerceInventory) GetAvailable() float64 {
+func (c *CommerceInventory) GetAvailable() *float64 {
 	if c == nil {
-		return 0.0
+		return nil
 	}
 	return c.Available
 }

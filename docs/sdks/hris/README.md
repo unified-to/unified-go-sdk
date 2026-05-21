@@ -317,9 +317,7 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisDevice(ctx, operations.CreateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -530,7 +528,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -545,7 +542,7 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2024-09-03T22:31:51.863Z"),
+            UserID: "<id>",
         },
         ConnectionID: "<id>",
     })
@@ -2087,9 +2084,7 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisDevice(ctx, operations.PatchHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2304,7 +2299,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2319,7 +2313,7 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2024-01-26T05:49:44.056Z"),
+            UserID: "<id>",
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3214,9 +3208,7 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisDevice(ctx, operations.UpdateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{
-            Name: "<value>",
-        },
+        HrisDevice: shared.HrisDevice{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -3431,7 +3423,6 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -3446,7 +3437,7 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
-            StartAt: types.MustTimeFromString("2026-02-26T01:59:20.061Z"),
+            UserID: "<id>",
         },
         ConnectionID: "<id>",
         ID: "<id>",

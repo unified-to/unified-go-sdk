@@ -25,8 +25,8 @@ const (
 	GetHrisPayslipQueryParamFieldsGrossAmount GetHrisPayslipQueryParamFields = "gross_amount"
 	GetHrisPayslipQueryParamFieldsNetAmount   GetHrisPayslipQueryParamFields = "net_amount"
 	GetHrisPayslipQueryParamFieldsDetails     GetHrisPayslipQueryParamFields = "details"
-	GetHrisPayslipQueryParamFieldsRaw         GetHrisPayslipQueryParamFields = "raw"
 	GetHrisPayslipQueryParamFieldsDeduction   GetHrisPayslipQueryParamFields = "deduction"
+	GetHrisPayslipQueryParamFieldsRaw         GetHrisPayslipQueryParamFields = "raw"
 )
 
 func (e GetHrisPayslipQueryParamFields) ToPointer() *GetHrisPayslipQueryParamFields {
@@ -64,9 +64,9 @@ func (e *GetHrisPayslipQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "details":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "deduction":
+		fallthrough
+	case "raw":
 		*e = GetHrisPayslipQueryParamFields(v)
 		return nil
 	default:

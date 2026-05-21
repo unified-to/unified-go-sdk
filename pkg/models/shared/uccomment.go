@@ -4,7 +4,7 @@ package shared
 
 type UcComment struct {
 	CallID    *string        `json:"call_id,omitempty"`
-	Content   string         `json:"content"`
+	Content   *string        `json:"content,omitempty"`
 	CreatedAt *string        `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
@@ -19,9 +19,9 @@ func (u *UcComment) GetCallID() *string {
 	return u.CallID
 }
 
-func (u *UcComment) GetContent() string {
+func (u *UcComment) GetContent() *string {
 	if u == nil {
-		return ""
+		return nil
 	}
 	return u.Content
 }

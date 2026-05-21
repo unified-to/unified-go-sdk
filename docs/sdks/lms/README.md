@@ -129,10 +129,7 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsClass(ctx, operations.CreateLmsClassRequest{
-        LmsClass: shared.LmsClass{
-            CourseID: "<id>",
-            Name: "<value>",
-        },
+        LmsClass: shared.LmsClass{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -300,9 +297,7 @@ func main() {
     )
 
     res, err := s.Lms.CreateLmsCourse(ctx, operations.CreateLmsCourseRequest{
-        LmsCourse: shared.LmsCourse{
-            Name: "<value>",
-        },
+        LmsCourse: shared.LmsCourse{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1290,10 +1285,7 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsClass(ctx, operations.PatchLmsClassRequest{
-        LmsClass: shared.LmsClass{
-            CourseID: "<id>",
-            Name: "<value>",
-        },
+        LmsClass: shared.LmsClass{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1464,9 +1456,7 @@ func main() {
     )
 
     res, err := s.Lms.PatchLmsCourse(ctx, operations.PatchLmsCourseRequest{
-        LmsCourse: shared.LmsCourse{
-            Name: "<value>",
-        },
+        LmsCourse: shared.LmsCourse{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2079,10 +2069,7 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsClass(ctx, operations.UpdateLmsClassRequest{
-        LmsClass: shared.LmsClass{
-            CourseID: "<id>",
-            Name: "<value>",
-        },
+        LmsClass: shared.LmsClass{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2253,9 +2240,7 @@ func main() {
     )
 
     res, err := s.Lms.UpdateLmsCourse(ctx, operations.UpdateLmsCourseRequest{
-        LmsCourse: shared.LmsCourse{
-            Name: "<value>",
-        },
+        LmsCourse: shared.LmsCourse{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

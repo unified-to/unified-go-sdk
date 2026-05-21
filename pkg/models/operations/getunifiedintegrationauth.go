@@ -15,9 +15,11 @@ type GetUnifiedIntegrationAuthRequest struct {
 	// Type of the supported integration
 	IntegrationType string `pathParam:"style=simple,explode=false,name=integration_type"`
 	// Language: en, fr, es, it, pt, zh, hi
-	Lang     *string  `queryParam:"style=form,explode=true,name=lang"`
-	Redirect *bool    `queryParam:"style=form,explode=true,name=redirect"`
-	Scopes   []string `queryParam:"style=form,explode=true,name=scopes"`
+	Lang     *string `queryParam:"style=form,explode=true,name=lang"`
+	Redirect *bool   `queryParam:"style=form,explode=true,name=redirect"`
+	// Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true.
+	Region *string  `queryParam:"style=form,explode=true,name=region"`
+	Scopes []string `queryParam:"style=form,explode=true,name=scopes"`
 	// Extra state to send back to your success URL
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
@@ -68,6 +70,13 @@ func (g *GetUnifiedIntegrationAuthRequest) GetRedirect() *bool {
 		return nil
 	}
 	return g.Redirect
+}
+
+func (g *GetUnifiedIntegrationAuthRequest) GetRegion() *string {
+	if g == nil {
+		return nil
+	}
+	return g.Region
 }
 
 func (g *GetUnifiedIntegrationAuthRequest) GetScopes() []string {

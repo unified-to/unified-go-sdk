@@ -248,9 +248,7 @@ func main() {
     )
 
     res, err := s.Ats.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1627,9 +1625,7 @@ func main() {
     )
 
     res, err := s.Ats.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2525,9 +2521,7 @@ func main() {
     )
 
     res, err := s.Ats.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{
-            Name: "<value>",
-        },
+        AtsCompany: shared.AtsCompany{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

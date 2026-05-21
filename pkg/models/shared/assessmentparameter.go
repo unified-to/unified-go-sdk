@@ -33,7 +33,7 @@ type AssessmentParameter struct {
 	FileTypes  []string `json:"file_types,omitempty"`
 	ID         *string  `json:"id,omitempty"`
 	IsRequired *bool    `json:"is_required,omitempty"`
-	Name       string   `json:"name"`
+	Name       *string  `json:"name,omitempty"`
 	// Options for MULTIPLE_CHOICE and MULTIPLE_SELECT
 	Options        []string                 `json:"options,omitempty"`
 	PublicQuestion *string                  `json:"public_question,omitempty"`
@@ -63,9 +63,9 @@ func (a *AssessmentParameter) GetIsRequired() *bool {
 	return a.IsRequired
 }
 
-func (a *AssessmentParameter) GetName() string {
+func (a *AssessmentParameter) GetName() *string {
 	if a == nil {
-		return ""
+		return nil
 	}
 	return a.Name
 }

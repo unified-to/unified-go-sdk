@@ -21,7 +21,7 @@ type HrisDevice struct {
 	LocationID         *string        `json:"location_id,omitempty"`
 	Manufacturer       *string        `json:"manufacturer,omitempty"`
 	Model              *string        `json:"model,omitempty"`
-	Name               string         `json:"name"`
+	Name               *string        `json:"name,omitempty"`
 	Os                 *string        `json:"os,omitempty"`
 	OsVersion          *string        `json:"os_version,omitempty"`
 	Raw                map[string]any `json:"raw,omitempty"`
@@ -133,9 +133,9 @@ func (h *HrisDevice) GetModel() *string {
 	return h.Model
 }
 
-func (h *HrisDevice) GetName() string {
+func (h *HrisDevice) GetName() *string {
 	if h == nil {
-		return ""
+		return nil
 	}
 	return h.Name
 }

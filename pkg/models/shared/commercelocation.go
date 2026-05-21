@@ -46,7 +46,7 @@ type CommerceLocation struct {
 	LocationType   *LocationType                    `json:"location_type,omitempty"`
 	Longitude      *float64                         `json:"longitude,omitempty"`
 	Media          []CommerceItemMedia              `json:"media,omitempty"`
-	Name           string                           `json:"name"`
+	Name           *string                          `json:"name,omitempty"`
 	ParentID       *string                          `json:"parent_id,omitempty"`
 	PriceLevel     *string                          `json:"price_level,omitempty"`
 	Rating         *float64                         `json:"rating,omitempty"`
@@ -159,9 +159,9 @@ func (c *CommerceLocation) GetMedia() []CommerceItemMedia {
 	return c.Media
 }
 
-func (c *CommerceLocation) GetName() string {
+func (c *CommerceLocation) GetName() *string {
 	if c == nil {
-		return ""
+		return nil
 	}
 	return c.Name
 }

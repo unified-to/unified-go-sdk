@@ -33,7 +33,7 @@ type PaymentPayout struct {
 	Notes       *string              `json:"notes,omitempty"`
 	Raw         map[string]any       `json:"raw,omitempty"`
 	Status      *PaymentPayoutStatus `json:"status,omitempty"`
-	TotalAmount float64              `json:"total_amount"`
+	TotalAmount *float64             `json:"total_amount,omitempty"`
 	UpdatedAt   *string              `json:"updated_at,omitempty"`
 }
 
@@ -79,9 +79,9 @@ func (p *PaymentPayout) GetStatus() *PaymentPayoutStatus {
 	return p.Status
 }
 
-func (p *PaymentPayout) GetTotalAmount() float64 {
+func (p *PaymentPayout) GetTotalAmount() *float64 {
 	if p == nil {
-		return 0.0
+		return nil
 	}
 	return p.TotalAmount
 }

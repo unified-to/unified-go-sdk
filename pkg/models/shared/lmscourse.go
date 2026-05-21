@@ -22,7 +22,7 @@ type LmsCourse struct {
 	IsPrivate     *bool           `json:"is_private,omitempty"`
 	Languages     []string        `json:"languages,omitempty"`
 	Media         []LmsMedia      `json:"media,omitempty"`
-	Name          string          `json:"name"`
+	Name          *string         `json:"name,omitempty"`
 	PriceAmount   *float64        `json:"price_amount,omitempty"`
 	ProviderName  *string         `json:"provider_name,omitempty"`
 	PublishedAt   *time.Time      `json:"published_at,omitempty"`
@@ -137,9 +137,9 @@ func (l *LmsCourse) GetMedia() []LmsMedia {
 	return l.Media
 }
 
-func (l *LmsCourse) GetName() string {
+func (l *LmsCourse) GetName() *string {
 	if l == nil {
-		return ""
+		return nil
 	}
 	return l.Name
 }

@@ -51,9 +51,7 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -657,9 +655,7 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -995,9 +991,7 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
-        TaskComment: shared.TaskComment{
-            Text: "<value>",
-        },
+        TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

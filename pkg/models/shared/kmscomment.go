@@ -54,7 +54,7 @@ func (e *KmsCommentType) IsExact() bool {
 }
 
 type KmsComment struct {
-	Content     string          `json:"content"`
+	Content     *string         `json:"content,omitempty"`
 	ContentType *ContentType    `json:"content_type,omitempty"`
 	CreatedAt   *time.Time      `json:"created_at,omitempty"`
 	ID          *string         `json:"id,omitempty"`
@@ -77,9 +77,9 @@ func (k *KmsComment) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (k *KmsComment) GetContent() string {
+func (k *KmsComment) GetContent() *string {
 	if k == nil {
-		return ""
+		return nil
 	}
 	return k.Content
 }

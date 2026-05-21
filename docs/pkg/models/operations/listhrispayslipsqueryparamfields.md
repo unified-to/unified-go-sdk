@@ -28,5 +28,5 @@ value := operations.ListHrisPayslipsQueryParamFieldsID
 | `ListHrisPayslipsQueryParamFieldsGrossAmount` | gross_amount                                  |
 | `ListHrisPayslipsQueryParamFieldsNetAmount`   | net_amount                                    |
 | `ListHrisPayslipsQueryParamFieldsDetails`     | details                                       |
-| `ListHrisPayslipsQueryParamFieldsRaw`         | raw                                           |
 | `ListHrisPayslipsQueryParamFieldsDeduction`   | deduction                                     |
+| `ListHrisPayslipsQueryParamFieldsRaw`         | raw                                           |

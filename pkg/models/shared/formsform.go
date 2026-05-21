@@ -18,7 +18,7 @@ type FormsForm struct {
 	HasShuffleQuestions     *bool          `json:"has_shuffle_questions,omitempty"`
 	ID                      *string        `json:"id,omitempty"`
 	IsActive                *bool          `json:"is_active,omitempty"`
-	Name                    string         `json:"name"`
+	Name                    *string        `json:"name,omitempty"`
 	PublishedURL            *string        `json:"published_url,omitempty"`
 	Raw                     map[string]any `json:"raw,omitempty"`
 	ResponseCount           *float64       `json:"response_count,omitempty"`
@@ -106,9 +106,9 @@ func (f *FormsForm) GetIsActive() *bool {
 	return f.IsActive
 }
 
-func (f *FormsForm) GetName() string {
+func (f *FormsForm) GetName() *string {
 	if f == nil {
-		return ""
+		return nil
 	}
 	return f.Name
 }

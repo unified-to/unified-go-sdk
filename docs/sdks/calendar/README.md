@@ -58,9 +58,7 @@ func main() {
     )
 
     res, err := s.Calendar.CreateCalendarCalendar(ctx, operations.CreateCalendarCalendarRequest{
-        CalendarCalendar: shared.CalendarCalendar{
-            Name: "<value>",
-        },
+        CalendarCalendar: shared.CalendarCalendar{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -885,9 +883,7 @@ func main() {
     )
 
     res, err := s.Calendar.PatchCalendarCalendar(ctx, operations.PatchCalendarCalendarRequest{
-        CalendarCalendar: shared.CalendarCalendar{
-            Name: "<value>",
-        },
+        CalendarCalendar: shared.CalendarCalendar{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1337,9 +1333,7 @@ func main() {
     )
 
     res, err := s.Calendar.UpdateCalendarCalendar(ctx, operations.UpdateCalendarCalendarRequest{
-        CalendarCalendar: shared.CalendarCalendar{
-            Name: "<value>",
-        },
+        CalendarCalendar: shared.CalendarCalendar{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

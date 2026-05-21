@@ -18,7 +18,7 @@
 | `LocationID`                               | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Manufacturer`                             | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Model`                                    | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Name`                                     | `string`                                   | :heavy_check_mark:                         | N/A                                        |
+| `Name`                                     | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Os`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `OsVersion`                                | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `Raw`                                      | map[string]`any`                           | :heavy_minus_sign:                         | N/A                                        |

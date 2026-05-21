@@ -51,9 +51,7 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcComment(ctx, operations.CreateUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -657,9 +655,7 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcComment(ctx, operations.PatchUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -995,9 +991,7 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
-        UcComment: shared.UcComment{
-            Content: "<value>",
-        },
+        UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -12,20 +12,22 @@ import (
 type CreatePaymentPaymentQueryParamFields string
 
 const (
-	CreatePaymentPaymentQueryParamFieldsID            CreatePaymentPaymentQueryParamFields = "id"
-	CreatePaymentPaymentQueryParamFieldsCreatedAt     CreatePaymentPaymentQueryParamFields = "created_at"
-	CreatePaymentPaymentQueryParamFieldsUpdatedAt     CreatePaymentPaymentQueryParamFields = "updated_at"
-	CreatePaymentPaymentQueryParamFieldsTotalAmount   CreatePaymentPaymentQueryParamFields = "total_amount"
-	CreatePaymentPaymentQueryParamFieldsContactID     CreatePaymentPaymentQueryParamFields = "contact_id"
-	CreatePaymentPaymentQueryParamFieldsType          CreatePaymentPaymentQueryParamFields = "type"
-	CreatePaymentPaymentQueryParamFieldsPaymentMethod CreatePaymentPaymentQueryParamFields = "payment_method"
-	CreatePaymentPaymentQueryParamFieldsCurrency      CreatePaymentPaymentQueryParamFields = "currency"
-	CreatePaymentPaymentQueryParamFieldsNotes         CreatePaymentPaymentQueryParamFields = "notes"
-	CreatePaymentPaymentQueryParamFieldsInvoiceID     CreatePaymentPaymentQueryParamFields = "invoice_id"
-	CreatePaymentPaymentQueryParamFieldsBillID        CreatePaymentPaymentQueryParamFields = "bill_id"
-	CreatePaymentPaymentQueryParamFieldsAccountID     CreatePaymentPaymentQueryParamFields = "account_id"
-	CreatePaymentPaymentQueryParamFieldsReference     CreatePaymentPaymentQueryParamFields = "reference"
-	CreatePaymentPaymentQueryParamFieldsRaw           CreatePaymentPaymentQueryParamFields = "raw"
+	CreatePaymentPaymentQueryParamFieldsID             CreatePaymentPaymentQueryParamFields = "id"
+	CreatePaymentPaymentQueryParamFieldsCreatedAt      CreatePaymentPaymentQueryParamFields = "created_at"
+	CreatePaymentPaymentQueryParamFieldsUpdatedAt      CreatePaymentPaymentQueryParamFields = "updated_at"
+	CreatePaymentPaymentQueryParamFieldsTotalAmount    CreatePaymentPaymentQueryParamFields = "total_amount"
+	CreatePaymentPaymentQueryParamFieldsContactID      CreatePaymentPaymentQueryParamFields = "contact_id"
+	CreatePaymentPaymentQueryParamFieldsPaymentMethod  CreatePaymentPaymentQueryParamFields = "payment_method"
+	CreatePaymentPaymentQueryParamFieldsType           CreatePaymentPaymentQueryParamFields = "type"
+	CreatePaymentPaymentQueryParamFieldsCurrency       CreatePaymentPaymentQueryParamFields = "currency"
+	CreatePaymentPaymentQueryParamFieldsNotes          CreatePaymentPaymentQueryParamFields = "notes"
+	CreatePaymentPaymentQueryParamFieldsInvoiceID      CreatePaymentPaymentQueryParamFields = "invoice_id"
+	CreatePaymentPaymentQueryParamFieldsBillID         CreatePaymentPaymentQueryParamFields = "bill_id"
+	CreatePaymentPaymentQueryParamFieldsLinkID         CreatePaymentPaymentQueryParamFields = "link_id"
+	CreatePaymentPaymentQueryParamFieldsAccountID      CreatePaymentPaymentQueryParamFields = "account_id"
+	CreatePaymentPaymentQueryParamFieldsReference      CreatePaymentPaymentQueryParamFields = "reference"
+	CreatePaymentPaymentQueryParamFieldsOrganizationID CreatePaymentPaymentQueryParamFields = "organization_id"
+	CreatePaymentPaymentQueryParamFieldsRaw            CreatePaymentPaymentQueryParamFields = "raw"
 )
 
 func (e CreatePaymentPaymentQueryParamFields) ToPointer() *CreatePaymentPaymentQueryParamFields {
@@ -47,9 +49,9 @@ func (e *CreatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "contact_id":
 		fallthrough
-	case "type":
-		fallthrough
 	case "payment_method":
+		fallthrough
+	case "type":
 		fallthrough
 	case "currency":
 		fallthrough
@@ -59,9 +61,13 @@ func (e *CreatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "bill_id":
 		fallthrough
+	case "link_id":
+		fallthrough
 	case "account_id":
 		fallthrough
 	case "reference":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = CreatePaymentPaymentQueryParamFields(v)

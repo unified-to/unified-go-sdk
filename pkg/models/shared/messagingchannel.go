@@ -15,7 +15,7 @@ type MessagingChannel struct {
 	IsActive       *bool             `json:"is_active,omitempty"`
 	IsPrivate      *bool             `json:"is_private,omitempty"`
 	Members        []MessagingMember `json:"members,omitempty"`
-	Name           string            `json:"name"`
+	Name           *string           `json:"name,omitempty"`
 	ParentID       *string           `json:"parent_id,omitempty"`
 	Raw            map[string]any    `json:"raw,omitempty"`
 	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
@@ -82,9 +82,9 @@ func (m *MessagingChannel) GetMembers() []MessagingMember {
 	return m.Members
 }
 
-func (m *MessagingChannel) GetName() string {
+func (m *MessagingChannel) GetName() *string {
 	if m == nil {
-		return ""
+		return nil
 	}
 	return m.Name
 }

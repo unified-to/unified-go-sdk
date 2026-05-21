@@ -30,20 +30,22 @@ func (e *PaymentPaymentType) IsExact() bool {
 }
 
 type PaymentPayment struct {
-	AccountID     *string             `json:"account_id,omitempty"`
-	BillID        *string             `json:"bill_id,omitempty"`
-	ContactID     *string             `json:"contact_id,omitempty"`
-	CreatedAt     *time.Time          `json:"created_at,omitempty"`
-	Currency      *string             `default:"USD" json:"currency"`
-	ID            *string             `json:"id,omitempty"`
-	InvoiceID     *string             `json:"invoice_id,omitempty"`
-	Notes         *string             `json:"notes,omitempty"`
-	PaymentMethod *string             `json:"payment_method,omitempty"`
-	Raw           map[string]any      `json:"raw,omitempty"`
-	Reference     *string             `json:"reference,omitempty"`
-	TotalAmount   *float64            `json:"total_amount,omitempty"`
-	Type          *PaymentPaymentType `json:"type,omitempty"`
-	UpdatedAt     *time.Time          `json:"updated_at,omitempty"`
+	AccountID      *string             `json:"account_id,omitempty"`
+	BillID         *string             `json:"bill_id,omitempty"`
+	ContactID      *string             `json:"contact_id,omitempty"`
+	CreatedAt      *time.Time          `json:"created_at,omitempty"`
+	Currency       *string             `default:"USD" json:"currency"`
+	ID             *string             `json:"id,omitempty"`
+	InvoiceID      *string             `json:"invoice_id,omitempty"`
+	LinkID         *string             `json:"link_id,omitempty"`
+	Notes          *string             `json:"notes,omitempty"`
+	OrganizationID *string             `json:"organization_id,omitempty"`
+	PaymentMethod  *string             `json:"payment_method,omitempty"`
+	Raw            map[string]any      `json:"raw,omitempty"`
+	Reference      *string             `json:"reference,omitempty"`
+	TotalAmount    *float64            `json:"total_amount,omitempty"`
+	Type           *PaymentPaymentType `json:"type,omitempty"`
+	UpdatedAt      *time.Time          `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayment) MarshalJSON() ([]byte, error) {
@@ -106,11 +108,25 @@ func (p *PaymentPayment) GetInvoiceID() *string {
 	return p.InvoiceID
 }
 
+func (p *PaymentPayment) GetLinkID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.LinkID
+}
+
 func (p *PaymentPayment) GetNotes() *string {
 	if p == nil {
 		return nil
 	}
 	return p.Notes
+}
+
+func (p *PaymentPayment) GetOrganizationID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.OrganizationID
 }
 
 func (p *PaymentPayment) GetPaymentMethod() *string {

@@ -15,7 +15,7 @@ type PropertyMessagingEventChannel struct {
 	IsActive       *bool             `json:"is_active,omitempty"`
 	IsPrivate      *bool             `json:"is_private,omitempty"`
 	Members        []MessagingMember `json:"members,omitempty"`
-	Name           string            `json:"name"`
+	Name           *string           `json:"name,omitempty"`
 	ParentID       *string           `json:"parent_id,omitempty"`
 	Raw            map[string]any    `json:"raw,omitempty"`
 	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
@@ -82,9 +82,9 @@ func (p *PropertyMessagingEventChannel) GetMembers() []MessagingMember {
 	return p.Members
 }
 
-func (p *PropertyMessagingEventChannel) GetName() string {
+func (p *PropertyMessagingEventChannel) GetName() *string {
 	if p == nil {
-		return ""
+		return nil
 	}
 	return p.Name
 }

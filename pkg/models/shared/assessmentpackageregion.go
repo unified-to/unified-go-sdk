@@ -3,16 +3,16 @@
 package shared
 
 type AssessmentPackageRegion struct {
-	CostAmount     float64  `json:"cost_amount"`
+	CostAmount     *float64 `json:"cost_amount,omitempty"`
 	Currency       *string  `json:"currency,omitempty"`
 	ProcessingTime *float64 `json:"processing_time,omitempty"`
 	// Countryregion codes where this package is available ({country}-{state} or {country})
-	Regions []string `json:"regions"`
+	Regions []string `json:"regions,omitempty"`
 }
 
-func (a *AssessmentPackageRegion) GetCostAmount() float64 {
+func (a *AssessmentPackageRegion) GetCostAmount() *float64 {
 	if a == nil {
-		return 0.0
+		return nil
 	}
 	return a.CostAmount
 }
@@ -33,7 +33,7 @@ func (a *AssessmentPackageRegion) GetProcessingTime() *float64 {
 
 func (a *AssessmentPackageRegion) GetRegions() []string {
 	if a == nil {
-		return []string{}
+		return nil
 	}
 	return a.Regions
 }

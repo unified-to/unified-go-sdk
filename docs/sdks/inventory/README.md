@@ -37,9 +37,7 @@ func main() {
     )
 
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 7463.62,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -204,9 +202,7 @@ func main() {
     )
 
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 7859.84,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -318,9 +314,7 @@ func main() {
     )
 
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{
-            Available: 4497.29,
-        },
+        CommerceInventory: shared.CommerceInventory{},
         ConnectionID: "<id>",
         ID: "<id>",
     })

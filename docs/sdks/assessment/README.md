@@ -40,8 +40,6 @@ func main() {
 
     res, err := s.Assessment.CreateAssessmentPackage(ctx, operations.CreateAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            ID: "<id>",
-            Name: "<value>",
             Type: shared.AssessmentPackageTypeReferenceCheck,
         },
         ConnectionID: "<id>",
@@ -269,8 +267,6 @@ func main() {
 
     res, err := s.Assessment.PatchAssessmentPackage(ctx, operations.PatchAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            ID: "<id>",
-            Name: "<value>",
             Type: shared.AssessmentPackageTypeBackgroundCheck,
         },
         ConnectionID: "<id>",
@@ -445,8 +441,6 @@ func main() {
 
     res, err := s.Assessment.UpdateAssessmentPackage(ctx, operations.UpdateAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            ID: "<id>",
-            Name: "<value>",
             Type: shared.AssessmentPackageTypeOther,
         },
         ConnectionID: "<id>",
