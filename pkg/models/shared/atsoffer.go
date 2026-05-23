@@ -39,7 +39,6 @@ type AtsOffer struct {
 	CreatorUserID  *string           `json:"creator_user_id,omitempty"`
 	EmployeeUserID *string           `json:"employee_user_id,omitempty"`
 	ID             *string           `json:"id,omitempty"`
-	Raw            map[string]any    `json:"raw,omitempty"`
 	RejectedAt     *time.Time        `json:"rejected_at,omitempty"`
 	SentAt         *time.Time        `json:"sent_at,omitempty"`
 	StartAt        *time.Time        `json:"start_at,omitempty"`
@@ -98,13 +97,6 @@ func (a *AtsOffer) GetID() *string {
 		return nil
 	}
 	return a.ID
-}
-
-func (a *AtsOffer) GetRaw() map[string]any {
-	if a == nil {
-		return nil
-	}
-	return a.Raw
 }
 
 func (a *AtsOffer) GetRejectedAt() *time.Time {
