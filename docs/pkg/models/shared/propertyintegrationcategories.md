@@ -46,3 +46,4 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesShipping`     | shipping                                    |
 | `PropertyIntegrationCategoriesAssessment`   | assessment                                  |
 | `PropertyIntegrationCategoriesSigning`      | signing                                     |
+| `PropertyIntegrationCategoriesClubs`        | clubs                                       |

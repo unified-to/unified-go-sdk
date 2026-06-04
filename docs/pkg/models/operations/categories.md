@@ -43,3 +43,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesShipping`     | shipping                 |
 | `CategoriesAssessment`   | assessment               |
 | `CategoriesSigning`      | signing                  |
+| `CategoriesClubs`        | clubs                    |

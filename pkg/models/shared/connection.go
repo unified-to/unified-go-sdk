@@ -16,19 +16,21 @@ type Connection struct {
 	AuthGcpSecretName   *string                 `json:"auth_gcp_secret_name,omitempty"`
 	AuthHashiVaultPath  *string                 `json:"auth_hashi_vault_path,omitempty"`
 	// The Integration categories that this connection supports
-	Categories      []PropertyConnectionCategories  `json:"categories"`
-	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
-	Environment     *string                         `default:"Production" json:"environment"`
-	ExternalXref    *string                         `json:"external_xref,omitempty"`
-	ID              *string                         `json:"id,omitempty"`
-	IntegrationName *string                         `json:"integration_name,omitempty"`
-	IntegrationType string                          `json:"integration_type"`
-	IsPaused        *bool                           `json:"is_paused,omitempty"`
-	LastHealthyAt   *time.Time                      `json:"last_healthy_at,omitempty"`
-	LastUnhealthyAt *time.Time                      `json:"last_unhealthy_at,omitempty"`
-	Permissions     []PropertyConnectionPermissions `json:"permissions"`
-	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
-	WorkspaceID     *string                         `json:"workspace_id,omitempty"`
+	Categories        []PropertyConnectionCategories  `json:"categories"`
+	CreatedAt         *time.Time                      `json:"created_at,omitempty"`
+	Environment       *string                         `default:"Production" json:"environment"`
+	ExternalXref      *string                         `json:"external_xref,omitempty"`
+	ID                *string                         `json:"id,omitempty"`
+	IntegrationName   *string                         `json:"integration_name,omitempty"`
+	IntegrationType   string                          `json:"integration_type"`
+	IsPaused          *bool                           `json:"is_paused,omitempty"`
+	LastHealthyAt     *time.Time                      `json:"last_healthy_at,omitempty"`
+	LastUnhealthyAt   *time.Time                      `json:"last_unhealthy_at,omitempty"`
+	Permissions       []PropertyConnectionPermissions `json:"permissions"`
+	SecretsmanagerID  *string                         `json:"secretsmanager_id,omitempty"`
+	SecretsmanagerKey *string                         `json:"secretsmanager_key,omitempty"`
+	UpdatedAt         *time.Time                      `json:"updated_at,omitempty"`
+	WorkspaceID       *string                         `json:"workspace_id,omitempty"`
 }
 
 func (c Connection) MarshalJSON() ([]byte, error) {
@@ -152,6 +154,20 @@ func (c *Connection) GetPermissions() []PropertyConnectionPermissions {
 		return []PropertyConnectionPermissions{}
 	}
 	return c.Permissions
+}
+
+func (c *Connection) GetSecretsmanagerID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.SecretsmanagerID
+}
+
+func (c *Connection) GetSecretsmanagerKey() *string {
+	if c == nil {
+		return nil
+	}
+	return c.SecretsmanagerKey
 }
 
 func (c *Connection) GetUpdatedAt() *time.Time {

@@ -186,8 +186,10 @@ func main() {
 * [CreateAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
 * [CreateLmsActivity](docs/sdks/activity/README.md#createlmsactivity) - Create an activity
 * [GetAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
+* [GetClubsActivity](docs/sdks/activity/README.md#getclubsactivity) - Retrieve an activity
 * [GetLmsActivity](docs/sdks/activity/README.md#getlmsactivity) - Retrieve an activity
 * [ListAtsActivities](docs/sdks/activity/README.md#listatsactivities) - List all activities
+* [ListClubsActivities](docs/sdks/activity/README.md#listclubsactivities) - List all activities
 * [ListLmsActivities](docs/sdks/activity/README.md#listlmsactivities) - List all activities
 * [PatchAtsActivity](docs/sdks/activity/README.md#patchatsactivity) - Update an activity
 * [PatchLmsActivity](docs/sdks/activity/README.md#patchlmsactivity) - Update an activity
@@ -486,6 +488,19 @@ func main() {
 * [PatchLmsClass](docs/sdks/class/README.md#patchlmsclass) - Update a class
 * [RemoveLmsClass](docs/sdks/class/README.md#removelmsclass) - Remove a class
 * [UpdateLmsClass](docs/sdks/class/README.md#updatelmsclass) - Update a class
+
+### [Clubs](docs/sdks/clubs/README.md)
+
+* [GetClubsActivity](docs/sdks/clubs/README.md#getclubsactivity) - Retrieve an activity
+* [GetClubsEvent](docs/sdks/clubs/README.md#getclubsevent) - Retrieve an event
+* [GetClubsGroup](docs/sdks/clubs/README.md#getclubsgroup) - Retrieve a group
+* [GetClubsLocation](docs/sdks/clubs/README.md#getclubslocation) - Retrieve a location
+* [GetClubsMember](docs/sdks/clubs/README.md#getclubsmember) - Retrieve a member
+* [ListClubsActivities](docs/sdks/clubs/README.md#listclubsactivities) - List all activities
+* [ListClubsEvents](docs/sdks/clubs/README.md#listclubsevents) - List all events
+* [ListClubsGroups](docs/sdks/clubs/README.md#listclubsgroups) - List all groups
+* [ListClubsLocations](docs/sdks/clubs/README.md#listclubslocations) - List all locations
+* [ListClubsMembers](docs/sdks/clubs/README.md#listclubsmembers) - List all members
 
 ### [Collection](docs/sdks/collection/README.md)
 
@@ -791,8 +806,10 @@ func main() {
 * [CreateCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
 * [CreateCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
 * [GetCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
+* [GetClubsEvent](docs/sdks/event/README.md#getclubsevent) - Retrieve an event
 * [GetCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
 * [ListCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
+* [ListClubsEvents](docs/sdks/event/README.md#listclubsevents) - List all events
 * [ListCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
 * [PatchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
 * [PatchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
@@ -854,9 +871,11 @@ func main() {
 * [CreateHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [CreateScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
 * [GetAdsGroup](docs/sdks/group/README.md#getadsgroup) - Retrieve a group
+* [GetClubsGroup](docs/sdks/group/README.md#getclubsgroup) - Retrieve a group
 * [GetHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [GetScimGroups](docs/sdks/group/README.md#getscimgroups) - Get group
 * [ListAdsGroups](docs/sdks/group/README.md#listadsgroups) - List all groups
+* [ListClubsGroups](docs/sdks/group/README.md#listclubsgroups) - List all groups
 * [ListHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
 * [ListScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
 * [PatchAdsGroup](docs/sdks/group/README.md#patchadsgroup) - Update a group
@@ -1138,8 +1157,10 @@ func main() {
 
 * [CreateCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [CreateHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
+* [GetClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [GetCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
 * [GetHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
+* [ListClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [ListCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
 * [ListHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [PatchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
@@ -1178,7 +1199,9 @@ func main() {
 ### [Member](docs/sdks/member/README.md)
 
 * [CreateMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
+* [GetClubsMember](docs/sdks/member/README.md#getclubsmember) - Retrieve a member
 * [GetMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member
+* [ListClubsMembers](docs/sdks/member/README.md#listclubsmembers) - List all members
 * [ListMartechMembers](docs/sdks/member/README.md#listmartechmembers) - List all members
 * [PatchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [RemoveMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member

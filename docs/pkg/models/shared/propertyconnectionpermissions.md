@@ -260,3 +260,13 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsSigningSignatoryRead`         | signing_signatory_read                                      |
 | `PropertyConnectionPermissionsSigningSignatoryWrite`        | signing_signatory_write                                     |
 | `PropertyConnectionPermissionsSigningTemplateRead`          | signing_template_read                                       |
+| `PropertyConnectionPermissionsClubsGroupRead`               | clubs_group_read                                            |
+| `PropertyConnectionPermissionsClubsGroupWrite`              | clubs_group_write                                           |
+| `PropertyConnectionPermissionsClubsMemberRead`              | clubs_member_read                                           |
+| `PropertyConnectionPermissionsClubsMemberWrite`             | clubs_member_write                                          |
+| `PropertyConnectionPermissionsClubsActivityRead`            | clubs_activity_read                                         |
+| `PropertyConnectionPermissionsClubsActivityWrite`           | clubs_activity_write                                        |
+| `PropertyConnectionPermissionsClubsLocationRead`            | clubs_location_read                                         |
+| `PropertyConnectionPermissionsClubsLocationWrite`           | clubs_location_write                                        |
+| `PropertyConnectionPermissionsClubsEventRead`               | clubs_event_read                                            |
+| `PropertyConnectionPermissionsClubsEventWrite`              | clubs_event_write                                           |

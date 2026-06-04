@@ -150,3 +150,8 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeSigningDocument`         | signing_document                    |
 | `ObjectTypeSigningSignatory`        | signing_signatory                   |
 | `ObjectTypeSigningTemplate`         | signing_template                    |
+| `ObjectTypeClubsGroup`              | clubs_group                         |
+| `ObjectTypeClubsMember`             | clubs_member                        |
+| `ObjectTypeClubsActivity`           | clubs_activity                      |
+| `ObjectTypeClubsLocation`           | clubs_location                      |
+| `ObjectTypeClubsEvent`              | clubs_event                         |

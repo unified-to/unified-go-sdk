@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.884.4
+// Generated from OpenAPI doc version 1.0 and generator version 2.893.0
 
 import (
 	"context"
@@ -103,13 +103,15 @@ type UnifiedTo struct {
 	Link              *Link
 	Recording         *Recording
 	Webinar           *Webinar
+	Clubs             *Clubs
+	Location          *Location
+	Member            *Member
 	Commerce          *Commerce
 	Availability      *Availability
 	Collection        *Collection
 	Inventory         *Inventory
 	Item              *Item
 	Itemvariant       *Itemvariant
-	Location          *Location
 	Reservation       *Reservation
 	Review            *Review
 	Saleschannel      *Saleschannel
@@ -147,7 +149,6 @@ type UnifiedTo struct {
 	Student           *Student
 	Martech           *Martech
 	List              *List
-	Member            *Member
 	Messaging         *Messaging
 	Channel           *Channel
 	Message           *Message
@@ -271,9 +272,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.79",
+		SDKVersion: "0.36.80",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.79 2.884.4 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.80 2.893.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -340,13 +341,15 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webinar = newWebinar(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Clubs = newClubs(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Member = newMember(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commerce = newCommerce(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Availability = newAvailability(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Collection = newCollection(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Inventory = newInventory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Item = newItem(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Itemvariant = newItemvariant(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Reservation = newReservation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -384,7 +387,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Student = newStudent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Martech = newMartech(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.List = newList(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Member = newMember(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Messaging = newMessaging(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Channel = newChannel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Message = newMessage(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -7,8 +7,10 @@
 * [CreateCalendarEvent](#createcalendarevent) - Create an event
 * [CreateCrmEvent](#createcrmevent) - Create an event
 * [GetCalendarEvent](#getcalendarevent) - Retrieve an event
+* [GetClubsEvent](#getclubsevent) - Retrieve an event
 * [GetCrmEvent](#getcrmevent) - Retrieve an event
 * [ListCalendarEvents](#listcalendarevents) - List all events
+* [ListClubsEvents](#listclubsevents) - List all events
 * [ListCrmEvents](#listcrmevents) - List all events
 * [PatchCalendarEvent](#patchcalendarevent) - Update an event
 * [PatchCrmEvent](#patchcrmevent) - Update an event
@@ -186,6 +188,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetClubsEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.GetClubsEvent(ctx, operations.GetClubsEventRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ClubsEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetClubsEventRequest](../../pkg/models/operations/getclubseventrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.GetClubsEventResponse](../../pkg/models/operations/getclubseventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetCrmEvent
 
 Retrieve an event
@@ -288,6 +345,60 @@ func main() {
 ### Response
 
 **[*operations.ListCalendarEventsResponse](../../pkg/models/operations/listcalendareventsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListClubsEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.ListClubsEvents(ctx, operations.ListClubsEventsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ClubsEvents != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListClubsEventsRequest](../../pkg/models/operations/listclubseventsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.ListClubsEventsResponse](../../pkg/models/operations/listclubseventsresponse.md), error**
 
 ### Errors
 

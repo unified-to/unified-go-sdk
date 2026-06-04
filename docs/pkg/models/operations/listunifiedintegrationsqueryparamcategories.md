@@ -43,3 +43,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesShipping`     | shipping                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesAssessment`   | assessment                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesSigning`      | signing                                                   |
+| `ListUnifiedIntegrationsQueryParamCategoriesClubs`        | clubs                                                     |

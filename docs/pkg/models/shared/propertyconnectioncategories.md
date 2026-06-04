@@ -46,3 +46,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesShipping`     | shipping                                   |
 | `PropertyConnectionCategoriesAssessment`   | assessment                                 |
 | `PropertyConnectionCategoriesSigning`      | signing                                    |
+| `PropertyConnectionCategoriesClubs`        | clubs                                      |
