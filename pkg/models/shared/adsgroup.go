@@ -147,6 +147,8 @@ const (
 	AdsGroupStatusActive               AdsGroupStatus = "ACTIVE"
 	AdsGroupStatusPaused               AdsGroupStatus = "PAUSED"
 	AdsGroupStatusArchived             AdsGroupStatus = "ARCHIVED"
+	AdsGroupStatusProcessing           AdsGroupStatus = "PROCESSING"
+	AdsGroupStatusProcessingFailed     AdsGroupStatus = "PROCESSING_FAILED"
 	AdsGroupStatusDraft                AdsGroupStatus = "DRAFT"
 	AdsGroupStatusScheduledForDeletion AdsGroupStatus = "SCHEDULED_FOR_DELETION"
 )
@@ -159,7 +161,7 @@ func (e AdsGroupStatus) ToPointer() *AdsGroupStatus {
 func (e *AdsGroupStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION":
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "PROCESSING", "PROCESSING_FAILED", "DRAFT", "SCHEDULED_FOR_DELETION":
 			return true
 		}
 	}

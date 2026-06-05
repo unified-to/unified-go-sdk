@@ -22,5 +22,7 @@ custom := shared.AdsInsertionorderStatus("custom_value")
 | `AdsInsertionorderStatusActive`               | ACTIVE                                        |
 | `AdsInsertionorderStatusPaused`               | PAUSED                                        |
 | `AdsInsertionorderStatusArchived`             | ARCHIVED                                      |
+| `AdsInsertionorderStatusProcessing`           | PROCESSING                                    |
+| `AdsInsertionorderStatusProcessingFailed`     | PROCESSING_FAILED                             |
 | `AdsInsertionorderStatusDraft`                | DRAFT                                         |
 | `AdsInsertionorderStatusScheduledForDeletion` | SCHEDULED_FOR_DELETION                        |

@@ -24,6 +24,7 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsItemID`                     | item_id                                                      |
 | `PatchAdsCreativeQueryParamFieldsOrganizationID`             | organization_id                                              |
 | `PatchAdsCreativeQueryParamFieldsStatus`                     | status                                                       |
+| `PatchAdsCreativeQueryParamFieldsData`                       | data                                                         |
 | `PatchAdsCreativeQueryParamFieldsCreativeType`               | creative_type                                                |
 | `PatchAdsCreativeQueryParamFieldsHostingSource`              | hosting_source                                               |
 | `PatchAdsCreativeQueryParamFieldsWidth`                      | width                                                        |

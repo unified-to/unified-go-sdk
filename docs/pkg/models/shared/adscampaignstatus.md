@@ -22,5 +22,7 @@ custom := shared.AdsCampaignStatus("custom_value")
 | `AdsCampaignStatusActive`               | ACTIVE                                  |
 | `AdsCampaignStatusPaused`               | PAUSED                                  |
 | `AdsCampaignStatusArchived`             | ARCHIVED                                |
+| `AdsCampaignStatusProcessing`           | PROCESSING                              |
+| `AdsCampaignStatusProcessingFailed`     | PROCESSING_FAILED                       |
 | `AdsCampaignStatusDraft`                | DRAFT                                   |
 | `AdsCampaignStatusScheduledForDeletion` | SCHEDULED_FOR_DELETION                  |

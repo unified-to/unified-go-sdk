@@ -24,6 +24,7 @@ value := operations.UpdateAdsCreativeQueryParamFieldsID
 | `UpdateAdsCreativeQueryParamFieldsItemID`                     | item_id                                                       |
 | `UpdateAdsCreativeQueryParamFieldsOrganizationID`             | organization_id                                               |
 | `UpdateAdsCreativeQueryParamFieldsStatus`                     | status                                                        |
+| `UpdateAdsCreativeQueryParamFieldsData`                       | data                                                          |
 | `UpdateAdsCreativeQueryParamFieldsCreativeType`               | creative_type                                                 |
 | `UpdateAdsCreativeQueryParamFieldsHostingSource`              | hosting_source                                                |
 | `UpdateAdsCreativeQueryParamFieldsWidth`                      | width                                                         |

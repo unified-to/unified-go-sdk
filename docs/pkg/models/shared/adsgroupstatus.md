@@ -22,5 +22,7 @@ custom := shared.AdsGroupStatus("custom_value")
 | `AdsGroupStatusActive`               | ACTIVE                               |
 | `AdsGroupStatusPaused`               | PAUSED                               |
 | `AdsGroupStatusArchived`             | ARCHIVED                             |
+| `AdsGroupStatusProcessing`           | PROCESSING                           |
+| `AdsGroupStatusProcessingFailed`     | PROCESSING_FAILED                    |
 | `AdsGroupStatusDraft`                | DRAFT                                |
 | `AdsGroupStatusScheduledForDeletion` | SCHEDULED_FOR_DELETION               |

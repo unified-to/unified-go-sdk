@@ -21,6 +21,7 @@ const (
 	ListAdsCreativesQueryParamFieldsItemID                     ListAdsCreativesQueryParamFields = "item_id"
 	ListAdsCreativesQueryParamFieldsOrganizationID             ListAdsCreativesQueryParamFields = "organization_id"
 	ListAdsCreativesQueryParamFieldsStatus                     ListAdsCreativesQueryParamFields = "status"
+	ListAdsCreativesQueryParamFieldsData                       ListAdsCreativesQueryParamFields = "data"
 	ListAdsCreativesQueryParamFieldsCreativeType               ListAdsCreativesQueryParamFields = "creative_type"
 	ListAdsCreativesQueryParamFieldsHostingSource              ListAdsCreativesQueryParamFields = "hosting_source"
 	ListAdsCreativesQueryParamFieldsWidth                      ListAdsCreativesQueryParamFields = "width"
@@ -67,6 +68,8 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "organization_id":
 		fallthrough
 	case "status":
+		fallthrough
+	case "data":
 		fallthrough
 	case "creative_type":
 		fallthrough

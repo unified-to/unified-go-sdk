@@ -22,5 +22,7 @@ custom := shared.PropertyAdsReportMetricsGroupStatus("custom_value")
 | `PropertyAdsReportMetricsGroupStatusActive`               | ACTIVE                                                    |
 | `PropertyAdsReportMetricsGroupStatusPaused`               | PAUSED                                                    |
 | `PropertyAdsReportMetricsGroupStatusArchived`             | ARCHIVED                                                  |
+| `PropertyAdsReportMetricsGroupStatusProcessing`           | PROCESSING                                                |
+| `PropertyAdsReportMetricsGroupStatusProcessingFailed`     | PROCESSING_FAILED                                         |
 | `PropertyAdsReportMetricsGroupStatusDraft`                | DRAFT                                                     |
 | `PropertyAdsReportMetricsGroupStatusScheduledForDeletion` | SCHEDULED_FOR_DELETION                                    |
