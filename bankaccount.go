@@ -30,8 +30,8 @@ func newBankaccount(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateHrisBankaccount - Create a bankaccount
-func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operations.CreateHrisBankaccountRequest, opts ...operations.Option) (*operations.CreateHrisBankaccountResponse, error) {
+// CreateHrisBankaccount2 - Create a bankaccount
+func (s *Bankaccount) CreateHrisBankaccount2(ctx context.Context, request operations.CreateHrisBankaccount2Request, opts ...operations.Option) (*operations.CreateHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisBankaccount",
+		OperationID:      "createHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateHrisBankaccountResponse{
+	res := &operations.CreateHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Bankaccount) CreateHrisBankaccount(ctx context.Context, request operati
 
 }
 
-// GetHrisBankaccount - Retrieve a bankaccount
-func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations.GetHrisBankaccountRequest, opts ...operations.Option) (*operations.GetHrisBankaccountResponse, error) {
+// GetHrisBankaccount2 - Retrieve a bankaccount
+func (s *Bankaccount) GetHrisBankaccount2(ctx context.Context, request operations.GetHrisBankaccount2Request, opts ...operations.Option) (*operations.GetHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisBankaccount",
+		OperationID:      "getHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetHrisBankaccountResponse{
+	res := &operations.GetHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Bankaccount) GetHrisBankaccount(ctx context.Context, request operations
 
 }
 
-// ListHrisBankaccounts - List all bankaccounts
-func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operations.ListHrisBankaccountsRequest, opts ...operations.Option) (*operations.ListHrisBankaccountsResponse, error) {
+// ListHrisBankaccounts2 - List all bankaccounts
+func (s *Bankaccount) ListHrisBankaccounts2(ctx context.Context, request operations.ListHrisBankaccounts2Request, opts ...operations.Option) (*operations.ListHrisBankaccounts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisBankaccounts",
+		OperationID:      "listHrisBankaccounts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListHrisBankaccountsResponse{
+	res := &operations.ListHrisBankaccounts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Bankaccount) ListHrisBankaccounts(ctx context.Context, request operatio
 
 }
 
-// PatchHrisBankaccount - Update a bankaccount
-func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operations.PatchHrisBankaccountRequest, opts ...operations.Option) (*operations.PatchHrisBankaccountResponse, error) {
+// PatchHrisBankaccount2 - Update a bankaccount
+func (s *Bankaccount) PatchHrisBankaccount2(ctx context.Context, request operations.PatchHrisBankaccount2Request, opts ...operations.Option) (*operations.PatchHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisBankaccount",
+		OperationID:      "patchHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchHrisBankaccountResponse{
+	res := &operations.PatchHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Bankaccount) PatchHrisBankaccount(ctx context.Context, request operatio
 
 }
 
-// RemoveHrisBankaccount - Remove a bankaccount
-func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operations.RemoveHrisBankaccountRequest, opts ...operations.Option) (*operations.RemoveHrisBankaccountResponse, error) {
+// RemoveHrisBankaccount2 - Remove a bankaccount
+func (s *Bankaccount) RemoveHrisBankaccount2(ctx context.Context, request operations.RemoveHrisBankaccount2Request, opts ...operations.Option) (*operations.RemoveHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisBankaccount",
+		OperationID:      "removeHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveHrisBankaccountResponse{
+	res := &operations.RemoveHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Bankaccount) RemoveHrisBankaccount(ctx context.Context, request operati
 
 }
 
-// UpdateHrisBankaccount - Update a bankaccount
-func (s *Bankaccount) UpdateHrisBankaccount(ctx context.Context, request operations.UpdateHrisBankaccountRequest, opts ...operations.Option) (*operations.UpdateHrisBankaccountResponse, error) {
+// UpdateHrisBankaccount2 - Update a bankaccount
+func (s *Bankaccount) UpdateHrisBankaccount2(ctx context.Context, request operations.UpdateHrisBankaccount2Request, opts ...operations.Option) (*operations.UpdateHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Bankaccount) UpdateHrisBankaccount(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisBankaccount",
+		OperationID:      "updateHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Bankaccount) UpdateHrisBankaccount(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateHrisBankaccountResponse{
+	res := &operations.UpdateHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

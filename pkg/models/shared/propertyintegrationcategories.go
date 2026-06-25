@@ -29,11 +29,13 @@ const (
 	PropertyIntegrationCategoriesCalendar     PropertyIntegrationCategories = "calendar"
 	PropertyIntegrationCategoriesVerification PropertyIntegrationCategories = "verification"
 	PropertyIntegrationCategoriesAds          PropertyIntegrationCategories = "ads"
+	PropertyIntegrationCategoriesAnalytics    PropertyIntegrationCategories = "analytics"
 	PropertyIntegrationCategoriesForms        PropertyIntegrationCategories = "forms"
 	PropertyIntegrationCategoriesShipping     PropertyIntegrationCategories = "shipping"
 	PropertyIntegrationCategoriesAssessment   PropertyIntegrationCategories = "assessment"
 	PropertyIntegrationCategoriesSigning      PropertyIntegrationCategories = "signing"
 	PropertyIntegrationCategoriesClubs        PropertyIntegrationCategories = "clubs"
+	PropertyIntegrationCategoriesDatastore    PropertyIntegrationCategories = "datastore"
 )
 
 func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategories {
@@ -44,7 +46,7 @@ func (e PropertyIntegrationCategories) ToPointer() *PropertyIntegrationCategorie
 func (e *PropertyIntegrationCategories) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "forms", "shipping", "assessment", "signing", "clubs":
+		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore":
 			return true
 		}
 	}

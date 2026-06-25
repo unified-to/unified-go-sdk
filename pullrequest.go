@@ -30,8 +30,8 @@ func newPullrequest(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateRepoPullrequest - Create a pullrequest
-func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operations.CreateRepoPullrequestRequest, opts ...operations.Option) (*operations.CreateRepoPullrequestResponse, error) {
+// CreateRepoPullrequest2 - Create a pullrequest
+func (s *Pullrequest) CreateRepoPullrequest2(ctx context.Context, request operations.CreateRepoPullrequest2Request, opts ...operations.Option) (*operations.CreateRepoPullrequest2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createRepoPullrequest",
+		OperationID:      "createRepoPullrequest2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateRepoPullrequestResponse{
+	res := &operations.CreateRepoPullrequest2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Pullrequest) CreateRepoPullrequest(ctx context.Context, request operati
 
 }
 
-// GetRepoPullrequest - Retrieve a pullrequest
-func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations.GetRepoPullrequestRequest, opts ...operations.Option) (*operations.GetRepoPullrequestResponse, error) {
+// GetRepoPullrequest2 - Retrieve a pullrequest
+func (s *Pullrequest) GetRepoPullrequest2(ctx context.Context, request operations.GetRepoPullrequest2Request, opts ...operations.Option) (*operations.GetRepoPullrequest2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getRepoPullrequest",
+		OperationID:      "getRepoPullrequest2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetRepoPullrequestResponse{
+	res := &operations.GetRepoPullrequest2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Pullrequest) GetRepoPullrequest(ctx context.Context, request operations
 
 }
 
-// ListRepoPullrequests - List all pullrequests
-func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operations.ListRepoPullrequestsRequest, opts ...operations.Option) (*operations.ListRepoPullrequestsResponse, error) {
+// ListRepoPullrequests2 - List all pullrequests
+func (s *Pullrequest) ListRepoPullrequests2(ctx context.Context, request operations.ListRepoPullrequests2Request, opts ...operations.Option) (*operations.ListRepoPullrequests2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listRepoPullrequests",
+		OperationID:      "listRepoPullrequests2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListRepoPullrequestsResponse{
+	res := &operations.ListRepoPullrequests2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Pullrequest) ListRepoPullrequests(ctx context.Context, request operatio
 
 }
 
-// PatchRepoPullrequest - Update a pullrequest
-func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operations.PatchRepoPullrequestRequest, opts ...operations.Option) (*operations.PatchRepoPullrequestResponse, error) {
+// PatchRepoPullrequest2 - Update a pullrequest
+func (s *Pullrequest) PatchRepoPullrequest2(ctx context.Context, request operations.PatchRepoPullrequest2Request, opts ...operations.Option) (*operations.PatchRepoPullrequest2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchRepoPullrequest",
+		OperationID:      "patchRepoPullrequest2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchRepoPullrequestResponse{
+	res := &operations.PatchRepoPullrequest2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Pullrequest) PatchRepoPullrequest(ctx context.Context, request operatio
 
 }
 
-// RemoveRepoPullrequest - Remove a pullrequest
-func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operations.RemoveRepoPullrequestRequest, opts ...operations.Option) (*operations.RemoveRepoPullrequestResponse, error) {
+// RemoveRepoPullrequest2 - Remove a pullrequest
+func (s *Pullrequest) RemoveRepoPullrequest2(ctx context.Context, request operations.RemoveRepoPullrequest2Request, opts ...operations.Option) (*operations.RemoveRepoPullrequest2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeRepoPullrequest",
+		OperationID:      "removeRepoPullrequest2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveRepoPullrequestResponse{
+	res := &operations.RemoveRepoPullrequest2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Pullrequest) RemoveRepoPullrequest(ctx context.Context, request operati
 
 }
 
-// UpdateRepoPullrequest - Update a pullrequest
-func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operations.UpdateRepoPullrequestRequest, opts ...operations.Option) (*operations.UpdateRepoPullrequestResponse, error) {
+// UpdateRepoPullrequest2 - Update a pullrequest
+func (s *Pullrequest) UpdateRepoPullrequest2(ctx context.Context, request operations.UpdateRepoPullrequest2Request, opts ...operations.Option) (*operations.UpdateRepoPullrequest2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateRepoPullrequest",
+		OperationID:      "updateRepoPullrequest2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoPullrequest", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Pullrequest) UpdateRepoPullrequest(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateRepoPullrequestResponse{
+	res := &operations.UpdateRepoPullrequest2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

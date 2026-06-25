@@ -30,8 +30,8 @@ func newTracking(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// GetShippingTracking - Retrieve a tracking
-func (s *Tracking) GetShippingTracking(ctx context.Context, request operations.GetShippingTrackingRequest, opts ...operations.Option) (*operations.GetShippingTrackingResponse, error) {
+// GetShippingTracking2 - Retrieve a tracking
+func (s *Tracking) GetShippingTracking2(ctx context.Context, request operations.GetShippingTracking2Request, opts ...operations.Option) (*operations.GetShippingTracking2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Tracking) GetShippingTracking(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getShippingTracking",
+		OperationID:      "getShippingTracking2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Tracking) GetShippingTracking(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetShippingTrackingResponse{
+	res := &operations.GetShippingTracking2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Tracking) GetShippingTracking(ctx context.Context, request operations.G
 
 }
 
-// ListShippingTrackings - List all trackings
-func (s *Tracking) ListShippingTrackings(ctx context.Context, request operations.ListShippingTrackingsRequest, opts ...operations.Option) (*operations.ListShippingTrackingsResponse, error) {
+// ListShippingTrackings2 - List all trackings
+func (s *Tracking) ListShippingTrackings2(ctx context.Context, request operations.ListShippingTrackings2Request, opts ...operations.Option) (*operations.ListShippingTrackings2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Tracking) ListShippingTrackings(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listShippingTrackings",
+		OperationID:      "listShippingTrackings2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Tracking) ListShippingTrackings(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListShippingTrackingsResponse{
+	res := &operations.ListShippingTrackings2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

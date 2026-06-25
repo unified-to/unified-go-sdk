@@ -30,8 +30,8 @@ func newAts(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 	}
 }
 
-// CreateAtsActivity - Create an activity
-func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAtsActivityRequest, opts ...operations.Option) (*operations.CreateAtsActivityResponse, error) {
+// CreateAtsActivity2 - Create an activity
+func (s *Ats) CreateAtsActivity2(ctx context.Context, request operations.CreateAtsActivity2Request, opts ...operations.Option) (*operations.CreateAtsActivity2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsActivity",
+		OperationID:      "createAtsActivity2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAt
 		}
 	}
 
-	res := &operations.CreateAtsActivityResponse{
+	res := &operations.CreateAtsActivity2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Ats) CreateAtsActivity(ctx context.Context, request operations.CreateAt
 
 }
 
-// CreateAtsApplication - Create an application
-func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest, opts ...operations.Option) (*operations.CreateAtsApplicationResponse, error) {
+// CreateAtsApplication2 - Create an application
+func (s *Ats) CreateAtsApplication2(ctx context.Context, request operations.CreateAtsApplication2Request, opts ...operations.Option) (*operations.CreateAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsApplication",
+		OperationID:      "createAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateAtsApplicationResponse{
+	res := &operations.CreateAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Ats) CreateAtsApplication(ctx context.Context, request operations.Creat
 
 }
 
-// CreateAtsCandidate - Create a candidate
-func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest, opts ...operations.Option) (*operations.CreateAtsCandidateResponse, error) {
+// CreateAtsCandidate2 - Create a candidate
+func (s *Ats) CreateAtsCandidate2(ctx context.Context, request operations.CreateAtsCandidate2Request, opts ...operations.Option) (*operations.CreateAtsCandidate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsCandidate",
+		OperationID:      "createAtsCandidate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 		}
 	}
 
-	res := &operations.CreateAtsCandidateResponse{
+	res := &operations.CreateAtsCandidate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Ats) CreateAtsCandidate(ctx context.Context, request operations.CreateA
 
 }
 
-// CreateAtsCompany - Create a company
-func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAtsCompanyRequest, opts ...operations.Option) (*operations.CreateAtsCompanyResponse, error) {
+// CreateAtsCompany2 - Create a company
+func (s *Ats) CreateAtsCompany2(ctx context.Context, request operations.CreateAtsCompany2Request, opts ...operations.Option) (*operations.CreateAtsCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsCompany",
+		OperationID:      "createAtsCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAts
 		}
 	}
 
-	res := &operations.CreateAtsCompanyResponse{
+	res := &operations.CreateAtsCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Ats) CreateAtsCompany(ctx context.Context, request operations.CreateAts
 
 }
 
-// CreateAtsDocument - Create a document
-func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAtsDocumentRequest, opts ...operations.Option) (*operations.CreateAtsDocumentResponse, error) {
+// CreateAtsDocument2 - Create a document
+func (s *Ats) CreateAtsDocument2(ctx context.Context, request operations.CreateAtsDocument2Request, opts ...operations.Option) (*operations.CreateAtsDocument2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsDocument",
+		OperationID:      "createAtsDocument2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsDocument", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 		}
 	}
 
-	res := &operations.CreateAtsDocumentResponse{
+	res := &operations.CreateAtsDocument2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Ats) CreateAtsDocument(ctx context.Context, request operations.CreateAt
 
 }
 
-// CreateAtsInterview - Create an interview
-func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest, opts ...operations.Option) (*operations.CreateAtsInterviewResponse, error) {
+// CreateAtsInterview2 - Create an interview
+func (s *Ats) CreateAtsInterview2(ctx context.Context, request operations.CreateAtsInterview2Request, opts ...operations.Option) (*operations.CreateAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsInterview",
+		OperationID:      "createAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 		}
 	}
 
-	res := &operations.CreateAtsInterviewResponse{
+	res := &operations.CreateAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Ats) CreateAtsInterview(ctx context.Context, request operations.CreateA
 
 }
 
-// CreateAtsJob - Create a job
-func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest, opts ...operations.Option) (*operations.CreateAtsJobResponse, error) {
+// CreateAtsJob2 - Create a job
+func (s *Ats) CreateAtsJob2(ctx context.Context, request operations.CreateAtsJob2Request, opts ...operations.Option) (*operations.CreateAtsJob2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsJob",
+		OperationID:      "createAtsJob2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -1476,7 +1476,7 @@ func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 		}
 	}
 
-	res := &operations.CreateAtsJobResponse{
+	res := &operations.CreateAtsJob2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1528,8 +1528,8 @@ func (s *Ats) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobR
 
 }
 
-// CreateAtsScorecard - Create a scorecard
-func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest, opts ...operations.Option) (*operations.CreateAtsScorecardResponse, error) {
+// CreateAtsScorecard2 - Create a scorecard
+func (s *Ats) CreateAtsScorecard2(ctx context.Context, request operations.CreateAtsScorecard2Request, opts ...operations.Option) (*operations.CreateAtsScorecard2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1558,7 +1558,7 @@ func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsScorecard",
+		OperationID:      "createAtsScorecard2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -1690,7 +1690,7 @@ func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 		}
 	}
 
-	res := &operations.CreateAtsScorecardResponse{
+	res := &operations.CreateAtsScorecard2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1742,8 +1742,8 @@ func (s *Ats) CreateAtsScorecard(ctx context.Context, request operations.CreateA
 
 }
 
-// GetAtsActivity - Retrieve an activity
-func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActivityRequest, opts ...operations.Option) (*operations.GetAtsActivityResponse, error) {
+// GetAtsActivity2 - Retrieve an activity
+func (s *Ats) GetAtsActivity2(ctx context.Context, request operations.GetAtsActivity2Request, opts ...operations.Option) (*operations.GetAtsActivity2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1772,7 +1772,7 @@ func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActiv
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsActivity",
+		OperationID:      "getAtsActivity2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1897,7 +1897,7 @@ func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActiv
 		}
 	}
 
-	res := &operations.GetAtsActivityResponse{
+	res := &operations.GetAtsActivity2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1949,8 +1949,8 @@ func (s *Ats) GetAtsActivity(ctx context.Context, request operations.GetAtsActiv
 
 }
 
-// GetAtsApplication - Retrieve an application
-func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest, opts ...operations.Option) (*operations.GetAtsApplicationResponse, error) {
+// GetAtsApplication2 - Retrieve an application
+func (s *Ats) GetAtsApplication2(ctx context.Context, request operations.GetAtsApplication2Request, opts ...operations.Option) (*operations.GetAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1979,7 +1979,7 @@ func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsApplication",
+		OperationID:      "getAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2104,7 +2104,7 @@ func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 		}
 	}
 
-	res := &operations.GetAtsApplicationResponse{
+	res := &operations.GetAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2156,8 +2156,8 @@ func (s *Ats) GetAtsApplication(ctx context.Context, request operations.GetAtsAp
 
 }
 
-// GetAtsCandidate - Retrieve a candidate
-func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest, opts ...operations.Option) (*operations.GetAtsCandidateResponse, error) {
+// GetAtsCandidate2 - Retrieve a candidate
+func (s *Ats) GetAtsCandidate2(ctx context.Context, request operations.GetAtsCandidate2Request, opts ...operations.Option) (*operations.GetAtsCandidate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2186,7 +2186,7 @@ func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsCandidate",
+		OperationID:      "getAtsCandidate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2311,7 +2311,7 @@ func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 		}
 	}
 
-	res := &operations.GetAtsCandidateResponse{
+	res := &operations.GetAtsCandidate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2363,8 +2363,8 @@ func (s *Ats) GetAtsCandidate(ctx context.Context, request operations.GetAtsCand
 
 }
 
-// GetAtsCompany - Retrieve a company
-func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompanyRequest, opts ...operations.Option) (*operations.GetAtsCompanyResponse, error) {
+// GetAtsCompany2 - Retrieve a company
+func (s *Ats) GetAtsCompany2(ctx context.Context, request operations.GetAtsCompany2Request, opts ...operations.Option) (*operations.GetAtsCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2393,7 +2393,7 @@ func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompan
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsCompany",
+		OperationID:      "getAtsCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2518,7 +2518,7 @@ func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompan
 		}
 	}
 
-	res := &operations.GetAtsCompanyResponse{
+	res := &operations.GetAtsCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2570,8 +2570,8 @@ func (s *Ats) GetAtsCompany(ctx context.Context, request operations.GetAtsCompan
 
 }
 
-// GetAtsDocument - Retrieve a document
-func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocumentRequest, opts ...operations.Option) (*operations.GetAtsDocumentResponse, error) {
+// GetAtsDocument2 - Retrieve a document
+func (s *Ats) GetAtsDocument2(ctx context.Context, request operations.GetAtsDocument2Request, opts ...operations.Option) (*operations.GetAtsDocument2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2600,7 +2600,7 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsDocument",
+		OperationID:      "getAtsDocument2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2725,7 +2725,7 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 		}
 	}
 
-	res := &operations.GetAtsDocumentResponse{
+	res := &operations.GetAtsDocument2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2777,8 +2777,8 @@ func (s *Ats) GetAtsDocument(ctx context.Context, request operations.GetAtsDocum
 
 }
 
-// GetAtsInterview - Retrieve an interview
-func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest, opts ...operations.Option) (*operations.GetAtsInterviewResponse, error) {
+// GetAtsInterview2 - Retrieve an interview
+func (s *Ats) GetAtsInterview2(ctx context.Context, request operations.GetAtsInterview2Request, opts ...operations.Option) (*operations.GetAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2807,7 +2807,7 @@ func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsInterview",
+		OperationID:      "getAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2932,7 +2932,7 @@ func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 		}
 	}
 
-	res := &operations.GetAtsInterviewResponse{
+	res := &operations.GetAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2984,8 +2984,8 @@ func (s *Ats) GetAtsInterview(ctx context.Context, request operations.GetAtsInte
 
 }
 
-// GetAtsJob - Retrieve a job
-func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest, opts ...operations.Option) (*operations.GetAtsJobResponse, error) {
+// GetAtsJob2 - Retrieve a job
+func (s *Ats) GetAtsJob2(ctx context.Context, request operations.GetAtsJob2Request, opts ...operations.Option) (*operations.GetAtsJob2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3014,7 +3014,7 @@ func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsJob",
+		OperationID:      "getAtsJob2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3139,7 +3139,7 @@ func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 		}
 	}
 
-	res := &operations.GetAtsJobResponse{
+	res := &operations.GetAtsJob2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3191,8 +3191,8 @@ func (s *Ats) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest
 
 }
 
-// GetAtsScorecard - Retrieve a scorecard
-func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest, opts ...operations.Option) (*operations.GetAtsScorecardResponse, error) {
+// GetAtsScorecard2 - Retrieve a scorecard
+func (s *Ats) GetAtsScorecard2(ctx context.Context, request operations.GetAtsScorecard2Request, opts ...operations.Option) (*operations.GetAtsScorecard2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3221,7 +3221,7 @@ func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsScorecard",
+		OperationID:      "getAtsScorecard2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3346,7 +3346,7 @@ func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 		}
 	}
 
-	res := &operations.GetAtsScorecardResponse{
+	res := &operations.GetAtsScorecard2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3398,8 +3398,8 @@ func (s *Ats) GetAtsScorecard(ctx context.Context, request operations.GetAtsScor
 
 }
 
-// ListAtsActivities - List all activities
-func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsActivitiesRequest, opts ...operations.Option) (*operations.ListAtsActivitiesResponse, error) {
+// ListAtsActivities2 - List all activities
+func (s *Ats) ListAtsActivities2(ctx context.Context, request operations.ListAtsActivities2Request, opts ...operations.Option) (*operations.ListAtsActivities2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3428,7 +3428,7 @@ func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsActivities",
+		OperationID:      "listAtsActivities2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3553,7 +3553,7 @@ func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsA
 		}
 	}
 
-	res := &operations.ListAtsActivitiesResponse{
+	res := &operations.ListAtsActivities2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3605,8 +3605,8 @@ func (s *Ats) ListAtsActivities(ctx context.Context, request operations.ListAtsA
 
 }
 
-// ListAtsApplications - List all applications
-func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest, opts ...operations.Option) (*operations.ListAtsApplicationsResponse, error) {
+// ListAtsApplications2 - List all applications
+func (s *Ats) ListAtsApplications2(ctx context.Context, request operations.ListAtsApplications2Request, opts ...operations.Option) (*operations.ListAtsApplications2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3635,7 +3635,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsApplications",
+		OperationID:      "listAtsApplications2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3760,7 +3760,7 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 		}
 	}
 
-	res := &operations.ListAtsApplicationsResponse{
+	res := &operations.ListAtsApplications2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3812,8 +3812,8 @@ func (s *Ats) ListAtsApplications(ctx context.Context, request operations.ListAt
 
 }
 
-// ListAtsApplicationstatuses - List all applicationstatuses
-func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest, opts ...operations.Option) (*operations.ListAtsApplicationstatusesResponse, error) {
+// ListAtsApplicationstatuses2 - List all applicationstatuses
+func (s *Ats) ListAtsApplicationstatuses2(ctx context.Context, request operations.ListAtsApplicationstatuses2Request, opts ...operations.Option) (*operations.ListAtsApplicationstatuses2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3842,7 +3842,7 @@ func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsApplicationstatuses",
+		OperationID:      "listAtsApplicationstatuses2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3967,7 +3967,7 @@ func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListAtsApplicationstatusesResponse{
+	res := &operations.ListAtsApplicationstatuses2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4019,8 +4019,8 @@ func (s *Ats) ListAtsApplicationstatuses(ctx context.Context, request operations
 
 }
 
-// ListAtsCandidates - List all candidates
-func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest, opts ...operations.Option) (*operations.ListAtsCandidatesResponse, error) {
+// ListAtsCandidates2 - List all candidates
+func (s *Ats) ListAtsCandidates2(ctx context.Context, request operations.ListAtsCandidates2Request, opts ...operations.Option) (*operations.ListAtsCandidates2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4049,7 +4049,7 @@ func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsCandidates",
+		OperationID:      "listAtsCandidates2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4174,7 +4174,7 @@ func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 		}
 	}
 
-	res := &operations.ListAtsCandidatesResponse{
+	res := &operations.ListAtsCandidates2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4226,8 +4226,8 @@ func (s *Ats) ListAtsCandidates(ctx context.Context, request operations.ListAtsC
 
 }
 
-// ListAtsCompanies - List all companies
-func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCompaniesRequest, opts ...operations.Option) (*operations.ListAtsCompaniesResponse, error) {
+// ListAtsCompanies2 - List all companies
+func (s *Ats) ListAtsCompanies2(ctx context.Context, request operations.ListAtsCompanies2Request, opts ...operations.Option) (*operations.ListAtsCompanies2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4256,7 +4256,7 @@ func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsCompanies",
+		OperationID:      "listAtsCompanies2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4381,7 +4381,7 @@ func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCo
 		}
 	}
 
-	res := &operations.ListAtsCompaniesResponse{
+	res := &operations.ListAtsCompanies2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4433,8 +4433,8 @@ func (s *Ats) ListAtsCompanies(ctx context.Context, request operations.ListAtsCo
 
 }
 
-// ListAtsDocuments - List all documents
-func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDocumentsRequest, opts ...operations.Option) (*operations.ListAtsDocumentsResponse, error) {
+// ListAtsDocuments2 - List all documents
+func (s *Ats) ListAtsDocuments2(ctx context.Context, request operations.ListAtsDocuments2Request, opts ...operations.Option) (*operations.ListAtsDocuments2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4463,7 +4463,7 @@ func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsDocuments",
+		OperationID:      "listAtsDocuments2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4588,7 +4588,7 @@ func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 		}
 	}
 
-	res := &operations.ListAtsDocumentsResponse{
+	res := &operations.ListAtsDocuments2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4640,8 +4640,8 @@ func (s *Ats) ListAtsDocuments(ctx context.Context, request operations.ListAtsDo
 
 }
 
-// ListAtsInterviews - List all interviews
-func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest, opts ...operations.Option) (*operations.ListAtsInterviewsResponse, error) {
+// ListAtsInterviews2 - List all interviews
+func (s *Ats) ListAtsInterviews2(ctx context.Context, request operations.ListAtsInterviews2Request, opts ...operations.Option) (*operations.ListAtsInterviews2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4670,7 +4670,7 @@ func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsInterviews",
+		OperationID:      "listAtsInterviews2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4795,7 +4795,7 @@ func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 		}
 	}
 
-	res := &operations.ListAtsInterviewsResponse{
+	res := &operations.ListAtsInterviews2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4847,8 +4847,8 @@ func (s *Ats) ListAtsInterviews(ctx context.Context, request operations.ListAtsI
 
 }
 
-// ListAtsJobs - List all jobs
-func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest, opts ...operations.Option) (*operations.ListAtsJobsResponse, error) {
+// ListAtsJobs2 - List all jobs
+func (s *Ats) ListAtsJobs2(ctx context.Context, request operations.ListAtsJobs2Request, opts ...operations.Option) (*operations.ListAtsJobs2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4877,7 +4877,7 @@ func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsJobs",
+		OperationID:      "listAtsJobs2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5002,7 +5002,7 @@ func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 		}
 	}
 
-	res := &operations.ListAtsJobsResponse{
+	res := &operations.ListAtsJobs2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5054,8 +5054,8 @@ func (s *Ats) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsReq
 
 }
 
-// ListAtsScorecards - List all scorecards
-func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest, opts ...operations.Option) (*operations.ListAtsScorecardsResponse, error) {
+// ListAtsScorecards2 - List all scorecards
+func (s *Ats) ListAtsScorecards2(ctx context.Context, request operations.ListAtsScorecards2Request, opts ...operations.Option) (*operations.ListAtsScorecards2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5084,7 +5084,7 @@ func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsScorecards",
+		OperationID:      "listAtsScorecards2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5209,7 +5209,7 @@ func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 		}
 	}
 
-	res := &operations.ListAtsScorecardsResponse{
+	res := &operations.ListAtsScorecards2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5261,8 +5261,8 @@ func (s *Ats) ListAtsScorecards(ctx context.Context, request operations.ListAtsS
 
 }
 
-// PatchAtsActivity - Update an activity
-func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsActivityRequest, opts ...operations.Option) (*operations.PatchAtsActivityResponse, error) {
+// PatchAtsActivity2 - Update an activity
+func (s *Ats) PatchAtsActivity2(ctx context.Context, request operations.PatchAtsActivity2Request, opts ...operations.Option) (*operations.PatchAtsActivity2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5291,7 +5291,7 @@ func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsActivity",
+		OperationID:      "patchAtsActivity2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
@@ -5423,7 +5423,7 @@ func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsA
 		}
 	}
 
-	res := &operations.PatchAtsActivityResponse{
+	res := &operations.PatchAtsActivity2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5475,8 +5475,8 @@ func (s *Ats) PatchAtsActivity(ctx context.Context, request operations.PatchAtsA
 
 }
 
-// PatchAtsApplication - Update an application
-func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest, opts ...operations.Option) (*operations.PatchAtsApplicationResponse, error) {
+// PatchAtsApplication2 - Update an application
+func (s *Ats) PatchAtsApplication2(ctx context.Context, request operations.PatchAtsApplication2Request, opts ...operations.Option) (*operations.PatchAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5505,7 +5505,7 @@ func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsApplication",
+		OperationID:      "patchAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -5637,7 +5637,7 @@ func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 		}
 	}
 
-	res := &operations.PatchAtsApplicationResponse{
+	res := &operations.PatchAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5689,8 +5689,8 @@ func (s *Ats) PatchAtsApplication(ctx context.Context, request operations.PatchA
 
 }
 
-// PatchAtsCandidate - Update a candidate
-func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest, opts ...operations.Option) (*operations.PatchAtsCandidateResponse, error) {
+// PatchAtsCandidate2 - Update a candidate
+func (s *Ats) PatchAtsCandidate2(ctx context.Context, request operations.PatchAtsCandidate2Request, opts ...operations.Option) (*operations.PatchAtsCandidate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5719,7 +5719,7 @@ func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsCandidate",
+		OperationID:      "patchAtsCandidate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -5851,7 +5851,7 @@ func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 		}
 	}
 
-	res := &operations.PatchAtsCandidateResponse{
+	res := &operations.PatchAtsCandidate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5903,8 +5903,8 @@ func (s *Ats) PatchAtsCandidate(ctx context.Context, request operations.PatchAts
 
 }
 
-// PatchAtsCompany - Update a company
-func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCompanyRequest, opts ...operations.Option) (*operations.PatchAtsCompanyResponse, error) {
+// PatchAtsCompany2 - Update a company
+func (s *Ats) PatchAtsCompany2(ctx context.Context, request operations.PatchAtsCompany2Request, opts ...operations.Option) (*operations.PatchAtsCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5933,7 +5933,7 @@ func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsCompany",
+		OperationID:      "patchAtsCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -6065,7 +6065,7 @@ func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCo
 		}
 	}
 
-	res := &operations.PatchAtsCompanyResponse{
+	res := &operations.PatchAtsCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6117,8 +6117,8 @@ func (s *Ats) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCo
 
 }
 
-// PatchAtsDocument - Update a document
-func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsDocumentRequest, opts ...operations.Option) (*operations.PatchAtsDocumentResponse, error) {
+// PatchAtsDocument2 - Update a document
+func (s *Ats) PatchAtsDocument2(ctx context.Context, request operations.PatchAtsDocument2Request, opts ...operations.Option) (*operations.PatchAtsDocument2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6147,7 +6147,7 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsDocument",
+		OperationID:      "patchAtsDocument2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsDocument", "json", `request:"mediaType=application/json"`)
@@ -6279,7 +6279,7 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 		}
 	}
 
-	res := &operations.PatchAtsDocumentResponse{
+	res := &operations.PatchAtsDocument2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6331,8 +6331,8 @@ func (s *Ats) PatchAtsDocument(ctx context.Context, request operations.PatchAtsD
 
 }
 
-// PatchAtsInterview - Update an interview
-func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest, opts ...operations.Option) (*operations.PatchAtsInterviewResponse, error) {
+// PatchAtsInterview2 - Update an interview
+func (s *Ats) PatchAtsInterview2(ctx context.Context, request operations.PatchAtsInterview2Request, opts ...operations.Option) (*operations.PatchAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6361,7 +6361,7 @@ func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsInterview",
+		OperationID:      "patchAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -6493,7 +6493,7 @@ func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 		}
 	}
 
-	res := &operations.PatchAtsInterviewResponse{
+	res := &operations.PatchAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6545,8 +6545,8 @@ func (s *Ats) PatchAtsInterview(ctx context.Context, request operations.PatchAts
 
 }
 
-// PatchAtsJob - Update a job
-func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest, opts ...operations.Option) (*operations.PatchAtsJobResponse, error) {
+// PatchAtsJob2 - Update a job
+func (s *Ats) PatchAtsJob2(ctx context.Context, request operations.PatchAtsJob2Request, opts ...operations.Option) (*operations.PatchAtsJob2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6575,7 +6575,7 @@ func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsJob",
+		OperationID:      "patchAtsJob2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -6707,7 +6707,7 @@ func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 		}
 	}
 
-	res := &operations.PatchAtsJobResponse{
+	res := &operations.PatchAtsJob2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6759,8 +6759,8 @@ func (s *Ats) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobReq
 
 }
 
-// PatchAtsScorecard - Update a scorecard
-func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest, opts ...operations.Option) (*operations.PatchAtsScorecardResponse, error) {
+// PatchAtsScorecard2 - Update a scorecard
+func (s *Ats) PatchAtsScorecard2(ctx context.Context, request operations.PatchAtsScorecard2Request, opts ...operations.Option) (*operations.PatchAtsScorecard2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6789,7 +6789,7 @@ func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsScorecard",
+		OperationID:      "patchAtsScorecard2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -6921,7 +6921,7 @@ func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 		}
 	}
 
-	res := &operations.PatchAtsScorecardResponse{
+	res := &operations.PatchAtsScorecard2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6973,8 +6973,8 @@ func (s *Ats) PatchAtsScorecard(ctx context.Context, request operations.PatchAts
 
 }
 
-// RemoveAtsActivity - Remove an activity
-func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAtsActivityRequest, opts ...operations.Option) (*operations.RemoveAtsActivityResponse, error) {
+// RemoveAtsActivity2 - Remove an activity
+func (s *Ats) RemoveAtsActivity2(ctx context.Context, request operations.RemoveAtsActivity2Request, opts ...operations.Option) (*operations.RemoveAtsActivity2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7003,7 +7003,7 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsActivity",
+		OperationID:      "removeAtsActivity2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7124,7 +7124,7 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 		}
 	}
 
-	res := &operations.RemoveAtsActivityResponse{
+	res := &operations.RemoveAtsActivity2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7155,8 +7155,8 @@ func (s *Ats) RemoveAtsActivity(ctx context.Context, request operations.RemoveAt
 
 }
 
-// RemoveAtsApplication - Remove an application
-func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest, opts ...operations.Option) (*operations.RemoveAtsApplicationResponse, error) {
+// RemoveAtsApplication2 - Remove an application
+func (s *Ats) RemoveAtsApplication2(ctx context.Context, request operations.RemoveAtsApplication2Request, opts ...operations.Option) (*operations.RemoveAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7185,7 +7185,7 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsApplication",
+		OperationID:      "removeAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7306,7 +7306,7 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveAtsApplicationResponse{
+	res := &operations.RemoveAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7337,8 +7337,8 @@ func (s *Ats) RemoveAtsApplication(ctx context.Context, request operations.Remov
 
 }
 
-// RemoveAtsCandidate - Remove a candidate
-func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest, opts ...operations.Option) (*operations.RemoveAtsCandidateResponse, error) {
+// RemoveAtsCandidate2 - Remove a candidate
+func (s *Ats) RemoveAtsCandidate2(ctx context.Context, request operations.RemoveAtsCandidate2Request, opts ...operations.Option) (*operations.RemoveAtsCandidate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7367,7 +7367,7 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsCandidate",
+		OperationID:      "removeAtsCandidate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7488,7 +7488,7 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 		}
 	}
 
-	res := &operations.RemoveAtsCandidateResponse{
+	res := &operations.RemoveAtsCandidate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7519,8 +7519,8 @@ func (s *Ats) RemoveAtsCandidate(ctx context.Context, request operations.RemoveA
 
 }
 
-// RemoveAtsCompany - Remove a company
-func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAtsCompanyRequest, opts ...operations.Option) (*operations.RemoveAtsCompanyResponse, error) {
+// RemoveAtsCompany2 - Remove a company
+func (s *Ats) RemoveAtsCompany2(ctx context.Context, request operations.RemoveAtsCompany2Request, opts ...operations.Option) (*operations.RemoveAtsCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7549,7 +7549,7 @@ func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsCompany",
+		OperationID:      "removeAtsCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7670,7 +7670,7 @@ func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAts
 		}
 	}
 
-	res := &operations.RemoveAtsCompanyResponse{
+	res := &operations.RemoveAtsCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7701,8 +7701,8 @@ func (s *Ats) RemoveAtsCompany(ctx context.Context, request operations.RemoveAts
 
 }
 
-// RemoveAtsDocument - Remove a document
-func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAtsDocumentRequest, opts ...operations.Option) (*operations.RemoveAtsDocumentResponse, error) {
+// RemoveAtsDocument2 - Remove a document
+func (s *Ats) RemoveAtsDocument2(ctx context.Context, request operations.RemoveAtsDocument2Request, opts ...operations.Option) (*operations.RemoveAtsDocument2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7731,7 +7731,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsDocument",
+		OperationID:      "removeAtsDocument2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7852,7 +7852,7 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 		}
 	}
 
-	res := &operations.RemoveAtsDocumentResponse{
+	res := &operations.RemoveAtsDocument2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7883,8 +7883,8 @@ func (s *Ats) RemoveAtsDocument(ctx context.Context, request operations.RemoveAt
 
 }
 
-// RemoveAtsInterview - Remove an interview
-func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest, opts ...operations.Option) (*operations.RemoveAtsInterviewResponse, error) {
+// RemoveAtsInterview2 - Remove an interview
+func (s *Ats) RemoveAtsInterview2(ctx context.Context, request operations.RemoveAtsInterview2Request, opts ...operations.Option) (*operations.RemoveAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7913,7 +7913,7 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsInterview",
+		OperationID:      "removeAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8034,7 +8034,7 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 		}
 	}
 
-	res := &operations.RemoveAtsInterviewResponse{
+	res := &operations.RemoveAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8065,8 +8065,8 @@ func (s *Ats) RemoveAtsInterview(ctx context.Context, request operations.RemoveA
 
 }
 
-// RemoveAtsJob - Remove a job
-func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest, opts ...operations.Option) (*operations.RemoveAtsJobResponse, error) {
+// RemoveAtsJob2 - Remove a job
+func (s *Ats) RemoveAtsJob2(ctx context.Context, request operations.RemoveAtsJob2Request, opts ...operations.Option) (*operations.RemoveAtsJob2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8095,7 +8095,7 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsJob",
+		OperationID:      "removeAtsJob2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8216,7 +8216,7 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 		}
 	}
 
-	res := &operations.RemoveAtsJobResponse{
+	res := &operations.RemoveAtsJob2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8247,8 +8247,8 @@ func (s *Ats) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobR
 
 }
 
-// RemoveAtsScorecard - Remove a scorecard
-func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest, opts ...operations.Option) (*operations.RemoveAtsScorecardResponse, error) {
+// RemoveAtsScorecard2 - Remove a scorecard
+func (s *Ats) RemoveAtsScorecard2(ctx context.Context, request operations.RemoveAtsScorecard2Request, opts ...operations.Option) (*operations.RemoveAtsScorecard2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8277,7 +8277,7 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsScorecard",
+		OperationID:      "removeAtsScorecard2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8398,7 +8398,7 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 		}
 	}
 
-	res := &operations.RemoveAtsScorecardResponse{
+	res := &operations.RemoveAtsScorecard2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8429,8 +8429,8 @@ func (s *Ats) RemoveAtsScorecard(ctx context.Context, request operations.RemoveA
 
 }
 
-// UpdateAtsActivity - Update an activity
-func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAtsActivityRequest, opts ...operations.Option) (*operations.UpdateAtsActivityResponse, error) {
+// UpdateAtsActivity2 - Update an activity
+func (s *Ats) UpdateAtsActivity2(ctx context.Context, request operations.UpdateAtsActivity2Request, opts ...operations.Option) (*operations.UpdateAtsActivity2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8459,7 +8459,7 @@ func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsActivity",
+		OperationID:      "updateAtsActivity2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsActivity", "json", `request:"mediaType=application/json"`)
@@ -8591,7 +8591,7 @@ func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAt
 		}
 	}
 
-	res := &operations.UpdateAtsActivityResponse{
+	res := &operations.UpdateAtsActivity2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8643,8 +8643,8 @@ func (s *Ats) UpdateAtsActivity(ctx context.Context, request operations.UpdateAt
 
 }
 
-// UpdateAtsApplication - Update an application
-func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest, opts ...operations.Option) (*operations.UpdateAtsApplicationResponse, error) {
+// UpdateAtsApplication2 - Update an application
+func (s *Ats) UpdateAtsApplication2(ctx context.Context, request operations.UpdateAtsApplication2Request, opts ...operations.Option) (*operations.UpdateAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8673,7 +8673,7 @@ func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsApplication",
+		OperationID:      "updateAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -8805,7 +8805,7 @@ func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateAtsApplicationResponse{
+	res := &operations.UpdateAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8857,8 +8857,8 @@ func (s *Ats) UpdateAtsApplication(ctx context.Context, request operations.Updat
 
 }
 
-// UpdateAtsCandidate - Update a candidate
-func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest, opts ...operations.Option) (*operations.UpdateAtsCandidateResponse, error) {
+// UpdateAtsCandidate2 - Update a candidate
+func (s *Ats) UpdateAtsCandidate2(ctx context.Context, request operations.UpdateAtsCandidate2Request, opts ...operations.Option) (*operations.UpdateAtsCandidate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8887,7 +8887,7 @@ func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsCandidate",
+		OperationID:      "updateAtsCandidate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -9019,7 +9019,7 @@ func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 		}
 	}
 
-	res := &operations.UpdateAtsCandidateResponse{
+	res := &operations.UpdateAtsCandidate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9071,8 +9071,8 @@ func (s *Ats) UpdateAtsCandidate(ctx context.Context, request operations.UpdateA
 
 }
 
-// UpdateAtsCompany - Update a company
-func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAtsCompanyRequest, opts ...operations.Option) (*operations.UpdateAtsCompanyResponse, error) {
+// UpdateAtsCompany2 - Update a company
+func (s *Ats) UpdateAtsCompany2(ctx context.Context, request operations.UpdateAtsCompany2Request, opts ...operations.Option) (*operations.UpdateAtsCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9101,7 +9101,7 @@ func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAts
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsCompany",
+		OperationID:      "updateAtsCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -9233,7 +9233,7 @@ func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAts
 		}
 	}
 
-	res := &operations.UpdateAtsCompanyResponse{
+	res := &operations.UpdateAtsCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9285,8 +9285,8 @@ func (s *Ats) UpdateAtsCompany(ctx context.Context, request operations.UpdateAts
 
 }
 
-// UpdateAtsDocument - Update a document
-func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAtsDocumentRequest, opts ...operations.Option) (*operations.UpdateAtsDocumentResponse, error) {
+// UpdateAtsDocument2 - Update a document
+func (s *Ats) UpdateAtsDocument2(ctx context.Context, request operations.UpdateAtsDocument2Request, opts ...operations.Option) (*operations.UpdateAtsDocument2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9315,7 +9315,7 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsDocument",
+		OperationID:      "updateAtsDocument2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsDocument", "json", `request:"mediaType=application/json"`)
@@ -9447,7 +9447,7 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 		}
 	}
 
-	res := &operations.UpdateAtsDocumentResponse{
+	res := &operations.UpdateAtsDocument2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9499,8 +9499,8 @@ func (s *Ats) UpdateAtsDocument(ctx context.Context, request operations.UpdateAt
 
 }
 
-// UpdateAtsInterview - Update an interview
-func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest, opts ...operations.Option) (*operations.UpdateAtsInterviewResponse, error) {
+// UpdateAtsInterview2 - Update an interview
+func (s *Ats) UpdateAtsInterview2(ctx context.Context, request operations.UpdateAtsInterview2Request, opts ...operations.Option) (*operations.UpdateAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9529,7 +9529,7 @@ func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsInterview",
+		OperationID:      "updateAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -9661,7 +9661,7 @@ func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 		}
 	}
 
-	res := &operations.UpdateAtsInterviewResponse{
+	res := &operations.UpdateAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9713,8 +9713,8 @@ func (s *Ats) UpdateAtsInterview(ctx context.Context, request operations.UpdateA
 
 }
 
-// UpdateAtsJob - Update a job
-func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest, opts ...operations.Option) (*operations.UpdateAtsJobResponse, error) {
+// UpdateAtsJob2 - Update a job
+func (s *Ats) UpdateAtsJob2(ctx context.Context, request operations.UpdateAtsJob2Request, opts ...operations.Option) (*operations.UpdateAtsJob2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9743,7 +9743,7 @@ func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsJob",
+		OperationID:      "updateAtsJob2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -9875,7 +9875,7 @@ func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 		}
 	}
 
-	res := &operations.UpdateAtsJobResponse{
+	res := &operations.UpdateAtsJob2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9927,8 +9927,8 @@ func (s *Ats) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobR
 
 }
 
-// UpdateAtsScorecard - Update a scorecard
-func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest, opts ...operations.Option) (*operations.UpdateAtsScorecardResponse, error) {
+// UpdateAtsScorecard2 - Update a scorecard
+func (s *Ats) UpdateAtsScorecard2(ctx context.Context, request operations.UpdateAtsScorecard2Request, opts ...operations.Option) (*operations.UpdateAtsScorecard2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9957,7 +9957,7 @@ func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsScorecard",
+		OperationID:      "updateAtsScorecard2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -10089,7 +10089,7 @@ func (s *Ats) UpdateAtsScorecard(ctx context.Context, request operations.UpdateA
 		}
 	}
 
-	res := &operations.UpdateAtsScorecardResponse{
+	res := &operations.UpdateAtsScorecard2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

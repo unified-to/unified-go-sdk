@@ -34,6 +34,7 @@ type UcRecording struct {
 	ContactID    *string            `json:"contact_id,omitempty"`
 	ContactName  *string            `json:"contact_name,omitempty"`
 	ContactPhone *string            `json:"contact_phone,omitempty"`
+	Contacts     []UcContact        `json:"contacts,omitempty"`
 	CreatedAt    *time.Time         `json:"created_at,omitempty"`
 	EndAt        *time.Time         `json:"end_at,omitempty"`
 	ExpiresAt    *time.Time         `json:"expires_at,omitempty"`
@@ -86,6 +87,13 @@ func (u *UcRecording) GetContactPhone() *string {
 		return nil
 	}
 	return u.ContactPhone
+}
+
+func (u *UcRecording) GetContacts() []UcContact {
+	if u == nil {
+		return nil
+	}
+	return u.Contacts
 }
 
 func (u *UcRecording) GetCreatedAt() *time.Time {

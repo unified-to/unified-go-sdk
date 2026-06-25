@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetAdsPromoted](#getadspromoted) - Retrieve a promoted
-* [ListAdsPromoteds](#listadspromoteds) - List all promoteds
+* [GetAdsPromoted2](#getadspromoted2) - Retrieve a promoted
+* [ListAdsPromoteds2](#listadspromoteds2) - List all promoteds
 
-## GetAdsPromoted
+## GetAdsPromoted2
 
 Retrieve a promoted
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Promoted.GetAdsPromoted(ctx, operations.GetAdsPromotedRequest{
+    res, err := s.Promoted.GetAdsPromoted2(ctx, operations.GetAdsPromoted2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetAdsPromotedRequest](../../pkg/models/operations/getadspromotedrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetAdsPromoted2Request](../../pkg/models/operations/getadspromoted2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.GetAdsPromotedResponse](../../pkg/models/operations/getadspromotedresponse.md), error**
+**[*operations.GetAdsPromoted2Response](../../pkg/models/operations/getadspromoted2response.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsPromoteds
+## ListAdsPromoteds2
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="go" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Promoted.ListAdsPromoteds(ctx, operations.ListAdsPromotedsRequest{
+    res, err := s.Promoted.ListAdsPromoteds2(ctx, operations.ListAdsPromoteds2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListAdsPromotedsRequest](../../pkg/models/operations/listadspromotedsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListAdsPromoteds2Request](../../pkg/models/operations/listadspromoteds2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.ListAdsPromotedsResponse](../../pkg/models/operations/listadspromotedsresponse.md), error**
+**[*operations.ListAdsPromoteds2Response](../../pkg/models/operations/listadspromoteds2response.md), error**
 
 ### Errors
 

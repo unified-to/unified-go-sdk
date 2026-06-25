@@ -30,8 +30,8 @@ func newApplication(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateAtsApplication - Create an application
-func (s *Application) CreateAtsApplication(ctx context.Context, request operations.CreateAtsApplicationRequest, opts ...operations.Option) (*operations.CreateAtsApplicationResponse, error) {
+// CreateAtsApplication2 - Create an application
+func (s *Application) CreateAtsApplication2(ctx context.Context, request operations.CreateAtsApplication2Request, opts ...operations.Option) (*operations.CreateAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Application) CreateAtsApplication(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsApplication",
+		OperationID:      "createAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Application) CreateAtsApplication(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAtsApplicationResponse{
+	res := &operations.CreateAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Application) CreateAtsApplication(ctx context.Context, request operatio
 
 }
 
-// GetAtsApplication - Retrieve an application
-func (s *Application) GetAtsApplication(ctx context.Context, request operations.GetAtsApplicationRequest, opts ...operations.Option) (*operations.GetAtsApplicationResponse, error) {
+// GetAtsApplication2 - Retrieve an application
+func (s *Application) GetAtsApplication2(ctx context.Context, request operations.GetAtsApplication2Request, opts ...operations.Option) (*operations.GetAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Application) GetAtsApplication(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsApplication",
+		OperationID:      "getAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Application) GetAtsApplication(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAtsApplicationResponse{
+	res := &operations.GetAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Application) GetAtsApplication(ctx context.Context, request operations.
 
 }
 
-// ListAtsApplications - List all applications
-func (s *Application) ListAtsApplications(ctx context.Context, request operations.ListAtsApplicationsRequest, opts ...operations.Option) (*operations.ListAtsApplicationsResponse, error) {
+// ListAtsApplications2 - List all applications
+func (s *Application) ListAtsApplications2(ctx context.Context, request operations.ListAtsApplications2Request, opts ...operations.Option) (*operations.ListAtsApplications2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Application) ListAtsApplications(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsApplications",
+		OperationID:      "listAtsApplications2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Application) ListAtsApplications(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAtsApplicationsResponse{
+	res := &operations.ListAtsApplications2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Application) ListAtsApplications(ctx context.Context, request operation
 
 }
 
-// PatchAtsApplication - Update an application
-func (s *Application) PatchAtsApplication(ctx context.Context, request operations.PatchAtsApplicationRequest, opts ...operations.Option) (*operations.PatchAtsApplicationResponse, error) {
+// PatchAtsApplication2 - Update an application
+func (s *Application) PatchAtsApplication2(ctx context.Context, request operations.PatchAtsApplication2Request, opts ...operations.Option) (*operations.PatchAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Application) PatchAtsApplication(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsApplication",
+		OperationID:      "patchAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Application) PatchAtsApplication(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAtsApplicationResponse{
+	res := &operations.PatchAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Application) PatchAtsApplication(ctx context.Context, request operation
 
 }
 
-// RemoveAtsApplication - Remove an application
-func (s *Application) RemoveAtsApplication(ctx context.Context, request operations.RemoveAtsApplicationRequest, opts ...operations.Option) (*operations.RemoveAtsApplicationResponse, error) {
+// RemoveAtsApplication2 - Remove an application
+func (s *Application) RemoveAtsApplication2(ctx context.Context, request operations.RemoveAtsApplication2Request, opts ...operations.Option) (*operations.RemoveAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Application) RemoveAtsApplication(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsApplication",
+		OperationID:      "removeAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Application) RemoveAtsApplication(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAtsApplicationResponse{
+	res := &operations.RemoveAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Application) RemoveAtsApplication(ctx context.Context, request operatio
 
 }
 
-// UpdateAtsApplication - Update an application
-func (s *Application) UpdateAtsApplication(ctx context.Context, request operations.UpdateAtsApplicationRequest, opts ...operations.Option) (*operations.UpdateAtsApplicationResponse, error) {
+// UpdateAtsApplication2 - Update an application
+func (s *Application) UpdateAtsApplication2(ctx context.Context, request operations.UpdateAtsApplication2Request, opts ...operations.Option) (*operations.UpdateAtsApplication2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Application) UpdateAtsApplication(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsApplication",
+		OperationID:      "updateAtsApplication2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsApplication", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Application) UpdateAtsApplication(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAtsApplicationResponse{
+	res := &operations.UpdateAtsApplication2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

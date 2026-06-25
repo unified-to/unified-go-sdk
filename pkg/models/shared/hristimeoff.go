@@ -7,6 +7,28 @@ import (
 	"time"
 )
 
+type DurationType string
+
+const (
+	DurationTypeHour DurationType = "HOUR"
+	DurationTypeDay  DurationType = "DAY"
+)
+
+func (e DurationType) ToPointer() *DurationType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *DurationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "HOUR", "DAY":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisTimeoffStatus string
 
 const (
@@ -64,6 +86,8 @@ type HrisTimeoff struct {
 	Comments       *string            `json:"comments,omitempty"`
 	CompanyID      *string            `json:"company_id,omitempty"`
 	CreatedAt      *time.Time         `json:"created_at,omitempty"`
+	Duration       *float64           `json:"duration,omitempty"`
+	DurationType   *DurationType      `json:"duration_type,omitempty"`
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
 	IsPaid         *bool              `json:"is_paid,omitempty"`
@@ -120,6 +144,20 @@ func (h *HrisTimeoff) GetCreatedAt() *time.Time {
 		return nil
 	}
 	return h.CreatedAt
+}
+
+func (h *HrisTimeoff) GetDuration() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.Duration
+}
+
+func (h *HrisTimeoff) GetDurationType() *DurationType {
+	if h == nil {
+		return nil
+	}
+	return h.DurationType
 }
 
 func (h *HrisTimeoff) GetEndAt() *time.Time {

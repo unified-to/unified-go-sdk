@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetGenaiModel](#getgenaimodel) - Retrieve a model
-* [ListGenaiModels](#listgenaimodels) - List all models
+* [GetGenaiModel2](#getgenaimodel2) - Retrieve a model
+* [ListGenaiModels2](#listgenaimodels2) - List all models
 
-## GetGenaiModel
+## GetGenaiModel2
 
 Retrieve a model
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getGenaiModel" method="get" path="/genai/{connection_id}/model/{id}" -->
+<!-- UsageSnippet language="go" operationID="getGenaiModel2" method="get" path="/genai/{connection_id}/model/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Model.GetGenaiModel(ctx, operations.GetGenaiModelRequest{
+    res, err := s.Model.GetGenaiModel2(ctx, operations.GetGenaiModel2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetGenaiModelRequest](../../pkg/models/operations/getgenaimodelrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetGenaiModel2Request](../../pkg/models/operations/getgenaimodel2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetGenaiModelResponse](../../pkg/models/operations/getgenaimodelresponse.md), error**
+**[*operations.GetGenaiModel2Response](../../pkg/models/operations/getgenaimodel2response.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListGenaiModels
+## ListGenaiModels2
 
 List all models
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listGenaiModels" method="get" path="/genai/{connection_id}/model" -->
+<!-- UsageSnippet language="go" operationID="listGenaiModels2" method="get" path="/genai/{connection_id}/model" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Model.ListGenaiModels(ctx, operations.ListGenaiModelsRequest{
+    res, err := s.Model.ListGenaiModels2(ctx, operations.ListGenaiModels2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListGenaiModelsRequest](../../pkg/models/operations/listgenaimodelsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListGenaiModels2Request](../../pkg/models/operations/listgenaimodels2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListGenaiModelsResponse](../../pkg/models/operations/listgenaimodelsresponse.md), error**
+**[*operations.ListGenaiModels2Response](../../pkg/models/operations/listgenaimodels2response.md), error**
 
 ### Errors
 

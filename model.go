@@ -30,8 +30,8 @@ func newModel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// GetGenaiModel - Retrieve a model
-func (s *Model) GetGenaiModel(ctx context.Context, request operations.GetGenaiModelRequest, opts ...operations.Option) (*operations.GetGenaiModelResponse, error) {
+// GetGenaiModel2 - Retrieve a model
+func (s *Model) GetGenaiModel2(ctx context.Context, request operations.GetGenaiModel2Request, opts ...operations.Option) (*operations.GetGenaiModel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Model) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getGenaiModel",
+		OperationID:      "getGenaiModel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Model) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 		}
 	}
 
-	res := &operations.GetGenaiModelResponse{
+	res := &operations.GetGenaiModel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Model) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 
 }
 
-// ListGenaiModels - List all models
-func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGenaiModelsRequest, opts ...operations.Option) (*operations.ListGenaiModelsResponse, error) {
+// ListGenaiModels2 - List all models
+func (s *Model) ListGenaiModels2(ctx context.Context, request operations.ListGenaiModels2Request, opts ...operations.Option) (*operations.ListGenaiModels2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGena
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listGenaiModels",
+		OperationID:      "listGenaiModels2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Model) ListGenaiModels(ctx context.Context, request operations.ListGena
 		}
 	}
 
-	res := &operations.ListGenaiModelsResponse{
+	res := &operations.ListGenaiModels2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

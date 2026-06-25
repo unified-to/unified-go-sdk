@@ -30,8 +30,8 @@ func newContent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateLmsContent - Create a content
-func (s *Content) CreateLmsContent(ctx context.Context, request operations.CreateLmsContentRequest, opts ...operations.Option) (*operations.CreateLmsContentResponse, error) {
+// CreateLmsContent2 - Create a content
+func (s *Content) CreateLmsContent2(ctx context.Context, request operations.CreateLmsContent2Request, opts ...operations.Option) (*operations.CreateLmsContent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Content) CreateLmsContent(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsContent",
+		OperationID:      "createLmsContent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Content) CreateLmsContent(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateLmsContentResponse{
+	res := &operations.CreateLmsContent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Content) CreateLmsContent(ctx context.Context, request operations.Creat
 
 }
 
-// GetLmsContent - Retrieve a content
-func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsContentRequest, opts ...operations.Option) (*operations.GetLmsContentResponse, error) {
+// GetLmsContent2 - Retrieve a content
+func (s *Content) GetLmsContent2(ctx context.Context, request operations.GetLmsContent2Request, opts ...operations.Option) (*operations.GetLmsContent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsContent",
+		OperationID:      "getLmsContent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsCo
 		}
 	}
 
-	res := &operations.GetLmsContentResponse{
+	res := &operations.GetLmsContent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Content) GetLmsContent(ctx context.Context, request operations.GetLmsCo
 
 }
 
-// ListLmsContents - List all contents
-func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLmsContentsRequest, opts ...operations.Option) (*operations.ListLmsContentsResponse, error) {
+// ListLmsContents2 - List all contents
+func (s *Content) ListLmsContents2(ctx context.Context, request operations.ListLmsContents2Request, opts ...operations.Option) (*operations.ListLmsContents2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsContents",
+		OperationID:      "listLmsContents2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLm
 		}
 	}
 
-	res := &operations.ListLmsContentsResponse{
+	res := &operations.ListLmsContents2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Content) ListLmsContents(ctx context.Context, request operations.ListLm
 
 }
 
-// PatchLmsContent - Update a content
-func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchLmsContentRequest, opts ...operations.Option) (*operations.PatchLmsContentResponse, error) {
+// PatchLmsContent2 - Update a content
+func (s *Content) PatchLmsContent2(ctx context.Context, request operations.PatchLmsContent2Request, opts ...operations.Option) (*operations.PatchLmsContent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsContent",
+		OperationID:      "patchLmsContent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchL
 		}
 	}
 
-	res := &operations.PatchLmsContentResponse{
+	res := &operations.PatchLmsContent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Content) PatchLmsContent(ctx context.Context, request operations.PatchL
 
 }
 
-// RemoveLmsContent - Remove a content
-func (s *Content) RemoveLmsContent(ctx context.Context, request operations.RemoveLmsContentRequest, opts ...operations.Option) (*operations.RemoveLmsContentResponse, error) {
+// RemoveLmsContent2 - Remove a content
+func (s *Content) RemoveLmsContent2(ctx context.Context, request operations.RemoveLmsContent2Request, opts ...operations.Option) (*operations.RemoveLmsContent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Content) RemoveLmsContent(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsContent",
+		OperationID:      "removeLmsContent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Content) RemoveLmsContent(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveLmsContentResponse{
+	res := &operations.RemoveLmsContent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Content) RemoveLmsContent(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateLmsContent - Update a content
-func (s *Content) UpdateLmsContent(ctx context.Context, request operations.UpdateLmsContentRequest, opts ...operations.Option) (*operations.UpdateLmsContentResponse, error) {
+// UpdateLmsContent2 - Update a content
+func (s *Content) UpdateLmsContent2(ctx context.Context, request operations.UpdateLmsContent2Request, opts ...operations.Option) (*operations.UpdateLmsContent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Content) UpdateLmsContent(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsContent",
+		OperationID:      "updateLmsContent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Content) UpdateLmsContent(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateLmsContentResponse{
+	res := &operations.UpdateLmsContent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

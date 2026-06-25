@@ -30,8 +30,8 @@ func newTimeoff(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateHrisTimeoff - Create a timeoff
-func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.CreateHrisTimeoffRequest, opts ...operations.Option) (*operations.CreateHrisTimeoffResponse, error) {
+// CreateHrisTimeoff2 - Create a timeoff
+func (s *Timeoff) CreateHrisTimeoff2(ctx context.Context, request operations.CreateHrisTimeoff2Request, opts ...operations.Option) (*operations.CreateHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisTimeoff",
+		OperationID:      "createHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateHrisTimeoffResponse{
+	res := &operations.CreateHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Timeoff) CreateHrisTimeoff(ctx context.Context, request operations.Crea
 
 }
 
-// GetHrisTimeoff - Retrieve a timeoff
-func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTimeoffRequest, opts ...operations.Option) (*operations.GetHrisTimeoffResponse, error) {
+// GetHrisTimeoff2 - Retrieve a timeoff
+func (s *Timeoff) GetHrisTimeoff2(ctx context.Context, request operations.GetHrisTimeoff2Request, opts ...operations.Option) (*operations.GetHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisTimeoff",
+		OperationID:      "getHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHris
 		}
 	}
 
-	res := &operations.GetHrisTimeoffResponse{
+	res := &operations.GetHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Timeoff) GetHrisTimeoff(ctx context.Context, request operations.GetHris
 
 }
 
-// ListHrisTimeoffs - List all timeoffs
-func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListHrisTimeoffsRequest, opts ...operations.Option) (*operations.ListHrisTimeoffsResponse, error) {
+// ListHrisTimeoffs2 - List all timeoffs
+func (s *Timeoff) ListHrisTimeoffs2(ctx context.Context, request operations.ListHrisTimeoffs2Request, opts ...operations.Option) (*operations.ListHrisTimeoffs2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisTimeoffs",
+		OperationID:      "listHrisTimeoffs2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListH
 		}
 	}
 
-	res := &operations.ListHrisTimeoffsResponse{
+	res := &operations.ListHrisTimeoffs2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Timeoff) ListHrisTimeoffs(ctx context.Context, request operations.ListH
 
 }
 
-// PatchHrisTimeoff - Update a timeoff
-func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.PatchHrisTimeoffRequest, opts ...operations.Option) (*operations.PatchHrisTimeoffResponse, error) {
+// PatchHrisTimeoff2 - Update a timeoff
+func (s *Timeoff) PatchHrisTimeoff2(ctx context.Context, request operations.PatchHrisTimeoff2Request, opts ...operations.Option) (*operations.PatchHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisTimeoff",
+		OperationID:      "patchHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchHrisTimeoffResponse{
+	res := &operations.PatchHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Timeoff) PatchHrisTimeoff(ctx context.Context, request operations.Patch
 
 }
 
-// RemoveHrisTimeoff - Remove a timeoff
-func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveHrisTimeoffRequest, opts ...operations.Option) (*operations.RemoveHrisTimeoffResponse, error) {
+// RemoveHrisTimeoff2 - Remove a timeoff
+func (s *Timeoff) RemoveHrisTimeoff2(ctx context.Context, request operations.RemoveHrisTimeoff2Request, opts ...operations.Option) (*operations.RemoveHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisTimeoff",
+		OperationID:      "removeHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveHrisTimeoffResponse{
+	res := &operations.RemoveHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Timeoff) RemoveHrisTimeoff(ctx context.Context, request operations.Remo
 
 }
 
-// UpdateHrisTimeoff - Update a timeoff
-func (s *Timeoff) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateHrisTimeoffRequest, opts ...operations.Option) (*operations.UpdateHrisTimeoffResponse, error) {
+// UpdateHrisTimeoff2 - Update a timeoff
+func (s *Timeoff) UpdateHrisTimeoff2(ctx context.Context, request operations.UpdateHrisTimeoff2Request, opts ...operations.Option) (*operations.UpdateHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Timeoff) UpdateHrisTimeoff(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisTimeoff",
+		OperationID:      "updateHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Timeoff) UpdateHrisTimeoff(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateHrisTimeoffResponse{
+	res := &operations.UpdateHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

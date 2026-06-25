@@ -30,8 +30,8 @@ func newReview(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateCommerceReview - Create a review
-func (s *Review) CreateCommerceReview(ctx context.Context, request operations.CreateCommerceReviewRequest, opts ...operations.Option) (*operations.CreateCommerceReviewResponse, error) {
+// CreateCommerceReview2 - Create a review
+func (s *Review) CreateCommerceReview2(ctx context.Context, request operations.CreateCommerceReview2Request, opts ...operations.Option) (*operations.CreateCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Review) CreateCommerceReview(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceReview",
+		OperationID:      "createCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Review) CreateCommerceReview(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateCommerceReviewResponse{
+	res := &operations.CreateCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Review) CreateCommerceReview(ctx context.Context, request operations.Cr
 
 }
 
-// GetCommerceReview - Retrieve a review
-func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCommerceReviewRequest, opts ...operations.Option) (*operations.GetCommerceReviewResponse, error) {
+// GetCommerceReview2 - Retrieve a review
+func (s *Review) GetCommerceReview2(ctx context.Context, request operations.GetCommerceReview2Request, opts ...operations.Option) (*operations.GetCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceReview",
+		OperationID:      "getCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCo
 		}
 	}
 
-	res := &operations.GetCommerceReviewResponse{
+	res := &operations.GetCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Review) GetCommerceReview(ctx context.Context, request operations.GetCo
 
 }
 
-// ListCommerceReviews - List all reviews
-func (s *Review) ListCommerceReviews(ctx context.Context, request operations.ListCommerceReviewsRequest, opts ...operations.Option) (*operations.ListCommerceReviewsResponse, error) {
+// ListCommerceReviews2 - List all reviews
+func (s *Review) ListCommerceReviews2(ctx context.Context, request operations.ListCommerceReviews2Request, opts ...operations.Option) (*operations.ListCommerceReviews2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Review) ListCommerceReviews(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceReviews",
+		OperationID:      "listCommerceReviews2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Review) ListCommerceReviews(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListCommerceReviewsResponse{
+	res := &operations.ListCommerceReviews2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Review) ListCommerceReviews(ctx context.Context, request operations.Lis
 
 }
 
-// PatchCommerceReview - Update a review
-func (s *Review) PatchCommerceReview(ctx context.Context, request operations.PatchCommerceReviewRequest, opts ...operations.Option) (*operations.PatchCommerceReviewResponse, error) {
+// PatchCommerceReview2 - Update a review
+func (s *Review) PatchCommerceReview2(ctx context.Context, request operations.PatchCommerceReview2Request, opts ...operations.Option) (*operations.PatchCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Review) PatchCommerceReview(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceReview",
+		OperationID:      "patchCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Review) PatchCommerceReview(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchCommerceReviewResponse{
+	res := &operations.PatchCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Review) PatchCommerceReview(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveCommerceReview - Remove a review
-func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.RemoveCommerceReviewRequest, opts ...operations.Option) (*operations.RemoveCommerceReviewResponse, error) {
+// RemoveCommerceReview2 - Remove a review
+func (s *Review) RemoveCommerceReview2(ctx context.Context, request operations.RemoveCommerceReview2Request, opts ...operations.Option) (*operations.RemoveCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceReview",
+		OperationID:      "removeCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveCommerceReviewResponse{
+	res := &operations.RemoveCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Review) RemoveCommerceReview(ctx context.Context, request operations.Re
 
 }
 
-// UpdateCommerceReview - Update a review
-func (s *Review) UpdateCommerceReview(ctx context.Context, request operations.UpdateCommerceReviewRequest, opts ...operations.Option) (*operations.UpdateCommerceReviewResponse, error) {
+// UpdateCommerceReview2 - Update a review
+func (s *Review) UpdateCommerceReview2(ctx context.Context, request operations.UpdateCommerceReview2Request, opts ...operations.Option) (*operations.UpdateCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Review) UpdateCommerceReview(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceReview",
+		OperationID:      "updateCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Review) UpdateCommerceReview(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateCommerceReviewResponse{
+	res := &operations.UpdateCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

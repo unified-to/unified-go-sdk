@@ -30,8 +30,8 @@ func newProject(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateTaskProject - Create a project
-func (s *Project) CreateTaskProject(ctx context.Context, request operations.CreateTaskProjectRequest, opts ...operations.Option) (*operations.CreateTaskProjectResponse, error) {
+// CreateTaskProject2 - Create a project
+func (s *Project) CreateTaskProject2(ctx context.Context, request operations.CreateTaskProject2Request, opts ...operations.Option) (*operations.CreateTaskProject2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTaskProject",
+		OperationID:      "createTaskProject2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateTaskProjectResponse{
+	res := &operations.CreateTaskProject2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Project) CreateTaskProject(ctx context.Context, request operations.Crea
 
 }
 
-// GetTaskProject - Retrieve a project
-func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTaskProjectRequest, opts ...operations.Option) (*operations.GetTaskProjectResponse, error) {
+// GetTaskProject2 - Retrieve a project
+func (s *Project) GetTaskProject2(ctx context.Context, request operations.GetTaskProject2Request, opts ...operations.Option) (*operations.GetTaskProject2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskProject",
+		OperationID:      "getTaskProject2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 		}
 	}
 
-	res := &operations.GetTaskProjectResponse{
+	res := &operations.GetTaskProject2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Project) GetTaskProject(ctx context.Context, request operations.GetTask
 
 }
 
-// ListTaskProjects - List all projects
-func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListTaskProjectsRequest, opts ...operations.Option) (*operations.ListTaskProjectsResponse, error) {
+// ListTaskProjects2 - List all projects
+func (s *Project) ListTaskProjects2(ctx context.Context, request operations.ListTaskProjects2Request, opts ...operations.Option) (*operations.ListTaskProjects2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskProjects",
+		OperationID:      "listTaskProjects2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 		}
 	}
 
-	res := &operations.ListTaskProjectsResponse{
+	res := &operations.ListTaskProjects2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Project) ListTaskProjects(ctx context.Context, request operations.ListT
 
 }
 
-// PatchTaskProject - Update a project
-func (s *Project) PatchTaskProject(ctx context.Context, request operations.PatchTaskProjectRequest, opts ...operations.Option) (*operations.PatchTaskProjectResponse, error) {
+// PatchTaskProject2 - Update a project
+func (s *Project) PatchTaskProject2(ctx context.Context, request operations.PatchTaskProject2Request, opts ...operations.Option) (*operations.PatchTaskProject2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTaskProject",
+		OperationID:      "patchTaskProject2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchTaskProjectResponse{
+	res := &operations.PatchTaskProject2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Project) PatchTaskProject(ctx context.Context, request operations.Patch
 
 }
 
-// RemoveTaskProject - Remove a project
-func (s *Project) RemoveTaskProject(ctx context.Context, request operations.RemoveTaskProjectRequest, opts ...operations.Option) (*operations.RemoveTaskProjectResponse, error) {
+// RemoveTaskProject2 - Remove a project
+func (s *Project) RemoveTaskProject2(ctx context.Context, request operations.RemoveTaskProject2Request, opts ...operations.Option) (*operations.RemoveTaskProject2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTaskProject",
+		OperationID:      "removeTaskProject2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveTaskProjectResponse{
+	res := &operations.RemoveTaskProject2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Project) RemoveTaskProject(ctx context.Context, request operations.Remo
 
 }
 
-// UpdateTaskProject - Update a project
-func (s *Project) UpdateTaskProject(ctx context.Context, request operations.UpdateTaskProjectRequest, opts ...operations.Option) (*operations.UpdateTaskProjectResponse, error) {
+// UpdateTaskProject2 - Update a project
+func (s *Project) UpdateTaskProject2(ctx context.Context, request operations.UpdateTaskProject2Request, opts ...operations.Option) (*operations.UpdateTaskProject2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Project) UpdateTaskProject(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTaskProject",
+		OperationID:      "updateTaskProject2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Project) UpdateTaskProject(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateTaskProjectResponse{
+	res := &operations.UpdateTaskProject2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

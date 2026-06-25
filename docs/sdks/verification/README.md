@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [CreateVerificationRequest](#createverificationrequest) - Create a request
-* [GetVerificationPackage](#getverificationpackage) - Retrieve a package
-* [GetVerificationRequest](#getverificationrequest) - Retrieve a request
-* [ListVerificationPackages](#listverificationpackages) - List all packages
-* [ListVerificationRequests](#listverificationrequests) - List all requests
-* [PatchVerificationRequest](#patchverificationrequest) - Update a request
-* [RemoveVerificationRequest](#removeverificationrequest) - Remove a request
-* [UpdateVerificationRequest](#updateverificationrequest) - Update a request
+* [CreateVerificationRequest2](#createverificationrequest2) - Create a request
+* [GetVerificationPackage2](#getverificationpackage2) - Retrieve a package
+* [GetVerificationRequest2](#getverificationrequest2) - Retrieve a request
+* [ListVerificationPackages2](#listverificationpackages2) - List all packages
+* [ListVerificationRequests2](#listverificationrequests2) - List all requests
+* [PatchVerificationRequest2](#patchverificationrequest2) - Update a request
+* [RemoveVerificationRequest2](#removeverificationrequest2) - Remove a request
+* [UpdateVerificationRequest2](#updateverificationrequest2) - Update a request
 
-## CreateVerificationRequest
+## CreateVerificationRequest2
 
 Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="go" operationID="createVerificationRequest2" method="post" path="/verification/{connection_id}/request" -->
 ```go
 package main
 
@@ -38,7 +38,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.CreateVerificationRequest(ctx, operations.CreateVerificationRequestRequest{
+    res, err := s.Verification.CreateVerificationRequest2(ctx, operations.CreateVerificationRequest2Request{
         VerificationRequest: shared.VerificationRequest{},
         ConnectionID: "<id>",
     })
@@ -53,15 +53,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.CreateVerificationRequestRequest](../../pkg/models/operations/createverificationrequestrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.CreateVerificationRequest2Request](../../pkg/models/operations/createverificationrequest2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.CreateVerificationRequestResponse](../../pkg/models/operations/createverificationrequestresponse.md), error**
+**[*operations.CreateVerificationRequest2Response](../../pkg/models/operations/createverificationrequest2response.md), error**
 
 ### Errors
 
@@ -69,13 +69,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetVerificationPackage
+## GetVerificationPackage2
 
 Retrieve a package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getVerificationPackage" method="get" path="/verification/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="getVerificationPackage2" method="get" path="/verification/{connection_id}/package/{id}" -->
 ```go
 package main
 
@@ -93,7 +93,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.GetVerificationPackage(ctx, operations.GetVerificationPackageRequest{
+    res, err := s.Verification.GetVerificationPackage2(ctx, operations.GetVerificationPackage2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -108,15 +108,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.GetVerificationPackageRequest](../../pkg/models/operations/getverificationpackagerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.GetVerificationPackage2Request](../../pkg/models/operations/getverificationpackage2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.GetVerificationPackageResponse](../../pkg/models/operations/getverificationpackageresponse.md), error**
+**[*operations.GetVerificationPackage2Response](../../pkg/models/operations/getverificationpackage2response.md), error**
 
 ### Errors
 
@@ -124,13 +124,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetVerificationRequest
+## GetVerificationRequest2
 
 Retrieve a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getVerificationRequest" method="get" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="getVerificationRequest2" method="get" path="/verification/{connection_id}/request/{id}" -->
 ```go
 package main
 
@@ -148,7 +148,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.GetVerificationRequest(ctx, operations.GetVerificationRequestRequest{
+    res, err := s.Verification.GetVerificationRequest2(ctx, operations.GetVerificationRequest2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -163,15 +163,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.GetVerificationRequestRequest](../../pkg/models/operations/getverificationrequestrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.GetVerificationRequest2Request](../../pkg/models/operations/getverificationrequest2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.GetVerificationRequestResponse](../../pkg/models/operations/getverificationrequestresponse.md), error**
+**[*operations.GetVerificationRequest2Response](../../pkg/models/operations/getverificationrequest2response.md), error**
 
 ### Errors
 
@@ -179,13 +179,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListVerificationPackages
+## ListVerificationPackages2
 
 List all packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listVerificationPackages" method="get" path="/verification/{connection_id}/package" -->
+<!-- UsageSnippet language="go" operationID="listVerificationPackages2" method="get" path="/verification/{connection_id}/package" -->
 ```go
 package main
 
@@ -203,7 +203,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.ListVerificationPackages(ctx, operations.ListVerificationPackagesRequest{
+    res, err := s.Verification.ListVerificationPackages2(ctx, operations.ListVerificationPackages2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.ListVerificationPackagesRequest](../../pkg/models/operations/listverificationpackagesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.ListVerificationPackages2Request](../../pkg/models/operations/listverificationpackages2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.ListVerificationPackagesResponse](../../pkg/models/operations/listverificationpackagesresponse.md), error**
+**[*operations.ListVerificationPackages2Response](../../pkg/models/operations/listverificationpackages2response.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListVerificationRequests
+## ListVerificationRequests2
 
 List all requests
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listVerificationRequests" method="get" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="go" operationID="listVerificationRequests2" method="get" path="/verification/{connection_id}/request" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.ListVerificationRequests(ctx, operations.ListVerificationRequestsRequest{
+    res, err := s.Verification.ListVerificationRequests2(ctx, operations.ListVerificationRequests2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -271,15 +271,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.ListVerificationRequestsRequest](../../pkg/models/operations/listverificationrequestsrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.ListVerificationRequests2Request](../../pkg/models/operations/listverificationrequests2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.ListVerificationRequestsResponse](../../pkg/models/operations/listverificationrequestsresponse.md), error**
+**[*operations.ListVerificationRequests2Response](../../pkg/models/operations/listverificationrequests2response.md), error**
 
 ### Errors
 
@@ -287,13 +287,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchVerificationRequest
+## PatchVerificationRequest2
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchVerificationRequest2" method="patch" path="/verification/{connection_id}/request/{id}" -->
 ```go
 package main
 
@@ -312,7 +312,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.PatchVerificationRequest(ctx, operations.PatchVerificationRequestRequest{
+    res, err := s.Verification.PatchVerificationRequest2(ctx, operations.PatchVerificationRequest2Request{
         VerificationRequest: shared.VerificationRequest{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -328,15 +328,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.PatchVerificationRequestRequest](../../pkg/models/operations/patchverificationrequestrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.PatchVerificationRequest2Request](../../pkg/models/operations/patchverificationrequest2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.PatchVerificationRequestResponse](../../pkg/models/operations/patchverificationrequestresponse.md), error**
+**[*operations.PatchVerificationRequest2Response](../../pkg/models/operations/patchverificationrequest2response.md), error**
 
 ### Errors
 
@@ -344,13 +344,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveVerificationRequest
+## RemoveVerificationRequest2
 
 Remove a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeVerificationRequest" method="delete" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeVerificationRequest2" method="delete" path="/verification/{connection_id}/request/{id}" -->
 ```go
 package main
 
@@ -368,7 +368,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.RemoveVerificationRequest(ctx, operations.RemoveVerificationRequestRequest{
+    res, err := s.Verification.RemoveVerificationRequest2(ctx, operations.RemoveVerificationRequest2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -383,15 +383,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.RemoveVerificationRequestRequest](../../pkg/models/operations/removeverificationrequestrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.RemoveVerificationRequest2Request](../../pkg/models/operations/removeverificationrequest2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.RemoveVerificationRequestResponse](../../pkg/models/operations/removeverificationrequestresponse.md), error**
+**[*operations.RemoveVerificationRequest2Response](../../pkg/models/operations/removeverificationrequest2response.md), error**
 
 ### Errors
 
@@ -399,13 +399,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateVerificationRequest
+## UpdateVerificationRequest2
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateVerificationRequest2" method="put" path="/verification/{connection_id}/request/{id}" -->
 ```go
 package main
 
@@ -424,7 +424,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Verification.UpdateVerificationRequest(ctx, operations.UpdateVerificationRequestRequest{
+    res, err := s.Verification.UpdateVerificationRequest2(ctx, operations.UpdateVerificationRequest2Request{
         VerificationRequest: shared.VerificationRequest{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -440,15 +440,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.UpdateVerificationRequestRequest](../../pkg/models/operations/updateverificationrequestrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.UpdateVerificationRequest2Request](../../pkg/models/operations/updateverificationrequest2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.UpdateVerificationRequestResponse](../../pkg/models/operations/updateverificationrequestresponse.md), error**
+**[*operations.UpdateVerificationRequest2Response](../../pkg/models/operations/updateverificationrequest2response.md), error**
 
 ### Errors
 

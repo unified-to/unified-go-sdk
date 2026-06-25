@@ -15,11 +15,11 @@ const (
 	CreativeTypeExpandable      CreativeType = "EXPANDABLE"
 	CreativeTypeVideo           CreativeType = "VIDEO"
 	CreativeTypeNative          CreativeType = "NATIVE"
-	CreativeTypeImage           CreativeType = "IMAGE"
 	CreativeTypeAudio           CreativeType = "AUDIO"
-	CreativeTypeDocument        CreativeType = "DOCUMENT"
 	CreativeTypePublisherHosted CreativeType = "PUBLISHER_HOSTED"
 	CreativeTypeAssetBased      CreativeType = "ASSET_BASED"
+	CreativeTypeImage           CreativeType = "IMAGE"
+	CreativeTypeDocument        CreativeType = "DOCUMENT"
 )
 
 func (e CreativeType) ToPointer() *CreativeType {
@@ -30,7 +30,7 @@ func (e CreativeType) ToPointer() *CreativeType {
 func (e *CreativeType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "IMAGE", "AUDIO", "DOCUMENT", "PUBLISHER_HOSTED", "ASSET_BASED":
+		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "AUDIO", "PUBLISHER_HOSTED", "ASSET_BASED", "IMAGE", "DOCUMENT":
 			return true
 		}
 	}
@@ -70,10 +70,10 @@ const (
 	AdsCreativeStatusActive               AdsCreativeStatus = "ACTIVE"
 	AdsCreativeStatusPaused               AdsCreativeStatus = "PAUSED"
 	AdsCreativeStatusArchived             AdsCreativeStatus = "ARCHIVED"
-	AdsCreativeStatusProcessing           AdsCreativeStatus = "PROCESSING"
-	AdsCreativeStatusProcessingFailed     AdsCreativeStatus = "PROCESSING_FAILED"
 	AdsCreativeStatusDraft                AdsCreativeStatus = "DRAFT"
 	AdsCreativeStatusScheduledForDeletion AdsCreativeStatus = "SCHEDULED_FOR_DELETION"
+	AdsCreativeStatusProcessing           AdsCreativeStatus = "PROCESSING"
+	AdsCreativeStatusProcessingFailed     AdsCreativeStatus = "PROCESSING_FAILED"
 )
 
 func (e AdsCreativeStatus) ToPointer() *AdsCreativeStatus {
@@ -84,7 +84,7 @@ func (e AdsCreativeStatus) ToPointer() *AdsCreativeStatus {
 func (e *AdsCreativeStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "PROCESSING", "PROCESSING_FAILED", "DRAFT", "SCHEDULED_FOR_DELETION":
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION", "PROCESSING", "PROCESSING_FAILED":
 			return true
 		}
 	}

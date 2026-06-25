@@ -30,8 +30,8 @@ func newEmployee(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateHrisEmployee - Create an employee
-func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest, opts ...operations.Option) (*operations.CreateHrisEmployeeResponse, error) {
+// CreateHrisEmployee2 - Create an employee
+func (s *Employee) CreateHrisEmployee2(ctx context.Context, request operations.CreateHrisEmployee2Request, opts ...operations.Option) (*operations.CreateHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisEmployee",
+		OperationID:      "createHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateHrisEmployeeResponse{
+	res := &operations.CreateHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Employee) CreateHrisEmployee(ctx context.Context, request operations.Cr
 
 }
 
-// GetHrisEmployee - Retrieve an employee
-func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest, opts ...operations.Option) (*operations.GetHrisEmployeeResponse, error) {
+// GetHrisEmployee2 - Retrieve an employee
+func (s *Employee) GetHrisEmployee2(ctx context.Context, request operations.GetHrisEmployee2Request, opts ...operations.Option) (*operations.GetHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisEmployee",
+		OperationID:      "getHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 		}
 	}
 
-	res := &operations.GetHrisEmployeeResponse{
+	res := &operations.GetHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Employee) GetHrisEmployee(ctx context.Context, request operations.GetHr
 
 }
 
-// ListHrisEmployees - List all employees
-func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest, opts ...operations.Option) (*operations.ListHrisEmployeesResponse, error) {
+// ListHrisEmployees2 - List all employees
+func (s *Employee) ListHrisEmployees2(ctx context.Context, request operations.ListHrisEmployees2Request, opts ...operations.Option) (*operations.ListHrisEmployees2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisEmployees",
+		OperationID:      "listHrisEmployees2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListHrisEmployeesResponse{
+	res := &operations.ListHrisEmployees2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Employee) ListHrisEmployees(ctx context.Context, request operations.Lis
 
 }
 
-// PatchHrisEmployee - Update an employee
-func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest, opts ...operations.Option) (*operations.PatchHrisEmployeeResponse, error) {
+// PatchHrisEmployee2 - Update an employee
+func (s *Employee) PatchHrisEmployee2(ctx context.Context, request operations.PatchHrisEmployee2Request, opts ...operations.Option) (*operations.PatchHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisEmployee",
+		OperationID:      "patchHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchHrisEmployeeResponse{
+	res := &operations.PatchHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Employee) PatchHrisEmployee(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveHrisEmployee - Remove an employee
-func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest, opts ...operations.Option) (*operations.RemoveHrisEmployeeResponse, error) {
+// RemoveHrisEmployee2 - Remove an employee
+func (s *Employee) RemoveHrisEmployee2(ctx context.Context, request operations.RemoveHrisEmployee2Request, opts ...operations.Option) (*operations.RemoveHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisEmployee",
+		OperationID:      "removeHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveHrisEmployeeResponse{
+	res := &operations.RemoveHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Employee) RemoveHrisEmployee(ctx context.Context, request operations.Re
 
 }
 
-// UpdateHrisEmployee - Update an employee
-func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest, opts ...operations.Option) (*operations.UpdateHrisEmployeeResponse, error) {
+// UpdateHrisEmployee2 - Update an employee
+func (s *Employee) UpdateHrisEmployee2(ctx context.Context, request operations.UpdateHrisEmployee2Request, opts ...operations.Option) (*operations.UpdateHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisEmployee",
+		OperationID:      "updateHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Employee) UpdateHrisEmployee(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateHrisEmployeeResponse{
+	res := &operations.UpdateHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

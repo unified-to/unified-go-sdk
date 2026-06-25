@@ -30,8 +30,8 @@ func newCrm(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 	}
 }
 
-// CreateCrmCompany - Create a company
-func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest, opts ...operations.Option) (*operations.CreateCrmCompanyResponse, error) {
+// CreateCrmCompany2 - Create a company
+func (s *Crm) CreateCrmCompany2(ctx context.Context, request operations.CreateCrmCompany2Request, opts ...operations.Option) (*operations.CreateCrmCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmCompany",
+		OperationID:      "createCrmCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 		}
 	}
 
-	res := &operations.CreateCrmCompanyResponse{
+	res := &operations.CreateCrmCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Crm) CreateCrmCompany(ctx context.Context, request operations.CreateCrm
 
 }
 
-// CreateCrmContact - Create a contact
-func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
+// CreateCrmContact2 - Create a contact
+func (s *Crm) CreateCrmContact2(ctx context.Context, request operations.CreateCrmContact2Request, opts ...operations.Option) (*operations.CreateCrmContact2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmContact",
+		OperationID:      "createCrmContact2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 		}
 	}
 
-	res := &operations.CreateCrmContactResponse{
+	res := &operations.CreateCrmContact2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Crm) CreateCrmContact(ctx context.Context, request operations.CreateCrm
 
 }
 
-// CreateCrmDeal - Create a deal
-func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDealRequest, opts ...operations.Option) (*operations.CreateCrmDealResponse, error) {
+// CreateCrmDeal2 - Create a deal
+func (s *Crm) CreateCrmDeal2(ctx context.Context, request operations.CreateCrmDeal2Request, opts ...operations.Option) (*operations.CreateCrmDeal2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmDeal",
+		OperationID:      "createCrmDeal2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmDeal", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 		}
 	}
 
-	res := &operations.CreateCrmDealResponse{
+	res := &operations.CreateCrmDeal2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Crm) CreateCrmDeal(ctx context.Context, request operations.CreateCrmDea
 
 }
 
-// CreateCrmEvent - Create an event
-func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEventRequest, opts ...operations.Option) (*operations.CreateCrmEventResponse, error) {
+// CreateCrmEvent2 - Create an event
+func (s *Crm) CreateCrmEvent2(ctx context.Context, request operations.CreateCrmEvent2Request, opts ...operations.Option) (*operations.CreateCrmEvent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmEvent",
+		OperationID:      "createCrmEvent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmEvent", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 		}
 	}
 
-	res := &operations.CreateCrmEventResponse{
+	res := &operations.CreateCrmEvent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Crm) CreateCrmEvent(ctx context.Context, request operations.CreateCrmEv
 
 }
 
-// CreateCrmLead - Create a lead
-func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest, opts ...operations.Option) (*operations.CreateCrmLeadResponse, error) {
+// CreateCrmLead2 - Create a lead
+func (s *Crm) CreateCrmLead2(ctx context.Context, request operations.CreateCrmLead2Request, opts ...operations.Option) (*operations.CreateCrmLead2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmLead",
+		OperationID:      "createCrmLead2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 		}
 	}
 
-	res := &operations.CreateCrmLeadResponse{
+	res := &operations.CreateCrmLead2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Crm) CreateCrmLead(ctx context.Context, request operations.CreateCrmLea
 
 }
 
-// CreateCrmPipeline - Create a pipeline
-func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
+// CreateCrmPipeline2 - Create a pipeline
+func (s *Crm) CreateCrmPipeline2(ctx context.Context, request operations.CreateCrmPipeline2Request, opts ...operations.Option) (*operations.CreateCrmPipeline2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmPipeline",
+		OperationID:      "createCrmPipeline2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 		}
 	}
 
-	res := &operations.CreateCrmPipelineResponse{
+	res := &operations.CreateCrmPipeline2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Crm) CreateCrmPipeline(ctx context.Context, request operations.CreateCr
 
 }
 
-// GetCrmCompany - Retrieve a company
-func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest, opts ...operations.Option) (*operations.GetCrmCompanyResponse, error) {
+// GetCrmCompany2 - Retrieve a company
+func (s *Crm) GetCrmCompany2(ctx context.Context, request operations.GetCrmCompany2Request, opts ...operations.Option) (*operations.GetCrmCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmCompany",
+		OperationID:      "getCrmCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1469,7 +1469,7 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 		}
 	}
 
-	res := &operations.GetCrmCompanyResponse{
+	res := &operations.GetCrmCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1521,8 +1521,8 @@ func (s *Crm) GetCrmCompany(ctx context.Context, request operations.GetCrmCompan
 
 }
 
-// GetCrmContact - Retrieve a contact
-func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
+// GetCrmContact2 - Retrieve a contact
+func (s *Crm) GetCrmContact2(ctx context.Context, request operations.GetCrmContact2Request, opts ...operations.Option) (*operations.GetCrmContact2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1551,7 +1551,7 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmContact",
+		OperationID:      "getCrmContact2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1676,7 +1676,7 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 		}
 	}
 
-	res := &operations.GetCrmContactResponse{
+	res := &operations.GetCrmContact2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1728,8 +1728,8 @@ func (s *Crm) GetCrmContact(ctx context.Context, request operations.GetCrmContac
 
 }
 
-// GetCrmDeal - Retrieve a deal
-func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealRequest, opts ...operations.Option) (*operations.GetCrmDealResponse, error) {
+// GetCrmDeal2 - Retrieve a deal
+func (s *Crm) GetCrmDeal2(ctx context.Context, request operations.GetCrmDeal2Request, opts ...operations.Option) (*operations.GetCrmDeal2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1758,7 +1758,7 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmDeal",
+		OperationID:      "getCrmDeal2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1883,7 +1883,7 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 		}
 	}
 
-	res := &operations.GetCrmDealResponse{
+	res := &operations.GetCrmDeal2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1935,8 +1935,8 @@ func (s *Crm) GetCrmDeal(ctx context.Context, request operations.GetCrmDealReque
 
 }
 
-// GetCrmEvent - Retrieve an event
-func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventRequest, opts ...operations.Option) (*operations.GetCrmEventResponse, error) {
+// GetCrmEvent2 - Retrieve an event
+func (s *Crm) GetCrmEvent2(ctx context.Context, request operations.GetCrmEvent2Request, opts ...operations.Option) (*operations.GetCrmEvent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1965,7 +1965,7 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmEvent",
+		OperationID:      "getCrmEvent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2090,7 +2090,7 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 		}
 	}
 
-	res := &operations.GetCrmEventResponse{
+	res := &operations.GetCrmEvent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2142,8 +2142,8 @@ func (s *Crm) GetCrmEvent(ctx context.Context, request operations.GetCrmEventReq
 
 }
 
-// GetCrmLead - Retrieve a lead
-func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest, opts ...operations.Option) (*operations.GetCrmLeadResponse, error) {
+// GetCrmLead2 - Retrieve a lead
+func (s *Crm) GetCrmLead2(ctx context.Context, request operations.GetCrmLead2Request, opts ...operations.Option) (*operations.GetCrmLead2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2172,7 +2172,7 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmLead",
+		OperationID:      "getCrmLead2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2297,7 +2297,7 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 		}
 	}
 
-	res := &operations.GetCrmLeadResponse{
+	res := &operations.GetCrmLead2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2349,8 +2349,8 @@ func (s *Crm) GetCrmLead(ctx context.Context, request operations.GetCrmLeadReque
 
 }
 
-// GetCrmPipeline - Retrieve a pipeline
-func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
+// GetCrmPipeline2 - Retrieve a pipeline
+func (s *Crm) GetCrmPipeline2(ctx context.Context, request operations.GetCrmPipeline2Request, opts ...operations.Option) (*operations.GetCrmPipeline2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2379,7 +2379,7 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmPipeline",
+		OperationID:      "getCrmPipeline2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2504,7 +2504,7 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 		}
 	}
 
-	res := &operations.GetCrmPipelineResponse{
+	res := &operations.GetCrmPipeline2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2556,8 +2556,8 @@ func (s *Crm) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipel
 
 }
 
-// ListCrmCompanies - List all companies
-func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest, opts ...operations.Option) (*operations.ListCrmCompaniesResponse, error) {
+// ListCrmCompanies2 - List all companies
+func (s *Crm) ListCrmCompanies2(ctx context.Context, request operations.ListCrmCompanies2Request, opts ...operations.Option) (*operations.ListCrmCompanies2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2586,7 +2586,7 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmCompanies",
+		OperationID:      "listCrmCompanies2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2711,7 +2711,7 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 		}
 	}
 
-	res := &operations.ListCrmCompaniesResponse{
+	res := &operations.ListCrmCompanies2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2763,8 +2763,8 @@ func (s *Crm) ListCrmCompanies(ctx context.Context, request operations.ListCrmCo
 
 }
 
-// ListCrmContacts - List all contacts
-func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
+// ListCrmContacts2 - List all contacts
+func (s *Crm) ListCrmContacts2(ctx context.Context, request operations.ListCrmContacts2Request, opts ...operations.Option) (*operations.ListCrmContacts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2793,7 +2793,7 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmContacts",
+		OperationID:      "listCrmContacts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2918,7 +2918,7 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 		}
 	}
 
-	res := &operations.ListCrmContactsResponse{
+	res := &operations.ListCrmContacts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2970,8 +2970,8 @@ func (s *Crm) ListCrmContacts(ctx context.Context, request operations.ListCrmCon
 
 }
 
-// ListCrmDeals - List all deals
-func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsRequest, opts ...operations.Option) (*operations.ListCrmDealsResponse, error) {
+// ListCrmDeals2 - List all deals
+func (s *Crm) ListCrmDeals2(ctx context.Context, request operations.ListCrmDeals2Request, opts ...operations.Option) (*operations.ListCrmDeals2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3000,7 +3000,7 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmDeals",
+		OperationID:      "listCrmDeals2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3125,7 +3125,7 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 		}
 	}
 
-	res := &operations.ListCrmDealsResponse{
+	res := &operations.ListCrmDeals2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3177,8 +3177,8 @@ func (s *Crm) ListCrmDeals(ctx context.Context, request operations.ListCrmDealsR
 
 }
 
-// ListCrmEvents - List all events
-func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEventsRequest, opts ...operations.Option) (*operations.ListCrmEventsResponse, error) {
+// ListCrmEvents2 - List all events
+func (s *Crm) ListCrmEvents2(ctx context.Context, request operations.ListCrmEvents2Request, opts ...operations.Option) (*operations.ListCrmEvents2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3207,7 +3207,7 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmEvents",
+		OperationID:      "listCrmEvents2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3332,7 +3332,7 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 		}
 	}
 
-	res := &operations.ListCrmEventsResponse{
+	res := &operations.ListCrmEvents2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3384,8 +3384,8 @@ func (s *Crm) ListCrmEvents(ctx context.Context, request operations.ListCrmEvent
 
 }
 
-// ListCrmLeads - List all leads
-func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest, opts ...operations.Option) (*operations.ListCrmLeadsResponse, error) {
+// ListCrmLeads2 - List all leads
+func (s *Crm) ListCrmLeads2(ctx context.Context, request operations.ListCrmLeads2Request, opts ...operations.Option) (*operations.ListCrmLeads2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3414,7 +3414,7 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmLeads",
+		OperationID:      "listCrmLeads2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3539,7 +3539,7 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 		}
 	}
 
-	res := &operations.ListCrmLeadsResponse{
+	res := &operations.ListCrmLeads2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3591,8 +3591,8 @@ func (s *Crm) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsR
 
 }
 
-// ListCrmPipelines - List all pipelines
-func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
+// ListCrmPipelines2 - List all pipelines
+func (s *Crm) ListCrmPipelines2(ctx context.Context, request operations.ListCrmPipelines2Request, opts ...operations.Option) (*operations.ListCrmPipelines2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3621,7 +3621,7 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmPipelines",
+		OperationID:      "listCrmPipelines2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3746,7 +3746,7 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 		}
 	}
 
-	res := &operations.ListCrmPipelinesResponse{
+	res := &operations.ListCrmPipelines2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3798,8 +3798,8 @@ func (s *Crm) ListCrmPipelines(ctx context.Context, request operations.ListCrmPi
 
 }
 
-// PatchCrmCompany - Update a company
-func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest, opts ...operations.Option) (*operations.PatchCrmCompanyResponse, error) {
+// PatchCrmCompany2 - Update a company
+func (s *Crm) PatchCrmCompany2(ctx context.Context, request operations.PatchCrmCompany2Request, opts ...operations.Option) (*operations.PatchCrmCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3828,7 +3828,7 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmCompany",
+		OperationID:      "patchCrmCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -3960,7 +3960,7 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 		}
 	}
 
-	res := &operations.PatchCrmCompanyResponse{
+	res := &operations.PatchCrmCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4012,8 +4012,8 @@ func (s *Crm) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCo
 
 }
 
-// PatchCrmContact - Update a contact
-func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
+// PatchCrmContact2 - Update a contact
+func (s *Crm) PatchCrmContact2(ctx context.Context, request operations.PatchCrmContact2Request, opts ...operations.Option) (*operations.PatchCrmContact2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4042,7 +4042,7 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmContact",
+		OperationID:      "patchCrmContact2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -4174,7 +4174,7 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 		}
 	}
 
-	res := &operations.PatchCrmContactResponse{
+	res := &operations.PatchCrmContact2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4226,8 +4226,8 @@ func (s *Crm) PatchCrmContact(ctx context.Context, request operations.PatchCrmCo
 
 }
 
-// PatchCrmDeal - Update a deal
-func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealRequest, opts ...operations.Option) (*operations.PatchCrmDealResponse, error) {
+// PatchCrmDeal2 - Update a deal
+func (s *Crm) PatchCrmDeal2(ctx context.Context, request operations.PatchCrmDeal2Request, opts ...operations.Option) (*operations.PatchCrmDeal2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4256,7 +4256,7 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmDeal",
+		OperationID:      "patchCrmDeal2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmDeal", "json", `request:"mediaType=application/json"`)
@@ -4388,7 +4388,7 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 		}
 	}
 
-	res := &operations.PatchCrmDealResponse{
+	res := &operations.PatchCrmDeal2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4440,8 +4440,8 @@ func (s *Crm) PatchCrmDeal(ctx context.Context, request operations.PatchCrmDealR
 
 }
 
-// PatchCrmEvent - Update an event
-func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEventRequest, opts ...operations.Option) (*operations.PatchCrmEventResponse, error) {
+// PatchCrmEvent2 - Update an event
+func (s *Crm) PatchCrmEvent2(ctx context.Context, request operations.PatchCrmEvent2Request, opts ...operations.Option) (*operations.PatchCrmEvent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4470,7 +4470,7 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmEvent",
+		OperationID:      "patchCrmEvent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmEvent", "json", `request:"mediaType=application/json"`)
@@ -4602,7 +4602,7 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 		}
 	}
 
-	res := &operations.PatchCrmEventResponse{
+	res := &operations.PatchCrmEvent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4654,8 +4654,8 @@ func (s *Crm) PatchCrmEvent(ctx context.Context, request operations.PatchCrmEven
 
 }
 
-// PatchCrmLead - Update a lead
-func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest, opts ...operations.Option) (*operations.PatchCrmLeadResponse, error) {
+// PatchCrmLead2 - Update a lead
+func (s *Crm) PatchCrmLead2(ctx context.Context, request operations.PatchCrmLead2Request, opts ...operations.Option) (*operations.PatchCrmLead2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4684,7 +4684,7 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmLead",
+		OperationID:      "patchCrmLead2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -4816,7 +4816,7 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 		}
 	}
 
-	res := &operations.PatchCrmLeadResponse{
+	res := &operations.PatchCrmLead2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4868,8 +4868,8 @@ func (s *Crm) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadR
 
 }
 
-// PatchCrmPipeline - Update a pipeline
-func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
+// PatchCrmPipeline2 - Update a pipeline
+func (s *Crm) PatchCrmPipeline2(ctx context.Context, request operations.PatchCrmPipeline2Request, opts ...operations.Option) (*operations.PatchCrmPipeline2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4898,7 +4898,7 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmPipeline",
+		OperationID:      "patchCrmPipeline2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -5030,7 +5030,7 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 		}
 	}
 
-	res := &operations.PatchCrmPipelineResponse{
+	res := &operations.PatchCrmPipeline2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5082,8 +5082,8 @@ func (s *Crm) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmP
 
 }
 
-// RemoveCrmCompany - Remove a company
-func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest, opts ...operations.Option) (*operations.RemoveCrmCompanyResponse, error) {
+// RemoveCrmCompany2 - Remove a company
+func (s *Crm) RemoveCrmCompany2(ctx context.Context, request operations.RemoveCrmCompany2Request, opts ...operations.Option) (*operations.RemoveCrmCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5112,7 +5112,7 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmCompany",
+		OperationID:      "removeCrmCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5233,7 +5233,7 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 		}
 	}
 
-	res := &operations.RemoveCrmCompanyResponse{
+	res := &operations.RemoveCrmCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5264,8 +5264,8 @@ func (s *Crm) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrm
 
 }
 
-// RemoveCrmContact - Remove a contact
-func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
+// RemoveCrmContact2 - Remove a contact
+func (s *Crm) RemoveCrmContact2(ctx context.Context, request operations.RemoveCrmContact2Request, opts ...operations.Option) (*operations.RemoveCrmContact2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5294,7 +5294,7 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmContact",
+		OperationID:      "removeCrmContact2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5415,7 +5415,7 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 		}
 	}
 
-	res := &operations.RemoveCrmContactResponse{
+	res := &operations.RemoveCrmContact2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5446,8 +5446,8 @@ func (s *Crm) RemoveCrmContact(ctx context.Context, request operations.RemoveCrm
 
 }
 
-// RemoveCrmDeal - Remove a deal
-func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDealRequest, opts ...operations.Option) (*operations.RemoveCrmDealResponse, error) {
+// RemoveCrmDeal2 - Remove a deal
+func (s *Crm) RemoveCrmDeal2(ctx context.Context, request operations.RemoveCrmDeal2Request, opts ...operations.Option) (*operations.RemoveCrmDeal2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5476,7 +5476,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmDeal",
+		OperationID:      "removeCrmDeal2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5597,7 +5597,7 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 		}
 	}
 
-	res := &operations.RemoveCrmDealResponse{
+	res := &operations.RemoveCrmDeal2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5628,8 +5628,8 @@ func (s *Crm) RemoveCrmDeal(ctx context.Context, request operations.RemoveCrmDea
 
 }
 
-// RemoveCrmEvent - Remove an event
-func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEventRequest, opts ...operations.Option) (*operations.RemoveCrmEventResponse, error) {
+// RemoveCrmEvent2 - Remove an event
+func (s *Crm) RemoveCrmEvent2(ctx context.Context, request operations.RemoveCrmEvent2Request, opts ...operations.Option) (*operations.RemoveCrmEvent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5658,7 +5658,7 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmEvent",
+		OperationID:      "removeCrmEvent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5779,7 +5779,7 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 		}
 	}
 
-	res := &operations.RemoveCrmEventResponse{
+	res := &operations.RemoveCrmEvent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5810,8 +5810,8 @@ func (s *Crm) RemoveCrmEvent(ctx context.Context, request operations.RemoveCrmEv
 
 }
 
-// RemoveCrmLead - Remove a lead
-func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest, opts ...operations.Option) (*operations.RemoveCrmLeadResponse, error) {
+// RemoveCrmLead2 - Remove a lead
+func (s *Crm) RemoveCrmLead2(ctx context.Context, request operations.RemoveCrmLead2Request, opts ...operations.Option) (*operations.RemoveCrmLead2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5840,7 +5840,7 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmLead",
+		OperationID:      "removeCrmLead2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5961,7 +5961,7 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 		}
 	}
 
-	res := &operations.RemoveCrmLeadResponse{
+	res := &operations.RemoveCrmLead2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5992,8 +5992,8 @@ func (s *Crm) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLea
 
 }
 
-// RemoveCrmPipeline - Remove a pipeline
-func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
+// RemoveCrmPipeline2 - Remove a pipeline
+func (s *Crm) RemoveCrmPipeline2(ctx context.Context, request operations.RemoveCrmPipeline2Request, opts ...operations.Option) (*operations.RemoveCrmPipeline2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6022,7 +6022,7 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmPipeline",
+		OperationID:      "removeCrmPipeline2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6143,7 +6143,7 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 		}
 	}
 
-	res := &operations.RemoveCrmPipelineResponse{
+	res := &operations.RemoveCrmPipeline2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6174,8 +6174,8 @@ func (s *Crm) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCr
 
 }
 
-// UpdateCrmCompany - Update a company
-func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest, opts ...operations.Option) (*operations.UpdateCrmCompanyResponse, error) {
+// UpdateCrmCompany2 - Update a company
+func (s *Crm) UpdateCrmCompany2(ctx context.Context, request operations.UpdateCrmCompany2Request, opts ...operations.Option) (*operations.UpdateCrmCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6204,7 +6204,7 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmCompany",
+		OperationID:      "updateCrmCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -6336,7 +6336,7 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 		}
 	}
 
-	res := &operations.UpdateCrmCompanyResponse{
+	res := &operations.UpdateCrmCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6388,8 +6388,8 @@ func (s *Crm) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrm
 
 }
 
-// UpdateCrmContact - Update a contact
-func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
+// UpdateCrmContact2 - Update a contact
+func (s *Crm) UpdateCrmContact2(ctx context.Context, request operations.UpdateCrmContact2Request, opts ...operations.Option) (*operations.UpdateCrmContact2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6418,7 +6418,7 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmContact",
+		OperationID:      "updateCrmContact2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -6550,7 +6550,7 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 		}
 	}
 
-	res := &operations.UpdateCrmContactResponse{
+	res := &operations.UpdateCrmContact2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6602,8 +6602,8 @@ func (s *Crm) UpdateCrmContact(ctx context.Context, request operations.UpdateCrm
 
 }
 
-// UpdateCrmDeal - Update a deal
-func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDealRequest, opts ...operations.Option) (*operations.UpdateCrmDealResponse, error) {
+// UpdateCrmDeal2 - Update a deal
+func (s *Crm) UpdateCrmDeal2(ctx context.Context, request operations.UpdateCrmDeal2Request, opts ...operations.Option) (*operations.UpdateCrmDeal2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6632,7 +6632,7 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmDeal",
+		OperationID:      "updateCrmDeal2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmDeal", "json", `request:"mediaType=application/json"`)
@@ -6764,7 +6764,7 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 		}
 	}
 
-	res := &operations.UpdateCrmDealResponse{
+	res := &operations.UpdateCrmDeal2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6816,8 +6816,8 @@ func (s *Crm) UpdateCrmDeal(ctx context.Context, request operations.UpdateCrmDea
 
 }
 
-// UpdateCrmEvent - Update an event
-func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEventRequest, opts ...operations.Option) (*operations.UpdateCrmEventResponse, error) {
+// UpdateCrmEvent2 - Update an event
+func (s *Crm) UpdateCrmEvent2(ctx context.Context, request operations.UpdateCrmEvent2Request, opts ...operations.Option) (*operations.UpdateCrmEvent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6846,7 +6846,7 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmEvent",
+		OperationID:      "updateCrmEvent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmEvent", "json", `request:"mediaType=application/json"`)
@@ -6978,7 +6978,7 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 		}
 	}
 
-	res := &operations.UpdateCrmEventResponse{
+	res := &operations.UpdateCrmEvent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7030,8 +7030,8 @@ func (s *Crm) UpdateCrmEvent(ctx context.Context, request operations.UpdateCrmEv
 
 }
 
-// UpdateCrmLead - Update a lead
-func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest, opts ...operations.Option) (*operations.UpdateCrmLeadResponse, error) {
+// UpdateCrmLead2 - Update a lead
+func (s *Crm) UpdateCrmLead2(ctx context.Context, request operations.UpdateCrmLead2Request, opts ...operations.Option) (*operations.UpdateCrmLead2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7060,7 +7060,7 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmLead",
+		OperationID:      "updateCrmLead2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -7192,7 +7192,7 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 		}
 	}
 
-	res := &operations.UpdateCrmLeadResponse{
+	res := &operations.UpdateCrmLead2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7244,8 +7244,8 @@ func (s *Crm) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLea
 
 }
 
-// UpdateCrmPipeline - Update a pipeline
-func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
+// UpdateCrmPipeline2 - Update a pipeline
+func (s *Crm) UpdateCrmPipeline2(ctx context.Context, request operations.UpdateCrmPipeline2Request, opts ...operations.Option) (*operations.UpdateCrmPipeline2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7274,7 +7274,7 @@ func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmPipeline",
+		OperationID:      "updateCrmPipeline2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -7406,7 +7406,7 @@ func (s *Crm) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCr
 		}
 	}
 
-	res := &operations.UpdateCrmPipelineResponse{
+	res := &operations.UpdateCrmPipeline2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

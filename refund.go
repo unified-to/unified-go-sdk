@@ -30,8 +30,8 @@ func newRefund(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// GetPaymentRefund - Retrieve a refund
-func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, opts ...operations.Option) (*operations.GetPaymentRefundResponse, error) {
+// GetPaymentRefund2 - Retrieve a refund
+func (s *Refund) GetPaymentRefund2(ctx context.Context, request operations.GetPaymentRefund2Request, opts ...operations.Option) (*operations.GetPaymentRefund2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentRefund",
+		OperationID:      "getPaymentRefund2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 		}
 	}
 
-	res := &operations.GetPaymentRefundResponse{
+	res := &operations.GetPaymentRefund2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Refund) GetPaymentRefund(ctx context.Context, request operations.GetPay
 
 }
 
-// ListPaymentRefunds - List all refunds
-func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest, opts ...operations.Option) (*operations.ListPaymentRefundsResponse, error) {
+// ListPaymentRefunds2 - List all refunds
+func (s *Refund) ListPaymentRefunds2(ctx context.Context, request operations.ListPaymentRefunds2Request, opts ...operations.Option) (*operations.ListPaymentRefunds2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentRefunds",
+		OperationID:      "listPaymentRefunds2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Refund) ListPaymentRefunds(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListPaymentRefundsResponse{
+	res := &operations.ListPaymentRefunds2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

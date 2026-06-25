@@ -30,8 +30,8 @@ func newGenai(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateGenaiEmbedding - Create an embedding
-func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.CreateGenaiEmbeddingRequest, opts ...operations.Option) (*operations.CreateGenaiEmbeddingResponse, error) {
+// CreateGenaiEmbedding2 - Create an embedding
+func (s *Genai) CreateGenaiEmbedding2(ctx context.Context, request operations.CreateGenaiEmbedding2Request, opts ...operations.Option) (*operations.CreateGenaiEmbedding2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createGenaiEmbedding",
+		OperationID:      "createGenaiEmbedding2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "GenaiEmbedding", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateGenaiEmbeddingResponse{
+	res := &operations.CreateGenaiEmbedding2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Genai) CreateGenaiEmbedding(ctx context.Context, request operations.Cre
 
 }
 
-// CreateGenaiPrompt - Create a prompt
-func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
+// CreateGenaiPrompt2 - Create a prompt
+func (s *Genai) CreateGenaiPrompt2(ctx context.Context, request operations.CreateGenaiPrompt2Request, opts ...operations.Option) (*operations.CreateGenaiPrompt2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createGenaiPrompt",
+		OperationID:      "createGenaiPrompt2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateGenaiPromptResponse{
+	res := &operations.CreateGenaiPrompt2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Genai) CreateGenaiPrompt(ctx context.Context, request operations.Create
 
 }
 
-// GetGenaiModel - Retrieve a model
-func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiModelRequest, opts ...operations.Option) (*operations.GetGenaiModelResponse, error) {
+// GetGenaiModel2 - Retrieve a model
+func (s *Genai) GetGenaiModel2(ctx context.Context, request operations.GetGenaiModel2Request, opts ...operations.Option) (*operations.GetGenaiModel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getGenaiModel",
+		OperationID:      "getGenaiModel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 		}
 	}
 
-	res := &operations.GetGenaiModelResponse{
+	res := &operations.GetGenaiModel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Genai) GetGenaiModel(ctx context.Context, request operations.GetGenaiMo
 
 }
 
-// ListGenaiModels - List all models
-func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGenaiModelsRequest, opts ...operations.Option) (*operations.ListGenaiModelsResponse, error) {
+// ListGenaiModels2 - List all models
+func (s *Genai) ListGenaiModels2(ctx context.Context, request operations.ListGenaiModels2Request, opts ...operations.Option) (*operations.ListGenaiModels2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGena
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listGenaiModels",
+		OperationID:      "listGenaiModels2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Genai) ListGenaiModels(ctx context.Context, request operations.ListGena
 		}
 	}
 
-	res := &operations.ListGenaiModelsResponse{
+	res := &operations.ListGenaiModels2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

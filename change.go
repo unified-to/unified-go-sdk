@@ -30,8 +30,8 @@ func newChange(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// GetTaskChange - Retrieve a change
-func (s *Change) GetTaskChange(ctx context.Context, request operations.GetTaskChangeRequest, opts ...operations.Option) (*operations.GetTaskChangeResponse, error) {
+// GetTaskChange2 - Retrieve a change
+func (s *Change) GetTaskChange2(ctx context.Context, request operations.GetTaskChange2Request, opts ...operations.Option) (*operations.GetTaskChange2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Change) GetTaskChange(ctx context.Context, request operations.GetTaskCh
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskChange",
+		OperationID:      "getTaskChange2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Change) GetTaskChange(ctx context.Context, request operations.GetTaskCh
 		}
 	}
 
-	res := &operations.GetTaskChangeResponse{
+	res := &operations.GetTaskChange2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Change) GetTaskChange(ctx context.Context, request operations.GetTaskCh
 
 }
 
-// ListTaskChanges - List all changes
-func (s *Change) ListTaskChanges(ctx context.Context, request operations.ListTaskChangesRequest, opts ...operations.Option) (*operations.ListTaskChangesResponse, error) {
+// ListTaskChanges2 - List all changes
+func (s *Change) ListTaskChanges2(ctx context.Context, request operations.ListTaskChanges2Request, opts ...operations.Option) (*operations.ListTaskChanges2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Change) ListTaskChanges(ctx context.Context, request operations.ListTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskChanges",
+		OperationID:      "listTaskChanges2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Change) ListTaskChanges(ctx context.Context, request operations.ListTas
 		}
 	}
 
-	res := &operations.ListTaskChangesResponse{
+	res := &operations.ListTaskChanges2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

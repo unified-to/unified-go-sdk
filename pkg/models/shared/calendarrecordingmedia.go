@@ -13,6 +13,8 @@ type CalendarRecordingMedia struct {
 	Language              *string                       `json:"language,omitempty"`
 	RecordingDownloadURL  *string                       `json:"recording_download_url,omitempty"`
 	StartAt               *time.Time                    `json:"start_at,omitempty"`
+	Summary               *string                       `json:"summary,omitempty"`
+	SummaryDownloadURL    *string                       `json:"summary_download_url,omitempty"`
 	TranscriptDownloadURL *string                       `json:"transcript_download_url,omitempty"`
 	Transcripts           []CalendarRecordingTranscript `json:"transcripts,omitempty"`
 }
@@ -61,6 +63,20 @@ func (c *CalendarRecordingMedia) GetStartAt() *time.Time {
 		return nil
 	}
 	return c.StartAt
+}
+
+func (c *CalendarRecordingMedia) GetSummary() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Summary
+}
+
+func (c *CalendarRecordingMedia) GetSummaryDownloadURL() *string {
+	if c == nil {
+		return nil
+	}
+	return c.SummaryDownloadURL
 }
 
 func (c *CalendarRecordingMedia) GetTranscriptDownloadURL() *string {

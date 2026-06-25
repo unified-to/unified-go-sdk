@@ -30,8 +30,8 @@ func newPromoted(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// GetAdsPromoted - Retrieve a promoted
-func (s *Promoted) GetAdsPromoted(ctx context.Context, request operations.GetAdsPromotedRequest, opts ...operations.Option) (*operations.GetAdsPromotedResponse, error) {
+// GetAdsPromoted2 - Retrieve a promoted
+func (s *Promoted) GetAdsPromoted2(ctx context.Context, request operations.GetAdsPromoted2Request, opts ...operations.Option) (*operations.GetAdsPromoted2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Promoted) GetAdsPromoted(ctx context.Context, request operations.GetAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsPromoted",
+		OperationID:      "getAdsPromoted2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Promoted) GetAdsPromoted(ctx context.Context, request operations.GetAds
 		}
 	}
 
-	res := &operations.GetAdsPromotedResponse{
+	res := &operations.GetAdsPromoted2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Promoted) GetAdsPromoted(ctx context.Context, request operations.GetAds
 
 }
 
-// ListAdsPromoteds - List all promoteds
-func (s *Promoted) ListAdsPromoteds(ctx context.Context, request operations.ListAdsPromotedsRequest, opts ...operations.Option) (*operations.ListAdsPromotedsResponse, error) {
+// ListAdsPromoteds2 - List all promoteds
+func (s *Promoted) ListAdsPromoteds2(ctx context.Context, request operations.ListAdsPromoteds2Request, opts ...operations.Option) (*operations.ListAdsPromoteds2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Promoted) ListAdsPromoteds(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsPromoteds",
+		OperationID:      "listAdsPromoteds2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Promoted) ListAdsPromoteds(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListAdsPromotedsResponse{
+	res := &operations.ListAdsPromoteds2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

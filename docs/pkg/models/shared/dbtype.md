@@ -16,11 +16,12 @@ custom := shared.DbType("custom_value")
 
 ## Values
 
-| Name             | Value            |
-| ---------------- | ---------------- |
-| `DbTypeMongodb`  | mongodb          |
-| `DbTypeMysql`    | mysql            |
-| `DbTypePostgres` | postgres         |
-| `DbTypeMssql`    | mssql            |
-| `DbTypeMariadb`  | mariadb          |
-| `DbTypeSupabase` | supabase         |
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `DbTypeMongodb`   | mongodb           |
+| `DbTypeMysql`     | mysql             |
+| `DbTypePostgres`  | postgres          |
+| `DbTypeMssql`     | mssql             |
+| `DbTypeMariadb`   | mariadb           |
+| `DbTypeSupabase`  | supabase          |
+| `DbTypeSnowflake` | snowflake         |

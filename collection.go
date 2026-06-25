@@ -30,8 +30,8 @@ func newCollection(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// CreateCommerceCollection - Create a collection
-func (s *Collection) CreateCommerceCollection(ctx context.Context, request operations.CreateCommerceCollectionRequest, opts ...operations.Option) (*operations.CreateCommerceCollectionResponse, error) {
+// CreateCommerceCollection2 - Create a collection
+func (s *Collection) CreateCommerceCollection2(ctx context.Context, request operations.CreateCommerceCollection2Request, opts ...operations.Option) (*operations.CreateCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceCollection",
+		OperationID:      "createCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateCommerceCollectionResponse{
+	res := &operations.CreateCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Collection) CreateCommerceCollection(ctx context.Context, request opera
 
 }
 
-// CreateLmsCollection - Create a collection
-func (s *Collection) CreateLmsCollection(ctx context.Context, request operations.CreateLmsCollectionRequest, opts ...operations.Option) (*operations.CreateLmsCollectionResponse, error) {
+// CreateLmsCollection2 - Create a collection
+func (s *Collection) CreateLmsCollection2(ctx context.Context, request operations.CreateLmsCollection2Request, opts ...operations.Option) (*operations.CreateLmsCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Collection) CreateLmsCollection(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsCollection",
+		OperationID:      "createLmsCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Collection) CreateLmsCollection(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.CreateLmsCollectionResponse{
+	res := &operations.CreateLmsCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Collection) CreateLmsCollection(ctx context.Context, request operations
 
 }
 
-// GetCommerceCollection - Retrieve a collection
-func (s *Collection) GetCommerceCollection(ctx context.Context, request operations.GetCommerceCollectionRequest, opts ...operations.Option) (*operations.GetCommerceCollectionResponse, error) {
+// GetCommerceCollection2 - Retrieve a collection
+func (s *Collection) GetCommerceCollection2(ctx context.Context, request operations.GetCommerceCollection2Request, opts ...operations.Option) (*operations.GetCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceCollection",
+		OperationID:      "getCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetCommerceCollectionResponse{
+	res := &operations.GetCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Collection) GetCommerceCollection(ctx context.Context, request operatio
 
 }
 
-// GetLmsCollection - Retrieve a collection
-func (s *Collection) GetLmsCollection(ctx context.Context, request operations.GetLmsCollectionRequest, opts ...operations.Option) (*operations.GetLmsCollectionResponse, error) {
+// GetLmsCollection2 - Retrieve a collection
+func (s *Collection) GetLmsCollection2(ctx context.Context, request operations.GetLmsCollection2Request, opts ...operations.Option) (*operations.GetLmsCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Collection) GetLmsCollection(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsCollection",
+		OperationID:      "getLmsCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Collection) GetLmsCollection(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetLmsCollectionResponse{
+	res := &operations.GetLmsCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Collection) GetLmsCollection(ctx context.Context, request operations.Ge
 
 }
 
-// ListCommerceCollections - List all collections
-func (s *Collection) ListCommerceCollections(ctx context.Context, request operations.ListCommerceCollectionsRequest, opts ...operations.Option) (*operations.ListCommerceCollectionsResponse, error) {
+// ListCommerceCollections2 - List all collections
+func (s *Collection) ListCommerceCollections2(ctx context.Context, request operations.ListCommerceCollections2Request, opts ...operations.Option) (*operations.ListCommerceCollections2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceCollections",
+		OperationID:      "listCommerceCollections2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListCommerceCollectionsResponse{
+	res := &operations.ListCommerceCollections2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Collection) ListCommerceCollections(ctx context.Context, request operat
 
 }
 
-// ListLmsCollections - List all collections
-func (s *Collection) ListLmsCollections(ctx context.Context, request operations.ListLmsCollectionsRequest, opts ...operations.Option) (*operations.ListLmsCollectionsResponse, error) {
+// ListLmsCollections2 - List all collections
+func (s *Collection) ListLmsCollections2(ctx context.Context, request operations.ListLmsCollections2Request, opts ...operations.Option) (*operations.ListLmsCollections2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Collection) ListLmsCollections(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsCollections",
+		OperationID:      "listLmsCollections2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Collection) ListLmsCollections(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListLmsCollectionsResponse{
+	res := &operations.ListLmsCollections2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Collection) ListLmsCollections(ctx context.Context, request operations.
 
 }
 
-// PatchCommerceCollection - Update a collection
-func (s *Collection) PatchCommerceCollection(ctx context.Context, request operations.PatchCommerceCollectionRequest, opts ...operations.Option) (*operations.PatchCommerceCollectionResponse, error) {
+// PatchCommerceCollection2 - Update a collection
+func (s *Collection) PatchCommerceCollection2(ctx context.Context, request operations.PatchCommerceCollection2Request, opts ...operations.Option) (*operations.PatchCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceCollection",
+		OperationID:      "patchCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -1448,7 +1448,7 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchCommerceCollectionResponse{
+	res := &operations.PatchCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Collection) PatchCommerceCollection(ctx context.Context, request operat
 
 }
 
-// PatchLmsCollection - Update a collection
-func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.PatchLmsCollectionRequest, opts ...operations.Option) (*operations.PatchLmsCollectionResponse, error) {
+// PatchLmsCollection2 - Update a collection
+func (s *Collection) PatchLmsCollection2(ctx context.Context, request operations.PatchLmsCollection2Request, opts ...operations.Option) (*operations.PatchLmsCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsCollection",
+		OperationID:      "patchLmsCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -1662,7 +1662,7 @@ func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.PatchLmsCollectionResponse{
+	res := &operations.PatchLmsCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Collection) PatchLmsCollection(ctx context.Context, request operations.
 
 }
 
-// RemoveCommerceCollection - Remove a collection
-func (s *Collection) RemoveCommerceCollection(ctx context.Context, request operations.RemoveCommerceCollectionRequest, opts ...operations.Option) (*operations.RemoveCommerceCollectionResponse, error) {
+// RemoveCommerceCollection2 - Remove a collection
+func (s *Collection) RemoveCommerceCollection2(ctx context.Context, request operations.RemoveCommerceCollection2Request, opts ...operations.Option) (*operations.RemoveCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceCollection",
+		OperationID:      "removeCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1865,7 +1865,7 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveCommerceCollectionResponse{
+	res := &operations.RemoveCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1896,8 +1896,8 @@ func (s *Collection) RemoveCommerceCollection(ctx context.Context, request opera
 
 }
 
-// RemoveLmsCollection - Remove a collection
-func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations.RemoveLmsCollectionRequest, opts ...operations.Option) (*operations.RemoveLmsCollectionResponse, error) {
+// RemoveLmsCollection2 - Remove a collection
+func (s *Collection) RemoveLmsCollection2(ctx context.Context, request operations.RemoveLmsCollection2Request, opts ...operations.Option) (*operations.RemoveLmsCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1926,7 +1926,7 @@ func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsCollection",
+		OperationID:      "removeLmsCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2047,7 +2047,7 @@ func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.RemoveLmsCollectionResponse{
+	res := &operations.RemoveLmsCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2078,8 +2078,8 @@ func (s *Collection) RemoveLmsCollection(ctx context.Context, request operations
 
 }
 
-// UpdateCommerceCollection - Update a collection
-func (s *Collection) UpdateCommerceCollection(ctx context.Context, request operations.UpdateCommerceCollectionRequest, opts ...operations.Option) (*operations.UpdateCommerceCollectionResponse, error) {
+// UpdateCommerceCollection2 - Update a collection
+func (s *Collection) UpdateCommerceCollection2(ctx context.Context, request operations.UpdateCommerceCollection2Request, opts ...operations.Option) (*operations.UpdateCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,7 +2108,7 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceCollection",
+		OperationID:      "updateCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -2240,7 +2240,7 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateCommerceCollectionResponse{
+	res := &operations.UpdateCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2292,8 +2292,8 @@ func (s *Collection) UpdateCommerceCollection(ctx context.Context, request opera
 
 }
 
-// UpdateLmsCollection - Update a collection
-func (s *Collection) UpdateLmsCollection(ctx context.Context, request operations.UpdateLmsCollectionRequest, opts ...operations.Option) (*operations.UpdateLmsCollectionResponse, error) {
+// UpdateLmsCollection2 - Update a collection
+func (s *Collection) UpdateLmsCollection2(ctx context.Context, request operations.UpdateLmsCollection2Request, opts ...operations.Option) (*operations.UpdateLmsCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2322,7 +2322,7 @@ func (s *Collection) UpdateLmsCollection(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsCollection",
+		OperationID:      "updateLmsCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -2454,7 +2454,7 @@ func (s *Collection) UpdateLmsCollection(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.UpdateLmsCollectionResponse{
+	res := &operations.UpdateLmsCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

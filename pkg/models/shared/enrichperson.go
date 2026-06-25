@@ -7,19 +7,19 @@ import (
 	"time"
 )
 
-type Gender string
+type EnrichPersonGender string
 
 const (
-	GenderMale   Gender = "MALE"
-	GenderFemale Gender = "FEMALE"
+	EnrichPersonGenderMale   EnrichPersonGender = "MALE"
+	EnrichPersonGenderFemale EnrichPersonGender = "FEMALE"
 )
 
-func (e Gender) ToPointer() *Gender {
+func (e EnrichPersonGender) ToPointer() *EnrichPersonGender {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Gender) IsExact() bool {
+func (e *EnrichPersonGender) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "MALE", "FEMALE":
@@ -39,18 +39,18 @@ type EnrichPerson struct {
 	CompanyDomain *string                      `json:"company_domain,omitempty"`
 	CreatedAt     *time.Time                   `json:"created_at,omitempty"`
 	// An array of email addresses for this person
-	Emails         []EnrichEmail  `json:"emails,omitempty"`
-	FacebookURL    *string        `json:"facebook_url,omitempty"`
-	FirstName      *string        `json:"first_name,omitempty"`
-	Gender         *Gender        `json:"gender,omitempty"`
-	GithubURL      *string        `json:"github_url,omitempty"`
-	GithubUsername *string        `json:"github_username,omitempty"`
-	ID             *string        `json:"id,omitempty"`
-	ImageURL       *string        `json:"image_url,omitempty"`
-	LastName       *string        `json:"last_name,omitempty"`
-	LinkedinURL    *string        `json:"linkedin_url,omitempty"`
-	Name           *string        `json:"name,omitempty"`
-	Raw            map[string]any `json:"raw,omitempty"`
+	Emails         []EnrichEmail       `json:"emails,omitempty"`
+	FacebookURL    *string             `json:"facebook_url,omitempty"`
+	FirstName      *string             `json:"first_name,omitempty"`
+	Gender         *EnrichPersonGender `json:"gender,omitempty"`
+	GithubURL      *string             `json:"github_url,omitempty"`
+	GithubUsername *string             `json:"github_username,omitempty"`
+	ID             *string             `json:"id,omitempty"`
+	ImageURL       *string             `json:"image_url,omitempty"`
+	LastName       *string             `json:"last_name,omitempty"`
+	LinkedinURL    *string             `json:"linkedin_url,omitempty"`
+	Name           *string             `json:"name,omitempty"`
+	Raw            map[string]any      `json:"raw,omitempty"`
 	// An array of telephones for this person
 	Telephones    []EnrichTelephone         `json:"telephones,omitempty"`
 	Timezone      *string                   `json:"timezone,omitempty"`
@@ -136,7 +136,7 @@ func (e *EnrichPerson) GetFirstName() *string {
 	return e.FirstName
 }
 
-func (e *EnrichPerson) GetGender() *Gender {
+func (e *EnrichPerson) GetGender() *EnrichPersonGender {
 	if e == nil {
 		return nil
 	}

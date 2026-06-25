@@ -1,0 +1,11 @@
+# DatastoreRelationship
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `Field`                                                                                     | `string`                                                                                    | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `Name`                                                                                      | `string`                                                                                    | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `TableID`                                                                                   | `string`                                                                                    | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `Type`                                                                                      | [shared.DatastoreRelationshipType](../../../pkg/models/shared/datastorerelationshiptype.md) | :heavy_check_mark:                                                                          | N/A                                                                                         |

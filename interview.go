@@ -30,8 +30,8 @@ func newInterview(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateAtsInterview - Create an interview
-func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.CreateAtsInterviewRequest, opts ...operations.Option) (*operations.CreateAtsInterviewResponse, error) {
+// CreateAtsInterview2 - Create an interview
+func (s *Interview) CreateAtsInterview2(ctx context.Context, request operations.CreateAtsInterview2Request, opts ...operations.Option) (*operations.CreateAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsInterview",
+		OperationID:      "createAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 		}
 	}
 
-	res := &operations.CreateAtsInterviewResponse{
+	res := &operations.CreateAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Interview) CreateAtsInterview(ctx context.Context, request operations.C
 
 }
 
-// GetAtsInterview - Retrieve an interview
-func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetAtsInterviewRequest, opts ...operations.Option) (*operations.GetAtsInterviewResponse, error) {
+// GetAtsInterview2 - Retrieve an interview
+func (s *Interview) GetAtsInterview2(ctx context.Context, request operations.GetAtsInterview2Request, opts ...operations.Option) (*operations.GetAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsInterview",
+		OperationID:      "getAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetA
 		}
 	}
 
-	res := &operations.GetAtsInterviewResponse{
+	res := &operations.GetAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Interview) GetAtsInterview(ctx context.Context, request operations.GetA
 
 }
 
-// ListAtsInterviews - List all interviews
-func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.ListAtsInterviewsRequest, opts ...operations.Option) (*operations.ListAtsInterviewsResponse, error) {
+// ListAtsInterviews2 - List all interviews
+func (s *Interview) ListAtsInterviews2(ctx context.Context, request operations.ListAtsInterviews2Request, opts ...operations.Option) (*operations.ListAtsInterviews2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsInterviews",
+		OperationID:      "listAtsInterviews2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListAtsInterviewsResponse{
+	res := &operations.ListAtsInterviews2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Interview) ListAtsInterviews(ctx context.Context, request operations.Li
 
 }
 
-// PatchAtsInterview - Update an interview
-func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.PatchAtsInterviewRequest, opts ...operations.Option) (*operations.PatchAtsInterviewResponse, error) {
+// PatchAtsInterview2 - Update an interview
+func (s *Interview) PatchAtsInterview2(ctx context.Context, request operations.PatchAtsInterview2Request, opts ...operations.Option) (*operations.PatchAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsInterview",
+		OperationID:      "patchAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 		}
 	}
 
-	res := &operations.PatchAtsInterviewResponse{
+	res := &operations.PatchAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Interview) PatchAtsInterview(ctx context.Context, request operations.Pa
 
 }
 
-// RemoveAtsInterview - Remove an interview
-func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.RemoveAtsInterviewRequest, opts ...operations.Option) (*operations.RemoveAtsInterviewResponse, error) {
+// RemoveAtsInterview2 - Remove an interview
+func (s *Interview) RemoveAtsInterview2(ctx context.Context, request operations.RemoveAtsInterview2Request, opts ...operations.Option) (*operations.RemoveAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsInterview",
+		OperationID:      "removeAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.R
 		}
 	}
 
-	res := &operations.RemoveAtsInterviewResponse{
+	res := &operations.RemoveAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Interview) RemoveAtsInterview(ctx context.Context, request operations.R
 
 }
 
-// UpdateAtsInterview - Update an interview
-func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.UpdateAtsInterviewRequest, opts ...operations.Option) (*operations.UpdateAtsInterviewResponse, error) {
+// UpdateAtsInterview2 - Update an interview
+func (s *Interview) UpdateAtsInterview2(ctx context.Context, request operations.UpdateAtsInterview2Request, opts ...operations.Option) (*operations.UpdateAtsInterview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.U
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsInterview",
+		OperationID:      "updateAtsInterview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsInterview", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Interview) UpdateAtsInterview(ctx context.Context, request operations.U
 		}
 	}
 
-	res := &operations.UpdateAtsInterviewResponse{
+	res := &operations.UpdateAtsInterview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

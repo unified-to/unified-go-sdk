@@ -30,8 +30,8 @@ func newBusy(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// ListCalendarBusies - List all busies
-func (s *Busy) ListCalendarBusies(ctx context.Context, request operations.ListCalendarBusiesRequest, opts ...operations.Option) (*operations.ListCalendarBusiesResponse, error) {
+// ListCalendarBusies2 - List all busies
+func (s *Busy) ListCalendarBusies2(ctx context.Context, request operations.ListCalendarBusies2Request, opts ...operations.Option) (*operations.ListCalendarBusies2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Busy) ListCalendarBusies(ctx context.Context, request operations.ListCa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarBusies",
+		OperationID:      "listCalendarBusies2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Busy) ListCalendarBusies(ctx context.Context, request operations.ListCa
 		}
 	}
 
-	res := &operations.ListCalendarBusiesResponse{
+	res := &operations.ListCalendarBusies2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newPage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateKmsPage - Create a page
-func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPageRequest, opts ...operations.Option) (*operations.CreateKmsPageResponse, error) {
+// CreateKmsPage2 - Create a page
+func (s *Page) CreateKmsPage2(ctx context.Context, request operations.CreateKmsPage2Request, opts ...operations.Option) (*operations.CreateKmsPage2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createKmsPage",
+		OperationID:      "createKmsPage2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 		}
 	}
 
-	res := &operations.CreateKmsPageResponse{
+	res := &operations.CreateKmsPage2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Page) CreateKmsPage(ctx context.Context, request operations.CreateKmsPa
 
 }
 
-// GetKmsPage - Retrieve a page
-func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequest, opts ...operations.Option) (*operations.GetKmsPageResponse, error) {
+// GetKmsPage2 - Retrieve a page
+func (s *Page) GetKmsPage2(ctx context.Context, request operations.GetKmsPage2Request, opts ...operations.Option) (*operations.GetKmsPage2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getKmsPage",
+		OperationID:      "getKmsPage2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 		}
 	}
 
-	res := &operations.GetKmsPageResponse{
+	res := &operations.GetKmsPage2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Page) GetKmsPage(ctx context.Context, request operations.GetKmsPageRequ
 
 }
 
-// ListKmsPages - List all pages
-func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPagesRequest, opts ...operations.Option) (*operations.ListKmsPagesResponse, error) {
+// ListKmsPages2 - List all pages
+func (s *Page) ListKmsPages2(ctx context.Context, request operations.ListKmsPages2Request, opts ...operations.Option) (*operations.ListKmsPages2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listKmsPages",
+		OperationID:      "listKmsPages2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 		}
 	}
 
-	res := &operations.ListKmsPagesResponse{
+	res := &operations.ListKmsPages2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Page) ListKmsPages(ctx context.Context, request operations.ListKmsPages
 
 }
 
-// PatchKmsPage - Update a page
-func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPageRequest, opts ...operations.Option) (*operations.PatchKmsPageResponse, error) {
+// PatchKmsPage2 - Update a page
+func (s *Page) PatchKmsPage2(ctx context.Context, request operations.PatchKmsPage2Request, opts ...operations.Option) (*operations.PatchKmsPage2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchKmsPage",
+		OperationID:      "patchKmsPage2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 		}
 	}
 
-	res := &operations.PatchKmsPageResponse{
+	res := &operations.PatchKmsPage2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Page) PatchKmsPage(ctx context.Context, request operations.PatchKmsPage
 
 }
 
-// RemoveKmsPage - Remove a page
-func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPageRequest, opts ...operations.Option) (*operations.RemoveKmsPageResponse, error) {
+// RemoveKmsPage2 - Remove a page
+func (s *Page) RemoveKmsPage2(ctx context.Context, request operations.RemoveKmsPage2Request, opts ...operations.Option) (*operations.RemoveKmsPage2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeKmsPage",
+		OperationID:      "removeKmsPage2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 		}
 	}
 
-	res := &operations.RemoveKmsPageResponse{
+	res := &operations.RemoveKmsPage2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Page) RemoveKmsPage(ctx context.Context, request operations.RemoveKmsPa
 
 }
 
-// UpdateKmsPage - Update a page
-func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPageRequest, opts ...operations.Option) (*operations.UpdateKmsPageResponse, error) {
+// UpdateKmsPage2 - Update a page
+func (s *Page) UpdateKmsPage2(ctx context.Context, request operations.UpdateKmsPage2Request, opts ...operations.Option) (*operations.UpdateKmsPage2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateKmsPage",
+		OperationID:      "updateKmsPage2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsPage", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Page) UpdateKmsPage(ctx context.Context, request operations.UpdateKmsPa
 		}
 	}
 
-	res := &operations.UpdateKmsPageResponse{
+	res := &operations.UpdateKmsPage2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -29,11 +29,13 @@ const (
 	PropertyConnectionCategoriesCalendar     PropertyConnectionCategories = "calendar"
 	PropertyConnectionCategoriesVerification PropertyConnectionCategories = "verification"
 	PropertyConnectionCategoriesAds          PropertyConnectionCategories = "ads"
+	PropertyConnectionCategoriesAnalytics    PropertyConnectionCategories = "analytics"
 	PropertyConnectionCategoriesForms        PropertyConnectionCategories = "forms"
 	PropertyConnectionCategoriesShipping     PropertyConnectionCategories = "shipping"
 	PropertyConnectionCategoriesAssessment   PropertyConnectionCategories = "assessment"
 	PropertyConnectionCategoriesSigning      PropertyConnectionCategories = "signing"
 	PropertyConnectionCategoriesClubs        PropertyConnectionCategories = "clubs"
+	PropertyConnectionCategoriesDatastore    PropertyConnectionCategories = "datastore"
 )
 
 func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories {
@@ -44,7 +46,7 @@ func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories 
 func (e *PropertyConnectionCategories) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "forms", "shipping", "assessment", "signing", "clubs":
+		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore":
 			return true
 		}
 	}

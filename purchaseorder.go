@@ -30,8 +30,8 @@ func newPurchaseorder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hoo
 	}
 }
 
-// CreateAccountingPurchaseorder - Create a purchaseorder
-func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, request operations.CreateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.CreateAccountingPurchaseorderResponse, error) {
+// CreateAccountingPurchaseorder2 - Create a purchaseorder
+func (s *Purchaseorder) CreateAccountingPurchaseorder2(ctx context.Context, request operations.CreateAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.CreateAccountingPurchaseorder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, reque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingPurchaseorder",
+		OperationID:      "createAccountingPurchaseorder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, reque
 		}
 	}
 
-	res := &operations.CreateAccountingPurchaseorderResponse{
+	res := &operations.CreateAccountingPurchaseorder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Purchaseorder) CreateAccountingPurchaseorder(ctx context.Context, reque
 
 }
 
-// GetAccountingPurchaseorder - Retrieve a purchaseorder
-func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request operations.GetAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.GetAccountingPurchaseorderResponse, error) {
+// GetAccountingPurchaseorder2 - Retrieve a purchaseorder
+func (s *Purchaseorder) GetAccountingPurchaseorder2(ctx context.Context, request operations.GetAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.GetAccountingPurchaseorder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingPurchaseorder",
+		OperationID:      "getAccountingPurchaseorder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.GetAccountingPurchaseorderResponse{
+	res := &operations.GetAccountingPurchaseorder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Purchaseorder) GetAccountingPurchaseorder(ctx context.Context, request 
 
 }
 
-// ListAccountingPurchaseorders - List all purchaseorders
-func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, request operations.ListAccountingPurchaseordersRequest, opts ...operations.Option) (*operations.ListAccountingPurchaseordersResponse, error) {
+// ListAccountingPurchaseorders2 - List all purchaseorders
+func (s *Purchaseorder) ListAccountingPurchaseorders2(ctx context.Context, request operations.ListAccountingPurchaseorders2Request, opts ...operations.Option) (*operations.ListAccountingPurchaseorders2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, reques
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingPurchaseorders",
+		OperationID:      "listAccountingPurchaseorders2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, reques
 		}
 	}
 
-	res := &operations.ListAccountingPurchaseordersResponse{
+	res := &operations.ListAccountingPurchaseorders2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Purchaseorder) ListAccountingPurchaseorders(ctx context.Context, reques
 
 }
 
-// PatchAccountingPurchaseorder - Update a purchaseorder
-func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, request operations.PatchAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.PatchAccountingPurchaseorderResponse, error) {
+// PatchAccountingPurchaseorder2 - Update a purchaseorder
+func (s *Purchaseorder) PatchAccountingPurchaseorder2(ctx context.Context, request operations.PatchAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.PatchAccountingPurchaseorder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, reques
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingPurchaseorder",
+		OperationID:      "patchAccountingPurchaseorder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, reques
 		}
 	}
 
-	res := &operations.PatchAccountingPurchaseorderResponse{
+	res := &operations.PatchAccountingPurchaseorder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Purchaseorder) PatchAccountingPurchaseorder(ctx context.Context, reques
 
 }
 
-// RemoveAccountingPurchaseorder - Remove a purchaseorder
-func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, request operations.RemoveAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorderResponse, error) {
+// RemoveAccountingPurchaseorder2 - Remove a purchaseorder
+func (s *Purchaseorder) RemoveAccountingPurchaseorder2(ctx context.Context, request operations.RemoveAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, reque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingPurchaseorder",
+		OperationID:      "removeAccountingPurchaseorder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, reque
 		}
 	}
 
-	res := &operations.RemoveAccountingPurchaseorderResponse{
+	res := &operations.RemoveAccountingPurchaseorder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Purchaseorder) RemoveAccountingPurchaseorder(ctx context.Context, reque
 
 }
 
-// UpdateAccountingPurchaseorder - Update a purchaseorder
-func (s *Purchaseorder) UpdateAccountingPurchaseorder(ctx context.Context, request operations.UpdateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorderResponse, error) {
+// UpdateAccountingPurchaseorder2 - Update a purchaseorder
+func (s *Purchaseorder) UpdateAccountingPurchaseorder2(ctx context.Context, request operations.UpdateAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Purchaseorder) UpdateAccountingPurchaseorder(ctx context.Context, reque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingPurchaseorder",
+		OperationID:      "updateAccountingPurchaseorder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Purchaseorder) UpdateAccountingPurchaseorder(ctx context.Context, reque
 		}
 	}
 
-	res := &operations.UpdateAccountingPurchaseorderResponse{
+	res := &operations.UpdateAccountingPurchaseorder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

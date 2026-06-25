@@ -30,8 +30,8 @@ func newRate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateShippingRate - Create a rate
-func (s *Rate) CreateShippingRate(ctx context.Context, request operations.CreateShippingRateRequest, opts ...operations.Option) (*operations.CreateShippingRateResponse, error) {
+// CreateShippingRate2 - Create a rate
+func (s *Rate) CreateShippingRate2(ctx context.Context, request operations.CreateShippingRate2Request, opts ...operations.Option) (*operations.CreateShippingRate2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Rate) CreateShippingRate(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createShippingRate",
+		OperationID:      "createShippingRate2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingRate", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Rate) CreateShippingRate(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateShippingRateResponse{
+	res := &operations.CreateShippingRate2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

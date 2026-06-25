@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
-* [ListAccountingCashflows](#listaccountingcashflows) - List all cashflows
+* [GetAccountingCashflow2](#getaccountingcashflow2) - Retrieve a cashflow
+* [ListAccountingCashflows2](#listaccountingcashflows2) - List all cashflows
 
-## GetAccountingCashflow
+## GetAccountingCashflow2
 
 Retrieve a cashflow
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingCashflow2" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Cashflow.GetAccountingCashflow(ctx, operations.GetAccountingCashflowRequest{
+    res, err := s.Cashflow.GetAccountingCashflow2(ctx, operations.GetAccountingCashflow2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetAccountingCashflowRequest](../../pkg/models/operations/getaccountingcashflowrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetAccountingCashflow2Request](../../pkg/models/operations/getaccountingcashflow2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.GetAccountingCashflowResponse](../../pkg/models/operations/getaccountingcashflowresponse.md), error**
+**[*operations.GetAccountingCashflow2Response](../../pkg/models/operations/getaccountingcashflow2response.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingCashflows
+## ListAccountingCashflows2
 
 List all cashflows
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
+<!-- UsageSnippet language="go" operationID="listAccountingCashflows2" method="get" path="/accounting/{connection_id}/cashflow" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Cashflow.ListAccountingCashflows(ctx, operations.ListAccountingCashflowsRequest{
+    res, err := s.Cashflow.ListAccountingCashflows2(ctx, operations.ListAccountingCashflows2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.ListAccountingCashflowsRequest](../../pkg/models/operations/listaccountingcashflowsrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListAccountingCashflows2Request](../../pkg/models/operations/listaccountingcashflows2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.ListAccountingCashflowsResponse](../../pkg/models/operations/listaccountingcashflowsresponse.md), error**
+**[*operations.ListAccountingCashflows2Response](../../pkg/models/operations/listaccountingcashflows2response.md), error**
 
 ### Errors
 

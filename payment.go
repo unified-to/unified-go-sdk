@@ -30,8 +30,8 @@ func newPayment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreatePaymentLink - Create a link
-func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest, opts ...operations.Option) (*operations.CreatePaymentLinkResponse, error) {
+// CreatePaymentLink2 - Create a link
+func (s *Payment) CreatePaymentLink2(ctx context.Context, request operations.CreatePaymentLink2Request, opts ...operations.Option) (*operations.CreatePaymentLink2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPaymentLink",
+		OperationID:      "createPaymentLink2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreatePaymentLinkResponse{
+	res := &operations.CreatePaymentLink2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Payment) CreatePaymentLink(ctx context.Context, request operations.Crea
 
 }
 
-// CreatePaymentPayment - Create a payment
-func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.CreatePaymentPaymentRequest, opts ...operations.Option) (*operations.CreatePaymentPaymentResponse, error) {
+// CreatePaymentPayment2 - Create a payment
+func (s *Payment) CreatePaymentPayment2(ctx context.Context, request operations.CreatePaymentPayment2Request, opts ...operations.Option) (*operations.CreatePaymentPayment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.C
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPaymentPayment",
+		OperationID:      "createPaymentPayment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentPayment", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.C
 		}
 	}
 
-	res := &operations.CreatePaymentPaymentResponse{
+	res := &operations.CreatePaymentPayment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Payment) CreatePaymentPayment(ctx context.Context, request operations.C
 
 }
 
-// CreatePaymentSubscription - Create a subscription
-func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operations.CreatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.CreatePaymentSubscriptionResponse, error) {
+// CreatePaymentSubscription2 - Create a subscription
+func (s *Payment) CreatePaymentSubscription2(ctx context.Context, request operations.CreatePaymentSubscription2Request, opts ...operations.Option) (*operations.CreatePaymentSubscription2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPaymentSubscription",
+		OperationID:      "createPaymentSubscription2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreatePaymentSubscriptionResponse{
+	res := &operations.CreatePaymentSubscription2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Payment) CreatePaymentSubscription(ctx context.Context, request operati
 
 }
 
-// GetPaymentLink - Retrieve a link
-func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest, opts ...operations.Option) (*operations.GetPaymentLinkResponse, error) {
+// GetPaymentLink2 - Retrieve a link
+func (s *Payment) GetPaymentLink2(ctx context.Context, request operations.GetPaymentLink2Request, opts ...operations.Option) (*operations.GetPaymentLink2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaym
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentLink",
+		OperationID:      "getPaymentLink2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaym
 		}
 	}
 
-	res := &operations.GetPaymentLinkResponse{
+	res := &operations.GetPaymentLink2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Payment) GetPaymentLink(ctx context.Context, request operations.GetPaym
 
 }
 
-// GetPaymentPayment - Retrieve a payment
-func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetPaymentPaymentRequest, opts ...operations.Option) (*operations.GetPaymentPaymentResponse, error) {
+// GetPaymentPayment2 - Retrieve a payment
+func (s *Payment) GetPaymentPayment2(ctx context.Context, request operations.GetPaymentPayment2Request, opts ...operations.Option) (*operations.GetPaymentPayment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetP
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentPayment",
+		OperationID:      "getPaymentPayment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetP
 		}
 	}
 
-	res := &operations.GetPaymentPaymentResponse{
+	res := &operations.GetPaymentPayment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Payment) GetPaymentPayment(ctx context.Context, request operations.GetP
 
 }
 
-// GetPaymentPayout - Retrieve a payout
-func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPaymentPayoutRequest, opts ...operations.Option) (*operations.GetPaymentPayoutResponse, error) {
+// GetPaymentPayout2 - Retrieve a payout
+func (s *Payment) GetPaymentPayout2(ctx context.Context, request operations.GetPaymentPayout2Request, opts ...operations.Option) (*operations.GetPaymentPayout2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentPayout",
+		OperationID:      "getPaymentPayout2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPa
 		}
 	}
 
-	res := &operations.GetPaymentPayoutResponse{
+	res := &operations.GetPaymentPayout2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Payment) GetPaymentPayout(ctx context.Context, request operations.GetPa
 
 }
 
-// GetPaymentRefund - Retrieve a refund
-func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, opts ...operations.Option) (*operations.GetPaymentRefundResponse, error) {
+// GetPaymentRefund2 - Retrieve a refund
+func (s *Payment) GetPaymentRefund2(ctx context.Context, request operations.GetPaymentRefund2Request, opts ...operations.Option) (*operations.GetPaymentRefund2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentRefund",
+		OperationID:      "getPaymentRefund2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPa
 		}
 	}
 
-	res := &operations.GetPaymentRefundResponse{
+	res := &operations.GetPaymentRefund2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Payment) GetPaymentRefund(ctx context.Context, request operations.GetPa
 
 }
 
-// GetPaymentSubscription - Retrieve a subscription
-func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations.GetPaymentSubscriptionRequest, opts ...operations.Option) (*operations.GetPaymentSubscriptionResponse, error) {
+// GetPaymentSubscription2 - Retrieve a subscription
+func (s *Payment) GetPaymentSubscription2(ctx context.Context, request operations.GetPaymentSubscription2Request, opts ...operations.Option) (*operations.GetPaymentSubscription2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentSubscription",
+		OperationID:      "getPaymentSubscription2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetPaymentSubscriptionResponse{
+	res := &operations.GetPaymentSubscription2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Payment) GetPaymentSubscription(ctx context.Context, request operations
 
 }
 
-// ListPaymentLinks - List all links
-func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest, opts ...operations.Option) (*operations.ListPaymentLinksResponse, error) {
+// ListPaymentLinks2 - List all links
+func (s *Payment) ListPaymentLinks2(ctx context.Context, request operations.ListPaymentLinks2Request, opts ...operations.Option) (*operations.ListPaymentLinks2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListP
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentLinks",
+		OperationID:      "listPaymentLinks2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListP
 		}
 	}
 
-	res := &operations.ListPaymentLinksResponse{
+	res := &operations.ListPaymentLinks2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Payment) ListPaymentLinks(ctx context.Context, request operations.ListP
 
 }
 
-// ListPaymentPayments - List all payments
-func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.ListPaymentPaymentsRequest, opts ...operations.Option) (*operations.ListPaymentPaymentsResponse, error) {
+// ListPaymentPayments2 - List all payments
+func (s *Payment) ListPaymentPayments2(ctx context.Context, request operations.ListPaymentPayments2Request, opts ...operations.Option) (*operations.ListPaymentPayments2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentPayments",
+		OperationID:      "listPaymentPayments2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2069,7 +2069,7 @@ func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListPaymentPaymentsResponse{
+	res := &operations.ListPaymentPayments2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2121,8 +2121,8 @@ func (s *Payment) ListPaymentPayments(ctx context.Context, request operations.Li
 
 }
 
-// ListPaymentPayouts - List all payouts
-func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.ListPaymentPayoutsRequest, opts ...operations.Option) (*operations.ListPaymentPayoutsResponse, error) {
+// ListPaymentPayouts2 - List all payouts
+func (s *Payment) ListPaymentPayouts2(ctx context.Context, request operations.ListPaymentPayouts2Request, opts ...operations.Option) (*operations.ListPaymentPayouts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2151,7 +2151,7 @@ func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentPayouts",
+		OperationID:      "listPaymentPayouts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2276,7 +2276,7 @@ func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListPaymentPayoutsResponse{
+	res := &operations.ListPaymentPayouts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2328,8 +2328,8 @@ func (s *Payment) ListPaymentPayouts(ctx context.Context, request operations.Lis
 
 }
 
-// ListPaymentRefunds - List all refunds
-func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.ListPaymentRefundsRequest, opts ...operations.Option) (*operations.ListPaymentRefundsResponse, error) {
+// ListPaymentRefunds2 - List all refunds
+func (s *Payment) ListPaymentRefunds2(ctx context.Context, request operations.ListPaymentRefunds2Request, opts ...operations.Option) (*operations.ListPaymentRefunds2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2358,7 +2358,7 @@ func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentRefunds",
+		OperationID:      "listPaymentRefunds2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2483,7 +2483,7 @@ func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListPaymentRefundsResponse{
+	res := &operations.ListPaymentRefunds2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2535,8 +2535,8 @@ func (s *Payment) ListPaymentRefunds(ctx context.Context, request operations.Lis
 
 }
 
-// ListPaymentSubscriptions - List all subscriptions
-func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operations.ListPaymentSubscriptionsRequest, opts ...operations.Option) (*operations.ListPaymentSubscriptionsResponse, error) {
+// ListPaymentSubscriptions2 - List all subscriptions
+func (s *Payment) ListPaymentSubscriptions2(ctx context.Context, request operations.ListPaymentSubscriptions2Request, opts ...operations.Option) (*operations.ListPaymentSubscriptions2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2565,7 +2565,7 @@ func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentSubscriptions",
+		OperationID:      "listPaymentSubscriptions2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2690,7 +2690,7 @@ func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListPaymentSubscriptionsResponse{
+	res := &operations.ListPaymentSubscriptions2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2742,8 +2742,8 @@ func (s *Payment) ListPaymentSubscriptions(ctx context.Context, request operatio
 
 }
 
-// PatchPaymentLink - Update a link
-func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest, opts ...operations.Option) (*operations.PatchPaymentLinkResponse, error) {
+// PatchPaymentLink2 - Update a link
+func (s *Payment) PatchPaymentLink2(ctx context.Context, request operations.PatchPaymentLink2Request, opts ...operations.Option) (*operations.PatchPaymentLink2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2772,7 +2772,7 @@ func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPaymentLink",
+		OperationID:      "patchPaymentLink2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -2904,7 +2904,7 @@ func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchPaymentLinkResponse{
+	res := &operations.PatchPaymentLink2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2956,8 +2956,8 @@ func (s *Payment) PatchPaymentLink(ctx context.Context, request operations.Patch
 
 }
 
-// PatchPaymentPayment - Update a payment
-func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.PatchPaymentPaymentRequest, opts ...operations.Option) (*operations.PatchPaymentPaymentResponse, error) {
+// PatchPaymentPayment2 - Update a payment
+func (s *Payment) PatchPaymentPayment2(ctx context.Context, request operations.PatchPaymentPayment2Request, opts ...operations.Option) (*operations.PatchPaymentPayment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2986,7 +2986,7 @@ func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.Pa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPaymentPayment",
+		OperationID:      "patchPaymentPayment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentPayment", "json", `request:"mediaType=application/json"`)
@@ -3118,7 +3118,7 @@ func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.Pa
 		}
 	}
 
-	res := &operations.PatchPaymentPaymentResponse{
+	res := &operations.PatchPaymentPayment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3170,8 +3170,8 @@ func (s *Payment) PatchPaymentPayment(ctx context.Context, request operations.Pa
 
 }
 
-// PatchPaymentSubscription - Update a subscription
-func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operations.PatchPaymentSubscriptionRequest, opts ...operations.Option) (*operations.PatchPaymentSubscriptionResponse, error) {
+// PatchPaymentSubscription2 - Update a subscription
+func (s *Payment) PatchPaymentSubscription2(ctx context.Context, request operations.PatchPaymentSubscription2Request, opts ...operations.Option) (*operations.PatchPaymentSubscription2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3200,7 +3200,7 @@ func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPaymentSubscription",
+		OperationID:      "patchPaymentSubscription2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
@@ -3332,7 +3332,7 @@ func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchPaymentSubscriptionResponse{
+	res := &operations.PatchPaymentSubscription2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3384,8 +3384,8 @@ func (s *Payment) PatchPaymentSubscription(ctx context.Context, request operatio
 
 }
 
-// RemovePaymentLink - Remove a link
-func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest, opts ...operations.Option) (*operations.RemovePaymentLinkResponse, error) {
+// RemovePaymentLink2 - Remove a link
+func (s *Payment) RemovePaymentLink2(ctx context.Context, request operations.RemovePaymentLink2Request, opts ...operations.Option) (*operations.RemovePaymentLink2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3414,7 +3414,7 @@ func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removePaymentLink",
+		OperationID:      "removePaymentLink2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3535,7 +3535,7 @@ func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemovePaymentLinkResponse{
+	res := &operations.RemovePaymentLink2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3566,8 +3566,8 @@ func (s *Payment) RemovePaymentLink(ctx context.Context, request operations.Remo
 
 }
 
-// RemovePaymentPayment - Remove a payment
-func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.RemovePaymentPaymentRequest, opts ...operations.Option) (*operations.RemovePaymentPaymentResponse, error) {
+// RemovePaymentPayment2 - Remove a payment
+func (s *Payment) RemovePaymentPayment2(ctx context.Context, request operations.RemovePaymentPayment2Request, opts ...operations.Option) (*operations.RemovePaymentPayment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3596,7 +3596,7 @@ func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removePaymentPayment",
+		OperationID:      "removePaymentPayment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3717,7 +3717,7 @@ func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.R
 		}
 	}
 
-	res := &operations.RemovePaymentPaymentResponse{
+	res := &operations.RemovePaymentPayment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3748,8 +3748,8 @@ func (s *Payment) RemovePaymentPayment(ctx context.Context, request operations.R
 
 }
 
-// RemovePaymentSubscription - Remove a subscription
-func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operations.RemovePaymentSubscriptionRequest, opts ...operations.Option) (*operations.RemovePaymentSubscriptionResponse, error) {
+// RemovePaymentSubscription2 - Remove a subscription
+func (s *Payment) RemovePaymentSubscription2(ctx context.Context, request operations.RemovePaymentSubscription2Request, opts ...operations.Option) (*operations.RemovePaymentSubscription2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3778,7 +3778,7 @@ func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removePaymentSubscription",
+		OperationID:      "removePaymentSubscription2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3899,7 +3899,7 @@ func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemovePaymentSubscriptionResponse{
+	res := &operations.RemovePaymentSubscription2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3930,8 +3930,8 @@ func (s *Payment) RemovePaymentSubscription(ctx context.Context, request operati
 
 }
 
-// UpdatePaymentLink - Update a link
-func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest, opts ...operations.Option) (*operations.UpdatePaymentLinkResponse, error) {
+// UpdatePaymentLink2 - Update a link
+func (s *Payment) UpdatePaymentLink2(ctx context.Context, request operations.UpdatePaymentLink2Request, opts ...operations.Option) (*operations.UpdatePaymentLink2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3960,7 +3960,7 @@ func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePaymentLink",
+		OperationID:      "updatePaymentLink2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -4092,7 +4092,7 @@ func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdatePaymentLinkResponse{
+	res := &operations.UpdatePaymentLink2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4144,8 +4144,8 @@ func (s *Payment) UpdatePaymentLink(ctx context.Context, request operations.Upda
 
 }
 
-// UpdatePaymentPayment - Update a payment
-func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.UpdatePaymentPaymentRequest, opts ...operations.Option) (*operations.UpdatePaymentPaymentResponse, error) {
+// UpdatePaymentPayment2 - Update a payment
+func (s *Payment) UpdatePaymentPayment2(ctx context.Context, request operations.UpdatePaymentPayment2Request, opts ...operations.Option) (*operations.UpdatePaymentPayment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4174,7 +4174,7 @@ func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.U
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePaymentPayment",
+		OperationID:      "updatePaymentPayment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentPayment", "json", `request:"mediaType=application/json"`)
@@ -4306,7 +4306,7 @@ func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.U
 		}
 	}
 
-	res := &operations.UpdatePaymentPaymentResponse{
+	res := &operations.UpdatePaymentPayment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4358,8 +4358,8 @@ func (s *Payment) UpdatePaymentPayment(ctx context.Context, request operations.U
 
 }
 
-// UpdatePaymentSubscription - Update a subscription
-func (s *Payment) UpdatePaymentSubscription(ctx context.Context, request operations.UpdatePaymentSubscriptionRequest, opts ...operations.Option) (*operations.UpdatePaymentSubscriptionResponse, error) {
+// UpdatePaymentSubscription2 - Update a subscription
+func (s *Payment) UpdatePaymentSubscription2(ctx context.Context, request operations.UpdatePaymentSubscription2Request, opts ...operations.Option) (*operations.UpdatePaymentSubscription2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4388,7 +4388,7 @@ func (s *Payment) UpdatePaymentSubscription(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePaymentSubscription",
+		OperationID:      "updatePaymentSubscription2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentSubscription", "json", `request:"mediaType=application/json"`)
@@ -4520,7 +4520,7 @@ func (s *Payment) UpdatePaymentSubscription(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdatePaymentSubscriptionResponse{
+	res := &operations.UpdatePaymentSubscription2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

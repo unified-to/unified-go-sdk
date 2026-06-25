@@ -30,8 +30,8 @@ func newReservation(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateCommerceReservation - Create a reservation
-func (s *Reservation) CreateCommerceReservation(ctx context.Context, request operations.CreateCommerceReservationRequest, opts ...operations.Option) (*operations.CreateCommerceReservationResponse, error) {
+// CreateCommerceReservation2 - Create a reservation
+func (s *Reservation) CreateCommerceReservation2(ctx context.Context, request operations.CreateCommerceReservation2Request, opts ...operations.Option) (*operations.CreateCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Reservation) CreateCommerceReservation(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceReservation",
+		OperationID:      "createCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Reservation) CreateCommerceReservation(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.CreateCommerceReservationResponse{
+	res := &operations.CreateCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Reservation) CreateCommerceReservation(ctx context.Context, request ope
 
 }
 
-// GetCommerceReservation - Retrieve a reservation
-func (s *Reservation) GetCommerceReservation(ctx context.Context, request operations.GetCommerceReservationRequest, opts ...operations.Option) (*operations.GetCommerceReservationResponse, error) {
+// GetCommerceReservation2 - Retrieve a reservation
+func (s *Reservation) GetCommerceReservation2(ctx context.Context, request operations.GetCommerceReservation2Request, opts ...operations.Option) (*operations.GetCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Reservation) GetCommerceReservation(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceReservation",
+		OperationID:      "getCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Reservation) GetCommerceReservation(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.GetCommerceReservationResponse{
+	res := &operations.GetCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Reservation) GetCommerceReservation(ctx context.Context, request operat
 
 }
 
-// ListCommerceReservations - List all reservations
-func (s *Reservation) ListCommerceReservations(ctx context.Context, request operations.ListCommerceReservationsRequest, opts ...operations.Option) (*operations.ListCommerceReservationsResponse, error) {
+// ListCommerceReservations2 - List all reservations
+func (s *Reservation) ListCommerceReservations2(ctx context.Context, request operations.ListCommerceReservations2Request, opts ...operations.Option) (*operations.ListCommerceReservations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Reservation) ListCommerceReservations(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceReservations",
+		OperationID:      "listCommerceReservations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Reservation) ListCommerceReservations(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.ListCommerceReservationsResponse{
+	res := &operations.ListCommerceReservations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Reservation) ListCommerceReservations(ctx context.Context, request oper
 
 }
 
-// PatchCommerceReservation - Update a reservation
-func (s *Reservation) PatchCommerceReservation(ctx context.Context, request operations.PatchCommerceReservationRequest, opts ...operations.Option) (*operations.PatchCommerceReservationResponse, error) {
+// PatchCommerceReservation2 - Update a reservation
+func (s *Reservation) PatchCommerceReservation2(ctx context.Context, request operations.PatchCommerceReservation2Request, opts ...operations.Option) (*operations.PatchCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Reservation) PatchCommerceReservation(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceReservation",
+		OperationID:      "patchCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Reservation) PatchCommerceReservation(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.PatchCommerceReservationResponse{
+	res := &operations.PatchCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Reservation) PatchCommerceReservation(ctx context.Context, request oper
 
 }
 
-// RemoveCommerceReservation - Remove a reservation
-func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request operations.RemoveCommerceReservationRequest, opts ...operations.Option) (*operations.RemoveCommerceReservationResponse, error) {
+// RemoveCommerceReservation2 - Remove a reservation
+func (s *Reservation) RemoveCommerceReservation2(ctx context.Context, request operations.RemoveCommerceReservation2Request, opts ...operations.Option) (*operations.RemoveCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceReservation",
+		OperationID:      "removeCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.RemoveCommerceReservationResponse{
+	res := &operations.RemoveCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Reservation) RemoveCommerceReservation(ctx context.Context, request ope
 
 }
 
-// UpdateCommerceReservation - Update a reservation
-func (s *Reservation) UpdateCommerceReservation(ctx context.Context, request operations.UpdateCommerceReservationRequest, opts ...operations.Option) (*operations.UpdateCommerceReservationResponse, error) {
+// UpdateCommerceReservation2 - Update a reservation
+func (s *Reservation) UpdateCommerceReservation2(ctx context.Context, request operations.UpdateCommerceReservation2Request, opts ...operations.Option) (*operations.UpdateCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Reservation) UpdateCommerceReservation(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceReservation",
+		OperationID:      "updateCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Reservation) UpdateCommerceReservation(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.UpdateCommerceReservationResponse{
+	res := &operations.UpdateCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

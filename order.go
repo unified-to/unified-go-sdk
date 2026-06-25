@@ -30,8 +30,8 @@ func newOrder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateAccountingOrder - Create an order
-func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.CreateAccountingOrderRequest, opts ...operations.Option) (*operations.CreateAccountingOrderResponse, error) {
+// CreateAccountingOrder2 - Create an order
+func (s *Order) CreateAccountingOrder2(ctx context.Context, request operations.CreateAccountingOrder2Request, opts ...operations.Option) (*operations.CreateAccountingOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingOrder",
+		OperationID:      "createAccountingOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateAccountingOrderResponse{
+	res := &operations.CreateAccountingOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Order) CreateAccountingOrder(ctx context.Context, request operations.Cr
 
 }
 
-// GetAccountingOrder - Retrieve an order
-func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAccountingOrderRequest, opts ...operations.Option) (*operations.GetAccountingOrderResponse, error) {
+// GetAccountingOrder2 - Retrieve an order
+func (s *Order) GetAccountingOrder2(ctx context.Context, request operations.GetAccountingOrder2Request, opts ...operations.Option) (*operations.GetAccountingOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingOrder",
+		OperationID:      "getAccountingOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 		}
 	}
 
-	res := &operations.GetAccountingOrderResponse{
+	res := &operations.GetAccountingOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Order) GetAccountingOrder(ctx context.Context, request operations.GetAc
 
 }
 
-// ListAccountingOrders - List all orders
-func (s *Order) ListAccountingOrders(ctx context.Context, request operations.ListAccountingOrdersRequest, opts ...operations.Option) (*operations.ListAccountingOrdersResponse, error) {
+// ListAccountingOrders2 - List all orders
+func (s *Order) ListAccountingOrders2(ctx context.Context, request operations.ListAccountingOrders2Request, opts ...operations.Option) (*operations.ListAccountingOrders2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingOrders",
+		OperationID:      "listAccountingOrders2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListAccountingOrdersResponse{
+	res := &operations.ListAccountingOrders2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Order) ListAccountingOrders(ctx context.Context, request operations.Lis
 
 }
 
-// PatchAccountingOrder - Update an order
-func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.PatchAccountingOrderRequest, opts ...operations.Option) (*operations.PatchAccountingOrderResponse, error) {
+// PatchAccountingOrder2 - Update an order
+func (s *Order) PatchAccountingOrder2(ctx context.Context, request operations.PatchAccountingOrder2Request, opts ...operations.Option) (*operations.PatchAccountingOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingOrder",
+		OperationID:      "patchAccountingOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchAccountingOrderResponse{
+	res := &operations.PatchAccountingOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Order) PatchAccountingOrder(ctx context.Context, request operations.Pat
 
 }
 
-// PatchAssessmentOrder - Update an order
-func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.PatchAssessmentOrderRequest, opts ...operations.Option) (*operations.PatchAssessmentOrderResponse, error) {
+// PatchAssessmentOrder2 - Update an order
+func (s *Order) PatchAssessmentOrder2(ctx context.Context, request operations.PatchAssessmentOrder2Request, opts ...operations.Option) (*operations.PatchAssessmentOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAssessmentOrder",
+		OperationID:      "patchAssessmentOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AssessmentOrder", "json", `request:"mediaType=application/json"`)
@@ -1034,7 +1034,7 @@ func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchAssessmentOrderResponse{
+	res := &operations.PatchAssessmentOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Order) PatchAssessmentOrder(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveAccountingOrder - Remove an order
-func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.RemoveAccountingOrderRequest, opts ...operations.Option) (*operations.RemoveAccountingOrderResponse, error) {
+// RemoveAccountingOrder2 - Remove an order
+func (s *Order) RemoveAccountingOrder2(ctx context.Context, request operations.RemoveAccountingOrder2Request, opts ...operations.Option) (*operations.RemoveAccountingOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingOrder",
+		OperationID:      "removeAccountingOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1237,7 +1237,7 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveAccountingOrderResponse{
+	res := &operations.RemoveAccountingOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1268,8 +1268,8 @@ func (s *Order) RemoveAccountingOrder(ctx context.Context, request operations.Re
 
 }
 
-// UpdateAccountingOrder - Update an order
-func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.UpdateAccountingOrderRequest, opts ...operations.Option) (*operations.UpdateAccountingOrderResponse, error) {
+// UpdateAccountingOrder2 - Update an order
+func (s *Order) UpdateAccountingOrder2(ctx context.Context, request operations.UpdateAccountingOrder2Request, opts ...operations.Option) (*operations.UpdateAccountingOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1298,7 +1298,7 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingOrder",
+		OperationID:      "updateAccountingOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -1430,7 +1430,7 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateAccountingOrderResponse{
+	res := &operations.UpdateAccountingOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1482,8 +1482,8 @@ func (s *Order) UpdateAccountingOrder(ctx context.Context, request operations.Up
 
 }
 
-// UpdateAssessmentOrder - Update an order
-func (s *Order) UpdateAssessmentOrder(ctx context.Context, request operations.UpdateAssessmentOrderRequest, opts ...operations.Option) (*operations.UpdateAssessmentOrderResponse, error) {
+// UpdateAssessmentOrder2 - Update an order
+func (s *Order) UpdateAssessmentOrder2(ctx context.Context, request operations.UpdateAssessmentOrder2Request, opts ...operations.Option) (*operations.UpdateAssessmentOrder2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1512,7 +1512,7 @@ func (s *Order) UpdateAssessmentOrder(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAssessmentOrder",
+		OperationID:      "updateAssessmentOrder2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AssessmentOrder", "json", `request:"mediaType=application/json"`)
@@ -1644,7 +1644,7 @@ func (s *Order) UpdateAssessmentOrder(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateAssessmentOrderResponse{
+	res := &operations.UpdateAssessmentOrder2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

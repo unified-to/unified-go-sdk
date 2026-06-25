@@ -42,8 +42,10 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesCalendar`     | calendar                                   |
 | `PropertyConnectionCategoriesVerification` | verification                               |
 | `PropertyConnectionCategoriesAds`          | ads                                        |
+| `PropertyConnectionCategoriesAnalytics`    | analytics                                  |
 | `PropertyConnectionCategoriesForms`        | forms                                      |
 | `PropertyConnectionCategoriesShipping`     | shipping                                   |
 | `PropertyConnectionCategoriesAssessment`   | assessment                                 |
 | `PropertyConnectionCategoriesSigning`      | signing                                    |
 | `PropertyConnectionCategoriesClubs`        | clubs                                      |
+| `PropertyConnectionCategoriesDatastore`    | datastore                                  |

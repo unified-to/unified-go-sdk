@@ -30,8 +30,8 @@ func newOrganization(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// CreateAdsOrganization - Create an organization
-func (s *Organization) CreateAdsOrganization(ctx context.Context, request operations.CreateAdsOrganizationRequest, opts ...operations.Option) (*operations.CreateAdsOrganizationResponse, error) {
+// CreateAdsOrganization2 - Create an organization
+func (s *Organization) CreateAdsOrganization2(ctx context.Context, request operations.CreateAdsOrganization2Request, opts ...operations.Option) (*operations.CreateAdsOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Organization) CreateAdsOrganization(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsOrganization",
+		OperationID:      "createAdsOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Organization) CreateAdsOrganization(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateAdsOrganizationResponse{
+	res := &operations.CreateAdsOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Organization) CreateAdsOrganization(ctx context.Context, request operat
 
 }
 
-// CreateRepoOrganization - Create an organization
-func (s *Organization) CreateRepoOrganization(ctx context.Context, request operations.CreateRepoOrganizationRequest, opts ...operations.Option) (*operations.CreateRepoOrganizationResponse, error) {
+// CreateRepoOrganization2 - Create an organization
+func (s *Organization) CreateRepoOrganization2(ctx context.Context, request operations.CreateRepoOrganization2Request, opts ...operations.Option) (*operations.CreateRepoOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Organization) CreateRepoOrganization(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createRepoOrganization",
+		OperationID:      "createRepoOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Organization) CreateRepoOrganization(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateRepoOrganizationResponse{
+	res := &operations.CreateRepoOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Organization) CreateRepoOrganization(ctx context.Context, request opera
 
 }
 
-// GetAccountingOrganization - Retrieve an organization
-func (s *Organization) GetAccountingOrganization(ctx context.Context, request operations.GetAccountingOrganizationRequest, opts ...operations.Option) (*operations.GetAccountingOrganizationResponse, error) {
+// GetAccountingOrganization2 - Retrieve an organization
+func (s *Organization) GetAccountingOrganization2(ctx context.Context, request operations.GetAccountingOrganization2Request, opts ...operations.Option) (*operations.GetAccountingOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Organization) GetAccountingOrganization(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingOrganization",
+		OperationID:      "getAccountingOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Organization) GetAccountingOrganization(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.GetAccountingOrganizationResponse{
+	res := &operations.GetAccountingOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Organization) GetAccountingOrganization(ctx context.Context, request op
 
 }
 
-// GetAdsOrganization - Retrieve an organization
-func (s *Organization) GetAdsOrganization(ctx context.Context, request operations.GetAdsOrganizationRequest, opts ...operations.Option) (*operations.GetAdsOrganizationResponse, error) {
+// GetAdsOrganization2 - Retrieve an organization
+func (s *Organization) GetAdsOrganization2(ctx context.Context, request operations.GetAdsOrganization2Request, opts ...operations.Option) (*operations.GetAdsOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Organization) GetAdsOrganization(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsOrganization",
+		OperationID:      "getAdsOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Organization) GetAdsOrganization(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetAdsOrganizationResponse{
+	res := &operations.GetAdsOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Organization) GetAdsOrganization(ctx context.Context, request operation
 
 }
 
-// GetRepoOrganization - Retrieve an organization
-func (s *Organization) GetRepoOrganization(ctx context.Context, request operations.GetRepoOrganizationRequest, opts ...operations.Option) (*operations.GetRepoOrganizationResponse, error) {
+// GetRepoOrganization2 - Retrieve an organization
+func (s *Organization) GetRepoOrganization2(ctx context.Context, request operations.GetRepoOrganization2Request, opts ...operations.Option) (*operations.GetRepoOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Organization) GetRepoOrganization(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getRepoOrganization",
+		OperationID:      "getRepoOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Organization) GetRepoOrganization(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetRepoOrganizationResponse{
+	res := &operations.GetRepoOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Organization) GetRepoOrganization(ctx context.Context, request operatio
 
 }
 
-// ListAccountingOrganizations - List all organizations
-func (s *Organization) ListAccountingOrganizations(ctx context.Context, request operations.ListAccountingOrganizationsRequest, opts ...operations.Option) (*operations.ListAccountingOrganizationsResponse, error) {
+// ListAccountingOrganizations2 - List all organizations
+func (s *Organization) ListAccountingOrganizations2(ctx context.Context, request operations.ListAccountingOrganizations2Request, opts ...operations.Option) (*operations.ListAccountingOrganizations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Organization) ListAccountingOrganizations(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingOrganizations",
+		OperationID:      "listAccountingOrganizations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Organization) ListAccountingOrganizations(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.ListAccountingOrganizationsResponse{
+	res := &operations.ListAccountingOrganizations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Organization) ListAccountingOrganizations(ctx context.Context, request 
 
 }
 
-// ListAdsOrganizations - List all organizations
-func (s *Organization) ListAdsOrganizations(ctx context.Context, request operations.ListAdsOrganizationsRequest, opts ...operations.Option) (*operations.ListAdsOrganizationsResponse, error) {
+// ListAdsOrganizations2 - List all organizations
+func (s *Organization) ListAdsOrganizations2(ctx context.Context, request operations.ListAdsOrganizations2Request, opts ...operations.Option) (*operations.ListAdsOrganizations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Organization) ListAdsOrganizations(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsOrganizations",
+		OperationID:      "listAdsOrganizations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1441,7 +1441,7 @@ func (s *Organization) ListAdsOrganizations(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListAdsOrganizationsResponse{
+	res := &operations.ListAdsOrganizations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1493,8 +1493,8 @@ func (s *Organization) ListAdsOrganizations(ctx context.Context, request operati
 
 }
 
-// ListRepoOrganizations - List all organizations
-func (s *Organization) ListRepoOrganizations(ctx context.Context, request operations.ListRepoOrganizationsRequest, opts ...operations.Option) (*operations.ListRepoOrganizationsResponse, error) {
+// ListRepoOrganizations2 - List all organizations
+func (s *Organization) ListRepoOrganizations2(ctx context.Context, request operations.ListRepoOrganizations2Request, opts ...operations.Option) (*operations.ListRepoOrganizations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1523,7 +1523,7 @@ func (s *Organization) ListRepoOrganizations(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listRepoOrganizations",
+		OperationID:      "listRepoOrganizations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1648,7 +1648,7 @@ func (s *Organization) ListRepoOrganizations(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListRepoOrganizationsResponse{
+	res := &operations.ListRepoOrganizations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1700,8 +1700,8 @@ func (s *Organization) ListRepoOrganizations(ctx context.Context, request operat
 
 }
 
-// PatchAdsOrganization - Update an organization
-func (s *Organization) PatchAdsOrganization(ctx context.Context, request operations.PatchAdsOrganizationRequest, opts ...operations.Option) (*operations.PatchAdsOrganizationResponse, error) {
+// PatchAdsOrganization2 - Update an organization
+func (s *Organization) PatchAdsOrganization2(ctx context.Context, request operations.PatchAdsOrganization2Request, opts ...operations.Option) (*operations.PatchAdsOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1730,7 +1730,7 @@ func (s *Organization) PatchAdsOrganization(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsOrganization",
+		OperationID:      "patchAdsOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -1862,7 +1862,7 @@ func (s *Organization) PatchAdsOrganization(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchAdsOrganizationResponse{
+	res := &operations.PatchAdsOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Organization) PatchAdsOrganization(ctx context.Context, request operati
 
 }
 
-// PatchRepoOrganization - Update an organization
-func (s *Organization) PatchRepoOrganization(ctx context.Context, request operations.PatchRepoOrganizationRequest, opts ...operations.Option) (*operations.PatchRepoOrganizationResponse, error) {
+// PatchRepoOrganization2 - Update an organization
+func (s *Organization) PatchRepoOrganization2(ctx context.Context, request operations.PatchRepoOrganization2Request, opts ...operations.Option) (*operations.PatchRepoOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Organization) PatchRepoOrganization(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchRepoOrganization",
+		OperationID:      "patchRepoOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
@@ -2076,7 +2076,7 @@ func (s *Organization) PatchRepoOrganization(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchRepoOrganizationResponse{
+	res := &operations.PatchRepoOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Organization) PatchRepoOrganization(ctx context.Context, request operat
 
 }
 
-// RemoveAdsOrganization - Remove an organization
-func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operations.RemoveAdsOrganizationRequest, opts ...operations.Option) (*operations.RemoveAdsOrganizationResponse, error) {
+// RemoveAdsOrganization2 - Remove an organization
+func (s *Organization) RemoveAdsOrganization2(ctx context.Context, request operations.RemoveAdsOrganization2Request, opts ...operations.Option) (*operations.RemoveAdsOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsOrganization",
+		OperationID:      "removeAdsOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2279,7 +2279,7 @@ func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveAdsOrganizationResponse{
+	res := &operations.RemoveAdsOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2310,8 +2310,8 @@ func (s *Organization) RemoveAdsOrganization(ctx context.Context, request operat
 
 }
 
-// RemoveRepoOrganization - Remove an organization
-func (s *Organization) RemoveRepoOrganization(ctx context.Context, request operations.RemoveRepoOrganizationRequest, opts ...operations.Option) (*operations.RemoveRepoOrganizationResponse, error) {
+// RemoveRepoOrganization2 - Remove an organization
+func (s *Organization) RemoveRepoOrganization2(ctx context.Context, request operations.RemoveRepoOrganization2Request, opts ...operations.Option) (*operations.RemoveRepoOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2340,7 +2340,7 @@ func (s *Organization) RemoveRepoOrganization(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeRepoOrganization",
+		OperationID:      "removeRepoOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2461,7 +2461,7 @@ func (s *Organization) RemoveRepoOrganization(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveRepoOrganizationResponse{
+	res := &operations.RemoveRepoOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2492,8 +2492,8 @@ func (s *Organization) RemoveRepoOrganization(ctx context.Context, request opera
 
 }
 
-// UpdateAdsOrganization - Update an organization
-func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operations.UpdateAdsOrganizationRequest, opts ...operations.Option) (*operations.UpdateAdsOrganizationResponse, error) {
+// UpdateAdsOrganization2 - Update an organization
+func (s *Organization) UpdateAdsOrganization2(ctx context.Context, request operations.UpdateAdsOrganization2Request, opts ...operations.Option) (*operations.UpdateAdsOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2522,7 +2522,7 @@ func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsOrganization",
+		OperationID:      "updateAdsOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -2654,7 +2654,7 @@ func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateAdsOrganizationResponse{
+	res := &operations.UpdateAdsOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2706,8 +2706,8 @@ func (s *Organization) UpdateAdsOrganization(ctx context.Context, request operat
 
 }
 
-// UpdateRepoOrganization - Update an organization
-func (s *Organization) UpdateRepoOrganization(ctx context.Context, request operations.UpdateRepoOrganizationRequest, opts ...operations.Option) (*operations.UpdateRepoOrganizationResponse, error) {
+// UpdateRepoOrganization2 - Update an organization
+func (s *Organization) UpdateRepoOrganization2(ctx context.Context, request operations.UpdateRepoOrganization2Request, opts ...operations.Option) (*operations.UpdateRepoOrganization2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2736,7 +2736,7 @@ func (s *Organization) UpdateRepoOrganization(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateRepoOrganization",
+		OperationID:      "updateRepoOrganization2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoOrganization", "json", `request:"mediaType=application/json"`)
@@ -2868,7 +2868,7 @@ func (s *Organization) UpdateRepoOrganization(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateRepoOrganizationResponse{
+	res := &operations.UpdateRepoOrganization2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

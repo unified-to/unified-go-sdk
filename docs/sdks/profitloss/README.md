@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
-* [ListAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
+* [GetAccountingProfitloss2](#getaccountingprofitloss2) - Retrieve a profitloss
+* [ListAccountingProfitlosses2](#listaccountingprofitlosses2) - List all profitlosses
 
-## GetAccountingProfitloss
+## GetAccountingProfitloss2
 
 Retrieve a profitloss
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingProfitloss" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingProfitloss2" method="get" path="/accounting/{connection_id}/profitloss/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Profitloss.GetAccountingProfitloss(ctx, operations.GetAccountingProfitlossRequest{
+    res, err := s.Profitloss.GetAccountingProfitloss2(ctx, operations.GetAccountingProfitloss2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.GetAccountingProfitlossRequest](../../pkg/models/operations/getaccountingprofitlossrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.GetAccountingProfitloss2Request](../../pkg/models/operations/getaccountingprofitloss2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.GetAccountingProfitlossResponse](../../pkg/models/operations/getaccountingprofitlossresponse.md), error**
+**[*operations.GetAccountingProfitloss2Response](../../pkg/models/operations/getaccountingprofitloss2response.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingProfitlosses
+## ListAccountingProfitlosses2
 
 List all profitlosses
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingProfitlosses" method="get" path="/accounting/{connection_id}/profitloss" -->
+<!-- UsageSnippet language="go" operationID="listAccountingProfitlosses2" method="get" path="/accounting/{connection_id}/profitloss" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Profitloss.ListAccountingProfitlosses(ctx, operations.ListAccountingProfitlossesRequest{
+    res, err := s.Profitloss.ListAccountingProfitlosses2(ctx, operations.ListAccountingProfitlosses2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.ListAccountingProfitlossesRequest](../../pkg/models/operations/listaccountingprofitlossesrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.ListAccountingProfitlosses2Request](../../pkg/models/operations/listaccountingprofitlosses2request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
 
 ### Response
 
-**[*operations.ListAccountingProfitlossesResponse](../../pkg/models/operations/listaccountingprofitlossesresponse.md), error**
+**[*operations.ListAccountingProfitlosses2Response](../../pkg/models/operations/listaccountingprofitlosses2response.md), error**
 
 ### Errors
 

@@ -415,112 +415,112 @@ func (u AtsMetadata5) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type AtsMetadata5: all fields are null")
 }
 
-type ValueType string
+type AtsMetadataValueType string
 
 const (
-	ValueTypeMapOfAny            ValueType = "mapOfAny"
-	ValueTypeStr                 ValueType = "str"
-	ValueTypeNumber              ValueType = "number"
-	ValueTypeBoolean             ValueType = "boolean"
-	ValueTypeArrayOfAtsMetadata5 ValueType = "arrayOfAtsMetadata5"
+	AtsMetadataValueTypeMapOfAny            AtsMetadataValueType = "mapOfAny"
+	AtsMetadataValueTypeStr                 AtsMetadataValueType = "str"
+	AtsMetadataValueTypeNumber              AtsMetadataValueType = "number"
+	AtsMetadataValueTypeBoolean             AtsMetadataValueType = "boolean"
+	AtsMetadataValueTypeArrayOfAtsMetadata5 AtsMetadataValueType = "arrayOfAtsMetadata5"
 )
 
-type Value struct {
+type AtsMetadataValue struct {
 	MapOfAny            map[string]any `queryParam:"inline" union:"member"`
 	Str                 *string        `queryParam:"inline" union:"member"`
 	Number              *float64       `queryParam:"inline" union:"member"`
 	Boolean             *bool          `queryParam:"inline" union:"member"`
 	ArrayOfAtsMetadata5 []AtsMetadata5 `queryParam:"inline" union:"member"`
 
-	Type ValueType
+	Type AtsMetadataValueType
 }
 
-func CreateValueMapOfAny(mapOfAny map[string]any) Value {
-	typ := ValueTypeMapOfAny
+func CreateAtsMetadataValueMapOfAny(mapOfAny map[string]any) AtsMetadataValue {
+	typ := AtsMetadataValueTypeMapOfAny
 
-	return Value{
+	return AtsMetadataValue{
 		MapOfAny: mapOfAny,
 		Type:     typ,
 	}
 }
 
-func CreateValueStr(str string) Value {
-	typ := ValueTypeStr
+func CreateAtsMetadataValueStr(str string) AtsMetadataValue {
+	typ := AtsMetadataValueTypeStr
 
-	return Value{
+	return AtsMetadataValue{
 		Str:  &str,
 		Type: typ,
 	}
 }
 
-func CreateValueNumber(number float64) Value {
-	typ := ValueTypeNumber
+func CreateAtsMetadataValueNumber(number float64) AtsMetadataValue {
+	typ := AtsMetadataValueTypeNumber
 
-	return Value{
+	return AtsMetadataValue{
 		Number: &number,
 		Type:   typ,
 	}
 }
 
-func CreateValueBoolean(boolean bool) Value {
-	typ := ValueTypeBoolean
+func CreateAtsMetadataValueBoolean(boolean bool) AtsMetadataValue {
+	typ := AtsMetadataValueTypeBoolean
 
-	return Value{
+	return AtsMetadataValue{
 		Boolean: &boolean,
 		Type:    typ,
 	}
 }
 
-func CreateValueArrayOfAtsMetadata5(arrayOfAtsMetadata5 []AtsMetadata5) Value {
-	typ := ValueTypeArrayOfAtsMetadata5
+func CreateAtsMetadataValueArrayOfAtsMetadata5(arrayOfAtsMetadata5 []AtsMetadata5) AtsMetadataValue {
+	typ := AtsMetadataValueTypeArrayOfAtsMetadata5
 
-	return Value{
+	return AtsMetadataValue{
 		ArrayOfAtsMetadata5: arrayOfAtsMetadata5,
 		Type:                typ,
 	}
 }
 
-func (u *Value) UnmarshalJSON(data []byte) error {
+func (u *AtsMetadataValue) UnmarshalJSON(data []byte) error {
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
 		u.MapOfAny = mapOfAny
-		u.Type = ValueTypeMapOfAny
+		u.Type = AtsMetadataValueTypeMapOfAny
 		return nil
 	}
 
 	var str string = ""
 	if err := utils.UnmarshalJSON(data, &str, "", true, nil); err == nil {
 		u.Str = &str
-		u.Type = ValueTypeStr
+		u.Type = AtsMetadataValueTypeStr
 		return nil
 	}
 
 	var number float64 = float64(0)
 	if err := utils.UnmarshalJSON(data, &number, "", true, nil); err == nil {
 		u.Number = &number
-		u.Type = ValueTypeNumber
+		u.Type = AtsMetadataValueTypeNumber
 		return nil
 	}
 
 	var boolean bool = false
 	if err := utils.UnmarshalJSON(data, &boolean, "", true, nil); err == nil {
 		u.Boolean = &boolean
-		u.Type = ValueTypeBoolean
+		u.Type = AtsMetadataValueTypeBoolean
 		return nil
 	}
 
 	var arrayOfAtsMetadata5 []AtsMetadata5 = []AtsMetadata5{}
 	if err := utils.UnmarshalJSON(data, &arrayOfAtsMetadata5, "", true, nil); err == nil {
 		u.ArrayOfAtsMetadata5 = arrayOfAtsMetadata5
-		u.Type = ValueTypeArrayOfAtsMetadata5
+		u.Type = AtsMetadataValueTypeArrayOfAtsMetadata5
 		return nil
 	}
 
-	return fmt.Errorf("could not unmarshal `%s` into any supported union types for Value", string(data))
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for AtsMetadataValue", string(data))
 }
 
-func (u Value) MarshalJSON() ([]byte, error) {
+func (u AtsMetadataValue) MarshalJSON() ([]byte, error) {
 	if u.MapOfAny != nil {
 		return utils.MarshalJSON(u.MapOfAny, "", true)
 	}
@@ -541,16 +541,16 @@ func (u Value) MarshalJSON() ([]byte, error) {
 		return utils.MarshalJSON(u.ArrayOfAtsMetadata5, "", true)
 	}
 
-	return nil, errors.New("could not marshal union type Value: all fields are null")
+	return nil, errors.New("could not marshal union type AtsMetadataValue: all fields are null")
 }
 
 type AtsMetadata struct {
-	ExtraData *ExtraData `json:"extra_data,omitempty"`
-	Format    *Format    `json:"format,omitempty"`
-	ID        *string    `json:"id,omitempty"`
-	Namespace *string    `json:"namespace,omitempty"`
-	Slug      *string    `json:"slug,omitempty"`
-	Value     *Value     `json:"value,omitempty"`
+	ExtraData *ExtraData        `json:"extra_data,omitempty"`
+	Format    *Format           `json:"format,omitempty"`
+	ID        *string           `json:"id,omitempty"`
+	Namespace *string           `json:"namespace,omitempty"`
+	Slug      *string           `json:"slug,omitempty"`
+	Value     *AtsMetadataValue `json:"value,omitempty"`
 }
 
 func (a *AtsMetadata) GetExtraData() *ExtraData {
@@ -588,7 +588,7 @@ func (a *AtsMetadata) GetSlug() *string {
 	return a.Slug
 }
 
-func (a *AtsMetadata) GetValue() *Value {
+func (a *AtsMetadata) GetValue() *AtsMetadataValue {
 	if a == nil {
 		return nil
 	}

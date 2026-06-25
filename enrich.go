@@ -30,8 +30,8 @@ func newEnrich(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// ListEnrichCompanies - Retrieve enrichment information for a company
-func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest, opts ...operations.Option) (*operations.ListEnrichCompaniesResponse, error) {
+// ListEnrichCompanies2 - Retrieve enrichment information for a company
+func (s *Enrich) ListEnrichCompanies2(ctx context.Context, request operations.ListEnrichCompanies2Request, opts ...operations.Option) (*operations.ListEnrichCompanies2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listEnrichCompanies",
+		OperationID:      "listEnrichCompanies2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListEnrichCompaniesResponse{
+	res := &operations.ListEnrichCompanies2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Enrich) ListEnrichCompanies(ctx context.Context, request operations.Lis
 
 }
 
-// ListEnrichPeople - Retrieve enrichment information for a person
-func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest, opts ...operations.Option) (*operations.ListEnrichPeopleResponse, error) {
+// ListEnrichPeople2 - Retrieve enrichment information for a person
+func (s *Enrich) ListEnrichPeople2(ctx context.Context, request operations.ListEnrichPeople2Request, opts ...operations.Option) (*operations.ListEnrichPeople2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEn
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listEnrichPeople",
+		OperationID:      "listEnrichPeople2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Enrich) ListEnrichPeople(ctx context.Context, request operations.ListEn
 		}
 	}
 
-	res := &operations.ListEnrichPeopleResponse{
+	res := &operations.ListEnrichPeople2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

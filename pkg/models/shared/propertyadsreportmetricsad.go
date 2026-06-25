@@ -47,10 +47,10 @@ const (
 	PropertyAdsReportMetricsAdStatusActive               PropertyAdsReportMetricsAdStatus = "ACTIVE"
 	PropertyAdsReportMetricsAdStatusPaused               PropertyAdsReportMetricsAdStatus = "PAUSED"
 	PropertyAdsReportMetricsAdStatusArchived             PropertyAdsReportMetricsAdStatus = "ARCHIVED"
-	PropertyAdsReportMetricsAdStatusProcessing           PropertyAdsReportMetricsAdStatus = "PROCESSING"
-	PropertyAdsReportMetricsAdStatusProcessingFailed     PropertyAdsReportMetricsAdStatus = "PROCESSING_FAILED"
 	PropertyAdsReportMetricsAdStatusDraft                PropertyAdsReportMetricsAdStatus = "DRAFT"
 	PropertyAdsReportMetricsAdStatusScheduledForDeletion PropertyAdsReportMetricsAdStatus = "SCHEDULED_FOR_DELETION"
+	PropertyAdsReportMetricsAdStatusProcessing           PropertyAdsReportMetricsAdStatus = "PROCESSING"
+	PropertyAdsReportMetricsAdStatusProcessingFailed     PropertyAdsReportMetricsAdStatus = "PROCESSING_FAILED"
 )
 
 func (e PropertyAdsReportMetricsAdStatus) ToPointer() *PropertyAdsReportMetricsAdStatus {
@@ -61,7 +61,7 @@ func (e PropertyAdsReportMetricsAdStatus) ToPointer() *PropertyAdsReportMetricsA
 func (e *PropertyAdsReportMetricsAdStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "PROCESSING", "PROCESSING_FAILED", "DRAFT", "SCHEDULED_FOR_DELETION":
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION", "PROCESSING", "PROCESSING_FAILED":
 			return true
 		}
 	}

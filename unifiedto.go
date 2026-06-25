@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.893.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.912.1
 
 import (
 	"context"
@@ -85,6 +85,11 @@ type UnifiedTo struct {
 	Insertionorder    *Insertionorder
 	Promoted          *Promoted
 	Target            *Target
+	Analytics         *Analytics
+	Event             *Event
+	Property          *Property
+	Session           *Session
+	Visitor           *Visitor
 	Assessment        *Assessment
 	Package           *Package
 	Ats               *Ats
@@ -99,7 +104,6 @@ type UnifiedTo struct {
 	Scorecard         *Scorecard
 	Calendar          *Calendar
 	Busy              *Busy
-	Event             *Event
 	Link              *Link
 	Recording         *Recording
 	Webinar           *Webinar
@@ -119,6 +123,11 @@ type UnifiedTo struct {
 	Deal              *Deal
 	Lead              *Lead
 	Pipeline          *Pipeline
+	Datastore         *Datastore
+	Database          *Database
+	Query             *Query
+	Record            *Record
+	Table             *Table
 	Enrich            *Enrich
 	Person            *Person
 	Forms             *Forms
@@ -272,9 +281,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.81",
+		SDKVersion: "0.36.82",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.81 2.893.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.82 2.912.1 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -323,6 +332,11 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Promoted = newPromoted(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Target = newTarget(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Event = newEvent(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Property = newProperty(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Session = newSession(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Visitor = newVisitor(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Assessment = newAssessment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Package = newPackage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ats = newAts(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -337,7 +351,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Scorecard = newScorecard(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Calendar = newCalendar(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Busy = newBusy(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Event = newEvent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webinar = newWebinar(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -357,6 +370,11 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Pipeline = newPipeline(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Datastore = newDatastore(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Database = newDatabase(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Query = newQuery(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Record = newRecord(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Table = newTable(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Enrich = newEnrich(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Person = newPerson(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Forms = newForms(sdk, sdk.sdkConfiguration, sdk.hooks)

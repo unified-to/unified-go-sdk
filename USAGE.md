@@ -17,7 +17,7 @@ func main() {
 		unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
+	res, err := s.Accounting.CreateAccountingAccount2(ctx, operations.CreateAccountingAccount2Request{
 		AccountingAccount: shared.AccountingAccount{},
 		ConnectionID:      "<id>",
 	})

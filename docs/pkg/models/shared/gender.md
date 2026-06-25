@@ -16,7 +16,10 @@ custom := shared.Gender("custom_value")
 
 ## Values
 
-| Name           | Value          |
-| -------------- | -------------- |
-| `GenderMale`   | MALE           |
-| `GenderFemale` | FEMALE         |
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `GenderMale`      | MALE              |
+| `GenderFemale`    | FEMALE            |
+| `GenderIntersex`  | INTERSEX          |
+| `GenderTrans`     | TRANS             |
+| `GenderNonBinary` | NON_BINARY        |

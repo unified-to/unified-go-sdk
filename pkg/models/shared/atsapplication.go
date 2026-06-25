@@ -42,23 +42,24 @@ func (e *AtsApplicationStatus) IsExact() bool {
 }
 
 type AtsApplication struct {
-	Answers        []AtsApplicationAnswer `json:"answers,omitempty"`
-	AppliedAt      *time.Time             `json:"applied_at,omitempty"`
-	CandidateID    *string                `json:"candidate_id,omitempty"`
-	CreatedAt      *time.Time             `json:"created_at,omitempty"`
-	HiredAt        *time.Time             `json:"hired_at,omitempty"`
-	ID             *string                `json:"id,omitempty"`
-	JobID          *string                `json:"job_id,omitempty"`
-	Metadata       []AtsMetadata          `json:"metadata,omitempty"`
-	Offers         []AtsOffer             `json:"offers,omitempty"`
-	OriginalStatus *string                `json:"original_status,omitempty"`
-	Raw            map[string]any         `json:"raw,omitempty"`
-	RejectedAt     *time.Time             `json:"rejected_at,omitempty"`
-	RejectedReason *string                `json:"rejected_reason,omitempty"`
-	Source         *string                `json:"source,omitempty"`
-	Status         *AtsApplicationStatus  `json:"status,omitempty"`
-	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
-	UserID         *string                `json:"user_id,omitempty"`
+	Answers           []AtsApplicationAnswer `json:"answers,omitempty"`
+	AppliedAt         *time.Time             `json:"applied_at,omitempty"`
+	CandidateID       *string                `json:"candidate_id,omitempty"`
+	CreatedAt         *time.Time             `json:"created_at,omitempty"`
+	HiredAt           *time.Time             `json:"hired_at,omitempty"`
+	ID                *string                `json:"id,omitempty"`
+	JobID             *string                `json:"job_id,omitempty"`
+	Metadata          []AtsMetadata          `json:"metadata,omitempty"`
+	Offers            []AtsOffer             `json:"offers,omitempty"`
+	OriginalStatus    *string                `json:"original_status,omitempty"`
+	OriginalSubstatus *string                `json:"original_substatus,omitempty"`
+	Raw               map[string]any         `json:"raw,omitempty"`
+	RejectedAt        *time.Time             `json:"rejected_at,omitempty"`
+	RejectedReason    *string                `json:"rejected_reason,omitempty"`
+	Source            *string                `json:"source,omitempty"`
+	Status            *AtsApplicationStatus  `json:"status,omitempty"`
+	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
+	UserID            *string                `json:"user_id,omitempty"`
 }
 
 func (a AtsApplication) MarshalJSON() ([]byte, error) {
@@ -140,6 +141,13 @@ func (a *AtsApplication) GetOriginalStatus() *string {
 		return nil
 	}
 	return a.OriginalStatus
+}
+
+func (a *AtsApplication) GetOriginalSubstatus() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OriginalSubstatus
 }
 
 func (a *AtsApplication) GetRaw() map[string]any {

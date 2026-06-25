@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [CreateShippingRate](#createshippingrate) - Create a rate
+* [CreateShippingRate2](#createshippingrate2) - Create a rate
 
-## CreateShippingRate
+## CreateShippingRate2
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="go" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Rate.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
+    res, err := s.Rate.CreateShippingRate2(ctx, operations.CreateShippingRate2Request{
         ShippingRate: shared.ShippingRate{},
         ConnectionID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateShippingRateRequest](../../pkg/models/operations/createshippingraterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateShippingRate2Request](../../pkg/models/operations/createshippingrate2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.CreateShippingRateResponse](../../pkg/models/operations/createshippingrateresponse.md), error**
+**[*operations.CreateShippingRate2Response](../../pkg/models/operations/createshippingrate2response.md), error**
 
 ### Errors
 

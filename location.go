@@ -30,8 +30,8 @@ func newLocation(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateCommerceLocation - Create a location
-func (s *Location) CreateCommerceLocation(ctx context.Context, request operations.CreateCommerceLocationRequest, opts ...operations.Option) (*operations.CreateCommerceLocationResponse, error) {
+// CreateCommerceLocation2 - Create a location
+func (s *Location) CreateCommerceLocation2(ctx context.Context, request operations.CreateCommerceLocation2Request, opts ...operations.Option) (*operations.CreateCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceLocation",
+		OperationID:      "createCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateCommerceLocationResponse{
+	res := &operations.CreateCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Location) CreateCommerceLocation(ctx context.Context, request operation
 
 }
 
-// CreateHrisLocation - Create a location
-func (s *Location) CreateHrisLocation(ctx context.Context, request operations.CreateHrisLocationRequest, opts ...operations.Option) (*operations.CreateHrisLocationResponse, error) {
+// CreateHrisLocation2 - Create a location
+func (s *Location) CreateHrisLocation2(ctx context.Context, request operations.CreateHrisLocation2Request, opts ...operations.Option) (*operations.CreateHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisLocation",
+		OperationID:      "createHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateHrisLocationResponse{
+	res := &operations.CreateHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Location) CreateHrisLocation(ctx context.Context, request operations.Cr
 
 }
 
-// GetClubsLocation - Retrieve a location
-func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetClubsLocationRequest, opts ...operations.Option) (*operations.GetClubsLocationResponse, error) {
+// GetClubsLocation2 - Retrieve a location
+func (s *Location) GetClubsLocation2(ctx context.Context, request operations.GetClubsLocation2Request, opts ...operations.Option) (*operations.GetClubsLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsLocation",
+		OperationID:      "getClubsLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetC
 		}
 	}
 
-	res := &operations.GetClubsLocationResponse{
+	res := &operations.GetClubsLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Location) GetClubsLocation(ctx context.Context, request operations.GetC
 
 }
 
-// GetCommerceLocation - Retrieve a location
-func (s *Location) GetCommerceLocation(ctx context.Context, request operations.GetCommerceLocationRequest, opts ...operations.Option) (*operations.GetCommerceLocationResponse, error) {
+// GetCommerceLocation2 - Retrieve a location
+func (s *Location) GetCommerceLocation2(ctx context.Context, request operations.GetCommerceLocation2Request, opts ...operations.Option) (*operations.GetCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceLocation",
+		OperationID:      "getCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetCommerceLocationResponse{
+	res := &operations.GetCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Location) GetCommerceLocation(ctx context.Context, request operations.G
 
 }
 
-// GetHrisLocation - Retrieve a location
-func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHrisLocationRequest, opts ...operations.Option) (*operations.GetHrisLocationResponse, error) {
+// GetHrisLocation2 - Retrieve a location
+func (s *Location) GetHrisLocation2(ctx context.Context, request operations.GetHrisLocation2Request, opts ...operations.Option) (*operations.GetHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisLocation",
+		OperationID:      "getHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 		}
 	}
 
-	res := &operations.GetHrisLocationResponse{
+	res := &operations.GetHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Location) GetHrisLocation(ctx context.Context, request operations.GetHr
 
 }
 
-// ListClubsLocations - List all locations
-func (s *Location) ListClubsLocations(ctx context.Context, request operations.ListClubsLocationsRequest, opts ...operations.Option) (*operations.ListClubsLocationsResponse, error) {
+// ListClubsLocations2 - List all locations
+func (s *Location) ListClubsLocations2(ctx context.Context, request operations.ListClubsLocations2Request, opts ...operations.Option) (*operations.ListClubsLocations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Location) ListClubsLocations(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsLocations",
+		OperationID:      "listClubsLocations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Location) ListClubsLocations(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListClubsLocationsResponse{
+	res := &operations.ListClubsLocations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Location) ListClubsLocations(ctx context.Context, request operations.Li
 
 }
 
-// ListCommerceLocations - List all locations
-func (s *Location) ListCommerceLocations(ctx context.Context, request operations.ListCommerceLocationsRequest, opts ...operations.Option) (*operations.ListCommerceLocationsResponse, error) {
+// ListCommerceLocations2 - List all locations
+func (s *Location) ListCommerceLocations2(ctx context.Context, request operations.ListCommerceLocations2Request, opts ...operations.Option) (*operations.ListCommerceLocations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceLocations",
+		OperationID:      "listCommerceLocations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1441,7 +1441,7 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListCommerceLocationsResponse{
+	res := &operations.ListCommerceLocations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1493,8 +1493,8 @@ func (s *Location) ListCommerceLocations(ctx context.Context, request operations
 
 }
 
-// ListHrisLocations - List all locations
-func (s *Location) ListHrisLocations(ctx context.Context, request operations.ListHrisLocationsRequest, opts ...operations.Option) (*operations.ListHrisLocationsResponse, error) {
+// ListHrisLocations2 - List all locations
+func (s *Location) ListHrisLocations2(ctx context.Context, request operations.ListHrisLocations2Request, opts ...operations.Option) (*operations.ListHrisLocations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1523,7 +1523,7 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisLocations",
+		OperationID:      "listHrisLocations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1648,7 +1648,7 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListHrisLocationsResponse{
+	res := &operations.ListHrisLocations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1700,8 +1700,8 @@ func (s *Location) ListHrisLocations(ctx context.Context, request operations.Lis
 
 }
 
-// PatchCommerceLocation - Update a location
-func (s *Location) PatchCommerceLocation(ctx context.Context, request operations.PatchCommerceLocationRequest, opts ...operations.Option) (*operations.PatchCommerceLocationResponse, error) {
+// PatchCommerceLocation2 - Update a location
+func (s *Location) PatchCommerceLocation2(ctx context.Context, request operations.PatchCommerceLocation2Request, opts ...operations.Option) (*operations.PatchCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1730,7 +1730,7 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceLocation",
+		OperationID:      "patchCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -1862,7 +1862,7 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchCommerceLocationResponse{
+	res := &operations.PatchCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Location) PatchCommerceLocation(ctx context.Context, request operations
 
 }
 
-// PatchHrisLocation - Update a location
-func (s *Location) PatchHrisLocation(ctx context.Context, request operations.PatchHrisLocationRequest, opts ...operations.Option) (*operations.PatchHrisLocationResponse, error) {
+// PatchHrisLocation2 - Update a location
+func (s *Location) PatchHrisLocation2(ctx context.Context, request operations.PatchHrisLocation2Request, opts ...operations.Option) (*operations.PatchHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisLocation",
+		OperationID:      "patchHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -2076,7 +2076,7 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchHrisLocationResponse{
+	res := &operations.PatchHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Location) PatchHrisLocation(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveCommerceLocation - Remove a location
-func (s *Location) RemoveCommerceLocation(ctx context.Context, request operations.RemoveCommerceLocationRequest, opts ...operations.Option) (*operations.RemoveCommerceLocationResponse, error) {
+// RemoveCommerceLocation2 - Remove a location
+func (s *Location) RemoveCommerceLocation2(ctx context.Context, request operations.RemoveCommerceLocation2Request, opts ...operations.Option) (*operations.RemoveCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceLocation",
+		OperationID:      "removeCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2279,7 +2279,7 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveCommerceLocationResponse{
+	res := &operations.RemoveCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2310,8 +2310,8 @@ func (s *Location) RemoveCommerceLocation(ctx context.Context, request operation
 
 }
 
-// RemoveHrisLocation - Remove a location
-func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.RemoveHrisLocationRequest, opts ...operations.Option) (*operations.RemoveHrisLocationResponse, error) {
+// RemoveHrisLocation2 - Remove a location
+func (s *Location) RemoveHrisLocation2(ctx context.Context, request operations.RemoveHrisLocation2Request, opts ...operations.Option) (*operations.RemoveHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2340,7 +2340,7 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisLocation",
+		OperationID:      "removeHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2461,7 +2461,7 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveHrisLocationResponse{
+	res := &operations.RemoveHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2492,8 +2492,8 @@ func (s *Location) RemoveHrisLocation(ctx context.Context, request operations.Re
 
 }
 
-// UpdateCommerceLocation - Update a location
-func (s *Location) UpdateCommerceLocation(ctx context.Context, request operations.UpdateCommerceLocationRequest, opts ...operations.Option) (*operations.UpdateCommerceLocationResponse, error) {
+// UpdateCommerceLocation2 - Update a location
+func (s *Location) UpdateCommerceLocation2(ctx context.Context, request operations.UpdateCommerceLocation2Request, opts ...operations.Option) (*operations.UpdateCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2522,7 +2522,7 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceLocation",
+		OperationID:      "updateCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -2654,7 +2654,7 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateCommerceLocationResponse{
+	res := &operations.UpdateCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2706,8 +2706,8 @@ func (s *Location) UpdateCommerceLocation(ctx context.Context, request operation
 
 }
 
-// UpdateHrisLocation - Update a location
-func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.UpdateHrisLocationRequest, opts ...operations.Option) (*operations.UpdateHrisLocationResponse, error) {
+// UpdateHrisLocation2 - Update a location
+func (s *Location) UpdateHrisLocation2(ctx context.Context, request operations.UpdateHrisLocation2Request, opts ...operations.Option) (*operations.UpdateHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2736,7 +2736,7 @@ func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisLocation",
+		OperationID:      "updateHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -2868,7 +2868,7 @@ func (s *Location) UpdateHrisLocation(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateHrisLocationResponse{
+	res := &operations.UpdateHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

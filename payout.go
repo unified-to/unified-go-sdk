@@ -30,8 +30,8 @@ func newPayout(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// GetPaymentPayout - Retrieve a payout
-func (s *Payout) GetPaymentPayout(ctx context.Context, request operations.GetPaymentPayoutRequest, opts ...operations.Option) (*operations.GetPaymentPayoutResponse, error) {
+// GetPaymentPayout2 - Retrieve a payout
+func (s *Payout) GetPaymentPayout2(ctx context.Context, request operations.GetPaymentPayout2Request, opts ...operations.Option) (*operations.GetPaymentPayout2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Payout) GetPaymentPayout(ctx context.Context, request operations.GetPay
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentPayout",
+		OperationID:      "getPaymentPayout2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Payout) GetPaymentPayout(ctx context.Context, request operations.GetPay
 		}
 	}
 
-	res := &operations.GetPaymentPayoutResponse{
+	res := &operations.GetPaymentPayout2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Payout) GetPaymentPayout(ctx context.Context, request operations.GetPay
 
 }
 
-// ListPaymentPayouts - List all payouts
-func (s *Payout) ListPaymentPayouts(ctx context.Context, request operations.ListPaymentPayoutsRequest, opts ...operations.Option) (*operations.ListPaymentPayoutsResponse, error) {
+// ListPaymentPayouts2 - List all payouts
+func (s *Payout) ListPaymentPayouts2(ctx context.Context, request operations.ListPaymentPayouts2Request, opts ...operations.Option) (*operations.ListPaymentPayouts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Payout) ListPaymentPayouts(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentPayouts",
+		OperationID:      "listPaymentPayouts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Payout) ListPaymentPayouts(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListPaymentPayoutsResponse{
+	res := &operations.ListPaymentPayouts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

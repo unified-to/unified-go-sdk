@@ -30,8 +30,8 @@ func newAccount(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAccountingAccount - Create an account
-func (s *Account) CreateAccountingAccount(ctx context.Context, request operations.CreateAccountingAccountRequest, opts ...operations.Option) (*operations.CreateAccountingAccountResponse, error) {
+// CreateAccountingAccount2 - Create an account
+func (s *Account) CreateAccountingAccount2(ctx context.Context, request operations.CreateAccountingAccount2Request, opts ...operations.Option) (*operations.CreateAccountingAccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingAccount",
+		OperationID:      "createAccountingAccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateAccountingAccountResponse{
+	res := &operations.CreateAccountingAccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Account) CreateAccountingAccount(ctx context.Context, request operation
 
 }
 
-// GetAccountingAccount - Retrieve an account
-func (s *Account) GetAccountingAccount(ctx context.Context, request operations.GetAccountingAccountRequest, opts ...operations.Option) (*operations.GetAccountingAccountResponse, error) {
+// GetAccountingAccount2 - Retrieve an account
+func (s *Account) GetAccountingAccount2(ctx context.Context, request operations.GetAccountingAccount2Request, opts ...operations.Option) (*operations.GetAccountingAccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingAccount",
+		OperationID:      "getAccountingAccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetAccountingAccountResponse{
+	res := &operations.GetAccountingAccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Account) GetAccountingAccount(ctx context.Context, request operations.G
 
 }
 
-// ListAccountingAccounts - List all accounts
-func (s *Account) ListAccountingAccounts(ctx context.Context, request operations.ListAccountingAccountsRequest, opts ...operations.Option) (*operations.ListAccountingAccountsResponse, error) {
+// ListAccountingAccounts2 - List all accounts
+func (s *Account) ListAccountingAccounts2(ctx context.Context, request operations.ListAccountingAccounts2Request, opts ...operations.Option) (*operations.ListAccountingAccounts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingAccounts",
+		OperationID:      "listAccountingAccounts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListAccountingAccountsResponse{
+	res := &operations.ListAccountingAccounts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Account) ListAccountingAccounts(ctx context.Context, request operations
 
 }
 
-// PatchAccountingAccount - Update an account
-func (s *Account) PatchAccountingAccount(ctx context.Context, request operations.PatchAccountingAccountRequest, opts ...operations.Option) (*operations.PatchAccountingAccountResponse, error) {
+// PatchAccountingAccount2 - Update an account
+func (s *Account) PatchAccountingAccount2(ctx context.Context, request operations.PatchAccountingAccount2Request, opts ...operations.Option) (*operations.PatchAccountingAccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingAccount",
+		OperationID:      "patchAccountingAccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchAccountingAccountResponse{
+	res := &operations.PatchAccountingAccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Account) PatchAccountingAccount(ctx context.Context, request operations
 
 }
 
-// RemoveAccountingAccount - Remove an account
-func (s *Account) RemoveAccountingAccount(ctx context.Context, request operations.RemoveAccountingAccountRequest, opts ...operations.Option) (*operations.RemoveAccountingAccountResponse, error) {
+// RemoveAccountingAccount2 - Remove an account
+func (s *Account) RemoveAccountingAccount2(ctx context.Context, request operations.RemoveAccountingAccount2Request, opts ...operations.Option) (*operations.RemoveAccountingAccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingAccount",
+		OperationID:      "removeAccountingAccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveAccountingAccountResponse{
+	res := &operations.RemoveAccountingAccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Account) RemoveAccountingAccount(ctx context.Context, request operation
 
 }
 
-// UpdateAccountingAccount - Update an account
-func (s *Account) UpdateAccountingAccount(ctx context.Context, request operations.UpdateAccountingAccountRequest, opts ...operations.Option) (*operations.UpdateAccountingAccountResponse, error) {
+// UpdateAccountingAccount2 - Update an account
+func (s *Account) UpdateAccountingAccount2(ctx context.Context, request operations.UpdateAccountingAccount2Request, opts ...operations.Option) (*operations.UpdateAccountingAccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Account) UpdateAccountingAccount(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingAccount",
+		OperationID:      "updateAccountingAccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Account) UpdateAccountingAccount(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateAccountingAccountResponse{
+	res := &operations.UpdateAccountingAccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

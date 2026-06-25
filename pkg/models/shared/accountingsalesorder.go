@@ -42,6 +42,7 @@ type AccountingSalesorder struct {
 	ContactID       *string                                      `json:"contact_id,omitempty"`
 	CreatedAt       *time.Time                                   `json:"created_at,omitempty"`
 	Currency        *string                                      `json:"currency,omitempty"`
+	Fees            []AccountingFee                              `json:"fees,omitempty"`
 	ID              *string                                      `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                         `json:"lineitems,omitempty"`
 	OrganizationID  *string                                      `json:"organization_id,omitempty"`
@@ -98,6 +99,13 @@ func (a *AccountingSalesorder) GetCurrency() *string {
 		return nil
 	}
 	return a.Currency
+}
+
+func (a *AccountingSalesorder) GetFees() []AccountingFee {
+	if a == nil {
+		return nil
+	}
+	return a.Fees
 }
 
 func (a *AccountingSalesorder) GetID() *string {

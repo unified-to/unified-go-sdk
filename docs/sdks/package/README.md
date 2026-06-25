@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [CreateAssessmentPackage](#createassessmentpackage) - Create an assessment package
-* [GetAssessmentPackage](#getassessmentpackage) - Get an assessment package
-* [GetVerificationPackage](#getverificationpackage) - Retrieve a package
-* [ListAssessmentPackages](#listassessmentpackages) - List assessment packages
-* [ListVerificationPackages](#listverificationpackages) - List all packages
-* [PatchAssessmentPackage](#patchassessmentpackage) - Update an assessment package
-* [RemoveAssessmentPackage](#removeassessmentpackage) - Delete an assessment package
-* [UpdateAssessmentPackage](#updateassessmentpackage) - Update an assessment package
+* [CreateAssessmentPackage2](#createassessmentpackage2) - Create an assessment package
+* [GetAssessmentPackage2](#getassessmentpackage2) - Get an assessment package
+* [GetVerificationPackage2](#getverificationpackage2) - Retrieve a package
+* [ListAssessmentPackages2](#listassessmentpackages2) - List assessment packages
+* [ListVerificationPackages2](#listverificationpackages2) - List all packages
+* [PatchAssessmentPackage2](#patchassessmentpackage2) - Update an assessment package
+* [RemoveAssessmentPackage2](#removeassessmentpackage2) - Delete an assessment package
+* [UpdateAssessmentPackage2](#updateassessmentpackage2) - Update an assessment package
 
-## CreateAssessmentPackage
+## CreateAssessmentPackage2
 
 Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="go" operationID="createAssessmentPackage2" method="post" path="/assessment/{connection_id}/package" -->
 ```go
 package main
 
@@ -38,9 +38,9 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.CreateAssessmentPackage(ctx, operations.CreateAssessmentPackageRequest{
+    res, err := s.Package.CreateAssessmentPackage2(ctx, operations.CreateAssessmentPackage2Request{
         AssessmentPackage: shared.AssessmentPackage{
-            Type: shared.AssessmentPackageTypeReferenceCheck,
+            Type: shared.AssessmentPackageTypeVideoInterview,
         },
         ConnectionID: "<id>",
     })
@@ -55,15 +55,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAssessmentPackageRequest](../../pkg/models/operations/createassessmentpackagerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAssessmentPackage2Request](../../pkg/models/operations/createassessmentpackage2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.CreateAssessmentPackageResponse](../../pkg/models/operations/createassessmentpackageresponse.md), error**
+**[*operations.CreateAssessmentPackage2Response](../../pkg/models/operations/createassessmentpackage2response.md), error**
 
 ### Errors
 
@@ -71,13 +71,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAssessmentPackage
+## GetAssessmentPackage2
 
 Get an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAssessmentPackage" method="get" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAssessmentPackage2" method="get" path="/assessment/{connection_id}/package/{id}" -->
 ```go
 package main
 
@@ -95,7 +95,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.GetAssessmentPackage(ctx, operations.GetAssessmentPackageRequest{
+    res, err := s.Package.GetAssessmentPackage2(ctx, operations.GetAssessmentPackage2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -110,15 +110,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAssessmentPackageRequest](../../pkg/models/operations/getassessmentpackagerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAssessmentPackage2Request](../../pkg/models/operations/getassessmentpackage2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.GetAssessmentPackageResponse](../../pkg/models/operations/getassessmentpackageresponse.md), error**
+**[*operations.GetAssessmentPackage2Response](../../pkg/models/operations/getassessmentpackage2response.md), error**
 
 ### Errors
 
@@ -126,13 +126,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetVerificationPackage
+## GetVerificationPackage2
 
 Retrieve a package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getVerificationPackage" method="get" path="/verification/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="getVerificationPackage2" method="get" path="/verification/{connection_id}/package/{id}" -->
 ```go
 package main
 
@@ -150,7 +150,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.GetVerificationPackage(ctx, operations.GetVerificationPackageRequest{
+    res, err := s.Package.GetVerificationPackage2(ctx, operations.GetVerificationPackage2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -165,15 +165,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.GetVerificationPackageRequest](../../pkg/models/operations/getverificationpackagerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.GetVerificationPackage2Request](../../pkg/models/operations/getverificationpackage2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.GetVerificationPackageResponse](../../pkg/models/operations/getverificationpackageresponse.md), error**
+**[*operations.GetVerificationPackage2Response](../../pkg/models/operations/getverificationpackage2response.md), error**
 
 ### Errors
 
@@ -181,13 +181,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAssessmentPackages
+## ListAssessmentPackages2
 
 List assessment packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAssessmentPackages" method="get" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="go" operationID="listAssessmentPackages2" method="get" path="/assessment/{connection_id}/package" -->
 ```go
 package main
 
@@ -205,7 +205,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.ListAssessmentPackages(ctx, operations.ListAssessmentPackagesRequest{
+    res, err := s.Package.ListAssessmentPackages2(ctx, operations.ListAssessmentPackages2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -219,15 +219,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAssessmentPackagesRequest](../../pkg/models/operations/listassessmentpackagesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListAssessmentPackages2Request](../../pkg/models/operations/listassessmentpackages2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.ListAssessmentPackagesResponse](../../pkg/models/operations/listassessmentpackagesresponse.md), error**
+**[*operations.ListAssessmentPackages2Response](../../pkg/models/operations/listassessmentpackages2response.md), error**
 
 ### Errors
 
@@ -235,13 +235,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListVerificationPackages
+## ListVerificationPackages2
 
 List all packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listVerificationPackages" method="get" path="/verification/{connection_id}/package" -->
+<!-- UsageSnippet language="go" operationID="listVerificationPackages2" method="get" path="/verification/{connection_id}/package" -->
 ```go
 package main
 
@@ -259,7 +259,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.ListVerificationPackages(ctx, operations.ListVerificationPackagesRequest{
+    res, err := s.Package.ListVerificationPackages2(ctx, operations.ListVerificationPackages2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -273,15 +273,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.ListVerificationPackagesRequest](../../pkg/models/operations/listverificationpackagesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.ListVerificationPackages2Request](../../pkg/models/operations/listverificationpackages2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.ListVerificationPackagesResponse](../../pkg/models/operations/listverificationpackagesresponse.md), error**
+**[*operations.ListVerificationPackages2Response](../../pkg/models/operations/listverificationpackages2response.md), error**
 
 ### Errors
 
@@ -289,13 +289,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAssessmentPackage
+## PatchAssessmentPackage2
 
 Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAssessmentPackage2" method="patch" path="/assessment/{connection_id}/package/{id}" -->
 ```go
 package main
 
@@ -314,121 +314,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Package.PatchAssessmentPackage(ctx, operations.PatchAssessmentPackageRequest{
-        AssessmentPackage: shared.AssessmentPackage{
-            Type: shared.AssessmentPackageTypeBackgroundCheck,
-        },
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AssessmentPackage != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAssessmentPackageRequest](../../pkg/models/operations/patchassessmentpackagerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.PatchAssessmentPackageResponse](../../pkg/models/operations/patchassessmentpackageresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAssessmentPackage
-
-Delete an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAssessmentPackage" method="delete" path="/assessment/{connection_id}/package/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Package.RemoveAssessmentPackage(ctx, operations.RemoveAssessmentPackageRequest{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAssessmentPackageRequest](../../pkg/models/operations/removeassessmentpackagerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
-
-### Response
-
-**[*operations.RemoveAssessmentPackageResponse](../../pkg/models/operations/removeassessmentpackageresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAssessmentPackage
-
-Update an assessment package
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Package.UpdateAssessmentPackage(ctx, operations.UpdateAssessmentPackageRequest{
+    res, err := s.Package.PatchAssessmentPackage2(ctx, operations.PatchAssessmentPackage2Request{
         AssessmentPackage: shared.AssessmentPackage{
             Type: shared.AssessmentPackageTypeOther,
         },
@@ -449,12 +335,126 @@ func main() {
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAssessmentPackageRequest](../../pkg/models/operations/updateassessmentpackagerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.PatchAssessmentPackage2Request](../../pkg/models/operations/patchassessmentpackage2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 | `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.UpdateAssessmentPackageResponse](../../pkg/models/operations/updateassessmentpackageresponse.md), error**
+**[*operations.PatchAssessmentPackage2Response](../../pkg/models/operations/patchassessmentpackage2response.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAssessmentPackage2
+
+Delete an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAssessmentPackage2" method="delete" path="/assessment/{connection_id}/package/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Package.RemoveAssessmentPackage2(ctx, operations.RemoveAssessmentPackage2Request{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAssessmentPackage2Request](../../pkg/models/operations/removeassessmentpackage2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.RemoveAssessmentPackage2Response](../../pkg/models/operations/removeassessmentpackage2response.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAssessmentPackage2
+
+Update an assessment package
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAssessmentPackage2" method="put" path="/assessment/{connection_id}/package/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Package.UpdateAssessmentPackage2(ctx, operations.UpdateAssessmentPackage2Request{
+        AssessmentPackage: shared.AssessmentPackage{
+            Type: shared.AssessmentPackageTypeOther,
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AssessmentPackage != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.UpdateAssessmentPackage2Request](../../pkg/models/operations/updateassessmentpackage2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.UpdateAssessmentPackage2Response](../../pkg/models/operations/updateassessmentpackage2response.md), error**
 
 ### Errors
 

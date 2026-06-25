@@ -30,8 +30,8 @@ func newStudent(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateLmsStudent - Create a student
-func (s *Student) CreateLmsStudent(ctx context.Context, request operations.CreateLmsStudentRequest, opts ...operations.Option) (*operations.CreateLmsStudentResponse, error) {
+// CreateLmsStudent2 - Create a student
+func (s *Student) CreateLmsStudent2(ctx context.Context, request operations.CreateLmsStudent2Request, opts ...operations.Option) (*operations.CreateLmsStudent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsStudent",
+		OperationID:      "createLmsStudent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateLmsStudentResponse{
+	res := &operations.CreateLmsStudent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Student) CreateLmsStudent(ctx context.Context, request operations.Creat
 
 }
 
-// GetLmsStudent - Retrieve a student
-func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsStudentRequest, opts ...operations.Option) (*operations.GetLmsStudentResponse, error) {
+// GetLmsStudent2 - Retrieve a student
+func (s *Student) GetLmsStudent2(ctx context.Context, request operations.GetLmsStudent2Request, opts ...operations.Option) (*operations.GetLmsStudent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsStudent",
+		OperationID:      "getLmsStudent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 		}
 	}
 
-	res := &operations.GetLmsStudentResponse{
+	res := &operations.GetLmsStudent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Student) GetLmsStudent(ctx context.Context, request operations.GetLmsSt
 
 }
 
-// ListLmsStudents - List all students
-func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLmsStudentsRequest, opts ...operations.Option) (*operations.ListLmsStudentsResponse, error) {
+// ListLmsStudents2 - List all students
+func (s *Student) ListLmsStudents2(ctx context.Context, request operations.ListLmsStudents2Request, opts ...operations.Option) (*operations.ListLmsStudents2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsStudents",
+		OperationID:      "listLmsStudents2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 		}
 	}
 
-	res := &operations.ListLmsStudentsResponse{
+	res := &operations.ListLmsStudents2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Student) ListLmsStudents(ctx context.Context, request operations.ListLm
 
 }
 
-// PatchLmsStudent - Update a student
-func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchLmsStudentRequest, opts ...operations.Option) (*operations.PatchLmsStudentResponse, error) {
+// PatchLmsStudent2 - Update a student
+func (s *Student) PatchLmsStudent2(ctx context.Context, request operations.PatchLmsStudent2Request, opts ...operations.Option) (*operations.PatchLmsStudent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsStudent",
+		OperationID:      "patchLmsStudent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 		}
 	}
 
-	res := &operations.PatchLmsStudentResponse{
+	res := &operations.PatchLmsStudent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Student) PatchLmsStudent(ctx context.Context, request operations.PatchL
 
 }
 
-// RemoveLmsStudent - Remove a student
-func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.RemoveLmsStudentRequest, opts ...operations.Option) (*operations.RemoveLmsStudentResponse, error) {
+// RemoveLmsStudent2 - Remove a student
+func (s *Student) RemoveLmsStudent2(ctx context.Context, request operations.RemoveLmsStudent2Request, opts ...operations.Option) (*operations.RemoveLmsStudent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsStudent",
+		OperationID:      "removeLmsStudent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveLmsStudentResponse{
+	res := &operations.RemoveLmsStudent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Student) RemoveLmsStudent(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateLmsStudent - Update a student
-func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.UpdateLmsStudentRequest, opts ...operations.Option) (*operations.UpdateLmsStudentResponse, error) {
+// UpdateLmsStudent2 - Update a student
+func (s *Student) UpdateLmsStudent2(ctx context.Context, request operations.UpdateLmsStudent2Request, opts ...operations.Option) (*operations.UpdateLmsStudent2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsStudent",
+		OperationID:      "updateLmsStudent2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Student) UpdateLmsStudent(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateLmsStudentResponse{
+	res := &operations.UpdateLmsStudent2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

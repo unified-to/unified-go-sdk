@@ -244,6 +244,14 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAdsInsertionorderWrite`       | ads_insertionorder_write                                    |
 | `PropertyConnectionPermissionsAdsTargetRead`                | ads_target_read                                             |
 | `PropertyConnectionPermissionsAdsPromotedRead`              | ads_promoted_read                                           |
+| `PropertyConnectionPermissionsAnalyticsPropertyRead`        | analytics_property_read                                     |
+| `PropertyConnectionPermissionsAnalyticsPropertyWrite`       | analytics_property_write                                    |
+| `PropertyConnectionPermissionsAnalyticsEventRead`           | analytics_event_read                                        |
+| `PropertyConnectionPermissionsAnalyticsEventWrite`          | analytics_event_write                                       |
+| `PropertyConnectionPermissionsAnalyticsSessionRead`         | analytics_session_read                                      |
+| `PropertyConnectionPermissionsAnalyticsVisitorRead`         | analytics_visitor_read                                      |
+| `PropertyConnectionPermissionsAnalyticsVisitorWrite`        | analytics_visitor_write                                     |
+| `PropertyConnectionPermissionsAnalyticsReportRead`          | analytics_report_read                                       |
 | `PropertyConnectionPermissionsFormsFormRead`                | forms_form_read                                             |
 | `PropertyConnectionPermissionsFormsFormWrite`               | forms_form_write                                            |
 | `PropertyConnectionPermissionsFormsSubmissionRead`          | forms_submission_read                                       |
@@ -270,3 +278,11 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsClubsLocationWrite`           | clubs_location_write                                        |
 | `PropertyConnectionPermissionsClubsEventRead`               | clubs_event_read                                            |
 | `PropertyConnectionPermissionsClubsEventWrite`              | clubs_event_write                                           |
+| `PropertyConnectionPermissionsDatastoreDatabaseRead`        | datastore_database_read                                     |
+| `PropertyConnectionPermissionsDatastoreDatabaseWrite`       | datastore_database_write                                    |
+| `PropertyConnectionPermissionsDatastoreTableRead`           | datastore_table_read                                        |
+| `PropertyConnectionPermissionsDatastoreTableWrite`          | datastore_table_write                                       |
+| `PropertyConnectionPermissionsDatastoreRecordRead`          | datastore_record_read                                       |
+| `PropertyConnectionPermissionsDatastoreRecordWrite`         | datastore_record_write                                      |
+| `PropertyConnectionPermissionsDatastoreQueryRead`           | datastore_query_read                                        |
+| `PropertyConnectionPermissionsDatastoreQueryWrite`          | datastore_query_write                                       |

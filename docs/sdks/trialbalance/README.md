@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
-* [ListAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
+* [GetAccountingTrialbalance2](#getaccountingtrialbalance2) - Retrieve a trialbalance
+* [ListAccountingTrialbalances2](#listaccountingtrialbalances2) - List all trialbalances
 
-## GetAccountingTrialbalance
+## GetAccountingTrialbalance2
 
 Retrieve a trialbalance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingTrialbalance" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingTrialbalance2" method="get" path="/accounting/{connection_id}/trialbalance/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Trialbalance.GetAccountingTrialbalance(ctx, operations.GetAccountingTrialbalanceRequest{
+    res, err := s.Trialbalance.GetAccountingTrialbalance2(ctx, operations.GetAccountingTrialbalance2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.GetAccountingTrialbalanceRequest](../../pkg/models/operations/getaccountingtrialbalancerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.GetAccountingTrialbalance2Request](../../pkg/models/operations/getaccountingtrialbalance2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.GetAccountingTrialbalanceResponse](../../pkg/models/operations/getaccountingtrialbalanceresponse.md), error**
+**[*operations.GetAccountingTrialbalance2Response](../../pkg/models/operations/getaccountingtrialbalance2response.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingTrialbalances
+## ListAccountingTrialbalances2
 
 List all trialbalances
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingTrialbalances" method="get" path="/accounting/{connection_id}/trialbalance" -->
+<!-- UsageSnippet language="go" operationID="listAccountingTrialbalances2" method="get" path="/accounting/{connection_id}/trialbalance" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Trialbalance.ListAccountingTrialbalances(ctx, operations.ListAccountingTrialbalancesRequest{
+    res, err := s.Trialbalance.ListAccountingTrialbalances2(ctx, operations.ListAccountingTrialbalances2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.ListAccountingTrialbalancesRequest](../../pkg/models/operations/listaccountingtrialbalancesrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.ListAccountingTrialbalances2Request](../../pkg/models/operations/listaccountingtrialbalances2request.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `opts`                                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                                         | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
 
 ### Response
 
-**[*operations.ListAccountingTrialbalancesResponse](../../pkg/models/operations/listaccountingtrialbalancesresponse.md), error**
+**[*operations.ListAccountingTrialbalances2Response](../../pkg/models/operations/listaccountingtrialbalances2response.md), error**
 
 ### Errors
 

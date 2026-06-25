@@ -39,8 +39,10 @@ value := operations.CategoriesPassthrough
 | `CategoriesCalendar`     | calendar                 |
 | `CategoriesVerification` | verification             |
 | `CategoriesAds`          | ads                      |
+| `CategoriesAnalytics`    | analytics                |
 | `CategoriesForms`        | forms                    |
 | `CategoriesShipping`     | shipping                 |
 | `CategoriesAssessment`   | assessment               |
 | `CategoriesSigning`      | signing                  |
 | `CategoriesClubs`        | clubs                    |
+| `CategoriesDatastore`    | datastore                |

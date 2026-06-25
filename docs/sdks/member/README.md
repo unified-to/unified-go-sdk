@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [CreateMartechMember](#createmartechmember) - Create a member
-* [GetClubsMember](#getclubsmember) - Retrieve a member
-* [GetMartechMember](#getmartechmember) - Retrieve a member
-* [ListClubsMembers](#listclubsmembers) - List all members
-* [ListMartechMembers](#listmartechmembers) - List all members
-* [PatchMartechMember](#patchmartechmember) - Update a member
-* [RemoveMartechMember](#removemartechmember) - Remove a member
-* [UpdateMartechMember](#updatemartechmember) - Update a member
+* [CreateMartechMember2](#createmartechmember2) - Create a member
+* [GetClubsMember2](#getclubsmember2) - Retrieve a member
+* [GetMartechMember2](#getmartechmember2) - Retrieve a member
+* [ListClubsMembers2](#listclubsmembers2) - List all members
+* [ListMartechMembers2](#listmartechmembers2) - List all members
+* [PatchMartechMember2](#patchmartechmember2) - Update a member
+* [RemoveMartechMember2](#removemartechmember2) - Remove a member
+* [UpdateMartechMember2](#updatemartechmember2) - Update a member
 
-## CreateMartechMember
+## CreateMartechMember2
 
 Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="go" operationID="createMartechMember2" method="post" path="/martech/{connection_id}/member" -->
 ```go
 package main
 
@@ -38,7 +38,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
+    res, err := s.Member.CreateMartechMember2(ctx, operations.CreateMartechMember2Request{
         MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
     })
@@ -53,15 +53,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.CreateMartechMemberRequest](../../pkg/models/operations/createmartechmemberrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreateMartechMember2Request](../../pkg/models/operations/createmartechmember2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.CreateMartechMemberResponse](../../pkg/models/operations/createmartechmemberresponse.md), error**
+**[*operations.CreateMartechMember2Response](../../pkg/models/operations/createmartechmember2response.md), error**
 
 ### Errors
 
@@ -69,13 +69,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetClubsMember
+## GetClubsMember2
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="getClubsMember2" method="get" path="/clubs/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -93,7 +93,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.GetClubsMember(ctx, operations.GetClubsMemberRequest{
+    res, err := s.Member.GetClubsMember2(ctx, operations.GetClubsMember2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -108,15 +108,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetClubsMemberRequest](../../pkg/models/operations/getclubsmemberrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetClubsMember2Request](../../pkg/models/operations/getclubsmember2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.GetClubsMemberResponse](../../pkg/models/operations/getclubsmemberresponse.md), error**
+**[*operations.GetClubsMember2Response](../../pkg/models/operations/getclubsmember2response.md), error**
 
 ### Errors
 
@@ -124,13 +124,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetMartechMember
+## GetMartechMember2
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="getMartechMember2" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -148,7 +148,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.GetMartechMember(ctx, operations.GetMartechMemberRequest{
+    res, err := s.Member.GetMartechMember2(ctx, operations.GetMartechMember2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -163,15 +163,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetMartechMemberRequest](../../pkg/models/operations/getmartechmemberrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.GetMartechMember2Request](../../pkg/models/operations/getmartechmember2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.GetMartechMemberResponse](../../pkg/models/operations/getmartechmemberresponse.md), error**
+**[*operations.GetMartechMember2Response](../../pkg/models/operations/getmartechmember2response.md), error**
 
 ### Errors
 
@@ -179,13 +179,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListClubsMembers
+## ListClubsMembers2
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+<!-- UsageSnippet language="go" operationID="listClubsMembers2" method="get" path="/clubs/{connection_id}/member" -->
 ```go
 package main
 
@@ -203,7 +203,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.ListClubsMembers(ctx, operations.ListClubsMembersRequest{
+    res, err := s.Member.ListClubsMembers2(ctx, operations.ListClubsMembers2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListClubsMembersRequest](../../pkg/models/operations/listclubsmembersrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListClubsMembers2Request](../../pkg/models/operations/listclubsmembers2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.ListClubsMembersResponse](../../pkg/models/operations/listclubsmembersresponse.md), error**
+**[*operations.ListClubsMembers2Response](../../pkg/models/operations/listclubsmembers2response.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListMartechMembers
+## ListMartechMembers2
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="go" operationID="listMartechMembers2" method="get" path="/martech/{connection_id}/member" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.ListMartechMembers(ctx, operations.ListMartechMembersRequest{
+    res, err := s.Member.ListMartechMembers2(ctx, operations.ListMartechMembers2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -271,15 +271,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.ListMartechMembersRequest](../../pkg/models/operations/listmartechmembersrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.ListMartechMembers2Request](../../pkg/models/operations/listmartechmembers2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.ListMartechMembersResponse](../../pkg/models/operations/listmartechmembersresponse.md), error**
+**[*operations.ListMartechMembers2Response](../../pkg/models/operations/listmartechmembers2response.md), error**
 
 ### Errors
 
@@ -287,13 +287,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchMartechMember
+## PatchMartechMember2
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMartechMember2" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -312,7 +312,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
+    res, err := s.Member.PatchMartechMember2(ctx, operations.PatchMartechMember2Request{
         MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -328,15 +328,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.PatchMartechMemberRequest](../../pkg/models/operations/patchmartechmemberrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.PatchMartechMember2Request](../../pkg/models/operations/patchmartechmember2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.PatchMartechMemberResponse](../../pkg/models/operations/patchmartechmemberresponse.md), error**
+**[*operations.PatchMartechMember2Response](../../pkg/models/operations/patchmartechmember2response.md), error**
 
 ### Errors
 
@@ -344,13 +344,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveMartechMember
+## RemoveMartechMember2
 
 Remove a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeMartechMember2" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -368,7 +368,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.RemoveMartechMember(ctx, operations.RemoveMartechMemberRequest{
+    res, err := s.Member.RemoveMartechMember2(ctx, operations.RemoveMartechMember2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -383,15 +383,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.RemoveMartechMemberRequest](../../pkg/models/operations/removemartechmemberrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.RemoveMartechMember2Request](../../pkg/models/operations/removemartechmember2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.RemoveMartechMemberResponse](../../pkg/models/operations/removemartechmemberresponse.md), error**
+**[*operations.RemoveMartechMember2Response](../../pkg/models/operations/removemartechmember2response.md), error**
 
 ### Errors
 
@@ -399,13 +399,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateMartechMember
+## UpdateMartechMember2
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMartechMember2" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```go
 package main
 
@@ -424,7 +424,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Member.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
+    res, err := s.Member.UpdateMartechMember2(ctx, operations.UpdateMartechMember2Request{
         MarketingMember: shared.MarketingMember{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -440,15 +440,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.UpdateMartechMemberRequest](../../pkg/models/operations/updatemartechmemberrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.UpdateMartechMember2Request](../../pkg/models/operations/updatemartechmember2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.UpdateMartechMemberResponse](../../pkg/models/operations/updatemartechmemberresponse.md), error**
+**[*operations.UpdateMartechMember2Response](../../pkg/models/operations/updatemartechmember2response.md), error**
 
 ### Errors
 

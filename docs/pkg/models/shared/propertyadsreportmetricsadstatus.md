@@ -22,7 +22,7 @@ custom := shared.PropertyAdsReportMetricsAdStatus("custom_value")
 | `PropertyAdsReportMetricsAdStatusActive`               | ACTIVE                                                 |
 | `PropertyAdsReportMetricsAdStatusPaused`               | PAUSED                                                 |
 | `PropertyAdsReportMetricsAdStatusArchived`             | ARCHIVED                                               |
-| `PropertyAdsReportMetricsAdStatusProcessing`           | PROCESSING                                             |
-| `PropertyAdsReportMetricsAdStatusProcessingFailed`     | PROCESSING_FAILED                                      |
 | `PropertyAdsReportMetricsAdStatusDraft`                | DRAFT                                                  |
 | `PropertyAdsReportMetricsAdStatusScheduledForDeletion` | SCHEDULED_FOR_DELETION                                 |
+| `PropertyAdsReportMetricsAdStatusProcessing`           | PROCESSING                                             |
+| `PropertyAdsReportMetricsAdStatusProcessingFailed`     | PROCESSING_FAILED                                      |

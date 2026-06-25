@@ -30,8 +30,8 @@ func newCommerce(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateCommerceCollection - Create a collection
-func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operations.CreateCommerceCollectionRequest, opts ...operations.Option) (*operations.CreateCommerceCollectionResponse, error) {
+// CreateCommerceCollection2 - Create a collection
+func (s *Commerce) CreateCommerceCollection2(ctx context.Context, request operations.CreateCommerceCollection2Request, opts ...operations.Option) (*operations.CreateCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceCollection",
+		OperationID:      "createCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateCommerceCollectionResponse{
+	res := &operations.CreateCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Commerce) CreateCommerceCollection(ctx context.Context, request operati
 
 }
 
-// CreateCommerceInventory - Create an inventory
-func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operations.CreateCommerceInventoryRequest, opts ...operations.Option) (*operations.CreateCommerceInventoryResponse, error) {
+// CreateCommerceInventory2 - Create an inventory
+func (s *Commerce) CreateCommerceInventory2(ctx context.Context, request operations.CreateCommerceInventory2Request, opts ...operations.Option) (*operations.CreateCommerceInventory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceInventory",
+		OperationID:      "createCommerceInventory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateCommerceInventoryResponse{
+	res := &operations.CreateCommerceInventory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Commerce) CreateCommerceInventory(ctx context.Context, request operatio
 
 }
 
-// CreateCommerceItem - Create an item
-func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.CreateCommerceItemRequest, opts ...operations.Option) (*operations.CreateCommerceItemResponse, error) {
+// CreateCommerceItem2 - Create an item
+func (s *Commerce) CreateCommerceItem2(ctx context.Context, request operations.CreateCommerceItem2Request, opts ...operations.Option) (*operations.CreateCommerceItem2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceItem",
+		OperationID:      "createCommerceItem2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItem", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateCommerceItemResponse{
+	res := &operations.CreateCommerceItem2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Commerce) CreateCommerceItem(ctx context.Context, request operations.Cr
 
 }
 
-// CreateCommerceItemvariant - Create an itemvariant
-func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operations.CreateCommerceItemvariantRequest, opts ...operations.Option) (*operations.CreateCommerceItemvariantResponse, error) {
+// CreateCommerceItemvariant2 - Create an itemvariant
+func (s *Commerce) CreateCommerceItemvariant2(ctx context.Context, request operations.CreateCommerceItemvariant2Request, opts ...operations.Option) (*operations.CreateCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceItemvariant",
+		OperationID:      "createCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateCommerceItemvariantResponse{
+	res := &operations.CreateCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Commerce) CreateCommerceItemvariant(ctx context.Context, request operat
 
 }
 
-// CreateCommerceLocation - Create a location
-func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operations.CreateCommerceLocationRequest, opts ...operations.Option) (*operations.CreateCommerceLocationResponse, error) {
+// CreateCommerceLocation2 - Create a location
+func (s *Commerce) CreateCommerceLocation2(ctx context.Context, request operations.CreateCommerceLocation2Request, opts ...operations.Option) (*operations.CreateCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceLocation",
+		OperationID:      "createCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateCommerceLocationResponse{
+	res := &operations.CreateCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Commerce) CreateCommerceLocation(ctx context.Context, request operation
 
 }
 
-// CreateCommerceReservation - Create a reservation
-func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operations.CreateCommerceReservationRequest, opts ...operations.Option) (*operations.CreateCommerceReservationResponse, error) {
+// CreateCommerceReservation2 - Create a reservation
+func (s *Commerce) CreateCommerceReservation2(ctx context.Context, request operations.CreateCommerceReservation2Request, opts ...operations.Option) (*operations.CreateCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceReservation",
+		OperationID:      "createCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateCommerceReservationResponse{
+	res := &operations.CreateCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Commerce) CreateCommerceReservation(ctx context.Context, request operat
 
 }
 
-// CreateCommerceReview - Create a review
-func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.CreateCommerceReviewRequest, opts ...operations.Option) (*operations.CreateCommerceReviewResponse, error) {
+// CreateCommerceReview2 - Create a review
+func (s *Commerce) CreateCommerceReview2(ctx context.Context, request operations.CreateCommerceReview2Request, opts ...operations.Option) (*operations.CreateCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceReview",
+		OperationID:      "createCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -1476,7 +1476,7 @@ func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.CreateCommerceReviewResponse{
+	res := &operations.CreateCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1528,8 +1528,8 @@ func (s *Commerce) CreateCommerceReview(ctx context.Context, request operations.
 
 }
 
-// CreateCommerceSaleschannel - Create a saleschannel
-func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request operations.CreateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.CreateCommerceSaleschannelResponse, error) {
+// CreateCommerceSaleschannel2 - Create a saleschannel
+func (s *Commerce) CreateCommerceSaleschannel2(ctx context.Context, request operations.CreateCommerceSaleschannel2Request, opts ...operations.Option) (*operations.CreateCommerceSaleschannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1558,7 +1558,7 @@ func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceSaleschannel",
+		OperationID:      "createCommerceSaleschannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -1690,7 +1690,7 @@ func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateCommerceSaleschannelResponse{
+	res := &operations.CreateCommerceSaleschannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1742,8 +1742,8 @@ func (s *Commerce) CreateCommerceSaleschannel(ctx context.Context, request opera
 
 }
 
-// GetCommerceCollection - Retrieve a collection
-func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations.GetCommerceCollectionRequest, opts ...operations.Option) (*operations.GetCommerceCollectionResponse, error) {
+// GetCommerceCollection2 - Retrieve a collection
+func (s *Commerce) GetCommerceCollection2(ctx context.Context, request operations.GetCommerceCollection2Request, opts ...operations.Option) (*operations.GetCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1772,7 +1772,7 @@ func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceCollection",
+		OperationID:      "getCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1897,7 +1897,7 @@ func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetCommerceCollectionResponse{
+	res := &operations.GetCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1949,8 +1949,8 @@ func (s *Commerce) GetCommerceCollection(ctx context.Context, request operations
 
 }
 
-// GetCommerceInventory - Retrieve an inventory
-func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.GetCommerceInventoryRequest, opts ...operations.Option) (*operations.GetCommerceInventoryResponse, error) {
+// GetCommerceInventory2 - Retrieve an inventory
+func (s *Commerce) GetCommerceInventory2(ctx context.Context, request operations.GetCommerceInventory2Request, opts ...operations.Option) (*operations.GetCommerceInventory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1979,7 +1979,7 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceInventory",
+		OperationID:      "getCommerceInventory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2104,7 +2104,7 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetCommerceInventoryResponse{
+	res := &operations.GetCommerceInventory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2156,8 +2156,8 @@ func (s *Commerce) GetCommerceInventory(ctx context.Context, request operations.
 
 }
 
-// GetCommerceItem - Retrieve an item
-func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCommerceItemRequest, opts ...operations.Option) (*operations.GetCommerceItemResponse, error) {
+// GetCommerceItem2 - Retrieve an item
+func (s *Commerce) GetCommerceItem2(ctx context.Context, request operations.GetCommerceItem2Request, opts ...operations.Option) (*operations.GetCommerceItem2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2186,7 +2186,7 @@ func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceItem",
+		OperationID:      "getCommerceItem2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2311,7 +2311,7 @@ func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCo
 		}
 	}
 
-	res := &operations.GetCommerceItemResponse{
+	res := &operations.GetCommerceItem2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2363,8 +2363,8 @@ func (s *Commerce) GetCommerceItem(ctx context.Context, request operations.GetCo
 
 }
 
-// GetCommerceItemvariant - Retrieve an itemvariant
-func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operations.GetCommerceItemvariantRequest, opts ...operations.Option) (*operations.GetCommerceItemvariantResponse, error) {
+// GetCommerceItemvariant2 - Retrieve an itemvariant
+func (s *Commerce) GetCommerceItemvariant2(ctx context.Context, request operations.GetCommerceItemvariant2Request, opts ...operations.Option) (*operations.GetCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2393,7 +2393,7 @@ func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceItemvariant",
+		OperationID:      "getCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2518,7 +2518,7 @@ func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetCommerceItemvariantResponse{
+	res := &operations.GetCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2570,8 +2570,8 @@ func (s *Commerce) GetCommerceItemvariant(ctx context.Context, request operation
 
 }
 
-// GetCommerceLocation - Retrieve a location
-func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.GetCommerceLocationRequest, opts ...operations.Option) (*operations.GetCommerceLocationResponse, error) {
+// GetCommerceLocation2 - Retrieve a location
+func (s *Commerce) GetCommerceLocation2(ctx context.Context, request operations.GetCommerceLocation2Request, opts ...operations.Option) (*operations.GetCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2600,7 +2600,7 @@ func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceLocation",
+		OperationID:      "getCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2725,7 +2725,7 @@ func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetCommerceLocationResponse{
+	res := &operations.GetCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2777,8 +2777,8 @@ func (s *Commerce) GetCommerceLocation(ctx context.Context, request operations.G
 
 }
 
-// GetCommerceReservation - Retrieve a reservation
-func (s *Commerce) GetCommerceReservation(ctx context.Context, request operations.GetCommerceReservationRequest, opts ...operations.Option) (*operations.GetCommerceReservationResponse, error) {
+// GetCommerceReservation2 - Retrieve a reservation
+func (s *Commerce) GetCommerceReservation2(ctx context.Context, request operations.GetCommerceReservation2Request, opts ...operations.Option) (*operations.GetCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2807,7 +2807,7 @@ func (s *Commerce) GetCommerceReservation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceReservation",
+		OperationID:      "getCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2932,7 +2932,7 @@ func (s *Commerce) GetCommerceReservation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetCommerceReservationResponse{
+	res := &operations.GetCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2984,8 +2984,8 @@ func (s *Commerce) GetCommerceReservation(ctx context.Context, request operation
 
 }
 
-// GetCommerceReview - Retrieve a review
-func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.GetCommerceReviewRequest, opts ...operations.Option) (*operations.GetCommerceReviewResponse, error) {
+// GetCommerceReview2 - Retrieve a review
+func (s *Commerce) GetCommerceReview2(ctx context.Context, request operations.GetCommerceReview2Request, opts ...operations.Option) (*operations.GetCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3014,7 +3014,7 @@ func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceReview",
+		OperationID:      "getCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3139,7 +3139,7 @@ func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetCommerceReviewResponse{
+	res := &operations.GetCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3191,8 +3191,8 @@ func (s *Commerce) GetCommerceReview(ctx context.Context, request operations.Get
 
 }
 
-// GetCommerceSaleschannel - Retrieve a saleschannel
-func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operations.GetCommerceSaleschannelRequest, opts ...operations.Option) (*operations.GetCommerceSaleschannelResponse, error) {
+// GetCommerceSaleschannel2 - Retrieve a saleschannel
+func (s *Commerce) GetCommerceSaleschannel2(ctx context.Context, request operations.GetCommerceSaleschannel2Request, opts ...operations.Option) (*operations.GetCommerceSaleschannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3221,7 +3221,7 @@ func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceSaleschannel",
+		OperationID:      "getCommerceSaleschannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3346,7 +3346,7 @@ func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetCommerceSaleschannelResponse{
+	res := &operations.GetCommerceSaleschannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3398,8 +3398,8 @@ func (s *Commerce) GetCommerceSaleschannel(ctx context.Context, request operatio
 
 }
 
-// ListCommerceAvailabilities - List all availabilities
-func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request operations.ListCommerceAvailabilitiesRequest, opts ...operations.Option) (*operations.ListCommerceAvailabilitiesResponse, error) {
+// ListCommerceAvailabilities2 - List all availabilities
+func (s *Commerce) ListCommerceAvailabilities2(ctx context.Context, request operations.ListCommerceAvailabilities2Request, opts ...operations.Option) (*operations.ListCommerceAvailabilities2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3428,7 +3428,7 @@ func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceAvailabilities",
+		OperationID:      "listCommerceAvailabilities2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3553,7 +3553,7 @@ func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.ListCommerceAvailabilitiesResponse{
+	res := &operations.ListCommerceAvailabilities2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3605,8 +3605,8 @@ func (s *Commerce) ListCommerceAvailabilities(ctx context.Context, request opera
 
 }
 
-// ListCommerceCollections - List all collections
-func (s *Commerce) ListCommerceCollections(ctx context.Context, request operations.ListCommerceCollectionsRequest, opts ...operations.Option) (*operations.ListCommerceCollectionsResponse, error) {
+// ListCommerceCollections2 - List all collections
+func (s *Commerce) ListCommerceCollections2(ctx context.Context, request operations.ListCommerceCollections2Request, opts ...operations.Option) (*operations.ListCommerceCollections2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3635,7 +3635,7 @@ func (s *Commerce) ListCommerceCollections(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceCollections",
+		OperationID:      "listCommerceCollections2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3760,7 +3760,7 @@ func (s *Commerce) ListCommerceCollections(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListCommerceCollectionsResponse{
+	res := &operations.ListCommerceCollections2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3812,8 +3812,8 @@ func (s *Commerce) ListCommerceCollections(ctx context.Context, request operatio
 
 }
 
-// ListCommerceInventories - List all inventories
-func (s *Commerce) ListCommerceInventories(ctx context.Context, request operations.ListCommerceInventoriesRequest, opts ...operations.Option) (*operations.ListCommerceInventoriesResponse, error) {
+// ListCommerceInventories2 - List all inventories
+func (s *Commerce) ListCommerceInventories2(ctx context.Context, request operations.ListCommerceInventories2Request, opts ...operations.Option) (*operations.ListCommerceInventories2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3842,7 +3842,7 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceInventories",
+		OperationID:      "listCommerceInventories2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3967,7 +3967,7 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListCommerceInventoriesResponse{
+	res := &operations.ListCommerceInventories2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4019,8 +4019,8 @@ func (s *Commerce) ListCommerceInventories(ctx context.Context, request operatio
 
 }
 
-// ListCommerceItems - List all items
-func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.ListCommerceItemsRequest, opts ...operations.Option) (*operations.ListCommerceItemsResponse, error) {
+// ListCommerceItems2 - List all items
+func (s *Commerce) ListCommerceItems2(ctx context.Context, request operations.ListCommerceItems2Request, opts ...operations.Option) (*operations.ListCommerceItems2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4049,7 +4049,7 @@ func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceItems",
+		OperationID:      "listCommerceItems2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4174,7 +4174,7 @@ func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListCommerceItemsResponse{
+	res := &operations.ListCommerceItems2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4226,8 +4226,8 @@ func (s *Commerce) ListCommerceItems(ctx context.Context, request operations.Lis
 
 }
 
-// ListCommerceItemvariants - List all itemvariants
-func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operations.ListCommerceItemvariantsRequest, opts ...operations.Option) (*operations.ListCommerceItemvariantsResponse, error) {
+// ListCommerceItemvariants2 - List all itemvariants
+func (s *Commerce) ListCommerceItemvariants2(ctx context.Context, request operations.ListCommerceItemvariants2Request, opts ...operations.Option) (*operations.ListCommerceItemvariants2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4256,7 +4256,7 @@ func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceItemvariants",
+		OperationID:      "listCommerceItemvariants2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4381,7 +4381,7 @@ func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListCommerceItemvariantsResponse{
+	res := &operations.ListCommerceItemvariants2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4433,8 +4433,8 @@ func (s *Commerce) ListCommerceItemvariants(ctx context.Context, request operati
 
 }
 
-// ListCommerceLocations - List all locations
-func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations.ListCommerceLocationsRequest, opts ...operations.Option) (*operations.ListCommerceLocationsResponse, error) {
+// ListCommerceLocations2 - List all locations
+func (s *Commerce) ListCommerceLocations2(ctx context.Context, request operations.ListCommerceLocations2Request, opts ...operations.Option) (*operations.ListCommerceLocations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4463,7 +4463,7 @@ func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceLocations",
+		OperationID:      "listCommerceLocations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4588,7 +4588,7 @@ func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListCommerceLocationsResponse{
+	res := &operations.ListCommerceLocations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4640,8 +4640,8 @@ func (s *Commerce) ListCommerceLocations(ctx context.Context, request operations
 
 }
 
-// ListCommerceReservations - List all reservations
-func (s *Commerce) ListCommerceReservations(ctx context.Context, request operations.ListCommerceReservationsRequest, opts ...operations.Option) (*operations.ListCommerceReservationsResponse, error) {
+// ListCommerceReservations2 - List all reservations
+func (s *Commerce) ListCommerceReservations2(ctx context.Context, request operations.ListCommerceReservations2Request, opts ...operations.Option) (*operations.ListCommerceReservations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4670,7 +4670,7 @@ func (s *Commerce) ListCommerceReservations(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceReservations",
+		OperationID:      "listCommerceReservations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4795,7 +4795,7 @@ func (s *Commerce) ListCommerceReservations(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListCommerceReservationsResponse{
+	res := &operations.ListCommerceReservations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4847,8 +4847,8 @@ func (s *Commerce) ListCommerceReservations(ctx context.Context, request operati
 
 }
 
-// ListCommerceReviews - List all reviews
-func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.ListCommerceReviewsRequest, opts ...operations.Option) (*operations.ListCommerceReviewsResponse, error) {
+// ListCommerceReviews2 - List all reviews
+func (s *Commerce) ListCommerceReviews2(ctx context.Context, request operations.ListCommerceReviews2Request, opts ...operations.Option) (*operations.ListCommerceReviews2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4877,7 +4877,7 @@ func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceReviews",
+		OperationID:      "listCommerceReviews2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5002,7 +5002,7 @@ func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListCommerceReviewsResponse{
+	res := &operations.ListCommerceReviews2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5054,8 +5054,8 @@ func (s *Commerce) ListCommerceReviews(ctx context.Context, request operations.L
 
 }
 
-// ListCommerceSaleschannels - List all saleschannels
-func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operations.ListCommerceSaleschannelsRequest, opts ...operations.Option) (*operations.ListCommerceSaleschannelsResponse, error) {
+// ListCommerceSaleschannels2 - List all saleschannels
+func (s *Commerce) ListCommerceSaleschannels2(ctx context.Context, request operations.ListCommerceSaleschannels2Request, opts ...operations.Option) (*operations.ListCommerceSaleschannels2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5084,7 +5084,7 @@ func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceSaleschannels",
+		OperationID:      "listCommerceSaleschannels2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5209,7 +5209,7 @@ func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListCommerceSaleschannelsResponse{
+	res := &operations.ListCommerceSaleschannels2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5261,8 +5261,8 @@ func (s *Commerce) ListCommerceSaleschannels(ctx context.Context, request operat
 
 }
 
-// PatchCommerceCollection - Update a collection
-func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operations.PatchCommerceCollectionRequest, opts ...operations.Option) (*operations.PatchCommerceCollectionResponse, error) {
+// PatchCommerceCollection2 - Update a collection
+func (s *Commerce) PatchCommerceCollection2(ctx context.Context, request operations.PatchCommerceCollection2Request, opts ...operations.Option) (*operations.PatchCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5291,7 +5291,7 @@ func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceCollection",
+		OperationID:      "patchCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -5423,7 +5423,7 @@ func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchCommerceCollectionResponse{
+	res := &operations.PatchCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5475,8 +5475,8 @@ func (s *Commerce) PatchCommerceCollection(ctx context.Context, request operatio
 
 }
 
-// PatchCommerceInventory - Update an inventory
-func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operations.PatchCommerceInventoryRequest, opts ...operations.Option) (*operations.PatchCommerceInventoryResponse, error) {
+// PatchCommerceInventory2 - Update an inventory
+func (s *Commerce) PatchCommerceInventory2(ctx context.Context, request operations.PatchCommerceInventory2Request, opts ...operations.Option) (*operations.PatchCommerceInventory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5505,7 +5505,7 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceInventory",
+		OperationID:      "patchCommerceInventory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
@@ -5637,7 +5637,7 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchCommerceInventoryResponse{
+	res := &operations.PatchCommerceInventory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5689,8 +5689,8 @@ func (s *Commerce) PatchCommerceInventory(ctx context.Context, request operation
 
 }
 
-// PatchCommerceItem - Update an item
-func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.PatchCommerceItemRequest, opts ...operations.Option) (*operations.PatchCommerceItemResponse, error) {
+// PatchCommerceItem2 - Update an item
+func (s *Commerce) PatchCommerceItem2(ctx context.Context, request operations.PatchCommerceItem2Request, opts ...operations.Option) (*operations.PatchCommerceItem2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5719,7 +5719,7 @@ func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceItem",
+		OperationID:      "patchCommerceItem2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItem", "json", `request:"mediaType=application/json"`)
@@ -5851,7 +5851,7 @@ func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchCommerceItemResponse{
+	res := &operations.PatchCommerceItem2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5903,8 +5903,8 @@ func (s *Commerce) PatchCommerceItem(ctx context.Context, request operations.Pat
 
 }
 
-// PatchCommerceItemvariant - Update an itemvariant
-func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operations.PatchCommerceItemvariantRequest, opts ...operations.Option) (*operations.PatchCommerceItemvariantResponse, error) {
+// PatchCommerceItemvariant2 - Update an itemvariant
+func (s *Commerce) PatchCommerceItemvariant2(ctx context.Context, request operations.PatchCommerceItemvariant2Request, opts ...operations.Option) (*operations.PatchCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5933,7 +5933,7 @@ func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceItemvariant",
+		OperationID:      "patchCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -6065,7 +6065,7 @@ func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchCommerceItemvariantResponse{
+	res := &operations.PatchCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6117,8 +6117,8 @@ func (s *Commerce) PatchCommerceItemvariant(ctx context.Context, request operati
 
 }
 
-// PatchCommerceLocation - Update a location
-func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations.PatchCommerceLocationRequest, opts ...operations.Option) (*operations.PatchCommerceLocationResponse, error) {
+// PatchCommerceLocation2 - Update a location
+func (s *Commerce) PatchCommerceLocation2(ctx context.Context, request operations.PatchCommerceLocation2Request, opts ...operations.Option) (*operations.PatchCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6147,7 +6147,7 @@ func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceLocation",
+		OperationID:      "patchCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -6279,7 +6279,7 @@ func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchCommerceLocationResponse{
+	res := &operations.PatchCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6331,8 +6331,8 @@ func (s *Commerce) PatchCommerceLocation(ctx context.Context, request operations
 
 }
 
-// PatchCommerceReservation - Update a reservation
-func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operations.PatchCommerceReservationRequest, opts ...operations.Option) (*operations.PatchCommerceReservationResponse, error) {
+// PatchCommerceReservation2 - Update a reservation
+func (s *Commerce) PatchCommerceReservation2(ctx context.Context, request operations.PatchCommerceReservation2Request, opts ...operations.Option) (*operations.PatchCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6361,7 +6361,7 @@ func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceReservation",
+		OperationID:      "patchCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -6493,7 +6493,7 @@ func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchCommerceReservationResponse{
+	res := &operations.PatchCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6545,8 +6545,8 @@ func (s *Commerce) PatchCommerceReservation(ctx context.Context, request operati
 
 }
 
-// PatchCommerceReview - Update a review
-func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.PatchCommerceReviewRequest, opts ...operations.Option) (*operations.PatchCommerceReviewResponse, error) {
+// PatchCommerceReview2 - Update a review
+func (s *Commerce) PatchCommerceReview2(ctx context.Context, request operations.PatchCommerceReview2Request, opts ...operations.Option) (*operations.PatchCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6575,7 +6575,7 @@ func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.P
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceReview",
+		OperationID:      "patchCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -6707,7 +6707,7 @@ func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.P
 		}
 	}
 
-	res := &operations.PatchCommerceReviewResponse{
+	res := &operations.PatchCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6759,8 +6759,8 @@ func (s *Commerce) PatchCommerceReview(ctx context.Context, request operations.P
 
 }
 
-// PatchCommerceSaleschannel - Update a saleschannel
-func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operations.PatchCommerceSaleschannelRequest, opts ...operations.Option) (*operations.PatchCommerceSaleschannelResponse, error) {
+// PatchCommerceSaleschannel2 - Update a saleschannel
+func (s *Commerce) PatchCommerceSaleschannel2(ctx context.Context, request operations.PatchCommerceSaleschannel2Request, opts ...operations.Option) (*operations.PatchCommerceSaleschannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6789,7 +6789,7 @@ func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceSaleschannel",
+		OperationID:      "patchCommerceSaleschannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -6921,7 +6921,7 @@ func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchCommerceSaleschannelResponse{
+	res := &operations.PatchCommerceSaleschannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6973,8 +6973,8 @@ func (s *Commerce) PatchCommerceSaleschannel(ctx context.Context, request operat
 
 }
 
-// RemoveCommerceCollection - Remove a collection
-func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operations.RemoveCommerceCollectionRequest, opts ...operations.Option) (*operations.RemoveCommerceCollectionResponse, error) {
+// RemoveCommerceCollection2 - Remove a collection
+func (s *Commerce) RemoveCommerceCollection2(ctx context.Context, request operations.RemoveCommerceCollection2Request, opts ...operations.Option) (*operations.RemoveCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7003,7 +7003,7 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceCollection",
+		OperationID:      "removeCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7124,7 +7124,7 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveCommerceCollectionResponse{
+	res := &operations.RemoveCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7155,8 +7155,8 @@ func (s *Commerce) RemoveCommerceCollection(ctx context.Context, request operati
 
 }
 
-// RemoveCommerceInventory - Remove an inventory
-func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operations.RemoveCommerceInventoryRequest, opts ...operations.Option) (*operations.RemoveCommerceInventoryResponse, error) {
+// RemoveCommerceInventory2 - Remove an inventory
+func (s *Commerce) RemoveCommerceInventory2(ctx context.Context, request operations.RemoveCommerceInventory2Request, opts ...operations.Option) (*operations.RemoveCommerceInventory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7185,7 +7185,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceInventory",
+		OperationID:      "removeCommerceInventory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7306,7 +7306,7 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveCommerceInventoryResponse{
+	res := &operations.RemoveCommerceInventory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7337,8 +7337,8 @@ func (s *Commerce) RemoveCommerceInventory(ctx context.Context, request operatio
 
 }
 
-// RemoveCommerceItem - Remove an item
-func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.RemoveCommerceItemRequest, opts ...operations.Option) (*operations.RemoveCommerceItemResponse, error) {
+// RemoveCommerceItem2 - Remove an item
+func (s *Commerce) RemoveCommerceItem2(ctx context.Context, request operations.RemoveCommerceItem2Request, opts ...operations.Option) (*operations.RemoveCommerceItem2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7367,7 +7367,7 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceItem",
+		OperationID:      "removeCommerceItem2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7488,7 +7488,7 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveCommerceItemResponse{
+	res := &operations.RemoveCommerceItem2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7519,8 +7519,8 @@ func (s *Commerce) RemoveCommerceItem(ctx context.Context, request operations.Re
 
 }
 
-// RemoveCommerceItemvariant - Remove an itemvariant
-func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operations.RemoveCommerceItemvariantRequest, opts ...operations.Option) (*operations.RemoveCommerceItemvariantResponse, error) {
+// RemoveCommerceItemvariant2 - Remove an itemvariant
+func (s *Commerce) RemoveCommerceItemvariant2(ctx context.Context, request operations.RemoveCommerceItemvariant2Request, opts ...operations.Option) (*operations.RemoveCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7549,7 +7549,7 @@ func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceItemvariant",
+		OperationID:      "removeCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7670,7 +7670,7 @@ func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveCommerceItemvariantResponse{
+	res := &operations.RemoveCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7701,8 +7701,8 @@ func (s *Commerce) RemoveCommerceItemvariant(ctx context.Context, request operat
 
 }
 
-// RemoveCommerceLocation - Remove a location
-func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operations.RemoveCommerceLocationRequest, opts ...operations.Option) (*operations.RemoveCommerceLocationResponse, error) {
+// RemoveCommerceLocation2 - Remove a location
+func (s *Commerce) RemoveCommerceLocation2(ctx context.Context, request operations.RemoveCommerceLocation2Request, opts ...operations.Option) (*operations.RemoveCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7731,7 +7731,7 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceLocation",
+		OperationID:      "removeCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7852,7 +7852,7 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveCommerceLocationResponse{
+	res := &operations.RemoveCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7883,8 +7883,8 @@ func (s *Commerce) RemoveCommerceLocation(ctx context.Context, request operation
 
 }
 
-// RemoveCommerceReservation - Remove a reservation
-func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operations.RemoveCommerceReservationRequest, opts ...operations.Option) (*operations.RemoveCommerceReservationResponse, error) {
+// RemoveCommerceReservation2 - Remove a reservation
+func (s *Commerce) RemoveCommerceReservation2(ctx context.Context, request operations.RemoveCommerceReservation2Request, opts ...operations.Option) (*operations.RemoveCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7913,7 +7913,7 @@ func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceReservation",
+		OperationID:      "removeCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8034,7 +8034,7 @@ func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveCommerceReservationResponse{
+	res := &operations.RemoveCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8065,8 +8065,8 @@ func (s *Commerce) RemoveCommerceReservation(ctx context.Context, request operat
 
 }
 
-// RemoveCommerceReview - Remove a review
-func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.RemoveCommerceReviewRequest, opts ...operations.Option) (*operations.RemoveCommerceReviewResponse, error) {
+// RemoveCommerceReview2 - Remove a review
+func (s *Commerce) RemoveCommerceReview2(ctx context.Context, request operations.RemoveCommerceReview2Request, opts ...operations.Option) (*operations.RemoveCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8095,7 +8095,7 @@ func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceReview",
+		OperationID:      "removeCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8216,7 +8216,7 @@ func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.RemoveCommerceReviewResponse{
+	res := &operations.RemoveCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8247,8 +8247,8 @@ func (s *Commerce) RemoveCommerceReview(ctx context.Context, request operations.
 
 }
 
-// RemoveCommerceSaleschannel - Remove a saleschannel
-func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request operations.RemoveCommerceSaleschannelRequest, opts ...operations.Option) (*operations.RemoveCommerceSaleschannelResponse, error) {
+// RemoveCommerceSaleschannel2 - Remove a saleschannel
+func (s *Commerce) RemoveCommerceSaleschannel2(ctx context.Context, request operations.RemoveCommerceSaleschannel2Request, opts ...operations.Option) (*operations.RemoveCommerceSaleschannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8277,7 +8277,7 @@ func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceSaleschannel",
+		OperationID:      "removeCommerceSaleschannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8398,7 +8398,7 @@ func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveCommerceSaleschannelResponse{
+	res := &operations.RemoveCommerceSaleschannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8429,8 +8429,8 @@ func (s *Commerce) RemoveCommerceSaleschannel(ctx context.Context, request opera
 
 }
 
-// UpdateCommerceCollection - Update a collection
-func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operations.UpdateCommerceCollectionRequest, opts ...operations.Option) (*operations.UpdateCommerceCollectionResponse, error) {
+// UpdateCommerceCollection2 - Update a collection
+func (s *Commerce) UpdateCommerceCollection2(ctx context.Context, request operations.UpdateCommerceCollection2Request, opts ...operations.Option) (*operations.UpdateCommerceCollection2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8459,7 +8459,7 @@ func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceCollection",
+		OperationID:      "updateCommerceCollection2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceCollection", "json", `request:"mediaType=application/json"`)
@@ -8591,7 +8591,7 @@ func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateCommerceCollectionResponse{
+	res := &operations.UpdateCommerceCollection2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8643,8 +8643,8 @@ func (s *Commerce) UpdateCommerceCollection(ctx context.Context, request operati
 
 }
 
-// UpdateCommerceInventory - Update an inventory
-func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operations.UpdateCommerceInventoryRequest, opts ...operations.Option) (*operations.UpdateCommerceInventoryResponse, error) {
+// UpdateCommerceInventory2 - Update an inventory
+func (s *Commerce) UpdateCommerceInventory2(ctx context.Context, request operations.UpdateCommerceInventory2Request, opts ...operations.Option) (*operations.UpdateCommerceInventory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8673,7 +8673,7 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceInventory",
+		OperationID:      "updateCommerceInventory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceInventory", "json", `request:"mediaType=application/json"`)
@@ -8805,7 +8805,7 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateCommerceInventoryResponse{
+	res := &operations.UpdateCommerceInventory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8857,8 +8857,8 @@ func (s *Commerce) UpdateCommerceInventory(ctx context.Context, request operatio
 
 }
 
-// UpdateCommerceItem - Update an item
-func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.UpdateCommerceItemRequest, opts ...operations.Option) (*operations.UpdateCommerceItemResponse, error) {
+// UpdateCommerceItem2 - Update an item
+func (s *Commerce) UpdateCommerceItem2(ctx context.Context, request operations.UpdateCommerceItem2Request, opts ...operations.Option) (*operations.UpdateCommerceItem2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8887,7 +8887,7 @@ func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceItem",
+		OperationID:      "updateCommerceItem2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItem", "json", `request:"mediaType=application/json"`)
@@ -9019,7 +9019,7 @@ func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateCommerceItemResponse{
+	res := &operations.UpdateCommerceItem2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9071,8 +9071,8 @@ func (s *Commerce) UpdateCommerceItem(ctx context.Context, request operations.Up
 
 }
 
-// UpdateCommerceItemvariant - Update an itemvariant
-func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operations.UpdateCommerceItemvariantRequest, opts ...operations.Option) (*operations.UpdateCommerceItemvariantResponse, error) {
+// UpdateCommerceItemvariant2 - Update an itemvariant
+func (s *Commerce) UpdateCommerceItemvariant2(ctx context.Context, request operations.UpdateCommerceItemvariant2Request, opts ...operations.Option) (*operations.UpdateCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9101,7 +9101,7 @@ func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceItemvariant",
+		OperationID:      "updateCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -9233,7 +9233,7 @@ func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateCommerceItemvariantResponse{
+	res := &operations.UpdateCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9285,8 +9285,8 @@ func (s *Commerce) UpdateCommerceItemvariant(ctx context.Context, request operat
 
 }
 
-// UpdateCommerceLocation - Update a location
-func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operations.UpdateCommerceLocationRequest, opts ...operations.Option) (*operations.UpdateCommerceLocationResponse, error) {
+// UpdateCommerceLocation2 - Update a location
+func (s *Commerce) UpdateCommerceLocation2(ctx context.Context, request operations.UpdateCommerceLocation2Request, opts ...operations.Option) (*operations.UpdateCommerceLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9315,7 +9315,7 @@ func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceLocation",
+		OperationID:      "updateCommerceLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceLocation", "json", `request:"mediaType=application/json"`)
@@ -9447,7 +9447,7 @@ func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateCommerceLocationResponse{
+	res := &operations.UpdateCommerceLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9499,8 +9499,8 @@ func (s *Commerce) UpdateCommerceLocation(ctx context.Context, request operation
 
 }
 
-// UpdateCommerceReservation - Update a reservation
-func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operations.UpdateCommerceReservationRequest, opts ...operations.Option) (*operations.UpdateCommerceReservationResponse, error) {
+// UpdateCommerceReservation2 - Update a reservation
+func (s *Commerce) UpdateCommerceReservation2(ctx context.Context, request operations.UpdateCommerceReservation2Request, opts ...operations.Option) (*operations.UpdateCommerceReservation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9529,7 +9529,7 @@ func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceReservation",
+		OperationID:      "updateCommerceReservation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReservation", "json", `request:"mediaType=application/json"`)
@@ -9661,7 +9661,7 @@ func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateCommerceReservationResponse{
+	res := &operations.UpdateCommerceReservation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9713,8 +9713,8 @@ func (s *Commerce) UpdateCommerceReservation(ctx context.Context, request operat
 
 }
 
-// UpdateCommerceReview - Update a review
-func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.UpdateCommerceReviewRequest, opts ...operations.Option) (*operations.UpdateCommerceReviewResponse, error) {
+// UpdateCommerceReview2 - Update a review
+func (s *Commerce) UpdateCommerceReview2(ctx context.Context, request operations.UpdateCommerceReview2Request, opts ...operations.Option) (*operations.UpdateCommerceReview2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9743,7 +9743,7 @@ func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceReview",
+		OperationID:      "updateCommerceReview2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceReview", "json", `request:"mediaType=application/json"`)
@@ -9875,7 +9875,7 @@ func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.UpdateCommerceReviewResponse{
+	res := &operations.UpdateCommerceReview2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9927,8 +9927,8 @@ func (s *Commerce) UpdateCommerceReview(ctx context.Context, request operations.
 
 }
 
-// UpdateCommerceSaleschannel - Update a saleschannel
-func (s *Commerce) UpdateCommerceSaleschannel(ctx context.Context, request operations.UpdateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.UpdateCommerceSaleschannelResponse, error) {
+// UpdateCommerceSaleschannel2 - Update a saleschannel
+func (s *Commerce) UpdateCommerceSaleschannel2(ctx context.Context, request operations.UpdateCommerceSaleschannel2Request, opts ...operations.Option) (*operations.UpdateCommerceSaleschannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9957,7 +9957,7 @@ func (s *Commerce) UpdateCommerceSaleschannel(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceSaleschannel",
+		OperationID:      "updateCommerceSaleschannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -10089,7 +10089,7 @@ func (s *Commerce) UpdateCommerceSaleschannel(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateCommerceSaleschannelResponse{
+	res := &operations.UpdateCommerceSaleschannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

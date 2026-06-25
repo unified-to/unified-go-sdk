@@ -30,8 +30,8 @@ func newTimeshift(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateHrisTimeshift - Create a timeshift
-func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.CreateHrisTimeshiftRequest, opts ...operations.Option) (*operations.CreateHrisTimeshiftResponse, error) {
+// CreateHrisTimeshift2 - Create a timeshift
+func (s *Timeshift) CreateHrisTimeshift2(ctx context.Context, request operations.CreateHrisTimeshift2Request, opts ...operations.Option) (*operations.CreateHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisTimeshift",
+		OperationID:      "createHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.CreateHrisTimeshiftResponse{
+	res := &operations.CreateHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Timeshift) CreateHrisTimeshift(ctx context.Context, request operations.
 
 }
 
-// GetHrisTimeshift - Retrieve a timeshift
-func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.GetHrisTimeshiftRequest, opts ...operations.Option) (*operations.GetHrisTimeshiftResponse, error) {
+// GetHrisTimeshift2 - Retrieve a timeshift
+func (s *Timeshift) GetHrisTimeshift2(ctx context.Context, request operations.GetHrisTimeshift2Request, opts ...operations.Option) (*operations.GetHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisTimeshift",
+		OperationID:      "getHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetHrisTimeshiftResponse{
+	res := &operations.GetHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Timeshift) GetHrisTimeshift(ctx context.Context, request operations.Get
 
 }
 
-// ListHrisTimeshifts - List all timeshifts
-func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.ListHrisTimeshiftsRequest, opts ...operations.Option) (*operations.ListHrisTimeshiftsResponse, error) {
+// ListHrisTimeshifts2 - List all timeshifts
+func (s *Timeshift) ListHrisTimeshifts2(ctx context.Context, request operations.ListHrisTimeshifts2Request, opts ...operations.Option) (*operations.ListHrisTimeshifts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisTimeshifts",
+		OperationID:      "listHrisTimeshifts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListHrisTimeshiftsResponse{
+	res := &operations.ListHrisTimeshifts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Timeshift) ListHrisTimeshifts(ctx context.Context, request operations.L
 
 }
 
-// PatchHrisTimeshift - Update a timeshift
-func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.PatchHrisTimeshiftRequest, opts ...operations.Option) (*operations.PatchHrisTimeshiftResponse, error) {
+// PatchHrisTimeshift2 - Update a timeshift
+func (s *Timeshift) PatchHrisTimeshift2(ctx context.Context, request operations.PatchHrisTimeshift2Request, opts ...operations.Option) (*operations.PatchHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.P
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisTimeshift",
+		OperationID:      "patchHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.P
 		}
 	}
 
-	res := &operations.PatchHrisTimeshiftResponse{
+	res := &operations.PatchHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Timeshift) PatchHrisTimeshift(ctx context.Context, request operations.P
 
 }
 
-// RemoveHrisTimeshift - Remove a timeshift
-func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.RemoveHrisTimeshiftRequest, opts ...operations.Option) (*operations.RemoveHrisTimeshiftResponse, error) {
+// RemoveHrisTimeshift2 - Remove a timeshift
+func (s *Timeshift) RemoveHrisTimeshift2(ctx context.Context, request operations.RemoveHrisTimeshift2Request, opts ...operations.Option) (*operations.RemoveHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisTimeshift",
+		OperationID:      "removeHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.RemoveHrisTimeshiftResponse{
+	res := &operations.RemoveHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Timeshift) RemoveHrisTimeshift(ctx context.Context, request operations.
 
 }
 
-// UpdateHrisTimeshift - Update a timeshift
-func (s *Timeshift) UpdateHrisTimeshift(ctx context.Context, request operations.UpdateHrisTimeshiftRequest, opts ...operations.Option) (*operations.UpdateHrisTimeshiftResponse, error) {
+// UpdateHrisTimeshift2 - Update a timeshift
+func (s *Timeshift) UpdateHrisTimeshift2(ctx context.Context, request operations.UpdateHrisTimeshift2Request, opts ...operations.Option) (*operations.UpdateHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Timeshift) UpdateHrisTimeshift(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisTimeshift",
+		OperationID:      "updateHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Timeshift) UpdateHrisTimeshift(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.UpdateHrisTimeshiftResponse{
+	res := &operations.UpdateHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

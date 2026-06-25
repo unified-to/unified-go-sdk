@@ -30,8 +30,8 @@ func newTransaction(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateAccountingTransaction - Create a transaction
-func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request operations.CreateAccountingTransactionRequest, opts ...operations.Option) (*operations.CreateAccountingTransactionResponse, error) {
+// CreateAccountingTransaction2 - Create a transaction
+func (s *Transaction) CreateAccountingTransaction2(ctx context.Context, request operations.CreateAccountingTransaction2Request, opts ...operations.Option) (*operations.CreateAccountingTransaction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingTransaction",
+		OperationID:      "createAccountingTransaction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.CreateAccountingTransactionResponse{
+	res := &operations.CreateAccountingTransaction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Transaction) CreateAccountingTransaction(ctx context.Context, request o
 
 }
 
-// GetAccountingTransaction - Retrieve a transaction
-func (s *Transaction) GetAccountingTransaction(ctx context.Context, request operations.GetAccountingTransactionRequest, opts ...operations.Option) (*operations.GetAccountingTransactionResponse, error) {
+// GetAccountingTransaction2 - Retrieve a transaction
+func (s *Transaction) GetAccountingTransaction2(ctx context.Context, request operations.GetAccountingTransaction2Request, opts ...operations.Option) (*operations.GetAccountingTransaction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTransaction",
+		OperationID:      "getAccountingTransaction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.GetAccountingTransactionResponse{
+	res := &operations.GetAccountingTransaction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Transaction) GetAccountingTransaction(ctx context.Context, request oper
 
 }
 
-// ListAccountingTransactions - List all transactions
-func (s *Transaction) ListAccountingTransactions(ctx context.Context, request operations.ListAccountingTransactionsRequest, opts ...operations.Option) (*operations.ListAccountingTransactionsResponse, error) {
+// ListAccountingTransactions2 - List all transactions
+func (s *Transaction) ListAccountingTransactions2(ctx context.Context, request operations.ListAccountingTransactions2Request, opts ...operations.Option) (*operations.ListAccountingTransactions2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTransactions",
+		OperationID:      "listAccountingTransactions2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingTransactionsResponse{
+	res := &operations.ListAccountingTransactions2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Transaction) ListAccountingTransactions(ctx context.Context, request op
 
 }
 
-// PatchAccountingTransaction - Update a transaction
-func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request operations.PatchAccountingTransactionRequest, opts ...operations.Option) (*operations.PatchAccountingTransactionResponse, error) {
+// PatchAccountingTransaction2 - Update a transaction
+func (s *Transaction) PatchAccountingTransaction2(ctx context.Context, request operations.PatchAccountingTransaction2Request, opts ...operations.Option) (*operations.PatchAccountingTransaction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingTransaction",
+		OperationID:      "patchAccountingTransaction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.PatchAccountingTransactionResponse{
+	res := &operations.PatchAccountingTransaction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Transaction) PatchAccountingTransaction(ctx context.Context, request op
 
 }
 
-// RemoveAccountingTransaction - Remove a transaction
-func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request operations.RemoveAccountingTransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingTransactionResponse, error) {
+// RemoveAccountingTransaction2 - Remove a transaction
+func (s *Transaction) RemoveAccountingTransaction2(ctx context.Context, request operations.RemoveAccountingTransaction2Request, opts ...operations.Option) (*operations.RemoveAccountingTransaction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingTransaction",
+		OperationID:      "removeAccountingTransaction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.RemoveAccountingTransactionResponse{
+	res := &operations.RemoveAccountingTransaction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Transaction) RemoveAccountingTransaction(ctx context.Context, request o
 
 }
 
-// UpdateAccountingTransaction - Update a transaction
-func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request operations.UpdateAccountingTransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingTransactionResponse, error) {
+// UpdateAccountingTransaction2 - Update a transaction
+func (s *Transaction) UpdateAccountingTransaction2(ctx context.Context, request operations.UpdateAccountingTransaction2Request, opts ...operations.Option) (*operations.UpdateAccountingTransaction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingTransaction",
+		OperationID:      "updateAccountingTransaction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Transaction) UpdateAccountingTransaction(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.UpdateAccountingTransactionResponse{
+	res := &operations.UpdateAccountingTransaction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

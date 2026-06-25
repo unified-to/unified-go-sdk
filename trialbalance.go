@@ -30,8 +30,8 @@ func newTrialbalance(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// GetAccountingTrialbalance - Retrieve a trialbalance
-func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request operations.GetAccountingTrialbalanceRequest, opts ...operations.Option) (*operations.GetAccountingTrialbalanceResponse, error) {
+// GetAccountingTrialbalance2 - Retrieve a trialbalance
+func (s *Trialbalance) GetAccountingTrialbalance2(ctx context.Context, request operations.GetAccountingTrialbalance2Request, opts ...operations.Option) (*operations.GetAccountingTrialbalance2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTrialbalance",
+		OperationID:      "getAccountingTrialbalance2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.GetAccountingTrialbalanceResponse{
+	res := &operations.GetAccountingTrialbalance2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Trialbalance) GetAccountingTrialbalance(ctx context.Context, request op
 
 }
 
-// ListAccountingTrialbalances - List all trialbalances
-func (s *Trialbalance) ListAccountingTrialbalances(ctx context.Context, request operations.ListAccountingTrialbalancesRequest, opts ...operations.Option) (*operations.ListAccountingTrialbalancesResponse, error) {
+// ListAccountingTrialbalances2 - List all trialbalances
+func (s *Trialbalance) ListAccountingTrialbalances2(ctx context.Context, request operations.ListAccountingTrialbalances2Request, opts ...operations.Option) (*operations.ListAccountingTrialbalances2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Trialbalance) ListAccountingTrialbalances(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTrialbalances",
+		OperationID:      "listAccountingTrialbalances2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Trialbalance) ListAccountingTrialbalances(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.ListAccountingTrialbalancesResponse{
+	res := &operations.ListAccountingTrialbalances2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

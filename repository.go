@@ -30,8 +30,8 @@ func newRepository(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// CreateRepoRepository - Create a repository
-func (s *Repository) CreateRepoRepository(ctx context.Context, request operations.CreateRepoRepositoryRequest, opts ...operations.Option) (*operations.CreateRepoRepositoryResponse, error) {
+// CreateRepoRepository2 - Create a repository
+func (s *Repository) CreateRepoRepository2(ctx context.Context, request operations.CreateRepoRepository2Request, opts ...operations.Option) (*operations.CreateRepoRepository2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Repository) CreateRepoRepository(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createRepoRepository",
+		OperationID:      "createRepoRepository2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Repository) CreateRepoRepository(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateRepoRepositoryResponse{
+	res := &operations.CreateRepoRepository2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Repository) CreateRepoRepository(ctx context.Context, request operation
 
 }
 
-// GetRepoRepository - Retrieve a repository
-func (s *Repository) GetRepoRepository(ctx context.Context, request operations.GetRepoRepositoryRequest, opts ...operations.Option) (*operations.GetRepoRepositoryResponse, error) {
+// GetRepoRepository2 - Retrieve a repository
+func (s *Repository) GetRepoRepository2(ctx context.Context, request operations.GetRepoRepository2Request, opts ...operations.Option) (*operations.GetRepoRepository2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Repository) GetRepoRepository(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getRepoRepository",
+		OperationID:      "getRepoRepository2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Repository) GetRepoRepository(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetRepoRepositoryResponse{
+	res := &operations.GetRepoRepository2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Repository) GetRepoRepository(ctx context.Context, request operations.G
 
 }
 
-// ListRepoRepositories - List all repositories
-func (s *Repository) ListRepoRepositories(ctx context.Context, request operations.ListRepoRepositoriesRequest, opts ...operations.Option) (*operations.ListRepoRepositoriesResponse, error) {
+// ListRepoRepositories2 - List all repositories
+func (s *Repository) ListRepoRepositories2(ctx context.Context, request operations.ListRepoRepositories2Request, opts ...operations.Option) (*operations.ListRepoRepositories2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Repository) ListRepoRepositories(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listRepoRepositories",
+		OperationID:      "listRepoRepositories2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Repository) ListRepoRepositories(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListRepoRepositoriesResponse{
+	res := &operations.ListRepoRepositories2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Repository) ListRepoRepositories(ctx context.Context, request operation
 
 }
 
-// PatchRepoRepository - Update a repository
-func (s *Repository) PatchRepoRepository(ctx context.Context, request operations.PatchRepoRepositoryRequest, opts ...operations.Option) (*operations.PatchRepoRepositoryResponse, error) {
+// PatchRepoRepository2 - Update a repository
+func (s *Repository) PatchRepoRepository2(ctx context.Context, request operations.PatchRepoRepository2Request, opts ...operations.Option) (*operations.PatchRepoRepository2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Repository) PatchRepoRepository(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchRepoRepository",
+		OperationID:      "patchRepoRepository2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Repository) PatchRepoRepository(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchRepoRepositoryResponse{
+	res := &operations.PatchRepoRepository2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Repository) PatchRepoRepository(ctx context.Context, request operations
 
 }
 
-// RemoveRepoRepository - Remove a repository
-func (s *Repository) RemoveRepoRepository(ctx context.Context, request operations.RemoveRepoRepositoryRequest, opts ...operations.Option) (*operations.RemoveRepoRepositoryResponse, error) {
+// RemoveRepoRepository2 - Remove a repository
+func (s *Repository) RemoveRepoRepository2(ctx context.Context, request operations.RemoveRepoRepository2Request, opts ...operations.Option) (*operations.RemoveRepoRepository2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Repository) RemoveRepoRepository(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeRepoRepository",
+		OperationID:      "removeRepoRepository2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Repository) RemoveRepoRepository(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveRepoRepositoryResponse{
+	res := &operations.RemoveRepoRepository2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Repository) RemoveRepoRepository(ctx context.Context, request operation
 
 }
 
-// UpdateRepoRepository - Update a repository
-func (s *Repository) UpdateRepoRepository(ctx context.Context, request operations.UpdateRepoRepositoryRequest, opts ...operations.Option) (*operations.UpdateRepoRepositoryResponse, error) {
+// UpdateRepoRepository2 - Update a repository
+func (s *Repository) UpdateRepoRepository2(ctx context.Context, request operations.UpdateRepoRepository2Request, opts ...operations.Option) (*operations.UpdateRepoRepository2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Repository) UpdateRepoRepository(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateRepoRepository",
+		OperationID:      "updateRepoRepository2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoRepository", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Repository) UpdateRepoRepository(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateRepoRepositoryResponse{
+	res := &operations.UpdateRepoRepository2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

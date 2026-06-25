@@ -30,8 +30,8 @@ func newComment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateKmsComment - Create a comment
-func (s *Comment) CreateKmsComment(ctx context.Context, request operations.CreateKmsCommentRequest, opts ...operations.Option) (*operations.CreateKmsCommentResponse, error) {
+// CreateKmsComment2 - Create a comment
+func (s *Comment) CreateKmsComment2(ctx context.Context, request operations.CreateKmsComment2Request, opts ...operations.Option) (*operations.CreateKmsComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createKmsComment",
+		OperationID:      "createKmsComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateKmsCommentResponse{
+	res := &operations.CreateKmsComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Comment) CreateKmsComment(ctx context.Context, request operations.Creat
 
 }
 
-// CreateTaskComment - Create a comment
-func (s *Comment) CreateTaskComment(ctx context.Context, request operations.CreateTaskCommentRequest, opts ...operations.Option) (*operations.CreateTaskCommentResponse, error) {
+// CreateTaskComment2 - Create a comment
+func (s *Comment) CreateTaskComment2(ctx context.Context, request operations.CreateTaskComment2Request, opts ...operations.Option) (*operations.CreateTaskComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTaskComment",
+		OperationID:      "createTaskComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateTaskCommentResponse{
+	res := &operations.CreateTaskComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Comment) CreateTaskComment(ctx context.Context, request operations.Crea
 
 }
 
-// CreateUcComment - Create a comment
-func (s *Comment) CreateUcComment(ctx context.Context, request operations.CreateUcCommentRequest, opts ...operations.Option) (*operations.CreateUcCommentResponse, error) {
+// CreateUcComment2 - Create a comment
+func (s *Comment) CreateUcComment2(ctx context.Context, request operations.CreateUcComment2Request, opts ...operations.Option) (*operations.CreateUcComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Comment) CreateUcComment(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcComment",
+		OperationID:      "createUcComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Comment) CreateUcComment(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateUcCommentResponse{
+	res := &operations.CreateUcComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Comment) CreateUcComment(ctx context.Context, request operations.Create
 
 }
 
-// GetKmsComment - Retrieve a comment
-func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCommentRequest, opts ...operations.Option) (*operations.GetKmsCommentResponse, error) {
+// GetKmsComment2 - Retrieve a comment
+func (s *Comment) GetKmsComment2(ctx context.Context, request operations.GetKmsComment2Request, opts ...operations.Option) (*operations.GetKmsComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getKmsComment",
+		OperationID:      "getKmsComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 		}
 	}
 
-	res := &operations.GetKmsCommentResponse{
+	res := &operations.GetKmsComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Comment) GetKmsComment(ctx context.Context, request operations.GetKmsCo
 
 }
 
-// GetTaskComment - Retrieve a comment
-func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTaskCommentRequest, opts ...operations.Option) (*operations.GetTaskCommentResponse, error) {
+// GetTaskComment2 - Retrieve a comment
+func (s *Comment) GetTaskComment2(ctx context.Context, request operations.GetTaskComment2Request, opts ...operations.Option) (*operations.GetTaskComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskComment",
+		OperationID:      "getTaskComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 		}
 	}
 
-	res := &operations.GetTaskCommentResponse{
+	res := &operations.GetTaskComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Comment) GetTaskComment(ctx context.Context, request operations.GetTask
 
 }
 
-// GetUcComment - Retrieve a comment
-func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcCommentRequest, opts ...operations.Option) (*operations.GetUcCommentResponse, error) {
+// GetUcComment2 - Retrieve a comment
+func (s *Comment) GetUcComment2(ctx context.Context, request operations.GetUcComment2Request, opts ...operations.Option) (*operations.GetUcComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcComm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcComment",
+		OperationID:      "getUcComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcComm
 		}
 	}
 
-	res := &operations.GetUcCommentResponse{
+	res := &operations.GetUcComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Comment) GetUcComment(ctx context.Context, request operations.GetUcComm
 
 }
 
-// ListKmsComments - List all comments
-func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKmsCommentsRequest, opts ...operations.Option) (*operations.ListKmsCommentsResponse, error) {
+// ListKmsComments2 - List all comments
+func (s *Comment) ListKmsComments2(ctx context.Context, request operations.ListKmsComments2Request, opts ...operations.Option) (*operations.ListKmsComments2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listKmsComments",
+		OperationID:      "listKmsComments2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 		}
 	}
 
-	res := &operations.ListKmsCommentsResponse{
+	res := &operations.ListKmsComments2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Comment) ListKmsComments(ctx context.Context, request operations.ListKm
 
 }
 
-// ListTaskComments - List all comments
-func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListTaskCommentsRequest, opts ...operations.Option) (*operations.ListTaskCommentsResponse, error) {
+// ListTaskComments2 - List all comments
+func (s *Comment) ListTaskComments2(ctx context.Context, request operations.ListTaskComments2Request, opts ...operations.Option) (*operations.ListTaskComments2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskComments",
+		OperationID:      "listTaskComments2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 		}
 	}
 
-	res := &operations.ListTaskCommentsResponse{
+	res := &operations.ListTaskComments2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Comment) ListTaskComments(ctx context.Context, request operations.ListT
 
 }
 
-// ListUcComments - List all comments
-func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcCommentsRequest, opts ...operations.Option) (*operations.ListUcCommentsResponse, error) {
+// ListUcComments2 - List all comments
+func (s *Comment) ListUcComments2(ctx context.Context, request operations.ListUcComments2Request, opts ...operations.Option) (*operations.ListUcComments2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcComments",
+		OperationID:      "listUcComments2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcC
 		}
 	}
 
-	res := &operations.ListUcCommentsResponse{
+	res := &operations.ListUcComments2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Comment) ListUcComments(ctx context.Context, request operations.ListUcC
 
 }
 
-// PatchKmsComment - Update a comment
-func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchKmsCommentRequest, opts ...operations.Option) (*operations.PatchKmsCommentResponse, error) {
+// PatchKmsComment2 - Update a comment
+func (s *Comment) PatchKmsComment2(ctx context.Context, request operations.PatchKmsComment2Request, opts ...operations.Option) (*operations.PatchKmsComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchKmsComment",
+		OperationID:      "patchKmsComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
@@ -2076,7 +2076,7 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 		}
 	}
 
-	res := &operations.PatchKmsCommentResponse{
+	res := &operations.PatchKmsComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Comment) PatchKmsComment(ctx context.Context, request operations.PatchK
 
 }
 
-// PatchTaskComment - Update a comment
-func (s *Comment) PatchTaskComment(ctx context.Context, request operations.PatchTaskCommentRequest, opts ...operations.Option) (*operations.PatchTaskCommentResponse, error) {
+// PatchTaskComment2 - Update a comment
+func (s *Comment) PatchTaskComment2(ctx context.Context, request operations.PatchTaskComment2Request, opts ...operations.Option) (*operations.PatchTaskComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTaskComment",
+		OperationID:      "patchTaskComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -2290,7 +2290,7 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchTaskCommentResponse{
+	res := &operations.PatchTaskComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2342,8 +2342,8 @@ func (s *Comment) PatchTaskComment(ctx context.Context, request operations.Patch
 
 }
 
-// PatchUcComment - Update a comment
-func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUcCommentRequest, opts ...operations.Option) (*operations.PatchUcCommentResponse, error) {
+// PatchUcComment2 - Update a comment
+func (s *Comment) PatchUcComment2(ctx context.Context, request operations.PatchUcComment2Request, opts ...operations.Option) (*operations.PatchUcComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2372,7 +2372,7 @@ func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcComment",
+		OperationID:      "patchUcComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -2504,7 +2504,7 @@ func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUc
 		}
 	}
 
-	res := &operations.PatchUcCommentResponse{
+	res := &operations.PatchUcComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2556,8 +2556,8 @@ func (s *Comment) PatchUcComment(ctx context.Context, request operations.PatchUc
 
 }
 
-// RemoveKmsComment - Remove a comment
-func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.RemoveKmsCommentRequest, opts ...operations.Option) (*operations.RemoveKmsCommentResponse, error) {
+// RemoveKmsComment2 - Remove a comment
+func (s *Comment) RemoveKmsComment2(ctx context.Context, request operations.RemoveKmsComment2Request, opts ...operations.Option) (*operations.RemoveKmsComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2586,7 +2586,7 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeKmsComment",
+		OperationID:      "removeKmsComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2707,7 +2707,7 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveKmsCommentResponse{
+	res := &operations.RemoveKmsComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2738,8 +2738,8 @@ func (s *Comment) RemoveKmsComment(ctx context.Context, request operations.Remov
 
 }
 
-// RemoveTaskComment - Remove a comment
-func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.RemoveTaskCommentRequest, opts ...operations.Option) (*operations.RemoveTaskCommentResponse, error) {
+// RemoveTaskComment2 - Remove a comment
+func (s *Comment) RemoveTaskComment2(ctx context.Context, request operations.RemoveTaskComment2Request, opts ...operations.Option) (*operations.RemoveTaskComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2768,7 +2768,7 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTaskComment",
+		OperationID:      "removeTaskComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2889,7 +2889,7 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveTaskCommentResponse{
+	res := &operations.RemoveTaskComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2920,8 +2920,8 @@ func (s *Comment) RemoveTaskComment(ctx context.Context, request operations.Remo
 
 }
 
-// RemoveUcComment - Remove a comment
-func (s *Comment) RemoveUcComment(ctx context.Context, request operations.RemoveUcCommentRequest, opts ...operations.Option) (*operations.RemoveUcCommentResponse, error) {
+// RemoveUcComment2 - Remove a comment
+func (s *Comment) RemoveUcComment2(ctx context.Context, request operations.RemoveUcComment2Request, opts ...operations.Option) (*operations.RemoveUcComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2950,7 +2950,7 @@ func (s *Comment) RemoveUcComment(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcComment",
+		OperationID:      "removeUcComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3071,7 +3071,7 @@ func (s *Comment) RemoveUcComment(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveUcCommentResponse{
+	res := &operations.RemoveUcComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3102,8 +3102,8 @@ func (s *Comment) RemoveUcComment(ctx context.Context, request operations.Remove
 
 }
 
-// UpdateKmsComment - Update a comment
-func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.UpdateKmsCommentRequest, opts ...operations.Option) (*operations.UpdateKmsCommentResponse, error) {
+// UpdateKmsComment2 - Update a comment
+func (s *Comment) UpdateKmsComment2(ctx context.Context, request operations.UpdateKmsComment2Request, opts ...operations.Option) (*operations.UpdateKmsComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3132,7 +3132,7 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateKmsComment",
+		OperationID:      "updateKmsComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "KmsComment", "json", `request:"mediaType=application/json"`)
@@ -3264,7 +3264,7 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateKmsCommentResponse{
+	res := &operations.UpdateKmsComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3316,8 +3316,8 @@ func (s *Comment) UpdateKmsComment(ctx context.Context, request operations.Updat
 
 }
 
-// UpdateTaskComment - Update a comment
-func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.UpdateTaskCommentRequest, opts ...operations.Option) (*operations.UpdateTaskCommentResponse, error) {
+// UpdateTaskComment2 - Update a comment
+func (s *Comment) UpdateTaskComment2(ctx context.Context, request operations.UpdateTaskComment2Request, opts ...operations.Option) (*operations.UpdateTaskComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3346,7 +3346,7 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTaskComment",
+		OperationID:      "updateTaskComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -3478,7 +3478,7 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateTaskCommentResponse{
+	res := &operations.UpdateTaskComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3530,8 +3530,8 @@ func (s *Comment) UpdateTaskComment(ctx context.Context, request operations.Upda
 
 }
 
-// UpdateUcComment - Update a comment
-func (s *Comment) UpdateUcComment(ctx context.Context, request operations.UpdateUcCommentRequest, opts ...operations.Option) (*operations.UpdateUcCommentResponse, error) {
+// UpdateUcComment2 - Update a comment
+func (s *Comment) UpdateUcComment2(ctx context.Context, request operations.UpdateUcComment2Request, opts ...operations.Option) (*operations.UpdateUcComment2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3560,7 +3560,7 @@ func (s *Comment) UpdateUcComment(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcComment",
+		OperationID:      "updateUcComment2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -3692,7 +3692,7 @@ func (s *Comment) UpdateUcComment(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateUcCommentResponse{
+	res := &operations.UpdateUcComment2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

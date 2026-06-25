@@ -30,8 +30,8 @@ func newHris(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateHrisBankaccount - Create a bankaccount
-func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.CreateHrisBankaccountRequest, opts ...operations.Option) (*operations.CreateHrisBankaccountResponse, error) {
+// CreateHrisBankaccount2 - Create a bankaccount
+func (s *Hris) CreateHrisBankaccount2(ctx context.Context, request operations.CreateHrisBankaccount2Request, opts ...operations.Option) (*operations.CreateHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisBankaccount",
+		OperationID:      "createHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateHrisBankaccountResponse{
+	res := &operations.CreateHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Hris) CreateHrisBankaccount(ctx context.Context, request operations.Cre
 
 }
 
-// CreateHrisBenefit - Create a benefit
-func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateHrisBenefitRequest, opts ...operations.Option) (*operations.CreateHrisBenefitResponse, error) {
+// CreateHrisBenefit2 - Create a benefit
+func (s *Hris) CreateHrisBenefit2(ctx context.Context, request operations.CreateHrisBenefit2Request, opts ...operations.Option) (*operations.CreateHrisBenefit2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisBenefit",
+		OperationID:      "createHrisBenefit2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateH
 		}
 	}
 
-	res := &operations.CreateHrisBenefitResponse{
+	res := &operations.CreateHrisBenefit2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Hris) CreateHrisBenefit(ctx context.Context, request operations.CreateH
 
 }
 
-// CreateHrisCompany - Create a company
-func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateHrisCompanyRequest, opts ...operations.Option) (*operations.CreateHrisCompanyResponse, error) {
+// CreateHrisCompany2 - Create a company
+func (s *Hris) CreateHrisCompany2(ctx context.Context, request operations.CreateHrisCompany2Request, opts ...operations.Option) (*operations.CreateHrisCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisCompany",
+		OperationID:      "createHrisCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 		}
 	}
 
-	res := &operations.CreateHrisCompanyResponse{
+	res := &operations.CreateHrisCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Hris) CreateHrisCompany(ctx context.Context, request operations.CreateH
 
 }
 
-// CreateHrisDeduction - Create a deduction
-func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.CreateHrisDeductionRequest, opts ...operations.Option) (*operations.CreateHrisDeductionResponse, error) {
+// CreateHrisDeduction2 - Create a deduction
+func (s *Hris) CreateHrisDeduction2(ctx context.Context, request operations.CreateHrisDeduction2Request, opts ...operations.Option) (*operations.CreateHrisDeduction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisDeduction",
+		OperationID:      "createHrisDeduction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateHrisDeductionResponse{
+	res := &operations.CreateHrisDeduction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Hris) CreateHrisDeduction(ctx context.Context, request operations.Creat
 
 }
 
-// CreateHrisDevice - Create a device
-func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHrisDeviceRequest, opts ...operations.Option) (*operations.CreateHrisDeviceResponse, error) {
+// CreateHrisDevice2 - Create a device
+func (s *Hris) CreateHrisDevice2(ctx context.Context, request operations.CreateHrisDevice2Request, opts ...operations.Option) (*operations.CreateHrisDevice2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisDevice",
+		OperationID:      "createHrisDevice2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHr
 		}
 	}
 
-	res := &operations.CreateHrisDeviceResponse{
+	res := &operations.CreateHrisDevice2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Hris) CreateHrisDevice(ctx context.Context, request operations.CreateHr
 
 }
 
-// CreateHrisEmployee - Create an employee
-func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.CreateHrisEmployeeRequest, opts ...operations.Option) (*operations.CreateHrisEmployeeResponse, error) {
+// CreateHrisEmployee2 - Create an employee
+func (s *Hris) CreateHrisEmployee2(ctx context.Context, request operations.CreateHrisEmployee2Request, opts ...operations.Option) (*operations.CreateHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisEmployee",
+		OperationID:      "createHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateHrisEmployeeResponse{
+	res := &operations.CreateHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Hris) CreateHrisEmployee(ctx context.Context, request operations.Create
 
 }
 
-// CreateHrisGroup - Create a group
-func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest, opts ...operations.Option) (*operations.CreateHrisGroupResponse, error) {
+// CreateHrisGroup2 - Create a group
+func (s *Hris) CreateHrisGroup2(ctx context.Context, request operations.CreateHrisGroup2Request, opts ...operations.Option) (*operations.CreateHrisGroup2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisGroup",
+		OperationID:      "createHrisGroup2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -1476,7 +1476,7 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 		}
 	}
 
-	res := &operations.CreateHrisGroupResponse{
+	res := &operations.CreateHrisGroup2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1528,8 +1528,8 @@ func (s *Hris) CreateHrisGroup(ctx context.Context, request operations.CreateHri
 
 }
 
-// CreateHrisLocation - Create a location
-func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.CreateHrisLocationRequest, opts ...operations.Option) (*operations.CreateHrisLocationResponse, error) {
+// CreateHrisLocation2 - Create a location
+func (s *Hris) CreateHrisLocation2(ctx context.Context, request operations.CreateHrisLocation2Request, opts ...operations.Option) (*operations.CreateHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1558,7 +1558,7 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisLocation",
+		OperationID:      "createHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -1690,7 +1690,7 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateHrisLocationResponse{
+	res := &operations.CreateHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1742,8 +1742,8 @@ func (s *Hris) CreateHrisLocation(ctx context.Context, request operations.Create
 
 }
 
-// CreateHrisTimeoff - Create a timeoff
-func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateHrisTimeoffRequest, opts ...operations.Option) (*operations.CreateHrisTimeoffResponse, error) {
+// CreateHrisTimeoff2 - Create a timeoff
+func (s *Hris) CreateHrisTimeoff2(ctx context.Context, request operations.CreateHrisTimeoff2Request, opts ...operations.Option) (*operations.CreateHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1772,7 +1772,7 @@ func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisTimeoff",
+		OperationID:      "createHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -1904,7 +1904,7 @@ func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateH
 		}
 	}
 
-	res := &operations.CreateHrisTimeoffResponse{
+	res := &operations.CreateHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1956,8 +1956,8 @@ func (s *Hris) CreateHrisTimeoff(ctx context.Context, request operations.CreateH
 
 }
 
-// CreateHrisTimeshift - Create a timeshift
-func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.CreateHrisTimeshiftRequest, opts ...operations.Option) (*operations.CreateHrisTimeshiftResponse, error) {
+// CreateHrisTimeshift2 - Create a timeshift
+func (s *Hris) CreateHrisTimeshift2(ctx context.Context, request operations.CreateHrisTimeshift2Request, opts ...operations.Option) (*operations.CreateHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1986,7 +1986,7 @@ func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisTimeshift",
+		OperationID:      "createHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -2118,7 +2118,7 @@ func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateHrisTimeshiftResponse{
+	res := &operations.CreateHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2170,8 +2170,8 @@ func (s *Hris) CreateHrisTimeshift(ctx context.Context, request operations.Creat
 
 }
 
-// GetHrisBankaccount - Retrieve a bankaccount
-func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHrisBankaccountRequest, opts ...operations.Option) (*operations.GetHrisBankaccountResponse, error) {
+// GetHrisBankaccount2 - Retrieve a bankaccount
+func (s *Hris) GetHrisBankaccount2(ctx context.Context, request operations.GetHrisBankaccount2Request, opts ...operations.Option) (*operations.GetHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2200,7 +2200,7 @@ func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisBankaccount",
+		OperationID:      "getHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2325,7 +2325,7 @@ func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHri
 		}
 	}
 
-	res := &operations.GetHrisBankaccountResponse{
+	res := &operations.GetHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2377,8 +2377,8 @@ func (s *Hris) GetHrisBankaccount(ctx context.Context, request operations.GetHri
 
 }
 
-// GetHrisBenefit - Retrieve a benefit
-func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBenefitRequest, opts ...operations.Option) (*operations.GetHrisBenefitResponse, error) {
+// GetHrisBenefit2 - Retrieve a benefit
+func (s *Hris) GetHrisBenefit2(ctx context.Context, request operations.GetHrisBenefit2Request, opts ...operations.Option) (*operations.GetHrisBenefit2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2407,7 +2407,7 @@ func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBen
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisBenefit",
+		OperationID:      "getHrisBenefit2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2532,7 +2532,7 @@ func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBen
 		}
 	}
 
-	res := &operations.GetHrisBenefitResponse{
+	res := &operations.GetHrisBenefit2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2584,8 +2584,8 @@ func (s *Hris) GetHrisBenefit(ctx context.Context, request operations.GetHrisBen
 
 }
 
-// GetHrisCompany - Retrieve a company
-func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCompanyRequest, opts ...operations.Option) (*operations.GetHrisCompanyResponse, error) {
+// GetHrisCompany2 - Retrieve a company
+func (s *Hris) GetHrisCompany2(ctx context.Context, request operations.GetHrisCompany2Request, opts ...operations.Option) (*operations.GetHrisCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2614,7 +2614,7 @@ func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCom
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisCompany",
+		OperationID:      "getHrisCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2739,7 +2739,7 @@ func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCom
 		}
 	}
 
-	res := &operations.GetHrisCompanyResponse{
+	res := &operations.GetHrisCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2791,8 +2791,8 @@ func (s *Hris) GetHrisCompany(ctx context.Context, request operations.GetHrisCom
 
 }
 
-// GetHrisDeduction - Retrieve a deduction
-func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisDeductionRequest, opts ...operations.Option) (*operations.GetHrisDeductionResponse, error) {
+// GetHrisDeduction2 - Retrieve a deduction
+func (s *Hris) GetHrisDeduction2(ctx context.Context, request operations.GetHrisDeduction2Request, opts ...operations.Option) (*operations.GetHrisDeduction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2821,7 +2821,7 @@ func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisD
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisDeduction",
+		OperationID:      "getHrisDeduction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2946,7 +2946,7 @@ func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisD
 		}
 	}
 
-	res := &operations.GetHrisDeductionResponse{
+	res := &operations.GetHrisDeduction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2998,8 +2998,8 @@ func (s *Hris) GetHrisDeduction(ctx context.Context, request operations.GetHrisD
 
 }
 
-// GetHrisDevice - Retrieve a device
-func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDeviceRequest, opts ...operations.Option) (*operations.GetHrisDeviceResponse, error) {
+// GetHrisDevice2 - Retrieve a device
+func (s *Hris) GetHrisDevice2(ctx context.Context, request operations.GetHrisDevice2Request, opts ...operations.Option) (*operations.GetHrisDevice2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3028,7 +3028,7 @@ func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDevi
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisDevice",
+		OperationID:      "getHrisDevice2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3153,7 +3153,7 @@ func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDevi
 		}
 	}
 
-	res := &operations.GetHrisDeviceResponse{
+	res := &operations.GetHrisDevice2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3205,8 +3205,8 @@ func (s *Hris) GetHrisDevice(ctx context.Context, request operations.GetHrisDevi
 
 }
 
-// GetHrisEmployee - Retrieve an employee
-func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEmployeeRequest, opts ...operations.Option) (*operations.GetHrisEmployeeResponse, error) {
+// GetHrisEmployee2 - Retrieve an employee
+func (s *Hris) GetHrisEmployee2(ctx context.Context, request operations.GetHrisEmployee2Request, opts ...operations.Option) (*operations.GetHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3235,7 +3235,7 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisEmployee",
+		OperationID:      "getHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3360,7 +3360,7 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 		}
 	}
 
-	res := &operations.GetHrisEmployeeResponse{
+	res := &operations.GetHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3412,8 +3412,8 @@ func (s *Hris) GetHrisEmployee(ctx context.Context, request operations.GetHrisEm
 
 }
 
-// GetHrisGroup - Retrieve a group
-func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest, opts ...operations.Option) (*operations.GetHrisGroupResponse, error) {
+// GetHrisGroup2 - Retrieve a group
+func (s *Hris) GetHrisGroup2(ctx context.Context, request operations.GetHrisGroup2Request, opts ...operations.Option) (*operations.GetHrisGroup2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3442,7 +3442,7 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisGroup",
+		OperationID:      "getHrisGroup2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3567,7 +3567,7 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 		}
 	}
 
-	res := &operations.GetHrisGroupResponse{
+	res := &operations.GetHrisGroup2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3619,8 +3619,8 @@ func (s *Hris) GetHrisGroup(ctx context.Context, request operations.GetHrisGroup
 
 }
 
-// GetHrisLocation - Retrieve a location
-func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLocationRequest, opts ...operations.Option) (*operations.GetHrisLocationResponse, error) {
+// GetHrisLocation2 - Retrieve a location
+func (s *Hris) GetHrisLocation2(ctx context.Context, request operations.GetHrisLocation2Request, opts ...operations.Option) (*operations.GetHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3649,7 +3649,7 @@ func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisLocation",
+		OperationID:      "getHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3774,7 +3774,7 @@ func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLo
 		}
 	}
 
-	res := &operations.GetHrisLocationResponse{
+	res := &operations.GetHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3826,8 +3826,8 @@ func (s *Hris) GetHrisLocation(ctx context.Context, request operations.GetHrisLo
 
 }
 
-// GetHrisPayslip - Retrieve a payslip
-func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPayslipRequest, opts ...operations.Option) (*operations.GetHrisPayslipResponse, error) {
+// GetHrisPayslip2 - Retrieve a payslip
+func (s *Hris) GetHrisPayslip2(ctx context.Context, request operations.GetHrisPayslip2Request, opts ...operations.Option) (*operations.GetHrisPayslip2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3856,7 +3856,7 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisPayslip",
+		OperationID:      "getHrisPayslip2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3981,7 +3981,7 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 		}
 	}
 
-	res := &operations.GetHrisPayslipResponse{
+	res := &operations.GetHrisPayslip2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4033,8 +4033,8 @@ func (s *Hris) GetHrisPayslip(ctx context.Context, request operations.GetHrisPay
 
 }
 
-// GetHrisTimeoff - Retrieve a timeoff
-func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTimeoffRequest, opts ...operations.Option) (*operations.GetHrisTimeoffResponse, error) {
+// GetHrisTimeoff2 - Retrieve a timeoff
+func (s *Hris) GetHrisTimeoff2(ctx context.Context, request operations.GetHrisTimeoff2Request, opts ...operations.Option) (*operations.GetHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4063,7 +4063,7 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisTimeoff",
+		OperationID:      "getHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4188,7 +4188,7 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 		}
 	}
 
-	res := &operations.GetHrisTimeoffResponse{
+	res := &operations.GetHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4240,8 +4240,8 @@ func (s *Hris) GetHrisTimeoff(ctx context.Context, request operations.GetHrisTim
 
 }
 
-// GetHrisTimeshift - Retrieve a timeshift
-func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisTimeshiftRequest, opts ...operations.Option) (*operations.GetHrisTimeshiftResponse, error) {
+// GetHrisTimeshift2 - Retrieve a timeshift
+func (s *Hris) GetHrisTimeshift2(ctx context.Context, request operations.GetHrisTimeshift2Request, opts ...operations.Option) (*operations.GetHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4270,7 +4270,7 @@ func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisT
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisTimeshift",
+		OperationID:      "getHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4395,7 +4395,7 @@ func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisT
 		}
 	}
 
-	res := &operations.GetHrisTimeshiftResponse{
+	res := &operations.GetHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4447,8 +4447,8 @@ func (s *Hris) GetHrisTimeshift(ctx context.Context, request operations.GetHrisT
 
 }
 
-// ListHrisBankaccounts - List all bankaccounts
-func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.ListHrisBankaccountsRequest, opts ...operations.Option) (*operations.ListHrisBankaccountsResponse, error) {
+// ListHrisBankaccounts2 - List all bankaccounts
+func (s *Hris) ListHrisBankaccounts2(ctx context.Context, request operations.ListHrisBankaccounts2Request, opts ...operations.Option) (*operations.ListHrisBankaccounts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4477,7 +4477,7 @@ func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisBankaccounts",
+		OperationID:      "listHrisBankaccounts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4602,7 +4602,7 @@ func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListHrisBankaccountsResponse{
+	res := &operations.ListHrisBankaccounts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4654,8 +4654,8 @@ func (s *Hris) ListHrisBankaccounts(ctx context.Context, request operations.List
 
 }
 
-// ListHrisBenefits - List all benefits
-func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHrisBenefitsRequest, opts ...operations.Option) (*operations.ListHrisBenefitsResponse, error) {
+// ListHrisBenefits2 - List all benefits
+func (s *Hris) ListHrisBenefits2(ctx context.Context, request operations.ListHrisBenefits2Request, opts ...operations.Option) (*operations.ListHrisBenefits2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4684,7 +4684,7 @@ func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisBenefits",
+		OperationID:      "listHrisBenefits2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4809,7 +4809,7 @@ func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHris
 		}
 	}
 
-	res := &operations.ListHrisBenefitsResponse{
+	res := &operations.ListHrisBenefits2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4861,8 +4861,8 @@ func (s *Hris) ListHrisBenefits(ctx context.Context, request operations.ListHris
 
 }
 
-// ListHrisCompanies - List all companies
-func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHrisCompaniesRequest, opts ...operations.Option) (*operations.ListHrisCompaniesResponse, error) {
+// ListHrisCompanies2 - List all companies
+func (s *Hris) ListHrisCompanies2(ctx context.Context, request operations.ListHrisCompanies2Request, opts ...operations.Option) (*operations.ListHrisCompanies2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4891,7 +4891,7 @@ func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisCompanies",
+		OperationID:      "listHrisCompanies2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5016,7 +5016,7 @@ func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHri
 		}
 	}
 
-	res := &operations.ListHrisCompaniesResponse{
+	res := &operations.ListHrisCompanies2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5068,8 +5068,8 @@ func (s *Hris) ListHrisCompanies(ctx context.Context, request operations.ListHri
 
 }
 
-// ListHrisDeductions - List all deductions
-func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHrisDeductionsRequest, opts ...operations.Option) (*operations.ListHrisDeductionsResponse, error) {
+// ListHrisDeductions2 - List all deductions
+func (s *Hris) ListHrisDeductions2(ctx context.Context, request operations.ListHrisDeductions2Request, opts ...operations.Option) (*operations.ListHrisDeductions2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5098,7 +5098,7 @@ func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisDeductions",
+		OperationID:      "listHrisDeductions2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5223,7 +5223,7 @@ func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHr
 		}
 	}
 
-	res := &operations.ListHrisDeductionsResponse{
+	res := &operations.ListHrisDeductions2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5275,8 +5275,8 @@ func (s *Hris) ListHrisDeductions(ctx context.Context, request operations.ListHr
 
 }
 
-// ListHrisDevices - List all devices
-func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisDevicesRequest, opts ...operations.Option) (*operations.ListHrisDevicesResponse, error) {
+// ListHrisDevices2 - List all devices
+func (s *Hris) ListHrisDevices2(ctx context.Context, request operations.ListHrisDevices2Request, opts ...operations.Option) (*operations.ListHrisDevices2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5305,7 +5305,7 @@ func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisD
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisDevices",
+		OperationID:      "listHrisDevices2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5430,7 +5430,7 @@ func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisD
 		}
 	}
 
-	res := &operations.ListHrisDevicesResponse{
+	res := &operations.ListHrisDevices2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5482,8 +5482,8 @@ func (s *Hris) ListHrisDevices(ctx context.Context, request operations.ListHrisD
 
 }
 
-// ListHrisEmployees - List all employees
-func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHrisEmployeesRequest, opts ...operations.Option) (*operations.ListHrisEmployeesResponse, error) {
+// ListHrisEmployees2 - List all employees
+func (s *Hris) ListHrisEmployees2(ctx context.Context, request operations.ListHrisEmployees2Request, opts ...operations.Option) (*operations.ListHrisEmployees2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5512,7 +5512,7 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisEmployees",
+		OperationID:      "listHrisEmployees2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5637,7 +5637,7 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 		}
 	}
 
-	res := &operations.ListHrisEmployeesResponse{
+	res := &operations.ListHrisEmployees2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5689,8 +5689,8 @@ func (s *Hris) ListHrisEmployees(ctx context.Context, request operations.ListHri
 
 }
 
-// ListHrisGroups - List all groups
-func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest, opts ...operations.Option) (*operations.ListHrisGroupsResponse, error) {
+// ListHrisGroups2 - List all groups
+func (s *Hris) ListHrisGroups2(ctx context.Context, request operations.ListHrisGroups2Request, opts ...operations.Option) (*operations.ListHrisGroups2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5719,7 +5719,7 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisGroups",
+		OperationID:      "listHrisGroups2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5844,7 +5844,7 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 		}
 	}
 
-	res := &operations.ListHrisGroupsResponse{
+	res := &operations.ListHrisGroups2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5896,8 +5896,8 @@ func (s *Hris) ListHrisGroups(ctx context.Context, request operations.ListHrisGr
 
 }
 
-// ListHrisLocations - List all locations
-func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHrisLocationsRequest, opts ...operations.Option) (*operations.ListHrisLocationsResponse, error) {
+// ListHrisLocations2 - List all locations
+func (s *Hris) ListHrisLocations2(ctx context.Context, request operations.ListHrisLocations2Request, opts ...operations.Option) (*operations.ListHrisLocations2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5926,7 +5926,7 @@ func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisLocations",
+		OperationID:      "listHrisLocations2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6051,7 +6051,7 @@ func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHri
 		}
 	}
 
-	res := &operations.ListHrisLocationsResponse{
+	res := &operations.ListHrisLocations2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6103,8 +6103,8 @@ func (s *Hris) ListHrisLocations(ctx context.Context, request operations.ListHri
 
 }
 
-// ListHrisPayslips - List all payslips
-func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest, opts ...operations.Option) (*operations.ListHrisPayslipsResponse, error) {
+// ListHrisPayslips2 - List all payslips
+func (s *Hris) ListHrisPayslips2(ctx context.Context, request operations.ListHrisPayslips2Request, opts ...operations.Option) (*operations.ListHrisPayslips2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6133,7 +6133,7 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisPayslips",
+		OperationID:      "listHrisPayslips2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6258,7 +6258,7 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 		}
 	}
 
-	res := &operations.ListHrisPayslipsResponse{
+	res := &operations.ListHrisPayslips2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6310,8 +6310,8 @@ func (s *Hris) ListHrisPayslips(ctx context.Context, request operations.ListHris
 
 }
 
-// ListHrisTimeoffs - List all timeoffs
-func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHrisTimeoffsRequest, opts ...operations.Option) (*operations.ListHrisTimeoffsResponse, error) {
+// ListHrisTimeoffs2 - List all timeoffs
+func (s *Hris) ListHrisTimeoffs2(ctx context.Context, request operations.ListHrisTimeoffs2Request, opts ...operations.Option) (*operations.ListHrisTimeoffs2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6340,7 +6340,7 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisTimeoffs",
+		OperationID:      "listHrisTimeoffs2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6465,7 +6465,7 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 		}
 	}
 
-	res := &operations.ListHrisTimeoffsResponse{
+	res := &operations.ListHrisTimeoffs2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6517,8 +6517,8 @@ func (s *Hris) ListHrisTimeoffs(ctx context.Context, request operations.ListHris
 
 }
 
-// ListHrisTimeshifts - List all timeshifts
-func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHrisTimeshiftsRequest, opts ...operations.Option) (*operations.ListHrisTimeshiftsResponse, error) {
+// ListHrisTimeshifts2 - List all timeshifts
+func (s *Hris) ListHrisTimeshifts2(ctx context.Context, request operations.ListHrisTimeshifts2Request, opts ...operations.Option) (*operations.ListHrisTimeshifts2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6547,7 +6547,7 @@ func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisTimeshifts",
+		OperationID:      "listHrisTimeshifts2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6672,7 +6672,7 @@ func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHr
 		}
 	}
 
-	res := &operations.ListHrisTimeshiftsResponse{
+	res := &operations.ListHrisTimeshifts2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6724,8 +6724,8 @@ func (s *Hris) ListHrisTimeshifts(ctx context.Context, request operations.ListHr
 
 }
 
-// PatchHrisBankaccount - Update a bankaccount
-func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.PatchHrisBankaccountRequest, opts ...operations.Option) (*operations.PatchHrisBankaccountResponse, error) {
+// PatchHrisBankaccount2 - Update a bankaccount
+func (s *Hris) PatchHrisBankaccount2(ctx context.Context, request operations.PatchHrisBankaccount2Request, opts ...operations.Option) (*operations.PatchHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6754,7 +6754,7 @@ func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisBankaccount",
+		OperationID:      "patchHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -6886,7 +6886,7 @@ func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchHrisBankaccountResponse{
+	res := &operations.PatchHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6938,8 +6938,8 @@ func (s *Hris) PatchHrisBankaccount(ctx context.Context, request operations.Patc
 
 }
 
-// PatchHrisBenefit - Update a benefit
-func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHrisBenefitRequest, opts ...operations.Option) (*operations.PatchHrisBenefitResponse, error) {
+// PatchHrisBenefit2 - Update a benefit
+func (s *Hris) PatchHrisBenefit2(ctx context.Context, request operations.PatchHrisBenefit2Request, opts ...operations.Option) (*operations.PatchHrisBenefit2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6968,7 +6968,7 @@ func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisBenefit",
+		OperationID:      "patchHrisBenefit2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -7100,7 +7100,7 @@ func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHri
 		}
 	}
 
-	res := &operations.PatchHrisBenefitResponse{
+	res := &operations.PatchHrisBenefit2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7152,8 +7152,8 @@ func (s *Hris) PatchHrisBenefit(ctx context.Context, request operations.PatchHri
 
 }
 
-// PatchHrisCompany - Update a company
-func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHrisCompanyRequest, opts ...operations.Option) (*operations.PatchHrisCompanyResponse, error) {
+// PatchHrisCompany2 - Update a company
+func (s *Hris) PatchHrisCompany2(ctx context.Context, request operations.PatchHrisCompany2Request, opts ...operations.Option) (*operations.PatchHrisCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7182,7 +7182,7 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisCompany",
+		OperationID:      "patchHrisCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -7314,7 +7314,7 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 		}
 	}
 
-	res := &operations.PatchHrisCompanyResponse{
+	res := &operations.PatchHrisCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7366,8 +7366,8 @@ func (s *Hris) PatchHrisCompany(ctx context.Context, request operations.PatchHri
 
 }
 
-// PatchHrisDeduction - Update a deduction
-func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchHrisDeductionRequest, opts ...operations.Option) (*operations.PatchHrisDeductionResponse, error) {
+// PatchHrisDeduction2 - Update a deduction
+func (s *Hris) PatchHrisDeduction2(ctx context.Context, request operations.PatchHrisDeduction2Request, opts ...operations.Option) (*operations.PatchHrisDeduction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7396,7 +7396,7 @@ func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisDeduction",
+		OperationID:      "patchHrisDeduction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -7528,7 +7528,7 @@ func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchH
 		}
 	}
 
-	res := &operations.PatchHrisDeductionResponse{
+	res := &operations.PatchHrisDeduction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7580,8 +7580,8 @@ func (s *Hris) PatchHrisDeduction(ctx context.Context, request operations.PatchH
 
 }
 
-// PatchHrisDevice - Update a device
-func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHrisDeviceRequest, opts ...operations.Option) (*operations.PatchHrisDeviceResponse, error) {
+// PatchHrisDevice2 - Update a device
+func (s *Hris) PatchHrisDevice2(ctx context.Context, request operations.PatchHrisDevice2Request, opts ...operations.Option) (*operations.PatchHrisDevice2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7610,7 +7610,7 @@ func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisDevice",
+		OperationID:      "patchHrisDevice2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -7742,7 +7742,7 @@ func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHris
 		}
 	}
 
-	res := &operations.PatchHrisDeviceResponse{
+	res := &operations.PatchHrisDevice2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7794,8 +7794,8 @@ func (s *Hris) PatchHrisDevice(ctx context.Context, request operations.PatchHris
 
 }
 
-// PatchHrisEmployee - Update an employee
-func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHrisEmployeeRequest, opts ...operations.Option) (*operations.PatchHrisEmployeeResponse, error) {
+// PatchHrisEmployee2 - Update an employee
+func (s *Hris) PatchHrisEmployee2(ctx context.Context, request operations.PatchHrisEmployee2Request, opts ...operations.Option) (*operations.PatchHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7824,7 +7824,7 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisEmployee",
+		OperationID:      "patchHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -7956,7 +7956,7 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 		}
 	}
 
-	res := &operations.PatchHrisEmployeeResponse{
+	res := &operations.PatchHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8008,8 +8008,8 @@ func (s *Hris) PatchHrisEmployee(ctx context.Context, request operations.PatchHr
 
 }
 
-// PatchHrisGroup - Update a group
-func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest, opts ...operations.Option) (*operations.PatchHrisGroupResponse, error) {
+// PatchHrisGroup2 - Update a group
+func (s *Hris) PatchHrisGroup2(ctx context.Context, request operations.PatchHrisGroup2Request, opts ...operations.Option) (*operations.PatchHrisGroup2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8038,7 +8038,7 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisGroup",
+		OperationID:      "patchHrisGroup2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -8170,7 +8170,7 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 		}
 	}
 
-	res := &operations.PatchHrisGroupResponse{
+	res := &operations.PatchHrisGroup2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8222,8 +8222,8 @@ func (s *Hris) PatchHrisGroup(ctx context.Context, request operations.PatchHrisG
 
 }
 
-// PatchHrisLocation - Update a location
-func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHrisLocationRequest, opts ...operations.Option) (*operations.PatchHrisLocationResponse, error) {
+// PatchHrisLocation2 - Update a location
+func (s *Hris) PatchHrisLocation2(ctx context.Context, request operations.PatchHrisLocation2Request, opts ...operations.Option) (*operations.PatchHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8252,7 +8252,7 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisLocation",
+		OperationID:      "patchHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -8384,7 +8384,7 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 		}
 	}
 
-	res := &operations.PatchHrisLocationResponse{
+	res := &operations.PatchHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8436,8 +8436,8 @@ func (s *Hris) PatchHrisLocation(ctx context.Context, request operations.PatchHr
 
 }
 
-// PatchHrisTimeoff - Update a timeoff
-func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHrisTimeoffRequest, opts ...operations.Option) (*operations.PatchHrisTimeoffResponse, error) {
+// PatchHrisTimeoff2 - Update a timeoff
+func (s *Hris) PatchHrisTimeoff2(ctx context.Context, request operations.PatchHrisTimeoff2Request, opts ...operations.Option) (*operations.PatchHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8466,7 +8466,7 @@ func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisTimeoff",
+		OperationID:      "patchHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -8598,7 +8598,7 @@ func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHri
 		}
 	}
 
-	res := &operations.PatchHrisTimeoffResponse{
+	res := &operations.PatchHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8650,8 +8650,8 @@ func (s *Hris) PatchHrisTimeoff(ctx context.Context, request operations.PatchHri
 
 }
 
-// PatchHrisTimeshift - Update a timeshift
-func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchHrisTimeshiftRequest, opts ...operations.Option) (*operations.PatchHrisTimeshiftResponse, error) {
+// PatchHrisTimeshift2 - Update a timeshift
+func (s *Hris) PatchHrisTimeshift2(ctx context.Context, request operations.PatchHrisTimeshift2Request, opts ...operations.Option) (*operations.PatchHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8680,7 +8680,7 @@ func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisTimeshift",
+		OperationID:      "patchHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -8812,7 +8812,7 @@ func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchH
 		}
 	}
 
-	res := &operations.PatchHrisTimeshiftResponse{
+	res := &operations.PatchHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8864,8 +8864,8 @@ func (s *Hris) PatchHrisTimeshift(ctx context.Context, request operations.PatchH
 
 }
 
-// RemoveHrisBankaccount - Remove a bankaccount
-func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.RemoveHrisBankaccountRequest, opts ...operations.Option) (*operations.RemoveHrisBankaccountResponse, error) {
+// RemoveHrisBankaccount2 - Remove a bankaccount
+func (s *Hris) RemoveHrisBankaccount2(ctx context.Context, request operations.RemoveHrisBankaccount2Request, opts ...operations.Option) (*operations.RemoveHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8894,7 +8894,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisBankaccount",
+		OperationID:      "removeHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9015,7 +9015,7 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveHrisBankaccountResponse{
+	res := &operations.RemoveHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9046,8 +9046,8 @@ func (s *Hris) RemoveHrisBankaccount(ctx context.Context, request operations.Rem
 
 }
 
-// RemoveHrisBenefit - Remove a benefit
-func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveHrisBenefitRequest, opts ...operations.Option) (*operations.RemoveHrisBenefitResponse, error) {
+// RemoveHrisBenefit2 - Remove a benefit
+func (s *Hris) RemoveHrisBenefit2(ctx context.Context, request operations.RemoveHrisBenefit2Request, opts ...operations.Option) (*operations.RemoveHrisBenefit2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9076,7 +9076,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisBenefit",
+		OperationID:      "removeHrisBenefit2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9197,7 +9197,7 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 		}
 	}
 
-	res := &operations.RemoveHrisBenefitResponse{
+	res := &operations.RemoveHrisBenefit2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9228,8 +9228,8 @@ func (s *Hris) RemoveHrisBenefit(ctx context.Context, request operations.RemoveH
 
 }
 
-// RemoveHrisCompany - Remove a company
-func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveHrisCompanyRequest, opts ...operations.Option) (*operations.RemoveHrisCompanyResponse, error) {
+// RemoveHrisCompany2 - Remove a company
+func (s *Hris) RemoveHrisCompany2(ctx context.Context, request operations.RemoveHrisCompany2Request, opts ...operations.Option) (*operations.RemoveHrisCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9258,7 +9258,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisCompany",
+		OperationID:      "removeHrisCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9379,7 +9379,7 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 		}
 	}
 
-	res := &operations.RemoveHrisCompanyResponse{
+	res := &operations.RemoveHrisCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9410,8 +9410,8 @@ func (s *Hris) RemoveHrisCompany(ctx context.Context, request operations.RemoveH
 
 }
 
-// RemoveHrisDeduction - Remove a deduction
-func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.RemoveHrisDeductionRequest, opts ...operations.Option) (*operations.RemoveHrisDeductionResponse, error) {
+// RemoveHrisDeduction2 - Remove a deduction
+func (s *Hris) RemoveHrisDeduction2(ctx context.Context, request operations.RemoveHrisDeduction2Request, opts ...operations.Option) (*operations.RemoveHrisDeduction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9440,7 +9440,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisDeduction",
+		OperationID:      "removeHrisDeduction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9561,7 +9561,7 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveHrisDeductionResponse{
+	res := &operations.RemoveHrisDeduction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9592,8 +9592,8 @@ func (s *Hris) RemoveHrisDeduction(ctx context.Context, request operations.Remov
 
 }
 
-// RemoveHrisDevice - Remove a device
-func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHrisDeviceRequest, opts ...operations.Option) (*operations.RemoveHrisDeviceResponse, error) {
+// RemoveHrisDevice2 - Remove a device
+func (s *Hris) RemoveHrisDevice2(ctx context.Context, request operations.RemoveHrisDevice2Request, opts ...operations.Option) (*operations.RemoveHrisDevice2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9622,7 +9622,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisDevice",
+		OperationID:      "removeHrisDevice2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9743,7 +9743,7 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 		}
 	}
 
-	res := &operations.RemoveHrisDeviceResponse{
+	res := &operations.RemoveHrisDevice2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9774,8 +9774,8 @@ func (s *Hris) RemoveHrisDevice(ctx context.Context, request operations.RemoveHr
 
 }
 
-// RemoveHrisEmployee - Remove an employee
-func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.RemoveHrisEmployeeRequest, opts ...operations.Option) (*operations.RemoveHrisEmployeeResponse, error) {
+// RemoveHrisEmployee2 - Remove an employee
+func (s *Hris) RemoveHrisEmployee2(ctx context.Context, request operations.RemoveHrisEmployee2Request, opts ...operations.Option) (*operations.RemoveHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9804,7 +9804,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisEmployee",
+		OperationID:      "removeHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9925,7 +9925,7 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveHrisEmployeeResponse{
+	res := &operations.RemoveHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9956,8 +9956,8 @@ func (s *Hris) RemoveHrisEmployee(ctx context.Context, request operations.Remove
 
 }
 
-// RemoveHrisGroup - Remove a group
-func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest, opts ...operations.Option) (*operations.RemoveHrisGroupResponse, error) {
+// RemoveHrisGroup2 - Remove a group
+func (s *Hris) RemoveHrisGroup2(ctx context.Context, request operations.RemoveHrisGroup2Request, opts ...operations.Option) (*operations.RemoveHrisGroup2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9986,7 +9986,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisGroup",
+		OperationID:      "removeHrisGroup2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10107,7 +10107,7 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 		}
 	}
 
-	res := &operations.RemoveHrisGroupResponse{
+	res := &operations.RemoveHrisGroup2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10138,8 +10138,8 @@ func (s *Hris) RemoveHrisGroup(ctx context.Context, request operations.RemoveHri
 
 }
 
-// RemoveHrisLocation - Remove a location
-func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.RemoveHrisLocationRequest, opts ...operations.Option) (*operations.RemoveHrisLocationResponse, error) {
+// RemoveHrisLocation2 - Remove a location
+func (s *Hris) RemoveHrisLocation2(ctx context.Context, request operations.RemoveHrisLocation2Request, opts ...operations.Option) (*operations.RemoveHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10168,7 +10168,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisLocation",
+		OperationID:      "removeHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10289,7 +10289,7 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveHrisLocationResponse{
+	res := &operations.RemoveHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10320,8 +10320,8 @@ func (s *Hris) RemoveHrisLocation(ctx context.Context, request operations.Remove
 
 }
 
-// RemoveHrisTimeoff - Remove a timeoff
-func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveHrisTimeoffRequest, opts ...operations.Option) (*operations.RemoveHrisTimeoffResponse, error) {
+// RemoveHrisTimeoff2 - Remove a timeoff
+func (s *Hris) RemoveHrisTimeoff2(ctx context.Context, request operations.RemoveHrisTimeoff2Request, opts ...operations.Option) (*operations.RemoveHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10350,7 +10350,7 @@ func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisTimeoff",
+		OperationID:      "removeHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10471,7 +10471,7 @@ func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveH
 		}
 	}
 
-	res := &operations.RemoveHrisTimeoffResponse{
+	res := &operations.RemoveHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10502,8 +10502,8 @@ func (s *Hris) RemoveHrisTimeoff(ctx context.Context, request operations.RemoveH
 
 }
 
-// RemoveHrisTimeshift - Remove a timeshift
-func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.RemoveHrisTimeshiftRequest, opts ...operations.Option) (*operations.RemoveHrisTimeshiftResponse, error) {
+// RemoveHrisTimeshift2 - Remove a timeshift
+func (s *Hris) RemoveHrisTimeshift2(ctx context.Context, request operations.RemoveHrisTimeshift2Request, opts ...operations.Option) (*operations.RemoveHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10532,7 +10532,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisTimeshift",
+		OperationID:      "removeHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10653,7 +10653,7 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveHrisTimeshiftResponse{
+	res := &operations.RemoveHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10684,8 +10684,8 @@ func (s *Hris) RemoveHrisTimeshift(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateHrisBankaccount - Update a bankaccount
-func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.UpdateHrisBankaccountRequest, opts ...operations.Option) (*operations.UpdateHrisBankaccountResponse, error) {
+// UpdateHrisBankaccount2 - Update a bankaccount
+func (s *Hris) UpdateHrisBankaccount2(ctx context.Context, request operations.UpdateHrisBankaccount2Request, opts ...operations.Option) (*operations.UpdateHrisBankaccount2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10714,7 +10714,7 @@ func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisBankaccount",
+		OperationID:      "updateHrisBankaccount2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBankaccount", "json", `request:"mediaType=application/json"`)
@@ -10846,7 +10846,7 @@ func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateHrisBankaccountResponse{
+	res := &operations.UpdateHrisBankaccount2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10898,8 +10898,8 @@ func (s *Hris) UpdateHrisBankaccount(ctx context.Context, request operations.Upd
 
 }
 
-// UpdateHrisBenefit - Update a benefit
-func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateHrisBenefitRequest, opts ...operations.Option) (*operations.UpdateHrisBenefitResponse, error) {
+// UpdateHrisBenefit2 - Update a benefit
+func (s *Hris) UpdateHrisBenefit2(ctx context.Context, request operations.UpdateHrisBenefit2Request, opts ...operations.Option) (*operations.UpdateHrisBenefit2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10928,7 +10928,7 @@ func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisBenefit",
+		OperationID:      "updateHrisBenefit2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -11060,7 +11060,7 @@ func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateH
 		}
 	}
 
-	res := &operations.UpdateHrisBenefitResponse{
+	res := &operations.UpdateHrisBenefit2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11112,8 +11112,8 @@ func (s *Hris) UpdateHrisBenefit(ctx context.Context, request operations.UpdateH
 
 }
 
-// UpdateHrisCompany - Update a company
-func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateHrisCompanyRequest, opts ...operations.Option) (*operations.UpdateHrisCompanyResponse, error) {
+// UpdateHrisCompany2 - Update a company
+func (s *Hris) UpdateHrisCompany2(ctx context.Context, request operations.UpdateHrisCompany2Request, opts ...operations.Option) (*operations.UpdateHrisCompany2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11142,7 +11142,7 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisCompany",
+		OperationID:      "updateHrisCompany2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -11274,7 +11274,7 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 		}
 	}
 
-	res := &operations.UpdateHrisCompanyResponse{
+	res := &operations.UpdateHrisCompany2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11326,8 +11326,8 @@ func (s *Hris) UpdateHrisCompany(ctx context.Context, request operations.UpdateH
 
 }
 
-// UpdateHrisDeduction - Update a deduction
-func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.UpdateHrisDeductionRequest, opts ...operations.Option) (*operations.UpdateHrisDeductionResponse, error) {
+// UpdateHrisDeduction2 - Update a deduction
+func (s *Hris) UpdateHrisDeduction2(ctx context.Context, request operations.UpdateHrisDeduction2Request, opts ...operations.Option) (*operations.UpdateHrisDeduction2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11356,7 +11356,7 @@ func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisDeduction",
+		OperationID:      "updateHrisDeduction2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -11488,7 +11488,7 @@ func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateHrisDeductionResponse{
+	res := &operations.UpdateHrisDeduction2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11540,8 +11540,8 @@ func (s *Hris) UpdateHrisDeduction(ctx context.Context, request operations.Updat
 
 }
 
-// UpdateHrisDevice - Update a device
-func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHrisDeviceRequest, opts ...operations.Option) (*operations.UpdateHrisDeviceResponse, error) {
+// UpdateHrisDevice2 - Update a device
+func (s *Hris) UpdateHrisDevice2(ctx context.Context, request operations.UpdateHrisDevice2Request, opts ...operations.Option) (*operations.UpdateHrisDevice2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11570,7 +11570,7 @@ func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisDevice",
+		OperationID:      "updateHrisDevice2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -11702,7 +11702,7 @@ func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHr
 		}
 	}
 
-	res := &operations.UpdateHrisDeviceResponse{
+	res := &operations.UpdateHrisDevice2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11754,8 +11754,8 @@ func (s *Hris) UpdateHrisDevice(ctx context.Context, request operations.UpdateHr
 
 }
 
-// UpdateHrisEmployee - Update an employee
-func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.UpdateHrisEmployeeRequest, opts ...operations.Option) (*operations.UpdateHrisEmployeeResponse, error) {
+// UpdateHrisEmployee2 - Update an employee
+func (s *Hris) UpdateHrisEmployee2(ctx context.Context, request operations.UpdateHrisEmployee2Request, opts ...operations.Option) (*operations.UpdateHrisEmployee2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11784,7 +11784,7 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisEmployee",
+		OperationID:      "updateHrisEmployee2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisEmployee", "json", `request:"mediaType=application/json"`)
@@ -11916,7 +11916,7 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateHrisEmployeeResponse{
+	res := &operations.UpdateHrisEmployee2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11968,8 +11968,8 @@ func (s *Hris) UpdateHrisEmployee(ctx context.Context, request operations.Update
 
 }
 
-// UpdateHrisGroup - Update a group
-func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest, opts ...operations.Option) (*operations.UpdateHrisGroupResponse, error) {
+// UpdateHrisGroup2 - Update a group
+func (s *Hris) UpdateHrisGroup2(ctx context.Context, request operations.UpdateHrisGroup2Request, opts ...operations.Option) (*operations.UpdateHrisGroup2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11998,7 +11998,7 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisGroup",
+		OperationID:      "updateHrisGroup2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -12130,7 +12130,7 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 		}
 	}
 
-	res := &operations.UpdateHrisGroupResponse{
+	res := &operations.UpdateHrisGroup2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12182,8 +12182,8 @@ func (s *Hris) UpdateHrisGroup(ctx context.Context, request operations.UpdateHri
 
 }
 
-// UpdateHrisLocation - Update a location
-func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.UpdateHrisLocationRequest, opts ...operations.Option) (*operations.UpdateHrisLocationResponse, error) {
+// UpdateHrisLocation2 - Update a location
+func (s *Hris) UpdateHrisLocation2(ctx context.Context, request operations.UpdateHrisLocation2Request, opts ...operations.Option) (*operations.UpdateHrisLocation2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12212,7 +12212,7 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisLocation",
+		OperationID:      "updateHrisLocation2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisLocation", "json", `request:"mediaType=application/json"`)
@@ -12344,7 +12344,7 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateHrisLocationResponse{
+	res := &operations.UpdateHrisLocation2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12396,8 +12396,8 @@ func (s *Hris) UpdateHrisLocation(ctx context.Context, request operations.Update
 
 }
 
-// UpdateHrisTimeoff - Update a timeoff
-func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateHrisTimeoffRequest, opts ...operations.Option) (*operations.UpdateHrisTimeoffResponse, error) {
+// UpdateHrisTimeoff2 - Update a timeoff
+func (s *Hris) UpdateHrisTimeoff2(ctx context.Context, request operations.UpdateHrisTimeoff2Request, opts ...operations.Option) (*operations.UpdateHrisTimeoff2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12426,7 +12426,7 @@ func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisTimeoff",
+		OperationID:      "updateHrisTimeoff2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeoff", "json", `request:"mediaType=application/json"`)
@@ -12558,7 +12558,7 @@ func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateH
 		}
 	}
 
-	res := &operations.UpdateHrisTimeoffResponse{
+	res := &operations.UpdateHrisTimeoff2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12610,8 +12610,8 @@ func (s *Hris) UpdateHrisTimeoff(ctx context.Context, request operations.UpdateH
 
 }
 
-// UpdateHrisTimeshift - Update a timeshift
-func (s *Hris) UpdateHrisTimeshift(ctx context.Context, request operations.UpdateHrisTimeshiftRequest, opts ...operations.Option) (*operations.UpdateHrisTimeshiftResponse, error) {
+// UpdateHrisTimeshift2 - Update a timeshift
+func (s *Hris) UpdateHrisTimeshift2(ctx context.Context, request operations.UpdateHrisTimeshift2Request, opts ...operations.Option) (*operations.UpdateHrisTimeshift2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12640,7 +12640,7 @@ func (s *Hris) UpdateHrisTimeshift(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisTimeshift",
+		OperationID:      "updateHrisTimeshift2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisTimeshift", "json", `request:"mediaType=application/json"`)
@@ -12772,7 +12772,7 @@ func (s *Hris) UpdateHrisTimeshift(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateHrisTimeshiftResponse{
+	res := &operations.UpdateHrisTimeshift2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

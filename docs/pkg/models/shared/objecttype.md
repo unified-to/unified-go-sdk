@@ -140,6 +140,11 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeAdsInsertionorder`       | ads_insertionorder                  |
 | `ObjectTypeAdsTarget`               | ads_target                          |
 | `ObjectTypeAdsPromoted`             | ads_promoted                        |
+| `ObjectTypeAnalyticsProperty`       | analytics_property                  |
+| `ObjectTypeAnalyticsEvent`          | analytics_event                     |
+| `ObjectTypeAnalyticsSession`        | analytics_session                   |
+| `ObjectTypeAnalyticsVisitor`        | analytics_visitor                   |
+| `ObjectTypeAnalyticsReport`         | analytics_report                    |
 | `ObjectTypeFormsForm`               | forms_form                          |
 | `ObjectTypeFormsSubmission`         | forms_submission                    |
 | `ObjectTypeShippingCarrier`         | shipping_carrier                    |
@@ -155,3 +160,7 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeClubsActivity`           | clubs_activity                      |
 | `ObjectTypeClubsLocation`           | clubs_location                      |
 | `ObjectTypeClubsEvent`              | clubs_event                         |
+| `ObjectTypeDatastoreDatabase`       | datastore_database                  |
+| `ObjectTypeDatastoreTable`          | datastore_table                     |
+| `ObjectTypeDatastoreRecord`         | datastore_record                    |
+| `ObjectTypeDatastoreQuery`          | datastore_query                     |

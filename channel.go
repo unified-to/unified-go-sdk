@@ -30,8 +30,8 @@ func newChannel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// GetMessagingChannel - Retrieve a channel
-func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.GetMessagingChannelRequest, opts ...operations.Option) (*operations.GetMessagingChannelResponse, error) {
+// GetMessagingChannel2 - Retrieve a channel
+func (s *Channel) GetMessagingChannel2(ctx context.Context, request operations.GetMessagingChannel2Request, opts ...operations.Option) (*operations.GetMessagingChannel2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMessagingChannel",
+		OperationID:      "getMessagingChannel2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetMessagingChannelResponse{
+	res := &operations.GetMessagingChannel2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Channel) GetMessagingChannel(ctx context.Context, request operations.Ge
 
 }
 
-// ListMessagingChannels - List all channels
-func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.ListMessagingChannelsRequest, opts ...operations.Option) (*operations.ListMessagingChannelsResponse, error) {
+// ListMessagingChannels2 - List all channels
+func (s *Channel) ListMessagingChannels2(ctx context.Context, request operations.ListMessagingChannels2Request, opts ...operations.Option) (*operations.ListMessagingChannels2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMessagingChannels",
+		OperationID:      "listMessagingChannels2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Channel) ListMessagingChannels(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListMessagingChannelsResponse{
+	res := &operations.ListMessagingChannels2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

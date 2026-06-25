@@ -30,8 +30,8 @@ func newCarrier(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// GetShippingCarrier - Retrieve a carrier
-func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.GetShippingCarrierRequest, opts ...operations.Option) (*operations.GetShippingCarrierResponse, error) {
+// GetShippingCarrier2 - Retrieve a carrier
+func (s *Carrier) GetShippingCarrier2(ctx context.Context, request operations.GetShippingCarrier2Request, opts ...operations.Option) (*operations.GetShippingCarrier2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getShippingCarrier",
+		OperationID:      "getShippingCarrier2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetShippingCarrierResponse{
+	res := &operations.GetShippingCarrier2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Carrier) GetShippingCarrier(ctx context.Context, request operations.Get
 
 }
 
-// ListShippingCarriers - List all carriers
-func (s *Carrier) ListShippingCarriers(ctx context.Context, request operations.ListShippingCarriersRequest, opts ...operations.Option) (*operations.ListShippingCarriersResponse, error) {
+// ListShippingCarriers2 - List all carriers
+func (s *Carrier) ListShippingCarriers2(ctx context.Context, request operations.ListShippingCarriers2Request, opts ...operations.Option) (*operations.ListShippingCarriers2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Carrier) ListShippingCarriers(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listShippingCarriers",
+		OperationID:      "listShippingCarriers2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Carrier) ListShippingCarriers(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListShippingCarriersResponse{
+	res := &operations.ListShippingCarriers2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

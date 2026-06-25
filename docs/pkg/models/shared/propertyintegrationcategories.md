@@ -42,8 +42,10 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesCalendar`     | calendar                                    |
 | `PropertyIntegrationCategoriesVerification` | verification                                |
 | `PropertyIntegrationCategoriesAds`          | ads                                         |
+| `PropertyIntegrationCategoriesAnalytics`    | analytics                                   |
 | `PropertyIntegrationCategoriesForms`        | forms                                       |
 | `PropertyIntegrationCategoriesShipping`     | shipping                                    |
 | `PropertyIntegrationCategoriesAssessment`   | assessment                                  |
 | `PropertyIntegrationCategoriesSigning`      | signing                                     |
 | `PropertyIntegrationCategoriesClubs`        | clubs                                       |
+| `PropertyIntegrationCategoriesDatastore`    | datastore                                   |

@@ -30,8 +30,8 @@ func newCreative(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateAdsCreative - Create a creative
-func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.CreateAdsCreativeRequest, opts ...operations.Option) (*operations.CreateAdsCreativeResponse, error) {
+// CreateAdsCreative2 - Create a creative
+func (s *Creative) CreateAdsCreative2(ctx context.Context, request operations.CreateAdsCreative2Request, opts ...operations.Option) (*operations.CreateAdsCreative2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsCreative",
+		OperationID:      "createAdsCreative2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateAdsCreativeResponse{
+	res := &operations.CreateAdsCreative2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Creative) CreateAdsCreative(ctx context.Context, request operations.Cre
 
 }
 
-// GetAdsCreative - Retrieve a creative
-func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAdsCreativeRequest, opts ...operations.Option) (*operations.GetAdsCreativeResponse, error) {
+// GetAdsCreative2 - Retrieve a creative
+func (s *Creative) GetAdsCreative2(ctx context.Context, request operations.GetAdsCreative2Request, opts ...operations.Option) (*operations.GetAdsCreative2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsCreative",
+		OperationID:      "getAdsCreative2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAds
 		}
 	}
 
-	res := &operations.GetAdsCreativeResponse{
+	res := &operations.GetAdsCreative2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Creative) GetAdsCreative(ctx context.Context, request operations.GetAds
 
 }
 
-// ListAdsCreatives - List all creatives
-func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.ListAdsCreativesRequest, opts ...operations.Option) (*operations.ListAdsCreativesResponse, error) {
+// ListAdsCreatives2 - List all creatives
+func (s *Creative) ListAdsCreatives2(ctx context.Context, request operations.ListAdsCreatives2Request, opts ...operations.Option) (*operations.ListAdsCreatives2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsCreatives",
+		OperationID:      "listAdsCreatives2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListAdsCreativesResponse{
+	res := &operations.ListAdsCreatives2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Creative) ListAdsCreatives(ctx context.Context, request operations.List
 
 }
 
-// PatchAdsCreative - Update a creative
-func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.PatchAdsCreativeRequest, opts ...operations.Option) (*operations.PatchAdsCreativeResponse, error) {
+// PatchAdsCreative2 - Update a creative
+func (s *Creative) PatchAdsCreative2(ctx context.Context, request operations.PatchAdsCreative2Request, opts ...operations.Option) (*operations.PatchAdsCreative2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsCreative",
+		OperationID:      "patchAdsCreative2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchAdsCreativeResponse{
+	res := &operations.PatchAdsCreative2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Creative) PatchAdsCreative(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveAdsCreative - Remove a creative
-func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.RemoveAdsCreativeRequest, opts ...operations.Option) (*operations.RemoveAdsCreativeResponse, error) {
+// RemoveAdsCreative2 - Remove a creative
+func (s *Creative) RemoveAdsCreative2(ctx context.Context, request operations.RemoveAdsCreative2Request, opts ...operations.Option) (*operations.RemoveAdsCreative2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsCreative",
+		OperationID:      "removeAdsCreative2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveAdsCreativeResponse{
+	res := &operations.RemoveAdsCreative2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Creative) RemoveAdsCreative(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateAdsCreative - Update a creative
-func (s *Creative) UpdateAdsCreative(ctx context.Context, request operations.UpdateAdsCreativeRequest, opts ...operations.Option) (*operations.UpdateAdsCreativeResponse, error) {
+// UpdateAdsCreative2 - Update a creative
+func (s *Creative) UpdateAdsCreative2(ctx context.Context, request operations.UpdateAdsCreative2Request, opts ...operations.Option) (*operations.UpdateAdsCreative2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Creative) UpdateAdsCreative(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsCreative",
+		OperationID:      "updateAdsCreative2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Creative) UpdateAdsCreative(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateAdsCreativeResponse{
+	res := &operations.UpdateAdsCreative2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

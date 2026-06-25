@@ -30,8 +30,8 @@ func newStorage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateStorageFile - Create a file
-func (s *Storage) CreateStorageFile(ctx context.Context, request operations.CreateStorageFileRequest, opts ...operations.Option) (*operations.CreateStorageFileResponse, error) {
+// CreateStorageFile2 - Create a file
+func (s *Storage) CreateStorageFile2(ctx context.Context, request operations.CreateStorageFile2Request, opts ...operations.Option) (*operations.CreateStorageFile2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Storage) CreateStorageFile(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createStorageFile",
+		OperationID:      "createStorageFile2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Storage) CreateStorageFile(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateStorageFileResponse{
+	res := &operations.CreateStorageFile2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Storage) CreateStorageFile(ctx context.Context, request operations.Crea
 
 }
 
-// GetStorageFile - Retrieve a file
-func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStorageFileRequest, opts ...operations.Option) (*operations.GetStorageFileResponse, error) {
+// GetStorageFile2 - Retrieve a file
+func (s *Storage) GetStorageFile2(ctx context.Context, request operations.GetStorageFile2Request, opts ...operations.Option) (*operations.GetStorageFile2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStor
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getStorageFile",
+		OperationID:      "getStorageFile2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStor
 		}
 	}
 
-	res := &operations.GetStorageFileResponse{
+	res := &operations.GetStorageFile2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Storage) GetStorageFile(ctx context.Context, request operations.GetStor
 
 }
 
-// ListStorageFiles - List all files
-func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListStorageFilesRequest, opts ...operations.Option) (*operations.ListStorageFilesResponse, error) {
+// ListStorageFiles2 - List all files
+func (s *Storage) ListStorageFiles2(ctx context.Context, request operations.ListStorageFiles2Request, opts ...operations.Option) (*operations.ListStorageFiles2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListS
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listStorageFiles",
+		OperationID:      "listStorageFiles2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListS
 		}
 	}
 
-	res := &operations.ListStorageFilesResponse{
+	res := &operations.ListStorageFiles2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Storage) ListStorageFiles(ctx context.Context, request operations.ListS
 
 }
 
-// PatchStorageFile - Update a file
-func (s *Storage) PatchStorageFile(ctx context.Context, request operations.PatchStorageFileRequest, opts ...operations.Option) (*operations.PatchStorageFileResponse, error) {
+// PatchStorageFile2 - Update a file
+func (s *Storage) PatchStorageFile2(ctx context.Context, request operations.PatchStorageFile2Request, opts ...operations.Option) (*operations.PatchStorageFile2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Storage) PatchStorageFile(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchStorageFile",
+		OperationID:      "patchStorageFile2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Storage) PatchStorageFile(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchStorageFileResponse{
+	res := &operations.PatchStorageFile2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Storage) PatchStorageFile(ctx context.Context, request operations.Patch
 
 }
 
-// RemoveStorageFile - Remove a file
-func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.RemoveStorageFileRequest, opts ...operations.Option) (*operations.RemoveStorageFileResponse, error) {
+// RemoveStorageFile2 - Remove a file
+func (s *Storage) RemoveStorageFile2(ctx context.Context, request operations.RemoveStorageFile2Request, opts ...operations.Option) (*operations.RemoveStorageFile2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeStorageFile",
+		OperationID:      "removeStorageFile2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveStorageFileResponse{
+	res := &operations.RemoveStorageFile2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Storage) RemoveStorageFile(ctx context.Context, request operations.Remo
 
 }
 
-// UpdateStorageFile - Update a file
-func (s *Storage) UpdateStorageFile(ctx context.Context, request operations.UpdateStorageFileRequest, opts ...operations.Option) (*operations.UpdateStorageFileResponse, error) {
+// UpdateStorageFile2 - Update a file
+func (s *Storage) UpdateStorageFile2(ctx context.Context, request operations.UpdateStorageFile2Request, opts ...operations.Option) (*operations.UpdateStorageFile2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Storage) UpdateStorageFile(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateStorageFile",
+		OperationID:      "updateStorageFile2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "StorageFile", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Storage) UpdateStorageFile(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateStorageFileResponse{
+	res := &operations.UpdateStorageFile2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

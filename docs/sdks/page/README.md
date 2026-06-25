@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateKmsPage](#createkmspage) - Create a page
-* [GetKmsPage](#getkmspage) - Retrieve a page
-* [ListKmsPages](#listkmspages) - List all pages
-* [PatchKmsPage](#patchkmspage) - Update a page
-* [RemoveKmsPage](#removekmspage) - Remove a page
-* [UpdateKmsPage](#updatekmspage) - Update a page
+* [CreateKmsPage2](#createkmspage2) - Create a page
+* [GetKmsPage2](#getkmspage2) - Retrieve a page
+* [ListKmsPages2](#listkmspages2) - List all pages
+* [PatchKmsPage2](#patchkmspage2) - Update a page
+* [RemoveKmsPage2](#removekmspage2) - Remove a page
+* [UpdateKmsPage2](#updatekmspage2) - Update a page
 
-## CreateKmsPage
+## CreateKmsPage2
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="go" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
 ```go
 package main
 
@@ -36,9 +36,9 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
+    res, err := s.Page.CreateKmsPage2(ctx, operations.CreateKmsPage2Request{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeText,
+            Type: shared.KmsPageTypeOther,
         },
         ConnectionID: "<id>",
     })
@@ -53,15 +53,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.CreateKmsPageRequest](../../pkg/models/operations/createkmspagerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateKmsPage2Request](../../pkg/models/operations/createkmspage2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.CreateKmsPageResponse](../../pkg/models/operations/createkmspageresponse.md), error**
+**[*operations.CreateKmsPage2Response](../../pkg/models/operations/createkmspage2response.md), error**
 
 ### Errors
 
@@ -69,13 +69,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetKmsPage
+## GetKmsPage2
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -93,7 +93,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.GetKmsPage(ctx, operations.GetKmsPageRequest{
+    res, err := s.Page.GetKmsPage2(ctx, operations.GetKmsPage2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -108,15 +108,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.GetKmsPageRequest](../../pkg/models/operations/getkmspagerequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetKmsPage2Request](../../pkg/models/operations/getkmspage2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.GetKmsPageResponse](../../pkg/models/operations/getkmspageresponse.md), error**
+**[*operations.GetKmsPage2Response](../../pkg/models/operations/getkmspage2response.md), error**
 
 ### Errors
 
@@ -124,13 +124,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListKmsPages
+## ListKmsPages2
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="go" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
 ```go
 package main
 
@@ -148,7 +148,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.ListKmsPages(ctx, operations.ListKmsPagesRequest{
+    res, err := s.Page.ListKmsPages2(ctx, operations.ListKmsPages2Request{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -162,15 +162,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.ListKmsPagesRequest](../../pkg/models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.ListKmsPages2Request](../../pkg/models/operations/listkmspages2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.ListKmsPagesResponse](../../pkg/models/operations/listkmspagesresponse.md), error**
+**[*operations.ListKmsPages2Response](../../pkg/models/operations/listkmspages2response.md), error**
 
 ### Errors
 
@@ -178,13 +178,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchKmsPage
+## PatchKmsPage2
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -203,7 +203,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
+    res, err := s.Page.PatchKmsPage2(ctx, operations.PatchKmsPage2Request{
         KmsPage: shared.KmsPage{
             Type: shared.KmsPageTypeOther,
         },
@@ -221,15 +221,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.PatchKmsPageRequest](../../pkg/models/operations/patchkmspagerequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchKmsPage2Request](../../pkg/models/operations/patchkmspage2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.PatchKmsPageResponse](../../pkg/models/operations/patchkmspageresponse.md), error**
+**[*operations.PatchKmsPage2Response](../../pkg/models/operations/patchkmspage2response.md), error**
 
 ### Errors
 
@@ -237,13 +237,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveKmsPage
+## RemoveKmsPage2
 
 Remove a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -261,7 +261,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.RemoveKmsPage(ctx, operations.RemoveKmsPageRequest{
+    res, err := s.Page.RemoveKmsPage2(ctx, operations.RemoveKmsPage2Request{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -276,15 +276,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.RemoveKmsPageRequest](../../pkg/models/operations/removekmspagerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveKmsPage2Request](../../pkg/models/operations/removekmspage2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.RemoveKmsPageResponse](../../pkg/models/operations/removekmspageresponse.md), error**
+**[*operations.RemoveKmsPage2Response](../../pkg/models/operations/removekmspage2response.md), error**
 
 ### Errors
 
@@ -292,13 +292,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateKmsPage
+## UpdateKmsPage2
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```go
 package main
 
@@ -317,9 +317,9 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Page.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
+    res, err := s.Page.UpdateKmsPage2(ctx, operations.UpdateKmsPage2Request{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeOther,
+            Type: shared.KmsPageTypeMarkdown,
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -335,15 +335,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.UpdateKmsPageRequest](../../pkg/models/operations/updatekmspagerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.UpdateKmsPage2Request](../../pkg/models/operations/updatekmspage2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.UpdateKmsPageResponse](../../pkg/models/operations/updatekmspageresponse.md), error**
+**[*operations.UpdateKmsPage2Response](../../pkg/models/operations/updatekmspage2response.md), error**
 
 ### Errors
 

@@ -30,8 +30,8 @@ func newBranch(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateRepoBranch - Create a branch
-func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.CreateRepoBranchRequest, opts ...operations.Option) (*operations.CreateRepoBranchResponse, error) {
+// CreateRepoBranch2 - Create a branch
+func (s *Branch) CreateRepoBranch2(ctx context.Context, request operations.CreateRepoBranch2Request, opts ...operations.Option) (*operations.CreateRepoBranch2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createRepoBranch",
+		OperationID:      "createRepoBranch2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateRepoBranchResponse{
+	res := &operations.CreateRepoBranch2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Branch) CreateRepoBranch(ctx context.Context, request operations.Create
 
 }
 
-// GetRepoBranch - Retrieve a branch
-func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBranchRequest, opts ...operations.Option) (*operations.GetRepoBranchResponse, error) {
+// GetRepoBranch2 - Retrieve a branch
+func (s *Branch) GetRepoBranch2(ctx context.Context, request operations.GetRepoBranch2Request, opts ...operations.Option) (*operations.GetRepoBranch2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getRepoBranch",
+		OperationID:      "getRepoBranch2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 		}
 	}
 
-	res := &operations.GetRepoBranchResponse{
+	res := &operations.GetRepoBranch2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Branch) GetRepoBranch(ctx context.Context, request operations.GetRepoBr
 
 }
 
-// ListRepoBranches - List all branches
-func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRepoBranchesRequest, opts ...operations.Option) (*operations.ListRepoBranchesResponse, error) {
+// ListRepoBranches2 - List all branches
+func (s *Branch) ListRepoBranches2(ctx context.Context, request operations.ListRepoBranches2Request, opts ...operations.Option) (*operations.ListRepoBranches2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listRepoBranches",
+		OperationID:      "listRepoBranches2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 		}
 	}
 
-	res := &operations.ListRepoBranchesResponse{
+	res := &operations.ListRepoBranches2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Branch) ListRepoBranches(ctx context.Context, request operations.ListRe
 
 }
 
-// PatchRepoBranch - Update a branch
-func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRepoBranchRequest, opts ...operations.Option) (*operations.PatchRepoBranchResponse, error) {
+// PatchRepoBranch2 - Update a branch
+func (s *Branch) PatchRepoBranch2(ctx context.Context, request operations.PatchRepoBranch2Request, opts ...operations.Option) (*operations.PatchRepoBranch2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchRepoBranch",
+		OperationID:      "patchRepoBranch2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 		}
 	}
 
-	res := &operations.PatchRepoBranchResponse{
+	res := &operations.PatchRepoBranch2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Branch) PatchRepoBranch(ctx context.Context, request operations.PatchRe
 
 }
 
-// RemoveRepoBranch - Remove a branch
-func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.RemoveRepoBranchRequest, opts ...operations.Option) (*operations.RemoveRepoBranchResponse, error) {
+// RemoveRepoBranch2 - Remove a branch
+func (s *Branch) RemoveRepoBranch2(ctx context.Context, request operations.RemoveRepoBranch2Request, opts ...operations.Option) (*operations.RemoveRepoBranch2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeRepoBranch",
+		OperationID:      "removeRepoBranch2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveRepoBranchResponse{
+	res := &operations.RemoveRepoBranch2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Branch) RemoveRepoBranch(ctx context.Context, request operations.Remove
 
 }
 
-// UpdateRepoBranch - Update a branch
-func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.UpdateRepoBranchRequest, opts ...operations.Option) (*operations.UpdateRepoBranchResponse, error) {
+// UpdateRepoBranch2 - Update a branch
+func (s *Branch) UpdateRepoBranch2(ctx context.Context, request operations.UpdateRepoBranch2Request, opts ...operations.Option) (*operations.UpdateRepoBranch2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateRepoBranch",
+		OperationID:      "updateRepoBranch2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoBranch", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Branch) UpdateRepoBranch(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateRepoBranchResponse{
+	res := &operations.UpdateRepoBranch2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

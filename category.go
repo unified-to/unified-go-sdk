@@ -30,8 +30,8 @@ func newCategory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateAccountingCategory - Create a category
-func (s *Category) CreateAccountingCategory(ctx context.Context, request operations.CreateAccountingCategoryRequest, opts ...operations.Option) (*operations.CreateAccountingCategoryResponse, error) {
+// CreateAccountingCategory2 - Create a category
+func (s *Category) CreateAccountingCategory2(ctx context.Context, request operations.CreateAccountingCategory2Request, opts ...operations.Option) (*operations.CreateAccountingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Category) CreateAccountingCategory(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingCategory",
+		OperationID:      "createAccountingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Category) CreateAccountingCategory(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateAccountingCategoryResponse{
+	res := &operations.CreateAccountingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Category) CreateAccountingCategory(ctx context.Context, request operati
 
 }
 
-// CreateTicketingCategory - Create a category
-func (s *Category) CreateTicketingCategory(ctx context.Context, request operations.CreateTicketingCategoryRequest, opts ...operations.Option) (*operations.CreateTicketingCategoryResponse, error) {
+// CreateTicketingCategory2 - Create a category
+func (s *Category) CreateTicketingCategory2(ctx context.Context, request operations.CreateTicketingCategory2Request, opts ...operations.Option) (*operations.CreateTicketingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Category) CreateTicketingCategory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingCategory",
+		OperationID:      "createTicketingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Category) CreateTicketingCategory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateTicketingCategoryResponse{
+	res := &operations.CreateTicketingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Category) CreateTicketingCategory(ctx context.Context, request operatio
 
 }
 
-// GetAccountingCategory - Retrieve a category
-func (s *Category) GetAccountingCategory(ctx context.Context, request operations.GetAccountingCategoryRequest, opts ...operations.Option) (*operations.GetAccountingCategoryResponse, error) {
+// GetAccountingCategory2 - Retrieve a category
+func (s *Category) GetAccountingCategory2(ctx context.Context, request operations.GetAccountingCategory2Request, opts ...operations.Option) (*operations.GetAccountingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Category) GetAccountingCategory(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCategory",
+		OperationID:      "getAccountingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Category) GetAccountingCategory(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetAccountingCategoryResponse{
+	res := &operations.GetAccountingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Category) GetAccountingCategory(ctx context.Context, request operations
 
 }
 
-// GetTicketingCategory - Retrieve a category
-func (s *Category) GetTicketingCategory(ctx context.Context, request operations.GetTicketingCategoryRequest, opts ...operations.Option) (*operations.GetTicketingCategoryResponse, error) {
+// GetTicketingCategory2 - Retrieve a category
+func (s *Category) GetTicketingCategory2(ctx context.Context, request operations.GetTicketingCategory2Request, opts ...operations.Option) (*operations.GetTicketingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Category) GetTicketingCategory(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingCategory",
+		OperationID:      "getTicketingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Category) GetTicketingCategory(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetTicketingCategoryResponse{
+	res := &operations.GetTicketingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Category) GetTicketingCategory(ctx context.Context, request operations.
 
 }
 
-// ListAccountingCategories - List all categories
-func (s *Category) ListAccountingCategories(ctx context.Context, request operations.ListAccountingCategoriesRequest, opts ...operations.Option) (*operations.ListAccountingCategoriesResponse, error) {
+// ListAccountingCategories2 - List all categories
+func (s *Category) ListAccountingCategories2(ctx context.Context, request operations.ListAccountingCategories2Request, opts ...operations.Option) (*operations.ListAccountingCategories2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Category) ListAccountingCategories(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCategories",
+		OperationID:      "listAccountingCategories2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Category) ListAccountingCategories(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListAccountingCategoriesResponse{
+	res := &operations.ListAccountingCategories2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Category) ListAccountingCategories(ctx context.Context, request operati
 
 }
 
-// ListTicketingCategories - List all categories
-func (s *Category) ListTicketingCategories(ctx context.Context, request operations.ListTicketingCategoriesRequest, opts ...operations.Option) (*operations.ListTicketingCategoriesResponse, error) {
+// ListTicketingCategories2 - List all categories
+func (s *Category) ListTicketingCategories2(ctx context.Context, request operations.ListTicketingCategories2Request, opts ...operations.Option) (*operations.ListTicketingCategories2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Category) ListTicketingCategories(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingCategories",
+		OperationID:      "listTicketingCategories2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Category) ListTicketingCategories(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListTicketingCategoriesResponse{
+	res := &operations.ListTicketingCategories2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Category) ListTicketingCategories(ctx context.Context, request operatio
 
 }
 
-// PatchAccountingCategory - Update a category
-func (s *Category) PatchAccountingCategory(ctx context.Context, request operations.PatchAccountingCategoryRequest, opts ...operations.Option) (*operations.PatchAccountingCategoryResponse, error) {
+// PatchAccountingCategory2 - Update a category
+func (s *Category) PatchAccountingCategory2(ctx context.Context, request operations.PatchAccountingCategory2Request, opts ...operations.Option) (*operations.PatchAccountingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Category) PatchAccountingCategory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingCategory",
+		OperationID:      "patchAccountingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -1448,7 +1448,7 @@ func (s *Category) PatchAccountingCategory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchAccountingCategoryResponse{
+	res := &operations.PatchAccountingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Category) PatchAccountingCategory(ctx context.Context, request operatio
 
 }
 
-// PatchTicketingCategory - Update a category
-func (s *Category) PatchTicketingCategory(ctx context.Context, request operations.PatchTicketingCategoryRequest, opts ...operations.Option) (*operations.PatchTicketingCategoryResponse, error) {
+// PatchTicketingCategory2 - Update a category
+func (s *Category) PatchTicketingCategory2(ctx context.Context, request operations.PatchTicketingCategory2Request, opts ...operations.Option) (*operations.PatchTicketingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Category) PatchTicketingCategory(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingCategory",
+		OperationID:      "patchTicketingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -1662,7 +1662,7 @@ func (s *Category) PatchTicketingCategory(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchTicketingCategoryResponse{
+	res := &operations.PatchTicketingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Category) PatchTicketingCategory(ctx context.Context, request operation
 
 }
 
-// RemoveAccountingCategory - Remove a category
-func (s *Category) RemoveAccountingCategory(ctx context.Context, request operations.RemoveAccountingCategoryRequest, opts ...operations.Option) (*operations.RemoveAccountingCategoryResponse, error) {
+// RemoveAccountingCategory2 - Remove a category
+func (s *Category) RemoveAccountingCategory2(ctx context.Context, request operations.RemoveAccountingCategory2Request, opts ...operations.Option) (*operations.RemoveAccountingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Category) RemoveAccountingCategory(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingCategory",
+		OperationID:      "removeAccountingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1865,7 +1865,7 @@ func (s *Category) RemoveAccountingCategory(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveAccountingCategoryResponse{
+	res := &operations.RemoveAccountingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1896,8 +1896,8 @@ func (s *Category) RemoveAccountingCategory(ctx context.Context, request operati
 
 }
 
-// RemoveTicketingCategory - Remove a category
-func (s *Category) RemoveTicketingCategory(ctx context.Context, request operations.RemoveTicketingCategoryRequest, opts ...operations.Option) (*operations.RemoveTicketingCategoryResponse, error) {
+// RemoveTicketingCategory2 - Remove a category
+func (s *Category) RemoveTicketingCategory2(ctx context.Context, request operations.RemoveTicketingCategory2Request, opts ...operations.Option) (*operations.RemoveTicketingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1926,7 +1926,7 @@ func (s *Category) RemoveTicketingCategory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingCategory",
+		OperationID:      "removeTicketingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2047,7 +2047,7 @@ func (s *Category) RemoveTicketingCategory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveTicketingCategoryResponse{
+	res := &operations.RemoveTicketingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2078,8 +2078,8 @@ func (s *Category) RemoveTicketingCategory(ctx context.Context, request operatio
 
 }
 
-// UpdateAccountingCategory - Update a category
-func (s *Category) UpdateAccountingCategory(ctx context.Context, request operations.UpdateAccountingCategoryRequest, opts ...operations.Option) (*operations.UpdateAccountingCategoryResponse, error) {
+// UpdateAccountingCategory2 - Update a category
+func (s *Category) UpdateAccountingCategory2(ctx context.Context, request operations.UpdateAccountingCategory2Request, opts ...operations.Option) (*operations.UpdateAccountingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,7 +2108,7 @@ func (s *Category) UpdateAccountingCategory(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingCategory",
+		OperationID:      "updateAccountingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -2240,7 +2240,7 @@ func (s *Category) UpdateAccountingCategory(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateAccountingCategoryResponse{
+	res := &operations.UpdateAccountingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2292,8 +2292,8 @@ func (s *Category) UpdateAccountingCategory(ctx context.Context, request operati
 
 }
 
-// UpdateTicketingCategory - Update a category
-func (s *Category) UpdateTicketingCategory(ctx context.Context, request operations.UpdateTicketingCategoryRequest, opts ...operations.Option) (*operations.UpdateTicketingCategoryResponse, error) {
+// UpdateTicketingCategory2 - Update a category
+func (s *Category) UpdateTicketingCategory2(ctx context.Context, request operations.UpdateTicketingCategory2Request, opts ...operations.Option) (*operations.UpdateTicketingCategory2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2322,7 +2322,7 @@ func (s *Category) UpdateTicketingCategory(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingCategory",
+		OperationID:      "updateTicketingCategory2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -2454,7 +2454,7 @@ func (s *Category) UpdateTicketingCategory(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateTicketingCategoryResponse{
+	res := &operations.UpdateTicketingCategory2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

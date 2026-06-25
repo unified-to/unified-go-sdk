@@ -39,8 +39,10 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesCalendar`     | calendar                           |
 | `QueryParamCategoriesVerification` | verification                       |
 | `QueryParamCategoriesAds`          | ads                                |
+| `QueryParamCategoriesAnalytics`    | analytics                          |
 | `QueryParamCategoriesForms`        | forms                              |
 | `QueryParamCategoriesShipping`     | shipping                           |
 | `QueryParamCategoriesAssessment`   | assessment                         |
 | `QueryParamCategoriesSigning`      | signing                            |
 | `QueryParamCategoriesClubs`        | clubs                              |
+| `QueryParamCategoriesDatastore`    | datastore                          |

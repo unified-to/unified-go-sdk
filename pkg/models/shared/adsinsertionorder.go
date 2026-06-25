@@ -37,10 +37,10 @@ const (
 	AdsInsertionorderStatusActive               AdsInsertionorderStatus = "ACTIVE"
 	AdsInsertionorderStatusPaused               AdsInsertionorderStatus = "PAUSED"
 	AdsInsertionorderStatusArchived             AdsInsertionorderStatus = "ARCHIVED"
-	AdsInsertionorderStatusProcessing           AdsInsertionorderStatus = "PROCESSING"
-	AdsInsertionorderStatusProcessingFailed     AdsInsertionorderStatus = "PROCESSING_FAILED"
 	AdsInsertionorderStatusDraft                AdsInsertionorderStatus = "DRAFT"
 	AdsInsertionorderStatusScheduledForDeletion AdsInsertionorderStatus = "SCHEDULED_FOR_DELETION"
+	AdsInsertionorderStatusProcessing           AdsInsertionorderStatus = "PROCESSING"
+	AdsInsertionorderStatusProcessingFailed     AdsInsertionorderStatus = "PROCESSING_FAILED"
 )
 
 func (e AdsInsertionorderStatus) ToPointer() *AdsInsertionorderStatus {
@@ -51,7 +51,7 @@ func (e AdsInsertionorderStatus) ToPointer() *AdsInsertionorderStatus {
 func (e *AdsInsertionorderStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "PROCESSING", "PROCESSING_FAILED", "DRAFT", "SCHEDULED_FOR_DELETION":
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION", "PROCESSING", "PROCESSING_FAILED":
 			return true
 		}
 	}

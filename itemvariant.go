@@ -30,8 +30,8 @@ func newItemvariant(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreateCommerceItemvariant - Create an itemvariant
-func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request operations.CreateCommerceItemvariantRequest, opts ...operations.Option) (*operations.CreateCommerceItemvariantResponse, error) {
+// CreateCommerceItemvariant2 - Create an itemvariant
+func (s *Itemvariant) CreateCommerceItemvariant2(ctx context.Context, request operations.CreateCommerceItemvariant2Request, opts ...operations.Option) (*operations.CreateCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceItemvariant",
+		OperationID:      "createCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.CreateCommerceItemvariantResponse{
+	res := &operations.CreateCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Itemvariant) CreateCommerceItemvariant(ctx context.Context, request ope
 
 }
 
-// GetCommerceItemvariant - Retrieve an itemvariant
-func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operations.GetCommerceItemvariantRequest, opts ...operations.Option) (*operations.GetCommerceItemvariantResponse, error) {
+// GetCommerceItemvariant2 - Retrieve an itemvariant
+func (s *Itemvariant) GetCommerceItemvariant2(ctx context.Context, request operations.GetCommerceItemvariant2Request, opts ...operations.Option) (*operations.GetCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceItemvariant",
+		OperationID:      "getCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.GetCommerceItemvariantResponse{
+	res := &operations.GetCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Itemvariant) GetCommerceItemvariant(ctx context.Context, request operat
 
 }
 
-// ListCommerceItemvariants - List all itemvariants
-func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request operations.ListCommerceItemvariantsRequest, opts ...operations.Option) (*operations.ListCommerceItemvariantsResponse, error) {
+// ListCommerceItemvariants2 - List all itemvariants
+func (s *Itemvariant) ListCommerceItemvariants2(ctx context.Context, request operations.ListCommerceItemvariants2Request, opts ...operations.Option) (*operations.ListCommerceItemvariants2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceItemvariants",
+		OperationID:      "listCommerceItemvariants2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.ListCommerceItemvariantsResponse{
+	res := &operations.ListCommerceItemvariants2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Itemvariant) ListCommerceItemvariants(ctx context.Context, request oper
 
 }
 
-// PatchCommerceItemvariant - Update an itemvariant
-func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request operations.PatchCommerceItemvariantRequest, opts ...operations.Option) (*operations.PatchCommerceItemvariantResponse, error) {
+// PatchCommerceItemvariant2 - Update an itemvariant
+func (s *Itemvariant) PatchCommerceItemvariant2(ctx context.Context, request operations.PatchCommerceItemvariant2Request, opts ...operations.Option) (*operations.PatchCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceItemvariant",
+		OperationID:      "patchCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.PatchCommerceItemvariantResponse{
+	res := &operations.PatchCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Itemvariant) PatchCommerceItemvariant(ctx context.Context, request oper
 
 }
 
-// RemoveCommerceItemvariant - Remove an itemvariant
-func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request operations.RemoveCommerceItemvariantRequest, opts ...operations.Option) (*operations.RemoveCommerceItemvariantResponse, error) {
+// RemoveCommerceItemvariant2 - Remove an itemvariant
+func (s *Itemvariant) RemoveCommerceItemvariant2(ctx context.Context, request operations.RemoveCommerceItemvariant2Request, opts ...operations.Option) (*operations.RemoveCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceItemvariant",
+		OperationID:      "removeCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.RemoveCommerceItemvariantResponse{
+	res := &operations.RemoveCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Itemvariant) RemoveCommerceItemvariant(ctx context.Context, request ope
 
 }
 
-// UpdateCommerceItemvariant - Update an itemvariant
-func (s *Itemvariant) UpdateCommerceItemvariant(ctx context.Context, request operations.UpdateCommerceItemvariantRequest, opts ...operations.Option) (*operations.UpdateCommerceItemvariantResponse, error) {
+// UpdateCommerceItemvariant2 - Update an itemvariant
+func (s *Itemvariant) UpdateCommerceItemvariant2(ctx context.Context, request operations.UpdateCommerceItemvariant2Request, opts ...operations.Option) (*operations.UpdateCommerceItemvariant2Response, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Itemvariant) UpdateCommerceItemvariant(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceItemvariant",
+		OperationID:      "updateCommerceItemvariant2",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceItemvariant", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Itemvariant) UpdateCommerceItemvariant(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.UpdateCommerceItemvariantResponse{
+	res := &operations.UpdateCommerceItemvariant2Response{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -39,8 +39,10 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesCalendar`     | calendar                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesVerification` | verification                                              |
 | `ListUnifiedIntegrationsQueryParamCategoriesAds`          | ads                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesAnalytics`    | analytics                                                 |
 | `ListUnifiedIntegrationsQueryParamCategoriesForms`        | forms                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesShipping`     | shipping                                                  |
 | `ListUnifiedIntegrationsQueryParamCategoriesAssessment`   | assessment                                                |
 | `ListUnifiedIntegrationsQueryParamCategoriesSigning`      | signing                                                   |
 | `ListUnifiedIntegrationsQueryParamCategoriesClubs`        | clubs                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesDatastore`    | datastore                                                 |

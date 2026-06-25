@@ -10,12 +10,13 @@ import (
 type DbType string
 
 const (
-	DbTypeMongodb  DbType = "mongodb"
-	DbTypeMysql    DbType = "mysql"
-	DbTypePostgres DbType = "postgres"
-	DbTypeMssql    DbType = "mssql"
-	DbTypeMariadb  DbType = "mariadb"
-	DbTypeSupabase DbType = "supabase"
+	DbTypeMongodb   DbType = "mongodb"
+	DbTypeMysql     DbType = "mysql"
+	DbTypePostgres  DbType = "postgres"
+	DbTypeMssql     DbType = "mssql"
+	DbTypeMariadb   DbType = "mariadb"
+	DbTypeSupabase  DbType = "supabase"
+	DbTypeSnowflake DbType = "snowflake"
 )
 
 func (e DbType) ToPointer() *DbType {
@@ -26,7 +27,7 @@ func (e DbType) ToPointer() *DbType {
 func (e *DbType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "mongodb", "mysql", "postgres", "mssql", "mariadb", "supabase":
+		case "mongodb", "mysql", "postgres", "mssql", "mariadb", "supabase", "snowflake":
 			return true
 		}
 	}
@@ -181,6 +182,11 @@ const (
 	ObjectTypeAdsInsertionorder       ObjectType = "ads_insertionorder"
 	ObjectTypeAdsTarget               ObjectType = "ads_target"
 	ObjectTypeAdsPromoted             ObjectType = "ads_promoted"
+	ObjectTypeAnalyticsProperty       ObjectType = "analytics_property"
+	ObjectTypeAnalyticsEvent          ObjectType = "analytics_event"
+	ObjectTypeAnalyticsSession        ObjectType = "analytics_session"
+	ObjectTypeAnalyticsVisitor        ObjectType = "analytics_visitor"
+	ObjectTypeAnalyticsReport         ObjectType = "analytics_report"
 	ObjectTypeFormsForm               ObjectType = "forms_form"
 	ObjectTypeFormsSubmission         ObjectType = "forms_submission"
 	ObjectTypeShippingCarrier         ObjectType = "shipping_carrier"
@@ -196,6 +202,10 @@ const (
 	ObjectTypeClubsActivity           ObjectType = "clubs_activity"
 	ObjectTypeClubsLocation           ObjectType = "clubs_location"
 	ObjectTypeClubsEvent              ObjectType = "clubs_event"
+	ObjectTypeDatastoreDatabase       ObjectType = "datastore_database"
+	ObjectTypeDatastoreTable          ObjectType = "datastore_table"
+	ObjectTypeDatastoreRecord         ObjectType = "datastore_record"
+	ObjectTypeDatastoreQuery          ObjectType = "datastore_query"
 )
 
 func (e ObjectType) ToPointer() *ObjectType {
@@ -206,7 +216,7 @@ func (e ObjectType) ToPointer() *ObjectType {
 func (e *ObjectType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_creditmemo", "accounting_taxrate", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_purchaseorder", "accounting_report", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_cashflow", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "commerce_itemvariant", "commerce_reservation", "commerce_availability", "verification_package", "verification_request", "assessment_package", "assessment_order", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_deduction", "hris_benefit", "hris_bankaccount", "martech_list", "martech_member", "martech_campaign", "martech_report", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "lms_content", "lms_collection", "lms_activity", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "calendar_webinar", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "ads_creative", "ads_insertionorder", "ads_target", "ads_promoted", "forms_form", "forms_submission", "shipping_carrier", "shipping_rate", "shipping_shipment", "shipping_label", "shipping_tracking", "signing_document", "signing_signatory", "signing_template", "clubs_group", "clubs_member", "clubs_activity", "clubs_location", "clubs_event":
+		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_creditmemo", "accounting_taxrate", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_purchaseorder", "accounting_report", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_cashflow", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "commerce_itemvariant", "commerce_reservation", "commerce_availability", "verification_package", "verification_request", "assessment_package", "assessment_order", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_deduction", "hris_benefit", "hris_bankaccount", "martech_list", "martech_member", "martech_campaign", "martech_report", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "lms_content", "lms_collection", "lms_activity", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "calendar_webinar", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "ads_creative", "ads_insertionorder", "ads_target", "ads_promoted", "analytics_property", "analytics_event", "analytics_session", "analytics_visitor", "analytics_report", "forms_form", "forms_submission", "shipping_carrier", "shipping_rate", "shipping_shipment", "shipping_label", "shipping_tracking", "signing_document", "signing_signatory", "signing_template", "clubs_group", "clubs_member", "clubs_activity", "clubs_location", "clubs_event", "datastore_database", "datastore_table", "datastore_record", "datastore_query":
 			return true
 		}
 	}

@@ -23,8 +23,8 @@ custom := shared.CreativeType("custom_value")
 | `CreativeTypeExpandable`      | EXPANDABLE                    |
 | `CreativeTypeVideo`           | VIDEO                         |
 | `CreativeTypeNative`          | NATIVE                        |
-| `CreativeTypeImage`           | IMAGE                         |
 | `CreativeTypeAudio`           | AUDIO                         |
-| `CreativeTypeDocument`        | DOCUMENT                      |
 | `CreativeTypePublisherHosted` | PUBLISHER_HOSTED              |
 | `CreativeTypeAssetBased`      | ASSET_BASED                   |
+| `CreativeTypeImage`           | IMAGE                         |
+| `CreativeTypeDocument`        | DOCUMENT                      |
