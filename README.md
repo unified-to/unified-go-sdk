@@ -1616,6 +1616,13 @@ func main() {
 * [RemoveAtsScorecard2](docs/sdks/scorecard/README.md#removeatsscorecard2) - Remove a scorecard
 * [UpdateAtsScorecard2](docs/sdks/scorecard/README.md#updateatsscorecard2) - Update a scorecard
 
+### [Secretsmanager](docs/sdks/secretsmanager/README.md)
+
+* [CreateUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
+* [GetUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
+* [ListUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
+* [RemoveUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
+
 ### [Session](docs/sdks/session/README.md)
 
 * [GetAnalyticsSession2](docs/sdks/session/README.md#getanalyticssession2) - Retrieve a session
@@ -1869,11 +1876,13 @@ func main() {
 * [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
 * [CreateUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [CreateUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
 * [GetUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [GetUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [ListUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [ListUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -1881,12 +1890,14 @@ func main() {
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [ListUnifiedWorkspaceSecretsmanagers](docs/sdks/unified/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [RemoveUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook

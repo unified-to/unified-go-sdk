@@ -7,11 +7,13 @@
 * [CreateUnifiedConnection](#createunifiedconnection) - Create connection
 * [CreateUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [CreateUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
+* [CreateUnifiedWorkspaceSecretsmanager](#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [GetUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [GetUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize new connection
 * [GetUnifiedIssue](#getunifiedissue) - Retrieve support issue
 * [GetUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
+* [GetUnifiedWorkspaceSecretsmanager](#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [ListUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](#listunifiedconnections) - List all connections
 * [ListUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -19,12 +21,14 @@
 * [ListUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](#listunifiedissues) - List support issues
 * [ListUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [ListUnifiedWorkspaceSecretsmanagers](#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [RemoveUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [RemoveUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+* [RemoveUnifiedWorkspaceSecretsmanager](#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [UpdateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
@@ -190,6 +194,64 @@ func main() {
 ### Response
 
 **[*operations.CreateUnifiedWebhookResponse](../../pkg/models/operations/createunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateUnifiedWorkspaceSecretsmanager
+
+Create secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createUnifiedWorkspaceSecretsmanager" method="post" path="/unified/workspace/secretsmanager" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.CreateUnifiedWorkspaceSecretsmanager(ctx, shared.SecretsManager{
+        Auth: map[string]string{
+
+        },
+        Name: "<value>",
+        Type: shared.SecretsManagerTypeHashicorp,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SecretsManager != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `ctx`                                                              | [context.Context](https://pkg.go.dev/context#Context)              | :heavy_check_mark:                                                 | The context to use for the request.                                |
+| `request`                                                          | [shared.SecretsManager](../../pkg/models/shared/secretsmanager.md) | :heavy_check_mark:                                                 | The request object to use for the request.                         |
+| `opts`                                                             | [][operations.Option](../../pkg/models/operations/option.md)       | :heavy_minus_sign:                                                 | The options for this request.                                      |
+
+### Response
+
+**[*operations.CreateUnifiedWorkspaceSecretsmanagerResponse](../../pkg/models/operations/createunifiedworkspacesecretsmanagerresponse.md), error**
 
 ### Errors
 
@@ -461,6 +523,60 @@ func main() {
 ### Response
 
 **[*operations.GetUnifiedWebhookResponse](../../pkg/models/operations/getunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetUnifiedWorkspaceSecretsmanager
+
+Retrieve secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUnifiedWorkspaceSecretsmanager" method="get" path="/unified/workspace/secretsmanager/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.GetUnifiedWorkspaceSecretsmanager(ctx, operations.GetUnifiedWorkspaceSecretsmanagerRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SecretsManager != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.GetUnifiedWorkspaceSecretsmanagerRequest](../../pkg/models/operations/getunifiedworkspacesecretsmanagerrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                                   | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.GetUnifiedWorkspaceSecretsmanagerResponse](../../pkg/models/operations/getunifiedworkspacesecretsmanagerresponse.md), error**
 
 ### Errors
 
@@ -832,6 +948,58 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListUnifiedWorkspaceSecretsmanagers
+
+List secrets managers
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUnifiedWorkspaceSecretsmanagers" method="get" path="/unified/workspace/secretsmanager" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.ListUnifiedWorkspaceSecretsmanagers(ctx, operations.ListUnifiedWorkspaceSecretsmanagersRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SecretsManagers != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                                              | :heavy_check_mark:                                                                                                                 | The context to use for the request.                                                                                                |
+| `request`                                                                                                                          | [operations.ListUnifiedWorkspaceSecretsmanagersRequest](../../pkg/models/operations/listunifiedworkspacesecretsmanagersrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `opts`                                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                                       | :heavy_minus_sign:                                                                                                                 | The options for this request.                                                                                                      |
+
+### Response
+
+**[*operations.ListUnifiedWorkspaceSecretsmanagersResponse](../../pkg/models/operations/listunifiedworkspacesecretsmanagersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchUnifiedConnection
 
 Update connection
@@ -1165,6 +1333,60 @@ func main() {
 ### Response
 
 **[*operations.RemoveUnifiedWebhookResponse](../../pkg/models/operations/removeunifiedwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveUnifiedWorkspaceSecretsmanager
+
+Remove secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeUnifiedWorkspaceSecretsmanager" method="delete" path="/unified/workspace/secretsmanager/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.RemoveUnifiedWorkspaceSecretsmanager(ctx, operations.RemoveUnifiedWorkspaceSecretsmanagerRequest{
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                | :heavy_check_mark:                                                                                                                   | The context to use for the request.                                                                                                  |
+| `request`                                                                                                                            | [operations.RemoveUnifiedWorkspaceSecretsmanagerRequest](../../pkg/models/operations/removeunifiedworkspacesecretsmanagerrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `opts`                                                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                                                         | :heavy_minus_sign:                                                                                                                   | The options for this request.                                                                                                        |
+
+### Response
+
+**[*operations.RemoveUnifiedWorkspaceSecretsmanagerResponse](../../pkg/models/operations/removeunifiedworkspacesecretsmanagerresponse.md), error**
 
 ### Errors
 

@@ -203,6 +203,7 @@ type UnifiedTo struct {
 	Login             *Login
 	Issue             *Issue
 	Webhook           *Webhook
+	Secretsmanager    *Secretsmanager
 	Verification      *Verification
 	Request           *Request
 
@@ -281,9 +282,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.82",
+		SDKVersion: "0.36.83",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.82 2.912.1 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.83 2.912.1 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -450,6 +451,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Login = newLogin(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Secretsmanager = newSecretsmanager(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Verification = newVerification(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Request = newRequest(sdk, sdk.sdkConfiguration, sdk.hooks)
 

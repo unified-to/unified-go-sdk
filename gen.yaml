@@ -29,7 +29,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.36.82
+  version: 0.36.83
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError
