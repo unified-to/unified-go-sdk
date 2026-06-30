@@ -18,6 +18,7 @@ const (
 	CreateMartechMember2QueryParamFieldsName      CreateMartechMember2QueryParamFields = "name"
 	CreateMartechMember2QueryParamFieldsFirstName CreateMartechMember2QueryParamFields = "first_name"
 	CreateMartechMember2QueryParamFieldsLastName  CreateMartechMember2QueryParamFields = "last_name"
+	CreateMartechMember2QueryParamFieldsCompany   CreateMartechMember2QueryParamFields = "company"
 	CreateMartechMember2QueryParamFieldsEmails    CreateMartechMember2QueryParamFields = "emails"
 	CreateMartechMember2QueryParamFieldsListIds   CreateMartechMember2QueryParamFields = "list_ids"
 	CreateMartechMember2QueryParamFieldsTags      CreateMartechMember2QueryParamFields = "tags"
@@ -45,6 +46,8 @@ func (e *CreateMartechMember2QueryParamFields) UnmarshalJSON(data []byte) error 
 	case "first_name":
 		fallthrough
 	case "last_name":
+		fallthrough
+	case "company":
 		fallthrough
 	case "emails":
 		fallthrough

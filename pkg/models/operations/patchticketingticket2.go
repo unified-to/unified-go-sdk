@@ -22,12 +22,12 @@ const (
 	PatchTicketingTicket2QueryParamFieldsClosedAt    PatchTicketingTicket2QueryParamFields = "closed_at"
 	PatchTicketingTicket2QueryParamFieldsPriority    PatchTicketingTicket2QueryParamFields = "priority"
 	PatchTicketingTicket2QueryParamFieldsCategoryID  PatchTicketingTicket2QueryParamFields = "category_id"
-	PatchTicketingTicket2QueryParamFieldsCategory    PatchTicketingTicket2QueryParamFields = "category"
 	PatchTicketingTicket2QueryParamFieldsSource      PatchTicketingTicket2QueryParamFields = "source"
 	PatchTicketingTicket2QueryParamFieldsSourceRef   PatchTicketingTicket2QueryParamFields = "source_ref"
 	PatchTicketingTicket2QueryParamFieldsTags        PatchTicketingTicket2QueryParamFields = "tags"
 	PatchTicketingTicket2QueryParamFieldsUserID      PatchTicketingTicket2QueryParamFields = "user_id"
 	PatchTicketingTicket2QueryParamFieldsURL         PatchTicketingTicket2QueryParamFields = "url"
+	PatchTicketingTicket2QueryParamFieldsDueAt       PatchTicketingTicket2QueryParamFields = "due_at"
 	PatchTicketingTicket2QueryParamFieldsRaw         PatchTicketingTicket2QueryParamFields = "raw"
 )
 
@@ -60,8 +60,6 @@ func (e *PatchTicketingTicket2QueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "category_id":
 		fallthrough
-	case "category":
-		fallthrough
 	case "source":
 		fallthrough
 	case "source_ref":
@@ -71,6 +69,8 @@ func (e *PatchTicketingTicket2QueryParamFields) UnmarshalJSON(data []byte) error
 	case "user_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "due_at":
 		fallthrough
 	case "raw":
 		*e = PatchTicketingTicket2QueryParamFields(v)

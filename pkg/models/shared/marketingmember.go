@@ -34,6 +34,7 @@ func (e *MarketingMemberStatus) IsExact() bool {
 
 // MarketingMember - A member represents a person
 type MarketingMember struct {
+	Company   *string    `json:"company,omitempty"`
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this member
 	Emails    []MarketingEmail `json:"emails,omitempty"`
@@ -59,6 +60,13 @@ func (m *MarketingMember) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (m *MarketingMember) GetCompany() *string {
+	if m == nil {
+		return nil
+	}
+	return m.Company
 }
 
 func (m *MarketingMember) GetCreatedAt() *time.Time {

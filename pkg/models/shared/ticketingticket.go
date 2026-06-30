@@ -30,12 +30,12 @@ func (e *TicketingTicketStatus) IsExact() bool {
 }
 
 type TicketingTicket struct {
-	Category    *string                `json:"category,omitempty"`
 	CategoryID  *string                `json:"category_id,omitempty"`
 	ClosedAt    *time.Time             `json:"closed_at,omitempty"`
 	CreatedAt   *time.Time             `json:"created_at,omitempty"`
 	CustomerID  *string                `json:"customer_id,omitempty"`
 	Description *string                `json:"description,omitempty"`
+	DueAt       *time.Time             `json:"due_at,omitempty"`
 	ID          *string                `json:"id,omitempty"`
 	Priority    *string                `json:"priority,omitempty"`
 	Raw         map[string]any         `json:"raw,omitempty"`
@@ -58,13 +58,6 @@ func (t *TicketingTicket) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
-}
-
-func (t *TicketingTicket) GetCategory() *string {
-	if t == nil {
-		return nil
-	}
-	return t.Category
 }
 
 func (t *TicketingTicket) GetCategoryID() *string {
@@ -100,6 +93,13 @@ func (t *TicketingTicket) GetDescription() *string {
 		return nil
 	}
 	return t.Description
+}
+
+func (t *TicketingTicket) GetDueAt() *time.Time {
+	if t == nil {
+		return nil
+	}
+	return t.DueAt
 }
 
 func (t *TicketingTicket) GetID() *string {

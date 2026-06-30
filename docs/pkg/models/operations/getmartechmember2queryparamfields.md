@@ -21,6 +21,7 @@ value := operations.GetMartechMember2QueryParamFieldsID
 | `GetMartechMember2QueryParamFieldsName`      | name                                         |
 | `GetMartechMember2QueryParamFieldsFirstName` | first_name                                   |
 | `GetMartechMember2QueryParamFieldsLastName`  | last_name                                    |
+| `GetMartechMember2QueryParamFieldsCompany`   | company                                      |
 | `GetMartechMember2QueryParamFieldsEmails`    | emails                                       |
 | `GetMartechMember2QueryParamFieldsListIds`   | list_ids                                     |
 | `GetMartechMember2QueryParamFieldsTags`      | tags                                         |

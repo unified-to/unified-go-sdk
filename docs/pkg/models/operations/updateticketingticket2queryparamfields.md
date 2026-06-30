@@ -25,10 +25,10 @@ value := operations.UpdateTicketingTicket2QueryParamFieldsID
 | `UpdateTicketingTicket2QueryParamFieldsClosedAt`    | closed_at                                           |
 | `UpdateTicketingTicket2QueryParamFieldsPriority`    | priority                                            |
 | `UpdateTicketingTicket2QueryParamFieldsCategoryID`  | category_id                                         |
-| `UpdateTicketingTicket2QueryParamFieldsCategory`    | category                                            |
 | `UpdateTicketingTicket2QueryParamFieldsSource`      | source                                              |
 | `UpdateTicketingTicket2QueryParamFieldsSourceRef`   | source_ref                                          |
 | `UpdateTicketingTicket2QueryParamFieldsTags`        | tags                                                |
 | `UpdateTicketingTicket2QueryParamFieldsUserID`      | user_id                                             |
 | `UpdateTicketingTicket2QueryParamFieldsURL`         | url                                                 |
+| `UpdateTicketingTicket2QueryParamFieldsDueAt`       | due_at                                              |
 | `UpdateTicketingTicket2QueryParamFieldsRaw`         | raw                                                 |
