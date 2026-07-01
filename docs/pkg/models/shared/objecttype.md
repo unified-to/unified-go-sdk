@@ -70,6 +70,7 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeCrmEvent`                | crm_event                           |
 | `ObjectTypeCrmLead`                 | crm_lead                            |
 | `ObjectTypeCrmPipeline`             | crm_pipeline                        |
+| `ObjectTypeCrmPicklist`             | crm_picklist                        |
 | `ObjectTypeHrisEmployee`            | hris_employee                       |
 | `ObjectTypeHrisGroup`               | hris_group                          |
 | `ObjectTypeHrisPayslip`             | hris_payslip                        |

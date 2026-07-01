@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.913.3
+// Generated from OpenAPI doc version 1.0 and generator version 2.914.0
 
 import (
 	"context"
@@ -122,6 +122,7 @@ type UnifiedTo struct {
 	Crm               *Crm
 	Deal              *Deal
 	Lead              *Lead
+	Picklist          *Picklist
 	Pipeline          *Pipeline
 	Datastore         *Datastore
 	Database          *Database
@@ -282,9 +283,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.84",
+		SDKVersion: "0.36.85",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.84 2.913.3 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.85 2.914.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -370,6 +371,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Crm = newCrm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Picklist = newPicklist(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Pipeline = newPipeline(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Datastore = newDatastore(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Database = newDatabase(sdk, sdk.sdkConfiguration, sdk.hooks)

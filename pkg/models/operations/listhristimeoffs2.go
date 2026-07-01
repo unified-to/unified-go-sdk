@@ -99,6 +99,7 @@ type ListHrisTimeoffs2Request struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
+	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
@@ -180,6 +181,13 @@ func (l *ListHrisTimeoffs2Request) GetStartGte() *string {
 		return nil
 	}
 	return l.StartGte
+}
+
+func (l *ListHrisTimeoffs2Request) GetType() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Type
 }
 
 func (l *ListHrisTimeoffs2Request) GetUpdatedGte() *string {

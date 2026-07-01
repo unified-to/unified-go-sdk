@@ -100,6 +100,8 @@ custom := shared.AdsReportMetricsType("custom_value")
 | `AdsReportMetricsTypeCrossDeviceConversions`           | CROSS_DEVICE_CONVERSIONS                               |
 | `AdsReportMetricsTypeAbsoluteTopImpressionShare`       | ABSOLUTE_TOP_IMPRESSION_SHARE                          |
 | `AdsReportMetricsTypeTopImpressionShare`               | TOP_IMPRESSION_SHARE                                   |
+| `AdsReportMetricsTypeAbsoluteTopImpressionRatePercent` | ABSOLUTE_TOP_IMPRESSION_RATE_PERCENT                   |
+| `AdsReportMetricsTypeTopImpressionRatePercent`         | TOP_IMPRESSION_RATE_PERCENT                            |
 | `AdsReportMetricsTypeVideoFullscreens`                 | VIDEO_FULLSCREENS                                      |
 | `AdsReportMetricsTypeVideoPauses`                      | VIDEO_PAUSES                                           |
 | `AdsReportMetricsTypeVideoMutes`                       | VIDEO_MUTES                                            |
@@ -133,9 +135,6 @@ custom := shared.AdsReportMetricsType("custom_value")
 | `AdsReportMetricsTypeActiveViewVisible10S`             | ACTIVE_VIEW_VISIBLE_10S                                |
 | `AdsReportMetricsTypeNotMeasurableImpressions`         | NOT_MEASURABLE_IMPRESSIONS                             |
 | `AdsReportMetricsTypeNotViewableImpressions`           | NOT_VIEWABLE_IMPRESSIONS                               |
-| `AdsReportMetricsTypePublisherPlatform`                | PUBLISHER_PLATFORM                                     |
-| `AdsReportMetricsTypePlatformPosition`                 | PLATFORM_POSITION                                      |
-| `AdsReportMetricsTypeImpressionDevice`                 | IMPRESSION_DEVICE                                      |
 | `AdsReportMetricsTypeOneDView`                         | 1D_VIEW                                                |
 | `AdsReportMetricsTypeOneDClick`                        | 1D_CLICK                                               |
 | `AdsReportMetricsTypeSevenDView`                       | 7D_VIEW                                                |

@@ -21,6 +21,7 @@
 * [ListCrmDeals2](#listcrmdeals2) - List all deals
 * [ListCrmEvents2](#listcrmevents2) - List all events
 * [ListCrmLeads2](#listcrmleads2) - List all leads
+* [ListCrmPicklists2](#listcrmpicklists2) - List all picklists
 * [ListCrmPipelines2](#listcrmpipelines2) - List all pipelines
 * [PatchCrmCompany2](#patchcrmcompany2) - Update a company
 * [PatchCrmContact2](#patchcrmcontact2) - Update a contact
@@ -970,6 +971,60 @@ func main() {
 ### Response
 
 **[*operations.ListCrmLeads2Response](../../pkg/models/operations/listcrmleads2response.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListCrmPicklists2
+
+List all picklists
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listCrmPicklists2" method="get" path="/crm/{connection_id}/picklist" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Crm.ListCrmPicklists2(ctx, operations.ListCrmPicklists2Request{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CrmPicklists != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListCrmPicklists2Request](../../pkg/models/operations/listcrmpicklists2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListCrmPicklists2Response](../../pkg/models/operations/listcrmpicklists2response.md), error**
 
 ### Errors
 

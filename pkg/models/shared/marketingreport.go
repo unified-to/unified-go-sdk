@@ -8,18 +8,21 @@ import (
 )
 
 type MarketingReport struct {
-	AbuseReports  *float64   `json:"abuse_reports,omitempty"`
-	CampaignID    *string    `json:"campaign_id,omitempty"`
-	ClickRate     *float64   `json:"click_rate,omitempty"`
-	ClicksTotal   *float64   `json:"clicks_total,omitempty"`
-	EmailsSent    *float64   `json:"emails_sent,omitempty"`
-	EndAt         *time.Time `json:"end_at,omitempty"`
-	ForwardsCount *float64   `json:"forwards_count,omitempty"`
-	ForwardsOpens *float64   `json:"forwards_opens,omitempty"`
-	HardBounces   *float64   `json:"hard_bounces,omitempty"`
-	ID            *string    `json:"id,omitempty"`
-	LastClickAt   *time.Time `json:"last_click_at,omitempty"`
-	LastOpenAt    *time.Time `json:"last_open_at,omitempty"`
+	AbuseReports     *float64   `json:"abuse_reports,omitempty"`
+	CampaignID       *string    `json:"campaign_id,omitempty"`
+	ClickRate        *float64   `json:"click_rate,omitempty"`
+	ClicksTotal      *float64   `json:"clicks_total,omitempty"`
+	EmailsSent       *float64   `json:"emails_sent,omitempty"`
+	EndAt            *time.Time `json:"end_at,omitempty"`
+	ForwardsCount    *float64   `json:"forwards_count,omitempty"`
+	ForwardsOpens    *float64   `json:"forwards_opens,omitempty"`
+	HardBounces      *float64   `json:"hard_bounces,omitempty"`
+	HumanOpenRate    *float64   `json:"human_open_rate,omitempty"`
+	HumanOpensTotal  *float64   `json:"human_opens_total,omitempty"`
+	HumanUniqueOpens *float64   `json:"human_unique_opens,omitempty"`
+	ID               *string    `json:"id,omitempty"`
+	LastClickAt      *time.Time `json:"last_click_at,omitempty"`
+	LastOpenAt       *time.Time `json:"last_open_at,omitempty"`
 	// URL-specific click data
 	Links                  []MarketingReportLink `json:"links,omitempty"`
 	ListID                 *string               `json:"list_id,omitempty"`
@@ -108,6 +111,27 @@ func (m *MarketingReport) GetHardBounces() *float64 {
 		return nil
 	}
 	return m.HardBounces
+}
+
+func (m *MarketingReport) GetHumanOpenRate() *float64 {
+	if m == nil {
+		return nil
+	}
+	return m.HumanOpenRate
+}
+
+func (m *MarketingReport) GetHumanOpensTotal() *float64 {
+	if m == nil {
+		return nil
+	}
+	return m.HumanOpensTotal
+}
+
+func (m *MarketingReport) GetHumanUniqueOpens() *float64 {
+	if m == nil {
+		return nil
+	}
+	return m.HumanUniqueOpens
 }
 
 func (m *MarketingReport) GetID() *string {

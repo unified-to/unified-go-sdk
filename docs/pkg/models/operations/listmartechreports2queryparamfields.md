@@ -39,4 +39,7 @@ value := operations.ListMartechReports2QueryParamFieldsID
 | `ListMartechReports2QueryParamFieldsClickRate`              | click_rate                                                  |
 | `ListMartechReports2QueryParamFieldsLastClickAt`            | last_click_at                                               |
 | `ListMartechReports2QueryParamFieldsLinks`                  | links                                                       |
+| `ListMartechReports2QueryParamFieldsHumanOpensTotal`        | human_opens_total                                           |
+| `ListMartechReports2QueryParamFieldsHumanUniqueOpens`       | human_unique_opens                                          |
+| `ListMartechReports2QueryParamFieldsHumanOpenRate`          | human_open_rate                                             |
 | `ListMartechReports2QueryParamFieldsRaw`                    | raw                                                         |

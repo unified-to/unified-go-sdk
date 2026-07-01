@@ -36,6 +36,9 @@ const (
 	ListMartechReports2QueryParamFieldsClickRate              ListMartechReports2QueryParamFields = "click_rate"
 	ListMartechReports2QueryParamFieldsLastClickAt            ListMartechReports2QueryParamFields = "last_click_at"
 	ListMartechReports2QueryParamFieldsLinks                  ListMartechReports2QueryParamFields = "links"
+	ListMartechReports2QueryParamFieldsHumanOpensTotal        ListMartechReports2QueryParamFields = "human_opens_total"
+	ListMartechReports2QueryParamFieldsHumanUniqueOpens       ListMartechReports2QueryParamFields = "human_unique_opens"
+	ListMartechReports2QueryParamFieldsHumanOpenRate          ListMartechReports2QueryParamFields = "human_open_rate"
 	ListMartechReports2QueryParamFieldsRaw                    ListMartechReports2QueryParamFields = "raw"
 )
 
@@ -95,6 +98,12 @@ func (e *ListMartechReports2QueryParamFields) UnmarshalJSON(data []byte) error {
 	case "last_click_at":
 		fallthrough
 	case "links":
+		fallthrough
+	case "human_opens_total":
+		fallthrough
+	case "human_unique_opens":
+		fallthrough
+	case "human_open_rate":
 		fallthrough
 	case "raw":
 		*e = ListMartechReports2QueryParamFields(v)
