@@ -30,8 +30,8 @@ func newWebinar(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateCalendarWebinar2 - Create a webinar
-func (s *Webinar) CreateCalendarWebinar2(ctx context.Context, request operations.CreateCalendarWebinar2Request, opts ...operations.Option) (*operations.CreateCalendarWebinar2Response, error) {
+// CreateCalendarWebinar - Create a webinar
+func (s *Webinar) CreateCalendarWebinar(ctx context.Context, request operations.CreateCalendarWebinarRequest, opts ...operations.Option) (*operations.CreateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Webinar) CreateCalendarWebinar2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarWebinar2",
+		OperationID:      "createCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Webinar) CreateCalendarWebinar2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.CreateCalendarWebinar2Response{
+	res := &operations.CreateCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Webinar) CreateCalendarWebinar2(ctx context.Context, request operations
 
 }
 
-// GetCalendarWebinar2 - Retrieve a webinar
-func (s *Webinar) GetCalendarWebinar2(ctx context.Context, request operations.GetCalendarWebinar2Request, opts ...operations.Option) (*operations.GetCalendarWebinar2Response, error) {
+// GetCalendarWebinar - Retrieve a webinar
+func (s *Webinar) GetCalendarWebinar(ctx context.Context, request operations.GetCalendarWebinarRequest, opts ...operations.Option) (*operations.GetCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Webinar) GetCalendarWebinar2(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarWebinar2",
+		OperationID:      "getCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Webinar) GetCalendarWebinar2(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetCalendarWebinar2Response{
+	res := &operations.GetCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Webinar) GetCalendarWebinar2(ctx context.Context, request operations.Ge
 
 }
 
-// ListCalendarWebinars2 - List all webinars
-func (s *Webinar) ListCalendarWebinars2(ctx context.Context, request operations.ListCalendarWebinars2Request, opts ...operations.Option) (*operations.ListCalendarWebinars2Response, error) {
+// ListCalendarWebinars - List all webinars
+func (s *Webinar) ListCalendarWebinars(ctx context.Context, request operations.ListCalendarWebinarsRequest, opts ...operations.Option) (*operations.ListCalendarWebinarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Webinar) ListCalendarWebinars2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarWebinars2",
+		OperationID:      "listCalendarWebinars",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Webinar) ListCalendarWebinars2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListCalendarWebinars2Response{
+	res := &operations.ListCalendarWebinarsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Webinar) ListCalendarWebinars2(ctx context.Context, request operations.
 
 }
 
-// PatchCalendarWebinar2 - Update a webinar
-func (s *Webinar) PatchCalendarWebinar2(ctx context.Context, request operations.PatchCalendarWebinar2Request, opts ...operations.Option) (*operations.PatchCalendarWebinar2Response, error) {
+// PatchCalendarWebinar - Update a webinar
+func (s *Webinar) PatchCalendarWebinar(ctx context.Context, request operations.PatchCalendarWebinarRequest, opts ...operations.Option) (*operations.PatchCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Webinar) PatchCalendarWebinar2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarWebinar2",
+		OperationID:      "patchCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Webinar) PatchCalendarWebinar2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.PatchCalendarWebinar2Response{
+	res := &operations.PatchCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Webinar) PatchCalendarWebinar2(ctx context.Context, request operations.
 
 }
 
-// RemoveCalendarWebinar2 - Remove a webinar
-func (s *Webinar) RemoveCalendarWebinar2(ctx context.Context, request operations.RemoveCalendarWebinar2Request, opts ...operations.Option) (*operations.RemoveCalendarWebinar2Response, error) {
+// RemoveCalendarWebinar - Remove a webinar
+func (s *Webinar) RemoveCalendarWebinar(ctx context.Context, request operations.RemoveCalendarWebinarRequest, opts ...operations.Option) (*operations.RemoveCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Webinar) RemoveCalendarWebinar2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarWebinar2",
+		OperationID:      "removeCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Webinar) RemoveCalendarWebinar2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.RemoveCalendarWebinar2Response{
+	res := &operations.RemoveCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Webinar) RemoveCalendarWebinar2(ctx context.Context, request operations
 
 }
 
-// UpdateCalendarWebinar2 - Update a webinar
-func (s *Webinar) UpdateCalendarWebinar2(ctx context.Context, request operations.UpdateCalendarWebinar2Request, opts ...operations.Option) (*operations.UpdateCalendarWebinar2Response, error) {
+// UpdateCalendarWebinar - Update a webinar
+func (s *Webinar) UpdateCalendarWebinar(ctx context.Context, request operations.UpdateCalendarWebinarRequest, opts ...operations.Option) (*operations.UpdateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Webinar) UpdateCalendarWebinar2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarWebinar2",
+		OperationID:      "updateCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Webinar) UpdateCalendarWebinar2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.UpdateCalendarWebinar2Response{
+	res := &operations.UpdateCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

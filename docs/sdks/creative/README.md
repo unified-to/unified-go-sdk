@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateAdsCreative2](#createadscreative2) - Create a creative
-* [GetAdsCreative2](#getadscreative2) - Retrieve a creative
-* [ListAdsCreatives2](#listadscreatives2) - List all creatives
-* [PatchAdsCreative2](#patchadscreative2) - Update a creative
-* [RemoveAdsCreative2](#removeadscreative2) - Remove a creative
-* [UpdateAdsCreative2](#updateadscreative2) - Update a creative
+* [CreateAdsCreative](#createadscreative) - Create a creative
+* [GetAdsCreative](#getadscreative) - Retrieve a creative
+* [ListAdsCreatives](#listadscreatives) - List all creatives
+* [PatchAdsCreative](#patchadscreative) - Update a creative
+* [RemoveAdsCreative](#removeadscreative) - Remove a creative
+* [UpdateAdsCreative](#updateadscreative) - Update a creative
 
-## CreateAdsCreative2
+## CreateAdsCreative
 
 Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.CreateAdsCreative2(ctx, operations.CreateAdsCreative2Request{
+    res, err := s.Creative.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateAdsCreative2Request](../../pkg/models/operations/createadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateAdsCreativeRequest](../../pkg/models/operations/createadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateAdsCreative2Response](../../pkg/models/operations/createadscreative2response.md), error**
+**[*operations.CreateAdsCreativeResponse](../../pkg/models/operations/createadscreativeresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsCreative2
+## GetAdsCreative
 
 Retrieve a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.GetAdsCreative2(ctx, operations.GetAdsCreative2Request{
+    res, err := s.Creative.GetAdsCreative(ctx, operations.GetAdsCreativeRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetAdsCreative2Request](../../pkg/models/operations/getadscreative2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAdsCreativeRequest](../../pkg/models/operations/getadscreativerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetAdsCreative2Response](../../pkg/models/operations/getadscreative2response.md), error**
+**[*operations.GetAdsCreativeResponse](../../pkg/models/operations/getadscreativeresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsCreatives2
+## ListAdsCreatives
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.ListAdsCreatives2(ctx, operations.ListAdsCreatives2Request{
+    res, err := s.Creative.ListAdsCreatives(ctx, operations.ListAdsCreativesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListAdsCreatives2Request](../../pkg/models/operations/listadscreatives2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListAdsCreativesRequest](../../pkg/models/operations/listadscreativesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListAdsCreatives2Response](../../pkg/models/operations/listadscreatives2response.md), error**
+**[*operations.ListAdsCreativesResponse](../../pkg/models/operations/listadscreativesresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsCreative2
+## PatchAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.PatchAdsCreative2(ctx, operations.PatchAdsCreative2Request{
+    res, err := s.Creative.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchAdsCreative2Request](../../pkg/models/operations/patchadscreative2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchAdsCreativeRequest](../../pkg/models/operations/patchadscreativerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchAdsCreative2Response](../../pkg/models/operations/patchadscreative2response.md), error**
+**[*operations.PatchAdsCreativeResponse](../../pkg/models/operations/patchadscreativeresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAdsCreative2
+## RemoveAdsCreative
 
 Remove a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.RemoveAdsCreative2(ctx, operations.RemoveAdsCreative2Request{
+    res, err := s.Creative.RemoveAdsCreative(ctx, operations.RemoveAdsCreativeRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveAdsCreative2Request](../../pkg/models/operations/removeadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveAdsCreativeRequest](../../pkg/models/operations/removeadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.RemoveAdsCreative2Response](../../pkg/models/operations/removeadscreative2response.md), error**
+**[*operations.RemoveAdsCreativeResponse](../../pkg/models/operations/removeadscreativeresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAdsCreative2
+## UpdateAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Creative.UpdateAdsCreative2(ctx, operations.UpdateAdsCreative2Request{
+    res, err := s.Creative.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateAdsCreative2Request](../../pkg/models/operations/updateadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateAdsCreativeRequest](../../pkg/models/operations/updateadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.UpdateAdsCreative2Response](../../pkg/models/operations/updateadscreative2response.md), error**
+**[*operations.UpdateAdsCreativeResponse](../../pkg/models/operations/updateadscreativeresponse.md), error**
 
 ### Errors
 

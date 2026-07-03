@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateRepoCommit2](#createrepocommit2) - Create a commit
-* [GetRepoCommit2](#getrepocommit2) - Retrieve a commit
-* [ListRepoCommits2](#listrepocommits2) - List all commits
-* [PatchRepoCommit2](#patchrepocommit2) - Update a commit
-* [RemoveRepoCommit2](#removerepocommit2) - Remove a commit
-* [UpdateRepoCommit2](#updaterepocommit2) - Update a commit
+* [CreateRepoCommit](#createrepocommit) - Create a commit
+* [GetRepoCommit](#getrepocommit) - Retrieve a commit
+* [ListRepoCommits](#listrepocommits) - List all commits
+* [PatchRepoCommit](#patchrepocommit) - Update a commit
+* [RemoveRepoCommit](#removerepocommit) - Remove a commit
+* [UpdateRepoCommit](#updaterepocommit) - Update a commit
 
-## CreateRepoCommit2
+## CreateRepoCommit
 
 Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoCommit2" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.CreateRepoCommit2(ctx, operations.CreateRepoCommit2Request{
+    res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
         },
@@ -53,15 +53,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.CreateRepoCommit2Request](../../pkg/models/operations/createrepocommit2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.CreateRepoCommitRequest](../../pkg/models/operations/createrepocommitrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.CreateRepoCommit2Response](../../pkg/models/operations/createrepocommit2response.md), error**
+**[*operations.CreateRepoCommitResponse](../../pkg/models/operations/createrepocommitresponse.md), error**
 
 ### Errors
 
@@ -69,13 +69,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetRepoCommit2
+## GetRepoCommit
 
 Retrieve a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getRepoCommit2" method="get" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="getRepoCommit" method="get" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -93,7 +93,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.GetRepoCommit2(ctx, operations.GetRepoCommit2Request{
+    res, err := s.Commit.GetRepoCommit(ctx, operations.GetRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -108,15 +108,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetRepoCommit2Request](../../pkg/models/operations/getrepocommit2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetRepoCommitRequest](../../pkg/models/operations/getrepocommitrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.GetRepoCommit2Response](../../pkg/models/operations/getrepocommit2response.md), error**
+**[*operations.GetRepoCommitResponse](../../pkg/models/operations/getrepocommitresponse.md), error**
 
 ### Errors
 
@@ -124,13 +124,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListRepoCommits2
+## ListRepoCommits
 
 List all commits
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listRepoCommits2" method="get" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="go" operationID="listRepoCommits" method="get" path="/repo/{connection_id}/commit" -->
 ```go
 package main
 
@@ -148,7 +148,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.ListRepoCommits2(ctx, operations.ListRepoCommits2Request{
+    res, err := s.Commit.ListRepoCommits(ctx, operations.ListRepoCommitsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -162,15 +162,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListRepoCommits2Request](../../pkg/models/operations/listrepocommits2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListRepoCommitsRequest](../../pkg/models/operations/listrepocommitsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.ListRepoCommits2Response](../../pkg/models/operations/listrepocommits2response.md), error**
+**[*operations.ListRepoCommitsResponse](../../pkg/models/operations/listrepocommitsresponse.md), error**
 
 ### Errors
 
@@ -178,13 +178,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchRepoCommit2
+## PatchRepoCommit
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoCommit2" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -203,7 +203,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.PatchRepoCommit2(ctx, operations.PatchRepoCommit2Request{
+    res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
         },
@@ -221,15 +221,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.PatchRepoCommit2Request](../../pkg/models/operations/patchrepocommit2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.PatchRepoCommitRequest](../../pkg/models/operations/patchrepocommitrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.PatchRepoCommit2Response](../../pkg/models/operations/patchrepocommit2response.md), error**
+**[*operations.PatchRepoCommitResponse](../../pkg/models/operations/patchrepocommitresponse.md), error**
 
 ### Errors
 
@@ -237,13 +237,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveRepoCommit2
+## RemoveRepoCommit
 
 Remove a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeRepoCommit2" method="delete" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeRepoCommit" method="delete" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -261,7 +261,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.RemoveRepoCommit2(ctx, operations.RemoveRepoCommit2Request{
+    res, err := s.Commit.RemoveRepoCommit(ctx, operations.RemoveRepoCommitRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -276,15 +276,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.RemoveRepoCommit2Request](../../pkg/models/operations/removerepocommit2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.RemoveRepoCommitRequest](../../pkg/models/operations/removerepocommitrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.RemoveRepoCommit2Response](../../pkg/models/operations/removerepocommit2response.md), error**
+**[*operations.RemoveRepoCommitResponse](../../pkg/models/operations/removerepocommitresponse.md), error**
 
 ### Errors
 
@@ -292,13 +292,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateRepoCommit2
+## UpdateRepoCommit
 
 Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoCommit2" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
 ```go
 package main
 
@@ -317,7 +317,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Commit.UpdateRepoCommit2(ctx, operations.UpdateRepoCommit2Request{
+    res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             RepoID: "<id>",
         },
@@ -335,15 +335,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdateRepoCommit2Request](../../pkg/models/operations/updaterepocommit2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.UpdateRepoCommitRequest](../../pkg/models/operations/updaterepocommitrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.UpdateRepoCommit2Response](../../pkg/models/operations/updaterepocommit2response.md), error**
+**[*operations.UpdateRepoCommitResponse](../../pkg/models/operations/updaterepocommitresponse.md), error**
 
 ### Errors
 

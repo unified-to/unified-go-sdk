@@ -28,6 +28,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAccountingInvoiceWrite`       | accounting_invoice_write                                    |
 | `PropertyConnectionPermissionsAccountingBillRead`           | accounting_bill_read                                        |
 | `PropertyConnectionPermissionsAccountingBillWrite`          | accounting_bill_write                                       |
+| `PropertyConnectionPermissionsAccountingVendorcreditRead`   | accounting_vendorcredit_read                                |
+| `PropertyConnectionPermissionsAccountingVendorcreditWrite`  | accounting_vendorcredit_write                               |
 | `PropertyConnectionPermissionsAccountingCreditmemoRead`     | accounting_creditmemo_read                                  |
 | `PropertyConnectionPermissionsAccountingCreditmemoWrite`    | accounting_creditmemo_write                                 |
 | `PropertyConnectionPermissionsAccountingContactRead`        | accounting_contact_read                                     |

@@ -4,19 +4,19 @@
 
 ### Available Operations
 
-* [GetAccountingReport2](#getaccountingreport2) - Retrieve a report
-* [ListAccountingReports2](#listaccountingreports2) - List all reports
-* [ListAdsReports2](#listadsreports2) - List all reports
-* [ListAnalyticsReports2](#listanalyticsreports2) - List all reports
-* [ListMartechReports2](#listmartechreports2) - List all reports
+* [GetAccountingReport](#getaccountingreport) - Retrieve a report
+* [ListAccountingReports](#listaccountingreports) - List all reports
+* [ListAdsReports](#listadsreports) - List all reports
+* [ListAnalyticsReports](#listanalyticsreports) - List all reports
+* [ListMartechReports](#listmartechreports) - List all reports
 
-## GetAccountingReport2
+## GetAccountingReport
 
 Retrieve a report
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingReport2" method="get" path="/accounting/{connection_id}/report/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
 ```go
 package main
 
@@ -34,7 +34,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Report.GetAccountingReport2(ctx, operations.GetAccountingReport2Request{
+    res, err := s.Report.GetAccountingReport(ctx, operations.GetAccountingReportRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -49,15 +49,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAccountingReport2Request](../../pkg/models/operations/getaccountingreport2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetAccountingReportRequest](../../pkg/models/operations/getaccountingreportrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.GetAccountingReport2Response](../../pkg/models/operations/getaccountingreport2response.md), error**
+**[*operations.GetAccountingReportResponse](../../pkg/models/operations/getaccountingreportresponse.md), error**
 
 ### Errors
 
@@ -65,13 +65,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingReports2
+## ListAccountingReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingReports2" method="get" path="/accounting/{connection_id}/report" -->
+<!-- UsageSnippet language="go" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
 ```go
 package main
 
@@ -89,7 +89,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Report.ListAccountingReports2(ctx, operations.ListAccountingReports2Request{
+    res, err := s.Report.ListAccountingReports(ctx, operations.ListAccountingReportsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -103,15 +103,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAccountingReports2Request](../../pkg/models/operations/listaccountingreports2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListAccountingReportsRequest](../../pkg/models/operations/listaccountingreportsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.ListAccountingReports2Response](../../pkg/models/operations/listaccountingreports2response.md), error**
+**[*operations.ListAccountingReportsResponse](../../pkg/models/operations/listaccountingreportsresponse.md), error**
 
 ### Errors
 
@@ -119,13 +119,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsReports2
+## ListAdsReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsReports2" method="get" path="/ads/{connection_id}/report" -->
+<!-- UsageSnippet language="go" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
 ```go
 package main
 
@@ -143,7 +143,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Report.ListAdsReports2(ctx, operations.ListAdsReports2Request{
+    res, err := s.Report.ListAdsReports(ctx, operations.ListAdsReportsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -157,15 +157,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListAdsReports2Request](../../pkg/models/operations/listadsreports2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListAdsReportsRequest](../../pkg/models/operations/listadsreportsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListAdsReports2Response](../../pkg/models/operations/listadsreports2response.md), error**
+**[*operations.ListAdsReportsResponse](../../pkg/models/operations/listadsreportsresponse.md), error**
 
 ### Errors
 
@@ -173,13 +173,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAnalyticsReports2
+## ListAnalyticsReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAnalyticsReports2" method="get" path="/analytics/{connection_id}/report" -->
+<!-- UsageSnippet language="go" operationID="listAnalyticsReports" method="get" path="/analytics/{connection_id}/report" -->
 ```go
 package main
 
@@ -197,7 +197,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Report.ListAnalyticsReports2(ctx, operations.ListAnalyticsReports2Request{
+    res, err := s.Report.ListAnalyticsReports(ctx, operations.ListAnalyticsReportsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -211,15 +211,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAnalyticsReports2Request](../../pkg/models/operations/listanalyticsreports2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListAnalyticsReportsRequest](../../pkg/models/operations/listanalyticsreportsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.ListAnalyticsReports2Response](../../pkg/models/operations/listanalyticsreports2response.md), error**
+**[*operations.ListAnalyticsReportsResponse](../../pkg/models/operations/listanalyticsreportsresponse.md), error**
 
 ### Errors
 
@@ -227,13 +227,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListMartechReports2
+## ListMartechReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listMartechReports2" method="get" path="/martech/{connection_id}/report" -->
+<!-- UsageSnippet language="go" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
 ```go
 package main
 
@@ -251,7 +251,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Report.ListMartechReports2(ctx, operations.ListMartechReports2Request{
+    res, err := s.Report.ListMartechReports(ctx, operations.ListMartechReportsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -265,15 +265,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListMartechReports2Request](../../pkg/models/operations/listmartechreports2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListMartechReportsRequest](../../pkg/models/operations/listmartechreportsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListMartechReports2Response](../../pkg/models/operations/listmartechreports2response.md), error**
+**[*operations.ListMartechReportsResponse](../../pkg/models/operations/listmartechreportsresponse.md), error**
 
 ### Errors
 

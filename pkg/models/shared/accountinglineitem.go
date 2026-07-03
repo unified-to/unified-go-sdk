@@ -10,6 +10,7 @@ import (
 type AccountingLineitem struct {
 	AccountID       *string               `json:"account_id,omitempty"`
 	CategoryIds     []string              `json:"category_ids,omitempty"`
+	ContactID       *string               `json:"contact_id,omitempty"`
 	CreatedAt       *time.Time            `json:"created_at,omitempty"`
 	DiscountAmount  *float64              `json:"discount_amount,omitempty"`
 	Fees            []AccountingFee       `json:"fees,omitempty"`
@@ -54,6 +55,13 @@ func (a *AccountingLineitem) GetCategoryIds() []string {
 		return nil
 	}
 	return a.CategoryIds
+}
+
+func (a *AccountingLineitem) GetContactID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ContactID
 }
 
 func (a *AccountingLineitem) GetCreatedAt() *time.Time {

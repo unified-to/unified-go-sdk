@@ -30,8 +30,8 @@ func newBalancesheet(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// GetAccountingBalancesheet2 - Retrieve a balancesheet
-func (s *Balancesheet) GetAccountingBalancesheet2(ctx context.Context, request operations.GetAccountingBalancesheet2Request, opts ...operations.Option) (*operations.GetAccountingBalancesheet2Response, error) {
+// GetAccountingBalancesheet - Retrieve a balancesheet
+func (s *Balancesheet) GetAccountingBalancesheet(ctx context.Context, request operations.GetAccountingBalancesheetRequest, opts ...operations.Option) (*operations.GetAccountingBalancesheetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Balancesheet) GetAccountingBalancesheet2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingBalancesheet2",
+		OperationID:      "getAccountingBalancesheet",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Balancesheet) GetAccountingBalancesheet2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.GetAccountingBalancesheet2Response{
+	res := &operations.GetAccountingBalancesheetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Balancesheet) GetAccountingBalancesheet2(ctx context.Context, request o
 
 }
 
-// ListAccountingBalancesheets2 - List all balancesheets
-func (s *Balancesheet) ListAccountingBalancesheets2(ctx context.Context, request operations.ListAccountingBalancesheets2Request, opts ...operations.Option) (*operations.ListAccountingBalancesheets2Response, error) {
+// ListAccountingBalancesheets - List all balancesheets
+func (s *Balancesheet) ListAccountingBalancesheets(ctx context.Context, request operations.ListAccountingBalancesheetsRequest, opts ...operations.Option) (*operations.ListAccountingBalancesheetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Balancesheet) ListAccountingBalancesheets2(ctx context.Context, request
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingBalancesheets2",
+		OperationID:      "listAccountingBalancesheets",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Balancesheet) ListAccountingBalancesheets2(ctx context.Context, request
 		}
 	}
 
-	res := &operations.ListAccountingBalancesheets2Response{
+	res := &operations.ListAccountingBalancesheetsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

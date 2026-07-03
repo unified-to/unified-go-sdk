@@ -30,8 +30,8 @@ func newCall(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// GetUcCall2 - Retrieve a call
-func (s *Call) GetUcCall2(ctx context.Context, request operations.GetUcCall2Request, opts ...operations.Option) (*operations.GetUcCall2Response, error) {
+// GetUcCall - Retrieve a call
+func (s *Call) GetUcCall(ctx context.Context, request operations.GetUcCallRequest, opts ...operations.Option) (*operations.GetUcCallResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Call) GetUcCall2(ctx context.Context, request operations.GetUcCall2Requ
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcCall2",
+		OperationID:      "getUcCall",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Call) GetUcCall2(ctx context.Context, request operations.GetUcCall2Requ
 		}
 	}
 
-	res := &operations.GetUcCall2Response{
+	res := &operations.GetUcCallResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Call) GetUcCall2(ctx context.Context, request operations.GetUcCall2Requ
 
 }
 
-// ListUcCalls2 - List all calls
-func (s *Call) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2Request, opts ...operations.Option) (*operations.ListUcCalls2Response, error) {
+// ListUcCalls - List all calls
+func (s *Call) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Call) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcCalls2",
+		OperationID:      "listUcCalls",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Call) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2
 		}
 	}
 
-	res := &operations.ListUcCalls2Response{
+	res := &operations.ListUcCallsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

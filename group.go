@@ -30,8 +30,8 @@ func newGroup(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateAdsGroup2 - Create a group
-func (s *Group) CreateAdsGroup2(ctx context.Context, request operations.CreateAdsGroup2Request, opts ...operations.Option) (*operations.CreateAdsGroup2Response, error) {
+// CreateAdsGroup - Create a group
+func (s *Group) CreateAdsGroup(ctx context.Context, request operations.CreateAdsGroupRequest, opts ...operations.Option) (*operations.CreateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Group) CreateAdsGroup2(ctx context.Context, request operations.CreateAd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsGroup2",
+		OperationID:      "createAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Group) CreateAdsGroup2(ctx context.Context, request operations.CreateAd
 		}
 	}
 
-	res := &operations.CreateAdsGroup2Response{
+	res := &operations.CreateAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Group) CreateAdsGroup2(ctx context.Context, request operations.CreateAd
 
 }
 
-// CreateHrisGroup2 - Create a group
-func (s *Group) CreateHrisGroup2(ctx context.Context, request operations.CreateHrisGroup2Request, opts ...operations.Option) (*operations.CreateHrisGroup2Response, error) {
+// CreateHrisGroup - Create a group
+func (s *Group) CreateHrisGroup(ctx context.Context, request operations.CreateHrisGroupRequest, opts ...operations.Option) (*operations.CreateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Group) CreateHrisGroup2(ctx context.Context, request operations.CreateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisGroup2",
+		OperationID:      "createHrisGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Group) CreateHrisGroup2(ctx context.Context, request operations.CreateH
 		}
 	}
 
-	res := &operations.CreateHrisGroup2Response{
+	res := &operations.CreateHrisGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -668,8 +668,8 @@ func (s *Group) CreateScimGroups(ctx context.Context, request operations.CreateS
 
 }
 
-// GetAdsGroup2 - Retrieve a group
-func (s *Group) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup2Request, opts ...operations.Option) (*operations.GetAdsGroup2Response, error) {
+// GetAdsGroup - Retrieve a group
+func (s *Group) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupRequest, opts ...operations.Option) (*operations.GetAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -698,7 +698,7 @@ func (s *Group) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsGroup2",
+		OperationID:      "getAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -823,7 +823,7 @@ func (s *Group) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup
 		}
 	}
 
-	res := &operations.GetAdsGroup2Response{
+	res := &operations.GetAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -875,8 +875,8 @@ func (s *Group) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup
 
 }
 
-// GetClubsGroup2 - Retrieve a group
-func (s *Group) GetClubsGroup2(ctx context.Context, request operations.GetClubsGroup2Request, opts ...operations.Option) (*operations.GetClubsGroup2Response, error) {
+// GetClubsGroup - Retrieve a group
+func (s *Group) GetClubsGroup(ctx context.Context, request operations.GetClubsGroupRequest, opts ...operations.Option) (*operations.GetClubsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -905,7 +905,7 @@ func (s *Group) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsGroup2",
+		OperationID:      "getClubsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1030,7 +1030,7 @@ func (s *Group) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 		}
 	}
 
-	res := &operations.GetClubsGroup2Response{
+	res := &operations.GetClubsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1082,8 +1082,8 @@ func (s *Group) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 
 }
 
-// GetHrisGroup2 - Retrieve a group
-func (s *Group) GetHrisGroup2(ctx context.Context, request operations.GetHrisGroup2Request, opts ...operations.Option) (*operations.GetHrisGroup2Response, error) {
+// GetHrisGroup - Retrieve a group
+func (s *Group) GetHrisGroup(ctx context.Context, request operations.GetHrisGroupRequest, opts ...operations.Option) (*operations.GetHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1112,7 +1112,7 @@ func (s *Group) GetHrisGroup2(ctx context.Context, request operations.GetHrisGro
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisGroup2",
+		OperationID:      "getHrisGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1237,7 +1237,7 @@ func (s *Group) GetHrisGroup2(ctx context.Context, request operations.GetHrisGro
 		}
 	}
 
-	res := &operations.GetHrisGroup2Response{
+	res := &operations.GetHrisGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1492,8 +1492,8 @@ func (s *Group) GetScimGroups(ctx context.Context, request operations.GetScimGro
 
 }
 
-// ListAdsGroups2 - List all groups
-func (s *Group) ListAdsGroups2(ctx context.Context, request operations.ListAdsGroups2Request, opts ...operations.Option) (*operations.ListAdsGroups2Response, error) {
+// ListAdsGroups - List all groups
+func (s *Group) ListAdsGroups(ctx context.Context, request operations.ListAdsGroupsRequest, opts ...operations.Option) (*operations.ListAdsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1522,7 +1522,7 @@ func (s *Group) ListAdsGroups2(ctx context.Context, request operations.ListAdsGr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsGroups2",
+		OperationID:      "listAdsGroups",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1647,7 +1647,7 @@ func (s *Group) ListAdsGroups2(ctx context.Context, request operations.ListAdsGr
 		}
 	}
 
-	res := &operations.ListAdsGroups2Response{
+	res := &operations.ListAdsGroupsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1699,8 +1699,8 @@ func (s *Group) ListAdsGroups2(ctx context.Context, request operations.ListAdsGr
 
 }
 
-// ListClubsGroups2 - List all groups
-func (s *Group) ListClubsGroups2(ctx context.Context, request operations.ListClubsGroups2Request, opts ...operations.Option) (*operations.ListClubsGroups2Response, error) {
+// ListClubsGroups - List all groups
+func (s *Group) ListClubsGroups(ctx context.Context, request operations.ListClubsGroupsRequest, opts ...operations.Option) (*operations.ListClubsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1729,7 +1729,7 @@ func (s *Group) ListClubsGroups2(ctx context.Context, request operations.ListClu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsGroups2",
+		OperationID:      "listClubsGroups",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1854,7 +1854,7 @@ func (s *Group) ListClubsGroups2(ctx context.Context, request operations.ListClu
 		}
 	}
 
-	res := &operations.ListClubsGroups2Response{
+	res := &operations.ListClubsGroupsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1906,8 +1906,8 @@ func (s *Group) ListClubsGroups2(ctx context.Context, request operations.ListClu
 
 }
 
-// ListHrisGroups2 - List all groups
-func (s *Group) ListHrisGroups2(ctx context.Context, request operations.ListHrisGroups2Request, opts ...operations.Option) (*operations.ListHrisGroups2Response, error) {
+// ListHrisGroups - List all groups
+func (s *Group) ListHrisGroups(ctx context.Context, request operations.ListHrisGroupsRequest, opts ...operations.Option) (*operations.ListHrisGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1936,7 +1936,7 @@ func (s *Group) ListHrisGroups2(ctx context.Context, request operations.ListHris
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisGroups2",
+		OperationID:      "listHrisGroups",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2061,7 +2061,7 @@ func (s *Group) ListHrisGroups2(ctx context.Context, request operations.ListHris
 		}
 	}
 
-	res := &operations.ListHrisGroups2Response{
+	res := &operations.ListHrisGroupsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2320,8 +2320,8 @@ func (s *Group) ListScimGroups(ctx context.Context, request operations.ListScimG
 
 }
 
-// PatchAdsGroup2 - Update a group
-func (s *Group) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsGroup2Request, opts ...operations.Option) (*operations.PatchAdsGroup2Response, error) {
+// PatchAdsGroup - Update a group
+func (s *Group) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGroupRequest, opts ...operations.Option) (*operations.PatchAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2350,7 +2350,7 @@ func (s *Group) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsGroup2",
+		OperationID:      "patchAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -2482,7 +2482,7 @@ func (s *Group) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsG
 		}
 	}
 
-	res := &operations.PatchAdsGroup2Response{
+	res := &operations.PatchAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2534,8 +2534,8 @@ func (s *Group) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsG
 
 }
 
-// PatchHrisGroup2 - Update a group
-func (s *Group) PatchHrisGroup2(ctx context.Context, request operations.PatchHrisGroup2Request, opts ...operations.Option) (*operations.PatchHrisGroup2Response, error) {
+// PatchHrisGroup - Update a group
+func (s *Group) PatchHrisGroup(ctx context.Context, request operations.PatchHrisGroupRequest, opts ...operations.Option) (*operations.PatchHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2564,7 +2564,7 @@ func (s *Group) PatchHrisGroup2(ctx context.Context, request operations.PatchHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisGroup2",
+		OperationID:      "patchHrisGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -2696,7 +2696,7 @@ func (s *Group) PatchHrisGroup2(ctx context.Context, request operations.PatchHri
 		}
 	}
 
-	res := &operations.PatchHrisGroup2Response{
+	res := &operations.PatchHrisGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2958,8 +2958,8 @@ func (s *Group) PatchScimGroups(ctx context.Context, request operations.PatchSci
 
 }
 
-// RemoveAdsGroup2 - Remove a group
-func (s *Group) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAdsGroup2Request, opts ...operations.Option) (*operations.RemoveAdsGroup2Response, error) {
+// RemoveAdsGroup - Remove a group
+func (s *Group) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGroupRequest, opts ...operations.Option) (*operations.RemoveAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2988,7 +2988,7 @@ func (s *Group) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsGroup2",
+		OperationID:      "removeAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3109,7 +3109,7 @@ func (s *Group) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAd
 		}
 	}
 
-	res := &operations.RemoveAdsGroup2Response{
+	res := &operations.RemoveAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3140,8 +3140,8 @@ func (s *Group) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAd
 
 }
 
-// RemoveHrisGroup2 - Remove a group
-func (s *Group) RemoveHrisGroup2(ctx context.Context, request operations.RemoveHrisGroup2Request, opts ...operations.Option) (*operations.RemoveHrisGroup2Response, error) {
+// RemoveHrisGroup - Remove a group
+func (s *Group) RemoveHrisGroup(ctx context.Context, request operations.RemoveHrisGroupRequest, opts ...operations.Option) (*operations.RemoveHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3170,7 +3170,7 @@ func (s *Group) RemoveHrisGroup2(ctx context.Context, request operations.RemoveH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisGroup2",
+		OperationID:      "removeHrisGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3291,7 +3291,7 @@ func (s *Group) RemoveHrisGroup2(ctx context.Context, request operations.RemoveH
 		}
 	}
 
-	res := &operations.RemoveHrisGroup2Response{
+	res := &operations.RemoveHrisGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3504,8 +3504,8 @@ func (s *Group) RemoveScimGroups(ctx context.Context, request operations.RemoveS
 
 }
 
-// UpdateAdsGroup2 - Update a group
-func (s *Group) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAdsGroup2Request, opts ...operations.Option) (*operations.UpdateAdsGroup2Response, error) {
+// UpdateAdsGroup - Update a group
+func (s *Group) UpdateAdsGroup(ctx context.Context, request operations.UpdateAdsGroupRequest, opts ...operations.Option) (*operations.UpdateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3534,7 +3534,7 @@ func (s *Group) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsGroup2",
+		OperationID:      "updateAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -3666,7 +3666,7 @@ func (s *Group) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAd
 		}
 	}
 
-	res := &operations.UpdateAdsGroup2Response{
+	res := &operations.UpdateAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3718,8 +3718,8 @@ func (s *Group) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAd
 
 }
 
-// UpdateHrisGroup2 - Update a group
-func (s *Group) UpdateHrisGroup2(ctx context.Context, request operations.UpdateHrisGroup2Request, opts ...operations.Option) (*operations.UpdateHrisGroup2Response, error) {
+// UpdateHrisGroup - Update a group
+func (s *Group) UpdateHrisGroup(ctx context.Context, request operations.UpdateHrisGroupRequest, opts ...operations.Option) (*operations.UpdateHrisGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3748,7 +3748,7 @@ func (s *Group) UpdateHrisGroup2(ctx context.Context, request operations.UpdateH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisGroup2",
+		OperationID:      "updateHrisGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisGroup", "json", `request:"mediaType=application/json"`)
@@ -3880,7 +3880,7 @@ func (s *Group) UpdateHrisGroup2(ctx context.Context, request operations.UpdateH
 		}
 	}
 
-	res := &operations.UpdateHrisGroup2Response{
+	res := &operations.UpdateHrisGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

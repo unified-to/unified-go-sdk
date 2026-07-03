@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [ListCalendarBusies2](#listcalendarbusies2) - List all busies
+* [ListCalendarBusies](#listcalendarbusies) - List all busies
 
-## ListCalendarBusies2
+## ListCalendarBusies
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="go" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```go
 package main
 
@@ -30,7 +30,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Busy.ListCalendarBusies2(ctx, operations.ListCalendarBusies2Request{
+    res, err := s.Busy.ListCalendarBusies(ctx, operations.ListCalendarBusiesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -44,15 +44,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListCalendarBusies2Request](../../pkg/models/operations/listcalendarbusies2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListCalendarBusiesRequest](../../pkg/models/operations/listcalendarbusiesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListCalendarBusies2Response](../../pkg/models/operations/listcalendarbusies2response.md), error**
+**[*operations.ListCalendarBusiesResponse](../../pkg/models/operations/listcalendarbusiesresponse.md), error**
 
 ### Errors
 

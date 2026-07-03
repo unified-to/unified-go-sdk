@@ -30,8 +30,8 @@ func newContact(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAccountingContact2 - Create a contact
-func (s *Contact) CreateAccountingContact2(ctx context.Context, request operations.CreateAccountingContact2Request, opts ...operations.Option) (*operations.CreateAccountingContact2Response, error) {
+// CreateAccountingContact - Create a contact
+func (s *Contact) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest, opts ...operations.Option) (*operations.CreateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Contact) CreateAccountingContact2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingContact2",
+		OperationID:      "createAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Contact) CreateAccountingContact2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAccountingContact2Response{
+	res := &operations.CreateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Contact) CreateAccountingContact2(ctx context.Context, request operatio
 
 }
 
-// CreateCrmContact2 - Create a contact
-func (s *Contact) CreateCrmContact2(ctx context.Context, request operations.CreateCrmContact2Request, opts ...operations.Option) (*operations.CreateCrmContact2Response, error) {
+// CreateCrmContact - Create a contact
+func (s *Contact) CreateCrmContact(ctx context.Context, request operations.CreateCrmContactRequest, opts ...operations.Option) (*operations.CreateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Contact) CreateCrmContact2(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmContact2",
+		OperationID:      "createCrmContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Contact) CreateCrmContact2(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateCrmContact2Response{
+	res := &operations.CreateCrmContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Contact) CreateCrmContact2(ctx context.Context, request operations.Crea
 
 }
 
-// CreateUcContact2 - Create a contact
-func (s *Contact) CreateUcContact2(ctx context.Context, request operations.CreateUcContact2Request, opts ...operations.Option) (*operations.CreateUcContact2Response, error) {
+// CreateUcContact - Create a contact
+func (s *Contact) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Contact) CreateUcContact2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcContact2",
+		OperationID:      "createUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Contact) CreateUcContact2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateUcContact2Response{
+	res := &operations.CreateUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Contact) CreateUcContact2(ctx context.Context, request operations.Creat
 
 }
 
-// GetAccountingContact2 - Retrieve a contact
-func (s *Contact) GetAccountingContact2(ctx context.Context, request operations.GetAccountingContact2Request, opts ...operations.Option) (*operations.GetAccountingContact2Response, error) {
+// GetAccountingContact - Retrieve a contact
+func (s *Contact) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest, opts ...operations.Option) (*operations.GetAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Contact) GetAccountingContact2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingContact2",
+		OperationID:      "getAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Contact) GetAccountingContact2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAccountingContact2Response{
+	res := &operations.GetAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Contact) GetAccountingContact2(ctx context.Context, request operations.
 
 }
 
-// GetCrmContact2 - Retrieve a contact
-func (s *Contact) GetCrmContact2(ctx context.Context, request operations.GetCrmContact2Request, opts ...operations.Option) (*operations.GetCrmContact2Response, error) {
+// GetCrmContact - Retrieve a contact
+func (s *Contact) GetCrmContact(ctx context.Context, request operations.GetCrmContactRequest, opts ...operations.Option) (*operations.GetCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Contact) GetCrmContact2(ctx context.Context, request operations.GetCrmC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmContact2",
+		OperationID:      "getCrmContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Contact) GetCrmContact2(ctx context.Context, request operations.GetCrmC
 		}
 	}
 
-	res := &operations.GetCrmContact2Response{
+	res := &operations.GetCrmContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Contact) GetCrmContact2(ctx context.Context, request operations.GetCrmC
 
 }
 
-// GetUcContact2 - Retrieve a contact
-func (s *Contact) GetUcContact2(ctx context.Context, request operations.GetUcContact2Request, opts ...operations.Option) (*operations.GetUcContact2Response, error) {
+// GetUcContact - Retrieve a contact
+func (s *Contact) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Contact) GetUcContact2(ctx context.Context, request operations.GetUcCon
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcContact2",
+		OperationID:      "getUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Contact) GetUcContact2(ctx context.Context, request operations.GetUcCon
 		}
 	}
 
-	res := &operations.GetUcContact2Response{
+	res := &operations.GetUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Contact) GetUcContact2(ctx context.Context, request operations.GetUcCon
 
 }
 
-// ListAccountingContacts2 - List all contacts
-func (s *Contact) ListAccountingContacts2(ctx context.Context, request operations.ListAccountingContacts2Request, opts ...operations.Option) (*operations.ListAccountingContacts2Response, error) {
+// ListAccountingContacts - List all contacts
+func (s *Contact) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest, opts ...operations.Option) (*operations.ListAccountingContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Contact) ListAccountingContacts2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingContacts2",
+		OperationID:      "listAccountingContacts",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Contact) ListAccountingContacts2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAccountingContacts2Response{
+	res := &operations.ListAccountingContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Contact) ListAccountingContacts2(ctx context.Context, request operation
 
 }
 
-// ListCrmContacts2 - List all contacts
-func (s *Contact) ListCrmContacts2(ctx context.Context, request operations.ListCrmContacts2Request, opts ...operations.Option) (*operations.ListCrmContacts2Response, error) {
+// ListCrmContacts - List all contacts
+func (s *Contact) ListCrmContacts(ctx context.Context, request operations.ListCrmContactsRequest, opts ...operations.Option) (*operations.ListCrmContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Contact) ListCrmContacts2(ctx context.Context, request operations.ListC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmContacts2",
+		OperationID:      "listCrmContacts",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Contact) ListCrmContacts2(ctx context.Context, request operations.ListC
 		}
 	}
 
-	res := &operations.ListCrmContacts2Response{
+	res := &operations.ListCrmContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Contact) ListCrmContacts2(ctx context.Context, request operations.ListC
 
 }
 
-// ListUcContacts2 - List all contacts
-func (s *Contact) ListUcContacts2(ctx context.Context, request operations.ListUcContacts2Request, opts ...operations.Option) (*operations.ListUcContacts2Response, error) {
+// ListUcContacts - List all contacts
+func (s *Contact) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Contact) ListUcContacts2(ctx context.Context, request operations.ListUc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcContacts2",
+		OperationID:      "listUcContacts",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Contact) ListUcContacts2(ctx context.Context, request operations.ListUc
 		}
 	}
 
-	res := &operations.ListUcContacts2Response{
+	res := &operations.ListUcContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Contact) ListUcContacts2(ctx context.Context, request operations.ListUc
 
 }
 
-// PatchAccountingContact2 - Update a contact
-func (s *Contact) PatchAccountingContact2(ctx context.Context, request operations.PatchAccountingContact2Request, opts ...operations.Option) (*operations.PatchAccountingContact2Response, error) {
+// PatchAccountingContact - Update a contact
+func (s *Contact) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest, opts ...operations.Option) (*operations.PatchAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Contact) PatchAccountingContact2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingContact2",
+		OperationID:      "patchAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -2076,7 +2076,7 @@ func (s *Contact) PatchAccountingContact2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAccountingContact2Response{
+	res := &operations.PatchAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Contact) PatchAccountingContact2(ctx context.Context, request operation
 
 }
 
-// PatchCrmContact2 - Update a contact
-func (s *Contact) PatchCrmContact2(ctx context.Context, request operations.PatchCrmContact2Request, opts ...operations.Option) (*operations.PatchCrmContact2Response, error) {
+// PatchCrmContact - Update a contact
+func (s *Contact) PatchCrmContact(ctx context.Context, request operations.PatchCrmContactRequest, opts ...operations.Option) (*operations.PatchCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Contact) PatchCrmContact2(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmContact2",
+		OperationID:      "patchCrmContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -2290,7 +2290,7 @@ func (s *Contact) PatchCrmContact2(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchCrmContact2Response{
+	res := &operations.PatchCrmContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2342,8 +2342,8 @@ func (s *Contact) PatchCrmContact2(ctx context.Context, request operations.Patch
 
 }
 
-// PatchUcContact2 - Update a contact
-func (s *Contact) PatchUcContact2(ctx context.Context, request operations.PatchUcContact2Request, opts ...operations.Option) (*operations.PatchUcContact2Response, error) {
+// PatchUcContact - Update a contact
+func (s *Contact) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2372,7 +2372,7 @@ func (s *Contact) PatchUcContact2(ctx context.Context, request operations.PatchU
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcContact2",
+		OperationID:      "patchUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -2504,7 +2504,7 @@ func (s *Contact) PatchUcContact2(ctx context.Context, request operations.PatchU
 		}
 	}
 
-	res := &operations.PatchUcContact2Response{
+	res := &operations.PatchUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2556,8 +2556,8 @@ func (s *Contact) PatchUcContact2(ctx context.Context, request operations.PatchU
 
 }
 
-// RemoveAccountingContact2 - Remove a contact
-func (s *Contact) RemoveAccountingContact2(ctx context.Context, request operations.RemoveAccountingContact2Request, opts ...operations.Option) (*operations.RemoveAccountingContact2Response, error) {
+// RemoveAccountingContact - Remove a contact
+func (s *Contact) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest, opts ...operations.Option) (*operations.RemoveAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2586,7 +2586,7 @@ func (s *Contact) RemoveAccountingContact2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingContact2",
+		OperationID:      "removeAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2707,7 +2707,7 @@ func (s *Contact) RemoveAccountingContact2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAccountingContact2Response{
+	res := &operations.RemoveAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2738,8 +2738,8 @@ func (s *Contact) RemoveAccountingContact2(ctx context.Context, request operatio
 
 }
 
-// RemoveCrmContact2 - Remove a contact
-func (s *Contact) RemoveCrmContact2(ctx context.Context, request operations.RemoveCrmContact2Request, opts ...operations.Option) (*operations.RemoveCrmContact2Response, error) {
+// RemoveCrmContact - Remove a contact
+func (s *Contact) RemoveCrmContact(ctx context.Context, request operations.RemoveCrmContactRequest, opts ...operations.Option) (*operations.RemoveCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2768,7 +2768,7 @@ func (s *Contact) RemoveCrmContact2(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmContact2",
+		OperationID:      "removeCrmContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2889,7 +2889,7 @@ func (s *Contact) RemoveCrmContact2(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveCrmContact2Response{
+	res := &operations.RemoveCrmContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2920,8 +2920,8 @@ func (s *Contact) RemoveCrmContact2(ctx context.Context, request operations.Remo
 
 }
 
-// RemoveUcContact2 - Remove a contact
-func (s *Contact) RemoveUcContact2(ctx context.Context, request operations.RemoveUcContact2Request, opts ...operations.Option) (*operations.RemoveUcContact2Response, error) {
+// RemoveUcContact - Remove a contact
+func (s *Contact) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2950,7 +2950,7 @@ func (s *Contact) RemoveUcContact2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcContact2",
+		OperationID:      "removeUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3071,7 +3071,7 @@ func (s *Contact) RemoveUcContact2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveUcContact2Response{
+	res := &operations.RemoveUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3102,8 +3102,8 @@ func (s *Contact) RemoveUcContact2(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateAccountingContact2 - Update a contact
-func (s *Contact) UpdateAccountingContact2(ctx context.Context, request operations.UpdateAccountingContact2Request, opts ...operations.Option) (*operations.UpdateAccountingContact2Response, error) {
+// UpdateAccountingContact - Update a contact
+func (s *Contact) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest, opts ...operations.Option) (*operations.UpdateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3132,7 +3132,7 @@ func (s *Contact) UpdateAccountingContact2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingContact2",
+		OperationID:      "updateAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -3264,7 +3264,7 @@ func (s *Contact) UpdateAccountingContact2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAccountingContact2Response{
+	res := &operations.UpdateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3316,8 +3316,8 @@ func (s *Contact) UpdateAccountingContact2(ctx context.Context, request operatio
 
 }
 
-// UpdateCrmContact2 - Update a contact
-func (s *Contact) UpdateCrmContact2(ctx context.Context, request operations.UpdateCrmContact2Request, opts ...operations.Option) (*operations.UpdateCrmContact2Response, error) {
+// UpdateCrmContact - Update a contact
+func (s *Contact) UpdateCrmContact(ctx context.Context, request operations.UpdateCrmContactRequest, opts ...operations.Option) (*operations.UpdateCrmContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3346,7 +3346,7 @@ func (s *Contact) UpdateCrmContact2(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmContact2",
+		OperationID:      "updateCrmContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmContact", "json", `request:"mediaType=application/json"`)
@@ -3478,7 +3478,7 @@ func (s *Contact) UpdateCrmContact2(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateCrmContact2Response{
+	res := &operations.UpdateCrmContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3530,8 +3530,8 @@ func (s *Contact) UpdateCrmContact2(ctx context.Context, request operations.Upda
 
 }
 
-// UpdateUcContact2 - Update a contact
-func (s *Contact) UpdateUcContact2(ctx context.Context, request operations.UpdateUcContact2Request, opts ...operations.Option) (*operations.UpdateUcContact2Response, error) {
+// UpdateUcContact - Update a contact
+func (s *Contact) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3560,7 +3560,7 @@ func (s *Contact) UpdateUcContact2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcContact2",
+		OperationID:      "updateUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -3692,7 +3692,7 @@ func (s *Contact) UpdateUcContact2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateUcContact2Response{
+	res := &operations.UpdateUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newTask(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateTaskComment2 - Create a comment
-func (s *Task) CreateTaskComment2(ctx context.Context, request operations.CreateTaskComment2Request, opts ...operations.Option) (*operations.CreateTaskComment2Response, error) {
+// CreateTaskComment - Create a comment
+func (s *Task) CreateTaskComment(ctx context.Context, request operations.CreateTaskCommentRequest, opts ...operations.Option) (*operations.CreateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Task) CreateTaskComment2(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTaskComment2",
+		OperationID:      "createTaskComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Task) CreateTaskComment2(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateTaskComment2Response{
+	res := &operations.CreateTaskCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Task) CreateTaskComment2(ctx context.Context, request operations.Create
 
 }
 
-// CreateTaskProject2 - Create a project
-func (s *Task) CreateTaskProject2(ctx context.Context, request operations.CreateTaskProject2Request, opts ...operations.Option) (*operations.CreateTaskProject2Response, error) {
+// CreateTaskProject - Create a project
+func (s *Task) CreateTaskProject(ctx context.Context, request operations.CreateTaskProjectRequest, opts ...operations.Option) (*operations.CreateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Task) CreateTaskProject2(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTaskProject2",
+		OperationID:      "createTaskProject",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Task) CreateTaskProject2(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreateTaskProject2Response{
+	res := &operations.CreateTaskProjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Task) CreateTaskProject2(ctx context.Context, request operations.Create
 
 }
 
-// CreateTaskTask2 - Create a task
-func (s *Task) CreateTaskTask2(ctx context.Context, request operations.CreateTaskTask2Request, opts ...operations.Option) (*operations.CreateTaskTask2Response, error) {
+// CreateTaskTask - Create a task
+func (s *Task) CreateTaskTask(ctx context.Context, request operations.CreateTaskTaskRequest, opts ...operations.Option) (*operations.CreateTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Task) CreateTaskTask2(ctx context.Context, request operations.CreateTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTaskTask2",
+		OperationID:      "createTaskTask",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Task) CreateTaskTask2(ctx context.Context, request operations.CreateTas
 		}
 	}
 
-	res := &operations.CreateTaskTask2Response{
+	res := &operations.CreateTaskTaskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Task) CreateTaskTask2(ctx context.Context, request operations.CreateTas
 
 }
 
-// GetTaskChange2 - Retrieve a change
-func (s *Task) GetTaskChange2(ctx context.Context, request operations.GetTaskChange2Request, opts ...operations.Option) (*operations.GetTaskChange2Response, error) {
+// GetTaskChange - Retrieve a change
+func (s *Task) GetTaskChange(ctx context.Context, request operations.GetTaskChangeRequest, opts ...operations.Option) (*operations.GetTaskChangeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Task) GetTaskChange2(ctx context.Context, request operations.GetTaskCha
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskChange2",
+		OperationID:      "getTaskChange",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Task) GetTaskChange2(ctx context.Context, request operations.GetTaskCha
 		}
 	}
 
-	res := &operations.GetTaskChange2Response{
+	res := &operations.GetTaskChangeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Task) GetTaskChange2(ctx context.Context, request operations.GetTaskCha
 
 }
 
-// GetTaskComment2 - Retrieve a comment
-func (s *Task) GetTaskComment2(ctx context.Context, request operations.GetTaskComment2Request, opts ...operations.Option) (*operations.GetTaskComment2Response, error) {
+// GetTaskComment - Retrieve a comment
+func (s *Task) GetTaskComment(ctx context.Context, request operations.GetTaskCommentRequest, opts ...operations.Option) (*operations.GetTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Task) GetTaskComment2(ctx context.Context, request operations.GetTaskCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskComment2",
+		OperationID:      "getTaskComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Task) GetTaskComment2(ctx context.Context, request operations.GetTaskCo
 		}
 	}
 
-	res := &operations.GetTaskComment2Response{
+	res := &operations.GetTaskCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Task) GetTaskComment2(ctx context.Context, request operations.GetTaskCo
 
 }
 
-// GetTaskProject2 - Retrieve a project
-func (s *Task) GetTaskProject2(ctx context.Context, request operations.GetTaskProject2Request, opts ...operations.Option) (*operations.GetTaskProject2Response, error) {
+// GetTaskProject - Retrieve a project
+func (s *Task) GetTaskProject(ctx context.Context, request operations.GetTaskProjectRequest, opts ...operations.Option) (*operations.GetTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Task) GetTaskProject2(ctx context.Context, request operations.GetTaskPr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskProject2",
+		OperationID:      "getTaskProject",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Task) GetTaskProject2(ctx context.Context, request operations.GetTaskPr
 		}
 	}
 
-	res := &operations.GetTaskProject2Response{
+	res := &operations.GetTaskProjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Task) GetTaskProject2(ctx context.Context, request operations.GetTaskPr
 
 }
 
-// GetTaskTask2 - Retrieve a task
-func (s *Task) GetTaskTask2(ctx context.Context, request operations.GetTaskTask2Request, opts ...operations.Option) (*operations.GetTaskTask2Response, error) {
+// GetTaskTask - Retrieve a task
+func (s *Task) GetTaskTask(ctx context.Context, request operations.GetTaskTaskRequest, opts ...operations.Option) (*operations.GetTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Task) GetTaskTask2(ctx context.Context, request operations.GetTaskTask2
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTaskTask2",
+		OperationID:      "getTaskTask",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Task) GetTaskTask2(ctx context.Context, request operations.GetTaskTask2
 		}
 	}
 
-	res := &operations.GetTaskTask2Response{
+	res := &operations.GetTaskTaskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Task) GetTaskTask2(ctx context.Context, request operations.GetTaskTask2
 
 }
 
-// ListTaskChanges2 - List all changes
-func (s *Task) ListTaskChanges2(ctx context.Context, request operations.ListTaskChanges2Request, opts ...operations.Option) (*operations.ListTaskChanges2Response, error) {
+// ListTaskChanges - List all changes
+func (s *Task) ListTaskChanges(ctx context.Context, request operations.ListTaskChangesRequest, opts ...operations.Option) (*operations.ListTaskChangesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Task) ListTaskChanges2(ctx context.Context, request operations.ListTask
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskChanges2",
+		OperationID:      "listTaskChanges",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Task) ListTaskChanges2(ctx context.Context, request operations.ListTask
 		}
 	}
 
-	res := &operations.ListTaskChanges2Response{
+	res := &operations.ListTaskChangesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Task) ListTaskChanges2(ctx context.Context, request operations.ListTask
 
 }
 
-// ListTaskComments2 - List all comments
-func (s *Task) ListTaskComments2(ctx context.Context, request operations.ListTaskComments2Request, opts ...operations.Option) (*operations.ListTaskComments2Response, error) {
+// ListTaskComments - List all comments
+func (s *Task) ListTaskComments(ctx context.Context, request operations.ListTaskCommentsRequest, opts ...operations.Option) (*operations.ListTaskCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Task) ListTaskComments2(ctx context.Context, request operations.ListTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskComments2",
+		OperationID:      "listTaskComments",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Task) ListTaskComments2(ctx context.Context, request operations.ListTas
 		}
 	}
 
-	res := &operations.ListTaskComments2Response{
+	res := &operations.ListTaskCommentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Task) ListTaskComments2(ctx context.Context, request operations.ListTas
 
 }
 
-// ListTaskProjects2 - List all projects
-func (s *Task) ListTaskProjects2(ctx context.Context, request operations.ListTaskProjects2Request, opts ...operations.Option) (*operations.ListTaskProjects2Response, error) {
+// ListTaskProjects - List all projects
+func (s *Task) ListTaskProjects(ctx context.Context, request operations.ListTaskProjectsRequest, opts ...operations.Option) (*operations.ListTaskProjectsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Task) ListTaskProjects2(ctx context.Context, request operations.ListTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskProjects2",
+		OperationID:      "listTaskProjects",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2069,7 +2069,7 @@ func (s *Task) ListTaskProjects2(ctx context.Context, request operations.ListTas
 		}
 	}
 
-	res := &operations.ListTaskProjects2Response{
+	res := &operations.ListTaskProjectsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2121,8 +2121,8 @@ func (s *Task) ListTaskProjects2(ctx context.Context, request operations.ListTas
 
 }
 
-// ListTaskTasks2 - List all tasks
-func (s *Task) ListTaskTasks2(ctx context.Context, request operations.ListTaskTasks2Request, opts ...operations.Option) (*operations.ListTaskTasks2Response, error) {
+// ListTaskTasks - List all tasks
+func (s *Task) ListTaskTasks(ctx context.Context, request operations.ListTaskTasksRequest, opts ...operations.Option) (*operations.ListTaskTasksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2151,7 +2151,7 @@ func (s *Task) ListTaskTasks2(ctx context.Context, request operations.ListTaskTa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTaskTasks2",
+		OperationID:      "listTaskTasks",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2276,7 +2276,7 @@ func (s *Task) ListTaskTasks2(ctx context.Context, request operations.ListTaskTa
 		}
 	}
 
-	res := &operations.ListTaskTasks2Response{
+	res := &operations.ListTaskTasksResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2328,8 +2328,8 @@ func (s *Task) ListTaskTasks2(ctx context.Context, request operations.ListTaskTa
 
 }
 
-// PatchTaskComment2 - Update a comment
-func (s *Task) PatchTaskComment2(ctx context.Context, request operations.PatchTaskComment2Request, opts ...operations.Option) (*operations.PatchTaskComment2Response, error) {
+// PatchTaskComment - Update a comment
+func (s *Task) PatchTaskComment(ctx context.Context, request operations.PatchTaskCommentRequest, opts ...operations.Option) (*operations.PatchTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2358,7 +2358,7 @@ func (s *Task) PatchTaskComment2(ctx context.Context, request operations.PatchTa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTaskComment2",
+		OperationID:      "patchTaskComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -2490,7 +2490,7 @@ func (s *Task) PatchTaskComment2(ctx context.Context, request operations.PatchTa
 		}
 	}
 
-	res := &operations.PatchTaskComment2Response{
+	res := &operations.PatchTaskCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2542,8 +2542,8 @@ func (s *Task) PatchTaskComment2(ctx context.Context, request operations.PatchTa
 
 }
 
-// PatchTaskProject2 - Update a project
-func (s *Task) PatchTaskProject2(ctx context.Context, request operations.PatchTaskProject2Request, opts ...operations.Option) (*operations.PatchTaskProject2Response, error) {
+// PatchTaskProject - Update a project
+func (s *Task) PatchTaskProject(ctx context.Context, request operations.PatchTaskProjectRequest, opts ...operations.Option) (*operations.PatchTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2572,7 +2572,7 @@ func (s *Task) PatchTaskProject2(ctx context.Context, request operations.PatchTa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTaskProject2",
+		OperationID:      "patchTaskProject",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -2704,7 +2704,7 @@ func (s *Task) PatchTaskProject2(ctx context.Context, request operations.PatchTa
 		}
 	}
 
-	res := &operations.PatchTaskProject2Response{
+	res := &operations.PatchTaskProjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2756,8 +2756,8 @@ func (s *Task) PatchTaskProject2(ctx context.Context, request operations.PatchTa
 
 }
 
-// PatchTaskTask2 - Update a task
-func (s *Task) PatchTaskTask2(ctx context.Context, request operations.PatchTaskTask2Request, opts ...operations.Option) (*operations.PatchTaskTask2Response, error) {
+// PatchTaskTask - Update a task
+func (s *Task) PatchTaskTask(ctx context.Context, request operations.PatchTaskTaskRequest, opts ...operations.Option) (*operations.PatchTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2786,7 +2786,7 @@ func (s *Task) PatchTaskTask2(ctx context.Context, request operations.PatchTaskT
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTaskTask2",
+		OperationID:      "patchTaskTask",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
@@ -2918,7 +2918,7 @@ func (s *Task) PatchTaskTask2(ctx context.Context, request operations.PatchTaskT
 		}
 	}
 
-	res := &operations.PatchTaskTask2Response{
+	res := &operations.PatchTaskTaskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2970,8 +2970,8 @@ func (s *Task) PatchTaskTask2(ctx context.Context, request operations.PatchTaskT
 
 }
 
-// RemoveTaskComment2 - Remove a comment
-func (s *Task) RemoveTaskComment2(ctx context.Context, request operations.RemoveTaskComment2Request, opts ...operations.Option) (*operations.RemoveTaskComment2Response, error) {
+// RemoveTaskComment - Remove a comment
+func (s *Task) RemoveTaskComment(ctx context.Context, request operations.RemoveTaskCommentRequest, opts ...operations.Option) (*operations.RemoveTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3000,7 +3000,7 @@ func (s *Task) RemoveTaskComment2(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTaskComment2",
+		OperationID:      "removeTaskComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3121,7 +3121,7 @@ func (s *Task) RemoveTaskComment2(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveTaskComment2Response{
+	res := &operations.RemoveTaskCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3152,8 +3152,8 @@ func (s *Task) RemoveTaskComment2(ctx context.Context, request operations.Remove
 
 }
 
-// RemoveTaskProject2 - Remove a project
-func (s *Task) RemoveTaskProject2(ctx context.Context, request operations.RemoveTaskProject2Request, opts ...operations.Option) (*operations.RemoveTaskProject2Response, error) {
+// RemoveTaskProject - Remove a project
+func (s *Task) RemoveTaskProject(ctx context.Context, request operations.RemoveTaskProjectRequest, opts ...operations.Option) (*operations.RemoveTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3182,7 +3182,7 @@ func (s *Task) RemoveTaskProject2(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTaskProject2",
+		OperationID:      "removeTaskProject",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3303,7 +3303,7 @@ func (s *Task) RemoveTaskProject2(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemoveTaskProject2Response{
+	res := &operations.RemoveTaskProjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3334,8 +3334,8 @@ func (s *Task) RemoveTaskProject2(ctx context.Context, request operations.Remove
 
 }
 
-// RemoveTaskTask2 - Remove a task
-func (s *Task) RemoveTaskTask2(ctx context.Context, request operations.RemoveTaskTask2Request, opts ...operations.Option) (*operations.RemoveTaskTask2Response, error) {
+// RemoveTaskTask - Remove a task
+func (s *Task) RemoveTaskTask(ctx context.Context, request operations.RemoveTaskTaskRequest, opts ...operations.Option) (*operations.RemoveTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3364,7 +3364,7 @@ func (s *Task) RemoveTaskTask2(ctx context.Context, request operations.RemoveTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTaskTask2",
+		OperationID:      "removeTaskTask",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3485,7 +3485,7 @@ func (s *Task) RemoveTaskTask2(ctx context.Context, request operations.RemoveTas
 		}
 	}
 
-	res := &operations.RemoveTaskTask2Response{
+	res := &operations.RemoveTaskTaskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3516,8 +3516,8 @@ func (s *Task) RemoveTaskTask2(ctx context.Context, request operations.RemoveTas
 
 }
 
-// UpdateTaskComment2 - Update a comment
-func (s *Task) UpdateTaskComment2(ctx context.Context, request operations.UpdateTaskComment2Request, opts ...operations.Option) (*operations.UpdateTaskComment2Response, error) {
+// UpdateTaskComment - Update a comment
+func (s *Task) UpdateTaskComment(ctx context.Context, request operations.UpdateTaskCommentRequest, opts ...operations.Option) (*operations.UpdateTaskCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3546,7 +3546,7 @@ func (s *Task) UpdateTaskComment2(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTaskComment2",
+		OperationID:      "updateTaskComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskComment", "json", `request:"mediaType=application/json"`)
@@ -3678,7 +3678,7 @@ func (s *Task) UpdateTaskComment2(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateTaskComment2Response{
+	res := &operations.UpdateTaskCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3730,8 +3730,8 @@ func (s *Task) UpdateTaskComment2(ctx context.Context, request operations.Update
 
 }
 
-// UpdateTaskProject2 - Update a project
-func (s *Task) UpdateTaskProject2(ctx context.Context, request operations.UpdateTaskProject2Request, opts ...operations.Option) (*operations.UpdateTaskProject2Response, error) {
+// UpdateTaskProject - Update a project
+func (s *Task) UpdateTaskProject(ctx context.Context, request operations.UpdateTaskProjectRequest, opts ...operations.Option) (*operations.UpdateTaskProjectResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3760,7 +3760,7 @@ func (s *Task) UpdateTaskProject2(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTaskProject2",
+		OperationID:      "updateTaskProject",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskProject", "json", `request:"mediaType=application/json"`)
@@ -3892,7 +3892,7 @@ func (s *Task) UpdateTaskProject2(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdateTaskProject2Response{
+	res := &operations.UpdateTaskProjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3944,8 +3944,8 @@ func (s *Task) UpdateTaskProject2(ctx context.Context, request operations.Update
 
 }
 
-// UpdateTaskTask2 - Update a task
-func (s *Task) UpdateTaskTask2(ctx context.Context, request operations.UpdateTaskTask2Request, opts ...operations.Option) (*operations.UpdateTaskTask2Response, error) {
+// UpdateTaskTask - Update a task
+func (s *Task) UpdateTaskTask(ctx context.Context, request operations.UpdateTaskTaskRequest, opts ...operations.Option) (*operations.UpdateTaskTaskResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3974,7 +3974,7 @@ func (s *Task) UpdateTaskTask2(ctx context.Context, request operations.UpdateTas
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTaskTask2",
+		OperationID:      "updateTaskTask",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TaskTask", "json", `request:"mediaType=application/json"`)
@@ -4106,7 +4106,7 @@ func (s *Task) UpdateTaskTask2(ctx context.Context, request operations.UpdateTas
 		}
 	}
 
-	res := &operations.UpdateTaskTask2Response{
+	res := &operations.UpdateTaskTaskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newSaleschannel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// CreateCommerceSaleschannel2 - Create a saleschannel
-func (s *Saleschannel) CreateCommerceSaleschannel2(ctx context.Context, request operations.CreateCommerceSaleschannel2Request, opts ...operations.Option) (*operations.CreateCommerceSaleschannel2Response, error) {
+// CreateCommerceSaleschannel - Create a saleschannel
+func (s *Saleschannel) CreateCommerceSaleschannel(ctx context.Context, request operations.CreateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.CreateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Saleschannel) CreateCommerceSaleschannel2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCommerceSaleschannel2",
+		OperationID:      "createCommerceSaleschannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Saleschannel) CreateCommerceSaleschannel2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.CreateCommerceSaleschannel2Response{
+	res := &operations.CreateCommerceSaleschannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Saleschannel) CreateCommerceSaleschannel2(ctx context.Context, request 
 
 }
 
-// GetCommerceSaleschannel2 - Retrieve a saleschannel
-func (s *Saleschannel) GetCommerceSaleschannel2(ctx context.Context, request operations.GetCommerceSaleschannel2Request, opts ...operations.Option) (*operations.GetCommerceSaleschannel2Response, error) {
+// GetCommerceSaleschannel - Retrieve a saleschannel
+func (s *Saleschannel) GetCommerceSaleschannel(ctx context.Context, request operations.GetCommerceSaleschannelRequest, opts ...operations.Option) (*operations.GetCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Saleschannel) GetCommerceSaleschannel2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCommerceSaleschannel2",
+		OperationID:      "getCommerceSaleschannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Saleschannel) GetCommerceSaleschannel2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.GetCommerceSaleschannel2Response{
+	res := &operations.GetCommerceSaleschannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Saleschannel) GetCommerceSaleschannel2(ctx context.Context, request ope
 
 }
 
-// ListCommerceSaleschannels2 - List all saleschannels
-func (s *Saleschannel) ListCommerceSaleschannels2(ctx context.Context, request operations.ListCommerceSaleschannels2Request, opts ...operations.Option) (*operations.ListCommerceSaleschannels2Response, error) {
+// ListCommerceSaleschannels - List all saleschannels
+func (s *Saleschannel) ListCommerceSaleschannels(ctx context.Context, request operations.ListCommerceSaleschannelsRequest, opts ...operations.Option) (*operations.ListCommerceSaleschannelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Saleschannel) ListCommerceSaleschannels2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceSaleschannels2",
+		OperationID:      "listCommerceSaleschannels",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Saleschannel) ListCommerceSaleschannels2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.ListCommerceSaleschannels2Response{
+	res := &operations.ListCommerceSaleschannelsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Saleschannel) ListCommerceSaleschannels2(ctx context.Context, request o
 
 }
 
-// PatchCommerceSaleschannel2 - Update a saleschannel
-func (s *Saleschannel) PatchCommerceSaleschannel2(ctx context.Context, request operations.PatchCommerceSaleschannel2Request, opts ...operations.Option) (*operations.PatchCommerceSaleschannel2Response, error) {
+// PatchCommerceSaleschannel - Update a saleschannel
+func (s *Saleschannel) PatchCommerceSaleschannel(ctx context.Context, request operations.PatchCommerceSaleschannelRequest, opts ...operations.Option) (*operations.PatchCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Saleschannel) PatchCommerceSaleschannel2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCommerceSaleschannel2",
+		OperationID:      "patchCommerceSaleschannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Saleschannel) PatchCommerceSaleschannel2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.PatchCommerceSaleschannel2Response{
+	res := &operations.PatchCommerceSaleschannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Saleschannel) PatchCommerceSaleschannel2(ctx context.Context, request o
 
 }
 
-// RemoveCommerceSaleschannel2 - Remove a saleschannel
-func (s *Saleschannel) RemoveCommerceSaleschannel2(ctx context.Context, request operations.RemoveCommerceSaleschannel2Request, opts ...operations.Option) (*operations.RemoveCommerceSaleschannel2Response, error) {
+// RemoveCommerceSaleschannel - Remove a saleschannel
+func (s *Saleschannel) RemoveCommerceSaleschannel(ctx context.Context, request operations.RemoveCommerceSaleschannelRequest, opts ...operations.Option) (*operations.RemoveCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Saleschannel) RemoveCommerceSaleschannel2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCommerceSaleschannel2",
+		OperationID:      "removeCommerceSaleschannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Saleschannel) RemoveCommerceSaleschannel2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.RemoveCommerceSaleschannel2Response{
+	res := &operations.RemoveCommerceSaleschannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Saleschannel) RemoveCommerceSaleschannel2(ctx context.Context, request 
 
 }
 
-// UpdateCommerceSaleschannel2 - Update a saleschannel
-func (s *Saleschannel) UpdateCommerceSaleschannel2(ctx context.Context, request operations.UpdateCommerceSaleschannel2Request, opts ...operations.Option) (*operations.UpdateCommerceSaleschannel2Response, error) {
+// UpdateCommerceSaleschannel - Update a saleschannel
+func (s *Saleschannel) UpdateCommerceSaleschannel(ctx context.Context, request operations.UpdateCommerceSaleschannelRequest, opts ...operations.Option) (*operations.UpdateCommerceSaleschannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Saleschannel) UpdateCommerceSaleschannel2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCommerceSaleschannel2",
+		OperationID:      "updateCommerceSaleschannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CommerceSaleschannel", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Saleschannel) UpdateCommerceSaleschannel2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.UpdateCommerceSaleschannel2Response{
+	res := &operations.UpdateCommerceSaleschannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

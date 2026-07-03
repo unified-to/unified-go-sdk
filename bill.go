@@ -30,8 +30,8 @@ func newBill(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateAccountingBill2 - Create a bill
-func (s *Bill) CreateAccountingBill2(ctx context.Context, request operations.CreateAccountingBill2Request, opts ...operations.Option) (*operations.CreateAccountingBill2Response, error) {
+// CreateAccountingBill - Create a bill
+func (s *Bill) CreateAccountingBill(ctx context.Context, request operations.CreateAccountingBillRequest, opts ...operations.Option) (*operations.CreateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Bill) CreateAccountingBill2(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingBill2",
+		OperationID:      "createAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Bill) CreateAccountingBill2(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateAccountingBill2Response{
+	res := &operations.CreateAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Bill) CreateAccountingBill2(ctx context.Context, request operations.Cre
 
 }
 
-// GetAccountingBill2 - Retrieve a bill
-func (s *Bill) GetAccountingBill2(ctx context.Context, request operations.GetAccountingBill2Request, opts ...operations.Option) (*operations.GetAccountingBill2Response, error) {
+// GetAccountingBill - Retrieve a bill
+func (s *Bill) GetAccountingBill(ctx context.Context, request operations.GetAccountingBillRequest, opts ...operations.Option) (*operations.GetAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Bill) GetAccountingBill2(ctx context.Context, request operations.GetAcc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingBill2",
+		OperationID:      "getAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Bill) GetAccountingBill2(ctx context.Context, request operations.GetAcc
 		}
 	}
 
-	res := &operations.GetAccountingBill2Response{
+	res := &operations.GetAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Bill) GetAccountingBill2(ctx context.Context, request operations.GetAcc
 
 }
 
-// ListAccountingBills2 - List all bills
-func (s *Bill) ListAccountingBills2(ctx context.Context, request operations.ListAccountingBills2Request, opts ...operations.Option) (*operations.ListAccountingBills2Response, error) {
+// ListAccountingBills - List all bills
+func (s *Bill) ListAccountingBills(ctx context.Context, request operations.ListAccountingBillsRequest, opts ...operations.Option) (*operations.ListAccountingBillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Bill) ListAccountingBills2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingBills2",
+		OperationID:      "listAccountingBills",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Bill) ListAccountingBills2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListAccountingBills2Response{
+	res := &operations.ListAccountingBillsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Bill) ListAccountingBills2(ctx context.Context, request operations.List
 
 }
 
-// PatchAccountingBill2 - Update a bill
-func (s *Bill) PatchAccountingBill2(ctx context.Context, request operations.PatchAccountingBill2Request, opts ...operations.Option) (*operations.PatchAccountingBill2Response, error) {
+// PatchAccountingBill - Update a bill
+func (s *Bill) PatchAccountingBill(ctx context.Context, request operations.PatchAccountingBillRequest, opts ...operations.Option) (*operations.PatchAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Bill) PatchAccountingBill2(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingBill2",
+		OperationID:      "patchAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Bill) PatchAccountingBill2(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchAccountingBill2Response{
+	res := &operations.PatchAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Bill) PatchAccountingBill2(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveAccountingBill2 - Remove a bill
-func (s *Bill) RemoveAccountingBill2(ctx context.Context, request operations.RemoveAccountingBill2Request, opts ...operations.Option) (*operations.RemoveAccountingBill2Response, error) {
+// RemoveAccountingBill - Remove a bill
+func (s *Bill) RemoveAccountingBill(ctx context.Context, request operations.RemoveAccountingBillRequest, opts ...operations.Option) (*operations.RemoveAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Bill) RemoveAccountingBill2(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingBill2",
+		OperationID:      "removeAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Bill) RemoveAccountingBill2(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveAccountingBill2Response{
+	res := &operations.RemoveAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Bill) RemoveAccountingBill2(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateAccountingBill2 - Update a bill
-func (s *Bill) UpdateAccountingBill2(ctx context.Context, request operations.UpdateAccountingBill2Request, opts ...operations.Option) (*operations.UpdateAccountingBill2Response, error) {
+// UpdateAccountingBill - Update a bill
+func (s *Bill) UpdateAccountingBill(ctx context.Context, request operations.UpdateAccountingBillRequest, opts ...operations.Option) (*operations.UpdateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Bill) UpdateAccountingBill2(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingBill2",
+		OperationID:      "updateAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Bill) UpdateAccountingBill2(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateAccountingBill2Response{
+	res := &operations.UpdateAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

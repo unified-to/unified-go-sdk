@@ -30,8 +30,8 @@ func newAds(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 	}
 }
 
-// CreateAdsAd2 - Create an ad
-func (s *Ads) CreateAdsAd2(ctx context.Context, request operations.CreateAdsAd2Request, opts ...operations.Option) (*operations.CreateAdsAd2Response, error) {
+// CreateAdsAd - Create an ad
+func (s *Ads) CreateAdsAd(ctx context.Context, request operations.CreateAdsAdRequest, opts ...operations.Option) (*operations.CreateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Ads) CreateAdsAd2(ctx context.Context, request operations.CreateAdsAd2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsAd2",
+		OperationID:      "createAdsAd",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsAd", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Ads) CreateAdsAd2(ctx context.Context, request operations.CreateAdsAd2R
 		}
 	}
 
-	res := &operations.CreateAdsAd2Response{
+	res := &operations.CreateAdsAdResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Ads) CreateAdsAd2(ctx context.Context, request operations.CreateAdsAd2R
 
 }
 
-// CreateAdsCampaign2 - Create a campaign
-func (s *Ads) CreateAdsCampaign2(ctx context.Context, request operations.CreateAdsCampaign2Request, opts ...operations.Option) (*operations.CreateAdsCampaign2Response, error) {
+// CreateAdsCampaign - Create a campaign
+func (s *Ads) CreateAdsCampaign(ctx context.Context, request operations.CreateAdsCampaignRequest, opts ...operations.Option) (*operations.CreateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Ads) CreateAdsCampaign2(ctx context.Context, request operations.CreateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsCampaign2",
+		OperationID:      "createAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Ads) CreateAdsCampaign2(ctx context.Context, request operations.CreateA
 		}
 	}
 
-	res := &operations.CreateAdsCampaign2Response{
+	res := &operations.CreateAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Ads) CreateAdsCampaign2(ctx context.Context, request operations.CreateA
 
 }
 
-// CreateAdsCreative2 - Create a creative
-func (s *Ads) CreateAdsCreative2(ctx context.Context, request operations.CreateAdsCreative2Request, opts ...operations.Option) (*operations.CreateAdsCreative2Response, error) {
+// CreateAdsCreative - Create a creative
+func (s *Ads) CreateAdsCreative(ctx context.Context, request operations.CreateAdsCreativeRequest, opts ...operations.Option) (*operations.CreateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Ads) CreateAdsCreative2(ctx context.Context, request operations.CreateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsCreative2",
+		OperationID:      "createAdsCreative",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Ads) CreateAdsCreative2(ctx context.Context, request operations.CreateA
 		}
 	}
 
-	res := &operations.CreateAdsCreative2Response{
+	res := &operations.CreateAdsCreativeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Ads) CreateAdsCreative2(ctx context.Context, request operations.CreateA
 
 }
 
-// CreateAdsGroup2 - Create a group
-func (s *Ads) CreateAdsGroup2(ctx context.Context, request operations.CreateAdsGroup2Request, opts ...operations.Option) (*operations.CreateAdsGroup2Response, error) {
+// CreateAdsGroup - Create a group
+func (s *Ads) CreateAdsGroup(ctx context.Context, request operations.CreateAdsGroupRequest, opts ...operations.Option) (*operations.CreateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Ads) CreateAdsGroup2(ctx context.Context, request operations.CreateAdsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsGroup2",
+		OperationID:      "createAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Ads) CreateAdsGroup2(ctx context.Context, request operations.CreateAdsG
 		}
 	}
 
-	res := &operations.CreateAdsGroup2Response{
+	res := &operations.CreateAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Ads) CreateAdsGroup2(ctx context.Context, request operations.CreateAdsG
 
 }
 
-// CreateAdsInsertionorder2 - Create an insertionorder
-func (s *Ads) CreateAdsInsertionorder2(ctx context.Context, request operations.CreateAdsInsertionorder2Request, opts ...operations.Option) (*operations.CreateAdsInsertionorder2Response, error) {
+// CreateAdsInsertionorder - Create an insertionorder
+func (s *Ads) CreateAdsInsertionorder(ctx context.Context, request operations.CreateAdsInsertionorderRequest, opts ...operations.Option) (*operations.CreateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Ads) CreateAdsInsertionorder2(ctx context.Context, request operations.C
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsInsertionorder2",
+		OperationID:      "createAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Ads) CreateAdsInsertionorder2(ctx context.Context, request operations.C
 		}
 	}
 
-	res := &operations.CreateAdsInsertionorder2Response{
+	res := &operations.CreateAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Ads) CreateAdsInsertionorder2(ctx context.Context, request operations.C
 
 }
 
-// CreateAdsOrganization2 - Create an organization
-func (s *Ads) CreateAdsOrganization2(ctx context.Context, request operations.CreateAdsOrganization2Request, opts ...operations.Option) (*operations.CreateAdsOrganization2Response, error) {
+// CreateAdsOrganization - Create an organization
+func (s *Ads) CreateAdsOrganization(ctx context.Context, request operations.CreateAdsOrganizationRequest, opts ...operations.Option) (*operations.CreateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Ads) CreateAdsOrganization2(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsOrganization2",
+		OperationID:      "createAdsOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Ads) CreateAdsOrganization2(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateAdsOrganization2Response{
+	res := &operations.CreateAdsOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Ads) CreateAdsOrganization2(ctx context.Context, request operations.Cre
 
 }
 
-// GetAdsAd2 - Retrieve an ad
-func (s *Ads) GetAdsAd2(ctx context.Context, request operations.GetAdsAd2Request, opts ...operations.Option) (*operations.GetAdsAd2Response, error) {
+// GetAdsAd - Retrieve an ad
+func (s *Ads) GetAdsAd(ctx context.Context, request operations.GetAdsAdRequest, opts ...operations.Option) (*operations.GetAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Ads) GetAdsAd2(ctx context.Context, request operations.GetAdsAd2Request
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsAd2",
+		OperationID:      "getAdsAd",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1469,7 +1469,7 @@ func (s *Ads) GetAdsAd2(ctx context.Context, request operations.GetAdsAd2Request
 		}
 	}
 
-	res := &operations.GetAdsAd2Response{
+	res := &operations.GetAdsAdResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1521,8 +1521,8 @@ func (s *Ads) GetAdsAd2(ctx context.Context, request operations.GetAdsAd2Request
 
 }
 
-// GetAdsCampaign2 - Retrieve a campaign
-func (s *Ads) GetAdsCampaign2(ctx context.Context, request operations.GetAdsCampaign2Request, opts ...operations.Option) (*operations.GetAdsCampaign2Response, error) {
+// GetAdsCampaign - Retrieve a campaign
+func (s *Ads) GetAdsCampaign(ctx context.Context, request operations.GetAdsCampaignRequest, opts ...operations.Option) (*operations.GetAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1551,7 +1551,7 @@ func (s *Ads) GetAdsCampaign2(ctx context.Context, request operations.GetAdsCamp
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsCampaign2",
+		OperationID:      "getAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1676,7 +1676,7 @@ func (s *Ads) GetAdsCampaign2(ctx context.Context, request operations.GetAdsCamp
 		}
 	}
 
-	res := &operations.GetAdsCampaign2Response{
+	res := &operations.GetAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1728,8 +1728,8 @@ func (s *Ads) GetAdsCampaign2(ctx context.Context, request operations.GetAdsCamp
 
 }
 
-// GetAdsCreative2 - Retrieve a creative
-func (s *Ads) GetAdsCreative2(ctx context.Context, request operations.GetAdsCreative2Request, opts ...operations.Option) (*operations.GetAdsCreative2Response, error) {
+// GetAdsCreative - Retrieve a creative
+func (s *Ads) GetAdsCreative(ctx context.Context, request operations.GetAdsCreativeRequest, opts ...operations.Option) (*operations.GetAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1758,7 +1758,7 @@ func (s *Ads) GetAdsCreative2(ctx context.Context, request operations.GetAdsCrea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsCreative2",
+		OperationID:      "getAdsCreative",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1883,7 +1883,7 @@ func (s *Ads) GetAdsCreative2(ctx context.Context, request operations.GetAdsCrea
 		}
 	}
 
-	res := &operations.GetAdsCreative2Response{
+	res := &operations.GetAdsCreativeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1935,8 +1935,8 @@ func (s *Ads) GetAdsCreative2(ctx context.Context, request operations.GetAdsCrea
 
 }
 
-// GetAdsGroup2 - Retrieve a group
-func (s *Ads) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup2Request, opts ...operations.Option) (*operations.GetAdsGroup2Response, error) {
+// GetAdsGroup - Retrieve a group
+func (s *Ads) GetAdsGroup(ctx context.Context, request operations.GetAdsGroupRequest, opts ...operations.Option) (*operations.GetAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1965,7 +1965,7 @@ func (s *Ads) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsGroup2",
+		OperationID:      "getAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2090,7 +2090,7 @@ func (s *Ads) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup2R
 		}
 	}
 
-	res := &operations.GetAdsGroup2Response{
+	res := &operations.GetAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2142,8 +2142,8 @@ func (s *Ads) GetAdsGroup2(ctx context.Context, request operations.GetAdsGroup2R
 
 }
 
-// GetAdsInsertionorder2 - Retrieve an insertionorder
-func (s *Ads) GetAdsInsertionorder2(ctx context.Context, request operations.GetAdsInsertionorder2Request, opts ...operations.Option) (*operations.GetAdsInsertionorder2Response, error) {
+// GetAdsInsertionorder - Retrieve an insertionorder
+func (s *Ads) GetAdsInsertionorder(ctx context.Context, request operations.GetAdsInsertionorderRequest, opts ...operations.Option) (*operations.GetAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2172,7 +2172,7 @@ func (s *Ads) GetAdsInsertionorder2(ctx context.Context, request operations.GetA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsInsertionorder2",
+		OperationID:      "getAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2297,7 +2297,7 @@ func (s *Ads) GetAdsInsertionorder2(ctx context.Context, request operations.GetA
 		}
 	}
 
-	res := &operations.GetAdsInsertionorder2Response{
+	res := &operations.GetAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2349,8 +2349,8 @@ func (s *Ads) GetAdsInsertionorder2(ctx context.Context, request operations.GetA
 
 }
 
-// GetAdsOrganization2 - Retrieve an organization
-func (s *Ads) GetAdsOrganization2(ctx context.Context, request operations.GetAdsOrganization2Request, opts ...operations.Option) (*operations.GetAdsOrganization2Response, error) {
+// GetAdsOrganization - Retrieve an organization
+func (s *Ads) GetAdsOrganization(ctx context.Context, request operations.GetAdsOrganizationRequest, opts ...operations.Option) (*operations.GetAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2379,7 +2379,7 @@ func (s *Ads) GetAdsOrganization2(ctx context.Context, request operations.GetAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsOrganization2",
+		OperationID:      "getAdsOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2504,7 +2504,7 @@ func (s *Ads) GetAdsOrganization2(ctx context.Context, request operations.GetAds
 		}
 	}
 
-	res := &operations.GetAdsOrganization2Response{
+	res := &operations.GetAdsOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2556,8 +2556,8 @@ func (s *Ads) GetAdsOrganization2(ctx context.Context, request operations.GetAds
 
 }
 
-// GetAdsPromoted2 - Retrieve a promoted
-func (s *Ads) GetAdsPromoted2(ctx context.Context, request operations.GetAdsPromoted2Request, opts ...operations.Option) (*operations.GetAdsPromoted2Response, error) {
+// GetAdsPromoted - Retrieve a promoted
+func (s *Ads) GetAdsPromoted(ctx context.Context, request operations.GetAdsPromotedRequest, opts ...operations.Option) (*operations.GetAdsPromotedResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2586,7 +2586,7 @@ func (s *Ads) GetAdsPromoted2(ctx context.Context, request operations.GetAdsProm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsPromoted2",
+		OperationID:      "getAdsPromoted",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2711,7 +2711,7 @@ func (s *Ads) GetAdsPromoted2(ctx context.Context, request operations.GetAdsProm
 		}
 	}
 
-	res := &operations.GetAdsPromoted2Response{
+	res := &operations.GetAdsPromotedResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2763,8 +2763,8 @@ func (s *Ads) GetAdsPromoted2(ctx context.Context, request operations.GetAdsProm
 
 }
 
-// GetAdsTarget2 - Retrieve a target
-func (s *Ads) GetAdsTarget2(ctx context.Context, request operations.GetAdsTarget2Request, opts ...operations.Option) (*operations.GetAdsTarget2Response, error) {
+// GetAdsTarget - Retrieve a target
+func (s *Ads) GetAdsTarget(ctx context.Context, request operations.GetAdsTargetRequest, opts ...operations.Option) (*operations.GetAdsTargetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2793,7 +2793,7 @@ func (s *Ads) GetAdsTarget2(ctx context.Context, request operations.GetAdsTarget
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsTarget2",
+		OperationID:      "getAdsTarget",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2918,7 +2918,7 @@ func (s *Ads) GetAdsTarget2(ctx context.Context, request operations.GetAdsTarget
 		}
 	}
 
-	res := &operations.GetAdsTarget2Response{
+	res := &operations.GetAdsTargetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2970,8 +2970,8 @@ func (s *Ads) GetAdsTarget2(ctx context.Context, request operations.GetAdsTarget
 
 }
 
-// ListAdsAds2 - List all ads
-func (s *Ads) ListAdsAds2(ctx context.Context, request operations.ListAdsAds2Request, opts ...operations.Option) (*operations.ListAdsAds2Response, error) {
+// ListAdsAds - List all ads
+func (s *Ads) ListAdsAds(ctx context.Context, request operations.ListAdsAdsRequest, opts ...operations.Option) (*operations.ListAdsAdsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3000,7 +3000,7 @@ func (s *Ads) ListAdsAds2(ctx context.Context, request operations.ListAdsAds2Req
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsAds2",
+		OperationID:      "listAdsAds",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3125,7 +3125,7 @@ func (s *Ads) ListAdsAds2(ctx context.Context, request operations.ListAdsAds2Req
 		}
 	}
 
-	res := &operations.ListAdsAds2Response{
+	res := &operations.ListAdsAdsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3177,8 +3177,8 @@ func (s *Ads) ListAdsAds2(ctx context.Context, request operations.ListAdsAds2Req
 
 }
 
-// ListAdsCampaigns2 - List all campaigns
-func (s *Ads) ListAdsCampaigns2(ctx context.Context, request operations.ListAdsCampaigns2Request, opts ...operations.Option) (*operations.ListAdsCampaigns2Response, error) {
+// ListAdsCampaigns - List all campaigns
+func (s *Ads) ListAdsCampaigns(ctx context.Context, request operations.ListAdsCampaignsRequest, opts ...operations.Option) (*operations.ListAdsCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3207,7 +3207,7 @@ func (s *Ads) ListAdsCampaigns2(ctx context.Context, request operations.ListAdsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsCampaigns2",
+		OperationID:      "listAdsCampaigns",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3332,7 +3332,7 @@ func (s *Ads) ListAdsCampaigns2(ctx context.Context, request operations.ListAdsC
 		}
 	}
 
-	res := &operations.ListAdsCampaigns2Response{
+	res := &operations.ListAdsCampaignsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3384,8 +3384,8 @@ func (s *Ads) ListAdsCampaigns2(ctx context.Context, request operations.ListAdsC
 
 }
 
-// ListAdsCreatives2 - List all creatives
-func (s *Ads) ListAdsCreatives2(ctx context.Context, request operations.ListAdsCreatives2Request, opts ...operations.Option) (*operations.ListAdsCreatives2Response, error) {
+// ListAdsCreatives - List all creatives
+func (s *Ads) ListAdsCreatives(ctx context.Context, request operations.ListAdsCreativesRequest, opts ...operations.Option) (*operations.ListAdsCreativesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3414,7 +3414,7 @@ func (s *Ads) ListAdsCreatives2(ctx context.Context, request operations.ListAdsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsCreatives2",
+		OperationID:      "listAdsCreatives",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3539,7 +3539,7 @@ func (s *Ads) ListAdsCreatives2(ctx context.Context, request operations.ListAdsC
 		}
 	}
 
-	res := &operations.ListAdsCreatives2Response{
+	res := &operations.ListAdsCreativesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3591,8 +3591,8 @@ func (s *Ads) ListAdsCreatives2(ctx context.Context, request operations.ListAdsC
 
 }
 
-// ListAdsGroups2 - List all groups
-func (s *Ads) ListAdsGroups2(ctx context.Context, request operations.ListAdsGroups2Request, opts ...operations.Option) (*operations.ListAdsGroups2Response, error) {
+// ListAdsGroups - List all groups
+func (s *Ads) ListAdsGroups(ctx context.Context, request operations.ListAdsGroupsRequest, opts ...operations.Option) (*operations.ListAdsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3621,7 +3621,7 @@ func (s *Ads) ListAdsGroups2(ctx context.Context, request operations.ListAdsGrou
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsGroups2",
+		OperationID:      "listAdsGroups",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3746,7 +3746,7 @@ func (s *Ads) ListAdsGroups2(ctx context.Context, request operations.ListAdsGrou
 		}
 	}
 
-	res := &operations.ListAdsGroups2Response{
+	res := &operations.ListAdsGroupsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3798,8 +3798,8 @@ func (s *Ads) ListAdsGroups2(ctx context.Context, request operations.ListAdsGrou
 
 }
 
-// ListAdsInsertionorders2 - List all insertionorders
-func (s *Ads) ListAdsInsertionorders2(ctx context.Context, request operations.ListAdsInsertionorders2Request, opts ...operations.Option) (*operations.ListAdsInsertionorders2Response, error) {
+// ListAdsInsertionorders - List all insertionorders
+func (s *Ads) ListAdsInsertionorders(ctx context.Context, request operations.ListAdsInsertionordersRequest, opts ...operations.Option) (*operations.ListAdsInsertionordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3828,7 +3828,7 @@ func (s *Ads) ListAdsInsertionorders2(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsInsertionorders2",
+		OperationID:      "listAdsInsertionorders",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3953,7 +3953,7 @@ func (s *Ads) ListAdsInsertionorders2(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListAdsInsertionorders2Response{
+	res := &operations.ListAdsInsertionordersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4005,8 +4005,8 @@ func (s *Ads) ListAdsInsertionorders2(ctx context.Context, request operations.Li
 
 }
 
-// ListAdsOrganizations2 - List all organizations
-func (s *Ads) ListAdsOrganizations2(ctx context.Context, request operations.ListAdsOrganizations2Request, opts ...operations.Option) (*operations.ListAdsOrganizations2Response, error) {
+// ListAdsOrganizations - List all organizations
+func (s *Ads) ListAdsOrganizations(ctx context.Context, request operations.ListAdsOrganizationsRequest, opts ...operations.Option) (*operations.ListAdsOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4035,7 +4035,7 @@ func (s *Ads) ListAdsOrganizations2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsOrganizations2",
+		OperationID:      "listAdsOrganizations",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4160,7 +4160,7 @@ func (s *Ads) ListAdsOrganizations2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListAdsOrganizations2Response{
+	res := &operations.ListAdsOrganizationsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4212,8 +4212,8 @@ func (s *Ads) ListAdsOrganizations2(ctx context.Context, request operations.List
 
 }
 
-// ListAdsPromoteds2 - List all promoteds
-func (s *Ads) ListAdsPromoteds2(ctx context.Context, request operations.ListAdsPromoteds2Request, opts ...operations.Option) (*operations.ListAdsPromoteds2Response, error) {
+// ListAdsPromoteds - List all promoteds
+func (s *Ads) ListAdsPromoteds(ctx context.Context, request operations.ListAdsPromotedsRequest, opts ...operations.Option) (*operations.ListAdsPromotedsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4242,7 +4242,7 @@ func (s *Ads) ListAdsPromoteds2(ctx context.Context, request operations.ListAdsP
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsPromoteds2",
+		OperationID:      "listAdsPromoteds",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4367,7 +4367,7 @@ func (s *Ads) ListAdsPromoteds2(ctx context.Context, request operations.ListAdsP
 		}
 	}
 
-	res := &operations.ListAdsPromoteds2Response{
+	res := &operations.ListAdsPromotedsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4419,8 +4419,8 @@ func (s *Ads) ListAdsPromoteds2(ctx context.Context, request operations.ListAdsP
 
 }
 
-// ListAdsReports2 - List all reports
-func (s *Ads) ListAdsReports2(ctx context.Context, request operations.ListAdsReports2Request, opts ...operations.Option) (*operations.ListAdsReports2Response, error) {
+// ListAdsReports - List all reports
+func (s *Ads) ListAdsReports(ctx context.Context, request operations.ListAdsReportsRequest, opts ...operations.Option) (*operations.ListAdsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4449,7 +4449,7 @@ func (s *Ads) ListAdsReports2(ctx context.Context, request operations.ListAdsRep
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsReports2",
+		OperationID:      "listAdsReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4574,7 +4574,7 @@ func (s *Ads) ListAdsReports2(ctx context.Context, request operations.ListAdsRep
 		}
 	}
 
-	res := &operations.ListAdsReports2Response{
+	res := &operations.ListAdsReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4626,8 +4626,8 @@ func (s *Ads) ListAdsReports2(ctx context.Context, request operations.ListAdsRep
 
 }
 
-// ListAdsTargets2 - List all targets
-func (s *Ads) ListAdsTargets2(ctx context.Context, request operations.ListAdsTargets2Request, opts ...operations.Option) (*operations.ListAdsTargets2Response, error) {
+// ListAdsTargets - List all targets
+func (s *Ads) ListAdsTargets(ctx context.Context, request operations.ListAdsTargetsRequest, opts ...operations.Option) (*operations.ListAdsTargetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4656,7 +4656,7 @@ func (s *Ads) ListAdsTargets2(ctx context.Context, request operations.ListAdsTar
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsTargets2",
+		OperationID:      "listAdsTargets",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4781,7 +4781,7 @@ func (s *Ads) ListAdsTargets2(ctx context.Context, request operations.ListAdsTar
 		}
 	}
 
-	res := &operations.ListAdsTargets2Response{
+	res := &operations.ListAdsTargetsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4833,8 +4833,8 @@ func (s *Ads) ListAdsTargets2(ctx context.Context, request operations.ListAdsTar
 
 }
 
-// PatchAdsAd2 - Update an ad
-func (s *Ads) PatchAdsAd2(ctx context.Context, request operations.PatchAdsAd2Request, opts ...operations.Option) (*operations.PatchAdsAd2Response, error) {
+// PatchAdsAd - Update an ad
+func (s *Ads) PatchAdsAd(ctx context.Context, request operations.PatchAdsAdRequest, opts ...operations.Option) (*operations.PatchAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4863,7 +4863,7 @@ func (s *Ads) PatchAdsAd2(ctx context.Context, request operations.PatchAdsAd2Req
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsAd2",
+		OperationID:      "patchAdsAd",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsAd", "json", `request:"mediaType=application/json"`)
@@ -4995,7 +4995,7 @@ func (s *Ads) PatchAdsAd2(ctx context.Context, request operations.PatchAdsAd2Req
 		}
 	}
 
-	res := &operations.PatchAdsAd2Response{
+	res := &operations.PatchAdsAdResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5047,8 +5047,8 @@ func (s *Ads) PatchAdsAd2(ctx context.Context, request operations.PatchAdsAd2Req
 
 }
 
-// PatchAdsCampaign2 - Update a campaign
-func (s *Ads) PatchAdsCampaign2(ctx context.Context, request operations.PatchAdsCampaign2Request, opts ...operations.Option) (*operations.PatchAdsCampaign2Response, error) {
+// PatchAdsCampaign - Update a campaign
+func (s *Ads) PatchAdsCampaign(ctx context.Context, request operations.PatchAdsCampaignRequest, opts ...operations.Option) (*operations.PatchAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5077,7 +5077,7 @@ func (s *Ads) PatchAdsCampaign2(ctx context.Context, request operations.PatchAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsCampaign2",
+		OperationID:      "patchAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -5209,7 +5209,7 @@ func (s *Ads) PatchAdsCampaign2(ctx context.Context, request operations.PatchAds
 		}
 	}
 
-	res := &operations.PatchAdsCampaign2Response{
+	res := &operations.PatchAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5261,8 +5261,8 @@ func (s *Ads) PatchAdsCampaign2(ctx context.Context, request operations.PatchAds
 
 }
 
-// PatchAdsCreative2 - Update a creative
-func (s *Ads) PatchAdsCreative2(ctx context.Context, request operations.PatchAdsCreative2Request, opts ...operations.Option) (*operations.PatchAdsCreative2Response, error) {
+// PatchAdsCreative - Update a creative
+func (s *Ads) PatchAdsCreative(ctx context.Context, request operations.PatchAdsCreativeRequest, opts ...operations.Option) (*operations.PatchAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5291,7 +5291,7 @@ func (s *Ads) PatchAdsCreative2(ctx context.Context, request operations.PatchAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsCreative2",
+		OperationID:      "patchAdsCreative",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -5423,7 +5423,7 @@ func (s *Ads) PatchAdsCreative2(ctx context.Context, request operations.PatchAds
 		}
 	}
 
-	res := &operations.PatchAdsCreative2Response{
+	res := &operations.PatchAdsCreativeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5475,8 +5475,8 @@ func (s *Ads) PatchAdsCreative2(ctx context.Context, request operations.PatchAds
 
 }
 
-// PatchAdsGroup2 - Update a group
-func (s *Ads) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsGroup2Request, opts ...operations.Option) (*operations.PatchAdsGroup2Response, error) {
+// PatchAdsGroup - Update a group
+func (s *Ads) PatchAdsGroup(ctx context.Context, request operations.PatchAdsGroupRequest, opts ...operations.Option) (*operations.PatchAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5505,7 +5505,7 @@ func (s *Ads) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsGro
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsGroup2",
+		OperationID:      "patchAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -5637,7 +5637,7 @@ func (s *Ads) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsGro
 		}
 	}
 
-	res := &operations.PatchAdsGroup2Response{
+	res := &operations.PatchAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5689,8 +5689,8 @@ func (s *Ads) PatchAdsGroup2(ctx context.Context, request operations.PatchAdsGro
 
 }
 
-// PatchAdsInsertionorder2 - Update an insertionorder
-func (s *Ads) PatchAdsInsertionorder2(ctx context.Context, request operations.PatchAdsInsertionorder2Request, opts ...operations.Option) (*operations.PatchAdsInsertionorder2Response, error) {
+// PatchAdsInsertionorder - Update an insertionorder
+func (s *Ads) PatchAdsInsertionorder(ctx context.Context, request operations.PatchAdsInsertionorderRequest, opts ...operations.Option) (*operations.PatchAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5719,7 +5719,7 @@ func (s *Ads) PatchAdsInsertionorder2(ctx context.Context, request operations.Pa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsInsertionorder2",
+		OperationID:      "patchAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -5851,7 +5851,7 @@ func (s *Ads) PatchAdsInsertionorder2(ctx context.Context, request operations.Pa
 		}
 	}
 
-	res := &operations.PatchAdsInsertionorder2Response{
+	res := &operations.PatchAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5903,8 +5903,8 @@ func (s *Ads) PatchAdsInsertionorder2(ctx context.Context, request operations.Pa
 
 }
 
-// PatchAdsOrganization2 - Update an organization
-func (s *Ads) PatchAdsOrganization2(ctx context.Context, request operations.PatchAdsOrganization2Request, opts ...operations.Option) (*operations.PatchAdsOrganization2Response, error) {
+// PatchAdsOrganization - Update an organization
+func (s *Ads) PatchAdsOrganization(ctx context.Context, request operations.PatchAdsOrganizationRequest, opts ...operations.Option) (*operations.PatchAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5933,7 +5933,7 @@ func (s *Ads) PatchAdsOrganization2(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsOrganization2",
+		OperationID:      "patchAdsOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -6065,7 +6065,7 @@ func (s *Ads) PatchAdsOrganization2(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchAdsOrganization2Response{
+	res := &operations.PatchAdsOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6117,8 +6117,8 @@ func (s *Ads) PatchAdsOrganization2(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveAdsAd2 - Remove an ad
-func (s *Ads) RemoveAdsAd2(ctx context.Context, request operations.RemoveAdsAd2Request, opts ...operations.Option) (*operations.RemoveAdsAd2Response, error) {
+// RemoveAdsAd - Remove an ad
+func (s *Ads) RemoveAdsAd(ctx context.Context, request operations.RemoveAdsAdRequest, opts ...operations.Option) (*operations.RemoveAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6147,7 +6147,7 @@ func (s *Ads) RemoveAdsAd2(ctx context.Context, request operations.RemoveAdsAd2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsAd2",
+		OperationID:      "removeAdsAd",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6268,7 +6268,7 @@ func (s *Ads) RemoveAdsAd2(ctx context.Context, request operations.RemoveAdsAd2R
 		}
 	}
 
-	res := &operations.RemoveAdsAd2Response{
+	res := &operations.RemoveAdsAdResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6299,8 +6299,8 @@ func (s *Ads) RemoveAdsAd2(ctx context.Context, request operations.RemoveAdsAd2R
 
 }
 
-// RemoveAdsCampaign2 - Remove a campaign
-func (s *Ads) RemoveAdsCampaign2(ctx context.Context, request operations.RemoveAdsCampaign2Request, opts ...operations.Option) (*operations.RemoveAdsCampaign2Response, error) {
+// RemoveAdsCampaign - Remove a campaign
+func (s *Ads) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAdsCampaignRequest, opts ...operations.Option) (*operations.RemoveAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6329,7 +6329,7 @@ func (s *Ads) RemoveAdsCampaign2(ctx context.Context, request operations.RemoveA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsCampaign2",
+		OperationID:      "removeAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6450,7 +6450,7 @@ func (s *Ads) RemoveAdsCampaign2(ctx context.Context, request operations.RemoveA
 		}
 	}
 
-	res := &operations.RemoveAdsCampaign2Response{
+	res := &operations.RemoveAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6481,8 +6481,8 @@ func (s *Ads) RemoveAdsCampaign2(ctx context.Context, request operations.RemoveA
 
 }
 
-// RemoveAdsCreative2 - Remove a creative
-func (s *Ads) RemoveAdsCreative2(ctx context.Context, request operations.RemoveAdsCreative2Request, opts ...operations.Option) (*operations.RemoveAdsCreative2Response, error) {
+// RemoveAdsCreative - Remove a creative
+func (s *Ads) RemoveAdsCreative(ctx context.Context, request operations.RemoveAdsCreativeRequest, opts ...operations.Option) (*operations.RemoveAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6511,7 +6511,7 @@ func (s *Ads) RemoveAdsCreative2(ctx context.Context, request operations.RemoveA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsCreative2",
+		OperationID:      "removeAdsCreative",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6632,7 +6632,7 @@ func (s *Ads) RemoveAdsCreative2(ctx context.Context, request operations.RemoveA
 		}
 	}
 
-	res := &operations.RemoveAdsCreative2Response{
+	res := &operations.RemoveAdsCreativeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6663,8 +6663,8 @@ func (s *Ads) RemoveAdsCreative2(ctx context.Context, request operations.RemoveA
 
 }
 
-// RemoveAdsGroup2 - Remove a group
-func (s *Ads) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAdsGroup2Request, opts ...operations.Option) (*operations.RemoveAdsGroup2Response, error) {
+// RemoveAdsGroup - Remove a group
+func (s *Ads) RemoveAdsGroup(ctx context.Context, request operations.RemoveAdsGroupRequest, opts ...operations.Option) (*operations.RemoveAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6693,7 +6693,7 @@ func (s *Ads) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAdsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsGroup2",
+		OperationID:      "removeAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6814,7 +6814,7 @@ func (s *Ads) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAdsG
 		}
 	}
 
-	res := &operations.RemoveAdsGroup2Response{
+	res := &operations.RemoveAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6845,8 +6845,8 @@ func (s *Ads) RemoveAdsGroup2(ctx context.Context, request operations.RemoveAdsG
 
 }
 
-// RemoveAdsInsertionorder2 - Remove an insertionorder
-func (s *Ads) RemoveAdsInsertionorder2(ctx context.Context, request operations.RemoveAdsInsertionorder2Request, opts ...operations.Option) (*operations.RemoveAdsInsertionorder2Response, error) {
+// RemoveAdsInsertionorder - Remove an insertionorder
+func (s *Ads) RemoveAdsInsertionorder(ctx context.Context, request operations.RemoveAdsInsertionorderRequest, opts ...operations.Option) (*operations.RemoveAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6875,7 +6875,7 @@ func (s *Ads) RemoveAdsInsertionorder2(ctx context.Context, request operations.R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsInsertionorder2",
+		OperationID:      "removeAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6996,7 +6996,7 @@ func (s *Ads) RemoveAdsInsertionorder2(ctx context.Context, request operations.R
 		}
 	}
 
-	res := &operations.RemoveAdsInsertionorder2Response{
+	res := &operations.RemoveAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7027,8 +7027,8 @@ func (s *Ads) RemoveAdsInsertionorder2(ctx context.Context, request operations.R
 
 }
 
-// RemoveAdsOrganization2 - Remove an organization
-func (s *Ads) RemoveAdsOrganization2(ctx context.Context, request operations.RemoveAdsOrganization2Request, opts ...operations.Option) (*operations.RemoveAdsOrganization2Response, error) {
+// RemoveAdsOrganization - Remove an organization
+func (s *Ads) RemoveAdsOrganization(ctx context.Context, request operations.RemoveAdsOrganizationRequest, opts ...operations.Option) (*operations.RemoveAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7057,7 +7057,7 @@ func (s *Ads) RemoveAdsOrganization2(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsOrganization2",
+		OperationID:      "removeAdsOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7178,7 +7178,7 @@ func (s *Ads) RemoveAdsOrganization2(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveAdsOrganization2Response{
+	res := &operations.RemoveAdsOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7209,8 +7209,8 @@ func (s *Ads) RemoveAdsOrganization2(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateAdsAd2 - Update an ad
-func (s *Ads) UpdateAdsAd2(ctx context.Context, request operations.UpdateAdsAd2Request, opts ...operations.Option) (*operations.UpdateAdsAd2Response, error) {
+// UpdateAdsAd - Update an ad
+func (s *Ads) UpdateAdsAd(ctx context.Context, request operations.UpdateAdsAdRequest, opts ...operations.Option) (*operations.UpdateAdsAdResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7239,7 +7239,7 @@ func (s *Ads) UpdateAdsAd2(ctx context.Context, request operations.UpdateAdsAd2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsAd2",
+		OperationID:      "updateAdsAd",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsAd", "json", `request:"mediaType=application/json"`)
@@ -7371,7 +7371,7 @@ func (s *Ads) UpdateAdsAd2(ctx context.Context, request operations.UpdateAdsAd2R
 		}
 	}
 
-	res := &operations.UpdateAdsAd2Response{
+	res := &operations.UpdateAdsAdResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7423,8 +7423,8 @@ func (s *Ads) UpdateAdsAd2(ctx context.Context, request operations.UpdateAdsAd2R
 
 }
 
-// UpdateAdsCampaign2 - Update a campaign
-func (s *Ads) UpdateAdsCampaign2(ctx context.Context, request operations.UpdateAdsCampaign2Request, opts ...operations.Option) (*operations.UpdateAdsCampaign2Response, error) {
+// UpdateAdsCampaign - Update a campaign
+func (s *Ads) UpdateAdsCampaign(ctx context.Context, request operations.UpdateAdsCampaignRequest, opts ...operations.Option) (*operations.UpdateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7453,7 +7453,7 @@ func (s *Ads) UpdateAdsCampaign2(ctx context.Context, request operations.UpdateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsCampaign2",
+		OperationID:      "updateAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -7585,7 +7585,7 @@ func (s *Ads) UpdateAdsCampaign2(ctx context.Context, request operations.UpdateA
 		}
 	}
 
-	res := &operations.UpdateAdsCampaign2Response{
+	res := &operations.UpdateAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7637,8 +7637,8 @@ func (s *Ads) UpdateAdsCampaign2(ctx context.Context, request operations.UpdateA
 
 }
 
-// UpdateAdsCreative2 - Update a creative
-func (s *Ads) UpdateAdsCreative2(ctx context.Context, request operations.UpdateAdsCreative2Request, opts ...operations.Option) (*operations.UpdateAdsCreative2Response, error) {
+// UpdateAdsCreative - Update a creative
+func (s *Ads) UpdateAdsCreative(ctx context.Context, request operations.UpdateAdsCreativeRequest, opts ...operations.Option) (*operations.UpdateAdsCreativeResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7667,7 +7667,7 @@ func (s *Ads) UpdateAdsCreative2(ctx context.Context, request operations.UpdateA
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsCreative2",
+		OperationID:      "updateAdsCreative",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCreative", "json", `request:"mediaType=application/json"`)
@@ -7799,7 +7799,7 @@ func (s *Ads) UpdateAdsCreative2(ctx context.Context, request operations.UpdateA
 		}
 	}
 
-	res := &operations.UpdateAdsCreative2Response{
+	res := &operations.UpdateAdsCreativeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7851,8 +7851,8 @@ func (s *Ads) UpdateAdsCreative2(ctx context.Context, request operations.UpdateA
 
 }
 
-// UpdateAdsGroup2 - Update a group
-func (s *Ads) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAdsGroup2Request, opts ...operations.Option) (*operations.UpdateAdsGroup2Response, error) {
+// UpdateAdsGroup - Update a group
+func (s *Ads) UpdateAdsGroup(ctx context.Context, request operations.UpdateAdsGroupRequest, opts ...operations.Option) (*operations.UpdateAdsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7881,7 +7881,7 @@ func (s *Ads) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAdsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsGroup2",
+		OperationID:      "updateAdsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsGroup", "json", `request:"mediaType=application/json"`)
@@ -8013,7 +8013,7 @@ func (s *Ads) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAdsG
 		}
 	}
 
-	res := &operations.UpdateAdsGroup2Response{
+	res := &operations.UpdateAdsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8065,8 +8065,8 @@ func (s *Ads) UpdateAdsGroup2(ctx context.Context, request operations.UpdateAdsG
 
 }
 
-// UpdateAdsInsertionorder2 - Update an insertionorder
-func (s *Ads) UpdateAdsInsertionorder2(ctx context.Context, request operations.UpdateAdsInsertionorder2Request, opts ...operations.Option) (*operations.UpdateAdsInsertionorder2Response, error) {
+// UpdateAdsInsertionorder - Update an insertionorder
+func (s *Ads) UpdateAdsInsertionorder(ctx context.Context, request operations.UpdateAdsInsertionorderRequest, opts ...operations.Option) (*operations.UpdateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8095,7 +8095,7 @@ func (s *Ads) UpdateAdsInsertionorder2(ctx context.Context, request operations.U
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsInsertionorder2",
+		OperationID:      "updateAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -8227,7 +8227,7 @@ func (s *Ads) UpdateAdsInsertionorder2(ctx context.Context, request operations.U
 		}
 	}
 
-	res := &operations.UpdateAdsInsertionorder2Response{
+	res := &operations.UpdateAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8279,8 +8279,8 @@ func (s *Ads) UpdateAdsInsertionorder2(ctx context.Context, request operations.U
 
 }
 
-// UpdateAdsOrganization2 - Update an organization
-func (s *Ads) UpdateAdsOrganization2(ctx context.Context, request operations.UpdateAdsOrganization2Request, opts ...operations.Option) (*operations.UpdateAdsOrganization2Response, error) {
+// UpdateAdsOrganization - Update an organization
+func (s *Ads) UpdateAdsOrganization(ctx context.Context, request operations.UpdateAdsOrganizationRequest, opts ...operations.Option) (*operations.UpdateAdsOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8309,7 +8309,7 @@ func (s *Ads) UpdateAdsOrganization2(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsOrganization2",
+		OperationID:      "updateAdsOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsOrganization", "json", `request:"mediaType=application/json"`)
@@ -8441,7 +8441,7 @@ func (s *Ads) UpdateAdsOrganization2(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateAdsOrganization2Response{
+	res := &operations.UpdateAdsOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

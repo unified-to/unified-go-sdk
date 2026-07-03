@@ -30,8 +30,8 @@ func newCashflow(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// GetAccountingCashflow2 - Retrieve a cashflow
-func (s *Cashflow) GetAccountingCashflow2(ctx context.Context, request operations.GetAccountingCashflow2Request, opts ...operations.Option) (*operations.GetAccountingCashflow2Response, error) {
+// GetAccountingCashflow - Retrieve a cashflow
+func (s *Cashflow) GetAccountingCashflow(ctx context.Context, request operations.GetAccountingCashflowRequest, opts ...operations.Option) (*operations.GetAccountingCashflowResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Cashflow) GetAccountingCashflow2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCashflow2",
+		OperationID:      "getAccountingCashflow",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Cashflow) GetAccountingCashflow2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetAccountingCashflow2Response{
+	res := &operations.GetAccountingCashflowResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Cashflow) GetAccountingCashflow2(ctx context.Context, request operation
 
 }
 
-// ListAccountingCashflows2 - List all cashflows
-func (s *Cashflow) ListAccountingCashflows2(ctx context.Context, request operations.ListAccountingCashflows2Request, opts ...operations.Option) (*operations.ListAccountingCashflows2Response, error) {
+// ListAccountingCashflows - List all cashflows
+func (s *Cashflow) ListAccountingCashflows(ctx context.Context, request operations.ListAccountingCashflowsRequest, opts ...operations.Option) (*operations.ListAccountingCashflowsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Cashflow) ListAccountingCashflows2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCashflows2",
+		OperationID:      "listAccountingCashflows",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Cashflow) ListAccountingCashflows2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListAccountingCashflows2Response{
+	res := &operations.ListAccountingCashflowsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

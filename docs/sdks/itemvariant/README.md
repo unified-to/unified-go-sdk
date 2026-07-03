@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateCommerceItemvariant2](#createcommerceitemvariant2) - Create an itemvariant
-* [GetCommerceItemvariant2](#getcommerceitemvariant2) - Retrieve an itemvariant
-* [ListCommerceItemvariants2](#listcommerceitemvariants2) - List all itemvariants
-* [PatchCommerceItemvariant2](#patchcommerceitemvariant2) - Update an itemvariant
-* [RemoveCommerceItemvariant2](#removecommerceitemvariant2) - Remove an itemvariant
-* [UpdateCommerceItemvariant2](#updatecommerceitemvariant2) - Update an itemvariant
+* [CreateCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
+* [GetCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
+* [ListCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
+* [PatchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
+* [RemoveCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
+* [UpdateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
 
-## CreateCommerceItemvariant2
+## CreateCommerceItemvariant
 
 Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="go" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.CreateCommerceItemvariant2(ctx, operations.CreateCommerceItemvariant2Request{
+    res, err := s.Itemvariant.CreateCommerceItemvariant(ctx, operations.CreateCommerceItemvariantRequest{
         CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.CreateCommerceItemvariant2Request](../../pkg/models/operations/createcommerceitemvariant2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.CreateCommerceItemvariantRequest](../../pkg/models/operations/createcommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.CreateCommerceItemvariant2Response](../../pkg/models/operations/createcommerceitemvariant2response.md), error**
+**[*operations.CreateCommerceItemvariantResponse](../../pkg/models/operations/createcommerceitemvariantresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetCommerceItemvariant2
+## GetCommerceItemvariant
 
 Retrieve an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="go" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.GetCommerceItemvariant2(ctx, operations.GetCommerceItemvariant2Request{
+    res, err := s.Itemvariant.GetCommerceItemvariant(ctx, operations.GetCommerceItemvariantRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.GetCommerceItemvariant2Request](../../pkg/models/operations/getcommerceitemvariant2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetCommerceItemvariantRequest](../../pkg/models/operations/getcommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.GetCommerceItemvariant2Response](../../pkg/models/operations/getcommerceitemvariant2response.md), error**
+**[*operations.GetCommerceItemvariantResponse](../../pkg/models/operations/getcommerceitemvariantresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListCommerceItemvariants2
+## ListCommerceItemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="go" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.ListCommerceItemvariants2(ctx, operations.ListCommerceItemvariants2Request{
+    res, err := s.Itemvariant.ListCommerceItemvariants(ctx, operations.ListCommerceItemvariantsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.ListCommerceItemvariants2Request](../../pkg/models/operations/listcommerceitemvariants2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListCommerceItemvariantsRequest](../../pkg/models/operations/listcommerceitemvariantsrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.ListCommerceItemvariants2Response](../../pkg/models/operations/listcommerceitemvariants2response.md), error**
+**[*operations.ListCommerceItemvariantsResponse](../../pkg/models/operations/listcommerceitemvariantsresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchCommerceItemvariant2
+## PatchCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.PatchCommerceItemvariant2(ctx, operations.PatchCommerceItemvariant2Request{
+    res, err := s.Itemvariant.PatchCommerceItemvariant(ctx, operations.PatchCommerceItemvariantRequest{
         CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.PatchCommerceItemvariant2Request](../../pkg/models/operations/patchcommerceitemvariant2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.PatchCommerceItemvariantRequest](../../pkg/models/operations/patchcommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.PatchCommerceItemvariant2Response](../../pkg/models/operations/patchcommerceitemvariant2response.md), error**
+**[*operations.PatchCommerceItemvariantResponse](../../pkg/models/operations/patchcommerceitemvariantresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveCommerceItemvariant2
+## RemoveCommerceItemvariant
 
 Remove an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.RemoveCommerceItemvariant2(ctx, operations.RemoveCommerceItemvariant2Request{
+    res, err := s.Itemvariant.RemoveCommerceItemvariant(ctx, operations.RemoveCommerceItemvariantRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.RemoveCommerceItemvariant2Request](../../pkg/models/operations/removecommerceitemvariant2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.RemoveCommerceItemvariantRequest](../../pkg/models/operations/removecommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.RemoveCommerceItemvariant2Response](../../pkg/models/operations/removecommerceitemvariant2response.md), error**
+**[*operations.RemoveCommerceItemvariantResponse](../../pkg/models/operations/removecommerceitemvariantresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateCommerceItemvariant2
+## UpdateCommerceItemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Itemvariant.UpdateCommerceItemvariant2(ctx, operations.UpdateCommerceItemvariant2Request{
+    res, err := s.Itemvariant.UpdateCommerceItemvariant(ctx, operations.UpdateCommerceItemvariantRequest{
         CommerceItemvariant: shared.CommerceItemvariant{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.UpdateCommerceItemvariant2Request](../../pkg/models/operations/updatecommerceitemvariant2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.UpdateCommerceItemvariantRequest](../../pkg/models/operations/updatecommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.UpdateCommerceItemvariant2Response](../../pkg/models/operations/updatecommerceitemvariant2response.md), error**
+**[*operations.UpdateCommerceItemvariantResponse](../../pkg/models/operations/updatecommerceitemvariantresponse.md), error**
 
 ### Errors
 

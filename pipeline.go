@@ -30,8 +30,8 @@ func newPipeline(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateCrmPipeline2 - Create a pipeline
-func (s *Pipeline) CreateCrmPipeline2(ctx context.Context, request operations.CreateCrmPipeline2Request, opts ...operations.Option) (*operations.CreateCrmPipeline2Response, error) {
+// CreateCrmPipeline - Create a pipeline
+func (s *Pipeline) CreateCrmPipeline(ctx context.Context, request operations.CreateCrmPipelineRequest, opts ...operations.Option) (*operations.CreateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Pipeline) CreateCrmPipeline2(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmPipeline2",
+		OperationID:      "createCrmPipeline",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Pipeline) CreateCrmPipeline2(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateCrmPipeline2Response{
+	res := &operations.CreateCrmPipelineResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Pipeline) CreateCrmPipeline2(ctx context.Context, request operations.Cr
 
 }
 
-// GetCrmPipeline2 - Retrieve a pipeline
-func (s *Pipeline) GetCrmPipeline2(ctx context.Context, request operations.GetCrmPipeline2Request, opts ...operations.Option) (*operations.GetCrmPipeline2Response, error) {
+// GetCrmPipeline - Retrieve a pipeline
+func (s *Pipeline) GetCrmPipeline(ctx context.Context, request operations.GetCrmPipelineRequest, opts ...operations.Option) (*operations.GetCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Pipeline) GetCrmPipeline2(ctx context.Context, request operations.GetCr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmPipeline2",
+		OperationID:      "getCrmPipeline",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Pipeline) GetCrmPipeline2(ctx context.Context, request operations.GetCr
 		}
 	}
 
-	res := &operations.GetCrmPipeline2Response{
+	res := &operations.GetCrmPipelineResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Pipeline) GetCrmPipeline2(ctx context.Context, request operations.GetCr
 
 }
 
-// ListCrmPipelines2 - List all pipelines
-func (s *Pipeline) ListCrmPipelines2(ctx context.Context, request operations.ListCrmPipelines2Request, opts ...operations.Option) (*operations.ListCrmPipelines2Response, error) {
+// ListCrmPipelines - List all pipelines
+func (s *Pipeline) ListCrmPipelines(ctx context.Context, request operations.ListCrmPipelinesRequest, opts ...operations.Option) (*operations.ListCrmPipelinesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Pipeline) ListCrmPipelines2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmPipelines2",
+		OperationID:      "listCrmPipelines",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Pipeline) ListCrmPipelines2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListCrmPipelines2Response{
+	res := &operations.ListCrmPipelinesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Pipeline) ListCrmPipelines2(ctx context.Context, request operations.Lis
 
 }
 
-// PatchCrmPipeline2 - Update a pipeline
-func (s *Pipeline) PatchCrmPipeline2(ctx context.Context, request operations.PatchCrmPipeline2Request, opts ...operations.Option) (*operations.PatchCrmPipeline2Response, error) {
+// PatchCrmPipeline - Update a pipeline
+func (s *Pipeline) PatchCrmPipeline(ctx context.Context, request operations.PatchCrmPipelineRequest, opts ...operations.Option) (*operations.PatchCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Pipeline) PatchCrmPipeline2(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmPipeline2",
+		OperationID:      "patchCrmPipeline",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Pipeline) PatchCrmPipeline2(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchCrmPipeline2Response{
+	res := &operations.PatchCrmPipelineResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Pipeline) PatchCrmPipeline2(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveCrmPipeline2 - Remove a pipeline
-func (s *Pipeline) RemoveCrmPipeline2(ctx context.Context, request operations.RemoveCrmPipeline2Request, opts ...operations.Option) (*operations.RemoveCrmPipeline2Response, error) {
+// RemoveCrmPipeline - Remove a pipeline
+func (s *Pipeline) RemoveCrmPipeline(ctx context.Context, request operations.RemoveCrmPipelineRequest, opts ...operations.Option) (*operations.RemoveCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Pipeline) RemoveCrmPipeline2(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmPipeline2",
+		OperationID:      "removeCrmPipeline",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Pipeline) RemoveCrmPipeline2(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveCrmPipeline2Response{
+	res := &operations.RemoveCrmPipelineResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Pipeline) RemoveCrmPipeline2(ctx context.Context, request operations.Re
 
 }
 
-// UpdateCrmPipeline2 - Update a pipeline
-func (s *Pipeline) UpdateCrmPipeline2(ctx context.Context, request operations.UpdateCrmPipeline2Request, opts ...operations.Option) (*operations.UpdateCrmPipeline2Response, error) {
+// UpdateCrmPipeline - Update a pipeline
+func (s *Pipeline) UpdateCrmPipeline(ctx context.Context, request operations.UpdateCrmPipelineRequest, opts ...operations.Option) (*operations.UpdateCrmPipelineResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Pipeline) UpdateCrmPipeline2(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmPipeline2",
+		OperationID:      "updateCrmPipeline",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmPipeline", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Pipeline) UpdateCrmPipeline2(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateCrmPipeline2Response{
+	res := &operations.UpdateCrmPipelineResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

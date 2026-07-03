@@ -30,8 +30,8 @@ func newCalendar(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateCalendarCalendar2 - Create a calendar
-func (s *Calendar) CreateCalendarCalendar2(ctx context.Context, request operations.CreateCalendarCalendar2Request, opts ...operations.Option) (*operations.CreateCalendarCalendar2Response, error) {
+// CreateCalendarCalendar - Create a calendar
+func (s *Calendar) CreateCalendarCalendar(ctx context.Context, request operations.CreateCalendarCalendarRequest, opts ...operations.Option) (*operations.CreateCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Calendar) CreateCalendarCalendar2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarCalendar2",
+		OperationID:      "createCalendarCalendar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarCalendar", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Calendar) CreateCalendarCalendar2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateCalendarCalendar2Response{
+	res := &operations.CreateCalendarCalendarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Calendar) CreateCalendarCalendar2(ctx context.Context, request operatio
 
 }
 
-// CreateCalendarEvent2 - Create an event
-func (s *Calendar) CreateCalendarEvent2(ctx context.Context, request operations.CreateCalendarEvent2Request, opts ...operations.Option) (*operations.CreateCalendarEvent2Response, error) {
+// CreateCalendarEvent - Create an event
+func (s *Calendar) CreateCalendarEvent(ctx context.Context, request operations.CreateCalendarEventRequest, opts ...operations.Option) (*operations.CreateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Calendar) CreateCalendarEvent2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarEvent2",
+		OperationID:      "createCalendarEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarEvent", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Calendar) CreateCalendarEvent2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.CreateCalendarEvent2Response{
+	res := &operations.CreateCalendarEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Calendar) CreateCalendarEvent2(ctx context.Context, request operations.
 
 }
 
-// CreateCalendarLink2 - Create a link
-func (s *Calendar) CreateCalendarLink2(ctx context.Context, request operations.CreateCalendarLink2Request, opts ...operations.Option) (*operations.CreateCalendarLink2Response, error) {
+// CreateCalendarLink - Create a link
+func (s *Calendar) CreateCalendarLink(ctx context.Context, request operations.CreateCalendarLinkRequest, opts ...operations.Option) (*operations.CreateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Calendar) CreateCalendarLink2(ctx context.Context, request operations.C
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarLink2",
+		OperationID:      "createCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Calendar) CreateCalendarLink2(ctx context.Context, request operations.C
 		}
 	}
 
-	res := &operations.CreateCalendarLink2Response{
+	res := &operations.CreateCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Calendar) CreateCalendarLink2(ctx context.Context, request operations.C
 
 }
 
-// CreateCalendarWebinar2 - Create a webinar
-func (s *Calendar) CreateCalendarWebinar2(ctx context.Context, request operations.CreateCalendarWebinar2Request, opts ...operations.Option) (*operations.CreateCalendarWebinar2Response, error) {
+// CreateCalendarWebinar - Create a webinar
+func (s *Calendar) CreateCalendarWebinar(ctx context.Context, request operations.CreateCalendarWebinarRequest, opts ...operations.Option) (*operations.CreateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Calendar) CreateCalendarWebinar2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarWebinar2",
+		OperationID:      "createCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Calendar) CreateCalendarWebinar2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateCalendarWebinar2Response{
+	res := &operations.CreateCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Calendar) CreateCalendarWebinar2(ctx context.Context, request operation
 
 }
 
-// GetCalendarCalendar2 - Retrieve a calendar
-func (s *Calendar) GetCalendarCalendar2(ctx context.Context, request operations.GetCalendarCalendar2Request, opts ...operations.Option) (*operations.GetCalendarCalendar2Response, error) {
+// GetCalendarCalendar - Retrieve a calendar
+func (s *Calendar) GetCalendarCalendar(ctx context.Context, request operations.GetCalendarCalendarRequest, opts ...operations.Option) (*operations.GetCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Calendar) GetCalendarCalendar2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarCalendar2",
+		OperationID:      "getCalendarCalendar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1041,7 +1041,7 @@ func (s *Calendar) GetCalendarCalendar2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetCalendarCalendar2Response{
+	res := &operations.GetCalendarCalendarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1093,8 +1093,8 @@ func (s *Calendar) GetCalendarCalendar2(ctx context.Context, request operations.
 
 }
 
-// GetCalendarEvent2 - Retrieve an event
-func (s *Calendar) GetCalendarEvent2(ctx context.Context, request operations.GetCalendarEvent2Request, opts ...operations.Option) (*operations.GetCalendarEvent2Response, error) {
+// GetCalendarEvent - Retrieve an event
+func (s *Calendar) GetCalendarEvent(ctx context.Context, request operations.GetCalendarEventRequest, opts ...operations.Option) (*operations.GetCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1123,7 +1123,7 @@ func (s *Calendar) GetCalendarEvent2(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarEvent2",
+		OperationID:      "getCalendarEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1248,7 +1248,7 @@ func (s *Calendar) GetCalendarEvent2(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetCalendarEvent2Response{
+	res := &operations.GetCalendarEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1300,8 +1300,8 @@ func (s *Calendar) GetCalendarEvent2(ctx context.Context, request operations.Get
 
 }
 
-// GetCalendarLink2 - Retrieve a link
-func (s *Calendar) GetCalendarLink2(ctx context.Context, request operations.GetCalendarLink2Request, opts ...operations.Option) (*operations.GetCalendarLink2Response, error) {
+// GetCalendarLink - Retrieve a link
+func (s *Calendar) GetCalendarLink(ctx context.Context, request operations.GetCalendarLinkRequest, opts ...operations.Option) (*operations.GetCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1330,7 +1330,7 @@ func (s *Calendar) GetCalendarLink2(ctx context.Context, request operations.GetC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarLink2",
+		OperationID:      "getCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1455,7 +1455,7 @@ func (s *Calendar) GetCalendarLink2(ctx context.Context, request operations.GetC
 		}
 	}
 
-	res := &operations.GetCalendarLink2Response{
+	res := &operations.GetCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1507,8 +1507,8 @@ func (s *Calendar) GetCalendarLink2(ctx context.Context, request operations.GetC
 
 }
 
-// GetCalendarRecording2 - Retrieve a recording
-func (s *Calendar) GetCalendarRecording2(ctx context.Context, request operations.GetCalendarRecording2Request, opts ...operations.Option) (*operations.GetCalendarRecording2Response, error) {
+// GetCalendarRecording - Retrieve a recording
+func (s *Calendar) GetCalendarRecording(ctx context.Context, request operations.GetCalendarRecordingRequest, opts ...operations.Option) (*operations.GetCalendarRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1537,7 +1537,7 @@ func (s *Calendar) GetCalendarRecording2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarRecording2",
+		OperationID:      "getCalendarRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1662,7 +1662,7 @@ func (s *Calendar) GetCalendarRecording2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetCalendarRecording2Response{
+	res := &operations.GetCalendarRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Calendar) GetCalendarRecording2(ctx context.Context, request operations
 
 }
 
-// GetCalendarWebinar2 - Retrieve a webinar
-func (s *Calendar) GetCalendarWebinar2(ctx context.Context, request operations.GetCalendarWebinar2Request, opts ...operations.Option) (*operations.GetCalendarWebinar2Response, error) {
+// GetCalendarWebinar - Retrieve a webinar
+func (s *Calendar) GetCalendarWebinar(ctx context.Context, request operations.GetCalendarWebinarRequest, opts ...operations.Option) (*operations.GetCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Calendar) GetCalendarWebinar2(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarWebinar2",
+		OperationID:      "getCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1869,7 +1869,7 @@ func (s *Calendar) GetCalendarWebinar2(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetCalendarWebinar2Response{
+	res := &operations.GetCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1921,8 +1921,8 @@ func (s *Calendar) GetCalendarWebinar2(ctx context.Context, request operations.G
 
 }
 
-// ListCalendarBusies2 - List all busies
-func (s *Calendar) ListCalendarBusies2(ctx context.Context, request operations.ListCalendarBusies2Request, opts ...operations.Option) (*operations.ListCalendarBusies2Response, error) {
+// ListCalendarBusies - List all busies
+func (s *Calendar) ListCalendarBusies(ctx context.Context, request operations.ListCalendarBusiesRequest, opts ...operations.Option) (*operations.ListCalendarBusiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1951,7 +1951,7 @@ func (s *Calendar) ListCalendarBusies2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarBusies2",
+		OperationID:      "listCalendarBusies",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2076,7 +2076,7 @@ func (s *Calendar) ListCalendarBusies2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListCalendarBusies2Response{
+	res := &operations.ListCalendarBusiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Calendar) ListCalendarBusies2(ctx context.Context, request operations.L
 
 }
 
-// ListCalendarCalendars2 - List all calendars
-func (s *Calendar) ListCalendarCalendars2(ctx context.Context, request operations.ListCalendarCalendars2Request, opts ...operations.Option) (*operations.ListCalendarCalendars2Response, error) {
+// ListCalendarCalendars - List all calendars
+func (s *Calendar) ListCalendarCalendars(ctx context.Context, request operations.ListCalendarCalendarsRequest, opts ...operations.Option) (*operations.ListCalendarCalendarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Calendar) ListCalendarCalendars2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarCalendars2",
+		OperationID:      "listCalendarCalendars",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2283,7 +2283,7 @@ func (s *Calendar) ListCalendarCalendars2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListCalendarCalendars2Response{
+	res := &operations.ListCalendarCalendarsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2335,8 +2335,8 @@ func (s *Calendar) ListCalendarCalendars2(ctx context.Context, request operation
 
 }
 
-// ListCalendarEvents2 - List all events
-func (s *Calendar) ListCalendarEvents2(ctx context.Context, request operations.ListCalendarEvents2Request, opts ...operations.Option) (*operations.ListCalendarEvents2Response, error) {
+// ListCalendarEvents - List all events
+func (s *Calendar) ListCalendarEvents(ctx context.Context, request operations.ListCalendarEventsRequest, opts ...operations.Option) (*operations.ListCalendarEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2365,7 +2365,7 @@ func (s *Calendar) ListCalendarEvents2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarEvents2",
+		OperationID:      "listCalendarEvents",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2490,7 +2490,7 @@ func (s *Calendar) ListCalendarEvents2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListCalendarEvents2Response{
+	res := &operations.ListCalendarEventsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2542,8 +2542,8 @@ func (s *Calendar) ListCalendarEvents2(ctx context.Context, request operations.L
 
 }
 
-// ListCalendarLinks2 - List all links
-func (s *Calendar) ListCalendarLinks2(ctx context.Context, request operations.ListCalendarLinks2Request, opts ...operations.Option) (*operations.ListCalendarLinks2Response, error) {
+// ListCalendarLinks - List all links
+func (s *Calendar) ListCalendarLinks(ctx context.Context, request operations.ListCalendarLinksRequest, opts ...operations.Option) (*operations.ListCalendarLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2572,7 +2572,7 @@ func (s *Calendar) ListCalendarLinks2(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarLinks2",
+		OperationID:      "listCalendarLinks",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2697,7 +2697,7 @@ func (s *Calendar) ListCalendarLinks2(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListCalendarLinks2Response{
+	res := &operations.ListCalendarLinksResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2749,8 +2749,8 @@ func (s *Calendar) ListCalendarLinks2(ctx context.Context, request operations.Li
 
 }
 
-// ListCalendarRecordings2 - List all recordings
-func (s *Calendar) ListCalendarRecordings2(ctx context.Context, request operations.ListCalendarRecordings2Request, opts ...operations.Option) (*operations.ListCalendarRecordings2Response, error) {
+// ListCalendarRecordings - List all recordings
+func (s *Calendar) ListCalendarRecordings(ctx context.Context, request operations.ListCalendarRecordingsRequest, opts ...operations.Option) (*operations.ListCalendarRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2779,7 +2779,7 @@ func (s *Calendar) ListCalendarRecordings2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarRecordings2",
+		OperationID:      "listCalendarRecordings",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2904,7 +2904,7 @@ func (s *Calendar) ListCalendarRecordings2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListCalendarRecordings2Response{
+	res := &operations.ListCalendarRecordingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2956,8 +2956,8 @@ func (s *Calendar) ListCalendarRecordings2(ctx context.Context, request operatio
 
 }
 
-// ListCalendarWebinars2 - List all webinars
-func (s *Calendar) ListCalendarWebinars2(ctx context.Context, request operations.ListCalendarWebinars2Request, opts ...operations.Option) (*operations.ListCalendarWebinars2Response, error) {
+// ListCalendarWebinars - List all webinars
+func (s *Calendar) ListCalendarWebinars(ctx context.Context, request operations.ListCalendarWebinarsRequest, opts ...operations.Option) (*operations.ListCalendarWebinarsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2986,7 +2986,7 @@ func (s *Calendar) ListCalendarWebinars2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarWebinars2",
+		OperationID:      "listCalendarWebinars",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3111,7 +3111,7 @@ func (s *Calendar) ListCalendarWebinars2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListCalendarWebinars2Response{
+	res := &operations.ListCalendarWebinarsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3163,8 +3163,8 @@ func (s *Calendar) ListCalendarWebinars2(ctx context.Context, request operations
 
 }
 
-// PatchCalendarCalendar2 - Update a calendar
-func (s *Calendar) PatchCalendarCalendar2(ctx context.Context, request operations.PatchCalendarCalendar2Request, opts ...operations.Option) (*operations.PatchCalendarCalendar2Response, error) {
+// PatchCalendarCalendar - Update a calendar
+func (s *Calendar) PatchCalendarCalendar(ctx context.Context, request operations.PatchCalendarCalendarRequest, opts ...operations.Option) (*operations.PatchCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3193,7 +3193,7 @@ func (s *Calendar) PatchCalendarCalendar2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarCalendar2",
+		OperationID:      "patchCalendarCalendar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarCalendar", "json", `request:"mediaType=application/json"`)
@@ -3325,7 +3325,7 @@ func (s *Calendar) PatchCalendarCalendar2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchCalendarCalendar2Response{
+	res := &operations.PatchCalendarCalendarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3377,8 +3377,8 @@ func (s *Calendar) PatchCalendarCalendar2(ctx context.Context, request operation
 
 }
 
-// PatchCalendarEvent2 - Update an event
-func (s *Calendar) PatchCalendarEvent2(ctx context.Context, request operations.PatchCalendarEvent2Request, opts ...operations.Option) (*operations.PatchCalendarEvent2Response, error) {
+// PatchCalendarEvent - Update an event
+func (s *Calendar) PatchCalendarEvent(ctx context.Context, request operations.PatchCalendarEventRequest, opts ...operations.Option) (*operations.PatchCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3407,7 +3407,7 @@ func (s *Calendar) PatchCalendarEvent2(ctx context.Context, request operations.P
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarEvent2",
+		OperationID:      "patchCalendarEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarEvent", "json", `request:"mediaType=application/json"`)
@@ -3539,7 +3539,7 @@ func (s *Calendar) PatchCalendarEvent2(ctx context.Context, request operations.P
 		}
 	}
 
-	res := &operations.PatchCalendarEvent2Response{
+	res := &operations.PatchCalendarEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3591,8 +3591,8 @@ func (s *Calendar) PatchCalendarEvent2(ctx context.Context, request operations.P
 
 }
 
-// PatchCalendarLink2 - Update a link
-func (s *Calendar) PatchCalendarLink2(ctx context.Context, request operations.PatchCalendarLink2Request, opts ...operations.Option) (*operations.PatchCalendarLink2Response, error) {
+// PatchCalendarLink - Update a link
+func (s *Calendar) PatchCalendarLink(ctx context.Context, request operations.PatchCalendarLinkRequest, opts ...operations.Option) (*operations.PatchCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3621,7 +3621,7 @@ func (s *Calendar) PatchCalendarLink2(ctx context.Context, request operations.Pa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarLink2",
+		OperationID:      "patchCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -3753,7 +3753,7 @@ func (s *Calendar) PatchCalendarLink2(ctx context.Context, request operations.Pa
 		}
 	}
 
-	res := &operations.PatchCalendarLink2Response{
+	res := &operations.PatchCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3805,8 +3805,8 @@ func (s *Calendar) PatchCalendarLink2(ctx context.Context, request operations.Pa
 
 }
 
-// PatchCalendarWebinar2 - Update a webinar
-func (s *Calendar) PatchCalendarWebinar2(ctx context.Context, request operations.PatchCalendarWebinar2Request, opts ...operations.Option) (*operations.PatchCalendarWebinar2Response, error) {
+// PatchCalendarWebinar - Update a webinar
+func (s *Calendar) PatchCalendarWebinar(ctx context.Context, request operations.PatchCalendarWebinarRequest, opts ...operations.Option) (*operations.PatchCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3835,7 +3835,7 @@ func (s *Calendar) PatchCalendarWebinar2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarWebinar2",
+		OperationID:      "patchCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -3967,7 +3967,7 @@ func (s *Calendar) PatchCalendarWebinar2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchCalendarWebinar2Response{
+	res := &operations.PatchCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4019,8 +4019,8 @@ func (s *Calendar) PatchCalendarWebinar2(ctx context.Context, request operations
 
 }
 
-// RemoveCalendarCalendar2 - Remove a calendar
-func (s *Calendar) RemoveCalendarCalendar2(ctx context.Context, request operations.RemoveCalendarCalendar2Request, opts ...operations.Option) (*operations.RemoveCalendarCalendar2Response, error) {
+// RemoveCalendarCalendar - Remove a calendar
+func (s *Calendar) RemoveCalendarCalendar(ctx context.Context, request operations.RemoveCalendarCalendarRequest, opts ...operations.Option) (*operations.RemoveCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4049,7 +4049,7 @@ func (s *Calendar) RemoveCalendarCalendar2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarCalendar2",
+		OperationID:      "removeCalendarCalendar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4170,7 +4170,7 @@ func (s *Calendar) RemoveCalendarCalendar2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveCalendarCalendar2Response{
+	res := &operations.RemoveCalendarCalendarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4201,8 +4201,8 @@ func (s *Calendar) RemoveCalendarCalendar2(ctx context.Context, request operatio
 
 }
 
-// RemoveCalendarEvent2 - Remove an event
-func (s *Calendar) RemoveCalendarEvent2(ctx context.Context, request operations.RemoveCalendarEvent2Request, opts ...operations.Option) (*operations.RemoveCalendarEvent2Response, error) {
+// RemoveCalendarEvent - Remove an event
+func (s *Calendar) RemoveCalendarEvent(ctx context.Context, request operations.RemoveCalendarEventRequest, opts ...operations.Option) (*operations.RemoveCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4231,7 +4231,7 @@ func (s *Calendar) RemoveCalendarEvent2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarEvent2",
+		OperationID:      "removeCalendarEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4352,7 +4352,7 @@ func (s *Calendar) RemoveCalendarEvent2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.RemoveCalendarEvent2Response{
+	res := &operations.RemoveCalendarEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4383,8 +4383,8 @@ func (s *Calendar) RemoveCalendarEvent2(ctx context.Context, request operations.
 
 }
 
-// RemoveCalendarLink2 - Remove a link
-func (s *Calendar) RemoveCalendarLink2(ctx context.Context, request operations.RemoveCalendarLink2Request, opts ...operations.Option) (*operations.RemoveCalendarLink2Response, error) {
+// RemoveCalendarLink - Remove a link
+func (s *Calendar) RemoveCalendarLink(ctx context.Context, request operations.RemoveCalendarLinkRequest, opts ...operations.Option) (*operations.RemoveCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4413,7 +4413,7 @@ func (s *Calendar) RemoveCalendarLink2(ctx context.Context, request operations.R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarLink2",
+		OperationID:      "removeCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4534,7 +4534,7 @@ func (s *Calendar) RemoveCalendarLink2(ctx context.Context, request operations.R
 		}
 	}
 
-	res := &operations.RemoveCalendarLink2Response{
+	res := &operations.RemoveCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4565,8 +4565,8 @@ func (s *Calendar) RemoveCalendarLink2(ctx context.Context, request operations.R
 
 }
 
-// RemoveCalendarWebinar2 - Remove a webinar
-func (s *Calendar) RemoveCalendarWebinar2(ctx context.Context, request operations.RemoveCalendarWebinar2Request, opts ...operations.Option) (*operations.RemoveCalendarWebinar2Response, error) {
+// RemoveCalendarWebinar - Remove a webinar
+func (s *Calendar) RemoveCalendarWebinar(ctx context.Context, request operations.RemoveCalendarWebinarRequest, opts ...operations.Option) (*operations.RemoveCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4595,7 +4595,7 @@ func (s *Calendar) RemoveCalendarWebinar2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarWebinar2",
+		OperationID:      "removeCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4716,7 +4716,7 @@ func (s *Calendar) RemoveCalendarWebinar2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveCalendarWebinar2Response{
+	res := &operations.RemoveCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4747,8 +4747,8 @@ func (s *Calendar) RemoveCalendarWebinar2(ctx context.Context, request operation
 
 }
 
-// UpdateCalendarCalendar2 - Update a calendar
-func (s *Calendar) UpdateCalendarCalendar2(ctx context.Context, request operations.UpdateCalendarCalendar2Request, opts ...operations.Option) (*operations.UpdateCalendarCalendar2Response, error) {
+// UpdateCalendarCalendar - Update a calendar
+func (s *Calendar) UpdateCalendarCalendar(ctx context.Context, request operations.UpdateCalendarCalendarRequest, opts ...operations.Option) (*operations.UpdateCalendarCalendarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4777,7 +4777,7 @@ func (s *Calendar) UpdateCalendarCalendar2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarCalendar2",
+		OperationID:      "updateCalendarCalendar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarCalendar", "json", `request:"mediaType=application/json"`)
@@ -4909,7 +4909,7 @@ func (s *Calendar) UpdateCalendarCalendar2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateCalendarCalendar2Response{
+	res := &operations.UpdateCalendarCalendarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4961,8 +4961,8 @@ func (s *Calendar) UpdateCalendarCalendar2(ctx context.Context, request operatio
 
 }
 
-// UpdateCalendarEvent2 - Update an event
-func (s *Calendar) UpdateCalendarEvent2(ctx context.Context, request operations.UpdateCalendarEvent2Request, opts ...operations.Option) (*operations.UpdateCalendarEvent2Response, error) {
+// UpdateCalendarEvent - Update an event
+func (s *Calendar) UpdateCalendarEvent(ctx context.Context, request operations.UpdateCalendarEventRequest, opts ...operations.Option) (*operations.UpdateCalendarEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4991,7 +4991,7 @@ func (s *Calendar) UpdateCalendarEvent2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarEvent2",
+		OperationID:      "updateCalendarEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarEvent", "json", `request:"mediaType=application/json"`)
@@ -5123,7 +5123,7 @@ func (s *Calendar) UpdateCalendarEvent2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.UpdateCalendarEvent2Response{
+	res := &operations.UpdateCalendarEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5175,8 +5175,8 @@ func (s *Calendar) UpdateCalendarEvent2(ctx context.Context, request operations.
 
 }
 
-// UpdateCalendarLink2 - Update a link
-func (s *Calendar) UpdateCalendarLink2(ctx context.Context, request operations.UpdateCalendarLink2Request, opts ...operations.Option) (*operations.UpdateCalendarLink2Response, error) {
+// UpdateCalendarLink - Update a link
+func (s *Calendar) UpdateCalendarLink(ctx context.Context, request operations.UpdateCalendarLinkRequest, opts ...operations.Option) (*operations.UpdateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5205,7 +5205,7 @@ func (s *Calendar) UpdateCalendarLink2(ctx context.Context, request operations.U
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarLink2",
+		OperationID:      "updateCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -5337,7 +5337,7 @@ func (s *Calendar) UpdateCalendarLink2(ctx context.Context, request operations.U
 		}
 	}
 
-	res := &operations.UpdateCalendarLink2Response{
+	res := &operations.UpdateCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5389,8 +5389,8 @@ func (s *Calendar) UpdateCalendarLink2(ctx context.Context, request operations.U
 
 }
 
-// UpdateCalendarWebinar2 - Update a webinar
-func (s *Calendar) UpdateCalendarWebinar2(ctx context.Context, request operations.UpdateCalendarWebinar2Request, opts ...operations.Option) (*operations.UpdateCalendarWebinar2Response, error) {
+// UpdateCalendarWebinar - Update a webinar
+func (s *Calendar) UpdateCalendarWebinar(ctx context.Context, request operations.UpdateCalendarWebinarRequest, opts ...operations.Option) (*operations.UpdateCalendarWebinarResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5419,7 +5419,7 @@ func (s *Calendar) UpdateCalendarWebinar2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarWebinar2",
+		OperationID:      "updateCalendarWebinar",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarWebinar", "json", `request:"mediaType=application/json"`)
@@ -5551,7 +5551,7 @@ func (s *Calendar) UpdateCalendarWebinar2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateCalendarWebinar2Response{
+	res := &operations.UpdateCalendarWebinarResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

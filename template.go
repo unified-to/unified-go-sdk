@@ -30,8 +30,8 @@ func newTemplate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// GetSigningTemplate2 - Retrieve a template
-func (s *Template) GetSigningTemplate2(ctx context.Context, request operations.GetSigningTemplate2Request, opts ...operations.Option) (*operations.GetSigningTemplate2Response, error) {
+// GetSigningTemplate - Retrieve a template
+func (s *Template) GetSigningTemplate(ctx context.Context, request operations.GetSigningTemplateRequest, opts ...operations.Option) (*operations.GetSigningTemplateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Template) GetSigningTemplate2(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getSigningTemplate2",
+		OperationID:      "getSigningTemplate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Template) GetSigningTemplate2(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetSigningTemplate2Response{
+	res := &operations.GetSigningTemplateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Template) GetSigningTemplate2(ctx context.Context, request operations.G
 
 }
 
-// ListSigningTemplates2 - List all templates
-func (s *Template) ListSigningTemplates2(ctx context.Context, request operations.ListSigningTemplates2Request, opts ...operations.Option) (*operations.ListSigningTemplates2Response, error) {
+// ListSigningTemplates - List all templates
+func (s *Template) ListSigningTemplates(ctx context.Context, request operations.ListSigningTemplatesRequest, opts ...operations.Option) (*operations.ListSigningTemplatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Template) ListSigningTemplates2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listSigningTemplates2",
+		OperationID:      "listSigningTemplates",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Template) ListSigningTemplates2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListSigningTemplates2Response{
+	res := &operations.ListSigningTemplatesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

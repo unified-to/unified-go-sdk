@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateCrmDeal2](#createcrmdeal2) - Create a deal
-* [GetCrmDeal2](#getcrmdeal2) - Retrieve a deal
-* [ListCrmDeals2](#listcrmdeals2) - List all deals
-* [PatchCrmDeal2](#patchcrmdeal2) - Update a deal
-* [RemoveCrmDeal2](#removecrmdeal2) - Remove a deal
-* [UpdateCrmDeal2](#updatecrmdeal2) - Update a deal
+* [CreateCrmDeal](#createcrmdeal) - Create a deal
+* [GetCrmDeal](#getcrmdeal) - Retrieve a deal
+* [ListCrmDeals](#listcrmdeals) - List all deals
+* [PatchCrmDeal](#patchcrmdeal) - Update a deal
+* [RemoveCrmDeal](#removecrmdeal) - Remove a deal
+* [UpdateCrmDeal](#updatecrmdeal) - Update a deal
 
-## CreateCrmDeal2
+## CreateCrmDeal
 
 Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCrmDeal2" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="go" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.CreateCrmDeal2(ctx, operations.CreateCrmDeal2Request{
+    res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.CreateCrmDeal2Request](../../pkg/models/operations/createcrmdeal2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.CreateCrmDealRequest](../../pkg/models/operations/createcrmdealrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.CreateCrmDeal2Response](../../pkg/models/operations/createcrmdeal2response.md), error**
+**[*operations.CreateCrmDealResponse](../../pkg/models/operations/createcrmdealresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetCrmDeal2
+## GetCrmDeal
 
 Retrieve a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getCrmDeal2" method="get" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="go" operationID="getCrmDeal" method="get" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.GetCrmDeal2(ctx, operations.GetCrmDeal2Request{
+    res, err := s.Deal.GetCrmDeal(ctx, operations.GetCrmDealRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.GetCrmDeal2Request](../../pkg/models/operations/getcrmdeal2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.GetCrmDealRequest](../../pkg/models/operations/getcrmdealrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
 
 ### Response
 
-**[*operations.GetCrmDeal2Response](../../pkg/models/operations/getcrmdeal2response.md), error**
+**[*operations.GetCrmDealResponse](../../pkg/models/operations/getcrmdealresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListCrmDeals2
+## ListCrmDeals
 
 List all deals
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listCrmDeals2" method="get" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="go" operationID="listCrmDeals" method="get" path="/crm/{connection_id}/deal" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.ListCrmDeals2(ctx, operations.ListCrmDeals2Request{
+    res, err := s.Deal.ListCrmDeals(ctx, operations.ListCrmDealsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.ListCrmDeals2Request](../../pkg/models/operations/listcrmdeals2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.ListCrmDealsRequest](../../pkg/models/operations/listcrmdealsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.ListCrmDeals2Response](../../pkg/models/operations/listcrmdeals2response.md), error**
+**[*operations.ListCrmDealsResponse](../../pkg/models/operations/listcrmdealsresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchCrmDeal2
+## PatchCrmDeal
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCrmDeal2" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.PatchCrmDeal2(ctx, operations.PatchCrmDeal2Request{
+    res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.PatchCrmDeal2Request](../../pkg/models/operations/patchcrmdeal2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.PatchCrmDealRequest](../../pkg/models/operations/patchcrmdealrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.PatchCrmDeal2Response](../../pkg/models/operations/patchcrmdeal2response.md), error**
+**[*operations.PatchCrmDealResponse](../../pkg/models/operations/patchcrmdealresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveCrmDeal2
+## RemoveCrmDeal
 
 Remove a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeCrmDeal2" method="delete" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeCrmDeal" method="delete" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.RemoveCrmDeal2(ctx, operations.RemoveCrmDeal2Request{
+    res, err := s.Deal.RemoveCrmDeal(ctx, operations.RemoveCrmDealRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.RemoveCrmDeal2Request](../../pkg/models/operations/removecrmdeal2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.RemoveCrmDealRequest](../../pkg/models/operations/removecrmdealrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.RemoveCrmDeal2Response](../../pkg/models/operations/removecrmdeal2response.md), error**
+**[*operations.RemoveCrmDealResponse](../../pkg/models/operations/removecrmdealresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateCrmDeal2
+## UpdateCrmDeal
 
 Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCrmDeal2" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Deal.UpdateCrmDeal2(ctx, operations.UpdateCrmDeal2Request{
+    res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: shared.CrmDeal{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.UpdateCrmDeal2Request](../../pkg/models/operations/updatecrmdeal2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.UpdateCrmDealRequest](../../pkg/models/operations/updatecrmdealrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.UpdateCrmDeal2Response](../../pkg/models/operations/updatecrmdeal2response.md), error**
+**[*operations.UpdateCrmDealResponse](../../pkg/models/operations/updatecrmdealresponse.md), error**
 
 ### Errors
 

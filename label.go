@@ -30,8 +30,8 @@ func newLabel(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateShippingLabel2 - Create a label
-func (s *Label) CreateShippingLabel2(ctx context.Context, request operations.CreateShippingLabel2Request, opts ...operations.Option) (*operations.CreateShippingLabel2Response, error) {
+// CreateShippingLabel - Create a label
+func (s *Label) CreateShippingLabel(ctx context.Context, request operations.CreateShippingLabelRequest, opts ...operations.Option) (*operations.CreateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Label) CreateShippingLabel2(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createShippingLabel2",
+		OperationID:      "createShippingLabel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingLabel", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Label) CreateShippingLabel2(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateShippingLabel2Response{
+	res := &operations.CreateShippingLabelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Label) CreateShippingLabel2(ctx context.Context, request operations.Cre
 
 }
 
-// GetShippingLabel2 - Retrieve a label
-func (s *Label) GetShippingLabel2(ctx context.Context, request operations.GetShippingLabel2Request, opts ...operations.Option) (*operations.GetShippingLabel2Response, error) {
+// GetShippingLabel - Retrieve a label
+func (s *Label) GetShippingLabel(ctx context.Context, request operations.GetShippingLabelRequest, opts ...operations.Option) (*operations.GetShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Label) GetShippingLabel2(ctx context.Context, request operations.GetShi
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getShippingLabel2",
+		OperationID:      "getShippingLabel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Label) GetShippingLabel2(ctx context.Context, request operations.GetShi
 		}
 	}
 
-	res := &operations.GetShippingLabel2Response{
+	res := &operations.GetShippingLabelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Label) GetShippingLabel2(ctx context.Context, request operations.GetShi
 
 }
 
-// ListShippingLabels2 - List all labels
-func (s *Label) ListShippingLabels2(ctx context.Context, request operations.ListShippingLabels2Request, opts ...operations.Option) (*operations.ListShippingLabels2Response, error) {
+// ListShippingLabels - List all labels
+func (s *Label) ListShippingLabels(ctx context.Context, request operations.ListShippingLabelsRequest, opts ...operations.Option) (*operations.ListShippingLabelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Label) ListShippingLabels2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listShippingLabels2",
+		OperationID:      "listShippingLabels",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Label) ListShippingLabels2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListShippingLabels2Response{
+	res := &operations.ListShippingLabelsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Label) ListShippingLabels2(ctx context.Context, request operations.List
 
 }
 
-// PatchShippingLabel2 - Update a label
-func (s *Label) PatchShippingLabel2(ctx context.Context, request operations.PatchShippingLabel2Request, opts ...operations.Option) (*operations.PatchShippingLabel2Response, error) {
+// PatchShippingLabel - Update a label
+func (s *Label) PatchShippingLabel(ctx context.Context, request operations.PatchShippingLabelRequest, opts ...operations.Option) (*operations.PatchShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Label) PatchShippingLabel2(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchShippingLabel2",
+		OperationID:      "patchShippingLabel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingLabel", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Label) PatchShippingLabel2(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchShippingLabel2Response{
+	res := &operations.PatchShippingLabelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Label) PatchShippingLabel2(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveShippingLabel2 - Remove a label
-func (s *Label) RemoveShippingLabel2(ctx context.Context, request operations.RemoveShippingLabel2Request, opts ...operations.Option) (*operations.RemoveShippingLabel2Response, error) {
+// RemoveShippingLabel - Remove a label
+func (s *Label) RemoveShippingLabel(ctx context.Context, request operations.RemoveShippingLabelRequest, opts ...operations.Option) (*operations.RemoveShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Label) RemoveShippingLabel2(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeShippingLabel2",
+		OperationID:      "removeShippingLabel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Label) RemoveShippingLabel2(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveShippingLabel2Response{
+	res := &operations.RemoveShippingLabelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Label) RemoveShippingLabel2(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateShippingLabel2 - Update a label
-func (s *Label) UpdateShippingLabel2(ctx context.Context, request operations.UpdateShippingLabel2Request, opts ...operations.Option) (*operations.UpdateShippingLabel2Response, error) {
+// UpdateShippingLabel - Update a label
+func (s *Label) UpdateShippingLabel(ctx context.Context, request operations.UpdateShippingLabelRequest, opts ...operations.Option) (*operations.UpdateShippingLabelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Label) UpdateShippingLabel2(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateShippingLabel2",
+		OperationID:      "updateShippingLabel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingLabel", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Label) UpdateShippingLabel2(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateShippingLabel2Response{
+	res := &operations.UpdateShippingLabelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

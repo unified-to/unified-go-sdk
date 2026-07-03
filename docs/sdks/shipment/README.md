@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateShippingShipment2](#createshippingshipment2) - Create a shipment
-* [GetShippingShipment2](#getshippingshipment2) - Retrieve a shipment
-* [ListShippingShipments2](#listshippingshipments2) - List all shipments
-* [PatchShippingShipment2](#patchshippingshipment2) - Update a shipment
-* [RemoveShippingShipment2](#removeshippingshipment2) - Remove a shipment
-* [UpdateShippingShipment2](#updateshippingshipment2) - Update a shipment
+* [CreateShippingShipment](#createshippingshipment) - Create a shipment
+* [GetShippingShipment](#getshippingshipment) - Retrieve a shipment
+* [ListShippingShipments](#listshippingshipments) - List all shipments
+* [PatchShippingShipment](#patchshippingshipment) - Update a shipment
+* [RemoveShippingShipment](#removeshippingshipment) - Remove a shipment
+* [UpdateShippingShipment](#updateshippingshipment) - Update a shipment
 
-## CreateShippingShipment2
+## CreateShippingShipment
 
 Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingShipment2" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="go" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.CreateShippingShipment2(ctx, operations.CreateShippingShipment2Request{
+    res, err := s.Shipment.CreateShippingShipment(ctx, operations.CreateShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateShippingShipment2Request](../../pkg/models/operations/createshippingshipment2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.CreateShippingShipmentRequest](../../pkg/models/operations/createshippingshipmentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.CreateShippingShipment2Response](../../pkg/models/operations/createshippingshipment2response.md), error**
+**[*operations.CreateShippingShipmentResponse](../../pkg/models/operations/createshippingshipmentresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetShippingShipment2
+## GetShippingShipment
 
 Retrieve a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getShippingShipment2" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="getShippingShipment" method="get" path="/shipping/{connection_id}/shipment/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.GetShippingShipment2(ctx, operations.GetShippingShipment2Request{
+    res, err := s.Shipment.GetShippingShipment(ctx, operations.GetShippingShipmentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetShippingShipment2Request](../../pkg/models/operations/getshippingshipment2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetShippingShipmentRequest](../../pkg/models/operations/getshippingshipmentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.GetShippingShipment2Response](../../pkg/models/operations/getshippingshipment2response.md), error**
+**[*operations.GetShippingShipmentResponse](../../pkg/models/operations/getshippingshipmentresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListShippingShipments2
+## ListShippingShipments
 
 List all shipments
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listShippingShipments2" method="get" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="go" operationID="listShippingShipments" method="get" path="/shipping/{connection_id}/shipment" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.ListShippingShipments2(ctx, operations.ListShippingShipments2Request{
+    res, err := s.Shipment.ListShippingShipments(ctx, operations.ListShippingShipmentsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListShippingShipments2Request](../../pkg/models/operations/listshippingshipments2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListShippingShipmentsRequest](../../pkg/models/operations/listshippingshipmentsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.ListShippingShipments2Response](../../pkg/models/operations/listshippingshipments2response.md), error**
+**[*operations.ListShippingShipmentsResponse](../../pkg/models/operations/listshippingshipmentsresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchShippingShipment2
+## PatchShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchShippingShipment2" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.PatchShippingShipment2(ctx, operations.PatchShippingShipment2Request{
+    res, err := s.Shipment.PatchShippingShipment(ctx, operations.PatchShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchShippingShipment2Request](../../pkg/models/operations/patchshippingshipment2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.PatchShippingShipmentRequest](../../pkg/models/operations/patchshippingshipmentrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.PatchShippingShipment2Response](../../pkg/models/operations/patchshippingshipment2response.md), error**
+**[*operations.PatchShippingShipmentResponse](../../pkg/models/operations/patchshippingshipmentresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveShippingShipment2
+## RemoveShippingShipment
 
 Remove a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeShippingShipment2" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeShippingShipment" method="delete" path="/shipping/{connection_id}/shipment/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.RemoveShippingShipment2(ctx, operations.RemoveShippingShipment2Request{
+    res, err := s.Shipment.RemoveShippingShipment(ctx, operations.RemoveShippingShipmentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveShippingShipment2Request](../../pkg/models/operations/removeshippingshipment2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.RemoveShippingShipmentRequest](../../pkg/models/operations/removeshippingshipmentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.RemoveShippingShipment2Response](../../pkg/models/operations/removeshippingshipment2response.md), error**
+**[*operations.RemoveShippingShipmentResponse](../../pkg/models/operations/removeshippingshipmentresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateShippingShipment2
+## UpdateShippingShipment
 
 Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateShippingShipment2" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Shipment.UpdateShippingShipment2(ctx, operations.UpdateShippingShipment2Request{
+    res, err := s.Shipment.UpdateShippingShipment(ctx, operations.UpdateShippingShipmentRequest{
         ShippingShipment: shared.ShippingShipment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateShippingShipment2Request](../../pkg/models/operations/updateshippingshipment2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.UpdateShippingShipmentRequest](../../pkg/models/operations/updateshippingshipmentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.UpdateShippingShipment2Response](../../pkg/models/operations/updateshippingshipment2response.md), error**
+**[*operations.UpdateShippingShipmentResponse](../../pkg/models/operations/updateshippingshipmentresponse.md), error**
 
 ### Errors
 

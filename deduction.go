@@ -30,8 +30,8 @@ func newDeduction(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateHrisDeduction2 - Create a deduction
-func (s *Deduction) CreateHrisDeduction2(ctx context.Context, request operations.CreateHrisDeduction2Request, opts ...operations.Option) (*operations.CreateHrisDeduction2Response, error) {
+// CreateHrisDeduction - Create a deduction
+func (s *Deduction) CreateHrisDeduction(ctx context.Context, request operations.CreateHrisDeductionRequest, opts ...operations.Option) (*operations.CreateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Deduction) CreateHrisDeduction2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisDeduction2",
+		OperationID:      "createHrisDeduction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Deduction) CreateHrisDeduction2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.CreateHrisDeduction2Response{
+	res := &operations.CreateHrisDeductionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Deduction) CreateHrisDeduction2(ctx context.Context, request operations
 
 }
 
-// GetHrisDeduction2 - Retrieve a deduction
-func (s *Deduction) GetHrisDeduction2(ctx context.Context, request operations.GetHrisDeduction2Request, opts ...operations.Option) (*operations.GetHrisDeduction2Response, error) {
+// GetHrisDeduction - Retrieve a deduction
+func (s *Deduction) GetHrisDeduction(ctx context.Context, request operations.GetHrisDeductionRequest, opts ...operations.Option) (*operations.GetHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Deduction) GetHrisDeduction2(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisDeduction2",
+		OperationID:      "getHrisDeduction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Deduction) GetHrisDeduction2(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetHrisDeduction2Response{
+	res := &operations.GetHrisDeductionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Deduction) GetHrisDeduction2(ctx context.Context, request operations.Ge
 
 }
 
-// ListHrisDeductions2 - List all deductions
-func (s *Deduction) ListHrisDeductions2(ctx context.Context, request operations.ListHrisDeductions2Request, opts ...operations.Option) (*operations.ListHrisDeductions2Response, error) {
+// ListHrisDeductions - List all deductions
+func (s *Deduction) ListHrisDeductions(ctx context.Context, request operations.ListHrisDeductionsRequest, opts ...operations.Option) (*operations.ListHrisDeductionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Deduction) ListHrisDeductions2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisDeductions2",
+		OperationID:      "listHrisDeductions",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Deduction) ListHrisDeductions2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListHrisDeductions2Response{
+	res := &operations.ListHrisDeductionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Deduction) ListHrisDeductions2(ctx context.Context, request operations.
 
 }
 
-// PatchHrisDeduction2 - Update a deduction
-func (s *Deduction) PatchHrisDeduction2(ctx context.Context, request operations.PatchHrisDeduction2Request, opts ...operations.Option) (*operations.PatchHrisDeduction2Response, error) {
+// PatchHrisDeduction - Update a deduction
+func (s *Deduction) PatchHrisDeduction(ctx context.Context, request operations.PatchHrisDeductionRequest, opts ...operations.Option) (*operations.PatchHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Deduction) PatchHrisDeduction2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisDeduction2",
+		OperationID:      "patchHrisDeduction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Deduction) PatchHrisDeduction2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.PatchHrisDeduction2Response{
+	res := &operations.PatchHrisDeductionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Deduction) PatchHrisDeduction2(ctx context.Context, request operations.
 
 }
 
-// RemoveHrisDeduction2 - Remove a deduction
-func (s *Deduction) RemoveHrisDeduction2(ctx context.Context, request operations.RemoveHrisDeduction2Request, opts ...operations.Option) (*operations.RemoveHrisDeduction2Response, error) {
+// RemoveHrisDeduction - Remove a deduction
+func (s *Deduction) RemoveHrisDeduction(ctx context.Context, request operations.RemoveHrisDeductionRequest, opts ...operations.Option) (*operations.RemoveHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Deduction) RemoveHrisDeduction2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisDeduction2",
+		OperationID:      "removeHrisDeduction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Deduction) RemoveHrisDeduction2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.RemoveHrisDeduction2Response{
+	res := &operations.RemoveHrisDeductionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Deduction) RemoveHrisDeduction2(ctx context.Context, request operations
 
 }
 
-// UpdateHrisDeduction2 - Update a deduction
-func (s *Deduction) UpdateHrisDeduction2(ctx context.Context, request operations.UpdateHrisDeduction2Request, opts ...operations.Option) (*operations.UpdateHrisDeduction2Response, error) {
+// UpdateHrisDeduction - Update a deduction
+func (s *Deduction) UpdateHrisDeduction(ctx context.Context, request operations.UpdateHrisDeductionRequest, opts ...operations.Option) (*operations.UpdateHrisDeductionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Deduction) UpdateHrisDeduction2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisDeduction2",
+		OperationID:      "updateHrisDeduction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDeduction", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Deduction) UpdateHrisDeduction2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.UpdateHrisDeduction2Response{
+	res := &operations.UpdateHrisDeductionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

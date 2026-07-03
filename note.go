@@ -30,8 +30,8 @@ func newNote(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateTicketingNote2 - Create a note
-func (s *Note) CreateTicketingNote2(ctx context.Context, request operations.CreateTicketingNote2Request, opts ...operations.Option) (*operations.CreateTicketingNote2Response, error) {
+// CreateTicketingNote - Create a note
+func (s *Note) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest, opts ...operations.Option) (*operations.CreateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Note) CreateTicketingNote2(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingNote2",
+		OperationID:      "createTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Note) CreateTicketingNote2(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateTicketingNote2Response{
+	res := &operations.CreateTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Note) CreateTicketingNote2(ctx context.Context, request operations.Crea
 
 }
 
-// GetTicketingNote2 - Retrieve a note
-func (s *Note) GetTicketingNote2(ctx context.Context, request operations.GetTicketingNote2Request, opts ...operations.Option) (*operations.GetTicketingNote2Response, error) {
+// GetTicketingNote - Retrieve a note
+func (s *Note) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest, opts ...operations.Option) (*operations.GetTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Note) GetTicketingNote2(ctx context.Context, request operations.GetTick
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingNote2",
+		OperationID:      "getTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Note) GetTicketingNote2(ctx context.Context, request operations.GetTick
 		}
 	}
 
-	res := &operations.GetTicketingNote2Response{
+	res := &operations.GetTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Note) GetTicketingNote2(ctx context.Context, request operations.GetTick
 
 }
 
-// ListTicketingNotes2 - List all notes
-func (s *Note) ListTicketingNotes2(ctx context.Context, request operations.ListTicketingNotes2Request, opts ...operations.Option) (*operations.ListTicketingNotes2Response, error) {
+// ListTicketingNotes - List all notes
+func (s *Note) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest, opts ...operations.Option) (*operations.ListTicketingNotesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Note) ListTicketingNotes2(ctx context.Context, request operations.ListT
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingNotes2",
+		OperationID:      "listTicketingNotes",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Note) ListTicketingNotes2(ctx context.Context, request operations.ListT
 		}
 	}
 
-	res := &operations.ListTicketingNotes2Response{
+	res := &operations.ListTicketingNotesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Note) ListTicketingNotes2(ctx context.Context, request operations.ListT
 
 }
 
-// PatchTicketingNote2 - Update a note
-func (s *Note) PatchTicketingNote2(ctx context.Context, request operations.PatchTicketingNote2Request, opts ...operations.Option) (*operations.PatchTicketingNote2Response, error) {
+// PatchTicketingNote - Update a note
+func (s *Note) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest, opts ...operations.Option) (*operations.PatchTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Note) PatchTicketingNote2(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingNote2",
+		OperationID:      "patchTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Note) PatchTicketingNote2(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchTicketingNote2Response{
+	res := &operations.PatchTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Note) PatchTicketingNote2(ctx context.Context, request operations.Patch
 
 }
 
-// RemoveTicketingNote2 - Remove a note
-func (s *Note) RemoveTicketingNote2(ctx context.Context, request operations.RemoveTicketingNote2Request, opts ...operations.Option) (*operations.RemoveTicketingNote2Response, error) {
+// RemoveTicketingNote - Remove a note
+func (s *Note) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest, opts ...operations.Option) (*operations.RemoveTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Note) RemoveTicketingNote2(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingNote2",
+		OperationID:      "removeTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Note) RemoveTicketingNote2(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveTicketingNote2Response{
+	res := &operations.RemoveTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Note) RemoveTicketingNote2(ctx context.Context, request operations.Remo
 
 }
 
-// UpdateTicketingNote2 - Update a note
-func (s *Note) UpdateTicketingNote2(ctx context.Context, request operations.UpdateTicketingNote2Request, opts ...operations.Option) (*operations.UpdateTicketingNote2Response, error) {
+// UpdateTicketingNote - Update a note
+func (s *Note) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest, opts ...operations.Option) (*operations.UpdateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Note) UpdateTicketingNote2(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingNote2",
+		OperationID:      "updateTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Note) UpdateTicketingNote2(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateTicketingNote2Response{
+	res := &operations.UpdateTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

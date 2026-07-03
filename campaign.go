@@ -30,8 +30,8 @@ func newCampaign(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateAdsCampaign2 - Create a campaign
-func (s *Campaign) CreateAdsCampaign2(ctx context.Context, request operations.CreateAdsCampaign2Request, opts ...operations.Option) (*operations.CreateAdsCampaign2Response, error) {
+// CreateAdsCampaign - Create a campaign
+func (s *Campaign) CreateAdsCampaign(ctx context.Context, request operations.CreateAdsCampaignRequest, opts ...operations.Option) (*operations.CreateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Campaign) CreateAdsCampaign2(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsCampaign2",
+		OperationID:      "createAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Campaign) CreateAdsCampaign2(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateAdsCampaign2Response{
+	res := &operations.CreateAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Campaign) CreateAdsCampaign2(ctx context.Context, request operations.Cr
 
 }
 
-// CreateMartechCampaign2 - Create a campaign
-func (s *Campaign) CreateMartechCampaign2(ctx context.Context, request operations.CreateMartechCampaign2Request, opts ...operations.Option) (*operations.CreateMartechCampaign2Response, error) {
+// CreateMartechCampaign - Create a campaign
+func (s *Campaign) CreateMartechCampaign(ctx context.Context, request operations.CreateMartechCampaignRequest, opts ...operations.Option) (*operations.CreateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Campaign) CreateMartechCampaign2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createMartechCampaign2",
+		OperationID:      "createMartechCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingCampaign", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Campaign) CreateMartechCampaign2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateMartechCampaign2Response{
+	res := &operations.CreateMartechCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Campaign) CreateMartechCampaign2(ctx context.Context, request operation
 
 }
 
-// GetAdsCampaign2 - Retrieve a campaign
-func (s *Campaign) GetAdsCampaign2(ctx context.Context, request operations.GetAdsCampaign2Request, opts ...operations.Option) (*operations.GetAdsCampaign2Response, error) {
+// GetAdsCampaign - Retrieve a campaign
+func (s *Campaign) GetAdsCampaign(ctx context.Context, request operations.GetAdsCampaignRequest, opts ...operations.Option) (*operations.GetAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Campaign) GetAdsCampaign2(ctx context.Context, request operations.GetAd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsCampaign2",
+		OperationID:      "getAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Campaign) GetAdsCampaign2(ctx context.Context, request operations.GetAd
 		}
 	}
 
-	res := &operations.GetAdsCampaign2Response{
+	res := &operations.GetAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Campaign) GetAdsCampaign2(ctx context.Context, request operations.GetAd
 
 }
 
-// GetMartechCampaign2 - Retrieve a campaign
-func (s *Campaign) GetMartechCampaign2(ctx context.Context, request operations.GetMartechCampaign2Request, opts ...operations.Option) (*operations.GetMartechCampaign2Response, error) {
+// GetMartechCampaign - Retrieve a campaign
+func (s *Campaign) GetMartechCampaign(ctx context.Context, request operations.GetMartechCampaignRequest, opts ...operations.Option) (*operations.GetMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Campaign) GetMartechCampaign2(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMartechCampaign2",
+		OperationID:      "getMartechCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Campaign) GetMartechCampaign2(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetMartechCampaign2Response{
+	res := &operations.GetMartechCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Campaign) GetMartechCampaign2(ctx context.Context, request operations.G
 
 }
 
-// ListAdsCampaigns2 - List all campaigns
-func (s *Campaign) ListAdsCampaigns2(ctx context.Context, request operations.ListAdsCampaigns2Request, opts ...operations.Option) (*operations.ListAdsCampaigns2Response, error) {
+// ListAdsCampaigns - List all campaigns
+func (s *Campaign) ListAdsCampaigns(ctx context.Context, request operations.ListAdsCampaignsRequest, opts ...operations.Option) (*operations.ListAdsCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Campaign) ListAdsCampaigns2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsCampaigns2",
+		OperationID:      "listAdsCampaigns",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Campaign) ListAdsCampaigns2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListAdsCampaigns2Response{
+	res := &operations.ListAdsCampaignsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Campaign) ListAdsCampaigns2(ctx context.Context, request operations.Lis
 
 }
 
-// ListMartechCampaigns2 - List all campaigns
-func (s *Campaign) ListMartechCampaigns2(ctx context.Context, request operations.ListMartechCampaigns2Request, opts ...operations.Option) (*operations.ListMartechCampaigns2Response, error) {
+// ListMartechCampaigns - List all campaigns
+func (s *Campaign) ListMartechCampaigns(ctx context.Context, request operations.ListMartechCampaignsRequest, opts ...operations.Option) (*operations.ListMartechCampaignsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Campaign) ListMartechCampaigns2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMartechCampaigns2",
+		OperationID:      "listMartechCampaigns",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Campaign) ListMartechCampaigns2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListMartechCampaigns2Response{
+	res := &operations.ListMartechCampaignsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Campaign) ListMartechCampaigns2(ctx context.Context, request operations
 
 }
 
-// PatchAdsCampaign2 - Update a campaign
-func (s *Campaign) PatchAdsCampaign2(ctx context.Context, request operations.PatchAdsCampaign2Request, opts ...operations.Option) (*operations.PatchAdsCampaign2Response, error) {
+// PatchAdsCampaign - Update a campaign
+func (s *Campaign) PatchAdsCampaign(ctx context.Context, request operations.PatchAdsCampaignRequest, opts ...operations.Option) (*operations.PatchAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Campaign) PatchAdsCampaign2(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsCampaign2",
+		OperationID:      "patchAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -1448,7 +1448,7 @@ func (s *Campaign) PatchAdsCampaign2(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchAdsCampaign2Response{
+	res := &operations.PatchAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Campaign) PatchAdsCampaign2(ctx context.Context, request operations.Pat
 
 }
 
-// PatchMartechCampaign2 - Update a campaign
-func (s *Campaign) PatchMartechCampaign2(ctx context.Context, request operations.PatchMartechCampaign2Request, opts ...operations.Option) (*operations.PatchMartechCampaign2Response, error) {
+// PatchMartechCampaign - Update a campaign
+func (s *Campaign) PatchMartechCampaign(ctx context.Context, request operations.PatchMartechCampaignRequest, opts ...operations.Option) (*operations.PatchMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Campaign) PatchMartechCampaign2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchMartechCampaign2",
+		OperationID:      "patchMartechCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingCampaign", "json", `request:"mediaType=application/json"`)
@@ -1662,7 +1662,7 @@ func (s *Campaign) PatchMartechCampaign2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchMartechCampaign2Response{
+	res := &operations.PatchMartechCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Campaign) PatchMartechCampaign2(ctx context.Context, request operations
 
 }
 
-// RemoveAdsCampaign2 - Remove a campaign
-func (s *Campaign) RemoveAdsCampaign2(ctx context.Context, request operations.RemoveAdsCampaign2Request, opts ...operations.Option) (*operations.RemoveAdsCampaign2Response, error) {
+// RemoveAdsCampaign - Remove a campaign
+func (s *Campaign) RemoveAdsCampaign(ctx context.Context, request operations.RemoveAdsCampaignRequest, opts ...operations.Option) (*operations.RemoveAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Campaign) RemoveAdsCampaign2(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsCampaign2",
+		OperationID:      "removeAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1865,7 +1865,7 @@ func (s *Campaign) RemoveAdsCampaign2(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveAdsCampaign2Response{
+	res := &operations.RemoveAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1896,8 +1896,8 @@ func (s *Campaign) RemoveAdsCampaign2(ctx context.Context, request operations.Re
 
 }
 
-// RemoveMartechCampaign2 - Remove a campaign
-func (s *Campaign) RemoveMartechCampaign2(ctx context.Context, request operations.RemoveMartechCampaign2Request, opts ...operations.Option) (*operations.RemoveMartechCampaign2Response, error) {
+// RemoveMartechCampaign - Remove a campaign
+func (s *Campaign) RemoveMartechCampaign(ctx context.Context, request operations.RemoveMartechCampaignRequest, opts ...operations.Option) (*operations.RemoveMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1926,7 +1926,7 @@ func (s *Campaign) RemoveMartechCampaign2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeMartechCampaign2",
+		OperationID:      "removeMartechCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2047,7 +2047,7 @@ func (s *Campaign) RemoveMartechCampaign2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveMartechCampaign2Response{
+	res := &operations.RemoveMartechCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2078,8 +2078,8 @@ func (s *Campaign) RemoveMartechCampaign2(ctx context.Context, request operation
 
 }
 
-// UpdateAdsCampaign2 - Update a campaign
-func (s *Campaign) UpdateAdsCampaign2(ctx context.Context, request operations.UpdateAdsCampaign2Request, opts ...operations.Option) (*operations.UpdateAdsCampaign2Response, error) {
+// UpdateAdsCampaign - Update a campaign
+func (s *Campaign) UpdateAdsCampaign(ctx context.Context, request operations.UpdateAdsCampaignRequest, opts ...operations.Option) (*operations.UpdateAdsCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,7 +2108,7 @@ func (s *Campaign) UpdateAdsCampaign2(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsCampaign2",
+		OperationID:      "updateAdsCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsCampaign", "json", `request:"mediaType=application/json"`)
@@ -2240,7 +2240,7 @@ func (s *Campaign) UpdateAdsCampaign2(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateAdsCampaign2Response{
+	res := &operations.UpdateAdsCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2292,8 +2292,8 @@ func (s *Campaign) UpdateAdsCampaign2(ctx context.Context, request operations.Up
 
 }
 
-// UpdateMartechCampaign2 - Update a campaign
-func (s *Campaign) UpdateMartechCampaign2(ctx context.Context, request operations.UpdateMartechCampaign2Request, opts ...operations.Option) (*operations.UpdateMartechCampaign2Response, error) {
+// UpdateMartechCampaign - Update a campaign
+func (s *Campaign) UpdateMartechCampaign(ctx context.Context, request operations.UpdateMartechCampaignRequest, opts ...operations.Option) (*operations.UpdateMartechCampaignResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2322,7 +2322,7 @@ func (s *Campaign) UpdateMartechCampaign2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateMartechCampaign2",
+		OperationID:      "updateMartechCampaign",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingCampaign", "json", `request:"mediaType=application/json"`)
@@ -2454,7 +2454,7 @@ func (s *Campaign) UpdateMartechCampaign2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateMartechCampaign2Response{
+	res := &operations.UpdateMartechCampaignResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

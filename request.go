@@ -30,8 +30,8 @@ func newRequest(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateVerificationRequest2 - Create a request
-func (s *Request) CreateVerificationRequest2(ctx context.Context, request operations.CreateVerificationRequest2Request, opts ...operations.Option) (*operations.CreateVerificationRequest2Response, error) {
+// CreateVerificationRequest - Create a request
+func (s *Request) CreateVerificationRequest(ctx context.Context, request operations.CreateVerificationRequestRequest, opts ...operations.Option) (*operations.CreateVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Request) CreateVerificationRequest2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createVerificationRequest2",
+		OperationID:      "createVerificationRequest",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "VerificationRequest", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Request) CreateVerificationRequest2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateVerificationRequest2Response{
+	res := &operations.CreateVerificationRequestResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Request) CreateVerificationRequest2(ctx context.Context, request operat
 
 }
 
-// GetVerificationRequest2 - Retrieve a request
-func (s *Request) GetVerificationRequest2(ctx context.Context, request operations.GetVerificationRequest2Request, opts ...operations.Option) (*operations.GetVerificationRequest2Response, error) {
+// GetVerificationRequest - Retrieve a request
+func (s *Request) GetVerificationRequest(ctx context.Context, request operations.GetVerificationRequestRequest, opts ...operations.Option) (*operations.GetVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Request) GetVerificationRequest2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getVerificationRequest2",
+		OperationID:      "getVerificationRequest",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Request) GetVerificationRequest2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetVerificationRequest2Response{
+	res := &operations.GetVerificationRequestResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Request) GetVerificationRequest2(ctx context.Context, request operation
 
 }
 
-// ListVerificationRequests2 - List all requests
-func (s *Request) ListVerificationRequests2(ctx context.Context, request operations.ListVerificationRequests2Request, opts ...operations.Option) (*operations.ListVerificationRequests2Response, error) {
+// ListVerificationRequests - List all requests
+func (s *Request) ListVerificationRequests(ctx context.Context, request operations.ListVerificationRequestsRequest, opts ...operations.Option) (*operations.ListVerificationRequestsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Request) ListVerificationRequests2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listVerificationRequests2",
+		OperationID:      "listVerificationRequests",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Request) ListVerificationRequests2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListVerificationRequests2Response{
+	res := &operations.ListVerificationRequestsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Request) ListVerificationRequests2(ctx context.Context, request operati
 
 }
 
-// PatchVerificationRequest2 - Update a request
-func (s *Request) PatchVerificationRequest2(ctx context.Context, request operations.PatchVerificationRequest2Request, opts ...operations.Option) (*operations.PatchVerificationRequest2Response, error) {
+// PatchVerificationRequest - Update a request
+func (s *Request) PatchVerificationRequest(ctx context.Context, request operations.PatchVerificationRequestRequest, opts ...operations.Option) (*operations.PatchVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Request) PatchVerificationRequest2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchVerificationRequest2",
+		OperationID:      "patchVerificationRequest",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "VerificationRequest", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Request) PatchVerificationRequest2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchVerificationRequest2Response{
+	res := &operations.PatchVerificationRequestResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Request) PatchVerificationRequest2(ctx context.Context, request operati
 
 }
 
-// RemoveVerificationRequest2 - Remove a request
-func (s *Request) RemoveVerificationRequest2(ctx context.Context, request operations.RemoveVerificationRequest2Request, opts ...operations.Option) (*operations.RemoveVerificationRequest2Response, error) {
+// RemoveVerificationRequest - Remove a request
+func (s *Request) RemoveVerificationRequest(ctx context.Context, request operations.RemoveVerificationRequestRequest, opts ...operations.Option) (*operations.RemoveVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Request) RemoveVerificationRequest2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeVerificationRequest2",
+		OperationID:      "removeVerificationRequest",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Request) RemoveVerificationRequest2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveVerificationRequest2Response{
+	res := &operations.RemoveVerificationRequestResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Request) RemoveVerificationRequest2(ctx context.Context, request operat
 
 }
 
-// UpdateVerificationRequest2 - Update a request
-func (s *Request) UpdateVerificationRequest2(ctx context.Context, request operations.UpdateVerificationRequest2Request, opts ...operations.Option) (*operations.UpdateVerificationRequest2Response, error) {
+// UpdateVerificationRequest - Update a request
+func (s *Request) UpdateVerificationRequest(ctx context.Context, request operations.UpdateVerificationRequestRequest, opts ...operations.Option) (*operations.UpdateVerificationRequestResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Request) UpdateVerificationRequest2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateVerificationRequest2",
+		OperationID:      "updateVerificationRequest",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "VerificationRequest", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Request) UpdateVerificationRequest2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateVerificationRequest2Response{
+	res := &operations.UpdateVerificationRequestResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

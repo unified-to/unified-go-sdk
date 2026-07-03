@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [ListEnrichPeople2](#listenrichpeople2) - Retrieve enrichment information for a person
+* [ListEnrichPeople](#listenrichpeople) - Retrieve enrichment information for a person
 
-## ListEnrichPeople2
+## ListEnrichPeople
 
 Retrieve enrichment information for a person
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listEnrichPeople2" method="get" path="/enrich/{connection_id}/person" -->
+<!-- UsageSnippet language="go" operationID="listEnrichPeople" method="get" path="/enrich/{connection_id}/person" -->
 ```go
 package main
 
@@ -30,7 +30,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Person.ListEnrichPeople2(ctx, operations.ListEnrichPeople2Request{
+    res, err := s.Person.ListEnrichPeople(ctx, operations.ListEnrichPeopleRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -44,15 +44,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListEnrichPeople2Request](../../pkg/models/operations/listenrichpeople2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListEnrichPeopleRequest](../../pkg/models/operations/listenrichpeoplerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListEnrichPeople2Response](../../pkg/models/operations/listenrichpeople2response.md), error**
+**[*operations.ListEnrichPeopleResponse](../../pkg/models/operations/listenrichpeopleresponse.md), error**
 
 ### Errors
 

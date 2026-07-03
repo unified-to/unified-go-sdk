@@ -30,8 +30,8 @@ func newMetadata(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateMetadataMetadata2 - Create a metadata
-func (s *Metadata) CreateMetadataMetadata2(ctx context.Context, request operations.CreateMetadataMetadata2Request, opts ...operations.Option) (*operations.CreateMetadataMetadata2Response, error) {
+// CreateMetadataMetadata - Create a metadata
+func (s *Metadata) CreateMetadataMetadata(ctx context.Context, request operations.CreateMetadataMetadataRequest, opts ...operations.Option) (*operations.CreateMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Metadata) CreateMetadataMetadata2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createMetadataMetadata2",
+		OperationID:      "createMetadataMetadata",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Metadata) CreateMetadataMetadata2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateMetadataMetadata2Response{
+	res := &operations.CreateMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Metadata) CreateMetadataMetadata2(ctx context.Context, request operatio
 
 }
 
-// GetMetadataMetadata2 - Retrieve a metadata
-func (s *Metadata) GetMetadataMetadata2(ctx context.Context, request operations.GetMetadataMetadata2Request, opts ...operations.Option) (*operations.GetMetadataMetadata2Response, error) {
+// GetMetadataMetadata - Retrieve a metadata
+func (s *Metadata) GetMetadataMetadata(ctx context.Context, request operations.GetMetadataMetadataRequest, opts ...operations.Option) (*operations.GetMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Metadata) GetMetadataMetadata2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMetadataMetadata2",
+		OperationID:      "getMetadataMetadata",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Metadata) GetMetadataMetadata2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetMetadataMetadata2Response{
+	res := &operations.GetMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Metadata) GetMetadataMetadata2(ctx context.Context, request operations.
 
 }
 
-// ListMetadataMetadatas2 - List all metadatas
-func (s *Metadata) ListMetadataMetadatas2(ctx context.Context, request operations.ListMetadataMetadatas2Request, opts ...operations.Option) (*operations.ListMetadataMetadatas2Response, error) {
+// ListMetadataMetadatas - List all metadatas
+func (s *Metadata) ListMetadataMetadatas(ctx context.Context, request operations.ListMetadataMetadatasRequest, opts ...operations.Option) (*operations.ListMetadataMetadatasResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Metadata) ListMetadataMetadatas2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMetadataMetadatas2",
+		OperationID:      "listMetadataMetadatas",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Metadata) ListMetadataMetadatas2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListMetadataMetadatas2Response{
+	res := &operations.ListMetadataMetadatasResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Metadata) ListMetadataMetadatas2(ctx context.Context, request operation
 
 }
 
-// PatchMetadataMetadata2 - Update a metadata
-func (s *Metadata) PatchMetadataMetadata2(ctx context.Context, request operations.PatchMetadataMetadata2Request, opts ...operations.Option) (*operations.PatchMetadataMetadata2Response, error) {
+// PatchMetadataMetadata - Update a metadata
+func (s *Metadata) PatchMetadataMetadata(ctx context.Context, request operations.PatchMetadataMetadataRequest, opts ...operations.Option) (*operations.PatchMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Metadata) PatchMetadataMetadata2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchMetadataMetadata2",
+		OperationID:      "patchMetadataMetadata",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Metadata) PatchMetadataMetadata2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchMetadataMetadata2Response{
+	res := &operations.PatchMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Metadata) PatchMetadataMetadata2(ctx context.Context, request operation
 
 }
 
-// RemoveMetadataMetadata2 - Remove a metadata
-func (s *Metadata) RemoveMetadataMetadata2(ctx context.Context, request operations.RemoveMetadataMetadata2Request, opts ...operations.Option) (*operations.RemoveMetadataMetadata2Response, error) {
+// RemoveMetadataMetadata - Remove a metadata
+func (s *Metadata) RemoveMetadataMetadata(ctx context.Context, request operations.RemoveMetadataMetadataRequest, opts ...operations.Option) (*operations.RemoveMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Metadata) RemoveMetadataMetadata2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeMetadataMetadata2",
+		OperationID:      "removeMetadataMetadata",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Metadata) RemoveMetadataMetadata2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveMetadataMetadata2Response{
+	res := &operations.RemoveMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Metadata) RemoveMetadataMetadata2(ctx context.Context, request operatio
 
 }
 
-// UpdateMetadataMetadata2 - Update a metadata
-func (s *Metadata) UpdateMetadataMetadata2(ctx context.Context, request operations.UpdateMetadataMetadata2Request, opts ...operations.Option) (*operations.UpdateMetadataMetadata2Response, error) {
+// UpdateMetadataMetadata - Update a metadata
+func (s *Metadata) UpdateMetadataMetadata(ctx context.Context, request operations.UpdateMetadataMetadataRequest, opts ...operations.Option) (*operations.UpdateMetadataMetadataResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Metadata) UpdateMetadataMetadata2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateMetadataMetadata2",
+		OperationID:      "updateMetadataMetadata",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MetadataMetadata", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Metadata) UpdateMetadataMetadata2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateMetadataMetadata2Response{
+	res := &operations.UpdateMetadataMetadataResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newTicketing(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateTicketingCategory2 - Create a category
-func (s *Ticketing) CreateTicketingCategory2(ctx context.Context, request operations.CreateTicketingCategory2Request, opts ...operations.Option) (*operations.CreateTicketingCategory2Response, error) {
+// CreateTicketingCategory - Create a category
+func (s *Ticketing) CreateTicketingCategory(ctx context.Context, request operations.CreateTicketingCategoryRequest, opts ...operations.Option) (*operations.CreateTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Ticketing) CreateTicketingCategory2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingCategory2",
+		OperationID:      "createTicketingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Ticketing) CreateTicketingCategory2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateTicketingCategory2Response{
+	res := &operations.CreateTicketingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Ticketing) CreateTicketingCategory2(ctx context.Context, request operat
 
 }
 
-// CreateTicketingCustomer2 - Create a customer
-func (s *Ticketing) CreateTicketingCustomer2(ctx context.Context, request operations.CreateTicketingCustomer2Request, opts ...operations.Option) (*operations.CreateTicketingCustomer2Response, error) {
+// CreateTicketingCustomer - Create a customer
+func (s *Ticketing) CreateTicketingCustomer(ctx context.Context, request operations.CreateTicketingCustomerRequest, opts ...operations.Option) (*operations.CreateTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Ticketing) CreateTicketingCustomer2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingCustomer2",
+		OperationID:      "createTicketingCustomer",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Ticketing) CreateTicketingCustomer2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreateTicketingCustomer2Response{
+	res := &operations.CreateTicketingCustomerResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Ticketing) CreateTicketingCustomer2(ctx context.Context, request operat
 
 }
 
-// CreateTicketingNote2 - Create a note
-func (s *Ticketing) CreateTicketingNote2(ctx context.Context, request operations.CreateTicketingNote2Request, opts ...operations.Option) (*operations.CreateTicketingNote2Response, error) {
+// CreateTicketingNote - Create a note
+func (s *Ticketing) CreateTicketingNote(ctx context.Context, request operations.CreateTicketingNoteRequest, opts ...operations.Option) (*operations.CreateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Ticketing) CreateTicketingNote2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingNote2",
+		OperationID:      "createTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Ticketing) CreateTicketingNote2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.CreateTicketingNote2Response{
+	res := &operations.CreateTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Ticketing) CreateTicketingNote2(ctx context.Context, request operations
 
 }
 
-// CreateTicketingTicket2 - Create a ticket
-func (s *Ticketing) CreateTicketingTicket2(ctx context.Context, request operations.CreateTicketingTicket2Request, opts ...operations.Option) (*operations.CreateTicketingTicket2Response, error) {
+// CreateTicketingTicket - Create a ticket
+func (s *Ticketing) CreateTicketingTicket(ctx context.Context, request operations.CreateTicketingTicketRequest, opts ...operations.Option) (*operations.CreateTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Ticketing) CreateTicketingTicket2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createTicketingTicket2",
+		OperationID:      "createTicketingTicket",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Ticketing) CreateTicketingTicket2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateTicketingTicket2Response{
+	res := &operations.CreateTicketingTicketResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Ticketing) CreateTicketingTicket2(ctx context.Context, request operatio
 
 }
 
-// GetTicketingCategory2 - Retrieve a category
-func (s *Ticketing) GetTicketingCategory2(ctx context.Context, request operations.GetTicketingCategory2Request, opts ...operations.Option) (*operations.GetTicketingCategory2Response, error) {
+// GetTicketingCategory - Retrieve a category
+func (s *Ticketing) GetTicketingCategory(ctx context.Context, request operations.GetTicketingCategoryRequest, opts ...operations.Option) (*operations.GetTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Ticketing) GetTicketingCategory2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingCategory2",
+		OperationID:      "getTicketingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1041,7 +1041,7 @@ func (s *Ticketing) GetTicketingCategory2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetTicketingCategory2Response{
+	res := &operations.GetTicketingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1093,8 +1093,8 @@ func (s *Ticketing) GetTicketingCategory2(ctx context.Context, request operation
 
 }
 
-// GetTicketingCustomer2 - Retrieve a customer
-func (s *Ticketing) GetTicketingCustomer2(ctx context.Context, request operations.GetTicketingCustomer2Request, opts ...operations.Option) (*operations.GetTicketingCustomer2Response, error) {
+// GetTicketingCustomer - Retrieve a customer
+func (s *Ticketing) GetTicketingCustomer(ctx context.Context, request operations.GetTicketingCustomerRequest, opts ...operations.Option) (*operations.GetTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1123,7 +1123,7 @@ func (s *Ticketing) GetTicketingCustomer2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingCustomer2",
+		OperationID:      "getTicketingCustomer",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1248,7 +1248,7 @@ func (s *Ticketing) GetTicketingCustomer2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetTicketingCustomer2Response{
+	res := &operations.GetTicketingCustomerResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1300,8 +1300,8 @@ func (s *Ticketing) GetTicketingCustomer2(ctx context.Context, request operation
 
 }
 
-// GetTicketingNote2 - Retrieve a note
-func (s *Ticketing) GetTicketingNote2(ctx context.Context, request operations.GetTicketingNote2Request, opts ...operations.Option) (*operations.GetTicketingNote2Response, error) {
+// GetTicketingNote - Retrieve a note
+func (s *Ticketing) GetTicketingNote(ctx context.Context, request operations.GetTicketingNoteRequest, opts ...operations.Option) (*operations.GetTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1330,7 +1330,7 @@ func (s *Ticketing) GetTicketingNote2(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingNote2",
+		OperationID:      "getTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1455,7 +1455,7 @@ func (s *Ticketing) GetTicketingNote2(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetTicketingNote2Response{
+	res := &operations.GetTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1507,8 +1507,8 @@ func (s *Ticketing) GetTicketingNote2(ctx context.Context, request operations.Ge
 
 }
 
-// GetTicketingTicket2 - Retrieve a ticket
-func (s *Ticketing) GetTicketingTicket2(ctx context.Context, request operations.GetTicketingTicket2Request, opts ...operations.Option) (*operations.GetTicketingTicket2Response, error) {
+// GetTicketingTicket - Retrieve a ticket
+func (s *Ticketing) GetTicketingTicket(ctx context.Context, request operations.GetTicketingTicketRequest, opts ...operations.Option) (*operations.GetTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1537,7 +1537,7 @@ func (s *Ticketing) GetTicketingTicket2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getTicketingTicket2",
+		OperationID:      "getTicketingTicket",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1662,7 +1662,7 @@ func (s *Ticketing) GetTicketingTicket2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetTicketingTicket2Response{
+	res := &operations.GetTicketingTicketResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Ticketing) GetTicketingTicket2(ctx context.Context, request operations.
 
 }
 
-// ListTicketingCategories2 - List all categories
-func (s *Ticketing) ListTicketingCategories2(ctx context.Context, request operations.ListTicketingCategories2Request, opts ...operations.Option) (*operations.ListTicketingCategories2Response, error) {
+// ListTicketingCategories - List all categories
+func (s *Ticketing) ListTicketingCategories(ctx context.Context, request operations.ListTicketingCategoriesRequest, opts ...operations.Option) (*operations.ListTicketingCategoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Ticketing) ListTicketingCategories2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingCategories2",
+		OperationID:      "listTicketingCategories",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1869,7 +1869,7 @@ func (s *Ticketing) ListTicketingCategories2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListTicketingCategories2Response{
+	res := &operations.ListTicketingCategoriesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1921,8 +1921,8 @@ func (s *Ticketing) ListTicketingCategories2(ctx context.Context, request operat
 
 }
 
-// ListTicketingCustomers2 - List all customers
-func (s *Ticketing) ListTicketingCustomers2(ctx context.Context, request operations.ListTicketingCustomers2Request, opts ...operations.Option) (*operations.ListTicketingCustomers2Response, error) {
+// ListTicketingCustomers - List all customers
+func (s *Ticketing) ListTicketingCustomers(ctx context.Context, request operations.ListTicketingCustomersRequest, opts ...operations.Option) (*operations.ListTicketingCustomersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1951,7 +1951,7 @@ func (s *Ticketing) ListTicketingCustomers2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingCustomers2",
+		OperationID:      "listTicketingCustomers",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2076,7 +2076,7 @@ func (s *Ticketing) ListTicketingCustomers2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListTicketingCustomers2Response{
+	res := &operations.ListTicketingCustomersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2128,8 +2128,8 @@ func (s *Ticketing) ListTicketingCustomers2(ctx context.Context, request operati
 
 }
 
-// ListTicketingNotes2 - List all notes
-func (s *Ticketing) ListTicketingNotes2(ctx context.Context, request operations.ListTicketingNotes2Request, opts ...operations.Option) (*operations.ListTicketingNotes2Response, error) {
+// ListTicketingNotes - List all notes
+func (s *Ticketing) ListTicketingNotes(ctx context.Context, request operations.ListTicketingNotesRequest, opts ...operations.Option) (*operations.ListTicketingNotesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2158,7 +2158,7 @@ func (s *Ticketing) ListTicketingNotes2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingNotes2",
+		OperationID:      "listTicketingNotes",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2283,7 +2283,7 @@ func (s *Ticketing) ListTicketingNotes2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListTicketingNotes2Response{
+	res := &operations.ListTicketingNotesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2335,8 +2335,8 @@ func (s *Ticketing) ListTicketingNotes2(ctx context.Context, request operations.
 
 }
 
-// ListTicketingTickets2 - List all tickets
-func (s *Ticketing) ListTicketingTickets2(ctx context.Context, request operations.ListTicketingTickets2Request, opts ...operations.Option) (*operations.ListTicketingTickets2Response, error) {
+// ListTicketingTickets - List all tickets
+func (s *Ticketing) ListTicketingTickets(ctx context.Context, request operations.ListTicketingTicketsRequest, opts ...operations.Option) (*operations.ListTicketingTicketsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2365,7 +2365,7 @@ func (s *Ticketing) ListTicketingTickets2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listTicketingTickets2",
+		OperationID:      "listTicketingTickets",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2490,7 +2490,7 @@ func (s *Ticketing) ListTicketingTickets2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListTicketingTickets2Response{
+	res := &operations.ListTicketingTicketsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2542,8 +2542,8 @@ func (s *Ticketing) ListTicketingTickets2(ctx context.Context, request operation
 
 }
 
-// PatchTicketingCategory2 - Update a category
-func (s *Ticketing) PatchTicketingCategory2(ctx context.Context, request operations.PatchTicketingCategory2Request, opts ...operations.Option) (*operations.PatchTicketingCategory2Response, error) {
+// PatchTicketingCategory - Update a category
+func (s *Ticketing) PatchTicketingCategory(ctx context.Context, request operations.PatchTicketingCategoryRequest, opts ...operations.Option) (*operations.PatchTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2572,7 +2572,7 @@ func (s *Ticketing) PatchTicketingCategory2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingCategory2",
+		OperationID:      "patchTicketingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -2704,7 +2704,7 @@ func (s *Ticketing) PatchTicketingCategory2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchTicketingCategory2Response{
+	res := &operations.PatchTicketingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2756,8 +2756,8 @@ func (s *Ticketing) PatchTicketingCategory2(ctx context.Context, request operati
 
 }
 
-// PatchTicketingCustomer2 - Update a customer
-func (s *Ticketing) PatchTicketingCustomer2(ctx context.Context, request operations.PatchTicketingCustomer2Request, opts ...operations.Option) (*operations.PatchTicketingCustomer2Response, error) {
+// PatchTicketingCustomer - Update a customer
+func (s *Ticketing) PatchTicketingCustomer(ctx context.Context, request operations.PatchTicketingCustomerRequest, opts ...operations.Option) (*operations.PatchTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2786,7 +2786,7 @@ func (s *Ticketing) PatchTicketingCustomer2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingCustomer2",
+		OperationID:      "patchTicketingCustomer",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
@@ -2918,7 +2918,7 @@ func (s *Ticketing) PatchTicketingCustomer2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchTicketingCustomer2Response{
+	res := &operations.PatchTicketingCustomerResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2970,8 +2970,8 @@ func (s *Ticketing) PatchTicketingCustomer2(ctx context.Context, request operati
 
 }
 
-// PatchTicketingNote2 - Update a note
-func (s *Ticketing) PatchTicketingNote2(ctx context.Context, request operations.PatchTicketingNote2Request, opts ...operations.Option) (*operations.PatchTicketingNote2Response, error) {
+// PatchTicketingNote - Update a note
+func (s *Ticketing) PatchTicketingNote(ctx context.Context, request operations.PatchTicketingNoteRequest, opts ...operations.Option) (*operations.PatchTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3000,7 +3000,7 @@ func (s *Ticketing) PatchTicketingNote2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingNote2",
+		OperationID:      "patchTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -3132,7 +3132,7 @@ func (s *Ticketing) PatchTicketingNote2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.PatchTicketingNote2Response{
+	res := &operations.PatchTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3184,8 +3184,8 @@ func (s *Ticketing) PatchTicketingNote2(ctx context.Context, request operations.
 
 }
 
-// PatchTicketingTicket2 - Update a ticket
-func (s *Ticketing) PatchTicketingTicket2(ctx context.Context, request operations.PatchTicketingTicket2Request, opts ...operations.Option) (*operations.PatchTicketingTicket2Response, error) {
+// PatchTicketingTicket - Update a ticket
+func (s *Ticketing) PatchTicketingTicket(ctx context.Context, request operations.PatchTicketingTicketRequest, opts ...operations.Option) (*operations.PatchTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3214,7 +3214,7 @@ func (s *Ticketing) PatchTicketingTicket2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchTicketingTicket2",
+		OperationID:      "patchTicketingTicket",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
@@ -3346,7 +3346,7 @@ func (s *Ticketing) PatchTicketingTicket2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchTicketingTicket2Response{
+	res := &operations.PatchTicketingTicketResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3398,8 +3398,8 @@ func (s *Ticketing) PatchTicketingTicket2(ctx context.Context, request operation
 
 }
 
-// RemoveTicketingCategory2 - Remove a category
-func (s *Ticketing) RemoveTicketingCategory2(ctx context.Context, request operations.RemoveTicketingCategory2Request, opts ...operations.Option) (*operations.RemoveTicketingCategory2Response, error) {
+// RemoveTicketingCategory - Remove a category
+func (s *Ticketing) RemoveTicketingCategory(ctx context.Context, request operations.RemoveTicketingCategoryRequest, opts ...operations.Option) (*operations.RemoveTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3428,7 +3428,7 @@ func (s *Ticketing) RemoveTicketingCategory2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingCategory2",
+		OperationID:      "removeTicketingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3549,7 +3549,7 @@ func (s *Ticketing) RemoveTicketingCategory2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveTicketingCategory2Response{
+	res := &operations.RemoveTicketingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3580,8 +3580,8 @@ func (s *Ticketing) RemoveTicketingCategory2(ctx context.Context, request operat
 
 }
 
-// RemoveTicketingCustomer2 - Remove a customer
-func (s *Ticketing) RemoveTicketingCustomer2(ctx context.Context, request operations.RemoveTicketingCustomer2Request, opts ...operations.Option) (*operations.RemoveTicketingCustomer2Response, error) {
+// RemoveTicketingCustomer - Remove a customer
+func (s *Ticketing) RemoveTicketingCustomer(ctx context.Context, request operations.RemoveTicketingCustomerRequest, opts ...operations.Option) (*operations.RemoveTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3610,7 +3610,7 @@ func (s *Ticketing) RemoveTicketingCustomer2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingCustomer2",
+		OperationID:      "removeTicketingCustomer",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3731,7 +3731,7 @@ func (s *Ticketing) RemoveTicketingCustomer2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.RemoveTicketingCustomer2Response{
+	res := &operations.RemoveTicketingCustomerResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3762,8 +3762,8 @@ func (s *Ticketing) RemoveTicketingCustomer2(ctx context.Context, request operat
 
 }
 
-// RemoveTicketingNote2 - Remove a note
-func (s *Ticketing) RemoveTicketingNote2(ctx context.Context, request operations.RemoveTicketingNote2Request, opts ...operations.Option) (*operations.RemoveTicketingNote2Response, error) {
+// RemoveTicketingNote - Remove a note
+func (s *Ticketing) RemoveTicketingNote(ctx context.Context, request operations.RemoveTicketingNoteRequest, opts ...operations.Option) (*operations.RemoveTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3792,7 +3792,7 @@ func (s *Ticketing) RemoveTicketingNote2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingNote2",
+		OperationID:      "removeTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3913,7 +3913,7 @@ func (s *Ticketing) RemoveTicketingNote2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.RemoveTicketingNote2Response{
+	res := &operations.RemoveTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3944,8 +3944,8 @@ func (s *Ticketing) RemoveTicketingNote2(ctx context.Context, request operations
 
 }
 
-// RemoveTicketingTicket2 - Remove a ticket
-func (s *Ticketing) RemoveTicketingTicket2(ctx context.Context, request operations.RemoveTicketingTicket2Request, opts ...operations.Option) (*operations.RemoveTicketingTicket2Response, error) {
+// RemoveTicketingTicket - Remove a ticket
+func (s *Ticketing) RemoveTicketingTicket(ctx context.Context, request operations.RemoveTicketingTicketRequest, opts ...operations.Option) (*operations.RemoveTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3974,7 +3974,7 @@ func (s *Ticketing) RemoveTicketingTicket2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeTicketingTicket2",
+		OperationID:      "removeTicketingTicket",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4095,7 +4095,7 @@ func (s *Ticketing) RemoveTicketingTicket2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveTicketingTicket2Response{
+	res := &operations.RemoveTicketingTicketResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4126,8 +4126,8 @@ func (s *Ticketing) RemoveTicketingTicket2(ctx context.Context, request operatio
 
 }
 
-// UpdateTicketingCategory2 - Update a category
-func (s *Ticketing) UpdateTicketingCategory2(ctx context.Context, request operations.UpdateTicketingCategory2Request, opts ...operations.Option) (*operations.UpdateTicketingCategory2Response, error) {
+// UpdateTicketingCategory - Update a category
+func (s *Ticketing) UpdateTicketingCategory(ctx context.Context, request operations.UpdateTicketingCategoryRequest, opts ...operations.Option) (*operations.UpdateTicketingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4156,7 +4156,7 @@ func (s *Ticketing) UpdateTicketingCategory2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingCategory2",
+		OperationID:      "updateTicketingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCategory", "json", `request:"mediaType=application/json"`)
@@ -4288,7 +4288,7 @@ func (s *Ticketing) UpdateTicketingCategory2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateTicketingCategory2Response{
+	res := &operations.UpdateTicketingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4340,8 +4340,8 @@ func (s *Ticketing) UpdateTicketingCategory2(ctx context.Context, request operat
 
 }
 
-// UpdateTicketingCustomer2 - Update a customer
-func (s *Ticketing) UpdateTicketingCustomer2(ctx context.Context, request operations.UpdateTicketingCustomer2Request, opts ...operations.Option) (*operations.UpdateTicketingCustomer2Response, error) {
+// UpdateTicketingCustomer - Update a customer
+func (s *Ticketing) UpdateTicketingCustomer(ctx context.Context, request operations.UpdateTicketingCustomerRequest, opts ...operations.Option) (*operations.UpdateTicketingCustomerResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4370,7 +4370,7 @@ func (s *Ticketing) UpdateTicketingCustomer2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingCustomer2",
+		OperationID:      "updateTicketingCustomer",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingCustomer", "json", `request:"mediaType=application/json"`)
@@ -4502,7 +4502,7 @@ func (s *Ticketing) UpdateTicketingCustomer2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdateTicketingCustomer2Response{
+	res := &operations.UpdateTicketingCustomerResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4554,8 +4554,8 @@ func (s *Ticketing) UpdateTicketingCustomer2(ctx context.Context, request operat
 
 }
 
-// UpdateTicketingNote2 - Update a note
-func (s *Ticketing) UpdateTicketingNote2(ctx context.Context, request operations.UpdateTicketingNote2Request, opts ...operations.Option) (*operations.UpdateTicketingNote2Response, error) {
+// UpdateTicketingNote - Update a note
+func (s *Ticketing) UpdateTicketingNote(ctx context.Context, request operations.UpdateTicketingNoteRequest, opts ...operations.Option) (*operations.UpdateTicketingNoteResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4584,7 +4584,7 @@ func (s *Ticketing) UpdateTicketingNote2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingNote2",
+		OperationID:      "updateTicketingNote",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingNote", "json", `request:"mediaType=application/json"`)
@@ -4716,7 +4716,7 @@ func (s *Ticketing) UpdateTicketingNote2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.UpdateTicketingNote2Response{
+	res := &operations.UpdateTicketingNoteResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4768,8 +4768,8 @@ func (s *Ticketing) UpdateTicketingNote2(ctx context.Context, request operations
 
 }
 
-// UpdateTicketingTicket2 - Update a ticket
-func (s *Ticketing) UpdateTicketingTicket2(ctx context.Context, request operations.UpdateTicketingTicket2Request, opts ...operations.Option) (*operations.UpdateTicketingTicket2Response, error) {
+// UpdateTicketingTicket - Update a ticket
+func (s *Ticketing) UpdateTicketingTicket(ctx context.Context, request operations.UpdateTicketingTicketRequest, opts ...operations.Option) (*operations.UpdateTicketingTicketResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4798,7 +4798,7 @@ func (s *Ticketing) UpdateTicketingTicket2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateTicketingTicket2",
+		OperationID:      "updateTicketingTicket",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TicketingTicket", "json", `request:"mediaType=application/json"`)
@@ -4930,7 +4930,7 @@ func (s *Ticketing) UpdateTicketingTicket2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateTicketingTicket2Response{
+	res := &operations.UpdateTicketingTicketResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

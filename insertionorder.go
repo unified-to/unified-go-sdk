@@ -30,8 +30,8 @@ func newInsertionorder(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, ho
 	}
 }
 
-// CreateAdsInsertionorder2 - Create an insertionorder
-func (s *Insertionorder) CreateAdsInsertionorder2(ctx context.Context, request operations.CreateAdsInsertionorder2Request, opts ...operations.Option) (*operations.CreateAdsInsertionorder2Response, error) {
+// CreateAdsInsertionorder - Create an insertionorder
+func (s *Insertionorder) CreateAdsInsertionorder(ctx context.Context, request operations.CreateAdsInsertionorderRequest, opts ...operations.Option) (*operations.CreateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Insertionorder) CreateAdsInsertionorder2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAdsInsertionorder2",
+		OperationID:      "createAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Insertionorder) CreateAdsInsertionorder2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.CreateAdsInsertionorder2Response{
+	res := &operations.CreateAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Insertionorder) CreateAdsInsertionorder2(ctx context.Context, request o
 
 }
 
-// GetAdsInsertionorder2 - Retrieve an insertionorder
-func (s *Insertionorder) GetAdsInsertionorder2(ctx context.Context, request operations.GetAdsInsertionorder2Request, opts ...operations.Option) (*operations.GetAdsInsertionorder2Response, error) {
+// GetAdsInsertionorder - Retrieve an insertionorder
+func (s *Insertionorder) GetAdsInsertionorder(ctx context.Context, request operations.GetAdsInsertionorderRequest, opts ...operations.Option) (*operations.GetAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Insertionorder) GetAdsInsertionorder2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsInsertionorder2",
+		OperationID:      "getAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Insertionorder) GetAdsInsertionorder2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.GetAdsInsertionorder2Response{
+	res := &operations.GetAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Insertionorder) GetAdsInsertionorder2(ctx context.Context, request oper
 
 }
 
-// ListAdsInsertionorders2 - List all insertionorders
-func (s *Insertionorder) ListAdsInsertionorders2(ctx context.Context, request operations.ListAdsInsertionorders2Request, opts ...operations.Option) (*operations.ListAdsInsertionorders2Response, error) {
+// ListAdsInsertionorders - List all insertionorders
+func (s *Insertionorder) ListAdsInsertionorders(ctx context.Context, request operations.ListAdsInsertionordersRequest, opts ...operations.Option) (*operations.ListAdsInsertionordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Insertionorder) ListAdsInsertionorders2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsInsertionorders2",
+		OperationID:      "listAdsInsertionorders",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Insertionorder) ListAdsInsertionorders2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAdsInsertionorders2Response{
+	res := &operations.ListAdsInsertionordersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Insertionorder) ListAdsInsertionorders2(ctx context.Context, request op
 
 }
 
-// PatchAdsInsertionorder2 - Update an insertionorder
-func (s *Insertionorder) PatchAdsInsertionorder2(ctx context.Context, request operations.PatchAdsInsertionorder2Request, opts ...operations.Option) (*operations.PatchAdsInsertionorder2Response, error) {
+// PatchAdsInsertionorder - Update an insertionorder
+func (s *Insertionorder) PatchAdsInsertionorder(ctx context.Context, request operations.PatchAdsInsertionorderRequest, opts ...operations.Option) (*operations.PatchAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Insertionorder) PatchAdsInsertionorder2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAdsInsertionorder2",
+		OperationID:      "patchAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Insertionorder) PatchAdsInsertionorder2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.PatchAdsInsertionorder2Response{
+	res := &operations.PatchAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Insertionorder) PatchAdsInsertionorder2(ctx context.Context, request op
 
 }
 
-// RemoveAdsInsertionorder2 - Remove an insertionorder
-func (s *Insertionorder) RemoveAdsInsertionorder2(ctx context.Context, request operations.RemoveAdsInsertionorder2Request, opts ...operations.Option) (*operations.RemoveAdsInsertionorder2Response, error) {
+// RemoveAdsInsertionorder - Remove an insertionorder
+func (s *Insertionorder) RemoveAdsInsertionorder(ctx context.Context, request operations.RemoveAdsInsertionorderRequest, opts ...operations.Option) (*operations.RemoveAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Insertionorder) RemoveAdsInsertionorder2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAdsInsertionorder2",
+		OperationID:      "removeAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Insertionorder) RemoveAdsInsertionorder2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.RemoveAdsInsertionorder2Response{
+	res := &operations.RemoveAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Insertionorder) RemoveAdsInsertionorder2(ctx context.Context, request o
 
 }
 
-// UpdateAdsInsertionorder2 - Update an insertionorder
-func (s *Insertionorder) UpdateAdsInsertionorder2(ctx context.Context, request operations.UpdateAdsInsertionorder2Request, opts ...operations.Option) (*operations.UpdateAdsInsertionorder2Response, error) {
+// UpdateAdsInsertionorder - Update an insertionorder
+func (s *Insertionorder) UpdateAdsInsertionorder(ctx context.Context, request operations.UpdateAdsInsertionorderRequest, opts ...operations.Option) (*operations.UpdateAdsInsertionorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Insertionorder) UpdateAdsInsertionorder2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAdsInsertionorder2",
+		OperationID:      "updateAdsInsertionorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AdsInsertionorder", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Insertionorder) UpdateAdsInsertionorder2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.UpdateAdsInsertionorder2Response{
+	res := &operations.UpdateAdsInsertionorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

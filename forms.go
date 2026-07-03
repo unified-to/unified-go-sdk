@@ -30,8 +30,8 @@ func newForms(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateFormsForm2 - Create a form
-func (s *Forms) CreateFormsForm2(ctx context.Context, request operations.CreateFormsForm2Request, opts ...operations.Option) (*operations.CreateFormsForm2Response, error) {
+// CreateFormsForm - Create a form
+func (s *Forms) CreateFormsForm(ctx context.Context, request operations.CreateFormsFormRequest, opts ...operations.Option) (*operations.CreateFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Forms) CreateFormsForm2(ctx context.Context, request operations.CreateF
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createFormsForm2",
+		OperationID:      "createFormsForm",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "FormsForm", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Forms) CreateFormsForm2(ctx context.Context, request operations.CreateF
 		}
 	}
 
-	res := &operations.CreateFormsForm2Response{
+	res := &operations.CreateFormsFormResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Forms) CreateFormsForm2(ctx context.Context, request operations.CreateF
 
 }
 
-// GetFormsForm2 - Retrieve a form
-func (s *Forms) GetFormsForm2(ctx context.Context, request operations.GetFormsForm2Request, opts ...operations.Option) (*operations.GetFormsForm2Response, error) {
+// GetFormsForm - Retrieve a form
+func (s *Forms) GetFormsForm(ctx context.Context, request operations.GetFormsFormRequest, opts ...operations.Option) (*operations.GetFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Forms) GetFormsForm2(ctx context.Context, request operations.GetFormsFo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getFormsForm2",
+		OperationID:      "getFormsForm",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Forms) GetFormsForm2(ctx context.Context, request operations.GetFormsFo
 		}
 	}
 
-	res := &operations.GetFormsForm2Response{
+	res := &operations.GetFormsFormResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Forms) GetFormsForm2(ctx context.Context, request operations.GetFormsFo
 
 }
 
-// GetFormsSubmission2 - Retrieve a submission
-func (s *Forms) GetFormsSubmission2(ctx context.Context, request operations.GetFormsSubmission2Request, opts ...operations.Option) (*operations.GetFormsSubmission2Response, error) {
+// GetFormsSubmission - Retrieve a submission
+func (s *Forms) GetFormsSubmission(ctx context.Context, request operations.GetFormsSubmissionRequest, opts ...operations.Option) (*operations.GetFormsSubmissionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Forms) GetFormsSubmission2(ctx context.Context, request operations.GetF
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getFormsSubmission2",
+		OperationID:      "getFormsSubmission",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Forms) GetFormsSubmission2(ctx context.Context, request operations.GetF
 		}
 	}
 
-	res := &operations.GetFormsSubmission2Response{
+	res := &operations.GetFormsSubmissionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Forms) GetFormsSubmission2(ctx context.Context, request operations.GetF
 
 }
 
-// ListFormsForms2 - List all forms
-func (s *Forms) ListFormsForms2(ctx context.Context, request operations.ListFormsForms2Request, opts ...operations.Option) (*operations.ListFormsForms2Response, error) {
+// ListFormsForms - List all forms
+func (s *Forms) ListFormsForms(ctx context.Context, request operations.ListFormsFormsRequest, opts ...operations.Option) (*operations.ListFormsFormsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Forms) ListFormsForms2(ctx context.Context, request operations.ListForm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listFormsForms2",
+		OperationID:      "listFormsForms",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -813,7 +813,7 @@ func (s *Forms) ListFormsForms2(ctx context.Context, request operations.ListForm
 		}
 	}
 
-	res := &operations.ListFormsForms2Response{
+	res := &operations.ListFormsFormsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -865,8 +865,8 @@ func (s *Forms) ListFormsForms2(ctx context.Context, request operations.ListForm
 
 }
 
-// ListFormsSubmissions2 - List all submissions
-func (s *Forms) ListFormsSubmissions2(ctx context.Context, request operations.ListFormsSubmissions2Request, opts ...operations.Option) (*operations.ListFormsSubmissions2Response, error) {
+// ListFormsSubmissions - List all submissions
+func (s *Forms) ListFormsSubmissions(ctx context.Context, request operations.ListFormsSubmissionsRequest, opts ...operations.Option) (*operations.ListFormsSubmissionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -895,7 +895,7 @@ func (s *Forms) ListFormsSubmissions2(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listFormsSubmissions2",
+		OperationID:      "listFormsSubmissions",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1020,7 +1020,7 @@ func (s *Forms) ListFormsSubmissions2(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListFormsSubmissions2Response{
+	res := &operations.ListFormsSubmissionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1072,8 +1072,8 @@ func (s *Forms) ListFormsSubmissions2(ctx context.Context, request operations.Li
 
 }
 
-// PatchFormsForm2 - Update a form
-func (s *Forms) PatchFormsForm2(ctx context.Context, request operations.PatchFormsForm2Request, opts ...operations.Option) (*operations.PatchFormsForm2Response, error) {
+// PatchFormsForm - Update a form
+func (s *Forms) PatchFormsForm(ctx context.Context, request operations.PatchFormsFormRequest, opts ...operations.Option) (*operations.PatchFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1102,7 +1102,7 @@ func (s *Forms) PatchFormsForm2(ctx context.Context, request operations.PatchFor
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchFormsForm2",
+		OperationID:      "patchFormsForm",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "FormsForm", "json", `request:"mediaType=application/json"`)
@@ -1234,7 +1234,7 @@ func (s *Forms) PatchFormsForm2(ctx context.Context, request operations.PatchFor
 		}
 	}
 
-	res := &operations.PatchFormsForm2Response{
+	res := &operations.PatchFormsFormResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Forms) PatchFormsForm2(ctx context.Context, request operations.PatchFor
 
 }
 
-// RemoveFormsForm2 - Remove a form
-func (s *Forms) RemoveFormsForm2(ctx context.Context, request operations.RemoveFormsForm2Request, opts ...operations.Option) (*operations.RemoveFormsForm2Response, error) {
+// RemoveFormsForm - Remove a form
+func (s *Forms) RemoveFormsForm(ctx context.Context, request operations.RemoveFormsFormRequest, opts ...operations.Option) (*operations.RemoveFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Forms) RemoveFormsForm2(ctx context.Context, request operations.RemoveF
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeFormsForm2",
+		OperationID:      "removeFormsForm",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1437,7 +1437,7 @@ func (s *Forms) RemoveFormsForm2(ctx context.Context, request operations.RemoveF
 		}
 	}
 
-	res := &operations.RemoveFormsForm2Response{
+	res := &operations.RemoveFormsFormResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1468,8 +1468,8 @@ func (s *Forms) RemoveFormsForm2(ctx context.Context, request operations.RemoveF
 
 }
 
-// UpdateFormsForm2 - Update a form
-func (s *Forms) UpdateFormsForm2(ctx context.Context, request operations.UpdateFormsForm2Request, opts ...operations.Option) (*operations.UpdateFormsForm2Response, error) {
+// UpdateFormsForm - Update a form
+func (s *Forms) UpdateFormsForm(ctx context.Context, request operations.UpdateFormsFormRequest, opts ...operations.Option) (*operations.UpdateFormsFormResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1498,7 +1498,7 @@ func (s *Forms) UpdateFormsForm2(ctx context.Context, request operations.UpdateF
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateFormsForm2",
+		OperationID:      "updateFormsForm",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "FormsForm", "json", `request:"mediaType=application/json"`)
@@ -1630,7 +1630,7 @@ func (s *Forms) UpdateFormsForm2(ctx context.Context, request operations.UpdateF
 		}
 	}
 
-	res := &operations.UpdateFormsForm2Response{
+	res := &operations.UpdateFormsFormResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newVisitor(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAnalyticsVisitor2 - Create a visitor
-func (s *Visitor) CreateAnalyticsVisitor2(ctx context.Context, request operations.CreateAnalyticsVisitor2Request, opts ...operations.Option) (*operations.CreateAnalyticsVisitor2Response, error) {
+// CreateAnalyticsVisitor - Create a visitor
+func (s *Visitor) CreateAnalyticsVisitor(ctx context.Context, request operations.CreateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.CreateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Visitor) CreateAnalyticsVisitor2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAnalyticsVisitor2",
+		OperationID:      "createAnalyticsVisitor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsVisitor", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Visitor) CreateAnalyticsVisitor2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateAnalyticsVisitor2Response{
+	res := &operations.CreateAnalyticsVisitorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Visitor) CreateAnalyticsVisitor2(ctx context.Context, request operation
 
 }
 
-// GetAnalyticsVisitor2 - Retrieve a visitor
-func (s *Visitor) GetAnalyticsVisitor2(ctx context.Context, request operations.GetAnalyticsVisitor2Request, opts ...operations.Option) (*operations.GetAnalyticsVisitor2Response, error) {
+// GetAnalyticsVisitor - Retrieve a visitor
+func (s *Visitor) GetAnalyticsVisitor(ctx context.Context, request operations.GetAnalyticsVisitorRequest, opts ...operations.Option) (*operations.GetAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Visitor) GetAnalyticsVisitor2(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAnalyticsVisitor2",
+		OperationID:      "getAnalyticsVisitor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Visitor) GetAnalyticsVisitor2(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetAnalyticsVisitor2Response{
+	res := &operations.GetAnalyticsVisitorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Visitor) GetAnalyticsVisitor2(ctx context.Context, request operations.G
 
 }
 
-// ListAnalyticsVisitors2 - List all visitors
-func (s *Visitor) ListAnalyticsVisitors2(ctx context.Context, request operations.ListAnalyticsVisitors2Request, opts ...operations.Option) (*operations.ListAnalyticsVisitors2Response, error) {
+// ListAnalyticsVisitors - List all visitors
+func (s *Visitor) ListAnalyticsVisitors(ctx context.Context, request operations.ListAnalyticsVisitorsRequest, opts ...operations.Option) (*operations.ListAnalyticsVisitorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Visitor) ListAnalyticsVisitors2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAnalyticsVisitors2",
+		OperationID:      "listAnalyticsVisitors",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Visitor) ListAnalyticsVisitors2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListAnalyticsVisitors2Response{
+	res := &operations.ListAnalyticsVisitorsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Visitor) ListAnalyticsVisitors2(ctx context.Context, request operations
 
 }
 
-// PatchAnalyticsVisitor2 - Update a visitor
-func (s *Visitor) PatchAnalyticsVisitor2(ctx context.Context, request operations.PatchAnalyticsVisitor2Request, opts ...operations.Option) (*operations.PatchAnalyticsVisitor2Response, error) {
+// PatchAnalyticsVisitor - Update a visitor
+func (s *Visitor) PatchAnalyticsVisitor(ctx context.Context, request operations.PatchAnalyticsVisitorRequest, opts ...operations.Option) (*operations.PatchAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Visitor) PatchAnalyticsVisitor2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAnalyticsVisitor2",
+		OperationID:      "patchAnalyticsVisitor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsVisitor", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Visitor) PatchAnalyticsVisitor2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchAnalyticsVisitor2Response{
+	res := &operations.PatchAnalyticsVisitorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Visitor) PatchAnalyticsVisitor2(ctx context.Context, request operations
 
 }
 
-// RemoveAnalyticsVisitor2 - Remove a visitor
-func (s *Visitor) RemoveAnalyticsVisitor2(ctx context.Context, request operations.RemoveAnalyticsVisitor2Request, opts ...operations.Option) (*operations.RemoveAnalyticsVisitor2Response, error) {
+// RemoveAnalyticsVisitor - Remove a visitor
+func (s *Visitor) RemoveAnalyticsVisitor(ctx context.Context, request operations.RemoveAnalyticsVisitorRequest, opts ...operations.Option) (*operations.RemoveAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Visitor) RemoveAnalyticsVisitor2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAnalyticsVisitor2",
+		OperationID:      "removeAnalyticsVisitor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Visitor) RemoveAnalyticsVisitor2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.RemoveAnalyticsVisitor2Response{
+	res := &operations.RemoveAnalyticsVisitorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Visitor) RemoveAnalyticsVisitor2(ctx context.Context, request operation
 
 }
 
-// UpdateAnalyticsVisitor2 - Update a visitor
-func (s *Visitor) UpdateAnalyticsVisitor2(ctx context.Context, request operations.UpdateAnalyticsVisitor2Request, opts ...operations.Option) (*operations.UpdateAnalyticsVisitor2Response, error) {
+// UpdateAnalyticsVisitor - Update a visitor
+func (s *Visitor) UpdateAnalyticsVisitor(ctx context.Context, request operations.UpdateAnalyticsVisitorRequest, opts ...operations.Option) (*operations.UpdateAnalyticsVisitorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Visitor) UpdateAnalyticsVisitor2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAnalyticsVisitor2",
+		OperationID:      "updateAnalyticsVisitor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsVisitor", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Visitor) UpdateAnalyticsVisitor2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateAnalyticsVisitor2Response{
+	res := &operations.UpdateAnalyticsVisitorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

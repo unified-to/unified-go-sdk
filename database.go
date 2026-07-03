@@ -30,8 +30,8 @@ func newDatabase(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateDatastoreDatabase2 - Create a database
-func (s *Database) CreateDatastoreDatabase2(ctx context.Context, request operations.CreateDatastoreDatabase2Request, opts ...operations.Option) (*operations.CreateDatastoreDatabase2Response, error) {
+// CreateDatastoreDatabase - Create a database
+func (s *Database) CreateDatastoreDatabase(ctx context.Context, request operations.CreateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.CreateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Database) CreateDatastoreDatabase2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createDatastoreDatabase2",
+		OperationID:      "createDatastoreDatabase",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "DatastoreDatabase", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Database) CreateDatastoreDatabase2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateDatastoreDatabase2Response{
+	res := &operations.CreateDatastoreDatabaseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Database) CreateDatastoreDatabase2(ctx context.Context, request operati
 
 }
 
-// GetDatastoreDatabase2 - Retrieve a database
-func (s *Database) GetDatastoreDatabase2(ctx context.Context, request operations.GetDatastoreDatabase2Request, opts ...operations.Option) (*operations.GetDatastoreDatabase2Response, error) {
+// GetDatastoreDatabase - Retrieve a database
+func (s *Database) GetDatastoreDatabase(ctx context.Context, request operations.GetDatastoreDatabaseRequest, opts ...operations.Option) (*operations.GetDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Database) GetDatastoreDatabase2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getDatastoreDatabase2",
+		OperationID:      "getDatastoreDatabase",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Database) GetDatastoreDatabase2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetDatastoreDatabase2Response{
+	res := &operations.GetDatastoreDatabaseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Database) GetDatastoreDatabase2(ctx context.Context, request operations
 
 }
 
-// ListDatastoreDatabases2 - List all databases
-func (s *Database) ListDatastoreDatabases2(ctx context.Context, request operations.ListDatastoreDatabases2Request, opts ...operations.Option) (*operations.ListDatastoreDatabases2Response, error) {
+// ListDatastoreDatabases - List all databases
+func (s *Database) ListDatastoreDatabases(ctx context.Context, request operations.ListDatastoreDatabasesRequest, opts ...operations.Option) (*operations.ListDatastoreDatabasesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Database) ListDatastoreDatabases2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listDatastoreDatabases2",
+		OperationID:      "listDatastoreDatabases",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Database) ListDatastoreDatabases2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListDatastoreDatabases2Response{
+	res := &operations.ListDatastoreDatabasesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Database) ListDatastoreDatabases2(ctx context.Context, request operatio
 
 }
 
-// PatchDatastoreDatabase2 - Update a database
-func (s *Database) PatchDatastoreDatabase2(ctx context.Context, request operations.PatchDatastoreDatabase2Request, opts ...operations.Option) (*operations.PatchDatastoreDatabase2Response, error) {
+// PatchDatastoreDatabase - Update a database
+func (s *Database) PatchDatastoreDatabase(ctx context.Context, request operations.PatchDatastoreDatabaseRequest, opts ...operations.Option) (*operations.PatchDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Database) PatchDatastoreDatabase2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchDatastoreDatabase2",
+		OperationID:      "patchDatastoreDatabase",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "DatastoreDatabase", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Database) PatchDatastoreDatabase2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchDatastoreDatabase2Response{
+	res := &operations.PatchDatastoreDatabaseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Database) PatchDatastoreDatabase2(ctx context.Context, request operatio
 
 }
 
-// RemoveDatastoreDatabase2 - Remove a database
-func (s *Database) RemoveDatastoreDatabase2(ctx context.Context, request operations.RemoveDatastoreDatabase2Request, opts ...operations.Option) (*operations.RemoveDatastoreDatabase2Response, error) {
+// RemoveDatastoreDatabase - Remove a database
+func (s *Database) RemoveDatastoreDatabase(ctx context.Context, request operations.RemoveDatastoreDatabaseRequest, opts ...operations.Option) (*operations.RemoveDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Database) RemoveDatastoreDatabase2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeDatastoreDatabase2",
+		OperationID:      "removeDatastoreDatabase",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Database) RemoveDatastoreDatabase2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveDatastoreDatabase2Response{
+	res := &operations.RemoveDatastoreDatabaseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Database) RemoveDatastoreDatabase2(ctx context.Context, request operati
 
 }
 
-// UpdateDatastoreDatabase2 - Update a database
-func (s *Database) UpdateDatastoreDatabase2(ctx context.Context, request operations.UpdateDatastoreDatabase2Request, opts ...operations.Option) (*operations.UpdateDatastoreDatabase2Response, error) {
+// UpdateDatastoreDatabase - Update a database
+func (s *Database) UpdateDatastoreDatabase(ctx context.Context, request operations.UpdateDatastoreDatabaseRequest, opts ...operations.Option) (*operations.UpdateDatastoreDatabaseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Database) UpdateDatastoreDatabase2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateDatastoreDatabase2",
+		OperationID:      "updateDatastoreDatabase",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "DatastoreDatabase", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Database) UpdateDatastoreDatabase2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateDatastoreDatabase2Response{
+	res := &operations.UpdateDatastoreDatabaseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

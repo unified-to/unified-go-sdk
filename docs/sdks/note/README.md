@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateTicketingNote2](#createticketingnote2) - Create a note
-* [GetTicketingNote2](#getticketingnote2) - Retrieve a note
-* [ListTicketingNotes2](#listticketingnotes2) - List all notes
-* [PatchTicketingNote2](#patchticketingnote2) - Update a note
-* [RemoveTicketingNote2](#removeticketingnote2) - Remove a note
-* [UpdateTicketingNote2](#updateticketingnote2) - Update a note
+* [CreateTicketingNote](#createticketingnote) - Create a note
+* [GetTicketingNote](#getticketingnote) - Retrieve a note
+* [ListTicketingNotes](#listticketingnotes) - List all notes
+* [PatchTicketingNote](#patchticketingnote) - Update a note
+* [RemoveTicketingNote](#removeticketingnote) - Remove a note
+* [UpdateTicketingNote](#updateticketingnote) - Update a note
 
-## CreateTicketingNote2
+## CreateTicketingNote
 
 Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingNote2" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="go" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.CreateTicketingNote2(ctx, operations.CreateTicketingNote2Request{
+    res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.CreateTicketingNote2Request](../../pkg/models/operations/createticketingnote2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateTicketingNoteRequest](../../pkg/models/operations/createticketingnoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.CreateTicketingNote2Response](../../pkg/models/operations/createticketingnote2response.md), error**
+**[*operations.CreateTicketingNoteResponse](../../pkg/models/operations/createticketingnoteresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTicketingNote2
+## GetTicketingNote
 
 Retrieve a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTicketingNote2" method="get" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTicketingNote" method="get" path="/ticketing/{connection_id}/note/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.GetTicketingNote2(ctx, operations.GetTicketingNote2Request{
+    res, err := s.Note.GetTicketingNote(ctx, operations.GetTicketingNoteRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetTicketingNote2Request](../../pkg/models/operations/getticketingnote2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetTicketingNoteRequest](../../pkg/models/operations/getticketingnoterequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.GetTicketingNote2Response](../../pkg/models/operations/getticketingnote2response.md), error**
+**[*operations.GetTicketingNoteResponse](../../pkg/models/operations/getticketingnoteresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTicketingNotes2
+## ListTicketingNotes
 
 List all notes
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTicketingNotes2" method="get" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="go" operationID="listTicketingNotes" method="get" path="/ticketing/{connection_id}/note" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.ListTicketingNotes2(ctx, operations.ListTicketingNotes2Request{
+    res, err := s.Note.ListTicketingNotes(ctx, operations.ListTicketingNotesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListTicketingNotes2Request](../../pkg/models/operations/listticketingnotes2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListTicketingNotesRequest](../../pkg/models/operations/listticketingnotesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListTicketingNotes2Response](../../pkg/models/operations/listticketingnotes2response.md), error**
+**[*operations.ListTicketingNotesResponse](../../pkg/models/operations/listticketingnotesresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchTicketingNote2
+## PatchTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingNote2" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.PatchTicketingNote2(ctx, operations.PatchTicketingNote2Request{
+    res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.PatchTicketingNote2Request](../../pkg/models/operations/patchticketingnote2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchTicketingNoteRequest](../../pkg/models/operations/patchticketingnoterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.PatchTicketingNote2Response](../../pkg/models/operations/patchticketingnote2response.md), error**
+**[*operations.PatchTicketingNoteResponse](../../pkg/models/operations/patchticketingnoteresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveTicketingNote2
+## RemoveTicketingNote
 
 Remove a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeTicketingNote2" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeTicketingNote" method="delete" path="/ticketing/{connection_id}/note/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.RemoveTicketingNote2(ctx, operations.RemoveTicketingNote2Request{
+    res, err := s.Note.RemoveTicketingNote(ctx, operations.RemoveTicketingNoteRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.RemoveTicketingNote2Request](../../pkg/models/operations/removeticketingnote2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveTicketingNoteRequest](../../pkg/models/operations/removeticketingnoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.RemoveTicketingNote2Response](../../pkg/models/operations/removeticketingnote2response.md), error**
+**[*operations.RemoveTicketingNoteResponse](../../pkg/models/operations/removeticketingnoteresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateTicketingNote2
+## UpdateTicketingNote
 
 Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingNote2" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Note.UpdateTicketingNote2(ctx, operations.UpdateTicketingNote2Request{
+    res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
         TicketingNote: shared.TicketingNote{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateTicketingNote2Request](../../pkg/models/operations/updateticketingnote2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.UpdateTicketingNoteRequest](../../pkg/models/operations/updateticketingnoterequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.UpdateTicketingNote2Response](../../pkg/models/operations/updateticketingnote2response.md), error**
+**[*operations.UpdateTicketingNoteResponse](../../pkg/models/operations/updateticketingnoteresponse.md), error**
 
 ### Errors
 

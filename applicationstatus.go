@@ -30,8 +30,8 @@ func newApplicationstatus(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration,
 	}
 }
 
-// ListAtsApplicationstatuses2 - List all applicationstatuses
-func (s *Applicationstatus) ListAtsApplicationstatuses2(ctx context.Context, request operations.ListAtsApplicationstatuses2Request, opts ...operations.Option) (*operations.ListAtsApplicationstatuses2Response, error) {
+// ListAtsApplicationstatuses - List all applicationstatuses
+func (s *Applicationstatus) ListAtsApplicationstatuses(ctx context.Context, request operations.ListAtsApplicationstatusesRequest, opts ...operations.Option) (*operations.ListAtsApplicationstatusesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Applicationstatus) ListAtsApplicationstatuses2(ctx context.Context, req
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsApplicationstatuses2",
+		OperationID:      "listAtsApplicationstatuses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Applicationstatus) ListAtsApplicationstatuses2(ctx context.Context, req
 		}
 	}
 
-	res := &operations.ListAtsApplicationstatuses2Response{
+	res := &operations.ListAtsApplicationstatusesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

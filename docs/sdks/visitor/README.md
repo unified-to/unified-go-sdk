@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateAnalyticsVisitor2](#createanalyticsvisitor2) - Create a visitor
-* [GetAnalyticsVisitor2](#getanalyticsvisitor2) - Retrieve a visitor
-* [ListAnalyticsVisitors2](#listanalyticsvisitors2) - List all visitors
-* [PatchAnalyticsVisitor2](#patchanalyticsvisitor2) - Update a visitor
-* [RemoveAnalyticsVisitor2](#removeanalyticsvisitor2) - Remove a visitor
-* [UpdateAnalyticsVisitor2](#updateanalyticsvisitor2) - Update a visitor
+* [CreateAnalyticsVisitor](#createanalyticsvisitor) - Create a visitor
+* [GetAnalyticsVisitor](#getanalyticsvisitor) - Retrieve a visitor
+* [ListAnalyticsVisitors](#listanalyticsvisitors) - List all visitors
+* [PatchAnalyticsVisitor](#patchanalyticsvisitor) - Update a visitor
+* [RemoveAnalyticsVisitor](#removeanalyticsvisitor) - Remove a visitor
+* [UpdateAnalyticsVisitor](#updateanalyticsvisitor) - Update a visitor
 
-## CreateAnalyticsVisitor2
+## CreateAnalyticsVisitor
 
 Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor2" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.CreateAnalyticsVisitor2(ctx, operations.CreateAnalyticsVisitor2Request{
+    res, err := s.Visitor.CreateAnalyticsVisitor(ctx, operations.CreateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.CreateAnalyticsVisitor2Request](../../pkg/models/operations/createanalyticsvisitor2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.CreateAnalyticsVisitorRequest](../../pkg/models/operations/createanalyticsvisitorrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.CreateAnalyticsVisitor2Response](../../pkg/models/operations/createanalyticsvisitor2response.md), error**
+**[*operations.CreateAnalyticsVisitorResponse](../../pkg/models/operations/createanalyticsvisitorresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAnalyticsVisitor2
+## GetAnalyticsVisitor
 
 Retrieve a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAnalyticsVisitor2" method="get" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAnalyticsVisitor" method="get" path="/analytics/{connection_id}/visitor/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.GetAnalyticsVisitor2(ctx, operations.GetAnalyticsVisitor2Request{
+    res, err := s.Visitor.GetAnalyticsVisitor(ctx, operations.GetAnalyticsVisitorRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetAnalyticsVisitor2Request](../../pkg/models/operations/getanalyticsvisitor2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetAnalyticsVisitorRequest](../../pkg/models/operations/getanalyticsvisitorrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.GetAnalyticsVisitor2Response](../../pkg/models/operations/getanalyticsvisitor2response.md), error**
+**[*operations.GetAnalyticsVisitorResponse](../../pkg/models/operations/getanalyticsvisitorresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAnalyticsVisitors2
+## ListAnalyticsVisitors
 
 List all visitors
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAnalyticsVisitors2" method="get" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="go" operationID="listAnalyticsVisitors" method="get" path="/analytics/{connection_id}/visitor" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.ListAnalyticsVisitors2(ctx, operations.ListAnalyticsVisitors2Request{
+    res, err := s.Visitor.ListAnalyticsVisitors(ctx, operations.ListAnalyticsVisitorsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListAnalyticsVisitors2Request](../../pkg/models/operations/listanalyticsvisitors2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListAnalyticsVisitorsRequest](../../pkg/models/operations/listanalyticsvisitorsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.ListAnalyticsVisitors2Response](../../pkg/models/operations/listanalyticsvisitors2response.md), error**
+**[*operations.ListAnalyticsVisitorsResponse](../../pkg/models/operations/listanalyticsvisitorsresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAnalyticsVisitor2
+## PatchAnalyticsVisitor
 
 Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor2" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.PatchAnalyticsVisitor2(ctx, operations.PatchAnalyticsVisitor2Request{
+    res, err := s.Visitor.PatchAnalyticsVisitor(ctx, operations.PatchAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.PatchAnalyticsVisitor2Request](../../pkg/models/operations/patchanalyticsvisitor2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.PatchAnalyticsVisitorRequest](../../pkg/models/operations/patchanalyticsvisitorrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.PatchAnalyticsVisitor2Response](../../pkg/models/operations/patchanalyticsvisitor2response.md), error**
+**[*operations.PatchAnalyticsVisitorResponse](../../pkg/models/operations/patchanalyticsvisitorresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAnalyticsVisitor2
+## RemoveAnalyticsVisitor
 
 Remove a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeAnalyticsVisitor2" method="delete" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeAnalyticsVisitor" method="delete" path="/analytics/{connection_id}/visitor/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.RemoveAnalyticsVisitor2(ctx, operations.RemoveAnalyticsVisitor2Request{
+    res, err := s.Visitor.RemoveAnalyticsVisitor(ctx, operations.RemoveAnalyticsVisitorRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.RemoveAnalyticsVisitor2Request](../../pkg/models/operations/removeanalyticsvisitor2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.RemoveAnalyticsVisitorRequest](../../pkg/models/operations/removeanalyticsvisitorrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.RemoveAnalyticsVisitor2Response](../../pkg/models/operations/removeanalyticsvisitor2response.md), error**
+**[*operations.RemoveAnalyticsVisitorResponse](../../pkg/models/operations/removeanalyticsvisitorresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAnalyticsVisitor2
+## UpdateAnalyticsVisitor
 
 Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor2" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Visitor.UpdateAnalyticsVisitor2(ctx, operations.UpdateAnalyticsVisitor2Request{
+    res, err := s.Visitor.UpdateAnalyticsVisitor(ctx, operations.UpdateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.UpdateAnalyticsVisitor2Request](../../pkg/models/operations/updateanalyticsvisitor2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.UpdateAnalyticsVisitorRequest](../../pkg/models/operations/updateanalyticsvisitorrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.UpdateAnalyticsVisitor2Response](../../pkg/models/operations/updateanalyticsvisitor2response.md), error**
+**[*operations.UpdateAnalyticsVisitorResponse](../../pkg/models/operations/updateanalyticsvisitorresponse.md), error**
 
 ### Errors
 

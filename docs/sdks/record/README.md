@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateDatastoreRecord2](#createdatastorerecord2) - Create a record
-* [GetDatastoreRecord2](#getdatastorerecord2) - Retrieve a record
-* [ListDatastoreRecords2](#listdatastorerecords2) - List all records
-* [PatchDatastoreRecord2](#patchdatastorerecord2) - Update a record
-* [RemoveDatastoreRecord2](#removedatastorerecord2) - Remove a record
-* [UpdateDatastoreRecord2](#updatedatastorerecord2) - Update a record
+* [CreateDatastoreRecord](#createdatastorerecord) - Create a record
+* [GetDatastoreRecord](#getdatastorerecord) - Retrieve a record
+* [ListDatastoreRecords](#listdatastorerecords) - List all records
+* [PatchDatastoreRecord](#patchdatastorerecord) - Update a record
+* [RemoveDatastoreRecord](#removedatastorerecord) - Remove a record
+* [UpdateDatastoreRecord](#updatedatastorerecord) - Update a record
 
-## CreateDatastoreRecord2
+## CreateDatastoreRecord
 
 Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreRecord2" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
 ```go
 package main
 
@@ -36,10 +36,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.CreateDatastoreRecord2(ctx, operations.CreateDatastoreRecord2Request{
+    res, err := s.Record.CreateDatastoreRecord(ctx, operations.CreateDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
             Fields: map[string]shared.DatastoreFieldValue{
-                "key": shared.DatastoreFieldValue{},
+
             },
         },
         ConnectionID: "<id>",
@@ -55,15 +55,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.CreateDatastoreRecord2Request](../../pkg/models/operations/createdatastorerecord2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.CreateDatastoreRecordRequest](../../pkg/models/operations/createdatastorerecordrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.CreateDatastoreRecord2Response](../../pkg/models/operations/createdatastorerecord2response.md), error**
+**[*operations.CreateDatastoreRecordResponse](../../pkg/models/operations/createdatastorerecordresponse.md), error**
 
 ### Errors
 
@@ -71,13 +71,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetDatastoreRecord2
+## GetDatastoreRecord
 
 Retrieve a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getDatastoreRecord2" method="get" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="getDatastoreRecord" method="get" path="/datastore/{connection_id}/record/{id}" -->
 ```go
 package main
 
@@ -95,7 +95,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.GetDatastoreRecord2(ctx, operations.GetDatastoreRecord2Request{
+    res, err := s.Record.GetDatastoreRecord(ctx, operations.GetDatastoreRecordRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -110,15 +110,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetDatastoreRecord2Request](../../pkg/models/operations/getdatastorerecord2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetDatastoreRecordRequest](../../pkg/models/operations/getdatastorerecordrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.GetDatastoreRecord2Response](../../pkg/models/operations/getdatastorerecord2response.md), error**
+**[*operations.GetDatastoreRecordResponse](../../pkg/models/operations/getdatastorerecordresponse.md), error**
 
 ### Errors
 
@@ -126,13 +126,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListDatastoreRecords2
+## ListDatastoreRecords
 
 List all records
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listDatastoreRecords2" method="get" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="go" operationID="listDatastoreRecords" method="get" path="/datastore/{connection_id}/record" -->
 ```go
 package main
 
@@ -150,7 +150,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.ListDatastoreRecords2(ctx, operations.ListDatastoreRecords2Request{
+    res, err := s.Record.ListDatastoreRecords(ctx, operations.ListDatastoreRecordsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -164,15 +164,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListDatastoreRecords2Request](../../pkg/models/operations/listdatastorerecords2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListDatastoreRecordsRequest](../../pkg/models/operations/listdatastorerecordsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.ListDatastoreRecords2Response](../../pkg/models/operations/listdatastorerecords2response.md), error**
+**[*operations.ListDatastoreRecordsResponse](../../pkg/models/operations/listdatastorerecordsresponse.md), error**
 
 ### Errors
 
@@ -180,13 +180,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchDatastoreRecord2
+## PatchDatastoreRecord
 
 Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchDatastoreRecord2" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
 ```go
 package main
 
@@ -205,10 +205,10 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.PatchDatastoreRecord2(ctx, operations.PatchDatastoreRecord2Request{
+    res, err := s.Record.PatchDatastoreRecord(ctx, operations.PatchDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
             Fields: map[string]shared.DatastoreFieldValue{
-                "key": shared.DatastoreFieldValue{},
+
             },
         },
         ConnectionID: "<id>",
@@ -225,15 +225,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.PatchDatastoreRecord2Request](../../pkg/models/operations/patchdatastorerecord2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchDatastoreRecordRequest](../../pkg/models/operations/patchdatastorerecordrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.PatchDatastoreRecord2Response](../../pkg/models/operations/patchdatastorerecord2response.md), error**
+**[*operations.PatchDatastoreRecordResponse](../../pkg/models/operations/patchdatastorerecordresponse.md), error**
 
 ### Errors
 
@@ -241,13 +241,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveDatastoreRecord2
+## RemoveDatastoreRecord
 
 Remove a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeDatastoreRecord2" method="delete" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeDatastoreRecord" method="delete" path="/datastore/{connection_id}/record/{id}" -->
 ```go
 package main
 
@@ -265,7 +265,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.RemoveDatastoreRecord2(ctx, operations.RemoveDatastoreRecord2Request{
+    res, err := s.Record.RemoveDatastoreRecord(ctx, operations.RemoveDatastoreRecordRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -280,15 +280,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.RemoveDatastoreRecord2Request](../../pkg/models/operations/removedatastorerecord2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.RemoveDatastoreRecordRequest](../../pkg/models/operations/removedatastorerecordrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.RemoveDatastoreRecord2Response](../../pkg/models/operations/removedatastorerecord2response.md), error**
+**[*operations.RemoveDatastoreRecordResponse](../../pkg/models/operations/removedatastorerecordresponse.md), error**
 
 ### Errors
 
@@ -296,13 +296,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateDatastoreRecord2
+## UpdateDatastoreRecord
 
 Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateDatastoreRecord2" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
 ```go
 package main
 
@@ -321,7 +321,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Record.UpdateDatastoreRecord2(ctx, operations.UpdateDatastoreRecord2Request{
+    res, err := s.Record.UpdateDatastoreRecord(ctx, operations.UpdateDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
             Fields: map[string]shared.DatastoreFieldValue{
 
@@ -341,15 +341,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.UpdateDatastoreRecord2Request](../../pkg/models/operations/updatedatastorerecord2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdateDatastoreRecordRequest](../../pkg/models/operations/updatedatastorerecordrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.UpdateDatastoreRecord2Response](../../pkg/models/operations/updatedatastorerecord2response.md), error**
+**[*operations.UpdateDatastoreRecordResponse](../../pkg/models/operations/updatedatastorerecordresponse.md), error**
 
 ### Errors
 

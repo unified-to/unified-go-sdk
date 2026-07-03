@@ -30,8 +30,8 @@ func newClubs(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// GetClubsActivity2 - Retrieve an activity
-func (s *Clubs) GetClubsActivity2(ctx context.Context, request operations.GetClubsActivity2Request, opts ...operations.Option) (*operations.GetClubsActivity2Response, error) {
+// GetClubsActivity - Retrieve an activity
+func (s *Clubs) GetClubsActivity(ctx context.Context, request operations.GetClubsActivityRequest, opts ...operations.Option) (*operations.GetClubsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Clubs) GetClubsActivity2(ctx context.Context, request operations.GetClu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsActivity2",
+		OperationID:      "getClubsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Clubs) GetClubsActivity2(ctx context.Context, request operations.GetClu
 		}
 	}
 
-	res := &operations.GetClubsActivity2Response{
+	res := &operations.GetClubsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Clubs) GetClubsActivity2(ctx context.Context, request operations.GetClu
 
 }
 
-// GetClubsEvent2 - Retrieve an event
-func (s *Clubs) GetClubsEvent2(ctx context.Context, request operations.GetClubsEvent2Request, opts ...operations.Option) (*operations.GetClubsEvent2Response, error) {
+// GetClubsEvent - Retrieve an event
+func (s *Clubs) GetClubsEvent(ctx context.Context, request operations.GetClubsEventRequest, opts ...operations.Option) (*operations.GetClubsEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Clubs) GetClubsEvent2(ctx context.Context, request operations.GetClubsE
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsEvent2",
+		OperationID:      "getClubsEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Clubs) GetClubsEvent2(ctx context.Context, request operations.GetClubsE
 		}
 	}
 
-	res := &operations.GetClubsEvent2Response{
+	res := &operations.GetClubsEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -444,8 +444,8 @@ func (s *Clubs) GetClubsEvent2(ctx context.Context, request operations.GetClubsE
 
 }
 
-// GetClubsGroup2 - Retrieve a group
-func (s *Clubs) GetClubsGroup2(ctx context.Context, request operations.GetClubsGroup2Request, opts ...operations.Option) (*operations.GetClubsGroup2Response, error) {
+// GetClubsGroup - Retrieve a group
+func (s *Clubs) GetClubsGroup(ctx context.Context, request operations.GetClubsGroupRequest, opts ...operations.Option) (*operations.GetClubsGroupResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -474,7 +474,7 @@ func (s *Clubs) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsGroup2",
+		OperationID:      "getClubsGroup",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -599,7 +599,7 @@ func (s *Clubs) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 		}
 	}
 
-	res := &operations.GetClubsGroup2Response{
+	res := &operations.GetClubsGroupResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -651,8 +651,8 @@ func (s *Clubs) GetClubsGroup2(ctx context.Context, request operations.GetClubsG
 
 }
 
-// GetClubsLocation2 - Retrieve a location
-func (s *Clubs) GetClubsLocation2(ctx context.Context, request operations.GetClubsLocation2Request, opts ...operations.Option) (*operations.GetClubsLocation2Response, error) {
+// GetClubsLocation - Retrieve a location
+func (s *Clubs) GetClubsLocation(ctx context.Context, request operations.GetClubsLocationRequest, opts ...operations.Option) (*operations.GetClubsLocationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -681,7 +681,7 @@ func (s *Clubs) GetClubsLocation2(ctx context.Context, request operations.GetClu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsLocation2",
+		OperationID:      "getClubsLocation",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -806,7 +806,7 @@ func (s *Clubs) GetClubsLocation2(ctx context.Context, request operations.GetClu
 		}
 	}
 
-	res := &operations.GetClubsLocation2Response{
+	res := &operations.GetClubsLocationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -858,8 +858,8 @@ func (s *Clubs) GetClubsLocation2(ctx context.Context, request operations.GetClu
 
 }
 
-// GetClubsMember2 - Retrieve a member
-func (s *Clubs) GetClubsMember2(ctx context.Context, request operations.GetClubsMember2Request, opts ...operations.Option) (*operations.GetClubsMember2Response, error) {
+// GetClubsMember - Retrieve a member
+func (s *Clubs) GetClubsMember(ctx context.Context, request operations.GetClubsMemberRequest, opts ...operations.Option) (*operations.GetClubsMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -888,7 +888,7 @@ func (s *Clubs) GetClubsMember2(ctx context.Context, request operations.GetClubs
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsMember2",
+		OperationID:      "getClubsMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1013,7 +1013,7 @@ func (s *Clubs) GetClubsMember2(ctx context.Context, request operations.GetClubs
 		}
 	}
 
-	res := &operations.GetClubsMember2Response{
+	res := &operations.GetClubsMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1065,8 +1065,8 @@ func (s *Clubs) GetClubsMember2(ctx context.Context, request operations.GetClubs
 
 }
 
-// ListClubsActivities2 - List all activities
-func (s *Clubs) ListClubsActivities2(ctx context.Context, request operations.ListClubsActivities2Request, opts ...operations.Option) (*operations.ListClubsActivities2Response, error) {
+// ListClubsActivities - List all activities
+func (s *Clubs) ListClubsActivities(ctx context.Context, request operations.ListClubsActivitiesRequest, opts ...operations.Option) (*operations.ListClubsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1095,7 +1095,7 @@ func (s *Clubs) ListClubsActivities2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsActivities2",
+		OperationID:      "listClubsActivities",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1220,7 +1220,7 @@ func (s *Clubs) ListClubsActivities2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListClubsActivities2Response{
+	res := &operations.ListClubsActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1272,8 +1272,8 @@ func (s *Clubs) ListClubsActivities2(ctx context.Context, request operations.Lis
 
 }
 
-// ListClubsEvents2 - List all events
-func (s *Clubs) ListClubsEvents2(ctx context.Context, request operations.ListClubsEvents2Request, opts ...operations.Option) (*operations.ListClubsEvents2Response, error) {
+// ListClubsEvents - List all events
+func (s *Clubs) ListClubsEvents(ctx context.Context, request operations.ListClubsEventsRequest, opts ...operations.Option) (*operations.ListClubsEventsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1302,7 +1302,7 @@ func (s *Clubs) ListClubsEvents2(ctx context.Context, request operations.ListClu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsEvents2",
+		OperationID:      "listClubsEvents",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1427,7 +1427,7 @@ func (s *Clubs) ListClubsEvents2(ctx context.Context, request operations.ListClu
 		}
 	}
 
-	res := &operations.ListClubsEvents2Response{
+	res := &operations.ListClubsEventsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1479,8 +1479,8 @@ func (s *Clubs) ListClubsEvents2(ctx context.Context, request operations.ListClu
 
 }
 
-// ListClubsGroups2 - List all groups
-func (s *Clubs) ListClubsGroups2(ctx context.Context, request operations.ListClubsGroups2Request, opts ...operations.Option) (*operations.ListClubsGroups2Response, error) {
+// ListClubsGroups - List all groups
+func (s *Clubs) ListClubsGroups(ctx context.Context, request operations.ListClubsGroupsRequest, opts ...operations.Option) (*operations.ListClubsGroupsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1509,7 +1509,7 @@ func (s *Clubs) ListClubsGroups2(ctx context.Context, request operations.ListClu
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsGroups2",
+		OperationID:      "listClubsGroups",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1634,7 +1634,7 @@ func (s *Clubs) ListClubsGroups2(ctx context.Context, request operations.ListClu
 		}
 	}
 
-	res := &operations.ListClubsGroups2Response{
+	res := &operations.ListClubsGroupsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1686,8 +1686,8 @@ func (s *Clubs) ListClubsGroups2(ctx context.Context, request operations.ListClu
 
 }
 
-// ListClubsLocations2 - List all locations
-func (s *Clubs) ListClubsLocations2(ctx context.Context, request operations.ListClubsLocations2Request, opts ...operations.Option) (*operations.ListClubsLocations2Response, error) {
+// ListClubsLocations - List all locations
+func (s *Clubs) ListClubsLocations(ctx context.Context, request operations.ListClubsLocationsRequest, opts ...operations.Option) (*operations.ListClubsLocationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1716,7 +1716,7 @@ func (s *Clubs) ListClubsLocations2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsLocations2",
+		OperationID:      "listClubsLocations",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1841,7 +1841,7 @@ func (s *Clubs) ListClubsLocations2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListClubsLocations2Response{
+	res := &operations.ListClubsLocationsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1893,8 +1893,8 @@ func (s *Clubs) ListClubsLocations2(ctx context.Context, request operations.List
 
 }
 
-// ListClubsMembers2 - List all members
-func (s *Clubs) ListClubsMembers2(ctx context.Context, request operations.ListClubsMembers2Request, opts ...operations.Option) (*operations.ListClubsMembers2Response, error) {
+// ListClubsMembers - List all members
+func (s *Clubs) ListClubsMembers(ctx context.Context, request operations.ListClubsMembersRequest, opts ...operations.Option) (*operations.ListClubsMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1923,7 +1923,7 @@ func (s *Clubs) ListClubsMembers2(ctx context.Context, request operations.ListCl
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsMembers2",
+		OperationID:      "listClubsMembers",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2048,7 +2048,7 @@ func (s *Clubs) ListClubsMembers2(ctx context.Context, request operations.ListCl
 		}
 	}
 
-	res := &operations.ListClubsMembers2Response{
+	res := &operations.ListClubsMembersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

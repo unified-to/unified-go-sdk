@@ -30,8 +30,8 @@ func newProfitloss(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// GetAccountingProfitloss2 - Retrieve a profitloss
-func (s *Profitloss) GetAccountingProfitloss2(ctx context.Context, request operations.GetAccountingProfitloss2Request, opts ...operations.Option) (*operations.GetAccountingProfitloss2Response, error) {
+// GetAccountingProfitloss - Retrieve a profitloss
+func (s *Profitloss) GetAccountingProfitloss(ctx context.Context, request operations.GetAccountingProfitlossRequest, opts ...operations.Option) (*operations.GetAccountingProfitlossResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Profitloss) GetAccountingProfitloss2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingProfitloss2",
+		OperationID:      "getAccountingProfitloss",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Profitloss) GetAccountingProfitloss2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.GetAccountingProfitloss2Response{
+	res := &operations.GetAccountingProfitlossResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Profitloss) GetAccountingProfitloss2(ctx context.Context, request opera
 
 }
 
-// ListAccountingProfitlosses2 - List all profitlosses
-func (s *Profitloss) ListAccountingProfitlosses2(ctx context.Context, request operations.ListAccountingProfitlosses2Request, opts ...operations.Option) (*operations.ListAccountingProfitlosses2Response, error) {
+// ListAccountingProfitlosses - List all profitlosses
+func (s *Profitloss) ListAccountingProfitlosses(ctx context.Context, request operations.ListAccountingProfitlossesRequest, opts ...operations.Option) (*operations.ListAccountingProfitlossesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Profitloss) ListAccountingProfitlosses2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingProfitlosses2",
+		OperationID:      "listAccountingProfitlosses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Profitloss) ListAccountingProfitlosses2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingProfitlosses2Response{
+	res := &operations.ListAccountingProfitlossesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

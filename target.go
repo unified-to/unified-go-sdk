@@ -30,8 +30,8 @@ func newTarget(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// GetAdsTarget2 - Retrieve a target
-func (s *Target) GetAdsTarget2(ctx context.Context, request operations.GetAdsTarget2Request, opts ...operations.Option) (*operations.GetAdsTarget2Response, error) {
+// GetAdsTarget - Retrieve a target
+func (s *Target) GetAdsTarget(ctx context.Context, request operations.GetAdsTargetRequest, opts ...operations.Option) (*operations.GetAdsTargetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Target) GetAdsTarget2(ctx context.Context, request operations.GetAdsTar
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAdsTarget2",
+		OperationID:      "getAdsTarget",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Target) GetAdsTarget2(ctx context.Context, request operations.GetAdsTar
 		}
 	}
 
-	res := &operations.GetAdsTarget2Response{
+	res := &operations.GetAdsTargetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Target) GetAdsTarget2(ctx context.Context, request operations.GetAdsTar
 
 }
 
-// ListAdsTargets2 - List all targets
-func (s *Target) ListAdsTargets2(ctx context.Context, request operations.ListAdsTargets2Request, opts ...operations.Option) (*operations.ListAdsTargets2Response, error) {
+// ListAdsTargets - List all targets
+func (s *Target) ListAdsTargets(ctx context.Context, request operations.ListAdsTargetsRequest, opts ...operations.Option) (*operations.ListAdsTargetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Target) ListAdsTargets2(ctx context.Context, request operations.ListAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsTargets2",
+		OperationID:      "listAdsTargets",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Target) ListAdsTargets2(ctx context.Context, request operations.ListAds
 		}
 	}
 
-	res := &operations.ListAdsTargets2Response{
+	res := &operations.ListAdsTargetsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

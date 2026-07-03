@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateAccountingTaxrate2](#createaccountingtaxrate2) - Create a taxrate
-* [GetAccountingTaxrate2](#getaccountingtaxrate2) - Retrieve a taxrate
-* [ListAccountingTaxrates2](#listaccountingtaxrates2) - List all taxrates
-* [PatchAccountingTaxrate2](#patchaccountingtaxrate2) - Update a taxrate
-* [RemoveAccountingTaxrate2](#removeaccountingtaxrate2) - Remove a taxrate
-* [UpdateAccountingTaxrate2](#updateaccountingtaxrate2) - Update a taxrate
+* [CreateAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
+* [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
+* [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
+* [PatchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
+* [RemoveAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
+* [UpdateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
 
-## CreateAccountingTaxrate2
+## CreateAccountingTaxrate
 
 Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingTaxrate2" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.CreateAccountingTaxrate2(ctx, operations.CreateAccountingTaxrate2Request{
+    res, err := s.Taxrate.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.CreateAccountingTaxrate2Request](../../pkg/models/operations/createaccountingtaxrate2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAccountingTaxrateRequest](../../pkg/models/operations/createaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.CreateAccountingTaxrate2Response](../../pkg/models/operations/createaccountingtaxrate2response.md), error**
+**[*operations.CreateAccountingTaxrateResponse](../../pkg/models/operations/createaccountingtaxrateresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAccountingTaxrate2
+## GetAccountingTaxrate
 
 Retrieve a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingTaxrate2" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingTaxrate" method="get" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.GetAccountingTaxrate2(ctx, operations.GetAccountingTaxrate2Request{
+    res, err := s.Taxrate.GetAccountingTaxrate(ctx, operations.GetAccountingTaxrateRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetAccountingTaxrate2Request](../../pkg/models/operations/getaccountingtaxrate2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingTaxrateRequest](../../pkg/models/operations/getaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.GetAccountingTaxrate2Response](../../pkg/models/operations/getaccountingtaxrate2response.md), error**
+**[*operations.GetAccountingTaxrateResponse](../../pkg/models/operations/getaccountingtaxrateresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingTaxrates2
+## ListAccountingTaxrates
 
 List all taxrates
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingTaxrates2" method="get" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="go" operationID="listAccountingTaxrates" method="get" path="/accounting/{connection_id}/taxrate" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.ListAccountingTaxrates2(ctx, operations.ListAccountingTaxrates2Request{
+    res, err := s.Taxrate.ListAccountingTaxrates(ctx, operations.ListAccountingTaxratesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.ListAccountingTaxrates2Request](../../pkg/models/operations/listaccountingtaxrates2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingTaxratesRequest](../../pkg/models/operations/listaccountingtaxratesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.ListAccountingTaxrates2Response](../../pkg/models/operations/listaccountingtaxrates2response.md), error**
+**[*operations.ListAccountingTaxratesResponse](../../pkg/models/operations/listaccountingtaxratesresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAccountingTaxrate2
+## PatchAccountingTaxrate
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate2" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.PatchAccountingTaxrate2(ctx, operations.PatchAccountingTaxrate2Request{
+    res, err := s.Taxrate.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchAccountingTaxrate2Request](../../pkg/models/operations/patchaccountingtaxrate2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchAccountingTaxrateRequest](../../pkg/models/operations/patchaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.PatchAccountingTaxrate2Response](../../pkg/models/operations/patchaccountingtaxrate2response.md), error**
+**[*operations.PatchAccountingTaxrateResponse](../../pkg/models/operations/patchaccountingtaxrateresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAccountingTaxrate2
+## RemoveAccountingTaxrate
 
 Remove a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeAccountingTaxrate2" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeAccountingTaxrate" method="delete" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.RemoveAccountingTaxrate2(ctx, operations.RemoveAccountingTaxrate2Request{
+    res, err := s.Taxrate.RemoveAccountingTaxrate(ctx, operations.RemoveAccountingTaxrateRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.RemoveAccountingTaxrate2Request](../../pkg/models/operations/removeaccountingtaxrate2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveAccountingTaxrateRequest](../../pkg/models/operations/removeaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.RemoveAccountingTaxrate2Response](../../pkg/models/operations/removeaccountingtaxrate2response.md), error**
+**[*operations.RemoveAccountingTaxrateResponse](../../pkg/models/operations/removeaccountingtaxrateresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAccountingTaxrate2
+## UpdateAccountingTaxrate
 
 Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate2" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Taxrate.UpdateAccountingTaxrate2(ctx, operations.UpdateAccountingTaxrate2Request{
+    res, err := s.Taxrate.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.UpdateAccountingTaxrate2Request](../../pkg/models/operations/updateaccountingtaxrate2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateAccountingTaxrateRequest](../../pkg/models/operations/updateaccountingtaxraterequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.UpdateAccountingTaxrate2Response](../../pkg/models/operations/updateaccountingtaxrate2response.md), error**
+**[*operations.UpdateAccountingTaxrateResponse](../../pkg/models/operations/updateaccountingtaxrateresponse.md), error**
 
 ### Errors
 

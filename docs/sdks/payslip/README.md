@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetHrisPayslip2](#gethrispayslip2) - Retrieve a payslip
-* [ListHrisPayslips2](#listhrispayslips2) - List all payslips
+* [GetHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [ListHrisPayslips](#listhrispayslips) - List all payslips
 
-## GetHrisPayslip2
+## GetHrisPayslip
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="go" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Payslip.GetHrisPayslip2(ctx, operations.GetHrisPayslip2Request{
+    res, err := s.Payslip.GetHrisPayslip(ctx, operations.GetHrisPayslipRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetHrisPayslip2Request](../../pkg/models/operations/gethrispayslip2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetHrisPayslipRequest](../../pkg/models/operations/gethrispaysliprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetHrisPayslip2Response](../../pkg/models/operations/gethrispayslip2response.md), error**
+**[*operations.GetHrisPayslipResponse](../../pkg/models/operations/gethrispayslipresponse.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListHrisPayslips2
+## ListHrisPayslips
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="go" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Payslip.ListHrisPayslips2(ctx, operations.ListHrisPayslips2Request{
+    res, err := s.Payslip.ListHrisPayslips(ctx, operations.ListHrisPayslipsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListHrisPayslips2Request](../../pkg/models/operations/listhrispayslips2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListHrisPayslipsRequest](../../pkg/models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListHrisPayslips2Response](../../pkg/models/operations/listhrispayslips2response.md), error**
+**[*operations.ListHrisPayslipsResponse](../../pkg/models/operations/listhrispayslipsresponse.md), error**
 
 ### Errors
 

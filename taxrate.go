@@ -30,8 +30,8 @@ func newTaxrate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAccountingTaxrate2 - Create a taxrate
-func (s *Taxrate) CreateAccountingTaxrate2(ctx context.Context, request operations.CreateAccountingTaxrate2Request, opts ...operations.Option) (*operations.CreateAccountingTaxrate2Response, error) {
+// CreateAccountingTaxrate - Create a taxrate
+func (s *Taxrate) CreateAccountingTaxrate(ctx context.Context, request operations.CreateAccountingTaxrateRequest, opts ...operations.Option) (*operations.CreateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Taxrate) CreateAccountingTaxrate2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingTaxrate2",
+		OperationID:      "createAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Taxrate) CreateAccountingTaxrate2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAccountingTaxrate2Response{
+	res := &operations.CreateAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Taxrate) CreateAccountingTaxrate2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingTaxrate2 - Retrieve a taxrate
-func (s *Taxrate) GetAccountingTaxrate2(ctx context.Context, request operations.GetAccountingTaxrate2Request, opts ...operations.Option) (*operations.GetAccountingTaxrate2Response, error) {
+// GetAccountingTaxrate - Retrieve a taxrate
+func (s *Taxrate) GetAccountingTaxrate(ctx context.Context, request operations.GetAccountingTaxrateRequest, opts ...operations.Option) (*operations.GetAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Taxrate) GetAccountingTaxrate2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTaxrate2",
+		OperationID:      "getAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Taxrate) GetAccountingTaxrate2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAccountingTaxrate2Response{
+	res := &operations.GetAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Taxrate) GetAccountingTaxrate2(ctx context.Context, request operations.
 
 }
 
-// ListAccountingTaxrates2 - List all taxrates
-func (s *Taxrate) ListAccountingTaxrates2(ctx context.Context, request operations.ListAccountingTaxrates2Request, opts ...operations.Option) (*operations.ListAccountingTaxrates2Response, error) {
+// ListAccountingTaxrates - List all taxrates
+func (s *Taxrate) ListAccountingTaxrates(ctx context.Context, request operations.ListAccountingTaxratesRequest, opts ...operations.Option) (*operations.ListAccountingTaxratesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Taxrate) ListAccountingTaxrates2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTaxrates2",
+		OperationID:      "listAccountingTaxrates",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Taxrate) ListAccountingTaxrates2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAccountingTaxrates2Response{
+	res := &operations.ListAccountingTaxratesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Taxrate) ListAccountingTaxrates2(ctx context.Context, request operation
 
 }
 
-// PatchAccountingTaxrate2 - Update a taxrate
-func (s *Taxrate) PatchAccountingTaxrate2(ctx context.Context, request operations.PatchAccountingTaxrate2Request, opts ...operations.Option) (*operations.PatchAccountingTaxrate2Response, error) {
+// PatchAccountingTaxrate - Update a taxrate
+func (s *Taxrate) PatchAccountingTaxrate(ctx context.Context, request operations.PatchAccountingTaxrateRequest, opts ...operations.Option) (*operations.PatchAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Taxrate) PatchAccountingTaxrate2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingTaxrate2",
+		OperationID:      "patchAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Taxrate) PatchAccountingTaxrate2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAccountingTaxrate2Response{
+	res := &operations.PatchAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Taxrate) PatchAccountingTaxrate2(ctx context.Context, request operation
 
 }
 
-// RemoveAccountingTaxrate2 - Remove a taxrate
-func (s *Taxrate) RemoveAccountingTaxrate2(ctx context.Context, request operations.RemoveAccountingTaxrate2Request, opts ...operations.Option) (*operations.RemoveAccountingTaxrate2Response, error) {
+// RemoveAccountingTaxrate - Remove a taxrate
+func (s *Taxrate) RemoveAccountingTaxrate(ctx context.Context, request operations.RemoveAccountingTaxrateRequest, opts ...operations.Option) (*operations.RemoveAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Taxrate) RemoveAccountingTaxrate2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingTaxrate2",
+		OperationID:      "removeAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Taxrate) RemoveAccountingTaxrate2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAccountingTaxrate2Response{
+	res := &operations.RemoveAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Taxrate) RemoveAccountingTaxrate2(ctx context.Context, request operatio
 
 }
 
-// UpdateAccountingTaxrate2 - Update a taxrate
-func (s *Taxrate) UpdateAccountingTaxrate2(ctx context.Context, request operations.UpdateAccountingTaxrate2Request, opts ...operations.Option) (*operations.UpdateAccountingTaxrate2Response, error) {
+// UpdateAccountingTaxrate - Update a taxrate
+func (s *Taxrate) UpdateAccountingTaxrate(ctx context.Context, request operations.UpdateAccountingTaxrateRequest, opts ...operations.Option) (*operations.UpdateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Taxrate) UpdateAccountingTaxrate2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingTaxrate2",
+		OperationID:      "updateAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Taxrate) UpdateAccountingTaxrate2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAccountingTaxrate2Response{
+	res := &operations.UpdateAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

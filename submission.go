@@ -30,8 +30,8 @@ func newSubmission(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// GetFormsSubmission2 - Retrieve a submission
-func (s *Submission) GetFormsSubmission2(ctx context.Context, request operations.GetFormsSubmission2Request, opts ...operations.Option) (*operations.GetFormsSubmission2Response, error) {
+// GetFormsSubmission - Retrieve a submission
+func (s *Submission) GetFormsSubmission(ctx context.Context, request operations.GetFormsSubmissionRequest, opts ...operations.Option) (*operations.GetFormsSubmissionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Submission) GetFormsSubmission2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getFormsSubmission2",
+		OperationID:      "getFormsSubmission",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Submission) GetFormsSubmission2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetFormsSubmission2Response{
+	res := &operations.GetFormsSubmissionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Submission) GetFormsSubmission2(ctx context.Context, request operations
 
 }
 
-// ListFormsSubmissions2 - List all submissions
-func (s *Submission) ListFormsSubmissions2(ctx context.Context, request operations.ListFormsSubmissions2Request, opts ...operations.Option) (*operations.ListFormsSubmissions2Response, error) {
+// ListFormsSubmissions - List all submissions
+func (s *Submission) ListFormsSubmissions(ctx context.Context, request operations.ListFormsSubmissionsRequest, opts ...operations.Option) (*operations.ListFormsSubmissionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Submission) ListFormsSubmissions2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listFormsSubmissions2",
+		OperationID:      "listFormsSubmissions",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Submission) ListFormsSubmissions2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListFormsSubmissions2Response{
+	res := &operations.ListFormsSubmissionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

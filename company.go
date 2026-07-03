@@ -30,8 +30,8 @@ func newCompany(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAtsCompany2 - Create a company
-func (s *Company) CreateAtsCompany2(ctx context.Context, request operations.CreateAtsCompany2Request, opts ...operations.Option) (*operations.CreateAtsCompany2Response, error) {
+// CreateAtsCompany - Create a company
+func (s *Company) CreateAtsCompany(ctx context.Context, request operations.CreateAtsCompanyRequest, opts ...operations.Option) (*operations.CreateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Company) CreateAtsCompany2(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsCompany2",
+		OperationID:      "createAtsCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Company) CreateAtsCompany2(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateAtsCompany2Response{
+	res := &operations.CreateAtsCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Company) CreateAtsCompany2(ctx context.Context, request operations.Crea
 
 }
 
-// CreateCrmCompany2 - Create a company
-func (s *Company) CreateCrmCompany2(ctx context.Context, request operations.CreateCrmCompany2Request, opts ...operations.Option) (*operations.CreateCrmCompany2Response, error) {
+// CreateCrmCompany - Create a company
+func (s *Company) CreateCrmCompany(ctx context.Context, request operations.CreateCrmCompanyRequest, opts ...operations.Option) (*operations.CreateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Company) CreateCrmCompany2(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmCompany2",
+		OperationID:      "createCrmCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Company) CreateCrmCompany2(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateCrmCompany2Response{
+	res := &operations.CreateCrmCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Company) CreateCrmCompany2(ctx context.Context, request operations.Crea
 
 }
 
-// CreateHrisCompany2 - Create a company
-func (s *Company) CreateHrisCompany2(ctx context.Context, request operations.CreateHrisCompany2Request, opts ...operations.Option) (*operations.CreateHrisCompany2Response, error) {
+// CreateHrisCompany - Create a company
+func (s *Company) CreateHrisCompany(ctx context.Context, request operations.CreateHrisCompanyRequest, opts ...operations.Option) (*operations.CreateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Company) CreateHrisCompany2(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisCompany2",
+		OperationID:      "createHrisCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Company) CreateHrisCompany2(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateHrisCompany2Response{
+	res := &operations.CreateHrisCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Company) CreateHrisCompany2(ctx context.Context, request operations.Cre
 
 }
 
-// GetAtsCompany2 - Retrieve a company
-func (s *Company) GetAtsCompany2(ctx context.Context, request operations.GetAtsCompany2Request, opts ...operations.Option) (*operations.GetAtsCompany2Response, error) {
+// GetAtsCompany - Retrieve a company
+func (s *Company) GetAtsCompany(ctx context.Context, request operations.GetAtsCompanyRequest, opts ...operations.Option) (*operations.GetAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Company) GetAtsCompany2(ctx context.Context, request operations.GetAtsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsCompany2",
+		OperationID:      "getAtsCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Company) GetAtsCompany2(ctx context.Context, request operations.GetAtsC
 		}
 	}
 
-	res := &operations.GetAtsCompany2Response{
+	res := &operations.GetAtsCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Company) GetAtsCompany2(ctx context.Context, request operations.GetAtsC
 
 }
 
-// GetCrmCompany2 - Retrieve a company
-func (s *Company) GetCrmCompany2(ctx context.Context, request operations.GetCrmCompany2Request, opts ...operations.Option) (*operations.GetCrmCompany2Response, error) {
+// GetCrmCompany - Retrieve a company
+func (s *Company) GetCrmCompany(ctx context.Context, request operations.GetCrmCompanyRequest, opts ...operations.Option) (*operations.GetCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Company) GetCrmCompany2(ctx context.Context, request operations.GetCrmC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmCompany2",
+		OperationID:      "getCrmCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Company) GetCrmCompany2(ctx context.Context, request operations.GetCrmC
 		}
 	}
 
-	res := &operations.GetCrmCompany2Response{
+	res := &operations.GetCrmCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Company) GetCrmCompany2(ctx context.Context, request operations.GetCrmC
 
 }
 
-// GetHrisCompany2 - Retrieve a company
-func (s *Company) GetHrisCompany2(ctx context.Context, request operations.GetHrisCompany2Request, opts ...operations.Option) (*operations.GetHrisCompany2Response, error) {
+// GetHrisCompany - Retrieve a company
+func (s *Company) GetHrisCompany(ctx context.Context, request operations.GetHrisCompanyRequest, opts ...operations.Option) (*operations.GetHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Company) GetHrisCompany2(ctx context.Context, request operations.GetHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisCompany2",
+		OperationID:      "getHrisCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Company) GetHrisCompany2(ctx context.Context, request operations.GetHri
 		}
 	}
 
-	res := &operations.GetHrisCompany2Response{
+	res := &operations.GetHrisCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Company) GetHrisCompany2(ctx context.Context, request operations.GetHri
 
 }
 
-// ListAtsCompanies2 - List all companies
-func (s *Company) ListAtsCompanies2(ctx context.Context, request operations.ListAtsCompanies2Request, opts ...operations.Option) (*operations.ListAtsCompanies2Response, error) {
+// ListAtsCompanies - List all companies
+func (s *Company) ListAtsCompanies(ctx context.Context, request operations.ListAtsCompaniesRequest, opts ...operations.Option) (*operations.ListAtsCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Company) ListAtsCompanies2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsCompanies2",
+		OperationID:      "listAtsCompanies",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Company) ListAtsCompanies2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListAtsCompanies2Response{
+	res := &operations.ListAtsCompaniesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Company) ListAtsCompanies2(ctx context.Context, request operations.List
 
 }
 
-// ListCrmCompanies2 - List all companies
-func (s *Company) ListCrmCompanies2(ctx context.Context, request operations.ListCrmCompanies2Request, opts ...operations.Option) (*operations.ListCrmCompanies2Response, error) {
+// ListCrmCompanies - List all companies
+func (s *Company) ListCrmCompanies(ctx context.Context, request operations.ListCrmCompaniesRequest, opts ...operations.Option) (*operations.ListCrmCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Company) ListCrmCompanies2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmCompanies2",
+		OperationID:      "listCrmCompanies",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Company) ListCrmCompanies2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListCrmCompanies2Response{
+	res := &operations.ListCrmCompaniesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Company) ListCrmCompanies2(ctx context.Context, request operations.List
 
 }
 
-// ListEnrichCompanies2 - Retrieve enrichment information for a company
-func (s *Company) ListEnrichCompanies2(ctx context.Context, request operations.ListEnrichCompanies2Request, opts ...operations.Option) (*operations.ListEnrichCompanies2Response, error) {
+// ListEnrichCompanies - Retrieve enrichment information for a company
+func (s *Company) ListEnrichCompanies(ctx context.Context, request operations.ListEnrichCompaniesRequest, opts ...operations.Option) (*operations.ListEnrichCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Company) ListEnrichCompanies2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listEnrichCompanies2",
+		OperationID:      "listEnrichCompanies",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Company) ListEnrichCompanies2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListEnrichCompanies2Response{
+	res := &operations.ListEnrichCompaniesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Company) ListEnrichCompanies2(ctx context.Context, request operations.L
 
 }
 
-// ListHrisCompanies2 - List all companies
-func (s *Company) ListHrisCompanies2(ctx context.Context, request operations.ListHrisCompanies2Request, opts ...operations.Option) (*operations.ListHrisCompanies2Response, error) {
+// ListHrisCompanies - List all companies
+func (s *Company) ListHrisCompanies(ctx context.Context, request operations.ListHrisCompaniesRequest, opts ...operations.Option) (*operations.ListHrisCompaniesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Company) ListHrisCompanies2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisCompanies2",
+		OperationID:      "listHrisCompanies",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2069,7 +2069,7 @@ func (s *Company) ListHrisCompanies2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListHrisCompanies2Response{
+	res := &operations.ListHrisCompaniesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2121,8 +2121,8 @@ func (s *Company) ListHrisCompanies2(ctx context.Context, request operations.Lis
 
 }
 
-// PatchAtsCompany2 - Update a company
-func (s *Company) PatchAtsCompany2(ctx context.Context, request operations.PatchAtsCompany2Request, opts ...operations.Option) (*operations.PatchAtsCompany2Response, error) {
+// PatchAtsCompany - Update a company
+func (s *Company) PatchAtsCompany(ctx context.Context, request operations.PatchAtsCompanyRequest, opts ...operations.Option) (*operations.PatchAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2151,7 +2151,7 @@ func (s *Company) PatchAtsCompany2(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsCompany2",
+		OperationID:      "patchAtsCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -2283,7 +2283,7 @@ func (s *Company) PatchAtsCompany2(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchAtsCompany2Response{
+	res := &operations.PatchAtsCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2335,8 +2335,8 @@ func (s *Company) PatchAtsCompany2(ctx context.Context, request operations.Patch
 
 }
 
-// PatchCrmCompany2 - Update a company
-func (s *Company) PatchCrmCompany2(ctx context.Context, request operations.PatchCrmCompany2Request, opts ...operations.Option) (*operations.PatchCrmCompany2Response, error) {
+// PatchCrmCompany - Update a company
+func (s *Company) PatchCrmCompany(ctx context.Context, request operations.PatchCrmCompanyRequest, opts ...operations.Option) (*operations.PatchCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2365,7 +2365,7 @@ func (s *Company) PatchCrmCompany2(ctx context.Context, request operations.Patch
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmCompany2",
+		OperationID:      "patchCrmCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -2497,7 +2497,7 @@ func (s *Company) PatchCrmCompany2(ctx context.Context, request operations.Patch
 		}
 	}
 
-	res := &operations.PatchCrmCompany2Response{
+	res := &operations.PatchCrmCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2549,8 +2549,8 @@ func (s *Company) PatchCrmCompany2(ctx context.Context, request operations.Patch
 
 }
 
-// PatchHrisCompany2 - Update a company
-func (s *Company) PatchHrisCompany2(ctx context.Context, request operations.PatchHrisCompany2Request, opts ...operations.Option) (*operations.PatchHrisCompany2Response, error) {
+// PatchHrisCompany - Update a company
+func (s *Company) PatchHrisCompany(ctx context.Context, request operations.PatchHrisCompanyRequest, opts ...operations.Option) (*operations.PatchHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2579,7 +2579,7 @@ func (s *Company) PatchHrisCompany2(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisCompany2",
+		OperationID:      "patchHrisCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -2711,7 +2711,7 @@ func (s *Company) PatchHrisCompany2(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchHrisCompany2Response{
+	res := &operations.PatchHrisCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2763,8 +2763,8 @@ func (s *Company) PatchHrisCompany2(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveAtsCompany2 - Remove a company
-func (s *Company) RemoveAtsCompany2(ctx context.Context, request operations.RemoveAtsCompany2Request, opts ...operations.Option) (*operations.RemoveAtsCompany2Response, error) {
+// RemoveAtsCompany - Remove a company
+func (s *Company) RemoveAtsCompany(ctx context.Context, request operations.RemoveAtsCompanyRequest, opts ...operations.Option) (*operations.RemoveAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2793,7 +2793,7 @@ func (s *Company) RemoveAtsCompany2(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsCompany2",
+		OperationID:      "removeAtsCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2914,7 +2914,7 @@ func (s *Company) RemoveAtsCompany2(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveAtsCompany2Response{
+	res := &operations.RemoveAtsCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2945,8 +2945,8 @@ func (s *Company) RemoveAtsCompany2(ctx context.Context, request operations.Remo
 
 }
 
-// RemoveCrmCompany2 - Remove a company
-func (s *Company) RemoveCrmCompany2(ctx context.Context, request operations.RemoveCrmCompany2Request, opts ...operations.Option) (*operations.RemoveCrmCompany2Response, error) {
+// RemoveCrmCompany - Remove a company
+func (s *Company) RemoveCrmCompany(ctx context.Context, request operations.RemoveCrmCompanyRequest, opts ...operations.Option) (*operations.RemoveCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2975,7 +2975,7 @@ func (s *Company) RemoveCrmCompany2(ctx context.Context, request operations.Remo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmCompany2",
+		OperationID:      "removeCrmCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3096,7 +3096,7 @@ func (s *Company) RemoveCrmCompany2(ctx context.Context, request operations.Remo
 		}
 	}
 
-	res := &operations.RemoveCrmCompany2Response{
+	res := &operations.RemoveCrmCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3127,8 +3127,8 @@ func (s *Company) RemoveCrmCompany2(ctx context.Context, request operations.Remo
 
 }
 
-// RemoveHrisCompany2 - Remove a company
-func (s *Company) RemoveHrisCompany2(ctx context.Context, request operations.RemoveHrisCompany2Request, opts ...operations.Option) (*operations.RemoveHrisCompany2Response, error) {
+// RemoveHrisCompany - Remove a company
+func (s *Company) RemoveHrisCompany(ctx context.Context, request operations.RemoveHrisCompanyRequest, opts ...operations.Option) (*operations.RemoveHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3157,7 +3157,7 @@ func (s *Company) RemoveHrisCompany2(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisCompany2",
+		OperationID:      "removeHrisCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3278,7 +3278,7 @@ func (s *Company) RemoveHrisCompany2(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveHrisCompany2Response{
+	res := &operations.RemoveHrisCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3309,8 +3309,8 @@ func (s *Company) RemoveHrisCompany2(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateAtsCompany2 - Update a company
-func (s *Company) UpdateAtsCompany2(ctx context.Context, request operations.UpdateAtsCompany2Request, opts ...operations.Option) (*operations.UpdateAtsCompany2Response, error) {
+// UpdateAtsCompany - Update a company
+func (s *Company) UpdateAtsCompany(ctx context.Context, request operations.UpdateAtsCompanyRequest, opts ...operations.Option) (*operations.UpdateAtsCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3339,7 +3339,7 @@ func (s *Company) UpdateAtsCompany2(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsCompany2",
+		OperationID:      "updateAtsCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCompany", "json", `request:"mediaType=application/json"`)
@@ -3471,7 +3471,7 @@ func (s *Company) UpdateAtsCompany2(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateAtsCompany2Response{
+	res := &operations.UpdateAtsCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3523,8 +3523,8 @@ func (s *Company) UpdateAtsCompany2(ctx context.Context, request operations.Upda
 
 }
 
-// UpdateCrmCompany2 - Update a company
-func (s *Company) UpdateCrmCompany2(ctx context.Context, request operations.UpdateCrmCompany2Request, opts ...operations.Option) (*operations.UpdateCrmCompany2Response, error) {
+// UpdateCrmCompany - Update a company
+func (s *Company) UpdateCrmCompany(ctx context.Context, request operations.UpdateCrmCompanyRequest, opts ...operations.Option) (*operations.UpdateCrmCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3553,7 +3553,7 @@ func (s *Company) UpdateCrmCompany2(ctx context.Context, request operations.Upda
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmCompany2",
+		OperationID:      "updateCrmCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmCompany", "json", `request:"mediaType=application/json"`)
@@ -3685,7 +3685,7 @@ func (s *Company) UpdateCrmCompany2(ctx context.Context, request operations.Upda
 		}
 	}
 
-	res := &operations.UpdateCrmCompany2Response{
+	res := &operations.UpdateCrmCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3737,8 +3737,8 @@ func (s *Company) UpdateCrmCompany2(ctx context.Context, request operations.Upda
 
 }
 
-// UpdateHrisCompany2 - Update a company
-func (s *Company) UpdateHrisCompany2(ctx context.Context, request operations.UpdateHrisCompany2Request, opts ...operations.Option) (*operations.UpdateHrisCompany2Response, error) {
+// UpdateHrisCompany - Update a company
+func (s *Company) UpdateHrisCompany(ctx context.Context, request operations.UpdateHrisCompanyRequest, opts ...operations.Option) (*operations.UpdateHrisCompanyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3767,7 +3767,7 @@ func (s *Company) UpdateHrisCompany2(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisCompany2",
+		OperationID:      "updateHrisCompany",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisCompany", "json", `request:"mediaType=application/json"`)
@@ -3899,7 +3899,7 @@ func (s *Company) UpdateHrisCompany2(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateHrisCompany2Response{
+	res := &operations.UpdateHrisCompanyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newScorecard(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateAtsScorecard2 - Create a scorecard
-func (s *Scorecard) CreateAtsScorecard2(ctx context.Context, request operations.CreateAtsScorecard2Request, opts ...operations.Option) (*operations.CreateAtsScorecard2Response, error) {
+// CreateAtsScorecard - Create a scorecard
+func (s *Scorecard) CreateAtsScorecard(ctx context.Context, request operations.CreateAtsScorecardRequest, opts ...operations.Option) (*operations.CreateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Scorecard) CreateAtsScorecard2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsScorecard2",
+		OperationID:      "createAtsScorecard",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Scorecard) CreateAtsScorecard2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.CreateAtsScorecard2Response{
+	res := &operations.CreateAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Scorecard) CreateAtsScorecard2(ctx context.Context, request operations.
 
 }
 
-// GetAtsScorecard2 - Retrieve a scorecard
-func (s *Scorecard) GetAtsScorecard2(ctx context.Context, request operations.GetAtsScorecard2Request, opts ...operations.Option) (*operations.GetAtsScorecard2Response, error) {
+// GetAtsScorecard - Retrieve a scorecard
+func (s *Scorecard) GetAtsScorecard(ctx context.Context, request operations.GetAtsScorecardRequest, opts ...operations.Option) (*operations.GetAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Scorecard) GetAtsScorecard2(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsScorecard2",
+		OperationID:      "getAtsScorecard",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Scorecard) GetAtsScorecard2(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetAtsScorecard2Response{
+	res := &operations.GetAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Scorecard) GetAtsScorecard2(ctx context.Context, request operations.Get
 
 }
 
-// ListAtsScorecards2 - List all scorecards
-func (s *Scorecard) ListAtsScorecards2(ctx context.Context, request operations.ListAtsScorecards2Request, opts ...operations.Option) (*operations.ListAtsScorecards2Response, error) {
+// ListAtsScorecards - List all scorecards
+func (s *Scorecard) ListAtsScorecards(ctx context.Context, request operations.ListAtsScorecardsRequest, opts ...operations.Option) (*operations.ListAtsScorecardsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Scorecard) ListAtsScorecards2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsScorecards2",
+		OperationID:      "listAtsScorecards",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Scorecard) ListAtsScorecards2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListAtsScorecards2Response{
+	res := &operations.ListAtsScorecardsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Scorecard) ListAtsScorecards2(ctx context.Context, request operations.L
 
 }
 
-// PatchAtsScorecard2 - Update a scorecard
-func (s *Scorecard) PatchAtsScorecard2(ctx context.Context, request operations.PatchAtsScorecard2Request, opts ...operations.Option) (*operations.PatchAtsScorecard2Response, error) {
+// PatchAtsScorecard - Update a scorecard
+func (s *Scorecard) PatchAtsScorecard(ctx context.Context, request operations.PatchAtsScorecardRequest, opts ...operations.Option) (*operations.PatchAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Scorecard) PatchAtsScorecard2(ctx context.Context, request operations.P
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsScorecard2",
+		OperationID:      "patchAtsScorecard",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Scorecard) PatchAtsScorecard2(ctx context.Context, request operations.P
 		}
 	}
 
-	res := &operations.PatchAtsScorecard2Response{
+	res := &operations.PatchAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Scorecard) PatchAtsScorecard2(ctx context.Context, request operations.P
 
 }
 
-// RemoveAtsScorecard2 - Remove a scorecard
-func (s *Scorecard) RemoveAtsScorecard2(ctx context.Context, request operations.RemoveAtsScorecard2Request, opts ...operations.Option) (*operations.RemoveAtsScorecard2Response, error) {
+// RemoveAtsScorecard - Remove a scorecard
+func (s *Scorecard) RemoveAtsScorecard(ctx context.Context, request operations.RemoveAtsScorecardRequest, opts ...operations.Option) (*operations.RemoveAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Scorecard) RemoveAtsScorecard2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsScorecard2",
+		OperationID:      "removeAtsScorecard",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Scorecard) RemoveAtsScorecard2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.RemoveAtsScorecard2Response{
+	res := &operations.RemoveAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Scorecard) RemoveAtsScorecard2(ctx context.Context, request operations.
 
 }
 
-// UpdateAtsScorecard2 - Update a scorecard
-func (s *Scorecard) UpdateAtsScorecard2(ctx context.Context, request operations.UpdateAtsScorecard2Request, opts ...operations.Option) (*operations.UpdateAtsScorecard2Response, error) {
+// UpdateAtsScorecard - Update a scorecard
+func (s *Scorecard) UpdateAtsScorecard(ctx context.Context, request operations.UpdateAtsScorecardRequest, opts ...operations.Option) (*operations.UpdateAtsScorecardResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Scorecard) UpdateAtsScorecard2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsScorecard2",
+		OperationID:      "updateAtsScorecard",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsScorecard", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Scorecard) UpdateAtsScorecard2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.UpdateAtsScorecard2Response{
+	res := &operations.UpdateAtsScorecardResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

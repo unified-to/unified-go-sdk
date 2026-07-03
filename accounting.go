@@ -30,8 +30,8 @@ func newAccounting(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// CreateAccountingAccount2 - Create an account
-func (s *Accounting) CreateAccountingAccount2(ctx context.Context, request operations.CreateAccountingAccount2Request, opts ...operations.Option) (*operations.CreateAccountingAccount2Response, error) {
+// CreateAccountingAccount - Create an account
+func (s *Accounting) CreateAccountingAccount(ctx context.Context, request operations.CreateAccountingAccountRequest, opts ...operations.Option) (*operations.CreateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Accounting) CreateAccountingAccount2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingAccount2",
+		OperationID:      "createAccountingAccount",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Accounting) CreateAccountingAccount2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingAccount2Response{
+	res := &operations.CreateAccountingAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Accounting) CreateAccountingAccount2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingBill2 - Create a bill
-func (s *Accounting) CreateAccountingBill2(ctx context.Context, request operations.CreateAccountingBill2Request, opts ...operations.Option) (*operations.CreateAccountingBill2Response, error) {
+// CreateAccountingBill - Create a bill
+func (s *Accounting) CreateAccountingBill(ctx context.Context, request operations.CreateAccountingBillRequest, opts ...operations.Option) (*operations.CreateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Accounting) CreateAccountingBill2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingBill2",
+		OperationID:      "createAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Accounting) CreateAccountingBill2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAccountingBill2Response{
+	res := &operations.CreateAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Accounting) CreateAccountingBill2(ctx context.Context, request operatio
 
 }
 
-// CreateAccountingCategory2 - Create a category
-func (s *Accounting) CreateAccountingCategory2(ctx context.Context, request operations.CreateAccountingCategory2Request, opts ...operations.Option) (*operations.CreateAccountingCategory2Response, error) {
+// CreateAccountingCategory - Create a category
+func (s *Accounting) CreateAccountingCategory(ctx context.Context, request operations.CreateAccountingCategoryRequest, opts ...operations.Option) (*operations.CreateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Accounting) CreateAccountingCategory2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingCategory2",
+		OperationID:      "createAccountingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Accounting) CreateAccountingCategory2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.CreateAccountingCategory2Response{
+	res := &operations.CreateAccountingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Accounting) CreateAccountingCategory2(ctx context.Context, request oper
 
 }
 
-// CreateAccountingContact2 - Create a contact
-func (s *Accounting) CreateAccountingContact2(ctx context.Context, request operations.CreateAccountingContact2Request, opts ...operations.Option) (*operations.CreateAccountingContact2Response, error) {
+// CreateAccountingContact - Create a contact
+func (s *Accounting) CreateAccountingContact(ctx context.Context, request operations.CreateAccountingContactRequest, opts ...operations.Option) (*operations.CreateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Accounting) CreateAccountingContact2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingContact2",
+		OperationID:      "createAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Accounting) CreateAccountingContact2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingContact2Response{
+	res := &operations.CreateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Accounting) CreateAccountingContact2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingCreditmemo2 - Create a creditmemo
-func (s *Accounting) CreateAccountingCreditmemo2(ctx context.Context, request operations.CreateAccountingCreditmemo2Request, opts ...operations.Option) (*operations.CreateAccountingCreditmemo2Response, error) {
+// CreateAccountingCreditmemo - Create a creditmemo
+func (s *Accounting) CreateAccountingCreditmemo(ctx context.Context, request operations.CreateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.CreateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Accounting) CreateAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingCreditmemo2",
+		OperationID:      "createAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Accounting) CreateAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.CreateAccountingCreditmemo2Response{
+	res := &operations.CreateAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Accounting) CreateAccountingCreditmemo2(ctx context.Context, request op
 
 }
 
-// CreateAccountingExpense2 - Create an expense
-func (s *Accounting) CreateAccountingExpense2(ctx context.Context, request operations.CreateAccountingExpense2Request, opts ...operations.Option) (*operations.CreateAccountingExpense2Response, error) {
+// CreateAccountingExpense - Create an expense
+func (s *Accounting) CreateAccountingExpense(ctx context.Context, request operations.CreateAccountingExpenseRequest, opts ...operations.Option) (*operations.CreateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Accounting) CreateAccountingExpense2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingExpense2",
+		OperationID:      "createAccountingExpense",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingExpense", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Accounting) CreateAccountingExpense2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingExpense2Response{
+	res := &operations.CreateAccountingExpenseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Accounting) CreateAccountingExpense2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingInvoice2 - Create an invoice
-func (s *Accounting) CreateAccountingInvoice2(ctx context.Context, request operations.CreateAccountingInvoice2Request, opts ...operations.Option) (*operations.CreateAccountingInvoice2Response, error) {
+// CreateAccountingInvoice - Create an invoice
+func (s *Accounting) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest, opts ...operations.Option) (*operations.CreateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Accounting) CreateAccountingInvoice2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingInvoice2",
+		OperationID:      "createAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -1476,7 +1476,7 @@ func (s *Accounting) CreateAccountingInvoice2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingInvoice2Response{
+	res := &operations.CreateAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1528,8 +1528,8 @@ func (s *Accounting) CreateAccountingInvoice2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingJournal2 - Create a journal
-func (s *Accounting) CreateAccountingJournal2(ctx context.Context, request operations.CreateAccountingJournal2Request, opts ...operations.Option) (*operations.CreateAccountingJournal2Response, error) {
+// CreateAccountingJournal - Create a journal
+func (s *Accounting) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest, opts ...operations.Option) (*operations.CreateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1558,7 +1558,7 @@ func (s *Accounting) CreateAccountingJournal2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingJournal2",
+		OperationID:      "createAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -1690,7 +1690,7 @@ func (s *Accounting) CreateAccountingJournal2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingJournal2Response{
+	res := &operations.CreateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1742,8 +1742,8 @@ func (s *Accounting) CreateAccountingJournal2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingOrder2 - Create an order
-func (s *Accounting) CreateAccountingOrder2(ctx context.Context, request operations.CreateAccountingOrder2Request, opts ...operations.Option) (*operations.CreateAccountingOrder2Response, error) {
+// CreateAccountingOrder - Create an order
+func (s *Accounting) CreateAccountingOrder(ctx context.Context, request operations.CreateAccountingOrderRequest, opts ...operations.Option) (*operations.CreateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1772,7 +1772,7 @@ func (s *Accounting) CreateAccountingOrder2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingOrder2",
+		OperationID:      "createAccountingOrder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -1904,7 +1904,7 @@ func (s *Accounting) CreateAccountingOrder2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateAccountingOrder2Response{
+	res := &operations.CreateAccountingOrderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1956,8 +1956,8 @@ func (s *Accounting) CreateAccountingOrder2(ctx context.Context, request operati
 
 }
 
-// CreateAccountingPurchaseorder2 - Create a purchaseorder
-func (s *Accounting) CreateAccountingPurchaseorder2(ctx context.Context, request operations.CreateAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.CreateAccountingPurchaseorder2Response, error) {
+// CreateAccountingPurchaseorder - Create a purchaseorder
+func (s *Accounting) CreateAccountingPurchaseorder(ctx context.Context, request operations.CreateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.CreateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1986,7 +1986,7 @@ func (s *Accounting) CreateAccountingPurchaseorder2(ctx context.Context, request
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingPurchaseorder2",
+		OperationID:      "createAccountingPurchaseorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -2118,7 +2118,7 @@ func (s *Accounting) CreateAccountingPurchaseorder2(ctx context.Context, request
 		}
 	}
 
-	res := &operations.CreateAccountingPurchaseorder2Response{
+	res := &operations.CreateAccountingPurchaseorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2170,8 +2170,8 @@ func (s *Accounting) CreateAccountingPurchaseorder2(ctx context.Context, request
 
 }
 
-// CreateAccountingSalesorder2 - Create a salesorder
-func (s *Accounting) CreateAccountingSalesorder2(ctx context.Context, request operations.CreateAccountingSalesorder2Request, opts ...operations.Option) (*operations.CreateAccountingSalesorder2Response, error) {
+// CreateAccountingSalesorder - Create a salesorder
+func (s *Accounting) CreateAccountingSalesorder(ctx context.Context, request operations.CreateAccountingSalesorderRequest, opts ...operations.Option) (*operations.CreateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2200,7 +2200,7 @@ func (s *Accounting) CreateAccountingSalesorder2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingSalesorder2",
+		OperationID:      "createAccountingSalesorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingSalesorder", "json", `request:"mediaType=application/json"`)
@@ -2332,7 +2332,7 @@ func (s *Accounting) CreateAccountingSalesorder2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.CreateAccountingSalesorder2Response{
+	res := &operations.CreateAccountingSalesorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2384,8 +2384,8 @@ func (s *Accounting) CreateAccountingSalesorder2(ctx context.Context, request op
 
 }
 
-// CreateAccountingTaxrate2 - Create a taxrate
-func (s *Accounting) CreateAccountingTaxrate2(ctx context.Context, request operations.CreateAccountingTaxrate2Request, opts ...operations.Option) (*operations.CreateAccountingTaxrate2Response, error) {
+// CreateAccountingTaxrate - Create a taxrate
+func (s *Accounting) CreateAccountingTaxrate(ctx context.Context, request operations.CreateAccountingTaxrateRequest, opts ...operations.Option) (*operations.CreateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2414,7 +2414,7 @@ func (s *Accounting) CreateAccountingTaxrate2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingTaxrate2",
+		OperationID:      "createAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -2546,7 +2546,7 @@ func (s *Accounting) CreateAccountingTaxrate2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.CreateAccountingTaxrate2Response{
+	res := &operations.CreateAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2598,8 +2598,8 @@ func (s *Accounting) CreateAccountingTaxrate2(ctx context.Context, request opera
 
 }
 
-// CreateAccountingTransaction2 - Create a transaction
-func (s *Accounting) CreateAccountingTransaction2(ctx context.Context, request operations.CreateAccountingTransaction2Request, opts ...operations.Option) (*operations.CreateAccountingTransaction2Response, error) {
+// CreateAccountingTransaction - Create a transaction
+func (s *Accounting) CreateAccountingTransaction(ctx context.Context, request operations.CreateAccountingTransactionRequest, opts ...operations.Option) (*operations.CreateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2628,7 +2628,7 @@ func (s *Accounting) CreateAccountingTransaction2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingTransaction2",
+		OperationID:      "createAccountingTransaction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -2760,7 +2760,7 @@ func (s *Accounting) CreateAccountingTransaction2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.CreateAccountingTransaction2Response{
+	res := &operations.CreateAccountingTransactionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2812,8 +2812,222 @@ func (s *Accounting) CreateAccountingTransaction2(ctx context.Context, request o
 
 }
 
-// GetAccountingAccount2 - Retrieve an account
-func (s *Accounting) GetAccountingAccount2(ctx context.Context, request operations.GetAccountingAccount2Request, opts ...operations.Option) (*operations.GetAccountingAccount2Response, error) {
+// CreateAccountingVendorcredit - Create a vendorcredit
+func (s *Accounting) CreateAccountingVendorcredit(ctx context.Context, request operations.CreateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.CreateAccountingVendorcreditResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "createAccountingVendorcredit",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingVendorcredit", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	if reqContentType != "" {
+		req.Header.Set("Content-Type", reqContentType)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.CreateAccountingVendorcreditResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out shared.AccountingVendorcredit
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.AccountingVendorcredit = &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// GetAccountingAccount - Retrieve an account
+func (s *Accounting) GetAccountingAccount(ctx context.Context, request operations.GetAccountingAccountRequest, opts ...operations.Option) (*operations.GetAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2842,7 +3056,7 @@ func (s *Accounting) GetAccountingAccount2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingAccount2",
+		OperationID:      "getAccountingAccount",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2967,7 +3181,7 @@ func (s *Accounting) GetAccountingAccount2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingAccount2Response{
+	res := &operations.GetAccountingAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3019,8 +3233,8 @@ func (s *Accounting) GetAccountingAccount2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingBalancesheet2 - Retrieve a balancesheet
-func (s *Accounting) GetAccountingBalancesheet2(ctx context.Context, request operations.GetAccountingBalancesheet2Request, opts ...operations.Option) (*operations.GetAccountingBalancesheet2Response, error) {
+// GetAccountingBalancesheet - Retrieve a balancesheet
+func (s *Accounting) GetAccountingBalancesheet(ctx context.Context, request operations.GetAccountingBalancesheetRequest, opts ...operations.Option) (*operations.GetAccountingBalancesheetResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3049,7 +3263,7 @@ func (s *Accounting) GetAccountingBalancesheet2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingBalancesheet2",
+		OperationID:      "getAccountingBalancesheet",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3174,7 +3388,7 @@ func (s *Accounting) GetAccountingBalancesheet2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.GetAccountingBalancesheet2Response{
+	res := &operations.GetAccountingBalancesheetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3226,8 +3440,8 @@ func (s *Accounting) GetAccountingBalancesheet2(ctx context.Context, request ope
 
 }
 
-// GetAccountingBill2 - Retrieve a bill
-func (s *Accounting) GetAccountingBill2(ctx context.Context, request operations.GetAccountingBill2Request, opts ...operations.Option) (*operations.GetAccountingBill2Response, error) {
+// GetAccountingBill - Retrieve a bill
+func (s *Accounting) GetAccountingBill(ctx context.Context, request operations.GetAccountingBillRequest, opts ...operations.Option) (*operations.GetAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3256,7 +3470,7 @@ func (s *Accounting) GetAccountingBill2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingBill2",
+		OperationID:      "getAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3381,7 +3595,7 @@ func (s *Accounting) GetAccountingBill2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAccountingBill2Response{
+	res := &operations.GetAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3433,8 +3647,8 @@ func (s *Accounting) GetAccountingBill2(ctx context.Context, request operations.
 
 }
 
-// GetAccountingCashflow2 - Retrieve a cashflow
-func (s *Accounting) GetAccountingCashflow2(ctx context.Context, request operations.GetAccountingCashflow2Request, opts ...operations.Option) (*operations.GetAccountingCashflow2Response, error) {
+// GetAccountingCashflow - Retrieve a cashflow
+func (s *Accounting) GetAccountingCashflow(ctx context.Context, request operations.GetAccountingCashflowRequest, opts ...operations.Option) (*operations.GetAccountingCashflowResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3463,7 +3677,7 @@ func (s *Accounting) GetAccountingCashflow2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCashflow2",
+		OperationID:      "getAccountingCashflow",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3588,7 +3802,7 @@ func (s *Accounting) GetAccountingCashflow2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.GetAccountingCashflow2Response{
+	res := &operations.GetAccountingCashflowResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3640,8 +3854,8 @@ func (s *Accounting) GetAccountingCashflow2(ctx context.Context, request operati
 
 }
 
-// GetAccountingCategory2 - Retrieve a category
-func (s *Accounting) GetAccountingCategory2(ctx context.Context, request operations.GetAccountingCategory2Request, opts ...operations.Option) (*operations.GetAccountingCategory2Response, error) {
+// GetAccountingCategory - Retrieve a category
+func (s *Accounting) GetAccountingCategory(ctx context.Context, request operations.GetAccountingCategoryRequest, opts ...operations.Option) (*operations.GetAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3670,7 +3884,7 @@ func (s *Accounting) GetAccountingCategory2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCategory2",
+		OperationID:      "getAccountingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3795,7 +4009,7 @@ func (s *Accounting) GetAccountingCategory2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.GetAccountingCategory2Response{
+	res := &operations.GetAccountingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3847,8 +4061,8 @@ func (s *Accounting) GetAccountingCategory2(ctx context.Context, request operati
 
 }
 
-// GetAccountingContact2 - Retrieve a contact
-func (s *Accounting) GetAccountingContact2(ctx context.Context, request operations.GetAccountingContact2Request, opts ...operations.Option) (*operations.GetAccountingContact2Response, error) {
+// GetAccountingContact - Retrieve a contact
+func (s *Accounting) GetAccountingContact(ctx context.Context, request operations.GetAccountingContactRequest, opts ...operations.Option) (*operations.GetAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3877,7 +4091,7 @@ func (s *Accounting) GetAccountingContact2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingContact2",
+		OperationID:      "getAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4002,7 +4216,7 @@ func (s *Accounting) GetAccountingContact2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingContact2Response{
+	res := &operations.GetAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4054,8 +4268,8 @@ func (s *Accounting) GetAccountingContact2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingCreditmemo2 - Retrieve a creditmemo
-func (s *Accounting) GetAccountingCreditmemo2(ctx context.Context, request operations.GetAccountingCreditmemo2Request, opts ...operations.Option) (*operations.GetAccountingCreditmemo2Response, error) {
+// GetAccountingCreditmemo - Retrieve a creditmemo
+func (s *Accounting) GetAccountingCreditmemo(ctx context.Context, request operations.GetAccountingCreditmemoRequest, opts ...operations.Option) (*operations.GetAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4084,7 +4298,7 @@ func (s *Accounting) GetAccountingCreditmemo2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCreditmemo2",
+		OperationID:      "getAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4209,7 +4423,7 @@ func (s *Accounting) GetAccountingCreditmemo2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.GetAccountingCreditmemo2Response{
+	res := &operations.GetAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4261,8 +4475,8 @@ func (s *Accounting) GetAccountingCreditmemo2(ctx context.Context, request opera
 
 }
 
-// GetAccountingExpense2 - Retrieve an expense
-func (s *Accounting) GetAccountingExpense2(ctx context.Context, request operations.GetAccountingExpense2Request, opts ...operations.Option) (*operations.GetAccountingExpense2Response, error) {
+// GetAccountingExpense - Retrieve an expense
+func (s *Accounting) GetAccountingExpense(ctx context.Context, request operations.GetAccountingExpenseRequest, opts ...operations.Option) (*operations.GetAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4291,7 +4505,7 @@ func (s *Accounting) GetAccountingExpense2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingExpense2",
+		OperationID:      "getAccountingExpense",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4416,7 +4630,7 @@ func (s *Accounting) GetAccountingExpense2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingExpense2Response{
+	res := &operations.GetAccountingExpenseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4468,8 +4682,8 @@ func (s *Accounting) GetAccountingExpense2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingInvoice2 - Retrieve an invoice
-func (s *Accounting) GetAccountingInvoice2(ctx context.Context, request operations.GetAccountingInvoice2Request, opts ...operations.Option) (*operations.GetAccountingInvoice2Response, error) {
+// GetAccountingInvoice - Retrieve an invoice
+func (s *Accounting) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest, opts ...operations.Option) (*operations.GetAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4498,7 +4712,7 @@ func (s *Accounting) GetAccountingInvoice2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingInvoice2",
+		OperationID:      "getAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4623,7 +4837,7 @@ func (s *Accounting) GetAccountingInvoice2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingInvoice2Response{
+	res := &operations.GetAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4675,8 +4889,8 @@ func (s *Accounting) GetAccountingInvoice2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingJournal2 - Retrieve a journal
-func (s *Accounting) GetAccountingJournal2(ctx context.Context, request operations.GetAccountingJournal2Request, opts ...operations.Option) (*operations.GetAccountingJournal2Response, error) {
+// GetAccountingJournal - Retrieve a journal
+func (s *Accounting) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest, opts ...operations.Option) (*operations.GetAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4705,7 +4919,7 @@ func (s *Accounting) GetAccountingJournal2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingJournal2",
+		OperationID:      "getAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4830,7 +5044,7 @@ func (s *Accounting) GetAccountingJournal2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingJournal2Response{
+	res := &operations.GetAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4882,8 +5096,8 @@ func (s *Accounting) GetAccountingJournal2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingOrder2 - Retrieve an order
-func (s *Accounting) GetAccountingOrder2(ctx context.Context, request operations.GetAccountingOrder2Request, opts ...operations.Option) (*operations.GetAccountingOrder2Response, error) {
+// GetAccountingOrder - Retrieve an order
+func (s *Accounting) GetAccountingOrder(ctx context.Context, request operations.GetAccountingOrderRequest, opts ...operations.Option) (*operations.GetAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4912,7 +5126,7 @@ func (s *Accounting) GetAccountingOrder2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingOrder2",
+		OperationID:      "getAccountingOrder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5037,7 +5251,7 @@ func (s *Accounting) GetAccountingOrder2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetAccountingOrder2Response{
+	res := &operations.GetAccountingOrderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5089,8 +5303,8 @@ func (s *Accounting) GetAccountingOrder2(ctx context.Context, request operations
 
 }
 
-// GetAccountingOrganization2 - Retrieve an organization
-func (s *Accounting) GetAccountingOrganization2(ctx context.Context, request operations.GetAccountingOrganization2Request, opts ...operations.Option) (*operations.GetAccountingOrganization2Response, error) {
+// GetAccountingOrganization - Retrieve an organization
+func (s *Accounting) GetAccountingOrganization(ctx context.Context, request operations.GetAccountingOrganizationRequest, opts ...operations.Option) (*operations.GetAccountingOrganizationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5119,7 +5333,7 @@ func (s *Accounting) GetAccountingOrganization2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingOrganization2",
+		OperationID:      "getAccountingOrganization",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5244,7 +5458,7 @@ func (s *Accounting) GetAccountingOrganization2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.GetAccountingOrganization2Response{
+	res := &operations.GetAccountingOrganizationResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5296,8 +5510,8 @@ func (s *Accounting) GetAccountingOrganization2(ctx context.Context, request ope
 
 }
 
-// GetAccountingProfitloss2 - Retrieve a profitloss
-func (s *Accounting) GetAccountingProfitloss2(ctx context.Context, request operations.GetAccountingProfitloss2Request, opts ...operations.Option) (*operations.GetAccountingProfitloss2Response, error) {
+// GetAccountingProfitloss - Retrieve a profitloss
+func (s *Accounting) GetAccountingProfitloss(ctx context.Context, request operations.GetAccountingProfitlossRequest, opts ...operations.Option) (*operations.GetAccountingProfitlossResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5326,7 +5540,7 @@ func (s *Accounting) GetAccountingProfitloss2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingProfitloss2",
+		OperationID:      "getAccountingProfitloss",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5451,7 +5665,7 @@ func (s *Accounting) GetAccountingProfitloss2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.GetAccountingProfitloss2Response{
+	res := &operations.GetAccountingProfitlossResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5503,8 +5717,8 @@ func (s *Accounting) GetAccountingProfitloss2(ctx context.Context, request opera
 
 }
 
-// GetAccountingPurchaseorder2 - Retrieve a purchaseorder
-func (s *Accounting) GetAccountingPurchaseorder2(ctx context.Context, request operations.GetAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.GetAccountingPurchaseorder2Response, error) {
+// GetAccountingPurchaseorder - Retrieve a purchaseorder
+func (s *Accounting) GetAccountingPurchaseorder(ctx context.Context, request operations.GetAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.GetAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5533,7 +5747,7 @@ func (s *Accounting) GetAccountingPurchaseorder2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingPurchaseorder2",
+		OperationID:      "getAccountingPurchaseorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5658,7 +5872,7 @@ func (s *Accounting) GetAccountingPurchaseorder2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.GetAccountingPurchaseorder2Response{
+	res := &operations.GetAccountingPurchaseorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5710,8 +5924,8 @@ func (s *Accounting) GetAccountingPurchaseorder2(ctx context.Context, request op
 
 }
 
-// GetAccountingReport2 - Retrieve a report
-func (s *Accounting) GetAccountingReport2(ctx context.Context, request operations.GetAccountingReport2Request, opts ...operations.Option) (*operations.GetAccountingReport2Response, error) {
+// GetAccountingReport - Retrieve a report
+func (s *Accounting) GetAccountingReport(ctx context.Context, request operations.GetAccountingReportRequest, opts ...operations.Option) (*operations.GetAccountingReportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5740,7 +5954,7 @@ func (s *Accounting) GetAccountingReport2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingReport2",
+		OperationID:      "getAccountingReport",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -5865,7 +6079,7 @@ func (s *Accounting) GetAccountingReport2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetAccountingReport2Response{
+	res := &operations.GetAccountingReportResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5917,8 +6131,8 @@ func (s *Accounting) GetAccountingReport2(ctx context.Context, request operation
 
 }
 
-// GetAccountingSalesorder2 - Retrieve a salesorder
-func (s *Accounting) GetAccountingSalesorder2(ctx context.Context, request operations.GetAccountingSalesorder2Request, opts ...operations.Option) (*operations.GetAccountingSalesorder2Response, error) {
+// GetAccountingSalesorder - Retrieve a salesorder
+func (s *Accounting) GetAccountingSalesorder(ctx context.Context, request operations.GetAccountingSalesorderRequest, opts ...operations.Option) (*operations.GetAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5947,7 +6161,7 @@ func (s *Accounting) GetAccountingSalesorder2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingSalesorder2",
+		OperationID:      "getAccountingSalesorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6072,7 +6286,7 @@ func (s *Accounting) GetAccountingSalesorder2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.GetAccountingSalesorder2Response{
+	res := &operations.GetAccountingSalesorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6124,8 +6338,8 @@ func (s *Accounting) GetAccountingSalesorder2(ctx context.Context, request opera
 
 }
 
-// GetAccountingTaxrate2 - Retrieve a taxrate
-func (s *Accounting) GetAccountingTaxrate2(ctx context.Context, request operations.GetAccountingTaxrate2Request, opts ...operations.Option) (*operations.GetAccountingTaxrate2Response, error) {
+// GetAccountingTaxrate - Retrieve a taxrate
+func (s *Accounting) GetAccountingTaxrate(ctx context.Context, request operations.GetAccountingTaxrateRequest, opts ...operations.Option) (*operations.GetAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6154,7 +6368,7 @@ func (s *Accounting) GetAccountingTaxrate2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTaxrate2",
+		OperationID:      "getAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6279,7 +6493,7 @@ func (s *Accounting) GetAccountingTaxrate2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetAccountingTaxrate2Response{
+	res := &operations.GetAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6331,8 +6545,8 @@ func (s *Accounting) GetAccountingTaxrate2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingTransaction2 - Retrieve a transaction
-func (s *Accounting) GetAccountingTransaction2(ctx context.Context, request operations.GetAccountingTransaction2Request, opts ...operations.Option) (*operations.GetAccountingTransaction2Response, error) {
+// GetAccountingTransaction - Retrieve a transaction
+func (s *Accounting) GetAccountingTransaction(ctx context.Context, request operations.GetAccountingTransactionRequest, opts ...operations.Option) (*operations.GetAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6361,7 +6575,7 @@ func (s *Accounting) GetAccountingTransaction2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTransaction2",
+		OperationID:      "getAccountingTransaction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6486,7 +6700,7 @@ func (s *Accounting) GetAccountingTransaction2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.GetAccountingTransaction2Response{
+	res := &operations.GetAccountingTransactionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6538,8 +6752,8 @@ func (s *Accounting) GetAccountingTransaction2(ctx context.Context, request oper
 
 }
 
-// GetAccountingTrialbalance2 - Retrieve a trialbalance
-func (s *Accounting) GetAccountingTrialbalance2(ctx context.Context, request operations.GetAccountingTrialbalance2Request, opts ...operations.Option) (*operations.GetAccountingTrialbalance2Response, error) {
+// GetAccountingTrialbalance - Retrieve a trialbalance
+func (s *Accounting) GetAccountingTrialbalance(ctx context.Context, request operations.GetAccountingTrialbalanceRequest, opts ...operations.Option) (*operations.GetAccountingTrialbalanceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6568,7 +6782,7 @@ func (s *Accounting) GetAccountingTrialbalance2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingTrialbalance2",
+		OperationID:      "getAccountingTrialbalance",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6693,7 +6907,7 @@ func (s *Accounting) GetAccountingTrialbalance2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.GetAccountingTrialbalance2Response{
+	res := &operations.GetAccountingTrialbalanceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6745,8 +6959,8 @@ func (s *Accounting) GetAccountingTrialbalance2(ctx context.Context, request ope
 
 }
 
-// ListAccountingAccounts2 - List all accounts
-func (s *Accounting) ListAccountingAccounts2(ctx context.Context, request operations.ListAccountingAccounts2Request, opts ...operations.Option) (*operations.ListAccountingAccounts2Response, error) {
+// GetAccountingVendorcredit - Retrieve a vendorcredit
+func (s *Accounting) GetAccountingVendorcredit(ctx context.Context, request operations.GetAccountingVendorcreditRequest, opts ...operations.Option) (*operations.GetAccountingVendorcreditResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6765,7 +6979,7 @@ func (s *Accounting) ListAccountingAccounts2(ctx context.Context, request operat
 	} else {
 		baseURL = *o.ServerURL
 	}
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/account", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit/{id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -6775,7 +6989,7 @@ func (s *Accounting) ListAccountingAccounts2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingAccounts2",
+		OperationID:      "getAccountingVendorcredit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6900,7 +7114,214 @@ func (s *Accounting) ListAccountingAccounts2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingAccounts2Response{
+	res := &operations.GetAccountingVendorcreditResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out shared.AccountingVendorcredit
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.AccountingVendorcredit = &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// ListAccountingAccounts - List all accounts
+func (s *Accounting) ListAccountingAccounts(ctx context.Context, request operations.ListAccountingAccountsRequest, opts ...operations.Option) (*operations.ListAccountingAccountsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "listAccountingAccounts",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.ListAccountingAccountsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6952,8 +7373,8 @@ func (s *Accounting) ListAccountingAccounts2(ctx context.Context, request operat
 
 }
 
-// ListAccountingBalancesheets2 - List all balancesheets
-func (s *Accounting) ListAccountingBalancesheets2(ctx context.Context, request operations.ListAccountingBalancesheets2Request, opts ...operations.Option) (*operations.ListAccountingBalancesheets2Response, error) {
+// ListAccountingBalancesheets - List all balancesheets
+func (s *Accounting) ListAccountingBalancesheets(ctx context.Context, request operations.ListAccountingBalancesheetsRequest, opts ...operations.Option) (*operations.ListAccountingBalancesheetsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6982,7 +7403,7 @@ func (s *Accounting) ListAccountingBalancesheets2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingBalancesheets2",
+		OperationID:      "listAccountingBalancesheets",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7107,7 +7528,7 @@ func (s *Accounting) ListAccountingBalancesheets2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.ListAccountingBalancesheets2Response{
+	res := &operations.ListAccountingBalancesheetsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7159,8 +7580,8 @@ func (s *Accounting) ListAccountingBalancesheets2(ctx context.Context, request o
 
 }
 
-// ListAccountingBills2 - List all bills
-func (s *Accounting) ListAccountingBills2(ctx context.Context, request operations.ListAccountingBills2Request, opts ...operations.Option) (*operations.ListAccountingBills2Response, error) {
+// ListAccountingBills - List all bills
+func (s *Accounting) ListAccountingBills(ctx context.Context, request operations.ListAccountingBillsRequest, opts ...operations.Option) (*operations.ListAccountingBillsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7189,7 +7610,7 @@ func (s *Accounting) ListAccountingBills2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingBills2",
+		OperationID:      "listAccountingBills",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7314,7 +7735,7 @@ func (s *Accounting) ListAccountingBills2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAccountingBills2Response{
+	res := &operations.ListAccountingBillsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7366,8 +7787,8 @@ func (s *Accounting) ListAccountingBills2(ctx context.Context, request operation
 
 }
 
-// ListAccountingCashflows2 - List all cashflows
-func (s *Accounting) ListAccountingCashflows2(ctx context.Context, request operations.ListAccountingCashflows2Request, opts ...operations.Option) (*operations.ListAccountingCashflows2Response, error) {
+// ListAccountingCashflows - List all cashflows
+func (s *Accounting) ListAccountingCashflows(ctx context.Context, request operations.ListAccountingCashflowsRequest, opts ...operations.Option) (*operations.ListAccountingCashflowsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7396,7 +7817,7 @@ func (s *Accounting) ListAccountingCashflows2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCashflows2",
+		OperationID:      "listAccountingCashflows",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7521,7 +7942,7 @@ func (s *Accounting) ListAccountingCashflows2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.ListAccountingCashflows2Response{
+	res := &operations.ListAccountingCashflowsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7573,8 +7994,8 @@ func (s *Accounting) ListAccountingCashflows2(ctx context.Context, request opera
 
 }
 
-// ListAccountingCategories2 - List all categories
-func (s *Accounting) ListAccountingCategories2(ctx context.Context, request operations.ListAccountingCategories2Request, opts ...operations.Option) (*operations.ListAccountingCategories2Response, error) {
+// ListAccountingCategories - List all categories
+func (s *Accounting) ListAccountingCategories(ctx context.Context, request operations.ListAccountingCategoriesRequest, opts ...operations.Option) (*operations.ListAccountingCategoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7603,7 +8024,7 @@ func (s *Accounting) ListAccountingCategories2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCategories2",
+		OperationID:      "listAccountingCategories",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7728,7 +8149,7 @@ func (s *Accounting) ListAccountingCategories2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.ListAccountingCategories2Response{
+	res := &operations.ListAccountingCategoriesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7780,8 +8201,8 @@ func (s *Accounting) ListAccountingCategories2(ctx context.Context, request oper
 
 }
 
-// ListAccountingContacts2 - List all contacts
-func (s *Accounting) ListAccountingContacts2(ctx context.Context, request operations.ListAccountingContacts2Request, opts ...operations.Option) (*operations.ListAccountingContacts2Response, error) {
+// ListAccountingContacts - List all contacts
+func (s *Accounting) ListAccountingContacts(ctx context.Context, request operations.ListAccountingContactsRequest, opts ...operations.Option) (*operations.ListAccountingContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7810,7 +8231,7 @@ func (s *Accounting) ListAccountingContacts2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingContacts2",
+		OperationID:      "listAccountingContacts",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7935,7 +8356,7 @@ func (s *Accounting) ListAccountingContacts2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingContacts2Response{
+	res := &operations.ListAccountingContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7987,8 +8408,8 @@ func (s *Accounting) ListAccountingContacts2(ctx context.Context, request operat
 
 }
 
-// ListAccountingCreditmemoes2 - List all creditmemoes
-func (s *Accounting) ListAccountingCreditmemoes2(ctx context.Context, request operations.ListAccountingCreditmemoes2Request, opts ...operations.Option) (*operations.ListAccountingCreditmemoes2Response, error) {
+// ListAccountingCreditmemoes - List all creditmemoes
+func (s *Accounting) ListAccountingCreditmemoes(ctx context.Context, request operations.ListAccountingCreditmemoesRequest, opts ...operations.Option) (*operations.ListAccountingCreditmemoesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8017,7 +8438,7 @@ func (s *Accounting) ListAccountingCreditmemoes2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCreditmemoes2",
+		OperationID:      "listAccountingCreditmemoes",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8142,7 +8563,7 @@ func (s *Accounting) ListAccountingCreditmemoes2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingCreditmemoes2Response{
+	res := &operations.ListAccountingCreditmemoesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8194,8 +8615,8 @@ func (s *Accounting) ListAccountingCreditmemoes2(ctx context.Context, request op
 
 }
 
-// ListAccountingExpenses2 - List all expenses
-func (s *Accounting) ListAccountingExpenses2(ctx context.Context, request operations.ListAccountingExpenses2Request, opts ...operations.Option) (*operations.ListAccountingExpenses2Response, error) {
+// ListAccountingExpenses - List all expenses
+func (s *Accounting) ListAccountingExpenses(ctx context.Context, request operations.ListAccountingExpensesRequest, opts ...operations.Option) (*operations.ListAccountingExpensesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8224,7 +8645,7 @@ func (s *Accounting) ListAccountingExpenses2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingExpenses2",
+		OperationID:      "listAccountingExpenses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8349,7 +8770,7 @@ func (s *Accounting) ListAccountingExpenses2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingExpenses2Response{
+	res := &operations.ListAccountingExpensesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8401,8 +8822,8 @@ func (s *Accounting) ListAccountingExpenses2(ctx context.Context, request operat
 
 }
 
-// ListAccountingInvoices2 - List all invoices
-func (s *Accounting) ListAccountingInvoices2(ctx context.Context, request operations.ListAccountingInvoices2Request, opts ...operations.Option) (*operations.ListAccountingInvoices2Response, error) {
+// ListAccountingInvoices - List all invoices
+func (s *Accounting) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest, opts ...operations.Option) (*operations.ListAccountingInvoicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8431,7 +8852,7 @@ func (s *Accounting) ListAccountingInvoices2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingInvoices2",
+		OperationID:      "listAccountingInvoices",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8556,7 +8977,7 @@ func (s *Accounting) ListAccountingInvoices2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingInvoices2Response{
+	res := &operations.ListAccountingInvoicesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8608,8 +9029,8 @@ func (s *Accounting) ListAccountingInvoices2(ctx context.Context, request operat
 
 }
 
-// ListAccountingJournals2 - List all journals
-func (s *Accounting) ListAccountingJournals2(ctx context.Context, request operations.ListAccountingJournals2Request, opts ...operations.Option) (*operations.ListAccountingJournals2Response, error) {
+// ListAccountingJournals - List all journals
+func (s *Accounting) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest, opts ...operations.Option) (*operations.ListAccountingJournalsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8638,7 +9059,7 @@ func (s *Accounting) ListAccountingJournals2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingJournals2",
+		OperationID:      "listAccountingJournals",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8763,7 +9184,7 @@ func (s *Accounting) ListAccountingJournals2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingJournals2Response{
+	res := &operations.ListAccountingJournalsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8815,8 +9236,8 @@ func (s *Accounting) ListAccountingJournals2(ctx context.Context, request operat
 
 }
 
-// ListAccountingOrders2 - List all orders
-func (s *Accounting) ListAccountingOrders2(ctx context.Context, request operations.ListAccountingOrders2Request, opts ...operations.Option) (*operations.ListAccountingOrders2Response, error) {
+// ListAccountingOrders - List all orders
+func (s *Accounting) ListAccountingOrders(ctx context.Context, request operations.ListAccountingOrdersRequest, opts ...operations.Option) (*operations.ListAccountingOrdersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8845,7 +9266,7 @@ func (s *Accounting) ListAccountingOrders2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingOrders2",
+		OperationID:      "listAccountingOrders",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -8970,7 +9391,7 @@ func (s *Accounting) ListAccountingOrders2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListAccountingOrders2Response{
+	res := &operations.ListAccountingOrdersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9022,8 +9443,8 @@ func (s *Accounting) ListAccountingOrders2(ctx context.Context, request operatio
 
 }
 
-// ListAccountingOrganizations2 - List all organizations
-func (s *Accounting) ListAccountingOrganizations2(ctx context.Context, request operations.ListAccountingOrganizations2Request, opts ...operations.Option) (*operations.ListAccountingOrganizations2Response, error) {
+// ListAccountingOrganizations - List all organizations
+func (s *Accounting) ListAccountingOrganizations(ctx context.Context, request operations.ListAccountingOrganizationsRequest, opts ...operations.Option) (*operations.ListAccountingOrganizationsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9052,7 +9473,7 @@ func (s *Accounting) ListAccountingOrganizations2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingOrganizations2",
+		OperationID:      "listAccountingOrganizations",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9177,7 +9598,7 @@ func (s *Accounting) ListAccountingOrganizations2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.ListAccountingOrganizations2Response{
+	res := &operations.ListAccountingOrganizationsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9229,8 +9650,8 @@ func (s *Accounting) ListAccountingOrganizations2(ctx context.Context, request o
 
 }
 
-// ListAccountingProfitlosses2 - List all profitlosses
-func (s *Accounting) ListAccountingProfitlosses2(ctx context.Context, request operations.ListAccountingProfitlosses2Request, opts ...operations.Option) (*operations.ListAccountingProfitlosses2Response, error) {
+// ListAccountingProfitlosses - List all profitlosses
+func (s *Accounting) ListAccountingProfitlosses(ctx context.Context, request operations.ListAccountingProfitlossesRequest, opts ...operations.Option) (*operations.ListAccountingProfitlossesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9259,7 +9680,7 @@ func (s *Accounting) ListAccountingProfitlosses2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingProfitlosses2",
+		OperationID:      "listAccountingProfitlosses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9384,7 +9805,7 @@ func (s *Accounting) ListAccountingProfitlosses2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingProfitlosses2Response{
+	res := &operations.ListAccountingProfitlossesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9436,8 +9857,8 @@ func (s *Accounting) ListAccountingProfitlosses2(ctx context.Context, request op
 
 }
 
-// ListAccountingPurchaseorders2 - List all purchaseorders
-func (s *Accounting) ListAccountingPurchaseorders2(ctx context.Context, request operations.ListAccountingPurchaseorders2Request, opts ...operations.Option) (*operations.ListAccountingPurchaseorders2Response, error) {
+// ListAccountingPurchaseorders - List all purchaseorders
+func (s *Accounting) ListAccountingPurchaseorders(ctx context.Context, request operations.ListAccountingPurchaseordersRequest, opts ...operations.Option) (*operations.ListAccountingPurchaseordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9466,7 +9887,7 @@ func (s *Accounting) ListAccountingPurchaseorders2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingPurchaseorders2",
+		OperationID:      "listAccountingPurchaseorders",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9591,7 +10012,7 @@ func (s *Accounting) ListAccountingPurchaseorders2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.ListAccountingPurchaseorders2Response{
+	res := &operations.ListAccountingPurchaseordersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9643,8 +10064,8 @@ func (s *Accounting) ListAccountingPurchaseorders2(ctx context.Context, request 
 
 }
 
-// ListAccountingReports2 - List all reports
-func (s *Accounting) ListAccountingReports2(ctx context.Context, request operations.ListAccountingReports2Request, opts ...operations.Option) (*operations.ListAccountingReports2Response, error) {
+// ListAccountingReports - List all reports
+func (s *Accounting) ListAccountingReports(ctx context.Context, request operations.ListAccountingReportsRequest, opts ...operations.Option) (*operations.ListAccountingReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9673,7 +10094,7 @@ func (s *Accounting) ListAccountingReports2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingReports2",
+		OperationID:      "listAccountingReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -9798,7 +10219,7 @@ func (s *Accounting) ListAccountingReports2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListAccountingReports2Response{
+	res := &operations.ListAccountingReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -9850,8 +10271,8 @@ func (s *Accounting) ListAccountingReports2(ctx context.Context, request operati
 
 }
 
-// ListAccountingSalesorders2 - List all salesorders
-func (s *Accounting) ListAccountingSalesorders2(ctx context.Context, request operations.ListAccountingSalesorders2Request, opts ...operations.Option) (*operations.ListAccountingSalesorders2Response, error) {
+// ListAccountingSalesorders - List all salesorders
+func (s *Accounting) ListAccountingSalesorders(ctx context.Context, request operations.ListAccountingSalesordersRequest, opts ...operations.Option) (*operations.ListAccountingSalesordersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -9880,7 +10301,7 @@ func (s *Accounting) ListAccountingSalesorders2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingSalesorders2",
+		OperationID:      "listAccountingSalesorders",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10005,7 +10426,7 @@ func (s *Accounting) ListAccountingSalesorders2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.ListAccountingSalesorders2Response{
+	res := &operations.ListAccountingSalesordersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10057,8 +10478,8 @@ func (s *Accounting) ListAccountingSalesorders2(ctx context.Context, request ope
 
 }
 
-// ListAccountingTaxrates2 - List all taxrates
-func (s *Accounting) ListAccountingTaxrates2(ctx context.Context, request operations.ListAccountingTaxrates2Request, opts ...operations.Option) (*operations.ListAccountingTaxrates2Response, error) {
+// ListAccountingTaxrates - List all taxrates
+func (s *Accounting) ListAccountingTaxrates(ctx context.Context, request operations.ListAccountingTaxratesRequest, opts ...operations.Option) (*operations.ListAccountingTaxratesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10087,7 +10508,7 @@ func (s *Accounting) ListAccountingTaxrates2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTaxrates2",
+		OperationID:      "listAccountingTaxrates",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10212,7 +10633,7 @@ func (s *Accounting) ListAccountingTaxrates2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.ListAccountingTaxrates2Response{
+	res := &operations.ListAccountingTaxratesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10264,8 +10685,8 @@ func (s *Accounting) ListAccountingTaxrates2(ctx context.Context, request operat
 
 }
 
-// ListAccountingTransactions2 - List all transactions
-func (s *Accounting) ListAccountingTransactions2(ctx context.Context, request operations.ListAccountingTransactions2Request, opts ...operations.Option) (*operations.ListAccountingTransactions2Response, error) {
+// ListAccountingTransactions - List all transactions
+func (s *Accounting) ListAccountingTransactions(ctx context.Context, request operations.ListAccountingTransactionsRequest, opts ...operations.Option) (*operations.ListAccountingTransactionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10294,7 +10715,7 @@ func (s *Accounting) ListAccountingTransactions2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTransactions2",
+		OperationID:      "listAccountingTransactions",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10419,7 +10840,7 @@ func (s *Accounting) ListAccountingTransactions2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingTransactions2Response{
+	res := &operations.ListAccountingTransactionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10471,8 +10892,8 @@ func (s *Accounting) ListAccountingTransactions2(ctx context.Context, request op
 
 }
 
-// ListAccountingTrialbalances2 - List all trialbalances
-func (s *Accounting) ListAccountingTrialbalances2(ctx context.Context, request operations.ListAccountingTrialbalances2Request, opts ...operations.Option) (*operations.ListAccountingTrialbalances2Response, error) {
+// ListAccountingTrialbalances - List all trialbalances
+func (s *Accounting) ListAccountingTrialbalances(ctx context.Context, request operations.ListAccountingTrialbalancesRequest, opts ...operations.Option) (*operations.ListAccountingTrialbalancesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10501,7 +10922,7 @@ func (s *Accounting) ListAccountingTrialbalances2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingTrialbalances2",
+		OperationID:      "listAccountingTrialbalances",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -10626,7 +11047,7 @@ func (s *Accounting) ListAccountingTrialbalances2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.ListAccountingTrialbalances2Response{
+	res := &operations.ListAccountingTrialbalancesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10678,8 +11099,215 @@ func (s *Accounting) ListAccountingTrialbalances2(ctx context.Context, request o
 
 }
 
-// PatchAccountingAccount2 - Update an account
-func (s *Accounting) PatchAccountingAccount2(ctx context.Context, request operations.PatchAccountingAccount2Request, opts ...operations.Option) (*operations.PatchAccountingAccount2Response, error) {
+// ListAccountingVendorcredits - List all vendorcredits
+func (s *Accounting) ListAccountingVendorcredits(ctx context.Context, request operations.ListAccountingVendorcreditsRequest, opts ...operations.Option) (*operations.ListAccountingVendorcreditsResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "listAccountingVendorcredits",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.ListAccountingVendorcreditsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out []shared.AccountingVendorcredit
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.AccountingVendorcredits = out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// PatchAccountingAccount - Update an account
+func (s *Accounting) PatchAccountingAccount(ctx context.Context, request operations.PatchAccountingAccountRequest, opts ...operations.Option) (*operations.PatchAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10708,7 +11336,7 @@ func (s *Accounting) PatchAccountingAccount2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingAccount2",
+		OperationID:      "patchAccountingAccount",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -10840,7 +11468,7 @@ func (s *Accounting) PatchAccountingAccount2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingAccount2Response{
+	res := &operations.PatchAccountingAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -10892,8 +11520,8 @@ func (s *Accounting) PatchAccountingAccount2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingBill2 - Update a bill
-func (s *Accounting) PatchAccountingBill2(ctx context.Context, request operations.PatchAccountingBill2Request, opts ...operations.Option) (*operations.PatchAccountingBill2Response, error) {
+// PatchAccountingBill - Update a bill
+func (s *Accounting) PatchAccountingBill(ctx context.Context, request operations.PatchAccountingBillRequest, opts ...operations.Option) (*operations.PatchAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -10922,7 +11550,7 @@ func (s *Accounting) PatchAccountingBill2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingBill2",
+		OperationID:      "patchAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -11054,7 +11682,7 @@ func (s *Accounting) PatchAccountingBill2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAccountingBill2Response{
+	res := &operations.PatchAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11106,8 +11734,8 @@ func (s *Accounting) PatchAccountingBill2(ctx context.Context, request operation
 
 }
 
-// PatchAccountingCategory2 - Update a category
-func (s *Accounting) PatchAccountingCategory2(ctx context.Context, request operations.PatchAccountingCategory2Request, opts ...operations.Option) (*operations.PatchAccountingCategory2Response, error) {
+// PatchAccountingCategory - Update a category
+func (s *Accounting) PatchAccountingCategory(ctx context.Context, request operations.PatchAccountingCategoryRequest, opts ...operations.Option) (*operations.PatchAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11136,7 +11764,7 @@ func (s *Accounting) PatchAccountingCategory2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingCategory2",
+		OperationID:      "patchAccountingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -11268,7 +11896,7 @@ func (s *Accounting) PatchAccountingCategory2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.PatchAccountingCategory2Response{
+	res := &operations.PatchAccountingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11320,8 +11948,8 @@ func (s *Accounting) PatchAccountingCategory2(ctx context.Context, request opera
 
 }
 
-// PatchAccountingContact2 - Update a contact
-func (s *Accounting) PatchAccountingContact2(ctx context.Context, request operations.PatchAccountingContact2Request, opts ...operations.Option) (*operations.PatchAccountingContact2Response, error) {
+// PatchAccountingContact - Update a contact
+func (s *Accounting) PatchAccountingContact(ctx context.Context, request operations.PatchAccountingContactRequest, opts ...operations.Option) (*operations.PatchAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11350,7 +11978,7 @@ func (s *Accounting) PatchAccountingContact2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingContact2",
+		OperationID:      "patchAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -11482,7 +12110,7 @@ func (s *Accounting) PatchAccountingContact2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingContact2Response{
+	res := &operations.PatchAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11534,8 +12162,8 @@ func (s *Accounting) PatchAccountingContact2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingCreditmemo2 - Update a creditmemo
-func (s *Accounting) PatchAccountingCreditmemo2(ctx context.Context, request operations.PatchAccountingCreditmemo2Request, opts ...operations.Option) (*operations.PatchAccountingCreditmemo2Response, error) {
+// PatchAccountingCreditmemo - Update a creditmemo
+func (s *Accounting) PatchAccountingCreditmemo(ctx context.Context, request operations.PatchAccountingCreditmemoRequest, opts ...operations.Option) (*operations.PatchAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11564,7 +12192,7 @@ func (s *Accounting) PatchAccountingCreditmemo2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingCreditmemo2",
+		OperationID:      "patchAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -11696,7 +12324,7 @@ func (s *Accounting) PatchAccountingCreditmemo2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.PatchAccountingCreditmemo2Response{
+	res := &operations.PatchAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11748,8 +12376,8 @@ func (s *Accounting) PatchAccountingCreditmemo2(ctx context.Context, request ope
 
 }
 
-// PatchAccountingExpense2 - Update an expense
-func (s *Accounting) PatchAccountingExpense2(ctx context.Context, request operations.PatchAccountingExpense2Request, opts ...operations.Option) (*operations.PatchAccountingExpense2Response, error) {
+// PatchAccountingExpense - Update an expense
+func (s *Accounting) PatchAccountingExpense(ctx context.Context, request operations.PatchAccountingExpenseRequest, opts ...operations.Option) (*operations.PatchAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11778,7 +12406,7 @@ func (s *Accounting) PatchAccountingExpense2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingExpense2",
+		OperationID:      "patchAccountingExpense",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingExpense", "json", `request:"mediaType=application/json"`)
@@ -11910,7 +12538,7 @@ func (s *Accounting) PatchAccountingExpense2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingExpense2Response{
+	res := &operations.PatchAccountingExpenseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -11962,8 +12590,8 @@ func (s *Accounting) PatchAccountingExpense2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingInvoice2 - Update an invoice
-func (s *Accounting) PatchAccountingInvoice2(ctx context.Context, request operations.PatchAccountingInvoice2Request, opts ...operations.Option) (*operations.PatchAccountingInvoice2Response, error) {
+// PatchAccountingInvoice - Update an invoice
+func (s *Accounting) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest, opts ...operations.Option) (*operations.PatchAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -11992,7 +12620,7 @@ func (s *Accounting) PatchAccountingInvoice2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingInvoice2",
+		OperationID:      "patchAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -12124,7 +12752,7 @@ func (s *Accounting) PatchAccountingInvoice2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingInvoice2Response{
+	res := &operations.PatchAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12176,8 +12804,8 @@ func (s *Accounting) PatchAccountingInvoice2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingJournal2 - Update a journal
-func (s *Accounting) PatchAccountingJournal2(ctx context.Context, request operations.PatchAccountingJournal2Request, opts ...operations.Option) (*operations.PatchAccountingJournal2Response, error) {
+// PatchAccountingJournal - Update a journal
+func (s *Accounting) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest, opts ...operations.Option) (*operations.PatchAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12206,7 +12834,7 @@ func (s *Accounting) PatchAccountingJournal2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingJournal2",
+		OperationID:      "patchAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -12338,7 +12966,7 @@ func (s *Accounting) PatchAccountingJournal2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingJournal2Response{
+	res := &operations.PatchAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12390,8 +13018,8 @@ func (s *Accounting) PatchAccountingJournal2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingOrder2 - Update an order
-func (s *Accounting) PatchAccountingOrder2(ctx context.Context, request operations.PatchAccountingOrder2Request, opts ...operations.Option) (*operations.PatchAccountingOrder2Response, error) {
+// PatchAccountingOrder - Update an order
+func (s *Accounting) PatchAccountingOrder(ctx context.Context, request operations.PatchAccountingOrderRequest, opts ...operations.Option) (*operations.PatchAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12420,7 +13048,7 @@ func (s *Accounting) PatchAccountingOrder2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingOrder2",
+		OperationID:      "patchAccountingOrder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -12552,7 +13180,7 @@ func (s *Accounting) PatchAccountingOrder2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchAccountingOrder2Response{
+	res := &operations.PatchAccountingOrderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12604,8 +13232,8 @@ func (s *Accounting) PatchAccountingOrder2(ctx context.Context, request operatio
 
 }
 
-// PatchAccountingPurchaseorder2 - Update a purchaseorder
-func (s *Accounting) PatchAccountingPurchaseorder2(ctx context.Context, request operations.PatchAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.PatchAccountingPurchaseorder2Response, error) {
+// PatchAccountingPurchaseorder - Update a purchaseorder
+func (s *Accounting) PatchAccountingPurchaseorder(ctx context.Context, request operations.PatchAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.PatchAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12634,7 +13262,7 @@ func (s *Accounting) PatchAccountingPurchaseorder2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingPurchaseorder2",
+		OperationID:      "patchAccountingPurchaseorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -12766,7 +13394,7 @@ func (s *Accounting) PatchAccountingPurchaseorder2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.PatchAccountingPurchaseorder2Response{
+	res := &operations.PatchAccountingPurchaseorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -12818,8 +13446,8 @@ func (s *Accounting) PatchAccountingPurchaseorder2(ctx context.Context, request 
 
 }
 
-// PatchAccountingSalesorder2 - Update a salesorder
-func (s *Accounting) PatchAccountingSalesorder2(ctx context.Context, request operations.PatchAccountingSalesorder2Request, opts ...operations.Option) (*operations.PatchAccountingSalesorder2Response, error) {
+// PatchAccountingSalesorder - Update a salesorder
+func (s *Accounting) PatchAccountingSalesorder(ctx context.Context, request operations.PatchAccountingSalesorderRequest, opts ...operations.Option) (*operations.PatchAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -12848,7 +13476,7 @@ func (s *Accounting) PatchAccountingSalesorder2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingSalesorder2",
+		OperationID:      "patchAccountingSalesorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingSalesorder", "json", `request:"mediaType=application/json"`)
@@ -12980,7 +13608,7 @@ func (s *Accounting) PatchAccountingSalesorder2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.PatchAccountingSalesorder2Response{
+	res := &operations.PatchAccountingSalesorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -13032,8 +13660,8 @@ func (s *Accounting) PatchAccountingSalesorder2(ctx context.Context, request ope
 
 }
 
-// PatchAccountingTaxrate2 - Update a taxrate
-func (s *Accounting) PatchAccountingTaxrate2(ctx context.Context, request operations.PatchAccountingTaxrate2Request, opts ...operations.Option) (*operations.PatchAccountingTaxrate2Response, error) {
+// PatchAccountingTaxrate - Update a taxrate
+func (s *Accounting) PatchAccountingTaxrate(ctx context.Context, request operations.PatchAccountingTaxrateRequest, opts ...operations.Option) (*operations.PatchAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -13062,7 +13690,7 @@ func (s *Accounting) PatchAccountingTaxrate2(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingTaxrate2",
+		OperationID:      "patchAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -13194,7 +13822,7 @@ func (s *Accounting) PatchAccountingTaxrate2(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.PatchAccountingTaxrate2Response{
+	res := &operations.PatchAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -13246,8 +13874,8 @@ func (s *Accounting) PatchAccountingTaxrate2(ctx context.Context, request operat
 
 }
 
-// PatchAccountingTransaction2 - Update a transaction
-func (s *Accounting) PatchAccountingTransaction2(ctx context.Context, request operations.PatchAccountingTransaction2Request, opts ...operations.Option) (*operations.PatchAccountingTransaction2Response, error) {
+// PatchAccountingTransaction - Update a transaction
+func (s *Accounting) PatchAccountingTransaction(ctx context.Context, request operations.PatchAccountingTransactionRequest, opts ...operations.Option) (*operations.PatchAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -13276,7 +13904,7 @@ func (s *Accounting) PatchAccountingTransaction2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingTransaction2",
+		OperationID:      "patchAccountingTransaction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -13408,7 +14036,7 @@ func (s *Accounting) PatchAccountingTransaction2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.PatchAccountingTransaction2Response{
+	res := &operations.PatchAccountingTransactionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -13460,8 +14088,222 @@ func (s *Accounting) PatchAccountingTransaction2(ctx context.Context, request op
 
 }
 
-// RemoveAccountingAccount2 - Remove an account
-func (s *Accounting) RemoveAccountingAccount2(ctx context.Context, request operations.RemoveAccountingAccount2Request, opts ...operations.Option) (*operations.RemoveAccountingAccount2Response, error) {
+// PatchAccountingVendorcredit - Update a vendorcredit
+func (s *Accounting) PatchAccountingVendorcredit(ctx context.Context, request operations.PatchAccountingVendorcreditRequest, opts ...operations.Option) (*operations.PatchAccountingVendorcreditResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "patchAccountingVendorcredit",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingVendorcredit", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	if reqContentType != "" {
+		req.Header.Set("Content-Type", reqContentType)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.PatchAccountingVendorcreditResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out shared.AccountingVendorcredit
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.AccountingVendorcredit = &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// RemoveAccountingAccount - Remove an account
+func (s *Accounting) RemoveAccountingAccount(ctx context.Context, request operations.RemoveAccountingAccountRequest, opts ...operations.Option) (*operations.RemoveAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -13490,7 +14332,7 @@ func (s *Accounting) RemoveAccountingAccount2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingAccount2",
+		OperationID:      "removeAccountingAccount",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -13611,7 +14453,7 @@ func (s *Accounting) RemoveAccountingAccount2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingAccount2Response{
+	res := &operations.RemoveAccountingAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -13642,8 +14484,8 @@ func (s *Accounting) RemoveAccountingAccount2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingBill2 - Remove a bill
-func (s *Accounting) RemoveAccountingBill2(ctx context.Context, request operations.RemoveAccountingBill2Request, opts ...operations.Option) (*operations.RemoveAccountingBill2Response, error) {
+// RemoveAccountingBill - Remove a bill
+func (s *Accounting) RemoveAccountingBill(ctx context.Context, request operations.RemoveAccountingBillRequest, opts ...operations.Option) (*operations.RemoveAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -13672,7 +14514,7 @@ func (s *Accounting) RemoveAccountingBill2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingBill2",
+		OperationID:      "removeAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -13793,7 +14635,7 @@ func (s *Accounting) RemoveAccountingBill2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAccountingBill2Response{
+	res := &operations.RemoveAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -13824,8 +14666,8 @@ func (s *Accounting) RemoveAccountingBill2(ctx context.Context, request operatio
 
 }
 
-// RemoveAccountingCategory2 - Remove a category
-func (s *Accounting) RemoveAccountingCategory2(ctx context.Context, request operations.RemoveAccountingCategory2Request, opts ...operations.Option) (*operations.RemoveAccountingCategory2Response, error) {
+// RemoveAccountingCategory - Remove a category
+func (s *Accounting) RemoveAccountingCategory(ctx context.Context, request operations.RemoveAccountingCategoryRequest, opts ...operations.Option) (*operations.RemoveAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -13854,7 +14696,7 @@ func (s *Accounting) RemoveAccountingCategory2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingCategory2",
+		OperationID:      "removeAccountingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -13975,7 +14817,7 @@ func (s *Accounting) RemoveAccountingCategory2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.RemoveAccountingCategory2Response{
+	res := &operations.RemoveAccountingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14006,8 +14848,8 @@ func (s *Accounting) RemoveAccountingCategory2(ctx context.Context, request oper
 
 }
 
-// RemoveAccountingContact2 - Remove a contact
-func (s *Accounting) RemoveAccountingContact2(ctx context.Context, request operations.RemoveAccountingContact2Request, opts ...operations.Option) (*operations.RemoveAccountingContact2Response, error) {
+// RemoveAccountingContact - Remove a contact
+func (s *Accounting) RemoveAccountingContact(ctx context.Context, request operations.RemoveAccountingContactRequest, opts ...operations.Option) (*operations.RemoveAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14036,7 +14878,7 @@ func (s *Accounting) RemoveAccountingContact2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingContact2",
+		OperationID:      "removeAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -14157,7 +14999,7 @@ func (s *Accounting) RemoveAccountingContact2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingContact2Response{
+	res := &operations.RemoveAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14188,8 +15030,8 @@ func (s *Accounting) RemoveAccountingContact2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingCreditmemo2 - Remove a creditmemo
-func (s *Accounting) RemoveAccountingCreditmemo2(ctx context.Context, request operations.RemoveAccountingCreditmemo2Request, opts ...operations.Option) (*operations.RemoveAccountingCreditmemo2Response, error) {
+// RemoveAccountingCreditmemo - Remove a creditmemo
+func (s *Accounting) RemoveAccountingCreditmemo(ctx context.Context, request operations.RemoveAccountingCreditmemoRequest, opts ...operations.Option) (*operations.RemoveAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14218,7 +15060,7 @@ func (s *Accounting) RemoveAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingCreditmemo2",
+		OperationID:      "removeAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -14339,7 +15181,7 @@ func (s *Accounting) RemoveAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.RemoveAccountingCreditmemo2Response{
+	res := &operations.RemoveAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14370,8 +15212,8 @@ func (s *Accounting) RemoveAccountingCreditmemo2(ctx context.Context, request op
 
 }
 
-// RemoveAccountingExpense2 - Remove an expense
-func (s *Accounting) RemoveAccountingExpense2(ctx context.Context, request operations.RemoveAccountingExpense2Request, opts ...operations.Option) (*operations.RemoveAccountingExpense2Response, error) {
+// RemoveAccountingExpense - Remove an expense
+func (s *Accounting) RemoveAccountingExpense(ctx context.Context, request operations.RemoveAccountingExpenseRequest, opts ...operations.Option) (*operations.RemoveAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14400,7 +15242,7 @@ func (s *Accounting) RemoveAccountingExpense2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingExpense2",
+		OperationID:      "removeAccountingExpense",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -14521,7 +15363,7 @@ func (s *Accounting) RemoveAccountingExpense2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingExpense2Response{
+	res := &operations.RemoveAccountingExpenseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14552,8 +15394,8 @@ func (s *Accounting) RemoveAccountingExpense2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingInvoice2 - Remove an invoice
-func (s *Accounting) RemoveAccountingInvoice2(ctx context.Context, request operations.RemoveAccountingInvoice2Request, opts ...operations.Option) (*operations.RemoveAccountingInvoice2Response, error) {
+// RemoveAccountingInvoice - Remove an invoice
+func (s *Accounting) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest, opts ...operations.Option) (*operations.RemoveAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14582,7 +15424,7 @@ func (s *Accounting) RemoveAccountingInvoice2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingInvoice2",
+		OperationID:      "removeAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -14703,7 +15545,7 @@ func (s *Accounting) RemoveAccountingInvoice2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingInvoice2Response{
+	res := &operations.RemoveAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14734,8 +15576,8 @@ func (s *Accounting) RemoveAccountingInvoice2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingJournal2 - Remove a journal
-func (s *Accounting) RemoveAccountingJournal2(ctx context.Context, request operations.RemoveAccountingJournal2Request, opts ...operations.Option) (*operations.RemoveAccountingJournal2Response, error) {
+// RemoveAccountingJournal - Remove a journal
+func (s *Accounting) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest, opts ...operations.Option) (*operations.RemoveAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14764,7 +15606,7 @@ func (s *Accounting) RemoveAccountingJournal2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingJournal2",
+		OperationID:      "removeAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -14885,7 +15727,7 @@ func (s *Accounting) RemoveAccountingJournal2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingJournal2Response{
+	res := &operations.RemoveAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -14916,8 +15758,8 @@ func (s *Accounting) RemoveAccountingJournal2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingOrder2 - Remove an order
-func (s *Accounting) RemoveAccountingOrder2(ctx context.Context, request operations.RemoveAccountingOrder2Request, opts ...operations.Option) (*operations.RemoveAccountingOrder2Response, error) {
+// RemoveAccountingOrder - Remove an order
+func (s *Accounting) RemoveAccountingOrder(ctx context.Context, request operations.RemoveAccountingOrderRequest, opts ...operations.Option) (*operations.RemoveAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -14946,7 +15788,7 @@ func (s *Accounting) RemoveAccountingOrder2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingOrder2",
+		OperationID:      "removeAccountingOrder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -15067,7 +15909,7 @@ func (s *Accounting) RemoveAccountingOrder2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveAccountingOrder2Response{
+	res := &operations.RemoveAccountingOrderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -15098,8 +15940,8 @@ func (s *Accounting) RemoveAccountingOrder2(ctx context.Context, request operati
 
 }
 
-// RemoveAccountingPurchaseorder2 - Remove a purchaseorder
-func (s *Accounting) RemoveAccountingPurchaseorder2(ctx context.Context, request operations.RemoveAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorder2Response, error) {
+// RemoveAccountingPurchaseorder - Remove a purchaseorder
+func (s *Accounting) RemoveAccountingPurchaseorder(ctx context.Context, request operations.RemoveAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.RemoveAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -15128,7 +15970,7 @@ func (s *Accounting) RemoveAccountingPurchaseorder2(ctx context.Context, request
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingPurchaseorder2",
+		OperationID:      "removeAccountingPurchaseorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -15249,7 +16091,7 @@ func (s *Accounting) RemoveAccountingPurchaseorder2(ctx context.Context, request
 		}
 	}
 
-	res := &operations.RemoveAccountingPurchaseorder2Response{
+	res := &operations.RemoveAccountingPurchaseorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -15280,8 +16122,8 @@ func (s *Accounting) RemoveAccountingPurchaseorder2(ctx context.Context, request
 
 }
 
-// RemoveAccountingSalesorder2 - Remove a salesorder
-func (s *Accounting) RemoveAccountingSalesorder2(ctx context.Context, request operations.RemoveAccountingSalesorder2Request, opts ...operations.Option) (*operations.RemoveAccountingSalesorder2Response, error) {
+// RemoveAccountingSalesorder - Remove a salesorder
+func (s *Accounting) RemoveAccountingSalesorder(ctx context.Context, request operations.RemoveAccountingSalesorderRequest, opts ...operations.Option) (*operations.RemoveAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -15310,7 +16152,7 @@ func (s *Accounting) RemoveAccountingSalesorder2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingSalesorder2",
+		OperationID:      "removeAccountingSalesorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -15431,7 +16273,7 @@ func (s *Accounting) RemoveAccountingSalesorder2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.RemoveAccountingSalesorder2Response{
+	res := &operations.RemoveAccountingSalesorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -15462,8 +16304,8 @@ func (s *Accounting) RemoveAccountingSalesorder2(ctx context.Context, request op
 
 }
 
-// RemoveAccountingTaxrate2 - Remove a taxrate
-func (s *Accounting) RemoveAccountingTaxrate2(ctx context.Context, request operations.RemoveAccountingTaxrate2Request, opts ...operations.Option) (*operations.RemoveAccountingTaxrate2Response, error) {
+// RemoveAccountingTaxrate - Remove a taxrate
+func (s *Accounting) RemoveAccountingTaxrate(ctx context.Context, request operations.RemoveAccountingTaxrateRequest, opts ...operations.Option) (*operations.RemoveAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -15492,7 +16334,7 @@ func (s *Accounting) RemoveAccountingTaxrate2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingTaxrate2",
+		OperationID:      "removeAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -15613,7 +16455,7 @@ func (s *Accounting) RemoveAccountingTaxrate2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.RemoveAccountingTaxrate2Response{
+	res := &operations.RemoveAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -15644,8 +16486,8 @@ func (s *Accounting) RemoveAccountingTaxrate2(ctx context.Context, request opera
 
 }
 
-// RemoveAccountingTransaction2 - Remove a transaction
-func (s *Accounting) RemoveAccountingTransaction2(ctx context.Context, request operations.RemoveAccountingTransaction2Request, opts ...operations.Option) (*operations.RemoveAccountingTransaction2Response, error) {
+// RemoveAccountingTransaction - Remove a transaction
+func (s *Accounting) RemoveAccountingTransaction(ctx context.Context, request operations.RemoveAccountingTransactionRequest, opts ...operations.Option) (*operations.RemoveAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -15674,7 +16516,7 @@ func (s *Accounting) RemoveAccountingTransaction2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingTransaction2",
+		OperationID:      "removeAccountingTransaction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -15795,7 +16637,7 @@ func (s *Accounting) RemoveAccountingTransaction2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.RemoveAccountingTransaction2Response{
+	res := &operations.RemoveAccountingTransactionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -15826,8 +16668,190 @@ func (s *Accounting) RemoveAccountingTransaction2(ctx context.Context, request o
 
 }
 
-// UpdateAccountingAccount2 - Update an account
-func (s *Accounting) UpdateAccountingAccount2(ctx context.Context, request operations.UpdateAccountingAccount2Request, opts ...operations.Option) (*operations.UpdateAccountingAccount2Response, error) {
+// RemoveAccountingVendorcredit - Remove a vendorcredit
+func (s *Accounting) RemoveAccountingVendorcredit(ctx context.Context, request operations.RemoveAccountingVendorcreditRequest, opts ...operations.Option) (*operations.RemoveAccountingVendorcreditResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "removeAccountingVendorcredit",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", opURL, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "*/*")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.RemoveAccountingVendorcreditResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		utils.DrainBody(httpRes)
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		res.Headers = httpRes.Header
+
+		utils.DrainBody(httpRes)
+	}
+
+	return res, nil
+
+}
+
+// UpdateAccountingAccount - Update an account
+func (s *Accounting) UpdateAccountingAccount(ctx context.Context, request operations.UpdateAccountingAccountRequest, opts ...operations.Option) (*operations.UpdateAccountingAccountResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -15856,7 +16880,7 @@ func (s *Accounting) UpdateAccountingAccount2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingAccount2",
+		OperationID:      "updateAccountingAccount",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingAccount", "json", `request:"mediaType=application/json"`)
@@ -15988,7 +17012,7 @@ func (s *Accounting) UpdateAccountingAccount2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingAccount2Response{
+	res := &operations.UpdateAccountingAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -16040,8 +17064,8 @@ func (s *Accounting) UpdateAccountingAccount2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingBill2 - Update a bill
-func (s *Accounting) UpdateAccountingBill2(ctx context.Context, request operations.UpdateAccountingBill2Request, opts ...operations.Option) (*operations.UpdateAccountingBill2Response, error) {
+// UpdateAccountingBill - Update a bill
+func (s *Accounting) UpdateAccountingBill(ctx context.Context, request operations.UpdateAccountingBillRequest, opts ...operations.Option) (*operations.UpdateAccountingBillResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -16070,7 +17094,7 @@ func (s *Accounting) UpdateAccountingBill2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingBill2",
+		OperationID:      "updateAccountingBill",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingBill", "json", `request:"mediaType=application/json"`)
@@ -16202,7 +17226,7 @@ func (s *Accounting) UpdateAccountingBill2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAccountingBill2Response{
+	res := &operations.UpdateAccountingBillResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -16254,8 +17278,8 @@ func (s *Accounting) UpdateAccountingBill2(ctx context.Context, request operatio
 
 }
 
-// UpdateAccountingCategory2 - Update a category
-func (s *Accounting) UpdateAccountingCategory2(ctx context.Context, request operations.UpdateAccountingCategory2Request, opts ...operations.Option) (*operations.UpdateAccountingCategory2Response, error) {
+// UpdateAccountingCategory - Update a category
+func (s *Accounting) UpdateAccountingCategory(ctx context.Context, request operations.UpdateAccountingCategoryRequest, opts ...operations.Option) (*operations.UpdateAccountingCategoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -16284,7 +17308,7 @@ func (s *Accounting) UpdateAccountingCategory2(ctx context.Context, request oper
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingCategory2",
+		OperationID:      "updateAccountingCategory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCategory", "json", `request:"mediaType=application/json"`)
@@ -16416,7 +17440,7 @@ func (s *Accounting) UpdateAccountingCategory2(ctx context.Context, request oper
 		}
 	}
 
-	res := &operations.UpdateAccountingCategory2Response{
+	res := &operations.UpdateAccountingCategoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -16468,8 +17492,8 @@ func (s *Accounting) UpdateAccountingCategory2(ctx context.Context, request oper
 
 }
 
-// UpdateAccountingContact2 - Update a contact
-func (s *Accounting) UpdateAccountingContact2(ctx context.Context, request operations.UpdateAccountingContact2Request, opts ...operations.Option) (*operations.UpdateAccountingContact2Response, error) {
+// UpdateAccountingContact - Update a contact
+func (s *Accounting) UpdateAccountingContact(ctx context.Context, request operations.UpdateAccountingContactRequest, opts ...operations.Option) (*operations.UpdateAccountingContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -16498,7 +17522,7 @@ func (s *Accounting) UpdateAccountingContact2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingContact2",
+		OperationID:      "updateAccountingContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingContact", "json", `request:"mediaType=application/json"`)
@@ -16630,7 +17654,7 @@ func (s *Accounting) UpdateAccountingContact2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingContact2Response{
+	res := &operations.UpdateAccountingContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -16682,8 +17706,8 @@ func (s *Accounting) UpdateAccountingContact2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingCreditmemo2 - Update a creditmemo
-func (s *Accounting) UpdateAccountingCreditmemo2(ctx context.Context, request operations.UpdateAccountingCreditmemo2Request, opts ...operations.Option) (*operations.UpdateAccountingCreditmemo2Response, error) {
+// UpdateAccountingCreditmemo - Update a creditmemo
+func (s *Accounting) UpdateAccountingCreditmemo(ctx context.Context, request operations.UpdateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.UpdateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -16712,7 +17736,7 @@ func (s *Accounting) UpdateAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingCreditmemo2",
+		OperationID:      "updateAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -16844,7 +17868,7 @@ func (s *Accounting) UpdateAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.UpdateAccountingCreditmemo2Response{
+	res := &operations.UpdateAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -16896,8 +17920,8 @@ func (s *Accounting) UpdateAccountingCreditmemo2(ctx context.Context, request op
 
 }
 
-// UpdateAccountingExpense2 - Update an expense
-func (s *Accounting) UpdateAccountingExpense2(ctx context.Context, request operations.UpdateAccountingExpense2Request, opts ...operations.Option) (*operations.UpdateAccountingExpense2Response, error) {
+// UpdateAccountingExpense - Update an expense
+func (s *Accounting) UpdateAccountingExpense(ctx context.Context, request operations.UpdateAccountingExpenseRequest, opts ...operations.Option) (*operations.UpdateAccountingExpenseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -16926,7 +17950,7 @@ func (s *Accounting) UpdateAccountingExpense2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingExpense2",
+		OperationID:      "updateAccountingExpense",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingExpense", "json", `request:"mediaType=application/json"`)
@@ -17058,7 +18082,7 @@ func (s *Accounting) UpdateAccountingExpense2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingExpense2Response{
+	res := &operations.UpdateAccountingExpenseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -17110,8 +18134,8 @@ func (s *Accounting) UpdateAccountingExpense2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingInvoice2 - Update an invoice
-func (s *Accounting) UpdateAccountingInvoice2(ctx context.Context, request operations.UpdateAccountingInvoice2Request, opts ...operations.Option) (*operations.UpdateAccountingInvoice2Response, error) {
+// UpdateAccountingInvoice - Update an invoice
+func (s *Accounting) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest, opts ...operations.Option) (*operations.UpdateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -17140,7 +18164,7 @@ func (s *Accounting) UpdateAccountingInvoice2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingInvoice2",
+		OperationID:      "updateAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -17272,7 +18296,7 @@ func (s *Accounting) UpdateAccountingInvoice2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingInvoice2Response{
+	res := &operations.UpdateAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -17324,8 +18348,8 @@ func (s *Accounting) UpdateAccountingInvoice2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingJournal2 - Update a journal
-func (s *Accounting) UpdateAccountingJournal2(ctx context.Context, request operations.UpdateAccountingJournal2Request, opts ...operations.Option) (*operations.UpdateAccountingJournal2Response, error) {
+// UpdateAccountingJournal - Update a journal
+func (s *Accounting) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest, opts ...operations.Option) (*operations.UpdateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -17354,7 +18378,7 @@ func (s *Accounting) UpdateAccountingJournal2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingJournal2",
+		OperationID:      "updateAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -17486,7 +18510,7 @@ func (s *Accounting) UpdateAccountingJournal2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingJournal2Response{
+	res := &operations.UpdateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -17538,8 +18562,8 @@ func (s *Accounting) UpdateAccountingJournal2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingOrder2 - Update an order
-func (s *Accounting) UpdateAccountingOrder2(ctx context.Context, request operations.UpdateAccountingOrder2Request, opts ...operations.Option) (*operations.UpdateAccountingOrder2Response, error) {
+// UpdateAccountingOrder - Update an order
+func (s *Accounting) UpdateAccountingOrder(ctx context.Context, request operations.UpdateAccountingOrderRequest, opts ...operations.Option) (*operations.UpdateAccountingOrderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -17568,7 +18592,7 @@ func (s *Accounting) UpdateAccountingOrder2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingOrder2",
+		OperationID:      "updateAccountingOrder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingOrder", "json", `request:"mediaType=application/json"`)
@@ -17700,7 +18724,7 @@ func (s *Accounting) UpdateAccountingOrder2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateAccountingOrder2Response{
+	res := &operations.UpdateAccountingOrderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -17752,8 +18776,8 @@ func (s *Accounting) UpdateAccountingOrder2(ctx context.Context, request operati
 
 }
 
-// UpdateAccountingPurchaseorder2 - Update a purchaseorder
-func (s *Accounting) UpdateAccountingPurchaseorder2(ctx context.Context, request operations.UpdateAccountingPurchaseorder2Request, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorder2Response, error) {
+// UpdateAccountingPurchaseorder - Update a purchaseorder
+func (s *Accounting) UpdateAccountingPurchaseorder(ctx context.Context, request operations.UpdateAccountingPurchaseorderRequest, opts ...operations.Option) (*operations.UpdateAccountingPurchaseorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -17782,7 +18806,7 @@ func (s *Accounting) UpdateAccountingPurchaseorder2(ctx context.Context, request
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingPurchaseorder2",
+		OperationID:      "updateAccountingPurchaseorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingPurchaseorder", "json", `request:"mediaType=application/json"`)
@@ -17914,7 +18938,7 @@ func (s *Accounting) UpdateAccountingPurchaseorder2(ctx context.Context, request
 		}
 	}
 
-	res := &operations.UpdateAccountingPurchaseorder2Response{
+	res := &operations.UpdateAccountingPurchaseorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -17966,8 +18990,8 @@ func (s *Accounting) UpdateAccountingPurchaseorder2(ctx context.Context, request
 
 }
 
-// UpdateAccountingSalesorder2 - Update a salesorder
-func (s *Accounting) UpdateAccountingSalesorder2(ctx context.Context, request operations.UpdateAccountingSalesorder2Request, opts ...operations.Option) (*operations.UpdateAccountingSalesorder2Response, error) {
+// UpdateAccountingSalesorder - Update a salesorder
+func (s *Accounting) UpdateAccountingSalesorder(ctx context.Context, request operations.UpdateAccountingSalesorderRequest, opts ...operations.Option) (*operations.UpdateAccountingSalesorderResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -17996,7 +19020,7 @@ func (s *Accounting) UpdateAccountingSalesorder2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingSalesorder2",
+		OperationID:      "updateAccountingSalesorder",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingSalesorder", "json", `request:"mediaType=application/json"`)
@@ -18128,7 +19152,7 @@ func (s *Accounting) UpdateAccountingSalesorder2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.UpdateAccountingSalesorder2Response{
+	res := &operations.UpdateAccountingSalesorderResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -18180,8 +19204,8 @@ func (s *Accounting) UpdateAccountingSalesorder2(ctx context.Context, request op
 
 }
 
-// UpdateAccountingTaxrate2 - Update a taxrate
-func (s *Accounting) UpdateAccountingTaxrate2(ctx context.Context, request operations.UpdateAccountingTaxrate2Request, opts ...operations.Option) (*operations.UpdateAccountingTaxrate2Response, error) {
+// UpdateAccountingTaxrate - Update a taxrate
+func (s *Accounting) UpdateAccountingTaxrate(ctx context.Context, request operations.UpdateAccountingTaxrateRequest, opts ...operations.Option) (*operations.UpdateAccountingTaxrateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -18210,7 +19234,7 @@ func (s *Accounting) UpdateAccountingTaxrate2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingTaxrate2",
+		OperationID:      "updateAccountingTaxrate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTaxrate", "json", `request:"mediaType=application/json"`)
@@ -18342,7 +19366,7 @@ func (s *Accounting) UpdateAccountingTaxrate2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.UpdateAccountingTaxrate2Response{
+	res := &operations.UpdateAccountingTaxrateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -18394,8 +19418,8 @@ func (s *Accounting) UpdateAccountingTaxrate2(ctx context.Context, request opera
 
 }
 
-// UpdateAccountingTransaction2 - Update a transaction
-func (s *Accounting) UpdateAccountingTransaction2(ctx context.Context, request operations.UpdateAccountingTransaction2Request, opts ...operations.Option) (*operations.UpdateAccountingTransaction2Response, error) {
+// UpdateAccountingTransaction - Update a transaction
+func (s *Accounting) UpdateAccountingTransaction(ctx context.Context, request operations.UpdateAccountingTransactionRequest, opts ...operations.Option) (*operations.UpdateAccountingTransactionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -18424,7 +19448,7 @@ func (s *Accounting) UpdateAccountingTransaction2(ctx context.Context, request o
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingTransaction2",
+		OperationID:      "updateAccountingTransaction",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingTransaction", "json", `request:"mediaType=application/json"`)
@@ -18556,7 +19580,7 @@ func (s *Accounting) UpdateAccountingTransaction2(ctx context.Context, request o
 		}
 	}
 
-	res := &operations.UpdateAccountingTransaction2Response{
+	res := &operations.UpdateAccountingTransactionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -18577,6 +19601,220 @@ func (s *Accounting) UpdateAccountingTransaction2(ctx context.Context, request o
 			}
 
 			res.AccountingTransaction = &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
+	default:
+		rawBody, err := utils.ConsumeRawBody(httpRes)
+		if err != nil {
+			return nil, err
+		}
+		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
+	}
+
+	return res, nil
+
+}
+
+// UpdateAccountingVendorcredit - Update a vendorcredit
+func (s *Accounting) UpdateAccountingVendorcredit(ctx context.Context, request operations.UpdateAccountingVendorcreditRequest, opts ...operations.Option) (*operations.UpdateAccountingVendorcreditResponse, error) {
+	o := operations.Options{}
+	supportedOptions := []string{
+		operations.SupportedOptionRetries,
+		operations.SupportedOptionTimeout,
+	}
+
+	for _, opt := range opts {
+		if err := opt(&o, supportedOptions...); err != nil {
+			return nil, fmt.Errorf("error applying option: %w", err)
+		}
+	}
+
+	var baseURL string
+	if o.ServerURL == nil {
+		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
+	} else {
+		baseURL = *o.ServerURL
+	}
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/accounting/{connection_id}/vendorcredit/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	hookCtx := hooks.HookContext{
+		SDK:              s.rootSDK,
+		SDKConfiguration: s.sdkConfiguration,
+		BaseURL:          baseURL,
+		Context:          ctx,
+		OperationID:      "updateAccountingVendorcredit",
+		SecuritySource:   s.sdkConfiguration.Security,
+	}
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingVendorcredit", "json", `request:"mediaType=application/json"`)
+	if err != nil {
+		return nil, err
+	}
+
+	timeout := o.Timeout
+	if timeout == nil {
+		timeout = s.sdkConfiguration.Timeout
+	}
+
+	if timeout != nil {
+		var cancel context.CancelFunc
+		ctx, cancel = context.WithTimeout(ctx, *timeout)
+		defer cancel()
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", opURL, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+	if reqContentType != "" {
+		req.Header.Set("Content-Type", reqContentType)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+		return nil, err
+	}
+
+	for k, v := range o.SetHeaders {
+		req.Header.Set(k, v)
+	}
+
+	globalRetryConfig := s.sdkConfiguration.RetryConfig
+	retryConfig := o.Retries
+	if retryConfig == nil {
+		if globalRetryConfig != nil {
+			retryConfig = globalRetryConfig
+		}
+	}
+
+	var httpRes *http.Response
+	if retryConfig != nil {
+		httpRes, err = utils.Retry(ctx, utils.Retries{
+			Config: retryConfig,
+			StatusCodes: []string{
+				"429",
+				"500",
+				"502",
+				"503",
+				"504",
+			},
+		}, func() (*http.Response, error) {
+			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
+				copyBody, err := req.GetBody()
+
+				if err != nil {
+					return nil, err
+				}
+
+				req.Body = copyBody
+			}
+
+			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+			if err != nil {
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
+			}
+
+			httpRes, err := s.sdkConfiguration.Client.Do(req)
+			if err != nil || httpRes == nil {
+				if err != nil {
+					err = fmt.Errorf("error sending request: %w", err)
+				} else {
+					err = fmt.Errorf("error sending request: no response")
+				}
+
+				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			}
+			return httpRes, err
+		})
+
+		if err != nil {
+			return nil, err
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	} else {
+		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
+		if err != nil {
+			return nil, err
+		}
+
+		httpRes, err = s.sdkConfiguration.Client.Do(req)
+		if err != nil || httpRes == nil {
+			if err != nil {
+				err = fmt.Errorf("error sending request: %w", err)
+			} else {
+				err = fmt.Errorf("error sending request: no response")
+			}
+
+			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
+			return nil, err
+		} else if utils.MatchStatusCodes([]string{"4XX", "5XX"}, httpRes.StatusCode) {
+			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
+			if err != nil {
+				return nil, err
+			} else if _httpRes != nil {
+				httpRes = _httpRes
+			}
+		} else {
+			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
+			if err != nil {
+				return nil, err
+			}
+		}
+	}
+
+	res := &operations.UpdateAccountingVendorcreditResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: httpRes.Header.Get("Content-Type"),
+		RawResponse: httpRes,
+	}
+
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out shared.AccountingVendorcredit
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			res.AccountingVendorcredit = &out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

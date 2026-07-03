@@ -4,26 +4,26 @@
 
 ### Available Operations
 
-* [CreateAccountingCategory2](#createaccountingcategory2) - Create a category
-* [CreateTicketingCategory2](#createticketingcategory2) - Create a category
-* [GetAccountingCategory2](#getaccountingcategory2) - Retrieve a category
-* [GetTicketingCategory2](#getticketingcategory2) - Retrieve a category
-* [ListAccountingCategories2](#listaccountingcategories2) - List all categories
-* [ListTicketingCategories2](#listticketingcategories2) - List all categories
-* [PatchAccountingCategory2](#patchaccountingcategory2) - Update a category
-* [PatchTicketingCategory2](#patchticketingcategory2) - Update a category
-* [RemoveAccountingCategory2](#removeaccountingcategory2) - Remove a category
-* [RemoveTicketingCategory2](#removeticketingcategory2) - Remove a category
-* [UpdateAccountingCategory2](#updateaccountingcategory2) - Update a category
-* [UpdateTicketingCategory2](#updateticketingcategory2) - Update a category
+* [CreateAccountingCategory](#createaccountingcategory) - Create a category
+* [CreateTicketingCategory](#createticketingcategory) - Create a category
+* [GetAccountingCategory](#getaccountingcategory) - Retrieve a category
+* [GetTicketingCategory](#getticketingcategory) - Retrieve a category
+* [ListAccountingCategories](#listaccountingcategories) - List all categories
+* [ListTicketingCategories](#listticketingcategories) - List all categories
+* [PatchAccountingCategory](#patchaccountingcategory) - Update a category
+* [PatchTicketingCategory](#patchticketingcategory) - Update a category
+* [RemoveAccountingCategory](#removeaccountingcategory) - Remove a category
+* [RemoveTicketingCategory](#removeticketingcategory) - Remove a category
+* [UpdateAccountingCategory](#updateaccountingcategory) - Update a category
+* [UpdateTicketingCategory](#updateticketingcategory) - Update a category
 
-## CreateAccountingCategory2
+## CreateAccountingCategory
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingCategory2" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
 ```go
 package main
 
@@ -42,7 +42,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.CreateAccountingCategory2(ctx, operations.CreateAccountingCategory2Request{
+    res, err := s.Category.CreateAccountingCategory(ctx, operations.CreateAccountingCategoryRequest{
         AccountingCategory: shared.AccountingCategory{},
         ConnectionID: "<id>",
     })
@@ -57,15 +57,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.CreateAccountingCategory2Request](../../pkg/models/operations/createaccountingcategory2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.CreateAccountingCategoryRequest](../../pkg/models/operations/createaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.CreateAccountingCategory2Response](../../pkg/models/operations/createaccountingcategory2response.md), error**
+**[*operations.CreateAccountingCategoryResponse](../../pkg/models/operations/createaccountingcategoryresponse.md), error**
 
 ### Errors
 
@@ -73,13 +73,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateTicketingCategory2
+## CreateTicketingCategory
 
 Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingCategory2" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
 ```go
 package main
 
@@ -98,7 +98,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.CreateTicketingCategory2(ctx, operations.CreateTicketingCategory2Request{
+    res, err := s.Category.CreateTicketingCategory(ctx, operations.CreateTicketingCategoryRequest{
         TicketingCategory: shared.TicketingCategory{},
         ConnectionID: "<id>",
     })
@@ -113,15 +113,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.CreateTicketingCategory2Request](../../pkg/models/operations/createticketingcategory2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateTicketingCategoryRequest](../../pkg/models/operations/createticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.CreateTicketingCategory2Response](../../pkg/models/operations/createticketingcategory2response.md), error**
+**[*operations.CreateTicketingCategoryResponse](../../pkg/models/operations/createticketingcategoryresponse.md), error**
 
 ### Errors
 
@@ -129,13 +129,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAccountingCategory2
+## GetAccountingCategory
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingCategory2" method="get" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingCategory" method="get" path="/accounting/{connection_id}/category/{id}" -->
 ```go
 package main
 
@@ -153,7 +153,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.GetAccountingCategory2(ctx, operations.GetAccountingCategory2Request{
+    res, err := s.Category.GetAccountingCategory(ctx, operations.GetAccountingCategoryRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -168,15 +168,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.GetAccountingCategory2Request](../../pkg/models/operations/getaccountingcategory2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetAccountingCategoryRequest](../../pkg/models/operations/getaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.GetAccountingCategory2Response](../../pkg/models/operations/getaccountingcategory2response.md), error**
+**[*operations.GetAccountingCategoryResponse](../../pkg/models/operations/getaccountingcategoryresponse.md), error**
 
 ### Errors
 
@@ -184,13 +184,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTicketingCategory2
+## GetTicketingCategory
 
 Retrieve a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTicketingCategory2" method="get" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTicketingCategory" method="get" path="/ticketing/{connection_id}/category/{id}" -->
 ```go
 package main
 
@@ -208,7 +208,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.GetTicketingCategory2(ctx, operations.GetTicketingCategory2Request{
+    res, err := s.Category.GetTicketingCategory(ctx, operations.GetTicketingCategoryRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -223,15 +223,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetTicketingCategory2Request](../../pkg/models/operations/getticketingcategory2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetTicketingCategoryRequest](../../pkg/models/operations/getticketingcategoryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.GetTicketingCategory2Response](../../pkg/models/operations/getticketingcategory2response.md), error**
+**[*operations.GetTicketingCategoryResponse](../../pkg/models/operations/getticketingcategoryresponse.md), error**
 
 ### Errors
 
@@ -239,13 +239,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingCategories2
+## ListAccountingCategories
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingCategories2" method="get" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="listAccountingCategories" method="get" path="/accounting/{connection_id}/category" -->
 ```go
 package main
 
@@ -263,7 +263,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.ListAccountingCategories2(ctx, operations.ListAccountingCategories2Request{
+    res, err := s.Category.ListAccountingCategories(ctx, operations.ListAccountingCategoriesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -277,15 +277,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.ListAccountingCategories2Request](../../pkg/models/operations/listaccountingcategories2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListAccountingCategoriesRequest](../../pkg/models/operations/listaccountingcategoriesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.ListAccountingCategories2Response](../../pkg/models/operations/listaccountingcategories2response.md), error**
+**[*operations.ListAccountingCategoriesResponse](../../pkg/models/operations/listaccountingcategoriesresponse.md), error**
 
 ### Errors
 
@@ -293,13 +293,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTicketingCategories2
+## ListTicketingCategories
 
 List all categories
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTicketingCategories2" method="get" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="listTicketingCategories" method="get" path="/ticketing/{connection_id}/category" -->
 ```go
 package main
 
@@ -317,7 +317,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.ListTicketingCategories2(ctx, operations.ListTicketingCategories2Request{
+    res, err := s.Category.ListTicketingCategories(ctx, operations.ListTicketingCategoriesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -331,15 +331,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.ListTicketingCategories2Request](../../pkg/models/operations/listticketingcategories2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListTicketingCategoriesRequest](../../pkg/models/operations/listticketingcategoriesrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.ListTicketingCategories2Response](../../pkg/models/operations/listticketingcategories2response.md), error**
+**[*operations.ListTicketingCategoriesResponse](../../pkg/models/operations/listticketingcategoriesresponse.md), error**
 
 ### Errors
 
@@ -347,13 +347,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAccountingCategory2
+## PatchAccountingCategory
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingCategory2" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
 ```go
 package main
 
@@ -372,7 +372,231 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.PatchAccountingCategory2(ctx, operations.PatchAccountingCategory2Request{
+    res, err := s.Category.PatchAccountingCategory(ctx, operations.PatchAccountingCategoryRequest{
+        AccountingCategory: shared.AccountingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.PatchAccountingCategoryRequest](../../pkg/models/operations/patchaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.PatchAccountingCategoryResponse](../../pkg/models/operations/patchaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchTicketingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.PatchTicketingCategory(ctx, operations.PatchTicketingCategoryRequest{
+        TicketingCategory: shared.TicketingCategory{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.TicketingCategory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchTicketingCategoryRequest](../../pkg/models/operations/patchticketingcategoryrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.PatchTicketingCategoryResponse](../../pkg/models/operations/patchticketingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAccountingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingCategory" method="delete" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.RemoveAccountingCategory(ctx, operations.RemoveAccountingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.RemoveAccountingCategoryRequest](../../pkg/models/operations/removeaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.RemoveAccountingCategoryResponse](../../pkg/models/operations/removeaccountingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveTicketingCategory
+
+Remove a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeTicketingCategory" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.RemoveTicketingCategory(ctx, operations.RemoveTicketingCategoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveTicketingCategoryRequest](../../pkg/models/operations/removeticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.RemoveTicketingCategoryResponse](../../pkg/models/operations/removeticketingcategoryresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAccountingCategory
+
+Update a category
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Category.UpdateAccountingCategory(ctx, operations.UpdateAccountingCategoryRequest{
         AccountingCategory: shared.AccountingCategory{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -391,12 +615,12 @@ func main() {
 | Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.PatchAccountingCategory2Request](../../pkg/models/operations/patchaccountingcategory2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `request`                                                                                                    | [operations.UpdateAccountingCategoryRequest](../../pkg/models/operations/updateaccountingcategoryrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 | `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
 
 ### Response
 
-**[*operations.PatchAccountingCategory2Response](../../pkg/models/operations/patchaccountingcategory2response.md), error**
+**[*operations.UpdateAccountingCategoryResponse](../../pkg/models/operations/updateaccountingcategoryresponse.md), error**
 
 ### Errors
 
@@ -404,13 +628,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchTicketingCategory2
+## UpdateTicketingCategory
 
 Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingCategory2" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
 ```go
 package main
 
@@ -429,7 +653,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Category.PatchTicketingCategory2(ctx, operations.PatchTicketingCategory2Request{
+    res, err := s.Category.UpdateTicketingCategory(ctx, operations.UpdateTicketingCategoryRequest{
         TicketingCategory: shared.TicketingCategory{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -448,236 +672,12 @@ func main() {
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchTicketingCategory2Request](../../pkg/models/operations/patchticketingcategory2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.UpdateTicketingCategoryRequest](../../pkg/models/operations/updateticketingcategoryrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 | `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.PatchTicketingCategory2Response](../../pkg/models/operations/patchticketingcategory2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAccountingCategory2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAccountingCategory2" method="delete" path="/accounting/{connection_id}/category/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Category.RemoveAccountingCategory2(ctx, operations.RemoveAccountingCategory2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.RemoveAccountingCategory2Request](../../pkg/models/operations/removeaccountingcategory2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
-
-### Response
-
-**[*operations.RemoveAccountingCategory2Response](../../pkg/models/operations/removeaccountingcategory2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveTicketingCategory2
-
-Remove a category
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeTicketingCategory2" method="delete" path="/ticketing/{connection_id}/category/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Category.RemoveTicketingCategory2(ctx, operations.RemoveTicketingCategory2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.RemoveTicketingCategory2Request](../../pkg/models/operations/removeticketingcategory2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
-
-### Response
-
-**[*operations.RemoveTicketingCategory2Response](../../pkg/models/operations/removeticketingcategory2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAccountingCategory2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAccountingCategory2" method="put" path="/accounting/{connection_id}/category/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Category.UpdateAccountingCategory2(ctx, operations.UpdateAccountingCategory2Request{
-        AccountingCategory: shared.AccountingCategory{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AccountingCategory != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
-| `request`                                                                                                      | [operations.UpdateAccountingCategory2Request](../../pkg/models/operations/updateaccountingcategory2request.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
-
-### Response
-
-**[*operations.UpdateAccountingCategory2Response](../../pkg/models/operations/updateaccountingcategory2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateTicketingCategory2
-
-Update a category
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateTicketingCategory2" method="put" path="/ticketing/{connection_id}/category/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Category.UpdateTicketingCategory2(ctx, operations.UpdateTicketingCategory2Request{
-        TicketingCategory: shared.TicketingCategory{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.TicketingCategory != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.UpdateTicketingCategory2Request](../../pkg/models/operations/updateticketingcategory2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
-
-### Response
-
-**[*operations.UpdateTicketingCategory2Response](../../pkg/models/operations/updateticketingcategory2response.md), error**
+**[*operations.UpdateTicketingCategoryResponse](../../pkg/models/operations/updateticketingcategoryresponse.md), error**
 
 ### Errors
 

@@ -30,8 +30,8 @@ func newReport(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// GetAccountingReport2 - Retrieve a report
-func (s *Report) GetAccountingReport2(ctx context.Context, request operations.GetAccountingReport2Request, opts ...operations.Option) (*operations.GetAccountingReport2Response, error) {
+// GetAccountingReport - Retrieve a report
+func (s *Report) GetAccountingReport(ctx context.Context, request operations.GetAccountingReportRequest, opts ...operations.Option) (*operations.GetAccountingReportResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Report) GetAccountingReport2(ctx context.Context, request operations.Ge
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingReport2",
+		OperationID:      "getAccountingReport",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Report) GetAccountingReport2(ctx context.Context, request operations.Ge
 		}
 	}
 
-	res := &operations.GetAccountingReport2Response{
+	res := &operations.GetAccountingReportResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Report) GetAccountingReport2(ctx context.Context, request operations.Ge
 
 }
 
-// ListAccountingReports2 - List all reports
-func (s *Report) ListAccountingReports2(ctx context.Context, request operations.ListAccountingReports2Request, opts ...operations.Option) (*operations.ListAccountingReports2Response, error) {
+// ListAccountingReports - List all reports
+func (s *Report) ListAccountingReports(ctx context.Context, request operations.ListAccountingReportsRequest, opts ...operations.Option) (*operations.ListAccountingReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Report) ListAccountingReports2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingReports2",
+		OperationID:      "listAccountingReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Report) ListAccountingReports2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListAccountingReports2Response{
+	res := &operations.ListAccountingReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -444,8 +444,8 @@ func (s *Report) ListAccountingReports2(ctx context.Context, request operations.
 
 }
 
-// ListAdsReports2 - List all reports
-func (s *Report) ListAdsReports2(ctx context.Context, request operations.ListAdsReports2Request, opts ...operations.Option) (*operations.ListAdsReports2Response, error) {
+// ListAdsReports - List all reports
+func (s *Report) ListAdsReports(ctx context.Context, request operations.ListAdsReportsRequest, opts ...operations.Option) (*operations.ListAdsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -474,7 +474,7 @@ func (s *Report) ListAdsReports2(ctx context.Context, request operations.ListAds
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAdsReports2",
+		OperationID:      "listAdsReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -599,7 +599,7 @@ func (s *Report) ListAdsReports2(ctx context.Context, request operations.ListAds
 		}
 	}
 
-	res := &operations.ListAdsReports2Response{
+	res := &operations.ListAdsReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -651,8 +651,8 @@ func (s *Report) ListAdsReports2(ctx context.Context, request operations.ListAds
 
 }
 
-// ListAnalyticsReports2 - List all reports
-func (s *Report) ListAnalyticsReports2(ctx context.Context, request operations.ListAnalyticsReports2Request, opts ...operations.Option) (*operations.ListAnalyticsReports2Response, error) {
+// ListAnalyticsReports - List all reports
+func (s *Report) ListAnalyticsReports(ctx context.Context, request operations.ListAnalyticsReportsRequest, opts ...operations.Option) (*operations.ListAnalyticsReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -681,7 +681,7 @@ func (s *Report) ListAnalyticsReports2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAnalyticsReports2",
+		OperationID:      "listAnalyticsReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -806,7 +806,7 @@ func (s *Report) ListAnalyticsReports2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListAnalyticsReports2Response{
+	res := &operations.ListAnalyticsReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -858,8 +858,8 @@ func (s *Report) ListAnalyticsReports2(ctx context.Context, request operations.L
 
 }
 
-// ListMartechReports2 - List all reports
-func (s *Report) ListMartechReports2(ctx context.Context, request operations.ListMartechReports2Request, opts ...operations.Option) (*operations.ListMartechReports2Response, error) {
+// ListMartechReports - List all reports
+func (s *Report) ListMartechReports(ctx context.Context, request operations.ListMartechReportsRequest, opts ...operations.Option) (*operations.ListMartechReportsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -888,7 +888,7 @@ func (s *Report) ListMartechReports2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMartechReports2",
+		OperationID:      "listMartechReports",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1013,7 +1013,7 @@ func (s *Report) ListMartechReports2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListMartechReports2Response{
+	res := &operations.ListMartechReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

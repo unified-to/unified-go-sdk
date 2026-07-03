@@ -30,8 +30,8 @@ func newCreditmemo(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks 
 	}
 }
 
-// CreateAccountingCreditmemo2 - Create a creditmemo
-func (s *Creditmemo) CreateAccountingCreditmemo2(ctx context.Context, request operations.CreateAccountingCreditmemo2Request, opts ...operations.Option) (*operations.CreateAccountingCreditmemo2Response, error) {
+// CreateAccountingCreditmemo - Create a creditmemo
+func (s *Creditmemo) CreateAccountingCreditmemo(ctx context.Context, request operations.CreateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.CreateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Creditmemo) CreateAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingCreditmemo2",
+		OperationID:      "createAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Creditmemo) CreateAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.CreateAccountingCreditmemo2Response{
+	res := &operations.CreateAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Creditmemo) CreateAccountingCreditmemo2(ctx context.Context, request op
 
 }
 
-// GetAccountingCreditmemo2 - Retrieve a creditmemo
-func (s *Creditmemo) GetAccountingCreditmemo2(ctx context.Context, request operations.GetAccountingCreditmemo2Request, opts ...operations.Option) (*operations.GetAccountingCreditmemo2Response, error) {
+// GetAccountingCreditmemo - Retrieve a creditmemo
+func (s *Creditmemo) GetAccountingCreditmemo(ctx context.Context, request operations.GetAccountingCreditmemoRequest, opts ...operations.Option) (*operations.GetAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Creditmemo) GetAccountingCreditmemo2(ctx context.Context, request opera
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingCreditmemo2",
+		OperationID:      "getAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Creditmemo) GetAccountingCreditmemo2(ctx context.Context, request opera
 		}
 	}
 
-	res := &operations.GetAccountingCreditmemo2Response{
+	res := &operations.GetAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Creditmemo) GetAccountingCreditmemo2(ctx context.Context, request opera
 
 }
 
-// ListAccountingCreditmemoes2 - List all creditmemoes
-func (s *Creditmemo) ListAccountingCreditmemoes2(ctx context.Context, request operations.ListAccountingCreditmemoes2Request, opts ...operations.Option) (*operations.ListAccountingCreditmemoes2Response, error) {
+// ListAccountingCreditmemoes - List all creditmemoes
+func (s *Creditmemo) ListAccountingCreditmemoes(ctx context.Context, request operations.ListAccountingCreditmemoesRequest, opts ...operations.Option) (*operations.ListAccountingCreditmemoesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Creditmemo) ListAccountingCreditmemoes2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingCreditmemoes2",
+		OperationID:      "listAccountingCreditmemoes",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Creditmemo) ListAccountingCreditmemoes2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.ListAccountingCreditmemoes2Response{
+	res := &operations.ListAccountingCreditmemoesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Creditmemo) ListAccountingCreditmemoes2(ctx context.Context, request op
 
 }
 
-// PatchAccountingCreditmemo2 - Update a creditmemo
-func (s *Creditmemo) PatchAccountingCreditmemo2(ctx context.Context, request operations.PatchAccountingCreditmemo2Request, opts ...operations.Option) (*operations.PatchAccountingCreditmemo2Response, error) {
+// PatchAccountingCreditmemo - Update a creditmemo
+func (s *Creditmemo) PatchAccountingCreditmemo(ctx context.Context, request operations.PatchAccountingCreditmemoRequest, opts ...operations.Option) (*operations.PatchAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Creditmemo) PatchAccountingCreditmemo2(ctx context.Context, request ope
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingCreditmemo2",
+		OperationID:      "patchAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Creditmemo) PatchAccountingCreditmemo2(ctx context.Context, request ope
 		}
 	}
 
-	res := &operations.PatchAccountingCreditmemo2Response{
+	res := &operations.PatchAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Creditmemo) PatchAccountingCreditmemo2(ctx context.Context, request ope
 
 }
 
-// RemoveAccountingCreditmemo2 - Remove a creditmemo
-func (s *Creditmemo) RemoveAccountingCreditmemo2(ctx context.Context, request operations.RemoveAccountingCreditmemo2Request, opts ...operations.Option) (*operations.RemoveAccountingCreditmemo2Response, error) {
+// RemoveAccountingCreditmemo - Remove a creditmemo
+func (s *Creditmemo) RemoveAccountingCreditmemo(ctx context.Context, request operations.RemoveAccountingCreditmemoRequest, opts ...operations.Option) (*operations.RemoveAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Creditmemo) RemoveAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingCreditmemo2",
+		OperationID:      "removeAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Creditmemo) RemoveAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.RemoveAccountingCreditmemo2Response{
+	res := &operations.RemoveAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Creditmemo) RemoveAccountingCreditmemo2(ctx context.Context, request op
 
 }
 
-// UpdateAccountingCreditmemo2 - Update a creditmemo
-func (s *Creditmemo) UpdateAccountingCreditmemo2(ctx context.Context, request operations.UpdateAccountingCreditmemo2Request, opts ...operations.Option) (*operations.UpdateAccountingCreditmemo2Response, error) {
+// UpdateAccountingCreditmemo - Update a creditmemo
+func (s *Creditmemo) UpdateAccountingCreditmemo(ctx context.Context, request operations.UpdateAccountingCreditmemoRequest, opts ...operations.Option) (*operations.UpdateAccountingCreditmemoResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Creditmemo) UpdateAccountingCreditmemo2(ctx context.Context, request op
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingCreditmemo2",
+		OperationID:      "updateAccountingCreditmemo",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingCreditmemo", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Creditmemo) UpdateAccountingCreditmemo2(ctx context.Context, request op
 		}
 	}
 
-	res := &operations.UpdateAccountingCreditmemo2Response{
+	res := &operations.UpdateAccountingCreditmemoResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

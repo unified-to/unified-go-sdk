@@ -30,8 +30,8 @@ func newCandidate(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateAtsCandidate2 - Create a candidate
-func (s *Candidate) CreateAtsCandidate2(ctx context.Context, request operations.CreateAtsCandidate2Request, opts ...operations.Option) (*operations.CreateAtsCandidate2Response, error) {
+// CreateAtsCandidate - Create a candidate
+func (s *Candidate) CreateAtsCandidate(ctx context.Context, request operations.CreateAtsCandidateRequest, opts ...operations.Option) (*operations.CreateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Candidate) CreateAtsCandidate2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsCandidate2",
+		OperationID:      "createAtsCandidate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Candidate) CreateAtsCandidate2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.CreateAtsCandidate2Response{
+	res := &operations.CreateAtsCandidateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Candidate) CreateAtsCandidate2(ctx context.Context, request operations.
 
 }
 
-// GetAtsCandidate2 - Retrieve a candidate
-func (s *Candidate) GetAtsCandidate2(ctx context.Context, request operations.GetAtsCandidate2Request, opts ...operations.Option) (*operations.GetAtsCandidate2Response, error) {
+// GetAtsCandidate - Retrieve a candidate
+func (s *Candidate) GetAtsCandidate(ctx context.Context, request operations.GetAtsCandidateRequest, opts ...operations.Option) (*operations.GetAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Candidate) GetAtsCandidate2(ctx context.Context, request operations.Get
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsCandidate2",
+		OperationID:      "getAtsCandidate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Candidate) GetAtsCandidate2(ctx context.Context, request operations.Get
 		}
 	}
 
-	res := &operations.GetAtsCandidate2Response{
+	res := &operations.GetAtsCandidateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Candidate) GetAtsCandidate2(ctx context.Context, request operations.Get
 
 }
 
-// ListAtsCandidates2 - List all candidates
-func (s *Candidate) ListAtsCandidates2(ctx context.Context, request operations.ListAtsCandidates2Request, opts ...operations.Option) (*operations.ListAtsCandidates2Response, error) {
+// ListAtsCandidates - List all candidates
+func (s *Candidate) ListAtsCandidates(ctx context.Context, request operations.ListAtsCandidatesRequest, opts ...operations.Option) (*operations.ListAtsCandidatesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Candidate) ListAtsCandidates2(ctx context.Context, request operations.L
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsCandidates2",
+		OperationID:      "listAtsCandidates",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Candidate) ListAtsCandidates2(ctx context.Context, request operations.L
 		}
 	}
 
-	res := &operations.ListAtsCandidates2Response{
+	res := &operations.ListAtsCandidatesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Candidate) ListAtsCandidates2(ctx context.Context, request operations.L
 
 }
 
-// PatchAtsCandidate2 - Update a candidate
-func (s *Candidate) PatchAtsCandidate2(ctx context.Context, request operations.PatchAtsCandidate2Request, opts ...operations.Option) (*operations.PatchAtsCandidate2Response, error) {
+// PatchAtsCandidate - Update a candidate
+func (s *Candidate) PatchAtsCandidate(ctx context.Context, request operations.PatchAtsCandidateRequest, opts ...operations.Option) (*operations.PatchAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Candidate) PatchAtsCandidate2(ctx context.Context, request operations.P
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsCandidate2",
+		OperationID:      "patchAtsCandidate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Candidate) PatchAtsCandidate2(ctx context.Context, request operations.P
 		}
 	}
 
-	res := &operations.PatchAtsCandidate2Response{
+	res := &operations.PatchAtsCandidateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Candidate) PatchAtsCandidate2(ctx context.Context, request operations.P
 
 }
 
-// RemoveAtsCandidate2 - Remove a candidate
-func (s *Candidate) RemoveAtsCandidate2(ctx context.Context, request operations.RemoveAtsCandidate2Request, opts ...operations.Option) (*operations.RemoveAtsCandidate2Response, error) {
+// RemoveAtsCandidate - Remove a candidate
+func (s *Candidate) RemoveAtsCandidate(ctx context.Context, request operations.RemoveAtsCandidateRequest, opts ...operations.Option) (*operations.RemoveAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Candidate) RemoveAtsCandidate2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsCandidate2",
+		OperationID:      "removeAtsCandidate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Candidate) RemoveAtsCandidate2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.RemoveAtsCandidate2Response{
+	res := &operations.RemoveAtsCandidateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Candidate) RemoveAtsCandidate2(ctx context.Context, request operations.
 
 }
 
-// UpdateAtsCandidate2 - Update a candidate
-func (s *Candidate) UpdateAtsCandidate2(ctx context.Context, request operations.UpdateAtsCandidate2Request, opts ...operations.Option) (*operations.UpdateAtsCandidate2Response, error) {
+// UpdateAtsCandidate - Update a candidate
+func (s *Candidate) UpdateAtsCandidate(ctx context.Context, request operations.UpdateAtsCandidateRequest, opts ...operations.Option) (*operations.UpdateAtsCandidateResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Candidate) UpdateAtsCandidate2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsCandidate2",
+		OperationID:      "updateAtsCandidate",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsCandidate", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Candidate) UpdateAtsCandidate2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.UpdateAtsCandidate2Response{
+	res := &operations.UpdateAtsCandidateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

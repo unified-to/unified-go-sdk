@@ -30,8 +30,8 @@ func newCommit(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateRepoCommit2 - Create a commit
-func (s *Commit) CreateRepoCommit2(ctx context.Context, request operations.CreateRepoCommit2Request, opts ...operations.Option) (*operations.CreateRepoCommit2Response, error) {
+// CreateRepoCommit - Create a commit
+func (s *Commit) CreateRepoCommit(ctx context.Context, request operations.CreateRepoCommitRequest, opts ...operations.Option) (*operations.CreateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Commit) CreateRepoCommit2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createRepoCommit2",
+		OperationID:      "createRepoCommit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Commit) CreateRepoCommit2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateRepoCommit2Response{
+	res := &operations.CreateRepoCommitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Commit) CreateRepoCommit2(ctx context.Context, request operations.Creat
 
 }
 
-// GetRepoCommit2 - Retrieve a commit
-func (s *Commit) GetRepoCommit2(ctx context.Context, request operations.GetRepoCommit2Request, opts ...operations.Option) (*operations.GetRepoCommit2Response, error) {
+// GetRepoCommit - Retrieve a commit
+func (s *Commit) GetRepoCommit(ctx context.Context, request operations.GetRepoCommitRequest, opts ...operations.Option) (*operations.GetRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Commit) GetRepoCommit2(ctx context.Context, request operations.GetRepoC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getRepoCommit2",
+		OperationID:      "getRepoCommit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Commit) GetRepoCommit2(ctx context.Context, request operations.GetRepoC
 		}
 	}
 
-	res := &operations.GetRepoCommit2Response{
+	res := &operations.GetRepoCommitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Commit) GetRepoCommit2(ctx context.Context, request operations.GetRepoC
 
 }
 
-// ListRepoCommits2 - List all commits
-func (s *Commit) ListRepoCommits2(ctx context.Context, request operations.ListRepoCommits2Request, opts ...operations.Option) (*operations.ListRepoCommits2Response, error) {
+// ListRepoCommits - List all commits
+func (s *Commit) ListRepoCommits(ctx context.Context, request operations.ListRepoCommitsRequest, opts ...operations.Option) (*operations.ListRepoCommitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Commit) ListRepoCommits2(ctx context.Context, request operations.ListRe
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listRepoCommits2",
+		OperationID:      "listRepoCommits",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Commit) ListRepoCommits2(ctx context.Context, request operations.ListRe
 		}
 	}
 
-	res := &operations.ListRepoCommits2Response{
+	res := &operations.ListRepoCommitsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Commit) ListRepoCommits2(ctx context.Context, request operations.ListRe
 
 }
 
-// PatchRepoCommit2 - Update a commit
-func (s *Commit) PatchRepoCommit2(ctx context.Context, request operations.PatchRepoCommit2Request, opts ...operations.Option) (*operations.PatchRepoCommit2Response, error) {
+// PatchRepoCommit - Update a commit
+func (s *Commit) PatchRepoCommit(ctx context.Context, request operations.PatchRepoCommitRequest, opts ...operations.Option) (*operations.PatchRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Commit) PatchRepoCommit2(ctx context.Context, request operations.PatchR
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchRepoCommit2",
+		OperationID:      "patchRepoCommit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Commit) PatchRepoCommit2(ctx context.Context, request operations.PatchR
 		}
 	}
 
-	res := &operations.PatchRepoCommit2Response{
+	res := &operations.PatchRepoCommitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Commit) PatchRepoCommit2(ctx context.Context, request operations.PatchR
 
 }
 
-// RemoveRepoCommit2 - Remove a commit
-func (s *Commit) RemoveRepoCommit2(ctx context.Context, request operations.RemoveRepoCommit2Request, opts ...operations.Option) (*operations.RemoveRepoCommit2Response, error) {
+// RemoveRepoCommit - Remove a commit
+func (s *Commit) RemoveRepoCommit(ctx context.Context, request operations.RemoveRepoCommitRequest, opts ...operations.Option) (*operations.RemoveRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Commit) RemoveRepoCommit2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeRepoCommit2",
+		OperationID:      "removeRepoCommit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Commit) RemoveRepoCommit2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveRepoCommit2Response{
+	res := &operations.RemoveRepoCommitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Commit) RemoveRepoCommit2(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateRepoCommit2 - Update a commit
-func (s *Commit) UpdateRepoCommit2(ctx context.Context, request operations.UpdateRepoCommit2Request, opts ...operations.Option) (*operations.UpdateRepoCommit2Response, error) {
+// UpdateRepoCommit - Update a commit
+func (s *Commit) UpdateRepoCommit(ctx context.Context, request operations.UpdateRepoCommitRequest, opts ...operations.Option) (*operations.UpdateRepoCommitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Commit) UpdateRepoCommit2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateRepoCommit2",
+		OperationID:      "updateRepoCommit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RepoCommit", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Commit) UpdateRepoCommit2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateRepoCommit2Response{
+	res := &operations.UpdateRepoCommitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

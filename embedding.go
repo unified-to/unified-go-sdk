@@ -30,8 +30,8 @@ func newEmbedding(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateGenaiEmbedding2 - Create an embedding
-func (s *Embedding) CreateGenaiEmbedding2(ctx context.Context, request operations.CreateGenaiEmbedding2Request, opts ...operations.Option) (*operations.CreateGenaiEmbedding2Response, error) {
+// CreateGenaiEmbedding - Create an embedding
+func (s *Embedding) CreateGenaiEmbedding(ctx context.Context, request operations.CreateGenaiEmbeddingRequest, opts ...operations.Option) (*operations.CreateGenaiEmbeddingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Embedding) CreateGenaiEmbedding2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createGenaiEmbedding2",
+		OperationID:      "createGenaiEmbedding",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "GenaiEmbedding", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Embedding) CreateGenaiEmbedding2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.CreateGenaiEmbedding2Response{
+	res := &operations.CreateGenaiEmbeddingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

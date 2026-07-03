@@ -30,8 +30,8 @@ func newBenefit(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateHrisBenefit2 - Create a benefit
-func (s *Benefit) CreateHrisBenefit2(ctx context.Context, request operations.CreateHrisBenefit2Request, opts ...operations.Option) (*operations.CreateHrisBenefit2Response, error) {
+// CreateHrisBenefit - Create a benefit
+func (s *Benefit) CreateHrisBenefit(ctx context.Context, request operations.CreateHrisBenefitRequest, opts ...operations.Option) (*operations.CreateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Benefit) CreateHrisBenefit2(ctx context.Context, request operations.Cre
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisBenefit2",
+		OperationID:      "createHrisBenefit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Benefit) CreateHrisBenefit2(ctx context.Context, request operations.Cre
 		}
 	}
 
-	res := &operations.CreateHrisBenefit2Response{
+	res := &operations.CreateHrisBenefitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Benefit) CreateHrisBenefit2(ctx context.Context, request operations.Cre
 
 }
 
-// GetHrisBenefit2 - Retrieve a benefit
-func (s *Benefit) GetHrisBenefit2(ctx context.Context, request operations.GetHrisBenefit2Request, opts ...operations.Option) (*operations.GetHrisBenefit2Response, error) {
+// GetHrisBenefit - Retrieve a benefit
+func (s *Benefit) GetHrisBenefit(ctx context.Context, request operations.GetHrisBenefitRequest, opts ...operations.Option) (*operations.GetHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Benefit) GetHrisBenefit2(ctx context.Context, request operations.GetHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisBenefit2",
+		OperationID:      "getHrisBenefit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Benefit) GetHrisBenefit2(ctx context.Context, request operations.GetHri
 		}
 	}
 
-	res := &operations.GetHrisBenefit2Response{
+	res := &operations.GetHrisBenefitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Benefit) GetHrisBenefit2(ctx context.Context, request operations.GetHri
 
 }
 
-// ListHrisBenefits2 - List all benefits
-func (s *Benefit) ListHrisBenefits2(ctx context.Context, request operations.ListHrisBenefits2Request, opts ...operations.Option) (*operations.ListHrisBenefits2Response, error) {
+// ListHrisBenefits - List all benefits
+func (s *Benefit) ListHrisBenefits(ctx context.Context, request operations.ListHrisBenefitsRequest, opts ...operations.Option) (*operations.ListHrisBenefitsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Benefit) ListHrisBenefits2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisBenefits2",
+		OperationID:      "listHrisBenefits",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Benefit) ListHrisBenefits2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListHrisBenefits2Response{
+	res := &operations.ListHrisBenefitsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Benefit) ListHrisBenefits2(ctx context.Context, request operations.List
 
 }
 
-// PatchHrisBenefit2 - Update a benefit
-func (s *Benefit) PatchHrisBenefit2(ctx context.Context, request operations.PatchHrisBenefit2Request, opts ...operations.Option) (*operations.PatchHrisBenefit2Response, error) {
+// PatchHrisBenefit - Update a benefit
+func (s *Benefit) PatchHrisBenefit(ctx context.Context, request operations.PatchHrisBenefitRequest, opts ...operations.Option) (*operations.PatchHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Benefit) PatchHrisBenefit2(ctx context.Context, request operations.Patc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisBenefit2",
+		OperationID:      "patchHrisBenefit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Benefit) PatchHrisBenefit2(ctx context.Context, request operations.Patc
 		}
 	}
 
-	res := &operations.PatchHrisBenefit2Response{
+	res := &operations.PatchHrisBenefitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Benefit) PatchHrisBenefit2(ctx context.Context, request operations.Patc
 
 }
 
-// RemoveHrisBenefit2 - Remove a benefit
-func (s *Benefit) RemoveHrisBenefit2(ctx context.Context, request operations.RemoveHrisBenefit2Request, opts ...operations.Option) (*operations.RemoveHrisBenefit2Response, error) {
+// RemoveHrisBenefit - Remove a benefit
+func (s *Benefit) RemoveHrisBenefit(ctx context.Context, request operations.RemoveHrisBenefitRequest, opts ...operations.Option) (*operations.RemoveHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Benefit) RemoveHrisBenefit2(ctx context.Context, request operations.Rem
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisBenefit2",
+		OperationID:      "removeHrisBenefit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Benefit) RemoveHrisBenefit2(ctx context.Context, request operations.Rem
 		}
 	}
 
-	res := &operations.RemoveHrisBenefit2Response{
+	res := &operations.RemoveHrisBenefitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Benefit) RemoveHrisBenefit2(ctx context.Context, request operations.Rem
 
 }
 
-// UpdateHrisBenefit2 - Update a benefit
-func (s *Benefit) UpdateHrisBenefit2(ctx context.Context, request operations.UpdateHrisBenefit2Request, opts ...operations.Option) (*operations.UpdateHrisBenefit2Response, error) {
+// UpdateHrisBenefit - Update a benefit
+func (s *Benefit) UpdateHrisBenefit(ctx context.Context, request operations.UpdateHrisBenefitRequest, opts ...operations.Option) (*operations.UpdateHrisBenefitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Benefit) UpdateHrisBenefit2(ctx context.Context, request operations.Upd
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisBenefit2",
+		OperationID:      "updateHrisBenefit",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisBenefit", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Benefit) UpdateHrisBenefit2(ctx context.Context, request operations.Upd
 		}
 	}
 
-	res := &operations.UpdateHrisBenefit2Response{
+	res := &operations.UpdateHrisBenefitResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newMember(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateMartechMember2 - Create a member
-func (s *Member) CreateMartechMember2(ctx context.Context, request operations.CreateMartechMember2Request, opts ...operations.Option) (*operations.CreateMartechMember2Response, error) {
+// CreateMartechMember - Create a member
+func (s *Member) CreateMartechMember(ctx context.Context, request operations.CreateMartechMemberRequest, opts ...operations.Option) (*operations.CreateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Member) CreateMartechMember2(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createMartechMember2",
+		OperationID:      "createMartechMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Member) CreateMartechMember2(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateMartechMember2Response{
+	res := &operations.CreateMartechMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Member) CreateMartechMember2(ctx context.Context, request operations.Cr
 
 }
 
-// GetClubsMember2 - Retrieve a member
-func (s *Member) GetClubsMember2(ctx context.Context, request operations.GetClubsMember2Request, opts ...operations.Option) (*operations.GetClubsMember2Response, error) {
+// GetClubsMember - Retrieve a member
+func (s *Member) GetClubsMember(ctx context.Context, request operations.GetClubsMemberRequest, opts ...operations.Option) (*operations.GetClubsMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Member) GetClubsMember2(ctx context.Context, request operations.GetClub
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getClubsMember2",
+		OperationID:      "getClubsMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Member) GetClubsMember2(ctx context.Context, request operations.GetClub
 		}
 	}
 
-	res := &operations.GetClubsMember2Response{
+	res := &operations.GetClubsMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Member) GetClubsMember2(ctx context.Context, request operations.GetClub
 
 }
 
-// GetMartechMember2 - Retrieve a member
-func (s *Member) GetMartechMember2(ctx context.Context, request operations.GetMartechMember2Request, opts ...operations.Option) (*operations.GetMartechMember2Response, error) {
+// GetMartechMember - Retrieve a member
+func (s *Member) GetMartechMember(ctx context.Context, request operations.GetMartechMemberRequest, opts ...operations.Option) (*operations.GetMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Member) GetMartechMember2(ctx context.Context, request operations.GetMa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMartechMember2",
+		OperationID:      "getMartechMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Member) GetMartechMember2(ctx context.Context, request operations.GetMa
 		}
 	}
 
-	res := &operations.GetMartechMember2Response{
+	res := &operations.GetMartechMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Member) GetMartechMember2(ctx context.Context, request operations.GetMa
 
 }
 
-// ListClubsMembers2 - List all members
-func (s *Member) ListClubsMembers2(ctx context.Context, request operations.ListClubsMembers2Request, opts ...operations.Option) (*operations.ListClubsMembers2Response, error) {
+// ListClubsMembers - List all members
+func (s *Member) ListClubsMembers(ctx context.Context, request operations.ListClubsMembersRequest, opts ...operations.Option) (*operations.ListClubsMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Member) ListClubsMembers2(ctx context.Context, request operations.ListC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listClubsMembers2",
+		OperationID:      "listClubsMembers",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -813,7 +813,7 @@ func (s *Member) ListClubsMembers2(ctx context.Context, request operations.ListC
 		}
 	}
 
-	res := &operations.ListClubsMembers2Response{
+	res := &operations.ListClubsMembersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -865,8 +865,8 @@ func (s *Member) ListClubsMembers2(ctx context.Context, request operations.ListC
 
 }
 
-// ListMartechMembers2 - List all members
-func (s *Member) ListMartechMembers2(ctx context.Context, request operations.ListMartechMembers2Request, opts ...operations.Option) (*operations.ListMartechMembers2Response, error) {
+// ListMartechMembers - List all members
+func (s *Member) ListMartechMembers(ctx context.Context, request operations.ListMartechMembersRequest, opts ...operations.Option) (*operations.ListMartechMembersResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -895,7 +895,7 @@ func (s *Member) ListMartechMembers2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMartechMembers2",
+		OperationID:      "listMartechMembers",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1020,7 +1020,7 @@ func (s *Member) ListMartechMembers2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListMartechMembers2Response{
+	res := &operations.ListMartechMembersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1072,8 +1072,8 @@ func (s *Member) ListMartechMembers2(ctx context.Context, request operations.Lis
 
 }
 
-// PatchMartechMember2 - Update a member
-func (s *Member) PatchMartechMember2(ctx context.Context, request operations.PatchMartechMember2Request, opts ...operations.Option) (*operations.PatchMartechMember2Response, error) {
+// PatchMartechMember - Update a member
+func (s *Member) PatchMartechMember(ctx context.Context, request operations.PatchMartechMemberRequest, opts ...operations.Option) (*operations.PatchMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1102,7 +1102,7 @@ func (s *Member) PatchMartechMember2(ctx context.Context, request operations.Pat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchMartechMember2",
+		OperationID:      "patchMartechMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
@@ -1234,7 +1234,7 @@ func (s *Member) PatchMartechMember2(ctx context.Context, request operations.Pat
 		}
 	}
 
-	res := &operations.PatchMartechMember2Response{
+	res := &operations.PatchMartechMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Member) PatchMartechMember2(ctx context.Context, request operations.Pat
 
 }
 
-// RemoveMartechMember2 - Remove a member
-func (s *Member) RemoveMartechMember2(ctx context.Context, request operations.RemoveMartechMember2Request, opts ...operations.Option) (*operations.RemoveMartechMember2Response, error) {
+// RemoveMartechMember - Remove a member
+func (s *Member) RemoveMartechMember(ctx context.Context, request operations.RemoveMartechMemberRequest, opts ...operations.Option) (*operations.RemoveMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Member) RemoveMartechMember2(ctx context.Context, request operations.Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeMartechMember2",
+		OperationID:      "removeMartechMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1437,7 +1437,7 @@ func (s *Member) RemoveMartechMember2(ctx context.Context, request operations.Re
 		}
 	}
 
-	res := &operations.RemoveMartechMember2Response{
+	res := &operations.RemoveMartechMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1468,8 +1468,8 @@ func (s *Member) RemoveMartechMember2(ctx context.Context, request operations.Re
 
 }
 
-// UpdateMartechMember2 - Update a member
-func (s *Member) UpdateMartechMember2(ctx context.Context, request operations.UpdateMartechMember2Request, opts ...operations.Option) (*operations.UpdateMartechMember2Response, error) {
+// UpdateMartechMember - Update a member
+func (s *Member) UpdateMartechMember(ctx context.Context, request operations.UpdateMartechMemberRequest, opts ...operations.Option) (*operations.UpdateMartechMemberResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1498,7 +1498,7 @@ func (s *Member) UpdateMartechMember2(ctx context.Context, request operations.Up
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateMartechMember2",
+		OperationID:      "updateMartechMember",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MarketingMember", "json", `request:"mediaType=application/json"`)
@@ -1630,7 +1630,7 @@ func (s *Member) UpdateMartechMember2(ctx context.Context, request operations.Up
 		}
 	}
 
-	res := &operations.UpdateMartechMember2Response{
+	res := &operations.UpdateMartechMemberResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

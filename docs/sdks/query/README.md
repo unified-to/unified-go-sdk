@@ -4,15 +4,15 @@
 
 ### Available Operations
 
-* [CreateDatastoreQuery2](#createdatastorequery2) - Create a query
+* [CreateDatastoreQuery](#createdatastorequery) - Create a query
 
-## CreateDatastoreQuery2
+## CreateDatastoreQuery
 
 Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreQuery2" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Query.CreateDatastoreQuery2(ctx, operations.CreateDatastoreQuery2Request{
+    res, err := s.Query.CreateDatastoreQuery(ctx, operations.CreateDatastoreQueryRequest{
         DatastoreQuery: shared.DatastoreQuery{},
         ConnectionID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.CreateDatastoreQuery2Request](../../pkg/models/operations/createdatastorequery2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.CreateDatastoreQueryRequest](../../pkg/models/operations/createdatastorequeryrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.CreateDatastoreQuery2Response](../../pkg/models/operations/createdatastorequery2response.md), error**
+**[*operations.CreateDatastoreQueryResponse](../../pkg/models/operations/createdatastorequeryresponse.md), error**
 
 ### Errors
 

@@ -30,8 +30,8 @@ func newUc(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.H
 	}
 }
 
-// CreateUcComment2 - Create a comment
-func (s *Uc) CreateUcComment2(ctx context.Context, request operations.CreateUcComment2Request, opts ...operations.Option) (*operations.CreateUcComment2Response, error) {
+// CreateUcComment - Create a comment
+func (s *Uc) CreateUcComment(ctx context.Context, request operations.CreateUcCommentRequest, opts ...operations.Option) (*operations.CreateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Uc) CreateUcComment2(ctx context.Context, request operations.CreateUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcComment2",
+		OperationID:      "createUcComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Uc) CreateUcComment2(ctx context.Context, request operations.CreateUcCo
 		}
 	}
 
-	res := &operations.CreateUcComment2Response{
+	res := &operations.CreateUcCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Uc) CreateUcComment2(ctx context.Context, request operations.CreateUcCo
 
 }
 
-// CreateUcContact2 - Create a contact
-func (s *Uc) CreateUcContact2(ctx context.Context, request operations.CreateUcContact2Request, opts ...operations.Option) (*operations.CreateUcContact2Response, error) {
+// CreateUcContact - Create a contact
+func (s *Uc) CreateUcContact(ctx context.Context, request operations.CreateUcContactRequest, opts ...operations.Option) (*operations.CreateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Uc) CreateUcContact2(ctx context.Context, request operations.CreateUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcContact2",
+		OperationID:      "createUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Uc) CreateUcContact2(ctx context.Context, request operations.CreateUcCo
 		}
 	}
 
-	res := &operations.CreateUcContact2Response{
+	res := &operations.CreateUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Uc) CreateUcContact2(ctx context.Context, request operations.CreateUcCo
 
 }
 
-// CreateUcRecording2 - Create a recording
-func (s *Uc) CreateUcRecording2(ctx context.Context, request operations.CreateUcRecording2Request, opts ...operations.Option) (*operations.CreateUcRecording2Response, error) {
+// CreateUcRecording - Create a recording
+func (s *Uc) CreateUcRecording(ctx context.Context, request operations.CreateUcRecordingRequest, opts ...operations.Option) (*operations.CreateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Uc) CreateUcRecording2(ctx context.Context, request operations.CreateUc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcRecording2",
+		OperationID:      "createUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Uc) CreateUcRecording2(ctx context.Context, request operations.CreateUc
 		}
 	}
 
-	res := &operations.CreateUcRecording2Response{
+	res := &operations.CreateUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Uc) CreateUcRecording2(ctx context.Context, request operations.CreateUc
 
 }
 
-// GetUcCall2 - Retrieve a call
-func (s *Uc) GetUcCall2(ctx context.Context, request operations.GetUcCall2Request, opts ...operations.Option) (*operations.GetUcCall2Response, error) {
+// GetUcCall - Retrieve a call
+func (s *Uc) GetUcCall(ctx context.Context, request operations.GetUcCallRequest, opts ...operations.Option) (*operations.GetUcCallResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Uc) GetUcCall2(ctx context.Context, request operations.GetUcCall2Reques
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcCall2",
+		OperationID:      "getUcCall",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -827,7 +827,7 @@ func (s *Uc) GetUcCall2(ctx context.Context, request operations.GetUcCall2Reques
 		}
 	}
 
-	res := &operations.GetUcCall2Response{
+	res := &operations.GetUcCallResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -879,8 +879,8 @@ func (s *Uc) GetUcCall2(ctx context.Context, request operations.GetUcCall2Reques
 
 }
 
-// GetUcComment2 - Retrieve a comment
-func (s *Uc) GetUcComment2(ctx context.Context, request operations.GetUcComment2Request, opts ...operations.Option) (*operations.GetUcComment2Response, error) {
+// GetUcComment - Retrieve a comment
+func (s *Uc) GetUcComment(ctx context.Context, request operations.GetUcCommentRequest, opts ...operations.Option) (*operations.GetUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -909,7 +909,7 @@ func (s *Uc) GetUcComment2(ctx context.Context, request operations.GetUcComment2
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcComment2",
+		OperationID:      "getUcComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1034,7 +1034,7 @@ func (s *Uc) GetUcComment2(ctx context.Context, request operations.GetUcComment2
 		}
 	}
 
-	res := &operations.GetUcComment2Response{
+	res := &operations.GetUcCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1086,8 +1086,8 @@ func (s *Uc) GetUcComment2(ctx context.Context, request operations.GetUcComment2
 
 }
 
-// GetUcContact2 - Retrieve a contact
-func (s *Uc) GetUcContact2(ctx context.Context, request operations.GetUcContact2Request, opts ...operations.Option) (*operations.GetUcContact2Response, error) {
+// GetUcContact - Retrieve a contact
+func (s *Uc) GetUcContact(ctx context.Context, request operations.GetUcContactRequest, opts ...operations.Option) (*operations.GetUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1116,7 +1116,7 @@ func (s *Uc) GetUcContact2(ctx context.Context, request operations.GetUcContact2
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcContact2",
+		OperationID:      "getUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1241,7 +1241,7 @@ func (s *Uc) GetUcContact2(ctx context.Context, request operations.GetUcContact2
 		}
 	}
 
-	res := &operations.GetUcContact2Response{
+	res := &operations.GetUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1293,8 +1293,8 @@ func (s *Uc) GetUcContact2(ctx context.Context, request operations.GetUcContact2
 
 }
 
-// GetUcRecording2 - Retrieve a recording
-func (s *Uc) GetUcRecording2(ctx context.Context, request operations.GetUcRecording2Request, opts ...operations.Option) (*operations.GetUcRecording2Response, error) {
+// GetUcRecording - Retrieve a recording
+func (s *Uc) GetUcRecording(ctx context.Context, request operations.GetUcRecordingRequest, opts ...operations.Option) (*operations.GetUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Uc) GetUcRecording2(ctx context.Context, request operations.GetUcRecord
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcRecording2",
+		OperationID:      "getUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1448,7 +1448,7 @@ func (s *Uc) GetUcRecording2(ctx context.Context, request operations.GetUcRecord
 		}
 	}
 
-	res := &operations.GetUcRecording2Response{
+	res := &operations.GetUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Uc) GetUcRecording2(ctx context.Context, request operations.GetUcRecord
 
 }
 
-// ListUcCalls2 - List all calls
-func (s *Uc) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2Request, opts ...operations.Option) (*operations.ListUcCalls2Response, error) {
+// ListUcCalls - List all calls
+func (s *Uc) ListUcCalls(ctx context.Context, request operations.ListUcCallsRequest, opts ...operations.Option) (*operations.ListUcCallsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Uc) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcCalls2",
+		OperationID:      "listUcCalls",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1655,7 +1655,7 @@ func (s *Uc) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2Re
 		}
 	}
 
-	res := &operations.ListUcCalls2Response{
+	res := &operations.ListUcCallsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1707,8 +1707,8 @@ func (s *Uc) ListUcCalls2(ctx context.Context, request operations.ListUcCalls2Re
 
 }
 
-// ListUcComments2 - List all comments
-func (s *Uc) ListUcComments2(ctx context.Context, request operations.ListUcComments2Request, opts ...operations.Option) (*operations.ListUcComments2Response, error) {
+// ListUcComments - List all comments
+func (s *Uc) ListUcComments(ctx context.Context, request operations.ListUcCommentsRequest, opts ...operations.Option) (*operations.ListUcCommentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1737,7 +1737,7 @@ func (s *Uc) ListUcComments2(ctx context.Context, request operations.ListUcComme
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcComments2",
+		OperationID:      "listUcComments",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1862,7 +1862,7 @@ func (s *Uc) ListUcComments2(ctx context.Context, request operations.ListUcComme
 		}
 	}
 
-	res := &operations.ListUcComments2Response{
+	res := &operations.ListUcCommentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1914,8 +1914,8 @@ func (s *Uc) ListUcComments2(ctx context.Context, request operations.ListUcComme
 
 }
 
-// ListUcContacts2 - List all contacts
-func (s *Uc) ListUcContacts2(ctx context.Context, request operations.ListUcContacts2Request, opts ...operations.Option) (*operations.ListUcContacts2Response, error) {
+// ListUcContacts - List all contacts
+func (s *Uc) ListUcContacts(ctx context.Context, request operations.ListUcContactsRequest, opts ...operations.Option) (*operations.ListUcContactsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1944,7 +1944,7 @@ func (s *Uc) ListUcContacts2(ctx context.Context, request operations.ListUcConta
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcContacts2",
+		OperationID:      "listUcContacts",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2069,7 +2069,7 @@ func (s *Uc) ListUcContacts2(ctx context.Context, request operations.ListUcConta
 		}
 	}
 
-	res := &operations.ListUcContacts2Response{
+	res := &operations.ListUcContactsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2121,8 +2121,8 @@ func (s *Uc) ListUcContacts2(ctx context.Context, request operations.ListUcConta
 
 }
 
-// ListUcRecordings2 - List all recordings
-func (s *Uc) ListUcRecordings2(ctx context.Context, request operations.ListUcRecordings2Request, opts ...operations.Option) (*operations.ListUcRecordings2Response, error) {
+// ListUcRecordings - List all recordings
+func (s *Uc) ListUcRecordings(ctx context.Context, request operations.ListUcRecordingsRequest, opts ...operations.Option) (*operations.ListUcRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2151,7 +2151,7 @@ func (s *Uc) ListUcRecordings2(ctx context.Context, request operations.ListUcRec
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcRecordings2",
+		OperationID:      "listUcRecordings",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2276,7 +2276,7 @@ func (s *Uc) ListUcRecordings2(ctx context.Context, request operations.ListUcRec
 		}
 	}
 
-	res := &operations.ListUcRecordings2Response{
+	res := &operations.ListUcRecordingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2328,8 +2328,8 @@ func (s *Uc) ListUcRecordings2(ctx context.Context, request operations.ListUcRec
 
 }
 
-// PatchUcComment2 - Update a comment
-func (s *Uc) PatchUcComment2(ctx context.Context, request operations.PatchUcComment2Request, opts ...operations.Option) (*operations.PatchUcComment2Response, error) {
+// PatchUcComment - Update a comment
+func (s *Uc) PatchUcComment(ctx context.Context, request operations.PatchUcCommentRequest, opts ...operations.Option) (*operations.PatchUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2358,7 +2358,7 @@ func (s *Uc) PatchUcComment2(ctx context.Context, request operations.PatchUcComm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcComment2",
+		OperationID:      "patchUcComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -2490,7 +2490,7 @@ func (s *Uc) PatchUcComment2(ctx context.Context, request operations.PatchUcComm
 		}
 	}
 
-	res := &operations.PatchUcComment2Response{
+	res := &operations.PatchUcCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2542,8 +2542,8 @@ func (s *Uc) PatchUcComment2(ctx context.Context, request operations.PatchUcComm
 
 }
 
-// PatchUcContact2 - Update a contact
-func (s *Uc) PatchUcContact2(ctx context.Context, request operations.PatchUcContact2Request, opts ...operations.Option) (*operations.PatchUcContact2Response, error) {
+// PatchUcContact - Update a contact
+func (s *Uc) PatchUcContact(ctx context.Context, request operations.PatchUcContactRequest, opts ...operations.Option) (*operations.PatchUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2572,7 +2572,7 @@ func (s *Uc) PatchUcContact2(ctx context.Context, request operations.PatchUcCont
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcContact2",
+		OperationID:      "patchUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -2704,7 +2704,7 @@ func (s *Uc) PatchUcContact2(ctx context.Context, request operations.PatchUcCont
 		}
 	}
 
-	res := &operations.PatchUcContact2Response{
+	res := &operations.PatchUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2756,8 +2756,8 @@ func (s *Uc) PatchUcContact2(ctx context.Context, request operations.PatchUcCont
 
 }
 
-// PatchUcRecording2 - Update a recording
-func (s *Uc) PatchUcRecording2(ctx context.Context, request operations.PatchUcRecording2Request, opts ...operations.Option) (*operations.PatchUcRecording2Response, error) {
+// PatchUcRecording - Update a recording
+func (s *Uc) PatchUcRecording(ctx context.Context, request operations.PatchUcRecordingRequest, opts ...operations.Option) (*operations.PatchUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2786,7 +2786,7 @@ func (s *Uc) PatchUcRecording2(ctx context.Context, request operations.PatchUcRe
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcRecording2",
+		OperationID:      "patchUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -2918,7 +2918,7 @@ func (s *Uc) PatchUcRecording2(ctx context.Context, request operations.PatchUcRe
 		}
 	}
 
-	res := &operations.PatchUcRecording2Response{
+	res := &operations.PatchUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2970,8 +2970,8 @@ func (s *Uc) PatchUcRecording2(ctx context.Context, request operations.PatchUcRe
 
 }
 
-// RemoveUcComment2 - Remove a comment
-func (s *Uc) RemoveUcComment2(ctx context.Context, request operations.RemoveUcComment2Request, opts ...operations.Option) (*operations.RemoveUcComment2Response, error) {
+// RemoveUcComment - Remove a comment
+func (s *Uc) RemoveUcComment(ctx context.Context, request operations.RemoveUcCommentRequest, opts ...operations.Option) (*operations.RemoveUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3000,7 +3000,7 @@ func (s *Uc) RemoveUcComment2(ctx context.Context, request operations.RemoveUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcComment2",
+		OperationID:      "removeUcComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3121,7 +3121,7 @@ func (s *Uc) RemoveUcComment2(ctx context.Context, request operations.RemoveUcCo
 		}
 	}
 
-	res := &operations.RemoveUcComment2Response{
+	res := &operations.RemoveUcCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3152,8 +3152,8 @@ func (s *Uc) RemoveUcComment2(ctx context.Context, request operations.RemoveUcCo
 
 }
 
-// RemoveUcContact2 - Remove a contact
-func (s *Uc) RemoveUcContact2(ctx context.Context, request operations.RemoveUcContact2Request, opts ...operations.Option) (*operations.RemoveUcContact2Response, error) {
+// RemoveUcContact - Remove a contact
+func (s *Uc) RemoveUcContact(ctx context.Context, request operations.RemoveUcContactRequest, opts ...operations.Option) (*operations.RemoveUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3182,7 +3182,7 @@ func (s *Uc) RemoveUcContact2(ctx context.Context, request operations.RemoveUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcContact2",
+		OperationID:      "removeUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3303,7 +3303,7 @@ func (s *Uc) RemoveUcContact2(ctx context.Context, request operations.RemoveUcCo
 		}
 	}
 
-	res := &operations.RemoveUcContact2Response{
+	res := &operations.RemoveUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3334,8 +3334,8 @@ func (s *Uc) RemoveUcContact2(ctx context.Context, request operations.RemoveUcCo
 
 }
 
-// RemoveUcRecording2 - Remove a recording
-func (s *Uc) RemoveUcRecording2(ctx context.Context, request operations.RemoveUcRecording2Request, opts ...operations.Option) (*operations.RemoveUcRecording2Response, error) {
+// RemoveUcRecording - Remove a recording
+func (s *Uc) RemoveUcRecording(ctx context.Context, request operations.RemoveUcRecordingRequest, opts ...operations.Option) (*operations.RemoveUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3364,7 +3364,7 @@ func (s *Uc) RemoveUcRecording2(ctx context.Context, request operations.RemoveUc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcRecording2",
+		OperationID:      "removeUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3485,7 +3485,7 @@ func (s *Uc) RemoveUcRecording2(ctx context.Context, request operations.RemoveUc
 		}
 	}
 
-	res := &operations.RemoveUcRecording2Response{
+	res := &operations.RemoveUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3516,8 +3516,8 @@ func (s *Uc) RemoveUcRecording2(ctx context.Context, request operations.RemoveUc
 
 }
 
-// UpdateUcComment2 - Update a comment
-func (s *Uc) UpdateUcComment2(ctx context.Context, request operations.UpdateUcComment2Request, opts ...operations.Option) (*operations.UpdateUcComment2Response, error) {
+// UpdateUcComment - Update a comment
+func (s *Uc) UpdateUcComment(ctx context.Context, request operations.UpdateUcCommentRequest, opts ...operations.Option) (*operations.UpdateUcCommentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3546,7 +3546,7 @@ func (s *Uc) UpdateUcComment2(ctx context.Context, request operations.UpdateUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcComment2",
+		OperationID:      "updateUcComment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcComment", "json", `request:"mediaType=application/json"`)
@@ -3678,7 +3678,7 @@ func (s *Uc) UpdateUcComment2(ctx context.Context, request operations.UpdateUcCo
 		}
 	}
 
-	res := &operations.UpdateUcComment2Response{
+	res := &operations.UpdateUcCommentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3730,8 +3730,8 @@ func (s *Uc) UpdateUcComment2(ctx context.Context, request operations.UpdateUcCo
 
 }
 
-// UpdateUcContact2 - Update a contact
-func (s *Uc) UpdateUcContact2(ctx context.Context, request operations.UpdateUcContact2Request, opts ...operations.Option) (*operations.UpdateUcContact2Response, error) {
+// UpdateUcContact - Update a contact
+func (s *Uc) UpdateUcContact(ctx context.Context, request operations.UpdateUcContactRequest, opts ...operations.Option) (*operations.UpdateUcContactResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3760,7 +3760,7 @@ func (s *Uc) UpdateUcContact2(ctx context.Context, request operations.UpdateUcCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcContact2",
+		OperationID:      "updateUcContact",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcContact", "json", `request:"mediaType=application/json"`)
@@ -3892,7 +3892,7 @@ func (s *Uc) UpdateUcContact2(ctx context.Context, request operations.UpdateUcCo
 		}
 	}
 
-	res := &operations.UpdateUcContact2Response{
+	res := &operations.UpdateUcContactResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3944,8 +3944,8 @@ func (s *Uc) UpdateUcContact2(ctx context.Context, request operations.UpdateUcCo
 
 }
 
-// UpdateUcRecording2 - Update a recording
-func (s *Uc) UpdateUcRecording2(ctx context.Context, request operations.UpdateUcRecording2Request, opts ...operations.Option) (*operations.UpdateUcRecording2Response, error) {
+// UpdateUcRecording - Update a recording
+func (s *Uc) UpdateUcRecording(ctx context.Context, request operations.UpdateUcRecordingRequest, opts ...operations.Option) (*operations.UpdateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3974,7 +3974,7 @@ func (s *Uc) UpdateUcRecording2(ctx context.Context, request operations.UpdateUc
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcRecording2",
+		OperationID:      "updateUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -4106,7 +4106,7 @@ func (s *Uc) UpdateUcRecording2(ctx context.Context, request operations.UpdateUc
 		}
 	}
 
-	res := &operations.UpdateUcRecording2Response{
+	res := &operations.UpdateUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

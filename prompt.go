@@ -30,8 +30,8 @@ func newPrompt(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateGenaiPrompt2 - Create a prompt
-func (s *Prompt) CreateGenaiPrompt2(ctx context.Context, request operations.CreateGenaiPrompt2Request, opts ...operations.Option) (*operations.CreateGenaiPrompt2Response, error) {
+// CreateGenaiPrompt - Create a prompt
+func (s *Prompt) CreateGenaiPrompt(ctx context.Context, request operations.CreateGenaiPromptRequest, opts ...operations.Option) (*operations.CreateGenaiPromptResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Prompt) CreateGenaiPrompt2(ctx context.Context, request operations.Crea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createGenaiPrompt2",
+		OperationID:      "createGenaiPrompt",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "GenaiPrompt", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Prompt) CreateGenaiPrompt2(ctx context.Context, request operations.Crea
 		}
 	}
 
-	res := &operations.CreateGenaiPrompt2Response{
+	res := &operations.CreateGenaiPromptResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

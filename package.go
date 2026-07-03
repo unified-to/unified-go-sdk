@@ -30,8 +30,8 @@ func newPackage(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAssessmentPackage2 - Create an assessment package
-func (s *Package) CreateAssessmentPackage2(ctx context.Context, request operations.CreateAssessmentPackage2Request, opts ...operations.Option) (*operations.CreateAssessmentPackage2Response, error) {
+// CreateAssessmentPackage - Create an assessment package
+func (s *Package) CreateAssessmentPackage(ctx context.Context, request operations.CreateAssessmentPackageRequest, opts ...operations.Option) (*operations.CreateAssessmentPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Package) CreateAssessmentPackage2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAssessmentPackage2",
+		OperationID:      "createAssessmentPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AssessmentPackage", "json", `request:"mediaType=application/json"`)
@@ -188,7 +188,7 @@ func (s *Package) CreateAssessmentPackage2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAssessmentPackage2Response{
+	res := &operations.CreateAssessmentPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -240,8 +240,8 @@ func (s *Package) CreateAssessmentPackage2(ctx context.Context, request operatio
 
 }
 
-// GetAssessmentPackage2 - Get an assessment package
-func (s *Package) GetAssessmentPackage2(ctx context.Context, request operations.GetAssessmentPackage2Request, opts ...operations.Option) (*operations.GetAssessmentPackage2Response, error) {
+// GetAssessmentPackage - Get an assessment package
+func (s *Package) GetAssessmentPackage(ctx context.Context, request operations.GetAssessmentPackageRequest, opts ...operations.Option) (*operations.GetAssessmentPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -270,7 +270,7 @@ func (s *Package) GetAssessmentPackage2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAssessmentPackage2",
+		OperationID:      "getAssessmentPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -391,7 +391,7 @@ func (s *Package) GetAssessmentPackage2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAssessmentPackage2Response{
+	res := &operations.GetAssessmentPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -443,8 +443,8 @@ func (s *Package) GetAssessmentPackage2(ctx context.Context, request operations.
 
 }
 
-// GetVerificationPackage2 - Retrieve a package
-func (s *Package) GetVerificationPackage2(ctx context.Context, request operations.GetVerificationPackage2Request, opts ...operations.Option) (*operations.GetVerificationPackage2Response, error) {
+// GetVerificationPackage - Retrieve a package
+func (s *Package) GetVerificationPackage(ctx context.Context, request operations.GetVerificationPackageRequest, opts ...operations.Option) (*operations.GetVerificationPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -473,7 +473,7 @@ func (s *Package) GetVerificationPackage2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getVerificationPackage2",
+		OperationID:      "getVerificationPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -598,7 +598,7 @@ func (s *Package) GetVerificationPackage2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetVerificationPackage2Response{
+	res := &operations.GetVerificationPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -650,8 +650,8 @@ func (s *Package) GetVerificationPackage2(ctx context.Context, request operation
 
 }
 
-// ListAssessmentPackages2 - List assessment packages
-func (s *Package) ListAssessmentPackages2(ctx context.Context, request operations.ListAssessmentPackages2Request, opts ...operations.Option) (*operations.ListAssessmentPackages2Response, error) {
+// ListAssessmentPackages - List assessment packages
+func (s *Package) ListAssessmentPackages(ctx context.Context, request operations.ListAssessmentPackagesRequest, opts ...operations.Option) (*operations.ListAssessmentPackagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -680,7 +680,7 @@ func (s *Package) ListAssessmentPackages2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAssessmentPackages2",
+		OperationID:      "listAssessmentPackages",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -805,7 +805,7 @@ func (s *Package) ListAssessmentPackages2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAssessmentPackages2Response{
+	res := &operations.ListAssessmentPackagesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -857,8 +857,8 @@ func (s *Package) ListAssessmentPackages2(ctx context.Context, request operation
 
 }
 
-// ListVerificationPackages2 - List all packages
-func (s *Package) ListVerificationPackages2(ctx context.Context, request operations.ListVerificationPackages2Request, opts ...operations.Option) (*operations.ListVerificationPackages2Response, error) {
+// ListVerificationPackages - List all packages
+func (s *Package) ListVerificationPackages(ctx context.Context, request operations.ListVerificationPackagesRequest, opts ...operations.Option) (*operations.ListVerificationPackagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -887,7 +887,7 @@ func (s *Package) ListVerificationPackages2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listVerificationPackages2",
+		OperationID:      "listVerificationPackages",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1012,7 +1012,7 @@ func (s *Package) ListVerificationPackages2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListVerificationPackages2Response{
+	res := &operations.ListVerificationPackagesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1064,8 +1064,8 @@ func (s *Package) ListVerificationPackages2(ctx context.Context, request operati
 
 }
 
-// PatchAssessmentPackage2 - Update an assessment package
-func (s *Package) PatchAssessmentPackage2(ctx context.Context, request operations.PatchAssessmentPackage2Request, opts ...operations.Option) (*operations.PatchAssessmentPackage2Response, error) {
+// PatchAssessmentPackage - Update an assessment package
+func (s *Package) PatchAssessmentPackage(ctx context.Context, request operations.PatchAssessmentPackageRequest, opts ...operations.Option) (*operations.PatchAssessmentPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1094,7 +1094,7 @@ func (s *Package) PatchAssessmentPackage2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAssessmentPackage2",
+		OperationID:      "patchAssessmentPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AssessmentPackage", "json", `request:"mediaType=application/json"`)
@@ -1222,7 +1222,7 @@ func (s *Package) PatchAssessmentPackage2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAssessmentPackage2Response{
+	res := &operations.PatchAssessmentPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1274,8 +1274,8 @@ func (s *Package) PatchAssessmentPackage2(ctx context.Context, request operation
 
 }
 
-// RemoveAssessmentPackage2 - Delete an assessment package
-func (s *Package) RemoveAssessmentPackage2(ctx context.Context, request operations.RemoveAssessmentPackage2Request, opts ...operations.Option) (*operations.RemoveAssessmentPackage2Response, error) {
+// RemoveAssessmentPackage - Delete an assessment package
+func (s *Package) RemoveAssessmentPackage(ctx context.Context, request operations.RemoveAssessmentPackageRequest, opts ...operations.Option) (*operations.RemoveAssessmentPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1304,7 +1304,7 @@ func (s *Package) RemoveAssessmentPackage2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAssessmentPackage2",
+		OperationID:      "removeAssessmentPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1425,7 +1425,7 @@ func (s *Package) RemoveAssessmentPackage2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAssessmentPackage2Response{
+	res := &operations.RemoveAssessmentPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1456,8 +1456,8 @@ func (s *Package) RemoveAssessmentPackage2(ctx context.Context, request operatio
 
 }
 
-// UpdateAssessmentPackage2 - Update an assessment package
-func (s *Package) UpdateAssessmentPackage2(ctx context.Context, request operations.UpdateAssessmentPackage2Request, opts ...operations.Option) (*operations.UpdateAssessmentPackage2Response, error) {
+// UpdateAssessmentPackage - Update an assessment package
+func (s *Package) UpdateAssessmentPackage(ctx context.Context, request operations.UpdateAssessmentPackageRequest, opts ...operations.Option) (*operations.UpdateAssessmentPackageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1486,7 +1486,7 @@ func (s *Package) UpdateAssessmentPackage2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAssessmentPackage2",
+		OperationID:      "updateAssessmentPackage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AssessmentPackage", "json", `request:"mediaType=application/json"`)
@@ -1614,7 +1614,7 @@ func (s *Package) UpdateAssessmentPackage2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAssessmentPackage2Response{
+	res := &operations.UpdateAssessmentPackageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

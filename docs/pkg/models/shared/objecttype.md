@@ -24,6 +24,7 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeAccountingContact`       | accounting_contact                  |
 | `ObjectTypeAccountingInvoice`       | accounting_invoice                  |
 | `ObjectTypeAccountingBill`          | accounting_bill                     |
+| `ObjectTypeAccountingVendorcredit`  | accounting_vendorcredit             |
 | `ObjectTypeAccountingCreditmemo`    | accounting_creditmemo               |
 | `ObjectTypeAccountingTaxrate`       | accounting_taxrate                  |
 | `ObjectTypeAccountingOrganization`  | accounting_organization             |

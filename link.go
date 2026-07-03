@@ -30,8 +30,8 @@ func newLink(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateCalendarLink2 - Create a link
-func (s *Link) CreateCalendarLink2(ctx context.Context, request operations.CreateCalendarLink2Request, opts ...operations.Option) (*operations.CreateCalendarLink2Response, error) {
+// CreateCalendarLink - Create a link
+func (s *Link) CreateCalendarLink(ctx context.Context, request operations.CreateCalendarLinkRequest, opts ...operations.Option) (*operations.CreateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Link) CreateCalendarLink2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCalendarLink2",
+		OperationID:      "createCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Link) CreateCalendarLink2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateCalendarLink2Response{
+	res := &operations.CreateCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Link) CreateCalendarLink2(ctx context.Context, request operations.Creat
 
 }
 
-// CreatePaymentLink2 - Create a link
-func (s *Link) CreatePaymentLink2(ctx context.Context, request operations.CreatePaymentLink2Request, opts ...operations.Option) (*operations.CreatePaymentLink2Response, error) {
+// CreatePaymentLink - Create a link
+func (s *Link) CreatePaymentLink(ctx context.Context, request operations.CreatePaymentLinkRequest, opts ...operations.Option) (*operations.CreatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Link) CreatePaymentLink2(ctx context.Context, request operations.Create
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPaymentLink2",
+		OperationID:      "createPaymentLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Link) CreatePaymentLink2(ctx context.Context, request operations.Create
 		}
 	}
 
-	res := &operations.CreatePaymentLink2Response{
+	res := &operations.CreatePaymentLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Link) CreatePaymentLink2(ctx context.Context, request operations.Create
 
 }
 
-// GetCalendarLink2 - Retrieve a link
-func (s *Link) GetCalendarLink2(ctx context.Context, request operations.GetCalendarLink2Request, opts ...operations.Option) (*operations.GetCalendarLink2Response, error) {
+// GetCalendarLink - Retrieve a link
+func (s *Link) GetCalendarLink(ctx context.Context, request operations.GetCalendarLinkRequest, opts ...operations.Option) (*operations.GetCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Link) GetCalendarLink2(ctx context.Context, request operations.GetCalen
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarLink2",
+		OperationID:      "getCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -613,7 +613,7 @@ func (s *Link) GetCalendarLink2(ctx context.Context, request operations.GetCalen
 		}
 	}
 
-	res := &operations.GetCalendarLink2Response{
+	res := &operations.GetCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -665,8 +665,8 @@ func (s *Link) GetCalendarLink2(ctx context.Context, request operations.GetCalen
 
 }
 
-// GetPaymentLink2 - Retrieve a link
-func (s *Link) GetPaymentLink2(ctx context.Context, request operations.GetPaymentLink2Request, opts ...operations.Option) (*operations.GetPaymentLink2Response, error) {
+// GetPaymentLink - Retrieve a link
+func (s *Link) GetPaymentLink(ctx context.Context, request operations.GetPaymentLinkRequest, opts ...operations.Option) (*operations.GetPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -695,7 +695,7 @@ func (s *Link) GetPaymentLink2(ctx context.Context, request operations.GetPaymen
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getPaymentLink2",
+		OperationID:      "getPaymentLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -820,7 +820,7 @@ func (s *Link) GetPaymentLink2(ctx context.Context, request operations.GetPaymen
 		}
 	}
 
-	res := &operations.GetPaymentLink2Response{
+	res := &operations.GetPaymentLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Link) GetPaymentLink2(ctx context.Context, request operations.GetPaymen
 
 }
 
-// ListCalendarLinks2 - List all links
-func (s *Link) ListCalendarLinks2(ctx context.Context, request operations.ListCalendarLinks2Request, opts ...operations.Option) (*operations.ListCalendarLinks2Response, error) {
+// ListCalendarLinks - List all links
+func (s *Link) ListCalendarLinks(ctx context.Context, request operations.ListCalendarLinksRequest, opts ...operations.Option) (*operations.ListCalendarLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Link) ListCalendarLinks2(ctx context.Context, request operations.ListCa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarLinks2",
+		OperationID:      "listCalendarLinks",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1027,7 +1027,7 @@ func (s *Link) ListCalendarLinks2(ctx context.Context, request operations.ListCa
 		}
 	}
 
-	res := &operations.ListCalendarLinks2Response{
+	res := &operations.ListCalendarLinksResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1079,8 +1079,8 @@ func (s *Link) ListCalendarLinks2(ctx context.Context, request operations.ListCa
 
 }
 
-// ListPaymentLinks2 - List all links
-func (s *Link) ListPaymentLinks2(ctx context.Context, request operations.ListPaymentLinks2Request, opts ...operations.Option) (*operations.ListPaymentLinks2Response, error) {
+// ListPaymentLinks - List all links
+func (s *Link) ListPaymentLinks(ctx context.Context, request operations.ListPaymentLinksRequest, opts ...operations.Option) (*operations.ListPaymentLinksResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1109,7 +1109,7 @@ func (s *Link) ListPaymentLinks2(ctx context.Context, request operations.ListPay
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPaymentLinks2",
+		OperationID:      "listPaymentLinks",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1234,7 +1234,7 @@ func (s *Link) ListPaymentLinks2(ctx context.Context, request operations.ListPay
 		}
 	}
 
-	res := &operations.ListPaymentLinks2Response{
+	res := &operations.ListPaymentLinksResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Link) ListPaymentLinks2(ctx context.Context, request operations.ListPay
 
 }
 
-// PatchCalendarLink2 - Update a link
-func (s *Link) PatchCalendarLink2(ctx context.Context, request operations.PatchCalendarLink2Request, opts ...operations.Option) (*operations.PatchCalendarLink2Response, error) {
+// PatchCalendarLink - Update a link
+func (s *Link) PatchCalendarLink(ctx context.Context, request operations.PatchCalendarLinkRequest, opts ...operations.Option) (*operations.PatchCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Link) PatchCalendarLink2(ctx context.Context, request operations.PatchC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCalendarLink2",
+		OperationID:      "patchCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -1448,7 +1448,7 @@ func (s *Link) PatchCalendarLink2(ctx context.Context, request operations.PatchC
 		}
 	}
 
-	res := &operations.PatchCalendarLink2Response{
+	res := &operations.PatchCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Link) PatchCalendarLink2(ctx context.Context, request operations.PatchC
 
 }
 
-// PatchPaymentLink2 - Update a link
-func (s *Link) PatchPaymentLink2(ctx context.Context, request operations.PatchPaymentLink2Request, opts ...operations.Option) (*operations.PatchPaymentLink2Response, error) {
+// PatchPaymentLink - Update a link
+func (s *Link) PatchPaymentLink(ctx context.Context, request operations.PatchPaymentLinkRequest, opts ...operations.Option) (*operations.PatchPaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Link) PatchPaymentLink2(ctx context.Context, request operations.PatchPa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPaymentLink2",
+		OperationID:      "patchPaymentLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -1662,7 +1662,7 @@ func (s *Link) PatchPaymentLink2(ctx context.Context, request operations.PatchPa
 		}
 	}
 
-	res := &operations.PatchPaymentLink2Response{
+	res := &operations.PatchPaymentLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1714,8 +1714,8 @@ func (s *Link) PatchPaymentLink2(ctx context.Context, request operations.PatchPa
 
 }
 
-// RemoveCalendarLink2 - Remove a link
-func (s *Link) RemoveCalendarLink2(ctx context.Context, request operations.RemoveCalendarLink2Request, opts ...operations.Option) (*operations.RemoveCalendarLink2Response, error) {
+// RemoveCalendarLink - Remove a link
+func (s *Link) RemoveCalendarLink(ctx context.Context, request operations.RemoveCalendarLinkRequest, opts ...operations.Option) (*operations.RemoveCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1744,7 +1744,7 @@ func (s *Link) RemoveCalendarLink2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCalendarLink2",
+		OperationID:      "removeCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1865,7 +1865,7 @@ func (s *Link) RemoveCalendarLink2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveCalendarLink2Response{
+	res := &operations.RemoveCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1896,8 +1896,8 @@ func (s *Link) RemoveCalendarLink2(ctx context.Context, request operations.Remov
 
 }
 
-// RemovePaymentLink2 - Remove a link
-func (s *Link) RemovePaymentLink2(ctx context.Context, request operations.RemovePaymentLink2Request, opts ...operations.Option) (*operations.RemovePaymentLink2Response, error) {
+// RemovePaymentLink - Remove a link
+func (s *Link) RemovePaymentLink(ctx context.Context, request operations.RemovePaymentLinkRequest, opts ...operations.Option) (*operations.RemovePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1926,7 +1926,7 @@ func (s *Link) RemovePaymentLink2(ctx context.Context, request operations.Remove
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removePaymentLink2",
+		OperationID:      "removePaymentLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2047,7 +2047,7 @@ func (s *Link) RemovePaymentLink2(ctx context.Context, request operations.Remove
 		}
 	}
 
-	res := &operations.RemovePaymentLink2Response{
+	res := &operations.RemovePaymentLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2078,8 +2078,8 @@ func (s *Link) RemovePaymentLink2(ctx context.Context, request operations.Remove
 
 }
 
-// UpdateCalendarLink2 - Update a link
-func (s *Link) UpdateCalendarLink2(ctx context.Context, request operations.UpdateCalendarLink2Request, opts ...operations.Option) (*operations.UpdateCalendarLink2Response, error) {
+// UpdateCalendarLink - Update a link
+func (s *Link) UpdateCalendarLink(ctx context.Context, request operations.UpdateCalendarLinkRequest, opts ...operations.Option) (*operations.UpdateCalendarLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2108,7 +2108,7 @@ func (s *Link) UpdateCalendarLink2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCalendarLink2",
+		OperationID:      "updateCalendarLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CalendarLink", "json", `request:"mediaType=application/json"`)
@@ -2240,7 +2240,7 @@ func (s *Link) UpdateCalendarLink2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateCalendarLink2Response{
+	res := &operations.UpdateCalendarLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2292,8 +2292,8 @@ func (s *Link) UpdateCalendarLink2(ctx context.Context, request operations.Updat
 
 }
 
-// UpdatePaymentLink2 - Update a link
-func (s *Link) UpdatePaymentLink2(ctx context.Context, request operations.UpdatePaymentLink2Request, opts ...operations.Option) (*operations.UpdatePaymentLink2Response, error) {
+// UpdatePaymentLink - Update a link
+func (s *Link) UpdatePaymentLink(ctx context.Context, request operations.UpdatePaymentLinkRequest, opts ...operations.Option) (*operations.UpdatePaymentLinkResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2322,7 +2322,7 @@ func (s *Link) UpdatePaymentLink2(ctx context.Context, request operations.Update
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePaymentLink2",
+		OperationID:      "updatePaymentLink",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PaymentLink", "json", `request:"mediaType=application/json"`)
@@ -2454,7 +2454,7 @@ func (s *Link) UpdatePaymentLink2(ctx context.Context, request operations.Update
 		}
 	}
 
-	res := &operations.UpdatePaymentLink2Response{
+	res := &operations.UpdatePaymentLinkResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

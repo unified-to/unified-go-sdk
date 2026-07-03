@@ -30,8 +30,8 @@ func newRecording(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateUcRecording2 - Create a recording
-func (s *Recording) CreateUcRecording2(ctx context.Context, request operations.CreateUcRecording2Request, opts ...operations.Option) (*operations.CreateUcRecording2Response, error) {
+// CreateUcRecording - Create a recording
+func (s *Recording) CreateUcRecording(ctx context.Context, request operations.CreateUcRecordingRequest, opts ...operations.Option) (*operations.CreateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Recording) CreateUcRecording2(ctx context.Context, request operations.C
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createUcRecording2",
+		OperationID:      "createUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Recording) CreateUcRecording2(ctx context.Context, request operations.C
 		}
 	}
 
-	res := &operations.CreateUcRecording2Response{
+	res := &operations.CreateUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Recording) CreateUcRecording2(ctx context.Context, request operations.C
 
 }
 
-// GetCalendarRecording2 - Retrieve a recording
-func (s *Recording) GetCalendarRecording2(ctx context.Context, request operations.GetCalendarRecording2Request, opts ...operations.Option) (*operations.GetCalendarRecording2Response, error) {
+// GetCalendarRecording - Retrieve a recording
+func (s *Recording) GetCalendarRecording(ctx context.Context, request operations.GetCalendarRecordingRequest, opts ...operations.Option) (*operations.GetCalendarRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Recording) GetCalendarRecording2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCalendarRecording2",
+		OperationID:      "getCalendarRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Recording) GetCalendarRecording2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.GetCalendarRecording2Response{
+	res := &operations.GetCalendarRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Recording) GetCalendarRecording2(ctx context.Context, request operation
 
 }
 
-// GetUcRecording2 - Retrieve a recording
-func (s *Recording) GetUcRecording2(ctx context.Context, request operations.GetUcRecording2Request, opts ...operations.Option) (*operations.GetUcRecording2Response, error) {
+// GetUcRecording - Retrieve a recording
+func (s *Recording) GetUcRecording(ctx context.Context, request operations.GetUcRecordingRequest, opts ...operations.Option) (*operations.GetUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Recording) GetUcRecording2(ctx context.Context, request operations.GetU
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUcRecording2",
+		OperationID:      "getUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Recording) GetUcRecording2(ctx context.Context, request operations.GetU
 		}
 	}
 
-	res := &operations.GetUcRecording2Response{
+	res := &operations.GetUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Recording) GetUcRecording2(ctx context.Context, request operations.GetU
 
 }
 
-// ListCalendarRecordings2 - List all recordings
-func (s *Recording) ListCalendarRecordings2(ctx context.Context, request operations.ListCalendarRecordings2Request, opts ...operations.Option) (*operations.ListCalendarRecordings2Response, error) {
+// ListCalendarRecordings - List all recordings
+func (s *Recording) ListCalendarRecordings(ctx context.Context, request operations.ListCalendarRecordingsRequest, opts ...operations.Option) (*operations.ListCalendarRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Recording) ListCalendarRecordings2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCalendarRecordings2",
+		OperationID:      "listCalendarRecordings",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -813,7 +813,7 @@ func (s *Recording) ListCalendarRecordings2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListCalendarRecordings2Response{
+	res := &operations.ListCalendarRecordingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -865,8 +865,8 @@ func (s *Recording) ListCalendarRecordings2(ctx context.Context, request operati
 
 }
 
-// ListUcRecordings2 - List all recordings
-func (s *Recording) ListUcRecordings2(ctx context.Context, request operations.ListUcRecordings2Request, opts ...operations.Option) (*operations.ListUcRecordings2Response, error) {
+// ListUcRecordings - List all recordings
+func (s *Recording) ListUcRecordings(ctx context.Context, request operations.ListUcRecordingsRequest, opts ...operations.Option) (*operations.ListUcRecordingsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -895,7 +895,7 @@ func (s *Recording) ListUcRecordings2(ctx context.Context, request operations.Li
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listUcRecordings2",
+		OperationID:      "listUcRecordings",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1020,7 +1020,7 @@ func (s *Recording) ListUcRecordings2(ctx context.Context, request operations.Li
 		}
 	}
 
-	res := &operations.ListUcRecordings2Response{
+	res := &operations.ListUcRecordingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1072,8 +1072,8 @@ func (s *Recording) ListUcRecordings2(ctx context.Context, request operations.Li
 
 }
 
-// PatchUcRecording2 - Update a recording
-func (s *Recording) PatchUcRecording2(ctx context.Context, request operations.PatchUcRecording2Request, opts ...operations.Option) (*operations.PatchUcRecording2Response, error) {
+// PatchUcRecording - Update a recording
+func (s *Recording) PatchUcRecording(ctx context.Context, request operations.PatchUcRecordingRequest, opts ...operations.Option) (*operations.PatchUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1102,7 +1102,7 @@ func (s *Recording) PatchUcRecording2(ctx context.Context, request operations.Pa
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchUcRecording2",
+		OperationID:      "patchUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -1234,7 +1234,7 @@ func (s *Recording) PatchUcRecording2(ctx context.Context, request operations.Pa
 		}
 	}
 
-	res := &operations.PatchUcRecording2Response{
+	res := &operations.PatchUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Recording) PatchUcRecording2(ctx context.Context, request operations.Pa
 
 }
 
-// RemoveUcRecording2 - Remove a recording
-func (s *Recording) RemoveUcRecording2(ctx context.Context, request operations.RemoveUcRecording2Request, opts ...operations.Option) (*operations.RemoveUcRecording2Response, error) {
+// RemoveUcRecording - Remove a recording
+func (s *Recording) RemoveUcRecording(ctx context.Context, request operations.RemoveUcRecordingRequest, opts ...operations.Option) (*operations.RemoveUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Recording) RemoveUcRecording2(ctx context.Context, request operations.R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeUcRecording2",
+		OperationID:      "removeUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1437,7 +1437,7 @@ func (s *Recording) RemoveUcRecording2(ctx context.Context, request operations.R
 		}
 	}
 
-	res := &operations.RemoveUcRecording2Response{
+	res := &operations.RemoveUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1468,8 +1468,8 @@ func (s *Recording) RemoveUcRecording2(ctx context.Context, request operations.R
 
 }
 
-// UpdateUcRecording2 - Update a recording
-func (s *Recording) UpdateUcRecording2(ctx context.Context, request operations.UpdateUcRecording2Request, opts ...operations.Option) (*operations.UpdateUcRecording2Response, error) {
+// UpdateUcRecording - Update a recording
+func (s *Recording) UpdateUcRecording(ctx context.Context, request operations.UpdateUcRecordingRequest, opts ...operations.Option) (*operations.UpdateUcRecordingResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1498,7 +1498,7 @@ func (s *Recording) UpdateUcRecording2(ctx context.Context, request operations.U
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateUcRecording2",
+		OperationID:      "updateUcRecording",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "UcRecording", "json", `request:"mediaType=application/json"`)
@@ -1630,7 +1630,7 @@ func (s *Recording) UpdateUcRecording2(ctx context.Context, request operations.U
 		}
 	}
 
-	res := &operations.UpdateUcRecording2Response{
+	res := &operations.UpdateUcRecordingResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

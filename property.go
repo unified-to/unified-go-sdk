@@ -30,8 +30,8 @@ func newProperty(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateAnalyticsProperty2 - Create a property
-func (s *Property) CreateAnalyticsProperty2(ctx context.Context, request operations.CreateAnalyticsProperty2Request, opts ...operations.Option) (*operations.CreateAnalyticsProperty2Response, error) {
+// CreateAnalyticsProperty - Create a property
+func (s *Property) CreateAnalyticsProperty(ctx context.Context, request operations.CreateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.CreateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Property) CreateAnalyticsProperty2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAnalyticsProperty2",
+		OperationID:      "createAnalyticsProperty",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsProperty", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Property) CreateAnalyticsProperty2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateAnalyticsProperty2Response{
+	res := &operations.CreateAnalyticsPropertyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Property) CreateAnalyticsProperty2(ctx context.Context, request operati
 
 }
 
-// GetAnalyticsProperty2 - Retrieve a property
-func (s *Property) GetAnalyticsProperty2(ctx context.Context, request operations.GetAnalyticsProperty2Request, opts ...operations.Option) (*operations.GetAnalyticsProperty2Response, error) {
+// GetAnalyticsProperty - Retrieve a property
+func (s *Property) GetAnalyticsProperty(ctx context.Context, request operations.GetAnalyticsPropertyRequest, opts ...operations.Option) (*operations.GetAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Property) GetAnalyticsProperty2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAnalyticsProperty2",
+		OperationID:      "getAnalyticsProperty",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Property) GetAnalyticsProperty2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetAnalyticsProperty2Response{
+	res := &operations.GetAnalyticsPropertyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Property) GetAnalyticsProperty2(ctx context.Context, request operations
 
 }
 
-// ListAnalyticsProperties2 - List all properties
-func (s *Property) ListAnalyticsProperties2(ctx context.Context, request operations.ListAnalyticsProperties2Request, opts ...operations.Option) (*operations.ListAnalyticsProperties2Response, error) {
+// ListAnalyticsProperties - List all properties
+func (s *Property) ListAnalyticsProperties(ctx context.Context, request operations.ListAnalyticsPropertiesRequest, opts ...operations.Option) (*operations.ListAnalyticsPropertiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Property) ListAnalyticsProperties2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAnalyticsProperties2",
+		OperationID:      "listAnalyticsProperties",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Property) ListAnalyticsProperties2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListAnalyticsProperties2Response{
+	res := &operations.ListAnalyticsPropertiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Property) ListAnalyticsProperties2(ctx context.Context, request operati
 
 }
 
-// PatchAnalyticsProperty2 - Update a property
-func (s *Property) PatchAnalyticsProperty2(ctx context.Context, request operations.PatchAnalyticsProperty2Request, opts ...operations.Option) (*operations.PatchAnalyticsProperty2Response, error) {
+// PatchAnalyticsProperty - Update a property
+func (s *Property) PatchAnalyticsProperty(ctx context.Context, request operations.PatchAnalyticsPropertyRequest, opts ...operations.Option) (*operations.PatchAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Property) PatchAnalyticsProperty2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAnalyticsProperty2",
+		OperationID:      "patchAnalyticsProperty",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsProperty", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Property) PatchAnalyticsProperty2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchAnalyticsProperty2Response{
+	res := &operations.PatchAnalyticsPropertyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Property) PatchAnalyticsProperty2(ctx context.Context, request operatio
 
 }
 
-// RemoveAnalyticsProperty2 - Remove a property
-func (s *Property) RemoveAnalyticsProperty2(ctx context.Context, request operations.RemoveAnalyticsProperty2Request, opts ...operations.Option) (*operations.RemoveAnalyticsProperty2Response, error) {
+// RemoveAnalyticsProperty - Remove a property
+func (s *Property) RemoveAnalyticsProperty(ctx context.Context, request operations.RemoveAnalyticsPropertyRequest, opts ...operations.Option) (*operations.RemoveAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Property) RemoveAnalyticsProperty2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAnalyticsProperty2",
+		OperationID:      "removeAnalyticsProperty",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Property) RemoveAnalyticsProperty2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveAnalyticsProperty2Response{
+	res := &operations.RemoveAnalyticsPropertyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Property) RemoveAnalyticsProperty2(ctx context.Context, request operati
 
 }
 
-// UpdateAnalyticsProperty2 - Update a property
-func (s *Property) UpdateAnalyticsProperty2(ctx context.Context, request operations.UpdateAnalyticsProperty2Request, opts ...operations.Option) (*operations.UpdateAnalyticsProperty2Response, error) {
+// UpdateAnalyticsProperty - Update a property
+func (s *Property) UpdateAnalyticsProperty(ctx context.Context, request operations.UpdateAnalyticsPropertyRequest, opts ...operations.Option) (*operations.UpdateAnalyticsPropertyResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Property) UpdateAnalyticsProperty2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAnalyticsProperty2",
+		OperationID:      "updateAnalyticsProperty",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AnalyticsProperty", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Property) UpdateAnalyticsProperty2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateAnalyticsProperty2Response{
+	res := &operations.UpdateAnalyticsPropertyResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

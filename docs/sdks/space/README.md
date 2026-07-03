@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateKmsSpace2](#createkmsspace2) - Create a space
-* [GetKmsSpace2](#getkmsspace2) - Retrieve a space
-* [ListKmsSpaces2](#listkmsspaces2) - List all spaces
-* [PatchKmsSpace2](#patchkmsspace2) - Update a space
-* [RemoveKmsSpace2](#removekmsspace2) - Remove a space
-* [UpdateKmsSpace2](#updatekmsspace2) - Update a space
+* [CreateKmsSpace](#createkmsspace) - Create a space
+* [GetKmsSpace](#getkmsspace) - Retrieve a space
+* [ListKmsSpaces](#listkmsspaces) - List all spaces
+* [PatchKmsSpace](#patchkmsspace) - Update a space
+* [RemoveKmsSpace](#removekmsspace) - Remove a space
+* [UpdateKmsSpace](#updatekmsspace) - Update a space
 
-## CreateKmsSpace2
+## CreateKmsSpace
 
 Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsSpace2" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.CreateKmsSpace2(ctx, operations.CreateKmsSpace2Request{
+    res, err := s.Space.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.CreateKmsSpace2Request](../../pkg/models/operations/createkmsspace2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateKmsSpaceRequest](../../pkg/models/operations/createkmsspacerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.CreateKmsSpace2Response](../../pkg/models/operations/createkmsspace2response.md), error**
+**[*operations.CreateKmsSpaceResponse](../../pkg/models/operations/createkmsspaceresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetKmsSpace2
+## GetKmsSpace
 
 Retrieve a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getKmsSpace2" method="get" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="getKmsSpace" method="get" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.GetKmsSpace2(ctx, operations.GetKmsSpace2Request{
+    res, err := s.Space.GetKmsSpace(ctx, operations.GetKmsSpaceRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetKmsSpace2Request](../../pkg/models/operations/getkmsspace2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetKmsSpaceRequest](../../pkg/models/operations/getkmsspacerequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.GetKmsSpace2Response](../../pkg/models/operations/getkmsspace2response.md), error**
+**[*operations.GetKmsSpaceResponse](../../pkg/models/operations/getkmsspaceresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListKmsSpaces2
+## ListKmsSpaces
 
 List all spaces
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listKmsSpaces2" method="get" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="go" operationID="listKmsSpaces" method="get" path="/kms/{connection_id}/space" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.ListKmsSpaces2(ctx, operations.ListKmsSpaces2Request{
+    res, err := s.Space.ListKmsSpaces(ctx, operations.ListKmsSpacesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.ListKmsSpaces2Request](../../pkg/models/operations/listkmsspaces2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.ListKmsSpacesRequest](../../pkg/models/operations/listkmsspacesrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.ListKmsSpaces2Response](../../pkg/models/operations/listkmsspaces2response.md), error**
+**[*operations.ListKmsSpacesResponse](../../pkg/models/operations/listkmsspacesresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchKmsSpace2
+## PatchKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsSpace2" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.PatchKmsSpace2(ctx, operations.PatchKmsSpace2Request{
+    res, err := s.Space.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PatchKmsSpace2Request](../../pkg/models/operations/patchkmsspace2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchKmsSpaceRequest](../../pkg/models/operations/patchkmsspacerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.PatchKmsSpace2Response](../../pkg/models/operations/patchkmsspace2response.md), error**
+**[*operations.PatchKmsSpaceResponse](../../pkg/models/operations/patchkmsspaceresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveKmsSpace2
+## RemoveKmsSpace
 
 Remove a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeKmsSpace2" method="delete" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeKmsSpace" method="delete" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.RemoveKmsSpace2(ctx, operations.RemoveKmsSpace2Request{
+    res, err := s.Space.RemoveKmsSpace(ctx, operations.RemoveKmsSpaceRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.RemoveKmsSpace2Request](../../pkg/models/operations/removekmsspace2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveKmsSpaceRequest](../../pkg/models/operations/removekmsspacerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.RemoveKmsSpace2Response](../../pkg/models/operations/removekmsspace2response.md), error**
+**[*operations.RemoveKmsSpaceResponse](../../pkg/models/operations/removekmsspaceresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateKmsSpace2
+## UpdateKmsSpace
 
 Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsSpace2" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Space.UpdateKmsSpace2(ctx, operations.UpdateKmsSpace2Request{
+    res, err := s.Space.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
         KmsSpace: shared.KmsSpace{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateKmsSpace2Request](../../pkg/models/operations/updatekmsspace2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.UpdateKmsSpaceRequest](../../pkg/models/operations/updatekmsspacerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.UpdateKmsSpace2Response](../../pkg/models/operations/updatekmsspace2response.md), error**
+**[*operations.UpdateKmsSpaceResponse](../../pkg/models/operations/updatekmsspaceresponse.md), error**
 
 ### Errors
 

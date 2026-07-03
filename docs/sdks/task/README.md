@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [CreateTaskComment2](#createtaskcomment2) - Create a comment
-* [CreateTaskProject2](#createtaskproject2) - Create a project
-* [CreateTaskTask2](#createtasktask2) - Create a task
-* [GetTaskChange2](#gettaskchange2) - Retrieve a change
-* [GetTaskComment2](#gettaskcomment2) - Retrieve a comment
-* [GetTaskProject2](#gettaskproject2) - Retrieve a project
-* [GetTaskTask2](#gettasktask2) - Retrieve a task
-* [ListTaskChanges2](#listtaskchanges2) - List all changes
-* [ListTaskComments2](#listtaskcomments2) - List all comments
-* [ListTaskProjects2](#listtaskprojects2) - List all projects
-* [ListTaskTasks2](#listtasktasks2) - List all tasks
-* [PatchTaskComment2](#patchtaskcomment2) - Update a comment
-* [PatchTaskProject2](#patchtaskproject2) - Update a project
-* [PatchTaskTask2](#patchtasktask2) - Update a task
-* [RemoveTaskComment2](#removetaskcomment2) - Remove a comment
-* [RemoveTaskProject2](#removetaskproject2) - Remove a project
-* [RemoveTaskTask2](#removetasktask2) - Remove a task
-* [UpdateTaskComment2](#updatetaskcomment2) - Update a comment
-* [UpdateTaskProject2](#updatetaskproject2) - Update a project
-* [UpdateTaskTask2](#updatetasktask2) - Update a task
+* [CreateTaskComment](#createtaskcomment) - Create a comment
+* [CreateTaskProject](#createtaskproject) - Create a project
+* [CreateTaskTask](#createtasktask) - Create a task
+* [GetTaskChange](#gettaskchange) - Retrieve a change
+* [GetTaskComment](#gettaskcomment) - Retrieve a comment
+* [GetTaskProject](#gettaskproject) - Retrieve a project
+* [GetTaskTask](#gettasktask) - Retrieve a task
+* [ListTaskChanges](#listtaskchanges) - List all changes
+* [ListTaskComments](#listtaskcomments) - List all comments
+* [ListTaskProjects](#listtaskprojects) - List all projects
+* [ListTaskTasks](#listtasktasks) - List all tasks
+* [PatchTaskComment](#patchtaskcomment) - Update a comment
+* [PatchTaskProject](#patchtaskproject) - Update a project
+* [PatchTaskTask](#patchtasktask) - Update a task
+* [RemoveTaskComment](#removetaskcomment) - Remove a comment
+* [RemoveTaskProject](#removetaskproject) - Remove a project
+* [RemoveTaskTask](#removetasktask) - Remove a task
+* [UpdateTaskComment](#updatetaskcomment) - Update a comment
+* [UpdateTaskProject](#updatetaskproject) - Update a project
+* [UpdateTaskTask](#updatetasktask) - Update a task
 
-## CreateTaskComment2
+## CreateTaskComment
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskComment2" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -50,7 +50,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.CreateTaskComment2(ctx, operations.CreateTaskComment2Request{
+    res, err := s.Task.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
         TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
     })
@@ -65,15 +65,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateTaskComment2Request](../../pkg/models/operations/createtaskcomment2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateTaskCommentRequest](../../pkg/models/operations/createtaskcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateTaskComment2Response](../../pkg/models/operations/createtaskcomment2response.md), error**
+**[*operations.CreateTaskCommentResponse](../../pkg/models/operations/createtaskcommentresponse.md), error**
 
 ### Errors
 
@@ -81,13 +81,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateTaskProject2
+## CreateTaskProject
 
 Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskProject2" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -106,7 +106,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.CreateTaskProject2(ctx, operations.CreateTaskProject2Request{
+    res, err := s.Task.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
         TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
     })
@@ -121,15 +121,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateTaskProject2Request](../../pkg/models/operations/createtaskproject2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateTaskProjectRequest](../../pkg/models/operations/createtaskprojectrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateTaskProject2Response](../../pkg/models/operations/createtaskproject2response.md), error**
+**[*operations.CreateTaskProjectResponse](../../pkg/models/operations/createtaskprojectresponse.md), error**
 
 ### Errors
 
@@ -137,13 +137,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateTaskTask2
+## CreateTaskTask
 
 Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskTask2" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="go" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
 ```go
 package main
 
@@ -162,7 +162,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.CreateTaskTask2(ctx, operations.CreateTaskTask2Request{
+    res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
         TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
     })
@@ -177,15 +177,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.CreateTaskTask2Request](../../pkg/models/operations/createtasktask2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateTaskTaskRequest](../../pkg/models/operations/createtasktaskrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.CreateTaskTask2Response](../../pkg/models/operations/createtasktask2response.md), error**
+**[*operations.CreateTaskTaskResponse](../../pkg/models/operations/createtasktaskresponse.md), error**
 
 ### Errors
 
@@ -193,13 +193,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTaskChange2
+## GetTaskChange
 
 Retrieve a change
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTaskChange2" method="get" path="/task/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTaskChange" method="get" path="/task/{connection_id}/change/{id}" -->
 ```go
 package main
 
@@ -217,7 +217,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.GetTaskChange2(ctx, operations.GetTaskChange2Request{
+    res, err := s.Task.GetTaskChange(ctx, operations.GetTaskChangeRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -232,15 +232,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetTaskChange2Request](../../pkg/models/operations/gettaskchange2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetTaskChangeRequest](../../pkg/models/operations/gettaskchangerequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.GetTaskChange2Response](../../pkg/models/operations/gettaskchange2response.md), error**
+**[*operations.GetTaskChangeResponse](../../pkg/models/operations/gettaskchangeresponse.md), error**
 
 ### Errors
 
@@ -248,13 +248,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTaskComment2
+## GetTaskComment
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTaskComment2" method="get" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -272,7 +272,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.GetTaskComment2(ctx, operations.GetTaskComment2Request{
+    res, err := s.Task.GetTaskComment(ctx, operations.GetTaskCommentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -287,15 +287,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetTaskComment2Request](../../pkg/models/operations/gettaskcomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetTaskCommentRequest](../../pkg/models/operations/gettaskcommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetTaskComment2Response](../../pkg/models/operations/gettaskcomment2response.md), error**
+**[*operations.GetTaskCommentResponse](../../pkg/models/operations/gettaskcommentresponse.md), error**
 
 ### Errors
 
@@ -303,13 +303,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTaskProject2
+## GetTaskProject
 
 Retrieve a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTaskProject2" method="get" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTaskProject" method="get" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -327,7 +327,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.GetTaskProject2(ctx, operations.GetTaskProject2Request{
+    res, err := s.Task.GetTaskProject(ctx, operations.GetTaskProjectRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -342,15 +342,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetTaskProject2Request](../../pkg/models/operations/gettaskproject2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetTaskProjectRequest](../../pkg/models/operations/gettaskprojectrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetTaskProject2Response](../../pkg/models/operations/gettaskproject2response.md), error**
+**[*operations.GetTaskProjectResponse](../../pkg/models/operations/gettaskprojectresponse.md), error**
 
 ### Errors
 
@@ -358,13 +358,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetTaskTask2
+## GetTaskTask
 
 Retrieve a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getTaskTask2" method="get" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="getTaskTask" method="get" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -382,7 +382,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.GetTaskTask2(ctx, operations.GetTaskTask2Request{
+    res, err := s.Task.GetTaskTask(ctx, operations.GetTaskTaskRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -397,15 +397,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetTaskTask2Request](../../pkg/models/operations/gettasktask2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetTaskTaskRequest](../../pkg/models/operations/gettasktaskrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.GetTaskTask2Response](../../pkg/models/operations/gettasktask2response.md), error**
+**[*operations.GetTaskTaskResponse](../../pkg/models/operations/gettasktaskresponse.md), error**
 
 ### Errors
 
@@ -413,13 +413,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTaskChanges2
+## ListTaskChanges
 
 List all changes
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTaskChanges2" method="get" path="/task/{connection_id}/change" -->
+<!-- UsageSnippet language="go" operationID="listTaskChanges" method="get" path="/task/{connection_id}/change" -->
 ```go
 package main
 
@@ -437,7 +437,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.ListTaskChanges2(ctx, operations.ListTaskChanges2Request{
+    res, err := s.Task.ListTaskChanges(ctx, operations.ListTaskChangesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -451,15 +451,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListTaskChanges2Request](../../pkg/models/operations/listtaskchanges2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListTaskChangesRequest](../../pkg/models/operations/listtaskchangesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.ListTaskChanges2Response](../../pkg/models/operations/listtaskchanges2response.md), error**
+**[*operations.ListTaskChangesResponse](../../pkg/models/operations/listtaskchangesresponse.md), error**
 
 ### Errors
 
@@ -467,13 +467,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTaskComments2
+## ListTaskComments
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTaskComments2" method="get" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
 ```go
 package main
 
@@ -491,7 +491,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.ListTaskComments2(ctx, operations.ListTaskComments2Request{
+    res, err := s.Task.ListTaskComments(ctx, operations.ListTaskCommentsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -505,15 +505,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListTaskComments2Request](../../pkg/models/operations/listtaskcomments2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListTaskCommentsRequest](../../pkg/models/operations/listtaskcommentsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListTaskComments2Response](../../pkg/models/operations/listtaskcomments2response.md), error**
+**[*operations.ListTaskCommentsResponse](../../pkg/models/operations/listtaskcommentsresponse.md), error**
 
 ### Errors
 
@@ -521,13 +521,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTaskProjects2
+## ListTaskProjects
 
 List all projects
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTaskProjects2" method="get" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="go" operationID="listTaskProjects" method="get" path="/task/{connection_id}/project" -->
 ```go
 package main
 
@@ -545,7 +545,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.ListTaskProjects2(ctx, operations.ListTaskProjects2Request{
+    res, err := s.Task.ListTaskProjects(ctx, operations.ListTaskProjectsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -559,15 +559,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListTaskProjects2Request](../../pkg/models/operations/listtaskprojects2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListTaskProjectsRequest](../../pkg/models/operations/listtaskprojectsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListTaskProjects2Response](../../pkg/models/operations/listtaskprojects2response.md), error**
+**[*operations.ListTaskProjectsResponse](../../pkg/models/operations/listtaskprojectsresponse.md), error**
 
 ### Errors
 
@@ -575,13 +575,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListTaskTasks2
+## ListTaskTasks
 
 List all tasks
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listTaskTasks2" method="get" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="go" operationID="listTaskTasks" method="get" path="/task/{connection_id}/task" -->
 ```go
 package main
 
@@ -599,7 +599,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.ListTaskTasks2(ctx, operations.ListTaskTasks2Request{
+    res, err := s.Task.ListTaskTasks(ctx, operations.ListTaskTasksRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -613,15 +613,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.ListTaskTasks2Request](../../pkg/models/operations/listtasktasks2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.ListTaskTasksRequest](../../pkg/models/operations/listtasktasksrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.ListTaskTasks2Response](../../pkg/models/operations/listtasktasks2response.md), error**
+**[*operations.ListTaskTasksResponse](../../pkg/models/operations/listtasktasksresponse.md), error**
 
 ### Errors
 
@@ -629,13 +629,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchTaskComment2
+## PatchTaskComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskComment2" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -654,7 +654,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.PatchTaskComment2(ctx, operations.PatchTaskComment2Request{
+    res, err := s.Task.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
         TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -670,15 +670,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchTaskComment2Request](../../pkg/models/operations/patchtaskcomment2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchTaskCommentRequest](../../pkg/models/operations/patchtaskcommentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchTaskComment2Response](../../pkg/models/operations/patchtaskcomment2response.md), error**
+**[*operations.PatchTaskCommentResponse](../../pkg/models/operations/patchtaskcommentresponse.md), error**
 
 ### Errors
 
@@ -686,13 +686,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchTaskProject2
+## PatchTaskProject
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskProject2" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -711,7 +711,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.PatchTaskProject2(ctx, operations.PatchTaskProject2Request{
+    res, err := s.Task.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
         TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -727,15 +727,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchTaskProject2Request](../../pkg/models/operations/patchtaskproject2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchTaskProjectRequest](../../pkg/models/operations/patchtaskprojectrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchTaskProject2Response](../../pkg/models/operations/patchtaskproject2response.md), error**
+**[*operations.PatchTaskProjectResponse](../../pkg/models/operations/patchtaskprojectresponse.md), error**
 
 ### Errors
 
@@ -743,13 +743,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchTaskTask2
+## PatchTaskTask
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskTask2" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -768,7 +768,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.PatchTaskTask2(ctx, operations.PatchTaskTask2Request{
+    res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
         TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -784,15 +784,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PatchTaskTask2Request](../../pkg/models/operations/patchtasktask2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchTaskTaskRequest](../../pkg/models/operations/patchtasktaskrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.PatchTaskTask2Response](../../pkg/models/operations/patchtasktask2response.md), error**
+**[*operations.PatchTaskTaskResponse](../../pkg/models/operations/patchtasktaskresponse.md), error**
 
 ### Errors
 
@@ -800,13 +800,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveTaskComment2
+## RemoveTaskComment
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeTaskComment2" method="delete" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -824,7 +824,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.RemoveTaskComment2(ctx, operations.RemoveTaskComment2Request{
+    res, err := s.Task.RemoveTaskComment(ctx, operations.RemoveTaskCommentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -839,15 +839,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveTaskComment2Request](../../pkg/models/operations/removetaskcomment2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveTaskCommentRequest](../../pkg/models/operations/removetaskcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.RemoveTaskComment2Response](../../pkg/models/operations/removetaskcomment2response.md), error**
+**[*operations.RemoveTaskCommentResponse](../../pkg/models/operations/removetaskcommentresponse.md), error**
 
 ### Errors
 
@@ -855,13 +855,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveTaskProject2
+## RemoveTaskProject
 
 Remove a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeTaskProject2" method="delete" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeTaskProject" method="delete" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -879,7 +879,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.RemoveTaskProject2(ctx, operations.RemoveTaskProject2Request{
+    res, err := s.Task.RemoveTaskProject(ctx, operations.RemoveTaskProjectRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,15 +894,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveTaskProject2Request](../../pkg/models/operations/removetaskproject2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveTaskProjectRequest](../../pkg/models/operations/removetaskprojectrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.RemoveTaskProject2Response](../../pkg/models/operations/removetaskproject2response.md), error**
+**[*operations.RemoveTaskProjectResponse](../../pkg/models/operations/removetaskprojectresponse.md), error**
 
 ### Errors
 
@@ -910,13 +910,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveTaskTask2
+## RemoveTaskTask
 
 Remove a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeTaskTask2" method="delete" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeTaskTask" method="delete" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -934,7 +934,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.RemoveTaskTask2(ctx, operations.RemoveTaskTask2Request{
+    res, err := s.Task.RemoveTaskTask(ctx, operations.RemoveTaskTaskRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -949,15 +949,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.RemoveTaskTask2Request](../../pkg/models/operations/removetasktask2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveTaskTaskRequest](../../pkg/models/operations/removetasktaskrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.RemoveTaskTask2Response](../../pkg/models/operations/removetasktask2response.md), error**
+**[*operations.RemoveTaskTaskResponse](../../pkg/models/operations/removetasktaskresponse.md), error**
 
 ### Errors
 
@@ -965,13 +965,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateTaskComment2
+## UpdateTaskComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskComment2" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -990,7 +990,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.UpdateTaskComment2(ctx, operations.UpdateTaskComment2Request{
+    res, err := s.Task.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
         TaskComment: shared.TaskComment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1006,15 +1006,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateTaskComment2Request](../../pkg/models/operations/updatetaskcomment2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateTaskCommentRequest](../../pkg/models/operations/updatetaskcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.UpdateTaskComment2Response](../../pkg/models/operations/updatetaskcomment2response.md), error**
+**[*operations.UpdateTaskCommentResponse](../../pkg/models/operations/updatetaskcommentresponse.md), error**
 
 ### Errors
 
@@ -1022,13 +1022,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateTaskProject2
+## UpdateTaskProject
 
 Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskProject2" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
 ```go
 package main
 
@@ -1047,7 +1047,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.UpdateTaskProject2(ctx, operations.UpdateTaskProject2Request{
+    res, err := s.Task.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
         TaskProject: shared.TaskProject{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1063,15 +1063,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateTaskProject2Request](../../pkg/models/operations/updatetaskproject2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateTaskProjectRequest](../../pkg/models/operations/updatetaskprojectrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.UpdateTaskProject2Response](../../pkg/models/operations/updatetaskproject2response.md), error**
+**[*operations.UpdateTaskProjectResponse](../../pkg/models/operations/updatetaskprojectresponse.md), error**
 
 ### Errors
 
@@ -1079,13 +1079,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateTaskTask2
+## UpdateTaskTask
 
 Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskTask2" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
 ```go
 package main
 
@@ -1104,7 +1104,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Task.UpdateTaskTask2(ctx, operations.UpdateTaskTask2Request{
+    res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
         TaskTask: shared.TaskTask{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1120,15 +1120,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateTaskTask2Request](../../pkg/models/operations/updatetasktask2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.UpdateTaskTaskRequest](../../pkg/models/operations/updatetasktaskrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.UpdateTaskTask2Response](../../pkg/models/operations/updatetasktask2response.md), error**
+**[*operations.UpdateTaskTaskResponse](../../pkg/models/operations/updatetasktaskresponse.md), error**
 
 ### Errors
 

@@ -30,8 +30,8 @@ func newAvailability(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hook
 	}
 }
 
-// ListCommerceAvailabilities2 - List all availabilities
-func (s *Availability) ListCommerceAvailabilities2(ctx context.Context, request operations.ListCommerceAvailabilities2Request, opts ...operations.Option) (*operations.ListCommerceAvailabilities2Response, error) {
+// ListCommerceAvailabilities - List all availabilities
+func (s *Availability) ListCommerceAvailabilities(ctx context.Context, request operations.ListCommerceAvailabilitiesRequest, opts ...operations.Option) (*operations.ListCommerceAvailabilitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Availability) ListCommerceAvailabilities2(ctx context.Context, request 
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCommerceAvailabilities2",
+		OperationID:      "listCommerceAvailabilities",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Availability) ListCommerceAvailabilities2(ctx context.Context, request 
 		}
 	}
 
-	res := &operations.ListCommerceAvailabilities2Response{
+	res := &operations.ListCommerceAvailabilitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

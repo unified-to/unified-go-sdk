@@ -30,8 +30,8 @@ func newDevice(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// CreateHrisDevice2 - Create a device
-func (s *Device) CreateHrisDevice2(ctx context.Context, request operations.CreateHrisDevice2Request, opts ...operations.Option) (*operations.CreateHrisDevice2Response, error) {
+// CreateHrisDevice - Create a device
+func (s *Device) CreateHrisDevice(ctx context.Context, request operations.CreateHrisDeviceRequest, opts ...operations.Option) (*operations.CreateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Device) CreateHrisDevice2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createHrisDevice2",
+		OperationID:      "createHrisDevice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Device) CreateHrisDevice2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateHrisDevice2Response{
+	res := &operations.CreateHrisDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Device) CreateHrisDevice2(ctx context.Context, request operations.Creat
 
 }
 
-// GetHrisDevice2 - Retrieve a device
-func (s *Device) GetHrisDevice2(ctx context.Context, request operations.GetHrisDevice2Request, opts ...operations.Option) (*operations.GetHrisDevice2Response, error) {
+// GetHrisDevice - Retrieve a device
+func (s *Device) GetHrisDevice(ctx context.Context, request operations.GetHrisDeviceRequest, opts ...operations.Option) (*operations.GetHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Device) GetHrisDevice2(ctx context.Context, request operations.GetHrisD
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisDevice2",
+		OperationID:      "getHrisDevice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Device) GetHrisDevice2(ctx context.Context, request operations.GetHrisD
 		}
 	}
 
-	res := &operations.GetHrisDevice2Response{
+	res := &operations.GetHrisDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Device) GetHrisDevice2(ctx context.Context, request operations.GetHrisD
 
 }
 
-// ListHrisDevices2 - List all devices
-func (s *Device) ListHrisDevices2(ctx context.Context, request operations.ListHrisDevices2Request, opts ...operations.Option) (*operations.ListHrisDevices2Response, error) {
+// ListHrisDevices - List all devices
+func (s *Device) ListHrisDevices(ctx context.Context, request operations.ListHrisDevicesRequest, opts ...operations.Option) (*operations.ListHrisDevicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Device) ListHrisDevices2(ctx context.Context, request operations.ListHr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisDevices2",
+		OperationID:      "listHrisDevices",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Device) ListHrisDevices2(ctx context.Context, request operations.ListHr
 		}
 	}
 
-	res := &operations.ListHrisDevices2Response{
+	res := &operations.ListHrisDevicesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Device) ListHrisDevices2(ctx context.Context, request operations.ListHr
 
 }
 
-// PatchHrisDevice2 - Update a device
-func (s *Device) PatchHrisDevice2(ctx context.Context, request operations.PatchHrisDevice2Request, opts ...operations.Option) (*operations.PatchHrisDevice2Response, error) {
+// PatchHrisDevice - Update a device
+func (s *Device) PatchHrisDevice(ctx context.Context, request operations.PatchHrisDeviceRequest, opts ...operations.Option) (*operations.PatchHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Device) PatchHrisDevice2(ctx context.Context, request operations.PatchH
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchHrisDevice2",
+		OperationID:      "patchHrisDevice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Device) PatchHrisDevice2(ctx context.Context, request operations.PatchH
 		}
 	}
 
-	res := &operations.PatchHrisDevice2Response{
+	res := &operations.PatchHrisDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Device) PatchHrisDevice2(ctx context.Context, request operations.PatchH
 
 }
 
-// RemoveHrisDevice2 - Remove a device
-func (s *Device) RemoveHrisDevice2(ctx context.Context, request operations.RemoveHrisDevice2Request, opts ...operations.Option) (*operations.RemoveHrisDevice2Response, error) {
+// RemoveHrisDevice - Remove a device
+func (s *Device) RemoveHrisDevice(ctx context.Context, request operations.RemoveHrisDeviceRequest, opts ...operations.Option) (*operations.RemoveHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Device) RemoveHrisDevice2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeHrisDevice2",
+		OperationID:      "removeHrisDevice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Device) RemoveHrisDevice2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveHrisDevice2Response{
+	res := &operations.RemoveHrisDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Device) RemoveHrisDevice2(ctx context.Context, request operations.Remov
 
 }
 
-// UpdateHrisDevice2 - Update a device
-func (s *Device) UpdateHrisDevice2(ctx context.Context, request operations.UpdateHrisDevice2Request, opts ...operations.Option) (*operations.UpdateHrisDevice2Response, error) {
+// UpdateHrisDevice - Update a device
+func (s *Device) UpdateHrisDevice(ctx context.Context, request operations.UpdateHrisDeviceRequest, opts ...operations.Option) (*operations.UpdateHrisDeviceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Device) UpdateHrisDevice2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateHrisDevice2",
+		OperationID:      "updateHrisDevice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "HrisDevice", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Device) UpdateHrisDevice2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateHrisDevice2Response{
+	res := &operations.UpdateHrisDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

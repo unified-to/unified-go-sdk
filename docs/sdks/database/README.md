@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateDatastoreDatabase2](#createdatastoredatabase2) - Create a database
-* [GetDatastoreDatabase2](#getdatastoredatabase2) - Retrieve a database
-* [ListDatastoreDatabases2](#listdatastoredatabases2) - List all databases
-* [PatchDatastoreDatabase2](#patchdatastoredatabase2) - Update a database
-* [RemoveDatastoreDatabase2](#removedatastoredatabase2) - Remove a database
-* [UpdateDatastoreDatabase2](#updatedatastoredatabase2) - Update a database
+* [CreateDatastoreDatabase](#createdatastoredatabase) - Create a database
+* [GetDatastoreDatabase](#getdatastoredatabase) - Retrieve a database
+* [ListDatastoreDatabases](#listdatastoredatabases) - List all databases
+* [PatchDatastoreDatabase](#patchdatastoredatabase) - Update a database
+* [RemoveDatastoreDatabase](#removedatastoredatabase) - Remove a database
+* [UpdateDatastoreDatabase](#updatedatastoredatabase) - Update a database
 
-## CreateDatastoreDatabase2
+## CreateDatastoreDatabase
 
 Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreDatabase2" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.CreateDatastoreDatabase2(ctx, operations.CreateDatastoreDatabase2Request{
+    res, err := s.Database.CreateDatastoreDatabase(ctx, operations.CreateDatastoreDatabaseRequest{
         DatastoreDatabase: shared.DatastoreDatabase{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.CreateDatastoreDatabase2Request](../../pkg/models/operations/createdatastoredatabase2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateDatastoreDatabaseRequest](../../pkg/models/operations/createdatastoredatabaserequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.CreateDatastoreDatabase2Response](../../pkg/models/operations/createdatastoredatabase2response.md), error**
+**[*operations.CreateDatastoreDatabaseResponse](../../pkg/models/operations/createdatastoredatabaseresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetDatastoreDatabase2
+## GetDatastoreDatabase
 
 Retrieve a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getDatastoreDatabase2" method="get" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="getDatastoreDatabase" method="get" path="/datastore/{connection_id}/database/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.GetDatastoreDatabase2(ctx, operations.GetDatastoreDatabase2Request{
+    res, err := s.Database.GetDatastoreDatabase(ctx, operations.GetDatastoreDatabaseRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetDatastoreDatabase2Request](../../pkg/models/operations/getdatastoredatabase2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetDatastoreDatabaseRequest](../../pkg/models/operations/getdatastoredatabaserequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.GetDatastoreDatabase2Response](../../pkg/models/operations/getdatastoredatabase2response.md), error**
+**[*operations.GetDatastoreDatabaseResponse](../../pkg/models/operations/getdatastoredatabaseresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListDatastoreDatabases2
+## ListDatastoreDatabases
 
 List all databases
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listDatastoreDatabases2" method="get" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="go" operationID="listDatastoreDatabases" method="get" path="/datastore/{connection_id}/database" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.ListDatastoreDatabases2(ctx, operations.ListDatastoreDatabases2Request{
+    res, err := s.Database.ListDatastoreDatabases(ctx, operations.ListDatastoreDatabasesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.ListDatastoreDatabases2Request](../../pkg/models/operations/listdatastoredatabases2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListDatastoreDatabasesRequest](../../pkg/models/operations/listdatastoredatabasesrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.ListDatastoreDatabases2Response](../../pkg/models/operations/listdatastoredatabases2response.md), error**
+**[*operations.ListDatastoreDatabasesResponse](../../pkg/models/operations/listdatastoredatabasesresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchDatastoreDatabase2
+## PatchDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchDatastoreDatabase2" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.PatchDatastoreDatabase2(ctx, operations.PatchDatastoreDatabase2Request{
+    res, err := s.Database.PatchDatastoreDatabase(ctx, operations.PatchDatastoreDatabaseRequest{
         DatastoreDatabase: shared.DatastoreDatabase{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchDatastoreDatabase2Request](../../pkg/models/operations/patchdatastoredatabase2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchDatastoreDatabaseRequest](../../pkg/models/operations/patchdatastoredatabaserequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.PatchDatastoreDatabase2Response](../../pkg/models/operations/patchdatastoredatabase2response.md), error**
+**[*operations.PatchDatastoreDatabaseResponse](../../pkg/models/operations/patchdatastoredatabaseresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveDatastoreDatabase2
+## RemoveDatastoreDatabase
 
 Remove a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeDatastoreDatabase2" method="delete" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeDatastoreDatabase" method="delete" path="/datastore/{connection_id}/database/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.RemoveDatastoreDatabase2(ctx, operations.RemoveDatastoreDatabase2Request{
+    res, err := s.Database.RemoveDatastoreDatabase(ctx, operations.RemoveDatastoreDatabaseRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.RemoveDatastoreDatabase2Request](../../pkg/models/operations/removedatastoredatabase2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveDatastoreDatabaseRequest](../../pkg/models/operations/removedatastoredatabaserequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.RemoveDatastoreDatabase2Response](../../pkg/models/operations/removedatastoredatabase2response.md), error**
+**[*operations.RemoveDatastoreDatabaseResponse](../../pkg/models/operations/removedatastoredatabaseresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateDatastoreDatabase2
+## UpdateDatastoreDatabase
 
 Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateDatastoreDatabase2" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Database.UpdateDatastoreDatabase2(ctx, operations.UpdateDatastoreDatabase2Request{
+    res, err := s.Database.UpdateDatastoreDatabase(ctx, operations.UpdateDatastoreDatabaseRequest{
         DatastoreDatabase: shared.DatastoreDatabase{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.UpdateDatastoreDatabase2Request](../../pkg/models/operations/updatedatastoredatabase2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateDatastoreDatabaseRequest](../../pkg/models/operations/updatedatastoredatabaserequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.UpdateDatastoreDatabase2Response](../../pkg/models/operations/updatedatastoredatabase2response.md), error**
+**[*operations.UpdateDatastoreDatabaseResponse](../../pkg/models/operations/updatedatastoredatabaseresponse.md), error**
 
 ### Errors
 

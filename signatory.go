@@ -30,8 +30,8 @@ func newSignatory(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateSigningSignatory2 - Create a signatory
-func (s *Signatory) CreateSigningSignatory2(ctx context.Context, request operations.CreateSigningSignatory2Request, opts ...operations.Option) (*operations.CreateSigningSignatory2Response, error) {
+// CreateSigningSignatory - Create a signatory
+func (s *Signatory) CreateSigningSignatory(ctx context.Context, request operations.CreateSigningSignatoryRequest, opts ...operations.Option) (*operations.CreateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Signatory) CreateSigningSignatory2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createSigningSignatory2",
+		OperationID:      "createSigningSignatory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "SigningSignatory", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Signatory) CreateSigningSignatory2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateSigningSignatory2Response{
+	res := &operations.CreateSigningSignatoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Signatory) CreateSigningSignatory2(ctx context.Context, request operati
 
 }
 
-// GetSigningSignatory2 - Retrieve a signatory
-func (s *Signatory) GetSigningSignatory2(ctx context.Context, request operations.GetSigningSignatory2Request, opts ...operations.Option) (*operations.GetSigningSignatory2Response, error) {
+// GetSigningSignatory - Retrieve a signatory
+func (s *Signatory) GetSigningSignatory(ctx context.Context, request operations.GetSigningSignatoryRequest, opts ...operations.Option) (*operations.GetSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Signatory) GetSigningSignatory2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getSigningSignatory2",
+		OperationID:      "getSigningSignatory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Signatory) GetSigningSignatory2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetSigningSignatory2Response{
+	res := &operations.GetSigningSignatoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Signatory) GetSigningSignatory2(ctx context.Context, request operations
 
 }
 
-// ListSigningSignatories2 - List all signatories
-func (s *Signatory) ListSigningSignatories2(ctx context.Context, request operations.ListSigningSignatories2Request, opts ...operations.Option) (*operations.ListSigningSignatories2Response, error) {
+// ListSigningSignatories - List all signatories
+func (s *Signatory) ListSigningSignatories(ctx context.Context, request operations.ListSigningSignatoriesRequest, opts ...operations.Option) (*operations.ListSigningSignatoriesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Signatory) ListSigningSignatories2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listSigningSignatories2",
+		OperationID:      "listSigningSignatories",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Signatory) ListSigningSignatories2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.ListSigningSignatories2Response{
+	res := &operations.ListSigningSignatoriesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Signatory) ListSigningSignatories2(ctx context.Context, request operati
 
 }
 
-// PatchSigningSignatory2 - Update a signatory
-func (s *Signatory) PatchSigningSignatory2(ctx context.Context, request operations.PatchSigningSignatory2Request, opts ...operations.Option) (*operations.PatchSigningSignatory2Response, error) {
+// PatchSigningSignatory - Update a signatory
+func (s *Signatory) PatchSigningSignatory(ctx context.Context, request operations.PatchSigningSignatoryRequest, opts ...operations.Option) (*operations.PatchSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Signatory) PatchSigningSignatory2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchSigningSignatory2",
+		OperationID:      "patchSigningSignatory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "SigningSignatory", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Signatory) PatchSigningSignatory2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchSigningSignatory2Response{
+	res := &operations.PatchSigningSignatoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Signatory) PatchSigningSignatory2(ctx context.Context, request operatio
 
 }
 
-// RemoveSigningSignatory2 - Remove a signatory
-func (s *Signatory) RemoveSigningSignatory2(ctx context.Context, request operations.RemoveSigningSignatory2Request, opts ...operations.Option) (*operations.RemoveSigningSignatory2Response, error) {
+// RemoveSigningSignatory - Remove a signatory
+func (s *Signatory) RemoveSigningSignatory(ctx context.Context, request operations.RemoveSigningSignatoryRequest, opts ...operations.Option) (*operations.RemoveSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Signatory) RemoveSigningSignatory2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeSigningSignatory2",
+		OperationID:      "removeSigningSignatory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Signatory) RemoveSigningSignatory2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveSigningSignatory2Response{
+	res := &operations.RemoveSigningSignatoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Signatory) RemoveSigningSignatory2(ctx context.Context, request operati
 
 }
 
-// UpdateSigningSignatory2 - Update a signatory
-func (s *Signatory) UpdateSigningSignatory2(ctx context.Context, request operations.UpdateSigningSignatory2Request, opts ...operations.Option) (*operations.UpdateSigningSignatory2Response, error) {
+// UpdateSigningSignatory - Update a signatory
+func (s *Signatory) UpdateSigningSignatory(ctx context.Context, request operations.UpdateSigningSignatoryRequest, opts ...operations.Option) (*operations.UpdateSigningSignatoryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Signatory) UpdateSigningSignatory2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateSigningSignatory2",
+		OperationID:      "updateSigningSignatory",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "SigningSignatory", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Signatory) UpdateSigningSignatory2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateSigningSignatory2Response{
+	res := &operations.UpdateSigningSignatoryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

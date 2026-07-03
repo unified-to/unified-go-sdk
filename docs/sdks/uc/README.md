@@ -4,34 +4,34 @@
 
 ### Available Operations
 
-* [CreateUcComment2](#createuccomment2) - Create a comment
-* [CreateUcContact2](#createuccontact2) - Create a contact
-* [CreateUcRecording2](#createucrecording2) - Create a recording
-* [GetUcCall2](#getuccall2) - Retrieve a call
-* [GetUcComment2](#getuccomment2) - Retrieve a comment
-* [GetUcContact2](#getuccontact2) - Retrieve a contact
-* [GetUcRecording2](#getucrecording2) - Retrieve a recording
-* [ListUcCalls2](#listuccalls2) - List all calls
-* [ListUcComments2](#listuccomments2) - List all comments
-* [ListUcContacts2](#listuccontacts2) - List all contacts
-* [ListUcRecordings2](#listucrecordings2) - List all recordings
-* [PatchUcComment2](#patchuccomment2) - Update a comment
-* [PatchUcContact2](#patchuccontact2) - Update a contact
-* [PatchUcRecording2](#patchucrecording2) - Update a recording
-* [RemoveUcComment2](#removeuccomment2) - Remove a comment
-* [RemoveUcContact2](#removeuccontact2) - Remove a contact
-* [RemoveUcRecording2](#removeucrecording2) - Remove a recording
-* [UpdateUcComment2](#updateuccomment2) - Update a comment
-* [UpdateUcContact2](#updateuccontact2) - Update a contact
-* [UpdateUcRecording2](#updateucrecording2) - Update a recording
+* [CreateUcComment](#createuccomment) - Create a comment
+* [CreateUcContact](#createuccontact) - Create a contact
+* [CreateUcRecording](#createucrecording) - Create a recording
+* [GetUcCall](#getuccall) - Retrieve a call
+* [GetUcComment](#getuccomment) - Retrieve a comment
+* [GetUcContact](#getuccontact) - Retrieve a contact
+* [GetUcRecording](#getucrecording) - Retrieve a recording
+* [ListUcCalls](#listuccalls) - List all calls
+* [ListUcComments](#listuccomments) - List all comments
+* [ListUcContacts](#listuccontacts) - List all contacts
+* [ListUcRecordings](#listucrecordings) - List all recordings
+* [PatchUcComment](#patchuccomment) - Update a comment
+* [PatchUcContact](#patchuccontact) - Update a contact
+* [PatchUcRecording](#patchucrecording) - Update a recording
+* [RemoveUcComment](#removeuccomment) - Remove a comment
+* [RemoveUcContact](#removeuccontact) - Remove a contact
+* [RemoveUcRecording](#removeucrecording) - Remove a recording
+* [UpdateUcComment](#updateuccomment) - Update a comment
+* [UpdateUcContact](#updateuccontact) - Update a contact
+* [UpdateUcRecording](#updateucrecording) - Update a recording
 
-## CreateUcComment2
+## CreateUcComment
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcComment2" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -50,7 +50,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.CreateUcComment2(ctx, operations.CreateUcComment2Request{
+    res, err := s.Uc.CreateUcComment(ctx, operations.CreateUcCommentRequest{
         UcComment: shared.UcComment{},
         ConnectionID: "<id>",
     })
@@ -65,15 +65,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.CreateUcComment2Request](../../pkg/models/operations/createuccomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateUcCommentRequest](../../pkg/models/operations/createuccommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.CreateUcComment2Response](../../pkg/models/operations/createuccomment2response.md), error**
+**[*operations.CreateUcCommentResponse](../../pkg/models/operations/createuccommentresponse.md), error**
 
 ### Errors
 
@@ -81,13 +81,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateUcContact2
+## CreateUcContact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="go" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -106,7 +106,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.CreateUcContact2(ctx, operations.CreateUcContact2Request{
+    res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
         UcContact: shared.UcContact{},
         ConnectionID: "<id>",
     })
@@ -121,15 +121,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.CreateUcContact2Request](../../pkg/models/operations/createuccontact2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateUcContactRequest](../../pkg/models/operations/createuccontactrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.CreateUcContact2Response](../../pkg/models/operations/createuccontact2response.md), error**
+**[*operations.CreateUcContactResponse](../../pkg/models/operations/createuccontactresponse.md), error**
 
 ### Errors
 
@@ -137,13 +137,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateUcRecording2
+## CreateUcRecording
 
 Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcRecording2" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -162,7 +162,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.CreateUcRecording2(ctx, operations.CreateUcRecording2Request{
+    res, err := s.Uc.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
         UcRecording: shared.UcRecording{},
         ConnectionID: "<id>",
     })
@@ -177,15 +177,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateUcRecording2Request](../../pkg/models/operations/createucrecording2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateUcRecordingRequest](../../pkg/models/operations/createucrecordingrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateUcRecording2Response](../../pkg/models/operations/createucrecording2response.md), error**
+**[*operations.CreateUcRecordingResponse](../../pkg/models/operations/createucrecordingresponse.md), error**
 
 ### Errors
 
@@ -193,13 +193,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetUcCall2
+## GetUcCall
 
 Retrieve a call
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getUcCall2" method="get" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="go" operationID="getUcCall" method="get" path="/uc/{connection_id}/call/{id}" -->
 ```go
 package main
 
@@ -217,7 +217,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.GetUcCall2(ctx, operations.GetUcCall2Request{
+    res, err := s.Uc.GetUcCall(ctx, operations.GetUcCallRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -232,15 +232,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [operations.GetUcCall2Request](../../pkg/models/operations/getuccall2request.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
+| `request`                                                                      | [operations.GetUcCallRequest](../../pkg/models/operations/getuccallrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `opts`                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                   | :heavy_minus_sign:                                                             | The options for this request.                                                  |
 
 ### Response
 
-**[*operations.GetUcCall2Response](../../pkg/models/operations/getuccall2response.md), error**
+**[*operations.GetUcCallResponse](../../pkg/models/operations/getuccallresponse.md), error**
 
 ### Errors
 
@@ -248,13 +248,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetUcComment2
+## GetUcComment
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getUcComment2" method="get" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -272,7 +272,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.GetUcComment2(ctx, operations.GetUcComment2Request{
+    res, err := s.Uc.GetUcComment(ctx, operations.GetUcCommentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -287,15 +287,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetUcComment2Request](../../pkg/models/operations/getuccomment2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetUcCommentRequest](../../pkg/models/operations/getuccommentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.GetUcComment2Response](../../pkg/models/operations/getuccomment2response.md), error**
+**[*operations.GetUcCommentResponse](../../pkg/models/operations/getuccommentresponse.md), error**
 
 ### Errors
 
@@ -303,13 +303,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetUcContact2
+## GetUcContact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -327,7 +327,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.GetUcContact2(ctx, operations.GetUcContact2Request{
+    res, err := s.Uc.GetUcContact(ctx, operations.GetUcContactRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -342,15 +342,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetUcContact2Request](../../pkg/models/operations/getuccontact2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetUcContactRequest](../../pkg/models/operations/getuccontactrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.GetUcContact2Response](../../pkg/models/operations/getuccontact2response.md), error**
+**[*operations.GetUcContactResponse](../../pkg/models/operations/getuccontactresponse.md), error**
 
 ### Errors
 
@@ -358,13 +358,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetUcRecording2
+## GetUcRecording
 
 Retrieve a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getUcRecording2" method="get" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="getUcRecording" method="get" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -382,7 +382,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.GetUcRecording2(ctx, operations.GetUcRecording2Request{
+    res, err := s.Uc.GetUcRecording(ctx, operations.GetUcRecordingRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -397,15 +397,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetUcRecording2Request](../../pkg/models/operations/getucrecording2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetUcRecordingRequest](../../pkg/models/operations/getucrecordingrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetUcRecording2Response](../../pkg/models/operations/getucrecording2response.md), error**
+**[*operations.GetUcRecordingResponse](../../pkg/models/operations/getucrecordingresponse.md), error**
 
 ### Errors
 
@@ -413,13 +413,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListUcCalls2
+## ListUcCalls
 
 List all calls
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listUcCalls2" method="get" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="go" operationID="listUcCalls" method="get" path="/uc/{connection_id}/call" -->
 ```go
 package main
 
@@ -437,7 +437,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.ListUcCalls2(ctx, operations.ListUcCalls2Request{
+    res, err := s.Uc.ListUcCalls(ctx, operations.ListUcCallsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -451,15 +451,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.ListUcCalls2Request](../../pkg/models/operations/listuccalls2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.ListUcCallsRequest](../../pkg/models/operations/listuccallsrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.ListUcCalls2Response](../../pkg/models/operations/listuccalls2response.md), error**
+**[*operations.ListUcCallsResponse](../../pkg/models/operations/listuccallsresponse.md), error**
 
 ### Errors
 
@@ -467,13 +467,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListUcComments2
+## ListUcComments
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listUcComments2" method="get" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
 ```go
 package main
 
@@ -491,7 +491,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.ListUcComments2(ctx, operations.ListUcComments2Request{
+    res, err := s.Uc.ListUcComments(ctx, operations.ListUcCommentsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -505,15 +505,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListUcComments2Request](../../pkg/models/operations/listuccomments2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListUcCommentsRequest](../../pkg/models/operations/listuccommentsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListUcComments2Response](../../pkg/models/operations/listuccomments2response.md), error**
+**[*operations.ListUcCommentsResponse](../../pkg/models/operations/listuccommentsresponse.md), error**
 
 ### Errors
 
@@ -521,13 +521,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListUcContacts2
+## ListUcContacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="go" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```go
 package main
 
@@ -545,7 +545,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.ListUcContacts2(ctx, operations.ListUcContacts2Request{
+    res, err := s.Uc.ListUcContacts(ctx, operations.ListUcContactsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -559,15 +559,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListUcContacts2Request](../../pkg/models/operations/listuccontacts2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListUcContactsRequest](../../pkg/models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListUcContacts2Response](../../pkg/models/operations/listuccontacts2response.md), error**
+**[*operations.ListUcContactsResponse](../../pkg/models/operations/listuccontactsresponse.md), error**
 
 ### Errors
 
@@ -575,13 +575,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListUcRecordings2
+## ListUcRecordings
 
 List all recordings
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listUcRecordings2" method="get" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="go" operationID="listUcRecordings" method="get" path="/uc/{connection_id}/recording" -->
 ```go
 package main
 
@@ -599,7 +599,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.ListUcRecordings2(ctx, operations.ListUcRecordings2Request{
+    res, err := s.Uc.ListUcRecordings(ctx, operations.ListUcRecordingsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -613,15 +613,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListUcRecordings2Request](../../pkg/models/operations/listucrecordings2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListUcRecordingsRequest](../../pkg/models/operations/listucrecordingsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListUcRecordings2Response](../../pkg/models/operations/listucrecordings2response.md), error**
+**[*operations.ListUcRecordingsResponse](../../pkg/models/operations/listucrecordingsresponse.md), error**
 
 ### Errors
 
@@ -629,13 +629,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchUcComment2
+## PatchUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcComment2" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -654,7 +654,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.PatchUcComment2(ctx, operations.PatchUcComment2Request{
+    res, err := s.Uc.PatchUcComment(ctx, operations.PatchUcCommentRequest{
         UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -670,15 +670,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.PatchUcComment2Request](../../pkg/models/operations/patchuccomment2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchUcCommentRequest](../../pkg/models/operations/patchuccommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.PatchUcComment2Response](../../pkg/models/operations/patchuccomment2response.md), error**
+**[*operations.PatchUcCommentResponse](../../pkg/models/operations/patchuccommentresponse.md), error**
 
 ### Errors
 
@@ -686,13 +686,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchUcContact2
+## PatchUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -711,7 +711,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.PatchUcContact2(ctx, operations.PatchUcContact2Request{
+    res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
         UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -727,15 +727,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.PatchUcContact2Request](../../pkg/models/operations/patchuccontact2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchUcContactRequest](../../pkg/models/operations/patchuccontactrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.PatchUcContact2Response](../../pkg/models/operations/patchuccontact2response.md), error**
+**[*operations.PatchUcContactResponse](../../pkg/models/operations/patchuccontactresponse.md), error**
 
 ### Errors
 
@@ -743,13 +743,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchUcRecording2
+## PatchUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcRecording2" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -768,7 +768,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.PatchUcRecording2(ctx, operations.PatchUcRecording2Request{
+    res, err := s.Uc.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
         UcRecording: shared.UcRecording{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -784,15 +784,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchUcRecording2Request](../../pkg/models/operations/patchucrecording2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchUcRecordingRequest](../../pkg/models/operations/patchucrecordingrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchUcRecording2Response](../../pkg/models/operations/patchucrecording2response.md), error**
+**[*operations.PatchUcRecordingResponse](../../pkg/models/operations/patchucrecordingresponse.md), error**
 
 ### Errors
 
@@ -800,13 +800,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveUcComment2
+## RemoveUcComment
 
 Remove a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeUcComment2" method="delete" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -824,7 +824,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.RemoveUcComment2(ctx, operations.RemoveUcComment2Request{
+    res, err := s.Uc.RemoveUcComment(ctx, operations.RemoveUcCommentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -839,15 +839,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.RemoveUcComment2Request](../../pkg/models/operations/removeuccomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveUcCommentRequest](../../pkg/models/operations/removeuccommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.RemoveUcComment2Response](../../pkg/models/operations/removeuccomment2response.md), error**
+**[*operations.RemoveUcCommentResponse](../../pkg/models/operations/removeuccommentresponse.md), error**
 
 ### Errors
 
@@ -855,13 +855,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveUcContact2
+## RemoveUcContact
 
 Remove a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -879,7 +879,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.RemoveUcContact2(ctx, operations.RemoveUcContact2Request{
+    res, err := s.Uc.RemoveUcContact(ctx, operations.RemoveUcContactRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -894,15 +894,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.RemoveUcContact2Request](../../pkg/models/operations/removeuccontact2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveUcContactRequest](../../pkg/models/operations/removeuccontactrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.RemoveUcContact2Response](../../pkg/models/operations/removeuccontact2response.md), error**
+**[*operations.RemoveUcContactResponse](../../pkg/models/operations/removeuccontactresponse.md), error**
 
 ### Errors
 
@@ -910,13 +910,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveUcRecording2
+## RemoveUcRecording
 
 Remove a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeUcRecording2" method="delete" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeUcRecording" method="delete" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -934,7 +934,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.RemoveUcRecording2(ctx, operations.RemoveUcRecording2Request{
+    res, err := s.Uc.RemoveUcRecording(ctx, operations.RemoveUcRecordingRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -949,15 +949,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveUcRecording2Request](../../pkg/models/operations/removeucrecording2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveUcRecordingRequest](../../pkg/models/operations/removeucrecordingrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.RemoveUcRecording2Response](../../pkg/models/operations/removeucrecording2response.md), error**
+**[*operations.RemoveUcRecordingResponse](../../pkg/models/operations/removeucrecordingresponse.md), error**
 
 ### Errors
 
@@ -965,13 +965,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateUcComment2
+## UpdateUcComment
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcComment2" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
 ```go
 package main
 
@@ -990,7 +990,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.UpdateUcComment2(ctx, operations.UpdateUcComment2Request{
+    res, err := s.Uc.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
         UcComment: shared.UcComment{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1006,15 +1006,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateUcComment2Request](../../pkg/models/operations/updateuccomment2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.UpdateUcCommentRequest](../../pkg/models/operations/updateuccommentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.UpdateUcComment2Response](../../pkg/models/operations/updateuccomment2response.md), error**
+**[*operations.UpdateUcCommentResponse](../../pkg/models/operations/updateuccommentresponse.md), error**
 
 ### Errors
 
@@ -1022,13 +1022,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateUcContact2
+## UpdateUcContact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```go
 package main
 
@@ -1047,7 +1047,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.UpdateUcContact2(ctx, operations.UpdateUcContact2Request{
+    res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
         UcContact: shared.UcContact{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1063,15 +1063,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateUcContact2Request](../../pkg/models/operations/updateuccontact2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.UpdateUcContactRequest](../../pkg/models/operations/updateuccontactrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.UpdateUcContact2Response](../../pkg/models/operations/updateuccontact2response.md), error**
+**[*operations.UpdateUcContactResponse](../../pkg/models/operations/updateuccontactresponse.md), error**
 
 ### Errors
 
@@ -1079,13 +1079,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateUcRecording2
+## UpdateUcRecording
 
 Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcRecording2" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
 ```go
 package main
 
@@ -1104,7 +1104,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Uc.UpdateUcRecording2(ctx, operations.UpdateUcRecording2Request{
+    res, err := s.Uc.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
         UcRecording: shared.UcRecording{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1120,15 +1120,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateUcRecording2Request](../../pkg/models/operations/updateucrecording2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateUcRecordingRequest](../../pkg/models/operations/updateucrecordingrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.UpdateUcRecording2Response](../../pkg/models/operations/updateucrecording2response.md), error**
+**[*operations.UpdateUcRecordingResponse](../../pkg/models/operations/updateucrecordingresponse.md), error**
 
 ### Errors
 

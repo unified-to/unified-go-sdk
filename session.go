@@ -30,8 +30,8 @@ func newSession(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// GetAnalyticsSession2 - Retrieve a session
-func (s *Session) GetAnalyticsSession2(ctx context.Context, request operations.GetAnalyticsSession2Request, opts ...operations.Option) (*operations.GetAnalyticsSession2Response, error) {
+// GetAnalyticsSession - Retrieve a session
+func (s *Session) GetAnalyticsSession(ctx context.Context, request operations.GetAnalyticsSessionRequest, opts ...operations.Option) (*operations.GetAnalyticsSessionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Session) GetAnalyticsSession2(ctx context.Context, request operations.G
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAnalyticsSession2",
+		OperationID:      "getAnalyticsSession",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Session) GetAnalyticsSession2(ctx context.Context, request operations.G
 		}
 	}
 
-	res := &operations.GetAnalyticsSession2Response{
+	res := &operations.GetAnalyticsSessionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Session) GetAnalyticsSession2(ctx context.Context, request operations.G
 
 }
 
-// ListAnalyticsSessions2 - List all sessions
-func (s *Session) ListAnalyticsSessions2(ctx context.Context, request operations.ListAnalyticsSessions2Request, opts ...operations.Option) (*operations.ListAnalyticsSessions2Response, error) {
+// ListAnalyticsSessions - List all sessions
+func (s *Session) ListAnalyticsSessions(ctx context.Context, request operations.ListAnalyticsSessionsRequest, opts ...operations.Option) (*operations.ListAnalyticsSessionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Session) ListAnalyticsSessions2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAnalyticsSessions2",
+		OperationID:      "listAnalyticsSessions",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Session) ListAnalyticsSessions2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.ListAnalyticsSessions2Response{
+	res := &operations.ListAnalyticsSessionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

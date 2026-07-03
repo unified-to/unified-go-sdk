@@ -30,8 +30,8 @@ func newMessaging(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *
 	}
 }
 
-// CreateMessagingMessage2 - Create a message
-func (s *Messaging) CreateMessagingMessage2(ctx context.Context, request operations.CreateMessagingMessage2Request, opts ...operations.Option) (*operations.CreateMessagingMessage2Response, error) {
+// CreateMessagingMessage - Create a message
+func (s *Messaging) CreateMessagingMessage(ctx context.Context, request operations.CreateMessagingMessageRequest, opts ...operations.Option) (*operations.CreateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Messaging) CreateMessagingMessage2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createMessagingMessage2",
+		OperationID:      "createMessagingMessage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MessagingMessage", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Messaging) CreateMessagingMessage2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreateMessagingMessage2Response{
+	res := &operations.CreateMessagingMessageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Messaging) CreateMessagingMessage2(ctx context.Context, request operati
 
 }
 
-// GetMessagingChannel2 - Retrieve a channel
-func (s *Messaging) GetMessagingChannel2(ctx context.Context, request operations.GetMessagingChannel2Request, opts ...operations.Option) (*operations.GetMessagingChannel2Response, error) {
+// GetMessagingChannel - Retrieve a channel
+func (s *Messaging) GetMessagingChannel(ctx context.Context, request operations.GetMessagingChannelRequest, opts ...operations.Option) (*operations.GetMessagingChannelResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Messaging) GetMessagingChannel2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMessagingChannel2",
+		OperationID:      "getMessagingChannel",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Messaging) GetMessagingChannel2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetMessagingChannel2Response{
+	res := &operations.GetMessagingChannelResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Messaging) GetMessagingChannel2(ctx context.Context, request operations
 
 }
 
-// GetMessagingMessage2 - Retrieve a message
-func (s *Messaging) GetMessagingMessage2(ctx context.Context, request operations.GetMessagingMessage2Request, opts ...operations.Option) (*operations.GetMessagingMessage2Response, error) {
+// GetMessagingMessage - Retrieve a message
+func (s *Messaging) GetMessagingMessage(ctx context.Context, request operations.GetMessagingMessageRequest, opts ...operations.Option) (*operations.GetMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Messaging) GetMessagingMessage2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getMessagingMessage2",
+		OperationID:      "getMessagingMessage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Messaging) GetMessagingMessage2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.GetMessagingMessage2Response{
+	res := &operations.GetMessagingMessageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Messaging) GetMessagingMessage2(ctx context.Context, request operations
 
 }
 
-// ListMessagingChannels2 - List all channels
-func (s *Messaging) ListMessagingChannels2(ctx context.Context, request operations.ListMessagingChannels2Request, opts ...operations.Option) (*operations.ListMessagingChannels2Response, error) {
+// ListMessagingChannels - List all channels
+func (s *Messaging) ListMessagingChannels(ctx context.Context, request operations.ListMessagingChannelsRequest, opts ...operations.Option) (*operations.ListMessagingChannelsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Messaging) ListMessagingChannels2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMessagingChannels2",
+		OperationID:      "listMessagingChannels",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -813,7 +813,7 @@ func (s *Messaging) ListMessagingChannels2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListMessagingChannels2Response{
+	res := &operations.ListMessagingChannelsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -865,8 +865,8 @@ func (s *Messaging) ListMessagingChannels2(ctx context.Context, request operatio
 
 }
 
-// ListMessagingMessages2 - List all messages
-func (s *Messaging) ListMessagingMessages2(ctx context.Context, request operations.ListMessagingMessages2Request, opts ...operations.Option) (*operations.ListMessagingMessages2Response, error) {
+// ListMessagingMessages - List all messages
+func (s *Messaging) ListMessagingMessages(ctx context.Context, request operations.ListMessagingMessagesRequest, opts ...operations.Option) (*operations.ListMessagingMessagesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -895,7 +895,7 @@ func (s *Messaging) ListMessagingMessages2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listMessagingMessages2",
+		OperationID:      "listMessagingMessages",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1020,7 +1020,7 @@ func (s *Messaging) ListMessagingMessages2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.ListMessagingMessages2Response{
+	res := &operations.ListMessagingMessagesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1072,8 +1072,8 @@ func (s *Messaging) ListMessagingMessages2(ctx context.Context, request operatio
 
 }
 
-// PatchMessagingEvent2 - Update an event
-func (s *Messaging) PatchMessagingEvent2(ctx context.Context, request operations.PatchMessagingEvent2Request, opts ...operations.Option) (*operations.PatchMessagingEvent2Response, error) {
+// PatchMessagingEvent - Update an event
+func (s *Messaging) PatchMessagingEvent(ctx context.Context, request operations.PatchMessagingEventRequest, opts ...operations.Option) (*operations.PatchMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1102,7 +1102,7 @@ func (s *Messaging) PatchMessagingEvent2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchMessagingEvent2",
+		OperationID:      "patchMessagingEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MessagingEvent", "json", `request:"mediaType=application/json"`)
@@ -1234,7 +1234,7 @@ func (s *Messaging) PatchMessagingEvent2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.PatchMessagingEvent2Response{
+	res := &operations.PatchMessagingEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1286,8 +1286,8 @@ func (s *Messaging) PatchMessagingEvent2(ctx context.Context, request operations
 
 }
 
-// PatchMessagingMessage2 - Update a message
-func (s *Messaging) PatchMessagingMessage2(ctx context.Context, request operations.PatchMessagingMessage2Request, opts ...operations.Option) (*operations.PatchMessagingMessage2Response, error) {
+// PatchMessagingMessage - Update a message
+func (s *Messaging) PatchMessagingMessage(ctx context.Context, request operations.PatchMessagingMessageRequest, opts ...operations.Option) (*operations.PatchMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1316,7 +1316,7 @@ func (s *Messaging) PatchMessagingMessage2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchMessagingMessage2",
+		OperationID:      "patchMessagingMessage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MessagingMessage", "json", `request:"mediaType=application/json"`)
@@ -1448,7 +1448,7 @@ func (s *Messaging) PatchMessagingMessage2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchMessagingMessage2Response{
+	res := &operations.PatchMessagingMessageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1500,8 +1500,8 @@ func (s *Messaging) PatchMessagingMessage2(ctx context.Context, request operatio
 
 }
 
-// RemoveMessagingMessage2 - Remove a message
-func (s *Messaging) RemoveMessagingMessage2(ctx context.Context, request operations.RemoveMessagingMessage2Request, opts ...operations.Option) (*operations.RemoveMessagingMessage2Response, error) {
+// RemoveMessagingMessage - Remove a message
+func (s *Messaging) RemoveMessagingMessage(ctx context.Context, request operations.RemoveMessagingMessageRequest, opts ...operations.Option) (*operations.RemoveMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1530,7 +1530,7 @@ func (s *Messaging) RemoveMessagingMessage2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeMessagingMessage2",
+		OperationID:      "removeMessagingMessage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1651,7 +1651,7 @@ func (s *Messaging) RemoveMessagingMessage2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.RemoveMessagingMessage2Response{
+	res := &operations.RemoveMessagingMessageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1682,8 +1682,8 @@ func (s *Messaging) RemoveMessagingMessage2(ctx context.Context, request operati
 
 }
 
-// UpdateMessagingEvent2 - Update an event
-func (s *Messaging) UpdateMessagingEvent2(ctx context.Context, request operations.UpdateMessagingEvent2Request, opts ...operations.Option) (*operations.UpdateMessagingEvent2Response, error) {
+// UpdateMessagingEvent - Update an event
+func (s *Messaging) UpdateMessagingEvent(ctx context.Context, request operations.UpdateMessagingEventRequest, opts ...operations.Option) (*operations.UpdateMessagingEventResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1712,7 +1712,7 @@ func (s *Messaging) UpdateMessagingEvent2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateMessagingEvent2",
+		OperationID:      "updateMessagingEvent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MessagingEvent", "json", `request:"mediaType=application/json"`)
@@ -1844,7 +1844,7 @@ func (s *Messaging) UpdateMessagingEvent2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.UpdateMessagingEvent2Response{
+	res := &operations.UpdateMessagingEventResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1896,8 +1896,8 @@ func (s *Messaging) UpdateMessagingEvent2(ctx context.Context, request operation
 
 }
 
-// UpdateMessagingMessage2 - Update a message
-func (s *Messaging) UpdateMessagingMessage2(ctx context.Context, request operations.UpdateMessagingMessage2Request, opts ...operations.Option) (*operations.UpdateMessagingMessage2Response, error) {
+// UpdateMessagingMessage - Update a message
+func (s *Messaging) UpdateMessagingMessage(ctx context.Context, request operations.UpdateMessagingMessageRequest, opts ...operations.Option) (*operations.UpdateMessagingMessageResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1926,7 +1926,7 @@ func (s *Messaging) UpdateMessagingMessage2(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateMessagingMessage2",
+		OperationID:      "updateMessagingMessage",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "MessagingMessage", "json", `request:"mediaType=application/json"`)
@@ -2058,7 +2058,7 @@ func (s *Messaging) UpdateMessagingMessage2(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdateMessagingMessage2Response{
+	res := &operations.UpdateMessagingMessageResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

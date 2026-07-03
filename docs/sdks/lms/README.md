@@ -4,56 +4,56 @@
 
 ### Available Operations
 
-* [CreateLmsActivity2](#createlmsactivity2) - Create an activity
-* [CreateLmsClass2](#createlmsclass2) - Create a class
-* [CreateLmsCollection2](#createlmscollection2) - Create a collection
-* [CreateLmsContent2](#createlmscontent2) - Create a content
-* [CreateLmsCourse2](#createlmscourse2) - Create a course
-* [CreateLmsInstructor2](#createlmsinstructor2) - Create an instructor
-* [CreateLmsStudent2](#createlmsstudent2) - Create a student
-* [GetLmsActivity2](#getlmsactivity2) - Retrieve an activity
-* [GetLmsClass2](#getlmsclass2) - Retrieve a class
-* [GetLmsCollection2](#getlmscollection2) - Retrieve a collection
-* [GetLmsContent2](#getlmscontent2) - Retrieve a content
-* [GetLmsCourse2](#getlmscourse2) - Retrieve a course
-* [GetLmsInstructor2](#getlmsinstructor2) - Retrieve an instructor
-* [GetLmsStudent2](#getlmsstudent2) - Retrieve a student
-* [ListLmsActivities2](#listlmsactivities2) - List all activities
-* [ListLmsClasses2](#listlmsclasses2) - List all classes
-* [ListLmsCollections2](#listlmscollections2) - List all collections
-* [ListLmsContents2](#listlmscontents2) - List all contents
-* [ListLmsCourses2](#listlmscourses2) - List all courses
-* [ListLmsInstructors2](#listlmsinstructors2) - List all instructors
-* [ListLmsStudents2](#listlmsstudents2) - List all students
-* [PatchLmsActivity2](#patchlmsactivity2) - Update an activity
-* [PatchLmsClass2](#patchlmsclass2) - Update a class
-* [PatchLmsCollection2](#patchlmscollection2) - Update a collection
-* [PatchLmsContent2](#patchlmscontent2) - Update a content
-* [PatchLmsCourse2](#patchlmscourse2) - Update a course
-* [PatchLmsInstructor2](#patchlmsinstructor2) - Update an instructor
-* [PatchLmsStudent2](#patchlmsstudent2) - Update a student
-* [RemoveLmsActivity2](#removelmsactivity2) - Remove an activity
-* [RemoveLmsClass2](#removelmsclass2) - Remove a class
-* [RemoveLmsCollection2](#removelmscollection2) - Remove a collection
-* [RemoveLmsContent2](#removelmscontent2) - Remove a content
-* [RemoveLmsCourse2](#removelmscourse2) - Remove a course
-* [RemoveLmsInstructor2](#removelmsinstructor2) - Remove an instructor
-* [RemoveLmsStudent2](#removelmsstudent2) - Remove a student
-* [UpdateLmsActivity2](#updatelmsactivity2) - Update an activity
-* [UpdateLmsClass2](#updatelmsclass2) - Update a class
-* [UpdateLmsCollection2](#updatelmscollection2) - Update a collection
-* [UpdateLmsContent2](#updatelmscontent2) - Update a content
-* [UpdateLmsCourse2](#updatelmscourse2) - Update a course
-* [UpdateLmsInstructor2](#updatelmsinstructor2) - Update an instructor
-* [UpdateLmsStudent2](#updatelmsstudent2) - Update a student
+* [CreateLmsActivity](#createlmsactivity) - Create an activity
+* [CreateLmsClass](#createlmsclass) - Create a class
+* [CreateLmsCollection](#createlmscollection) - Create a collection
+* [CreateLmsContent](#createlmscontent) - Create a content
+* [CreateLmsCourse](#createlmscourse) - Create a course
+* [CreateLmsInstructor](#createlmsinstructor) - Create an instructor
+* [CreateLmsStudent](#createlmsstudent) - Create a student
+* [GetLmsActivity](#getlmsactivity) - Retrieve an activity
+* [GetLmsClass](#getlmsclass) - Retrieve a class
+* [GetLmsCollection](#getlmscollection) - Retrieve a collection
+* [GetLmsContent](#getlmscontent) - Retrieve a content
+* [GetLmsCourse](#getlmscourse) - Retrieve a course
+* [GetLmsInstructor](#getlmsinstructor) - Retrieve an instructor
+* [GetLmsStudent](#getlmsstudent) - Retrieve a student
+* [ListLmsActivities](#listlmsactivities) - List all activities
+* [ListLmsClasses](#listlmsclasses) - List all classes
+* [ListLmsCollections](#listlmscollections) - List all collections
+* [ListLmsContents](#listlmscontents) - List all contents
+* [ListLmsCourses](#listlmscourses) - List all courses
+* [ListLmsInstructors](#listlmsinstructors) - List all instructors
+* [ListLmsStudents](#listlmsstudents) - List all students
+* [PatchLmsActivity](#patchlmsactivity) - Update an activity
+* [PatchLmsClass](#patchlmsclass) - Update a class
+* [PatchLmsCollection](#patchlmscollection) - Update a collection
+* [PatchLmsContent](#patchlmscontent) - Update a content
+* [PatchLmsCourse](#patchlmscourse) - Update a course
+* [PatchLmsInstructor](#patchlmsinstructor) - Update an instructor
+* [PatchLmsStudent](#patchlmsstudent) - Update a student
+* [RemoveLmsActivity](#removelmsactivity) - Remove an activity
+* [RemoveLmsClass](#removelmsclass) - Remove a class
+* [RemoveLmsCollection](#removelmscollection) - Remove a collection
+* [RemoveLmsContent](#removelmscontent) - Remove a content
+* [RemoveLmsCourse](#removelmscourse) - Remove a course
+* [RemoveLmsInstructor](#removelmsinstructor) - Remove an instructor
+* [RemoveLmsStudent](#removelmsstudent) - Remove a student
+* [UpdateLmsActivity](#updatelmsactivity) - Update an activity
+* [UpdateLmsClass](#updatelmsclass) - Update a class
+* [UpdateLmsCollection](#updatelmscollection) - Update a collection
+* [UpdateLmsContent](#updatelmscontent) - Update a content
+* [UpdateLmsCourse](#updatelmscourse) - Update a course
+* [UpdateLmsInstructor](#updatelmsinstructor) - Update an instructor
+* [UpdateLmsStudent](#updatelmsstudent) - Update a student
 
-## CreateLmsActivity2
+## CreateLmsActivity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsActivity2" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="go" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
 ```go
 package main
 
@@ -72,7 +72,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsActivity2(ctx, operations.CreateLmsActivity2Request{
+    res, err := s.Lms.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{},
         ConnectionID: "<id>",
     })
@@ -87,15 +87,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateLmsActivity2Request](../../pkg/models/operations/createlmsactivity2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateLmsActivityRequest](../../pkg/models/operations/createlmsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateLmsActivity2Response](../../pkg/models/operations/createlmsactivity2response.md), error**
+**[*operations.CreateLmsActivityResponse](../../pkg/models/operations/createlmsactivityresponse.md), error**
 
 ### Errors
 
@@ -103,13 +103,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsClass2
+## CreateLmsClass
 
 Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsClass2" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="go" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -128,7 +128,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsClass2(ctx, operations.CreateLmsClass2Request{
+    res, err := s.Lms.CreateLmsClass(ctx, operations.CreateLmsClassRequest{
         LmsClass: shared.LmsClass{},
         ConnectionID: "<id>",
     })
@@ -143,15 +143,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.CreateLmsClass2Request](../../pkg/models/operations/createlmsclass2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateLmsClassRequest](../../pkg/models/operations/createlmsclassrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.CreateLmsClass2Response](../../pkg/models/operations/createlmsclass2response.md), error**
+**[*operations.CreateLmsClassResponse](../../pkg/models/operations/createlmsclassresponse.md), error**
 
 ### Errors
 
@@ -159,13 +159,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsCollection2
+## CreateLmsCollection
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsCollection2" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="go" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
 ```go
 package main
 
@@ -184,7 +184,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsCollection2(ctx, operations.CreateLmsCollection2Request{
+    res, err := s.Lms.CreateLmsCollection(ctx, operations.CreateLmsCollectionRequest{
         LmsCollection: shared.LmsCollection{},
         ConnectionID: "<id>",
     })
@@ -199,15 +199,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.CreateLmsCollection2Request](../../pkg/models/operations/createlmscollection2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateLmsCollectionRequest](../../pkg/models/operations/createlmscollectionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.CreateLmsCollection2Response](../../pkg/models/operations/createlmscollection2response.md), error**
+**[*operations.CreateLmsCollectionResponse](../../pkg/models/operations/createlmscollectionresponse.md), error**
 
 ### Errors
 
@@ -215,13 +215,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsContent2
+## CreateLmsContent
 
 Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsContent2" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="go" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
 ```go
 package main
 
@@ -240,7 +240,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsContent2(ctx, operations.CreateLmsContent2Request{
+    res, err := s.Lms.CreateLmsContent(ctx, operations.CreateLmsContentRequest{
         LmsContent: shared.LmsContent{},
         ConnectionID: "<id>",
     })
@@ -255,15 +255,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.CreateLmsContent2Request](../../pkg/models/operations/createlmscontent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.CreateLmsContentRequest](../../pkg/models/operations/createlmscontentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.CreateLmsContent2Response](../../pkg/models/operations/createlmscontent2response.md), error**
+**[*operations.CreateLmsContentResponse](../../pkg/models/operations/createlmscontentresponse.md), error**
 
 ### Errors
 
@@ -271,13 +271,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsCourse2
+## CreateLmsCourse
 
 Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsCourse2" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="go" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -296,7 +296,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsCourse2(ctx, operations.CreateLmsCourse2Request{
+    res, err := s.Lms.CreateLmsCourse(ctx, operations.CreateLmsCourseRequest{
         LmsCourse: shared.LmsCourse{},
         ConnectionID: "<id>",
     })
@@ -311,15 +311,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.CreateLmsCourse2Request](../../pkg/models/operations/createlmscourse2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateLmsCourseRequest](../../pkg/models/operations/createlmscourserequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.CreateLmsCourse2Response](../../pkg/models/operations/createlmscourse2response.md), error**
+**[*operations.CreateLmsCourseResponse](../../pkg/models/operations/createlmscourseresponse.md), error**
 
 ### Errors
 
@@ -327,13 +327,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsInstructor2
+## CreateLmsInstructor
 
 Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsInstructor2" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="go" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -352,7 +352,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsInstructor2(ctx, operations.CreateLmsInstructor2Request{
+    res, err := s.Lms.CreateLmsInstructor(ctx, operations.CreateLmsInstructorRequest{
         LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
     })
@@ -367,15 +367,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.CreateLmsInstructor2Request](../../pkg/models/operations/createlmsinstructor2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.CreateLmsInstructorRequest](../../pkg/models/operations/createlmsinstructorrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.CreateLmsInstructor2Response](../../pkg/models/operations/createlmsinstructor2response.md), error**
+**[*operations.CreateLmsInstructorResponse](../../pkg/models/operations/createlmsinstructorresponse.md), error**
 
 ### Errors
 
@@ -383,13 +383,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateLmsStudent2
+## CreateLmsStudent
 
 Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsStudent2" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="go" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -408,7 +408,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.CreateLmsStudent2(ctx, operations.CreateLmsStudent2Request{
+    res, err := s.Lms.CreateLmsStudent(ctx, operations.CreateLmsStudentRequest{
         LmsStudent: shared.LmsStudent{},
         ConnectionID: "<id>",
     })
@@ -423,15 +423,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.CreateLmsStudent2Request](../../pkg/models/operations/createlmsstudent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.CreateLmsStudentRequest](../../pkg/models/operations/createlmsstudentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.CreateLmsStudent2Response](../../pkg/models/operations/createlmsstudent2response.md), error**
+**[*operations.CreateLmsStudentResponse](../../pkg/models/operations/createlmsstudentresponse.md), error**
 
 ### Errors
 
@@ -439,13 +439,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsActivity2
+## GetLmsActivity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsActivity2" method="get" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -463,7 +463,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsActivity2(ctx, operations.GetLmsActivity2Request{
+    res, err := s.Lms.GetLmsActivity(ctx, operations.GetLmsActivityRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -478,15 +478,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetLmsActivity2Request](../../pkg/models/operations/getlmsactivity2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetLmsActivityRequest](../../pkg/models/operations/getlmsactivityrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetLmsActivity2Response](../../pkg/models/operations/getlmsactivity2response.md), error**
+**[*operations.GetLmsActivityResponse](../../pkg/models/operations/getlmsactivityresponse.md), error**
 
 ### Errors
 
@@ -494,13 +494,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsClass2
+## GetLmsClass
 
 Retrieve a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsClass2" method="get" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsClass" method="get" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -518,7 +518,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsClass2(ctx, operations.GetLmsClass2Request{
+    res, err := s.Lms.GetLmsClass(ctx, operations.GetLmsClassRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -533,15 +533,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetLmsClass2Request](../../pkg/models/operations/getlmsclass2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetLmsClassRequest](../../pkg/models/operations/getlmsclassrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.GetLmsClass2Response](../../pkg/models/operations/getlmsclass2response.md), error**
+**[*operations.GetLmsClassResponse](../../pkg/models/operations/getlmsclassresponse.md), error**
 
 ### Errors
 
@@ -549,13 +549,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsCollection2
+## GetLmsCollection
 
 Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsCollection2" method="get" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsCollection" method="get" path="/lms/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -573,7 +573,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsCollection2(ctx, operations.GetLmsCollection2Request{
+    res, err := s.Lms.GetLmsCollection(ctx, operations.GetLmsCollectionRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -588,15 +588,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetLmsCollection2Request](../../pkg/models/operations/getlmscollection2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetLmsCollectionRequest](../../pkg/models/operations/getlmscollectionrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.GetLmsCollection2Response](../../pkg/models/operations/getlmscollection2response.md), error**
+**[*operations.GetLmsCollectionResponse](../../pkg/models/operations/getlmscollectionresponse.md), error**
 
 ### Errors
 
@@ -604,13 +604,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsContent2
+## GetLmsContent
 
 Retrieve a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsContent2" method="get" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsContent" method="get" path="/lms/{connection_id}/content/{id}" -->
 ```go
 package main
 
@@ -628,7 +628,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsContent2(ctx, operations.GetLmsContent2Request{
+    res, err := s.Lms.GetLmsContent(ctx, operations.GetLmsContentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -643,15 +643,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetLmsContent2Request](../../pkg/models/operations/getlmscontent2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetLmsContentRequest](../../pkg/models/operations/getlmscontentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.GetLmsContent2Response](../../pkg/models/operations/getlmscontent2response.md), error**
+**[*operations.GetLmsContentResponse](../../pkg/models/operations/getlmscontentresponse.md), error**
 
 ### Errors
 
@@ -659,13 +659,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsCourse2
+## GetLmsCourse
 
 Retrieve a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsCourse2" method="get" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsCourse" method="get" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -683,7 +683,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsCourse2(ctx, operations.GetLmsCourse2Request{
+    res, err := s.Lms.GetLmsCourse(ctx, operations.GetLmsCourseRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -698,15 +698,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetLmsCourse2Request](../../pkg/models/operations/getlmscourse2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetLmsCourseRequest](../../pkg/models/operations/getlmscourserequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.GetLmsCourse2Response](../../pkg/models/operations/getlmscourse2response.md), error**
+**[*operations.GetLmsCourseResponse](../../pkg/models/operations/getlmscourseresponse.md), error**
 
 ### Errors
 
@@ -714,13 +714,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsInstructor2
+## GetLmsInstructor
 
 Retrieve an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsInstructor2" method="get" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsInstructor" method="get" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -738,7 +738,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsInstructor2(ctx, operations.GetLmsInstructor2Request{
+    res, err := s.Lms.GetLmsInstructor(ctx, operations.GetLmsInstructorRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -753,15 +753,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.GetLmsInstructor2Request](../../pkg/models/operations/getlmsinstructor2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetLmsInstructorRequest](../../pkg/models/operations/getlmsinstructorrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.GetLmsInstructor2Response](../../pkg/models/operations/getlmsinstructor2response.md), error**
+**[*operations.GetLmsInstructorResponse](../../pkg/models/operations/getlmsinstructorresponse.md), error**
 
 ### Errors
 
@@ -769,13 +769,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetLmsStudent2
+## GetLmsStudent
 
 Retrieve a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getLmsStudent2" method="get" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="go" operationID="getLmsStudent" method="get" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -793,7 +793,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.GetLmsStudent2(ctx, operations.GetLmsStudent2Request{
+    res, err := s.Lms.GetLmsStudent(ctx, operations.GetLmsStudentRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -808,15 +808,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.GetLmsStudent2Request](../../pkg/models/operations/getlmsstudent2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.GetLmsStudentRequest](../../pkg/models/operations/getlmsstudentrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.GetLmsStudent2Response](../../pkg/models/operations/getlmsstudent2response.md), error**
+**[*operations.GetLmsStudentResponse](../../pkg/models/operations/getlmsstudentresponse.md), error**
 
 ### Errors
 
@@ -824,13 +824,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsActivities2
+## ListLmsActivities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsActivities2" method="get" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="go" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
 ```go
 package main
 
@@ -848,7 +848,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsActivities2(ctx, operations.ListLmsActivities2Request{
+    res, err := s.Lms.ListLmsActivities(ctx, operations.ListLmsActivitiesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -862,15 +862,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.ListLmsActivities2Request](../../pkg/models/operations/listlmsactivities2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListLmsActivitiesRequest](../../pkg/models/operations/listlmsactivitiesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.ListLmsActivities2Response](../../pkg/models/operations/listlmsactivities2response.md), error**
+**[*operations.ListLmsActivitiesResponse](../../pkg/models/operations/listlmsactivitiesresponse.md), error**
 
 ### Errors
 
@@ -878,13 +878,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsClasses2
+## ListLmsClasses
 
 List all classes
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsClasses2" method="get" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="go" operationID="listLmsClasses" method="get" path="/lms/{connection_id}/class" -->
 ```go
 package main
 
@@ -902,7 +902,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsClasses2(ctx, operations.ListLmsClasses2Request{
+    res, err := s.Lms.ListLmsClasses(ctx, operations.ListLmsClassesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -916,15 +916,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListLmsClasses2Request](../../pkg/models/operations/listlmsclasses2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListLmsClassesRequest](../../pkg/models/operations/listlmsclassesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListLmsClasses2Response](../../pkg/models/operations/listlmsclasses2response.md), error**
+**[*operations.ListLmsClassesResponse](../../pkg/models/operations/listlmsclassesresponse.md), error**
 
 ### Errors
 
@@ -932,13 +932,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsCollections2
+## ListLmsCollections
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsCollections2" method="get" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="go" operationID="listLmsCollections" method="get" path="/lms/{connection_id}/collection" -->
 ```go
 package main
 
@@ -956,7 +956,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsCollections2(ctx, operations.ListLmsCollections2Request{
+    res, err := s.Lms.ListLmsCollections(ctx, operations.ListLmsCollectionsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -970,15 +970,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListLmsCollections2Request](../../pkg/models/operations/listlmscollections2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListLmsCollectionsRequest](../../pkg/models/operations/listlmscollectionsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListLmsCollections2Response](../../pkg/models/operations/listlmscollections2response.md), error**
+**[*operations.ListLmsCollectionsResponse](../../pkg/models/operations/listlmscollectionsresponse.md), error**
 
 ### Errors
 
@@ -986,13 +986,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsContents2
+## ListLmsContents
 
 List all contents
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsContents2" method="get" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="go" operationID="listLmsContents" method="get" path="/lms/{connection_id}/content" -->
 ```go
 package main
 
@@ -1010,7 +1010,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsContents2(ctx, operations.ListLmsContents2Request{
+    res, err := s.Lms.ListLmsContents(ctx, operations.ListLmsContentsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1024,15 +1024,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListLmsContents2Request](../../pkg/models/operations/listlmscontents2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListLmsContentsRequest](../../pkg/models/operations/listlmscontentsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.ListLmsContents2Response](../../pkg/models/operations/listlmscontents2response.md), error**
+**[*operations.ListLmsContentsResponse](../../pkg/models/operations/listlmscontentsresponse.md), error**
 
 ### Errors
 
@@ -1040,13 +1040,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsCourses2
+## ListLmsCourses
 
 List all courses
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsCourses2" method="get" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="go" operationID="listLmsCourses" method="get" path="/lms/{connection_id}/course" -->
 ```go
 package main
 
@@ -1064,7 +1064,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsCourses2(ctx, operations.ListLmsCourses2Request{
+    res, err := s.Lms.ListLmsCourses(ctx, operations.ListLmsCoursesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1078,15 +1078,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListLmsCourses2Request](../../pkg/models/operations/listlmscourses2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListLmsCoursesRequest](../../pkg/models/operations/listlmscoursesrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListLmsCourses2Response](../../pkg/models/operations/listlmscourses2response.md), error**
+**[*operations.ListLmsCoursesResponse](../../pkg/models/operations/listlmscoursesresponse.md), error**
 
 ### Errors
 
@@ -1094,13 +1094,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsInstructors2
+## ListLmsInstructors
 
 List all instructors
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsInstructors2" method="get" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="go" operationID="listLmsInstructors" method="get" path="/lms/{connection_id}/instructor" -->
 ```go
 package main
 
@@ -1118,7 +1118,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsInstructors2(ctx, operations.ListLmsInstructors2Request{
+    res, err := s.Lms.ListLmsInstructors(ctx, operations.ListLmsInstructorsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1132,15 +1132,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.ListLmsInstructors2Request](../../pkg/models/operations/listlmsinstructors2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListLmsInstructorsRequest](../../pkg/models/operations/listlmsinstructorsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.ListLmsInstructors2Response](../../pkg/models/operations/listlmsinstructors2response.md), error**
+**[*operations.ListLmsInstructorsResponse](../../pkg/models/operations/listlmsinstructorsresponse.md), error**
 
 ### Errors
 
@@ -1148,13 +1148,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListLmsStudents2
+## ListLmsStudents
 
 List all students
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listLmsStudents2" method="get" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="go" operationID="listLmsStudents" method="get" path="/lms/{connection_id}/student" -->
 ```go
 package main
 
@@ -1172,7 +1172,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.ListLmsStudents2(ctx, operations.ListLmsStudents2Request{
+    res, err := s.Lms.ListLmsStudents(ctx, operations.ListLmsStudentsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1186,15 +1186,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.ListLmsStudents2Request](../../pkg/models/operations/listlmsstudents2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.ListLmsStudentsRequest](../../pkg/models/operations/listlmsstudentsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.ListLmsStudents2Response](../../pkg/models/operations/listlmsstudents2response.md), error**
+**[*operations.ListLmsStudentsResponse](../../pkg/models/operations/listlmsstudentsresponse.md), error**
 
 ### Errors
 
@@ -1202,13 +1202,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsActivity2
+## PatchLmsActivity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsActivity2" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
 ```go
 package main
 
@@ -1227,7 +1227,791 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsActivity2(ctx, operations.PatchLmsActivity2Request{
+    res, err := s.Lms.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
+        LmsActivity: shared.LmsActivity{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsActivity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchLmsActivityRequest](../../pkg/models/operations/patchlmsactivityrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchLmsActivityResponse](../../pkg/models/operations/patchlmsactivityresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsClass
+
+Update a class
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsClass(ctx, operations.PatchLmsClassRequest{
+        LmsClass: shared.LmsClass{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsClass != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchLmsClassRequest](../../pkg/models/operations/patchlmsclassrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.PatchLmsClassResponse](../../pkg/models/operations/patchlmsclassresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsCollection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsCollection(ctx, operations.PatchLmsCollectionRequest{
+        LmsCollection: shared.LmsCollection{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsCollection != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchLmsCollectionRequest](../../pkg/models/operations/patchlmscollectionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.PatchLmsCollectionResponse](../../pkg/models/operations/patchlmscollectionresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsContent
+
+Update a content
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsContent(ctx, operations.PatchLmsContentRequest{
+        LmsContent: shared.LmsContent{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsContent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.PatchLmsContentRequest](../../pkg/models/operations/patchlmscontentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.PatchLmsContentResponse](../../pkg/models/operations/patchlmscontentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsCourse
+
+Update a course
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsCourse(ctx, operations.PatchLmsCourseRequest{
+        LmsCourse: shared.LmsCourse{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsCourse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.PatchLmsCourseRequest](../../pkg/models/operations/patchlmscourserequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.PatchLmsCourseResponse](../../pkg/models/operations/patchlmscourseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsInstructor
+
+Update an instructor
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsInstructor(ctx, operations.PatchLmsInstructorRequest{
+        LmsInstructor: shared.LmsInstructor{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsInstructor != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.PatchLmsInstructorRequest](../../pkg/models/operations/patchlmsinstructorrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.PatchLmsInstructorResponse](../../pkg/models/operations/patchlmsinstructorresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchLmsStudent
+
+Update a student
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.PatchLmsStudent(ctx, operations.PatchLmsStudentRequest{
+        LmsStudent: shared.LmsStudent{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.LmsStudent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.PatchLmsStudentRequest](../../pkg/models/operations/patchlmsstudentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.PatchLmsStudentResponse](../../pkg/models/operations/patchlmsstudentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsActivity(ctx, operations.RemoveLmsActivityRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveLmsActivityRequest](../../pkg/models/operations/removelmsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.RemoveLmsActivityResponse](../../pkg/models/operations/removelmsactivityresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsClass
+
+Remove a class
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsClass" method="delete" path="/lms/{connection_id}/class/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsClass(ctx, operations.RemoveLmsClassRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveLmsClassRequest](../../pkg/models/operations/removelmsclassrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.RemoveLmsClassResponse](../../pkg/models/operations/removelmsclassresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsCollection
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsCollection" method="delete" path="/lms/{connection_id}/collection/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsCollection(ctx, operations.RemoveLmsCollectionRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveLmsCollectionRequest](../../pkg/models/operations/removelmscollectionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemoveLmsCollectionResponse](../../pkg/models/operations/removelmscollectionresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsContent
+
+Remove a content
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsContent" method="delete" path="/lms/{connection_id}/content/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsContent(ctx, operations.RemoveLmsContentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.RemoveLmsContentRequest](../../pkg/models/operations/removelmscontentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.RemoveLmsContentResponse](../../pkg/models/operations/removelmscontentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsCourse
+
+Remove a course
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsCourse" method="delete" path="/lms/{connection_id}/course/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsCourse(ctx, operations.RemoveLmsCourseRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveLmsCourseRequest](../../pkg/models/operations/removelmscourserequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.RemoveLmsCourseResponse](../../pkg/models/operations/removelmscourseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsInstructor
+
+Remove an instructor
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsInstructor" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsInstructor(ctx, operations.RemoveLmsInstructorRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.RemoveLmsInstructorRequest](../../pkg/models/operations/removelmsinstructorrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+
+### Response
+
+**[*operations.RemoveLmsInstructorResponse](../../pkg/models/operations/removelmsinstructorresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveLmsStudent
+
+Remove a student
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeLmsStudent" method="delete" path="/lms/{connection_id}/student/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.RemoveLmsStudent(ctx, operations.RemoveLmsStudentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.RemoveLmsStudentRequest](../../pkg/models/operations/removelmsstudentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.RemoveLmsStudentResponse](../../pkg/models/operations/removelmsstudentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateLmsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Lms.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1246,12 +2030,12 @@ func main() {
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchLmsActivity2Request](../../pkg/models/operations/patchlmsactivity2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateLmsActivityRequest](../../pkg/models/operations/updatelmsactivityrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.PatchLmsActivity2Response](../../pkg/models/operations/patchlmsactivity2response.md), error**
+**[*operations.UpdateLmsActivityResponse](../../pkg/models/operations/updatelmsactivityresponse.md), error**
 
 ### Errors
 
@@ -1259,13 +2043,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsClass2
+## UpdateLmsClass
 
 Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsClass2" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
 ```go
 package main
 
@@ -1284,7 +2068,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsClass2(ctx, operations.PatchLmsClass2Request{
+    res, err := s.Lms.UpdateLmsClass(ctx, operations.UpdateLmsClassRequest{
         LmsClass: shared.LmsClass{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1303,12 +2087,12 @@ func main() {
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PatchLmsClass2Request](../../pkg/models/operations/patchlmsclass2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `request`                                                                                | [operations.UpdateLmsClassRequest](../../pkg/models/operations/updatelmsclassrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 | `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.PatchLmsClass2Response](../../pkg/models/operations/patchlmsclass2response.md), error**
+**[*operations.UpdateLmsClassResponse](../../pkg/models/operations/updatelmsclassresponse.md), error**
 
 ### Errors
 
@@ -1316,13 +2100,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsCollection2
+## UpdateLmsCollection
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsCollection2" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
 ```go
 package main
 
@@ -1341,7 +2125,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsCollection2(ctx, operations.PatchLmsCollection2Request{
+    res, err := s.Lms.UpdateLmsCollection(ctx, operations.UpdateLmsCollectionRequest{
         LmsCollection: shared.LmsCollection{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1360,12 +2144,12 @@ func main() {
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.PatchLmsCollection2Request](../../pkg/models/operations/patchlmscollection2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `request`                                                                                          | [operations.UpdateLmsCollectionRequest](../../pkg/models/operations/updatelmscollectionrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.PatchLmsCollection2Response](../../pkg/models/operations/patchlmscollection2response.md), error**
+**[*operations.UpdateLmsCollectionResponse](../../pkg/models/operations/updatelmscollectionresponse.md), error**
 
 ### Errors
 
@@ -1373,13 +2157,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsContent2
+## UpdateLmsContent
 
 Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsContent2" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
 ```go
 package main
 
@@ -1398,7 +2182,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsContent2(ctx, operations.PatchLmsContent2Request{
+    res, err := s.Lms.UpdateLmsContent(ctx, operations.UpdateLmsContentRequest{
         LmsContent: shared.LmsContent{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1417,12 +2201,12 @@ func main() {
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.PatchLmsContent2Request](../../pkg/models/operations/patchlmscontent2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `request`                                                                                    | [operations.UpdateLmsContentRequest](../../pkg/models/operations/updatelmscontentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 | `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchLmsContent2Response](../../pkg/models/operations/patchlmscontent2response.md), error**
+**[*operations.UpdateLmsContentResponse](../../pkg/models/operations/updatelmscontentresponse.md), error**
 
 ### Errors
 
@@ -1430,13 +2214,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsCourse2
+## UpdateLmsCourse
 
 Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsCourse2" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
 ```go
 package main
 
@@ -1455,7 +2239,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsCourse2(ctx, operations.PatchLmsCourse2Request{
+    res, err := s.Lms.UpdateLmsCourse(ctx, operations.UpdateLmsCourseRequest{
         LmsCourse: shared.LmsCourse{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1474,12 +2258,12 @@ func main() {
 | Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.PatchLmsCourse2Request](../../pkg/models/operations/patchlmscourse2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `request`                                                                                  | [operations.UpdateLmsCourseRequest](../../pkg/models/operations/updatelmscourserequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
 | `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
 
 ### Response
 
-**[*operations.PatchLmsCourse2Response](../../pkg/models/operations/patchlmscourse2response.md), error**
+**[*operations.UpdateLmsCourseResponse](../../pkg/models/operations/updatelmscourseresponse.md), error**
 
 ### Errors
 
@@ -1487,13 +2271,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsInstructor2
+## UpdateLmsInstructor
 
 Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsInstructor2" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
 ```go
 package main
 
@@ -1512,7 +2296,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsInstructor2(ctx, operations.PatchLmsInstructor2Request{
+    res, err := s.Lms.UpdateLmsInstructor(ctx, operations.UpdateLmsInstructorRequest{
         LmsInstructor: shared.LmsInstructor{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1531,12 +2315,12 @@ func main() {
 | Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.PatchLmsInstructor2Request](../../pkg/models/operations/patchlmsinstructor2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `request`                                                                                          | [operations.UpdateLmsInstructorRequest](../../pkg/models/operations/updatelmsinstructorrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
 | `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.PatchLmsInstructor2Response](../../pkg/models/operations/patchlmsinstructor2response.md), error**
+**[*operations.UpdateLmsInstructorResponse](../../pkg/models/operations/updatelmsinstructorresponse.md), error**
 
 ### Errors
 
@@ -1544,13 +2328,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchLmsStudent2
+## UpdateLmsStudent
 
 Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsStudent2" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
 ```go
 package main
 
@@ -1569,7 +2353,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Lms.PatchLmsStudent2(ctx, operations.PatchLmsStudent2Request{
+    res, err := s.Lms.UpdateLmsStudent(ctx, operations.UpdateLmsStudentRequest{
         LmsStudent: shared.LmsStudent{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1588,796 +2372,12 @@ func main() {
 | Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.PatchLmsStudent2Request](../../pkg/models/operations/patchlmsstudent2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `request`                                                                                    | [operations.UpdateLmsStudentRequest](../../pkg/models/operations/updatelmsstudentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
 | `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.PatchLmsStudent2Response](../../pkg/models/operations/patchlmsstudent2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsActivity2
-
-Remove an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsActivity2" method="delete" path="/lms/{connection_id}/activity/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsActivity2(ctx, operations.RemoveLmsActivity2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveLmsActivity2Request](../../pkg/models/operations/removelmsactivity2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.RemoveLmsActivity2Response](../../pkg/models/operations/removelmsactivity2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsClass2
-
-Remove a class
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsClass2" method="delete" path="/lms/{connection_id}/class/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsClass2(ctx, operations.RemoveLmsClass2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.RemoveLmsClass2Request](../../pkg/models/operations/removelmsclass2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.RemoveLmsClass2Response](../../pkg/models/operations/removelmsclass2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsCollection2
-
-Remove a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsCollection2" method="delete" path="/lms/{connection_id}/collection/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsCollection2(ctx, operations.RemoveLmsCollection2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.RemoveLmsCollection2Request](../../pkg/models/operations/removelmscollection2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
-
-### Response
-
-**[*operations.RemoveLmsCollection2Response](../../pkg/models/operations/removelmscollection2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsContent2
-
-Remove a content
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsContent2" method="delete" path="/lms/{connection_id}/content/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsContent2(ctx, operations.RemoveLmsContent2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.RemoveLmsContent2Request](../../pkg/models/operations/removelmscontent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
-
-### Response
-
-**[*operations.RemoveLmsContent2Response](../../pkg/models/operations/removelmscontent2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsCourse2
-
-Remove a course
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsCourse2" method="delete" path="/lms/{connection_id}/course/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsCourse2(ctx, operations.RemoveLmsCourse2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.RemoveLmsCourse2Request](../../pkg/models/operations/removelmscourse2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
-
-### Response
-
-**[*operations.RemoveLmsCourse2Response](../../pkg/models/operations/removelmscourse2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsInstructor2
-
-Remove an instructor
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsInstructor2" method="delete" path="/lms/{connection_id}/instructor/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsInstructor2(ctx, operations.RemoveLmsInstructor2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.RemoveLmsInstructor2Request](../../pkg/models/operations/removelmsinstructor2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
-
-### Response
-
-**[*operations.RemoveLmsInstructor2Response](../../pkg/models/operations/removelmsinstructor2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveLmsStudent2
-
-Remove a student
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeLmsStudent2" method="delete" path="/lms/{connection_id}/student/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.RemoveLmsStudent2(ctx, operations.RemoveLmsStudent2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.RemoveLmsStudent2Request](../../pkg/models/operations/removelmsstudent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
-
-### Response
-
-**[*operations.RemoveLmsStudent2Response](../../pkg/models/operations/removelmsstudent2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsActivity2
-
-Update an activity
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsActivity2" method="put" path="/lms/{connection_id}/activity/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsActivity2(ctx, operations.UpdateLmsActivity2Request{
-        LmsActivity: shared.LmsActivity{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsActivity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateLmsActivity2Request](../../pkg/models/operations/updatelmsactivity2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.UpdateLmsActivity2Response](../../pkg/models/operations/updatelmsactivity2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsClass2
-
-Update a class
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsClass2" method="put" path="/lms/{connection_id}/class/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsClass2(ctx, operations.UpdateLmsClass2Request{
-        LmsClass: shared.LmsClass{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsClass != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateLmsClass2Request](../../pkg/models/operations/updatelmsclass2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.UpdateLmsClass2Response](../../pkg/models/operations/updatelmsclass2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsCollection2
-
-Update a collection
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsCollection2" method="put" path="/lms/{connection_id}/collection/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsCollection2(ctx, operations.UpdateLmsCollection2Request{
-        LmsCollection: shared.LmsCollection{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsCollection != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateLmsCollection2Request](../../pkg/models/operations/updatelmscollection2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
-
-### Response
-
-**[*operations.UpdateLmsCollection2Response](../../pkg/models/operations/updatelmscollection2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsContent2
-
-Update a content
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsContent2" method="put" path="/lms/{connection_id}/content/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsContent2(ctx, operations.UpdateLmsContent2Request{
-        LmsContent: shared.LmsContent{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsContent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdateLmsContent2Request](../../pkg/models/operations/updatelmscontent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
-
-### Response
-
-**[*operations.UpdateLmsContent2Response](../../pkg/models/operations/updatelmscontent2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsCourse2
-
-Update a course
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsCourse2" method="put" path="/lms/{connection_id}/course/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsCourse2(ctx, operations.UpdateLmsCourse2Request{
-        LmsCourse: shared.LmsCourse{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsCourse != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.UpdateLmsCourse2Request](../../pkg/models/operations/updatelmscourse2request.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
-
-### Response
-
-**[*operations.UpdateLmsCourse2Response](../../pkg/models/operations/updatelmscourse2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsInstructor2
-
-Update an instructor
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsInstructor2" method="put" path="/lms/{connection_id}/instructor/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsInstructor2(ctx, operations.UpdateLmsInstructor2Request{
-        LmsInstructor: shared.LmsInstructor{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsInstructor != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.UpdateLmsInstructor2Request](../../pkg/models/operations/updatelmsinstructor2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
-
-### Response
-
-**[*operations.UpdateLmsInstructor2Response](../../pkg/models/operations/updatelmsinstructor2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateLmsStudent2
-
-Update a student
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateLmsStudent2" method="put" path="/lms/{connection_id}/student/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Lms.UpdateLmsStudent2(ctx, operations.UpdateLmsStudent2Request{
-        LmsStudent: shared.LmsStudent{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.LmsStudent != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.UpdateLmsStudent2Request](../../pkg/models/operations/updatelmsstudent2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
-
-### Response
-
-**[*operations.UpdateLmsStudent2Response](../../pkg/models/operations/updatelmsstudent2response.md), error**
+**[*operations.UpdateLmsStudentResponse](../../pkg/models/operations/updatelmsstudentresponse.md), error**
 
 ### Errors
 

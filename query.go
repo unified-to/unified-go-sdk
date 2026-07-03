@@ -30,8 +30,8 @@ func newQuery(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// CreateDatastoreQuery2 - Create a query
-func (s *Query) CreateDatastoreQuery2(ctx context.Context, request operations.CreateDatastoreQuery2Request, opts ...operations.Option) (*operations.CreateDatastoreQuery2Response, error) {
+// CreateDatastoreQuery - Create a query
+func (s *Query) CreateDatastoreQuery(ctx context.Context, request operations.CreateDatastoreQueryRequest, opts ...operations.Option) (*operations.CreateDatastoreQueryResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Query) CreateDatastoreQuery2(ctx context.Context, request operations.Cr
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createDatastoreQuery2",
+		OperationID:      "createDatastoreQuery",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "DatastoreQuery", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Query) CreateDatastoreQuery2(ctx context.Context, request operations.Cr
 		}
 	}
 
-	res := &operations.CreateDatastoreQuery2Response{
+	res := &operations.CreateDatastoreQueryResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

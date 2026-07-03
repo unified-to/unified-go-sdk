@@ -30,8 +30,8 @@ func newInvoice(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAccountingInvoice2 - Create an invoice
-func (s *Invoice) CreateAccountingInvoice2(ctx context.Context, request operations.CreateAccountingInvoice2Request, opts ...operations.Option) (*operations.CreateAccountingInvoice2Response, error) {
+// CreateAccountingInvoice - Create an invoice
+func (s *Invoice) CreateAccountingInvoice(ctx context.Context, request operations.CreateAccountingInvoiceRequest, opts ...operations.Option) (*operations.CreateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Invoice) CreateAccountingInvoice2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingInvoice2",
+		OperationID:      "createAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Invoice) CreateAccountingInvoice2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAccountingInvoice2Response{
+	res := &operations.CreateAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Invoice) CreateAccountingInvoice2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingInvoice2 - Retrieve an invoice
-func (s *Invoice) GetAccountingInvoice2(ctx context.Context, request operations.GetAccountingInvoice2Request, opts ...operations.Option) (*operations.GetAccountingInvoice2Response, error) {
+// GetAccountingInvoice - Retrieve an invoice
+func (s *Invoice) GetAccountingInvoice(ctx context.Context, request operations.GetAccountingInvoiceRequest, opts ...operations.Option) (*operations.GetAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Invoice) GetAccountingInvoice2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingInvoice2",
+		OperationID:      "getAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Invoice) GetAccountingInvoice2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAccountingInvoice2Response{
+	res := &operations.GetAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Invoice) GetAccountingInvoice2(ctx context.Context, request operations.
 
 }
 
-// ListAccountingInvoices2 - List all invoices
-func (s *Invoice) ListAccountingInvoices2(ctx context.Context, request operations.ListAccountingInvoices2Request, opts ...operations.Option) (*operations.ListAccountingInvoices2Response, error) {
+// ListAccountingInvoices - List all invoices
+func (s *Invoice) ListAccountingInvoices(ctx context.Context, request operations.ListAccountingInvoicesRequest, opts ...operations.Option) (*operations.ListAccountingInvoicesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Invoice) ListAccountingInvoices2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingInvoices2",
+		OperationID:      "listAccountingInvoices",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Invoice) ListAccountingInvoices2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAccountingInvoices2Response{
+	res := &operations.ListAccountingInvoicesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Invoice) ListAccountingInvoices2(ctx context.Context, request operation
 
 }
 
-// PatchAccountingInvoice2 - Update an invoice
-func (s *Invoice) PatchAccountingInvoice2(ctx context.Context, request operations.PatchAccountingInvoice2Request, opts ...operations.Option) (*operations.PatchAccountingInvoice2Response, error) {
+// PatchAccountingInvoice - Update an invoice
+func (s *Invoice) PatchAccountingInvoice(ctx context.Context, request operations.PatchAccountingInvoiceRequest, opts ...operations.Option) (*operations.PatchAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Invoice) PatchAccountingInvoice2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingInvoice2",
+		OperationID:      "patchAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Invoice) PatchAccountingInvoice2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAccountingInvoice2Response{
+	res := &operations.PatchAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Invoice) PatchAccountingInvoice2(ctx context.Context, request operation
 
 }
 
-// RemoveAccountingInvoice2 - Remove an invoice
-func (s *Invoice) RemoveAccountingInvoice2(ctx context.Context, request operations.RemoveAccountingInvoice2Request, opts ...operations.Option) (*operations.RemoveAccountingInvoice2Response, error) {
+// RemoveAccountingInvoice - Remove an invoice
+func (s *Invoice) RemoveAccountingInvoice(ctx context.Context, request operations.RemoveAccountingInvoiceRequest, opts ...operations.Option) (*operations.RemoveAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Invoice) RemoveAccountingInvoice2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingInvoice2",
+		OperationID:      "removeAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Invoice) RemoveAccountingInvoice2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAccountingInvoice2Response{
+	res := &operations.RemoveAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Invoice) RemoveAccountingInvoice2(ctx context.Context, request operatio
 
 }
 
-// UpdateAccountingInvoice2 - Update an invoice
-func (s *Invoice) UpdateAccountingInvoice2(ctx context.Context, request operations.UpdateAccountingInvoice2Request, opts ...operations.Option) (*operations.UpdateAccountingInvoice2Response, error) {
+// UpdateAccountingInvoice - Update an invoice
+func (s *Invoice) UpdateAccountingInvoice(ctx context.Context, request operations.UpdateAccountingInvoiceRequest, opts ...operations.Option) (*operations.UpdateAccountingInvoiceResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Invoice) UpdateAccountingInvoice2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingInvoice2",
+		OperationID:      "updateAccountingInvoice",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingInvoice", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Invoice) UpdateAccountingInvoice2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAccountingInvoice2Response{
+	res := &operations.UpdateAccountingInvoiceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -30,8 +30,8 @@ func newPayslip(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// GetHrisPayslip2 - Retrieve a payslip
-func (s *Payslip) GetHrisPayslip2(ctx context.Context, request operations.GetHrisPayslip2Request, opts ...operations.Option) (*operations.GetHrisPayslip2Response, error) {
+// GetHrisPayslip - Retrieve a payslip
+func (s *Payslip) GetHrisPayslip(ctx context.Context, request operations.GetHrisPayslipRequest, opts ...operations.Option) (*operations.GetHrisPayslipResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Payslip) GetHrisPayslip2(ctx context.Context, request operations.GetHri
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getHrisPayslip2",
+		OperationID:      "getHrisPayslip",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Payslip) GetHrisPayslip2(ctx context.Context, request operations.GetHri
 		}
 	}
 
-	res := &operations.GetHrisPayslip2Response{
+	res := &operations.GetHrisPayslipResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -237,8 +237,8 @@ func (s *Payslip) GetHrisPayslip2(ctx context.Context, request operations.GetHri
 
 }
 
-// ListHrisPayslips2 - List all payslips
-func (s *Payslip) ListHrisPayslips2(ctx context.Context, request operations.ListHrisPayslips2Request, opts ...operations.Option) (*operations.ListHrisPayslips2Response, error) {
+// ListHrisPayslips - List all payslips
+func (s *Payslip) ListHrisPayslips(ctx context.Context, request operations.ListHrisPayslipsRequest, opts ...operations.Option) (*operations.ListHrisPayslipsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -267,7 +267,7 @@ func (s *Payslip) ListHrisPayslips2(ctx context.Context, request operations.List
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listHrisPayslips2",
+		OperationID:      "listHrisPayslips",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -392,7 +392,7 @@ func (s *Payslip) ListHrisPayslips2(ctx context.Context, request operations.List
 		}
 	}
 
-	res := &operations.ListHrisPayslips2Response{
+	res := &operations.ListHrisPayslipsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

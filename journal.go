@@ -30,8 +30,8 @@ func newJournal(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// CreateAccountingJournal2 - Create a journal
-func (s *Journal) CreateAccountingJournal2(ctx context.Context, request operations.CreateAccountingJournal2Request, opts ...operations.Option) (*operations.CreateAccountingJournal2Response, error) {
+// CreateAccountingJournal - Create a journal
+func (s *Journal) CreateAccountingJournal(ctx context.Context, request operations.CreateAccountingJournalRequest, opts ...operations.Option) (*operations.CreateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Journal) CreateAccountingJournal2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAccountingJournal2",
+		OperationID:      "createAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Journal) CreateAccountingJournal2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateAccountingJournal2Response{
+	res := &operations.CreateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Journal) CreateAccountingJournal2(ctx context.Context, request operatio
 
 }
 
-// GetAccountingJournal2 - Retrieve a journal
-func (s *Journal) GetAccountingJournal2(ctx context.Context, request operations.GetAccountingJournal2Request, opts ...operations.Option) (*operations.GetAccountingJournal2Response, error) {
+// GetAccountingJournal - Retrieve a journal
+func (s *Journal) GetAccountingJournal(ctx context.Context, request operations.GetAccountingJournalRequest, opts ...operations.Option) (*operations.GetAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Journal) GetAccountingJournal2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAccountingJournal2",
+		OperationID:      "getAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Journal) GetAccountingJournal2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetAccountingJournal2Response{
+	res := &operations.GetAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Journal) GetAccountingJournal2(ctx context.Context, request operations.
 
 }
 
-// ListAccountingJournals2 - List all journals
-func (s *Journal) ListAccountingJournals2(ctx context.Context, request operations.ListAccountingJournals2Request, opts ...operations.Option) (*operations.ListAccountingJournals2Response, error) {
+// ListAccountingJournals - List all journals
+func (s *Journal) ListAccountingJournals(ctx context.Context, request operations.ListAccountingJournalsRequest, opts ...operations.Option) (*operations.ListAccountingJournalsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Journal) ListAccountingJournals2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAccountingJournals2",
+		OperationID:      "listAccountingJournals",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Journal) ListAccountingJournals2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListAccountingJournals2Response{
+	res := &operations.ListAccountingJournalsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Journal) ListAccountingJournals2(ctx context.Context, request operation
 
 }
 
-// PatchAccountingJournal2 - Update a journal
-func (s *Journal) PatchAccountingJournal2(ctx context.Context, request operations.PatchAccountingJournal2Request, opts ...operations.Option) (*operations.PatchAccountingJournal2Response, error) {
+// PatchAccountingJournal - Update a journal
+func (s *Journal) PatchAccountingJournal(ctx context.Context, request operations.PatchAccountingJournalRequest, opts ...operations.Option) (*operations.PatchAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Journal) PatchAccountingJournal2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAccountingJournal2",
+		OperationID:      "patchAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Journal) PatchAccountingJournal2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchAccountingJournal2Response{
+	res := &operations.PatchAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Journal) PatchAccountingJournal2(ctx context.Context, request operation
 
 }
 
-// RemoveAccountingJournal2 - Remove a journal
-func (s *Journal) RemoveAccountingJournal2(ctx context.Context, request operations.RemoveAccountingJournal2Request, opts ...operations.Option) (*operations.RemoveAccountingJournal2Response, error) {
+// RemoveAccountingJournal - Remove a journal
+func (s *Journal) RemoveAccountingJournal(ctx context.Context, request operations.RemoveAccountingJournalRequest, opts ...operations.Option) (*operations.RemoveAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Journal) RemoveAccountingJournal2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAccountingJournal2",
+		OperationID:      "removeAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Journal) RemoveAccountingJournal2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveAccountingJournal2Response{
+	res := &operations.RemoveAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Journal) RemoveAccountingJournal2(ctx context.Context, request operatio
 
 }
 
-// UpdateAccountingJournal2 - Update a journal
-func (s *Journal) UpdateAccountingJournal2(ctx context.Context, request operations.UpdateAccountingJournal2Request, opts ...operations.Option) (*operations.UpdateAccountingJournal2Response, error) {
+// UpdateAccountingJournal - Update a journal
+func (s *Journal) UpdateAccountingJournal(ctx context.Context, request operations.UpdateAccountingJournalRequest, opts ...operations.Option) (*operations.UpdateAccountingJournalResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Journal) UpdateAccountingJournal2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAccountingJournal2",
+		OperationID:      "updateAccountingJournal",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AccountingJournal", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Journal) UpdateAccountingJournal2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateAccountingJournal2Response{
+	res := &operations.UpdateAccountingJournalResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

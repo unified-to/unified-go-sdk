@@ -4,55 +4,55 @@
 
 ### Available Operations
 
-* [CreateAdsAd2](#createadsad2) - Create an ad
-* [CreateAdsCampaign2](#createadscampaign2) - Create a campaign
-* [CreateAdsCreative2](#createadscreative2) - Create a creative
-* [CreateAdsGroup2](#createadsgroup2) - Create a group
-* [CreateAdsInsertionorder2](#createadsinsertionorder2) - Create an insertionorder
-* [CreateAdsOrganization2](#createadsorganization2) - Create an organization
-* [GetAdsAd2](#getadsad2) - Retrieve an ad
-* [GetAdsCampaign2](#getadscampaign2) - Retrieve a campaign
-* [GetAdsCreative2](#getadscreative2) - Retrieve a creative
-* [GetAdsGroup2](#getadsgroup2) - Retrieve a group
-* [GetAdsInsertionorder2](#getadsinsertionorder2) - Retrieve an insertionorder
-* [GetAdsOrganization2](#getadsorganization2) - Retrieve an organization
-* [GetAdsPromoted2](#getadspromoted2) - Retrieve a promoted
-* [GetAdsTarget2](#getadstarget2) - Retrieve a target
-* [ListAdsAds2](#listadsads2) - List all ads
-* [ListAdsCampaigns2](#listadscampaigns2) - List all campaigns
-* [ListAdsCreatives2](#listadscreatives2) - List all creatives
-* [ListAdsGroups2](#listadsgroups2) - List all groups
-* [ListAdsInsertionorders2](#listadsinsertionorders2) - List all insertionorders
-* [ListAdsOrganizations2](#listadsorganizations2) - List all organizations
-* [ListAdsPromoteds2](#listadspromoteds2) - List all promoteds
-* [ListAdsReports2](#listadsreports2) - List all reports
-* [ListAdsTargets2](#listadstargets2) - List all targets
-* [PatchAdsAd2](#patchadsad2) - Update an ad
-* [PatchAdsCampaign2](#patchadscampaign2) - Update a campaign
-* [PatchAdsCreative2](#patchadscreative2) - Update a creative
-* [PatchAdsGroup2](#patchadsgroup2) - Update a group
-* [PatchAdsInsertionorder2](#patchadsinsertionorder2) - Update an insertionorder
-* [PatchAdsOrganization2](#patchadsorganization2) - Update an organization
-* [RemoveAdsAd2](#removeadsad2) - Remove an ad
-* [RemoveAdsCampaign2](#removeadscampaign2) - Remove a campaign
-* [RemoveAdsCreative2](#removeadscreative2) - Remove a creative
-* [RemoveAdsGroup2](#removeadsgroup2) - Remove a group
-* [RemoveAdsInsertionorder2](#removeadsinsertionorder2) - Remove an insertionorder
-* [RemoveAdsOrganization2](#removeadsorganization2) - Remove an organization
-* [UpdateAdsAd2](#updateadsad2) - Update an ad
-* [UpdateAdsCampaign2](#updateadscampaign2) - Update a campaign
-* [UpdateAdsCreative2](#updateadscreative2) - Update a creative
-* [UpdateAdsGroup2](#updateadsgroup2) - Update a group
-* [UpdateAdsInsertionorder2](#updateadsinsertionorder2) - Update an insertionorder
-* [UpdateAdsOrganization2](#updateadsorganization2) - Update an organization
+* [CreateAdsAd](#createadsad) - Create an ad
+* [CreateAdsCampaign](#createadscampaign) - Create a campaign
+* [CreateAdsCreative](#createadscreative) - Create a creative
+* [CreateAdsGroup](#createadsgroup) - Create a group
+* [CreateAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
+* [CreateAdsOrganization](#createadsorganization) - Create an organization
+* [GetAdsAd](#getadsad) - Retrieve an ad
+* [GetAdsCampaign](#getadscampaign) - Retrieve a campaign
+* [GetAdsCreative](#getadscreative) - Retrieve a creative
+* [GetAdsGroup](#getadsgroup) - Retrieve a group
+* [GetAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
+* [GetAdsOrganization](#getadsorganization) - Retrieve an organization
+* [GetAdsPromoted](#getadspromoted) - Retrieve a promoted
+* [GetAdsTarget](#getadstarget) - Retrieve a target
+* [ListAdsAds](#listadsads) - List all ads
+* [ListAdsCampaigns](#listadscampaigns) - List all campaigns
+* [ListAdsCreatives](#listadscreatives) - List all creatives
+* [ListAdsGroups](#listadsgroups) - List all groups
+* [ListAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
+* [ListAdsOrganizations](#listadsorganizations) - List all organizations
+* [ListAdsPromoteds](#listadspromoteds) - List all promoteds
+* [ListAdsReports](#listadsreports) - List all reports
+* [ListAdsTargets](#listadstargets) - List all targets
+* [PatchAdsAd](#patchadsad) - Update an ad
+* [PatchAdsCampaign](#patchadscampaign) - Update a campaign
+* [PatchAdsCreative](#patchadscreative) - Update a creative
+* [PatchAdsGroup](#patchadsgroup) - Update a group
+* [PatchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
+* [PatchAdsOrganization](#patchadsorganization) - Update an organization
+* [RemoveAdsAd](#removeadsad) - Remove an ad
+* [RemoveAdsCampaign](#removeadscampaign) - Remove a campaign
+* [RemoveAdsCreative](#removeadscreative) - Remove a creative
+* [RemoveAdsGroup](#removeadsgroup) - Remove a group
+* [RemoveAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
+* [RemoveAdsOrganization](#removeadsorganization) - Remove an organization
+* [UpdateAdsAd](#updateadsad) - Update an ad
+* [UpdateAdsCampaign](#updateadscampaign) - Update a campaign
+* [UpdateAdsCreative](#updateadscreative) - Update a creative
+* [UpdateAdsGroup](#updateadsgroup) - Update a group
+* [UpdateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
+* [UpdateAdsOrganization](#updateadsorganization) - Update an organization
 
-## CreateAdsAd2
+## CreateAdsAd
 
 Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsAd2" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="go" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
 ```go
 package main
 
@@ -71,7 +71,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsAd2(ctx, operations.CreateAdsAd2Request{
+    res, err := s.Ads.CreateAdsAd(ctx, operations.CreateAdsAdRequest{
         AdsAd: shared.AdsAd{},
         ConnectionID: "<id>",
     })
@@ -86,15 +86,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.CreateAdsAd2Request](../../pkg/models/operations/createadsad2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.CreateAdsAdRequest](../../pkg/models/operations/createadsadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.CreateAdsAd2Response](../../pkg/models/operations/createadsad2response.md), error**
+**[*operations.CreateAdsAdResponse](../../pkg/models/operations/createadsadresponse.md), error**
 
 ### Errors
 
@@ -102,13 +102,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAdsCampaign2
+## CreateAdsCampaign
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCampaign2" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
 ```go
 package main
 
@@ -127,7 +127,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsCampaign2(ctx, operations.CreateAdsCampaign2Request{
+    res, err := s.Ads.CreateAdsCampaign(ctx, operations.CreateAdsCampaignRequest{
         AdsCampaign: shared.AdsCampaign{},
         ConnectionID: "<id>",
     })
@@ -142,15 +142,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateAdsCampaign2Request](../../pkg/models/operations/createadscampaign2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateAdsCampaignRequest](../../pkg/models/operations/createadscampaignrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateAdsCampaign2Response](../../pkg/models/operations/createadscampaign2response.md), error**
+**[*operations.CreateAdsCampaignResponse](../../pkg/models/operations/createadscampaignresponse.md), error**
 
 ### Errors
 
@@ -158,13 +158,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAdsCreative2
+## CreateAdsCreative
 
 Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCreative2" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
 ```go
 package main
 
@@ -183,7 +183,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsCreative2(ctx, operations.CreateAdsCreative2Request{
+    res, err := s.Ads.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{},
         ConnectionID: "<id>",
     })
@@ -198,15 +198,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.CreateAdsCreative2Request](../../pkg/models/operations/createadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateAdsCreativeRequest](../../pkg/models/operations/createadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.CreateAdsCreative2Response](../../pkg/models/operations/createadscreative2response.md), error**
+**[*operations.CreateAdsCreativeResponse](../../pkg/models/operations/createadscreativeresponse.md), error**
 
 ### Errors
 
@@ -214,13 +214,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAdsGroup2
+## CreateAdsGroup
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsGroup2" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
 ```go
 package main
 
@@ -239,7 +239,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsGroup2(ctx, operations.CreateAdsGroup2Request{
+    res, err := s.Ads.CreateAdsGroup(ctx, operations.CreateAdsGroupRequest{
         AdsGroup: shared.AdsGroup{},
         ConnectionID: "<id>",
     })
@@ -254,15 +254,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.CreateAdsGroup2Request](../../pkg/models/operations/createadsgroup2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateAdsGroupRequest](../../pkg/models/operations/createadsgrouprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.CreateAdsGroup2Response](../../pkg/models/operations/createadsgroup2response.md), error**
+**[*operations.CreateAdsGroupResponse](../../pkg/models/operations/createadsgroupresponse.md), error**
 
 ### Errors
 
@@ -270,13 +270,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAdsInsertionorder2
+## CreateAdsInsertionorder
 
 Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsInsertionorder2" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="go" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
 ```go
 package main
 
@@ -295,7 +295,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsInsertionorder2(ctx, operations.CreateAdsInsertionorder2Request{
+    res, err := s.Ads.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{},
         ConnectionID: "<id>",
     })
@@ -310,15 +310,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.CreateAdsInsertionorder2Request](../../pkg/models/operations/createadsinsertionorder2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAdsInsertionorderRequest](../../pkg/models/operations/createadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.CreateAdsInsertionorder2Response](../../pkg/models/operations/createadsinsertionorder2response.md), error**
+**[*operations.CreateAdsInsertionorderResponse](../../pkg/models/operations/createadsinsertionorderresponse.md), error**
 
 ### Errors
 
@@ -326,13 +326,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## CreateAdsOrganization2
+## CreateAdsOrganization
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
 ```go
 package main
 
@@ -351,7 +351,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.CreateAdsOrganization2(ctx, operations.CreateAdsOrganization2Request{
+    res, err := s.Ads.CreateAdsOrganization(ctx, operations.CreateAdsOrganizationRequest{
         AdsOrganization: shared.AdsOrganization{},
         ConnectionID: "<id>",
     })
@@ -366,15 +366,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.CreateAdsOrganization2Request](../../pkg/models/operations/createadsorganization2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.CreateAdsOrganizationRequest](../../pkg/models/operations/createadsorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.CreateAdsOrganization2Response](../../pkg/models/operations/createadsorganization2response.md), error**
+**[*operations.CreateAdsOrganizationResponse](../../pkg/models/operations/createadsorganizationresponse.md), error**
 
 ### Errors
 
@@ -382,13 +382,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsAd2
+## GetAdsAd
 
 Retrieve an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsAd2" method="get" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsAd" method="get" path="/ads/{connection_id}/ad/{id}" -->
 ```go
 package main
 
@@ -406,7 +406,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsAd2(ctx, operations.GetAdsAd2Request{
+    res, err := s.Ads.GetAdsAd(ctx, operations.GetAdsAdRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -421,15 +421,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetAdsAd2Request](../../pkg/models/operations/getadsad2request.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `opts`                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                   | :heavy_minus_sign:                                                             | The options for this request.                                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
+| `request`                                                                    | [operations.GetAdsAdRequest](../../pkg/models/operations/getadsadrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `opts`                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                 | :heavy_minus_sign:                                                           | The options for this request.                                                |
 
 ### Response
 
-**[*operations.GetAdsAd2Response](../../pkg/models/operations/getadsad2response.md), error**
+**[*operations.GetAdsAdResponse](../../pkg/models/operations/getadsadresponse.md), error**
 
 ### Errors
 
@@ -437,13 +437,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsCampaign2
+## GetAdsCampaign
 
 Retrieve a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsCampaign2" method="get" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsCampaign" method="get" path="/ads/{connection_id}/campaign/{id}" -->
 ```go
 package main
 
@@ -461,7 +461,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsCampaign2(ctx, operations.GetAdsCampaign2Request{
+    res, err := s.Ads.GetAdsCampaign(ctx, operations.GetAdsCampaignRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -476,15 +476,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetAdsCampaign2Request](../../pkg/models/operations/getadscampaign2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAdsCampaignRequest](../../pkg/models/operations/getadscampaignrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetAdsCampaign2Response](../../pkg/models/operations/getadscampaign2response.md), error**
+**[*operations.GetAdsCampaignResponse](../../pkg/models/operations/getadscampaignresponse.md), error**
 
 ### Errors
 
@@ -492,13 +492,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsCreative2
+## GetAdsCreative
 
 Retrieve a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsCreative2" method="get" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -516,7 +516,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsCreative2(ctx, operations.GetAdsCreative2Request{
+    res, err := s.Ads.GetAdsCreative(ctx, operations.GetAdsCreativeRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -531,15 +531,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetAdsCreative2Request](../../pkg/models/operations/getadscreative2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAdsCreativeRequest](../../pkg/models/operations/getadscreativerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetAdsCreative2Response](../../pkg/models/operations/getadscreative2response.md), error**
+**[*operations.GetAdsCreativeResponse](../../pkg/models/operations/getadscreativeresponse.md), error**
 
 ### Errors
 
@@ -547,13 +547,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsGroup2
+## GetAdsGroup
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsGroup2" method="get" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsGroup" method="get" path="/ads/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -571,7 +571,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsGroup2(ctx, operations.GetAdsGroup2Request{
+    res, err := s.Ads.GetAdsGroup(ctx, operations.GetAdsGroupRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -586,15 +586,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.GetAdsGroup2Request](../../pkg/models/operations/getadsgroup2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetAdsGroupRequest](../../pkg/models/operations/getadsgrouprequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.GetAdsGroup2Response](../../pkg/models/operations/getadsgroup2response.md), error**
+**[*operations.GetAdsGroupResponse](../../pkg/models/operations/getadsgroupresponse.md), error**
 
 ### Errors
 
@@ -602,13 +602,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsInsertionorder2
+## GetAdsInsertionorder
 
 Retrieve an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsInsertionorder2" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```go
 package main
 
@@ -626,7 +626,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsInsertionorder2(ctx, operations.GetAdsInsertionorder2Request{
+    res, err := s.Ads.GetAdsInsertionorder(ctx, operations.GetAdsInsertionorderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -641,15 +641,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.GetAdsInsertionorder2Request](../../pkg/models/operations/getadsinsertionorder2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAdsInsertionorderRequest](../../pkg/models/operations/getadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.GetAdsInsertionorder2Response](../../pkg/models/operations/getadsinsertionorder2response.md), error**
+**[*operations.GetAdsInsertionorderResponse](../../pkg/models/operations/getadsinsertionorderresponse.md), error**
 
 ### Errors
 
@@ -657,13 +657,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsOrganization2
+## GetAdsOrganization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -681,7 +681,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsOrganization2(ctx, operations.GetAdsOrganization2Request{
+    res, err := s.Ads.GetAdsOrganization(ctx, operations.GetAdsOrganizationRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -696,15 +696,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetAdsOrganization2Request](../../pkg/models/operations/getadsorganization2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetAdsOrganizationRequest](../../pkg/models/operations/getadsorganizationrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.GetAdsOrganization2Response](../../pkg/models/operations/getadsorganization2response.md), error**
+**[*operations.GetAdsOrganizationResponse](../../pkg/models/operations/getadsorganizationresponse.md), error**
 
 ### Errors
 
@@ -712,13 +712,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsPromoted2
+## GetAdsPromoted
 
 Retrieve a promoted
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsPromoted2" method="get" path="/ads/{connection_id}/promoted/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsPromoted" method="get" path="/ads/{connection_id}/promoted/{id}" -->
 ```go
 package main
 
@@ -736,7 +736,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsPromoted2(ctx, operations.GetAdsPromoted2Request{
+    res, err := s.Ads.GetAdsPromoted(ctx, operations.GetAdsPromotedRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -751,15 +751,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.GetAdsPromoted2Request](../../pkg/models/operations/getadspromoted2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetAdsPromotedRequest](../../pkg/models/operations/getadspromotedrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.GetAdsPromoted2Response](../../pkg/models/operations/getadspromoted2response.md), error**
+**[*operations.GetAdsPromotedResponse](../../pkg/models/operations/getadspromotedresponse.md), error**
 
 ### Errors
 
@@ -767,13 +767,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAdsTarget2
+## GetAdsTarget
 
 Retrieve a target
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAdsTarget2" method="get" path="/ads/{connection_id}/target/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
 ```go
 package main
 
@@ -791,7 +791,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.GetAdsTarget2(ctx, operations.GetAdsTarget2Request{
+    res, err := s.Ads.GetAdsTarget(ctx, operations.GetAdsTargetRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -806,15 +806,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
-| `request`                                                                              | [operations.GetAdsTarget2Request](../../pkg/models/operations/getadstarget2request.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
-| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetAdsTargetRequest](../../pkg/models/operations/getadstargetrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
 
 ### Response
 
-**[*operations.GetAdsTarget2Response](../../pkg/models/operations/getadstarget2response.md), error**
+**[*operations.GetAdsTargetResponse](../../pkg/models/operations/getadstargetresponse.md), error**
 
 ### Errors
 
@@ -822,13 +822,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsAds2
+## ListAdsAds
 
 List all ads
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsAds2" method="get" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="go" operationID="listAdsAds" method="get" path="/ads/{connection_id}/ad" -->
 ```go
 package main
 
@@ -846,7 +846,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsAds2(ctx, operations.ListAdsAds2Request{
+    res, err := s.Ads.ListAdsAds(ctx, operations.ListAdsAdsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -860,15 +860,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.ListAdsAds2Request](../../pkg/models/operations/listadsads2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
-| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.ListAdsAdsRequest](../../pkg/models/operations/listadsadsrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
 
 ### Response
 
-**[*operations.ListAdsAds2Response](../../pkg/models/operations/listadsads2response.md), error**
+**[*operations.ListAdsAdsResponse](../../pkg/models/operations/listadsadsresponse.md), error**
 
 ### Errors
 
@@ -876,13 +876,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsCampaigns2
+## ListAdsCampaigns
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsCampaigns2" method="get" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="listAdsCampaigns" method="get" path="/ads/{connection_id}/campaign" -->
 ```go
 package main
 
@@ -900,7 +900,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsCampaigns2(ctx, operations.ListAdsCampaigns2Request{
+    res, err := s.Ads.ListAdsCampaigns(ctx, operations.ListAdsCampaignsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -914,15 +914,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListAdsCampaigns2Request](../../pkg/models/operations/listadscampaigns2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListAdsCampaignsRequest](../../pkg/models/operations/listadscampaignsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListAdsCampaigns2Response](../../pkg/models/operations/listadscampaigns2response.md), error**
+**[*operations.ListAdsCampaignsResponse](../../pkg/models/operations/listadscampaignsresponse.md), error**
 
 ### Errors
 
@@ -930,13 +930,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsCreatives2
+## ListAdsCreatives
 
 List all creatives
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsCreatives2" method="get" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
 ```go
 package main
 
@@ -954,7 +954,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsCreatives2(ctx, operations.ListAdsCreatives2Request{
+    res, err := s.Ads.ListAdsCreatives(ctx, operations.ListAdsCreativesRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -968,15 +968,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListAdsCreatives2Request](../../pkg/models/operations/listadscreatives2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListAdsCreativesRequest](../../pkg/models/operations/listadscreativesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListAdsCreatives2Response](../../pkg/models/operations/listadscreatives2response.md), error**
+**[*operations.ListAdsCreativesResponse](../../pkg/models/operations/listadscreativesresponse.md), error**
 
 ### Errors
 
@@ -984,13 +984,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsGroups2
+## ListAdsGroups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsGroups2" method="get" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="listAdsGroups" method="get" path="/ads/{connection_id}/group" -->
 ```go
 package main
 
@@ -1008,7 +1008,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsGroups2(ctx, operations.ListAdsGroups2Request{
+    res, err := s.Ads.ListAdsGroups(ctx, operations.ListAdsGroupsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1022,15 +1022,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.ListAdsGroups2Request](../../pkg/models/operations/listadsgroups2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.ListAdsGroupsRequest](../../pkg/models/operations/listadsgroupsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
 
 ### Response
 
-**[*operations.ListAdsGroups2Response](../../pkg/models/operations/listadsgroups2response.md), error**
+**[*operations.ListAdsGroupsResponse](../../pkg/models/operations/listadsgroupsresponse.md), error**
 
 ### Errors
 
@@ -1038,13 +1038,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsInsertionorders2
+## ListAdsInsertionorders
 
 List all insertionorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsInsertionorders2" method="get" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="go" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
 ```go
 package main
 
@@ -1062,7 +1062,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsInsertionorders2(ctx, operations.ListAdsInsertionorders2Request{
+    res, err := s.Ads.ListAdsInsertionorders(ctx, operations.ListAdsInsertionordersRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1076,15 +1076,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.ListAdsInsertionorders2Request](../../pkg/models/operations/listadsinsertionorders2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAdsInsertionordersRequest](../../pkg/models/operations/listadsinsertionordersrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
 
 ### Response
 
-**[*operations.ListAdsInsertionorders2Response](../../pkg/models/operations/listadsinsertionorders2response.md), error**
+**[*operations.ListAdsInsertionordersResponse](../../pkg/models/operations/listadsinsertionordersresponse.md), error**
 
 ### Errors
 
@@ -1092,13 +1092,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsOrganizations2
+## ListAdsOrganizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
 ```go
 package main
 
@@ -1116,7 +1116,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsOrganizations2(ctx, operations.ListAdsOrganizations2Request{
+    res, err := s.Ads.ListAdsOrganizations(ctx, operations.ListAdsOrganizationsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1130,15 +1130,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListAdsOrganizations2Request](../../pkg/models/operations/listadsorganizations2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListAdsOrganizationsRequest](../../pkg/models/operations/listadsorganizationsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.ListAdsOrganizations2Response](../../pkg/models/operations/listadsorganizations2response.md), error**
+**[*operations.ListAdsOrganizationsResponse](../../pkg/models/operations/listadsorganizationsresponse.md), error**
 
 ### Errors
 
@@ -1146,13 +1146,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsPromoteds2
+## ListAdsPromoteds
 
 List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsPromoteds2" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="go" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```go
 package main
 
@@ -1170,7 +1170,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsPromoteds2(ctx, operations.ListAdsPromoteds2Request{
+    res, err := s.Ads.ListAdsPromoteds(ctx, operations.ListAdsPromotedsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1184,15 +1184,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.ListAdsPromoteds2Request](../../pkg/models/operations/listadspromoteds2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListAdsPromotedsRequest](../../pkg/models/operations/listadspromotedsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
 
 ### Response
 
-**[*operations.ListAdsPromoteds2Response](../../pkg/models/operations/listadspromoteds2response.md), error**
+**[*operations.ListAdsPromotedsResponse](../../pkg/models/operations/listadspromotedsresponse.md), error**
 
 ### Errors
 
@@ -1200,13 +1200,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsReports2
+## ListAdsReports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsReports2" method="get" path="/ads/{connection_id}/report" -->
+<!-- UsageSnippet language="go" operationID="listAdsReports" method="get" path="/ads/{connection_id}/report" -->
 ```go
 package main
 
@@ -1224,7 +1224,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsReports2(ctx, operations.ListAdsReports2Request{
+    res, err := s.Ads.ListAdsReports(ctx, operations.ListAdsReportsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1238,15 +1238,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListAdsReports2Request](../../pkg/models/operations/listadsreports2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListAdsReportsRequest](../../pkg/models/operations/listadsreportsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListAdsReports2Response](../../pkg/models/operations/listadsreports2response.md), error**
+**[*operations.ListAdsReportsResponse](../../pkg/models/operations/listadsreportsresponse.md), error**
 
 ### Errors
 
@@ -1254,13 +1254,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAdsTargets2
+## ListAdsTargets
 
 List all targets
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAdsTargets2" method="get" path="/ads/{connection_id}/target" -->
+<!-- UsageSnippet language="go" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
 ```go
 package main
 
@@ -1278,7 +1278,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.ListAdsTargets2(ctx, operations.ListAdsTargets2Request{
+    res, err := s.Ads.ListAdsTargets(ctx, operations.ListAdsTargetsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1292,15 +1292,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.ListAdsTargets2Request](../../pkg/models/operations/listadstargets2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListAdsTargetsRequest](../../pkg/models/operations/listadstargetsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.ListAdsTargets2Response](../../pkg/models/operations/listadstargets2response.md), error**
+**[*operations.ListAdsTargetsResponse](../../pkg/models/operations/listadstargetsresponse.md), error**
 
 ### Errors
 
@@ -1308,13 +1308,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsAd2
+## PatchAdsAd
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsAd2" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
 ```go
 package main
 
@@ -1333,7 +1333,679 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsAd2(ctx, operations.PatchAdsAd2Request{
+    res, err := s.Ads.PatchAdsAd(ctx, operations.PatchAdsAdRequest{
+        AdsAd: shared.AdsAd{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsAd != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.PatchAdsAdRequest](../../pkg/models/operations/patchadsadrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+
+### Response
+
+**[*operations.PatchAdsAdResponse](../../pkg/models/operations/patchadsadresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAdsCampaign
+
+Update a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.PatchAdsCampaign(ctx, operations.PatchAdsCampaignRequest{
+        AdsCampaign: shared.AdsCampaign{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsCampaign != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchAdsCampaignRequest](../../pkg/models/operations/patchadscampaignrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchAdsCampaignResponse](../../pkg/models/operations/patchadscampaignresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAdsCreative
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
+        AdsCreative: shared.AdsCreative{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsCreative != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchAdsCreativeRequest](../../pkg/models/operations/patchadscreativerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchAdsCreativeResponse](../../pkg/models/operations/patchadscreativeresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAdsGroup
+
+Update a group
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.PatchAdsGroup(ctx, operations.PatchAdsGroupRequest{
+        AdsGroup: shared.AdsGroup{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsGroup != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchAdsGroupRequest](../../pkg/models/operations/patchadsgrouprequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.PatchAdsGroupResponse](../../pkg/models/operations/patchadsgroupresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAdsInsertionorder
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
+        AdsInsertionorder: shared.AdsInsertionorder{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsInsertionorder != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchAdsInsertionorderRequest](../../pkg/models/operations/patchadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.PatchAdsInsertionorderResponse](../../pkg/models/operations/patchadsinsertionorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAdsOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.PatchAdsOrganization(ctx, operations.PatchAdsOrganizationRequest{
+        AdsOrganization: shared.AdsOrganization{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AdsOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchAdsOrganizationRequest](../../pkg/models/operations/patchadsorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.PatchAdsOrganizationResponse](../../pkg/models/operations/patchadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsAd
+
+Remove an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsAd" method="delete" path="/ads/{connection_id}/ad/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsAd(ctx, operations.RemoveAdsAdRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.RemoveAdsAdRequest](../../pkg/models/operations/removeadsadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.RemoveAdsAdResponse](../../pkg/models/operations/removeadsadresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsCampaign
+
+Remove a campaign
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsCampaign" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsCampaign(ctx, operations.RemoveAdsCampaignRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveAdsCampaignRequest](../../pkg/models/operations/removeadscampaignrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.RemoveAdsCampaignResponse](../../pkg/models/operations/removeadscampaignresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsCreative
+
+Remove a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsCreative(ctx, operations.RemoveAdsCreativeRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveAdsCreativeRequest](../../pkg/models/operations/removeadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.RemoveAdsCreativeResponse](../../pkg/models/operations/removeadscreativeresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsGroup
+
+Remove a group
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsGroup" method="delete" path="/ads/{connection_id}/group/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsGroup(ctx, operations.RemoveAdsGroupRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveAdsGroupRequest](../../pkg/models/operations/removeadsgrouprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.RemoveAdsGroupResponse](../../pkg/models/operations/removeadsgroupresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsInsertionorder
+
+Remove an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsInsertionorder(ctx, operations.RemoveAdsInsertionorderRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveAdsInsertionorderRequest](../../pkg/models/operations/removeadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.RemoveAdsInsertionorderResponse](../../pkg/models/operations/removeadsinsertionorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAdsOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.RemoveAdsOrganization(ctx, operations.RemoveAdsOrganizationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.RemoveAdsOrganizationRequest](../../pkg/models/operations/removeadsorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.RemoveAdsOrganizationResponse](../../pkg/models/operations/removeadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAdsAd
+
+Update an ad
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Ads.UpdateAdsAd(ctx, operations.UpdateAdsAdRequest{
         AdsAd: shared.AdsAd{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1352,12 +2024,12 @@ func main() {
 | Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
-| `request`                                                                          | [operations.PatchAdsAd2Request](../../pkg/models/operations/patchadsad2request.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `request`                                                                          | [operations.UpdateAdsAdRequest](../../pkg/models/operations/updateadsadrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
 | `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
 
 ### Response
 
-**[*operations.PatchAdsAd2Response](../../pkg/models/operations/patchadsad2response.md), error**
+**[*operations.UpdateAdsAdResponse](../../pkg/models/operations/updateadsadresponse.md), error**
 
 ### Errors
 
@@ -1365,13 +2037,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsCampaign2
+## UpdateAdsCampaign
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCampaign2" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
 ```go
 package main
 
@@ -1390,7 +2062,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsCampaign2(ctx, operations.PatchAdsCampaign2Request{
+    res, err := s.Ads.UpdateAdsCampaign(ctx, operations.UpdateAdsCampaignRequest{
         AdsCampaign: shared.AdsCampaign{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1409,12 +2081,12 @@ func main() {
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchAdsCampaign2Request](../../pkg/models/operations/patchadscampaign2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateAdsCampaignRequest](../../pkg/models/operations/updateadscampaignrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.PatchAdsCampaign2Response](../../pkg/models/operations/patchadscampaign2response.md), error**
+**[*operations.UpdateAdsCampaignResponse](../../pkg/models/operations/updateadscampaignresponse.md), error**
 
 ### Errors
 
@@ -1422,13 +2094,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsCreative2
+## UpdateAdsCreative
 
 Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCreative2" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
 ```go
 package main
 
@@ -1447,7 +2119,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsCreative2(ctx, operations.PatchAdsCreative2Request{
+    res, err := s.Ads.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
         AdsCreative: shared.AdsCreative{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1466,12 +2138,12 @@ func main() {
 | Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
-| `request`                                                                                      | [operations.PatchAdsCreative2Request](../../pkg/models/operations/patchadscreative2request.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `request`                                                                                      | [operations.UpdateAdsCreativeRequest](../../pkg/models/operations/updateadscreativerequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 | `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.PatchAdsCreative2Response](../../pkg/models/operations/patchadscreative2response.md), error**
+**[*operations.UpdateAdsCreativeResponse](../../pkg/models/operations/updateadscreativeresponse.md), error**
 
 ### Errors
 
@@ -1479,13 +2151,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsGroup2
+## UpdateAdsGroup
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsGroup2" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
 ```go
 package main
 
@@ -1504,7 +2176,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsGroup2(ctx, operations.PatchAdsGroup2Request{
+    res, err := s.Ads.UpdateAdsGroup(ctx, operations.UpdateAdsGroupRequest{
         AdsGroup: shared.AdsGroup{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1523,12 +2195,12 @@ func main() {
 | Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
-| `request`                                                                                | [operations.PatchAdsGroup2Request](../../pkg/models/operations/patchadsgroup2request.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `request`                                                                                | [operations.UpdateAdsGroupRequest](../../pkg/models/operations/updateadsgrouprequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
 | `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
 
 ### Response
 
-**[*operations.PatchAdsGroup2Response](../../pkg/models/operations/patchadsgroup2response.md), error**
+**[*operations.UpdateAdsGroupResponse](../../pkg/models/operations/updateadsgroupresponse.md), error**
 
 ### Errors
 
@@ -1536,13 +2208,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsInsertionorder2
+## UpdateAdsInsertionorder
 
 Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder2" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
 ```go
 package main
 
@@ -1561,7 +2233,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsInsertionorder2(ctx, operations.PatchAdsInsertionorder2Request{
+    res, err := s.Ads.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
         AdsInsertionorder: shared.AdsInsertionorder{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1580,12 +2252,12 @@ func main() {
 | Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.PatchAdsInsertionorder2Request](../../pkg/models/operations/patchadsinsertionorder2request.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `request`                                                                                                  | [operations.UpdateAdsInsertionorderRequest](../../pkg/models/operations/updateadsinsertionorderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 | `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.PatchAdsInsertionorder2Response](../../pkg/models/operations/patchadsinsertionorder2response.md), error**
+**[*operations.UpdateAdsInsertionorderResponse](../../pkg/models/operations/updateadsinsertionorderresponse.md), error**
 
 ### Errors
 
@@ -1593,13 +2265,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAdsOrganization2
+## UpdateAdsOrganization
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
 ```go
 package main
 
@@ -1618,7 +2290,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Ads.PatchAdsOrganization2(ctx, operations.PatchAdsOrganization2Request{
+    res, err := s.Ads.UpdateAdsOrganization(ctx, operations.UpdateAdsOrganizationRequest{
         AdsOrganization: shared.AdsOrganization{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1637,684 +2309,12 @@ func main() {
 | Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.PatchAdsOrganization2Request](../../pkg/models/operations/patchadsorganization2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `request`                                                                                              | [operations.UpdateAdsOrganizationRequest](../../pkg/models/operations/updateadsorganizationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
 | `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.PatchAdsOrganization2Response](../../pkg/models/operations/patchadsorganization2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsAd2
-
-Remove an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsAd2" method="delete" path="/ads/{connection_id}/ad/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsAd2(ctx, operations.RemoveAdsAd2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.RemoveAdsAd2Request](../../pkg/models/operations/removeadsad2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
-
-### Response
-
-**[*operations.RemoveAdsAd2Response](../../pkg/models/operations/removeadsad2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsCampaign2
-
-Remove a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsCampaign2" method="delete" path="/ads/{connection_id}/campaign/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsCampaign2(ctx, operations.RemoveAdsCampaign2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveAdsCampaign2Request](../../pkg/models/operations/removeadscampaign2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.RemoveAdsCampaign2Response](../../pkg/models/operations/removeadscampaign2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsCreative2
-
-Remove a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsCreative2" method="delete" path="/ads/{connection_id}/creative/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsCreative2(ctx, operations.RemoveAdsCreative2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.RemoveAdsCreative2Request](../../pkg/models/operations/removeadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.RemoveAdsCreative2Response](../../pkg/models/operations/removeadscreative2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsGroup2
-
-Remove a group
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsGroup2" method="delete" path="/ads/{connection_id}/group/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsGroup2(ctx, operations.RemoveAdsGroup2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.RemoveAdsGroup2Request](../../pkg/models/operations/removeadsgroup2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.RemoveAdsGroup2Response](../../pkg/models/operations/removeadsgroup2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsInsertionorder2
-
-Remove an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsInsertionorder2" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsInsertionorder2(ctx, operations.RemoveAdsInsertionorder2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.RemoveAdsInsertionorder2Request](../../pkg/models/operations/removeadsinsertionorder2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
-
-### Response
-
-**[*operations.RemoveAdsInsertionorder2Response](../../pkg/models/operations/removeadsinsertionorder2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## RemoveAdsOrganization2
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.RemoveAdsOrganization2(ctx, operations.RemoveAdsOrganization2Request{
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.RemoveAdsOrganization2Request](../../pkg/models/operations/removeadsorganization2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.RemoveAdsOrganization2Response](../../pkg/models/operations/removeadsorganization2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsAd2
-
-Update an ad
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsAd2" method="put" path="/ads/{connection_id}/ad/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsAd2(ctx, operations.UpdateAdsAd2Request{
-        AdsAd: shared.AdsAd{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsAd != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `request`                                                                            | [operations.UpdateAdsAd2Request](../../pkg/models/operations/updateadsad2request.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
-| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
-
-### Response
-
-**[*operations.UpdateAdsAd2Response](../../pkg/models/operations/updateadsad2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsCampaign2
-
-Update a campaign
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsCampaign2" method="put" path="/ads/{connection_id}/campaign/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsCampaign2(ctx, operations.UpdateAdsCampaign2Request{
-        AdsCampaign: shared.AdsCampaign{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsCampaign != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateAdsCampaign2Request](../../pkg/models/operations/updateadscampaign2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.UpdateAdsCampaign2Response](../../pkg/models/operations/updateadscampaign2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsCreative2
-
-Update a creative
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsCreative2" method="put" path="/ads/{connection_id}/creative/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsCreative2(ctx, operations.UpdateAdsCreative2Request{
-        AdsCreative: shared.AdsCreative{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsCreative != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.UpdateAdsCreative2Request](../../pkg/models/operations/updateadscreative2request.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.UpdateAdsCreative2Response](../../pkg/models/operations/updateadscreative2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsGroup2
-
-Update a group
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsGroup2" method="put" path="/ads/{connection_id}/group/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsGroup2(ctx, operations.UpdateAdsGroup2Request{
-        AdsGroup: shared.AdsGroup{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsGroup != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
-| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
-| `request`                                                                                  | [operations.UpdateAdsGroup2Request](../../pkg/models/operations/updateadsgroup2request.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
-| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
-
-### Response
-
-**[*operations.UpdateAdsGroup2Response](../../pkg/models/operations/updateadsgroup2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsInsertionorder2
-
-Update an insertionorder
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder2" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsInsertionorder2(ctx, operations.UpdateAdsInsertionorder2Request{
-        AdsInsertionorder: shared.AdsInsertionorder{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsInsertionorder != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.UpdateAdsInsertionorder2Request](../../pkg/models/operations/updateadsinsertionorder2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
-
-### Response
-
-**[*operations.UpdateAdsInsertionorder2Response](../../pkg/models/operations/updateadsinsertionorder2response.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateAdsOrganization2
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
-```go
-package main
-
-import(
-	"context"
-	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
-	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := unifiedgosdk.New(
-        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    res, err := s.Ads.UpdateAdsOrganization2(ctx, operations.UpdateAdsOrganization2Request{
-        AdsOrganization: shared.AdsOrganization{},
-        ConnectionID: "<id>",
-        ID: "<id>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.AdsOrganization != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.UpdateAdsOrganization2Request](../../pkg/models/operations/updateadsorganization2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
-
-### Response
-
-**[*operations.UpdateAdsOrganization2Response](../../pkg/models/operations/updateadsorganization2response.md), error**
+**[*operations.UpdateAdsOrganizationResponse](../../pkg/models/operations/updateadsorganizationresponse.md), error**
 
 ### Errors
 

@@ -30,8 +30,8 @@ func newLead(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// CreateCrmLead2 - Create a lead
-func (s *Lead) CreateCrmLead2(ctx context.Context, request operations.CreateCrmLead2Request, opts ...operations.Option) (*operations.CreateCrmLead2Response, error) {
+// CreateCrmLead - Create a lead
+func (s *Lead) CreateCrmLead(ctx context.Context, request operations.CreateCrmLeadRequest, opts ...operations.Option) (*operations.CreateCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Lead) CreateCrmLead2(ctx context.Context, request operations.CreateCrmL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createCrmLead2",
+		OperationID:      "createCrmLead",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Lead) CreateCrmLead2(ctx context.Context, request operations.CreateCrmL
 		}
 	}
 
-	res := &operations.CreateCrmLead2Response{
+	res := &operations.CreateCrmLeadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Lead) CreateCrmLead2(ctx context.Context, request operations.CreateCrmL
 
 }
 
-// GetCrmLead2 - Retrieve a lead
-func (s *Lead) GetCrmLead2(ctx context.Context, request operations.GetCrmLead2Request, opts ...operations.Option) (*operations.GetCrmLead2Response, error) {
+// GetCrmLead - Retrieve a lead
+func (s *Lead) GetCrmLead(ctx context.Context, request operations.GetCrmLeadRequest, opts ...operations.Option) (*operations.GetCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Lead) GetCrmLead2(ctx context.Context, request operations.GetCrmLead2Re
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getCrmLead2",
+		OperationID:      "getCrmLead",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Lead) GetCrmLead2(ctx context.Context, request operations.GetCrmLead2Re
 		}
 	}
 
-	res := &operations.GetCrmLead2Response{
+	res := &operations.GetCrmLeadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Lead) GetCrmLead2(ctx context.Context, request operations.GetCrmLead2Re
 
 }
 
-// ListCrmLeads2 - List all leads
-func (s *Lead) ListCrmLeads2(ctx context.Context, request operations.ListCrmLeads2Request, opts ...operations.Option) (*operations.ListCrmLeads2Response, error) {
+// ListCrmLeads - List all leads
+func (s *Lead) ListCrmLeads(ctx context.Context, request operations.ListCrmLeadsRequest, opts ...operations.Option) (*operations.ListCrmLeadsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Lead) ListCrmLeads2(ctx context.Context, request operations.ListCrmLead
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmLeads2",
+		OperationID:      "listCrmLeads",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Lead) ListCrmLeads2(ctx context.Context, request operations.ListCrmLead
 		}
 	}
 
-	res := &operations.ListCrmLeads2Response{
+	res := &operations.ListCrmLeadsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Lead) ListCrmLeads2(ctx context.Context, request operations.ListCrmLead
 
 }
 
-// PatchCrmLead2 - Update a lead
-func (s *Lead) PatchCrmLead2(ctx context.Context, request operations.PatchCrmLead2Request, opts ...operations.Option) (*operations.PatchCrmLead2Response, error) {
+// PatchCrmLead - Update a lead
+func (s *Lead) PatchCrmLead(ctx context.Context, request operations.PatchCrmLeadRequest, opts ...operations.Option) (*operations.PatchCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Lead) PatchCrmLead2(ctx context.Context, request operations.PatchCrmLea
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchCrmLead2",
+		OperationID:      "patchCrmLead",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Lead) PatchCrmLead2(ctx context.Context, request operations.PatchCrmLea
 		}
 	}
 
-	res := &operations.PatchCrmLead2Response{
+	res := &operations.PatchCrmLeadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Lead) PatchCrmLead2(ctx context.Context, request operations.PatchCrmLea
 
 }
 
-// RemoveCrmLead2 - Remove a lead
-func (s *Lead) RemoveCrmLead2(ctx context.Context, request operations.RemoveCrmLead2Request, opts ...operations.Option) (*operations.RemoveCrmLead2Response, error) {
+// RemoveCrmLead - Remove a lead
+func (s *Lead) RemoveCrmLead(ctx context.Context, request operations.RemoveCrmLeadRequest, opts ...operations.Option) (*operations.RemoveCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Lead) RemoveCrmLead2(ctx context.Context, request operations.RemoveCrmL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeCrmLead2",
+		OperationID:      "removeCrmLead",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Lead) RemoveCrmLead2(ctx context.Context, request operations.RemoveCrmL
 		}
 	}
 
-	res := &operations.RemoveCrmLead2Response{
+	res := &operations.RemoveCrmLeadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Lead) RemoveCrmLead2(ctx context.Context, request operations.RemoveCrmL
 
 }
 
-// UpdateCrmLead2 - Update a lead
-func (s *Lead) UpdateCrmLead2(ctx context.Context, request operations.UpdateCrmLead2Request, opts ...operations.Option) (*operations.UpdateCrmLead2Response, error) {
+// UpdateCrmLead - Update a lead
+func (s *Lead) UpdateCrmLead(ctx context.Context, request operations.UpdateCrmLeadRequest, opts ...operations.Option) (*operations.UpdateCrmLeadResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Lead) UpdateCrmLead2(ctx context.Context, request operations.UpdateCrmL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateCrmLead2",
+		OperationID:      "updateCrmLead",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "CrmLead", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Lead) UpdateCrmLead2(ctx context.Context, request operations.UpdateCrmL
 		}
 	}
 
-	res := &operations.UpdateCrmLead2Response{
+	res := &operations.UpdateCrmLeadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

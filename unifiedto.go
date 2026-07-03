@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.914.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.915.0
 
 import (
 	"context"
@@ -77,6 +77,7 @@ type UnifiedTo struct {
 	Taxrate           *Taxrate
 	Transaction       *Transaction
 	Trialbalance      *Trialbalance
+	Vendorcredit      *Vendorcredit
 	Ads               *Ads
 	Ad                *Ad
 	Campaign          *Campaign
@@ -283,9 +284,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.85",
+		SDKVersion: "0.36.86",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.85 2.914.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.86 2.915.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -326,6 +327,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Trialbalance = newTrialbalance(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Vendorcredit = newVendorcredit(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ads = newAds(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ad = newAd(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Campaign = newCampaign(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -30,8 +30,8 @@ func newJob(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 	}
 }
 
-// CreateAtsJob2 - Create a job
-func (s *Job) CreateAtsJob2(ctx context.Context, request operations.CreateAtsJob2Request, opts ...operations.Option) (*operations.CreateAtsJob2Response, error) {
+// CreateAtsJob - Create a job
+func (s *Job) CreateAtsJob(ctx context.Context, request operations.CreateAtsJobRequest, opts ...operations.Option) (*operations.CreateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Job) CreateAtsJob2(ctx context.Context, request operations.CreateAtsJob
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createAtsJob2",
+		OperationID:      "createAtsJob",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Job) CreateAtsJob2(ctx context.Context, request operations.CreateAtsJob
 		}
 	}
 
-	res := &operations.CreateAtsJob2Response{
+	res := &operations.CreateAtsJobResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Job) CreateAtsJob2(ctx context.Context, request operations.CreateAtsJob
 
 }
 
-// GetAtsJob2 - Retrieve a job
-func (s *Job) GetAtsJob2(ctx context.Context, request operations.GetAtsJob2Request, opts ...operations.Option) (*operations.GetAtsJob2Response, error) {
+// GetAtsJob - Retrieve a job
+func (s *Job) GetAtsJob(ctx context.Context, request operations.GetAtsJobRequest, opts ...operations.Option) (*operations.GetAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Job) GetAtsJob2(ctx context.Context, request operations.GetAtsJob2Reque
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getAtsJob2",
+		OperationID:      "getAtsJob",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Job) GetAtsJob2(ctx context.Context, request operations.GetAtsJob2Reque
 		}
 	}
 
-	res := &operations.GetAtsJob2Response{
+	res := &operations.GetAtsJobResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Job) GetAtsJob2(ctx context.Context, request operations.GetAtsJob2Reque
 
 }
 
-// ListAtsJobs2 - List all jobs
-func (s *Job) ListAtsJobs2(ctx context.Context, request operations.ListAtsJobs2Request, opts ...operations.Option) (*operations.ListAtsJobs2Response, error) {
+// ListAtsJobs - List all jobs
+func (s *Job) ListAtsJobs(ctx context.Context, request operations.ListAtsJobsRequest, opts ...operations.Option) (*operations.ListAtsJobsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Job) ListAtsJobs2(ctx context.Context, request operations.ListAtsJobs2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listAtsJobs2",
+		OperationID:      "listAtsJobs",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Job) ListAtsJobs2(ctx context.Context, request operations.ListAtsJobs2R
 		}
 	}
 
-	res := &operations.ListAtsJobs2Response{
+	res := &operations.ListAtsJobsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Job) ListAtsJobs2(ctx context.Context, request operations.ListAtsJobs2R
 
 }
 
-// PatchAtsJob2 - Update a job
-func (s *Job) PatchAtsJob2(ctx context.Context, request operations.PatchAtsJob2Request, opts ...operations.Option) (*operations.PatchAtsJob2Response, error) {
+// PatchAtsJob - Update a job
+func (s *Job) PatchAtsJob(ctx context.Context, request operations.PatchAtsJobRequest, opts ...operations.Option) (*operations.PatchAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Job) PatchAtsJob2(ctx context.Context, request operations.PatchAtsJob2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchAtsJob2",
+		OperationID:      "patchAtsJob",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Job) PatchAtsJob2(ctx context.Context, request operations.PatchAtsJob2R
 		}
 	}
 
-	res := &operations.PatchAtsJob2Response{
+	res := &operations.PatchAtsJobResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Job) PatchAtsJob2(ctx context.Context, request operations.PatchAtsJob2R
 
 }
 
-// RemoveAtsJob2 - Remove a job
-func (s *Job) RemoveAtsJob2(ctx context.Context, request operations.RemoveAtsJob2Request, opts ...operations.Option) (*operations.RemoveAtsJob2Response, error) {
+// RemoveAtsJob - Remove a job
+func (s *Job) RemoveAtsJob(ctx context.Context, request operations.RemoveAtsJobRequest, opts ...operations.Option) (*operations.RemoveAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Job) RemoveAtsJob2(ctx context.Context, request operations.RemoveAtsJob
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeAtsJob2",
+		OperationID:      "removeAtsJob",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Job) RemoveAtsJob2(ctx context.Context, request operations.RemoveAtsJob
 		}
 	}
 
-	res := &operations.RemoveAtsJob2Response{
+	res := &operations.RemoveAtsJobResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Job) RemoveAtsJob2(ctx context.Context, request operations.RemoveAtsJob
 
 }
 
-// UpdateAtsJob2 - Update a job
-func (s *Job) UpdateAtsJob2(ctx context.Context, request operations.UpdateAtsJob2Request, opts ...operations.Option) (*operations.UpdateAtsJob2Response, error) {
+// UpdateAtsJob - Update a job
+func (s *Job) UpdateAtsJob(ctx context.Context, request operations.UpdateAtsJobRequest, opts ...operations.Option) (*operations.UpdateAtsJobResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Job) UpdateAtsJob2(ctx context.Context, request operations.UpdateAtsJob
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateAtsJob2",
+		OperationID:      "updateAtsJob",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "AtsJob", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Job) UpdateAtsJob2(ctx context.Context, request operations.UpdateAtsJob
 		}
 	}
 
-	res := &operations.UpdateAtsJob2Response{
+	res := &operations.UpdateAtsJobResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetMessagingChannel2](#getmessagingchannel2) - Retrieve a channel
-* [ListMessagingChannels2](#listmessagingchannels2) - List all channels
+* [GetMessagingChannel](#getmessagingchannel) - Retrieve a channel
+* [ListMessagingChannels](#listmessagingchannels) - List all channels
 
-## GetMessagingChannel2
+## GetMessagingChannel
 
 Retrieve a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getMessagingChannel2" method="get" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="go" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Channel.GetMessagingChannel2(ctx, operations.GetMessagingChannel2Request{
+    res, err := s.Channel.GetMessagingChannel(ctx, operations.GetMessagingChannelRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
-| `request`                                                                                            | [operations.GetMessagingChannel2Request](../../pkg/models/operations/getmessagingchannel2request.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
+| `request`                                                                                          | [operations.GetMessagingChannelRequest](../../pkg/models/operations/getmessagingchannelrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
 
 ### Response
 
-**[*operations.GetMessagingChannel2Response](../../pkg/models/operations/getmessagingchannel2response.md), error**
+**[*operations.GetMessagingChannelResponse](../../pkg/models/operations/getmessagingchannelresponse.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListMessagingChannels2
+## ListMessagingChannels
 
 List all channels
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listMessagingChannels2" method="get" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="go" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Channel.ListMessagingChannels2(ctx, operations.ListMessagingChannels2Request{
+    res, err := s.Channel.ListMessagingChannels(ctx, operations.ListMessagingChannelsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
-| `request`                                                                                                | [operations.ListMessagingChannels2Request](../../pkg/models/operations/listmessagingchannels2request.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListMessagingChannelsRequest](../../pkg/models/operations/listmessagingchannelsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
 
 ### Response
 
-**[*operations.ListMessagingChannels2Response](../../pkg/models/operations/listmessagingchannels2response.md), error**
+**[*operations.ListMessagingChannelsResponse](../../pkg/models/operations/listmessagingchannelsresponse.md), error**
 
 ### Errors
 

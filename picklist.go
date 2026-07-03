@@ -30,8 +30,8 @@ func newPicklist(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// ListCrmPicklists2 - List all picklists
-func (s *Picklist) ListCrmPicklists2(ctx context.Context, request operations.ListCrmPicklists2Request, opts ...operations.Option) (*operations.ListCrmPicklists2Response, error) {
+// ListCrmPicklists - List all picklists
+func (s *Picklist) ListCrmPicklists(ctx context.Context, request operations.ListCrmPicklistsRequest, opts ...operations.Option) (*operations.ListCrmPicklistsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Picklist) ListCrmPicklists2(ctx context.Context, request operations.Lis
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listCrmPicklists2",
+		OperationID:      "listCrmPicklists",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Picklist) ListCrmPicklists2(ctx context.Context, request operations.Lis
 		}
 	}
 
-	res := &operations.ListCrmPicklists2Response{
+	res := &operations.ListCrmPicklistsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

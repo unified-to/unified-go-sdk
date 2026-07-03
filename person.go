@@ -30,8 +30,8 @@ func newPerson(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hoo
 	}
 }
 
-// ListEnrichPeople2 - Retrieve enrichment information for a person
-func (s *Person) ListEnrichPeople2(ctx context.Context, request operations.ListEnrichPeople2Request, opts ...operations.Option) (*operations.ListEnrichPeople2Response, error) {
+// ListEnrichPeople - Retrieve enrichment information for a person
+func (s *Person) ListEnrichPeople(ctx context.Context, request operations.ListEnrichPeopleRequest, opts ...operations.Option) (*operations.ListEnrichPeopleResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Person) ListEnrichPeople2(ctx context.Context, request operations.ListE
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listEnrichPeople2",
+		OperationID:      "listEnrichPeople",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -185,7 +185,7 @@ func (s *Person) ListEnrichPeople2(ctx context.Context, request operations.ListE
 		}
 	}
 
-	res := &operations.ListEnrichPeople2Response{
+	res := &operations.ListEnrichPeopleResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

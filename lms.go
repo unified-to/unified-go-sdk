@@ -30,8 +30,8 @@ func newLms(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.
 	}
 }
 
-// CreateLmsActivity2 - Create an activity
-func (s *Lms) CreateLmsActivity2(ctx context.Context, request operations.CreateLmsActivity2Request, opts ...operations.Option) (*operations.CreateLmsActivity2Response, error) {
+// CreateLmsActivity - Create an activity
+func (s *Lms) CreateLmsActivity(ctx context.Context, request operations.CreateLmsActivityRequest, opts ...operations.Option) (*operations.CreateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Lms) CreateLmsActivity2(ctx context.Context, request operations.CreateL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsActivity2",
+		OperationID:      "createLmsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsActivity", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Lms) CreateLmsActivity2(ctx context.Context, request operations.CreateL
 		}
 	}
 
-	res := &operations.CreateLmsActivity2Response{
+	res := &operations.CreateLmsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Lms) CreateLmsActivity2(ctx context.Context, request operations.CreateL
 
 }
 
-// CreateLmsClass2 - Create a class
-func (s *Lms) CreateLmsClass2(ctx context.Context, request operations.CreateLmsClass2Request, opts ...operations.Option) (*operations.CreateLmsClass2Response, error) {
+// CreateLmsClass - Create a class
+func (s *Lms) CreateLmsClass(ctx context.Context, request operations.CreateLmsClassRequest, opts ...operations.Option) (*operations.CreateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Lms) CreateLmsClass2(ctx context.Context, request operations.CreateLmsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsClass2",
+		OperationID:      "createLmsClass",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
@@ -406,7 +406,7 @@ func (s *Lms) CreateLmsClass2(ctx context.Context, request operations.CreateLmsC
 		}
 	}
 
-	res := &operations.CreateLmsClass2Response{
+	res := &operations.CreateLmsClassResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -458,8 +458,8 @@ func (s *Lms) CreateLmsClass2(ctx context.Context, request operations.CreateLmsC
 
 }
 
-// CreateLmsCollection2 - Create a collection
-func (s *Lms) CreateLmsCollection2(ctx context.Context, request operations.CreateLmsCollection2Request, opts ...operations.Option) (*operations.CreateLmsCollection2Response, error) {
+// CreateLmsCollection - Create a collection
+func (s *Lms) CreateLmsCollection(ctx context.Context, request operations.CreateLmsCollectionRequest, opts ...operations.Option) (*operations.CreateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -488,7 +488,7 @@ func (s *Lms) CreateLmsCollection2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsCollection2",
+		OperationID:      "createLmsCollection",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -620,7 +620,7 @@ func (s *Lms) CreateLmsCollection2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateLmsCollection2Response{
+	res := &operations.CreateLmsCollectionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -672,8 +672,8 @@ func (s *Lms) CreateLmsCollection2(ctx context.Context, request operations.Creat
 
 }
 
-// CreateLmsContent2 - Create a content
-func (s *Lms) CreateLmsContent2(ctx context.Context, request operations.CreateLmsContent2Request, opts ...operations.Option) (*operations.CreateLmsContent2Response, error) {
+// CreateLmsContent - Create a content
+func (s *Lms) CreateLmsContent(ctx context.Context, request operations.CreateLmsContentRequest, opts ...operations.Option) (*operations.CreateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -702,7 +702,7 @@ func (s *Lms) CreateLmsContent2(ctx context.Context, request operations.CreateLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsContent2",
+		OperationID:      "createLmsContent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -834,7 +834,7 @@ func (s *Lms) CreateLmsContent2(ctx context.Context, request operations.CreateLm
 		}
 	}
 
-	res := &operations.CreateLmsContent2Response{
+	res := &operations.CreateLmsContentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -886,8 +886,8 @@ func (s *Lms) CreateLmsContent2(ctx context.Context, request operations.CreateLm
 
 }
 
-// CreateLmsCourse2 - Create a course
-func (s *Lms) CreateLmsCourse2(ctx context.Context, request operations.CreateLmsCourse2Request, opts ...operations.Option) (*operations.CreateLmsCourse2Response, error) {
+// CreateLmsCourse - Create a course
+func (s *Lms) CreateLmsCourse(ctx context.Context, request operations.CreateLmsCourseRequest, opts ...operations.Option) (*operations.CreateLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -916,7 +916,7 @@ func (s *Lms) CreateLmsCourse2(ctx context.Context, request operations.CreateLms
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsCourse2",
+		OperationID:      "createLmsCourse",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCourse", "json", `request:"mediaType=application/json"`)
@@ -1048,7 +1048,7 @@ func (s *Lms) CreateLmsCourse2(ctx context.Context, request operations.CreateLms
 		}
 	}
 
-	res := &operations.CreateLmsCourse2Response{
+	res := &operations.CreateLmsCourseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1100,8 +1100,8 @@ func (s *Lms) CreateLmsCourse2(ctx context.Context, request operations.CreateLms
 
 }
 
-// CreateLmsInstructor2 - Create an instructor
-func (s *Lms) CreateLmsInstructor2(ctx context.Context, request operations.CreateLmsInstructor2Request, opts ...operations.Option) (*operations.CreateLmsInstructor2Response, error) {
+// CreateLmsInstructor - Create an instructor
+func (s *Lms) CreateLmsInstructor(ctx context.Context, request operations.CreateLmsInstructorRequest, opts ...operations.Option) (*operations.CreateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1130,7 +1130,7 @@ func (s *Lms) CreateLmsInstructor2(ctx context.Context, request operations.Creat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsInstructor2",
+		OperationID:      "createLmsInstructor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsInstructor", "json", `request:"mediaType=application/json"`)
@@ -1262,7 +1262,7 @@ func (s *Lms) CreateLmsInstructor2(ctx context.Context, request operations.Creat
 		}
 	}
 
-	res := &operations.CreateLmsInstructor2Response{
+	res := &operations.CreateLmsInstructorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1314,8 +1314,8 @@ func (s *Lms) CreateLmsInstructor2(ctx context.Context, request operations.Creat
 
 }
 
-// CreateLmsStudent2 - Create a student
-func (s *Lms) CreateLmsStudent2(ctx context.Context, request operations.CreateLmsStudent2Request, opts ...operations.Option) (*operations.CreateLmsStudent2Response, error) {
+// CreateLmsStudent - Create a student
+func (s *Lms) CreateLmsStudent(ctx context.Context, request operations.CreateLmsStudentRequest, opts ...operations.Option) (*operations.CreateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1344,7 +1344,7 @@ func (s *Lms) CreateLmsStudent2(ctx context.Context, request operations.CreateLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createLmsStudent2",
+		OperationID:      "createLmsStudent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -1476,7 +1476,7 @@ func (s *Lms) CreateLmsStudent2(ctx context.Context, request operations.CreateLm
 		}
 	}
 
-	res := &operations.CreateLmsStudent2Response{
+	res := &operations.CreateLmsStudentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1528,8 +1528,8 @@ func (s *Lms) CreateLmsStudent2(ctx context.Context, request operations.CreateLm
 
 }
 
-// GetLmsActivity2 - Retrieve an activity
-func (s *Lms) GetLmsActivity2(ctx context.Context, request operations.GetLmsActivity2Request, opts ...operations.Option) (*operations.GetLmsActivity2Response, error) {
+// GetLmsActivity - Retrieve an activity
+func (s *Lms) GetLmsActivity(ctx context.Context, request operations.GetLmsActivityRequest, opts ...operations.Option) (*operations.GetLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1558,7 +1558,7 @@ func (s *Lms) GetLmsActivity2(ctx context.Context, request operations.GetLmsActi
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsActivity2",
+		OperationID:      "getLmsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1683,7 +1683,7 @@ func (s *Lms) GetLmsActivity2(ctx context.Context, request operations.GetLmsActi
 		}
 	}
 
-	res := &operations.GetLmsActivity2Response{
+	res := &operations.GetLmsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1735,8 +1735,8 @@ func (s *Lms) GetLmsActivity2(ctx context.Context, request operations.GetLmsActi
 
 }
 
-// GetLmsClass2 - Retrieve a class
-func (s *Lms) GetLmsClass2(ctx context.Context, request operations.GetLmsClass2Request, opts ...operations.Option) (*operations.GetLmsClass2Response, error) {
+// GetLmsClass - Retrieve a class
+func (s *Lms) GetLmsClass(ctx context.Context, request operations.GetLmsClassRequest, opts ...operations.Option) (*operations.GetLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1765,7 +1765,7 @@ func (s *Lms) GetLmsClass2(ctx context.Context, request operations.GetLmsClass2R
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsClass2",
+		OperationID:      "getLmsClass",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1890,7 +1890,7 @@ func (s *Lms) GetLmsClass2(ctx context.Context, request operations.GetLmsClass2R
 		}
 	}
 
-	res := &operations.GetLmsClass2Response{
+	res := &operations.GetLmsClassResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1942,8 +1942,8 @@ func (s *Lms) GetLmsClass2(ctx context.Context, request operations.GetLmsClass2R
 
 }
 
-// GetLmsCollection2 - Retrieve a collection
-func (s *Lms) GetLmsCollection2(ctx context.Context, request operations.GetLmsCollection2Request, opts ...operations.Option) (*operations.GetLmsCollection2Response, error) {
+// GetLmsCollection - Retrieve a collection
+func (s *Lms) GetLmsCollection(ctx context.Context, request operations.GetLmsCollectionRequest, opts ...operations.Option) (*operations.GetLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1972,7 +1972,7 @@ func (s *Lms) GetLmsCollection2(ctx context.Context, request operations.GetLmsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsCollection2",
+		OperationID:      "getLmsCollection",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2097,7 +2097,7 @@ func (s *Lms) GetLmsCollection2(ctx context.Context, request operations.GetLmsCo
 		}
 	}
 
-	res := &operations.GetLmsCollection2Response{
+	res := &operations.GetLmsCollectionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2149,8 +2149,8 @@ func (s *Lms) GetLmsCollection2(ctx context.Context, request operations.GetLmsCo
 
 }
 
-// GetLmsContent2 - Retrieve a content
-func (s *Lms) GetLmsContent2(ctx context.Context, request operations.GetLmsContent2Request, opts ...operations.Option) (*operations.GetLmsContent2Response, error) {
+// GetLmsContent - Retrieve a content
+func (s *Lms) GetLmsContent(ctx context.Context, request operations.GetLmsContentRequest, opts ...operations.Option) (*operations.GetLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2179,7 +2179,7 @@ func (s *Lms) GetLmsContent2(ctx context.Context, request operations.GetLmsConte
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsContent2",
+		OperationID:      "getLmsContent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2304,7 +2304,7 @@ func (s *Lms) GetLmsContent2(ctx context.Context, request operations.GetLmsConte
 		}
 	}
 
-	res := &operations.GetLmsContent2Response{
+	res := &operations.GetLmsContentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2356,8 +2356,8 @@ func (s *Lms) GetLmsContent2(ctx context.Context, request operations.GetLmsConte
 
 }
 
-// GetLmsCourse2 - Retrieve a course
-func (s *Lms) GetLmsCourse2(ctx context.Context, request operations.GetLmsCourse2Request, opts ...operations.Option) (*operations.GetLmsCourse2Response, error) {
+// GetLmsCourse - Retrieve a course
+func (s *Lms) GetLmsCourse(ctx context.Context, request operations.GetLmsCourseRequest, opts ...operations.Option) (*operations.GetLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2386,7 +2386,7 @@ func (s *Lms) GetLmsCourse2(ctx context.Context, request operations.GetLmsCourse
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsCourse2",
+		OperationID:      "getLmsCourse",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2511,7 +2511,7 @@ func (s *Lms) GetLmsCourse2(ctx context.Context, request operations.GetLmsCourse
 		}
 	}
 
-	res := &operations.GetLmsCourse2Response{
+	res := &operations.GetLmsCourseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2563,8 +2563,8 @@ func (s *Lms) GetLmsCourse2(ctx context.Context, request operations.GetLmsCourse
 
 }
 
-// GetLmsInstructor2 - Retrieve an instructor
-func (s *Lms) GetLmsInstructor2(ctx context.Context, request operations.GetLmsInstructor2Request, opts ...operations.Option) (*operations.GetLmsInstructor2Response, error) {
+// GetLmsInstructor - Retrieve an instructor
+func (s *Lms) GetLmsInstructor(ctx context.Context, request operations.GetLmsInstructorRequest, opts ...operations.Option) (*operations.GetLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2593,7 +2593,7 @@ func (s *Lms) GetLmsInstructor2(ctx context.Context, request operations.GetLmsIn
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsInstructor2",
+		OperationID:      "getLmsInstructor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2718,7 +2718,7 @@ func (s *Lms) GetLmsInstructor2(ctx context.Context, request operations.GetLmsIn
 		}
 	}
 
-	res := &operations.GetLmsInstructor2Response{
+	res := &operations.GetLmsInstructorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2770,8 +2770,8 @@ func (s *Lms) GetLmsInstructor2(ctx context.Context, request operations.GetLmsIn
 
 }
 
-// GetLmsStudent2 - Retrieve a student
-func (s *Lms) GetLmsStudent2(ctx context.Context, request operations.GetLmsStudent2Request, opts ...operations.Option) (*operations.GetLmsStudent2Response, error) {
+// GetLmsStudent - Retrieve a student
+func (s *Lms) GetLmsStudent(ctx context.Context, request operations.GetLmsStudentRequest, opts ...operations.Option) (*operations.GetLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -2800,7 +2800,7 @@ func (s *Lms) GetLmsStudent2(ctx context.Context, request operations.GetLmsStude
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getLmsStudent2",
+		OperationID:      "getLmsStudent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -2925,7 +2925,7 @@ func (s *Lms) GetLmsStudent2(ctx context.Context, request operations.GetLmsStude
 		}
 	}
 
-	res := &operations.GetLmsStudent2Response{
+	res := &operations.GetLmsStudentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -2977,8 +2977,8 @@ func (s *Lms) GetLmsStudent2(ctx context.Context, request operations.GetLmsStude
 
 }
 
-// ListLmsActivities2 - List all activities
-func (s *Lms) ListLmsActivities2(ctx context.Context, request operations.ListLmsActivities2Request, opts ...operations.Option) (*operations.ListLmsActivities2Response, error) {
+// ListLmsActivities - List all activities
+func (s *Lms) ListLmsActivities(ctx context.Context, request operations.ListLmsActivitiesRequest, opts ...operations.Option) (*operations.ListLmsActivitiesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3007,7 +3007,7 @@ func (s *Lms) ListLmsActivities2(ctx context.Context, request operations.ListLms
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsActivities2",
+		OperationID:      "listLmsActivities",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3132,7 +3132,7 @@ func (s *Lms) ListLmsActivities2(ctx context.Context, request operations.ListLms
 		}
 	}
 
-	res := &operations.ListLmsActivities2Response{
+	res := &operations.ListLmsActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3184,8 +3184,8 @@ func (s *Lms) ListLmsActivities2(ctx context.Context, request operations.ListLms
 
 }
 
-// ListLmsClasses2 - List all classes
-func (s *Lms) ListLmsClasses2(ctx context.Context, request operations.ListLmsClasses2Request, opts ...operations.Option) (*operations.ListLmsClasses2Response, error) {
+// ListLmsClasses - List all classes
+func (s *Lms) ListLmsClasses(ctx context.Context, request operations.ListLmsClassesRequest, opts ...operations.Option) (*operations.ListLmsClassesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3214,7 +3214,7 @@ func (s *Lms) ListLmsClasses2(ctx context.Context, request operations.ListLmsCla
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsClasses2",
+		OperationID:      "listLmsClasses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3339,7 +3339,7 @@ func (s *Lms) ListLmsClasses2(ctx context.Context, request operations.ListLmsCla
 		}
 	}
 
-	res := &operations.ListLmsClasses2Response{
+	res := &operations.ListLmsClassesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3391,8 +3391,8 @@ func (s *Lms) ListLmsClasses2(ctx context.Context, request operations.ListLmsCla
 
 }
 
-// ListLmsCollections2 - List all collections
-func (s *Lms) ListLmsCollections2(ctx context.Context, request operations.ListLmsCollections2Request, opts ...operations.Option) (*operations.ListLmsCollections2Response, error) {
+// ListLmsCollections - List all collections
+func (s *Lms) ListLmsCollections(ctx context.Context, request operations.ListLmsCollectionsRequest, opts ...operations.Option) (*operations.ListLmsCollectionsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3421,7 +3421,7 @@ func (s *Lms) ListLmsCollections2(ctx context.Context, request operations.ListLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsCollections2",
+		OperationID:      "listLmsCollections",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3546,7 +3546,7 @@ func (s *Lms) ListLmsCollections2(ctx context.Context, request operations.ListLm
 		}
 	}
 
-	res := &operations.ListLmsCollections2Response{
+	res := &operations.ListLmsCollectionsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3598,8 +3598,8 @@ func (s *Lms) ListLmsCollections2(ctx context.Context, request operations.ListLm
 
 }
 
-// ListLmsContents2 - List all contents
-func (s *Lms) ListLmsContents2(ctx context.Context, request operations.ListLmsContents2Request, opts ...operations.Option) (*operations.ListLmsContents2Response, error) {
+// ListLmsContents - List all contents
+func (s *Lms) ListLmsContents(ctx context.Context, request operations.ListLmsContentsRequest, opts ...operations.Option) (*operations.ListLmsContentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3628,7 +3628,7 @@ func (s *Lms) ListLmsContents2(ctx context.Context, request operations.ListLmsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsContents2",
+		OperationID:      "listLmsContents",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3753,7 +3753,7 @@ func (s *Lms) ListLmsContents2(ctx context.Context, request operations.ListLmsCo
 		}
 	}
 
-	res := &operations.ListLmsContents2Response{
+	res := &operations.ListLmsContentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -3805,8 +3805,8 @@ func (s *Lms) ListLmsContents2(ctx context.Context, request operations.ListLmsCo
 
 }
 
-// ListLmsCourses2 - List all courses
-func (s *Lms) ListLmsCourses2(ctx context.Context, request operations.ListLmsCourses2Request, opts ...operations.Option) (*operations.ListLmsCourses2Response, error) {
+// ListLmsCourses - List all courses
+func (s *Lms) ListLmsCourses(ctx context.Context, request operations.ListLmsCoursesRequest, opts ...operations.Option) (*operations.ListLmsCoursesResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -3835,7 +3835,7 @@ func (s *Lms) ListLmsCourses2(ctx context.Context, request operations.ListLmsCou
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsCourses2",
+		OperationID:      "listLmsCourses",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -3960,7 +3960,7 @@ func (s *Lms) ListLmsCourses2(ctx context.Context, request operations.ListLmsCou
 		}
 	}
 
-	res := &operations.ListLmsCourses2Response{
+	res := &operations.ListLmsCoursesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4012,8 +4012,8 @@ func (s *Lms) ListLmsCourses2(ctx context.Context, request operations.ListLmsCou
 
 }
 
-// ListLmsInstructors2 - List all instructors
-func (s *Lms) ListLmsInstructors2(ctx context.Context, request operations.ListLmsInstructors2Request, opts ...operations.Option) (*operations.ListLmsInstructors2Response, error) {
+// ListLmsInstructors - List all instructors
+func (s *Lms) ListLmsInstructors(ctx context.Context, request operations.ListLmsInstructorsRequest, opts ...operations.Option) (*operations.ListLmsInstructorsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4042,7 +4042,7 @@ func (s *Lms) ListLmsInstructors2(ctx context.Context, request operations.ListLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsInstructors2",
+		OperationID:      "listLmsInstructors",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4167,7 +4167,7 @@ func (s *Lms) ListLmsInstructors2(ctx context.Context, request operations.ListLm
 		}
 	}
 
-	res := &operations.ListLmsInstructors2Response{
+	res := &operations.ListLmsInstructorsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4219,8 +4219,8 @@ func (s *Lms) ListLmsInstructors2(ctx context.Context, request operations.ListLm
 
 }
 
-// ListLmsStudents2 - List all students
-func (s *Lms) ListLmsStudents2(ctx context.Context, request operations.ListLmsStudents2Request, opts ...operations.Option) (*operations.ListLmsStudents2Response, error) {
+// ListLmsStudents - List all students
+func (s *Lms) ListLmsStudents(ctx context.Context, request operations.ListLmsStudentsRequest, opts ...operations.Option) (*operations.ListLmsStudentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4249,7 +4249,7 @@ func (s *Lms) ListLmsStudents2(ctx context.Context, request operations.ListLmsSt
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listLmsStudents2",
+		OperationID:      "listLmsStudents",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -4374,7 +4374,7 @@ func (s *Lms) ListLmsStudents2(ctx context.Context, request operations.ListLmsSt
 		}
 	}
 
-	res := &operations.ListLmsStudents2Response{
+	res := &operations.ListLmsStudentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4426,8 +4426,8 @@ func (s *Lms) ListLmsStudents2(ctx context.Context, request operations.ListLmsSt
 
 }
 
-// PatchLmsActivity2 - Update an activity
-func (s *Lms) PatchLmsActivity2(ctx context.Context, request operations.PatchLmsActivity2Request, opts ...operations.Option) (*operations.PatchLmsActivity2Response, error) {
+// PatchLmsActivity - Update an activity
+func (s *Lms) PatchLmsActivity(ctx context.Context, request operations.PatchLmsActivityRequest, opts ...operations.Option) (*operations.PatchLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4456,7 +4456,7 @@ func (s *Lms) PatchLmsActivity2(ctx context.Context, request operations.PatchLms
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsActivity2",
+		OperationID:      "patchLmsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsActivity", "json", `request:"mediaType=application/json"`)
@@ -4588,7 +4588,7 @@ func (s *Lms) PatchLmsActivity2(ctx context.Context, request operations.PatchLms
 		}
 	}
 
-	res := &operations.PatchLmsActivity2Response{
+	res := &operations.PatchLmsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4640,8 +4640,8 @@ func (s *Lms) PatchLmsActivity2(ctx context.Context, request operations.PatchLms
 
 }
 
-// PatchLmsClass2 - Update a class
-func (s *Lms) PatchLmsClass2(ctx context.Context, request operations.PatchLmsClass2Request, opts ...operations.Option) (*operations.PatchLmsClass2Response, error) {
+// PatchLmsClass - Update a class
+func (s *Lms) PatchLmsClass(ctx context.Context, request operations.PatchLmsClassRequest, opts ...operations.Option) (*operations.PatchLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4670,7 +4670,7 @@ func (s *Lms) PatchLmsClass2(ctx context.Context, request operations.PatchLmsCla
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsClass2",
+		OperationID:      "patchLmsClass",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
@@ -4802,7 +4802,7 @@ func (s *Lms) PatchLmsClass2(ctx context.Context, request operations.PatchLmsCla
 		}
 	}
 
-	res := &operations.PatchLmsClass2Response{
+	res := &operations.PatchLmsClassResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -4854,8 +4854,8 @@ func (s *Lms) PatchLmsClass2(ctx context.Context, request operations.PatchLmsCla
 
 }
 
-// PatchLmsCollection2 - Update a collection
-func (s *Lms) PatchLmsCollection2(ctx context.Context, request operations.PatchLmsCollection2Request, opts ...operations.Option) (*operations.PatchLmsCollection2Response, error) {
+// PatchLmsCollection - Update a collection
+func (s *Lms) PatchLmsCollection(ctx context.Context, request operations.PatchLmsCollectionRequest, opts ...operations.Option) (*operations.PatchLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -4884,7 +4884,7 @@ func (s *Lms) PatchLmsCollection2(ctx context.Context, request operations.PatchL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsCollection2",
+		OperationID:      "patchLmsCollection",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -5016,7 +5016,7 @@ func (s *Lms) PatchLmsCollection2(ctx context.Context, request operations.PatchL
 		}
 	}
 
-	res := &operations.PatchLmsCollection2Response{
+	res := &operations.PatchLmsCollectionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5068,8 +5068,8 @@ func (s *Lms) PatchLmsCollection2(ctx context.Context, request operations.PatchL
 
 }
 
-// PatchLmsContent2 - Update a content
-func (s *Lms) PatchLmsContent2(ctx context.Context, request operations.PatchLmsContent2Request, opts ...operations.Option) (*operations.PatchLmsContent2Response, error) {
+// PatchLmsContent - Update a content
+func (s *Lms) PatchLmsContent(ctx context.Context, request operations.PatchLmsContentRequest, opts ...operations.Option) (*operations.PatchLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5098,7 +5098,7 @@ func (s *Lms) PatchLmsContent2(ctx context.Context, request operations.PatchLmsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsContent2",
+		OperationID:      "patchLmsContent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -5230,7 +5230,7 @@ func (s *Lms) PatchLmsContent2(ctx context.Context, request operations.PatchLmsC
 		}
 	}
 
-	res := &operations.PatchLmsContent2Response{
+	res := &operations.PatchLmsContentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5282,8 +5282,8 @@ func (s *Lms) PatchLmsContent2(ctx context.Context, request operations.PatchLmsC
 
 }
 
-// PatchLmsCourse2 - Update a course
-func (s *Lms) PatchLmsCourse2(ctx context.Context, request operations.PatchLmsCourse2Request, opts ...operations.Option) (*operations.PatchLmsCourse2Response, error) {
+// PatchLmsCourse - Update a course
+func (s *Lms) PatchLmsCourse(ctx context.Context, request operations.PatchLmsCourseRequest, opts ...operations.Option) (*operations.PatchLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5312,7 +5312,7 @@ func (s *Lms) PatchLmsCourse2(ctx context.Context, request operations.PatchLmsCo
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsCourse2",
+		OperationID:      "patchLmsCourse",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCourse", "json", `request:"mediaType=application/json"`)
@@ -5444,7 +5444,7 @@ func (s *Lms) PatchLmsCourse2(ctx context.Context, request operations.PatchLmsCo
 		}
 	}
 
-	res := &operations.PatchLmsCourse2Response{
+	res := &operations.PatchLmsCourseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5496,8 +5496,8 @@ func (s *Lms) PatchLmsCourse2(ctx context.Context, request operations.PatchLmsCo
 
 }
 
-// PatchLmsInstructor2 - Update an instructor
-func (s *Lms) PatchLmsInstructor2(ctx context.Context, request operations.PatchLmsInstructor2Request, opts ...operations.Option) (*operations.PatchLmsInstructor2Response, error) {
+// PatchLmsInstructor - Update an instructor
+func (s *Lms) PatchLmsInstructor(ctx context.Context, request operations.PatchLmsInstructorRequest, opts ...operations.Option) (*operations.PatchLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5526,7 +5526,7 @@ func (s *Lms) PatchLmsInstructor2(ctx context.Context, request operations.PatchL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsInstructor2",
+		OperationID:      "patchLmsInstructor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsInstructor", "json", `request:"mediaType=application/json"`)
@@ -5658,7 +5658,7 @@ func (s *Lms) PatchLmsInstructor2(ctx context.Context, request operations.PatchL
 		}
 	}
 
-	res := &operations.PatchLmsInstructor2Response{
+	res := &operations.PatchLmsInstructorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5710,8 +5710,8 @@ func (s *Lms) PatchLmsInstructor2(ctx context.Context, request operations.PatchL
 
 }
 
-// PatchLmsStudent2 - Update a student
-func (s *Lms) PatchLmsStudent2(ctx context.Context, request operations.PatchLmsStudent2Request, opts ...operations.Option) (*operations.PatchLmsStudent2Response, error) {
+// PatchLmsStudent - Update a student
+func (s *Lms) PatchLmsStudent(ctx context.Context, request operations.PatchLmsStudentRequest, opts ...operations.Option) (*operations.PatchLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5740,7 +5740,7 @@ func (s *Lms) PatchLmsStudent2(ctx context.Context, request operations.PatchLmsS
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchLmsStudent2",
+		OperationID:      "patchLmsStudent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -5872,7 +5872,7 @@ func (s *Lms) PatchLmsStudent2(ctx context.Context, request operations.PatchLmsS
 		}
 	}
 
-	res := &operations.PatchLmsStudent2Response{
+	res := &operations.PatchLmsStudentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -5924,8 +5924,8 @@ func (s *Lms) PatchLmsStudent2(ctx context.Context, request operations.PatchLmsS
 
 }
 
-// RemoveLmsActivity2 - Remove an activity
-func (s *Lms) RemoveLmsActivity2(ctx context.Context, request operations.RemoveLmsActivity2Request, opts ...operations.Option) (*operations.RemoveLmsActivity2Response, error) {
+// RemoveLmsActivity - Remove an activity
+func (s *Lms) RemoveLmsActivity(ctx context.Context, request operations.RemoveLmsActivityRequest, opts ...operations.Option) (*operations.RemoveLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -5954,7 +5954,7 @@ func (s *Lms) RemoveLmsActivity2(ctx context.Context, request operations.RemoveL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsActivity2",
+		OperationID:      "removeLmsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6075,7 +6075,7 @@ func (s *Lms) RemoveLmsActivity2(ctx context.Context, request operations.RemoveL
 		}
 	}
 
-	res := &operations.RemoveLmsActivity2Response{
+	res := &operations.RemoveLmsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6106,8 +6106,8 @@ func (s *Lms) RemoveLmsActivity2(ctx context.Context, request operations.RemoveL
 
 }
 
-// RemoveLmsClass2 - Remove a class
-func (s *Lms) RemoveLmsClass2(ctx context.Context, request operations.RemoveLmsClass2Request, opts ...operations.Option) (*operations.RemoveLmsClass2Response, error) {
+// RemoveLmsClass - Remove a class
+func (s *Lms) RemoveLmsClass(ctx context.Context, request operations.RemoveLmsClassRequest, opts ...operations.Option) (*operations.RemoveLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6136,7 +6136,7 @@ func (s *Lms) RemoveLmsClass2(ctx context.Context, request operations.RemoveLmsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsClass2",
+		OperationID:      "removeLmsClass",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6257,7 +6257,7 @@ func (s *Lms) RemoveLmsClass2(ctx context.Context, request operations.RemoveLmsC
 		}
 	}
 
-	res := &operations.RemoveLmsClass2Response{
+	res := &operations.RemoveLmsClassResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6288,8 +6288,8 @@ func (s *Lms) RemoveLmsClass2(ctx context.Context, request operations.RemoveLmsC
 
 }
 
-// RemoveLmsCollection2 - Remove a collection
-func (s *Lms) RemoveLmsCollection2(ctx context.Context, request operations.RemoveLmsCollection2Request, opts ...operations.Option) (*operations.RemoveLmsCollection2Response, error) {
+// RemoveLmsCollection - Remove a collection
+func (s *Lms) RemoveLmsCollection(ctx context.Context, request operations.RemoveLmsCollectionRequest, opts ...operations.Option) (*operations.RemoveLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6318,7 +6318,7 @@ func (s *Lms) RemoveLmsCollection2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsCollection2",
+		OperationID:      "removeLmsCollection",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6439,7 +6439,7 @@ func (s *Lms) RemoveLmsCollection2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveLmsCollection2Response{
+	res := &operations.RemoveLmsCollectionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6470,8 +6470,8 @@ func (s *Lms) RemoveLmsCollection2(ctx context.Context, request operations.Remov
 
 }
 
-// RemoveLmsContent2 - Remove a content
-func (s *Lms) RemoveLmsContent2(ctx context.Context, request operations.RemoveLmsContent2Request, opts ...operations.Option) (*operations.RemoveLmsContent2Response, error) {
+// RemoveLmsContent - Remove a content
+func (s *Lms) RemoveLmsContent(ctx context.Context, request operations.RemoveLmsContentRequest, opts ...operations.Option) (*operations.RemoveLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6500,7 +6500,7 @@ func (s *Lms) RemoveLmsContent2(ctx context.Context, request operations.RemoveLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsContent2",
+		OperationID:      "removeLmsContent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6621,7 +6621,7 @@ func (s *Lms) RemoveLmsContent2(ctx context.Context, request operations.RemoveLm
 		}
 	}
 
-	res := &operations.RemoveLmsContent2Response{
+	res := &operations.RemoveLmsContentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6652,8 +6652,8 @@ func (s *Lms) RemoveLmsContent2(ctx context.Context, request operations.RemoveLm
 
 }
 
-// RemoveLmsCourse2 - Remove a course
-func (s *Lms) RemoveLmsCourse2(ctx context.Context, request operations.RemoveLmsCourse2Request, opts ...operations.Option) (*operations.RemoveLmsCourse2Response, error) {
+// RemoveLmsCourse - Remove a course
+func (s *Lms) RemoveLmsCourse(ctx context.Context, request operations.RemoveLmsCourseRequest, opts ...operations.Option) (*operations.RemoveLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6682,7 +6682,7 @@ func (s *Lms) RemoveLmsCourse2(ctx context.Context, request operations.RemoveLms
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsCourse2",
+		OperationID:      "removeLmsCourse",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6803,7 +6803,7 @@ func (s *Lms) RemoveLmsCourse2(ctx context.Context, request operations.RemoveLms
 		}
 	}
 
-	res := &operations.RemoveLmsCourse2Response{
+	res := &operations.RemoveLmsCourseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -6834,8 +6834,8 @@ func (s *Lms) RemoveLmsCourse2(ctx context.Context, request operations.RemoveLms
 
 }
 
-// RemoveLmsInstructor2 - Remove an instructor
-func (s *Lms) RemoveLmsInstructor2(ctx context.Context, request operations.RemoveLmsInstructor2Request, opts ...operations.Option) (*operations.RemoveLmsInstructor2Response, error) {
+// RemoveLmsInstructor - Remove an instructor
+func (s *Lms) RemoveLmsInstructor(ctx context.Context, request operations.RemoveLmsInstructorRequest, opts ...operations.Option) (*operations.RemoveLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -6864,7 +6864,7 @@ func (s *Lms) RemoveLmsInstructor2(ctx context.Context, request operations.Remov
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsInstructor2",
+		OperationID:      "removeLmsInstructor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -6985,7 +6985,7 @@ func (s *Lms) RemoveLmsInstructor2(ctx context.Context, request operations.Remov
 		}
 	}
 
-	res := &operations.RemoveLmsInstructor2Response{
+	res := &operations.RemoveLmsInstructorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7016,8 +7016,8 @@ func (s *Lms) RemoveLmsInstructor2(ctx context.Context, request operations.Remov
 
 }
 
-// RemoveLmsStudent2 - Remove a student
-func (s *Lms) RemoveLmsStudent2(ctx context.Context, request operations.RemoveLmsStudent2Request, opts ...operations.Option) (*operations.RemoveLmsStudent2Response, error) {
+// RemoveLmsStudent - Remove a student
+func (s *Lms) RemoveLmsStudent(ctx context.Context, request operations.RemoveLmsStudentRequest, opts ...operations.Option) (*operations.RemoveLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7046,7 +7046,7 @@ func (s *Lms) RemoveLmsStudent2(ctx context.Context, request operations.RemoveLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeLmsStudent2",
+		OperationID:      "removeLmsStudent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -7167,7 +7167,7 @@ func (s *Lms) RemoveLmsStudent2(ctx context.Context, request operations.RemoveLm
 		}
 	}
 
-	res := &operations.RemoveLmsStudent2Response{
+	res := &operations.RemoveLmsStudentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7198,8 +7198,8 @@ func (s *Lms) RemoveLmsStudent2(ctx context.Context, request operations.RemoveLm
 
 }
 
-// UpdateLmsActivity2 - Update an activity
-func (s *Lms) UpdateLmsActivity2(ctx context.Context, request operations.UpdateLmsActivity2Request, opts ...operations.Option) (*operations.UpdateLmsActivity2Response, error) {
+// UpdateLmsActivity - Update an activity
+func (s *Lms) UpdateLmsActivity(ctx context.Context, request operations.UpdateLmsActivityRequest, opts ...operations.Option) (*operations.UpdateLmsActivityResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7228,7 +7228,7 @@ func (s *Lms) UpdateLmsActivity2(ctx context.Context, request operations.UpdateL
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsActivity2",
+		OperationID:      "updateLmsActivity",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsActivity", "json", `request:"mediaType=application/json"`)
@@ -7360,7 +7360,7 @@ func (s *Lms) UpdateLmsActivity2(ctx context.Context, request operations.UpdateL
 		}
 	}
 
-	res := &operations.UpdateLmsActivity2Response{
+	res := &operations.UpdateLmsActivityResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7412,8 +7412,8 @@ func (s *Lms) UpdateLmsActivity2(ctx context.Context, request operations.UpdateL
 
 }
 
-// UpdateLmsClass2 - Update a class
-func (s *Lms) UpdateLmsClass2(ctx context.Context, request operations.UpdateLmsClass2Request, opts ...operations.Option) (*operations.UpdateLmsClass2Response, error) {
+// UpdateLmsClass - Update a class
+func (s *Lms) UpdateLmsClass(ctx context.Context, request operations.UpdateLmsClassRequest, opts ...operations.Option) (*operations.UpdateLmsClassResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7442,7 +7442,7 @@ func (s *Lms) UpdateLmsClass2(ctx context.Context, request operations.UpdateLmsC
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsClass2",
+		OperationID:      "updateLmsClass",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsClass", "json", `request:"mediaType=application/json"`)
@@ -7574,7 +7574,7 @@ func (s *Lms) UpdateLmsClass2(ctx context.Context, request operations.UpdateLmsC
 		}
 	}
 
-	res := &operations.UpdateLmsClass2Response{
+	res := &operations.UpdateLmsClassResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7626,8 +7626,8 @@ func (s *Lms) UpdateLmsClass2(ctx context.Context, request operations.UpdateLmsC
 
 }
 
-// UpdateLmsCollection2 - Update a collection
-func (s *Lms) UpdateLmsCollection2(ctx context.Context, request operations.UpdateLmsCollection2Request, opts ...operations.Option) (*operations.UpdateLmsCollection2Response, error) {
+// UpdateLmsCollection - Update a collection
+func (s *Lms) UpdateLmsCollection(ctx context.Context, request operations.UpdateLmsCollectionRequest, opts ...operations.Option) (*operations.UpdateLmsCollectionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7656,7 +7656,7 @@ func (s *Lms) UpdateLmsCollection2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsCollection2",
+		OperationID:      "updateLmsCollection",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCollection", "json", `request:"mediaType=application/json"`)
@@ -7788,7 +7788,7 @@ func (s *Lms) UpdateLmsCollection2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateLmsCollection2Response{
+	res := &operations.UpdateLmsCollectionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -7840,8 +7840,8 @@ func (s *Lms) UpdateLmsCollection2(ctx context.Context, request operations.Updat
 
 }
 
-// UpdateLmsContent2 - Update a content
-func (s *Lms) UpdateLmsContent2(ctx context.Context, request operations.UpdateLmsContent2Request, opts ...operations.Option) (*operations.UpdateLmsContent2Response, error) {
+// UpdateLmsContent - Update a content
+func (s *Lms) UpdateLmsContent(ctx context.Context, request operations.UpdateLmsContentRequest, opts ...operations.Option) (*operations.UpdateLmsContentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -7870,7 +7870,7 @@ func (s *Lms) UpdateLmsContent2(ctx context.Context, request operations.UpdateLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsContent2",
+		OperationID:      "updateLmsContent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsContent", "json", `request:"mediaType=application/json"`)
@@ -8002,7 +8002,7 @@ func (s *Lms) UpdateLmsContent2(ctx context.Context, request operations.UpdateLm
 		}
 	}
 
-	res := &operations.UpdateLmsContent2Response{
+	res := &operations.UpdateLmsContentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8054,8 +8054,8 @@ func (s *Lms) UpdateLmsContent2(ctx context.Context, request operations.UpdateLm
 
 }
 
-// UpdateLmsCourse2 - Update a course
-func (s *Lms) UpdateLmsCourse2(ctx context.Context, request operations.UpdateLmsCourse2Request, opts ...operations.Option) (*operations.UpdateLmsCourse2Response, error) {
+// UpdateLmsCourse - Update a course
+func (s *Lms) UpdateLmsCourse(ctx context.Context, request operations.UpdateLmsCourseRequest, opts ...operations.Option) (*operations.UpdateLmsCourseResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8084,7 +8084,7 @@ func (s *Lms) UpdateLmsCourse2(ctx context.Context, request operations.UpdateLms
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsCourse2",
+		OperationID:      "updateLmsCourse",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsCourse", "json", `request:"mediaType=application/json"`)
@@ -8216,7 +8216,7 @@ func (s *Lms) UpdateLmsCourse2(ctx context.Context, request operations.UpdateLms
 		}
 	}
 
-	res := &operations.UpdateLmsCourse2Response{
+	res := &operations.UpdateLmsCourseResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8268,8 +8268,8 @@ func (s *Lms) UpdateLmsCourse2(ctx context.Context, request operations.UpdateLms
 
 }
 
-// UpdateLmsInstructor2 - Update an instructor
-func (s *Lms) UpdateLmsInstructor2(ctx context.Context, request operations.UpdateLmsInstructor2Request, opts ...operations.Option) (*operations.UpdateLmsInstructor2Response, error) {
+// UpdateLmsInstructor - Update an instructor
+func (s *Lms) UpdateLmsInstructor(ctx context.Context, request operations.UpdateLmsInstructorRequest, opts ...operations.Option) (*operations.UpdateLmsInstructorResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8298,7 +8298,7 @@ func (s *Lms) UpdateLmsInstructor2(ctx context.Context, request operations.Updat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsInstructor2",
+		OperationID:      "updateLmsInstructor",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsInstructor", "json", `request:"mediaType=application/json"`)
@@ -8430,7 +8430,7 @@ func (s *Lms) UpdateLmsInstructor2(ctx context.Context, request operations.Updat
 		}
 	}
 
-	res := &operations.UpdateLmsInstructor2Response{
+	res := &operations.UpdateLmsInstructorResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -8482,8 +8482,8 @@ func (s *Lms) UpdateLmsInstructor2(ctx context.Context, request operations.Updat
 
 }
 
-// UpdateLmsStudent2 - Update a student
-func (s *Lms) UpdateLmsStudent2(ctx context.Context, request operations.UpdateLmsStudent2Request, opts ...operations.Option) (*operations.UpdateLmsStudent2Response, error) {
+// UpdateLmsStudent - Update a student
+func (s *Lms) UpdateLmsStudent(ctx context.Context, request operations.UpdateLmsStudentRequest, opts ...operations.Option) (*operations.UpdateLmsStudentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -8512,7 +8512,7 @@ func (s *Lms) UpdateLmsStudent2(ctx context.Context, request operations.UpdateLm
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateLmsStudent2",
+		OperationID:      "updateLmsStudent",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "LmsStudent", "json", `request:"mediaType=application/json"`)
@@ -8644,7 +8644,7 @@ func (s *Lms) UpdateLmsStudent2(ctx context.Context, request operations.UpdateLm
 		}
 	}
 
-	res := &operations.UpdateLmsStudent2Response{
+	res := &operations.UpdateLmsStudentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

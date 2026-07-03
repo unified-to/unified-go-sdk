@@ -30,8 +30,8 @@ func newShipment(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *h
 	}
 }
 
-// CreateShippingShipment2 - Create a shipment
-func (s *Shipment) CreateShippingShipment2(ctx context.Context, request operations.CreateShippingShipment2Request, opts ...operations.Option) (*operations.CreateShippingShipment2Response, error) {
+// CreateShippingShipment - Create a shipment
+func (s *Shipment) CreateShippingShipment(ctx context.Context, request operations.CreateShippingShipmentRequest, opts ...operations.Option) (*operations.CreateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Shipment) CreateShippingShipment2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createShippingShipment2",
+		OperationID:      "createShippingShipment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingShipment", "json", `request:"mediaType=application/json"`)
@@ -192,7 +192,7 @@ func (s *Shipment) CreateShippingShipment2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.CreateShippingShipment2Response{
+	res := &operations.CreateShippingShipmentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -244,8 +244,8 @@ func (s *Shipment) CreateShippingShipment2(ctx context.Context, request operatio
 
 }
 
-// GetShippingShipment2 - Retrieve a shipment
-func (s *Shipment) GetShippingShipment2(ctx context.Context, request operations.GetShippingShipment2Request, opts ...operations.Option) (*operations.GetShippingShipment2Response, error) {
+// GetShippingShipment - Retrieve a shipment
+func (s *Shipment) GetShippingShipment(ctx context.Context, request operations.GetShippingShipmentRequest, opts ...operations.Option) (*operations.GetShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -274,7 +274,7 @@ func (s *Shipment) GetShippingShipment2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getShippingShipment2",
+		OperationID:      "getShippingShipment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -399,7 +399,7 @@ func (s *Shipment) GetShippingShipment2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.GetShippingShipment2Response{
+	res := &operations.GetShippingShipmentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -451,8 +451,8 @@ func (s *Shipment) GetShippingShipment2(ctx context.Context, request operations.
 
 }
 
-// ListShippingShipments2 - List all shipments
-func (s *Shipment) ListShippingShipments2(ctx context.Context, request operations.ListShippingShipments2Request, opts ...operations.Option) (*operations.ListShippingShipments2Response, error) {
+// ListShippingShipments - List all shipments
+func (s *Shipment) ListShippingShipments(ctx context.Context, request operations.ListShippingShipmentsRequest, opts ...operations.Option) (*operations.ListShippingShipmentsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -481,7 +481,7 @@ func (s *Shipment) ListShippingShipments2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listShippingShipments2",
+		OperationID:      "listShippingShipments",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -606,7 +606,7 @@ func (s *Shipment) ListShippingShipments2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.ListShippingShipments2Response{
+	res := &operations.ListShippingShipmentsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -658,8 +658,8 @@ func (s *Shipment) ListShippingShipments2(ctx context.Context, request operation
 
 }
 
-// PatchShippingShipment2 - Update a shipment
-func (s *Shipment) PatchShippingShipment2(ctx context.Context, request operations.PatchShippingShipment2Request, opts ...operations.Option) (*operations.PatchShippingShipment2Response, error) {
+// PatchShippingShipment - Update a shipment
+func (s *Shipment) PatchShippingShipment(ctx context.Context, request operations.PatchShippingShipmentRequest, opts ...operations.Option) (*operations.PatchShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -688,7 +688,7 @@ func (s *Shipment) PatchShippingShipment2(ctx context.Context, request operation
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchShippingShipment2",
+		OperationID:      "patchShippingShipment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingShipment", "json", `request:"mediaType=application/json"`)
@@ -820,7 +820,7 @@ func (s *Shipment) PatchShippingShipment2(ctx context.Context, request operation
 		}
 	}
 
-	res := &operations.PatchShippingShipment2Response{
+	res := &operations.PatchShippingShipmentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -872,8 +872,8 @@ func (s *Shipment) PatchShippingShipment2(ctx context.Context, request operation
 
 }
 
-// RemoveShippingShipment2 - Remove a shipment
-func (s *Shipment) RemoveShippingShipment2(ctx context.Context, request operations.RemoveShippingShipment2Request, opts ...operations.Option) (*operations.RemoveShippingShipment2Response, error) {
+// RemoveShippingShipment - Remove a shipment
+func (s *Shipment) RemoveShippingShipment(ctx context.Context, request operations.RemoveShippingShipmentRequest, opts ...operations.Option) (*operations.RemoveShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -902,7 +902,7 @@ func (s *Shipment) RemoveShippingShipment2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removeShippingShipment2",
+		OperationID:      "removeShippingShipment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1023,7 +1023,7 @@ func (s *Shipment) RemoveShippingShipment2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.RemoveShippingShipment2Response{
+	res := &operations.RemoveShippingShipmentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1054,8 +1054,8 @@ func (s *Shipment) RemoveShippingShipment2(ctx context.Context, request operatio
 
 }
 
-// UpdateShippingShipment2 - Update a shipment
-func (s *Shipment) UpdateShippingShipment2(ctx context.Context, request operations.UpdateShippingShipment2Request, opts ...operations.Option) (*operations.UpdateShippingShipment2Response, error) {
+// UpdateShippingShipment - Update a shipment
+func (s *Shipment) UpdateShippingShipment(ctx context.Context, request operations.UpdateShippingShipmentRequest, opts ...operations.Option) (*operations.UpdateShippingShipmentResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1084,7 +1084,7 @@ func (s *Shipment) UpdateShippingShipment2(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updateShippingShipment2",
+		OperationID:      "updateShippingShipment",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "ShippingShipment", "json", `request:"mediaType=application/json"`)
@@ -1216,7 +1216,7 @@ func (s *Shipment) UpdateShippingShipment2(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.UpdateShippingShipment2Response{
+	res := &operations.UpdateShippingShipmentResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

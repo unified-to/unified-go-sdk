@@ -39,6 +39,7 @@ func (e *AtsStatusStatus) IsExact() bool {
 type AtsStatus struct {
 	Description    *string          `json:"description,omitempty"`
 	ID             *string          `json:"id,omitempty"`
+	JobID          *string          `json:"job_id,omitempty"`
 	OriginalStatus *string          `json:"original_status,omitempty"`
 	Raw            map[string]any   `json:"raw,omitempty"`
 	Status         *AtsStatusStatus `json:"status,omitempty"`
@@ -56,6 +57,13 @@ func (a *AtsStatus) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AtsStatus) GetJobID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.JobID
 }
 
 func (a *AtsStatus) GetOriginalStatus() *string {

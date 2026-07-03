@@ -29,8 +29,8 @@ func newPassthrough(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// CreatePassthrough2JSON - Passthrough POST
-func (s *Passthrough) CreatePassthrough2JSON(ctx context.Context, request operations.CreatePassthrough2JSONRequest, opts ...operations.Option) (*operations.CreatePassthrough2JSONResponse, error) {
+// CreatePassthroughJSON - Passthrough POST
+func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operations.CreatePassthroughJSONRequest, opts ...operations.Option) (*operations.CreatePassthroughJSONResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -60,7 +60,7 @@ func (s *Passthrough) CreatePassthrough2JSON(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPassthrough2_json",
+		OperationID:      "createPassthrough_json",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -197,7 +197,7 @@ func (s *Passthrough) CreatePassthrough2JSON(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.CreatePassthrough2JSONResponse{
+	res := &operations.CreatePassthroughJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -283,8 +283,8 @@ func (s *Passthrough) CreatePassthrough2JSON(ctx context.Context, request operat
 
 }
 
-// CreatePassthrough2Raw - Passthrough POST
-func (s *Passthrough) CreatePassthrough2Raw(ctx context.Context, request operations.CreatePassthrough2RawRequest, opts ...operations.Option) (*operations.CreatePassthrough2RawResponse, error) {
+// CreatePassthroughRaw - Passthrough POST
+func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operations.CreatePassthroughRawRequest, opts ...operations.Option) (*operations.CreatePassthroughRawResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -314,7 +314,7 @@ func (s *Passthrough) CreatePassthrough2Raw(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "createPassthrough2_raw",
+		OperationID:      "createPassthrough_raw",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
@@ -451,7 +451,7 @@ func (s *Passthrough) CreatePassthrough2Raw(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.CreatePassthrough2RawResponse{
+	res := &operations.CreatePassthroughRawResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -537,8 +537,8 @@ func (s *Passthrough) CreatePassthrough2Raw(ctx context.Context, request operati
 
 }
 
-// ListPassthroughs2 - Passthrough GET
-func (s *Passthrough) ListPassthroughs2(ctx context.Context, request operations.ListPassthroughs2Request, opts ...operations.Option) (*operations.ListPassthroughs2Response, error) {
+// ListPassthroughs - Passthrough GET
+func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.ListPassthroughsRequest, opts ...operations.Option) (*operations.ListPassthroughsResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -568,7 +568,7 @@ func (s *Passthrough) ListPassthroughs2(ctx context.Context, request operations.
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "listPassthroughs2",
+		OperationID:      "listPassthroughs",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -698,7 +698,7 @@ func (s *Passthrough) ListPassthroughs2(ctx context.Context, request operations.
 		}
 	}
 
-	res := &operations.ListPassthroughs2Response{
+	res := &operations.ListPassthroughsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -784,8 +784,8 @@ func (s *Passthrough) ListPassthroughs2(ctx context.Context, request operations.
 
 }
 
-// PatchPassthrough2JSON - Passthrough PUT
-func (s *Passthrough) PatchPassthrough2JSON(ctx context.Context, request operations.PatchPassthrough2JSONRequest, opts ...operations.Option) (*operations.PatchPassthrough2JSONResponse, error) {
+// PatchPassthroughJSON - Passthrough PUT
+func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operations.PatchPassthroughJSONRequest, opts ...operations.Option) (*operations.PatchPassthroughJSONResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -815,7 +815,7 @@ func (s *Passthrough) PatchPassthrough2JSON(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPassthrough2_json",
+		OperationID:      "patchPassthrough_json",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -952,7 +952,7 @@ func (s *Passthrough) PatchPassthrough2JSON(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.PatchPassthrough2JSONResponse{
+	res := &operations.PatchPassthroughJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1038,8 +1038,8 @@ func (s *Passthrough) PatchPassthrough2JSON(ctx context.Context, request operati
 
 }
 
-// PatchPassthrough2Raw - Passthrough PUT
-func (s *Passthrough) PatchPassthrough2Raw(ctx context.Context, request operations.PatchPassthrough2RawRequest, opts ...operations.Option) (*operations.PatchPassthrough2RawResponse, error) {
+// PatchPassthroughRaw - Passthrough PUT
+func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operations.PatchPassthroughRawRequest, opts ...operations.Option) (*operations.PatchPassthroughRawResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1069,7 +1069,7 @@ func (s *Passthrough) PatchPassthrough2Raw(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "patchPassthrough2_raw",
+		OperationID:      "patchPassthrough_raw",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
@@ -1206,7 +1206,7 @@ func (s *Passthrough) PatchPassthrough2Raw(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.PatchPassthrough2RawResponse{
+	res := &operations.PatchPassthroughRawResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1292,8 +1292,8 @@ func (s *Passthrough) PatchPassthrough2Raw(ctx context.Context, request operatio
 
 }
 
-// RemovePassthrough2 - Passthrough DELETE
-func (s *Passthrough) RemovePassthrough2(ctx context.Context, request operations.RemovePassthrough2Request, opts ...operations.Option) (*operations.RemovePassthrough2Response, error) {
+// RemovePassthrough - Passthrough DELETE
+func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.RemovePassthroughRequest, opts ...operations.Option) (*operations.RemovePassthroughResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1323,7 +1323,7 @@ func (s *Passthrough) RemovePassthrough2(ctx context.Context, request operations
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "removePassthrough2",
+		OperationID:      "removePassthrough",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -1453,7 +1453,7 @@ func (s *Passthrough) RemovePassthrough2(ctx context.Context, request operations
 		}
 	}
 
-	res := &operations.RemovePassthrough2Response{
+	res := &operations.RemovePassthroughResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1539,8 +1539,8 @@ func (s *Passthrough) RemovePassthrough2(ctx context.Context, request operations
 
 }
 
-// UpdatePassthrough2JSON - Passthrough PUT
-func (s *Passthrough) UpdatePassthrough2JSON(ctx context.Context, request operations.UpdatePassthrough2JSONRequest, opts ...operations.Option) (*operations.UpdatePassthrough2JSONResponse, error) {
+// UpdatePassthroughJSON - Passthrough PUT
+func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operations.UpdatePassthroughJSONRequest, opts ...operations.Option) (*operations.UpdatePassthroughJSONResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1570,7 +1570,7 @@ func (s *Passthrough) UpdatePassthrough2JSON(ctx context.Context, request operat
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePassthrough2_json",
+		OperationID:      "updatePassthrough_json",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1707,7 +1707,7 @@ func (s *Passthrough) UpdatePassthrough2JSON(ctx context.Context, request operat
 		}
 	}
 
-	res := &operations.UpdatePassthrough2JSONResponse{
+	res := &operations.UpdatePassthroughJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,
@@ -1793,8 +1793,8 @@ func (s *Passthrough) UpdatePassthrough2JSON(ctx context.Context, request operat
 
 }
 
-// UpdatePassthrough2Raw - Passthrough PUT
-func (s *Passthrough) UpdatePassthrough2Raw(ctx context.Context, request operations.UpdatePassthrough2RawRequest, opts ...operations.Option) (*operations.UpdatePassthrough2RawResponse, error) {
+// UpdatePassthroughRaw - Passthrough PUT
+func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operations.UpdatePassthroughRawRequest, opts ...operations.Option) (*operations.UpdatePassthroughRawResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -1824,7 +1824,7 @@ func (s *Passthrough) UpdatePassthrough2Raw(ctx context.Context, request operati
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "updatePassthrough2_raw",
+		OperationID:      "updatePassthrough_raw",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "RequestBody", "raw", `request:"mediaType=text/plain"`)
@@ -1961,7 +1961,7 @@ func (s *Passthrough) UpdatePassthrough2Raw(ctx context.Context, request operati
 		}
 	}
 
-	res := &operations.UpdatePassthrough2RawResponse{
+	res := &operations.UpdatePassthroughRawResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

@@ -4,16 +4,16 @@
 
 ### Available Operations
 
-* [GetFormsSubmission2](#getformssubmission2) - Retrieve a submission
-* [ListFormsSubmissions2](#listformssubmissions2) - List all submissions
+* [GetFormsSubmission](#getformssubmission) - Retrieve a submission
+* [ListFormsSubmissions](#listformssubmissions) - List all submissions
 
-## GetFormsSubmission2
+## GetFormsSubmission
 
 Retrieve a submission
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getFormsSubmission2" method="get" path="/forms/{connection_id}/submission/{id}" -->
+<!-- UsageSnippet language="go" operationID="getFormsSubmission" method="get" path="/forms/{connection_id}/submission/{id}" -->
 ```go
 package main
 
@@ -31,7 +31,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Submission.GetFormsSubmission2(ctx, operations.GetFormsSubmission2Request{
+    res, err := s.Submission.GetFormsSubmission(ctx, operations.GetFormsSubmissionRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -46,15 +46,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                              | :heavy_check_mark:                                                                                 | The context to use for the request.                                                                |
-| `request`                                                                                          | [operations.GetFormsSubmission2Request](../../pkg/models/operations/getformssubmission2request.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `opts`                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                       | :heavy_minus_sign:                                                                                 | The options for this request.                                                                      |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetFormsSubmissionRequest](../../pkg/models/operations/getformssubmissionrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
 
 ### Response
 
-**[*operations.GetFormsSubmission2Response](../../pkg/models/operations/getformssubmission2response.md), error**
+**[*operations.GetFormsSubmissionResponse](../../pkg/models/operations/getformssubmissionresponse.md), error**
 
 ### Errors
 
@@ -62,13 +62,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListFormsSubmissions2
+## ListFormsSubmissions
 
 List all submissions
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listFormsSubmissions2" method="get" path="/forms/{connection_id}/submission" -->
+<!-- UsageSnippet language="go" operationID="listFormsSubmissions" method="get" path="/forms/{connection_id}/submission" -->
 ```go
 package main
 
@@ -86,7 +86,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Submission.ListFormsSubmissions2(ctx, operations.ListFormsSubmissions2Request{
+    res, err := s.Submission.ListFormsSubmissions(ctx, operations.ListFormsSubmissionsRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -100,15 +100,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.ListFormsSubmissions2Request](../../pkg/models/operations/listformssubmissions2request.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListFormsSubmissionsRequest](../../pkg/models/operations/listformssubmissionsrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
 
 ### Response
 
-**[*operations.ListFormsSubmissions2Response](../../pkg/models/operations/listformssubmissions2response.md), error**
+**[*operations.ListFormsSubmissionsResponse](../../pkg/models/operations/listformssubmissionsresponse.md), error**
 
 ### Errors
 

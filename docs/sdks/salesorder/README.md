@@ -4,20 +4,20 @@
 
 ### Available Operations
 
-* [CreateAccountingSalesorder2](#createaccountingsalesorder2) - Create a salesorder
-* [GetAccountingSalesorder2](#getaccountingsalesorder2) - Retrieve a salesorder
-* [ListAccountingSalesorders2](#listaccountingsalesorders2) - List all salesorders
-* [PatchAccountingSalesorder2](#patchaccountingsalesorder2) - Update a salesorder
-* [RemoveAccountingSalesorder2](#removeaccountingsalesorder2) - Remove a salesorder
-* [UpdateAccountingSalesorder2](#updateaccountingsalesorder2) - Update a salesorder
+* [CreateAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
+* [GetAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
+* [ListAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
+* [PatchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
+* [RemoveAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
+* [UpdateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
 
-## CreateAccountingSalesorder2
+## CreateAccountingSalesorder
 
 Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingSalesorder2" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="go" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -36,7 +36,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.CreateAccountingSalesorder2(ctx, operations.CreateAccountingSalesorder2Request{
+    res, err := s.Salesorder.CreateAccountingSalesorder(ctx, operations.CreateAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{},
         ConnectionID: "<id>",
     })
@@ -51,15 +51,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.CreateAccountingSalesorder2Request](../../pkg/models/operations/createaccountingsalesorder2request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.CreateAccountingSalesorderRequest](../../pkg/models/operations/createaccountingsalesorderrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.CreateAccountingSalesorder2Response](../../pkg/models/operations/createaccountingsalesorder2response.md), error**
+**[*operations.CreateAccountingSalesorderResponse](../../pkg/models/operations/createaccountingsalesorderresponse.md), error**
 
 ### Errors
 
@@ -67,13 +67,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetAccountingSalesorder2
+## GetAccountingSalesorder
 
 Retrieve a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="getAccountingSalesorder2" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="getAccountingSalesorder" method="get" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -91,7 +91,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.GetAccountingSalesorder2(ctx, operations.GetAccountingSalesorder2Request{
+    res, err := s.Salesorder.GetAccountingSalesorder(ctx, operations.GetAccountingSalesorderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -106,15 +106,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `request`                                                                                                    | [operations.GetAccountingSalesorder2Request](../../pkg/models/operations/getaccountingsalesorder2request.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.GetAccountingSalesorderRequest](../../pkg/models/operations/getaccountingsalesorderrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
 
 ### Response
 
-**[*operations.GetAccountingSalesorder2Response](../../pkg/models/operations/getaccountingsalesorder2response.md), error**
+**[*operations.GetAccountingSalesorderResponse](../../pkg/models/operations/getaccountingsalesorderresponse.md), error**
 
 ### Errors
 
@@ -122,13 +122,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## ListAccountingSalesorders2
+## ListAccountingSalesorders
 
 List all salesorders
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="listAccountingSalesorders2" method="get" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="go" operationID="listAccountingSalesorders" method="get" path="/accounting/{connection_id}/salesorder" -->
 ```go
 package main
 
@@ -146,7 +146,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.ListAccountingSalesorders2(ctx, operations.ListAccountingSalesorders2Request{
+    res, err := s.Salesorder.ListAccountingSalesorders(ctx, operations.ListAccountingSalesordersRequest{
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -160,15 +160,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.ListAccountingSalesorders2Request](../../pkg/models/operations/listaccountingsalesorders2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.ListAccountingSalesordersRequest](../../pkg/models/operations/listaccountingsalesordersrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.ListAccountingSalesorders2Response](../../pkg/models/operations/listaccountingsalesorders2response.md), error**
+**[*operations.ListAccountingSalesordersResponse](../../pkg/models/operations/listaccountingsalesordersresponse.md), error**
 
 ### Errors
 
@@ -176,13 +176,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## PatchAccountingSalesorder2
+## PatchAccountingSalesorder
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder2" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -201,7 +201,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.PatchAccountingSalesorder2(ctx, operations.PatchAccountingSalesorder2Request{
+    res, err := s.Salesorder.PatchAccountingSalesorder(ctx, operations.PatchAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -217,15 +217,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
-| `request`                                                                                                        | [operations.PatchAccountingSalesorder2Request](../../pkg/models/operations/patchaccountingsalesorder2request.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.PatchAccountingSalesorderRequest](../../pkg/models/operations/patchaccountingsalesorderrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
 
 ### Response
 
-**[*operations.PatchAccountingSalesorder2Response](../../pkg/models/operations/patchaccountingsalesorder2response.md), error**
+**[*operations.PatchAccountingSalesorderResponse](../../pkg/models/operations/patchaccountingsalesorderresponse.md), error**
 
 ### Errors
 
@@ -233,13 +233,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## RemoveAccountingSalesorder2
+## RemoveAccountingSalesorder
 
 Remove a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="removeAccountingSalesorder2" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="removeAccountingSalesorder" method="delete" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -257,7 +257,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.RemoveAccountingSalesorder2(ctx, operations.RemoveAccountingSalesorder2Request{
+    res, err := s.Salesorder.RemoveAccountingSalesorder(ctx, operations.RemoveAccountingSalesorderRequest{
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -272,15 +272,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.RemoveAccountingSalesorder2Request](../../pkg/models/operations/removeaccountingsalesorder2request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.RemoveAccountingSalesorderRequest](../../pkg/models/operations/removeaccountingsalesorderrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.RemoveAccountingSalesorder2Response](../../pkg/models/operations/removeaccountingsalesorder2response.md), error**
+**[*operations.RemoveAccountingSalesorderResponse](../../pkg/models/operations/removeaccountingsalesorderresponse.md), error**
 
 ### Errors
 
@@ -288,13 +288,13 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## UpdateAccountingSalesorder2
+## UpdateAccountingSalesorder
 
 Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder2" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
 ```go
 package main
 
@@ -313,7 +313,7 @@ func main() {
         unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    res, err := s.Salesorder.UpdateAccountingSalesorder2(ctx, operations.UpdateAccountingSalesorder2Request{
+    res, err := s.Salesorder.UpdateAccountingSalesorder(ctx, operations.UpdateAccountingSalesorderRequest{
         AccountingSalesorder: shared.AccountingSalesorder{},
         ConnectionID: "<id>",
         ID: "<id>",
@@ -329,15 +329,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
-| `request`                                                                                                          | [operations.UpdateAccountingSalesorder2Request](../../pkg/models/operations/updateaccountingsalesorder2request.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.UpdateAccountingSalesorderRequest](../../pkg/models/operations/updateaccountingsalesorderrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
 
 ### Response
 
-**[*operations.UpdateAccountingSalesorder2Response](../../pkg/models/operations/updateaccountingsalesorder2response.md), error**
+**[*operations.UpdateAccountingSalesorderResponse](../../pkg/models/operations/updateaccountingsalesorderresponse.md), error**
 
 ### Errors
 
