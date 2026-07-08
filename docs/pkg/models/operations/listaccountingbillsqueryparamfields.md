@@ -17,6 +17,7 @@ value := operations.ListAccountingBillsQueryParamFieldsID
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `ListAccountingBillsQueryParamFieldsID`                      | id                                                           |
 | `ListAccountingBillsQueryParamFieldsBillNumber`              | bill_number                                                  |
+| `ListAccountingBillsQueryParamFieldsTerm`                    | term                                                         |
 | `ListAccountingBillsQueryParamFieldsCreatedAt`               | created_at                                                   |
 | `ListAccountingBillsQueryParamFieldsUpdatedAt`               | updated_at                                                   |
 | `ListAccountingBillsQueryParamFieldsDueAt`                   | due_at                                                       |

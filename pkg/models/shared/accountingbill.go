@@ -59,6 +59,31 @@ func (e *AccountingBillStatus) IsExact() bool {
 	return false
 }
 
+type Term string
+
+const (
+	TermOnReceipt Term = "ON_RECEIPT"
+	TermNet10     Term = "NET_10"
+	TermNet15     Term = "NET_15"
+	TermNet30     Term = "NET_30"
+	TermNet60     Term = "NET_60"
+)
+
+func (e Term) ToPointer() *Term {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Term) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ON_RECEIPT", "NET_10", "NET_15", "NET_30", "NET_60":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingBill struct {
 	Attachments             []AccountingAttachment   `json:"attachments,omitempty"`
 	BalanceAmount           *float64                 `json:"balance_amount,omitempty"`
@@ -84,6 +109,7 @@ type AccountingBill struct {
 	Send                    *bool                    `json:"send,omitempty"`
 	Status                  *AccountingBillStatus    `json:"status,omitempty"`
 	TaxAmount               *float64                 `json:"tax_amount,omitempty"`
+	Term                    *Term                    `json:"term,omitempty"`
 	TotalAmount             *float64                 `json:"total_amount,omitempty"`
 	UpdatedAt               *time.Time               `json:"updated_at,omitempty"`
 	URL                     *string                  `json:"url,omitempty"`
@@ -266,6 +292,13 @@ func (a *AccountingBill) GetTaxAmount() *float64 {
 		return nil
 	}
 	return a.TaxAmount
+}
+
+func (a *AccountingBill) GetTerm() *Term {
+	if a == nil {
+		return nil
+	}
+	return a.Term
 }
 
 func (a *AccountingBill) GetTotalAmount() *float64 {

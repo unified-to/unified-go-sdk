@@ -59,6 +59,31 @@ func (e *AccountingInvoiceStatus) IsExact() bool {
 	return false
 }
 
+type AccountingInvoiceTerm string
+
+const (
+	AccountingInvoiceTermOnReceipt AccountingInvoiceTerm = "ON_RECEIPT"
+	AccountingInvoiceTermNet10     AccountingInvoiceTerm = "NET_10"
+	AccountingInvoiceTermNet15     AccountingInvoiceTerm = "NET_15"
+	AccountingInvoiceTermNet30     AccountingInvoiceTerm = "NET_30"
+	AccountingInvoiceTermNet60     AccountingInvoiceTerm = "NET_60"
+)
+
+func (e AccountingInvoiceTerm) ToPointer() *AccountingInvoiceTerm {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingInvoiceTerm) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ON_RECEIPT", "NET_10", "NET_15", "NET_30", "NET_60":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingInvoiceType string
 
 const (
@@ -108,6 +133,7 @@ type AccountingInvoice struct {
 	Send                    *bool                                     `json:"send,omitempty"`
 	Status                  *AccountingInvoiceStatus                  `json:"status,omitempty"`
 	TaxAmount               *float64                                  `json:"tax_amount,omitempty"`
+	Term                    *AccountingInvoiceTerm                    `json:"term,omitempty"`
 	TotalAmount             *float64                                  `json:"total_amount,omitempty"`
 	Type                    *AccountingInvoiceType                    `json:"type,omitempty"`
 	UpdatedAt               *time.Time                                `json:"updated_at,omitempty"`
@@ -298,6 +324,13 @@ func (a *AccountingInvoice) GetTaxAmount() *float64 {
 		return nil
 	}
 	return a.TaxAmount
+}
+
+func (a *AccountingInvoice) GetTerm() *AccountingInvoiceTerm {
+	if a == nil {
+		return nil
+	}
+	return a.Term
 }
 
 func (a *AccountingInvoice) GetTotalAmount() *float64 {

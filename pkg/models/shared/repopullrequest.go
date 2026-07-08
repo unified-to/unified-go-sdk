@@ -31,16 +31,20 @@ func (e *RepoPullrequestStatus) IsExact() bool {
 }
 
 type RepoPullrequest struct {
-	ClosedAt  *time.Time             `json:"closed_at,omitempty"`
-	CommitIds []string               `json:"commit_ids,omitempty"`
-	CreatedAt *time.Time             `json:"created_at,omitempty"`
-	ID        *string                `json:"id,omitempty"`
-	Labels    []string               `json:"labels,omitempty"`
-	Raw       map[string]any         `json:"raw,omitempty"`
-	RepoID    *string                `json:"repo_id,omitempty"`
-	Status    *RepoPullrequestStatus `json:"status,omitempty"`
-	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
-	UserIds   []string               `json:"user_ids,omitempty"`
+	ClosedAt       *time.Time             `json:"closed_at,omitempty"`
+	CommitIds      []string               `json:"commit_ids,omitempty"`
+	CreatedAt      *time.Time             `json:"created_at,omitempty"`
+	ID             *string                `json:"id,omitempty"`
+	Labels         []string               `json:"labels,omitempty"`
+	Notes          *string                `json:"notes,omitempty"`
+	Raw            map[string]any         `json:"raw,omitempty"`
+	RepoID         *string                `json:"repo_id,omitempty"`
+	SourceBranchID *string                `json:"source_branch_id,omitempty"`
+	Status         *RepoPullrequestStatus `json:"status,omitempty"`
+	TargetBranchID *string                `json:"target_branch_id,omitempty"`
+	Title          *string                `json:"title,omitempty"`
+	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
+	UserIds        []string               `json:"user_ids,omitempty"`
 }
 
 func (r RepoPullrequest) MarshalJSON() ([]byte, error) {
@@ -89,6 +93,13 @@ func (r *RepoPullrequest) GetLabels() []string {
 	return r.Labels
 }
 
+func (r *RepoPullrequest) GetNotes() *string {
+	if r == nil {
+		return nil
+	}
+	return r.Notes
+}
+
 func (r *RepoPullrequest) GetRaw() map[string]any {
 	if r == nil {
 		return nil
@@ -103,11 +114,32 @@ func (r *RepoPullrequest) GetRepoID() *string {
 	return r.RepoID
 }
 
+func (r *RepoPullrequest) GetSourceBranchID() *string {
+	if r == nil {
+		return nil
+	}
+	return r.SourceBranchID
+}
+
 func (r *RepoPullrequest) GetStatus() *RepoPullrequestStatus {
 	if r == nil {
 		return nil
 	}
 	return r.Status
+}
+
+func (r *RepoPullrequest) GetTargetBranchID() *string {
+	if r == nil {
+		return nil
+	}
+	return r.TargetBranchID
+}
+
+func (r *RepoPullrequest) GetTitle() *string {
+	if r == nil {
+		return nil
+	}
+	return r.Title
 }
 
 func (r *RepoPullrequest) GetUpdatedAt() *time.Time {

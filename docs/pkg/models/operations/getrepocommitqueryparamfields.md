@@ -13,13 +13,16 @@ value := operations.GetRepoCommitQueryParamFieldsID
 
 ## Values
 
-| Name                                     | Value                                    |
-| ---------------------------------------- | ---------------------------------------- |
-| `GetRepoCommitQueryParamFieldsID`        | id                                       |
-| `GetRepoCommitQueryParamFieldsCreatedAt` | created_at                               |
-| `GetRepoCommitQueryParamFieldsUpdatedAt` | updated_at                               |
-| `GetRepoCommitQueryParamFieldsUserID`    | user_id                                  |
-| `GetRepoCommitQueryParamFieldsRepoID`    | repo_id                                  |
-| `GetRepoCommitQueryParamFieldsMessage`   | message                                  |
-| `GetRepoCommitQueryParamFieldsBranchID`  | branch_id                                |
-| `GetRepoCommitQueryParamFieldsRaw`       | raw                                      |
+| Name                                        | Value                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| `GetRepoCommitQueryParamFieldsID`           | id                                          |
+| `GetRepoCommitQueryParamFieldsCreatedAt`    | created_at                                  |
+| `GetRepoCommitQueryParamFieldsUpdatedAt`    | updated_at                                  |
+| `GetRepoCommitQueryParamFieldsUserID`       | user_id                                     |
+| `GetRepoCommitQueryParamFieldsRepoID`       | repo_id                                     |
+| `GetRepoCommitQueryParamFieldsMessage`      | message                                     |
+| `GetRepoCommitQueryParamFieldsBranchID`     | branch_id                                   |
+| `GetRepoCommitQueryParamFieldsLinesAdded`   | lines_added                                 |
+| `GetRepoCommitQueryParamFieldsLinesDeleted` | lines_deleted                               |
+| `GetRepoCommitQueryParamFieldsLinesChanged` | lines_changed                               |
+| `GetRepoCommitQueryParamFieldsRaw`          | raw                                         |

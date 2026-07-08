@@ -14,6 +14,7 @@ type UpdateAccountingBillQueryParamFields string
 const (
 	UpdateAccountingBillQueryParamFieldsID                      UpdateAccountingBillQueryParamFields = "id"
 	UpdateAccountingBillQueryParamFieldsBillNumber              UpdateAccountingBillQueryParamFields = "bill_number"
+	UpdateAccountingBillQueryParamFieldsTerm                    UpdateAccountingBillQueryParamFields = "term"
 	UpdateAccountingBillQueryParamFieldsCreatedAt               UpdateAccountingBillQueryParamFields = "created_at"
 	UpdateAccountingBillQueryParamFieldsUpdatedAt               UpdateAccountingBillQueryParamFields = "updated_at"
 	UpdateAccountingBillQueryParamFieldsDueAt                   UpdateAccountingBillQueryParamFields = "due_at"
@@ -53,6 +54,8 @@ func (e *UpdateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "id":
 		fallthrough
 	case "bill_number":
+		fallthrough
+	case "term":
 		fallthrough
 	case "created_at":
 		fallthrough

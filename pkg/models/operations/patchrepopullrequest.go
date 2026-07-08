@@ -12,16 +12,20 @@ import (
 type PatchRepoPullrequestQueryParamFields string
 
 const (
-	PatchRepoPullrequestQueryParamFieldsID        PatchRepoPullrequestQueryParamFields = "id"
-	PatchRepoPullrequestQueryParamFieldsCreatedAt PatchRepoPullrequestQueryParamFields = "created_at"
-	PatchRepoPullrequestQueryParamFieldsUpdatedAt PatchRepoPullrequestQueryParamFields = "updated_at"
-	PatchRepoPullrequestQueryParamFieldsUserIds   PatchRepoPullrequestQueryParamFields = "user_ids"
-	PatchRepoPullrequestQueryParamFieldsRepoID    PatchRepoPullrequestQueryParamFields = "repo_id"
-	PatchRepoPullrequestQueryParamFieldsStatus    PatchRepoPullrequestQueryParamFields = "status"
-	PatchRepoPullrequestQueryParamFieldsLabels    PatchRepoPullrequestQueryParamFields = "labels"
-	PatchRepoPullrequestQueryParamFieldsClosedAt  PatchRepoPullrequestQueryParamFields = "closed_at"
-	PatchRepoPullrequestQueryParamFieldsCommitIds PatchRepoPullrequestQueryParamFields = "commit_ids"
-	PatchRepoPullrequestQueryParamFieldsRaw       PatchRepoPullrequestQueryParamFields = "raw"
+	PatchRepoPullrequestQueryParamFieldsID             PatchRepoPullrequestQueryParamFields = "id"
+	PatchRepoPullrequestQueryParamFieldsCreatedAt      PatchRepoPullrequestQueryParamFields = "created_at"
+	PatchRepoPullrequestQueryParamFieldsUpdatedAt      PatchRepoPullrequestQueryParamFields = "updated_at"
+	PatchRepoPullrequestQueryParamFieldsUserIds        PatchRepoPullrequestQueryParamFields = "user_ids"
+	PatchRepoPullrequestQueryParamFieldsRepoID         PatchRepoPullrequestQueryParamFields = "repo_id"
+	PatchRepoPullrequestQueryParamFieldsTitle          PatchRepoPullrequestQueryParamFields = "title"
+	PatchRepoPullrequestQueryParamFieldsNotes          PatchRepoPullrequestQueryParamFields = "notes"
+	PatchRepoPullrequestQueryParamFieldsTargetBranchID PatchRepoPullrequestQueryParamFields = "target_branch_id"
+	PatchRepoPullrequestQueryParamFieldsSourceBranchID PatchRepoPullrequestQueryParamFields = "source_branch_id"
+	PatchRepoPullrequestQueryParamFieldsStatus         PatchRepoPullrequestQueryParamFields = "status"
+	PatchRepoPullrequestQueryParamFieldsLabels         PatchRepoPullrequestQueryParamFields = "labels"
+	PatchRepoPullrequestQueryParamFieldsClosedAt       PatchRepoPullrequestQueryParamFields = "closed_at"
+	PatchRepoPullrequestQueryParamFieldsCommitIds      PatchRepoPullrequestQueryParamFields = "commit_ids"
+	PatchRepoPullrequestQueryParamFieldsRaw            PatchRepoPullrequestQueryParamFields = "raw"
 )
 
 func (e PatchRepoPullrequestQueryParamFields) ToPointer() *PatchRepoPullrequestQueryParamFields {
@@ -42,6 +46,14 @@ func (e *PatchRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "user_ids":
 		fallthrough
 	case "repo_id":
+		fallthrough
+	case "title":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "target_branch_id":
+		fallthrough
+	case "source_branch_id":
 		fallthrough
 	case "status":
 		fallthrough

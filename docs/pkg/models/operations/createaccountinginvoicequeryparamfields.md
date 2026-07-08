@@ -35,6 +35,7 @@ value := operations.CreateAccountingInvoiceQueryParamFieldsID
 | `CreateAccountingInvoiceQueryParamFieldsCurrency`                | currency                                                         |
 | `CreateAccountingInvoiceQueryParamFieldsNotes`                   | notes                                                            |
 | `CreateAccountingInvoiceQueryParamFieldsRefundReason`            | refund_reason                                                    |
+| `CreateAccountingInvoiceQueryParamFieldsTerm`                    | term                                                             |
 | `CreateAccountingInvoiceQueryParamFieldsLineitems`               | lineitems                                                        |
 | `CreateAccountingInvoiceQueryParamFieldsStatus`                  | status                                                           |
 | `CreateAccountingInvoiceQueryParamFieldsURL`                     | url                                                              |

@@ -12,14 +12,17 @@ import (
 type UpdateRepoCommitQueryParamFields string
 
 const (
-	UpdateRepoCommitQueryParamFieldsID        UpdateRepoCommitQueryParamFields = "id"
-	UpdateRepoCommitQueryParamFieldsCreatedAt UpdateRepoCommitQueryParamFields = "created_at"
-	UpdateRepoCommitQueryParamFieldsUpdatedAt UpdateRepoCommitQueryParamFields = "updated_at"
-	UpdateRepoCommitQueryParamFieldsUserID    UpdateRepoCommitQueryParamFields = "user_id"
-	UpdateRepoCommitQueryParamFieldsRepoID    UpdateRepoCommitQueryParamFields = "repo_id"
-	UpdateRepoCommitQueryParamFieldsMessage   UpdateRepoCommitQueryParamFields = "message"
-	UpdateRepoCommitQueryParamFieldsBranchID  UpdateRepoCommitQueryParamFields = "branch_id"
-	UpdateRepoCommitQueryParamFieldsRaw       UpdateRepoCommitQueryParamFields = "raw"
+	UpdateRepoCommitQueryParamFieldsID           UpdateRepoCommitQueryParamFields = "id"
+	UpdateRepoCommitQueryParamFieldsCreatedAt    UpdateRepoCommitQueryParamFields = "created_at"
+	UpdateRepoCommitQueryParamFieldsUpdatedAt    UpdateRepoCommitQueryParamFields = "updated_at"
+	UpdateRepoCommitQueryParamFieldsUserID       UpdateRepoCommitQueryParamFields = "user_id"
+	UpdateRepoCommitQueryParamFieldsRepoID       UpdateRepoCommitQueryParamFields = "repo_id"
+	UpdateRepoCommitQueryParamFieldsMessage      UpdateRepoCommitQueryParamFields = "message"
+	UpdateRepoCommitQueryParamFieldsBranchID     UpdateRepoCommitQueryParamFields = "branch_id"
+	UpdateRepoCommitQueryParamFieldsLinesAdded   UpdateRepoCommitQueryParamFields = "lines_added"
+	UpdateRepoCommitQueryParamFieldsLinesDeleted UpdateRepoCommitQueryParamFields = "lines_deleted"
+	UpdateRepoCommitQueryParamFieldsLinesChanged UpdateRepoCommitQueryParamFields = "lines_changed"
+	UpdateRepoCommitQueryParamFieldsRaw          UpdateRepoCommitQueryParamFields = "raw"
 )
 
 func (e UpdateRepoCommitQueryParamFields) ToPointer() *UpdateRepoCommitQueryParamFields {
@@ -44,6 +47,12 @@ func (e *UpdateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "message":
 		fallthrough
 	case "branch_id":
+		fallthrough
+	case "lines_added":
+		fallthrough
+	case "lines_deleted":
+		fallthrough
+	case "lines_changed":
 		fallthrough
 	case "raw":
 		*e = UpdateRepoCommitQueryParamFields(v)

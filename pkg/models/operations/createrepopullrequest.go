@@ -12,16 +12,20 @@ import (
 type CreateRepoPullrequestQueryParamFields string
 
 const (
-	CreateRepoPullrequestQueryParamFieldsID        CreateRepoPullrequestQueryParamFields = "id"
-	CreateRepoPullrequestQueryParamFieldsCreatedAt CreateRepoPullrequestQueryParamFields = "created_at"
-	CreateRepoPullrequestQueryParamFieldsUpdatedAt CreateRepoPullrequestQueryParamFields = "updated_at"
-	CreateRepoPullrequestQueryParamFieldsUserIds   CreateRepoPullrequestQueryParamFields = "user_ids"
-	CreateRepoPullrequestQueryParamFieldsRepoID    CreateRepoPullrequestQueryParamFields = "repo_id"
-	CreateRepoPullrequestQueryParamFieldsStatus    CreateRepoPullrequestQueryParamFields = "status"
-	CreateRepoPullrequestQueryParamFieldsLabels    CreateRepoPullrequestQueryParamFields = "labels"
-	CreateRepoPullrequestQueryParamFieldsClosedAt  CreateRepoPullrequestQueryParamFields = "closed_at"
-	CreateRepoPullrequestQueryParamFieldsCommitIds CreateRepoPullrequestQueryParamFields = "commit_ids"
-	CreateRepoPullrequestQueryParamFieldsRaw       CreateRepoPullrequestQueryParamFields = "raw"
+	CreateRepoPullrequestQueryParamFieldsID             CreateRepoPullrequestQueryParamFields = "id"
+	CreateRepoPullrequestQueryParamFieldsCreatedAt      CreateRepoPullrequestQueryParamFields = "created_at"
+	CreateRepoPullrequestQueryParamFieldsUpdatedAt      CreateRepoPullrequestQueryParamFields = "updated_at"
+	CreateRepoPullrequestQueryParamFieldsUserIds        CreateRepoPullrequestQueryParamFields = "user_ids"
+	CreateRepoPullrequestQueryParamFieldsRepoID         CreateRepoPullrequestQueryParamFields = "repo_id"
+	CreateRepoPullrequestQueryParamFieldsTitle          CreateRepoPullrequestQueryParamFields = "title"
+	CreateRepoPullrequestQueryParamFieldsNotes          CreateRepoPullrequestQueryParamFields = "notes"
+	CreateRepoPullrequestQueryParamFieldsTargetBranchID CreateRepoPullrequestQueryParamFields = "target_branch_id"
+	CreateRepoPullrequestQueryParamFieldsSourceBranchID CreateRepoPullrequestQueryParamFields = "source_branch_id"
+	CreateRepoPullrequestQueryParamFieldsStatus         CreateRepoPullrequestQueryParamFields = "status"
+	CreateRepoPullrequestQueryParamFieldsLabels         CreateRepoPullrequestQueryParamFields = "labels"
+	CreateRepoPullrequestQueryParamFieldsClosedAt       CreateRepoPullrequestQueryParamFields = "closed_at"
+	CreateRepoPullrequestQueryParamFieldsCommitIds      CreateRepoPullrequestQueryParamFields = "commit_ids"
+	CreateRepoPullrequestQueryParamFieldsRaw            CreateRepoPullrequestQueryParamFields = "raw"
 )
 
 func (e CreateRepoPullrequestQueryParamFields) ToPointer() *CreateRepoPullrequestQueryParamFields {
@@ -42,6 +46,14 @@ func (e *CreateRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error
 	case "user_ids":
 		fallthrough
 	case "repo_id":
+		fallthrough
+	case "title":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "target_branch_id":
+		fallthrough
+	case "source_branch_id":
 		fallthrough
 	case "status":
 		fallthrough

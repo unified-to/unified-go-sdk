@@ -12,16 +12,20 @@ import (
 type GetRepoPullrequestQueryParamFields string
 
 const (
-	GetRepoPullrequestQueryParamFieldsID        GetRepoPullrequestQueryParamFields = "id"
-	GetRepoPullrequestQueryParamFieldsCreatedAt GetRepoPullrequestQueryParamFields = "created_at"
-	GetRepoPullrequestQueryParamFieldsUpdatedAt GetRepoPullrequestQueryParamFields = "updated_at"
-	GetRepoPullrequestQueryParamFieldsUserIds   GetRepoPullrequestQueryParamFields = "user_ids"
-	GetRepoPullrequestQueryParamFieldsRepoID    GetRepoPullrequestQueryParamFields = "repo_id"
-	GetRepoPullrequestQueryParamFieldsStatus    GetRepoPullrequestQueryParamFields = "status"
-	GetRepoPullrequestQueryParamFieldsLabels    GetRepoPullrequestQueryParamFields = "labels"
-	GetRepoPullrequestQueryParamFieldsClosedAt  GetRepoPullrequestQueryParamFields = "closed_at"
-	GetRepoPullrequestQueryParamFieldsCommitIds GetRepoPullrequestQueryParamFields = "commit_ids"
-	GetRepoPullrequestQueryParamFieldsRaw       GetRepoPullrequestQueryParamFields = "raw"
+	GetRepoPullrequestQueryParamFieldsID             GetRepoPullrequestQueryParamFields = "id"
+	GetRepoPullrequestQueryParamFieldsCreatedAt      GetRepoPullrequestQueryParamFields = "created_at"
+	GetRepoPullrequestQueryParamFieldsUpdatedAt      GetRepoPullrequestQueryParamFields = "updated_at"
+	GetRepoPullrequestQueryParamFieldsUserIds        GetRepoPullrequestQueryParamFields = "user_ids"
+	GetRepoPullrequestQueryParamFieldsRepoID         GetRepoPullrequestQueryParamFields = "repo_id"
+	GetRepoPullrequestQueryParamFieldsTitle          GetRepoPullrequestQueryParamFields = "title"
+	GetRepoPullrequestQueryParamFieldsNotes          GetRepoPullrequestQueryParamFields = "notes"
+	GetRepoPullrequestQueryParamFieldsTargetBranchID GetRepoPullrequestQueryParamFields = "target_branch_id"
+	GetRepoPullrequestQueryParamFieldsSourceBranchID GetRepoPullrequestQueryParamFields = "source_branch_id"
+	GetRepoPullrequestQueryParamFieldsStatus         GetRepoPullrequestQueryParamFields = "status"
+	GetRepoPullrequestQueryParamFieldsLabels         GetRepoPullrequestQueryParamFields = "labels"
+	GetRepoPullrequestQueryParamFieldsClosedAt       GetRepoPullrequestQueryParamFields = "closed_at"
+	GetRepoPullrequestQueryParamFieldsCommitIds      GetRepoPullrequestQueryParamFields = "commit_ids"
+	GetRepoPullrequestQueryParamFieldsRaw            GetRepoPullrequestQueryParamFields = "raw"
 )
 
 func (e GetRepoPullrequestQueryParamFields) ToPointer() *GetRepoPullrequestQueryParamFields {
@@ -42,6 +46,14 @@ func (e *GetRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_ids":
 		fallthrough
 	case "repo_id":
+		fallthrough
+	case "title":
+		fallthrough
+	case "notes":
+		fallthrough
+	case "target_branch_id":
+		fallthrough
+	case "source_branch_id":
 		fallthrough
 	case "status":
 		fallthrough

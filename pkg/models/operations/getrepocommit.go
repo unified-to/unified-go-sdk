@@ -12,14 +12,17 @@ import (
 type GetRepoCommitQueryParamFields string
 
 const (
-	GetRepoCommitQueryParamFieldsID        GetRepoCommitQueryParamFields = "id"
-	GetRepoCommitQueryParamFieldsCreatedAt GetRepoCommitQueryParamFields = "created_at"
-	GetRepoCommitQueryParamFieldsUpdatedAt GetRepoCommitQueryParamFields = "updated_at"
-	GetRepoCommitQueryParamFieldsUserID    GetRepoCommitQueryParamFields = "user_id"
-	GetRepoCommitQueryParamFieldsRepoID    GetRepoCommitQueryParamFields = "repo_id"
-	GetRepoCommitQueryParamFieldsMessage   GetRepoCommitQueryParamFields = "message"
-	GetRepoCommitQueryParamFieldsBranchID  GetRepoCommitQueryParamFields = "branch_id"
-	GetRepoCommitQueryParamFieldsRaw       GetRepoCommitQueryParamFields = "raw"
+	GetRepoCommitQueryParamFieldsID           GetRepoCommitQueryParamFields = "id"
+	GetRepoCommitQueryParamFieldsCreatedAt    GetRepoCommitQueryParamFields = "created_at"
+	GetRepoCommitQueryParamFieldsUpdatedAt    GetRepoCommitQueryParamFields = "updated_at"
+	GetRepoCommitQueryParamFieldsUserID       GetRepoCommitQueryParamFields = "user_id"
+	GetRepoCommitQueryParamFieldsRepoID       GetRepoCommitQueryParamFields = "repo_id"
+	GetRepoCommitQueryParamFieldsMessage      GetRepoCommitQueryParamFields = "message"
+	GetRepoCommitQueryParamFieldsBranchID     GetRepoCommitQueryParamFields = "branch_id"
+	GetRepoCommitQueryParamFieldsLinesAdded   GetRepoCommitQueryParamFields = "lines_added"
+	GetRepoCommitQueryParamFieldsLinesDeleted GetRepoCommitQueryParamFields = "lines_deleted"
+	GetRepoCommitQueryParamFieldsLinesChanged GetRepoCommitQueryParamFields = "lines_changed"
+	GetRepoCommitQueryParamFieldsRaw          GetRepoCommitQueryParamFields = "raw"
 )
 
 func (e GetRepoCommitQueryParamFields) ToPointer() *GetRepoCommitQueryParamFields {
@@ -44,6 +47,12 @@ func (e *GetRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "message":
 		fallthrough
 	case "branch_id":
+		fallthrough
+	case "lines_added":
+		fallthrough
+	case "lines_deleted":
+		fallthrough
+	case "lines_changed":
 		fallthrough
 	case "raw":
 		*e = GetRepoCommitQueryParamFields(v)

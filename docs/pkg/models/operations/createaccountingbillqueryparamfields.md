@@ -17,6 +17,7 @@ value := operations.CreateAccountingBillQueryParamFieldsID
 | ------------------------------------------------------------- | ------------------------------------------------------------- |
 | `CreateAccountingBillQueryParamFieldsID`                      | id                                                            |
 | `CreateAccountingBillQueryParamFieldsBillNumber`              | bill_number                                                   |
+| `CreateAccountingBillQueryParamFieldsTerm`                    | term                                                          |
 | `CreateAccountingBillQueryParamFieldsCreatedAt`               | created_at                                                    |
 | `CreateAccountingBillQueryParamFieldsUpdatedAt`               | updated_at                                                    |
 | `CreateAccountingBillQueryParamFieldsDueAt`                   | due_at                                                        |

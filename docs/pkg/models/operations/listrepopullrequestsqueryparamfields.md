@@ -13,15 +13,19 @@ value := operations.ListRepoPullrequestsQueryParamFieldsID
 
 ## Values
 
-| Name                                            | Value                                           |
-| ----------------------------------------------- | ----------------------------------------------- |
-| `ListRepoPullrequestsQueryParamFieldsID`        | id                                              |
-| `ListRepoPullrequestsQueryParamFieldsCreatedAt` | created_at                                      |
-| `ListRepoPullrequestsQueryParamFieldsUpdatedAt` | updated_at                                      |
-| `ListRepoPullrequestsQueryParamFieldsUserIds`   | user_ids                                        |
-| `ListRepoPullrequestsQueryParamFieldsRepoID`    | repo_id                                         |
-| `ListRepoPullrequestsQueryParamFieldsStatus`    | status                                          |
-| `ListRepoPullrequestsQueryParamFieldsLabels`    | labels                                          |
-| `ListRepoPullrequestsQueryParamFieldsClosedAt`  | closed_at                                       |
-| `ListRepoPullrequestsQueryParamFieldsCommitIds` | commit_ids                                      |
-| `ListRepoPullrequestsQueryParamFieldsRaw`       | raw                                             |
+| Name                                                 | Value                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `ListRepoPullrequestsQueryParamFieldsID`             | id                                                   |
+| `ListRepoPullrequestsQueryParamFieldsCreatedAt`      | created_at                                           |
+| `ListRepoPullrequestsQueryParamFieldsUpdatedAt`      | updated_at                                           |
+| `ListRepoPullrequestsQueryParamFieldsUserIds`        | user_ids                                             |
+| `ListRepoPullrequestsQueryParamFieldsRepoID`         | repo_id                                              |
+| `ListRepoPullrequestsQueryParamFieldsTitle`          | title                                                |
+| `ListRepoPullrequestsQueryParamFieldsNotes`          | notes                                                |
+| `ListRepoPullrequestsQueryParamFieldsTargetBranchID` | target_branch_id                                     |
+| `ListRepoPullrequestsQueryParamFieldsSourceBranchID` | source_branch_id                                     |
+| `ListRepoPullrequestsQueryParamFieldsStatus`         | status                                               |
+| `ListRepoPullrequestsQueryParamFieldsLabels`         | labels                                               |
+| `ListRepoPullrequestsQueryParamFieldsClosedAt`       | closed_at                                            |
+| `ListRepoPullrequestsQueryParamFieldsCommitIds`      | commit_ids                                           |
+| `ListRepoPullrequestsQueryParamFieldsRaw`            | raw                                                  |
