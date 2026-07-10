@@ -31,6 +31,7 @@ const (
 	GetAtsActivityQueryParamFieldsBcc           GetAtsActivityQueryParamFields = "bcc"
 	GetAtsActivityQueryParamFieldsSubType       GetAtsActivityQueryParamFields = "sub_type"
 	GetAtsActivityQueryParamFieldsCompanyID     GetAtsActivityQueryParamFields = "company_id"
+	GetAtsActivityQueryParamFieldsMetadata      GetAtsActivityQueryParamFields = "metadata"
 	GetAtsActivityQueryParamFieldsRaw           GetAtsActivityQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *GetAtsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "sub_type":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAtsActivityQueryParamFields(v)

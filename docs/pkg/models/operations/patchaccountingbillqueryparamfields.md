@@ -17,7 +17,6 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `PatchAccountingBillQueryParamFieldsID`                      | id                                                           |
 | `PatchAccountingBillQueryParamFieldsBillNumber`              | bill_number                                                  |
-| `PatchAccountingBillQueryParamFieldsTerm`                    | term                                                         |
 | `PatchAccountingBillQueryParamFieldsCreatedAt`               | created_at                                                   |
 | `PatchAccountingBillQueryParamFieldsUpdatedAt`               | updated_at                                                   |
 | `PatchAccountingBillQueryParamFieldsDueAt`                   | due_at                                                       |
@@ -43,3 +42,4 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | `PatchAccountingBillQueryParamFieldsSend`                    | send                                                         |
 | `PatchAccountingBillQueryParamFieldsOrganizationID`          | organization_id                                              |
 | `PatchAccountingBillQueryParamFieldsRaw`                     | raw                                                          |
+| `PatchAccountingBillQueryParamFieldsTerm`                    | term                                                         |

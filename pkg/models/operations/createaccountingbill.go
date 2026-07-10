@@ -14,7 +14,6 @@ type CreateAccountingBillQueryParamFields string
 const (
 	CreateAccountingBillQueryParamFieldsID                      CreateAccountingBillQueryParamFields = "id"
 	CreateAccountingBillQueryParamFieldsBillNumber              CreateAccountingBillQueryParamFields = "bill_number"
-	CreateAccountingBillQueryParamFieldsTerm                    CreateAccountingBillQueryParamFields = "term"
 	CreateAccountingBillQueryParamFieldsCreatedAt               CreateAccountingBillQueryParamFields = "created_at"
 	CreateAccountingBillQueryParamFieldsUpdatedAt               CreateAccountingBillQueryParamFields = "updated_at"
 	CreateAccountingBillQueryParamFieldsDueAt                   CreateAccountingBillQueryParamFields = "due_at"
@@ -40,6 +39,7 @@ const (
 	CreateAccountingBillQueryParamFieldsSend                    CreateAccountingBillQueryParamFields = "send"
 	CreateAccountingBillQueryParamFieldsOrganizationID          CreateAccountingBillQueryParamFields = "organization_id"
 	CreateAccountingBillQueryParamFieldsRaw                     CreateAccountingBillQueryParamFields = "raw"
+	CreateAccountingBillQueryParamFieldsTerm                    CreateAccountingBillQueryParamFields = "term"
 )
 
 func (e CreateAccountingBillQueryParamFields) ToPointer() *CreateAccountingBillQueryParamFields {
@@ -54,8 +54,6 @@ func (e *CreateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "id":
 		fallthrough
 	case "bill_number":
-		fallthrough
-	case "term":
 		fallthrough
 	case "created_at":
 		fallthrough
@@ -106,6 +104,8 @@ func (e *CreateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "organization_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "term":
 		*e = CreateAccountingBillQueryParamFields(v)
 		return nil
 	default:

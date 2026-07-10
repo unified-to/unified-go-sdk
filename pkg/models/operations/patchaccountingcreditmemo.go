@@ -28,6 +28,7 @@ const (
 	PatchAccountingCreditmemoQueryParamFieldsBalanceAmount           PatchAccountingCreditmemoQueryParamFields = "balance_amount"
 	PatchAccountingCreditmemoQueryParamFieldsCreditmemoNumber        PatchAccountingCreditmemoQueryParamFields = "creditmemo_number"
 	PatchAccountingCreditmemoQueryParamFieldsContactID               PatchAccountingCreditmemoQueryParamFields = "contact_id"
+	PatchAccountingCreditmemoQueryParamFieldsInvoiceID               PatchAccountingCreditmemoQueryParamFields = "invoice_id"
 	PatchAccountingCreditmemoQueryParamFieldsCurrency                PatchAccountingCreditmemoQueryParamFields = "currency"
 	PatchAccountingCreditmemoQueryParamFieldsNotes                   PatchAccountingCreditmemoQueryParamFields = "notes"
 	PatchAccountingCreditmemoQueryParamFieldsRefundReason            PatchAccountingCreditmemoQueryParamFields = "refund_reason"
@@ -81,6 +82,8 @@ func (e *PatchAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) e
 	case "creditmemo_number":
 		fallthrough
 	case "contact_id":
+		fallthrough
+	case "invoice_id":
 		fallthrough
 	case "currency":
 		fallthrough

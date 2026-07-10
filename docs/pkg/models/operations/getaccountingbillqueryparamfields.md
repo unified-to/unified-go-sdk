@@ -17,7 +17,6 @@ value := operations.GetAccountingBillQueryParamFieldsID
 | ---------------------------------------------------------- | ---------------------------------------------------------- |
 | `GetAccountingBillQueryParamFieldsID`                      | id                                                         |
 | `GetAccountingBillQueryParamFieldsBillNumber`              | bill_number                                                |
-| `GetAccountingBillQueryParamFieldsTerm`                    | term                                                       |
 | `GetAccountingBillQueryParamFieldsCreatedAt`               | created_at                                                 |
 | `GetAccountingBillQueryParamFieldsUpdatedAt`               | updated_at                                                 |
 | `GetAccountingBillQueryParamFieldsDueAt`                   | due_at                                                     |
@@ -43,3 +42,4 @@ value := operations.GetAccountingBillQueryParamFieldsID
 | `GetAccountingBillQueryParamFieldsSend`                    | send                                                       |
 | `GetAccountingBillQueryParamFieldsOrganizationID`          | organization_id                                            |
 | `GetAccountingBillQueryParamFieldsRaw`                     | raw                                                        |
+| `GetAccountingBillQueryParamFieldsTerm`                    | term                                                       |

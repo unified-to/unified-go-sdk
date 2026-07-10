@@ -34,4 +34,5 @@ value := operations.CreateAtsActivityQueryParamFieldsID
 | `CreateAtsActivityQueryParamFieldsBcc`           | bcc                                              |
 | `CreateAtsActivityQueryParamFieldsSubType`       | sub_type                                         |
 | `CreateAtsActivityQueryParamFieldsCompanyID`     | company_id                                       |
+| `CreateAtsActivityQueryParamFieldsMetadata`      | metadata                                         |
 | `CreateAtsActivityQueryParamFieldsRaw`           | raw                                              |

@@ -31,6 +31,7 @@ value := operations.GetAccountingCreditmemoQueryParamFieldsID
 | `GetAccountingCreditmemoQueryParamFieldsBalanceAmount`           | balance_amount                                                   |
 | `GetAccountingCreditmemoQueryParamFieldsCreditmemoNumber`        | creditmemo_number                                                |
 | `GetAccountingCreditmemoQueryParamFieldsContactID`               | contact_id                                                       |
+| `GetAccountingCreditmemoQueryParamFieldsInvoiceID`               | invoice_id                                                       |
 | `GetAccountingCreditmemoQueryParamFieldsCurrency`                | currency                                                         |
 | `GetAccountingCreditmemoQueryParamFieldsNotes`                   | notes                                                            |
 | `GetAccountingCreditmemoQueryParamFieldsRefundReason`            | refund_reason                                                    |
