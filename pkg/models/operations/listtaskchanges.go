@@ -58,6 +58,8 @@ type ListTaskChangesRequest struct {
 	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                           `queryParam:"style=form,explode=true,name=order"`
+	// The project ID to filter by (reference to TaskProject)
+	ProjectID *string `queryParam:"style=form,explode=true,name=project_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -102,6 +104,13 @@ func (l *ListTaskChangesRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
+}
+
+func (l *ListTaskChangesRequest) GetProjectID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ProjectID
 }
 
 func (l *ListTaskChangesRequest) GetQuery() *string {

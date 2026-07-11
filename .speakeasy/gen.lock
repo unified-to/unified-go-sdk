@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: d678a2007a56718bfb29f419fb284e0a
+  docChecksum: 765c9a8f026f994299cd84192f56c8b0
   docVersion: "1.0"
-  speakeasyVersion: 1.789.1
+  speakeasyVersion: 1.789.2
   generationVersion: 2.916.4
-  releaseVersion: 0.36.88
-  configChecksum: 9aecbb97f5b9ceaf7555793195cb7479
+  releaseVersion: 0.36.89
+  configChecksum: 6ed42c7f98e1d1cc4f202691be949370
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 64cda1ba-7305-47e6-a6eb-b01f45a4a229
-  pristine_commit_hash: 6a1c783fd91b74088e8a69b4de1762d42c7d7321
-  pristine_tree_hash: c863e860730b7b41ae6642e078f006675cc220d6
+  generation_id: 10258821-c7a0-42ce-ade7-e100f7d6f426
+  pristine_commit_hash: e51469f96fb659066f64a73cdc20fa48290c0c18
+  pristine_tree_hash: 7384d5b341a3094bcbdb03f7ed59ade86d065b45
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4715,8 +4715,8 @@ trackedFiles:
     pristine_git_object: 9ba8d57b8f8082af5c62ac15fb7d81b4fc549dfc
   docs/pkg/models/operations/listtaskchangesrequest.md:
     id: ecbf797f034d
-    last_write_checksum: sha1:a1a12db43f2d932a377d0c1ec23ed0f64189179e
-    pristine_git_object: 6c4788ad00318895a8fa8f1710abf83eab4e24c1
+    last_write_checksum: sha1:8ca2a1a8f3bb5f319492be6a28587f539aa14d3d
+    pristine_git_object: 9ad9af3455509b44df056eb6025352fe141a8168
   docs/pkg/models/operations/listtaskchangesresponse.md:
     id: 05062733290f
     last_write_checksum: sha1:71593fb2e6bf335da4c621e09f17bd87bc80f464
@@ -14587,8 +14587,8 @@ trackedFiles:
     pristine_git_object: 29ac562dd1406d57bdf17143b44ca3409b8b76e9
   pkg/models/operations/listtaskchanges.go:
     id: 14854ebb7185
-    last_write_checksum: sha1:c0e32809c0296560af7073b66cdfd6ee5ac7f179
-    pristine_git_object: 4eeae965238bf6bd2431fb7f66b46cdd614dbb48
+    last_write_checksum: sha1:c77711218523b4016666fc66663181744f00edd1
+    pristine_git_object: 26302835048d6ea8c4cf401ac058f08454affc2b
   pkg/models/operations/listtaskcomments.go:
     id: 733af9c364aa
     last_write_checksum: sha1:8821ff88a044e7fcb584b2b604b43e8bfca27125
@@ -18135,8 +18135,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:f2f8ea27a9c015be4c25a8a4c21e4fdc4fead55d
-    pristine_git_object: b4ce9e18e5157af85b1ac3e36b5956fff0064658
+    last_write_checksum: sha1:e724483c39eee5e9802cdc24e3b7acd64ec94f95
+    pristine_git_object: 17ee74f11a614faf2031d79bd8016464f444042e
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -31154,7 +31154,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.CreateAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Accounting.GetAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.GetAccountingCreditmemo()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Accounting.ListAccountingBills()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.ListAccountingCreditmemoes()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].InvoiceId` **Added**\n* `UnifiedTo.Accounting.PatchAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.PatchAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Accounting.UpdateAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Accounting.UpdateAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Bill.CreateAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Bill.GetAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Bill.ListAccountingBills()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Bill.PatchAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Bill.UpdateAccountingBill()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Creditmemo.CreateAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Creditmemo.GetAccountingCreditmemo()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Creditmemo.ListAccountingCreditmemoes()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].InvoiceId` **Added**\n* `UnifiedTo.Creditmemo.PatchAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Creditmemo.UpdateAccountingCreditmemo()`: \n  *  `request.Request` **Changed**\n  *  `response.InvoiceId` **Added**\n* `UnifiedTo.Ats.CreateAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Ats.GetAtsActivity()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Ats.ListAtsActivities()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Metadata` **Added**\n* `UnifiedTo.Ats.PatchAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Ats.UpdateAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Activity.CreateAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Activity.GetAtsActivity()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Activity.ListAtsActivities()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Metadata` **Added**\n* `UnifiedTo.Activity.PatchAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Activity.UpdateAtsActivity()`: \n  *  `request.Request` **Changed**\n  *  `response.Metadata` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Task.ListTaskChanges()`: \n  *  `request.Request.ProjectId` **Added**\n* `UnifiedTo.Change.ListTaskChanges()`: \n  *  `request.Request.ProjectId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
