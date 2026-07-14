@@ -63,8 +63,11 @@ type AccountingInvoiceTerm string
 
 const (
 	AccountingInvoiceTermOnReceipt AccountingInvoiceTerm = "ON_RECEIPT"
+	AccountingInvoiceTermNet7      AccountingInvoiceTerm = "NET_7"
 	AccountingInvoiceTermNet10     AccountingInvoiceTerm = "NET_10"
 	AccountingInvoiceTermNet15     AccountingInvoiceTerm = "NET_15"
+	AccountingInvoiceTermNet20     AccountingInvoiceTerm = "NET_20"
+	AccountingInvoiceTermNet25     AccountingInvoiceTerm = "NET_25"
 	AccountingInvoiceTermNet30     AccountingInvoiceTerm = "NET_30"
 	AccountingInvoiceTermNet60     AccountingInvoiceTerm = "NET_60"
 )
@@ -77,7 +80,7 @@ func (e AccountingInvoiceTerm) ToPointer() *AccountingInvoiceTerm {
 func (e *AccountingInvoiceTerm) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ON_RECEIPT", "NET_10", "NET_15", "NET_30", "NET_60":
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_60":
 			return true
 		}
 	}

@@ -63,8 +63,11 @@ type Term string
 
 const (
 	TermOnReceipt Term = "ON_RECEIPT"
+	TermNet7      Term = "NET_7"
 	TermNet10     Term = "NET_10"
 	TermNet15     Term = "NET_15"
+	TermNet20     Term = "NET_20"
+	TermNet25     Term = "NET_25"
 	TermNet30     Term = "NET_30"
 	TermNet60     Term = "NET_60"
 )
@@ -77,7 +80,7 @@ func (e Term) ToPointer() *Term {
 func (e *Term) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ON_RECEIPT", "NET_10", "NET_15", "NET_30", "NET_60":
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_60":
 			return true
 		}
 	}

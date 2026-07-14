@@ -71,6 +71,7 @@ func (e *PropertyAdsReportMetricsAdStatus) IsExact() bool {
 type PropertyAdsReportMetricsAd struct {
 	AdCopy           *string                           `json:"ad_copy,omitempty"`
 	AdType           *PropertyAdsReportMetricsAdAdType `json:"ad_type,omitempty"`
+	AdvertiserName   *string                           `json:"advertiser_name,omitempty"`
 	CampaignID       *string                           `json:"campaign_id,omitempty"`
 	CreatedAt        *time.Time                        `json:"created_at,omitempty"`
 	CreativeAssetURL *string                           `json:"creative_asset_url,omitempty"`
@@ -82,6 +83,7 @@ type PropertyAdsReportMetricsAd struct {
 	GroupID          *string                           `json:"group_id,omitempty"`
 	Headline         *string                           `json:"headline,omitempty"`
 	ID               *string                           `json:"id,omitempty"`
+	LogoCreativeID   *string                           `json:"logo_creative_id,omitempty"`
 	Name             *string                           `json:"name,omitempty"`
 	OrganizationID   *string                           `json:"organization_id,omitempty"`
 	Path1            *string                           `json:"path1,omitempty"`
@@ -115,6 +117,13 @@ func (p *PropertyAdsReportMetricsAd) GetAdType() *PropertyAdsReportMetricsAdAdTy
 		return nil
 	}
 	return p.AdType
+}
+
+func (p *PropertyAdsReportMetricsAd) GetAdvertiserName() *string {
+	if p == nil {
+		return nil
+	}
+	return p.AdvertiserName
 }
 
 func (p *PropertyAdsReportMetricsAd) GetCampaignID() *string {
@@ -192,6 +201,13 @@ func (p *PropertyAdsReportMetricsAd) GetID() *string {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PropertyAdsReportMetricsAd) GetLogoCreativeID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.LogoCreativeID
 }
 
 func (p *PropertyAdsReportMetricsAd) GetName() *string {

@@ -99,6 +99,7 @@ type ListAdsCampaignsRequest struct {
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
 	Fields []ListAdsCampaignsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Goal   *string                            `queryParam:"style=form,explode=true,name=goal"`
 	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
@@ -136,6 +137,13 @@ func (l *ListAdsCampaignsRequest) GetFields() []ListAdsCampaignsQueryParamFields
 		return nil
 	}
 	return l.Fields
+}
+
+func (l *ListAdsCampaignsRequest) GetGoal() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Goal
 }
 
 func (l *ListAdsCampaignsRequest) GetLimit() *float64 {

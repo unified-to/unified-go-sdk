@@ -32,5 +32,6 @@ value := operations.PatchAccountingExpenseQueryParamFieldsID
 | `PatchAccountingExpenseQueryParamFieldsApprovedAt`       | approved_at                                              |
 | `PatchAccountingExpenseQueryParamFieldsApproverUserID`   | approver_user_id                                         |
 | `PatchAccountingExpenseQueryParamFieldsLineitems`        | lineitems                                                |
-| `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |
+| `PatchAccountingExpenseQueryParamFieldsAttachments`      | attachments                                              |
 | `PatchAccountingExpenseQueryParamFieldsOrganizationID`   | organization_id                                          |
+| `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |

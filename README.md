@@ -824,16 +824,22 @@ func main() {
 ### [Document](docs/sdks/document/README.md)
 
 * [CreateAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [CreateHrisDocument](docs/sdks/document/README.md#createhrisdocument) - Create a document
 * [CreateSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [GetAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [GetHrisDocument](docs/sdks/document/README.md#gethrisdocument) - Retrieve a document
 * [GetSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [ListHrisDocuments](docs/sdks/document/README.md#listhrisdocuments) - List all documents
 * [ListSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [PatchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [PatchHrisDocument](docs/sdks/document/README.md#patchhrisdocument) - Update a document
 * [PatchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [RemoveAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [RemoveHrisDocument](docs/sdks/document/README.md#removehrisdocument) - Remove a document
 * [RemoveSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [UpdateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
+* [UpdateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [UpdateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
@@ -957,6 +963,7 @@ func main() {
 * [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
 * [CreateHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [CreateHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
+* [CreateHrisDocument](docs/sdks/hris/README.md#createhrisdocument) - Create a document
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
@@ -967,6 +974,7 @@ func main() {
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
 * [GetHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [GetHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
+* [GetHrisDocument](docs/sdks/hris/README.md#gethrisdocument) - Retrieve a document
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [GetHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
@@ -978,6 +986,7 @@ func main() {
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
 * [ListHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [ListHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
+* [ListHrisDocuments](docs/sdks/hris/README.md#listhrisdocuments) - List all documents
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [ListHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
@@ -989,6 +998,7 @@ func main() {
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
 * [PatchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [PatchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
+* [PatchHrisDocument](docs/sdks/hris/README.md#patchhrisdocument) - Update a document
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
@@ -999,6 +1009,7 @@ func main() {
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
 * [RemoveHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [RemoveHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
+* [RemoveHrisDocument](docs/sdks/hris/README.md#removehrisdocument) - Remove a document
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
@@ -1009,6 +1020,7 @@ func main() {
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company
 * [UpdateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [UpdateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
+* [UpdateHrisDocument](docs/sdks/hris/README.md#updatehrisdocument) - Update a document
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location

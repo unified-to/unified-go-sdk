@@ -69,6 +69,7 @@ type PropertyAdsReportMetricsCampaignGoal string
 const (
 	PropertyAdsReportMetricsCampaignGoalUnspecified    PropertyAdsReportMetricsCampaignGoal = "UNSPECIFIED"
 	PropertyAdsReportMetricsCampaignGoalBrandAwareness PropertyAdsReportMetricsCampaignGoal = "BRAND_AWARENESS"
+	PropertyAdsReportMetricsCampaignGoalEngagement     PropertyAdsReportMetricsCampaignGoal = "ENGAGEMENT"
 	PropertyAdsReportMetricsCampaignGoalReach          PropertyAdsReportMetricsCampaignGoal = "REACH"
 	PropertyAdsReportMetricsCampaignGoalWebsiteTraffic PropertyAdsReportMetricsCampaignGoal = "WEBSITE_TRAFFIC"
 	PropertyAdsReportMetricsCampaignGoalLeads          PropertyAdsReportMetricsCampaignGoal = "LEADS"
@@ -84,7 +85,7 @@ func (e PropertyAdsReportMetricsCampaignGoal) ToPointer() *PropertyAdsReportMetr
 func (e *PropertyAdsReportMetricsCampaignGoal) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "BRAND_AWARENESS", "REACH", "WEBSITE_TRAFFIC", "LEADS", "SALES", "APP_PROMOTION":
+		case "UNSPECIFIED", "BRAND_AWARENESS", "ENGAGEMENT", "REACH", "WEBSITE_TRAFFIC", "LEADS", "SALES", "APP_PROMOTION":
 			return true
 		}
 	}

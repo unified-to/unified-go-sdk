@@ -19,7 +19,10 @@ custom := shared.AccountingInvoiceTerm("custom_value")
 | Name                             | Value                            |
 | -------------------------------- | -------------------------------- |
 | `AccountingInvoiceTermOnReceipt` | ON_RECEIPT                       |
+| `AccountingInvoiceTermNet7`      | NET_7                            |
 | `AccountingInvoiceTermNet10`     | NET_10                           |
 | `AccountingInvoiceTermNet15`     | NET_15                           |
+| `AccountingInvoiceTermNet20`     | NET_20                           |
+| `AccountingInvoiceTermNet25`     | NET_25                           |
 | `AccountingInvoiceTermNet30`     | NET_30                           |
 | `AccountingInvoiceTermNet60`     | NET_60                           |

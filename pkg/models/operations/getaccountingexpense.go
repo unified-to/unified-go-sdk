@@ -29,8 +29,9 @@ const (
 	GetAccountingExpenseQueryParamFieldsApprovedAt       GetAccountingExpenseQueryParamFields = "approved_at"
 	GetAccountingExpenseQueryParamFieldsApproverUserID   GetAccountingExpenseQueryParamFields = "approver_user_id"
 	GetAccountingExpenseQueryParamFieldsLineitems        GetAccountingExpenseQueryParamFields = "lineitems"
-	GetAccountingExpenseQueryParamFieldsRaw              GetAccountingExpenseQueryParamFields = "raw"
+	GetAccountingExpenseQueryParamFieldsAttachments      GetAccountingExpenseQueryParamFields = "attachments"
 	GetAccountingExpenseQueryParamFieldsOrganizationID   GetAccountingExpenseQueryParamFields = "organization_id"
+	GetAccountingExpenseQueryParamFieldsRaw              GetAccountingExpenseQueryParamFields = "raw"
 )
 
 func (e GetAccountingExpenseQueryParamFields) ToPointer() *GetAccountingExpenseQueryParamFields {
@@ -76,9 +77,11 @@ func (e *GetAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "lineitems":
 		fallthrough
-	case "raw":
+	case "attachments":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "raw":
 		*e = GetAccountingExpenseQueryParamFields(v)
 		return nil
 	default:

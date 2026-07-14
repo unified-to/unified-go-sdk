@@ -24,7 +24,9 @@ value := operations.PatchAdsAdQueryParamFieldsID
 | `PatchAdsAdQueryParamFieldsOrganizationID`   | organization_id                              |
 | `PatchAdsAdQueryParamFieldsStatus`           | status                                       |
 | `PatchAdsAdQueryParamFieldsAdType`           | ad_type                                      |
+| `PatchAdsAdQueryParamFieldsAdvertiserName`   | advertiser_name                              |
 | `PatchAdsAdQueryParamFieldsCreativeIds`      | creative_ids                                 |
+| `PatchAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                             |
 | `PatchAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                           |
 | `PatchAdsAdQueryParamFieldsAdCopy`           | ad_copy                                      |
 | `PatchAdsAdQueryParamFieldsHeadline`         | headline                                     |

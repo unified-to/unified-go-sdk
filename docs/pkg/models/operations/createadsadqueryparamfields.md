@@ -24,7 +24,9 @@ value := operations.CreateAdsAdQueryParamFieldsID
 | `CreateAdsAdQueryParamFieldsOrganizationID`   | organization_id                               |
 | `CreateAdsAdQueryParamFieldsStatus`           | status                                        |
 | `CreateAdsAdQueryParamFieldsAdType`           | ad_type                                       |
+| `CreateAdsAdQueryParamFieldsAdvertiserName`   | advertiser_name                               |
 | `CreateAdsAdQueryParamFieldsCreativeIds`      | creative_ids                                  |
+| `CreateAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                              |
 | `CreateAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                            |
 | `CreateAdsAdQueryParamFieldsAdCopy`           | ad_copy                                       |
 | `CreateAdsAdQueryParamFieldsHeadline`         | headline                                      |

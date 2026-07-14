@@ -39,6 +39,7 @@ func (e *AccountingVendorcreditStatus) IsExact() bool {
 
 type AccountingVendorcredit struct {
 	AccountID      *string                       `json:"account_id,omitempty"`
+	ApplyAmount    *float64                      `json:"apply_amount,omitempty"`
 	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
 	BillID         *string                       `json:"bill_id,omitempty"`
 	ContactID      *string                       `json:"contact_id,omitempty"`
@@ -72,6 +73,13 @@ func (a *AccountingVendorcredit) GetAccountID() *string {
 		return nil
 	}
 	return a.AccountID
+}
+
+func (a *AccountingVendorcredit) GetApplyAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ApplyAmount
 }
 
 func (a *AccountingVendorcredit) GetBalanceAmount() *float64 {

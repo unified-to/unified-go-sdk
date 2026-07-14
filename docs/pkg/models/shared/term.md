@@ -19,7 +19,10 @@ custom := shared.Term("custom_value")
 | Name            | Value           |
 | --------------- | --------------- |
 | `TermOnReceipt` | ON_RECEIPT      |
+| `TermNet7`      | NET_7           |
 | `TermNet10`     | NET_10          |
 | `TermNet15`     | NET_15          |
+| `TermNet20`     | NET_20          |
+| `TermNet25`     | NET_25          |
 | `TermNet30`     | NET_30          |
 | `TermNet60`     | NET_60          |

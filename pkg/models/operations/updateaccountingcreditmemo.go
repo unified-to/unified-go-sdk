@@ -39,6 +39,7 @@ const (
 	UpdateAccountingCreditmemoQueryParamFieldsAttachments             UpdateAccountingCreditmemoQueryParamFields = "attachments"
 	UpdateAccountingCreditmemoQueryParamFieldsSend                    UpdateAccountingCreditmemoQueryParamFields = "send"
 	UpdateAccountingCreditmemoQueryParamFieldsOrganizationID          UpdateAccountingCreditmemoQueryParamFields = "organization_id"
+	UpdateAccountingCreditmemoQueryParamFieldsApplyAmount             UpdateAccountingCreditmemoQueryParamFields = "apply_amount"
 	UpdateAccountingCreditmemoQueryParamFieldsRaw                     UpdateAccountingCreditmemoQueryParamFields = "raw"
 )
 
@@ -104,6 +105,8 @@ func (e *UpdateAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) 
 	case "send":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "apply_amount":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingCreditmemoQueryParamFields(v)

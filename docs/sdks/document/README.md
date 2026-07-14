@@ -5,16 +5,22 @@
 ### Available Operations
 
 * [CreateAtsDocument](#createatsdocument) - Create a document
+* [CreateHrisDocument](#createhrisdocument) - Create a document
 * [CreateSigningDocument](#createsigningdocument) - Create a document
 * [GetAtsDocument](#getatsdocument) - Retrieve a document
+* [GetHrisDocument](#gethrisdocument) - Retrieve a document
 * [GetSigningDocument](#getsigningdocument) - Retrieve a document
 * [ListAtsDocuments](#listatsdocuments) - List all documents
+* [ListHrisDocuments](#listhrisdocuments) - List all documents
 * [ListSigningDocuments](#listsigningdocuments) - List all documents
 * [PatchAtsDocument](#patchatsdocument) - Update a document
+* [PatchHrisDocument](#patchhrisdocument) - Update a document
 * [PatchSigningDocument](#patchsigningdocument) - Update a document
 * [RemoveAtsDocument](#removeatsdocument) - Remove a document
+* [RemoveHrisDocument](#removehrisdocument) - Remove a document
 * [RemoveSigningDocument](#removesigningdocument) - Remove a document
 * [UpdateAtsDocument](#updateatsdocument) - Update a document
+* [UpdateHrisDocument](#updatehrisdocument) - Update a document
 * [UpdateSigningDocument](#updatesigningdocument) - Update a document
 
 ## CreateAtsDocument
@@ -66,6 +72,62 @@ func main() {
 ### Response
 
 **[*operations.CreateAtsDocumentResponse](../../pkg/models/operations/createatsdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateHrisDocument
+
+Create a document
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.CreateHrisDocument(ctx, operations.CreateHrisDocumentRequest{
+        HrisDocument: shared.HrisDocument{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.CreateHrisDocumentRequest](../../pkg/models/operations/createhrisdocumentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.CreateHrisDocumentResponse](../../pkg/models/operations/createhrisdocumentresponse.md), error**
 
 ### Errors
 
@@ -184,6 +246,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHrisDocument
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHrisDocument" method="get" path="/hris/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.GetHrisDocument(ctx, operations.GetHrisDocumentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetHrisDocumentRequest](../../pkg/models/operations/gethrisdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.GetHrisDocumentResponse](../../pkg/models/operations/gethrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetSigningDocument
 
 Retrieve a document
@@ -286,6 +403,60 @@ func main() {
 ### Response
 
 **[*operations.ListAtsDocumentsResponse](../../pkg/models/operations/listatsdocumentsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHrisDocuments
+
+List all documents
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHrisDocuments" method="get" path="/hris/{connection_id}/document" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.ListHrisDocuments(ctx, operations.ListHrisDocumentsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDocuments != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListHrisDocumentsRequest](../../pkg/models/operations/listhrisdocumentsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListHrisDocumentsResponse](../../pkg/models/operations/listhrisdocumentsresponse.md), error**
 
 ### Errors
 
@@ -397,6 +568,63 @@ func main() {
 ### Response
 
 **[*operations.PatchAtsDocumentResponse](../../pkg/models/operations/patchatsdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchHrisDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.PatchHrisDocument(ctx, operations.PatchHrisDocumentRequest{
+        HrisDocument: shared.HrisDocument{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchHrisDocumentRequest](../../pkg/models/operations/patchhrisdocumentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.PatchHrisDocumentResponse](../../pkg/models/operations/patchhrisdocumentresponse.md), error**
 
 ### Errors
 
@@ -516,6 +744,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveHrisDocument
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisDocument" method="delete" path="/hris/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.RemoveHrisDocument(ctx, operations.RemoveHrisDocumentRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.RemoveHrisDocumentRequest](../../pkg/models/operations/removehrisdocumentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.RemoveHrisDocumentResponse](../../pkg/models/operations/removehrisdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveSigningDocument
 
 Remove a document
@@ -621,6 +904,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateAtsDocumentResponse](../../pkg/models/operations/updateatsdocumentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateHrisDocument
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Document.UpdateHrisDocument(ctx, operations.UpdateHrisDocumentRequest{
+        HrisDocument: shared.HrisDocument{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisDocument != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateHrisDocumentRequest](../../pkg/models/operations/updatehrisdocumentrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.UpdateHrisDocumentResponse](../../pkg/models/operations/updatehrisdocumentresponse.md), error**
 
 ### Errors
 

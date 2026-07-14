@@ -21,7 +21,9 @@ const (
 	GetAdsAdQueryParamFieldsOrganizationID   GetAdsAdQueryParamFields = "organization_id"
 	GetAdsAdQueryParamFieldsStatus           GetAdsAdQueryParamFields = "status"
 	GetAdsAdQueryParamFieldsAdType           GetAdsAdQueryParamFields = "ad_type"
+	GetAdsAdQueryParamFieldsAdvertiserName   GetAdsAdQueryParamFields = "advertiser_name"
 	GetAdsAdQueryParamFieldsCreativeIds      GetAdsAdQueryParamFields = "creative_ids"
+	GetAdsAdQueryParamFieldsLogoCreativeID   GetAdsAdQueryParamFields = "logo_creative_id"
 	GetAdsAdQueryParamFieldsCreativeAssetURL GetAdsAdQueryParamFields = "creative_asset_url"
 	GetAdsAdQueryParamFieldsAdCopy           GetAdsAdQueryParamFields = "ad_copy"
 	GetAdsAdQueryParamFieldsHeadline         GetAdsAdQueryParamFields = "headline"
@@ -62,7 +64,11 @@ func (e *GetAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "ad_type":
 		fallthrough
+	case "advertiser_name":
+		fallthrough
 	case "creative_ids":
+		fallthrough
+	case "logo_creative_id":
 		fallthrough
 	case "creative_asset_url":
 		fallthrough

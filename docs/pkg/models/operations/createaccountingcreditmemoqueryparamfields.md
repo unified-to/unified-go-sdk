@@ -42,4 +42,5 @@ value := operations.CreateAccountingCreditmemoQueryParamFieldsID
 | `CreateAccountingCreditmemoQueryParamFieldsAttachments`             | attachments                                                         |
 | `CreateAccountingCreditmemoQueryParamFieldsSend`                    | send                                                                |
 | `CreateAccountingCreditmemoQueryParamFieldsOrganizationID`          | organization_id                                                     |
+| `CreateAccountingCreditmemoQueryParamFieldsApplyAmount`             | apply_amount                                                        |
 | `CreateAccountingCreditmemoQueryParamFieldsRaw`                     | raw                                                                 |

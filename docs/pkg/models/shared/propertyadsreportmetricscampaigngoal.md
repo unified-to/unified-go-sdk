@@ -20,6 +20,7 @@ custom := shared.PropertyAdsReportMetricsCampaignGoal("custom_value")
 | ---------------------------------------------------- | ---------------------------------------------------- |
 | `PropertyAdsReportMetricsCampaignGoalUnspecified`    | UNSPECIFIED                                          |
 | `PropertyAdsReportMetricsCampaignGoalBrandAwareness` | BRAND_AWARENESS                                      |
+| `PropertyAdsReportMetricsCampaignGoalEngagement`     | ENGAGEMENT                                           |
 | `PropertyAdsReportMetricsCampaignGoalReach`          | REACH                                                |
 | `PropertyAdsReportMetricsCampaignGoalWebsiteTraffic` | WEBSITE_TRAFFIC                                      |
 | `PropertyAdsReportMetricsCampaignGoalLeads`          | LEADS                                                |

@@ -157,6 +157,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsHrisBenefitWrite`             | hris_benefit_write                                          |
 | `PropertyConnectionPermissionsHrisBankaccountRead`          | hris_bankaccount_read                                       |
 | `PropertyConnectionPermissionsHrisBankaccountWrite`         | hris_bankaccount_write                                      |
+| `PropertyConnectionPermissionsHrisDocumentRead`             | hris_document_read                                          |
+| `PropertyConnectionPermissionsHrisDocumentWrite`            | hris_document_write                                         |
 | `PropertyConnectionPermissionsUcCallRead`                   | uc_call_read                                                |
 | `PropertyConnectionPermissionsUcContactRead`                | uc_contact_read                                             |
 | `PropertyConnectionPermissionsUcContactWrite`               | uc_contact_write                                            |

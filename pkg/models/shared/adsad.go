@@ -71,6 +71,7 @@ func (e *AdsAdStatus) IsExact() bool {
 type AdsAd struct {
 	AdCopy           *string        `json:"ad_copy,omitempty"`
 	AdType           *AdType        `json:"ad_type,omitempty"`
+	AdvertiserName   *string        `json:"advertiser_name,omitempty"`
 	CampaignID       *string        `json:"campaign_id,omitempty"`
 	CreatedAt        *time.Time     `json:"created_at,omitempty"`
 	CreativeAssetURL *string        `json:"creative_asset_url,omitempty"`
@@ -82,6 +83,7 @@ type AdsAd struct {
 	GroupID          *string        `json:"group_id,omitempty"`
 	Headline         *string        `json:"headline,omitempty"`
 	ID               *string        `json:"id,omitempty"`
+	LogoCreativeID   *string        `json:"logo_creative_id,omitempty"`
 	Name             *string        `json:"name,omitempty"`
 	OrganizationID   *string        `json:"organization_id,omitempty"`
 	Path1            *string        `json:"path1,omitempty"`
@@ -115,6 +117,13 @@ func (a *AdsAd) GetAdType() *AdType {
 		return nil
 	}
 	return a.AdType
+}
+
+func (a *AdsAd) GetAdvertiserName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.AdvertiserName
 }
 
 func (a *AdsAd) GetCampaignID() *string {
@@ -192,6 +201,13 @@ func (a *AdsAd) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AdsAd) GetLogoCreativeID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LogoCreativeID
 }
 
 func (a *AdsAd) GetName() *string {

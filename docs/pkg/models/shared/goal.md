@@ -20,6 +20,7 @@ custom := shared.Goal("custom_value")
 | -------------------- | -------------------- |
 | `GoalUnspecified`    | UNSPECIFIED          |
 | `GoalBrandAwareness` | BRAND_AWARENESS      |
+| `GoalEngagement`     | ENGAGEMENT           |
 | `GoalReach`          | REACH                |
 | `GoalWebsiteTraffic` | WEBSITE_TRAFFIC      |
 | `GoalLeads`          | LEADS                |

@@ -60,6 +60,7 @@ func (e *AccountingCreditmemoStatus) IsExact() bool {
 }
 
 type AccountingCreditmemo struct {
+	ApplyAmount             *float64                                     `json:"apply_amount,omitempty"`
 	Attachments             []AccountingAttachment                       `json:"attachments,omitempty"`
 	BalanceAmount           *float64                                     `json:"balance_amount,omitempty"`
 	CancelledAt             *time.Time                                   `json:"cancelled_at,omitempty"`
@@ -99,6 +100,13 @@ func (a *AccountingCreditmemo) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingCreditmemo) GetApplyAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ApplyAmount
 }
 
 func (a *AccountingCreditmemo) GetAttachments() []AccountingAttachment {

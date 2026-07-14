@@ -27,6 +27,7 @@ const (
 	CreateAccountingVendorcreditQueryParamFieldsLineitems      CreateAccountingVendorcreditQueryParamFields = "lineitems"
 	CreateAccountingVendorcreditQueryParamFieldsStatus         CreateAccountingVendorcreditQueryParamFields = "status"
 	CreateAccountingVendorcreditQueryParamFieldsOrganizationID CreateAccountingVendorcreditQueryParamFields = "organization_id"
+	CreateAccountingVendorcreditQueryParamFieldsApplyAmount    CreateAccountingVendorcreditQueryParamFields = "apply_amount"
 	CreateAccountingVendorcreditQueryParamFieldsRaw            CreateAccountingVendorcreditQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *CreateAccountingVendorcreditQueryParamFields) UnmarshalJSON(data []byte
 	case "status":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "apply_amount":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingVendorcreditQueryParamFields(v)

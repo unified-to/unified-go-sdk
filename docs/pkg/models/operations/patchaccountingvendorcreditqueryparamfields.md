@@ -30,4 +30,5 @@ value := operations.PatchAccountingVendorcreditQueryParamFieldsID
 | `PatchAccountingVendorcreditQueryParamFieldsLineitems`      | lineitems                                                   |
 | `PatchAccountingVendorcreditQueryParamFieldsStatus`         | status                                                      |
 | `PatchAccountingVendorcreditQueryParamFieldsOrganizationID` | organization_id                                             |
+| `PatchAccountingVendorcreditQueryParamFieldsApplyAmount`    | apply_amount                                                |
 | `PatchAccountingVendorcreditQueryParamFieldsRaw`            | raw                                                         |

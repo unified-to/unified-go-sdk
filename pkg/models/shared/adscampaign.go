@@ -69,6 +69,7 @@ type Goal string
 const (
 	GoalUnspecified    Goal = "UNSPECIFIED"
 	GoalBrandAwareness Goal = "BRAND_AWARENESS"
+	GoalEngagement     Goal = "ENGAGEMENT"
 	GoalReach          Goal = "REACH"
 	GoalWebsiteTraffic Goal = "WEBSITE_TRAFFIC"
 	GoalLeads          Goal = "LEADS"
@@ -84,7 +85,7 @@ func (e Goal) ToPointer() *Goal {
 func (e *Goal) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "BRAND_AWARENESS", "REACH", "WEBSITE_TRAFFIC", "LEADS", "SALES", "APP_PROMOTION":
+		case "UNSPECIFIED", "BRAND_AWARENESS", "ENGAGEMENT", "REACH", "WEBSITE_TRAFFIC", "LEADS", "SALES", "APP_PROMOTION":
 			return true
 		}
 	}
