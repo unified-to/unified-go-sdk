@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.917.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.918.1
 
 import (
 	"context"
@@ -146,6 +146,7 @@ type UnifiedTo struct {
 	Device            *Device
 	Employee          *Employee
 	Payslip           *Payslip
+	Taxonomy          *Taxonomy
 	Timeoff           *Timeoff
 	Timeshift         *Timeshift
 	Kms               *Kms
@@ -284,9 +285,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.90",
+		SDKVersion: "0.36.91",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.90 2.917.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.91 2.918.1 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -396,6 +397,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Employee = newEmployee(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Taxonomy = newTaxonomy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Kms = newKms(sdk, sdk.sdkConfiguration, sdk.hooks)

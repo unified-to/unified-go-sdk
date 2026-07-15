@@ -12,21 +12,22 @@ import (
 type ListHrisPayslipsQueryParamFields string
 
 const (
-	ListHrisPayslipsQueryParamFieldsID          ListHrisPayslipsQueryParamFields = "id"
-	ListHrisPayslipsQueryParamFieldsCreatedAt   ListHrisPayslipsQueryParamFields = "created_at"
-	ListHrisPayslipsQueryParamFieldsUpdatedAt   ListHrisPayslipsQueryParamFields = "updated_at"
-	ListHrisPayslipsQueryParamFieldsUserID      ListHrisPayslipsQueryParamFields = "user_id"
-	ListHrisPayslipsQueryParamFieldsCompanyID   ListHrisPayslipsQueryParamFields = "company_id"
-	ListHrisPayslipsQueryParamFieldsPaymentType ListHrisPayslipsQueryParamFields = "payment_type"
-	ListHrisPayslipsQueryParamFieldsPaidAt      ListHrisPayslipsQueryParamFields = "paid_at"
-	ListHrisPayslipsQueryParamFieldsStartAt     ListHrisPayslipsQueryParamFields = "start_at"
-	ListHrisPayslipsQueryParamFieldsEndAt       ListHrisPayslipsQueryParamFields = "end_at"
-	ListHrisPayslipsQueryParamFieldsCurrency    ListHrisPayslipsQueryParamFields = "currency"
-	ListHrisPayslipsQueryParamFieldsGrossAmount ListHrisPayslipsQueryParamFields = "gross_amount"
-	ListHrisPayslipsQueryParamFieldsNetAmount   ListHrisPayslipsQueryParamFields = "net_amount"
-	ListHrisPayslipsQueryParamFieldsDetails     ListHrisPayslipsQueryParamFields = "details"
-	ListHrisPayslipsQueryParamFieldsDeduction   ListHrisPayslipsQueryParamFields = "deduction"
-	ListHrisPayslipsQueryParamFieldsRaw         ListHrisPayslipsQueryParamFields = "raw"
+	ListHrisPayslipsQueryParamFieldsID               ListHrisPayslipsQueryParamFields = "id"
+	ListHrisPayslipsQueryParamFieldsCreatedAt        ListHrisPayslipsQueryParamFields = "created_at"
+	ListHrisPayslipsQueryParamFieldsUpdatedAt        ListHrisPayslipsQueryParamFields = "updated_at"
+	ListHrisPayslipsQueryParamFieldsUserID           ListHrisPayslipsQueryParamFields = "user_id"
+	ListHrisPayslipsQueryParamFieldsCompanyID        ListHrisPayslipsQueryParamFields = "company_id"
+	ListHrisPayslipsQueryParamFieldsPaymentReference ListHrisPayslipsQueryParamFields = "payment_reference"
+	ListHrisPayslipsQueryParamFieldsPaymentType      ListHrisPayslipsQueryParamFields = "payment_type"
+	ListHrisPayslipsQueryParamFieldsPaidAt           ListHrisPayslipsQueryParamFields = "paid_at"
+	ListHrisPayslipsQueryParamFieldsStartAt          ListHrisPayslipsQueryParamFields = "start_at"
+	ListHrisPayslipsQueryParamFieldsEndAt            ListHrisPayslipsQueryParamFields = "end_at"
+	ListHrisPayslipsQueryParamFieldsCurrency         ListHrisPayslipsQueryParamFields = "currency"
+	ListHrisPayslipsQueryParamFieldsGrossAmount      ListHrisPayslipsQueryParamFields = "gross_amount"
+	ListHrisPayslipsQueryParamFieldsNetAmount        ListHrisPayslipsQueryParamFields = "net_amount"
+	ListHrisPayslipsQueryParamFieldsDetails          ListHrisPayslipsQueryParamFields = "details"
+	ListHrisPayslipsQueryParamFieldsDeduction        ListHrisPayslipsQueryParamFields = "deduction"
+	ListHrisPayslipsQueryParamFieldsRaw              ListHrisPayslipsQueryParamFields = "raw"
 )
 
 func (e ListHrisPayslipsQueryParamFields) ToPointer() *ListHrisPayslipsQueryParamFields {
@@ -47,6 +48,8 @@ func (e *ListHrisPayslipsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "payment_reference":
 		fallthrough
 	case "payment_type":
 		fallthrough

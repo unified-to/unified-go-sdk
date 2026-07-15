@@ -35,18 +35,19 @@ type HrisPayslip struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
 	// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
-	Deduction   *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
-	Details     []HrisPayslipDetail           `json:"details,omitempty"`
-	EndAt       *time.Time                    `json:"end_at,omitempty"`
-	GrossAmount *float64                      `json:"gross_amount,omitempty"`
-	ID          *string                       `json:"id,omitempty"`
-	NetAmount   *float64                      `json:"net_amount,omitempty"`
-	PaidAt      *time.Time                    `json:"paid_at,omitempty"`
-	PaymentType *PaymentType                  `json:"payment_type,omitempty"`
-	Raw         map[string]any                `json:"raw,omitempty"`
-	StartAt     *time.Time                    `json:"start_at,omitempty"`
-	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
-	UserID      *string                       `json:"user_id,omitempty"`
+	Deduction        *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
+	Details          []HrisPayslipDetail           `json:"details,omitempty"`
+	EndAt            *time.Time                    `json:"end_at,omitempty"`
+	GrossAmount      *float64                      `json:"gross_amount,omitempty"`
+	ID               *string                       `json:"id,omitempty"`
+	NetAmount        *float64                      `json:"net_amount,omitempty"`
+	PaidAt           *time.Time                    `json:"paid_at,omitempty"`
+	PaymentReference *string                       `json:"payment_reference,omitempty"`
+	PaymentType      *PaymentType                  `json:"payment_type,omitempty"`
+	Raw              map[string]any                `json:"raw,omitempty"`
+	StartAt          *time.Time                    `json:"start_at,omitempty"`
+	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
+	UserID           *string                       `json:"user_id,omitempty"`
 }
 
 func (h HrisPayslip) MarshalJSON() ([]byte, error) {
@@ -128,6 +129,13 @@ func (h *HrisPayslip) GetPaidAt() *time.Time {
 		return nil
 	}
 	return h.PaidAt
+}
+
+func (h *HrisPayslip) GetPaymentReference() *string {
+	if h == nil {
+		return nil
+	}
+	return h.PaymentReference
 }
 
 func (h *HrisPayslip) GetPaymentType() *PaymentType {

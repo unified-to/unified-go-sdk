@@ -84,6 +84,7 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeHrisBenefit`             | hris_benefit                        |
 | `ObjectTypeHrisBankaccount`         | hris_bankaccount                    |
 | `ObjectTypeHrisDocument`            | hris_document                       |
+| `ObjectTypeHrisTaxonomy`            | hris_taxonomy                       |
 | `ObjectTypeMartechList`             | martech_list                        |
 | `ObjectTypeMartechMember`           | martech_member                      |
 | `ObjectTypeMartechCampaign`         | martech_campaign                    |

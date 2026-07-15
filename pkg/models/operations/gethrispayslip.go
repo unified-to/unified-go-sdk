@@ -12,21 +12,22 @@ import (
 type GetHrisPayslipQueryParamFields string
 
 const (
-	GetHrisPayslipQueryParamFieldsID          GetHrisPayslipQueryParamFields = "id"
-	GetHrisPayslipQueryParamFieldsCreatedAt   GetHrisPayslipQueryParamFields = "created_at"
-	GetHrisPayslipQueryParamFieldsUpdatedAt   GetHrisPayslipQueryParamFields = "updated_at"
-	GetHrisPayslipQueryParamFieldsUserID      GetHrisPayslipQueryParamFields = "user_id"
-	GetHrisPayslipQueryParamFieldsCompanyID   GetHrisPayslipQueryParamFields = "company_id"
-	GetHrisPayslipQueryParamFieldsPaymentType GetHrisPayslipQueryParamFields = "payment_type"
-	GetHrisPayslipQueryParamFieldsPaidAt      GetHrisPayslipQueryParamFields = "paid_at"
-	GetHrisPayslipQueryParamFieldsStartAt     GetHrisPayslipQueryParamFields = "start_at"
-	GetHrisPayslipQueryParamFieldsEndAt       GetHrisPayslipQueryParamFields = "end_at"
-	GetHrisPayslipQueryParamFieldsCurrency    GetHrisPayslipQueryParamFields = "currency"
-	GetHrisPayslipQueryParamFieldsGrossAmount GetHrisPayslipQueryParamFields = "gross_amount"
-	GetHrisPayslipQueryParamFieldsNetAmount   GetHrisPayslipQueryParamFields = "net_amount"
-	GetHrisPayslipQueryParamFieldsDetails     GetHrisPayslipQueryParamFields = "details"
-	GetHrisPayslipQueryParamFieldsDeduction   GetHrisPayslipQueryParamFields = "deduction"
-	GetHrisPayslipQueryParamFieldsRaw         GetHrisPayslipQueryParamFields = "raw"
+	GetHrisPayslipQueryParamFieldsID               GetHrisPayslipQueryParamFields = "id"
+	GetHrisPayslipQueryParamFieldsCreatedAt        GetHrisPayslipQueryParamFields = "created_at"
+	GetHrisPayslipQueryParamFieldsUpdatedAt        GetHrisPayslipQueryParamFields = "updated_at"
+	GetHrisPayslipQueryParamFieldsUserID           GetHrisPayslipQueryParamFields = "user_id"
+	GetHrisPayslipQueryParamFieldsCompanyID        GetHrisPayslipQueryParamFields = "company_id"
+	GetHrisPayslipQueryParamFieldsPaymentReference GetHrisPayslipQueryParamFields = "payment_reference"
+	GetHrisPayslipQueryParamFieldsPaymentType      GetHrisPayslipQueryParamFields = "payment_type"
+	GetHrisPayslipQueryParamFieldsPaidAt           GetHrisPayslipQueryParamFields = "paid_at"
+	GetHrisPayslipQueryParamFieldsStartAt          GetHrisPayslipQueryParamFields = "start_at"
+	GetHrisPayslipQueryParamFieldsEndAt            GetHrisPayslipQueryParamFields = "end_at"
+	GetHrisPayslipQueryParamFieldsCurrency         GetHrisPayslipQueryParamFields = "currency"
+	GetHrisPayslipQueryParamFieldsGrossAmount      GetHrisPayslipQueryParamFields = "gross_amount"
+	GetHrisPayslipQueryParamFieldsNetAmount        GetHrisPayslipQueryParamFields = "net_amount"
+	GetHrisPayslipQueryParamFieldsDetails          GetHrisPayslipQueryParamFields = "details"
+	GetHrisPayslipQueryParamFieldsDeduction        GetHrisPayslipQueryParamFields = "deduction"
+	GetHrisPayslipQueryParamFieldsRaw              GetHrisPayslipQueryParamFields = "raw"
 )
 
 func (e GetHrisPayslipQueryParamFields) ToPointer() *GetHrisPayslipQueryParamFields {
@@ -47,6 +48,8 @@ func (e *GetHrisPayslipQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "payment_reference":
 		fallthrough
 	case "payment_type":
 		fallthrough

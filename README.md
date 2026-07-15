@@ -979,6 +979,7 @@ func main() {
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [GetHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
+* [GetHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [ListHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
@@ -991,6 +992,7 @@ func main() {
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [ListHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
+* [ListHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [PatchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
@@ -1783,6 +1785,11 @@ func main() {
 * [UpdateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [UpdateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [UpdateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
+
+### [Taxonomy](docs/sdks/taxonomy/README.md)
+
+* [GetHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [ListHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 

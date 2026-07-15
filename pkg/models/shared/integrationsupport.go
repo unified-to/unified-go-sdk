@@ -1451,6 +1451,29 @@ func (e *ListRepoID) IsExact() bool {
 	return false
 }
 
+type ListRoleID string
+
+const (
+	ListRoleIDSupportedRequired ListRoleID = "supported-required"
+	ListRoleIDSupported         ListRoleID = "supported"
+	ListRoleIDNotSupported      ListRoleID = "not-supported"
+)
+
+func (e ListRoleID) ToPointer() *ListRoleID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListRoleID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListRootID string
 
 const (
@@ -4161,6 +4184,7 @@ type IntegrationSupport struct {
 	ListRawFields           *ListRawFields           `json:"list_raw_fields,omitempty"`
 	ListReference           *ListReference           `json:"list_reference,omitempty"`
 	ListRepoID              *ListRepoID              `json:"list_repo_id,omitempty"`
+	ListRoleID              *ListRoleID              `json:"list_role_id,omitempty"`
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
 	ListSessionID           *ListSessionID           `json:"list_session_id,omitempty"`
@@ -4730,6 +4754,13 @@ func (i *IntegrationSupport) GetListRepoID() *ListRepoID {
 		return nil
 	}
 	return i.ListRepoID
+}
+
+func (i *IntegrationSupport) GetListRoleID() *ListRoleID {
+	if i == nil {
+		return nil
+	}
+	return i.ListRoleID
 }
 
 func (i *IntegrationSupport) GetListRootID() *ListRootID {
