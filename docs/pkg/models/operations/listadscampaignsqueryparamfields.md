@@ -21,6 +21,7 @@ value := operations.ListAdsCampaignsQueryParamFieldsID
 | `ListAdsCampaignsQueryParamFieldsName`                     | name                                                       |
 | `ListAdsCampaignsQueryParamFieldsOrganizationID`           | organization_id                                            |
 | `ListAdsCampaignsQueryParamFieldsStatus`                   | status                                                     |
+| `ListAdsCampaignsQueryParamFieldsEffectiveStatus`          | effective_status                                           |
 | `ListAdsCampaignsQueryParamFieldsStartAt`                  | start_at                                                   |
 | `ListAdsCampaignsQueryParamFieldsEndAt`                    | end_at                                                     |
 | `ListAdsCampaignsQueryParamFieldsBudgetAmount`             | budget_amount                                              |

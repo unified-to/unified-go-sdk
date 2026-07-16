@@ -21,6 +21,7 @@ value := operations.PatchAdsCampaignQueryParamFieldsID
 | `PatchAdsCampaignQueryParamFieldsName`                     | name                                                       |
 | `PatchAdsCampaignQueryParamFieldsOrganizationID`           | organization_id                                            |
 | `PatchAdsCampaignQueryParamFieldsStatus`                   | status                                                     |
+| `PatchAdsCampaignQueryParamFieldsEffectiveStatus`          | effective_status                                           |
 | `PatchAdsCampaignQueryParamFieldsStartAt`                  | start_at                                                   |
 | `PatchAdsCampaignQueryParamFieldsEndAt`                    | end_at                                                     |
 | `PatchAdsCampaignQueryParamFieldsBudgetAmount`             | budget_amount                                              |

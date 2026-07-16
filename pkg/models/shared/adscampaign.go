@@ -64,6 +64,37 @@ func (e *BudgetPeriod) IsExact() bool {
 	return false
 }
 
+type EffectiveStatus string
+
+const (
+	EffectiveStatusUnspecified   EffectiveStatus = "UNSPECIFIED"
+	EffectiveStatusServing       EffectiveStatus = "SERVING"
+	EffectiveStatusLimited       EffectiveStatus = "LIMITED"
+	EffectiveStatusLearning      EffectiveStatus = "LEARNING"
+	EffectiveStatusPaused        EffectiveStatus = "PAUSED"
+	EffectiveStatusPending       EffectiveStatus = "PENDING"
+	EffectiveStatusEnded         EffectiveStatus = "ENDED"
+	EffectiveStatusMisconfigured EffectiveStatus = "MISCONFIGURED"
+	EffectiveStatusNotEligible   EffectiveStatus = "NOT_ELIGIBLE"
+	EffectiveStatusArchived      EffectiveStatus = "ARCHIVED"
+	EffectiveStatusRemoved       EffectiveStatus = "REMOVED"
+)
+
+func (e EffectiveStatus) ToPointer() *EffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "SERVING", "LIMITED", "LEARNING", "PAUSED", "PENDING", "ENDED", "MISCONFIGURED", "NOT_ELIGIBLE", "ARCHIVED", "REMOVED":
+			return true
+		}
+	}
+	return false
+}
+
 type Goal string
 
 const (
@@ -128,6 +159,7 @@ type AdsCampaign struct {
 	Category                 *string                          `json:"category,omitempty"`
 	CreatedAt                *time.Time                       `json:"created_at,omitempty"`
 	Currency                 *string                          `json:"currency,omitempty"`
+	EffectiveStatus          *EffectiveStatus                 `json:"effective_status,omitempty"`
 	EndAt                    *time.Time                       `json:"end_at,omitempty"`
 	FrequencyCap             *PropertyAdsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
 	Goal                     *Goal                            `json:"goal,omitempty"`
@@ -202,6 +234,13 @@ func (a *AdsCampaign) GetCurrency() *string {
 		return nil
 	}
 	return a.Currency
+}
+
+func (a *AdsCampaign) GetEffectiveStatus() *EffectiveStatus {
+	if a == nil {
+		return nil
+	}
+	return a.EffectiveStatus
 }
 
 func (a *AdsCampaign) GetEndAt() *time.Time {

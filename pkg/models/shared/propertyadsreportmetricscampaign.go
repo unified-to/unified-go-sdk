@@ -64,6 +64,37 @@ func (e *PropertyAdsReportMetricsCampaignBudgetPeriod) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsCampaignEffectiveStatus string
+
+const (
+	PropertyAdsReportMetricsCampaignEffectiveStatusUnspecified   PropertyAdsReportMetricsCampaignEffectiveStatus = "UNSPECIFIED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusServing       PropertyAdsReportMetricsCampaignEffectiveStatus = "SERVING"
+	PropertyAdsReportMetricsCampaignEffectiveStatusLimited       PropertyAdsReportMetricsCampaignEffectiveStatus = "LIMITED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusLearning      PropertyAdsReportMetricsCampaignEffectiveStatus = "LEARNING"
+	PropertyAdsReportMetricsCampaignEffectiveStatusPaused        PropertyAdsReportMetricsCampaignEffectiveStatus = "PAUSED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusPending       PropertyAdsReportMetricsCampaignEffectiveStatus = "PENDING"
+	PropertyAdsReportMetricsCampaignEffectiveStatusEnded         PropertyAdsReportMetricsCampaignEffectiveStatus = "ENDED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusMisconfigured PropertyAdsReportMetricsCampaignEffectiveStatus = "MISCONFIGURED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusNotEligible   PropertyAdsReportMetricsCampaignEffectiveStatus = "NOT_ELIGIBLE"
+	PropertyAdsReportMetricsCampaignEffectiveStatusArchived      PropertyAdsReportMetricsCampaignEffectiveStatus = "ARCHIVED"
+	PropertyAdsReportMetricsCampaignEffectiveStatusRemoved       PropertyAdsReportMetricsCampaignEffectiveStatus = "REMOVED"
+)
+
+func (e PropertyAdsReportMetricsCampaignEffectiveStatus) ToPointer() *PropertyAdsReportMetricsCampaignEffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsCampaignEffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "SERVING", "LIMITED", "LEARNING", "PAUSED", "PENDING", "ENDED", "MISCONFIGURED", "NOT_ELIGIBLE", "ARCHIVED", "REMOVED":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsCampaignGoal string
 
 const (
@@ -128,6 +159,7 @@ type PropertyAdsReportMetricsCampaign struct {
 	Category                 *string                                                 `json:"category,omitempty"`
 	CreatedAt                *time.Time                                              `json:"created_at,omitempty"`
 	Currency                 *string                                                 `json:"currency,omitempty"`
+	EffectiveStatus          *PropertyAdsReportMetricsCampaignEffectiveStatus        `json:"effective_status,omitempty"`
 	EndAt                    *time.Time                                              `json:"end_at,omitempty"`
 	FrequencyCap             *PropertyAdsReportMetricsCampaignFrequencyCap           `json:"frequency_cap,omitempty"`
 	Goal                     *PropertyAdsReportMetricsCampaignGoal                   `json:"goal,omitempty"`
@@ -202,6 +234,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetCurrency() *string {
 		return nil
 	}
 	return p.Currency
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetEffectiveStatus() *PropertyAdsReportMetricsCampaignEffectiveStatus {
+	if p == nil {
+		return nil
+	}
+	return p.EffectiveStatus
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetEndAt() *time.Time {

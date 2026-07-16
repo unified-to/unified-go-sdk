@@ -18,6 +18,7 @@ const (
 	PatchAdsCampaignQueryParamFieldsName                     PatchAdsCampaignQueryParamFields = "name"
 	PatchAdsCampaignQueryParamFieldsOrganizationID           PatchAdsCampaignQueryParamFields = "organization_id"
 	PatchAdsCampaignQueryParamFieldsStatus                   PatchAdsCampaignQueryParamFields = "status"
+	PatchAdsCampaignQueryParamFieldsEffectiveStatus          PatchAdsCampaignQueryParamFields = "effective_status"
 	PatchAdsCampaignQueryParamFieldsStartAt                  PatchAdsCampaignQueryParamFields = "start_at"
 	PatchAdsCampaignQueryParamFieldsEndAt                    PatchAdsCampaignQueryParamFields = "end_at"
 	PatchAdsCampaignQueryParamFieldsBudgetAmount             PatchAdsCampaignQueryParamFields = "budget_amount"
@@ -55,6 +56,8 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "organization_id":
 		fallthrough
 	case "status":
+		fallthrough
+	case "effective_status":
 		fallthrough
 	case "start_at":
 		fallthrough

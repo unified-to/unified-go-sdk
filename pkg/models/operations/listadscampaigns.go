@@ -18,6 +18,7 @@ const (
 	ListAdsCampaignsQueryParamFieldsName                     ListAdsCampaignsQueryParamFields = "name"
 	ListAdsCampaignsQueryParamFieldsOrganizationID           ListAdsCampaignsQueryParamFields = "organization_id"
 	ListAdsCampaignsQueryParamFieldsStatus                   ListAdsCampaignsQueryParamFields = "status"
+	ListAdsCampaignsQueryParamFieldsEffectiveStatus          ListAdsCampaignsQueryParamFields = "effective_status"
 	ListAdsCampaignsQueryParamFieldsStartAt                  ListAdsCampaignsQueryParamFields = "start_at"
 	ListAdsCampaignsQueryParamFieldsEndAt                    ListAdsCampaignsQueryParamFields = "end_at"
 	ListAdsCampaignsQueryParamFieldsBudgetAmount             ListAdsCampaignsQueryParamFields = "budget_amount"
@@ -55,6 +56,8 @@ func (e *ListAdsCampaignsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "organization_id":
 		fallthrough
 	case "status":
+		fallthrough
+	case "effective_status":
 		fallthrough
 	case "start_at":
 		fallthrough
@@ -94,7 +97,8 @@ func (e *ListAdsCampaignsQueryParamFields) UnmarshalJSON(data []byte) error {
 
 type ListAdsCampaignsRequest struct {
 	// ID of the connection
-	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	ConnectionID    string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	EffectiveStatus *string `queryParam:"style=form,explode=true,name=effective_status"`
 	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
@@ -123,6 +127,13 @@ func (l *ListAdsCampaignsRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAdsCampaignsRequest) GetEffectiveStatus() *string {
+	if l == nil {
+		return nil
+	}
+	return l.EffectiveStatus
 }
 
 func (l *ListAdsCampaignsRequest) GetEndLt() *string {
