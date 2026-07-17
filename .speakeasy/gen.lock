@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 187dee688fb0a5b05b3100f79c0eab58
+  docChecksum: c20cc0103001f7589cc7477ec75e8585
   docVersion: "1.0"
   speakeasyVersion: 1.790.2
   generationVersion: 2.918.3
-  releaseVersion: 0.36.92
-  configChecksum: c2a1a083008c8226ba3393fa3a800fa1
+  releaseVersion: 0.36.93
+  configChecksum: d79afeaf75843efaa324258f48dee754
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: e885bbda-7162-40a3-8dfd-fcc809497c88
-  pristine_commit_hash: 3625a538185ccff2a90cafdf042b1494780f8bb8
-  pristine_tree_hash: 783e71a009a6ec71aa5200aef4a691528dc42bdb
+  generation_id: 803d6239-d7f8-434c-86e8-f37e146b489c
+  pristine_commit_hash: 0cd35dd8b6126de4e87a3486524256a3fe38198c
+  pristine_tree_hash: 624150900d4d6706d85f2033a686c9354ee386fc
 features:
   go:
     acceptHeaders: 2.81.2
@@ -9907,8 +9907,8 @@ trackedFiles:
     pristine_git_object: d25d6a890d6e8161f0a99004a984f8d9b5b3ddb9
   docs/pkg/models/shared/integrationsupport.md:
     id: de5c915a8590
-    last_write_checksum: sha1:87ab3979aa397b0516654d3dd2c249af0b24d123
-    pristine_git_object: 01a3d079b25ed16477a808a2e021fb7e46bb864b
+    last_write_checksum: sha1:df726df18c04434fd63e0b0327ffa171650bdf9a
+    pristine_git_object: 3246e0d101d91c7935d427e64f5849f17285a0e2
   docs/pkg/models/shared/intervalunit.md:
     id: 6af2406d0f78
     last_write_checksum: sha1:8ebbd9c9f3cb2cab38321a41e3c38a65119aae15
@@ -10073,6 +10073,10 @@ trackedFiles:
     id: 85603cc56e67
     last_write_checksum: sha1:ebd94c5f06d6f39e0bf97545f1e43d6431353282
     pristine_git_object: 6d4126171795c209088d6d9edcd1892d7ea15347
+  docs/pkg/models/shared/listeffectivestatus.md:
+    id: 0db36761ae04
+    last_write_checksum: sha1:947525dab2154d90b9b88d77ae8631c70c642b14
+    pristine_git_object: 5c70c95127360147ba5b8ef092c915b8bf227846
   docs/pkg/models/shared/listendlt.md:
     id: 558e5f60f069
     last_write_checksum: sha1:6026b15a3d4b407929cd60d164d251b4ad559e47
@@ -16915,8 +16919,8 @@ trackedFiles:
     pristine_git_object: 9dd3e35dbc0a1904db07dc18a39437f1b1d5b50d
   pkg/models/shared/integrationsupport.go:
     id: b3cca4d8ed48
-    last_write_checksum: sha1:99f0834453e55533dbde986ac3f7b8530dc9b888
-    pristine_git_object: 20ed9b3c02177e64a22478e654a30cd961f0e654
+    last_write_checksum: sha1:e8bcf4b3c9d1365ceeb2f9668a96a073f50b7872
+    pristine_git_object: 67513abacfd6c9940488456662a4e542d224f8d9
   pkg/models/shared/issue.go:
     id: b72881281f6d
     last_write_checksum: sha1:f7ca4a8cb1426571240908d80b0d81410dd6d982
@@ -18307,8 +18311,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:880eb5bf3d9dab78bf41a77de9d45ac2e88be063
-    pristine_git_object: 1b245fb183bdeb649f760563ca306045a372f19d
+    last_write_checksum: sha1:d2d405eca93b2c924639d33726b2da19f036b3ac
+    pristine_git_object: 5f146935555cd5648db66a132f1e9df14a87debc
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -31398,7 +31402,12 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[].Campaign.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.ListAdsCampaigns()`: \n  *  `request.Request` **Changed**\n  *  `response.[].EffectiveStatus` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[].Campaign.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Campaign.CreateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Campaign.GetAdsCampaign()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Campaign.ListAdsCampaigns()`: \n  *  `request.Request` **Changed**\n  *  `response.[].EffectiveStatus` **Added**\n* `UnifiedTo.Campaign.PatchAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Campaign.UpdateAdsCampaign()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.ListEffectiveStatus` **Added**
+  * `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.ListEffectiveStatus` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>.ListEffectiveStatus` **Added**
+  * `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>.ListEffectiveStatus` **Added**
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

@@ -577,6 +577,29 @@ func (e *ListDocumentID) IsExact() bool {
 	return false
 }
 
+type ListEffectiveStatus string
+
+const (
+	ListEffectiveStatusSupportedRequired ListEffectiveStatus = "supported-required"
+	ListEffectiveStatusSupported         ListEffectiveStatus = "supported"
+	ListEffectiveStatusNotSupported      ListEffectiveStatus = "not-supported"
+)
+
+func (e ListEffectiveStatus) ToPointer() *ListEffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListEffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListEndLt string
 
 const (
@@ -4146,6 +4169,7 @@ type IntegrationSupport struct {
 	ListDealID              *ListDealID              `json:"list_deal_id,omitempty"`
 	ListDimension           *ListDimension           `json:"list_dimension,omitempty"`
 	ListDocumentID          *ListDocumentID          `json:"list_document_id,omitempty"`
+	ListEffectiveStatus     *ListEffectiveStatus     `json:"list_effective_status,omitempty"`
 	ListEndLt               *ListEndLt               `json:"list_end_lt,omitempty"`
 	ListEventID             *ListEventID             `json:"list_event_id,omitempty"`
 	ListExpand              *ListExpand              `json:"list_expand,omitempty"`
@@ -4488,6 +4512,13 @@ func (i *IntegrationSupport) GetListDocumentID() *ListDocumentID {
 		return nil
 	}
 	return i.ListDocumentID
+}
+
+func (i *IntegrationSupport) GetListEffectiveStatus() *ListEffectiveStatus {
+	if i == nil {
+		return nil
+	}
+	return i.ListEffectiveStatus
 }
 
 func (i *IntegrationSupport) GetListEndLt() *ListEndLt {
