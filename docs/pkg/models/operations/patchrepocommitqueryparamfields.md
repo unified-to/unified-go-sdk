@@ -13,16 +13,17 @@ value := operations.PatchRepoCommitQueryParamFieldsID
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `PatchRepoCommitQueryParamFieldsID`           | id                                            |
-| `PatchRepoCommitQueryParamFieldsCreatedAt`    | created_at                                    |
-| `PatchRepoCommitQueryParamFieldsUpdatedAt`    | updated_at                                    |
-| `PatchRepoCommitQueryParamFieldsUserID`       | user_id                                       |
-| `PatchRepoCommitQueryParamFieldsRepoID`       | repo_id                                       |
-| `PatchRepoCommitQueryParamFieldsMessage`      | message                                       |
-| `PatchRepoCommitQueryParamFieldsBranchID`     | branch_id                                     |
-| `PatchRepoCommitQueryParamFieldsLinesAdded`   | lines_added                                   |
-| `PatchRepoCommitQueryParamFieldsLinesDeleted` | lines_deleted                                 |
-| `PatchRepoCommitQueryParamFieldsLinesChanged` | lines_changed                                 |
-| `PatchRepoCommitQueryParamFieldsRaw`          | raw                                           |
+| Name                                            | Value                                           |
+| ----------------------------------------------- | ----------------------------------------------- |
+| `PatchRepoCommitQueryParamFieldsID`             | id                                              |
+| `PatchRepoCommitQueryParamFieldsCreatedAt`      | created_at                                      |
+| `PatchRepoCommitQueryParamFieldsUpdatedAt`      | updated_at                                      |
+| `PatchRepoCommitQueryParamFieldsUserID`         | user_id                                         |
+| `PatchRepoCommitQueryParamFieldsRepoID`         | repo_id                                         |
+| `PatchRepoCommitQueryParamFieldsMessage`        | message                                         |
+| `PatchRepoCommitQueryParamFieldsBranchID`       | branch_id                                       |
+| `PatchRepoCommitQueryParamFieldsPullrequestIds` | pullrequest_ids                                 |
+| `PatchRepoCommitQueryParamFieldsLinesAdded`     | lines_added                                     |
+| `PatchRepoCommitQueryParamFieldsLinesDeleted`   | lines_deleted                                   |
+| `PatchRepoCommitQueryParamFieldsLinesChanged`   | lines_changed                                   |
+| `PatchRepoCommitQueryParamFieldsRaw`            | raw                                             |

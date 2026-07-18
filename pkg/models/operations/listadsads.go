@@ -23,7 +23,6 @@ const (
 	ListAdsAdsQueryParamFieldsAdType           ListAdsAdsQueryParamFields = "ad_type"
 	ListAdsAdsQueryParamFieldsAdvertiserName   ListAdsAdsQueryParamFields = "advertiser_name"
 	ListAdsAdsQueryParamFieldsCreativeIds      ListAdsAdsQueryParamFields = "creative_ids"
-	ListAdsAdsQueryParamFieldsLogoCreativeID   ListAdsAdsQueryParamFields = "logo_creative_id"
 	ListAdsAdsQueryParamFieldsCreativeAssetURL ListAdsAdsQueryParamFields = "creative_asset_url"
 	ListAdsAdsQueryParamFieldsAdCopy           ListAdsAdsQueryParamFields = "ad_copy"
 	ListAdsAdsQueryParamFieldsHeadline         ListAdsAdsQueryParamFields = "headline"
@@ -34,6 +33,7 @@ const (
 	ListAdsAdsQueryParamFieldsPath1            ListAdsAdsQueryParamFields = "path1"
 	ListAdsAdsQueryParamFieldsPath2            ListAdsAdsQueryParamFields = "path2"
 	ListAdsAdsQueryParamFieldsPromoted         ListAdsAdsQueryParamFields = "promoted"
+	ListAdsAdsQueryParamFieldsLogoCreativeID   ListAdsAdsQueryParamFields = "logo_creative_id"
 	ListAdsAdsQueryParamFieldsRaw              ListAdsAdsQueryParamFields = "raw"
 )
 
@@ -68,8 +68,6 @@ func (e *ListAdsAdsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "creative_ids":
 		fallthrough
-	case "logo_creative_id":
-		fallthrough
 	case "creative_asset_url":
 		fallthrough
 	case "ad_copy":
@@ -89,6 +87,8 @@ func (e *ListAdsAdsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "path2":
 		fallthrough
 	case "promoted":
+		fallthrough
+	case "logo_creative_id":
 		fallthrough
 	case "raw":
 		*e = ListAdsAdsQueryParamFields(v)

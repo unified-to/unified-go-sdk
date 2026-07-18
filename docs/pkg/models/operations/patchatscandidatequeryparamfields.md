@@ -35,6 +35,7 @@ value := operations.PatchAtsCandidateQueryParamFieldsID
 | `PatchAtsCandidateQueryParamFieldsSources`            | sources                                               |
 | `PatchAtsCandidateQueryParamFieldsDateOfBirth`        | date_of_birth                                         |
 | `PatchAtsCandidateQueryParamFieldsUserID`             | user_id                                               |
+| `PatchAtsCandidateQueryParamFieldsUserIds`            | user_ids                                              |
 | `PatchAtsCandidateQueryParamFieldsWebURL`             | web_url                                               |
 | `PatchAtsCandidateQueryParamFieldsExperiences`        | experiences                                           |
 | `PatchAtsCandidateQueryParamFieldsEducation`          | education                                             |

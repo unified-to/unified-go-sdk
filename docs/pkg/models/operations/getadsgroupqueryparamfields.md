@@ -24,6 +24,7 @@ value := operations.GetAdsGroupQueryParamFieldsID
 | `GetAdsGroupQueryParamFieldsOrganizationID`       | organization_id                                   |
 | `GetAdsGroupQueryParamFieldsInsertionorderID`     | insertionorder_id                                 |
 | `GetAdsGroupQueryParamFieldsStatus`               | status                                            |
+| `GetAdsGroupQueryParamFieldsEffectiveStatus`      | effective_status                                  |
 | `GetAdsGroupQueryParamFieldsTargeting`            | targeting                                         |
 | `GetAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                        |
 | `GetAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                      |

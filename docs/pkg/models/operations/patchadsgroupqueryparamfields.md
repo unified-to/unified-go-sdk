@@ -24,6 +24,7 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsOrganizationID`       | organization_id                                     |
 | `PatchAdsGroupQueryParamFieldsInsertionorderID`     | insertionorder_id                                   |
 | `PatchAdsGroupQueryParamFieldsStatus`               | status                                              |
+| `PatchAdsGroupQueryParamFieldsEffectiveStatus`      | effective_status                                    |
 | `PatchAdsGroupQueryParamFieldsTargeting`            | targeting                                           |
 | `PatchAdsGroupQueryParamFieldsBidAmount`            | bid_amount                                          |
 | `PatchAdsGroupQueryParamFieldsBidStrategy`          | bid_strategy                                        |

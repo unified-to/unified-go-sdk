@@ -26,7 +26,6 @@ value := operations.UpdateAdsAdQueryParamFieldsID
 | `UpdateAdsAdQueryParamFieldsAdType`           | ad_type                                       |
 | `UpdateAdsAdQueryParamFieldsAdvertiserName`   | advertiser_name                               |
 | `UpdateAdsAdQueryParamFieldsCreativeIds`      | creative_ids                                  |
-| `UpdateAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                              |
 | `UpdateAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                            |
 | `UpdateAdsAdQueryParamFieldsAdCopy`           | ad_copy                                       |
 | `UpdateAdsAdQueryParamFieldsHeadline`         | headline                                      |
@@ -37,4 +36,5 @@ value := operations.UpdateAdsAdQueryParamFieldsID
 | `UpdateAdsAdQueryParamFieldsPath1`            | path1                                         |
 | `UpdateAdsAdQueryParamFieldsPath2`            | path2                                         |
 | `UpdateAdsAdQueryParamFieldsPromoted`         | promoted                                      |
+| `UpdateAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                              |
 | `UpdateAdsAdQueryParamFieldsRaw`              | raw                                           |

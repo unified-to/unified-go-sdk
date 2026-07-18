@@ -108,6 +108,37 @@ func (e *BudgetUnit) IsExact() bool {
 	return false
 }
 
+type AdsGroupEffectiveStatus string
+
+const (
+	AdsGroupEffectiveStatusUnspecified   AdsGroupEffectiveStatus = "UNSPECIFIED"
+	AdsGroupEffectiveStatusServing       AdsGroupEffectiveStatus = "SERVING"
+	AdsGroupEffectiveStatusLimited       AdsGroupEffectiveStatus = "LIMITED"
+	AdsGroupEffectiveStatusLearning      AdsGroupEffectiveStatus = "LEARNING"
+	AdsGroupEffectiveStatusPaused        AdsGroupEffectiveStatus = "PAUSED"
+	AdsGroupEffectiveStatusPending       AdsGroupEffectiveStatus = "PENDING"
+	AdsGroupEffectiveStatusEnded         AdsGroupEffectiveStatus = "ENDED"
+	AdsGroupEffectiveStatusMisconfigured AdsGroupEffectiveStatus = "MISCONFIGURED"
+	AdsGroupEffectiveStatusNotEligible   AdsGroupEffectiveStatus = "NOT_ELIGIBLE"
+	AdsGroupEffectiveStatusArchived      AdsGroupEffectiveStatus = "ARCHIVED"
+	AdsGroupEffectiveStatusRemoved       AdsGroupEffectiveStatus = "REMOVED"
+)
+
+func (e AdsGroupEffectiveStatus) ToPointer() *AdsGroupEffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsGroupEffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "SERVING", "LIMITED", "LEARNING", "PAUSED", "PENDING", "ENDED", "MISCONFIGURED", "NOT_ELIGIBLE", "ARCHIVED", "REMOVED":
+			return true
+		}
+	}
+	return false
+}
+
 type OptimizationGoal string
 
 const (
@@ -215,6 +246,7 @@ type AdsGroup struct {
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
 	Currency             *string                       `json:"currency,omitempty"`
+	EffectiveStatus      *AdsGroupEffectiveStatus      `json:"effective_status,omitempty"`
 	EndAt                *time.Time                    `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
@@ -327,6 +359,13 @@ func (a *AdsGroup) GetCurrency() *string {
 		return nil
 	}
 	return a.Currency
+}
+
+func (a *AdsGroup) GetEffectiveStatus() *AdsGroupEffectiveStatus {
+	if a == nil {
+		return nil
+	}
+	return a.EffectiveStatus
 }
 
 func (a *AdsGroup) GetEndAt() *time.Time {

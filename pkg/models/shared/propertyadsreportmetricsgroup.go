@@ -108,6 +108,37 @@ func (e *PropertyAdsReportMetricsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsGroupEffectiveStatus string
+
+const (
+	PropertyAdsReportMetricsGroupEffectiveStatusUnspecified   PropertyAdsReportMetricsGroupEffectiveStatus = "UNSPECIFIED"
+	PropertyAdsReportMetricsGroupEffectiveStatusServing       PropertyAdsReportMetricsGroupEffectiveStatus = "SERVING"
+	PropertyAdsReportMetricsGroupEffectiveStatusLimited       PropertyAdsReportMetricsGroupEffectiveStatus = "LIMITED"
+	PropertyAdsReportMetricsGroupEffectiveStatusLearning      PropertyAdsReportMetricsGroupEffectiveStatus = "LEARNING"
+	PropertyAdsReportMetricsGroupEffectiveStatusPaused        PropertyAdsReportMetricsGroupEffectiveStatus = "PAUSED"
+	PropertyAdsReportMetricsGroupEffectiveStatusPending       PropertyAdsReportMetricsGroupEffectiveStatus = "PENDING"
+	PropertyAdsReportMetricsGroupEffectiveStatusEnded         PropertyAdsReportMetricsGroupEffectiveStatus = "ENDED"
+	PropertyAdsReportMetricsGroupEffectiveStatusMisconfigured PropertyAdsReportMetricsGroupEffectiveStatus = "MISCONFIGURED"
+	PropertyAdsReportMetricsGroupEffectiveStatusNotEligible   PropertyAdsReportMetricsGroupEffectiveStatus = "NOT_ELIGIBLE"
+	PropertyAdsReportMetricsGroupEffectiveStatusArchived      PropertyAdsReportMetricsGroupEffectiveStatus = "ARCHIVED"
+	PropertyAdsReportMetricsGroupEffectiveStatusRemoved       PropertyAdsReportMetricsGroupEffectiveStatus = "REMOVED"
+)
+
+func (e PropertyAdsReportMetricsGroupEffectiveStatus) ToPointer() *PropertyAdsReportMetricsGroupEffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupEffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "SERVING", "LIMITED", "LEARNING", "PAUSED", "PENDING", "ENDED", "MISCONFIGURED", "NOT_ELIGIBLE", "ARCHIVED", "REMOVED":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsGroupOptimizationGoal string
 
 const (
@@ -215,6 +246,7 @@ type PropertyAdsReportMetricsGroup struct {
 	CreatedAt            *time.Time                                         `json:"created_at,omitempty"`
 	CreativeIds          []string                                           `json:"creative_ids,omitempty"`
 	Currency             *string                                            `json:"currency,omitempty"`
+	EffectiveStatus      *PropertyAdsReportMetricsGroupEffectiveStatus      `json:"effective_status,omitempty"`
 	EndAt                *time.Time                                         `json:"end_at,omitempty"`
 	FrequencyCap         *PropertyAdsReportMetricsGroupFrequencyCap         `json:"frequency_cap,omitempty"`
 	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
@@ -327,6 +359,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCurrency() *string {
 		return nil
 	}
 	return p.Currency
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetEffectiveStatus() *PropertyAdsReportMetricsGroupEffectiveStatus {
+	if p == nil {
+		return nil
+	}
+	return p.EffectiveStatus
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetEndAt() *time.Time {

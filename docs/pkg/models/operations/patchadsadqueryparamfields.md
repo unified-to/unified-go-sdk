@@ -26,7 +26,6 @@ value := operations.PatchAdsAdQueryParamFieldsID
 | `PatchAdsAdQueryParamFieldsAdType`           | ad_type                                      |
 | `PatchAdsAdQueryParamFieldsAdvertiserName`   | advertiser_name                              |
 | `PatchAdsAdQueryParamFieldsCreativeIds`      | creative_ids                                 |
-| `PatchAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                             |
 | `PatchAdsAdQueryParamFieldsCreativeAssetURL` | creative_asset_url                           |
 | `PatchAdsAdQueryParamFieldsAdCopy`           | ad_copy                                      |
 | `PatchAdsAdQueryParamFieldsHeadline`         | headline                                     |
@@ -37,4 +36,5 @@ value := operations.PatchAdsAdQueryParamFieldsID
 | `PatchAdsAdQueryParamFieldsPath1`            | path1                                        |
 | `PatchAdsAdQueryParamFieldsPath2`            | path2                                        |
 | `PatchAdsAdQueryParamFieldsPromoted`         | promoted                                     |
+| `PatchAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                             |
 | `PatchAdsAdQueryParamFieldsRaw`              | raw                                          |

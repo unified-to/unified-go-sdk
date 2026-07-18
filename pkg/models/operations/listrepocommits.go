@@ -12,17 +12,18 @@ import (
 type ListRepoCommitsQueryParamFields string
 
 const (
-	ListRepoCommitsQueryParamFieldsID           ListRepoCommitsQueryParamFields = "id"
-	ListRepoCommitsQueryParamFieldsCreatedAt    ListRepoCommitsQueryParamFields = "created_at"
-	ListRepoCommitsQueryParamFieldsUpdatedAt    ListRepoCommitsQueryParamFields = "updated_at"
-	ListRepoCommitsQueryParamFieldsUserID       ListRepoCommitsQueryParamFields = "user_id"
-	ListRepoCommitsQueryParamFieldsRepoID       ListRepoCommitsQueryParamFields = "repo_id"
-	ListRepoCommitsQueryParamFieldsMessage      ListRepoCommitsQueryParamFields = "message"
-	ListRepoCommitsQueryParamFieldsBranchID     ListRepoCommitsQueryParamFields = "branch_id"
-	ListRepoCommitsQueryParamFieldsLinesAdded   ListRepoCommitsQueryParamFields = "lines_added"
-	ListRepoCommitsQueryParamFieldsLinesDeleted ListRepoCommitsQueryParamFields = "lines_deleted"
-	ListRepoCommitsQueryParamFieldsLinesChanged ListRepoCommitsQueryParamFields = "lines_changed"
-	ListRepoCommitsQueryParamFieldsRaw          ListRepoCommitsQueryParamFields = "raw"
+	ListRepoCommitsQueryParamFieldsID             ListRepoCommitsQueryParamFields = "id"
+	ListRepoCommitsQueryParamFieldsCreatedAt      ListRepoCommitsQueryParamFields = "created_at"
+	ListRepoCommitsQueryParamFieldsUpdatedAt      ListRepoCommitsQueryParamFields = "updated_at"
+	ListRepoCommitsQueryParamFieldsUserID         ListRepoCommitsQueryParamFields = "user_id"
+	ListRepoCommitsQueryParamFieldsRepoID         ListRepoCommitsQueryParamFields = "repo_id"
+	ListRepoCommitsQueryParamFieldsMessage        ListRepoCommitsQueryParamFields = "message"
+	ListRepoCommitsQueryParamFieldsBranchID       ListRepoCommitsQueryParamFields = "branch_id"
+	ListRepoCommitsQueryParamFieldsPullrequestIds ListRepoCommitsQueryParamFields = "pullrequest_ids"
+	ListRepoCommitsQueryParamFieldsLinesAdded     ListRepoCommitsQueryParamFields = "lines_added"
+	ListRepoCommitsQueryParamFieldsLinesDeleted   ListRepoCommitsQueryParamFields = "lines_deleted"
+	ListRepoCommitsQueryParamFieldsLinesChanged   ListRepoCommitsQueryParamFields = "lines_changed"
+	ListRepoCommitsQueryParamFieldsRaw            ListRepoCommitsQueryParamFields = "raw"
 )
 
 func (e ListRepoCommitsQueryParamFields) ToPointer() *ListRepoCommitsQueryParamFields {
@@ -47,6 +48,8 @@ func (e *ListRepoCommitsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "message":
 		fallthrough
 	case "branch_id":
+		fallthrough
+	case "pullrequest_ids":
 		fallthrough
 	case "lines_added":
 		fallthrough

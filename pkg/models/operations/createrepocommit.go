@@ -12,17 +12,18 @@ import (
 type CreateRepoCommitQueryParamFields string
 
 const (
-	CreateRepoCommitQueryParamFieldsID           CreateRepoCommitQueryParamFields = "id"
-	CreateRepoCommitQueryParamFieldsCreatedAt    CreateRepoCommitQueryParamFields = "created_at"
-	CreateRepoCommitQueryParamFieldsUpdatedAt    CreateRepoCommitQueryParamFields = "updated_at"
-	CreateRepoCommitQueryParamFieldsUserID       CreateRepoCommitQueryParamFields = "user_id"
-	CreateRepoCommitQueryParamFieldsRepoID       CreateRepoCommitQueryParamFields = "repo_id"
-	CreateRepoCommitQueryParamFieldsMessage      CreateRepoCommitQueryParamFields = "message"
-	CreateRepoCommitQueryParamFieldsBranchID     CreateRepoCommitQueryParamFields = "branch_id"
-	CreateRepoCommitQueryParamFieldsLinesAdded   CreateRepoCommitQueryParamFields = "lines_added"
-	CreateRepoCommitQueryParamFieldsLinesDeleted CreateRepoCommitQueryParamFields = "lines_deleted"
-	CreateRepoCommitQueryParamFieldsLinesChanged CreateRepoCommitQueryParamFields = "lines_changed"
-	CreateRepoCommitQueryParamFieldsRaw          CreateRepoCommitQueryParamFields = "raw"
+	CreateRepoCommitQueryParamFieldsID             CreateRepoCommitQueryParamFields = "id"
+	CreateRepoCommitQueryParamFieldsCreatedAt      CreateRepoCommitQueryParamFields = "created_at"
+	CreateRepoCommitQueryParamFieldsUpdatedAt      CreateRepoCommitQueryParamFields = "updated_at"
+	CreateRepoCommitQueryParamFieldsUserID         CreateRepoCommitQueryParamFields = "user_id"
+	CreateRepoCommitQueryParamFieldsRepoID         CreateRepoCommitQueryParamFields = "repo_id"
+	CreateRepoCommitQueryParamFieldsMessage        CreateRepoCommitQueryParamFields = "message"
+	CreateRepoCommitQueryParamFieldsBranchID       CreateRepoCommitQueryParamFields = "branch_id"
+	CreateRepoCommitQueryParamFieldsPullrequestIds CreateRepoCommitQueryParamFields = "pullrequest_ids"
+	CreateRepoCommitQueryParamFieldsLinesAdded     CreateRepoCommitQueryParamFields = "lines_added"
+	CreateRepoCommitQueryParamFieldsLinesDeleted   CreateRepoCommitQueryParamFields = "lines_deleted"
+	CreateRepoCommitQueryParamFieldsLinesChanged   CreateRepoCommitQueryParamFields = "lines_changed"
+	CreateRepoCommitQueryParamFieldsRaw            CreateRepoCommitQueryParamFields = "raw"
 )
 
 func (e CreateRepoCommitQueryParamFields) ToPointer() *CreateRepoCommitQueryParamFields {
@@ -47,6 +48,8 @@ func (e *CreateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "message":
 		fallthrough
 	case "branch_id":
+		fallthrough
+	case "pullrequest_ids":
 		fallthrough
 	case "lines_added":
 		fallthrough

@@ -12,6 +12,7 @@
 | `LinesChanged`                             | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `LinesDeleted`                             | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `Message`                                  | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
+| `PullrequestIds`                           | []`string`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `Raw`                                      | map[string]`any`                           | :heavy_minus_sign:                         | N/A                                        |
 | `RepoID`                                   | `string`                                   | :heavy_check_mark:                         | N/A                                        |
 | `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |

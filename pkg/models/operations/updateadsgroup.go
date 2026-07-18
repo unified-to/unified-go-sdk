@@ -21,6 +21,7 @@ const (
 	UpdateAdsGroupQueryParamFieldsOrganizationID       UpdateAdsGroupQueryParamFields = "organization_id"
 	UpdateAdsGroupQueryParamFieldsInsertionorderID     UpdateAdsGroupQueryParamFields = "insertionorder_id"
 	UpdateAdsGroupQueryParamFieldsStatus               UpdateAdsGroupQueryParamFields = "status"
+	UpdateAdsGroupQueryParamFieldsEffectiveStatus      UpdateAdsGroupQueryParamFields = "effective_status"
 	UpdateAdsGroupQueryParamFieldsTargeting            UpdateAdsGroupQueryParamFields = "targeting"
 	UpdateAdsGroupQueryParamFieldsBidAmount            UpdateAdsGroupQueryParamFields = "bid_amount"
 	UpdateAdsGroupQueryParamFieldsBidStrategy          UpdateAdsGroupQueryParamFields = "bid_strategy"
@@ -69,6 +70,8 @@ func (e *UpdateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "insertionorder_id":
 		fallthrough
 	case "status":
+		fallthrough
+	case "effective_status":
 		fallthrough
 	case "targeting":
 		fallthrough

@@ -13,16 +13,17 @@ value := operations.ListRepoCommitsQueryParamFieldsID
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `ListRepoCommitsQueryParamFieldsID`           | id                                            |
-| `ListRepoCommitsQueryParamFieldsCreatedAt`    | created_at                                    |
-| `ListRepoCommitsQueryParamFieldsUpdatedAt`    | updated_at                                    |
-| `ListRepoCommitsQueryParamFieldsUserID`       | user_id                                       |
-| `ListRepoCommitsQueryParamFieldsRepoID`       | repo_id                                       |
-| `ListRepoCommitsQueryParamFieldsMessage`      | message                                       |
-| `ListRepoCommitsQueryParamFieldsBranchID`     | branch_id                                     |
-| `ListRepoCommitsQueryParamFieldsLinesAdded`   | lines_added                                   |
-| `ListRepoCommitsQueryParamFieldsLinesDeleted` | lines_deleted                                 |
-| `ListRepoCommitsQueryParamFieldsLinesChanged` | lines_changed                                 |
-| `ListRepoCommitsQueryParamFieldsRaw`          | raw                                           |
+| Name                                            | Value                                           |
+| ----------------------------------------------- | ----------------------------------------------- |
+| `ListRepoCommitsQueryParamFieldsID`             | id                                              |
+| `ListRepoCommitsQueryParamFieldsCreatedAt`      | created_at                                      |
+| `ListRepoCommitsQueryParamFieldsUpdatedAt`      | updated_at                                      |
+| `ListRepoCommitsQueryParamFieldsUserID`         | user_id                                         |
+| `ListRepoCommitsQueryParamFieldsRepoID`         | repo_id                                         |
+| `ListRepoCommitsQueryParamFieldsMessage`        | message                                         |
+| `ListRepoCommitsQueryParamFieldsBranchID`       | branch_id                                       |
+| `ListRepoCommitsQueryParamFieldsPullrequestIds` | pullrequest_ids                                 |
+| `ListRepoCommitsQueryParamFieldsLinesAdded`     | lines_added                                     |
+| `ListRepoCommitsQueryParamFieldsLinesDeleted`   | lines_deleted                                   |
+| `ListRepoCommitsQueryParamFieldsLinesChanged`   | lines_changed                                   |
+| `ListRepoCommitsQueryParamFieldsRaw`            | raw                                             |

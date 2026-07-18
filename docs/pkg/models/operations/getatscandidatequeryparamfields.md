@@ -35,6 +35,7 @@ value := operations.GetAtsCandidateQueryParamFieldsID
 | `GetAtsCandidateQueryParamFieldsSources`            | sources                                             |
 | `GetAtsCandidateQueryParamFieldsDateOfBirth`        | date_of_birth                                       |
 | `GetAtsCandidateQueryParamFieldsUserID`             | user_id                                             |
+| `GetAtsCandidateQueryParamFieldsUserIds`            | user_ids                                            |
 | `GetAtsCandidateQueryParamFieldsWebURL`             | web_url                                             |
 | `GetAtsCandidateQueryParamFieldsExperiences`        | experiences                                         |
 | `GetAtsCandidateQueryParamFieldsEducation`          | education                                           |

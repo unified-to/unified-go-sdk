@@ -61,7 +61,9 @@ type AtsCandidate struct {
 	Title      *string        `json:"title,omitempty"`
 	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
 	UserID     *string        `json:"user_id,omitempty"`
-	WebURL     *string        `json:"web_url,omitempty"`
+	// references hris employees
+	UserIds []string `json:"user_ids,omitempty"`
+	WebURL  *string  `json:"web_url,omitempty"`
 }
 
 func (a AtsCandidate) MarshalJSON() ([]byte, error) {
@@ -255,6 +257,13 @@ func (a *AtsCandidate) GetUserID() *string {
 		return nil
 	}
 	return a.UserID
+}
+
+func (a *AtsCandidate) GetUserIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.UserIds
 }
 
 func (a *AtsCandidate) GetWebURL() *string {

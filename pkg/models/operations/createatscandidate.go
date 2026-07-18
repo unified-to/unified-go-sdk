@@ -32,6 +32,7 @@ const (
 	CreateAtsCandidateQueryParamFieldsSources            CreateAtsCandidateQueryParamFields = "sources"
 	CreateAtsCandidateQueryParamFieldsDateOfBirth        CreateAtsCandidateQueryParamFields = "date_of_birth"
 	CreateAtsCandidateQueryParamFieldsUserID             CreateAtsCandidateQueryParamFields = "user_id"
+	CreateAtsCandidateQueryParamFieldsUserIds            CreateAtsCandidateQueryParamFields = "user_ids"
 	CreateAtsCandidateQueryParamFieldsWebURL             CreateAtsCandidateQueryParamFields = "web_url"
 	CreateAtsCandidateQueryParamFieldsExperiences        CreateAtsCandidateQueryParamFields = "experiences"
 	CreateAtsCandidateQueryParamFieldsEducation          CreateAtsCandidateQueryParamFields = "education"
@@ -89,6 +90,8 @@ func (e *CreateAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "date_of_birth":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "user_ids":
 		fallthrough
 	case "web_url":
 		fallthrough

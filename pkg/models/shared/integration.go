@@ -1042,6 +1042,7 @@ type Integration struct {
 	Partnership          *Partnership                    `json:"partnership,omitempty"`
 	Popularity           *float64                        `json:"popularity,omitempty"`
 	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
+	RequiresCname        *bool                           `json:"requires_cname,omitempty"`
 	Saml                 *Saml                           `json:"saml,omitempty"`
 	Sandbox              *Sandbox                        `json:"sandbox,omitempty"`
 	Support              map[string]IntegrationSupport   `json:"support,omitempty"`
@@ -1191,6 +1192,13 @@ func (i *Integration) GetRateLimitDescription() *string {
 		return nil
 	}
 	return i.RateLimitDescription
+}
+
+func (i *Integration) GetRequiresCname() *bool {
+	if i == nil {
+		return nil
+	}
+	return i.RequiresCname
 }
 
 func (i *Integration) GetSaml() *Saml {

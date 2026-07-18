@@ -8,17 +8,18 @@ import (
 )
 
 type RepoCommit struct {
-	BranchID     *string        `json:"branch_id,omitempty"`
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	ID           *string        `json:"id,omitempty"`
-	LinesAdded   *float64       `json:"lines_added,omitempty"`
-	LinesChanged *float64       `json:"lines_changed,omitempty"`
-	LinesDeleted *float64       `json:"lines_deleted,omitempty"`
-	Message      *string        `json:"message,omitempty"`
-	Raw          map[string]any `json:"raw,omitempty"`
-	RepoID       string         `json:"repo_id"`
-	UpdatedAt    *time.Time     `json:"updated_at,omitempty"`
-	UserID       *string        `json:"user_id,omitempty"`
+	BranchID       *string        `json:"branch_id,omitempty"`
+	CreatedAt      *time.Time     `json:"created_at,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	LinesAdded     *float64       `json:"lines_added,omitempty"`
+	LinesChanged   *float64       `json:"lines_changed,omitempty"`
+	LinesDeleted   *float64       `json:"lines_deleted,omitempty"`
+	Message        *string        `json:"message,omitempty"`
+	PullrequestIds []string       `json:"pullrequest_ids,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	RepoID         string         `json:"repo_id"`
+	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
+	UserID         *string        `json:"user_id,omitempty"`
 }
 
 func (r RepoCommit) MarshalJSON() ([]byte, error) {
@@ -79,6 +80,13 @@ func (r *RepoCommit) GetMessage() *string {
 		return nil
 	}
 	return r.Message
+}
+
+func (r *RepoCommit) GetPullrequestIds() []string {
+	if r == nil {
+		return nil
+	}
+	return r.PullrequestIds
 }
 
 func (r *RepoCommit) GetRaw() map[string]any {
