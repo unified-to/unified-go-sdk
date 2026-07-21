@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 3b22e3eb6058fda75068b7b68db79d73
+  docChecksum: 1c53d4c83d670f3e7401df3422270680
   docVersion: "1.0"
-  speakeasyVersion: 1.790.2
-  generationVersion: 2.918.3
-  releaseVersion: 0.36.94
-  configChecksum: b946a0310b757693b974063fb54887a9
+  speakeasyVersion: 1.790.3
+  generationVersion: 2.918.4
+  releaseVersion: 0.36.95
+  configChecksum: af7c0042ea7fe98b2bde8fe8b81cf788
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 41183ab9-7b87-41be-9173-05ed6a8dcc31
-  pristine_commit_hash: 74f3ec32a4ad25d273b3c788516d9ea97201fb96
-  pristine_tree_hash: d8c2e2ee1ac1d89388163d1d8a7325259feaa25c
+  generation_id: 6c049b95-7816-4cc8-b709-17b630143ee6
+  pristine_commit_hash: 513b57051396986024bb38e96dafd7d0f924e7fc
+  pristine_tree_hash: 930c478859417b2ef4ec8a49e4276589629f9a47
 features:
   go:
     acceptHeaders: 2.81.2
@@ -155,8 +155,8 @@ trackedFiles:
     pristine_git_object: 76d12e753961a194c3fc123c6a03d97d4b002dd8
   channel.go:
     id: 39dc2e99bd46
-    last_write_checksum: sha1:f25158adbcfcc99788998bd3dbada16c5d6fdbfb
-    pristine_git_object: 4fbaf60816262d7f792a04238703a12b847f24d8
+    last_write_checksum: sha1:ab977e38f936d32222bc78436b0fb3a5cdf3059e
+    pristine_git_object: 2007243ad1a4c1a6868fe9c099375bb801f520d6
   class.go:
     id: 3263c5874b77
     last_write_checksum: sha1:04848eed127b9b8e58d039ff611e96ee7b0a0205
@@ -1205,6 +1205,18 @@ trackedFiles:
     id: 21e43850d624
     last_write_checksum: sha1:5969e47184e31c40ec93552f77c49265d2acb446
     pristine_git_object: 5f412916fcee9444824b433e6270de06e1f642d5
+  docs/pkg/models/operations/createmessagingchannelqueryparamfields.md:
+    id: 3f0c3dfad3fe
+    last_write_checksum: sha1:4cb9645f89fa7cf8d94e9f370735e0206bffe73b
+    pristine_git_object: 270210f08f2aaf1c9ae08a95b3866f1e9d6b467b
+  docs/pkg/models/operations/createmessagingchannelrequest.md:
+    id: 900107e08aca
+    last_write_checksum: sha1:580758df6e828dcdb0dcb8b04cc79b9c386749b5
+    pristine_git_object: ea56c4610e24a1a7b201ffee9e57459c4cc90885
+  docs/pkg/models/operations/createmessagingchannelresponse.md:
+    id: bbb49a3b6c46
+    last_write_checksum: sha1:b51fc43b26096bfae1244d71cc5351121f5510d0
+    pristine_git_object: ff4ce59e3ee959716e29b593f76b53492742d431
   docs/pkg/models/operations/createmessagingmessagequeryparamfields.md:
     id: b4ec85581435
     last_write_checksum: sha1:5dce930667fe1d344380778d0f7f142cc02646c8
@@ -5937,6 +5949,18 @@ trackedFiles:
     id: e5db16507a4d
     last_write_checksum: sha1:a1b77bf58186e0c578c81363b2a0f53a93cb36af
     pristine_git_object: 0986feb61787dccd3e1e49bf8e24c5ce775472cf
+  docs/pkg/models/operations/patchmessagingchannelqueryparamfields.md:
+    id: a0053b0cf33f
+    last_write_checksum: sha1:bb41cb795f28e6d6ac051687677db6cf7ee4ba27
+    pristine_git_object: 43f021fd37ddc0b277ba81b8a32d031c9d71f3ca
+  docs/pkg/models/operations/patchmessagingchannelrequest.md:
+    id: 1c851d3c4ee5
+    last_write_checksum: sha1:a2d449caac20ddf4ab1ad394330fad2a50a16606
+    pristine_git_object: 8f5e9763aac6a20d1e7bcb8add5b311b75e0b4c2
+  docs/pkg/models/operations/patchmessagingchannelresponse.md:
+    id: 8f7ba4f24ad2
+    last_write_checksum: sha1:3401af022e4edfbaa64867ba4254ff0b7a2b689f
+    pristine_git_object: b1cea1506d27be6f55904e4cdcd1d03f61348696
   docs/pkg/models/operations/patchmessagingeventqueryparamfields.md:
     id: 63409b4bc35f
     last_write_checksum: sha1:d708b9071ba4d83a71f8fb9c6d538d91225c4caf
@@ -6941,6 +6965,14 @@ trackedFiles:
     id: 1d0a2b395b39
     last_write_checksum: sha1:bf8a77f4d82aa1e8f60578278d52b233da3abe62
     pristine_git_object: f2cbec7fdf4bdacd16c1809b1316b83979b6f50a
+  docs/pkg/models/operations/removemessagingchannelrequest.md:
+    id: 075b2c725289
+    last_write_checksum: sha1:711e41f07ca7cdb3434421795ad2bf0ee668ea15
+    pristine_git_object: 3ea5a42daa64f0d27fb8689a8cc30f659aefccc5
+  docs/pkg/models/operations/removemessagingchannelresponse.md:
+    id: cb51a21c79ae
+    last_write_checksum: sha1:12ec381a5657bbd0e5353183eca4f9ee1b87b082
+    pristine_git_object: 79c4f4d77334aa2ce54013ce30fe1092c9b4c733
   docs/pkg/models/operations/removemessagingmessagerequest.md:
     id: ef66c995a1c0
     last_write_checksum: sha1:f596c2dab2e0e9461b01f1d5eb84d69003e4001f
@@ -8137,6 +8169,18 @@ trackedFiles:
     id: 24c2b05be298
     last_write_checksum: sha1:159c85e7e0b0c2321076a23ffc78ce02f9f425ef
     pristine_git_object: 33efd55626eb194c38d8ac835b9c999bbbf295d7
+  docs/pkg/models/operations/updatemessagingchannelqueryparamfields.md:
+    id: 7884b072b731
+    last_write_checksum: sha1:d1f1478c6461ea8d9d22946574a3134acf245bb2
+    pristine_git_object: 9298ea417823cd6c1f86ce242d2b84842931157f
+  docs/pkg/models/operations/updatemessagingchannelrequest.md:
+    id: 2a220f1c0ab0
+    last_write_checksum: sha1:ee4e699b986ff03ba858c1ae84b6c4de9f3c37cc
+    pristine_git_object: 84f0dcefcaa3935d0b5714cf772545a565682f48
+  docs/pkg/models/operations/updatemessagingchannelresponse.md:
+    id: 89f878bdd9cc
+    last_write_checksum: sha1:5f2a461228700eba0e13e3e77606e7d1548ff697
+    pristine_git_object: 093feb975d9ee8dbc2f7aa88bfc97ea8bd804ece
   docs/pkg/models/operations/updatemessagingeventqueryparamfields.md:
     id: 8352afbaccb1
     last_write_checksum: sha1:e92f6d1a507d8a8d152c1df7e4b5b0bf93f3e8b4
@@ -11243,8 +11287,8 @@ trackedFiles:
     pristine_git_object: 28a6c3e4f14c886a9f79152cc3ba8d406373146d
   docs/pkg/models/shared/propertyconnectionpermissions.md:
     id: 91ecc1edb2f8
-    last_write_checksum: sha1:61db2ba8e61c8d2a7ae8b5a60d709bbd4d981027
-    pristine_git_object: 156866b91a1f91a97126ac49b4f3e0deb04a7abe
+    last_write_checksum: sha1:13e107eb4a514748eb6a323f441db2604dd592f4
+    pristine_git_object: 73b3fdb8d3d43d9a4898197c6578a373c4a5cdfa
   docs/pkg/models/shared/propertycrmcompanyaddress.md:
     id: 4e66f1e6e9ae
     last_write_checksum: sha1:63910ed921ad49c794766e598099bb2cc36334af
@@ -12487,8 +12531,8 @@ trackedFiles:
     pristine_git_object: dfc45f7e003c204fc75ebd38ac744907bcf4c3c8
   docs/sdks/channel/README.md:
     id: 53c1192ca208
-    last_write_checksum: sha1:e31eac76dc4e011e7b03db023bd7d949f405791d
-    pristine_git_object: 53706901a47bc316c9f1f42303e3642fb19167aa
+    last_write_checksum: sha1:d4f7a0f6db8c82a870a17bd3224fdbe01a107c6a
+    pristine_git_object: 7598790ccea21c437021f46a178a1339f3894347
   docs/sdks/class/README.md:
     id: 3d83b7f3788f
     last_write_checksum: sha1:bb367984978f4a77e8eb65755ea55571d453a910
@@ -12711,8 +12755,8 @@ trackedFiles:
     pristine_git_object: 752942457c23ff3c55b6537823fcee1922629a20
   docs/sdks/messaging/README.md:
     id: 827f9d81a390
-    last_write_checksum: sha1:ea0cafc80199423026a004cacff502de9ff30701
-    pristine_git_object: b86afa087621d8e35f5cdcf6e673b43777ef1c12
+    last_write_checksum: sha1:cc4e8e1ba8e32cf13e848fcf2b09e730936bfa1f
+    pristine_git_object: 5f907a23f519d0258e89d2be64605aaa49e87585
   docs/sdks/metadata/README.md:
     id: de871ca7dbeb
     last_write_checksum: sha1:53f93a2389ace4769d841be06a2c2305f0cfa900
@@ -13139,8 +13183,8 @@ trackedFiles:
     pristine_git_object: 4d14e8cc6355a789be1734cedd42415bbf283d9f
   messaging.go:
     id: 32653bc1b9f7
-    last_write_checksum: sha1:f67d1ce64051cd9ac68a5abc1a2f569926051e88
-    pristine_git_object: 00fea07938eff03de2996e8d19eeb721cddc7df6
+    last_write_checksum: sha1:de99d59e2a3a91bc81d5cd277a398881b149a875
+    pristine_git_object: b3e319d0759d60417099b3458c3fda2a9f738d31
   metadata.go:
     id: 52ff7515a520
     last_write_checksum: sha1:e29faccb24a327e20be7bc930f9f7008127c1010
@@ -13521,6 +13565,10 @@ trackedFiles:
     id: 3d1ea68b8ba5
     last_write_checksum: sha1:4f21cd6fb7674e08a15a938e27284d6e7d1748f9
     pristine_git_object: 8fc1ad68bcf5683c2e572091507061adc533c126
+  pkg/models/operations/createmessagingchannel.go:
+    id: d153270be779
+    last_write_checksum: sha1:e6348d81af359fb7a2af6c840e5926fd96ed9e57
+    pristine_git_object: c07aa96956751c2d1c205d16da5c9e51b92e6fde
   pkg/models/operations/createmessagingmessage.go:
     id: 286bc656b368
     last_write_checksum: sha1:5911acea6be1afa35bec6945eddeb65fffb52c8c
@@ -15149,6 +15197,10 @@ trackedFiles:
     id: 96292d1b046d
     last_write_checksum: sha1:2606637f21433f98d0cd0cf553c5cca8fa0248ce
     pristine_git_object: 578ca29079069f09fb0650391822e3a78bc51939
+  pkg/models/operations/patchmessagingchannel.go:
+    id: 77e50951f042
+    last_write_checksum: sha1:1fcdfab9c87c061fbaabb62fb90bf4d8179bd2be
+    pristine_git_object: 6769732a44880be5c9c2bcccceb5414abb440243
   pkg/models/operations/patchmessagingevent.go:
     id: 546aa8e70948
     last_write_checksum: sha1:98664dbb298263cf60008991244b3f49325db35f
@@ -15593,6 +15645,10 @@ trackedFiles:
     id: fdd332e1afa0
     last_write_checksum: sha1:13d24d20e255419bd51cbf8be6e16f14a2190144
     pristine_git_object: 21283d0d40b113ca48c961680e4566458f03ddd0
+  pkg/models/operations/removemessagingchannel.go:
+    id: de41613754a6
+    last_write_checksum: sha1:280ec6ed19964e2d0a59b1eeab5b522894b88b1b
+    pristine_git_object: a00e8f367b0ef14627fcfbbed47348d3fe26f97b
   pkg/models/operations/removemessagingmessage.go:
     id: 95800b69c087
     last_write_checksum: sha1:d130f42ce9aafd952f8e9a6187ccaafe5717d1e7
@@ -16037,6 +16093,10 @@ trackedFiles:
     id: e28ca3d86b57
     last_write_checksum: sha1:690aa5c9b84cd77eeba2d1e5bda08b9fc1b8957c
     pristine_git_object: 6fc2937f03493284dbd26ba945d7f14647ce785d
+  pkg/models/operations/updatemessagingchannel.go:
+    id: 5130af60dd63
+    last_write_checksum: sha1:a491c686856e0c21c396ffd7ad7f3c51d445eae0
+    pristine_git_object: 75a2cca68f6ac85987fa167bf9475419ca45a2ef
   pkg/models/operations/updatemessagingevent.go:
     id: 3558380398d1
     last_write_checksum: sha1:ba22541a6646fdb847b1000eea9430d6aacd6f4e
@@ -17491,8 +17551,8 @@ trackedFiles:
     pristine_git_object: dac18a9fb8d180c18e2bae46642a54c8c0104d23
   pkg/models/shared/propertyconnectionpermissions.go:
     id: 88ab9d7b79f5
-    last_write_checksum: sha1:49e445bf8aab4718846979b5d660695379e09973
-    pristine_git_object: c748301b515351c2fef862915215bf5945cf9b5d
+    last_write_checksum: sha1:07c9ba0acd806c2be71f7709567895d2ef589140
+    pristine_git_object: 8d25e8643e50dbf8694efee1af376e9e44f287fb
   pkg/models/shared/propertycrmcompanyaddress.go:
     id: 3f96e587bede
     last_write_checksum: sha1:bc8a562133a28ecf7f82a04f5827fb21b9bf0d46
@@ -18319,8 +18379,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:9101d941687a0d02b3f624950631b024514ab9c0
-    pristine_git_object: c1e356570330f23f898b4bde8bec231902bbd025
+    last_write_checksum: sha1:ff064a0933207647df805b527d33151624611920
+    pristine_git_object: ca31f77ddaabe6f46be62dbd22d9d2627738c2f6
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -31408,9 +31468,47 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createMessagingChannel:
+    speakeasy-default-create-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchMessagingChannel:
+    speakeasy-default-patch-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMessagingChannel:
+    speakeasy-default-remove-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMessagingChannel:
+    speakeasy-default-update-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[].Group.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.CreateAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ads.CreateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ads.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ads.ListAdsGroups()`: \n  *  `request.Request` **Changed**\n  *  `response.[].EffectiveStatus` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[].Group.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.PatchAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ads.PatchAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ads.UpdateAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ads.UpdateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ad.CreateAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ad.GetAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ad.ListAdsAds()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ad.PatchAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Ad.UpdateAdsAd()`: \n  *  `request.Request.Fields` **Changed**\n* `UnifiedTo.Group.CreateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Group.GetAdsGroup()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Group.ListAdsGroups()`: \n  *  `request.Request` **Changed**\n  *  `response.[].EffectiveStatus` **Added**\n* `UnifiedTo.Group.PatchAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Group.UpdateAdsGroup()`: \n  *  `request.Request` **Changed**\n  *  `response.EffectiveStatus` **Added**\n* `UnifiedTo.Ats.CreateAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Ats.GetAtsCandidate()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Ats.ListAtsCandidates()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].UserIds` **Added**\n* `UnifiedTo.Ats.PatchAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Ats.UpdateAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Candidate.CreateAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Candidate.GetAtsCandidate()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Candidate.ListAtsCandidates()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].UserIds` **Added**\n* `UnifiedTo.Candidate.PatchAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Candidate.UpdateAtsCandidate()`: \n  *  `request.Request` **Changed**\n  *  `response.UserIds` **Added**\n* `UnifiedTo.Repo.CreateRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Repo.GetRepoCommit()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Repo.ListRepoCommits()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].PullrequestIds` **Added**\n* `UnifiedTo.Repo.PatchRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Repo.UpdateRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Commit.CreateRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Commit.GetRepoCommit()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Commit.ListRepoCommits()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].PullrequestIds` **Added**\n* `UnifiedTo.Commit.PatchRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Commit.UpdateRepoCommit()`: \n  *  `request.Request` **Changed**\n  *  `response.PullrequestIds` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].RequiresCname` **Added**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].RequiresCname` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].RequiresCname` **Added**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].RequiresCname` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Messaging.CreateMessagingChannel()`: **Added**\n* `UnifiedTo.Messaging.PatchMessagingChannel()`: **Added**\n* `UnifiedTo.Messaging.RemoveMessagingChannel()`: **Added**\n* `UnifiedTo.Messaging.UpdateMessagingChannel()`: **Added**\n* `UnifiedTo.Channel.CreateMessagingChannel()`: **Added**\n* `UnifiedTo.Channel.PatchMessagingChannel()`: **Added**\n* `UnifiedTo.Channel.RemoveMessagingChannel()`: **Added**\n* `UnifiedTo.Channel.UpdateMessagingChannel()`: **Added**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[].Enum(messagingChannelWrite)` **Added**\n  *  `response.Permissions[].Enum(messagingChannelWrite)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

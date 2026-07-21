@@ -504,8 +504,12 @@ func main() {
 
 ### [Channel](docs/sdks/channel/README.md)
 
+* [CreateMessagingChannel](docs/sdks/channel/README.md#createmessagingchannel) - Create a channel
 * [GetMessagingChannel](docs/sdks/channel/README.md#getmessagingchannel) - Retrieve a channel
 * [ListMessagingChannels](docs/sdks/channel/README.md#listmessagingchannels) - List all channels
+* [PatchMessagingChannel](docs/sdks/channel/README.md#patchmessagingchannel) - Update a channel
+* [RemoveMessagingChannel](docs/sdks/channel/README.md#removemessagingchannel) - Remove a channel
+* [UpdateMessagingChannel](docs/sdks/channel/README.md#updatemessagingchannel) - Update a channel
 
 ### [Class](docs/sdks/class/README.md)
 
@@ -1294,14 +1298,18 @@ func main() {
 
 ### [Messaging](docs/sdks/messaging/README.md)
 
+* [CreateMessagingChannel](docs/sdks/messaging/README.md#createmessagingchannel) - Create a channel
 * [CreateMessagingMessage](docs/sdks/messaging/README.md#createmessagingmessage) - Create a message
 * [GetMessagingChannel](docs/sdks/messaging/README.md#getmessagingchannel) - Retrieve a channel
 * [GetMessagingMessage](docs/sdks/messaging/README.md#getmessagingmessage) - Retrieve a message
 * [ListMessagingChannels](docs/sdks/messaging/README.md#listmessagingchannels) - List all channels
 * [ListMessagingMessages](docs/sdks/messaging/README.md#listmessagingmessages) - List all messages
+* [PatchMessagingChannel](docs/sdks/messaging/README.md#patchmessagingchannel) - Update a channel
 * [PatchMessagingEvent](docs/sdks/messaging/README.md#patchmessagingevent) - Update an event
 * [PatchMessagingMessage](docs/sdks/messaging/README.md#patchmessagingmessage) - Update a message
+* [RemoveMessagingChannel](docs/sdks/messaging/README.md#removemessagingchannel) - Remove a channel
 * [RemoveMessagingMessage](docs/sdks/messaging/README.md#removemessagingmessage) - Remove a message
+* [UpdateMessagingChannel](docs/sdks/messaging/README.md#updatemessagingchannel) - Update a channel
 * [UpdateMessagingEvent](docs/sdks/messaging/README.md#updatemessagingevent) - Update an event
 * [UpdateMessagingMessage](docs/sdks/messaging/README.md#updatemessagingmessage) - Update a message
 
