@@ -94,6 +94,29 @@ func (e *ListApplicationID) IsExact() bool {
 	return false
 }
 
+type ListAssignedUserID string
+
+const (
+	ListAssignedUserIDSupportedRequired ListAssignedUserID = "supported-required"
+	ListAssignedUserIDSupported         ListAssignedUserID = "supported"
+	ListAssignedUserIDNotSupported      ListAssignedUserID = "not-supported"
+)
+
+func (e ListAssignedUserID) ToPointer() *ListAssignedUserID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListAssignedUserID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListBenefitID string
 
 const (
@@ -2762,6 +2785,29 @@ func (e *VirtualWebhookApplicationID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookAssignedUserID string
+
+const (
+	VirtualWebhookAssignedUserIDSupportedRequired VirtualWebhookAssignedUserID = "supported-required"
+	VirtualWebhookAssignedUserIDSupported         VirtualWebhookAssignedUserID = "supported"
+	VirtualWebhookAssignedUserIDNotSupported      VirtualWebhookAssignedUserID = "not-supported"
+)
+
+func (e VirtualWebhookAssignedUserID) ToPointer() *VirtualWebhookAssignedUserID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookAssignedUserID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookBenefitID string
 
 const (
@@ -4148,6 +4194,7 @@ type IntegrationSupport struct {
 	ListAccountID           *ListAccountID           `json:"list_account_id,omitempty"`
 	ListAdID                *ListAdID                `json:"list_ad_id,omitempty"`
 	ListApplicationID       *ListApplicationID       `json:"list_application_id,omitempty"`
+	ListAssignedUserID      *ListAssignedUserID      `json:"list_assigned_user_id,omitempty"`
 	ListBenefitID           *ListBenefitID           `json:"list_benefit_id,omitempty"`
 	ListBillID              *ListBillID              `json:"list_bill_id,omitempty"`
 	ListBranchID            *ListBranchID            `json:"list_branch_id,omitempty"`
@@ -4269,6 +4316,7 @@ type IntegrationSupport struct {
 	VirtualWebhookAccountID       *VirtualWebhookAccountID                 `json:"virtual_webhook_account_id,omitempty"`
 	VirtualWebhookAdID            *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
 	VirtualWebhookApplicationID   *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
+	VirtualWebhookAssignedUserID  *VirtualWebhookAssignedUserID            `json:"virtual_webhook_assigned_user_id,omitempty"`
 	VirtualWebhookBenefitID       *VirtualWebhookBenefitID                 `json:"virtual_webhook_benefit_id,omitempty"`
 	VirtualWebhookBillID          *VirtualWebhookBillID                    `json:"virtual_webhook_bill_id,omitempty"`
 	VirtualWebhookBranchID        *VirtualWebhookBranchID                  `json:"virtual_webhook_branch_id,omitempty"`
@@ -4365,6 +4413,13 @@ func (i *IntegrationSupport) GetListApplicationID() *ListApplicationID {
 		return nil
 	}
 	return i.ListApplicationID
+}
+
+func (i *IntegrationSupport) GetListAssignedUserID() *ListAssignedUserID {
+	if i == nil {
+		return nil
+	}
+	return i.ListAssignedUserID
 }
 
 func (i *IntegrationSupport) GetListBenefitID() *ListBenefitID {
@@ -5205,6 +5260,13 @@ func (i *IntegrationSupport) GetVirtualWebhookApplicationID() *VirtualWebhookApp
 		return nil
 	}
 	return i.VirtualWebhookApplicationID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookAssignedUserID() *VirtualWebhookAssignedUserID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookAssignedUserID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookBenefitID() *VirtualWebhookBenefitID {

@@ -25,6 +25,8 @@ value := operations.GetTaskTaskQueryParamFieldsID
 | `GetTaskTaskQueryParamFieldsStatus`          | status                                       |
 | `GetTaskTaskQueryParamFieldsNotes`           | notes                                        |
 | `GetTaskTaskQueryParamFieldsDueAt`           | due_at                                       |
+| `GetTaskTaskQueryParamFieldsStartAt`         | start_at                                     |
+| `GetTaskTaskQueryParamFieldsEndAt`           | end_at                                       |
 | `GetTaskTaskQueryParamFieldsPriority`        | priority                                     |
 | `GetTaskTaskQueryParamFieldsAssignedUserIds` | assigned_user_ids                            |
 | `GetTaskTaskQueryParamFieldsCreatorUserID`   | creator_user_id                              |
@@ -35,4 +37,5 @@ value := operations.GetTaskTaskQueryParamFieldsID
 | `GetTaskTaskQueryParamFieldsAttachmentIds`   | attachment_ids                               |
 | `GetTaskTaskQueryParamFieldsMetadata`        | metadata                                     |
 | `GetTaskTaskQueryParamFieldsHasChildren`     | has_children                                 |
+| `GetTaskTaskQueryParamFieldsType`            | type                                         |
 | `GetTaskTaskQueryParamFieldsRaw`             | raw                                          |

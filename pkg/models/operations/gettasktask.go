@@ -22,6 +22,8 @@ const (
 	GetTaskTaskQueryParamFieldsStatus          GetTaskTaskQueryParamFields = "status"
 	GetTaskTaskQueryParamFieldsNotes           GetTaskTaskQueryParamFields = "notes"
 	GetTaskTaskQueryParamFieldsDueAt           GetTaskTaskQueryParamFields = "due_at"
+	GetTaskTaskQueryParamFieldsStartAt         GetTaskTaskQueryParamFields = "start_at"
+	GetTaskTaskQueryParamFieldsEndAt           GetTaskTaskQueryParamFields = "end_at"
 	GetTaskTaskQueryParamFieldsPriority        GetTaskTaskQueryParamFields = "priority"
 	GetTaskTaskQueryParamFieldsAssignedUserIds GetTaskTaskQueryParamFields = "assigned_user_ids"
 	GetTaskTaskQueryParamFieldsCreatorUserID   GetTaskTaskQueryParamFields = "creator_user_id"
@@ -32,6 +34,7 @@ const (
 	GetTaskTaskQueryParamFieldsAttachmentIds   GetTaskTaskQueryParamFields = "attachment_ids"
 	GetTaskTaskQueryParamFieldsMetadata        GetTaskTaskQueryParamFields = "metadata"
 	GetTaskTaskQueryParamFieldsHasChildren     GetTaskTaskQueryParamFields = "has_children"
+	GetTaskTaskQueryParamFieldsType            GetTaskTaskQueryParamFields = "type"
 	GetTaskTaskQueryParamFieldsRaw             GetTaskTaskQueryParamFields = "raw"
 )
 
@@ -64,6 +67,10 @@ func (e *GetTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "due_at":
 		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
 	case "priority":
 		fallthrough
 	case "assigned_user_ids":
@@ -83,6 +90,8 @@ func (e *GetTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "has_children":
+		fallthrough
+	case "type":
 		fallthrough
 	case "raw":
 		*e = GetTaskTaskQueryParamFields(v)

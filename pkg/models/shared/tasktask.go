@@ -38,6 +38,7 @@ type TaskTask struct {
 	CreatedAt       *time.Time      `json:"created_at,omitempty"`
 	CreatorUserID   *string         `json:"creator_user_id,omitempty"`
 	DueAt           *time.Time      `json:"due_at,omitempty"`
+	EndAt           *time.Time      `json:"end_at,omitempty"`
 	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
 	GroupIds        []string        `json:"group_ids,omitempty"`
 	HasChildren     *bool           `json:"has_children,omitempty"`
@@ -49,8 +50,10 @@ type TaskTask struct {
 	Priority        *string         `json:"priority,omitempty"`
 	ProjectID       *string         `json:"project_id,omitempty"`
 	Raw             map[string]any  `json:"raw,omitempty"`
+	StartAt         *time.Time      `json:"start_at,omitempty"`
 	Status          *TaskTaskStatus `json:"status,omitempty"`
 	Tags            []string        `json:"tags,omitempty"`
+	Type            *string         `json:"type,omitempty"`
 	UpdatedAt       *time.Time      `json:"updated_at,omitempty"`
 	URL             *string         `json:"url,omitempty"`
 }
@@ -106,6 +109,13 @@ func (t *TaskTask) GetDueAt() *time.Time {
 		return nil
 	}
 	return t.DueAt
+}
+
+func (t *TaskTask) GetEndAt() *time.Time {
+	if t == nil {
+		return nil
+	}
+	return t.EndAt
 }
 
 func (t *TaskTask) GetFollowerUserIds() []string {
@@ -185,6 +195,13 @@ func (t *TaskTask) GetRaw() map[string]any {
 	return t.Raw
 }
 
+func (t *TaskTask) GetStartAt() *time.Time {
+	if t == nil {
+		return nil
+	}
+	return t.StartAt
+}
+
 func (t *TaskTask) GetStatus() *TaskTaskStatus {
 	if t == nil {
 		return nil
@@ -197,6 +214,13 @@ func (t *TaskTask) GetTags() []string {
 		return nil
 	}
 	return t.Tags
+}
+
+func (t *TaskTask) GetType() *string {
+	if t == nil {
+		return nil
+	}
+	return t.Type
 }
 
 func (t *TaskTask) GetUpdatedAt() *time.Time {

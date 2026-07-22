@@ -22,6 +22,8 @@ const (
 	ListTaskTasksQueryParamFieldsStatus          ListTaskTasksQueryParamFields = "status"
 	ListTaskTasksQueryParamFieldsNotes           ListTaskTasksQueryParamFields = "notes"
 	ListTaskTasksQueryParamFieldsDueAt           ListTaskTasksQueryParamFields = "due_at"
+	ListTaskTasksQueryParamFieldsStartAt         ListTaskTasksQueryParamFields = "start_at"
+	ListTaskTasksQueryParamFieldsEndAt           ListTaskTasksQueryParamFields = "end_at"
 	ListTaskTasksQueryParamFieldsPriority        ListTaskTasksQueryParamFields = "priority"
 	ListTaskTasksQueryParamFieldsAssignedUserIds ListTaskTasksQueryParamFields = "assigned_user_ids"
 	ListTaskTasksQueryParamFieldsCreatorUserID   ListTaskTasksQueryParamFields = "creator_user_id"
@@ -32,6 +34,7 @@ const (
 	ListTaskTasksQueryParamFieldsAttachmentIds   ListTaskTasksQueryParamFields = "attachment_ids"
 	ListTaskTasksQueryParamFieldsMetadata        ListTaskTasksQueryParamFields = "metadata"
 	ListTaskTasksQueryParamFieldsHasChildren     ListTaskTasksQueryParamFields = "has_children"
+	ListTaskTasksQueryParamFieldsType            ListTaskTasksQueryParamFields = "type"
 	ListTaskTasksQueryParamFieldsRaw             ListTaskTasksQueryParamFields = "raw"
 )
 
@@ -64,6 +67,10 @@ func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "due_at":
 		fallthrough
+	case "start_at":
+		fallthrough
+	case "end_at":
+		fallthrough
 	case "priority":
 		fallthrough
 	case "assigned_user_ids":
@@ -84,6 +91,8 @@ func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "has_children":
 		fallthrough
+	case "type":
+		fallthrough
 	case "raw":
 		*e = ListTaskTasksQueryParamFields(v)
 		return nil
@@ -93,6 +102,8 @@ func (e *ListTaskTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 }
 
 type ListTaskTasksRequest struct {
+	// The assigned user/employee ID to filter by (reference to HrisEmployee)
+	AssignedUserID *string `queryParam:"style=form,explode=true,name=assigned_user_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -119,6 +130,13 @@ type ListTaskTasksRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+}
+
+func (l *ListTaskTasksRequest) GetAssignedUserID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.AssignedUserID
 }
 
 func (l *ListTaskTasksRequest) GetConnectionID() string {

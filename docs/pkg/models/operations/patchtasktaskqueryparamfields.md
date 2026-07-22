@@ -25,6 +25,8 @@ value := operations.PatchTaskTaskQueryParamFieldsID
 | `PatchTaskTaskQueryParamFieldsStatus`          | status                                         |
 | `PatchTaskTaskQueryParamFieldsNotes`           | notes                                          |
 | `PatchTaskTaskQueryParamFieldsDueAt`           | due_at                                         |
+| `PatchTaskTaskQueryParamFieldsStartAt`         | start_at                                       |
+| `PatchTaskTaskQueryParamFieldsEndAt`           | end_at                                         |
 | `PatchTaskTaskQueryParamFieldsPriority`        | priority                                       |
 | `PatchTaskTaskQueryParamFieldsAssignedUserIds` | assigned_user_ids                              |
 | `PatchTaskTaskQueryParamFieldsCreatorUserID`   | creator_user_id                                |
@@ -35,4 +37,5 @@ value := operations.PatchTaskTaskQueryParamFieldsID
 | `PatchTaskTaskQueryParamFieldsAttachmentIds`   | attachment_ids                                 |
 | `PatchTaskTaskQueryParamFieldsMetadata`        | metadata                                       |
 | `PatchTaskTaskQueryParamFieldsHasChildren`     | has_children                                   |
+| `PatchTaskTaskQueryParamFieldsType`            | type                                           |
 | `PatchTaskTaskQueryParamFieldsRaw`             | raw                                            |
