@@ -46,3 +46,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesSigning`      | signing                                                   |
 | `ListUnifiedIntegrationsQueryParamCategoriesClubs`        | clubs                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesDatastore`    | datastore                                                 |
+| `ListUnifiedIntegrationsQueryParamCategoriesCdp`          | cdp                                                       |

@@ -187,6 +187,15 @@ func main() {
 * [UpdateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 * [UpdateAccountingVendorcredit](docs/sdks/accounting/README.md#updateaccountingvendorcredit) - Update a vendorcredit
 
+### [Activation](docs/sdks/activation/README.md)
+
+* [CreateCdpActivation](docs/sdks/activation/README.md#createcdpactivation) - Create an activation
+* [GetCdpActivation](docs/sdks/activation/README.md#getcdpactivation) - Retrieve an activation
+* [ListCdpActivations](docs/sdks/activation/README.md#listcdpactivations) - List all activations
+* [PatchCdpActivation](docs/sdks/activation/README.md#patchcdpactivation) - Update an activation
+* [RemoveCdpActivation](docs/sdks/activation/README.md#removecdpactivation) - Remove an activation
+* [UpdateCdpActivation](docs/sdks/activation/README.md#updatecdpactivation) - Update an activation
+
 ### [Activity](docs/sdks/activity/README.md)
 
 * [CreateAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
@@ -496,6 +505,45 @@ func main() {
 * [RemoveTicketingCategory](docs/sdks/category/README.md#removeticketingcategory) - Remove a category
 * [UpdateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 * [UpdateTicketingCategory](docs/sdks/category/README.md#updateticketingcategory) - Update a category
+
+### [Cdp](docs/sdks/cdp/README.md)
+
+* [CreateCdpActivation](docs/sdks/cdp/README.md#createcdpactivation) - Create an activation
+* [CreateCdpDestination](docs/sdks/cdp/README.md#createcdpdestination) - Create a destination
+* [CreateCdpEvent](docs/sdks/cdp/README.md#createcdpevent) - Create an event
+* [CreateCdpProfile](docs/sdks/cdp/README.md#createcdpprofile) - Create a profile
+* [CreateCdpSegment](docs/sdks/cdp/README.md#createcdpsegment) - Create a segment
+* [CreateCdpSource](docs/sdks/cdp/README.md#createcdpsource) - Create a source
+* [GetCdpActivation](docs/sdks/cdp/README.md#getcdpactivation) - Retrieve an activation
+* [GetCdpDestination](docs/sdks/cdp/README.md#getcdpdestination) - Retrieve a destination
+* [GetCdpEvent](docs/sdks/cdp/README.md#getcdpevent) - Retrieve an event
+* [GetCdpProfile](docs/sdks/cdp/README.md#getcdpprofile) - Retrieve a profile
+* [GetCdpSegment](docs/sdks/cdp/README.md#getcdpsegment) - Retrieve a segment
+* [GetCdpSource](docs/sdks/cdp/README.md#getcdpsource) - Retrieve a source
+* [ListCdpActivations](docs/sdks/cdp/README.md#listcdpactivations) - List all activations
+* [ListCdpDestinations](docs/sdks/cdp/README.md#listcdpdestinations) - List all destinations
+* [ListCdpEvents](docs/sdks/cdp/README.md#listcdpevents) - List all events
+* [ListCdpProfiles](docs/sdks/cdp/README.md#listcdpprofiles) - List all profiles
+* [ListCdpSegments](docs/sdks/cdp/README.md#listcdpsegments) - List all segments
+* [ListCdpSources](docs/sdks/cdp/README.md#listcdpsources) - List all sources
+* [PatchCdpActivation](docs/sdks/cdp/README.md#patchcdpactivation) - Update an activation
+* [PatchCdpDestination](docs/sdks/cdp/README.md#patchcdpdestination) - Update a destination
+* [PatchCdpEvent](docs/sdks/cdp/README.md#patchcdpevent) - Update an event
+* [PatchCdpProfile](docs/sdks/cdp/README.md#patchcdpprofile) - Update a profile
+* [PatchCdpSegment](docs/sdks/cdp/README.md#patchcdpsegment) - Update a segment
+* [PatchCdpSource](docs/sdks/cdp/README.md#patchcdpsource) - Update a source
+* [RemoveCdpActivation](docs/sdks/cdp/README.md#removecdpactivation) - Remove an activation
+* [RemoveCdpDestination](docs/sdks/cdp/README.md#removecdpdestination) - Remove a destination
+* [RemoveCdpEvent](docs/sdks/cdp/README.md#removecdpevent) - Remove an event
+* [RemoveCdpProfile](docs/sdks/cdp/README.md#removecdpprofile) - Remove a profile
+* [RemoveCdpSegment](docs/sdks/cdp/README.md#removecdpsegment) - Remove a segment
+* [RemoveCdpSource](docs/sdks/cdp/README.md#removecdpsource) - Remove a source
+* [UpdateCdpActivation](docs/sdks/cdp/README.md#updatecdpactivation) - Update an activation
+* [UpdateCdpDestination](docs/sdks/cdp/README.md#updatecdpdestination) - Update a destination
+* [UpdateCdpEvent](docs/sdks/cdp/README.md#updatecdpevent) - Update an event
+* [UpdateCdpProfile](docs/sdks/cdp/README.md#updatecdpprofile) - Update a profile
+* [UpdateCdpSegment](docs/sdks/cdp/README.md#updatecdpsegment) - Update a segment
+* [UpdateCdpSource](docs/sdks/cdp/README.md#updatecdpsource) - Update a source
 
 ### [Change](docs/sdks/change/README.md)
 
@@ -816,6 +864,15 @@ func main() {
 * [RemoveHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
 * [UpdateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
 
+### [Destination](docs/sdks/destination/README.md)
+
+* [CreateCdpDestination](docs/sdks/destination/README.md#createcdpdestination) - Create a destination
+* [GetCdpDestination](docs/sdks/destination/README.md#getcdpdestination) - Retrieve a destination
+* [ListCdpDestinations](docs/sdks/destination/README.md#listcdpdestinations) - List all destinations
+* [PatchCdpDestination](docs/sdks/destination/README.md#patchcdpdestination) - Update a destination
+* [RemoveCdpDestination](docs/sdks/destination/README.md#removecdpdestination) - Remove a destination
+* [UpdateCdpDestination](docs/sdks/destination/README.md#updatecdpdestination) - Update a destination
+
 ### [Device](docs/sdks/device/README.md)
 
 * [CreateHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
@@ -874,21 +931,27 @@ func main() {
 
 * [CreateAnalyticsEvent](docs/sdks/event/README.md#createanalyticsevent) - Create an event
 * [CreateCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
+* [CreateCdpEvent](docs/sdks/event/README.md#createcdpevent) - Create an event
 * [CreateCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
 * [GetAnalyticsEvent](docs/sdks/event/README.md#getanalyticsevent) - Retrieve an event
 * [GetCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
+* [GetCdpEvent](docs/sdks/event/README.md#getcdpevent) - Retrieve an event
 * [GetClubsEvent](docs/sdks/event/README.md#getclubsevent) - Retrieve an event
 * [GetCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
 * [ListAnalyticsEvents](docs/sdks/event/README.md#listanalyticsevents) - List all events
 * [ListCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
+* [ListCdpEvents](docs/sdks/event/README.md#listcdpevents) - List all events
 * [ListClubsEvents](docs/sdks/event/README.md#listclubsevents) - List all events
 * [ListCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
 * [PatchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
+* [PatchCdpEvent](docs/sdks/event/README.md#patchcdpevent) - Update an event
 * [PatchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
 * [PatchMessagingEvent](docs/sdks/event/README.md#patchmessagingevent) - Update an event
 * [RemoveCalendarEvent](docs/sdks/event/README.md#removecalendarevent) - Remove an event
+* [RemoveCdpEvent](docs/sdks/event/README.md#removecdpevent) - Remove an event
 * [RemoveCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [UpdateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
+* [UpdateCdpEvent](docs/sdks/event/README.md#updatecdpevent) - Update an event
 * [UpdateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 * [UpdateMessagingEvent](docs/sdks/event/README.md#updatemessagingevent) - Update an event
 
@@ -1447,6 +1510,15 @@ func main() {
 * [RemoveCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [UpdateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
+### [Profile](docs/sdks/profile/README.md)
+
+* [CreateCdpProfile](docs/sdks/profile/README.md#createcdpprofile) - Create a profile
+* [GetCdpProfile](docs/sdks/profile/README.md#getcdpprofile) - Retrieve a profile
+* [ListCdpProfiles](docs/sdks/profile/README.md#listcdpprofiles) - List all profiles
+* [PatchCdpProfile](docs/sdks/profile/README.md#patchcdpprofile) - Update a profile
+* [RemoveCdpProfile](docs/sdks/profile/README.md#removecdpprofile) - Remove a profile
+* [UpdateCdpProfile](docs/sdks/profile/README.md#updatecdpprofile) - Update a profile
+
 ### [Profitloss](docs/sdks/profitloss/README.md)
 
 * [GetAccountingProfitloss](docs/sdks/profitloss/README.md#getaccountingprofitloss) - Retrieve a profitloss
@@ -1656,6 +1728,15 @@ func main() {
 * [ListUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [RemoveUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 
+### [Segment](docs/sdks/segment/README.md)
+
+* [CreateCdpSegment](docs/sdks/segment/README.md#createcdpsegment) - Create a segment
+* [GetCdpSegment](docs/sdks/segment/README.md#getcdpsegment) - Retrieve a segment
+* [ListCdpSegments](docs/sdks/segment/README.md#listcdpsegments) - List all segments
+* [PatchCdpSegment](docs/sdks/segment/README.md#patchcdpsegment) - Update a segment
+* [RemoveCdpSegment](docs/sdks/segment/README.md#removecdpsegment) - Remove a segment
+* [UpdateCdpSegment](docs/sdks/segment/README.md#updatecdpsegment) - Update a segment
+
 ### [Session](docs/sdks/session/README.md)
 
 * [GetAnalyticsSession](docs/sdks/session/README.md#getanalyticssession) - Retrieve a session
@@ -1715,6 +1796,15 @@ func main() {
 * [RemoveSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
 * [UpdateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
 * [UpdateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
+### [Source](docs/sdks/source/README.md)
+
+* [CreateCdpSource](docs/sdks/source/README.md#createcdpsource) - Create a source
+* [GetCdpSource](docs/sdks/source/README.md#getcdpsource) - Retrieve a source
+* [ListCdpSources](docs/sdks/source/README.md#listcdpsources) - List all sources
+* [PatchCdpSource](docs/sdks/source/README.md#patchcdpsource) - Update a source
+* [RemoveCdpSource](docs/sdks/source/README.md#removecdpsource) - Remove a source
+* [UpdateCdpSource](docs/sdks/source/README.md#updatecdpsource) - Update a source
 
 ### [Space](docs/sdks/space/README.md)
 

@@ -27,10 +27,14 @@ value := operations.UpdateLmsContentQueryParamFieldsID
 | `UpdateLmsContentQueryParamFieldsIsActive`          | is_active                                           |
 | `UpdateLmsContentQueryParamFieldsDurationMinutes`   | duration_minutes                                    |
 | `UpdateLmsContentQueryParamFieldsCategories`        | categories                                          |
+| `UpdateLmsContentQueryParamFieldsSubjects`          | subjects                                            |
 | `UpdateLmsContentQueryParamFieldsSkills`            | skills                                              |
+| `UpdateLmsContentQueryParamFieldsTags`              | tags                                                |
+| `UpdateLmsContentQueryParamFieldsDifficulty`        | difficulty                                          |
 | `UpdateLmsContentQueryParamFieldsSortOrder`         | sort_order                                          |
 | `UpdateLmsContentQueryParamFieldsProviderName`      | provider_name                                       |
 | `UpdateLmsContentQueryParamFieldsShortDescription`  | short_description                                   |
+| `UpdateLmsContentQueryParamFieldsPublishedAt`       | published_at                                        |
 | `UpdateLmsContentQueryParamFieldsLocalizations`     | localizations                                       |
 | `UpdateLmsContentQueryParamFieldsInstructorIds`     | instructor_ids                                      |
 | `UpdateLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                      |

@@ -49,3 +49,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesSigning`      | signing                                    |
 | `PropertyConnectionCategoriesClubs`        | clubs                                      |
 | `PropertyConnectionCategoriesDatastore`    | datastore                                  |
+| `PropertyConnectionCategoriesCdp`          | cdp                                        |

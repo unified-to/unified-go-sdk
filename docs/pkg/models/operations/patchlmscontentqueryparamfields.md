@@ -27,10 +27,14 @@ value := operations.PatchLmsContentQueryParamFieldsID
 | `PatchLmsContentQueryParamFieldsIsActive`          | is_active                                          |
 | `PatchLmsContentQueryParamFieldsDurationMinutes`   | duration_minutes                                   |
 | `PatchLmsContentQueryParamFieldsCategories`        | categories                                         |
+| `PatchLmsContentQueryParamFieldsSubjects`          | subjects                                           |
 | `PatchLmsContentQueryParamFieldsSkills`            | skills                                             |
+| `PatchLmsContentQueryParamFieldsTags`              | tags                                               |
+| `PatchLmsContentQueryParamFieldsDifficulty`        | difficulty                                         |
 | `PatchLmsContentQueryParamFieldsSortOrder`         | sort_order                                         |
 | `PatchLmsContentQueryParamFieldsProviderName`      | provider_name                                      |
 | `PatchLmsContentQueryParamFieldsShortDescription`  | short_description                                  |
+| `PatchLmsContentQueryParamFieldsPublishedAt`       | published_at                                       |
 | `PatchLmsContentQueryParamFieldsLocalizations`     | localizations                                      |
 | `PatchLmsContentQueryParamFieldsInstructorIds`     | instructor_ids                                     |
 | `PatchLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                     |

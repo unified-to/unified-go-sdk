@@ -43,6 +43,7 @@ const (
 	ListUnifiedIntegrationsQueryParamCategoriesSigning      ListUnifiedIntegrationsQueryParamCategories = "signing"
 	ListUnifiedIntegrationsQueryParamCategoriesClubs        ListUnifiedIntegrationsQueryParamCategories = "clubs"
 	ListUnifiedIntegrationsQueryParamCategoriesDatastore    ListUnifiedIntegrationsQueryParamCategories = "datastore"
+	ListUnifiedIntegrationsQueryParamCategoriesCdp          ListUnifiedIntegrationsQueryParamCategories = "cdp"
 )
 
 func (e ListUnifiedIntegrationsQueryParamCategories) ToPointer() *ListUnifiedIntegrationsQueryParamCategories {
@@ -115,6 +116,8 @@ func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte)
 	case "clubs":
 		fallthrough
 	case "datastore":
+		fallthrough
+	case "cdp":
 		*e = ListUnifiedIntegrationsQueryParamCategories(v)
 		return nil
 	default:

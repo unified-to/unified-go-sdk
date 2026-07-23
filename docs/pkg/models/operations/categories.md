@@ -46,3 +46,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesSigning`      | signing                  |
 | `CategoriesClubs`        | clubs                    |
 | `CategoriesDatastore`    | datastore                |
+| `CategoriesCdp`          | cdp                      |

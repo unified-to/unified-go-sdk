@@ -108,6 +108,12 @@ type UnifiedTo struct {
 	Link              *Link
 	Recording         *Recording
 	Webinar           *Webinar
+	Cdp               *Cdp
+	Activation        *Activation
+	Destination       *Destination
+	Profile           *Profile
+	Segment           *Segment
+	Source            *Source
 	Clubs             *Clubs
 	Location          *Location
 	Member            *Member
@@ -285,9 +291,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.96",
+		SDKVersion: "0.36.97",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.96 2.918.4 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.97 2.918.4 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -359,6 +365,12 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Link = newLink(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Recording = newRecording(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Webinar = newWebinar(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Cdp = newCdp(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Activation = newActivation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Destination = newDestination(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Profile = newProfile(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Segment = newSegment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Source = newSource(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Clubs = newClubs(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Location = newLocation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Member = newMember(sdk, sdk.sdkConfiguration, sdk.hooks)

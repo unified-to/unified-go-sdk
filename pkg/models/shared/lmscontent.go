@@ -13,6 +13,7 @@ type LmsContent struct {
 	CourseIds         []string                 `json:"course_ids,omitempty"`
 	CreatedAt         *time.Time               `json:"created_at,omitempty"`
 	Description       *string                  `json:"description,omitempty"`
+	Difficulty        *string                  `json:"difficulty,omitempty"`
 	DurationMinutes   *float64                 `json:"duration_minutes,omitempty"`
 	ExternalReference *string                  `json:"external_reference,omitempty"`
 	ID                *string                  `json:"id,omitempty"`
@@ -23,11 +24,15 @@ type LmsContent struct {
 	Media             []LmsMedia               `json:"media,omitempty"`
 	Name              *string                  `json:"name,omitempty"`
 	ProviderName      *string                  `json:"provider_name,omitempty"`
+	PublishedAt       *time.Time               `json:"published_at,omitempty"`
 	Raw               map[string]any           `json:"raw,omitempty"`
 	ShortDescription  *string                  `json:"short_description,omitempty"`
 	Skills            []string                 `json:"skills,omitempty"`
 	SortOrder         *float64                 `json:"sort_order,omitempty"`
-	UpdatedAt         *time.Time               `json:"updated_at,omitempty"`
+	// Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+	Subjects  []LmsSubject `json:"subjects,omitempty"`
+	Tags      []string     `json:"tags,omitempty"`
+	UpdatedAt *time.Time   `json:"updated_at,omitempty"`
 }
 
 func (l LmsContent) MarshalJSON() ([]byte, error) {
@@ -74,6 +79,13 @@ func (l *LmsContent) GetDescription() *string {
 		return nil
 	}
 	return l.Description
+}
+
+func (l *LmsContent) GetDifficulty() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Difficulty
 }
 
 func (l *LmsContent) GetDurationMinutes() *float64 {
@@ -146,6 +158,13 @@ func (l *LmsContent) GetProviderName() *string {
 	return l.ProviderName
 }
 
+func (l *LmsContent) GetPublishedAt() *time.Time {
+	if l == nil {
+		return nil
+	}
+	return l.PublishedAt
+}
+
 func (l *LmsContent) GetRaw() map[string]any {
 	if l == nil {
 		return nil
@@ -172,6 +191,20 @@ func (l *LmsContent) GetSortOrder() *float64 {
 		return nil
 	}
 	return l.SortOrder
+}
+
+func (l *LmsContent) GetSubjects() []LmsSubject {
+	if l == nil {
+		return nil
+	}
+	return l.Subjects
+}
+
+func (l *LmsContent) GetTags() []string {
+	if l == nil {
+		return nil
+	}
+	return l.Tags
 }
 
 func (l *LmsContent) GetUpdatedAt() *time.Time {

@@ -1,0 +1,13 @@
+# CdpMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ExtraData`                                                                        | [*shared.CdpMetadataExtraData](../../../pkg/models/shared/cdpmetadataextradata.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Format`                                                                           | [*shared.CdpMetadataFormat](../../../pkg/models/shared/cdpmetadataformat.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `ID`                                                                               | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Namespace`                                                                        | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Slug`                                                                             | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Value`                                                                            | [*shared.CdpMetadataValue](../../../pkg/models/shared/cdpmetadatavalue.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |

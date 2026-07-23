@@ -36,6 +36,7 @@ const (
 	PropertyConnectionCategoriesSigning      PropertyConnectionCategories = "signing"
 	PropertyConnectionCategoriesClubs        PropertyConnectionCategories = "clubs"
 	PropertyConnectionCategoriesDatastore    PropertyConnectionCategories = "datastore"
+	PropertyConnectionCategoriesCdp          PropertyConnectionCategories = "cdp"
 )
 
 func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories {
@@ -46,7 +47,7 @@ func (e PropertyConnectionCategories) ToPointer() *PropertyConnectionCategories 
 func (e *PropertyConnectionCategories) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore":
+		case "passthrough", "hris", "ats", "auth", "crm", "enrich", "martech", "ticketing", "uc", "accounting", "storage", "commerce", "payment", "genai", "messaging", "kms", "task", "scim", "lms", "repo", "metadata", "calendar", "verification", "ads", "analytics", "forms", "shipping", "assessment", "signing", "clubs", "datastore", "cdp":
 			return true
 		}
 	}

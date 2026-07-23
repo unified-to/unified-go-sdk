@@ -6,21 +6,27 @@
 
 * [CreateAnalyticsEvent](#createanalyticsevent) - Create an event
 * [CreateCalendarEvent](#createcalendarevent) - Create an event
+* [CreateCdpEvent](#createcdpevent) - Create an event
 * [CreateCrmEvent](#createcrmevent) - Create an event
 * [GetAnalyticsEvent](#getanalyticsevent) - Retrieve an event
 * [GetCalendarEvent](#getcalendarevent) - Retrieve an event
+* [GetCdpEvent](#getcdpevent) - Retrieve an event
 * [GetClubsEvent](#getclubsevent) - Retrieve an event
 * [GetCrmEvent](#getcrmevent) - Retrieve an event
 * [ListAnalyticsEvents](#listanalyticsevents) - List all events
 * [ListCalendarEvents](#listcalendarevents) - List all events
+* [ListCdpEvents](#listcdpevents) - List all events
 * [ListClubsEvents](#listclubsevents) - List all events
 * [ListCrmEvents](#listcrmevents) - List all events
 * [PatchCalendarEvent](#patchcalendarevent) - Update an event
+* [PatchCdpEvent](#patchcdpevent) - Update an event
 * [PatchCrmEvent](#patchcrmevent) - Update an event
 * [PatchMessagingEvent](#patchmessagingevent) - Update an event
 * [RemoveCalendarEvent](#removecalendarevent) - Remove an event
+* [RemoveCdpEvent](#removecdpevent) - Remove an event
 * [RemoveCrmEvent](#removecrmevent) - Remove an event
 * [UpdateCalendarEvent](#updatecalendarevent) - Update an event
+* [UpdateCdpEvent](#updatecdpevent) - Update an event
 * [UpdateCrmEvent](#updatecrmevent) - Update an event
 * [UpdateMessagingEvent](#updatemessagingevent) - Update an event
 
@@ -129,6 +135,62 @@ func main() {
 ### Response
 
 **[*operations.CreateCalendarEventResponse](../../pkg/models/operations/createcalendareventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateCdpEvent
+
+Create an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createCdpEvent" method="post" path="/cdp/{connection_id}/event" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.CreateCdpEvent(ctx, operations.CreateCdpEventRequest{
+        CdpEvent: shared.CdpEvent{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CdpEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.CreateCdpEventRequest](../../pkg/models/operations/createcdpeventrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.CreateCdpEventResponse](../../pkg/models/operations/createcdpeventresponse.md), error**
 
 ### Errors
 
@@ -295,6 +357,61 @@ func main() {
 ### Response
 
 **[*operations.GetCalendarEventResponse](../../pkg/models/operations/getcalendareventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetCdpEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getCdpEvent" method="get" path="/cdp/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.GetCdpEvent(ctx, operations.GetCdpEventRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CdpEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.GetCdpEventRequest](../../pkg/models/operations/getcdpeventrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                       | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.GetCdpEventResponse](../../pkg/models/operations/getcdpeventresponse.md), error**
 
 ### Errors
 
@@ -520,6 +637,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListCdpEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listCdpEvents" method="get" path="/cdp/{connection_id}/event" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.ListCdpEvents(ctx, operations.ListCdpEventsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CdpEvents != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.ListCdpEventsRequest](../../pkg/models/operations/listcdpeventsrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.ListCdpEventsResponse](../../pkg/models/operations/listcdpeventsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListClubsEvents
 
 List all events
@@ -678,6 +849,63 @@ func main() {
 ### Response
 
 **[*operations.PatchCalendarEventResponse](../../pkg/models/operations/patchcalendareventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchCdpEvent" method="patch" path="/cdp/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.PatchCdpEvent(ctx, operations.PatchCdpEventRequest{
+        CdpEvent: shared.CdpEvent{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CdpEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.PatchCdpEventRequest](../../pkg/models/operations/patchcdpeventrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.PatchCdpEventResponse](../../pkg/models/operations/patchcdpeventresponse.md), error**
 
 ### Errors
 
@@ -854,6 +1082,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveCdpEvent
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeCdpEvent" method="delete" path="/cdp/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.RemoveCdpEvent(ctx, operations.RemoveCdpEventRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.RemoveCdpEventRequest](../../pkg/models/operations/removecdpeventrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.RemoveCdpEventResponse](../../pkg/models/operations/removecdpeventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveCrmEvent
 
 Remove an event
@@ -959,6 +1242,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateCalendarEventResponse](../../pkg/models/operations/updatecalendareventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateCdpEvent" method="put" path="/cdp/{connection_id}/event/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Event.UpdateCdpEvent(ctx, operations.UpdateCdpEventRequest{
+        CdpEvent: shared.CdpEvent{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CdpEvent != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.UpdateCdpEventRequest](../../pkg/models/operations/updatecdpeventrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.UpdateCdpEventResponse](../../pkg/models/operations/updatecdpeventresponse.md), error**
 
 ### Errors
 

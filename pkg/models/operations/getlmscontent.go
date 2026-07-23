@@ -24,10 +24,14 @@ const (
 	GetLmsContentQueryParamFieldsIsActive          GetLmsContentQueryParamFields = "is_active"
 	GetLmsContentQueryParamFieldsDurationMinutes   GetLmsContentQueryParamFields = "duration_minutes"
 	GetLmsContentQueryParamFieldsCategories        GetLmsContentQueryParamFields = "categories"
+	GetLmsContentQueryParamFieldsSubjects          GetLmsContentQueryParamFields = "subjects"
 	GetLmsContentQueryParamFieldsSkills            GetLmsContentQueryParamFields = "skills"
+	GetLmsContentQueryParamFieldsTags              GetLmsContentQueryParamFields = "tags"
+	GetLmsContentQueryParamFieldsDifficulty        GetLmsContentQueryParamFields = "difficulty"
 	GetLmsContentQueryParamFieldsSortOrder         GetLmsContentQueryParamFields = "sort_order"
 	GetLmsContentQueryParamFieldsProviderName      GetLmsContentQueryParamFields = "provider_name"
 	GetLmsContentQueryParamFieldsShortDescription  GetLmsContentQueryParamFields = "short_description"
+	GetLmsContentQueryParamFieldsPublishedAt       GetLmsContentQueryParamFields = "published_at"
 	GetLmsContentQueryParamFieldsLocalizations     GetLmsContentQueryParamFields = "localizations"
 	GetLmsContentQueryParamFieldsInstructorIds     GetLmsContentQueryParamFields = "instructor_ids"
 	GetLmsContentQueryParamFieldsCollectionIds     GetLmsContentQueryParamFields = "collection_ids"
@@ -67,13 +71,21 @@ func (e *GetLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "categories":
 		fallthrough
+	case "subjects":
+		fallthrough
 	case "skills":
+		fallthrough
+	case "tags":
+		fallthrough
+	case "difficulty":
 		fallthrough
 	case "sort_order":
 		fallthrough
 	case "provider_name":
 		fallthrough
 	case "short_description":
+		fallthrough
+	case "published_at":
 		fallthrough
 	case "localizations":
 		fallthrough

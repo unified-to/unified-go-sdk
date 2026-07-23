@@ -294,3 +294,15 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsDatastoreRecordWrite`         | datastore_record_write                                      |
 | `PropertyConnectionPermissionsDatastoreQueryRead`           | datastore_query_read                                        |
 | `PropertyConnectionPermissionsDatastoreQueryWrite`          | datastore_query_write                                       |
+| `PropertyConnectionPermissionsCdpProfileRead`               | cdp_profile_read                                            |
+| `PropertyConnectionPermissionsCdpProfileWrite`              | cdp_profile_write                                           |
+| `PropertyConnectionPermissionsCdpSegmentRead`               | cdp_segment_read                                            |
+| `PropertyConnectionPermissionsCdpSegmentWrite`              | cdp_segment_write                                           |
+| `PropertyConnectionPermissionsCdpEventRead`                 | cdp_event_read                                              |
+| `PropertyConnectionPermissionsCdpEventWrite`                | cdp_event_write                                             |
+| `PropertyConnectionPermissionsCdpSourceRead`                | cdp_source_read                                             |
+| `PropertyConnectionPermissionsCdpSourceWrite`               | cdp_source_write                                            |
+| `PropertyConnectionPermissionsCdpDestinationRead`           | cdp_destination_read                                        |
+| `PropertyConnectionPermissionsCdpDestinationWrite`          | cdp_destination_write                                       |
+| `PropertyConnectionPermissionsCdpActivationRead`            | cdp_activation_read                                         |
+| `PropertyConnectionPermissionsCdpActivationWrite`           | cdp_activation_write                                        |

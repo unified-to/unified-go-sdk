@@ -46,3 +46,4 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesSigning`      | signing                            |
 | `QueryParamCategoriesClubs`        | clubs                              |
 | `QueryParamCategoriesDatastore`    | datastore                          |
+| `QueryParamCategoriesCdp`          | cdp                                |

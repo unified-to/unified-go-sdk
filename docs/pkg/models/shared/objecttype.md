@@ -168,3 +168,9 @@ custom := shared.ObjectType("custom_value")
 | `ObjectTypeDatastoreTable`          | datastore_table                     |
 | `ObjectTypeDatastoreRecord`         | datastore_record                    |
 | `ObjectTypeDatastoreQuery`          | datastore_query                     |
+| `ObjectTypeCdpProfile`              | cdp_profile                         |
+| `ObjectTypeCdpSegment`              | cdp_segment                         |
+| `ObjectTypeCdpEvent`                | cdp_event                           |
+| `ObjectTypeCdpSource`               | cdp_source                          |
+| `ObjectTypeCdpDestination`          | cdp_destination                     |
+| `ObjectTypeCdpActivation`           | cdp_activation                      |
