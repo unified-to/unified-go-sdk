@@ -143,3 +143,5 @@ custom := shared.AdsReportMetricsType("custom_value")
 | `AdsReportMetricsTypeTwentyEightDView`                 | 28D_VIEW                                               |
 | `AdsReportMetricsTypeTwentyEightDClick`                | 28D_CLICK                                              |
 | `AdsReportMetricsTypeThirtyDClick`                     | 30D_CLICK                                              |
+| `AdsReportMetricsTypeVisits`                           | VISITS                                                 |
+| `AdsReportMetricsTypeAudioMutes`                       | AUDIO_MUTES                                            |
