@@ -12,23 +12,24 @@ import (
 type CreateTicketingTicketQueryParamFields string
 
 const (
-	CreateTicketingTicketQueryParamFieldsID          CreateTicketingTicketQueryParamFields = "id"
-	CreateTicketingTicketQueryParamFieldsCreatedAt   CreateTicketingTicketQueryParamFields = "created_at"
-	CreateTicketingTicketQueryParamFieldsUpdatedAt   CreateTicketingTicketQueryParamFields = "updated_at"
-	CreateTicketingTicketQueryParamFieldsCustomerID  CreateTicketingTicketQueryParamFields = "customer_id"
-	CreateTicketingTicketQueryParamFieldsSubject     CreateTicketingTicketQueryParamFields = "subject"
-	CreateTicketingTicketQueryParamFieldsDescription CreateTicketingTicketQueryParamFields = "description"
-	CreateTicketingTicketQueryParamFieldsStatus      CreateTicketingTicketQueryParamFields = "status"
-	CreateTicketingTicketQueryParamFieldsClosedAt    CreateTicketingTicketQueryParamFields = "closed_at"
-	CreateTicketingTicketQueryParamFieldsPriority    CreateTicketingTicketQueryParamFields = "priority"
-	CreateTicketingTicketQueryParamFieldsCategoryID  CreateTicketingTicketQueryParamFields = "category_id"
-	CreateTicketingTicketQueryParamFieldsSource      CreateTicketingTicketQueryParamFields = "source"
-	CreateTicketingTicketQueryParamFieldsSourceRef   CreateTicketingTicketQueryParamFields = "source_ref"
-	CreateTicketingTicketQueryParamFieldsTags        CreateTicketingTicketQueryParamFields = "tags"
-	CreateTicketingTicketQueryParamFieldsUserID      CreateTicketingTicketQueryParamFields = "user_id"
-	CreateTicketingTicketQueryParamFieldsURL         CreateTicketingTicketQueryParamFields = "url"
-	CreateTicketingTicketQueryParamFieldsDueAt       CreateTicketingTicketQueryParamFields = "due_at"
-	CreateTicketingTicketQueryParamFieldsRaw         CreateTicketingTicketQueryParamFields = "raw"
+	CreateTicketingTicketQueryParamFieldsID            CreateTicketingTicketQueryParamFields = "id"
+	CreateTicketingTicketQueryParamFieldsCreatedAt     CreateTicketingTicketQueryParamFields = "created_at"
+	CreateTicketingTicketQueryParamFieldsUpdatedAt     CreateTicketingTicketQueryParamFields = "updated_at"
+	CreateTicketingTicketQueryParamFieldsCustomerID    CreateTicketingTicketQueryParamFields = "customer_id"
+	CreateTicketingTicketQueryParamFieldsSubject       CreateTicketingTicketQueryParamFields = "subject"
+	CreateTicketingTicketQueryParamFieldsDescription   CreateTicketingTicketQueryParamFields = "description"
+	CreateTicketingTicketQueryParamFieldsStatus        CreateTicketingTicketQueryParamFields = "status"
+	CreateTicketingTicketQueryParamFieldsClosedAt      CreateTicketingTicketQueryParamFields = "closed_at"
+	CreateTicketingTicketQueryParamFieldsPriority      CreateTicketingTicketQueryParamFields = "priority"
+	CreateTicketingTicketQueryParamFieldsCategoryID    CreateTicketingTicketQueryParamFields = "category_id"
+	CreateTicketingTicketQueryParamFieldsSource        CreateTicketingTicketQueryParamFields = "source"
+	CreateTicketingTicketQueryParamFieldsSourceRef     CreateTicketingTicketQueryParamFields = "source_ref"
+	CreateTicketingTicketQueryParamFieldsTags          CreateTicketingTicketQueryParamFields = "tags"
+	CreateTicketingTicketQueryParamFieldsUserID        CreateTicketingTicketQueryParamFields = "user_id"
+	CreateTicketingTicketQueryParamFieldsURL           CreateTicketingTicketQueryParamFields = "url"
+	CreateTicketingTicketQueryParamFieldsAttachmentIds CreateTicketingTicketQueryParamFields = "attachment_ids"
+	CreateTicketingTicketQueryParamFieldsDueAt         CreateTicketingTicketQueryParamFields = "due_at"
+	CreateTicketingTicketQueryParamFieldsRaw           CreateTicketingTicketQueryParamFields = "raw"
 )
 
 func (e CreateTicketingTicketQueryParamFields) ToPointer() *CreateTicketingTicketQueryParamFields {
@@ -69,6 +70,8 @@ func (e *CreateTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error
 	case "user_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "attachment_ids":
 		fallthrough
 	case "due_at":
 		fallthrough

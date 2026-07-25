@@ -16,6 +16,7 @@ const (
 	QueryParamCategoriesHris         QueryParamCategories = "hris"
 	QueryParamCategoriesAts          QueryParamCategories = "ats"
 	QueryParamCategoriesAuth         QueryParamCategories = "auth"
+	QueryParamCategoriesSaml         QueryParamCategories = "saml"
 	QueryParamCategoriesCrm          QueryParamCategories = "crm"
 	QueryParamCategoriesEnrich       QueryParamCategories = "enrich"
 	QueryParamCategoriesMartech      QueryParamCategories = "martech"
@@ -62,6 +63,8 @@ func (e *QueryParamCategories) UnmarshalJSON(data []byte) error {
 	case "ats":
 		fallthrough
 	case "auth":
+		fallthrough
+	case "saml":
 		fallthrough
 	case "crm":
 		fallthrough

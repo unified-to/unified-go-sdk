@@ -34,4 +34,8 @@ value := operations.ListAccountingExpensesQueryParamFieldsID
 | `ListAccountingExpensesQueryParamFieldsLineitems`        | lineitems                                                |
 | `ListAccountingExpensesQueryParamFieldsAttachments`      | attachments                                              |
 | `ListAccountingExpensesQueryParamFieldsOrganizationID`   | organization_id                                          |
+| `ListAccountingExpensesQueryParamFieldsUsers`            | users                                                    |
+| `ListAccountingExpensesQueryParamFieldsApproverUsers`    | approver_users                                           |
+| `ListAccountingExpensesQueryParamFieldsStatus`           | status                                                   |
+| `ListAccountingExpensesQueryParamFieldsExternalNumber`   | external_number                                          |
 | `ListAccountingExpensesQueryParamFieldsRaw`              | raw                                                      |

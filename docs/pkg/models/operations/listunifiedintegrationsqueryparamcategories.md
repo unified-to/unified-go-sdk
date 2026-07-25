@@ -19,6 +19,7 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesHris`         | hris                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesAts`          | ats                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesAuth`         | auth                                                      |
+| `ListUnifiedIntegrationsQueryParamCategoriesSaml`         | saml                                                      |
 | `ListUnifiedIntegrationsQueryParamCategoriesCrm`          | crm                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesEnrich`       | enrich                                                    |
 | `ListUnifiedIntegrationsQueryParamCategoriesMartech`      | martech                                                   |

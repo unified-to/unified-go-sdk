@@ -31,6 +31,10 @@ const (
 	PatchAccountingExpenseQueryParamFieldsLineitems        PatchAccountingExpenseQueryParamFields = "lineitems"
 	PatchAccountingExpenseQueryParamFieldsAttachments      PatchAccountingExpenseQueryParamFields = "attachments"
 	PatchAccountingExpenseQueryParamFieldsOrganizationID   PatchAccountingExpenseQueryParamFields = "organization_id"
+	PatchAccountingExpenseQueryParamFieldsUsers            PatchAccountingExpenseQueryParamFields = "users"
+	PatchAccountingExpenseQueryParamFieldsApproverUsers    PatchAccountingExpenseQueryParamFields = "approver_users"
+	PatchAccountingExpenseQueryParamFieldsStatus           PatchAccountingExpenseQueryParamFields = "status"
+	PatchAccountingExpenseQueryParamFieldsExternalNumber   PatchAccountingExpenseQueryParamFields = "external_number"
 	PatchAccountingExpenseQueryParamFieldsRaw              PatchAccountingExpenseQueryParamFields = "raw"
 )
 
@@ -80,6 +84,14 @@ func (e *PatchAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "attachments":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "users":
+		fallthrough
+	case "approver_users":
+		fallthrough
+	case "status":
+		fallthrough
+	case "external_number":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingExpenseQueryParamFields(v)

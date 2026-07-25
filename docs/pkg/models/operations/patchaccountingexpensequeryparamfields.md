@@ -34,4 +34,8 @@ value := operations.PatchAccountingExpenseQueryParamFieldsID
 | `PatchAccountingExpenseQueryParamFieldsLineitems`        | lineitems                                                |
 | `PatchAccountingExpenseQueryParamFieldsAttachments`      | attachments                                              |
 | `PatchAccountingExpenseQueryParamFieldsOrganizationID`   | organization_id                                          |
+| `PatchAccountingExpenseQueryParamFieldsUsers`            | users                                                    |
+| `PatchAccountingExpenseQueryParamFieldsApproverUsers`    | approver_users                                           |
+| `PatchAccountingExpenseQueryParamFieldsStatus`           | status                                                   |
+| `PatchAccountingExpenseQueryParamFieldsExternalNumber`   | external_number                                          |
 | `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |

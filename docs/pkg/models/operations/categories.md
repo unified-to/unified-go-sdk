@@ -19,6 +19,7 @@ value := operations.CategoriesPassthrough
 | `CategoriesHris`         | hris                     |
 | `CategoriesAts`          | ats                      |
 | `CategoriesAuth`         | auth                     |
+| `CategoriesSaml`         | saml                     |
 | `CategoriesCrm`          | crm                      |
 | `CategoriesEnrich`       | enrich                   |
 | `CategoriesMartech`      | martech                  |

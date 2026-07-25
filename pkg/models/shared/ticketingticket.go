@@ -30,23 +30,25 @@ func (e *TicketingTicketStatus) IsExact() bool {
 }
 
 type TicketingTicket struct {
-	CategoryID  *string                `json:"category_id,omitempty"`
-	ClosedAt    *time.Time             `json:"closed_at,omitempty"`
-	CreatedAt   *time.Time             `json:"created_at,omitempty"`
-	CustomerID  *string                `json:"customer_id,omitempty"`
-	Description *string                `json:"description,omitempty"`
-	DueAt       *time.Time             `json:"due_at,omitempty"`
-	ID          *string                `json:"id,omitempty"`
-	Priority    *string                `json:"priority,omitempty"`
-	Raw         map[string]any         `json:"raw,omitempty"`
-	Source      *string                `json:"source,omitempty"`
-	SourceRef   *string                `json:"source_ref,omitempty"`
-	Status      *TicketingTicketStatus `json:"status,omitempty"`
-	Subject     *string                `json:"subject,omitempty"`
-	Tags        []string               `json:"tags,omitempty"`
-	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
-	URL         *string                `json:"url,omitempty"`
-	UserID      *string                `json:"user_id,omitempty"`
+	// Array of attachment IDs retrieved from StorageFile.Get endpoint
+	AttachmentIds []string               `json:"attachment_ids,omitempty"`
+	CategoryID    *string                `json:"category_id,omitempty"`
+	ClosedAt      *time.Time             `json:"closed_at,omitempty"`
+	CreatedAt     *time.Time             `json:"created_at,omitempty"`
+	CustomerID    *string                `json:"customer_id,omitempty"`
+	Description   *string                `json:"description,omitempty"`
+	DueAt         *time.Time             `json:"due_at,omitempty"`
+	ID            *string                `json:"id,omitempty"`
+	Priority      *string                `json:"priority,omitempty"`
+	Raw           map[string]any         `json:"raw,omitempty"`
+	Source        *string                `json:"source,omitempty"`
+	SourceRef     *string                `json:"source_ref,omitempty"`
+	Status        *TicketingTicketStatus `json:"status,omitempty"`
+	Subject       *string                `json:"subject,omitempty"`
+	Tags          []string               `json:"tags,omitempty"`
+	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
+	URL           *string                `json:"url,omitempty"`
+	UserID        *string                `json:"user_id,omitempty"`
 }
 
 func (t TicketingTicket) MarshalJSON() ([]byte, error) {
@@ -58,6 +60,13 @@ func (t *TicketingTicket) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (t *TicketingTicket) GetAttachmentIds() []string {
+	if t == nil {
+		return nil
+	}
+	return t.AttachmentIds
 }
 
 func (t *TicketingTicket) GetCategoryID() *string {

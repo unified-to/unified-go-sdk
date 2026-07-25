@@ -29,7 +29,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 go:
-  version: 0.36.98
+  version: 0.36.99
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: UnifiedToError
@@ -40,6 +40,7 @@ go:
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: false
   forwardCompatibleUnionsByDefault: "false"
+  idiomaticMethodCollisionNames: false
   imports:
     option: openapi
     paths:
@@ -56,10 +57,12 @@ go:
   modulePath: ""
   multipartArrayFormat: legacy
   nullableOptionalWrapper: false
+  optionalMethodArguments: pointers
   outputModelSuffix: output
   packageName: github.com/unified-to/unified-go-sdk
   respectRequiredFields: false
   respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope
   sdkPackageName: ""
+  unionGenerics: false
   unionStrategy: left-to-right

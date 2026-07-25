@@ -31,6 +31,10 @@ const (
 	ListAccountingExpensesQueryParamFieldsLineitems        ListAccountingExpensesQueryParamFields = "lineitems"
 	ListAccountingExpensesQueryParamFieldsAttachments      ListAccountingExpensesQueryParamFields = "attachments"
 	ListAccountingExpensesQueryParamFieldsOrganizationID   ListAccountingExpensesQueryParamFields = "organization_id"
+	ListAccountingExpensesQueryParamFieldsUsers            ListAccountingExpensesQueryParamFields = "users"
+	ListAccountingExpensesQueryParamFieldsApproverUsers    ListAccountingExpensesQueryParamFields = "approver_users"
+	ListAccountingExpensesQueryParamFieldsStatus           ListAccountingExpensesQueryParamFields = "status"
+	ListAccountingExpensesQueryParamFieldsExternalNumber   ListAccountingExpensesQueryParamFields = "external_number"
 	ListAccountingExpensesQueryParamFieldsRaw              ListAccountingExpensesQueryParamFields = "raw"
 )
 
@@ -81,6 +85,14 @@ func (e *ListAccountingExpensesQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "organization_id":
 		fallthrough
+	case "users":
+		fallthrough
+	case "approver_users":
+		fallthrough
+	case "status":
+		fallthrough
+	case "external_number":
+		fallthrough
 	case "raw":
 		*e = ListAccountingExpensesQueryParamFields(v)
 		return nil
@@ -114,6 +126,8 @@ type ListAccountingExpensesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
+	// The status to filter by
+	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
@@ -216,6 +230,13 @@ func (l *ListAccountingExpensesRequest) GetStartGte() *string {
 		return nil
 	}
 	return l.StartGte
+}
+
+func (l *ListAccountingExpensesRequest) GetStatus() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Status
 }
 
 func (l *ListAccountingExpensesRequest) GetUpdatedGte() *string {

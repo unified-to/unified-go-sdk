@@ -372,6 +372,7 @@ func main() {
 
 * [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [GetUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
+* [GetUnifiedIntegrationSaml](docs/sdks/auth/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Availability](docs/sdks/availability/README.md)
 
@@ -1316,6 +1317,7 @@ func main() {
 ### [Login](docs/sdks/login/README.md)
 
 * [GetUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
+* [GetUnifiedIntegrationSaml](docs/sdks/login/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Martech](docs/sdks/martech/README.md)
 

@@ -22,6 +22,7 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesHris`         | hris                                       |
 | `PropertyConnectionCategoriesAts`          | ats                                        |
 | `PropertyConnectionCategoriesAuth`         | auth                                       |
+| `PropertyConnectionCategoriesSaml`         | saml                                       |
 | `PropertyConnectionCategoriesCrm`          | crm                                        |
 | `PropertyConnectionCategoriesEnrich`       | enrich                                     |
 | `PropertyConnectionCategoriesMartech`      | martech                                    |

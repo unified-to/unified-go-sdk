@@ -12,23 +12,24 @@ import (
 type PatchTicketingTicketQueryParamFields string
 
 const (
-	PatchTicketingTicketQueryParamFieldsID          PatchTicketingTicketQueryParamFields = "id"
-	PatchTicketingTicketQueryParamFieldsCreatedAt   PatchTicketingTicketQueryParamFields = "created_at"
-	PatchTicketingTicketQueryParamFieldsUpdatedAt   PatchTicketingTicketQueryParamFields = "updated_at"
-	PatchTicketingTicketQueryParamFieldsCustomerID  PatchTicketingTicketQueryParamFields = "customer_id"
-	PatchTicketingTicketQueryParamFieldsSubject     PatchTicketingTicketQueryParamFields = "subject"
-	PatchTicketingTicketQueryParamFieldsDescription PatchTicketingTicketQueryParamFields = "description"
-	PatchTicketingTicketQueryParamFieldsStatus      PatchTicketingTicketQueryParamFields = "status"
-	PatchTicketingTicketQueryParamFieldsClosedAt    PatchTicketingTicketQueryParamFields = "closed_at"
-	PatchTicketingTicketQueryParamFieldsPriority    PatchTicketingTicketQueryParamFields = "priority"
-	PatchTicketingTicketQueryParamFieldsCategoryID  PatchTicketingTicketQueryParamFields = "category_id"
-	PatchTicketingTicketQueryParamFieldsSource      PatchTicketingTicketQueryParamFields = "source"
-	PatchTicketingTicketQueryParamFieldsSourceRef   PatchTicketingTicketQueryParamFields = "source_ref"
-	PatchTicketingTicketQueryParamFieldsTags        PatchTicketingTicketQueryParamFields = "tags"
-	PatchTicketingTicketQueryParamFieldsUserID      PatchTicketingTicketQueryParamFields = "user_id"
-	PatchTicketingTicketQueryParamFieldsURL         PatchTicketingTicketQueryParamFields = "url"
-	PatchTicketingTicketQueryParamFieldsDueAt       PatchTicketingTicketQueryParamFields = "due_at"
-	PatchTicketingTicketQueryParamFieldsRaw         PatchTicketingTicketQueryParamFields = "raw"
+	PatchTicketingTicketQueryParamFieldsID            PatchTicketingTicketQueryParamFields = "id"
+	PatchTicketingTicketQueryParamFieldsCreatedAt     PatchTicketingTicketQueryParamFields = "created_at"
+	PatchTicketingTicketQueryParamFieldsUpdatedAt     PatchTicketingTicketQueryParamFields = "updated_at"
+	PatchTicketingTicketQueryParamFieldsCustomerID    PatchTicketingTicketQueryParamFields = "customer_id"
+	PatchTicketingTicketQueryParamFieldsSubject       PatchTicketingTicketQueryParamFields = "subject"
+	PatchTicketingTicketQueryParamFieldsDescription   PatchTicketingTicketQueryParamFields = "description"
+	PatchTicketingTicketQueryParamFieldsStatus        PatchTicketingTicketQueryParamFields = "status"
+	PatchTicketingTicketQueryParamFieldsClosedAt      PatchTicketingTicketQueryParamFields = "closed_at"
+	PatchTicketingTicketQueryParamFieldsPriority      PatchTicketingTicketQueryParamFields = "priority"
+	PatchTicketingTicketQueryParamFieldsCategoryID    PatchTicketingTicketQueryParamFields = "category_id"
+	PatchTicketingTicketQueryParamFieldsSource        PatchTicketingTicketQueryParamFields = "source"
+	PatchTicketingTicketQueryParamFieldsSourceRef     PatchTicketingTicketQueryParamFields = "source_ref"
+	PatchTicketingTicketQueryParamFieldsTags          PatchTicketingTicketQueryParamFields = "tags"
+	PatchTicketingTicketQueryParamFieldsUserID        PatchTicketingTicketQueryParamFields = "user_id"
+	PatchTicketingTicketQueryParamFieldsURL           PatchTicketingTicketQueryParamFields = "url"
+	PatchTicketingTicketQueryParamFieldsAttachmentIds PatchTicketingTicketQueryParamFields = "attachment_ids"
+	PatchTicketingTicketQueryParamFieldsDueAt         PatchTicketingTicketQueryParamFields = "due_at"
+	PatchTicketingTicketQueryParamFieldsRaw           PatchTicketingTicketQueryParamFields = "raw"
 )
 
 func (e PatchTicketingTicketQueryParamFields) ToPointer() *PatchTicketingTicketQueryParamFields {
@@ -69,6 +70,8 @@ func (e *PatchTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "user_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "attachment_ids":
 		fallthrough
 	case "due_at":
 		fallthrough

@@ -19,6 +19,7 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesHris`         | hris                               |
 | `QueryParamCategoriesAts`          | ats                                |
 | `QueryParamCategoriesAuth`         | auth                               |
+| `QueryParamCategoriesSaml`         | saml                               |
 | `QueryParamCategoriesCrm`          | crm                                |
 | `QueryParamCategoriesEnrich`       | enrich                             |
 | `QueryParamCategoriesMartech`      | martech                            |

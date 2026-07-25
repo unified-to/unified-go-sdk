@@ -22,6 +22,7 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesHris`         | hris                                        |
 | `PropertyIntegrationCategoriesAts`          | ats                                         |
 | `PropertyIntegrationCategoriesAuth`         | auth                                        |
+| `PropertyIntegrationCategoriesSaml`         | saml                                        |
 | `PropertyIntegrationCategoriesCrm`          | crm                                         |
 | `PropertyIntegrationCategoriesEnrich`       | enrich                                      |
 | `PropertyIntegrationCategoriesMartech`      | martech                                     |

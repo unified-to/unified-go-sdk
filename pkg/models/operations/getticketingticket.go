@@ -12,23 +12,24 @@ import (
 type GetTicketingTicketQueryParamFields string
 
 const (
-	GetTicketingTicketQueryParamFieldsID          GetTicketingTicketQueryParamFields = "id"
-	GetTicketingTicketQueryParamFieldsCreatedAt   GetTicketingTicketQueryParamFields = "created_at"
-	GetTicketingTicketQueryParamFieldsUpdatedAt   GetTicketingTicketQueryParamFields = "updated_at"
-	GetTicketingTicketQueryParamFieldsCustomerID  GetTicketingTicketQueryParamFields = "customer_id"
-	GetTicketingTicketQueryParamFieldsSubject     GetTicketingTicketQueryParamFields = "subject"
-	GetTicketingTicketQueryParamFieldsDescription GetTicketingTicketQueryParamFields = "description"
-	GetTicketingTicketQueryParamFieldsStatus      GetTicketingTicketQueryParamFields = "status"
-	GetTicketingTicketQueryParamFieldsClosedAt    GetTicketingTicketQueryParamFields = "closed_at"
-	GetTicketingTicketQueryParamFieldsPriority    GetTicketingTicketQueryParamFields = "priority"
-	GetTicketingTicketQueryParamFieldsCategoryID  GetTicketingTicketQueryParamFields = "category_id"
-	GetTicketingTicketQueryParamFieldsSource      GetTicketingTicketQueryParamFields = "source"
-	GetTicketingTicketQueryParamFieldsSourceRef   GetTicketingTicketQueryParamFields = "source_ref"
-	GetTicketingTicketQueryParamFieldsTags        GetTicketingTicketQueryParamFields = "tags"
-	GetTicketingTicketQueryParamFieldsUserID      GetTicketingTicketQueryParamFields = "user_id"
-	GetTicketingTicketQueryParamFieldsURL         GetTicketingTicketQueryParamFields = "url"
-	GetTicketingTicketQueryParamFieldsDueAt       GetTicketingTicketQueryParamFields = "due_at"
-	GetTicketingTicketQueryParamFieldsRaw         GetTicketingTicketQueryParamFields = "raw"
+	GetTicketingTicketQueryParamFieldsID            GetTicketingTicketQueryParamFields = "id"
+	GetTicketingTicketQueryParamFieldsCreatedAt     GetTicketingTicketQueryParamFields = "created_at"
+	GetTicketingTicketQueryParamFieldsUpdatedAt     GetTicketingTicketQueryParamFields = "updated_at"
+	GetTicketingTicketQueryParamFieldsCustomerID    GetTicketingTicketQueryParamFields = "customer_id"
+	GetTicketingTicketQueryParamFieldsSubject       GetTicketingTicketQueryParamFields = "subject"
+	GetTicketingTicketQueryParamFieldsDescription   GetTicketingTicketQueryParamFields = "description"
+	GetTicketingTicketQueryParamFieldsStatus        GetTicketingTicketQueryParamFields = "status"
+	GetTicketingTicketQueryParamFieldsClosedAt      GetTicketingTicketQueryParamFields = "closed_at"
+	GetTicketingTicketQueryParamFieldsPriority      GetTicketingTicketQueryParamFields = "priority"
+	GetTicketingTicketQueryParamFieldsCategoryID    GetTicketingTicketQueryParamFields = "category_id"
+	GetTicketingTicketQueryParamFieldsSource        GetTicketingTicketQueryParamFields = "source"
+	GetTicketingTicketQueryParamFieldsSourceRef     GetTicketingTicketQueryParamFields = "source_ref"
+	GetTicketingTicketQueryParamFieldsTags          GetTicketingTicketQueryParamFields = "tags"
+	GetTicketingTicketQueryParamFieldsUserID        GetTicketingTicketQueryParamFields = "user_id"
+	GetTicketingTicketQueryParamFieldsURL           GetTicketingTicketQueryParamFields = "url"
+	GetTicketingTicketQueryParamFieldsAttachmentIds GetTicketingTicketQueryParamFields = "attachment_ids"
+	GetTicketingTicketQueryParamFieldsDueAt         GetTicketingTicketQueryParamFields = "due_at"
+	GetTicketingTicketQueryParamFieldsRaw           GetTicketingTicketQueryParamFields = "raw"
 )
 
 func (e GetTicketingTicketQueryParamFields) ToPointer() *GetTicketingTicketQueryParamFields {
@@ -69,6 +70,8 @@ func (e *GetTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "attachment_ids":
 		fallthrough
 	case "due_at":
 		fallthrough

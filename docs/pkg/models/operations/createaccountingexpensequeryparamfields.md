@@ -34,4 +34,8 @@ value := operations.CreateAccountingExpenseQueryParamFieldsID
 | `CreateAccountingExpenseQueryParamFieldsLineitems`        | lineitems                                                 |
 | `CreateAccountingExpenseQueryParamFieldsAttachments`      | attachments                                               |
 | `CreateAccountingExpenseQueryParamFieldsOrganizationID`   | organization_id                                           |
+| `CreateAccountingExpenseQueryParamFieldsUsers`            | users                                                     |
+| `CreateAccountingExpenseQueryParamFieldsApproverUsers`    | approver_users                                            |
+| `CreateAccountingExpenseQueryParamFieldsStatus`           | status                                                    |
+| `CreateAccountingExpenseQueryParamFieldsExternalNumber`   | external_number                                           |
 | `CreateAccountingExpenseQueryParamFieldsRaw`              | raw                                                       |

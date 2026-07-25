@@ -12,23 +12,24 @@ import (
 type ListTicketingTicketsQueryParamFields string
 
 const (
-	ListTicketingTicketsQueryParamFieldsID          ListTicketingTicketsQueryParamFields = "id"
-	ListTicketingTicketsQueryParamFieldsCreatedAt   ListTicketingTicketsQueryParamFields = "created_at"
-	ListTicketingTicketsQueryParamFieldsUpdatedAt   ListTicketingTicketsQueryParamFields = "updated_at"
-	ListTicketingTicketsQueryParamFieldsCustomerID  ListTicketingTicketsQueryParamFields = "customer_id"
-	ListTicketingTicketsQueryParamFieldsSubject     ListTicketingTicketsQueryParamFields = "subject"
-	ListTicketingTicketsQueryParamFieldsDescription ListTicketingTicketsQueryParamFields = "description"
-	ListTicketingTicketsQueryParamFieldsStatus      ListTicketingTicketsQueryParamFields = "status"
-	ListTicketingTicketsQueryParamFieldsClosedAt    ListTicketingTicketsQueryParamFields = "closed_at"
-	ListTicketingTicketsQueryParamFieldsPriority    ListTicketingTicketsQueryParamFields = "priority"
-	ListTicketingTicketsQueryParamFieldsCategoryID  ListTicketingTicketsQueryParamFields = "category_id"
-	ListTicketingTicketsQueryParamFieldsSource      ListTicketingTicketsQueryParamFields = "source"
-	ListTicketingTicketsQueryParamFieldsSourceRef   ListTicketingTicketsQueryParamFields = "source_ref"
-	ListTicketingTicketsQueryParamFieldsTags        ListTicketingTicketsQueryParamFields = "tags"
-	ListTicketingTicketsQueryParamFieldsUserID      ListTicketingTicketsQueryParamFields = "user_id"
-	ListTicketingTicketsQueryParamFieldsURL         ListTicketingTicketsQueryParamFields = "url"
-	ListTicketingTicketsQueryParamFieldsDueAt       ListTicketingTicketsQueryParamFields = "due_at"
-	ListTicketingTicketsQueryParamFieldsRaw         ListTicketingTicketsQueryParamFields = "raw"
+	ListTicketingTicketsQueryParamFieldsID            ListTicketingTicketsQueryParamFields = "id"
+	ListTicketingTicketsQueryParamFieldsCreatedAt     ListTicketingTicketsQueryParamFields = "created_at"
+	ListTicketingTicketsQueryParamFieldsUpdatedAt     ListTicketingTicketsQueryParamFields = "updated_at"
+	ListTicketingTicketsQueryParamFieldsCustomerID    ListTicketingTicketsQueryParamFields = "customer_id"
+	ListTicketingTicketsQueryParamFieldsSubject       ListTicketingTicketsQueryParamFields = "subject"
+	ListTicketingTicketsQueryParamFieldsDescription   ListTicketingTicketsQueryParamFields = "description"
+	ListTicketingTicketsQueryParamFieldsStatus        ListTicketingTicketsQueryParamFields = "status"
+	ListTicketingTicketsQueryParamFieldsClosedAt      ListTicketingTicketsQueryParamFields = "closed_at"
+	ListTicketingTicketsQueryParamFieldsPriority      ListTicketingTicketsQueryParamFields = "priority"
+	ListTicketingTicketsQueryParamFieldsCategoryID    ListTicketingTicketsQueryParamFields = "category_id"
+	ListTicketingTicketsQueryParamFieldsSource        ListTicketingTicketsQueryParamFields = "source"
+	ListTicketingTicketsQueryParamFieldsSourceRef     ListTicketingTicketsQueryParamFields = "source_ref"
+	ListTicketingTicketsQueryParamFieldsTags          ListTicketingTicketsQueryParamFields = "tags"
+	ListTicketingTicketsQueryParamFieldsUserID        ListTicketingTicketsQueryParamFields = "user_id"
+	ListTicketingTicketsQueryParamFieldsURL           ListTicketingTicketsQueryParamFields = "url"
+	ListTicketingTicketsQueryParamFieldsAttachmentIds ListTicketingTicketsQueryParamFields = "attachment_ids"
+	ListTicketingTicketsQueryParamFieldsDueAt         ListTicketingTicketsQueryParamFields = "due_at"
+	ListTicketingTicketsQueryParamFieldsRaw           ListTicketingTicketsQueryParamFields = "raw"
 )
 
 func (e ListTicketingTicketsQueryParamFields) ToPointer() *ListTicketingTicketsQueryParamFields {
@@ -69,6 +70,8 @@ func (e *ListTicketingTicketsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "user_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "attachment_ids":
 		fallthrough
 	case "due_at":
 		fallthrough

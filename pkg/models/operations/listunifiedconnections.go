@@ -16,6 +16,7 @@ const (
 	CategoriesHris         Categories = "hris"
 	CategoriesAts          Categories = "ats"
 	CategoriesAuth         Categories = "auth"
+	CategoriesSaml         Categories = "saml"
 	CategoriesCrm          Categories = "crm"
 	CategoriesEnrich       Categories = "enrich"
 	CategoriesMartech      Categories = "martech"
@@ -62,6 +63,8 @@ func (e *Categories) UnmarshalJSON(data []byte) error {
 	case "ats":
 		fallthrough
 	case "auth":
+		fallthrough
+	case "saml":
 		fallthrough
 	case "crm":
 		fallthrough

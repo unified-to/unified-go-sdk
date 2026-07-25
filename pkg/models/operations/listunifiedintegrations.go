@@ -16,6 +16,7 @@ const (
 	ListUnifiedIntegrationsQueryParamCategoriesHris         ListUnifiedIntegrationsQueryParamCategories = "hris"
 	ListUnifiedIntegrationsQueryParamCategoriesAts          ListUnifiedIntegrationsQueryParamCategories = "ats"
 	ListUnifiedIntegrationsQueryParamCategoriesAuth         ListUnifiedIntegrationsQueryParamCategories = "auth"
+	ListUnifiedIntegrationsQueryParamCategoriesSaml         ListUnifiedIntegrationsQueryParamCategories = "saml"
 	ListUnifiedIntegrationsQueryParamCategoriesCrm          ListUnifiedIntegrationsQueryParamCategories = "crm"
 	ListUnifiedIntegrationsQueryParamCategoriesEnrich       ListUnifiedIntegrationsQueryParamCategories = "enrich"
 	ListUnifiedIntegrationsQueryParamCategoriesMartech      ListUnifiedIntegrationsQueryParamCategories = "martech"
@@ -62,6 +63,8 @@ func (e *ListUnifiedIntegrationsQueryParamCategories) UnmarshalJSON(data []byte)
 	case "ats":
 		fallthrough
 	case "auth":
+		fallthrough
+	case "saml":
 		fallthrough
 	case "crm":
 		fallthrough
