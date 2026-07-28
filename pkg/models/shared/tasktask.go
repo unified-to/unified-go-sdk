@@ -48,11 +48,15 @@ type TaskTask struct {
 	Notes           *string         `json:"notes,omitempty"`
 	ParentID        *string         `json:"parent_id,omitempty"`
 	Priority        *string         `json:"priority,omitempty"`
+	Progress        *float64        `json:"progress,omitempty"`
 	ProjectID       *string         `json:"project_id,omitempty"`
 	Raw             map[string]any  `json:"raw,omitempty"`
 	StartAt         *time.Time      `json:"start_at,omitempty"`
 	Status          *TaskTaskStatus `json:"status,omitempty"`
+	StoryPoints     *float64        `json:"story_points,omitempty"`
 	Tags            []string        `json:"tags,omitempty"`
+	TimeSpent       *float64        `json:"time_spent,omitempty"`
+	TimeSpentUnit   *string         `json:"time_spent_unit,omitempty"`
 	Type            *string         `json:"type,omitempty"`
 	UpdatedAt       *time.Time      `json:"updated_at,omitempty"`
 	URL             *string         `json:"url,omitempty"`
@@ -181,6 +185,13 @@ func (t *TaskTask) GetPriority() *string {
 	return t.Priority
 }
 
+func (t *TaskTask) GetProgress() *float64 {
+	if t == nil {
+		return nil
+	}
+	return t.Progress
+}
+
 func (t *TaskTask) GetProjectID() *string {
 	if t == nil {
 		return nil
@@ -209,11 +220,32 @@ func (t *TaskTask) GetStatus() *TaskTaskStatus {
 	return t.Status
 }
 
+func (t *TaskTask) GetStoryPoints() *float64 {
+	if t == nil {
+		return nil
+	}
+	return t.StoryPoints
+}
+
 func (t *TaskTask) GetTags() []string {
 	if t == nil {
 		return nil
 	}
 	return t.Tags
+}
+
+func (t *TaskTask) GetTimeSpent() *float64 {
+	if t == nil {
+		return nil
+	}
+	return t.TimeSpent
+}
+
+func (t *TaskTask) GetTimeSpentUnit() *string {
+	if t == nil {
+		return nil
+	}
+	return t.TimeSpentUnit
 }
 
 func (t *TaskTask) GetType() *string {

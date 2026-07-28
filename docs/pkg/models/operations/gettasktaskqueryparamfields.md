@@ -38,4 +38,8 @@ value := operations.GetTaskTaskQueryParamFieldsID
 | `GetTaskTaskQueryParamFieldsMetadata`        | metadata                                     |
 | `GetTaskTaskQueryParamFieldsHasChildren`     | has_children                                 |
 | `GetTaskTaskQueryParamFieldsType`            | type                                         |
+| `GetTaskTaskQueryParamFieldsTimeSpent`       | time_spent                                   |
+| `GetTaskTaskQueryParamFieldsTimeSpentUnit`   | time_spent_unit                              |
+| `GetTaskTaskQueryParamFieldsProgress`        | progress                                     |
+| `GetTaskTaskQueryParamFieldsStoryPoints`     | story_points                                 |
 | `GetTaskTaskQueryParamFieldsRaw`             | raw                                          |

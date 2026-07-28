@@ -35,6 +35,10 @@ const (
 	CreateTaskTaskQueryParamFieldsMetadata        CreateTaskTaskQueryParamFields = "metadata"
 	CreateTaskTaskQueryParamFieldsHasChildren     CreateTaskTaskQueryParamFields = "has_children"
 	CreateTaskTaskQueryParamFieldsType            CreateTaskTaskQueryParamFields = "type"
+	CreateTaskTaskQueryParamFieldsTimeSpent       CreateTaskTaskQueryParamFields = "time_spent"
+	CreateTaskTaskQueryParamFieldsTimeSpentUnit   CreateTaskTaskQueryParamFields = "time_spent_unit"
+	CreateTaskTaskQueryParamFieldsProgress        CreateTaskTaskQueryParamFields = "progress"
+	CreateTaskTaskQueryParamFieldsStoryPoints     CreateTaskTaskQueryParamFields = "story_points"
 	CreateTaskTaskQueryParamFieldsRaw             CreateTaskTaskQueryParamFields = "raw"
 )
 
@@ -92,6 +96,14 @@ func (e *CreateTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "has_children":
 		fallthrough
 	case "type":
+		fallthrough
+	case "time_spent":
+		fallthrough
+	case "time_spent_unit":
+		fallthrough
+	case "progress":
+		fallthrough
+	case "story_points":
 		fallthrough
 	case "raw":
 		*e = CreateTaskTaskQueryParamFields(v)

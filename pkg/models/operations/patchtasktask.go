@@ -35,6 +35,10 @@ const (
 	PatchTaskTaskQueryParamFieldsMetadata        PatchTaskTaskQueryParamFields = "metadata"
 	PatchTaskTaskQueryParamFieldsHasChildren     PatchTaskTaskQueryParamFields = "has_children"
 	PatchTaskTaskQueryParamFieldsType            PatchTaskTaskQueryParamFields = "type"
+	PatchTaskTaskQueryParamFieldsTimeSpent       PatchTaskTaskQueryParamFields = "time_spent"
+	PatchTaskTaskQueryParamFieldsTimeSpentUnit   PatchTaskTaskQueryParamFields = "time_spent_unit"
+	PatchTaskTaskQueryParamFieldsProgress        PatchTaskTaskQueryParamFields = "progress"
+	PatchTaskTaskQueryParamFieldsStoryPoints     PatchTaskTaskQueryParamFields = "story_points"
 	PatchTaskTaskQueryParamFieldsRaw             PatchTaskTaskQueryParamFields = "raw"
 )
 
@@ -92,6 +96,14 @@ func (e *PatchTaskTaskQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "has_children":
 		fallthrough
 	case "type":
+		fallthrough
+	case "time_spent":
+		fallthrough
+	case "time_spent_unit":
+		fallthrough
+	case "progress":
+		fallthrough
+	case "story_points":
 		fallthrough
 	case "raw":
 		*e = PatchTaskTaskQueryParamFields(v)

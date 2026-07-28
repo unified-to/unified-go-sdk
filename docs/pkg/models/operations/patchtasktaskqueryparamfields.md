@@ -38,4 +38,8 @@ value := operations.PatchTaskTaskQueryParamFieldsID
 | `PatchTaskTaskQueryParamFieldsMetadata`        | metadata                                       |
 | `PatchTaskTaskQueryParamFieldsHasChildren`     | has_children                                   |
 | `PatchTaskTaskQueryParamFieldsType`            | type                                           |
+| `PatchTaskTaskQueryParamFieldsTimeSpent`       | time_spent                                     |
+| `PatchTaskTaskQueryParamFieldsTimeSpentUnit`   | time_spent_unit                                |
+| `PatchTaskTaskQueryParamFieldsProgress`        | progress                                       |
+| `PatchTaskTaskQueryParamFieldsStoryPoints`     | story_points                                   |
 | `PatchTaskTaskQueryParamFieldsRaw`             | raw                                            |
