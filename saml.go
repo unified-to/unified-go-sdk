@@ -14,23 +14,23 @@ import (
 	"net/http"
 )
 
-type Login struct {
+type Saml struct {
 	rootSDK          *UnifiedTo
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
 }
 
-func newLogin(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *Login {
-	return &Login{
+func newSaml(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *Saml {
+	return &Saml{
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
 	}
 }
 
-// GetUnifiedIntegrationLogin - Sign in a user
-// Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
-func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operations.GetUnifiedIntegrationLoginRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationLoginResponse, error) {
+// GetUnifiedIntegrationSaml - Sign in a user via SAML
+// Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+func (s *Saml) GetUnifiedIntegrationSaml(ctx context.Context, request operations.GetUnifiedIntegrationSamlRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationSamlResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
 		operations.SupportedOptionRetries,
@@ -49,7 +49,7 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 	} else {
 		baseURL = *o.ServerURL
 	}
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/login/{workspace_id}/{integration_type}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/unified/integration/saml/{workspace_id}/{integration_type}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -59,7 +59,7 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 		SDKConfiguration: s.sdkConfiguration,
 		BaseURL:          baseURL,
 		Context:          ctx,
-		OperationID:      "getUnifiedIntegrationLogin",
+		OperationID:      "getUnifiedIntegrationSaml",
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -184,7 +184,7 @@ func (s *Login) GetUnifiedIntegrationLogin(ctx context.Context, request operatio
 		}
 	}
 
-	res := &operations.GetUnifiedIntegrationLoginResponse{
+	res := &operations.GetUnifiedIntegrationSamlResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: httpRes.Header.Get("Content-Type"),
 		RawResponse: httpRes,

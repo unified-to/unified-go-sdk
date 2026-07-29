@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
+  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 0.36.100
-  configChecksum: 999906ffb0df375620a9490eeb57f2c8
+  releaseVersion: 0.36.101
+  configChecksum: bb35cd90160bdbeaf5bd98f879aeb3b8
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 4bb812fb-9f98-428b-99de-41ebccb8fee7
-  pristine_commit_hash: d5706abaf1da5c6f192d5b1ac05448ef5332c57d
-  pristine_tree_hash: f36e74da32de26d7f6023c6f490a3801164a3d22
+  generation_id: 8fae4235-62d8-42fb-bc21-50cb6e5a1cb6
+  pristine_commit_hash: 558a3783daa1b4c2bec37d59c7df80fc6218df97
+  pristine_tree_hash: 9dfc1bae4a244572861d57a7783c1bda7abb913d
 features:
   go:
     acceptHeaders: 2.81.2
@@ -95,8 +95,8 @@ trackedFiles:
     pristine_git_object: 7ca3122915134a1cd5cd8be037eb8c05d79974e1
   auth.go:
     id: 082b9e5329e5
-    last_write_checksum: sha1:7aac9b038c3613d69367c91375b03234c47ce7d0
-    pristine_git_object: 5d8374fb3d269e95fd5edc06baaf6c659239e74e
+    last_write_checksum: sha1:a42613f9d7e2ba69e27be874f5cefe5a63464c1a
+    pristine_git_object: 38df6e361e4368099ed07e589755d0a22696c9c4
   availability.go:
     id: 423036eb67fe
     last_write_checksum: sha1:0ba85d4a5ee34b4f19f4f687a34d36836cb55ccb
@@ -13031,8 +13031,8 @@ trackedFiles:
     pristine_git_object: e57fcebb73af29b3aec590dbd3d2baf5a2243bfd
   docs/sdks/auth/README.md:
     id: e9724f17945f
-    last_write_checksum: sha1:721260a8640293309af7499e8e94fdabb52e54e9
-    pristine_git_object: 5a06afab2ced17ee08df0ad8652a6be35b2851c5
+    last_write_checksum: sha1:da713793739416ceefb6f4b33c6a8f1443f7d013
+    pristine_git_object: 7d27a20ad477807a52ffb264804483e72395a5f3
   docs/sdks/availability/README.md:
     id: 2226d6a22b27
     last_write_checksum: sha1:7876caed6c465bf664b8646fadd96e2a9d5a608d
@@ -13311,8 +13311,8 @@ trackedFiles:
     pristine_git_object: caa095b1f5f659fb53bc2f95e272908afa88c6cc
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
-    last_write_checksum: sha1:e7232d5ce72d4253fa290a9a70cd35b0561a7560
-    pristine_git_object: 4a8e39090e3af2f6e420ddaa68a7cb97754f7183
+    last_write_checksum: sha1:2b981262870fa735b60b2aa9373b6c27a56509e6
+    pristine_git_object: cb81838a93b8d4ad6e7a28010b751906f69af428
   docs/sdks/martech/README.md:
     id: ba21e4ca633c
     last_write_checksum: sha1:22556ea09bdb1ac0356a20ff0d9de61f912d2202
@@ -13469,6 +13469,10 @@ trackedFiles:
     id: 276981d6d854
     last_write_checksum: sha1:b0ddfa03f0c2a270a3b170303ff578901217dc22
     pristine_git_object: 3b5448996a85f21e7d1d30359874a250f9dee22e
+  docs/sdks/saml/README.md:
+    id: f6b6fd24d6c6
+    last_write_checksum: sha1:aca8143211f6545d6d5d02f20a276d2acd3ec798
+    pristine_git_object: 956fa625d51b244c9e575449ccbda29c1beca4ca
   docs/sdks/scim/README.md:
     id: 1d60f0a72b05
     last_write_checksum: sha1:84d50430d685a1c7e10e0a1059e131dbae24cd92
@@ -13751,8 +13755,8 @@ trackedFiles:
     pristine_git_object: bf2f951a1fab0b26f4b0a4d604300c95c32a9c5f
   login.go:
     id: add8eb522e62
-    last_write_checksum: sha1:9225d518b08eab59705df69f47121f9b5ff5f598
-    pristine_git_object: 9f4c14f20bc4c2ce12f62b0ff879e9e36d1c19bb
+    last_write_checksum: sha1:4b053370c2ecb6218a7f74ec2ba36eb6910d5177
+    pristine_git_object: 005645c0cf583eee1055701803abc3ee9c8dc2da
   martech.go:
     id: f619274e395d
     last_write_checksum: sha1:f94fe294024ddb48759e527d343ee408ab21aef4
@@ -19049,6 +19053,10 @@ trackedFiles:
     id: b5de6b7aeceb
     last_write_checksum: sha1:0dda7d074765583f0ad8866e4209e4f71efa7410
     pristine_git_object: 18e06b6347fd4a846f34329e04bd5f71fa3503e2
+  saml.go:
+    id: ba7ba4719755
+    last_write_checksum: sha1:0d8f60353e5eae01355384b3b5200b1f677a6fc2
+    pristine_git_object: 9cbf3f8d2ad495a0c644f340ab191b50565eaa9d
   scim.go:
     id: 7cae7699a750
     last_write_checksum: sha1:85ed9449173df798d8b0ffe37b7ede28fd3d5916
@@ -19171,8 +19179,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:7507265beb815712bd01f53defec5ac2518d8055
-    pristine_git_object: 6991a5dfe724c1e167eff2935f42b0f7ee9fb5fd
+    last_write_checksum: sha1:a475019b13412063d6902d85a565481a8d242eb6
+    pristine_git_object: 1dc967c0d213f98718eb0031ffa74335a7f77cc6
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -32639,7 +32647,10 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Task.CreateTaskTask()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Task.GetTaskTask()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Task.ListTaskTasks()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Task.PatchTaskTask()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Task.UpdateTaskTask()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Go SDK Changes:
+  * `UnifiedTo.Saml.GetUnifiedIntegrationSaml()`: **Added**
+  * `UnifiedTo.Login.GetUnifiedIntegrationSaml()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
