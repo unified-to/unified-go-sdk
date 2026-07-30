@@ -28,4 +28,6 @@ value := operations.GetAccountingOrganizationQueryParamFieldsID
 | `GetAccountingOrganizationQueryParamFieldsParentID`           | parent_id                                                     |
 | `GetAccountingOrganizationQueryParamFieldsFiscalYearEndMonth` | fiscal_year_end_month                                         |
 | `GetAccountingOrganizationQueryParamFieldsOrganizationCode`   | organization_code                                             |
+| `GetAccountingOrganizationQueryParamFieldsType`               | type                                                          |
+| `GetAccountingOrganizationQueryParamFieldsIsElimination`      | is_elimination                                                |
 | `GetAccountingOrganizationQueryParamFieldsRaw`                | raw                                                           |

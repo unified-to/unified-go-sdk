@@ -225,12 +225,14 @@ func main() {
 ### [Ads](docs/sdks/ads/README.md)
 
 * [CreateAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
+* [CreateAdsAsset](docs/sdks/ads/README.md#createadsasset) - Create an asset
 * [CreateAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
 * [CreateAdsCreative](docs/sdks/ads/README.md#createadscreative) - Create a creative
 * [CreateAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
 * [CreateAdsInsertionorder](docs/sdks/ads/README.md#createadsinsertionorder) - Create an insertionorder
 * [CreateAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
 * [GetAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
+* [GetAdsAsset](docs/sdks/ads/README.md#getadsasset) - Retrieve an asset
 * [GetAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
 * [GetAdsCreative](docs/sdks/ads/README.md#getadscreative) - Retrieve a creative
 * [GetAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
@@ -239,6 +241,7 @@ func main() {
 * [GetAdsPromoted](docs/sdks/ads/README.md#getadspromoted) - Retrieve a promoted
 * [GetAdsTarget](docs/sdks/ads/README.md#getadstarget) - Retrieve a target
 * [ListAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
+* [ListAdsAssets](docs/sdks/ads/README.md#listadsassets) - List all assets
 * [ListAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
 * [ListAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
 * [ListAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
@@ -315,6 +318,12 @@ func main() {
 * [RemoveAssessmentPackage](docs/sdks/assessment/README.md#removeassessmentpackage) - Delete an assessment package
 * [UpdateAssessmentOrder](docs/sdks/assessment/README.md#updateassessmentorder) - Update an order
 * [UpdateAssessmentPackage](docs/sdks/assessment/README.md#updateassessmentpackage) - Update an assessment package
+
+### [Asset](docs/sdks/asset/README.md)
+
+* [CreateAdsAsset](docs/sdks/asset/README.md#createadsasset) - Create an asset
+* [GetAdsAsset](docs/sdks/asset/README.md#getadsasset) - Retrieve an asset
+* [ListAdsAssets](docs/sdks/asset/README.md#listadsassets) - List all assets
 
 ### [Ats](docs/sdks/ats/README.md)
 

@@ -30,4 +30,5 @@ value := operations.PatchAccountingSalesorderQueryParamFieldsID
 | `PatchAccountingSalesorderQueryParamFieldsSalesChannel`    | sales_channel                                              |
 | `PatchAccountingSalesorderQueryParamFieldsOrganizationID`  | organization_id                                            |
 | `PatchAccountingSalesorderQueryParamFieldsFees`            | fees                                                       |
+| `PatchAccountingSalesorderQueryParamFieldsCategoryIds`     | category_ids                                               |
 | `PatchAccountingSalesorderQueryParamFieldsRaw`             | raw                                                        |

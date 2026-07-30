@@ -38,8 +38,11 @@ const (
 	UpdateAccountingBillQueryParamFieldsAttachments             UpdateAccountingBillQueryParamFields = "attachments"
 	UpdateAccountingBillQueryParamFieldsSend                    UpdateAccountingBillQueryParamFields = "send"
 	UpdateAccountingBillQueryParamFieldsOrganizationID          UpdateAccountingBillQueryParamFields = "organization_id"
-	UpdateAccountingBillQueryParamFieldsRaw                     UpdateAccountingBillQueryParamFields = "raw"
 	UpdateAccountingBillQueryParamFieldsTerm                    UpdateAccountingBillQueryParamFields = "term"
+	UpdateAccountingBillQueryParamFieldsPaymentTerms            UpdateAccountingBillQueryParamFields = "payment_terms"
+	UpdateAccountingBillQueryParamFieldsPayments                UpdateAccountingBillQueryParamFields = "payments"
+	UpdateAccountingBillQueryParamFieldsCategoryIds             UpdateAccountingBillQueryParamFields = "category_ids"
+	UpdateAccountingBillQueryParamFieldsRaw                     UpdateAccountingBillQueryParamFields = "raw"
 )
 
 func (e UpdateAccountingBillQueryParamFields) ToPointer() *UpdateAccountingBillQueryParamFields {
@@ -103,9 +106,15 @@ func (e *UpdateAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "term":
+		fallthrough
+	case "payment_terms":
+		fallthrough
+	case "payments":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "raw":
 		*e = UpdateAccountingBillQueryParamFields(v)
 		return nil
 	default:

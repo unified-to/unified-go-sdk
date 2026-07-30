@@ -12,14 +12,17 @@ import (
 type PatchAccountingCategoryQueryParamFields string
 
 const (
-	PatchAccountingCategoryQueryParamFieldsID          PatchAccountingCategoryQueryParamFields = "id"
-	PatchAccountingCategoryQueryParamFieldsCreatedAt   PatchAccountingCategoryQueryParamFields = "created_at"
-	PatchAccountingCategoryQueryParamFieldsUpdatedAt   PatchAccountingCategoryQueryParamFields = "updated_at"
-	PatchAccountingCategoryQueryParamFieldsName        PatchAccountingCategoryQueryParamFields = "name"
-	PatchAccountingCategoryQueryParamFieldsDescription PatchAccountingCategoryQueryParamFields = "description"
-	PatchAccountingCategoryQueryParamFieldsIsActive    PatchAccountingCategoryQueryParamFields = "is_active"
-	PatchAccountingCategoryQueryParamFieldsParentID    PatchAccountingCategoryQueryParamFields = "parent_id"
-	PatchAccountingCategoryQueryParamFieldsRaw         PatchAccountingCategoryQueryParamFields = "raw"
+	PatchAccountingCategoryQueryParamFieldsID             PatchAccountingCategoryQueryParamFields = "id"
+	PatchAccountingCategoryQueryParamFieldsCreatedAt      PatchAccountingCategoryQueryParamFields = "created_at"
+	PatchAccountingCategoryQueryParamFieldsUpdatedAt      PatchAccountingCategoryQueryParamFields = "updated_at"
+	PatchAccountingCategoryQueryParamFieldsName           PatchAccountingCategoryQueryParamFields = "name"
+	PatchAccountingCategoryQueryParamFieldsDescription    PatchAccountingCategoryQueryParamFields = "description"
+	PatchAccountingCategoryQueryParamFieldsIsActive       PatchAccountingCategoryQueryParamFields = "is_active"
+	PatchAccountingCategoryQueryParamFieldsParentID       PatchAccountingCategoryQueryParamFields = "parent_id"
+	PatchAccountingCategoryQueryParamFieldsType           PatchAccountingCategoryQueryParamFields = "type"
+	PatchAccountingCategoryQueryParamFieldsCode           PatchAccountingCategoryQueryParamFields = "code"
+	PatchAccountingCategoryQueryParamFieldsOrganizationID PatchAccountingCategoryQueryParamFields = "organization_id"
+	PatchAccountingCategoryQueryParamFieldsRaw            PatchAccountingCategoryQueryParamFields = "raw"
 )
 
 func (e PatchAccountingCategoryQueryParamFields) ToPointer() *PatchAccountingCategoryQueryParamFields {
@@ -44,6 +47,12 @@ func (e *PatchAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) err
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "code":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingCategoryQueryParamFields(v)

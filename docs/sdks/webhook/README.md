@@ -42,7 +42,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventCreated,
-            ObjectType: shared.ObjectTypeAtsScorecard,
+            ObjectType: shared.WebhookObjectTypeAtsScorecard,
         },
     })
     if err != nil {
@@ -207,7 +207,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventUpdated,
-            ObjectType: shared.ObjectTypeTicketingCustomer,
+            ObjectType: shared.WebhookObjectTypeTicketingCustomer,
         },
         ID: "<id>",
     })
@@ -375,7 +375,7 @@ func main() {
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
             Event: shared.EventDeleted,
-            ObjectType: shared.ObjectTypeMessagingChannel,
+            ObjectType: shared.WebhookObjectTypeMessagingChannel,
         },
         ID: "<id>",
     })

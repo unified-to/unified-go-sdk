@@ -36,6 +36,7 @@ value := operations.UpdateAccountingInvoiceQueryParamFieldsID
 | `UpdateAccountingInvoiceQueryParamFieldsNotes`                   | notes                                                            |
 | `UpdateAccountingInvoiceQueryParamFieldsRefundReason`            | refund_reason                                                    |
 | `UpdateAccountingInvoiceQueryParamFieldsTerm`                    | term                                                             |
+| `UpdateAccountingInvoiceQueryParamFieldsPaymentTerms`            | payment_terms                                                    |
 | `UpdateAccountingInvoiceQueryParamFieldsLineitems`               | lineitems                                                        |
 | `UpdateAccountingInvoiceQueryParamFieldsStatus`                  | status                                                           |
 | `UpdateAccountingInvoiceQueryParamFieldsURL`                     | url                                                              |
@@ -44,4 +45,6 @@ value := operations.UpdateAccountingInvoiceQueryParamFieldsID
 | `UpdateAccountingInvoiceQueryParamFieldsAttachments`             | attachments                                                      |
 | `UpdateAccountingInvoiceQueryParamFieldsSend`                    | send                                                             |
 | `UpdateAccountingInvoiceQueryParamFieldsOrganizationID`          | organization_id                                                  |
+| `UpdateAccountingInvoiceQueryParamFieldsPayments`                | payments                                                         |
+| `UpdateAccountingInvoiceQueryParamFieldsCategoryIds`             | category_ids                                                     |
 | `UpdateAccountingInvoiceQueryParamFieldsRaw`                     | raw                                                              |

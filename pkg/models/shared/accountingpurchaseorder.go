@@ -39,6 +39,7 @@ func (e *AccountingPurchaseorderStatus) IsExact() bool {
 type AccountingPurchaseorder struct {
 	AccountID       *string                                         `json:"account_id,omitempty"`
 	BillingAddress  *PropertyAccountingPurchaseorderBillingAddress  `json:"billing_address,omitempty"`
+	CategoryIds     []string                                        `json:"category_ids,omitempty"`
 	ContactID       *string                                         `json:"contact_id,omitempty"`
 	CreatedAt       *time.Time                                      `json:"created_at,omitempty"`
 	Currency        *string                                         `json:"currency,omitempty"`
@@ -76,6 +77,13 @@ func (a *AccountingPurchaseorder) GetBillingAddress() *PropertyAccountingPurchas
 		return nil
 	}
 	return a.BillingAddress
+}
+
+func (a *AccountingPurchaseorder) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingPurchaseorder) GetContactID() *string {

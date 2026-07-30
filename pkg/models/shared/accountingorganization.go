@@ -7,12 +7,37 @@ import (
 	"time"
 )
 
+type AccountingOrganizationType string
+
+const (
+	AccountingOrganizationTypeCompany    AccountingOrganizationType = "COMPANY"
+	AccountingOrganizationTypeSubsidiary AccountingOrganizationType = "SUBSIDIARY"
+	AccountingOrganizationTypeDivision   AccountingOrganizationType = "DIVISION"
+	AccountingOrganizationTypeLocation   AccountingOrganizationType = "LOCATION"
+)
+
+func (e AccountingOrganizationType) ToPointer() *AccountingOrganizationType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingOrganizationType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "COMPANY", "SUBSIDIARY", "DIVISION", "LOCATION":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingOrganization struct {
 	Address            *PropertyAccountingOrganizationAddress `json:"address,omitempty"`
 	CreatedAt          *time.Time                             `json:"created_at,omitempty"`
 	Currency           *string                                `json:"currency,omitempty"`
 	FiscalYearEndMonth *float64                               `json:"fiscal_year_end_month,omitempty"`
 	ID                 *string                                `json:"id,omitempty"`
+	IsElimination      *bool                                  `json:"is_elimination,omitempty"`
 	LegalName          *string                                `json:"legal_name,omitempty"`
 	Name               *string                                `json:"name,omitempty"`
 	OrganizationCode   *string                                `json:"organization_code,omitempty"`
@@ -20,6 +45,7 @@ type AccountingOrganization struct {
 	Raw                map[string]any                         `json:"raw,omitempty"`
 	TaxNumber          *string                                `json:"tax_number,omitempty"`
 	Timezone           *string                                `json:"timezone,omitempty"`
+	Type               *AccountingOrganizationType            `json:"type,omitempty"`
 	UpdatedAt          *time.Time                             `json:"updated_at,omitempty"`
 	Website            *string                                `json:"website,omitempty"`
 }
@@ -70,6 +96,13 @@ func (a *AccountingOrganization) GetID() *string {
 	return a.ID
 }
 
+func (a *AccountingOrganization) GetIsElimination() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsElimination
+}
+
 func (a *AccountingOrganization) GetLegalName() *string {
 	if a == nil {
 		return nil
@@ -117,6 +150,13 @@ func (a *AccountingOrganization) GetTimezone() *string {
 		return nil
 	}
 	return a.Timezone
+}
+
+func (a *AccountingOrganization) GetType() *AccountingOrganizationType {
+	if a == nil {
+		return nil
+	}
+	return a.Type
 }
 
 func (a *AccountingOrganization) GetUpdatedAt() *time.Time {

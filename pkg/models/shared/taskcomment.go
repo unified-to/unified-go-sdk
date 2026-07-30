@@ -8,14 +8,16 @@ import (
 )
 
 type TaskComment struct {
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	TaskID    *string        `json:"task_id,omitempty"`
-	Text      *string        `json:"text,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
-	UserID    *string        `json:"user_id,omitempty"`
-	UserName  *string        `json:"user_name,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	HasChildren *bool          `json:"has_children,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	ParentID    *string        `json:"parent_id,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	TaskID      *string        `json:"task_id,omitempty"`
+	Text        *string        `json:"text,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	UserID      *string        `json:"user_id,omitempty"`
+	UserName    *string        `json:"user_name,omitempty"`
 }
 
 func (t TaskComment) MarshalJSON() ([]byte, error) {
@@ -36,11 +38,25 @@ func (t *TaskComment) GetCreatedAt() *time.Time {
 	return t.CreatedAt
 }
 
+func (t *TaskComment) GetHasChildren() *bool {
+	if t == nil {
+		return nil
+	}
+	return t.HasChildren
+}
+
 func (t *TaskComment) GetID() *string {
 	if t == nil {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TaskComment) GetParentID() *string {
+	if t == nil {
+		return nil
+	}
+	return t.ParentID
 }
 
 func (t *TaskComment) GetRaw() map[string]any {

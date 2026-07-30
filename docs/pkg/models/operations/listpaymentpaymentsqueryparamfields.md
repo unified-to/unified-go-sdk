@@ -30,4 +30,5 @@ value := operations.ListPaymentPaymentsQueryParamFieldsID
 | `ListPaymentPaymentsQueryParamFieldsAccountID`      | account_id                                          |
 | `ListPaymentPaymentsQueryParamFieldsReference`      | reference                                           |
 | `ListPaymentPaymentsQueryParamFieldsOrganizationID` | organization_id                                     |
+| `ListPaymentPaymentsQueryParamFieldsAllocations`    | allocations                                         |
 | `ListPaymentPaymentsQueryParamFieldsRaw`            | raw                                                 |

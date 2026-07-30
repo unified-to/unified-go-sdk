@@ -29,6 +29,37 @@ func (e *PaymentCollectionMethod) IsExact() bool {
 	return false
 }
 
+type PaymentTerms string
+
+const (
+	PaymentTermsOnReceipt PaymentTerms = "ON_RECEIPT"
+	PaymentTermsNet7      PaymentTerms = "NET_7"
+	PaymentTermsNet10     PaymentTerms = "NET_10"
+	PaymentTermsNet15     PaymentTerms = "NET_15"
+	PaymentTermsNet20     PaymentTerms = "NET_20"
+	PaymentTermsNet25     PaymentTerms = "NET_25"
+	PaymentTermsNet30     PaymentTerms = "NET_30"
+	PaymentTermsNet45     PaymentTerms = "NET_45"
+	PaymentTermsNet60     PaymentTerms = "NET_60"
+	PaymentTermsNet90     PaymentTerms = "NET_90"
+	PaymentTermsOther     PaymentTerms = "OTHER"
+)
+
+func (e PaymentTerms) ToPointer() *PaymentTerms {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentTerms) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_45", "NET_60", "NET_90", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingBillStatus string
 
 const (
@@ -69,7 +100,10 @@ const (
 	TermNet20     Term = "NET_20"
 	TermNet25     Term = "NET_25"
 	TermNet30     Term = "NET_30"
+	TermNet45     Term = "NET_45"
 	TermNet60     Term = "NET_60"
+	TermNet90     Term = "NET_90"
+	TermOther     Term = "OTHER"
 )
 
 func (e Term) ToPointer() *Term {
@@ -80,7 +114,7 @@ func (e Term) ToPointer() *Term {
 func (e *Term) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_60":
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_45", "NET_60", "NET_90", "OTHER":
 			return true
 		}
 	}
@@ -92,6 +126,7 @@ type AccountingBill struct {
 	BalanceAmount           *float64                 `json:"balance_amount,omitempty"`
 	BillNumber              *string                  `json:"bill_number,omitempty"`
 	CancelledAt             *time.Time               `json:"cancelled_at,omitempty"`
+	CategoryIds             []string                 `json:"category_ids,omitempty"`
 	ContactID               *string                  `json:"contact_id,omitempty"`
 	CreatedAt               *time.Time               `json:"created_at,omitempty"`
 	Currency                *string                  `json:"currency,omitempty"`
@@ -104,18 +139,21 @@ type AccountingBill struct {
 	PaidAmount              *float64                 `json:"paid_amount,omitempty"`
 	PaidAt                  *time.Time               `json:"paid_at,omitempty"`
 	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
-	PostedAt                *time.Time               `json:"posted_at,omitempty"`
-	Raw                     map[string]any           `json:"raw,omitempty"`
-	RefundAmount            *float64                 `json:"refund_amount,omitempty"`
-	RefundReason            *string                  `json:"refund_reason,omitempty"`
-	RefundedAt              *time.Time               `json:"refunded_at,omitempty"`
-	Send                    *bool                    `json:"send,omitempty"`
-	Status                  *AccountingBillStatus    `json:"status,omitempty"`
-	TaxAmount               *float64                 `json:"tax_amount,omitempty"`
-	Term                    *Term                    `json:"term,omitempty"`
-	TotalAmount             *float64                 `json:"total_amount,omitempty"`
-	UpdatedAt               *time.Time               `json:"updated_at,omitempty"`
-	URL                     *string                  `json:"url,omitempty"`
+	PaymentTerms            *PaymentTerms            `json:"payment_terms,omitempty"`
+	// read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+	Payments     []AccountingPaymentReference `json:"payments,omitempty"`
+	PostedAt     *time.Time                   `json:"posted_at,omitempty"`
+	Raw          map[string]any               `json:"raw,omitempty"`
+	RefundAmount *float64                     `json:"refund_amount,omitempty"`
+	RefundReason *string                      `json:"refund_reason,omitempty"`
+	RefundedAt   *time.Time                   `json:"refunded_at,omitempty"`
+	Send         *bool                        `json:"send,omitempty"`
+	Status       *AccountingBillStatus        `json:"status,omitempty"`
+	TaxAmount    *float64                     `json:"tax_amount,omitempty"`
+	Term         *Term                        `json:"term,omitempty"`
+	TotalAmount  *float64                     `json:"total_amount,omitempty"`
+	UpdatedAt    *time.Time                   `json:"updated_at,omitempty"`
+	URL          *string                      `json:"url,omitempty"`
 }
 
 func (a AccountingBill) MarshalJSON() ([]byte, error) {
@@ -155,6 +193,13 @@ func (a *AccountingBill) GetCancelledAt() *time.Time {
 		return nil
 	}
 	return a.CancelledAt
+}
+
+func (a *AccountingBill) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingBill) GetContactID() *string {
@@ -239,6 +284,20 @@ func (a *AccountingBill) GetPaymentCollectionMethod() *PaymentCollectionMethod {
 		return nil
 	}
 	return a.PaymentCollectionMethod
+}
+
+func (a *AccountingBill) GetPaymentTerms() *PaymentTerms {
+	if a == nil {
+		return nil
+	}
+	return a.PaymentTerms
+}
+
+func (a *AccountingBill) GetPayments() []AccountingPaymentReference {
+	if a == nil {
+		return nil
+	}
+	return a.Payments
 }
 
 func (a *AccountingBill) GetPostedAt() *time.Time {

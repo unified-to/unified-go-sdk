@@ -30,7 +30,9 @@ func (e *PaymentPaymentType) IsExact() bool {
 }
 
 type PaymentPayment struct {
-	AccountID      *string             `json:"account_id,omitempty"`
+	AccountID *string `json:"account_id,omitempty"`
+	// What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints.
+	Allocations    []PaymentAllocation `json:"allocations,omitempty"`
 	BillID         *string             `json:"bill_id,omitempty"`
 	ContactID      *string             `json:"contact_id,omitempty"`
 	CreatedAt      *time.Time          `json:"created_at,omitempty"`
@@ -64,6 +66,13 @@ func (p *PaymentPayment) GetAccountID() *string {
 		return nil
 	}
 	return p.AccountID
+}
+
+func (p *PaymentPayment) GetAllocations() []PaymentAllocation {
+	if p == nil {
+		return nil
+	}
+	return p.Allocations
 }
 
 func (p *PaymentPayment) GetBillID() *string {

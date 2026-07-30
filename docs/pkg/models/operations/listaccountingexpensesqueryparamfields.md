@@ -38,4 +38,5 @@ value := operations.ListAccountingExpensesQueryParamFieldsID
 | `ListAccountingExpensesQueryParamFieldsApproverUsers`    | approver_users                                           |
 | `ListAccountingExpensesQueryParamFieldsStatus`           | status                                                   |
 | `ListAccountingExpensesQueryParamFieldsExternalNumber`   | external_number                                          |
+| `ListAccountingExpensesQueryParamFieldsCategoryIds`      | category_ids                                             |
 | `ListAccountingExpensesQueryParamFieldsRaw`              | raw                                                      |

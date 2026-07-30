@@ -12,14 +12,16 @@ import (
 type UpdateTaskCommentQueryParamFields string
 
 const (
-	UpdateTaskCommentQueryParamFieldsID        UpdateTaskCommentQueryParamFields = "id"
-	UpdateTaskCommentQueryParamFieldsCreatedAt UpdateTaskCommentQueryParamFields = "created_at"
-	UpdateTaskCommentQueryParamFieldsUpdatedAt UpdateTaskCommentQueryParamFields = "updated_at"
-	UpdateTaskCommentQueryParamFieldsText      UpdateTaskCommentQueryParamFields = "text"
-	UpdateTaskCommentQueryParamFieldsUserID    UpdateTaskCommentQueryParamFields = "user_id"
-	UpdateTaskCommentQueryParamFieldsUserName  UpdateTaskCommentQueryParamFields = "user_name"
-	UpdateTaskCommentQueryParamFieldsTaskID    UpdateTaskCommentQueryParamFields = "task_id"
-	UpdateTaskCommentQueryParamFieldsRaw       UpdateTaskCommentQueryParamFields = "raw"
+	UpdateTaskCommentQueryParamFieldsID          UpdateTaskCommentQueryParamFields = "id"
+	UpdateTaskCommentQueryParamFieldsCreatedAt   UpdateTaskCommentQueryParamFields = "created_at"
+	UpdateTaskCommentQueryParamFieldsUpdatedAt   UpdateTaskCommentQueryParamFields = "updated_at"
+	UpdateTaskCommentQueryParamFieldsText        UpdateTaskCommentQueryParamFields = "text"
+	UpdateTaskCommentQueryParamFieldsUserID      UpdateTaskCommentQueryParamFields = "user_id"
+	UpdateTaskCommentQueryParamFieldsUserName    UpdateTaskCommentQueryParamFields = "user_name"
+	UpdateTaskCommentQueryParamFieldsTaskID      UpdateTaskCommentQueryParamFields = "task_id"
+	UpdateTaskCommentQueryParamFieldsParentID    UpdateTaskCommentQueryParamFields = "parent_id"
+	UpdateTaskCommentQueryParamFieldsHasChildren UpdateTaskCommentQueryParamFields = "has_children"
+	UpdateTaskCommentQueryParamFieldsRaw         UpdateTaskCommentQueryParamFields = "raw"
 )
 
 func (e UpdateTaskCommentQueryParamFields) ToPointer() *UpdateTaskCommentQueryParamFields {
@@ -44,6 +46,10 @@ func (e *UpdateTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_name":
 		fallthrough
 	case "task_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_children":
 		fallthrough
 	case "raw":
 		*e = UpdateTaskCommentQueryParamFields(v)

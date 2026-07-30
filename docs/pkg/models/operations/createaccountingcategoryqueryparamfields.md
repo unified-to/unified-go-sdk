@@ -13,13 +13,16 @@ value := operations.CreateAccountingCategoryQueryParamFieldsID
 
 ## Values
 
-| Name                                                  | Value                                                 |
-| ----------------------------------------------------- | ----------------------------------------------------- |
-| `CreateAccountingCategoryQueryParamFieldsID`          | id                                                    |
-| `CreateAccountingCategoryQueryParamFieldsCreatedAt`   | created_at                                            |
-| `CreateAccountingCategoryQueryParamFieldsUpdatedAt`   | updated_at                                            |
-| `CreateAccountingCategoryQueryParamFieldsName`        | name                                                  |
-| `CreateAccountingCategoryQueryParamFieldsDescription` | description                                           |
-| `CreateAccountingCategoryQueryParamFieldsIsActive`    | is_active                                             |
-| `CreateAccountingCategoryQueryParamFieldsParentID`    | parent_id                                             |
-| `CreateAccountingCategoryQueryParamFieldsRaw`         | raw                                                   |
+| Name                                                     | Value                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| `CreateAccountingCategoryQueryParamFieldsID`             | id                                                       |
+| `CreateAccountingCategoryQueryParamFieldsCreatedAt`      | created_at                                               |
+| `CreateAccountingCategoryQueryParamFieldsUpdatedAt`      | updated_at                                               |
+| `CreateAccountingCategoryQueryParamFieldsName`           | name                                                     |
+| `CreateAccountingCategoryQueryParamFieldsDescription`    | description                                              |
+| `CreateAccountingCategoryQueryParamFieldsIsActive`       | is_active                                                |
+| `CreateAccountingCategoryQueryParamFieldsParentID`       | parent_id                                                |
+| `CreateAccountingCategoryQueryParamFieldsType`           | type                                                     |
+| `CreateAccountingCategoryQueryParamFieldsCode`           | code                                                     |
+| `CreateAccountingCategoryQueryParamFieldsOrganizationID` | organization_id                                          |
+| `CreateAccountingCategoryQueryParamFieldsRaw`            | raw                                                      |

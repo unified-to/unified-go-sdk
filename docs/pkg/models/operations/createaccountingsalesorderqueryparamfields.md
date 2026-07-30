@@ -30,4 +30,5 @@ value := operations.CreateAccountingSalesorderQueryParamFieldsID
 | `CreateAccountingSalesorderQueryParamFieldsSalesChannel`    | sales_channel                                               |
 | `CreateAccountingSalesorderQueryParamFieldsOrganizationID`  | organization_id                                             |
 | `CreateAccountingSalesorderQueryParamFieldsFees`            | fees                                                        |
+| `CreateAccountingSalesorderQueryParamFieldsCategoryIds`     | category_ids                                                |
 | `CreateAccountingSalesorderQueryParamFieldsRaw`             | raw                                                         |

@@ -37,4 +37,5 @@ value := operations.UpdateAccountingContactQueryParamFieldsID
 | `UpdateAccountingContactQueryParamFieldsIdentification`     | identification                                              |
 | `UpdateAccountingContactQueryParamFieldsAssociatedContacts` | associated_contacts                                         |
 | `UpdateAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                             |
+| `UpdateAccountingContactQueryParamFieldsPaymentTerms`       | payment_terms                                               |
 | `UpdateAccountingContactQueryParamFieldsRaw`                | raw                                                         |

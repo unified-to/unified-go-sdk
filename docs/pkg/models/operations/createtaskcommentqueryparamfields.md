@@ -13,13 +13,15 @@ value := operations.CreateTaskCommentQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `CreateTaskCommentQueryParamFieldsID`        | id                                           |
-| `CreateTaskCommentQueryParamFieldsCreatedAt` | created_at                                   |
-| `CreateTaskCommentQueryParamFieldsUpdatedAt` | updated_at                                   |
-| `CreateTaskCommentQueryParamFieldsText`      | text                                         |
-| `CreateTaskCommentQueryParamFieldsUserID`    | user_id                                      |
-| `CreateTaskCommentQueryParamFieldsUserName`  | user_name                                    |
-| `CreateTaskCommentQueryParamFieldsTaskID`    | task_id                                      |
-| `CreateTaskCommentQueryParamFieldsRaw`       | raw                                          |
+| Name                                           | Value                                          |
+| ---------------------------------------------- | ---------------------------------------------- |
+| `CreateTaskCommentQueryParamFieldsID`          | id                                             |
+| `CreateTaskCommentQueryParamFieldsCreatedAt`   | created_at                                     |
+| `CreateTaskCommentQueryParamFieldsUpdatedAt`   | updated_at                                     |
+| `CreateTaskCommentQueryParamFieldsText`        | text                                           |
+| `CreateTaskCommentQueryParamFieldsUserID`      | user_id                                        |
+| `CreateTaskCommentQueryParamFieldsUserName`    | user_name                                      |
+| `CreateTaskCommentQueryParamFieldsTaskID`      | task_id                                        |
+| `CreateTaskCommentQueryParamFieldsParentID`    | parent_id                                      |
+| `CreateTaskCommentQueryParamFieldsHasChildren` | has_children                                   |
+| `CreateTaskCommentQueryParamFieldsRaw`         | raw                                            |

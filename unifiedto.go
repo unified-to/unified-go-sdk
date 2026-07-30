@@ -80,6 +80,7 @@ type UnifiedTo struct {
 	Vendorcredit      *Vendorcredit
 	Ads               *Ads
 	Ad                *Ad
+	Asset             *Asset
 	Campaign          *Campaign
 	Creative          *Creative
 	Group             *Group
@@ -292,9 +293,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.101",
+		SDKVersion: "0.36.102",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.101 2.924.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.102 2.924.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -338,6 +339,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Vendorcredit = newVendorcredit(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ads = newAds(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ad = newAd(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Asset = newAsset(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Campaign = newCampaign(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Creative = newCreative(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)

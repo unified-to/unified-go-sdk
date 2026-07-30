@@ -8,10 +8,12 @@ import (
 )
 
 type AccountingJournal struct {
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Currency    *string    `json:"currency,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
+	Attachments []AccountingAttachment `json:"attachments,omitempty"`
+	CategoryIds []string               `json:"category_ids,omitempty"`
+	CreatedAt   *time.Time             `json:"created_at,omitempty"`
+	Currency    *string                `json:"currency,omitempty"`
+	Description *string                `json:"description,omitempty"`
+	ID          *string                `json:"id,omitempty"`
 	// new field name
 	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	OrganizationID *string                     `json:"organization_id,omitempty"`
@@ -33,6 +35,20 @@ func (a *AccountingJournal) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingJournal) GetAttachments() []AccountingAttachment {
+	if a == nil {
+		return nil
+	}
+	return a.Attachments
+}
+
+func (a *AccountingJournal) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingJournal) GetCreatedAt() *time.Time {

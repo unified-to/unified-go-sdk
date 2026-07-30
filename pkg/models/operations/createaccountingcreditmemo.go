@@ -40,6 +40,7 @@ const (
 	CreateAccountingCreditmemoQueryParamFieldsSend                    CreateAccountingCreditmemoQueryParamFields = "send"
 	CreateAccountingCreditmemoQueryParamFieldsOrganizationID          CreateAccountingCreditmemoQueryParamFields = "organization_id"
 	CreateAccountingCreditmemoQueryParamFieldsApplyAmount             CreateAccountingCreditmemoQueryParamFields = "apply_amount"
+	CreateAccountingCreditmemoQueryParamFieldsApplications            CreateAccountingCreditmemoQueryParamFields = "applications"
 	CreateAccountingCreditmemoQueryParamFieldsRaw                     CreateAccountingCreditmemoQueryParamFields = "raw"
 )
 
@@ -107,6 +108,8 @@ func (e *CreateAccountingCreditmemoQueryParamFields) UnmarshalJSON(data []byte) 
 	case "organization_id":
 		fallthrough
 	case "apply_amount":
+		fallthrough
+	case "applications":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingCreditmemoQueryParamFields(v)

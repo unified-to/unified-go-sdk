@@ -30,4 +30,5 @@ value := operations.CreatePaymentPaymentQueryParamFieldsID
 | `CreatePaymentPaymentQueryParamFieldsAccountID`      | account_id                                           |
 | `CreatePaymentPaymentQueryParamFieldsReference`      | reference                                            |
 | `CreatePaymentPaymentQueryParamFieldsOrganizationID` | organization_id                                      |
+| `CreatePaymentPaymentQueryParamFieldsAllocations`    | allocations                                          |
 | `CreatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |

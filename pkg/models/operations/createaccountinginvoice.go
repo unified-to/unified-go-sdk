@@ -33,6 +33,7 @@ const (
 	CreateAccountingInvoiceQueryParamFieldsNotes                   CreateAccountingInvoiceQueryParamFields = "notes"
 	CreateAccountingInvoiceQueryParamFieldsRefundReason            CreateAccountingInvoiceQueryParamFields = "refund_reason"
 	CreateAccountingInvoiceQueryParamFieldsTerm                    CreateAccountingInvoiceQueryParamFields = "term"
+	CreateAccountingInvoiceQueryParamFieldsPaymentTerms            CreateAccountingInvoiceQueryParamFields = "payment_terms"
 	CreateAccountingInvoiceQueryParamFieldsLineitems               CreateAccountingInvoiceQueryParamFields = "lineitems"
 	CreateAccountingInvoiceQueryParamFieldsStatus                  CreateAccountingInvoiceQueryParamFields = "status"
 	CreateAccountingInvoiceQueryParamFieldsURL                     CreateAccountingInvoiceQueryParamFields = "url"
@@ -41,6 +42,8 @@ const (
 	CreateAccountingInvoiceQueryParamFieldsAttachments             CreateAccountingInvoiceQueryParamFields = "attachments"
 	CreateAccountingInvoiceQueryParamFieldsSend                    CreateAccountingInvoiceQueryParamFields = "send"
 	CreateAccountingInvoiceQueryParamFieldsOrganizationID          CreateAccountingInvoiceQueryParamFields = "organization_id"
+	CreateAccountingInvoiceQueryParamFieldsPayments                CreateAccountingInvoiceQueryParamFields = "payments"
+	CreateAccountingInvoiceQueryParamFieldsCategoryIds             CreateAccountingInvoiceQueryParamFields = "category_ids"
 	CreateAccountingInvoiceQueryParamFieldsRaw                     CreateAccountingInvoiceQueryParamFields = "raw"
 )
 
@@ -95,6 +98,8 @@ func (e *CreateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) err
 		fallthrough
 	case "term":
 		fallthrough
+	case "payment_terms":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -110,6 +115,10 @@ func (e *CreateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) err
 	case "send":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "payments":
+		fallthrough
+	case "category_ids":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingInvoiceQueryParamFields(v)

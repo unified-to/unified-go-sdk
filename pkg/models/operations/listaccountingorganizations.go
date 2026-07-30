@@ -25,6 +25,8 @@ const (
 	ListAccountingOrganizationsQueryParamFieldsParentID           ListAccountingOrganizationsQueryParamFields = "parent_id"
 	ListAccountingOrganizationsQueryParamFieldsFiscalYearEndMonth ListAccountingOrganizationsQueryParamFields = "fiscal_year_end_month"
 	ListAccountingOrganizationsQueryParamFieldsOrganizationCode   ListAccountingOrganizationsQueryParamFields = "organization_code"
+	ListAccountingOrganizationsQueryParamFieldsType               ListAccountingOrganizationsQueryParamFields = "type"
+	ListAccountingOrganizationsQueryParamFieldsIsElimination      ListAccountingOrganizationsQueryParamFields = "is_elimination"
 	ListAccountingOrganizationsQueryParamFieldsRaw                ListAccountingOrganizationsQueryParamFields = "raw"
 )
 
@@ -62,6 +64,10 @@ func (e *ListAccountingOrganizationsQueryParamFields) UnmarshalJSON(data []byte)
 	case "fiscal_year_end_month":
 		fallthrough
 	case "organization_code":
+		fallthrough
+	case "type":
+		fallthrough
+	case "is_elimination":
 		fallthrough
 	case "raw":
 		*e = ListAccountingOrganizationsQueryParamFields(v)

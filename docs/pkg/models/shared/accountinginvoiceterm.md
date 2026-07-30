@@ -25,4 +25,7 @@ custom := shared.AccountingInvoiceTerm("custom_value")
 | `AccountingInvoiceTermNet20`     | NET_20                           |
 | `AccountingInvoiceTermNet25`     | NET_25                           |
 | `AccountingInvoiceTermNet30`     | NET_30                           |
+| `AccountingInvoiceTermNet45`     | NET_45                           |
 | `AccountingInvoiceTermNet60`     | NET_60                           |
+| `AccountingInvoiceTermNet90`     | NET_90                           |
+| `AccountingInvoiceTermOther`     | OTHER                            |

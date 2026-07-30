@@ -38,4 +38,5 @@ value := operations.PatchAccountingExpenseQueryParamFieldsID
 | `PatchAccountingExpenseQueryParamFieldsApproverUsers`    | approver_users                                           |
 | `PatchAccountingExpenseQueryParamFieldsStatus`           | status                                                   |
 | `PatchAccountingExpenseQueryParamFieldsExternalNumber`   | external_number                                          |
+| `PatchAccountingExpenseQueryParamFieldsCategoryIds`      | category_ids                                             |
 | `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |

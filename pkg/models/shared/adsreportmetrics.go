@@ -2,6 +2,30 @@
 
 package shared
 
+type Dimension string
+
+const (
+	DimensionDate             Dimension = "DATE"
+	DimensionPlatform         Dimension = "PLATFORM"
+	DimensionPlatformPosition Dimension = "PLATFORM_POSITION"
+	DimensionDevice           Dimension = "DEVICE"
+)
+
+func (e Dimension) ToPointer() *Dimension {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Dimension) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DATE", "PLATFORM", "PLATFORM_POSITION", "DEVICE":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsReportMetricsType string
 
 const (
@@ -150,11 +174,17 @@ func (e *AdsReportMetricsType) IsExact() bool {
 }
 
 type AdsReportMetrics struct {
-	Ad       *PropertyAdsReportMetricsAd       `json:"ad,omitempty"`
-	Campaign *PropertyAdsReportMetricsCampaign `json:"campaign,omitempty"`
-	Group    *PropertyAdsReportMetricsGroup    `json:"group,omitempty"`
-	Type     *AdsReportMetricsType             `json:"type,omitempty"`
-	Value    *float64                          `json:"value,omitempty"`
+	Ad             *PropertyAdsReportMetricsAd             `json:"ad,omitempty"`
+	Campaign       *PropertyAdsReportMetricsCampaign       `json:"campaign,omitempty"`
+	Creative       *PropertyAdsReportMetricsCreative       `json:"creative,omitempty"`
+	Dimension      *Dimension                              `json:"dimension,omitempty"`
+	DimensionValue *string                                 `json:"dimension_value,omitempty"`
+	Group          *PropertyAdsReportMetricsGroup          `json:"group,omitempty"`
+	Insertionorder *PropertyAdsReportMetricsInsertionorder `json:"insertionorder,omitempty"`
+	Keyword        *PropertyAdsReportMetricsKeyword        `json:"keyword,omitempty"`
+	Placement      *PropertyAdsReportMetricsPlacement      `json:"placement,omitempty"`
+	Type           *AdsReportMetricsType                   `json:"type,omitempty"`
+	Value          *float64                                `json:"value,omitempty"`
 }
 
 func (a *AdsReportMetrics) GetAd() *PropertyAdsReportMetricsAd {
@@ -171,11 +201,53 @@ func (a *AdsReportMetrics) GetCampaign() *PropertyAdsReportMetricsCampaign {
 	return a.Campaign
 }
 
+func (a *AdsReportMetrics) GetCreative() *PropertyAdsReportMetricsCreative {
+	if a == nil {
+		return nil
+	}
+	return a.Creative
+}
+
+func (a *AdsReportMetrics) GetDimension() *Dimension {
+	if a == nil {
+		return nil
+	}
+	return a.Dimension
+}
+
+func (a *AdsReportMetrics) GetDimensionValue() *string {
+	if a == nil {
+		return nil
+	}
+	return a.DimensionValue
+}
+
 func (a *AdsReportMetrics) GetGroup() *PropertyAdsReportMetricsGroup {
 	if a == nil {
 		return nil
 	}
 	return a.Group
+}
+
+func (a *AdsReportMetrics) GetInsertionorder() *PropertyAdsReportMetricsInsertionorder {
+	if a == nil {
+		return nil
+	}
+	return a.Insertionorder
+}
+
+func (a *AdsReportMetrics) GetKeyword() *PropertyAdsReportMetricsKeyword {
+	if a == nil {
+		return nil
+	}
+	return a.Keyword
+}
+
+func (a *AdsReportMetrics) GetPlacement() *PropertyAdsReportMetricsPlacement {
+	if a == nil {
+		return nil
+	}
+	return a.Placement
 }
 
 func (a *AdsReportMetrics) GetType() *AdsReportMetricsType {

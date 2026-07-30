@@ -33,4 +33,5 @@ value := operations.UpdateAccountingTransactionQueryParamFieldsID
 | `UpdateAccountingTransactionQueryParamFieldsCurrency`        | currency                                                     |
 | `UpdateAccountingTransactionQueryParamFieldsContacts`        | contacts                                                     |
 | `UpdateAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                              |
+| `UpdateAccountingTransactionQueryParamFieldsCategoryIds`     | category_ids                                                 |
 | `UpdateAccountingTransactionQueryParamFieldsRaw`             | raw                                                          |

@@ -248,6 +248,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAdsOrganizationWrite`         | ads_organization_write                                      |
 | `PropertyConnectionPermissionsAdsCreativeRead`              | ads_creative_read                                           |
 | `PropertyConnectionPermissionsAdsCreativeWrite`             | ads_creative_write                                          |
+| `PropertyConnectionPermissionsAdsAssetRead`                 | ads_asset_read                                              |
+| `PropertyConnectionPermissionsAdsAssetWrite`                | ads_asset_write                                             |
 | `PropertyConnectionPermissionsAdsInsertionorderRead`        | ads_insertionorder_read                                     |
 | `PropertyConnectionPermissionsAdsInsertionorderWrite`       | ads_insertionorder_write                                    |
 | `PropertyConnectionPermissionsAdsTargetRead`                | ads_target_read                                             |

@@ -40,6 +40,7 @@ type AccountingExpense struct {
 	// expense approver(s); id is HR employee/user when resolved
 	ApproverUsers    []AccountingReference    `json:"approver_users,omitempty"`
 	Attachments      []AccountingAttachment   `json:"attachments,omitempty"`
+	CategoryIds      []string                 `json:"category_ids,omitempty"`
 	ContactID        *string                  `json:"contact_id,omitempty"`
 	CreatedAt        *time.Time               `json:"created_at,omitempty"`
 	Currency         *string                  `json:"currency,omitempty"`
@@ -105,6 +106,13 @@ func (a *AccountingExpense) GetAttachments() []AccountingAttachment {
 		return nil
 	}
 	return a.Attachments
+}
+
+func (a *AccountingExpense) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingExpense) GetContactID() *string {

@@ -33,6 +33,7 @@ const (
 	GetAccountingInvoiceQueryParamFieldsNotes                   GetAccountingInvoiceQueryParamFields = "notes"
 	GetAccountingInvoiceQueryParamFieldsRefundReason            GetAccountingInvoiceQueryParamFields = "refund_reason"
 	GetAccountingInvoiceQueryParamFieldsTerm                    GetAccountingInvoiceQueryParamFields = "term"
+	GetAccountingInvoiceQueryParamFieldsPaymentTerms            GetAccountingInvoiceQueryParamFields = "payment_terms"
 	GetAccountingInvoiceQueryParamFieldsLineitems               GetAccountingInvoiceQueryParamFields = "lineitems"
 	GetAccountingInvoiceQueryParamFieldsStatus                  GetAccountingInvoiceQueryParamFields = "status"
 	GetAccountingInvoiceQueryParamFieldsURL                     GetAccountingInvoiceQueryParamFields = "url"
@@ -41,6 +42,8 @@ const (
 	GetAccountingInvoiceQueryParamFieldsAttachments             GetAccountingInvoiceQueryParamFields = "attachments"
 	GetAccountingInvoiceQueryParamFieldsSend                    GetAccountingInvoiceQueryParamFields = "send"
 	GetAccountingInvoiceQueryParamFieldsOrganizationID          GetAccountingInvoiceQueryParamFields = "organization_id"
+	GetAccountingInvoiceQueryParamFieldsPayments                GetAccountingInvoiceQueryParamFields = "payments"
+	GetAccountingInvoiceQueryParamFieldsCategoryIds             GetAccountingInvoiceQueryParamFields = "category_ids"
 	GetAccountingInvoiceQueryParamFieldsRaw                     GetAccountingInvoiceQueryParamFields = "raw"
 )
 
@@ -95,6 +98,8 @@ func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "term":
 		fallthrough
+	case "payment_terms":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -110,6 +115,10 @@ func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "send":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "payments":
+		fallthrough
+	case "category_ids":
 		fallthrough
 	case "raw":
 		*e = GetAccountingInvoiceQueryParamFields(v)

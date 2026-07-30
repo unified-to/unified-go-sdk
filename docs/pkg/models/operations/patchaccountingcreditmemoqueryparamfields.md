@@ -43,4 +43,5 @@ value := operations.PatchAccountingCreditmemoQueryParamFieldsID
 | `PatchAccountingCreditmemoQueryParamFieldsSend`                    | send                                                               |
 | `PatchAccountingCreditmemoQueryParamFieldsOrganizationID`          | organization_id                                                    |
 | `PatchAccountingCreditmemoQueryParamFieldsApplyAmount`             | apply_amount                                                       |
+| `PatchAccountingCreditmemoQueryParamFieldsApplications`            | applications                                                       |
 | `PatchAccountingCreditmemoQueryParamFieldsRaw`                     | raw                                                                |

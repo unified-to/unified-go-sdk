@@ -2,37 +2,37 @@
 
 package shared
 
-type Dimension string
+type AnalyticsReportMetricsDimension string
 
 const (
-	DimensionDate        Dimension = "DATE"
-	DimensionHour        Dimension = "HOUR"
-	DimensionDayOfWeek   Dimension = "DAY_OF_WEEK"
-	DimensionWeek        Dimension = "WEEK"
-	DimensionMonth       Dimension = "MONTH"
-	DimensionYear        Dimension = "YEAR"
-	DimensionPage        Dimension = "PAGE"
-	DimensionPageTitle   Dimension = "PAGE_TITLE"
-	DimensionEventName   Dimension = "EVENT_NAME"
-	DimensionSource      Dimension = "SOURCE"
-	DimensionMedium      Dimension = "MEDIUM"
-	DimensionCampaign    Dimension = "CAMPAIGN"
-	DimensionCountry     Dimension = "COUNTRY"
-	DimensionCity        Dimension = "CITY"
-	DimensionDeviceType  Dimension = "DEVICE_TYPE"
-	DimensionBrowser     Dimension = "BROWSER"
-	DimensionOs          Dimension = "OS"
-	DimensionUserType    Dimension = "USER_TYPE"
-	DimensionLandingPage Dimension = "LANDING_PAGE"
-	DimensionVideo       Dimension = "VIDEO"
+	AnalyticsReportMetricsDimensionDate        AnalyticsReportMetricsDimension = "DATE"
+	AnalyticsReportMetricsDimensionHour        AnalyticsReportMetricsDimension = "HOUR"
+	AnalyticsReportMetricsDimensionDayOfWeek   AnalyticsReportMetricsDimension = "DAY_OF_WEEK"
+	AnalyticsReportMetricsDimensionWeek        AnalyticsReportMetricsDimension = "WEEK"
+	AnalyticsReportMetricsDimensionMonth       AnalyticsReportMetricsDimension = "MONTH"
+	AnalyticsReportMetricsDimensionYear        AnalyticsReportMetricsDimension = "YEAR"
+	AnalyticsReportMetricsDimensionPage        AnalyticsReportMetricsDimension = "PAGE"
+	AnalyticsReportMetricsDimensionPageTitle   AnalyticsReportMetricsDimension = "PAGE_TITLE"
+	AnalyticsReportMetricsDimensionEventName   AnalyticsReportMetricsDimension = "EVENT_NAME"
+	AnalyticsReportMetricsDimensionSource      AnalyticsReportMetricsDimension = "SOURCE"
+	AnalyticsReportMetricsDimensionMedium      AnalyticsReportMetricsDimension = "MEDIUM"
+	AnalyticsReportMetricsDimensionCampaign    AnalyticsReportMetricsDimension = "CAMPAIGN"
+	AnalyticsReportMetricsDimensionCountry     AnalyticsReportMetricsDimension = "COUNTRY"
+	AnalyticsReportMetricsDimensionCity        AnalyticsReportMetricsDimension = "CITY"
+	AnalyticsReportMetricsDimensionDeviceType  AnalyticsReportMetricsDimension = "DEVICE_TYPE"
+	AnalyticsReportMetricsDimensionBrowser     AnalyticsReportMetricsDimension = "BROWSER"
+	AnalyticsReportMetricsDimensionOs          AnalyticsReportMetricsDimension = "OS"
+	AnalyticsReportMetricsDimensionUserType    AnalyticsReportMetricsDimension = "USER_TYPE"
+	AnalyticsReportMetricsDimensionLandingPage AnalyticsReportMetricsDimension = "LANDING_PAGE"
+	AnalyticsReportMetricsDimensionVideo       AnalyticsReportMetricsDimension = "VIDEO"
 )
 
-func (e Dimension) ToPointer() *Dimension {
+func (e AnalyticsReportMetricsDimension) ToPointer() *AnalyticsReportMetricsDimension {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Dimension) IsExact() bool {
+func (e *AnalyticsReportMetricsDimension) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "DATE", "HOUR", "DAY_OF_WEEK", "WEEK", "MONTH", "YEAR", "PAGE", "PAGE_TITLE", "EVENT_NAME", "SOURCE", "MEDIUM", "CAMPAIGN", "COUNTRY", "CITY", "DEVICE_TYPE", "BROWSER", "OS", "USER_TYPE", "LANDING_PAGE", "VIDEO":
@@ -96,13 +96,13 @@ func (e *AnalyticsReportMetricsType) IsExact() bool {
 }
 
 type AnalyticsReportMetrics struct {
-	Dimension      *Dimension                  `json:"dimension,omitempty"`
-	DimensionValue *string                     `json:"dimension_value,omitempty"`
-	Type           *AnalyticsReportMetricsType `json:"type,omitempty"`
-	Value          *float64                    `json:"value,omitempty"`
+	Dimension      *AnalyticsReportMetricsDimension `json:"dimension,omitempty"`
+	DimensionValue *string                          `json:"dimension_value,omitempty"`
+	Type           *AnalyticsReportMetricsType      `json:"type,omitempty"`
+	Value          *float64                         `json:"value,omitempty"`
 }
 
-func (a *AnalyticsReportMetrics) GetDimension() *Dimension {
+func (a *AnalyticsReportMetrics) GetDimension() *AnalyticsReportMetricsDimension {
 	if a == nil {
 		return nil
 	}

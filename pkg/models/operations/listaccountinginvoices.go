@@ -33,6 +33,7 @@ const (
 	ListAccountingInvoicesQueryParamFieldsNotes                   ListAccountingInvoicesQueryParamFields = "notes"
 	ListAccountingInvoicesQueryParamFieldsRefundReason            ListAccountingInvoicesQueryParamFields = "refund_reason"
 	ListAccountingInvoicesQueryParamFieldsTerm                    ListAccountingInvoicesQueryParamFields = "term"
+	ListAccountingInvoicesQueryParamFieldsPaymentTerms            ListAccountingInvoicesQueryParamFields = "payment_terms"
 	ListAccountingInvoicesQueryParamFieldsLineitems               ListAccountingInvoicesQueryParamFields = "lineitems"
 	ListAccountingInvoicesQueryParamFieldsStatus                  ListAccountingInvoicesQueryParamFields = "status"
 	ListAccountingInvoicesQueryParamFieldsURL                     ListAccountingInvoicesQueryParamFields = "url"
@@ -41,6 +42,8 @@ const (
 	ListAccountingInvoicesQueryParamFieldsAttachments             ListAccountingInvoicesQueryParamFields = "attachments"
 	ListAccountingInvoicesQueryParamFieldsSend                    ListAccountingInvoicesQueryParamFields = "send"
 	ListAccountingInvoicesQueryParamFieldsOrganizationID          ListAccountingInvoicesQueryParamFields = "organization_id"
+	ListAccountingInvoicesQueryParamFieldsPayments                ListAccountingInvoicesQueryParamFields = "payments"
+	ListAccountingInvoicesQueryParamFieldsCategoryIds             ListAccountingInvoicesQueryParamFields = "category_ids"
 	ListAccountingInvoicesQueryParamFieldsRaw                     ListAccountingInvoicesQueryParamFields = "raw"
 )
 
@@ -95,6 +98,8 @@ func (e *ListAccountingInvoicesQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "term":
 		fallthrough
+	case "payment_terms":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -110,6 +115,10 @@ func (e *ListAccountingInvoicesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "send":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "payments":
+		fallthrough
+	case "category_ids":
 		fallthrough
 	case "raw":
 		*e = ListAccountingInvoicesQueryParamFields(v)

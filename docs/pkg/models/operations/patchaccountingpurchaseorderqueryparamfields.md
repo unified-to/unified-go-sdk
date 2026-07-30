@@ -28,4 +28,5 @@ value := operations.PatchAccountingPurchaseorderQueryParamFieldsID
 | `PatchAccountingPurchaseorderQueryParamFieldsStatus`          | status                                                        |
 | `PatchAccountingPurchaseorderQueryParamFieldsLineitems`       | lineitems                                                     |
 | `PatchAccountingPurchaseorderQueryParamFieldsOrganizationID`  | organization_id                                               |
+| `PatchAccountingPurchaseorderQueryParamFieldsCategoryIds`     | category_ids                                                  |
 | `PatchAccountingPurchaseorderQueryParamFieldsRaw`             | raw                                                           |

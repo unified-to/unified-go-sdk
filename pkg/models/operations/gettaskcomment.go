@@ -12,14 +12,16 @@ import (
 type GetTaskCommentQueryParamFields string
 
 const (
-	GetTaskCommentQueryParamFieldsID        GetTaskCommentQueryParamFields = "id"
-	GetTaskCommentQueryParamFieldsCreatedAt GetTaskCommentQueryParamFields = "created_at"
-	GetTaskCommentQueryParamFieldsUpdatedAt GetTaskCommentQueryParamFields = "updated_at"
-	GetTaskCommentQueryParamFieldsText      GetTaskCommentQueryParamFields = "text"
-	GetTaskCommentQueryParamFieldsUserID    GetTaskCommentQueryParamFields = "user_id"
-	GetTaskCommentQueryParamFieldsUserName  GetTaskCommentQueryParamFields = "user_name"
-	GetTaskCommentQueryParamFieldsTaskID    GetTaskCommentQueryParamFields = "task_id"
-	GetTaskCommentQueryParamFieldsRaw       GetTaskCommentQueryParamFields = "raw"
+	GetTaskCommentQueryParamFieldsID          GetTaskCommentQueryParamFields = "id"
+	GetTaskCommentQueryParamFieldsCreatedAt   GetTaskCommentQueryParamFields = "created_at"
+	GetTaskCommentQueryParamFieldsUpdatedAt   GetTaskCommentQueryParamFields = "updated_at"
+	GetTaskCommentQueryParamFieldsText        GetTaskCommentQueryParamFields = "text"
+	GetTaskCommentQueryParamFieldsUserID      GetTaskCommentQueryParamFields = "user_id"
+	GetTaskCommentQueryParamFieldsUserName    GetTaskCommentQueryParamFields = "user_name"
+	GetTaskCommentQueryParamFieldsTaskID      GetTaskCommentQueryParamFields = "task_id"
+	GetTaskCommentQueryParamFieldsParentID    GetTaskCommentQueryParamFields = "parent_id"
+	GetTaskCommentQueryParamFieldsHasChildren GetTaskCommentQueryParamFields = "has_children"
+	GetTaskCommentQueryParamFieldsRaw         GetTaskCommentQueryParamFields = "raw"
 )
 
 func (e GetTaskCommentQueryParamFields) ToPointer() *GetTaskCommentQueryParamFields {
@@ -44,6 +46,10 @@ func (e *GetTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_name":
 		fallthrough
 	case "task_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_children":
 		fallthrough
 	case "raw":
 		*e = GetTaskCommentQueryParamFields(v)

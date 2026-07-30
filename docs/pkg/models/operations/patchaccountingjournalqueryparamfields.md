@@ -27,4 +27,6 @@ value := operations.PatchAccountingJournalQueryParamFieldsID
 | `PatchAccountingJournalQueryParamFieldsPostedAt`       | posted_at                                              |
 | `PatchAccountingJournalQueryParamFieldsSource`         | source                                                 |
 | `PatchAccountingJournalQueryParamFieldsOrganizationID` | organization_id                                        |
+| `PatchAccountingJournalQueryParamFieldsCategoryIds`    | category_ids                                           |
+| `PatchAccountingJournalQueryParamFieldsAttachments`    | attachments                                            |
 | `PatchAccountingJournalQueryParamFieldsRaw`            | raw                                                    |

@@ -12,14 +12,17 @@ import (
 type GetAccountingCategoryQueryParamFields string
 
 const (
-	GetAccountingCategoryQueryParamFieldsID          GetAccountingCategoryQueryParamFields = "id"
-	GetAccountingCategoryQueryParamFieldsCreatedAt   GetAccountingCategoryQueryParamFields = "created_at"
-	GetAccountingCategoryQueryParamFieldsUpdatedAt   GetAccountingCategoryQueryParamFields = "updated_at"
-	GetAccountingCategoryQueryParamFieldsName        GetAccountingCategoryQueryParamFields = "name"
-	GetAccountingCategoryQueryParamFieldsDescription GetAccountingCategoryQueryParamFields = "description"
-	GetAccountingCategoryQueryParamFieldsIsActive    GetAccountingCategoryQueryParamFields = "is_active"
-	GetAccountingCategoryQueryParamFieldsParentID    GetAccountingCategoryQueryParamFields = "parent_id"
-	GetAccountingCategoryQueryParamFieldsRaw         GetAccountingCategoryQueryParamFields = "raw"
+	GetAccountingCategoryQueryParamFieldsID             GetAccountingCategoryQueryParamFields = "id"
+	GetAccountingCategoryQueryParamFieldsCreatedAt      GetAccountingCategoryQueryParamFields = "created_at"
+	GetAccountingCategoryQueryParamFieldsUpdatedAt      GetAccountingCategoryQueryParamFields = "updated_at"
+	GetAccountingCategoryQueryParamFieldsName           GetAccountingCategoryQueryParamFields = "name"
+	GetAccountingCategoryQueryParamFieldsDescription    GetAccountingCategoryQueryParamFields = "description"
+	GetAccountingCategoryQueryParamFieldsIsActive       GetAccountingCategoryQueryParamFields = "is_active"
+	GetAccountingCategoryQueryParamFieldsParentID       GetAccountingCategoryQueryParamFields = "parent_id"
+	GetAccountingCategoryQueryParamFieldsType           GetAccountingCategoryQueryParamFields = "type"
+	GetAccountingCategoryQueryParamFieldsCode           GetAccountingCategoryQueryParamFields = "code"
+	GetAccountingCategoryQueryParamFieldsOrganizationID GetAccountingCategoryQueryParamFields = "organization_id"
+	GetAccountingCategoryQueryParamFieldsRaw            GetAccountingCategoryQueryParamFields = "raw"
 )
 
 func (e GetAccountingCategoryQueryParamFields) ToPointer() *GetAccountingCategoryQueryParamFields {
@@ -44,6 +47,12 @@ func (e *GetAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "code":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = GetAccountingCategoryQueryParamFields(v)

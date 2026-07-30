@@ -13,13 +13,16 @@ value := operations.PatchAccountingCategoryQueryParamFieldsID
 
 ## Values
 
-| Name                                                 | Value                                                |
-| ---------------------------------------------------- | ---------------------------------------------------- |
-| `PatchAccountingCategoryQueryParamFieldsID`          | id                                                   |
-| `PatchAccountingCategoryQueryParamFieldsCreatedAt`   | created_at                                           |
-| `PatchAccountingCategoryQueryParamFieldsUpdatedAt`   | updated_at                                           |
-| `PatchAccountingCategoryQueryParamFieldsName`        | name                                                 |
-| `PatchAccountingCategoryQueryParamFieldsDescription` | description                                          |
-| `PatchAccountingCategoryQueryParamFieldsIsActive`    | is_active                                            |
-| `PatchAccountingCategoryQueryParamFieldsParentID`    | parent_id                                            |
-| `PatchAccountingCategoryQueryParamFieldsRaw`         | raw                                                  |
+| Name                                                    | Value                                                   |
+| ------------------------------------------------------- | ------------------------------------------------------- |
+| `PatchAccountingCategoryQueryParamFieldsID`             | id                                                      |
+| `PatchAccountingCategoryQueryParamFieldsCreatedAt`      | created_at                                              |
+| `PatchAccountingCategoryQueryParamFieldsUpdatedAt`      | updated_at                                              |
+| `PatchAccountingCategoryQueryParamFieldsName`           | name                                                    |
+| `PatchAccountingCategoryQueryParamFieldsDescription`    | description                                             |
+| `PatchAccountingCategoryQueryParamFieldsIsActive`       | is_active                                               |
+| `PatchAccountingCategoryQueryParamFieldsParentID`       | parent_id                                               |
+| `PatchAccountingCategoryQueryParamFieldsType`           | type                                                    |
+| `PatchAccountingCategoryQueryParamFieldsCode`           | code                                                    |
+| `PatchAccountingCategoryQueryParamFieldsOrganizationID` | organization_id                                         |
+| `PatchAccountingCategoryQueryParamFieldsRaw`            | raw                                                     |

@@ -12,14 +12,17 @@ import (
 type CreateAccountingCategoryQueryParamFields string
 
 const (
-	CreateAccountingCategoryQueryParamFieldsID          CreateAccountingCategoryQueryParamFields = "id"
-	CreateAccountingCategoryQueryParamFieldsCreatedAt   CreateAccountingCategoryQueryParamFields = "created_at"
-	CreateAccountingCategoryQueryParamFieldsUpdatedAt   CreateAccountingCategoryQueryParamFields = "updated_at"
-	CreateAccountingCategoryQueryParamFieldsName        CreateAccountingCategoryQueryParamFields = "name"
-	CreateAccountingCategoryQueryParamFieldsDescription CreateAccountingCategoryQueryParamFields = "description"
-	CreateAccountingCategoryQueryParamFieldsIsActive    CreateAccountingCategoryQueryParamFields = "is_active"
-	CreateAccountingCategoryQueryParamFieldsParentID    CreateAccountingCategoryQueryParamFields = "parent_id"
-	CreateAccountingCategoryQueryParamFieldsRaw         CreateAccountingCategoryQueryParamFields = "raw"
+	CreateAccountingCategoryQueryParamFieldsID             CreateAccountingCategoryQueryParamFields = "id"
+	CreateAccountingCategoryQueryParamFieldsCreatedAt      CreateAccountingCategoryQueryParamFields = "created_at"
+	CreateAccountingCategoryQueryParamFieldsUpdatedAt      CreateAccountingCategoryQueryParamFields = "updated_at"
+	CreateAccountingCategoryQueryParamFieldsName           CreateAccountingCategoryQueryParamFields = "name"
+	CreateAccountingCategoryQueryParamFieldsDescription    CreateAccountingCategoryQueryParamFields = "description"
+	CreateAccountingCategoryQueryParamFieldsIsActive       CreateAccountingCategoryQueryParamFields = "is_active"
+	CreateAccountingCategoryQueryParamFieldsParentID       CreateAccountingCategoryQueryParamFields = "parent_id"
+	CreateAccountingCategoryQueryParamFieldsType           CreateAccountingCategoryQueryParamFields = "type"
+	CreateAccountingCategoryQueryParamFieldsCode           CreateAccountingCategoryQueryParamFields = "code"
+	CreateAccountingCategoryQueryParamFieldsOrganizationID CreateAccountingCategoryQueryParamFields = "organization_id"
+	CreateAccountingCategoryQueryParamFieldsRaw            CreateAccountingCategoryQueryParamFields = "raw"
 )
 
 func (e CreateAccountingCategoryQueryParamFields) ToPointer() *CreateAccountingCategoryQueryParamFields {
@@ -44,6 +47,12 @@ func (e *CreateAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) er
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "code":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingCategoryQueryParamFields(v)

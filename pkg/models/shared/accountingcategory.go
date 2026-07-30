@@ -7,15 +7,46 @@ import (
 	"time"
 )
 
+type AccountingCategoryType string
+
+const (
+	AccountingCategoryTypeClass      AccountingCategoryType = "CLASS"
+	AccountingCategoryTypeDepartment AccountingCategoryType = "DEPARTMENT"
+	AccountingCategoryTypeLocation   AccountingCategoryType = "LOCATION"
+	AccountingCategoryTypeProject    AccountingCategoryType = "PROJECT"
+	AccountingCategoryTypeTask       AccountingCategoryType = "TASK"
+	AccountingCategoryTypeCustom     AccountingCategoryType = "CUSTOM"
+	AccountingCategoryTypeExpense    AccountingCategoryType = "EXPENSE"
+	AccountingCategoryTypeIncome     AccountingCategoryType = "INCOME"
+)
+
+func (e AccountingCategoryType) ToPointer() *AccountingCategoryType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingCategoryType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CLASS", "DEPARTMENT", "LOCATION", "PROJECT", "TASK", "CUSTOM", "EXPENSE", "INCOME":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingCategory struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	ParentID    *string        `json:"parent_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	Code           *string                 `json:"code,omitempty"`
+	CreatedAt      *time.Time              `json:"created_at,omitempty"`
+	Description    *string                 `json:"description,omitempty"`
+	ID             *string                 `json:"id,omitempty"`
+	IsActive       *bool                   `json:"is_active,omitempty"`
+	Name           *string                 `json:"name,omitempty"`
+	OrganizationID *string                 `json:"organization_id,omitempty"`
+	ParentID       *string                 `json:"parent_id,omitempty"`
+	Raw            map[string]any          `json:"raw,omitempty"`
+	Type           *AccountingCategoryType `json:"type,omitempty"`
+	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
 }
 
 func (a AccountingCategory) MarshalJSON() ([]byte, error) {
@@ -27,6 +58,13 @@ func (a *AccountingCategory) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingCategory) GetCode() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Code
 }
 
 func (a *AccountingCategory) GetCreatedAt() *time.Time {
@@ -64,6 +102,13 @@ func (a *AccountingCategory) GetName() *string {
 	return a.Name
 }
 
+func (a *AccountingCategory) GetOrganizationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrganizationID
+}
+
 func (a *AccountingCategory) GetParentID() *string {
 	if a == nil {
 		return nil
@@ -76,6 +121,13 @@ func (a *AccountingCategory) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AccountingCategory) GetType() *AccountingCategoryType {
+	if a == nil {
+		return nil
+	}
+	return a.Type
 }
 
 func (a *AccountingCategory) GetUpdatedAt() *time.Time {

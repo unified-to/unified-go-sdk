@@ -63,6 +63,8 @@ type ListAdsReportsRequest struct {
 	CampaignID *string `queryParam:"style=form,explode=true,name=campaign_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+	Dimension *string `queryParam:"style=form,explode=true,name=dimension"`
 	// The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndLt *string `queryParam:"style=form,explode=true,name=end_lt"`
 	// Fields to return
@@ -106,6 +108,13 @@ func (l *ListAdsReportsRequest) GetConnectionID() string {
 		return ""
 	}
 	return l.ConnectionID
+}
+
+func (l *ListAdsReportsRequest) GetDimension() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Dimension
 }
 
 func (l *ListAdsReportsRequest) GetEndLt() *string {

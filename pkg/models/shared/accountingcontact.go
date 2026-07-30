@@ -7,6 +7,37 @@ import (
 	"time"
 )
 
+type AccountingContactPaymentTerms string
+
+const (
+	AccountingContactPaymentTermsOnReceipt AccountingContactPaymentTerms = "ON_RECEIPT"
+	AccountingContactPaymentTermsNet7      AccountingContactPaymentTerms = "NET_7"
+	AccountingContactPaymentTermsNet10     AccountingContactPaymentTerms = "NET_10"
+	AccountingContactPaymentTermsNet15     AccountingContactPaymentTerms = "NET_15"
+	AccountingContactPaymentTermsNet20     AccountingContactPaymentTerms = "NET_20"
+	AccountingContactPaymentTermsNet25     AccountingContactPaymentTerms = "NET_25"
+	AccountingContactPaymentTermsNet30     AccountingContactPaymentTerms = "NET_30"
+	AccountingContactPaymentTermsNet45     AccountingContactPaymentTerms = "NET_45"
+	AccountingContactPaymentTermsNet60     AccountingContactPaymentTerms = "NET_60"
+	AccountingContactPaymentTermsNet90     AccountingContactPaymentTerms = "NET_90"
+	AccountingContactPaymentTermsOther     AccountingContactPaymentTerms = "OTHER"
+)
+
+func (e AccountingContactPaymentTerms) ToPointer() *AccountingContactPaymentTerms {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingContactPaymentTerms) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_45", "NET_60", "NET_90", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type TaxExemption string
 
 const (
@@ -55,6 +86,7 @@ type AccountingContact struct {
 	Name               *string                                   `json:"name,omitempty"`
 	OrganizationID     *string                                   `json:"organization_id,omitempty"`
 	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
+	PaymentTerms       *AccountingContactPaymentTerms            `json:"payment_terms,omitempty"`
 	PortalURL          *string                                   `json:"portal_url,omitempty"`
 	Raw                map[string]any                            `json:"raw,omitempty"`
 	ShippingAddress    *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
@@ -185,6 +217,13 @@ func (a *AccountingContact) GetPaymentMethods() []AccountingContactPaymentMethod
 		return nil
 	}
 	return a.PaymentMethods
+}
+
+func (a *AccountingContact) GetPaymentTerms() *AccountingContactPaymentTerms {
+	if a == nil {
+		return nil
+	}
+	return a.PaymentTerms
 }
 
 func (a *AccountingContact) GetPortalURL() *string {

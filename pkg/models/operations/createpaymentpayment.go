@@ -27,6 +27,7 @@ const (
 	CreatePaymentPaymentQueryParamFieldsAccountID      CreatePaymentPaymentQueryParamFields = "account_id"
 	CreatePaymentPaymentQueryParamFieldsReference      CreatePaymentPaymentQueryParamFields = "reference"
 	CreatePaymentPaymentQueryParamFieldsOrganizationID CreatePaymentPaymentQueryParamFields = "organization_id"
+	CreatePaymentPaymentQueryParamFieldsAllocations    CreatePaymentPaymentQueryParamFields = "allocations"
 	CreatePaymentPaymentQueryParamFieldsRaw            CreatePaymentPaymentQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *CreatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "reference":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "allocations":
 		fallthrough
 	case "raw":
 		*e = CreatePaymentPaymentQueryParamFields(v)

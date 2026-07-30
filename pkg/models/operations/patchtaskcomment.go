@@ -12,14 +12,16 @@ import (
 type PatchTaskCommentQueryParamFields string
 
 const (
-	PatchTaskCommentQueryParamFieldsID        PatchTaskCommentQueryParamFields = "id"
-	PatchTaskCommentQueryParamFieldsCreatedAt PatchTaskCommentQueryParamFields = "created_at"
-	PatchTaskCommentQueryParamFieldsUpdatedAt PatchTaskCommentQueryParamFields = "updated_at"
-	PatchTaskCommentQueryParamFieldsText      PatchTaskCommentQueryParamFields = "text"
-	PatchTaskCommentQueryParamFieldsUserID    PatchTaskCommentQueryParamFields = "user_id"
-	PatchTaskCommentQueryParamFieldsUserName  PatchTaskCommentQueryParamFields = "user_name"
-	PatchTaskCommentQueryParamFieldsTaskID    PatchTaskCommentQueryParamFields = "task_id"
-	PatchTaskCommentQueryParamFieldsRaw       PatchTaskCommentQueryParamFields = "raw"
+	PatchTaskCommentQueryParamFieldsID          PatchTaskCommentQueryParamFields = "id"
+	PatchTaskCommentQueryParamFieldsCreatedAt   PatchTaskCommentQueryParamFields = "created_at"
+	PatchTaskCommentQueryParamFieldsUpdatedAt   PatchTaskCommentQueryParamFields = "updated_at"
+	PatchTaskCommentQueryParamFieldsText        PatchTaskCommentQueryParamFields = "text"
+	PatchTaskCommentQueryParamFieldsUserID      PatchTaskCommentQueryParamFields = "user_id"
+	PatchTaskCommentQueryParamFieldsUserName    PatchTaskCommentQueryParamFields = "user_name"
+	PatchTaskCommentQueryParamFieldsTaskID      PatchTaskCommentQueryParamFields = "task_id"
+	PatchTaskCommentQueryParamFieldsParentID    PatchTaskCommentQueryParamFields = "parent_id"
+	PatchTaskCommentQueryParamFieldsHasChildren PatchTaskCommentQueryParamFields = "has_children"
+	PatchTaskCommentQueryParamFieldsRaw         PatchTaskCommentQueryParamFields = "raw"
 )
 
 func (e PatchTaskCommentQueryParamFields) ToPointer() *PatchTaskCommentQueryParamFields {
@@ -44,6 +46,10 @@ func (e *PatchTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_name":
 		fallthrough
 	case "task_id":
+		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_children":
 		fallthrough
 	case "raw":
 		*e = PatchTaskCommentQueryParamFields(v)

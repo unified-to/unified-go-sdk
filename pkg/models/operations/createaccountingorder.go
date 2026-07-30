@@ -25,6 +25,7 @@ const (
 	CreateAccountingOrderQueryParamFieldsBillingAddress  CreateAccountingOrderQueryParamFields = "billing_address"
 	CreateAccountingOrderQueryParamFieldsStatus          CreateAccountingOrderQueryParamFields = "status"
 	CreateAccountingOrderQueryParamFieldsLineitems       CreateAccountingOrderQueryParamFields = "lineitems"
+	CreateAccountingOrderQueryParamFieldsOrganizationID  CreateAccountingOrderQueryParamFields = "organization_id"
 	CreateAccountingOrderQueryParamFieldsRaw             CreateAccountingOrderQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *CreateAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error
 	case "status":
 		fallthrough
 	case "lineitems":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingOrderQueryParamFields(v)

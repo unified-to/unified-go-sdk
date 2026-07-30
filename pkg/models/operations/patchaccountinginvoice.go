@@ -33,6 +33,7 @@ const (
 	PatchAccountingInvoiceQueryParamFieldsNotes                   PatchAccountingInvoiceQueryParamFields = "notes"
 	PatchAccountingInvoiceQueryParamFieldsRefundReason            PatchAccountingInvoiceQueryParamFields = "refund_reason"
 	PatchAccountingInvoiceQueryParamFieldsTerm                    PatchAccountingInvoiceQueryParamFields = "term"
+	PatchAccountingInvoiceQueryParamFieldsPaymentTerms            PatchAccountingInvoiceQueryParamFields = "payment_terms"
 	PatchAccountingInvoiceQueryParamFieldsLineitems               PatchAccountingInvoiceQueryParamFields = "lineitems"
 	PatchAccountingInvoiceQueryParamFieldsStatus                  PatchAccountingInvoiceQueryParamFields = "status"
 	PatchAccountingInvoiceQueryParamFieldsURL                     PatchAccountingInvoiceQueryParamFields = "url"
@@ -41,6 +42,8 @@ const (
 	PatchAccountingInvoiceQueryParamFieldsAttachments             PatchAccountingInvoiceQueryParamFields = "attachments"
 	PatchAccountingInvoiceQueryParamFieldsSend                    PatchAccountingInvoiceQueryParamFields = "send"
 	PatchAccountingInvoiceQueryParamFieldsOrganizationID          PatchAccountingInvoiceQueryParamFields = "organization_id"
+	PatchAccountingInvoiceQueryParamFieldsPayments                PatchAccountingInvoiceQueryParamFields = "payments"
+	PatchAccountingInvoiceQueryParamFieldsCategoryIds             PatchAccountingInvoiceQueryParamFields = "category_ids"
 	PatchAccountingInvoiceQueryParamFieldsRaw                     PatchAccountingInvoiceQueryParamFields = "raw"
 )
 
@@ -95,6 +98,8 @@ func (e *PatchAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "term":
 		fallthrough
+	case "payment_terms":
+		fallthrough
 	case "lineitems":
 		fallthrough
 	case "status":
@@ -110,6 +115,10 @@ func (e *PatchAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "send":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "payments":
+		fallthrough
+	case "category_ids":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingInvoiceQueryParamFields(v)

@@ -12,14 +12,17 @@ import (
 type ListAccountingCategoriesQueryParamFields string
 
 const (
-	ListAccountingCategoriesQueryParamFieldsID          ListAccountingCategoriesQueryParamFields = "id"
-	ListAccountingCategoriesQueryParamFieldsCreatedAt   ListAccountingCategoriesQueryParamFields = "created_at"
-	ListAccountingCategoriesQueryParamFieldsUpdatedAt   ListAccountingCategoriesQueryParamFields = "updated_at"
-	ListAccountingCategoriesQueryParamFieldsName        ListAccountingCategoriesQueryParamFields = "name"
-	ListAccountingCategoriesQueryParamFieldsDescription ListAccountingCategoriesQueryParamFields = "description"
-	ListAccountingCategoriesQueryParamFieldsIsActive    ListAccountingCategoriesQueryParamFields = "is_active"
-	ListAccountingCategoriesQueryParamFieldsParentID    ListAccountingCategoriesQueryParamFields = "parent_id"
-	ListAccountingCategoriesQueryParamFieldsRaw         ListAccountingCategoriesQueryParamFields = "raw"
+	ListAccountingCategoriesQueryParamFieldsID             ListAccountingCategoriesQueryParamFields = "id"
+	ListAccountingCategoriesQueryParamFieldsCreatedAt      ListAccountingCategoriesQueryParamFields = "created_at"
+	ListAccountingCategoriesQueryParamFieldsUpdatedAt      ListAccountingCategoriesQueryParamFields = "updated_at"
+	ListAccountingCategoriesQueryParamFieldsName           ListAccountingCategoriesQueryParamFields = "name"
+	ListAccountingCategoriesQueryParamFieldsDescription    ListAccountingCategoriesQueryParamFields = "description"
+	ListAccountingCategoriesQueryParamFieldsIsActive       ListAccountingCategoriesQueryParamFields = "is_active"
+	ListAccountingCategoriesQueryParamFieldsParentID       ListAccountingCategoriesQueryParamFields = "parent_id"
+	ListAccountingCategoriesQueryParamFieldsType           ListAccountingCategoriesQueryParamFields = "type"
+	ListAccountingCategoriesQueryParamFieldsCode           ListAccountingCategoriesQueryParamFields = "code"
+	ListAccountingCategoriesQueryParamFieldsOrganizationID ListAccountingCategoriesQueryParamFields = "organization_id"
+	ListAccountingCategoriesQueryParamFieldsRaw            ListAccountingCategoriesQueryParamFields = "raw"
 )
 
 func (e ListAccountingCategoriesQueryParamFields) ToPointer() *ListAccountingCategoriesQueryParamFields {
@@ -44,6 +47,12 @@ func (e *ListAccountingCategoriesQueryParamFields) UnmarshalJSON(data []byte) er
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "type":
+		fallthrough
+	case "code":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "raw":
 		*e = ListAccountingCategoriesQueryParamFields(v)

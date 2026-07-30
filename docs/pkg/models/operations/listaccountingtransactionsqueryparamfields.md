@@ -33,4 +33,5 @@ value := operations.ListAccountingTransactionsQueryParamFieldsID
 | `ListAccountingTransactionsQueryParamFieldsCurrency`        | currency                                                    |
 | `ListAccountingTransactionsQueryParamFieldsContacts`        | contacts                                                    |
 | `ListAccountingTransactionsQueryParamFieldsOrganizationID`  | organization_id                                             |
+| `ListAccountingTransactionsQueryParamFieldsCategoryIds`     | category_ids                                                |
 | `ListAccountingTransactionsQueryParamFieldsRaw`             | raw                                                         |

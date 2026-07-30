@@ -60,6 +60,8 @@ func (e *AccountingCreditmemoStatus) IsExact() bool {
 }
 
 type AccountingCreditmemo struct {
+	// What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+	Applications            []AccountingCreditApplication                `json:"applications,omitempty"`
 	ApplyAmount             *float64                                     `json:"apply_amount,omitempty"`
 	Attachments             []AccountingAttachment                       `json:"attachments,omitempty"`
 	BalanceAmount           *float64                                     `json:"balance_amount,omitempty"`
@@ -100,6 +102,13 @@ func (a *AccountingCreditmemo) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingCreditmemo) GetApplications() []AccountingCreditApplication {
+	if a == nil {
+		return nil
+	}
+	return a.Applications
 }
 
 func (a *AccountingCreditmemo) GetApplyAmount() *float64 {

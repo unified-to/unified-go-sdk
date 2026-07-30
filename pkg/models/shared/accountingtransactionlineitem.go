@@ -4,6 +4,7 @@ package shared
 
 type AccountingTransactionLineItem struct {
 	AccountID    *string  `json:"account_id,omitempty"`
+	CategoryIds  []string `json:"category_ids,omitempty"`
 	Description  *string  `json:"description,omitempty"`
 	ID           *string  `json:"id,omitempty"`
 	Name         *string  `json:"name,omitempty"`
@@ -18,6 +19,13 @@ func (a *AccountingTransactionLineItem) GetAccountID() *string {
 		return nil
 	}
 	return a.AccountID
+}
+
+func (a *AccountingTransactionLineItem) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingTransactionLineItem) GetDescription() *string {

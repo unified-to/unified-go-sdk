@@ -27,4 +27,6 @@ value := operations.GetAccountingJournalQueryParamFieldsID
 | `GetAccountingJournalQueryParamFieldsPostedAt`       | posted_at                                            |
 | `GetAccountingJournalQueryParamFieldsSource`         | source                                               |
 | `GetAccountingJournalQueryParamFieldsOrganizationID` | organization_id                                      |
+| `GetAccountingJournalQueryParamFieldsCategoryIds`    | category_ids                                         |
+| `GetAccountingJournalQueryParamFieldsAttachments`    | attachments                                          |
 | `GetAccountingJournalQueryParamFieldsRaw`            | raw                                                  |

@@ -29,6 +29,37 @@ func (e *AccountingInvoicePaymentCollectionMethod) IsExact() bool {
 	return false
 }
 
+type AccountingInvoicePaymentTerms string
+
+const (
+	AccountingInvoicePaymentTermsOnReceipt AccountingInvoicePaymentTerms = "ON_RECEIPT"
+	AccountingInvoicePaymentTermsNet7      AccountingInvoicePaymentTerms = "NET_7"
+	AccountingInvoicePaymentTermsNet10     AccountingInvoicePaymentTerms = "NET_10"
+	AccountingInvoicePaymentTermsNet15     AccountingInvoicePaymentTerms = "NET_15"
+	AccountingInvoicePaymentTermsNet20     AccountingInvoicePaymentTerms = "NET_20"
+	AccountingInvoicePaymentTermsNet25     AccountingInvoicePaymentTerms = "NET_25"
+	AccountingInvoicePaymentTermsNet30     AccountingInvoicePaymentTerms = "NET_30"
+	AccountingInvoicePaymentTermsNet45     AccountingInvoicePaymentTerms = "NET_45"
+	AccountingInvoicePaymentTermsNet60     AccountingInvoicePaymentTerms = "NET_60"
+	AccountingInvoicePaymentTermsNet90     AccountingInvoicePaymentTerms = "NET_90"
+	AccountingInvoicePaymentTermsOther     AccountingInvoicePaymentTerms = "OTHER"
+)
+
+func (e AccountingInvoicePaymentTerms) ToPointer() *AccountingInvoicePaymentTerms {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingInvoicePaymentTerms) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_45", "NET_60", "NET_90", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingInvoiceStatus string
 
 const (
@@ -69,7 +100,10 @@ const (
 	AccountingInvoiceTermNet20     AccountingInvoiceTerm = "NET_20"
 	AccountingInvoiceTermNet25     AccountingInvoiceTerm = "NET_25"
 	AccountingInvoiceTermNet30     AccountingInvoiceTerm = "NET_30"
+	AccountingInvoiceTermNet45     AccountingInvoiceTerm = "NET_45"
 	AccountingInvoiceTermNet60     AccountingInvoiceTerm = "NET_60"
+	AccountingInvoiceTermNet90     AccountingInvoiceTerm = "NET_90"
+	AccountingInvoiceTermOther     AccountingInvoiceTerm = "OTHER"
 )
 
 func (e AccountingInvoiceTerm) ToPointer() *AccountingInvoiceTerm {
@@ -80,7 +114,7 @@ func (e AccountingInvoiceTerm) ToPointer() *AccountingInvoiceTerm {
 func (e *AccountingInvoiceTerm) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_60":
+		case "ON_RECEIPT", "NET_7", "NET_10", "NET_15", "NET_20", "NET_25", "NET_30", "NET_45", "NET_60", "NET_90", "OTHER":
 			return true
 		}
 	}
@@ -114,6 +148,7 @@ type AccountingInvoice struct {
 	Attachments             []AccountingAttachment                    `json:"attachments,omitempty"`
 	BalanceAmount           *float64                                  `json:"balance_amount,omitempty"`
 	CancelledAt             *time.Time                                `json:"cancelled_at,omitempty"`
+	CategoryIds             []string                                  `json:"category_ids,omitempty"`
 	ContactID               *string                                   `json:"contact_id,omitempty"`
 	CreatedAt               *time.Time                                `json:"created_at,omitempty"`
 	Currency                *string                                   `json:"currency,omitempty"`
@@ -127,20 +162,23 @@ type AccountingInvoice struct {
 	PaidAmount              *float64                                  `json:"paid_amount,omitempty"`
 	PaidAt                  *time.Time                                `json:"paid_at,omitempty"`
 	PaymentCollectionMethod *AccountingInvoicePaymentCollectionMethod `json:"payment_collection_method,omitempty"`
-	PostedAt                *time.Time                                `json:"posted_at,omitempty"`
-	Raw                     map[string]any                            `json:"raw,omitempty"`
-	Reference               *string                                   `json:"reference,omitempty"`
-	RefundAmount            *float64                                  `json:"refund_amount,omitempty"`
-	RefundReason            *string                                   `json:"refund_reason,omitempty"`
-	RefundedAt              *time.Time                                `json:"refunded_at,omitempty"`
-	Send                    *bool                                     `json:"send,omitempty"`
-	Status                  *AccountingInvoiceStatus                  `json:"status,omitempty"`
-	TaxAmount               *float64                                  `json:"tax_amount,omitempty"`
-	Term                    *AccountingInvoiceTerm                    `json:"term,omitempty"`
-	TotalAmount             *float64                                  `json:"total_amount,omitempty"`
-	Type                    *AccountingInvoiceType                    `json:"type,omitempty"`
-	UpdatedAt               *time.Time                                `json:"updated_at,omitempty"`
-	URL                     *string                                   `json:"url,omitempty"`
+	PaymentTerms            *AccountingInvoicePaymentTerms            `json:"payment_terms,omitempty"`
+	// ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+	Payments     []AccountingPaymentReference `json:"payments,omitempty"`
+	PostedAt     *time.Time                   `json:"posted_at,omitempty"`
+	Raw          map[string]any               `json:"raw,omitempty"`
+	Reference    *string                      `json:"reference,omitempty"`
+	RefundAmount *float64                     `json:"refund_amount,omitempty"`
+	RefundReason *string                      `json:"refund_reason,omitempty"`
+	RefundedAt   *time.Time                   `json:"refunded_at,omitempty"`
+	Send         *bool                        `json:"send,omitempty"`
+	Status       *AccountingInvoiceStatus     `json:"status,omitempty"`
+	TaxAmount    *float64                     `json:"tax_amount,omitempty"`
+	Term         *AccountingInvoiceTerm       `json:"term,omitempty"`
+	TotalAmount  *float64                     `json:"total_amount,omitempty"`
+	Type         *AccountingInvoiceType       `json:"type,omitempty"`
+	UpdatedAt    *time.Time                   `json:"updated_at,omitempty"`
+	URL          *string                      `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -173,6 +211,13 @@ func (a *AccountingInvoice) GetCancelledAt() *time.Time {
 		return nil
 	}
 	return a.CancelledAt
+}
+
+func (a *AccountingInvoice) GetCategoryIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.CategoryIds
 }
 
 func (a *AccountingInvoice) GetContactID() *string {
@@ -264,6 +309,20 @@ func (a *AccountingInvoice) GetPaymentCollectionMethod() *AccountingInvoicePayme
 		return nil
 	}
 	return a.PaymentCollectionMethod
+}
+
+func (a *AccountingInvoice) GetPaymentTerms() *AccountingInvoicePaymentTerms {
+	if a == nil {
+		return nil
+	}
+	return a.PaymentTerms
+}
+
+func (a *AccountingInvoice) GetPayments() []AccountingPaymentReference {
+	if a == nil {
+		return nil
+	}
+	return a.Payments
 }
 
 func (a *AccountingInvoice) GetPostedAt() *time.Time {

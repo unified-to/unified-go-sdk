@@ -31,4 +31,5 @@ value := operations.GetAccountingVendorcreditQueryParamFieldsID
 | `GetAccountingVendorcreditQueryParamFieldsStatus`         | status                                                    |
 | `GetAccountingVendorcreditQueryParamFieldsOrganizationID` | organization_id                                           |
 | `GetAccountingVendorcreditQueryParamFieldsApplyAmount`    | apply_amount                                              |
+| `GetAccountingVendorcreditQueryParamFieldsApplications`   | applications                                              |
 | `GetAccountingVendorcreditQueryParamFieldsRaw`            | raw                                                       |

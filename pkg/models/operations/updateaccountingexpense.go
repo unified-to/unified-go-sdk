@@ -35,6 +35,7 @@ const (
 	UpdateAccountingExpenseQueryParamFieldsApproverUsers    UpdateAccountingExpenseQueryParamFields = "approver_users"
 	UpdateAccountingExpenseQueryParamFieldsStatus           UpdateAccountingExpenseQueryParamFields = "status"
 	UpdateAccountingExpenseQueryParamFieldsExternalNumber   UpdateAccountingExpenseQueryParamFields = "external_number"
+	UpdateAccountingExpenseQueryParamFieldsCategoryIds      UpdateAccountingExpenseQueryParamFields = "category_ids"
 	UpdateAccountingExpenseQueryParamFieldsRaw              UpdateAccountingExpenseQueryParamFields = "raw"
 )
 
@@ -92,6 +93,8 @@ func (e *UpdateAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) err
 	case "status":
 		fallthrough
 	case "external_number":
+		fallthrough
+	case "category_ids":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingExpenseQueryParamFields(v)

@@ -12,14 +12,16 @@ import (
 type ListTaskCommentsQueryParamFields string
 
 const (
-	ListTaskCommentsQueryParamFieldsID        ListTaskCommentsQueryParamFields = "id"
-	ListTaskCommentsQueryParamFieldsCreatedAt ListTaskCommentsQueryParamFields = "created_at"
-	ListTaskCommentsQueryParamFieldsUpdatedAt ListTaskCommentsQueryParamFields = "updated_at"
-	ListTaskCommentsQueryParamFieldsText      ListTaskCommentsQueryParamFields = "text"
-	ListTaskCommentsQueryParamFieldsUserID    ListTaskCommentsQueryParamFields = "user_id"
-	ListTaskCommentsQueryParamFieldsUserName  ListTaskCommentsQueryParamFields = "user_name"
-	ListTaskCommentsQueryParamFieldsTaskID    ListTaskCommentsQueryParamFields = "task_id"
-	ListTaskCommentsQueryParamFieldsRaw       ListTaskCommentsQueryParamFields = "raw"
+	ListTaskCommentsQueryParamFieldsID          ListTaskCommentsQueryParamFields = "id"
+	ListTaskCommentsQueryParamFieldsCreatedAt   ListTaskCommentsQueryParamFields = "created_at"
+	ListTaskCommentsQueryParamFieldsUpdatedAt   ListTaskCommentsQueryParamFields = "updated_at"
+	ListTaskCommentsQueryParamFieldsText        ListTaskCommentsQueryParamFields = "text"
+	ListTaskCommentsQueryParamFieldsUserID      ListTaskCommentsQueryParamFields = "user_id"
+	ListTaskCommentsQueryParamFieldsUserName    ListTaskCommentsQueryParamFields = "user_name"
+	ListTaskCommentsQueryParamFieldsTaskID      ListTaskCommentsQueryParamFields = "task_id"
+	ListTaskCommentsQueryParamFieldsParentID    ListTaskCommentsQueryParamFields = "parent_id"
+	ListTaskCommentsQueryParamFieldsHasChildren ListTaskCommentsQueryParamFields = "has_children"
+	ListTaskCommentsQueryParamFieldsRaw         ListTaskCommentsQueryParamFields = "raw"
 )
 
 func (e ListTaskCommentsQueryParamFields) ToPointer() *ListTaskCommentsQueryParamFields {
@@ -45,6 +47,10 @@ func (e *ListTaskCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "task_id":
 		fallthrough
+	case "parent_id":
+		fallthrough
+	case "has_children":
+		fallthrough
 	case "raw":
 		*e = ListTaskCommentsQueryParamFields(v)
 		return nil
@@ -61,6 +67,8 @@ type ListTaskCommentsRequest struct {
 	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
+	// The parent ID to filter by
+	ParentID *string `queryParam:"style=form,explode=true,name=parent_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -105,6 +113,13 @@ func (l *ListTaskCommentsRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
+}
+
+func (l *ListTaskCommentsRequest) GetParentID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ParentID
 }
 
 func (l *ListTaskCommentsRequest) GetQuery() *string {

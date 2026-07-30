@@ -41,5 +41,8 @@ value := operations.ListAccountingBillsQueryParamFieldsID
 | `ListAccountingBillsQueryParamFieldsAttachments`             | attachments                                                  |
 | `ListAccountingBillsQueryParamFieldsSend`                    | send                                                         |
 | `ListAccountingBillsQueryParamFieldsOrganizationID`          | organization_id                                              |
-| `ListAccountingBillsQueryParamFieldsRaw`                     | raw                                                          |
 | `ListAccountingBillsQueryParamFieldsTerm`                    | term                                                         |
+| `ListAccountingBillsQueryParamFieldsPaymentTerms`            | payment_terms                                                |
+| `ListAccountingBillsQueryParamFieldsPayments`                | payments                                                     |
+| `ListAccountingBillsQueryParamFieldsCategoryIds`             | category_ids                                                 |
+| `ListAccountingBillsQueryParamFieldsRaw`                     | raw                                                          |
