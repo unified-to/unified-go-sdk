@@ -12,6 +12,7 @@ type PaymentLink struct {
 	ContactID       *string           `json:"contact_id,omitempty"`
 	CreatedAt       *time.Time        `json:"created_at,omitempty"`
 	Currency        *string           `json:"currency,omitempty"`
+	Description     *string           `json:"description,omitempty"`
 	ID              *string           `json:"id,omitempty"`
 	IsActive        *bool             `json:"is_active,omitempty"`
 	IsChargeableNow *bool             `json:"is_chargeable_now,omitempty"`
@@ -60,6 +61,13 @@ func (p *PaymentLink) GetCurrency() *string {
 		return nil
 	}
 	return p.Currency
+}
+
+func (p *PaymentLink) GetDescription() *string {
+	if p == nil {
+		return nil
+	}
+	return p.Description
 }
 
 func (p *PaymentLink) GetID() *string {

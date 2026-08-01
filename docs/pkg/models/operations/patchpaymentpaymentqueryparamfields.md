@@ -30,5 +30,5 @@ value := operations.PatchPaymentPaymentQueryParamFieldsID
 | `PatchPaymentPaymentQueryParamFieldsAccountID`      | account_id                                          |
 | `PatchPaymentPaymentQueryParamFieldsReference`      | reference                                           |
 | `PatchPaymentPaymentQueryParamFieldsOrganizationID` | organization_id                                     |
-| `PatchPaymentPaymentQueryParamFieldsAllocations`    | allocations                                         |
 | `PatchPaymentPaymentQueryParamFieldsRaw`            | raw                                                 |
+| `PatchPaymentPaymentQueryParamFieldsAllocations`    | allocations                                         |

@@ -22,6 +22,7 @@ const (
 	CreatePaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt CreatePaymentSubscriptionQueryParamFields = "current_period_start_at"
 	CreatePaymentSubscriptionQueryParamFieldsCanceledAt           CreatePaymentSubscriptionQueryParamFields = "canceled_at"
 	CreatePaymentSubscriptionQueryParamFieldsCurrency             CreatePaymentSubscriptionQueryParamFields = "currency"
+	CreatePaymentSubscriptionQueryParamFieldsTotalAmount          CreatePaymentSubscriptionQueryParamFields = "total_amount"
 	CreatePaymentSubscriptionQueryParamFieldsStartAt              CreatePaymentSubscriptionQueryParamFields = "start_at"
 	CreatePaymentSubscriptionQueryParamFieldsEndAt                CreatePaymentSubscriptionQueryParamFields = "end_at"
 	CreatePaymentSubscriptionQueryParamFieldsStatus               CreatePaymentSubscriptionQueryParamFields = "status"
@@ -62,6 +63,8 @@ func (e *CreatePaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) e
 	case "canceled_at":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "total_amount":
 		fallthrough
 	case "start_at":
 		fallthrough

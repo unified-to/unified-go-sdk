@@ -31,6 +31,7 @@ func (e *IssueStatus) IsExact() bool {
 
 type Issue struct {
 	CreatedAt      *string     `json:"created_at,omitempty"`
+	CustomerNote   *string     `json:"customer_note,omitempty"`
 	ID             *string     `json:"id,omitempty"`
 	Importance     *float64    `json:"importance,omitempty"`
 	ResolutionTime *float64    `json:"resolution_time,omitempty"`
@@ -49,6 +50,13 @@ func (i *Issue) GetCreatedAt() *string {
 		return nil
 	}
 	return i.CreatedAt
+}
+
+func (i *Issue) GetCustomerNote() *string {
+	if i == nil {
+		return nil
+	}
+	return i.CustomerNote
 }
 
 func (i *Issue) GetID() *string {

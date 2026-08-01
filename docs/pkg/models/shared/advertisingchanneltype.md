@@ -31,3 +31,6 @@ custom := shared.AdvertisingChannelType("custom_value")
 | `AdvertisingChannelTypeSearch`     | SEARCH                             |
 | `AdvertisingChannelTypeAudio`      | AUDIO                              |
 | `AdvertisingChannelTypeYoutube`    | YOUTUBE                            |
+| `AdvertisingChannelTypeNative`     | NATIVE                             |
+| `AdvertisingChannelTypeCtv`        | CTV                                |
+| `AdvertisingChannelTypeDooh`       | DOOH                               |

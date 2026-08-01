@@ -27,8 +27,8 @@ const (
 	GetPaymentPaymentQueryParamFieldsAccountID      GetPaymentPaymentQueryParamFields = "account_id"
 	GetPaymentPaymentQueryParamFieldsReference      GetPaymentPaymentQueryParamFields = "reference"
 	GetPaymentPaymentQueryParamFieldsOrganizationID GetPaymentPaymentQueryParamFields = "organization_id"
-	GetPaymentPaymentQueryParamFieldsAllocations    GetPaymentPaymentQueryParamFields = "allocations"
 	GetPaymentPaymentQueryParamFieldsRaw            GetPaymentPaymentQueryParamFields = "raw"
+	GetPaymentPaymentQueryParamFieldsAllocations    GetPaymentPaymentQueryParamFields = "allocations"
 )
 
 func (e GetPaymentPaymentQueryParamFields) ToPointer() *GetPaymentPaymentQueryParamFields {
@@ -70,9 +70,9 @@ func (e *GetPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "allocations":
-		fallthrough
 	case "raw":
+		fallthrough
+	case "allocations":
 		*e = GetPaymentPaymentQueryParamFields(v)
 		return nil
 	default:

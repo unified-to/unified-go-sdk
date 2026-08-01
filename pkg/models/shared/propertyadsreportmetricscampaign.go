@@ -23,6 +23,9 @@ const (
 	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SEARCH"
 	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "AUDIO"
 	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube    PropertyAdsReportMetricsCampaignAdvertisingChannelType = "YOUTUBE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeNative     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "NATIVE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCtv        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CTV"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDooh       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DOOH"
 )
 
 func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *PropertyAdsReportMetricsCampaignAdvertisingChannelType {
@@ -33,7 +36,7 @@ func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *Pro
 func (e *PropertyAdsReportMetricsCampaignAdvertisingChannelType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
 			return true
 		}
 	}
@@ -58,6 +61,29 @@ func (e *PropertyAdsReportMetricsCampaignBudgetPeriod) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "DAILY", "MONTHLY", "TOTAL", "LIFETIME":
+			return true
+		}
+	}
+	return false
+}
+
+type PropertyAdsReportMetricsCampaignBudgetUnit string
+
+const (
+	PropertyAdsReportMetricsCampaignBudgetUnitUnspecified PropertyAdsReportMetricsCampaignBudgetUnit = "UNSPECIFIED"
+	PropertyAdsReportMetricsCampaignBudgetUnitCurrency    PropertyAdsReportMetricsCampaignBudgetUnit = "CURRENCY"
+	PropertyAdsReportMetricsCampaignBudgetUnitImpressions PropertyAdsReportMetricsCampaignBudgetUnit = "IMPRESSIONS"
+)
+
+func (e PropertyAdsReportMetricsCampaignBudgetUnit) ToPointer() *PropertyAdsReportMetricsCampaignBudgetUnit {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsCampaignBudgetUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "CURRENCY", "IMPRESSIONS":
 			return true
 		}
 	}
@@ -155,6 +181,7 @@ type PropertyAdsReportMetricsCampaign struct {
 	AdvertisingChannelType   *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
 	BudgetAmount             *float64                                                `json:"budget_amount,omitempty"`
 	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod           `json:"budget_period,omitempty"`
+	BudgetUnit               *PropertyAdsReportMetricsCampaignBudgetUnit             `json:"budget_unit,omitempty"`
 	CampaignBudgetIdentifier *string                                                 `json:"campaign_budget_identifier,omitempty"`
 	Category                 *string                                                 `json:"category,omitempty"`
 	CreatedAt                *time.Time                                              `json:"created_at,omitempty"`
@@ -206,6 +233,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetBudgetPeriod() *PropertyAdsReportM
 		return nil
 	}
 	return p.BudgetPeriod
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetBudgetUnit() *PropertyAdsReportMetricsCampaignBudgetUnit {
+	if p == nil {
+		return nil
+	}
+	return p.BudgetUnit
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetCampaignBudgetIdentifier() *string {

@@ -22,6 +22,7 @@ const (
 	ListPaymentLinksQueryParamFieldsPaymentID       ListPaymentLinksQueryParamFields = "payment_id"
 	ListPaymentLinksQueryParamFieldsContactID       ListPaymentLinksQueryParamFields = "contact_id"
 	ListPaymentLinksQueryParamFieldsURL             ListPaymentLinksQueryParamFields = "url"
+	ListPaymentLinksQueryParamFieldsDescription     ListPaymentLinksQueryParamFields = "description"
 	ListPaymentLinksQueryParamFieldsIsChargeableNow ListPaymentLinksQueryParamFields = "is_chargeable_now"
 	ListPaymentLinksQueryParamFieldsSuccessURL      ListPaymentLinksQueryParamFields = "success_url"
 	ListPaymentLinksQueryParamFieldsRaw             ListPaymentLinksQueryParamFields = "raw"
@@ -55,6 +56,8 @@ func (e *ListPaymentLinksQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "contact_id":
 		fallthrough
 	case "url":
+		fallthrough
+	case "description":
 		fallthrough
 	case "is_chargeable_now":
 		fallthrough

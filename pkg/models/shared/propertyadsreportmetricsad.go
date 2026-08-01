@@ -23,6 +23,9 @@ const (
 	PropertyAdsReportMetricsAdAdTypeSearch     PropertyAdsReportMetricsAdAdType = "SEARCH"
 	PropertyAdsReportMetricsAdAdTypeAudio      PropertyAdsReportMetricsAdAdType = "AUDIO"
 	PropertyAdsReportMetricsAdAdTypeYoutube    PropertyAdsReportMetricsAdAdType = "YOUTUBE"
+	PropertyAdsReportMetricsAdAdTypeNative     PropertyAdsReportMetricsAdAdType = "NATIVE"
+	PropertyAdsReportMetricsAdAdTypeCtv        PropertyAdsReportMetricsAdAdType = "CTV"
+	PropertyAdsReportMetricsAdAdTypeDooh       PropertyAdsReportMetricsAdAdType = "DOOH"
 )
 
 func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsAdAdType {
@@ -33,7 +36,7 @@ func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsA
 func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
 			return true
 		}
 	}

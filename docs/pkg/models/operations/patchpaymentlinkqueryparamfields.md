@@ -25,6 +25,7 @@ value := operations.PatchPaymentLinkQueryParamFieldsID
 | `PatchPaymentLinkQueryParamFieldsPaymentID`       | payment_id                                        |
 | `PatchPaymentLinkQueryParamFieldsContactID`       | contact_id                                        |
 | `PatchPaymentLinkQueryParamFieldsURL`             | url                                               |
+| `PatchPaymentLinkQueryParamFieldsDescription`     | description                                       |
 | `PatchPaymentLinkQueryParamFieldsIsChargeableNow` | is_chargeable_now                                 |
 | `PatchPaymentLinkQueryParamFieldsSuccessURL`      | success_url                                       |
 | `PatchPaymentLinkQueryParamFieldsRaw`             | raw                                               |

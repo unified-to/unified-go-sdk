@@ -75,6 +75,7 @@ type PaymentSubscription struct {
 	Raw                  map[string]any             `json:"raw,omitempty"`
 	StartAt              *time.Time                 `json:"start_at,omitempty"`
 	Status               *PaymentSubscriptionStatus `json:"status,omitempty"`
+	TotalAmount          *float64                   `json:"total_amount,omitempty"`
 	UpdatedAt            *time.Time                 `json:"updated_at,omitempty"`
 }
 
@@ -220,6 +221,13 @@ func (p *PaymentSubscription) GetStatus() *PaymentSubscriptionStatus {
 		return nil
 	}
 	return p.Status
+}
+
+func (p *PaymentSubscription) GetTotalAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.TotalAmount
 }
 
 func (p *PaymentSubscription) GetUpdatedAt() *time.Time {

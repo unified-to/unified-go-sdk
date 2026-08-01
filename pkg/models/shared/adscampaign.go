@@ -23,6 +23,9 @@ const (
 	AdvertisingChannelTypeSearch     AdvertisingChannelType = "SEARCH"
 	AdvertisingChannelTypeAudio      AdvertisingChannelType = "AUDIO"
 	AdvertisingChannelTypeYoutube    AdvertisingChannelType = "YOUTUBE"
+	AdvertisingChannelTypeNative     AdvertisingChannelType = "NATIVE"
+	AdvertisingChannelTypeCtv        AdvertisingChannelType = "CTV"
+	AdvertisingChannelTypeDooh       AdvertisingChannelType = "DOOH"
 )
 
 func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
@@ -33,7 +36,7 @@ func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
 func (e *AdvertisingChannelType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
 			return true
 		}
 	}
@@ -58,6 +61,29 @@ func (e *BudgetPeriod) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "DAILY", "MONTHLY", "TOTAL", "LIFETIME":
+			return true
+		}
+	}
+	return false
+}
+
+type BudgetUnit string
+
+const (
+	BudgetUnitUnspecified BudgetUnit = "UNSPECIFIED"
+	BudgetUnitCurrency    BudgetUnit = "CURRENCY"
+	BudgetUnitImpressions BudgetUnit = "IMPRESSIONS"
+)
+
+func (e BudgetUnit) ToPointer() *BudgetUnit {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *BudgetUnit) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "CURRENCY", "IMPRESSIONS":
 			return true
 		}
 	}
@@ -155,6 +181,7 @@ type AdsCampaign struct {
 	AdvertisingChannelType   *AdvertisingChannelType          `json:"advertising_channel_type,omitempty"`
 	BudgetAmount             *float64                         `json:"budget_amount,omitempty"`
 	BudgetPeriod             *BudgetPeriod                    `json:"budget_period,omitempty"`
+	BudgetUnit               *BudgetUnit                      `json:"budget_unit,omitempty"`
 	CampaignBudgetIdentifier *string                          `json:"campaign_budget_identifier,omitempty"`
 	Category                 *string                          `json:"category,omitempty"`
 	CreatedAt                *time.Time                       `json:"created_at,omitempty"`
@@ -206,6 +233,13 @@ func (a *AdsCampaign) GetBudgetPeriod() *BudgetPeriod {
 		return nil
 	}
 	return a.BudgetPeriod
+}
+
+func (a *AdsCampaign) GetBudgetUnit() *BudgetUnit {
+	if a == nil {
+		return nil
+	}
+	return a.BudgetUnit
 }
 
 func (a *AdsCampaign) GetCampaignBudgetIdentifier() *string {

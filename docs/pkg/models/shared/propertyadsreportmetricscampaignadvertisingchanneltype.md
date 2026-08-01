@@ -31,3 +31,6 @@ custom := shared.PropertyAdsReportMetricsCampaignAdvertisingChannelType("custom_
 | `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch`     | SEARCH                                                             |
 | `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio`      | AUDIO                                                              |
 | `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube`    | YOUTUBE                                                            |
+| `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeNative`     | NATIVE                                                             |
+| `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCtv`        | CTV                                                                |
+| `PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDooh`       | DOOH                                                               |

@@ -22,6 +22,7 @@ const (
 	PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt PatchPaymentSubscriptionQueryParamFields = "current_period_start_at"
 	PatchPaymentSubscriptionQueryParamFieldsCanceledAt           PatchPaymentSubscriptionQueryParamFields = "canceled_at"
 	PatchPaymentSubscriptionQueryParamFieldsCurrency             PatchPaymentSubscriptionQueryParamFields = "currency"
+	PatchPaymentSubscriptionQueryParamFieldsTotalAmount          PatchPaymentSubscriptionQueryParamFields = "total_amount"
 	PatchPaymentSubscriptionQueryParamFieldsStartAt              PatchPaymentSubscriptionQueryParamFields = "start_at"
 	PatchPaymentSubscriptionQueryParamFieldsEndAt                PatchPaymentSubscriptionQueryParamFields = "end_at"
 	PatchPaymentSubscriptionQueryParamFieldsStatus               PatchPaymentSubscriptionQueryParamFields = "status"
@@ -62,6 +63,8 @@ func (e *PatchPaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) er
 	case "canceled_at":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "total_amount":
 		fallthrough
 	case "start_at":
 		fallthrough

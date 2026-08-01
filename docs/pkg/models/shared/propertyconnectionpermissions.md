@@ -272,6 +272,7 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsShippingLabelWrite`           | shipping_label_write                                        |
 | `PropertyConnectionPermissionsShippingTrackingRead`         | shipping_tracking_read                                      |
 | `PropertyConnectionPermissionsShippingRateRead`             | shipping_rate_read                                          |
+| `PropertyConnectionPermissionsShippingRateWrite`            | shipping_rate_write                                         |
 | `PropertyConnectionPermissionsShippingCarrierRead`          | shipping_carrier_read                                       |
 | `PropertyConnectionPermissionsSigningDocumentRead`          | signing_document_read                                       |
 | `PropertyConnectionPermissionsSigningDocumentWrite`         | signing_document_write                                      |

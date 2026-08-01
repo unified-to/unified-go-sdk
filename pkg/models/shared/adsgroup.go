@@ -85,20 +85,20 @@ func (e *AdsGroupBudgetPeriod) IsExact() bool {
 	return false
 }
 
-type BudgetUnit string
+type AdsGroupBudgetUnit string
 
 const (
-	BudgetUnitUnspecified BudgetUnit = "UNSPECIFIED"
-	BudgetUnitCurrency    BudgetUnit = "CURRENCY"
-	BudgetUnitImpressions BudgetUnit = "IMPRESSIONS"
+	AdsGroupBudgetUnitUnspecified AdsGroupBudgetUnit = "UNSPECIFIED"
+	AdsGroupBudgetUnitCurrency    AdsGroupBudgetUnit = "CURRENCY"
+	AdsGroupBudgetUnitImpressions AdsGroupBudgetUnit = "IMPRESSIONS"
 )
 
-func (e BudgetUnit) ToPointer() *BudgetUnit {
+func (e AdsGroupBudgetUnit) ToPointer() *AdsGroupBudgetUnit {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *BudgetUnit) IsExact() bool {
+func (e *AdsGroupBudgetUnit) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "UNSPECIFIED", "CURRENCY", "IMPRESSIONS":
@@ -215,6 +215,9 @@ const (
 	AdsGroupTypeSearch     AdsGroupType = "SEARCH"
 	AdsGroupTypeAudio      AdsGroupType = "AUDIO"
 	AdsGroupTypeYoutube    AdsGroupType = "YOUTUBE"
+	AdsGroupTypeNative     AdsGroupType = "NATIVE"
+	AdsGroupTypeCtv        AdsGroupType = "CTV"
+	AdsGroupTypeDooh       AdsGroupType = "DOOH"
 )
 
 func (e AdsGroupType) ToPointer() *AdsGroupType {
@@ -225,7 +228,7 @@ func (e AdsGroupType) ToPointer() *AdsGroupType {
 func (e *AdsGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
 			return true
 		}
 	}
@@ -241,7 +244,7 @@ type AdsGroup struct {
 	BudgetAmount         *float64                      `json:"budget_amount,omitempty"`
 	BudgetMaxAmount      *float64                      `json:"budget_max_amount,omitempty"`
 	BudgetPeriod         *AdsGroupBudgetPeriod         `json:"budget_period,omitempty"`
-	BudgetUnit           *BudgetUnit                   `json:"budget_unit,omitempty"`
+	BudgetUnit           *AdsGroupBudgetUnit           `json:"budget_unit,omitempty"`
 	CampaignID           *string                       `json:"campaign_id,omitempty"`
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
@@ -326,7 +329,7 @@ func (a *AdsGroup) GetBudgetPeriod() *AdsGroupBudgetPeriod {
 	return a.BudgetPeriod
 }
 
-func (a *AdsGroup) GetBudgetUnit() *BudgetUnit {
+func (a *AdsGroup) GetBudgetUnit() *AdsGroupBudgetUnit {
 	if a == nil {
 		return nil
 	}

@@ -25,6 +25,7 @@ value := operations.UpdatePaymentLinkQueryParamFieldsID
 | `UpdatePaymentLinkQueryParamFieldsPaymentID`       | payment_id                                         |
 | `UpdatePaymentLinkQueryParamFieldsContactID`       | contact_id                                         |
 | `UpdatePaymentLinkQueryParamFieldsURL`             | url                                                |
+| `UpdatePaymentLinkQueryParamFieldsDescription`     | description                                        |
 | `UpdatePaymentLinkQueryParamFieldsIsChargeableNow` | is_chargeable_now                                  |
 | `UpdatePaymentLinkQueryParamFieldsSuccessURL`      | success_url                                        |
 | `UpdatePaymentLinkQueryParamFieldsRaw`             | raw                                                |

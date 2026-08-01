@@ -30,5 +30,5 @@ value := operations.GetPaymentPaymentQueryParamFieldsID
 | `GetPaymentPaymentQueryParamFieldsAccountID`      | account_id                                        |
 | `GetPaymentPaymentQueryParamFieldsReference`      | reference                                         |
 | `GetPaymentPaymentQueryParamFieldsOrganizationID` | organization_id                                   |
-| `GetPaymentPaymentQueryParamFieldsAllocations`    | allocations                                       |
 | `GetPaymentPaymentQueryParamFieldsRaw`            | raw                                               |
+| `GetPaymentPaymentQueryParamFieldsAllocations`    | allocations                                       |

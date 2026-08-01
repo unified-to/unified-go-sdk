@@ -25,6 +25,7 @@ value := operations.PatchPaymentSubscriptionQueryParamFieldsID
 | `PatchPaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt` | current_period_start_at                                        |
 | `PatchPaymentSubscriptionQueryParamFieldsCanceledAt`           | canceled_at                                                    |
 | `PatchPaymentSubscriptionQueryParamFieldsCurrency`             | currency                                                       |
+| `PatchPaymentSubscriptionQueryParamFieldsTotalAmount`          | total_amount                                                   |
 | `PatchPaymentSubscriptionQueryParamFieldsStartAt`              | start_at                                                       |
 | `PatchPaymentSubscriptionQueryParamFieldsEndAt`                | end_at                                                         |
 | `PatchPaymentSubscriptionQueryParamFieldsStatus`               | status                                                         |

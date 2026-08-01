@@ -26,6 +26,7 @@ value := operations.PatchAdsCampaignQueryParamFieldsID
 | `PatchAdsCampaignQueryParamFieldsEndAt`                    | end_at                                                     |
 | `PatchAdsCampaignQueryParamFieldsBudgetAmount`             | budget_amount                                              |
 | `PatchAdsCampaignQueryParamFieldsBudgetPeriod`             | budget_period                                              |
+| `PatchAdsCampaignQueryParamFieldsBudgetUnit`               | budget_unit                                                |
 | `PatchAdsCampaignQueryParamFieldsTotalSpendAmount`         | total_spend_amount                                         |
 | `PatchAdsCampaignQueryParamFieldsTargeting`                | targeting                                                  |
 | `PatchAdsCampaignQueryParamFieldsGoal`                     | goal                                                       |

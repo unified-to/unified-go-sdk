@@ -31,3 +31,6 @@ custom := shared.AdType("custom_value")
 | `AdTypeSearch`     | SEARCH             |
 | `AdTypeAudio`      | AUDIO              |
 | `AdTypeYoutube`    | YOUTUBE            |
+| `AdTypeNative`     | NATIVE             |
+| `AdTypeCtv`        | CTV                |
+| `AdTypeDooh`       | DOOH               |

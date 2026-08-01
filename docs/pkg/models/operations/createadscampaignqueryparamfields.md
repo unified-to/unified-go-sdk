@@ -26,6 +26,7 @@ value := operations.CreateAdsCampaignQueryParamFieldsID
 | `CreateAdsCampaignQueryParamFieldsEndAt`                    | end_at                                                      |
 | `CreateAdsCampaignQueryParamFieldsBudgetAmount`             | budget_amount                                               |
 | `CreateAdsCampaignQueryParamFieldsBudgetPeriod`             | budget_period                                               |
+| `CreateAdsCampaignQueryParamFieldsBudgetUnit`               | budget_unit                                                 |
 | `CreateAdsCampaignQueryParamFieldsTotalSpendAmount`         | total_spend_amount                                          |
 | `CreateAdsCampaignQueryParamFieldsTargeting`                | targeting                                                   |
 | `CreateAdsCampaignQueryParamFieldsGoal`                     | goal                                                        |

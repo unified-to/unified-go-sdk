@@ -31,3 +31,6 @@ custom := shared.PropertyAdsReportMetricsGroupType("custom_value")
 | `PropertyAdsReportMetricsGroupTypeSearch`     | SEARCH                                        |
 | `PropertyAdsReportMetricsGroupTypeAudio`      | AUDIO                                         |
 | `PropertyAdsReportMetricsGroupTypeYoutube`    | YOUTUBE                                       |
+| `PropertyAdsReportMetricsGroupTypeNative`     | NATIVE                                        |
+| `PropertyAdsReportMetricsGroupTypeCtv`        | CTV                                           |
+| `PropertyAdsReportMetricsGroupTypeDooh`       | DOOH                                          |

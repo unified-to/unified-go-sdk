@@ -23,6 +23,9 @@ const (
 	AdTypeSearch     AdType = "SEARCH"
 	AdTypeAudio      AdType = "AUDIO"
 	AdTypeYoutube    AdType = "YOUTUBE"
+	AdTypeNative     AdType = "NATIVE"
+	AdTypeCtv        AdType = "CTV"
+	AdTypeDooh       AdType = "DOOH"
 )
 
 func (e AdType) ToPointer() *AdType {
@@ -33,7 +36,7 @@ func (e AdType) ToPointer() *AdType {
 func (e *AdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
 			return true
 		}
 	}

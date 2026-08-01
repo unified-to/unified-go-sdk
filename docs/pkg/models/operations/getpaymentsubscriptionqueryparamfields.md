@@ -25,6 +25,7 @@ value := operations.GetPaymentSubscriptionQueryParamFieldsID
 | `GetPaymentSubscriptionQueryParamFieldsCurrentPeriodStartAt` | current_period_start_at                                      |
 | `GetPaymentSubscriptionQueryParamFieldsCanceledAt`           | canceled_at                                                  |
 | `GetPaymentSubscriptionQueryParamFieldsCurrency`             | currency                                                     |
+| `GetPaymentSubscriptionQueryParamFieldsTotalAmount`          | total_amount                                                 |
 | `GetPaymentSubscriptionQueryParamFieldsStartAt`              | start_at                                                     |
 | `GetPaymentSubscriptionQueryParamFieldsEndAt`                | end_at                                                       |
 | `GetPaymentSubscriptionQueryParamFieldsStatus`               | status                                                       |
