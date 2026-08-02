@@ -32,9 +32,10 @@ func (e *DurationType) IsExact() bool {
 type HrisTimeoffStatus string
 
 const (
-	HrisTimeoffStatusApproved HrisTimeoffStatus = "APPROVED"
-	HrisTimeoffStatusPending  HrisTimeoffStatus = "PENDING"
-	HrisTimeoffStatusDenied   HrisTimeoffStatus = "DENIED"
+	HrisTimeoffStatusApproved  HrisTimeoffStatus = "APPROVED"
+	HrisTimeoffStatusPending   HrisTimeoffStatus = "PENDING"
+	HrisTimeoffStatusDenied    HrisTimeoffStatus = "DENIED"
+	HrisTimeoffStatusCancelled HrisTimeoffStatus = "CANCELLED"
 )
 
 func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
@@ -45,7 +46,7 @@ func (e HrisTimeoffStatus) ToPointer() *HrisTimeoffStatus {
 func (e *HrisTimeoffStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "APPROVED", "PENDING", "DENIED":
+		case "APPROVED", "PENDING", "DENIED", "CANCELLED":
 			return true
 		}
 	}

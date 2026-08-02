@@ -16,8 +16,9 @@ custom := shared.HrisTimeoffStatus("custom_value")
 
 ## Values
 
-| Name                        | Value                       |
-| --------------------------- | --------------------------- |
-| `HrisTimeoffStatusApproved` | APPROVED                    |
-| `HrisTimeoffStatusPending`  | PENDING                     |
-| `HrisTimeoffStatusDenied`   | DENIED                      |
+| Name                         | Value                        |
+| ---------------------------- | ---------------------------- |
+| `HrisTimeoffStatusApproved`  | APPROVED                     |
+| `HrisTimeoffStatusPending`   | PENDING                      |
+| `HrisTimeoffStatusDenied`    | DENIED                       |
+| `HrisTimeoffStatusCancelled` | CANCELLED                    |
