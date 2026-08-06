@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: eaa7c7c10c6b862aff52c98e1484ea59
+  docChecksum: 6bf7f9e899b77c356d345eaaf87bb444
   docVersion: "1.0"
-  speakeasyVersion: 1.791.0
-  generationVersion: 2.924.0
-  releaseVersion: 0.36.104
-  configChecksum: c60c9e0539ad2614a90b48d59cd78200
+  speakeasyVersion: 1.791.4
+  generationVersion: 2.926.8
+  releaseVersion: 0.36.105
+  configChecksum: 5fb4f0e0f806193dec0ca50ba4b2e73b
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 10f28f55-097b-47c9-8ad9-e96ced0eebb2
-  pristine_commit_hash: e91fe54439155f4fdf55e6c802def58cbc88b5ea
-  pristine_tree_hash: e0010f5de2044f5f3bf2686058086d50805dd7a2
+  generation_id: 805a18c6-288f-411e-af50-e77eb3d53d10
+  pristine_commit_hash: 779a4407e6036e764c7ccdc17392efd0937c144e
+  pristine_tree_hash: d0c38b586151e6bb48376a656f1bed7aad8303f5
 features:
   go:
     acceptHeaders: 2.81.2
@@ -10023,8 +10023,8 @@ trackedFiles:
     pristine_git_object: 0b30f2e66b9ffb55e681b0d50cff48b2dd61b7b2
   docs/pkg/models/shared/connection.md:
     id: 200b0cd3d8de
-    last_write_checksum: sha1:7c0953e2514d82caca64e85e1f8b98e5a4889de8
-    pristine_git_object: 39b3b2727acba6b764438b0766722b5f2119837e
+    last_write_checksum: sha1:8d7c0ad6c7fda71f90c83ef16487be203802d49d
+    pristine_git_object: aec311f9df8a867a9f5f6efd71e5902da6857c45
   docs/pkg/models/shared/contentstype.md:
     id: "535408761439"
     last_write_checksum: sha1:74f54fc5a3cacae9ad4ec6aaf712a63c965dc267
@@ -17735,8 +17735,8 @@ trackedFiles:
     pristine_git_object: 1856bba66ed02a6147b646ebfcacf11e1108f81d
   pkg/models/shared/connection.go:
     id: ca1fe549ed75
-    last_write_checksum: sha1:b55d7d20551ca4fab2a09d020f0789516b56b4b4
-    pristine_git_object: a114c4f78aa288dc374a7cc9d06151364e2bc72d
+    last_write_checksum: sha1:eac1b4c7ba59e0ab547ef8b757e386ee5bed1e32
+    pristine_git_object: 7bb9eb0138941720bdf658423658d4b689b055f1
   pkg/models/shared/crmcompany.go:
     id: 9fc0c829cc14
     last_write_checksum: sha1:b4d326ac7924fa468db8f0d7e9398a8ee7b3e22a
@@ -19419,8 +19419,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:0e99baf5a161a240ecc01cd1743b778feb9e7599
-    pristine_git_object: 58ab47b8be04bda77164dd63edce4051fb11e8de
+    last_write_checksum: sha1:b5a7a66170a3edaea11f83da4a0f5b76d0d22629
+    pristine_git_object: 261db4530b075d38614973fc4601481463367fba
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -32914,7 +32914,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Commerce.ListCommerceInventories()`: \n  *  `request.Request.ItemId` **Added**\n* `UnifiedTo.Inventory.ListCommerceInventories()`: \n  *  `request.Request.ItemId` **Added**\n* `UnifiedTo.Hris.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Hris.GetHrisTimeoff()`:  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Hris.ListHrisTimeoffs()`:  `response.[].Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Hris.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Hris.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Timeoff.CreateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Timeoff.GetHrisTimeoff()`:  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Timeoff.ListHrisTimeoffs()`:  `response.[].Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Timeoff.PatchHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n* `UnifiedTo.Timeoff.UpdateHrisTimeoff()`: \n  *  `request.Request.HrisTimeoff.Status.Enum(cancelled)` **Added**\n  *  `response.Status.Enum(cancelled)` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].LastUnhealthyCode` **Added**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].LastUnhealthyCode` **Added**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.LastUnhealthyCode` **Added**\n  *  `response.LastUnhealthyCode` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

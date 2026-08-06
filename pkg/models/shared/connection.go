@@ -22,6 +22,7 @@ type Connection struct {
 	IsPaused          *bool                           `json:"is_paused,omitempty"`
 	LastHealthyAt     *time.Time                      `json:"last_healthy_at,omitempty"`
 	LastUnhealthyAt   *time.Time                      `json:"last_unhealthy_at,omitempty"`
+	LastUnhealthyCode *string                         `json:"last_unhealthy_code,omitempty"`
 	Permissions       []PropertyConnectionPermissions `json:"permissions"`
 	SecretsmanagerID  *string                         `json:"secretsmanager_id,omitempty"`
 	SecretsmanagerKey *string                         `json:"secretsmanager_key,omitempty"`
@@ -115,6 +116,13 @@ func (c *Connection) GetLastUnhealthyAt() *time.Time {
 		return nil
 	}
 	return c.LastUnhealthyAt
+}
+
+func (c *Connection) GetLastUnhealthyCode() *string {
+	if c == nil {
+		return nil
+	}
+	return c.LastUnhealthyCode
 }
 
 func (c *Connection) GetPermissions() []PropertyConnectionPermissions {
