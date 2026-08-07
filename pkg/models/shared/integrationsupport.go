@@ -1589,6 +1589,29 @@ func (e *ListSaleschannelID) IsExact() bool {
 	return false
 }
 
+type ListSegmentID string
+
+const (
+	ListSegmentIDSupportedRequired ListSegmentID = "supported-required"
+	ListSegmentIDSupported         ListSegmentID = "supported"
+	ListSegmentIDNotSupported      ListSegmentID = "not-supported"
+)
+
+func (e ListSegmentID) ToPointer() *ListSegmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListSegmentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListSessionID string
 
 const (
@@ -2431,6 +2454,29 @@ func (e NativeWebhookPropertyID) ToPointer() *NativeWebhookPropertyID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *NativeWebhookPropertyID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type NativeWebhookSegmentID string
+
+const (
+	NativeWebhookSegmentIDSupportedRequired NativeWebhookSegmentID = "supported-required"
+	NativeWebhookSegmentIDSupported         NativeWebhookSegmentID = "supported"
+	NativeWebhookSegmentIDNotSupported      NativeWebhookSegmentID = "not-supported"
+)
+
+func (e NativeWebhookSegmentID) ToPointer() *NativeWebhookSegmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookSegmentID) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -3889,6 +3935,29 @@ func (e *VirtualWebhookSaleschannelID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookSegmentID string
+
+const (
+	VirtualWebhookSegmentIDSupportedRequired VirtualWebhookSegmentID = "supported-required"
+	VirtualWebhookSegmentIDSupported         VirtualWebhookSegmentID = "supported"
+	VirtualWebhookSegmentIDNotSupported      VirtualWebhookSegmentID = "not-supported"
+)
+
+func (e VirtualWebhookSegmentID) ToPointer() *VirtualWebhookSegmentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookSegmentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookSessionID string
 
 const (
@@ -4305,6 +4374,7 @@ type IntegrationSupport struct {
 	ListRoleID              *ListRoleID              `json:"list_role_id,omitempty"`
 	ListRootID              *ListRootID              `json:"list_root_id,omitempty"`
 	ListSaleschannelID      *ListSaleschannelID      `json:"list_saleschannel_id,omitempty"`
+	ListSegmentID           *ListSegmentID           `json:"list_segment_id,omitempty"`
 	ListSessionID           *ListSessionID           `json:"list_session_id,omitempty"`
 	ListShipmentID          *ListShipmentID          `json:"list_shipment_id,omitempty"`
 	ListSize                *ListSize                `json:"list_size,omitempty"`
@@ -4343,6 +4413,7 @@ type IntegrationSupport struct {
 	NativeWebhookParentID   *NativeWebhookParentID   `json:"native_webhook_parent_id,omitempty"`
 	NativeWebhookProjectID  *NativeWebhookProjectID  `json:"native_webhook_project_id,omitempty"`
 	NativeWebhookPropertyID *NativeWebhookPropertyID `json:"native_webhook_property_id,omitempty"`
+	NativeWebhookSegmentID  *NativeWebhookSegmentID  `json:"native_webhook_segment_id,omitempty"`
 	NativeWebhookSessionID  *NativeWebhookSessionID  `json:"native_webhook_session_id,omitempty"`
 	NativeWebhookShipmentID *NativeWebhookShipmentID `json:"native_webhook_shipment_id,omitempty"`
 	NativeWebhookStudentID  *NativeWebhookStudentID  `json:"native_webhook_student_id,omitempty"`
@@ -4410,6 +4481,7 @@ type IntegrationSupport struct {
 	VirtualWebhookReference       *VirtualWebhookReference                 `json:"virtual_webhook_reference,omitempty"`
 	VirtualWebhookRepoID          *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
 	VirtualWebhookSaleschannelID  *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
+	VirtualWebhookSegmentID       *VirtualWebhookSegmentID                 `json:"virtual_webhook_segment_id,omitempty"`
 	VirtualWebhookSessionID       *VirtualWebhookSessionID                 `json:"virtual_webhook_session_id,omitempty"`
 	VirtualWebhookShipmentID      *VirtualWebhookShipmentID                `json:"virtual_webhook_shipment_id,omitempty"`
 	VirtualWebhookSpaceID         *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
@@ -4918,6 +4990,13 @@ func (i *IntegrationSupport) GetListSaleschannelID() *ListSaleschannelID {
 	return i.ListSaleschannelID
 }
 
+func (i *IntegrationSupport) GetListSegmentID() *ListSegmentID {
+	if i == nil {
+		return nil
+	}
+	return i.ListSegmentID
+}
+
 func (i *IntegrationSupport) GetListSessionID() *ListSessionID {
 	if i == nil {
 		return nil
@@ -5182,6 +5261,13 @@ func (i *IntegrationSupport) GetNativeWebhookPropertyID() *NativeWebhookProperty
 		return nil
 	}
 	return i.NativeWebhookPropertyID
+}
+
+func (i *IntegrationSupport) GetNativeWebhookSegmentID() *NativeWebhookSegmentID {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookSegmentID
 }
 
 func (i *IntegrationSupport) GetNativeWebhookSessionID() *NativeWebhookSessionID {
@@ -5644,6 +5730,13 @@ func (i *IntegrationSupport) GetVirtualWebhookSaleschannelID() *VirtualWebhookSa
 		return nil
 	}
 	return i.VirtualWebhookSaleschannelID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookSegmentID() *VirtualWebhookSegmentID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookSegmentID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookSessionID() *VirtualWebhookSessionID {
