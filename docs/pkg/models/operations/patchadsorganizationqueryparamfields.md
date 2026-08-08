@@ -13,13 +13,16 @@ value := operations.PatchAdsOrganizationQueryParamFieldsID
 
 ## Values
 
-| Name                                            | Value                                           |
-| ----------------------------------------------- | ----------------------------------------------- |
-| `PatchAdsOrganizationQueryParamFieldsID`        | id                                              |
-| `PatchAdsOrganizationQueryParamFieldsCreatedAt` | created_at                                      |
-| `PatchAdsOrganizationQueryParamFieldsUpdatedAt` | updated_at                                      |
-| `PatchAdsOrganizationQueryParamFieldsName`      | name                                            |
-| `PatchAdsOrganizationQueryParamFieldsCurrency`  | currency                                        |
-| `PatchAdsOrganizationQueryParamFieldsTimezone`  | timezone                                        |
-| `PatchAdsOrganizationQueryParamFieldsParentID`  | parent_id                                       |
-| `PatchAdsOrganizationQueryParamFieldsRaw`       | raw                                             |
+| Name                                                | Value                                               |
+| --------------------------------------------------- | --------------------------------------------------- |
+| `PatchAdsOrganizationQueryParamFieldsID`            | id                                                  |
+| `PatchAdsOrganizationQueryParamFieldsCreatedAt`     | created_at                                          |
+| `PatchAdsOrganizationQueryParamFieldsUpdatedAt`     | updated_at                                          |
+| `PatchAdsOrganizationQueryParamFieldsName`          | name                                                |
+| `PatchAdsOrganizationQueryParamFieldsCurrency`      | currency                                            |
+| `PatchAdsOrganizationQueryParamFieldsTimezone`      | timezone                                            |
+| `PatchAdsOrganizationQueryParamFieldsParentID`      | parent_id                                           |
+| `PatchAdsOrganizationQueryParamFieldsStatus`        | status                                              |
+| `PatchAdsOrganizationQueryParamFieldsAccountNumber` | account_number                                      |
+| `PatchAdsOrganizationQueryParamFieldsManagers`      | managers                                            |
+| `PatchAdsOrganizationQueryParamFieldsRaw`           | raw                                                 |

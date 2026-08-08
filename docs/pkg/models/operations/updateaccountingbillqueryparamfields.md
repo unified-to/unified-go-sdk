@@ -45,4 +45,5 @@ value := operations.UpdateAccountingBillQueryParamFieldsID
 | `UpdateAccountingBillQueryParamFieldsPaymentTerms`            | payment_terms                                                 |
 | `UpdateAccountingBillQueryParamFieldsPayments`                | payments                                                      |
 | `UpdateAccountingBillQueryParamFieldsCategoryIds`             | category_ids                                                  |
+| `UpdateAccountingBillQueryParamFieldsProjectID`               | project_id                                                    |
 | `UpdateAccountingBillQueryParamFieldsRaw`                     | raw                                                           |

@@ -36,6 +36,7 @@ const (
 	PatchAccountingExpenseQueryParamFieldsStatus           PatchAccountingExpenseQueryParamFields = "status"
 	PatchAccountingExpenseQueryParamFieldsExternalNumber   PatchAccountingExpenseQueryParamFields = "external_number"
 	PatchAccountingExpenseQueryParamFieldsCategoryIds      PatchAccountingExpenseQueryParamFields = "category_ids"
+	PatchAccountingExpenseQueryParamFieldsProjectID        PatchAccountingExpenseQueryParamFields = "project_id"
 	PatchAccountingExpenseQueryParamFieldsRaw              PatchAccountingExpenseQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *PatchAccountingExpenseQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "external_number":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "project_id":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingExpenseQueryParamFields(v)

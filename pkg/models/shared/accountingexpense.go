@@ -51,6 +51,7 @@ type AccountingExpense struct {
 	OrganizationID   *string                  `json:"organization_id,omitempty"`
 	PaymentMethod    *string                  `json:"payment_method,omitempty"`
 	PostedAt         *time.Time               `json:"posted_at,omitempty"`
+	ProjectID        *string                  `json:"project_id,omitempty"`
 	Raw              map[string]any           `json:"raw,omitempty"`
 	ReimbursedAmount *float64                 `json:"reimbursed_amount,omitempty"`
 	ReimbursedAt     *time.Time               `json:"reimbursed_at,omitempty"`
@@ -183,6 +184,13 @@ func (a *AccountingExpense) GetPostedAt() *time.Time {
 		return nil
 	}
 	return a.PostedAt
+}
+
+func (a *AccountingExpense) GetProjectID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ProjectID
 }
 
 func (a *AccountingExpense) GetRaw() map[string]any {

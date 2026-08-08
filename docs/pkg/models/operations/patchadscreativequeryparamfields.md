@@ -30,6 +30,7 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsHeight`                     | height                                                       |
 | `PatchAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                   |
 | `PatchAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                     |
+| `PatchAdsCreativeQueryParamFieldsURLTags`                    | url_tags                                                     |
 | `PatchAdsCreativeQueryParamFieldsBody`                       | body                                                         |
 | `PatchAdsCreativeQueryParamFieldsTitle`                      | title                                                        |
 | `PatchAdsCreativeQueryParamFieldsCta`                        | cta                                                          |
@@ -42,4 +43,5 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsPath1`                      | path1                                                        |
 | `PatchAdsCreativeQueryParamFieldsPath2`                      | path2                                                        |
 | `PatchAdsCreativeQueryParamFieldsData`                       | data                                                         |
+| `PatchAdsCreativeQueryParamFieldsLabels`                     | labels                                                       |
 | `PatchAdsCreativeQueryParamFieldsRaw`                        | raw                                                          |

@@ -13,13 +13,16 @@ value := operations.ListAdsOrganizationsQueryParamFieldsID
 
 ## Values
 
-| Name                                            | Value                                           |
-| ----------------------------------------------- | ----------------------------------------------- |
-| `ListAdsOrganizationsQueryParamFieldsID`        | id                                              |
-| `ListAdsOrganizationsQueryParamFieldsCreatedAt` | created_at                                      |
-| `ListAdsOrganizationsQueryParamFieldsUpdatedAt` | updated_at                                      |
-| `ListAdsOrganizationsQueryParamFieldsName`      | name                                            |
-| `ListAdsOrganizationsQueryParamFieldsCurrency`  | currency                                        |
-| `ListAdsOrganizationsQueryParamFieldsTimezone`  | timezone                                        |
-| `ListAdsOrganizationsQueryParamFieldsParentID`  | parent_id                                       |
-| `ListAdsOrganizationsQueryParamFieldsRaw`       | raw                                             |
+| Name                                                | Value                                               |
+| --------------------------------------------------- | --------------------------------------------------- |
+| `ListAdsOrganizationsQueryParamFieldsID`            | id                                                  |
+| `ListAdsOrganizationsQueryParamFieldsCreatedAt`     | created_at                                          |
+| `ListAdsOrganizationsQueryParamFieldsUpdatedAt`     | updated_at                                          |
+| `ListAdsOrganizationsQueryParamFieldsName`          | name                                                |
+| `ListAdsOrganizationsQueryParamFieldsCurrency`      | currency                                            |
+| `ListAdsOrganizationsQueryParamFieldsTimezone`      | timezone                                            |
+| `ListAdsOrganizationsQueryParamFieldsParentID`      | parent_id                                           |
+| `ListAdsOrganizationsQueryParamFieldsStatus`        | status                                              |
+| `ListAdsOrganizationsQueryParamFieldsAccountNumber` | account_number                                      |
+| `ListAdsOrganizationsQueryParamFieldsManagers`      | managers                                            |
+| `ListAdsOrganizationsQueryParamFieldsRaw`           | raw                                                 |

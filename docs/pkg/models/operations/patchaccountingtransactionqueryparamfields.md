@@ -34,4 +34,5 @@ value := operations.PatchAccountingTransactionQueryParamFieldsID
 | `PatchAccountingTransactionQueryParamFieldsContacts`        | contacts                                                    |
 | `PatchAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                             |
 | `PatchAccountingTransactionQueryParamFieldsCategoryIds`     | category_ids                                                |
+| `PatchAccountingTransactionQueryParamFieldsProjectID`       | project_id                                                  |
 | `PatchAccountingTransactionQueryParamFieldsRaw`             | raw                                                         |

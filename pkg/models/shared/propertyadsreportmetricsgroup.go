@@ -108,6 +108,28 @@ func (e *PropertyAdsReportMetricsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+type PropertyAdsReportMetricsGroupCreativeSelection string
+
+const (
+	PropertyAdsReportMetricsGroupCreativeSelectionOptimized  PropertyAdsReportMetricsGroupCreativeSelection = "OPTIMIZED"
+	PropertyAdsReportMetricsGroupCreativeSelectionRoundRobin PropertyAdsReportMetricsGroupCreativeSelection = "ROUND_ROBIN"
+)
+
+func (e PropertyAdsReportMetricsGroupCreativeSelection) ToPointer() *PropertyAdsReportMetricsGroupCreativeSelection {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyAdsReportMetricsGroupCreativeSelection) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "OPTIMIZED", "ROUND_ROBIN":
+			return true
+		}
+	}
+	return false
+}
+
 type PropertyAdsReportMetricsGroupEffectiveStatus string
 
 const (
@@ -248,6 +270,7 @@ type PropertyAdsReportMetricsGroup struct {
 	CampaignID           *string                                            `json:"campaign_id,omitempty"`
 	CreatedAt            *time.Time                                         `json:"created_at,omitempty"`
 	CreativeIds          []string                                           `json:"creative_ids,omitempty"`
+	CreativeSelection    *PropertyAdsReportMetricsGroupCreativeSelection    `json:"creative_selection,omitempty"`
 	Currency             *string                                            `json:"currency,omitempty"`
 	EffectiveStatus      *PropertyAdsReportMetricsGroupEffectiveStatus      `json:"effective_status,omitempty"`
 	EndAt                *time.Time                                         `json:"end_at,omitempty"`
@@ -255,6 +278,7 @@ type PropertyAdsReportMetricsGroup struct {
 	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                                            `json:"id,omitempty"`
 	InsertionorderID     *string                                            `json:"insertionorder_id,omitempty"`
+	LanguageLocale       *string                                            `json:"language_locale,omitempty"`
 	Name                 *string                                            `json:"name,omitempty"`
 	OptimizationGoal     *PropertyAdsReportMetricsGroupOptimizationGoal     `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                                            `json:"organization_id,omitempty"`
@@ -357,6 +381,13 @@ func (p *PropertyAdsReportMetricsGroup) GetCreativeIds() []string {
 	return p.CreativeIds
 }
 
+func (p *PropertyAdsReportMetricsGroup) GetCreativeSelection() *PropertyAdsReportMetricsGroupCreativeSelection {
+	if p == nil {
+		return nil
+	}
+	return p.CreativeSelection
+}
+
 func (p *PropertyAdsReportMetricsGroup) GetCurrency() *string {
 	if p == nil {
 		return nil
@@ -404,6 +435,13 @@ func (p *PropertyAdsReportMetricsGroup) GetInsertionorderID() *string {
 		return nil
 	}
 	return p.InsertionorderID
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetLanguageLocale() *string {
+	if p == nil {
+		return nil
+	}
+	return p.LanguageLocale
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetName() *string {

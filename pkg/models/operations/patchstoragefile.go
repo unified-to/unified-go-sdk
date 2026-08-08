@@ -29,6 +29,7 @@ const (
 	PatchStorageFileQueryParamFieldsVersion     PatchStorageFileQueryParamFields = "version"
 	PatchStorageFileQueryParamFieldsWebURL      PatchStorageFileQueryParamFields = "web_url"
 	PatchStorageFileQueryParamFieldsReferences  PatchStorageFileQueryParamFields = "references"
+	PatchStorageFileQueryParamFieldsTags        PatchStorageFileQueryParamFields = "tags"
 	PatchStorageFileQueryParamFieldsRaw         PatchStorageFileQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *PatchStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "references":
+		fallthrough
+	case "tags":
 		fallthrough
 	case "raw":
 		*e = PatchStorageFileQueryParamFields(v)

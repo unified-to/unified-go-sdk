@@ -108,6 +108,28 @@ func (e *AdsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+type CreativeSelection string
+
+const (
+	CreativeSelectionOptimized  CreativeSelection = "OPTIMIZED"
+	CreativeSelectionRoundRobin CreativeSelection = "ROUND_ROBIN"
+)
+
+func (e CreativeSelection) ToPointer() *CreativeSelection {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CreativeSelection) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "OPTIMIZED", "ROUND_ROBIN":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsGroupEffectiveStatus string
 
 const (
@@ -248,6 +270,7 @@ type AdsGroup struct {
 	CampaignID           *string                       `json:"campaign_id,omitempty"`
 	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
 	CreativeIds          []string                      `json:"creative_ids,omitempty"`
+	CreativeSelection    *CreativeSelection            `json:"creative_selection,omitempty"`
 	Currency             *string                       `json:"currency,omitempty"`
 	EffectiveStatus      *AdsGroupEffectiveStatus      `json:"effective_status,omitempty"`
 	EndAt                *time.Time                    `json:"end_at,omitempty"`
@@ -255,6 +278,7 @@ type AdsGroup struct {
 	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
 	ID                   *string                       `json:"id,omitempty"`
 	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
+	LanguageLocale       *string                       `json:"language_locale,omitempty"`
 	Name                 *string                       `json:"name,omitempty"`
 	OptimizationGoal     *OptimizationGoal             `json:"optimization_goal,omitempty"`
 	OrganizationID       *string                       `json:"organization_id,omitempty"`
@@ -357,6 +381,13 @@ func (a *AdsGroup) GetCreativeIds() []string {
 	return a.CreativeIds
 }
 
+func (a *AdsGroup) GetCreativeSelection() *CreativeSelection {
+	if a == nil {
+		return nil
+	}
+	return a.CreativeSelection
+}
+
 func (a *AdsGroup) GetCurrency() *string {
 	if a == nil {
 		return nil
@@ -404,6 +435,13 @@ func (a *AdsGroup) GetInsertionorderID() *string {
 		return nil
 	}
 	return a.InsertionorderID
+}
+
+func (a *AdsGroup) GetLanguageLocale() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LanguageLocale
 }
 
 func (a *AdsGroup) GetName() *string {

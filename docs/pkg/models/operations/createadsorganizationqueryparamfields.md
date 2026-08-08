@@ -13,13 +13,16 @@ value := operations.CreateAdsOrganizationQueryParamFieldsID
 
 ## Values
 
-| Name                                             | Value                                            |
-| ------------------------------------------------ | ------------------------------------------------ |
-| `CreateAdsOrganizationQueryParamFieldsID`        | id                                               |
-| `CreateAdsOrganizationQueryParamFieldsCreatedAt` | created_at                                       |
-| `CreateAdsOrganizationQueryParamFieldsUpdatedAt` | updated_at                                       |
-| `CreateAdsOrganizationQueryParamFieldsName`      | name                                             |
-| `CreateAdsOrganizationQueryParamFieldsCurrency`  | currency                                         |
-| `CreateAdsOrganizationQueryParamFieldsTimezone`  | timezone                                         |
-| `CreateAdsOrganizationQueryParamFieldsParentID`  | parent_id                                        |
-| `CreateAdsOrganizationQueryParamFieldsRaw`       | raw                                              |
+| Name                                                 | Value                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| `CreateAdsOrganizationQueryParamFieldsID`            | id                                                   |
+| `CreateAdsOrganizationQueryParamFieldsCreatedAt`     | created_at                                           |
+| `CreateAdsOrganizationQueryParamFieldsUpdatedAt`     | updated_at                                           |
+| `CreateAdsOrganizationQueryParamFieldsName`          | name                                                 |
+| `CreateAdsOrganizationQueryParamFieldsCurrency`      | currency                                             |
+| `CreateAdsOrganizationQueryParamFieldsTimezone`      | timezone                                             |
+| `CreateAdsOrganizationQueryParamFieldsParentID`      | parent_id                                            |
+| `CreateAdsOrganizationQueryParamFieldsStatus`        | status                                               |
+| `CreateAdsOrganizationQueryParamFieldsAccountNumber` | account_number                                       |
+| `CreateAdsOrganizationQueryParamFieldsManagers`      | managers                                             |
+| `CreateAdsOrganizationQueryParamFieldsRaw`           | raw                                                  |

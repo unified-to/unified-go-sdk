@@ -45,4 +45,5 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | `PatchAccountingBillQueryParamFieldsPaymentTerms`            | payment_terms                                                |
 | `PatchAccountingBillQueryParamFieldsPayments`                | payments                                                     |
 | `PatchAccountingBillQueryParamFieldsCategoryIds`             | category_ids                                                 |
+| `PatchAccountingBillQueryParamFieldsProjectID`               | project_id                                                   |
 | `PatchAccountingBillQueryParamFieldsRaw`                     | raw                                                          |

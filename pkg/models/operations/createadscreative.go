@@ -27,6 +27,7 @@ const (
 	CreateAdsCreativeQueryParamFieldsHeight                     CreateAdsCreativeQueryParamFields = "height"
 	CreateAdsCreativeQueryParamFieldsAssetUrls                  CreateAdsCreativeQueryParamFields = "asset_urls"
 	CreateAdsCreativeQueryParamFieldsLinkURL                    CreateAdsCreativeQueryParamFields = "link_url"
+	CreateAdsCreativeQueryParamFieldsURLTags                    CreateAdsCreativeQueryParamFields = "url_tags"
 	CreateAdsCreativeQueryParamFieldsBody                       CreateAdsCreativeQueryParamFields = "body"
 	CreateAdsCreativeQueryParamFieldsTitle                      CreateAdsCreativeQueryParamFields = "title"
 	CreateAdsCreativeQueryParamFieldsCta                        CreateAdsCreativeQueryParamFields = "cta"
@@ -39,6 +40,7 @@ const (
 	CreateAdsCreativeQueryParamFieldsPath1                      CreateAdsCreativeQueryParamFields = "path1"
 	CreateAdsCreativeQueryParamFieldsPath2                      CreateAdsCreativeQueryParamFields = "path2"
 	CreateAdsCreativeQueryParamFieldsData                       CreateAdsCreativeQueryParamFields = "data"
+	CreateAdsCreativeQueryParamFieldsLabels                     CreateAdsCreativeQueryParamFields = "labels"
 	CreateAdsCreativeQueryParamFieldsRaw                        CreateAdsCreativeQueryParamFields = "raw"
 )
 
@@ -81,6 +83,8 @@ func (e *CreateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "link_url":
 		fallthrough
+	case "url_tags":
+		fallthrough
 	case "body":
 		fallthrough
 	case "title":
@@ -104,6 +108,8 @@ func (e *CreateAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "path2":
 		fallthrough
 	case "data":
+		fallthrough
+	case "labels":
 		fallthrough
 	case "raw":
 		*e = CreateAdsCreativeQueryParamFields(v)

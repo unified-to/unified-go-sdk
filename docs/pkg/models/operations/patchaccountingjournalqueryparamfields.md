@@ -28,5 +28,6 @@ value := operations.PatchAccountingJournalQueryParamFieldsID
 | `PatchAccountingJournalQueryParamFieldsSource`         | source                                                 |
 | `PatchAccountingJournalQueryParamFieldsOrganizationID` | organization_id                                        |
 | `PatchAccountingJournalQueryParamFieldsCategoryIds`    | category_ids                                           |
+| `PatchAccountingJournalQueryParamFieldsProjectID`      | project_id                                             |
 | `PatchAccountingJournalQueryParamFieldsAttachments`    | attachments                                            |
 | `PatchAccountingJournalQueryParamFieldsRaw`            | raw                                                    |

@@ -192,6 +192,7 @@ type AdsCampaign struct {
 	Goal                     *Goal                            `json:"goal,omitempty"`
 	HasEuPoliticalAds        *bool                            `json:"has_eu_political_ads,omitempty"`
 	ID                       *string                          `json:"id,omitempty"`
+	Labels                   []string                         `json:"labels,omitempty"`
 	Name                     *string                          `json:"name,omitempty"`
 	OrganizationID           *string                          `json:"organization_id,omitempty"`
 	PlannedSpendAmount       *float64                         `json:"planned_spend_amount,omitempty"`
@@ -310,6 +311,13 @@ func (a *AdsCampaign) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AdsCampaign) GetLabels() []string {
+	if a == nil {
+		return nil
+	}
+	return a.Labels
 }
 
 func (a *AdsCampaign) GetName() *string {

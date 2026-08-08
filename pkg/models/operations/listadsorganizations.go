@@ -12,14 +12,17 @@ import (
 type ListAdsOrganizationsQueryParamFields string
 
 const (
-	ListAdsOrganizationsQueryParamFieldsID        ListAdsOrganizationsQueryParamFields = "id"
-	ListAdsOrganizationsQueryParamFieldsCreatedAt ListAdsOrganizationsQueryParamFields = "created_at"
-	ListAdsOrganizationsQueryParamFieldsUpdatedAt ListAdsOrganizationsQueryParamFields = "updated_at"
-	ListAdsOrganizationsQueryParamFieldsName      ListAdsOrganizationsQueryParamFields = "name"
-	ListAdsOrganizationsQueryParamFieldsCurrency  ListAdsOrganizationsQueryParamFields = "currency"
-	ListAdsOrganizationsQueryParamFieldsTimezone  ListAdsOrganizationsQueryParamFields = "timezone"
-	ListAdsOrganizationsQueryParamFieldsParentID  ListAdsOrganizationsQueryParamFields = "parent_id"
-	ListAdsOrganizationsQueryParamFieldsRaw       ListAdsOrganizationsQueryParamFields = "raw"
+	ListAdsOrganizationsQueryParamFieldsID            ListAdsOrganizationsQueryParamFields = "id"
+	ListAdsOrganizationsQueryParamFieldsCreatedAt     ListAdsOrganizationsQueryParamFields = "created_at"
+	ListAdsOrganizationsQueryParamFieldsUpdatedAt     ListAdsOrganizationsQueryParamFields = "updated_at"
+	ListAdsOrganizationsQueryParamFieldsName          ListAdsOrganizationsQueryParamFields = "name"
+	ListAdsOrganizationsQueryParamFieldsCurrency      ListAdsOrganizationsQueryParamFields = "currency"
+	ListAdsOrganizationsQueryParamFieldsTimezone      ListAdsOrganizationsQueryParamFields = "timezone"
+	ListAdsOrganizationsQueryParamFieldsParentID      ListAdsOrganizationsQueryParamFields = "parent_id"
+	ListAdsOrganizationsQueryParamFieldsStatus        ListAdsOrganizationsQueryParamFields = "status"
+	ListAdsOrganizationsQueryParamFieldsAccountNumber ListAdsOrganizationsQueryParamFields = "account_number"
+	ListAdsOrganizationsQueryParamFieldsManagers      ListAdsOrganizationsQueryParamFields = "managers"
+	ListAdsOrganizationsQueryParamFieldsRaw           ListAdsOrganizationsQueryParamFields = "raw"
 )
 
 func (e ListAdsOrganizationsQueryParamFields) ToPointer() *ListAdsOrganizationsQueryParamFields {
@@ -44,6 +47,12 @@ func (e *ListAdsOrganizationsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "timezone":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "status":
+		fallthrough
+	case "account_number":
+		fallthrough
+	case "managers":
 		fallthrough
 	case "raw":
 		*e = ListAdsOrganizationsQueryParamFields(v)

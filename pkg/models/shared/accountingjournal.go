@@ -18,6 +18,7 @@ type AccountingJournal struct {
 	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	OrganizationID *string                     `json:"organization_id,omitempty"`
 	PostedAt       *time.Time                  `json:"posted_at,omitempty"`
+	ProjectID      *string                     `json:"project_id,omitempty"`
 	Raw            map[string]any              `json:"raw,omitempty"`
 	Reference      *string                     `json:"reference,omitempty"`
 	Source         *string                     `json:"source,omitempty"`
@@ -98,6 +99,13 @@ func (a *AccountingJournal) GetPostedAt() *time.Time {
 		return nil
 	}
 	return a.PostedAt
+}
+
+func (a *AccountingJournal) GetProjectID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ProjectID
 }
 
 func (a *AccountingJournal) GetRaw() map[string]any {

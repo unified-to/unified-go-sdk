@@ -37,4 +37,5 @@ value := operations.CreateAdsCampaignQueryParamFieldsID
 | `CreateAdsCampaignQueryParamFieldsCurrency`                 | currency                                                    |
 | `CreateAdsCampaignQueryParamFieldsCategory`                 | category                                                    |
 | `CreateAdsCampaignQueryParamFieldsHasEuPoliticalAds`        | has_eu_political_ads                                        |
+| `CreateAdsCampaignQueryParamFieldsLabels`                   | labels                                                      |
 | `CreateAdsCampaignQueryParamFieldsRaw`                      | raw                                                         |

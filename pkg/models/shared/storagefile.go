@@ -43,6 +43,7 @@ type StorageFile struct {
 	Raw         map[string]any      `json:"raw,omitempty"`
 	References  []StorageReference  `json:"references,omitempty"`
 	Size        *float64            `json:"size,omitempty"`
+	Tags        []string            `json:"tags,omitempty"`
 	Type        *StorageFileType    `json:"type,omitempty"`
 	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
 	UserID      *string             `json:"user_id,omitempty"`
@@ -150,6 +151,13 @@ func (s *StorageFile) GetSize() *float64 {
 		return nil
 	}
 	return s.Size
+}
+
+func (s *StorageFile) GetTags() []string {
+	if s == nil {
+		return nil
+	}
+	return s.Tags
 }
 
 func (s *StorageFile) GetType() *StorageFileType {

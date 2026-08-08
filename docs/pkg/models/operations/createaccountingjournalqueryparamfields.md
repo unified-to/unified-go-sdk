@@ -28,5 +28,6 @@ value := operations.CreateAccountingJournalQueryParamFieldsID
 | `CreateAccountingJournalQueryParamFieldsSource`         | source                                                  |
 | `CreateAccountingJournalQueryParamFieldsOrganizationID` | organization_id                                         |
 | `CreateAccountingJournalQueryParamFieldsCategoryIds`    | category_ids                                            |
+| `CreateAccountingJournalQueryParamFieldsProjectID`      | project_id                                              |
 | `CreateAccountingJournalQueryParamFieldsAttachments`    | attachments                                             |
 | `CreateAccountingJournalQueryParamFieldsRaw`            | raw                                                     |

@@ -32,4 +32,5 @@ value := operations.PatchStorageFileQueryParamFieldsID
 | `PatchStorageFileQueryParamFieldsVersion`     | version                                       |
 | `PatchStorageFileQueryParamFieldsWebURL`      | web_url                                       |
 | `PatchStorageFileQueryParamFieldsReferences`  | references                                    |
+| `PatchStorageFileQueryParamFieldsTags`        | tags                                          |
 | `PatchStorageFileQueryParamFieldsRaw`         | raw                                           |

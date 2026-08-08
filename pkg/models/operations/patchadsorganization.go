@@ -12,14 +12,17 @@ import (
 type PatchAdsOrganizationQueryParamFields string
 
 const (
-	PatchAdsOrganizationQueryParamFieldsID        PatchAdsOrganizationQueryParamFields = "id"
-	PatchAdsOrganizationQueryParamFieldsCreatedAt PatchAdsOrganizationQueryParamFields = "created_at"
-	PatchAdsOrganizationQueryParamFieldsUpdatedAt PatchAdsOrganizationQueryParamFields = "updated_at"
-	PatchAdsOrganizationQueryParamFieldsName      PatchAdsOrganizationQueryParamFields = "name"
-	PatchAdsOrganizationQueryParamFieldsCurrency  PatchAdsOrganizationQueryParamFields = "currency"
-	PatchAdsOrganizationQueryParamFieldsTimezone  PatchAdsOrganizationQueryParamFields = "timezone"
-	PatchAdsOrganizationQueryParamFieldsParentID  PatchAdsOrganizationQueryParamFields = "parent_id"
-	PatchAdsOrganizationQueryParamFieldsRaw       PatchAdsOrganizationQueryParamFields = "raw"
+	PatchAdsOrganizationQueryParamFieldsID            PatchAdsOrganizationQueryParamFields = "id"
+	PatchAdsOrganizationQueryParamFieldsCreatedAt     PatchAdsOrganizationQueryParamFields = "created_at"
+	PatchAdsOrganizationQueryParamFieldsUpdatedAt     PatchAdsOrganizationQueryParamFields = "updated_at"
+	PatchAdsOrganizationQueryParamFieldsName          PatchAdsOrganizationQueryParamFields = "name"
+	PatchAdsOrganizationQueryParamFieldsCurrency      PatchAdsOrganizationQueryParamFields = "currency"
+	PatchAdsOrganizationQueryParamFieldsTimezone      PatchAdsOrganizationQueryParamFields = "timezone"
+	PatchAdsOrganizationQueryParamFieldsParentID      PatchAdsOrganizationQueryParamFields = "parent_id"
+	PatchAdsOrganizationQueryParamFieldsStatus        PatchAdsOrganizationQueryParamFields = "status"
+	PatchAdsOrganizationQueryParamFieldsAccountNumber PatchAdsOrganizationQueryParamFields = "account_number"
+	PatchAdsOrganizationQueryParamFieldsManagers      PatchAdsOrganizationQueryParamFields = "managers"
+	PatchAdsOrganizationQueryParamFieldsRaw           PatchAdsOrganizationQueryParamFields = "raw"
 )
 
 func (e PatchAdsOrganizationQueryParamFields) ToPointer() *PatchAdsOrganizationQueryParamFields {
@@ -44,6 +47,12 @@ func (e *PatchAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "timezone":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "status":
+		fallthrough
+	case "account_number":
+		fallthrough
+	case "managers":
 		fallthrough
 	case "raw":
 		*e = PatchAdsOrganizationQueryParamFields(v)

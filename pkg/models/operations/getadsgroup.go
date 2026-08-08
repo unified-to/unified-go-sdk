@@ -41,6 +41,8 @@ const (
 	GetAdsGroupQueryParamFieldsBillingEvent         GetAdsGroupQueryParamFields = "billing_event"
 	GetAdsGroupQueryParamFieldsCurrency             GetAdsGroupQueryParamFields = "currency"
 	GetAdsGroupQueryParamFieldsPromoted             GetAdsGroupQueryParamFields = "promoted"
+	GetAdsGroupQueryParamFieldsLanguageLocale       GetAdsGroupQueryParamFields = "language_locale"
+	GetAdsGroupQueryParamFieldsCreativeSelection    GetAdsGroupQueryParamFields = "creative_selection"
 	GetAdsGroupQueryParamFieldsRaw                  GetAdsGroupQueryParamFields = "raw"
 )
 
@@ -110,6 +112,10 @@ func (e *GetAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "currency":
 		fallthrough
 	case "promoted":
+		fallthrough
+	case "language_locale":
+		fallthrough
+	case "creative_selection":
 		fallthrough
 	case "raw":
 		*e = GetAdsGroupQueryParamFields(v)

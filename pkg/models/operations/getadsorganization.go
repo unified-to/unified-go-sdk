@@ -12,14 +12,17 @@ import (
 type GetAdsOrganizationQueryParamFields string
 
 const (
-	GetAdsOrganizationQueryParamFieldsID        GetAdsOrganizationQueryParamFields = "id"
-	GetAdsOrganizationQueryParamFieldsCreatedAt GetAdsOrganizationQueryParamFields = "created_at"
-	GetAdsOrganizationQueryParamFieldsUpdatedAt GetAdsOrganizationQueryParamFields = "updated_at"
-	GetAdsOrganizationQueryParamFieldsName      GetAdsOrganizationQueryParamFields = "name"
-	GetAdsOrganizationQueryParamFieldsCurrency  GetAdsOrganizationQueryParamFields = "currency"
-	GetAdsOrganizationQueryParamFieldsTimezone  GetAdsOrganizationQueryParamFields = "timezone"
-	GetAdsOrganizationQueryParamFieldsParentID  GetAdsOrganizationQueryParamFields = "parent_id"
-	GetAdsOrganizationQueryParamFieldsRaw       GetAdsOrganizationQueryParamFields = "raw"
+	GetAdsOrganizationQueryParamFieldsID            GetAdsOrganizationQueryParamFields = "id"
+	GetAdsOrganizationQueryParamFieldsCreatedAt     GetAdsOrganizationQueryParamFields = "created_at"
+	GetAdsOrganizationQueryParamFieldsUpdatedAt     GetAdsOrganizationQueryParamFields = "updated_at"
+	GetAdsOrganizationQueryParamFieldsName          GetAdsOrganizationQueryParamFields = "name"
+	GetAdsOrganizationQueryParamFieldsCurrency      GetAdsOrganizationQueryParamFields = "currency"
+	GetAdsOrganizationQueryParamFieldsTimezone      GetAdsOrganizationQueryParamFields = "timezone"
+	GetAdsOrganizationQueryParamFieldsParentID      GetAdsOrganizationQueryParamFields = "parent_id"
+	GetAdsOrganizationQueryParamFieldsStatus        GetAdsOrganizationQueryParamFields = "status"
+	GetAdsOrganizationQueryParamFieldsAccountNumber GetAdsOrganizationQueryParamFields = "account_number"
+	GetAdsOrganizationQueryParamFieldsManagers      GetAdsOrganizationQueryParamFields = "managers"
+	GetAdsOrganizationQueryParamFieldsRaw           GetAdsOrganizationQueryParamFields = "raw"
 )
 
 func (e GetAdsOrganizationQueryParamFields) ToPointer() *GetAdsOrganizationQueryParamFields {
@@ -44,6 +47,12 @@ func (e *GetAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "timezone":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "status":
+		fallthrough
+	case "account_number":
+		fallthrough
+	case "managers":
 		fallthrough
 	case "raw":
 		*e = GetAdsOrganizationQueryParamFields(v)

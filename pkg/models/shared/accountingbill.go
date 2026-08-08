@@ -143,6 +143,7 @@ type AccountingBill struct {
 	// read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
 	Payments     []AccountingPaymentReference `json:"payments,omitempty"`
 	PostedAt     *time.Time                   `json:"posted_at,omitempty"`
+	ProjectID    *string                      `json:"project_id,omitempty"`
 	Raw          map[string]any               `json:"raw,omitempty"`
 	RefundAmount *float64                     `json:"refund_amount,omitempty"`
 	RefundReason *string                      `json:"refund_reason,omitempty"`
@@ -305,6 +306,13 @@ func (a *AccountingBill) GetPostedAt() *time.Time {
 		return nil
 	}
 	return a.PostedAt
+}
+
+func (a *AccountingBill) GetProjectID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ProjectID
 }
 
 func (a *AccountingBill) GetRaw() map[string]any {

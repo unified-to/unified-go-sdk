@@ -44,4 +44,6 @@ value := operations.ListAdsGroupsQueryParamFieldsID
 | `ListAdsGroupsQueryParamFieldsBillingEvent`         | billing_event                                       |
 | `ListAdsGroupsQueryParamFieldsCurrency`             | currency                                            |
 | `ListAdsGroupsQueryParamFieldsPromoted`             | promoted                                            |
+| `ListAdsGroupsQueryParamFieldsLanguageLocale`       | language_locale                                     |
+| `ListAdsGroupsQueryParamFieldsCreativeSelection`    | creative_selection                                  |
 | `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

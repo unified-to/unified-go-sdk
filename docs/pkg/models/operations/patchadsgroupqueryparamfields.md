@@ -44,4 +44,6 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsBillingEvent`         | billing_event                                       |
 | `PatchAdsGroupQueryParamFieldsCurrency`             | currency                                            |
 | `PatchAdsGroupQueryParamFieldsPromoted`             | promoted                                            |
+| `PatchAdsGroupQueryParamFieldsLanguageLocale`       | language_locale                                     |
+| `PatchAdsGroupQueryParamFieldsCreativeSelection`    | creative_selection                                  |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |

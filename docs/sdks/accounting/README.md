@@ -13,12 +13,16 @@
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](#createaccountingorder) - Create an order
+* [CreateAccountingProject](#createaccountingproject) - Create a project
 * [CreateAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
+* [CreateAccountingQuote](#createaccountingquote) - Create a quote
 * [CreateAccountingSalesorder](#createaccountingsalesorder) - Create a salesorder
 * [CreateAccountingTaxrate](#createaccountingtaxrate) - Create a taxrate
 * [CreateAccountingTransaction](#createaccountingtransaction) - Create a transaction
 * [CreateAccountingVendorcredit](#createaccountingvendorcredit) - Create a vendorcredit
 * [GetAccountingAccount](#getaccountingaccount) - Retrieve an account
+* [GetAccountingAgedpayable](#getaccountingagedpayable) - Retrieve an agedpayable
+* [GetAccountingAgedreceivable](#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [GetAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
 * [GetAccountingBill](#getaccountingbill) - Retrieve a bill
 * [GetAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
@@ -31,7 +35,9 @@
 * [GetAccountingOrder](#getaccountingorder) - Retrieve an order
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [GetAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
+* [GetAccountingProject](#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [GetAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [GetAccountingReport](#getaccountingreport) - Retrieve a report
 * [GetAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
 * [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
@@ -39,6 +45,8 @@
 * [GetAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
 * [GetAccountingVendorcredit](#getaccountingvendorcredit) - Retrieve a vendorcredit
 * [ListAccountingAccounts](#listaccountingaccounts) - List all accounts
+* [ListAccountingAgedpayables](#listaccountingagedpayables) - List all agedpayables
+* [ListAccountingAgedreceivables](#listaccountingagedreceivables) - List all agedreceivables
 * [ListAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
 * [ListAccountingBills](#listaccountingbills) - List all bills
 * [ListAccountingCashflows](#listaccountingcashflows) - List all cashflows
@@ -51,7 +59,9 @@
 * [ListAccountingOrders](#listaccountingorders) - List all orders
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [ListAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
+* [ListAccountingProjects](#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
+* [ListAccountingQuotes](#listaccountingquotes) - List all quotes
 * [ListAccountingReports](#listaccountingreports) - List all reports
 * [ListAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
 * [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
@@ -67,7 +77,9 @@
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](#patchaccountingorder) - Update an order
+* [PatchAccountingProject](#patchaccountingproject) - Update a project
 * [PatchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
+* [PatchAccountingQuote](#patchaccountingquote) - Update a quote
 * [PatchAccountingSalesorder](#patchaccountingsalesorder) - Update a salesorder
 * [PatchAccountingTaxrate](#patchaccountingtaxrate) - Update a taxrate
 * [PatchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
@@ -81,7 +93,9 @@
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](#removeaccountingorder) - Remove an order
+* [RemoveAccountingProject](#removeaccountingproject) - Remove a project
 * [RemoveAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
+* [RemoveAccountingQuote](#removeaccountingquote) - Remove a quote
 * [RemoveAccountingSalesorder](#removeaccountingsalesorder) - Remove a salesorder
 * [RemoveAccountingTaxrate](#removeaccountingtaxrate) - Remove a taxrate
 * [RemoveAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
@@ -95,7 +109,9 @@
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](#updateaccountingorder) - Update an order
+* [UpdateAccountingProject](#updateaccountingproject) - Update a project
 * [UpdateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
+* [UpdateAccountingQuote](#updateaccountingquote) - Update a quote
 * [UpdateAccountingSalesorder](#updateaccountingsalesorder) - Update a salesorder
 * [UpdateAccountingTaxrate](#updateaccountingtaxrate) - Update a taxrate
 * [UpdateAccountingTransaction](#updateaccountingtransaction) - Update a transaction
@@ -605,6 +621,62 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## CreateAccountingProject
+
+Create a project
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createAccountingProject" method="post" path="/accounting/{connection_id}/project" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.CreateAccountingProject(ctx, operations.CreateAccountingProjectRequest{
+        AccountingProject: shared.AccountingProject{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingProject != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateAccountingProjectRequest](../../pkg/models/operations/createaccountingprojectrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.CreateAccountingProjectResponse](../../pkg/models/operations/createaccountingprojectresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## CreateAccountingPurchaseorder
 
 Create a purchaseorder
@@ -654,6 +726,62 @@ func main() {
 ### Response
 
 **[*operations.CreateAccountingPurchaseorderResponse](../../pkg/models/operations/createaccountingpurchaseorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateAccountingQuote
+
+Create a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createAccountingQuote" method="post" path="/accounting/{connection_id}/quote" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.CreateAccountingQuote(ctx, operations.CreateAccountingQuoteRequest{
+        AccountingQuote: shared.AccountingQuote{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.CreateAccountingQuoteRequest](../../pkg/models/operations/createaccountingquoterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.CreateAccountingQuoteResponse](../../pkg/models/operations/createaccountingquoteresponse.md), error**
 
 ### Errors
 
@@ -933,6 +1061,116 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingAccountResponse](../../pkg/models/operations/getaccountingaccountresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAccountingAgedpayable
+
+Retrieve an agedpayable
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingAgedpayable" method="get" path="/accounting/{connection_id}/agedpayable/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingAgedpayable(ctx, operations.GetAccountingAgedpayableRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingAgedpayable != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.GetAccountingAgedpayableRequest](../../pkg/models/operations/getaccountingagedpayablerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.GetAccountingAgedpayableResponse](../../pkg/models/operations/getaccountingagedpayableresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAccountingAgedreceivable
+
+Retrieve an agedreceivable
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingAgedreceivable" method="get" path="/accounting/{connection_id}/agedreceivable/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingAgedreceivable(ctx, operations.GetAccountingAgedreceivableRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingAgedreceivable != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.GetAccountingAgedreceivableRequest](../../pkg/models/operations/getaccountingagedreceivablerequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.GetAccountingAgedreceivableResponse](../../pkg/models/operations/getaccountingagedreceivableresponse.md), error**
 
 ### Errors
 
@@ -1600,6 +1838,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetAccountingProject
+
+Retrieve a project
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingProject" method="get" path="/accounting/{connection_id}/project/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingProject(ctx, operations.GetAccountingProjectRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingProject != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetAccountingProjectRequest](../../pkg/models/operations/getaccountingprojectrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.GetAccountingProjectResponse](../../pkg/models/operations/getaccountingprojectresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetAccountingPurchaseorder
 
 Retrieve a purchaseorder
@@ -1648,6 +1941,61 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingPurchaseorderResponse](../../pkg/models/operations/getaccountingpurchaseorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAccountingQuote
+
+Retrieve a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingQuote" method="get" path="/accounting/{connection_id}/quote/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingQuote(ctx, operations.GetAccountingQuoteRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.GetAccountingQuoteRequest](../../pkg/models/operations/getaccountingquoterequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.GetAccountingQuoteResponse](../../pkg/models/operations/getaccountingquoteresponse.md), error**
 
 ### Errors
 
@@ -2032,6 +2380,114 @@ func main() {
 ### Response
 
 **[*operations.ListAccountingAccountsResponse](../../pkg/models/operations/listaccountingaccountsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListAccountingAgedpayables
+
+List all agedpayables
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingAgedpayables" method="get" path="/accounting/{connection_id}/agedpayable" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingAgedpayables(ctx, operations.ListAccountingAgedpayablesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingAgedpayables != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.ListAccountingAgedpayablesRequest](../../pkg/models/operations/listaccountingagedpayablesrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+
+### Response
+
+**[*operations.ListAccountingAgedpayablesResponse](../../pkg/models/operations/listaccountingagedpayablesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListAccountingAgedreceivables
+
+List all agedreceivables
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingAgedreceivables" method="get" path="/accounting/{connection_id}/agedreceivable" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingAgedreceivables(ctx, operations.ListAccountingAgedreceivablesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingAgedreceivables != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.ListAccountingAgedreceivablesRequest](../../pkg/models/operations/listaccountingagedreceivablesrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.ListAccountingAgedreceivablesResponse](../../pkg/models/operations/listaccountingagedreceivablesresponse.md), error**
 
 ### Errors
 
@@ -2687,6 +3143,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAccountingProjects
+
+List all projects
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingProjects" method="get" path="/accounting/{connection_id}/project" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingProjects(ctx, operations.ListAccountingProjectsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingProjects != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListAccountingProjectsRequest](../../pkg/models/operations/listaccountingprojectsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.ListAccountingProjectsResponse](../../pkg/models/operations/listaccountingprojectsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAccountingPurchaseorders
 
 List all purchaseorders
@@ -2734,6 +3244,60 @@ func main() {
 ### Response
 
 **[*operations.ListAccountingPurchaseordersResponse](../../pkg/models/operations/listaccountingpurchaseordersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListAccountingQuotes
+
+List all quotes
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingQuotes" method="get" path="/accounting/{connection_id}/quote" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingQuotes(ctx, operations.ListAccountingQuotesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingQuotes != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.ListAccountingQuotesRequest](../../pkg/models/operations/listaccountingquotesrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.ListAccountingQuotesResponse](../../pkg/models/operations/listaccountingquotesresponse.md), error**
 
 ### Errors
 
@@ -3578,6 +4142,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchAccountingProject
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAccountingProject" method="patch" path="/accounting/{connection_id}/project/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.PatchAccountingProject(ctx, operations.PatchAccountingProjectRequest{
+        AccountingProject: shared.AccountingProject{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingProject != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchAccountingProjectRequest](../../pkg/models/operations/patchaccountingprojectrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.PatchAccountingProjectResponse](../../pkg/models/operations/patchaccountingprojectresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchAccountingPurchaseorder
 
 Update a purchaseorder
@@ -3628,6 +4249,63 @@ func main() {
 ### Response
 
 **[*operations.PatchAccountingPurchaseorderResponse](../../pkg/models/operations/patchaccountingpurchaseorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAccountingQuote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAccountingQuote" method="patch" path="/accounting/{connection_id}/quote/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.PatchAccountingQuote(ctx, operations.PatchAccountingQuoteRequest{
+        AccountingQuote: shared.AccountingQuote{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.PatchAccountingQuoteRequest](../../pkg/models/operations/patchaccountingquoterequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.PatchAccountingQuoteResponse](../../pkg/models/operations/patchaccountingquoteresponse.md), error**
 
 ### Errors
 
@@ -4358,6 +5036,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## RemoveAccountingProject
+
+Remove a project
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingProject" method="delete" path="/accounting/{connection_id}/project/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.RemoveAccountingProject(ctx, operations.RemoveAccountingProjectRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveAccountingProjectRequest](../../pkg/models/operations/removeaccountingprojectrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.RemoveAccountingProjectResponse](../../pkg/models/operations/removeaccountingprojectresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## RemoveAccountingPurchaseorder
 
 Remove a purchaseorder
@@ -4406,6 +5139,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveAccountingPurchaseorderResponse](../../pkg/models/operations/removeaccountingpurchaseorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAccountingQuote
+
+Remove a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingQuote" method="delete" path="/accounting/{connection_id}/quote/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.RemoveAccountingQuote(ctx, operations.RemoveAccountingQuoteRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.RemoveAccountingQuoteRequest](../../pkg/models/operations/removeaccountingquoterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.RemoveAccountingQuoteResponse](../../pkg/models/operations/removeaccountingquoteresponse.md), error**
 
 ### Errors
 
@@ -5146,6 +5934,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## UpdateAccountingProject
+
+Update a project
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingProject" method="put" path="/accounting/{connection_id}/project/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.UpdateAccountingProject(ctx, operations.UpdateAccountingProjectRequest{
+        AccountingProject: shared.AccountingProject{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingProject != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateAccountingProjectRequest](../../pkg/models/operations/updateaccountingprojectrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.UpdateAccountingProjectResponse](../../pkg/models/operations/updateaccountingprojectresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## UpdateAccountingPurchaseorder
 
 Update a purchaseorder
@@ -5196,6 +6041,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateAccountingPurchaseorderResponse](../../pkg/models/operations/updateaccountingpurchaseorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAccountingQuote
+
+Update a quote
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingQuote" method="put" path="/accounting/{connection_id}/quote/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.UpdateAccountingQuote(ctx, operations.UpdateAccountingQuoteRequest{
+        AccountingQuote: shared.AccountingQuote{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingQuote != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.UpdateAccountingQuoteRequest](../../pkg/models/operations/updateaccountingquoterequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.UpdateAccountingQuoteResponse](../../pkg/models/operations/updateaccountingquoteresponse.md), error**
 
 ### Errors
 

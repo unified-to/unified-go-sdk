@@ -108,6 +108,7 @@ type AdsCreative struct {
 	HostingSource              *HostingSource     `json:"hosting_source,omitempty"`
 	ID                         *string            `json:"id,omitempty"`
 	ItemID                     *string            `json:"item_id,omitempty"`
+	Labels                     []string           `json:"labels,omitempty"`
 	LinkURL                    *string            `json:"link_url,omitempty"`
 	Name                       *string            `json:"name,omitempty"`
 	OrganizationID             *string            `json:"organization_id,omitempty"`
@@ -119,6 +120,7 @@ type AdsCreative struct {
 	ThirdPartyTag              *string            `json:"third_party_tag,omitempty"`
 	Title                      *string            `json:"title,omitempty"`
 	UpdatedAt                  *time.Time         `json:"updated_at,omitempty"`
+	URLTags                    *string            `json:"url_tags,omitempty"`
 	VastTagURL                 *string            `json:"vast_tag_url,omitempty"`
 	Width                      *float64           `json:"width,omitempty"`
 }
@@ -239,6 +241,13 @@ func (a *AdsCreative) GetItemID() *string {
 	return a.ItemID
 }
 
+func (a *AdsCreative) GetLabels() []string {
+	if a == nil {
+		return nil
+	}
+	return a.Labels
+}
+
 func (a *AdsCreative) GetLinkURL() *string {
 	if a == nil {
 		return nil
@@ -314,6 +323,13 @@ func (a *AdsCreative) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return a.UpdatedAt
+}
+
+func (a *AdsCreative) GetURLTags() *string {
+	if a == nil {
+		return nil
+	}
+	return a.URLTags
 }
 
 func (a *AdsCreative) GetVastTagURL() *string {

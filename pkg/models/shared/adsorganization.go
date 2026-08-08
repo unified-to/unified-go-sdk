@@ -7,15 +7,47 @@ import (
 	"time"
 )
 
+type AdsOrganizationStatus string
+
+const (
+	AdsOrganizationStatusUnspecified          AdsOrganizationStatus = "UNSPECIFIED"
+	AdsOrganizationStatusActive               AdsOrganizationStatus = "ACTIVE"
+	AdsOrganizationStatusPaused               AdsOrganizationStatus = "PAUSED"
+	AdsOrganizationStatusArchived             AdsOrganizationStatus = "ARCHIVED"
+	AdsOrganizationStatusDraft                AdsOrganizationStatus = "DRAFT"
+	AdsOrganizationStatusScheduledForDeletion AdsOrganizationStatus = "SCHEDULED_FOR_DELETION"
+	AdsOrganizationStatusProcessing           AdsOrganizationStatus = "PROCESSING"
+	AdsOrganizationStatusProcessingFailed     AdsOrganizationStatus = "PROCESSING_FAILED"
+)
+
+func (e AdsOrganizationStatus) ToPointer() *AdsOrganizationStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AdsOrganizationStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "UNSPECIFIED", "ACTIVE", "PAUSED", "ARCHIVED", "DRAFT", "SCHEDULED_FOR_DELETION", "PROCESSING", "PROCESSING_FAILED":
+			return true
+		}
+	}
+	return false
+}
+
 type AdsOrganization struct {
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	Currency  *string        `json:"currency,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	Name      *string        `json:"name,omitempty"`
-	ParentID  *string        `json:"parent_id,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	Timezone  *string        `json:"timezone,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	AccountNumber *string    `json:"account_number,omitempty"`
+	CreatedAt     *time.Time `json:"created_at,omitempty"`
+	Currency      *string    `json:"currency,omitempty"`
+	ID            *string    `json:"id,omitempty"`
+	// Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+	Managers  []AdsManager           `json:"managers,omitempty"`
+	Name      *string                `json:"name,omitempty"`
+	ParentID  *string                `json:"parent_id,omitempty"`
+	Raw       map[string]any         `json:"raw,omitempty"`
+	Status    *AdsOrganizationStatus `json:"status,omitempty"`
+	Timezone  *string                `json:"timezone,omitempty"`
+	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
 }
 
 func (a AdsOrganization) MarshalJSON() ([]byte, error) {
@@ -27,6 +59,13 @@ func (a *AdsOrganization) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AdsOrganization) GetAccountNumber() *string {
+	if a == nil {
+		return nil
+	}
+	return a.AccountNumber
 }
 
 func (a *AdsOrganization) GetCreatedAt() *time.Time {
@@ -50,6 +89,13 @@ func (a *AdsOrganization) GetID() *string {
 	return a.ID
 }
 
+func (a *AdsOrganization) GetManagers() []AdsManager {
+	if a == nil {
+		return nil
+	}
+	return a.Managers
+}
+
 func (a *AdsOrganization) GetName() *string {
 	if a == nil {
 		return nil
@@ -69,6 +115,13 @@ func (a *AdsOrganization) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AdsOrganization) GetStatus() *AdsOrganizationStatus {
+	if a == nil {
+		return nil
+	}
+	return a.Status
 }
 
 func (a *AdsOrganization) GetTimezone() *string {

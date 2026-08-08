@@ -32,4 +32,5 @@ value := operations.GetStorageFileQueryParamFieldsID
 | `GetStorageFileQueryParamFieldsVersion`     | version                                     |
 | `GetStorageFileQueryParamFieldsWebURL`      | web_url                                     |
 | `GetStorageFileQueryParamFieldsReferences`  | references                                  |
+| `GetStorageFileQueryParamFieldsTags`        | tags                                        |
 | `GetStorageFileQueryParamFieldsRaw`         | raw                                         |

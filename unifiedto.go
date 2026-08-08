@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.926.8
+// Generated from OpenAPI doc version 1.0 and generator version 2.927.0
 
 import (
 	"context"
@@ -59,6 +59,8 @@ type UnifiedTo struct {
 	SDKVersion        string
 	Accounting        *Accounting
 	Account           *Account
+	Agedpayable       *Agedpayable
+	Agedreceivable    *Agedreceivable
 	Balancesheet      *Balancesheet
 	Bill              *Bill
 	Cashflow          *Cashflow
@@ -71,7 +73,9 @@ type UnifiedTo struct {
 	Order             *Order
 	Organization      *Organization
 	Profitloss        *Profitloss
+	Project           *Project
 	Purchaseorder     *Purchaseorder
+	Quote             *Quote
 	Report            *Report
 	Salesorder        *Salesorder
 	Taxrate           *Taxrate
@@ -197,7 +201,6 @@ type UnifiedTo struct {
 	File              *File
 	Task              *Task
 	Change            *Change
-	Project           *Project
 	Ticketing         *Ticketing
 	Customer          *Customer
 	Note              *Note
@@ -293,9 +296,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.106",
+		SDKVersion: "0.36.107",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.106 2.926.8 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.107 2.927.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -318,6 +321,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 
 	sdk.Accounting = newAccounting(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Account = newAccount(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Agedpayable = newAgedpayable(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Agedreceivable = newAgedreceivable(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Balancesheet = newBalancesheet(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Bill = newBill(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Cashflow = newCashflow(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -330,7 +335,9 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Organization = newOrganization(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Profitloss = newProfitloss(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Purchaseorder = newPurchaseorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Quote = newQuote(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Salesorder = newSalesorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -456,7 +463,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Note = newNote(sdk, sdk.sdkConfiguration, sdk.hooks)

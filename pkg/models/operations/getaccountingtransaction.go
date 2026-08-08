@@ -31,6 +31,7 @@ const (
 	GetAccountingTransactionQueryParamFieldsContacts        GetAccountingTransactionQueryParamFields = "contacts"
 	GetAccountingTransactionQueryParamFieldsOrganizationID  GetAccountingTransactionQueryParamFields = "organization_id"
 	GetAccountingTransactionQueryParamFieldsCategoryIds     GetAccountingTransactionQueryParamFields = "category_ids"
+	GetAccountingTransactionQueryParamFieldsProjectID       GetAccountingTransactionQueryParamFields = "project_id"
 	GetAccountingTransactionQueryParamFieldsRaw             GetAccountingTransactionQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *GetAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte) er
 	case "organization_id":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "project_id":
 		fallthrough
 	case "raw":
 		*e = GetAccountingTransactionQueryParamFields(v)

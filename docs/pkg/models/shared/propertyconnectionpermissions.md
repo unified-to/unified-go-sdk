@@ -59,6 +59,12 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsPaymentPaymentWrite`          | payment_payment_write                                       |
 | `PropertyConnectionPermissionsAccountingCashflowRead`       | accounting_cashflow_read                                    |
 | `PropertyConnectionPermissionsAccountingCashflowWrite`      | accounting_cashflow_write                                   |
+| `PropertyConnectionPermissionsAccountingQuoteRead`          | accounting_quote_read                                       |
+| `PropertyConnectionPermissionsAccountingQuoteWrite`         | accounting_quote_write                                      |
+| `PropertyConnectionPermissionsAccountingAgedreceivableRead` | accounting_agedreceivable_read                              |
+| `PropertyConnectionPermissionsAccountingAgedpayableRead`    | accounting_agedpayable_read                                 |
+| `PropertyConnectionPermissionsAccountingProjectRead`        | accounting_project_read                                     |
+| `PropertyConnectionPermissionsAccountingProjectWrite`       | accounting_project_write                                    |
 | `PropertyConnectionPermissionsPaymentPayoutRead`            | payment_payout_read                                         |
 | `PropertyConnectionPermissionsPaymentRefundRead`            | payment_refund_read                                         |
 | `PropertyConnectionPermissionsPaymentLinkRead`              | payment_link_read                                           |

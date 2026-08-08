@@ -108,6 +108,7 @@ type PropertyAdsReportMetricsCreative struct {
 	HostingSource              *PropertyAdsReportMetricsCreativeHostingSource `json:"hosting_source,omitempty"`
 	ID                         *string                                        `json:"id,omitempty"`
 	ItemID                     *string                                        `json:"item_id,omitempty"`
+	Labels                     []string                                       `json:"labels,omitempty"`
 	LinkURL                    *string                                        `json:"link_url,omitempty"`
 	Name                       *string                                        `json:"name,omitempty"`
 	OrganizationID             *string                                        `json:"organization_id,omitempty"`
@@ -119,6 +120,7 @@ type PropertyAdsReportMetricsCreative struct {
 	ThirdPartyTag              *string                                        `json:"third_party_tag,omitempty"`
 	Title                      *string                                        `json:"title,omitempty"`
 	UpdatedAt                  *time.Time                                     `json:"updated_at,omitempty"`
+	URLTags                    *string                                        `json:"url_tags,omitempty"`
 	VastTagURL                 *string                                        `json:"vast_tag_url,omitempty"`
 	Width                      *float64                                       `json:"width,omitempty"`
 }
@@ -239,6 +241,13 @@ func (p *PropertyAdsReportMetricsCreative) GetItemID() *string {
 	return p.ItemID
 }
 
+func (p *PropertyAdsReportMetricsCreative) GetLabels() []string {
+	if p == nil {
+		return nil
+	}
+	return p.Labels
+}
+
 func (p *PropertyAdsReportMetricsCreative) GetLinkURL() *string {
 	if p == nil {
 		return nil
@@ -314,6 +323,13 @@ func (p *PropertyAdsReportMetricsCreative) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return p.UpdatedAt
+}
+
+func (p *PropertyAdsReportMetricsCreative) GetURLTags() *string {
+	if p == nil {
+		return nil
+	}
+	return p.URLTags
 }
 
 func (p *PropertyAdsReportMetricsCreative) GetVastTagURL() *string {

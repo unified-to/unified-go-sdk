@@ -30,6 +30,7 @@ value := operations.CreateAdsCreativeQueryParamFieldsID
 | `CreateAdsCreativeQueryParamFieldsHeight`                     | height                                                        |
 | `CreateAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                    |
 | `CreateAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                      |
+| `CreateAdsCreativeQueryParamFieldsURLTags`                    | url_tags                                                      |
 | `CreateAdsCreativeQueryParamFieldsBody`                       | body                                                          |
 | `CreateAdsCreativeQueryParamFieldsTitle`                      | title                                                         |
 | `CreateAdsCreativeQueryParamFieldsCta`                        | cta                                                           |
@@ -42,4 +43,5 @@ value := operations.CreateAdsCreativeQueryParamFieldsID
 | `CreateAdsCreativeQueryParamFieldsPath1`                      | path1                                                         |
 | `CreateAdsCreativeQueryParamFieldsPath2`                      | path2                                                         |
 | `CreateAdsCreativeQueryParamFieldsData`                       | data                                                          |
+| `CreateAdsCreativeQueryParamFieldsLabels`                     | labels                                                        |
 | `CreateAdsCreativeQueryParamFieldsRaw`                        | raw                                                           |
