@@ -851,6 +851,11 @@ func main() {
 * [RemoveTicketingCustomer](docs/sdks/customer/README.md#removeticketingcustomer) - Remove a customer
 * [UpdateTicketingCustomer](docs/sdks/customer/README.md#updateticketingcustomer) - Update a customer
 
+### [Cycle](docs/sdks/cycle/README.md)
+
+* [GetPerformanceCycle](docs/sdks/cycle/README.md#getperformancecycle) - Retrieve a cycle
+* [ListPerformanceCycles](docs/sdks/cycle/README.md#listperformancecycles) - List all cycles
+
 ### [Database](docs/sdks/database/README.md)
 
 * [CreateDatastoreDatabase](docs/sdks/database/README.md#createdatastoredatabase) - Create a database
@@ -1000,6 +1005,12 @@ func main() {
 * [RemoveAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
 * [UpdateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
+### [Feedback](docs/sdks/feedback/README.md)
+
+* [CreatePerformanceFeedback](docs/sdks/feedback/README.md#createperformancefeedback) - Create a feedback
+* [GetPerformanceFeedback](docs/sdks/feedback/README.md#getperformancefeedback) - Retrieve a feedback
+* [ListPerformanceFeedbacks](docs/sdks/feedback/README.md#listperformancefeedbacks) - List all feedbacks
+
 ### [File](docs/sdks/file/README.md)
 
 * [CreateStorageFile](docs/sdks/file/README.md#createstoragefile) - Create a file
@@ -1035,6 +1046,15 @@ func main() {
 * [CreateGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [GetGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [ListGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
+
+### [Goal](docs/sdks/goal/README.md)
+
+* [CreatePerformanceGoal](docs/sdks/goal/README.md#createperformancegoal) - Create a goal
+* [GetPerformanceGoal](docs/sdks/goal/README.md#getperformancegoal) - Retrieve a goal
+* [ListPerformanceGoals](docs/sdks/goal/README.md#listperformancegoals) - List all goals
+* [PatchPerformanceGoal](docs/sdks/goal/README.md#patchperformancegoal) - Update a goal
+* [RemovePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
+* [UpdatePerformanceGoal](docs/sdks/goal/README.md#updateperformancegoal) - Update a goal
 
 ### [Group](docs/sdks/group/README.md)
 
@@ -1529,6 +1549,22 @@ func main() {
 * [GetHrisPayslip](docs/sdks/payslip/README.md#gethrispayslip) - Retrieve a payslip
 * [ListHrisPayslips](docs/sdks/payslip/README.md#listhrispayslips) - List all payslips
 
+### [Performance](docs/sdks/performance/README.md)
+
+* [CreatePerformanceFeedback](docs/sdks/performance/README.md#createperformancefeedback) - Create a feedback
+* [CreatePerformanceGoal](docs/sdks/performance/README.md#createperformancegoal) - Create a goal
+* [GetPerformanceCycle](docs/sdks/performance/README.md#getperformancecycle) - Retrieve a cycle
+* [GetPerformanceFeedback](docs/sdks/performance/README.md#getperformancefeedback) - Retrieve a feedback
+* [GetPerformanceGoal](docs/sdks/performance/README.md#getperformancegoal) - Retrieve a goal
+* [GetPerformanceReview](docs/sdks/performance/README.md#getperformancereview) - Retrieve a review
+* [ListPerformanceCycles](docs/sdks/performance/README.md#listperformancecycles) - List all cycles
+* [ListPerformanceFeedbacks](docs/sdks/performance/README.md#listperformancefeedbacks) - List all feedbacks
+* [ListPerformanceGoals](docs/sdks/performance/README.md#listperformancegoals) - List all goals
+* [ListPerformanceReviews](docs/sdks/performance/README.md#listperformancereviews) - List all reviews
+* [PatchPerformanceGoal](docs/sdks/performance/README.md#patchperformancegoal) - Update a goal
+* [RemovePerformanceGoal](docs/sdks/performance/README.md#removeperformancegoal) - Remove a goal
+* [UpdatePerformanceGoal](docs/sdks/performance/README.md#updateperformancegoal) - Update a goal
+
 ### [Person](docs/sdks/person/README.md)
 
 * [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
@@ -1725,7 +1761,9 @@ func main() {
 
 * [CreateCommerceReview](docs/sdks/review/README.md#createcommercereview) - Create a review
 * [GetCommerceReview](docs/sdks/review/README.md#getcommercereview) - Retrieve a review
+* [GetPerformanceReview](docs/sdks/review/README.md#getperformancereview) - Retrieve a review
 * [ListCommerceReviews](docs/sdks/review/README.md#listcommercereviews) - List all reviews
+* [ListPerformanceReviews](docs/sdks/review/README.md#listperformancereviews) - List all reviews
 * [PatchCommerceReview](docs/sdks/review/README.md#patchcommercereview) - Update a review
 * [RemoveCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [UpdateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review

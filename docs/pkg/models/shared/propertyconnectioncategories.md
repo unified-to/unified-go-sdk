@@ -51,3 +51,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesClubs`        | clubs                                      |
 | `PropertyConnectionCategoriesDatastore`    | datastore                                  |
 | `PropertyConnectionCategoriesCdp`          | cdp                                        |
+| `PropertyConnectionCategoriesPerformance`  | performance                                |

@@ -179,3 +179,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeCdpSource`                | cdp_source                                  |
 | `WebhookObjectTypeCdpDestination`           | cdp_destination                             |
 | `WebhookObjectTypeCdpActivation`            | cdp_activation                              |
+| `WebhookObjectTypePerformanceCycle`         | performance_cycle                           |
+| `WebhookObjectTypePerformanceReview`        | performance_review                          |
+| `WebhookObjectTypePerformanceGoal`          | performance_goal                            |
+| `WebhookObjectTypePerformanceFeedback`      | performance_feedback                        |

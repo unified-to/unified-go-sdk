@@ -508,6 +508,29 @@ func (e *ListCustomerID) IsExact() bool {
 	return false
 }
 
+type ListCycleID string
+
+const (
+	ListCycleIDSupportedRequired ListCycleID = "supported-required"
+	ListCycleIDSupported         ListCycleID = "supported"
+	ListCycleIDNotSupported      ListCycleID = "not-supported"
+)
+
+func (e ListCycleID) ToPointer() *ListCycleID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListCycleID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListDatabaseID string
 
 const (
@@ -3176,6 +3199,29 @@ func (e *VirtualWebhookCustomerID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookCycleID string
+
+const (
+	VirtualWebhookCycleIDSupportedRequired VirtualWebhookCycleID = "supported-required"
+	VirtualWebhookCycleIDSupported         VirtualWebhookCycleID = "supported"
+	VirtualWebhookCycleIDNotSupported      VirtualWebhookCycleID = "not-supported"
+)
+
+func (e VirtualWebhookCycleID) ToPointer() *VirtualWebhookCycleID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookCycleID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookDatabaseID string
 
 const (
@@ -4281,6 +4327,7 @@ type IntegrationSupport struct {
 	ListContentID           *ListContentID           `json:"list_content_id,omitempty"`
 	ListCourseID            *ListCourseID            `json:"list_course_id,omitempty"`
 	ListCustomerID          *ListCustomerID          `json:"list_customer_id,omitempty"`
+	ListCycleID             *ListCycleID             `json:"list_cycle_id,omitempty"`
 	ListDatabaseID          *ListDatabaseID          `json:"list_database_id,omitempty"`
 	ListDealID              *ListDealID              `json:"list_deal_id,omitempty"`
 	ListDimension           *ListDimension           `json:"list_dimension,omitempty"`
@@ -4402,6 +4449,7 @@ type IntegrationSupport struct {
 	VirtualWebhookContactID       *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
 	VirtualWebhookCourseID        *VirtualWebhookCourseID                  `json:"virtual_webhook_course_id,omitempty"`
 	VirtualWebhookCustomerID      *VirtualWebhookCustomerID                `json:"virtual_webhook_customer_id,omitempty"`
+	VirtualWebhookCycleID         *VirtualWebhookCycleID                   `json:"virtual_webhook_cycle_id,omitempty"`
 	VirtualWebhookDatabaseID      *VirtualWebhookDatabaseID                `json:"virtual_webhook_database_id,omitempty"`
 	VirtualWebhookDealID          *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
 	VirtualWebhookEndLt           *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
@@ -4611,6 +4659,13 @@ func (i *IntegrationSupport) GetListCustomerID() *ListCustomerID {
 		return nil
 	}
 	return i.ListCustomerID
+}
+
+func (i *IntegrationSupport) GetListCycleID() *ListCycleID {
+	if i == nil {
+		return nil
+	}
+	return i.ListCycleID
 }
 
 func (i *IntegrationSupport) GetListDatabaseID() *ListDatabaseID {
@@ -5451,6 +5506,13 @@ func (i *IntegrationSupport) GetVirtualWebhookCustomerID() *VirtualWebhookCustom
 		return nil
 	}
 	return i.VirtualWebhookCustomerID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookCycleID() *VirtualWebhookCycleID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookCycleID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookDatabaseID() *VirtualWebhookDatabaseID {

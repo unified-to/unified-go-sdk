@@ -23,3 +23,5 @@ custom := shared.PropertyHrisEmployeeEmployeeRoles("custom_value")
 | `PropertyHrisEmployeeEmployeeRolesRecruiter`   | RECRUITER                                      |
 | `PropertyHrisEmployeeEmployeeRolesSalesrep`    | SALESREP                                       |
 | `PropertyHrisEmployeeEmployeeRolesInterviewer` | INTERVIEWER                                    |
+| `PropertyHrisEmployeeEmployeeRolesUser`        | USER                                           |
+| `PropertyHrisEmployeeEmployeeRolesEmployee`    | EMPLOYEE                                       |

@@ -58,6 +58,7 @@ func (e *AccountingOrderType) IsExact() bool {
 	return false
 }
 
+// AccountingOrder - @deprecated; use AccountingSalesorder or AccountingPurchaseorder
 type AccountingOrder struct {
 	AccountID       *string                                 `json:"account_id,omitempty"`
 	BillingAddress  *PropertyAccountingOrderBillingAddress  `json:"billing_address,omitempty"`

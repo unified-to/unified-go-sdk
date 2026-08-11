@@ -6,7 +6,9 @@
 
 * [CreateCommerceReview](#createcommercereview) - Create a review
 * [GetCommerceReview](#getcommercereview) - Retrieve a review
+* [GetPerformanceReview](#getperformancereview) - Retrieve a review
 * [ListCommerceReviews](#listcommercereviews) - List all reviews
+* [ListPerformanceReviews](#listperformancereviews) - List all reviews
 * [PatchCommerceReview](#patchcommercereview) - Update a review
 * [RemoveCommerceReview](#removecommercereview) - Remove a review
 * [UpdateCommerceReview](#updatecommercereview) - Update a review
@@ -122,6 +124,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetPerformanceReview
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getPerformanceReview" method="get" path="/performance/{connection_id}/review/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.GetPerformanceReview(ctx, operations.GetPerformanceReviewRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PerformanceReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetPerformanceReviewRequest](../../pkg/models/operations/getperformancereviewrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.GetPerformanceReviewResponse](../../pkg/models/operations/getperformancereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListCommerceReviews
 
 List all reviews
@@ -169,6 +226,60 @@ func main() {
 ### Response
 
 **[*operations.ListCommerceReviewsResponse](../../pkg/models/operations/listcommercereviewsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListPerformanceReviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listPerformanceReviews" method="get" path="/performance/{connection_id}/review" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.ListPerformanceReviews(ctx, operations.ListPerformanceReviewsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.PerformanceReviews != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListPerformanceReviewsRequest](../../pkg/models/operations/listperformancereviewsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.ListPerformanceReviewsResponse](../../pkg/models/operations/listperformancereviewsresponse.md), error**
 
 ### Errors
 

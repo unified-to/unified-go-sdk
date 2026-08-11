@@ -134,11 +134,10 @@ type ListAccountingProjectsRequest struct {
 	// The contact ID to filter by (reference to AccountingContact)
 	ContactID *string `queryParam:"style=form,explode=true,name=contact_id"`
 	// Fields to return
-	Fields   []ListAccountingProjectsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	IsActive *string                                  `queryParam:"style=form,explode=true,name=is_active"`
-	Limit    *float64                                 `queryParam:"style=form,explode=true,name=limit"`
-	Offset   *float64                                 `queryParam:"style=form,explode=true,name=offset"`
-	Order    *string                                  `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListAccountingProjectsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                                 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                                 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                                  `queryParam:"style=form,explode=true,name=order"`
 	// The org ID to filter by (reference to AccountingOrganization)
 	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// The parent ID to filter by
@@ -172,13 +171,6 @@ func (l *ListAccountingProjectsRequest) GetFields() []ListAccountingProjectsQuer
 		return nil
 	}
 	return l.Fields
-}
-
-func (l *ListAccountingProjectsRequest) GetIsActive() *string {
-	if l == nil {
-		return nil
-	}
-	return l.IsActive
 }
 
 func (l *ListAccountingProjectsRequest) GetLimit() *float64 {

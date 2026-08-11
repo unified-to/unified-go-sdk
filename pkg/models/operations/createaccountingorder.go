@@ -75,6 +75,7 @@ func (e *CreateAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error
 }
 
 type CreateAccountingOrderRequest struct {
+	// @deprecated; use AccountingSalesorder or AccountingPurchaseorder
 	AccountingOrder shared.AccountingOrder `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

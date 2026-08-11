@@ -315,3 +315,10 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsCdpDestinationWrite`          | cdp_destination_write                                       |
 | `PropertyConnectionPermissionsCdpActivationRead`            | cdp_activation_read                                         |
 | `PropertyConnectionPermissionsCdpActivationWrite`           | cdp_activation_write                                        |
+| `PropertyConnectionPermissionsPerformanceCycleRead`         | performance_cycle_read                                      |
+| `PropertyConnectionPermissionsPerformanceReviewRead`        | performance_review_read                                     |
+| `PropertyConnectionPermissionsPerformanceReviewWrite`       | performance_review_write                                    |
+| `PropertyConnectionPermissionsPerformanceGoalRead`          | performance_goal_read                                       |
+| `PropertyConnectionPermissionsPerformanceGoalWrite`         | performance_goal_write                                      |
+| `PropertyConnectionPermissionsPerformanceFeedbackRead`      | performance_feedback_read                                   |
+| `PropertyConnectionPermissionsPerformanceFeedbackWrite`     | performance_feedback_write                                  |

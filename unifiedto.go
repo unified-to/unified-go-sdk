@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.927.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.928.0
 
 import (
 	"context"
@@ -181,6 +181,10 @@ type UnifiedTo struct {
 	Payout            *Payout
 	Refund            *Refund
 	Subscription      *Subscription
+	Performance       *Performance
+	Cycle             *Cycle
+	Feedback          *Feedback
+	Goal              *Goal
 	Repo              *Repo
 	Branch            *Branch
 	Commit            *Commit
@@ -296,9 +300,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.107",
+		SDKVersion: "0.36.108",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.107 2.927.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.108 2.928.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -443,6 +447,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Payout = newPayout(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Refund = newRefund(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Subscription = newSubscription(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Performance = newPerformance(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Cycle = newCycle(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Feedback = newFeedback(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Goal = newGoal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Repo = newRepo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Branch = newBranch(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Commit = newCommit(sdk, sdk.sdkConfiguration, sdk.hooks)

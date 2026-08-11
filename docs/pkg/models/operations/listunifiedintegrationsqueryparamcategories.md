@@ -48,3 +48,4 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesClubs`        | clubs                                                     |
 | `ListUnifiedIntegrationsQueryParamCategoriesDatastore`    | datastore                                                 |
 | `ListUnifiedIntegrationsQueryParamCategoriesCdp`          | cdp                                                       |
+| `ListUnifiedIntegrationsQueryParamCategoriesPerformance`  | performance                                               |

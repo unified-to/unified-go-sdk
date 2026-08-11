@@ -10,6 +10,8 @@ const (
 	PropertyHrisEmployeeEmployeeRolesRecruiter   PropertyHrisEmployeeEmployeeRoles = "RECRUITER"
 	PropertyHrisEmployeeEmployeeRolesSalesrep    PropertyHrisEmployeeEmployeeRoles = "SALESREP"
 	PropertyHrisEmployeeEmployeeRolesInterviewer PropertyHrisEmployeeEmployeeRoles = "INTERVIEWER"
+	PropertyHrisEmployeeEmployeeRolesUser        PropertyHrisEmployeeEmployeeRoles = "USER"
+	PropertyHrisEmployeeEmployeeRolesEmployee    PropertyHrisEmployeeEmployeeRoles = "EMPLOYEE"
 )
 
 func (e PropertyHrisEmployeeEmployeeRoles) ToPointer() *PropertyHrisEmployeeEmployeeRoles {
@@ -20,7 +22,7 @@ func (e PropertyHrisEmployeeEmployeeRoles) ToPointer() *PropertyHrisEmployeeEmpl
 func (e *PropertyHrisEmployeeEmployeeRoles) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ADMIN", "MANAGER", "RECRUITER", "SALESREP", "INTERVIEWER":
+		case "ADMIN", "MANAGER", "RECRUITER", "SALESREP", "INTERVIEWER", "USER", "EMPLOYEE":
 			return true
 		}
 	}
