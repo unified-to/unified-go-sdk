@@ -22,6 +22,7 @@ const (
 	PatchAccountingCategoryQueryParamFieldsType           PatchAccountingCategoryQueryParamFields = "type"
 	PatchAccountingCategoryQueryParamFieldsCode           PatchAccountingCategoryQueryParamFields = "code"
 	PatchAccountingCategoryQueryParamFieldsOrganizationID PatchAccountingCategoryQueryParamFields = "organization_id"
+	PatchAccountingCategoryQueryParamFieldsMetadata       PatchAccountingCategoryQueryParamFields = "metadata"
 	PatchAccountingCategoryQueryParamFieldsRaw            PatchAccountingCategoryQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *PatchAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) err
 	case "code":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingCategoryQueryParamFields(v)

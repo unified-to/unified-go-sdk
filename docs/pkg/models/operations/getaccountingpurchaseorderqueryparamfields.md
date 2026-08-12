@@ -29,4 +29,5 @@ value := operations.GetAccountingPurchaseorderQueryParamFieldsID
 | `GetAccountingPurchaseorderQueryParamFieldsLineitems`       | lineitems                                                   |
 | `GetAccountingPurchaseorderQueryParamFieldsOrganizationID`  | organization_id                                             |
 | `GetAccountingPurchaseorderQueryParamFieldsCategoryIds`     | category_ids                                                |
+| `GetAccountingPurchaseorderQueryParamFieldsMetadata`        | metadata                                                    |
 | `GetAccountingPurchaseorderQueryParamFieldsRaw`             | raw                                                         |

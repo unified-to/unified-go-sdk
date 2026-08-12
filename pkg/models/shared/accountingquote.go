@@ -109,6 +109,7 @@ type AccountingQuote struct {
 	IssuedAt        *time.Time                     `json:"issued_at,omitempty"`
 	Lineitems       []AccountingLineitem           `json:"lineitems,omitempty"`
 	Memo            *string                        `json:"memo,omitempty"`
+	Metadata        []AccountingMetadata           `json:"metadata,omitempty"`
 	OrganizationID  *string                        `json:"organization_id,omitempty"`
 	PaymentTerms    *AccountingQuotePaymentTerms   `json:"payment_terms,omitempty"`
 	ProjectID       *string                        `json:"project_id,omitempty"`
@@ -255,6 +256,13 @@ func (a *AccountingQuote) GetMemo() *string {
 		return nil
 	}
 	return a.Memo
+}
+
+func (a *AccountingQuote) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingQuote) GetOrganizationID() *string {

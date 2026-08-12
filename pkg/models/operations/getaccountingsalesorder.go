@@ -12,23 +12,39 @@ import (
 type GetAccountingSalesorderQueryParamFields string
 
 const (
-	GetAccountingSalesorderQueryParamFieldsID              GetAccountingSalesorderQueryParamFields = "id"
-	GetAccountingSalesorderQueryParamFieldsCreatedAt       GetAccountingSalesorderQueryParamFields = "created_at"
-	GetAccountingSalesorderQueryParamFieldsUpdatedAt       GetAccountingSalesorderQueryParamFields = "updated_at"
-	GetAccountingSalesorderQueryParamFieldsPostedAt        GetAccountingSalesorderQueryParamFields = "posted_at"
-	GetAccountingSalesorderQueryParamFieldsContactID       GetAccountingSalesorderQueryParamFields = "contact_id"
-	GetAccountingSalesorderQueryParamFieldsAccountID       GetAccountingSalesorderQueryParamFields = "account_id"
-	GetAccountingSalesorderQueryParamFieldsCurrency        GetAccountingSalesorderQueryParamFields = "currency"
-	GetAccountingSalesorderQueryParamFieldsTotalAmount     GetAccountingSalesorderQueryParamFields = "total_amount"
-	GetAccountingSalesorderQueryParamFieldsShippingAddress GetAccountingSalesorderQueryParamFields = "shipping_address"
-	GetAccountingSalesorderQueryParamFieldsBillingAddress  GetAccountingSalesorderQueryParamFields = "billing_address"
-	GetAccountingSalesorderQueryParamFieldsStatus          GetAccountingSalesorderQueryParamFields = "status"
-	GetAccountingSalesorderQueryParamFieldsLineitems       GetAccountingSalesorderQueryParamFields = "lineitems"
-	GetAccountingSalesorderQueryParamFieldsSalesChannel    GetAccountingSalesorderQueryParamFields = "sales_channel"
-	GetAccountingSalesorderQueryParamFieldsOrganizationID  GetAccountingSalesorderQueryParamFields = "organization_id"
-	GetAccountingSalesorderQueryParamFieldsFees            GetAccountingSalesorderQueryParamFields = "fees"
-	GetAccountingSalesorderQueryParamFieldsCategoryIds     GetAccountingSalesorderQueryParamFields = "category_ids"
-	GetAccountingSalesorderQueryParamFieldsRaw             GetAccountingSalesorderQueryParamFields = "raw"
+	GetAccountingSalesorderQueryParamFieldsID                  GetAccountingSalesorderQueryParamFields = "id"
+	GetAccountingSalesorderQueryParamFieldsCreatedAt           GetAccountingSalesorderQueryParamFields = "created_at"
+	GetAccountingSalesorderQueryParamFieldsUpdatedAt           GetAccountingSalesorderQueryParamFields = "updated_at"
+	GetAccountingSalesorderQueryParamFieldsPostedAt            GetAccountingSalesorderQueryParamFields = "posted_at"
+	GetAccountingSalesorderQueryParamFieldsContactID           GetAccountingSalesorderQueryParamFields = "contact_id"
+	GetAccountingSalesorderQueryParamFieldsAccountID           GetAccountingSalesorderQueryParamFields = "account_id"
+	GetAccountingSalesorderQueryParamFieldsCurrency            GetAccountingSalesorderQueryParamFields = "currency"
+	GetAccountingSalesorderQueryParamFieldsTotalAmount         GetAccountingSalesorderQueryParamFields = "total_amount"
+	GetAccountingSalesorderQueryParamFieldsShippingAddress     GetAccountingSalesorderQueryParamFields = "shipping_address"
+	GetAccountingSalesorderQueryParamFieldsBillingAddress      GetAccountingSalesorderQueryParamFields = "billing_address"
+	GetAccountingSalesorderQueryParamFieldsStatus              GetAccountingSalesorderQueryParamFields = "status"
+	GetAccountingSalesorderQueryParamFieldsLineitems           GetAccountingSalesorderQueryParamFields = "lineitems"
+	GetAccountingSalesorderQueryParamFieldsSalesChannel        GetAccountingSalesorderQueryParamFields = "sales_channel"
+	GetAccountingSalesorderQueryParamFieldsOrganizationID      GetAccountingSalesorderQueryParamFields = "organization_id"
+	GetAccountingSalesorderQueryParamFieldsFees                GetAccountingSalesorderQueryParamFields = "fees"
+	GetAccountingSalesorderQueryParamFieldsCategoryIds         GetAccountingSalesorderQueryParamFields = "category_ids"
+	GetAccountingSalesorderQueryParamFieldsMetadata            GetAccountingSalesorderQueryParamFields = "metadata"
+	GetAccountingSalesorderQueryParamFieldsOrderNumber         GetAccountingSalesorderQueryParamFields = "order_number"
+	GetAccountingSalesorderQueryParamFieldsLocationID          GetAccountingSalesorderQueryParamFields = "location_id"
+	GetAccountingSalesorderQueryParamFieldsEmployeeUserID      GetAccountingSalesorderQueryParamFields = "employee_user_id"
+	GetAccountingSalesorderQueryParamFieldsDeviceID            GetAccountingSalesorderQueryParamFields = "device_id"
+	GetAccountingSalesorderQueryParamFieldsFulfillmentType     GetAccountingSalesorderQueryParamFields = "fulfillment_type"
+	GetAccountingSalesorderQueryParamFieldsGuestCount          GetAccountingSalesorderQueryParamFields = "guest_count"
+	GetAccountingSalesorderQueryParamFieldsSubtotalAmount      GetAccountingSalesorderQueryParamFields = "subtotal_amount"
+	GetAccountingSalesorderQueryParamFieldsTaxAmount           GetAccountingSalesorderQueryParamFields = "tax_amount"
+	GetAccountingSalesorderQueryParamFieldsDiscountAmount      GetAccountingSalesorderQueryParamFields = "discount_amount"
+	GetAccountingSalesorderQueryParamFieldsTipAmount           GetAccountingSalesorderQueryParamFields = "tip_amount"
+	GetAccountingSalesorderQueryParamFieldsServiceChargeAmount GetAccountingSalesorderQueryParamFields = "service_charge_amount"
+	GetAccountingSalesorderQueryParamFieldsRefundedAmount      GetAccountingSalesorderQueryParamFields = "refunded_amount"
+	GetAccountingSalesorderQueryParamFieldsClosedAt            GetAccountingSalesorderQueryParamFields = "closed_at"
+	GetAccountingSalesorderQueryParamFieldsSubscriptionID      GetAccountingSalesorderQueryParamFields = "subscription_id"
+	GetAccountingSalesorderQueryParamFieldsPayments            GetAccountingSalesorderQueryParamFields = "payments"
+	GetAccountingSalesorderQueryParamFieldsRaw                 GetAccountingSalesorderQueryParamFields = "raw"
 )
 
 func (e GetAccountingSalesorderQueryParamFields) ToPointer() *GetAccountingSalesorderQueryParamFields {
@@ -71,6 +87,38 @@ func (e *GetAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) err
 	case "fees":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "order_number":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "employee_user_id":
+		fallthrough
+	case "device_id":
+		fallthrough
+	case "fulfillment_type":
+		fallthrough
+	case "guest_count":
+		fallthrough
+	case "subtotal_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "tip_amount":
+		fallthrough
+	case "service_charge_amount":
+		fallthrough
+	case "refunded_amount":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "subscription_id":
+		fallthrough
+	case "payments":
 		fallthrough
 	case "raw":
 		*e = GetAccountingSalesorderQueryParamFields(v)

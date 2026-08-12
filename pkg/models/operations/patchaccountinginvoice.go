@@ -45,6 +45,7 @@ const (
 	PatchAccountingInvoiceQueryParamFieldsPayments                PatchAccountingInvoiceQueryParamFields = "payments"
 	PatchAccountingInvoiceQueryParamFieldsCategoryIds             PatchAccountingInvoiceQueryParamFields = "category_ids"
 	PatchAccountingInvoiceQueryParamFieldsProjectID               PatchAccountingInvoiceQueryParamFields = "project_id"
+	PatchAccountingInvoiceQueryParamFieldsMetadata                PatchAccountingInvoiceQueryParamFields = "metadata"
 	PatchAccountingInvoiceQueryParamFieldsRaw                     PatchAccountingInvoiceQueryParamFields = "raw"
 )
 
@@ -122,6 +123,8 @@ func (e *PatchAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "category_ids":
 		fallthrough
 	case "project_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingInvoiceQueryParamFields(v)

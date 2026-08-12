@@ -151,6 +151,8 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsHrisTimeoffWrite`             | hris_timeoff_write                                          |
 | `PropertyConnectionPermissionsHrisTimeshiftRead`            | hris_timeshift_read                                         |
 | `PropertyConnectionPermissionsHrisTimeshiftWrite`           | hris_timeshift_write                                        |
+| `PropertyConnectionPermissionsHrisAttendanceRead`           | hris_attendance_read                                        |
+| `PropertyConnectionPermissionsHrisAttendanceWrite`          | hris_attendance_write                                       |
 | `PropertyConnectionPermissionsHrisCompanyRead`              | hris_company_read                                           |
 | `PropertyConnectionPermissionsHrisCompanyWrite`             | hris_company_write                                          |
 | `PropertyConnectionPermissionsHrisLocationRead`             | hris_location_read                                          |

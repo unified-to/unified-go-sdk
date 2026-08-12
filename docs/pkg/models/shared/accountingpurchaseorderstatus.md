@@ -27,3 +27,6 @@ custom := shared.AccountingPurchaseorderStatus("custom_value")
 | `AccountingPurchaseorderStatusRefunded`          | REFUNDED                                         |
 | `AccountingPurchaseorderStatusSubmitted`         | SUBMITTED                                        |
 | `AccountingPurchaseorderStatusDeleted`           | DELETED                                          |
+| `AccountingPurchaseorderStatusOpen`              | OPEN                                             |
+| `AccountingPurchaseorderStatusCompleted`         | COMPLETED                                        |
+| `AccountingPurchaseorderStatusCanceled`          | CANCELED                                         |

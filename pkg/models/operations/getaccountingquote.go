@@ -44,6 +44,7 @@ const (
 	GetAccountingQuoteQueryParamFieldsCategoryIds     GetAccountingQuoteQueryParamFields = "category_ids"
 	GetAccountingQuoteQueryParamFieldsURL             GetAccountingQuoteQueryParamFields = "url"
 	GetAccountingQuoteQueryParamFieldsOrganizationID  GetAccountingQuoteQueryParamFields = "organization_id"
+	GetAccountingQuoteQueryParamFieldsMetadata        GetAccountingQuoteQueryParamFields = "metadata"
 	GetAccountingQuoteQueryParamFieldsRaw             GetAccountingQuoteQueryParamFields = "raw"
 )
 
@@ -119,6 +120,8 @@ func (e *GetAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "url":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingQuoteQueryParamFields(v)

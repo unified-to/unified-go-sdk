@@ -75,6 +75,7 @@ type AccountingCreditmemo struct {
 	ID                      *string                                      `json:"id,omitempty"`
 	InvoiceID               *string                                      `json:"invoice_id,omitempty"`
 	Lineitems               []AccountingLineitem                         `json:"lineitems,omitempty"`
+	Metadata                []AccountingMetadata                         `json:"metadata,omitempty"`
 	Notes                   *string                                      `json:"notes,omitempty"`
 	OrganizationID          *string                                      `json:"organization_id,omitempty"`
 	PaidAmount              *float64                                     `json:"paid_amount,omitempty"`
@@ -200,6 +201,13 @@ func (a *AccountingCreditmemo) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingCreditmemo) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingCreditmemo) GetNotes() *string {

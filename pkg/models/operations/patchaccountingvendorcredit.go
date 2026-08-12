@@ -29,6 +29,7 @@ const (
 	PatchAccountingVendorcreditQueryParamFieldsOrganizationID PatchAccountingVendorcreditQueryParamFields = "organization_id"
 	PatchAccountingVendorcreditQueryParamFieldsApplyAmount    PatchAccountingVendorcreditQueryParamFields = "apply_amount"
 	PatchAccountingVendorcreditQueryParamFieldsApplications   PatchAccountingVendorcreditQueryParamFields = "applications"
+	PatchAccountingVendorcreditQueryParamFieldsMetadata       PatchAccountingVendorcreditQueryParamFields = "metadata"
 	PatchAccountingVendorcreditQueryParamFieldsRaw            PatchAccountingVendorcreditQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *PatchAccountingVendorcreditQueryParamFields) UnmarshalJSON(data []byte)
 	case "apply_amount":
 		fallthrough
 	case "applications":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingVendorcreditQueryParamFields(v)

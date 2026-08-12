@@ -47,4 +47,5 @@ value := operations.GetAccountingProjectQueryParamFieldsID
 | `GetAccountingProjectQueryParamFieldsCategoryIds`          | category_ids                                               |
 | `GetAccountingProjectQueryParamFieldsLocationID`           | location_id                                                |
 | `GetAccountingProjectQueryParamFieldsOrganizationID`       | organization_id                                            |
+| `GetAccountingProjectQueryParamFieldsMetadata`             | metadata                                                   |
 | `GetAccountingProjectQueryParamFieldsRaw`                  | raw                                                        |

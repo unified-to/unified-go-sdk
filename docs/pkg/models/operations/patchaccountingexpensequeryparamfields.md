@@ -40,4 +40,5 @@ value := operations.PatchAccountingExpenseQueryParamFieldsID
 | `PatchAccountingExpenseQueryParamFieldsExternalNumber`   | external_number                                          |
 | `PatchAccountingExpenseQueryParamFieldsCategoryIds`      | category_ids                                             |
 | `PatchAccountingExpenseQueryParamFieldsProjectID`        | project_id                                               |
+| `PatchAccountingExpenseQueryParamFieldsMetadata`         | metadata                                                 |
 | `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |

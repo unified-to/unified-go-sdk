@@ -23,4 +23,5 @@ value := operations.UpdateAccountingTaxrateQueryParamFieldsID
 | `UpdateAccountingTaxrateQueryParamFieldsRate`           | rate                                                    |
 | `UpdateAccountingTaxrateQueryParamFieldsIsActive`       | is_active                                               |
 | `UpdateAccountingTaxrateQueryParamFieldsOrganizationID` | organization_id                                         |
+| `UpdateAccountingTaxrateQueryParamFieldsMetadata`       | metadata                                                |
 | `UpdateAccountingTaxrateQueryParamFieldsRaw`            | raw                                                     |

@@ -27,8 +27,17 @@ const (
 	UpdatePaymentPaymentQueryParamFieldsAccountID      UpdatePaymentPaymentQueryParamFields = "account_id"
 	UpdatePaymentPaymentQueryParamFieldsReference      UpdatePaymentPaymentQueryParamFields = "reference"
 	UpdatePaymentPaymentQueryParamFieldsOrganizationID UpdatePaymentPaymentQueryParamFields = "organization_id"
-	UpdatePaymentPaymentQueryParamFieldsRaw            UpdatePaymentPaymentQueryParamFields = "raw"
 	UpdatePaymentPaymentQueryParamFieldsAllocations    UpdatePaymentPaymentQueryParamFields = "allocations"
+	UpdatePaymentPaymentQueryParamFieldsStatus         UpdatePaymentPaymentQueryParamFields = "status"
+	UpdatePaymentPaymentQueryParamFieldsSalesorderID   UpdatePaymentPaymentQueryParamFields = "salesorder_id"
+	UpdatePaymentPaymentQueryParamFieldsTenderType     UpdatePaymentPaymentQueryParamFields = "tender_type"
+	UpdatePaymentPaymentQueryParamFieldsTipAmount      UpdatePaymentPaymentQueryParamFields = "tip_amount"
+	UpdatePaymentPaymentQueryParamFieldsFeeAmount      UpdatePaymentPaymentQueryParamFields = "fee_amount"
+	UpdatePaymentPaymentQueryParamFieldsLocationID     UpdatePaymentPaymentQueryParamFields = "location_id"
+	UpdatePaymentPaymentQueryParamFieldsDeviceID       UpdatePaymentPaymentQueryParamFields = "device_id"
+	UpdatePaymentPaymentQueryParamFieldsCardBrand      UpdatePaymentPaymentQueryParamFields = "card_brand"
+	UpdatePaymentPaymentQueryParamFieldsCardLast4      UpdatePaymentPaymentQueryParamFields = "card_last4"
+	UpdatePaymentPaymentQueryParamFieldsRaw            UpdatePaymentPaymentQueryParamFields = "raw"
 )
 
 func (e UpdatePaymentPaymentQueryParamFields) ToPointer() *UpdatePaymentPaymentQueryParamFields {
@@ -70,9 +79,27 @@ func (e *UpdatePaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "allocations":
+		fallthrough
+	case "status":
+		fallthrough
+	case "salesorder_id":
+		fallthrough
+	case "tender_type":
+		fallthrough
+	case "tip_amount":
+		fallthrough
+	case "fee_amount":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "device_id":
+		fallthrough
+	case "card_brand":
+		fallthrough
+	case "card_last4":
+		fallthrough
+	case "raw":
 		*e = UpdatePaymentPaymentQueryParamFields(v)
 		return nil
 	default:

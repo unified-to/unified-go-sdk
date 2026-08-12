@@ -27,8 +27,17 @@ const (
 	ListPaymentPaymentsQueryParamFieldsAccountID      ListPaymentPaymentsQueryParamFields = "account_id"
 	ListPaymentPaymentsQueryParamFieldsReference      ListPaymentPaymentsQueryParamFields = "reference"
 	ListPaymentPaymentsQueryParamFieldsOrganizationID ListPaymentPaymentsQueryParamFields = "organization_id"
-	ListPaymentPaymentsQueryParamFieldsRaw            ListPaymentPaymentsQueryParamFields = "raw"
 	ListPaymentPaymentsQueryParamFieldsAllocations    ListPaymentPaymentsQueryParamFields = "allocations"
+	ListPaymentPaymentsQueryParamFieldsStatus         ListPaymentPaymentsQueryParamFields = "status"
+	ListPaymentPaymentsQueryParamFieldsSalesorderID   ListPaymentPaymentsQueryParamFields = "salesorder_id"
+	ListPaymentPaymentsQueryParamFieldsTenderType     ListPaymentPaymentsQueryParamFields = "tender_type"
+	ListPaymentPaymentsQueryParamFieldsTipAmount      ListPaymentPaymentsQueryParamFields = "tip_amount"
+	ListPaymentPaymentsQueryParamFieldsFeeAmount      ListPaymentPaymentsQueryParamFields = "fee_amount"
+	ListPaymentPaymentsQueryParamFieldsLocationID     ListPaymentPaymentsQueryParamFields = "location_id"
+	ListPaymentPaymentsQueryParamFieldsDeviceID       ListPaymentPaymentsQueryParamFields = "device_id"
+	ListPaymentPaymentsQueryParamFieldsCardBrand      ListPaymentPaymentsQueryParamFields = "card_brand"
+	ListPaymentPaymentsQueryParamFieldsCardLast4      ListPaymentPaymentsQueryParamFields = "card_last4"
+	ListPaymentPaymentsQueryParamFieldsRaw            ListPaymentPaymentsQueryParamFields = "raw"
 )
 
 func (e ListPaymentPaymentsQueryParamFields) ToPointer() *ListPaymentPaymentsQueryParamFields {
@@ -70,9 +79,27 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "organization_id":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "allocations":
+		fallthrough
+	case "status":
+		fallthrough
+	case "salesorder_id":
+		fallthrough
+	case "tender_type":
+		fallthrough
+	case "tip_amount":
+		fallthrough
+	case "fee_amount":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "device_id":
+		fallthrough
+	case "card_brand":
+		fallthrough
+	case "card_last4":
+		fallthrough
+	case "raw":
 		*e = ListPaymentPaymentsQueryParamFields(v)
 		return nil
 	default:

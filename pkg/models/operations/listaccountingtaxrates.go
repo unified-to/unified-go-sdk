@@ -20,6 +20,7 @@ const (
 	ListAccountingTaxratesQueryParamFieldsRate           ListAccountingTaxratesQueryParamFields = "rate"
 	ListAccountingTaxratesQueryParamFieldsIsActive       ListAccountingTaxratesQueryParamFields = "is_active"
 	ListAccountingTaxratesQueryParamFieldsOrganizationID ListAccountingTaxratesQueryParamFields = "organization_id"
+	ListAccountingTaxratesQueryParamFieldsMetadata       ListAccountingTaxratesQueryParamFields = "metadata"
 	ListAccountingTaxratesQueryParamFieldsRaw            ListAccountingTaxratesQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListAccountingTaxratesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "is_active":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingTaxratesQueryParamFields(v)

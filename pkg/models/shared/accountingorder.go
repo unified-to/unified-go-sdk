@@ -19,6 +19,9 @@ const (
 	AccountingOrderStatusRefunded          AccountingOrderStatus = "REFUNDED"
 	AccountingOrderStatusSubmitted         AccountingOrderStatus = "SUBMITTED"
 	AccountingOrderStatusDeleted           AccountingOrderStatus = "DELETED"
+	AccountingOrderStatusOpen              AccountingOrderStatus = "OPEN"
+	AccountingOrderStatusCompleted         AccountingOrderStatus = "COMPLETED"
+	AccountingOrderStatusCanceled          AccountingOrderStatus = "CANCELED"
 )
 
 func (e AccountingOrderStatus) ToPointer() *AccountingOrderStatus {
@@ -29,7 +32,7 @@ func (e AccountingOrderStatus) ToPointer() *AccountingOrderStatus {
 func (e *AccountingOrderStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED":
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED", "OPEN", "COMPLETED", "CANCELED":
 			return true
 		}
 	}
@@ -67,6 +70,7 @@ type AccountingOrder struct {
 	Currency        *string                                 `json:"currency,omitempty"`
 	ID              *string                                 `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                    `json:"lineitems,omitempty"`
+	Metadata        []AccountingMetadata                    `json:"metadata,omitempty"`
 	OrganizationID  *string                                 `json:"organization_id,omitempty"`
 	PostedAt        *time.Time                              `json:"posted_at,omitempty"`
 	Raw             map[string]any                          `json:"raw,omitempty"`
@@ -135,6 +139,13 @@ func (a *AccountingOrder) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingOrder) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingOrder) GetOrganizationID() *string {

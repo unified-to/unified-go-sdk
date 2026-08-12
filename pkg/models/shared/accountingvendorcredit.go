@@ -50,6 +50,7 @@ type AccountingVendorcredit struct {
 	DueAt          *time.Time                    `json:"due_at,omitempty"`
 	ID             *string                       `json:"id,omitempty"`
 	Lineitems      []AccountingLineitem          `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata          `json:"metadata,omitempty"`
 	Notes          *string                       `json:"notes,omitempty"`
 	OrganizationID *string                       `json:"organization_id,omitempty"`
 	PostedAt       *time.Time                    `json:"posted_at,omitempty"`
@@ -145,6 +146,13 @@ func (a *AccountingVendorcredit) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingVendorcredit) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingVendorcredit) GetNotes() *string {

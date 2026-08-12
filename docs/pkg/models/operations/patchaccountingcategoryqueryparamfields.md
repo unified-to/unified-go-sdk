@@ -25,4 +25,5 @@ value := operations.PatchAccountingCategoryQueryParamFieldsID
 | `PatchAccountingCategoryQueryParamFieldsType`           | type                                                    |
 | `PatchAccountingCategoryQueryParamFieldsCode`           | code                                                    |
 | `PatchAccountingCategoryQueryParamFieldsOrganizationID` | organization_id                                         |
+| `PatchAccountingCategoryQueryParamFieldsMetadata`       | metadata                                                |
 | `PatchAccountingCategoryQueryParamFieldsRaw`            | raw                                                     |

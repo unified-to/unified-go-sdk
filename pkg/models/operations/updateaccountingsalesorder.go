@@ -12,23 +12,39 @@ import (
 type UpdateAccountingSalesorderQueryParamFields string
 
 const (
-	UpdateAccountingSalesorderQueryParamFieldsID              UpdateAccountingSalesorderQueryParamFields = "id"
-	UpdateAccountingSalesorderQueryParamFieldsCreatedAt       UpdateAccountingSalesorderQueryParamFields = "created_at"
-	UpdateAccountingSalesorderQueryParamFieldsUpdatedAt       UpdateAccountingSalesorderQueryParamFields = "updated_at"
-	UpdateAccountingSalesorderQueryParamFieldsPostedAt        UpdateAccountingSalesorderQueryParamFields = "posted_at"
-	UpdateAccountingSalesorderQueryParamFieldsContactID       UpdateAccountingSalesorderQueryParamFields = "contact_id"
-	UpdateAccountingSalesorderQueryParamFieldsAccountID       UpdateAccountingSalesorderQueryParamFields = "account_id"
-	UpdateAccountingSalesorderQueryParamFieldsCurrency        UpdateAccountingSalesorderQueryParamFields = "currency"
-	UpdateAccountingSalesorderQueryParamFieldsTotalAmount     UpdateAccountingSalesorderQueryParamFields = "total_amount"
-	UpdateAccountingSalesorderQueryParamFieldsShippingAddress UpdateAccountingSalesorderQueryParamFields = "shipping_address"
-	UpdateAccountingSalesorderQueryParamFieldsBillingAddress  UpdateAccountingSalesorderQueryParamFields = "billing_address"
-	UpdateAccountingSalesorderQueryParamFieldsStatus          UpdateAccountingSalesorderQueryParamFields = "status"
-	UpdateAccountingSalesorderQueryParamFieldsLineitems       UpdateAccountingSalesorderQueryParamFields = "lineitems"
-	UpdateAccountingSalesorderQueryParamFieldsSalesChannel    UpdateAccountingSalesorderQueryParamFields = "sales_channel"
-	UpdateAccountingSalesorderQueryParamFieldsOrganizationID  UpdateAccountingSalesorderQueryParamFields = "organization_id"
-	UpdateAccountingSalesorderQueryParamFieldsFees            UpdateAccountingSalesorderQueryParamFields = "fees"
-	UpdateAccountingSalesorderQueryParamFieldsCategoryIds     UpdateAccountingSalesorderQueryParamFields = "category_ids"
-	UpdateAccountingSalesorderQueryParamFieldsRaw             UpdateAccountingSalesorderQueryParamFields = "raw"
+	UpdateAccountingSalesorderQueryParamFieldsID                  UpdateAccountingSalesorderQueryParamFields = "id"
+	UpdateAccountingSalesorderQueryParamFieldsCreatedAt           UpdateAccountingSalesorderQueryParamFields = "created_at"
+	UpdateAccountingSalesorderQueryParamFieldsUpdatedAt           UpdateAccountingSalesorderQueryParamFields = "updated_at"
+	UpdateAccountingSalesorderQueryParamFieldsPostedAt            UpdateAccountingSalesorderQueryParamFields = "posted_at"
+	UpdateAccountingSalesorderQueryParamFieldsContactID           UpdateAccountingSalesorderQueryParamFields = "contact_id"
+	UpdateAccountingSalesorderQueryParamFieldsAccountID           UpdateAccountingSalesorderQueryParamFields = "account_id"
+	UpdateAccountingSalesorderQueryParamFieldsCurrency            UpdateAccountingSalesorderQueryParamFields = "currency"
+	UpdateAccountingSalesorderQueryParamFieldsTotalAmount         UpdateAccountingSalesorderQueryParamFields = "total_amount"
+	UpdateAccountingSalesorderQueryParamFieldsShippingAddress     UpdateAccountingSalesorderQueryParamFields = "shipping_address"
+	UpdateAccountingSalesorderQueryParamFieldsBillingAddress      UpdateAccountingSalesorderQueryParamFields = "billing_address"
+	UpdateAccountingSalesorderQueryParamFieldsStatus              UpdateAccountingSalesorderQueryParamFields = "status"
+	UpdateAccountingSalesorderQueryParamFieldsLineitems           UpdateAccountingSalesorderQueryParamFields = "lineitems"
+	UpdateAccountingSalesorderQueryParamFieldsSalesChannel        UpdateAccountingSalesorderQueryParamFields = "sales_channel"
+	UpdateAccountingSalesorderQueryParamFieldsOrganizationID      UpdateAccountingSalesorderQueryParamFields = "organization_id"
+	UpdateAccountingSalesorderQueryParamFieldsFees                UpdateAccountingSalesorderQueryParamFields = "fees"
+	UpdateAccountingSalesorderQueryParamFieldsCategoryIds         UpdateAccountingSalesorderQueryParamFields = "category_ids"
+	UpdateAccountingSalesorderQueryParamFieldsMetadata            UpdateAccountingSalesorderQueryParamFields = "metadata"
+	UpdateAccountingSalesorderQueryParamFieldsOrderNumber         UpdateAccountingSalesorderQueryParamFields = "order_number"
+	UpdateAccountingSalesorderQueryParamFieldsLocationID          UpdateAccountingSalesorderQueryParamFields = "location_id"
+	UpdateAccountingSalesorderQueryParamFieldsEmployeeUserID      UpdateAccountingSalesorderQueryParamFields = "employee_user_id"
+	UpdateAccountingSalesorderQueryParamFieldsDeviceID            UpdateAccountingSalesorderQueryParamFields = "device_id"
+	UpdateAccountingSalesorderQueryParamFieldsFulfillmentType     UpdateAccountingSalesorderQueryParamFields = "fulfillment_type"
+	UpdateAccountingSalesorderQueryParamFieldsGuestCount          UpdateAccountingSalesorderQueryParamFields = "guest_count"
+	UpdateAccountingSalesorderQueryParamFieldsSubtotalAmount      UpdateAccountingSalesorderQueryParamFields = "subtotal_amount"
+	UpdateAccountingSalesorderQueryParamFieldsTaxAmount           UpdateAccountingSalesorderQueryParamFields = "tax_amount"
+	UpdateAccountingSalesorderQueryParamFieldsDiscountAmount      UpdateAccountingSalesorderQueryParamFields = "discount_amount"
+	UpdateAccountingSalesorderQueryParamFieldsTipAmount           UpdateAccountingSalesorderQueryParamFields = "tip_amount"
+	UpdateAccountingSalesorderQueryParamFieldsServiceChargeAmount UpdateAccountingSalesorderQueryParamFields = "service_charge_amount"
+	UpdateAccountingSalesorderQueryParamFieldsRefundedAmount      UpdateAccountingSalesorderQueryParamFields = "refunded_amount"
+	UpdateAccountingSalesorderQueryParamFieldsClosedAt            UpdateAccountingSalesorderQueryParamFields = "closed_at"
+	UpdateAccountingSalesorderQueryParamFieldsSubscriptionID      UpdateAccountingSalesorderQueryParamFields = "subscription_id"
+	UpdateAccountingSalesorderQueryParamFieldsPayments            UpdateAccountingSalesorderQueryParamFields = "payments"
+	UpdateAccountingSalesorderQueryParamFieldsRaw                 UpdateAccountingSalesorderQueryParamFields = "raw"
 )
 
 func (e UpdateAccountingSalesorderQueryParamFields) ToPointer() *UpdateAccountingSalesorderQueryParamFields {
@@ -71,6 +87,38 @@ func (e *UpdateAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) 
 	case "fees":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "order_number":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "employee_user_id":
+		fallthrough
+	case "device_id":
+		fallthrough
+	case "fulfillment_type":
+		fallthrough
+	case "guest_count":
+		fallthrough
+	case "subtotal_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "tip_amount":
+		fallthrough
+	case "service_charge_amount":
+		fallthrough
+	case "refunded_amount":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "subscription_id":
+		fallthrough
+	case "payments":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingSalesorderQueryParamFields(v)

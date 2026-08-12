@@ -48,4 +48,5 @@ value := operations.GetAccountingInvoiceQueryParamFieldsID
 | `GetAccountingInvoiceQueryParamFieldsPayments`                | payments                                                      |
 | `GetAccountingInvoiceQueryParamFieldsCategoryIds`             | category_ids                                                  |
 | `GetAccountingInvoiceQueryParamFieldsProjectID`               | project_id                                                    |
+| `GetAccountingInvoiceQueryParamFieldsMetadata`                | metadata                                                      |
 | `GetAccountingInvoiceQueryParamFieldsRaw`                     | raw                                                           |

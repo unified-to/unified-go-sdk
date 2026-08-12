@@ -47,4 +47,5 @@ value := operations.UpdateAccountingQuoteQueryParamFieldsID
 | `UpdateAccountingQuoteQueryParamFieldsCategoryIds`     | category_ids                                           |
 | `UpdateAccountingQuoteQueryParamFieldsURL`             | url                                                    |
 | `UpdateAccountingQuoteQueryParamFieldsOrganizationID`  | organization_id                                        |
+| `UpdateAccountingQuoteQueryParamFieldsMetadata`        | metadata                                               |
 | `UpdateAccountingQuoteQueryParamFieldsRaw`             | raw                                                    |

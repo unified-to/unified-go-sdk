@@ -23,4 +23,5 @@ value := operations.CreateAccountingTaxrateQueryParamFieldsID
 | `CreateAccountingTaxrateQueryParamFieldsRate`           | rate                                                    |
 | `CreateAccountingTaxrateQueryParamFieldsIsActive`       | is_active                                               |
 | `CreateAccountingTaxrateQueryParamFieldsOrganizationID` | organization_id                                         |
+| `CreateAccountingTaxrateQueryParamFieldsMetadata`       | metadata                                                |
 | `CreateAccountingTaxrateQueryParamFieldsRaw`            | raw                                                     |

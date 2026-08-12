@@ -7,6 +7,61 @@ import (
 	"time"
 )
 
+type PaymentPaymentStatus string
+
+const (
+	PaymentPaymentStatusSucceeded  PaymentPaymentStatus = "SUCCEEDED"
+	PaymentPaymentStatusPending    PaymentPaymentStatus = "PENDING"
+	PaymentPaymentStatusAuthorized PaymentPaymentStatus = "AUTHORIZED"
+	PaymentPaymentStatusFailed     PaymentPaymentStatus = "FAILED"
+	PaymentPaymentStatusCanceled   PaymentPaymentStatus = "CANCELED"
+)
+
+func (e PaymentPaymentStatus) ToPointer() *PaymentPaymentStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentPaymentStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SUCCEEDED", "PENDING", "AUTHORIZED", "FAILED", "CANCELED":
+			return true
+		}
+	}
+	return false
+}
+
+type TenderType string
+
+const (
+	TenderTypeCard           TenderType = "CARD"
+	TenderTypeCash           TenderType = "CASH"
+	TenderTypeGiftCard       TenderType = "GIFT_CARD"
+	TenderTypeBankTransfer   TenderType = "BANK_TRANSFER"
+	TenderTypeWallet         TenderType = "WALLET"
+	TenderTypeCheck          TenderType = "CHECK"
+	TenderTypeStoreCredit    TenderType = "STORE_CREDIT"
+	TenderTypeBuyNowPayLater TenderType = "BUY_NOW_PAY_LATER"
+	TenderTypeExternal       TenderType = "EXTERNAL"
+	TenderTypeOther          TenderType = "OTHER"
+)
+
+func (e TenderType) ToPointer() *TenderType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TenderType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CARD", "CASH", "GIFT_CARD", "BANK_TRANSFER", "WALLET", "CHECK", "STORE_CREDIT", "BUY_NOW_PAY_LATER", "EXTERNAL", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentPaymentType string
 
 const (
@@ -32,22 +87,31 @@ func (e *PaymentPaymentType) IsExact() bool {
 type PaymentPayment struct {
 	AccountID *string `json:"account_id,omitempty"`
 	// What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints.
-	Allocations    []PaymentAllocation `json:"allocations,omitempty"`
-	BillID         *string             `json:"bill_id,omitempty"`
-	ContactID      *string             `json:"contact_id,omitempty"`
-	CreatedAt      *time.Time          `json:"created_at,omitempty"`
-	Currency       *string             `default:"USD" json:"currency"`
-	ID             *string             `json:"id,omitempty"`
-	InvoiceID      *string             `json:"invoice_id,omitempty"`
-	LinkID         *string             `json:"link_id,omitempty"`
-	Notes          *string             `json:"notes,omitempty"`
-	OrganizationID *string             `json:"organization_id,omitempty"`
-	PaymentMethod  *string             `json:"payment_method,omitempty"`
-	Raw            map[string]any      `json:"raw,omitempty"`
-	Reference      *string             `json:"reference,omitempty"`
-	TotalAmount    *float64            `json:"total_amount,omitempty"`
-	Type           *PaymentPaymentType `json:"type,omitempty"`
-	UpdatedAt      *time.Time          `json:"updated_at,omitempty"`
+	Allocations    []PaymentAllocation   `json:"allocations,omitempty"`
+	BillID         *string               `json:"bill_id,omitempty"`
+	CardBrand      *string               `json:"card_brand,omitempty"`
+	CardLast4      *string               `json:"card_last4,omitempty"`
+	ContactID      *string               `json:"contact_id,omitempty"`
+	CreatedAt      *time.Time            `json:"created_at,omitempty"`
+	Currency       *string               `default:"USD" json:"currency"`
+	DeviceID       *string               `json:"device_id,omitempty"`
+	FeeAmount      *float64              `json:"fee_amount,omitempty"`
+	ID             *string               `json:"id,omitempty"`
+	InvoiceID      *string               `json:"invoice_id,omitempty"`
+	LinkID         *string               `json:"link_id,omitempty"`
+	LocationID     *string               `json:"location_id,omitempty"`
+	Notes          *string               `json:"notes,omitempty"`
+	OrganizationID *string               `json:"organization_id,omitempty"`
+	PaymentMethod  *string               `json:"payment_method,omitempty"`
+	Raw            map[string]any        `json:"raw,omitempty"`
+	Reference      *string               `json:"reference,omitempty"`
+	SalesorderID   *string               `json:"salesorder_id,omitempty"`
+	Status         *PaymentPaymentStatus `json:"status,omitempty"`
+	TenderType     *TenderType           `json:"tender_type,omitempty"`
+	TipAmount      *float64              `json:"tip_amount,omitempty"`
+	TotalAmount    *float64              `json:"total_amount,omitempty"`
+	Type           *PaymentPaymentType   `json:"type,omitempty"`
+	UpdatedAt      *time.Time            `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayment) MarshalJSON() ([]byte, error) {
@@ -82,6 +146,20 @@ func (p *PaymentPayment) GetBillID() *string {
 	return p.BillID
 }
 
+func (p *PaymentPayment) GetCardBrand() *string {
+	if p == nil {
+		return nil
+	}
+	return p.CardBrand
+}
+
+func (p *PaymentPayment) GetCardLast4() *string {
+	if p == nil {
+		return nil
+	}
+	return p.CardLast4
+}
+
 func (p *PaymentPayment) GetContactID() *string {
 	if p == nil {
 		return nil
@@ -103,6 +181,20 @@ func (p *PaymentPayment) GetCurrency() *string {
 	return p.Currency
 }
 
+func (p *PaymentPayment) GetDeviceID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.DeviceID
+}
+
+func (p *PaymentPayment) GetFeeAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.FeeAmount
+}
+
 func (p *PaymentPayment) GetID() *string {
 	if p == nil {
 		return nil
@@ -122,6 +214,13 @@ func (p *PaymentPayment) GetLinkID() *string {
 		return nil
 	}
 	return p.LinkID
+}
+
+func (p *PaymentPayment) GetLocationID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.LocationID
 }
 
 func (p *PaymentPayment) GetNotes() *string {
@@ -157,6 +256,34 @@ func (p *PaymentPayment) GetReference() *string {
 		return nil
 	}
 	return p.Reference
+}
+
+func (p *PaymentPayment) GetSalesorderID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.SalesorderID
+}
+
+func (p *PaymentPayment) GetStatus() *PaymentPaymentStatus {
+	if p == nil {
+		return nil
+	}
+	return p.Status
+}
+
+func (p *PaymentPayment) GetTenderType() *TenderType {
+	if p == nil {
+		return nil
+	}
+	return p.TenderType
+}
+
+func (p *PaymentPayment) GetTipAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.TipAmount
 }
 
 func (p *PaymentPayment) GetTotalAmount() *float64 {

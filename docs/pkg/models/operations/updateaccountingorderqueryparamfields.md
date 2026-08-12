@@ -29,4 +29,5 @@ value := operations.UpdateAccountingOrderQueryParamFieldsID
 | `UpdateAccountingOrderQueryParamFieldsStatus`          | status                                                 |
 | `UpdateAccountingOrderQueryParamFieldsLineitems`       | lineitems                                              |
 | `UpdateAccountingOrderQueryParamFieldsOrganizationID`  | organization_id                                        |
+| `UpdateAccountingOrderQueryParamFieldsMetadata`        | metadata                                               |
 | `UpdateAccountingOrderQueryParamFieldsRaw`             | raw                                                    |

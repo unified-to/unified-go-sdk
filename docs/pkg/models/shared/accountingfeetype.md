@@ -16,13 +16,15 @@ custom := shared.AccountingFeeType("custom_value")
 
 ## Values
 
-| Name                         | Value                        |
-| ---------------------------- | ---------------------------- |
-| `AccountingFeeTypeTax`       | TAX                          |
-| `AccountingFeeTypeDiscount`  | DISCOUNT                     |
-| `AccountingFeeTypePromotion` | PROMOTION                    |
-| `AccountingFeeTypeShipping`  | SHIPPING                     |
-| `AccountingFeeTypeGiftWrap`  | GIFT_WRAP                    |
-| `AccountingFeeTypeCod`       | COD                          |
-| `AccountingFeeTypeSurcharge` | SURCHARGE                    |
-| `AccountingFeeTypeOther`     | OTHER                        |
+| Name                             | Value                            |
+| -------------------------------- | -------------------------------- |
+| `AccountingFeeTypeTax`           | TAX                              |
+| `AccountingFeeTypeDiscount`      | DISCOUNT                         |
+| `AccountingFeeTypePromotion`     | PROMOTION                        |
+| `AccountingFeeTypeShipping`      | SHIPPING                         |
+| `AccountingFeeTypeGiftWrap`      | GIFT_WRAP                        |
+| `AccountingFeeTypeCod`           | COD                              |
+| `AccountingFeeTypeSurcharge`     | SURCHARGE                        |
+| `AccountingFeeTypeTip`           | TIP                              |
+| `AccountingFeeTypeServiceCharge` | SERVICE_CHARGE                   |
+| `AccountingFeeTypeOther`         | OTHER                            |

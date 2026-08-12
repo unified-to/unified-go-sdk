@@ -30,5 +30,14 @@ value := operations.UpdatePaymentPaymentQueryParamFieldsID
 | `UpdatePaymentPaymentQueryParamFieldsAccountID`      | account_id                                           |
 | `UpdatePaymentPaymentQueryParamFieldsReference`      | reference                                            |
 | `UpdatePaymentPaymentQueryParamFieldsOrganizationID` | organization_id                                      |
-| `UpdatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |
 | `UpdatePaymentPaymentQueryParamFieldsAllocations`    | allocations                                          |
+| `UpdatePaymentPaymentQueryParamFieldsStatus`         | status                                               |
+| `UpdatePaymentPaymentQueryParamFieldsSalesorderID`   | salesorder_id                                        |
+| `UpdatePaymentPaymentQueryParamFieldsTenderType`     | tender_type                                          |
+| `UpdatePaymentPaymentQueryParamFieldsTipAmount`      | tip_amount                                           |
+| `UpdatePaymentPaymentQueryParamFieldsFeeAmount`      | fee_amount                                           |
+| `UpdatePaymentPaymentQueryParamFieldsLocationID`     | location_id                                          |
+| `UpdatePaymentPaymentQueryParamFieldsDeviceID`       | device_id                                            |
+| `UpdatePaymentPaymentQueryParamFieldsCardBrand`      | card_brand                                           |
+| `UpdatePaymentPaymentQueryParamFieldsCardLast4`      | card_last4                                           |
+| `UpdatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |

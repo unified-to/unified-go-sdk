@@ -26,6 +26,7 @@ const (
 	PatchAccountingOrderQueryParamFieldsStatus          PatchAccountingOrderQueryParamFields = "status"
 	PatchAccountingOrderQueryParamFieldsLineitems       PatchAccountingOrderQueryParamFields = "lineitems"
 	PatchAccountingOrderQueryParamFieldsOrganizationID  PatchAccountingOrderQueryParamFields = "organization_id"
+	PatchAccountingOrderQueryParamFieldsMetadata        PatchAccountingOrderQueryParamFields = "metadata"
 	PatchAccountingOrderQueryParamFieldsRaw             PatchAccountingOrderQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *PatchAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "lineitems":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingOrderQueryParamFields(v)

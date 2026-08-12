@@ -44,4 +44,5 @@ value := operations.ListAccountingCreditmemoesQueryParamFieldsID
 | `ListAccountingCreditmemoesQueryParamFieldsOrganizationID`          | organization_id                                                     |
 | `ListAccountingCreditmemoesQueryParamFieldsApplyAmount`             | apply_amount                                                        |
 | `ListAccountingCreditmemoesQueryParamFieldsApplications`            | applications                                                        |
+| `ListAccountingCreditmemoesQueryParamFieldsMetadata`                | metadata                                                            |
 | `ListAccountingCreditmemoesQueryParamFieldsRaw`                     | raw                                                                 |

@@ -7,6 +7,34 @@ import (
 	"time"
 )
 
+type FulfillmentType string
+
+const (
+	FulfillmentTypeDineIn   FulfillmentType = "DINE_IN"
+	FulfillmentTypeTakeout  FulfillmentType = "TAKEOUT"
+	FulfillmentTypeDelivery FulfillmentType = "DELIVERY"
+	FulfillmentTypePickup   FulfillmentType = "PICKUP"
+	FulfillmentTypeCurbside FulfillmentType = "CURBSIDE"
+	FulfillmentTypeShipping FulfillmentType = "SHIPPING"
+	FulfillmentTypeDigital  FulfillmentType = "DIGITAL"
+	FulfillmentTypeOther    FulfillmentType = "OTHER"
+)
+
+func (e FulfillmentType) ToPointer() *FulfillmentType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *FulfillmentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DINE_IN", "TAKEOUT", "DELIVERY", "PICKUP", "CURBSIDE", "SHIPPING", "DIGITAL", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingSalesorderStatus string
 
 const (
@@ -19,6 +47,9 @@ const (
 	AccountingSalesorderStatusRefunded          AccountingSalesorderStatus = "REFUNDED"
 	AccountingSalesorderStatusSubmitted         AccountingSalesorderStatus = "SUBMITTED"
 	AccountingSalesorderStatusDeleted           AccountingSalesorderStatus = "DELETED"
+	AccountingSalesorderStatusOpen              AccountingSalesorderStatus = "OPEN"
+	AccountingSalesorderStatusCompleted         AccountingSalesorderStatus = "COMPLETED"
+	AccountingSalesorderStatusCanceled          AccountingSalesorderStatus = "CANCELED"
 )
 
 func (e AccountingSalesorderStatus) ToPointer() *AccountingSalesorderStatus {
@@ -29,7 +60,7 @@ func (e AccountingSalesorderStatus) ToPointer() *AccountingSalesorderStatus {
 func (e *AccountingSalesorderStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED":
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED", "OPEN", "COMPLETED", "CANCELED":
 			return true
 		}
 	}
@@ -37,23 +68,40 @@ func (e *AccountingSalesorderStatus) IsExact() bool {
 }
 
 type AccountingSalesorder struct {
-	AccountID       *string                                      `json:"account_id,omitempty"`
-	BillingAddress  *PropertyAccountingSalesorderBillingAddress  `json:"billing_address,omitempty"`
-	CategoryIds     []string                                     `json:"category_ids,omitempty"`
-	ContactID       *string                                      `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time                                   `json:"created_at,omitempty"`
-	Currency        *string                                      `json:"currency,omitempty"`
-	Fees            []AccountingFee                              `json:"fees,omitempty"`
-	ID              *string                                      `json:"id,omitempty"`
-	Lineitems       []AccountingLineitem                         `json:"lineitems,omitempty"`
-	OrganizationID  *string                                      `json:"organization_id,omitempty"`
-	PostedAt        *time.Time                                   `json:"posted_at,omitempty"`
-	Raw             map[string]any                               `json:"raw,omitempty"`
-	SalesChannel    *string                                      `json:"sales_channel,omitempty"`
-	ShippingAddress *PropertyAccountingSalesorderShippingAddress `json:"shipping_address,omitempty"`
-	Status          *AccountingSalesorderStatus                  `json:"status,omitempty"`
-	TotalAmount     *float64                                     `json:"total_amount,omitempty"`
-	UpdatedAt       *time.Time                                   `json:"updated_at,omitempty"`
+	AccountID       *string                                     `json:"account_id,omitempty"`
+	BillingAddress  *PropertyAccountingSalesorderBillingAddress `json:"billing_address,omitempty"`
+	CategoryIds     []string                                    `json:"category_ids,omitempty"`
+	ClosedAt        *time.Time                                  `json:"closed_at,omitempty"`
+	ContactID       *string                                     `json:"contact_id,omitempty"`
+	CreatedAt       *time.Time                                  `json:"created_at,omitempty"`
+	Currency        *string                                     `json:"currency,omitempty"`
+	DeviceID        *string                                     `json:"device_id,omitempty"`
+	DiscountAmount  *float64                                    `json:"discount_amount,omitempty"`
+	EmployeeUserID  *string                                     `json:"employee_user_id,omitempty"`
+	Fees            []AccountingFee                             `json:"fees,omitempty"`
+	FulfillmentType *FulfillmentType                            `json:"fulfillment_type,omitempty"`
+	GuestCount      *float64                                    `json:"guest_count,omitempty"`
+	ID              *string                                     `json:"id,omitempty"`
+	Lineitems       []AccountingLineitem                        `json:"lineitems,omitempty"`
+	LocationID      *string                                     `json:"location_id,omitempty"`
+	Metadata        []AccountingMetadata                        `json:"metadata,omitempty"`
+	OrderNumber     *string                                     `json:"order_number,omitempty"`
+	OrganizationID  *string                                     `json:"organization_id,omitempty"`
+	// read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+	Payments            []AccountingPaymentReference                 `json:"payments,omitempty"`
+	PostedAt            *time.Time                                   `json:"posted_at,omitempty"`
+	Raw                 map[string]any                               `json:"raw,omitempty"`
+	RefundedAmount      *float64                                     `json:"refunded_amount,omitempty"`
+	SalesChannel        *string                                      `json:"sales_channel,omitempty"`
+	ServiceChargeAmount *float64                                     `json:"service_charge_amount,omitempty"`
+	ShippingAddress     *PropertyAccountingSalesorderShippingAddress `json:"shipping_address,omitempty"`
+	Status              *AccountingSalesorderStatus                  `json:"status,omitempty"`
+	SubscriptionID      *string                                      `json:"subscription_id,omitempty"`
+	SubtotalAmount      *float64                                     `json:"subtotal_amount,omitempty"`
+	TaxAmount           *float64                                     `json:"tax_amount,omitempty"`
+	TipAmount           *float64                                     `json:"tip_amount,omitempty"`
+	TotalAmount         *float64                                     `json:"total_amount,omitempty"`
+	UpdatedAt           *time.Time                                   `json:"updated_at,omitempty"`
 }
 
 func (a AccountingSalesorder) MarshalJSON() ([]byte, error) {
@@ -88,6 +136,13 @@ func (a *AccountingSalesorder) GetCategoryIds() []string {
 	return a.CategoryIds
 }
 
+func (a *AccountingSalesorder) GetClosedAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.ClosedAt
+}
+
 func (a *AccountingSalesorder) GetContactID() *string {
 	if a == nil {
 		return nil
@@ -109,11 +164,46 @@ func (a *AccountingSalesorder) GetCurrency() *string {
 	return a.Currency
 }
 
+func (a *AccountingSalesorder) GetDeviceID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.DeviceID
+}
+
+func (a *AccountingSalesorder) GetDiscountAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.DiscountAmount
+}
+
+func (a *AccountingSalesorder) GetEmployeeUserID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.EmployeeUserID
+}
+
 func (a *AccountingSalesorder) GetFees() []AccountingFee {
 	if a == nil {
 		return nil
 	}
 	return a.Fees
+}
+
+func (a *AccountingSalesorder) GetFulfillmentType() *FulfillmentType {
+	if a == nil {
+		return nil
+	}
+	return a.FulfillmentType
+}
+
+func (a *AccountingSalesorder) GetGuestCount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.GuestCount
 }
 
 func (a *AccountingSalesorder) GetID() *string {
@@ -130,11 +220,39 @@ func (a *AccountingSalesorder) GetLineitems() []AccountingLineitem {
 	return a.Lineitems
 }
 
+func (a *AccountingSalesorder) GetLocationID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LocationID
+}
+
+func (a *AccountingSalesorder) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
+}
+
+func (a *AccountingSalesorder) GetOrderNumber() *string {
+	if a == nil {
+		return nil
+	}
+	return a.OrderNumber
+}
+
 func (a *AccountingSalesorder) GetOrganizationID() *string {
 	if a == nil {
 		return nil
 	}
 	return a.OrganizationID
+}
+
+func (a *AccountingSalesorder) GetPayments() []AccountingPaymentReference {
+	if a == nil {
+		return nil
+	}
+	return a.Payments
 }
 
 func (a *AccountingSalesorder) GetPostedAt() *time.Time {
@@ -151,11 +269,25 @@ func (a *AccountingSalesorder) GetRaw() map[string]any {
 	return a.Raw
 }
 
+func (a *AccountingSalesorder) GetRefundedAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.RefundedAmount
+}
+
 func (a *AccountingSalesorder) GetSalesChannel() *string {
 	if a == nil {
 		return nil
 	}
 	return a.SalesChannel
+}
+
+func (a *AccountingSalesorder) GetServiceChargeAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ServiceChargeAmount
 }
 
 func (a *AccountingSalesorder) GetShippingAddress() *PropertyAccountingSalesorderShippingAddress {
@@ -170,6 +302,34 @@ func (a *AccountingSalesorder) GetStatus() *AccountingSalesorderStatus {
 		return nil
 	}
 	return a.Status
+}
+
+func (a *AccountingSalesorder) GetSubscriptionID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.SubscriptionID
+}
+
+func (a *AccountingSalesorder) GetSubtotalAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.SubtotalAmount
+}
+
+func (a *AccountingSalesorder) GetTaxAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.TaxAmount
+}
+
+func (a *AccountingSalesorder) GetTipAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.TipAmount
 }
 
 func (a *AccountingSalesorder) GetTotalAmount() *float64 {

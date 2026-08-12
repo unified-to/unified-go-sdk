@@ -12,23 +12,39 @@ import (
 type PatchAccountingSalesorderQueryParamFields string
 
 const (
-	PatchAccountingSalesorderQueryParamFieldsID              PatchAccountingSalesorderQueryParamFields = "id"
-	PatchAccountingSalesorderQueryParamFieldsCreatedAt       PatchAccountingSalesorderQueryParamFields = "created_at"
-	PatchAccountingSalesorderQueryParamFieldsUpdatedAt       PatchAccountingSalesorderQueryParamFields = "updated_at"
-	PatchAccountingSalesorderQueryParamFieldsPostedAt        PatchAccountingSalesorderQueryParamFields = "posted_at"
-	PatchAccountingSalesorderQueryParamFieldsContactID       PatchAccountingSalesorderQueryParamFields = "contact_id"
-	PatchAccountingSalesorderQueryParamFieldsAccountID       PatchAccountingSalesorderQueryParamFields = "account_id"
-	PatchAccountingSalesorderQueryParamFieldsCurrency        PatchAccountingSalesorderQueryParamFields = "currency"
-	PatchAccountingSalesorderQueryParamFieldsTotalAmount     PatchAccountingSalesorderQueryParamFields = "total_amount"
-	PatchAccountingSalesorderQueryParamFieldsShippingAddress PatchAccountingSalesorderQueryParamFields = "shipping_address"
-	PatchAccountingSalesorderQueryParamFieldsBillingAddress  PatchAccountingSalesorderQueryParamFields = "billing_address"
-	PatchAccountingSalesorderQueryParamFieldsStatus          PatchAccountingSalesorderQueryParamFields = "status"
-	PatchAccountingSalesorderQueryParamFieldsLineitems       PatchAccountingSalesorderQueryParamFields = "lineitems"
-	PatchAccountingSalesorderQueryParamFieldsSalesChannel    PatchAccountingSalesorderQueryParamFields = "sales_channel"
-	PatchAccountingSalesorderQueryParamFieldsOrganizationID  PatchAccountingSalesorderQueryParamFields = "organization_id"
-	PatchAccountingSalesorderQueryParamFieldsFees            PatchAccountingSalesorderQueryParamFields = "fees"
-	PatchAccountingSalesorderQueryParamFieldsCategoryIds     PatchAccountingSalesorderQueryParamFields = "category_ids"
-	PatchAccountingSalesorderQueryParamFieldsRaw             PatchAccountingSalesorderQueryParamFields = "raw"
+	PatchAccountingSalesorderQueryParamFieldsID                  PatchAccountingSalesorderQueryParamFields = "id"
+	PatchAccountingSalesorderQueryParamFieldsCreatedAt           PatchAccountingSalesorderQueryParamFields = "created_at"
+	PatchAccountingSalesorderQueryParamFieldsUpdatedAt           PatchAccountingSalesorderQueryParamFields = "updated_at"
+	PatchAccountingSalesorderQueryParamFieldsPostedAt            PatchAccountingSalesorderQueryParamFields = "posted_at"
+	PatchAccountingSalesorderQueryParamFieldsContactID           PatchAccountingSalesorderQueryParamFields = "contact_id"
+	PatchAccountingSalesorderQueryParamFieldsAccountID           PatchAccountingSalesorderQueryParamFields = "account_id"
+	PatchAccountingSalesorderQueryParamFieldsCurrency            PatchAccountingSalesorderQueryParamFields = "currency"
+	PatchAccountingSalesorderQueryParamFieldsTotalAmount         PatchAccountingSalesorderQueryParamFields = "total_amount"
+	PatchAccountingSalesorderQueryParamFieldsShippingAddress     PatchAccountingSalesorderQueryParamFields = "shipping_address"
+	PatchAccountingSalesorderQueryParamFieldsBillingAddress      PatchAccountingSalesorderQueryParamFields = "billing_address"
+	PatchAccountingSalesorderQueryParamFieldsStatus              PatchAccountingSalesorderQueryParamFields = "status"
+	PatchAccountingSalesorderQueryParamFieldsLineitems           PatchAccountingSalesorderQueryParamFields = "lineitems"
+	PatchAccountingSalesorderQueryParamFieldsSalesChannel        PatchAccountingSalesorderQueryParamFields = "sales_channel"
+	PatchAccountingSalesorderQueryParamFieldsOrganizationID      PatchAccountingSalesorderQueryParamFields = "organization_id"
+	PatchAccountingSalesorderQueryParamFieldsFees                PatchAccountingSalesorderQueryParamFields = "fees"
+	PatchAccountingSalesorderQueryParamFieldsCategoryIds         PatchAccountingSalesorderQueryParamFields = "category_ids"
+	PatchAccountingSalesorderQueryParamFieldsMetadata            PatchAccountingSalesorderQueryParamFields = "metadata"
+	PatchAccountingSalesorderQueryParamFieldsOrderNumber         PatchAccountingSalesorderQueryParamFields = "order_number"
+	PatchAccountingSalesorderQueryParamFieldsLocationID          PatchAccountingSalesorderQueryParamFields = "location_id"
+	PatchAccountingSalesorderQueryParamFieldsEmployeeUserID      PatchAccountingSalesorderQueryParamFields = "employee_user_id"
+	PatchAccountingSalesorderQueryParamFieldsDeviceID            PatchAccountingSalesorderQueryParamFields = "device_id"
+	PatchAccountingSalesorderQueryParamFieldsFulfillmentType     PatchAccountingSalesorderQueryParamFields = "fulfillment_type"
+	PatchAccountingSalesorderQueryParamFieldsGuestCount          PatchAccountingSalesorderQueryParamFields = "guest_count"
+	PatchAccountingSalesorderQueryParamFieldsSubtotalAmount      PatchAccountingSalesorderQueryParamFields = "subtotal_amount"
+	PatchAccountingSalesorderQueryParamFieldsTaxAmount           PatchAccountingSalesorderQueryParamFields = "tax_amount"
+	PatchAccountingSalesorderQueryParamFieldsDiscountAmount      PatchAccountingSalesorderQueryParamFields = "discount_amount"
+	PatchAccountingSalesorderQueryParamFieldsTipAmount           PatchAccountingSalesorderQueryParamFields = "tip_amount"
+	PatchAccountingSalesorderQueryParamFieldsServiceChargeAmount PatchAccountingSalesorderQueryParamFields = "service_charge_amount"
+	PatchAccountingSalesorderQueryParamFieldsRefundedAmount      PatchAccountingSalesorderQueryParamFields = "refunded_amount"
+	PatchAccountingSalesorderQueryParamFieldsClosedAt            PatchAccountingSalesorderQueryParamFields = "closed_at"
+	PatchAccountingSalesorderQueryParamFieldsSubscriptionID      PatchAccountingSalesorderQueryParamFields = "subscription_id"
+	PatchAccountingSalesorderQueryParamFieldsPayments            PatchAccountingSalesorderQueryParamFields = "payments"
+	PatchAccountingSalesorderQueryParamFieldsRaw                 PatchAccountingSalesorderQueryParamFields = "raw"
 )
 
 func (e PatchAccountingSalesorderQueryParamFields) ToPointer() *PatchAccountingSalesorderQueryParamFields {
@@ -71,6 +87,38 @@ func (e *PatchAccountingSalesorderQueryParamFields) UnmarshalJSON(data []byte) e
 	case "fees":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "metadata":
+		fallthrough
+	case "order_number":
+		fallthrough
+	case "location_id":
+		fallthrough
+	case "employee_user_id":
+		fallthrough
+	case "device_id":
+		fallthrough
+	case "fulfillment_type":
+		fallthrough
+	case "guest_count":
+		fallthrough
+	case "subtotal_amount":
+		fallthrough
+	case "tax_amount":
+		fallthrough
+	case "discount_amount":
+		fallthrough
+	case "tip_amount":
+		fallthrough
+	case "service_charge_amount":
+		fallthrough
+	case "refunded_amount":
+		fallthrough
+	case "closed_at":
+		fallthrough
+	case "subscription_id":
+		fallthrough
+	case "payments":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingSalesorderQueryParamFields(v)

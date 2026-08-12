@@ -25,4 +25,5 @@ value := operations.UpdateAccountingCategoryQueryParamFieldsID
 | `UpdateAccountingCategoryQueryParamFieldsType`           | type                                                     |
 | `UpdateAccountingCategoryQueryParamFieldsCode`           | code                                                     |
 | `UpdateAccountingCategoryQueryParamFieldsOrganizationID` | organization_id                                          |
+| `UpdateAccountingCategoryQueryParamFieldsMetadata`       | metadata                                                 |
 | `UpdateAccountingCategoryQueryParamFieldsRaw`            | raw                                                      |

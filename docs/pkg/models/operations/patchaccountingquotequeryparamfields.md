@@ -47,4 +47,5 @@ value := operations.PatchAccountingQuoteQueryParamFieldsID
 | `PatchAccountingQuoteQueryParamFieldsCategoryIds`     | category_ids                                          |
 | `PatchAccountingQuoteQueryParamFieldsURL`             | url                                                   |
 | `PatchAccountingQuoteQueryParamFieldsOrganizationID`  | organization_id                                       |
+| `PatchAccountingQuoteQueryParamFieldsMetadata`        | metadata                                              |
 | `PatchAccountingQuoteQueryParamFieldsRaw`             | raw                                                   |

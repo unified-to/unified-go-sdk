@@ -84,6 +84,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeHrisLocation`             | hris_location                               |
 | `WebhookObjectTypeHrisDevice`               | hris_device                                 |
 | `WebhookObjectTypeHrisTimeshift`            | hris_timeshift                              |
+| `WebhookObjectTypeHrisAttendance`           | hris_attendance                             |
 | `WebhookObjectTypeHrisDeduction`            | hris_deduction                              |
 | `WebhookObjectTypeHrisBenefit`              | hris_benefit                                |
 | `WebhookObjectTypeHrisBankaccount`          | hris_bankaccount                            |

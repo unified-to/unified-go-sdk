@@ -47,4 +47,5 @@ value := operations.PatchAccountingProjectQueryParamFieldsID
 | `PatchAccountingProjectQueryParamFieldsCategoryIds`          | category_ids                                                 |
 | `PatchAccountingProjectQueryParamFieldsLocationID`           | location_id                                                  |
 | `PatchAccountingProjectQueryParamFieldsOrganizationID`       | organization_id                                              |
+| `PatchAccountingProjectQueryParamFieldsMetadata`             | metadata                                                     |
 | `PatchAccountingProjectQueryParamFieldsRaw`                  | raw                                                          |

@@ -32,4 +32,5 @@ value := operations.CreateAccountingVendorcreditQueryParamFieldsID
 | `CreateAccountingVendorcreditQueryParamFieldsOrganizationID` | organization_id                                              |
 | `CreateAccountingVendorcreditQueryParamFieldsApplyAmount`    | apply_amount                                                 |
 | `CreateAccountingVendorcreditQueryParamFieldsApplications`   | applications                                                 |
+| `CreateAccountingVendorcreditQueryParamFieldsMetadata`       | metadata                                                     |
 | `CreateAccountingVendorcreditQueryParamFieldsRaw`            | raw                                                          |

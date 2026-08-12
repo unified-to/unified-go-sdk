@@ -151,6 +151,7 @@ type UnifiedTo struct {
 	Model             *Model
 	Prompt            *Prompt
 	Hris              *Hris
+	Attendance        *Attendance
 	Bankaccount       *Bankaccount
 	Benefit           *Benefit
 	Deduction         *Deduction
@@ -300,9 +301,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.108",
+		SDKVersion: "0.36.109",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.108 2.928.0 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.109 2.928.0 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -417,6 +418,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Attendance = newAttendance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Bankaccount = newBankaccount(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Benefit = newBenefit(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deduction = newDeduction(sdk, sdk.sdkConfiguration, sdk.hooks)

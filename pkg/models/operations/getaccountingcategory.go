@@ -22,6 +22,7 @@ const (
 	GetAccountingCategoryQueryParamFieldsType           GetAccountingCategoryQueryParamFields = "type"
 	GetAccountingCategoryQueryParamFieldsCode           GetAccountingCategoryQueryParamFields = "code"
 	GetAccountingCategoryQueryParamFieldsOrganizationID GetAccountingCategoryQueryParamFields = "organization_id"
+	GetAccountingCategoryQueryParamFieldsMetadata       GetAccountingCategoryQueryParamFields = "metadata"
 	GetAccountingCategoryQueryParamFieldsRaw            GetAccountingCategoryQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetAccountingCategoryQueryParamFields) UnmarshalJSON(data []byte) error
 	case "code":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingCategoryQueryParamFields(v)

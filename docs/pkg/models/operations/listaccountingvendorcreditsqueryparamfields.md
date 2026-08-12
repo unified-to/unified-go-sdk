@@ -32,4 +32,5 @@ value := operations.ListAccountingVendorcreditsQueryParamFieldsID
 | `ListAccountingVendorcreditsQueryParamFieldsOrganizationID` | organization_id                                             |
 | `ListAccountingVendorcreditsQueryParamFieldsApplyAmount`    | apply_amount                                                |
 | `ListAccountingVendorcreditsQueryParamFieldsApplications`   | applications                                                |
+| `ListAccountingVendorcreditsQueryParamFieldsMetadata`       | metadata                                                    |
 | `ListAccountingVendorcreditsQueryParamFieldsRaw`            | raw                                                         |

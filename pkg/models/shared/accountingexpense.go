@@ -47,6 +47,7 @@ type AccountingExpense struct {
 	ExternalNumber   *string                  `json:"external_number,omitempty"`
 	ID               *string                  `json:"id,omitempty"`
 	Lineitems        []AccountingLineitem     `json:"lineitems,omitempty"`
+	Metadata         []AccountingMetadata     `json:"metadata,omitempty"`
 	Name             *string                  `json:"name,omitempty"`
 	OrganizationID   *string                  `json:"organization_id,omitempty"`
 	PaymentMethod    *string                  `json:"payment_method,omitempty"`
@@ -156,6 +157,13 @@ func (a *AccountingExpense) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingExpense) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingExpense) GetName() *string {

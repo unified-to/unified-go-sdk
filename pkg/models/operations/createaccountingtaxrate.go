@@ -20,6 +20,7 @@ const (
 	CreateAccountingTaxrateQueryParamFieldsRate           CreateAccountingTaxrateQueryParamFields = "rate"
 	CreateAccountingTaxrateQueryParamFieldsIsActive       CreateAccountingTaxrateQueryParamFields = "is_active"
 	CreateAccountingTaxrateQueryParamFieldsOrganizationID CreateAccountingTaxrateQueryParamFields = "organization_id"
+	CreateAccountingTaxrateQueryParamFieldsMetadata       CreateAccountingTaxrateQueryParamFields = "metadata"
 	CreateAccountingTaxrateQueryParamFieldsRaw            CreateAccountingTaxrateQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *CreateAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) err
 	case "is_active":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingTaxrateQueryParamFields(v)

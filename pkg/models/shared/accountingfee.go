@@ -5,14 +5,16 @@ package shared
 type AccountingFeeType string
 
 const (
-	AccountingFeeTypeTax       AccountingFeeType = "TAX"
-	AccountingFeeTypeDiscount  AccountingFeeType = "DISCOUNT"
-	AccountingFeeTypePromotion AccountingFeeType = "PROMOTION"
-	AccountingFeeTypeShipping  AccountingFeeType = "SHIPPING"
-	AccountingFeeTypeGiftWrap  AccountingFeeType = "GIFT_WRAP"
-	AccountingFeeTypeCod       AccountingFeeType = "COD"
-	AccountingFeeTypeSurcharge AccountingFeeType = "SURCHARGE"
-	AccountingFeeTypeOther     AccountingFeeType = "OTHER"
+	AccountingFeeTypeTax           AccountingFeeType = "TAX"
+	AccountingFeeTypeDiscount      AccountingFeeType = "DISCOUNT"
+	AccountingFeeTypePromotion     AccountingFeeType = "PROMOTION"
+	AccountingFeeTypeShipping      AccountingFeeType = "SHIPPING"
+	AccountingFeeTypeGiftWrap      AccountingFeeType = "GIFT_WRAP"
+	AccountingFeeTypeCod           AccountingFeeType = "COD"
+	AccountingFeeTypeSurcharge     AccountingFeeType = "SURCHARGE"
+	AccountingFeeTypeTip           AccountingFeeType = "TIP"
+	AccountingFeeTypeServiceCharge AccountingFeeType = "SERVICE_CHARGE"
+	AccountingFeeTypeOther         AccountingFeeType = "OTHER"
 )
 
 func (e AccountingFeeType) ToPointer() *AccountingFeeType {
@@ -23,7 +25,7 @@ func (e AccountingFeeType) ToPointer() *AccountingFeeType {
 func (e *AccountingFeeType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TAX", "DISCOUNT", "PROMOTION", "SHIPPING", "GIFT_WRAP", "COD", "SURCHARGE", "OTHER":
+		case "TAX", "DISCOUNT", "PROMOTION", "SHIPPING", "GIFT_WRAP", "COD", "SURCHARGE", "TIP", "SERVICE_CHARGE", "OTHER":
 			return true
 		}
 	}

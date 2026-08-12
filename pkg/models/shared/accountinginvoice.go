@@ -157,6 +157,7 @@ type AccountingInvoice struct {
 	ID                      *string                                   `json:"id,omitempty"`
 	InvoiceNumber           *string                                   `json:"invoice_number,omitempty"`
 	Lineitems               []AccountingLineitem                      `json:"lineitems,omitempty"`
+	Metadata                []AccountingMetadata                      `json:"metadata,omitempty"`
 	Notes                   *string                                   `json:"notes,omitempty"`
 	OrganizationID          *string                                   `json:"organization_id,omitempty"`
 	PaidAmount              *float64                                  `json:"paid_amount,omitempty"`
@@ -275,6 +276,13 @@ func (a *AccountingInvoice) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingInvoice) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingInvoice) GetNotes() *string {

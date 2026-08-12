@@ -26,6 +26,7 @@ const (
 	GetAccountingOrderQueryParamFieldsStatus          GetAccountingOrderQueryParamFields = "status"
 	GetAccountingOrderQueryParamFieldsLineitems       GetAccountingOrderQueryParamFields = "lineitems"
 	GetAccountingOrderQueryParamFieldsOrganizationID  GetAccountingOrderQueryParamFields = "organization_id"
+	GetAccountingOrderQueryParamFieldsMetadata        GetAccountingOrderQueryParamFields = "metadata"
 	GetAccountingOrderQueryParamFieldsRaw             GetAccountingOrderQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *GetAccountingOrderQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "lineitems":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingOrderQueryParamFields(v)

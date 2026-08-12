@@ -80,6 +80,7 @@ type AccountingProject struct {
 	IsBillable           *bool                    `json:"is_billable,omitempty"`
 	LocationID           *string                  `json:"location_id,omitempty"`
 	ManagerUserID        *string                  `json:"manager_user_id,omitempty"`
+	Metadata             []AccountingMetadata     `json:"metadata,omitempty"`
 	MinutesLogged        *float64                 `json:"minutes_logged,omitempty"`
 	MinutesToBeInvoiced  *float64                 `json:"minutes_to_be_invoiced,omitempty"`
 	Name                 *string                  `json:"name,omitempty"`
@@ -256,6 +257,13 @@ func (a *AccountingProject) GetManagerUserID() *string {
 		return nil
 	}
 	return a.ManagerUserID
+}
+
+func (a *AccountingProject) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingProject) GetMinutesLogged() *float64 {

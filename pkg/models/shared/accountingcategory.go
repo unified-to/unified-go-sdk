@@ -41,6 +41,7 @@ type AccountingCategory struct {
 	Description    *string                 `json:"description,omitempty"`
 	ID             *string                 `json:"id,omitempty"`
 	IsActive       *bool                   `json:"is_active,omitempty"`
+	Metadata       []AccountingMetadata    `json:"metadata,omitempty"`
 	Name           *string                 `json:"name,omitempty"`
 	OrganizationID *string                 `json:"organization_id,omitempty"`
 	ParentID       *string                 `json:"parent_id,omitempty"`
@@ -93,6 +94,13 @@ func (a *AccountingCategory) GetIsActive() *bool {
 		return nil
 	}
 	return a.IsActive
+}
+
+func (a *AccountingCategory) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingCategory) GetName() *string {

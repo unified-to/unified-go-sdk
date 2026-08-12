@@ -403,6 +403,15 @@ func main() {
 * [UpdateAtsJob](docs/sdks/ats/README.md#updateatsjob) - Update a job
 * [UpdateAtsScorecard](docs/sdks/ats/README.md#updateatsscorecard) - Update a scorecard
 
+### [Attendance](docs/sdks/attendance/README.md)
+
+* [CreateHrisAttendance](docs/sdks/attendance/README.md#createhrisattendance) - Create an attendance
+* [GetHrisAttendance](docs/sdks/attendance/README.md#gethrisattendance) - Retrieve an attendance
+* [ListHrisAttendances](docs/sdks/attendance/README.md#listhrisattendances) - List all attendances
+* [PatchHrisAttendance](docs/sdks/attendance/README.md#patchhrisattendance) - Update an attendance
+* [RemoveHrisAttendance](docs/sdks/attendance/README.md#removehrisattendance) - Remove an attendance
+* [UpdateHrisAttendance](docs/sdks/attendance/README.md#updatehrisattendance) - Update an attendance
+
 ### [Auth](docs/sdks/auth/README.md)
 
 * [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
@@ -1081,6 +1090,7 @@ func main() {
 
 ### [Hris](docs/sdks/hris/README.md)
 
+* [CreateHrisAttendance](docs/sdks/hris/README.md#createhrisattendance) - Create an attendance
 * [CreateHrisBankaccount](docs/sdks/hris/README.md#createhrisbankaccount) - Create a bankaccount
 * [CreateHrisBenefit](docs/sdks/hris/README.md#createhrisbenefit) - Create a benefit
 * [CreateHrisCompany](docs/sdks/hris/README.md#createhriscompany) - Create a company
@@ -1092,6 +1102,7 @@ func main() {
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [CreateHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [CreateHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
+* [GetHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
 * [GetHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [GetHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
 * [GetHrisCompany](docs/sdks/hris/README.md#gethriscompany) - Retrieve a company
@@ -1105,6 +1116,7 @@ func main() {
 * [GetHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [GetHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
+* [ListHrisAttendances](docs/sdks/hris/README.md#listhrisattendances) - List all attendances
 * [ListHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
 * [ListHrisBenefits](docs/sdks/hris/README.md#listhrisbenefits) - List all benefits
 * [ListHrisCompanies](docs/sdks/hris/README.md#listhriscompanies) - List all companies
@@ -1118,6 +1130,7 @@ func main() {
 * [ListHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [ListHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
+* [PatchHrisAttendance](docs/sdks/hris/README.md#patchhrisattendance) - Update an attendance
 * [PatchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
 * [PatchHrisBenefit](docs/sdks/hris/README.md#patchhrisbenefit) - Update a benefit
 * [PatchHrisCompany](docs/sdks/hris/README.md#patchhriscompany) - Update a company
@@ -1129,6 +1142,7 @@ func main() {
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [PatchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
+* [RemoveHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
 * [RemoveHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [RemoveHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
 * [RemoveHrisCompany](docs/sdks/hris/README.md#removehriscompany) - Remove a company
@@ -1140,6 +1154,7 @@ func main() {
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [RemoveHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
+* [UpdateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
 * [UpdateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [UpdateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
 * [UpdateHrisCompany](docs/sdks/hris/README.md#updatehriscompany) - Update a company

@@ -20,6 +20,7 @@ const (
 	PatchAccountingTaxrateQueryParamFieldsRate           PatchAccountingTaxrateQueryParamFields = "rate"
 	PatchAccountingTaxrateQueryParamFieldsIsActive       PatchAccountingTaxrateQueryParamFields = "is_active"
 	PatchAccountingTaxrateQueryParamFieldsOrganizationID PatchAccountingTaxrateQueryParamFields = "organization_id"
+	PatchAccountingTaxrateQueryParamFieldsMetadata       PatchAccountingTaxrateQueryParamFields = "metadata"
 	PatchAccountingTaxrateQueryParamFieldsRaw            PatchAccountingTaxrateQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "is_active":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingTaxrateQueryParamFields(v)

@@ -26,6 +26,7 @@ const (
 	PatchAccountingPurchaseorderQueryParamFieldsLineitems       PatchAccountingPurchaseorderQueryParamFields = "lineitems"
 	PatchAccountingPurchaseorderQueryParamFieldsOrganizationID  PatchAccountingPurchaseorderQueryParamFields = "organization_id"
 	PatchAccountingPurchaseorderQueryParamFieldsCategoryIds     PatchAccountingPurchaseorderQueryParamFields = "category_ids"
+	PatchAccountingPurchaseorderQueryParamFieldsMetadata        PatchAccountingPurchaseorderQueryParamFields = "metadata"
 	PatchAccountingPurchaseorderQueryParamFieldsRaw             PatchAccountingPurchaseorderQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *PatchAccountingPurchaseorderQueryParamFields) UnmarshalJSON(data []byte
 	case "organization_id":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingPurchaseorderQueryParamFields(v)

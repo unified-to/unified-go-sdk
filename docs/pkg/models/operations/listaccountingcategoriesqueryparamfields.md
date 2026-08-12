@@ -25,4 +25,5 @@ value := operations.ListAccountingCategoriesQueryParamFieldsID
 | `ListAccountingCategoriesQueryParamFieldsType`           | type                                                     |
 | `ListAccountingCategoriesQueryParamFieldsCode`           | code                                                     |
 | `ListAccountingCategoriesQueryParamFieldsOrganizationID` | organization_id                                          |
+| `ListAccountingCategoriesQueryParamFieldsMetadata`       | metadata                                                 |
 | `ListAccountingCategoriesQueryParamFieldsRaw`            | raw                                                      |

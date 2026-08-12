@@ -45,6 +45,7 @@ const (
 	ListAccountingInvoicesQueryParamFieldsPayments                ListAccountingInvoicesQueryParamFields = "payments"
 	ListAccountingInvoicesQueryParamFieldsCategoryIds             ListAccountingInvoicesQueryParamFields = "category_ids"
 	ListAccountingInvoicesQueryParamFieldsProjectID               ListAccountingInvoicesQueryParamFields = "project_id"
+	ListAccountingInvoicesQueryParamFieldsMetadata                ListAccountingInvoicesQueryParamFields = "metadata"
 	ListAccountingInvoicesQueryParamFieldsRaw                     ListAccountingInvoicesQueryParamFields = "raw"
 )
 
@@ -122,6 +123,8 @@ func (e *ListAccountingInvoicesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "category_ids":
 		fallthrough
 	case "project_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingInvoicesQueryParamFields(v)

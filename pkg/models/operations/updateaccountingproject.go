@@ -44,6 +44,7 @@ const (
 	UpdateAccountingProjectQueryParamFieldsCategoryIds          UpdateAccountingProjectQueryParamFields = "category_ids"
 	UpdateAccountingProjectQueryParamFieldsLocationID           UpdateAccountingProjectQueryParamFields = "location_id"
 	UpdateAccountingProjectQueryParamFieldsOrganizationID       UpdateAccountingProjectQueryParamFields = "organization_id"
+	UpdateAccountingProjectQueryParamFieldsMetadata             UpdateAccountingProjectQueryParamFields = "metadata"
 	UpdateAccountingProjectQueryParamFieldsRaw                  UpdateAccountingProjectQueryParamFields = "raw"
 )
 
@@ -119,6 +120,8 @@ func (e *UpdateAccountingProjectQueryParamFields) UnmarshalJSON(data []byte) err
 	case "location_id":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingProjectQueryParamFields(v)

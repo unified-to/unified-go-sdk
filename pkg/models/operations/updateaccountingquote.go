@@ -44,6 +44,7 @@ const (
 	UpdateAccountingQuoteQueryParamFieldsCategoryIds     UpdateAccountingQuoteQueryParamFields = "category_ids"
 	UpdateAccountingQuoteQueryParamFieldsURL             UpdateAccountingQuoteQueryParamFields = "url"
 	UpdateAccountingQuoteQueryParamFieldsOrganizationID  UpdateAccountingQuoteQueryParamFields = "organization_id"
+	UpdateAccountingQuoteQueryParamFieldsMetadata        UpdateAccountingQuoteQueryParamFields = "metadata"
 	UpdateAccountingQuoteQueryParamFieldsRaw             UpdateAccountingQuoteQueryParamFields = "raw"
 )
 
@@ -119,6 +120,8 @@ func (e *UpdateAccountingQuoteQueryParamFields) UnmarshalJSON(data []byte) error
 	case "url":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingQuoteQueryParamFields(v)

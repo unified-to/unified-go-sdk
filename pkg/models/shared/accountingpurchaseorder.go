@@ -19,6 +19,9 @@ const (
 	AccountingPurchaseorderStatusRefunded          AccountingPurchaseorderStatus = "REFUNDED"
 	AccountingPurchaseorderStatusSubmitted         AccountingPurchaseorderStatus = "SUBMITTED"
 	AccountingPurchaseorderStatusDeleted           AccountingPurchaseorderStatus = "DELETED"
+	AccountingPurchaseorderStatusOpen              AccountingPurchaseorderStatus = "OPEN"
+	AccountingPurchaseorderStatusCompleted         AccountingPurchaseorderStatus = "COMPLETED"
+	AccountingPurchaseorderStatusCanceled          AccountingPurchaseorderStatus = "CANCELED"
 )
 
 func (e AccountingPurchaseorderStatus) ToPointer() *AccountingPurchaseorderStatus {
@@ -29,7 +32,7 @@ func (e AccountingPurchaseorderStatus) ToPointer() *AccountingPurchaseorderStatu
 func (e *AccountingPurchaseorderStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED":
+		case "DRAFT", "VOIDED", "AUTHORIZED", "PAID", "PARTIALLY_PAID", "PARTIALLY_REFUNDED", "REFUNDED", "SUBMITTED", "DELETED", "OPEN", "COMPLETED", "CANCELED":
 			return true
 		}
 	}
@@ -45,6 +48,7 @@ type AccountingPurchaseorder struct {
 	Currency        *string                                         `json:"currency,omitempty"`
 	ID              *string                                         `json:"id,omitempty"`
 	Lineitems       []AccountingLineitem                            `json:"lineitems,omitempty"`
+	Metadata        []AccountingMetadata                            `json:"metadata,omitempty"`
 	OrganizationID  *string                                         `json:"organization_id,omitempty"`
 	PostedAt        *time.Time                                      `json:"posted_at,omitempty"`
 	Raw             map[string]any                                  `json:"raw,omitempty"`
@@ -119,6 +123,13 @@ func (a *AccountingPurchaseorder) GetLineitems() []AccountingLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingPurchaseorder) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingPurchaseorder) GetOrganizationID() *string {
