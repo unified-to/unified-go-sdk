@@ -8,27 +8,29 @@ import (
 )
 
 type LmsContent struct {
-	Categories        []string                 `json:"categories,omitempty"`
-	CollectionIds     []string                 `json:"collection_ids,omitempty"`
-	CourseIds         []string                 `json:"course_ids,omitempty"`
-	CreatedAt         *time.Time               `json:"created_at,omitempty"`
-	Description       *string                  `json:"description,omitempty"`
-	Difficulty        *string                  `json:"difficulty,omitempty"`
-	DurationMinutes   *float64                 `json:"duration_minutes,omitempty"`
-	ExternalReference *string                  `json:"external_reference,omitempty"`
-	ID                *string                  `json:"id,omitempty"`
-	InstructorIds     []string                 `json:"instructor_ids,omitempty"`
-	IsActive          *bool                    `json:"is_active,omitempty"`
-	Languages         []string                 `json:"languages,omitempty"`
-	Localizations     []LmsContentLocalization `json:"localizations,omitempty"`
-	Media             []LmsMedia               `json:"media,omitempty"`
-	Name              *string                  `json:"name,omitempty"`
-	ProviderName      *string                  `json:"provider_name,omitempty"`
-	PublishedAt       *time.Time               `json:"published_at,omitempty"`
-	Raw               map[string]any           `json:"raw,omitempty"`
-	ShortDescription  *string                  `json:"short_description,omitempty"`
-	Skills            []string                 `json:"skills,omitempty"`
-	SortOrder         *float64                 `json:"sort_order,omitempty"`
+	Categories        []string   `json:"categories,omitempty"`
+	CollectionIds     []string   `json:"collection_ids,omitempty"`
+	CourseIds         []string   `json:"course_ids,omitempty"`
+	CreatedAt         *time.Time `json:"created_at,omitempty"`
+	Description       *string    `json:"description,omitempty"`
+	Difficulty        *string    `json:"difficulty,omitempty"`
+	DurationMinutes   *float64   `json:"duration_minutes,omitempty"`
+	ExternalReference *string    `json:"external_reference,omitempty"`
+	ID                *string    `json:"id,omitempty"`
+	// @deprecated; use instructors
+	InstructorIds    []string                 `json:"instructor_ids,omitempty"`
+	Instructors      []LmsReference           `json:"instructors,omitempty"`
+	IsActive         *bool                    `json:"is_active,omitempty"`
+	Languages        []string                 `json:"languages,omitempty"`
+	Localizations    []LmsContentLocalization `json:"localizations,omitempty"`
+	Media            []LmsMedia               `json:"media,omitempty"`
+	Name             *string                  `json:"name,omitempty"`
+	ProviderName     *string                  `json:"provider_name,omitempty"`
+	PublishedAt      *time.Time               `json:"published_at,omitempty"`
+	Raw              map[string]any           `json:"raw,omitempty"`
+	ShortDescription *string                  `json:"short_description,omitempty"`
+	Skills           []string                 `json:"skills,omitempty"`
+	SortOrder        *float64                 `json:"sort_order,omitempty"`
 	// Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
 	Subjects  []LmsSubject `json:"subjects,omitempty"`
 	Tags      []string     `json:"tags,omitempty"`
@@ -114,6 +116,13 @@ func (l *LmsContent) GetInstructorIds() []string {
 		return nil
 	}
 	return l.InstructorIds
+}
+
+func (l *LmsContent) GetInstructors() []LmsReference {
+	if l == nil {
+		return nil
+	}
+	return l.Instructors
 }
 
 func (l *LmsContent) GetIsActive() *bool {

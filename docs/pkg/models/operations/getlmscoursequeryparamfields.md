@@ -35,6 +35,6 @@ value := operations.GetLmsCourseQueryParamFieldsID
 | `GetLmsCourseQueryParamFieldsSkills`              | skills                                            |
 | `GetLmsCourseQueryParamFieldsDurationMinutes`     | duration_minutes                                  |
 | `GetLmsCourseQueryParamFieldsProviderName`        | provider_name                                     |
-| `GetLmsCourseQueryParamFieldsRaw`                 | raw                                               |
 | `GetLmsCourseQueryParamFieldsPublishedAt`         | published_at                                      |
 | `GetLmsCourseQueryParamFieldsTimeEstimateMinutes` | time_estimate_minutes                             |
+| `GetLmsCourseQueryParamFieldsRaw`                 | raw                                               |

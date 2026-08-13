@@ -34,8 +34,9 @@ value := operations.PatchLmsContentQueryParamFieldsID
 | `PatchLmsContentQueryParamFieldsSortOrder`         | sort_order                                         |
 | `PatchLmsContentQueryParamFieldsProviderName`      | provider_name                                      |
 | `PatchLmsContentQueryParamFieldsShortDescription`  | short_description                                  |
-| `PatchLmsContentQueryParamFieldsPublishedAt`       | published_at                                       |
 | `PatchLmsContentQueryParamFieldsLocalizations`     | localizations                                      |
 | `PatchLmsContentQueryParamFieldsInstructorIds`     | instructor_ids                                     |
 | `PatchLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                     |
+| `PatchLmsContentQueryParamFieldsInstructors`       | instructors                                        |
+| `PatchLmsContentQueryParamFieldsPublishedAt`       | published_at                                       |
 | `PatchLmsContentQueryParamFieldsRaw`               | raw                                                |

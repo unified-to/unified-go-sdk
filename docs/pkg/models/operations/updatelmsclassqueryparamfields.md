@@ -25,4 +25,6 @@ value := operations.UpdateLmsClassQueryParamFieldsID
 | `UpdateLmsClassQueryParamFieldsInstructorIds` | instructor_ids                                |
 | `UpdateLmsClassQueryParamFieldsStudentIds`    | student_ids                                   |
 | `UpdateLmsClassQueryParamFieldsLanguages`     | languages                                     |
+| `UpdateLmsClassQueryParamFieldsInstructors`   | instructors                                   |
+| `UpdateLmsClassQueryParamFieldsStudents`      | students                                      |
 | `UpdateLmsClassQueryParamFieldsRaw`           | raw                                           |

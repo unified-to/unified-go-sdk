@@ -22,6 +22,8 @@ const (
 	UpdateLmsClassQueryParamFieldsInstructorIds UpdateLmsClassQueryParamFields = "instructor_ids"
 	UpdateLmsClassQueryParamFieldsStudentIds    UpdateLmsClassQueryParamFields = "student_ids"
 	UpdateLmsClassQueryParamFieldsLanguages     UpdateLmsClassQueryParamFields = "languages"
+	UpdateLmsClassQueryParamFieldsInstructors   UpdateLmsClassQueryParamFields = "instructors"
+	UpdateLmsClassQueryParamFieldsStudents      UpdateLmsClassQueryParamFields = "students"
 	UpdateLmsClassQueryParamFieldsRaw           UpdateLmsClassQueryParamFields = "raw"
 )
 
@@ -53,6 +55,10 @@ func (e *UpdateLmsClassQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "student_ids":
 		fallthrough
 	case "languages":
+		fallthrough
+	case "instructors":
+		fallthrough
+	case "students":
 		fallthrough
 	case "raw":
 		*e = UpdateLmsClassQueryParamFields(v)

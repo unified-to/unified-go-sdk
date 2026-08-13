@@ -25,4 +25,6 @@ value := operations.PatchLmsClassQueryParamFieldsID
 | `PatchLmsClassQueryParamFieldsInstructorIds` | instructor_ids                               |
 | `PatchLmsClassQueryParamFieldsStudentIds`    | student_ids                                  |
 | `PatchLmsClassQueryParamFieldsLanguages`     | languages                                    |
+| `PatchLmsClassQueryParamFieldsInstructors`   | instructors                                  |
+| `PatchLmsClassQueryParamFieldsStudents`      | students                                     |
 | `PatchLmsClassQueryParamFieldsRaw`           | raw                                          |

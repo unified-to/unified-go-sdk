@@ -8,17 +8,21 @@ import (
 )
 
 type LmsClass struct {
-	CourseID      *string        `json:"course_id,omitempty"`
-	CreatedAt     *time.Time     `json:"created_at,omitempty"`
-	Description   *string        `json:"description,omitempty"`
-	ID            *string        `json:"id,omitempty"`
+	CourseID    *string    `json:"course_id,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	// @deprecated; use instructors
 	InstructorIds []string       `json:"instructor_ids,omitempty"`
+	Instructors   []LmsReference `json:"instructors,omitempty"`
 	Languages     []string       `json:"languages,omitempty"`
 	Media         []LmsMedia     `json:"media,omitempty"`
 	Name          *string        `json:"name,omitempty"`
 	Raw           map[string]any `json:"raw,omitempty"`
-	StudentIds    []string       `json:"student_ids,omitempty"`
-	UpdatedAt     *time.Time     `json:"updated_at,omitempty"`
+	// @deprecated; use students
+	StudentIds []string       `json:"student_ids,omitempty"`
+	Students   []LmsReference `json:"students,omitempty"`
+	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (l LmsClass) MarshalJSON() ([]byte, error) {
@@ -67,6 +71,13 @@ func (l *LmsClass) GetInstructorIds() []string {
 	return l.InstructorIds
 }
 
+func (l *LmsClass) GetInstructors() []LmsReference {
+	if l == nil {
+		return nil
+	}
+	return l.Instructors
+}
+
 func (l *LmsClass) GetLanguages() []string {
 	if l == nil {
 		return nil
@@ -100,6 +111,13 @@ func (l *LmsClass) GetStudentIds() []string {
 		return nil
 	}
 	return l.StudentIds
+}
+
+func (l *LmsClass) GetStudents() []LmsReference {
+	if l == nil {
+		return nil
+	}
+	return l.Students
 }
 
 func (l *LmsClass) GetUpdatedAt() *time.Time {

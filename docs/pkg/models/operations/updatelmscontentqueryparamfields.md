@@ -34,8 +34,9 @@ value := operations.UpdateLmsContentQueryParamFieldsID
 | `UpdateLmsContentQueryParamFieldsSortOrder`         | sort_order                                          |
 | `UpdateLmsContentQueryParamFieldsProviderName`      | provider_name                                       |
 | `UpdateLmsContentQueryParamFieldsShortDescription`  | short_description                                   |
-| `UpdateLmsContentQueryParamFieldsPublishedAt`       | published_at                                        |
 | `UpdateLmsContentQueryParamFieldsLocalizations`     | localizations                                       |
 | `UpdateLmsContentQueryParamFieldsInstructorIds`     | instructor_ids                                      |
 | `UpdateLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                      |
+| `UpdateLmsContentQueryParamFieldsInstructors`       | instructors                                         |
+| `UpdateLmsContentQueryParamFieldsPublishedAt`       | published_at                                        |
 | `UpdateLmsContentQueryParamFieldsRaw`               | raw                                                 |

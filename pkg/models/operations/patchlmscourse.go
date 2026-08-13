@@ -32,9 +32,9 @@ const (
 	PatchLmsCourseQueryParamFieldsSkills              PatchLmsCourseQueryParamFields = "skills"
 	PatchLmsCourseQueryParamFieldsDurationMinutes     PatchLmsCourseQueryParamFields = "duration_minutes"
 	PatchLmsCourseQueryParamFieldsProviderName        PatchLmsCourseQueryParamFields = "provider_name"
-	PatchLmsCourseQueryParamFieldsRaw                 PatchLmsCourseQueryParamFields = "raw"
 	PatchLmsCourseQueryParamFieldsPublishedAt         PatchLmsCourseQueryParamFields = "published_at"
 	PatchLmsCourseQueryParamFieldsTimeEstimateMinutes PatchLmsCourseQueryParamFields = "time_estimate_minutes"
+	PatchLmsCourseQueryParamFieldsRaw                 PatchLmsCourseQueryParamFields = "raw"
 )
 
 func (e PatchLmsCourseQueryParamFields) ToPointer() *PatchLmsCourseQueryParamFields {
@@ -86,11 +86,11 @@ func (e *PatchLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "provider_name":
 		fallthrough
-	case "raw":
-		fallthrough
 	case "published_at":
 		fallthrough
 	case "time_estimate_minutes":
+		fallthrough
+	case "raw":
 		*e = PatchLmsCourseQueryParamFields(v)
 		return nil
 	default:

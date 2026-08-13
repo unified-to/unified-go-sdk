@@ -31,10 +31,11 @@ const (
 	CreateLmsContentQueryParamFieldsSortOrder         CreateLmsContentQueryParamFields = "sort_order"
 	CreateLmsContentQueryParamFieldsProviderName      CreateLmsContentQueryParamFields = "provider_name"
 	CreateLmsContentQueryParamFieldsShortDescription  CreateLmsContentQueryParamFields = "short_description"
-	CreateLmsContentQueryParamFieldsPublishedAt       CreateLmsContentQueryParamFields = "published_at"
 	CreateLmsContentQueryParamFieldsLocalizations     CreateLmsContentQueryParamFields = "localizations"
 	CreateLmsContentQueryParamFieldsInstructorIds     CreateLmsContentQueryParamFields = "instructor_ids"
 	CreateLmsContentQueryParamFieldsCollectionIds     CreateLmsContentQueryParamFields = "collection_ids"
+	CreateLmsContentQueryParamFieldsInstructors       CreateLmsContentQueryParamFields = "instructors"
+	CreateLmsContentQueryParamFieldsPublishedAt       CreateLmsContentQueryParamFields = "published_at"
 	CreateLmsContentQueryParamFieldsRaw               CreateLmsContentQueryParamFields = "raw"
 )
 
@@ -85,13 +86,15 @@ func (e *CreateLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "short_description":
 		fallthrough
-	case "published_at":
-		fallthrough
 	case "localizations":
 		fallthrough
 	case "instructor_ids":
 		fallthrough
 	case "collection_ids":
+		fallthrough
+	case "instructors":
+		fallthrough
+	case "published_at":
 		fallthrough
 	case "raw":
 		*e = CreateLmsContentQueryParamFields(v)
