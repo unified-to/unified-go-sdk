@@ -7,19 +7,19 @@ import (
 	"time"
 )
 
-type AccountType string
+type HrisBankaccountAccountType string
 
 const (
-	AccountTypeChecking AccountType = "CHECKING"
-	AccountTypeSavings  AccountType = "SAVINGS"
+	HrisBankaccountAccountTypeChecking HrisBankaccountAccountType = "CHECKING"
+	HrisBankaccountAccountTypeSavings  HrisBankaccountAccountType = "SAVINGS"
 )
 
-func (e AccountType) ToPointer() *AccountType {
+func (e HrisBankaccountAccountType) ToPointer() *HrisBankaccountAccountType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *AccountType) IsExact() bool {
+func (e *HrisBankaccountAccountType) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "CHECKING", "SAVINGS":
@@ -30,19 +30,19 @@ func (e *AccountType) IsExact() bool {
 }
 
 type HrisBankaccount struct {
-	AccountNumber      *string        `json:"account_number,omitempty"`
-	AccountNumberLast4 *string        `json:"account_number_last4,omitempty"`
-	AccountType        *AccountType   `json:"account_type,omitempty"`
-	BankName           *string        `json:"bank_name,omitempty"`
-	CompanyID          *string        `json:"company_id,omitempty"`
-	CreatedAt          *time.Time     `json:"created_at,omitempty"`
-	ID                 *string        `json:"id,omitempty"`
-	IsPrimary          *bool          `json:"is_primary,omitempty"`
-	Name               *string        `json:"name,omitempty"`
-	Raw                map[string]any `json:"raw,omitempty"`
-	RoutingNumber      *string        `json:"routing_number,omitempty"`
-	UpdatedAt          *time.Time     `json:"updated_at,omitempty"`
-	UserID             *string        `json:"user_id,omitempty"`
+	AccountNumber      *string                     `json:"account_number,omitempty"`
+	AccountNumberLast4 *string                     `json:"account_number_last4,omitempty"`
+	AccountType        *HrisBankaccountAccountType `json:"account_type,omitempty"`
+	BankName           *string                     `json:"bank_name,omitempty"`
+	CompanyID          *string                     `json:"company_id,omitempty"`
+	CreatedAt          *time.Time                  `json:"created_at,omitempty"`
+	ID                 *string                     `json:"id,omitempty"`
+	IsPrimary          *bool                       `json:"is_primary,omitempty"`
+	Name               *string                     `json:"name,omitempty"`
+	Raw                map[string]any              `json:"raw,omitempty"`
+	RoutingNumber      *string                     `json:"routing_number,omitempty"`
+	UpdatedAt          *time.Time                  `json:"updated_at,omitempty"`
+	UserID             *string                     `json:"user_id,omitempty"`
 }
 
 func (h HrisBankaccount) MarshalJSON() ([]byte, error) {
@@ -70,7 +70,7 @@ func (h *HrisBankaccount) GetAccountNumberLast4() *string {
 	return h.AccountNumberLast4
 }
 
-func (h *HrisBankaccount) GetAccountType() *AccountType {
+func (h *HrisBankaccount) GetAccountType() *HrisBankaccountAccountType {
 	if h == nil {
 		return nil
 	}

@@ -117,6 +117,29 @@ func (e *ListAssignedUserID) IsExact() bool {
 	return false
 }
 
+type ListBankfeedaccountID string
+
+const (
+	ListBankfeedaccountIDSupportedRequired ListBankfeedaccountID = "supported-required"
+	ListBankfeedaccountIDSupported         ListBankfeedaccountID = "supported"
+	ListBankfeedaccountIDNotSupported      ListBankfeedaccountID = "not-supported"
+)
+
+func (e ListBankfeedaccountID) ToPointer() *ListBankfeedaccountID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListBankfeedaccountID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListBenefitID string
 
 const (
@@ -2877,6 +2900,29 @@ func (e *VirtualWebhookAssignedUserID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookBankfeedaccountID string
+
+const (
+	VirtualWebhookBankfeedaccountIDSupportedRequired VirtualWebhookBankfeedaccountID = "supported-required"
+	VirtualWebhookBankfeedaccountIDSupported         VirtualWebhookBankfeedaccountID = "supported"
+	VirtualWebhookBankfeedaccountIDNotSupported      VirtualWebhookBankfeedaccountID = "not-supported"
+)
+
+func (e VirtualWebhookBankfeedaccountID) ToPointer() *VirtualWebhookBankfeedaccountID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookBankfeedaccountID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookBenefitID string
 
 const (
@@ -4310,6 +4356,7 @@ type IntegrationSupport struct {
 	ListAdID                *ListAdID                `json:"list_ad_id,omitempty"`
 	ListApplicationID       *ListApplicationID       `json:"list_application_id,omitempty"`
 	ListAssignedUserID      *ListAssignedUserID      `json:"list_assigned_user_id,omitempty"`
+	ListBankfeedaccountID   *ListBankfeedaccountID   `json:"list_bankfeedaccount_id,omitempty"`
 	ListBenefitID           *ListBenefitID           `json:"list_benefit_id,omitempty"`
 	ListBillID              *ListBillID              `json:"list_bill_id,omitempty"`
 	ListBranchID            *ListBranchID            `json:"list_branch_id,omitempty"`
@@ -4424,80 +4471,81 @@ type IntegrationSupport struct {
 	NativeWebhookVisitorID  *NativeWebhookVisitorID  `json:"native_webhook_visitor_id,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
-	RawObjects                    []string                                 `json:"raw_objects,omitempty"`
-	SearchDomain                  *SearchDomain                            `json:"search_domain,omitempty"`
-	SearchEmail                   *SearchEmail                             `json:"search_email,omitempty"`
-	SearchLinkedinurl             *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
-	SearchName                    *SearchName                              `json:"search_name,omitempty"`
-	SearchTwitter                 *SearchTwitter                           `json:"search_twitter,omitempty"`
-	SlowFields                    []string                                 `json:"slow_fields,omitempty"`
-	VirtualWebhookAccountID       *VirtualWebhookAccountID                 `json:"virtual_webhook_account_id,omitempty"`
-	VirtualWebhookAdID            *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
-	VirtualWebhookApplicationID   *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
-	VirtualWebhookAssignedUserID  *VirtualWebhookAssignedUserID            `json:"virtual_webhook_assigned_user_id,omitempty"`
-	VirtualWebhookBenefitID       *VirtualWebhookBenefitID                 `json:"virtual_webhook_benefit_id,omitempty"`
-	VirtualWebhookBillID          *VirtualWebhookBillID                    `json:"virtual_webhook_bill_id,omitempty"`
-	VirtualWebhookBranchID        *VirtualWebhookBranchID                  `json:"virtual_webhook_branch_id,omitempty"`
-	VirtualWebhookCalendarID      *VirtualWebhookCalendarID                `json:"virtual_webhook_calendar_id,omitempty"`
-	VirtualWebhookCallID          *VirtualWebhookCallID                    `json:"virtual_webhook_call_id,omitempty"`
-	VirtualWebhookCampaignID      *VirtualWebhookCampaignID                `json:"virtual_webhook_campaign_id,omitempty"`
-	VirtualWebhookCandidateID     *VirtualWebhookCandidateID               `json:"virtual_webhook_candidate_id,omitempty"`
-	VirtualWebhookCarrierID       *VirtualWebhookCarrierID                 `json:"virtual_webhook_carrier_id,omitempty"`
-	VirtualWebhookChannelID       *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
-	VirtualWebhookCollectionID    *VirtualWebhookCollectionID              `json:"virtual_webhook_collection_id,omitempty"`
-	VirtualWebhookCompanyID       *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
-	VirtualWebhookContactID       *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
-	VirtualWebhookCourseID        *VirtualWebhookCourseID                  `json:"virtual_webhook_course_id,omitempty"`
-	VirtualWebhookCustomerID      *VirtualWebhookCustomerID                `json:"virtual_webhook_customer_id,omitempty"`
-	VirtualWebhookCycleID         *VirtualWebhookCycleID                   `json:"virtual_webhook_cycle_id,omitempty"`
-	VirtualWebhookDatabaseID      *VirtualWebhookDatabaseID                `json:"virtual_webhook_database_id,omitempty"`
-	VirtualWebhookDealID          *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
-	VirtualWebhookEndLt           *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
-	VirtualWebhookEventID         *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
-	VirtualWebhookExpand          *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
-	VirtualWebhookFields          *VirtualWebhookFields                    `json:"virtual_webhook_fields,omitempty"`
-	VirtualWebhookFormID          *VirtualWebhookFormID                    `json:"virtual_webhook_form_id,omitempty"`
-	VirtualWebhookGroupID         *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
-	VirtualWebhookInvoiceID       *VirtualWebhookInvoiceID                 `json:"virtual_webhook_invoice_id,omitempty"`
-	VirtualWebhookIoID            *VirtualWebhookIoID                      `json:"virtual_webhook_io_id,omitempty"`
-	VirtualWebhookItemID          *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
-	VirtualWebhookItemVariantID   *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
-	VirtualWebhookJobID           *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
-	VirtualWebhookLabelID         *VirtualWebhookLabelID                   `json:"virtual_webhook_label_id,omitempty"`
-	VirtualWebhookLeadID          *VirtualWebhookLeadID                    `json:"virtual_webhook_lead_id,omitempty"`
-	VirtualWebhookLimit           *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
-	VirtualWebhookLinkID          *VirtualWebhookLinkID                    `json:"virtual_webhook_link_id,omitempty"`
-	VirtualWebhookListID          *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
-	VirtualWebhookLocationID      *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
-	VirtualWebhookMemberID        *VirtualWebhookMemberID                  `json:"virtual_webhook_member_id,omitempty"`
-	VirtualWebhookOrderID         *VirtualWebhookOrderID                   `json:"virtual_webhook_order_id,omitempty"`
-	VirtualWebhookOrgID           *VirtualWebhookOrgID                     `json:"virtual_webhook_org_id,omitempty"`
-	VirtualWebhookPageID          *VirtualWebhookPageID                    `json:"virtual_webhook_page_id,omitempty"`
-	VirtualWebhookParentID        *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
-	VirtualWebhookPaymentID       *VirtualWebhookPaymentID                 `json:"virtual_webhook_payment_id,omitempty"`
-	VirtualWebhookPipelineID      *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
-	VirtualWebhookProfileID       *VirtualWebhookProfileID                 `json:"virtual_webhook_profile_id,omitempty"`
-	VirtualWebhookProjectID       *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
-	VirtualWebhookPropertyID      *VirtualWebhookPropertyID                `json:"virtual_webhook_property_id,omitempty"`
-	VirtualWebhookReference       *VirtualWebhookReference                 `json:"virtual_webhook_reference,omitempty"`
-	VirtualWebhookRepoID          *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
-	VirtualWebhookSaleschannelID  *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
-	VirtualWebhookSessionID       *VirtualWebhookSessionID                 `json:"virtual_webhook_session_id,omitempty"`
-	VirtualWebhookShipmentID      *VirtualWebhookShipmentID                `json:"virtual_webhook_shipment_id,omitempty"`
-	VirtualWebhookSpaceID         *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
-	VirtualWebhookStartGte        *VirtualWebhookStartGte                  `json:"virtual_webhook_start_gte,omitempty"`
-	VirtualWebhookStatus          *VirtualWebhookStatus                    `json:"virtual_webhook_status,omitempty"`
-	VirtualWebhookStudentID       *VirtualWebhookStudentID                 `json:"virtual_webhook_student_id,omitempty"`
-	VirtualWebhookTableID         *VirtualWebhookTableID                   `json:"virtual_webhook_table_id,omitempty"`
-	VirtualWebhookTaskID          *VirtualWebhookTaskID                    `json:"virtual_webhook_task_id,omitempty"`
-	VirtualWebhookTemplateID      *VirtualWebhookTemplateID                `json:"virtual_webhook_template_id,omitempty"`
-	VirtualWebhookTicketID        *VirtualWebhookTicketID                  `json:"virtual_webhook_ticket_id,omitempty"`
-	VirtualWebhookType            *VirtualWebhookType                      `json:"virtual_webhook_type,omitempty"`
-	VirtualWebhookUpdatedGte      *VirtualWebhookUpdatedGte                `json:"virtual_webhook_updated_gte,omitempty"`
-	VirtualWebhookUserID          *VirtualWebhookUserID                    `json:"virtual_webhook_user_id,omitempty"`
-	VirtualWebhookUserMentionedID *VirtualWebhookUserMentionedID           `json:"virtual_webhook_user_mentioned_id,omitempty"`
-	VirtualWebhookVisitorID       *VirtualWebhookVisitorID                 `json:"virtual_webhook_visitor_id,omitempty"`
-	WebhookEvents                 *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
+	RawObjects                      []string                                 `json:"raw_objects,omitempty"`
+	SearchDomain                    *SearchDomain                            `json:"search_domain,omitempty"`
+	SearchEmail                     *SearchEmail                             `json:"search_email,omitempty"`
+	SearchLinkedinurl               *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
+	SearchName                      *SearchName                              `json:"search_name,omitempty"`
+	SearchTwitter                   *SearchTwitter                           `json:"search_twitter,omitempty"`
+	SlowFields                      []string                                 `json:"slow_fields,omitempty"`
+	VirtualWebhookAccountID         *VirtualWebhookAccountID                 `json:"virtual_webhook_account_id,omitempty"`
+	VirtualWebhookAdID              *VirtualWebhookAdID                      `json:"virtual_webhook_ad_id,omitempty"`
+	VirtualWebhookApplicationID     *VirtualWebhookApplicationID             `json:"virtual_webhook_application_id,omitempty"`
+	VirtualWebhookAssignedUserID    *VirtualWebhookAssignedUserID            `json:"virtual_webhook_assigned_user_id,omitempty"`
+	VirtualWebhookBankfeedaccountID *VirtualWebhookBankfeedaccountID         `json:"virtual_webhook_bankfeedaccount_id,omitempty"`
+	VirtualWebhookBenefitID         *VirtualWebhookBenefitID                 `json:"virtual_webhook_benefit_id,omitempty"`
+	VirtualWebhookBillID            *VirtualWebhookBillID                    `json:"virtual_webhook_bill_id,omitempty"`
+	VirtualWebhookBranchID          *VirtualWebhookBranchID                  `json:"virtual_webhook_branch_id,omitempty"`
+	VirtualWebhookCalendarID        *VirtualWebhookCalendarID                `json:"virtual_webhook_calendar_id,omitempty"`
+	VirtualWebhookCallID            *VirtualWebhookCallID                    `json:"virtual_webhook_call_id,omitempty"`
+	VirtualWebhookCampaignID        *VirtualWebhookCampaignID                `json:"virtual_webhook_campaign_id,omitempty"`
+	VirtualWebhookCandidateID       *VirtualWebhookCandidateID               `json:"virtual_webhook_candidate_id,omitempty"`
+	VirtualWebhookCarrierID         *VirtualWebhookCarrierID                 `json:"virtual_webhook_carrier_id,omitempty"`
+	VirtualWebhookChannelID         *VirtualWebhookChannelID                 `json:"virtual_webhook_channel_id,omitempty"`
+	VirtualWebhookCollectionID      *VirtualWebhookCollectionID              `json:"virtual_webhook_collection_id,omitempty"`
+	VirtualWebhookCompanyID         *VirtualWebhookCompanyID                 `json:"virtual_webhook_company_id,omitempty"`
+	VirtualWebhookContactID         *VirtualWebhookContactID                 `json:"virtual_webhook_contact_id,omitempty"`
+	VirtualWebhookCourseID          *VirtualWebhookCourseID                  `json:"virtual_webhook_course_id,omitempty"`
+	VirtualWebhookCustomerID        *VirtualWebhookCustomerID                `json:"virtual_webhook_customer_id,omitempty"`
+	VirtualWebhookCycleID           *VirtualWebhookCycleID                   `json:"virtual_webhook_cycle_id,omitempty"`
+	VirtualWebhookDatabaseID        *VirtualWebhookDatabaseID                `json:"virtual_webhook_database_id,omitempty"`
+	VirtualWebhookDealID            *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
+	VirtualWebhookEndLt             *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
+	VirtualWebhookEventID           *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
+	VirtualWebhookExpand            *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
+	VirtualWebhookFields            *VirtualWebhookFields                    `json:"virtual_webhook_fields,omitempty"`
+	VirtualWebhookFormID            *VirtualWebhookFormID                    `json:"virtual_webhook_form_id,omitempty"`
+	VirtualWebhookGroupID           *VirtualWebhookGroupID                   `json:"virtual_webhook_group_id,omitempty"`
+	VirtualWebhookInvoiceID         *VirtualWebhookInvoiceID                 `json:"virtual_webhook_invoice_id,omitempty"`
+	VirtualWebhookIoID              *VirtualWebhookIoID                      `json:"virtual_webhook_io_id,omitempty"`
+	VirtualWebhookItemID            *VirtualWebhookItemID                    `json:"virtual_webhook_item_id,omitempty"`
+	VirtualWebhookItemVariantID     *VirtualWebhookItemVariantID             `json:"virtual_webhook_item_variant_id,omitempty"`
+	VirtualWebhookJobID             *VirtualWebhookJobID                     `json:"virtual_webhook_job_id,omitempty"`
+	VirtualWebhookLabelID           *VirtualWebhookLabelID                   `json:"virtual_webhook_label_id,omitempty"`
+	VirtualWebhookLeadID            *VirtualWebhookLeadID                    `json:"virtual_webhook_lead_id,omitempty"`
+	VirtualWebhookLimit             *VirtualWebhookLimit                     `json:"virtual_webhook_limit,omitempty"`
+	VirtualWebhookLinkID            *VirtualWebhookLinkID                    `json:"virtual_webhook_link_id,omitempty"`
+	VirtualWebhookListID            *VirtualWebhookListID                    `json:"virtual_webhook_list_id,omitempty"`
+	VirtualWebhookLocationID        *VirtualWebhookLocationID                `json:"virtual_webhook_location_id,omitempty"`
+	VirtualWebhookMemberID          *VirtualWebhookMemberID                  `json:"virtual_webhook_member_id,omitempty"`
+	VirtualWebhookOrderID           *VirtualWebhookOrderID                   `json:"virtual_webhook_order_id,omitempty"`
+	VirtualWebhookOrgID             *VirtualWebhookOrgID                     `json:"virtual_webhook_org_id,omitempty"`
+	VirtualWebhookPageID            *VirtualWebhookPageID                    `json:"virtual_webhook_page_id,omitempty"`
+	VirtualWebhookParentID          *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
+	VirtualWebhookPaymentID         *VirtualWebhookPaymentID                 `json:"virtual_webhook_payment_id,omitempty"`
+	VirtualWebhookPipelineID        *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
+	VirtualWebhookProfileID         *VirtualWebhookProfileID                 `json:"virtual_webhook_profile_id,omitempty"`
+	VirtualWebhookProjectID         *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
+	VirtualWebhookPropertyID        *VirtualWebhookPropertyID                `json:"virtual_webhook_property_id,omitempty"`
+	VirtualWebhookReference         *VirtualWebhookReference                 `json:"virtual_webhook_reference,omitempty"`
+	VirtualWebhookRepoID            *VirtualWebhookRepoID                    `json:"virtual_webhook_repo_id,omitempty"`
+	VirtualWebhookSaleschannelID    *VirtualWebhookSaleschannelID            `json:"virtual_webhook_saleschannel_id,omitempty"`
+	VirtualWebhookSessionID         *VirtualWebhookSessionID                 `json:"virtual_webhook_session_id,omitempty"`
+	VirtualWebhookShipmentID        *VirtualWebhookShipmentID                `json:"virtual_webhook_shipment_id,omitempty"`
+	VirtualWebhookSpaceID           *VirtualWebhookSpaceID                   `json:"virtual_webhook_space_id,omitempty"`
+	VirtualWebhookStartGte          *VirtualWebhookStartGte                  `json:"virtual_webhook_start_gte,omitempty"`
+	VirtualWebhookStatus            *VirtualWebhookStatus                    `json:"virtual_webhook_status,omitempty"`
+	VirtualWebhookStudentID         *VirtualWebhookStudentID                 `json:"virtual_webhook_student_id,omitempty"`
+	VirtualWebhookTableID           *VirtualWebhookTableID                   `json:"virtual_webhook_table_id,omitempty"`
+	VirtualWebhookTaskID            *VirtualWebhookTaskID                    `json:"virtual_webhook_task_id,omitempty"`
+	VirtualWebhookTemplateID        *VirtualWebhookTemplateID                `json:"virtual_webhook_template_id,omitempty"`
+	VirtualWebhookTicketID          *VirtualWebhookTicketID                  `json:"virtual_webhook_ticket_id,omitempty"`
+	VirtualWebhookType              *VirtualWebhookType                      `json:"virtual_webhook_type,omitempty"`
+	VirtualWebhookUpdatedGte        *VirtualWebhookUpdatedGte                `json:"virtual_webhook_updated_gte,omitempty"`
+	VirtualWebhookUserID            *VirtualWebhookUserID                    `json:"virtual_webhook_user_id,omitempty"`
+	VirtualWebhookUserMentionedID   *VirtualWebhookUserMentionedID           `json:"virtual_webhook_user_mentioned_id,omitempty"`
+	VirtualWebhookVisitorID         *VirtualWebhookVisitorID                 `json:"virtual_webhook_visitor_id,omitempty"`
+	WebhookEvents                   *PropertyIntegrationSupportWebhookEvents `json:"webhook_events,omitempty"`
 }
 
 func (i *IntegrationSupport) GetFromWebhook() *FromWebhook {
@@ -4540,6 +4588,13 @@ func (i *IntegrationSupport) GetListAssignedUserID() *ListAssignedUserID {
 		return nil
 	}
 	return i.ListAssignedUserID
+}
+
+func (i *IntegrationSupport) GetListBankfeedaccountID() *ListBankfeedaccountID {
+	if i == nil {
+		return nil
+	}
+	return i.ListBankfeedaccountID
 }
 
 func (i *IntegrationSupport) GetListBenefitID() *ListBenefitID {
@@ -5408,6 +5463,13 @@ func (i *IntegrationSupport) GetVirtualWebhookAssignedUserID() *VirtualWebhookAs
 		return nil
 	}
 	return i.VirtualWebhookAssignedUserID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookBankfeedaccountID() *VirtualWebhookBankfeedaccountID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookBankfeedaccountID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookBenefitID() *VirtualWebhookBenefitID {

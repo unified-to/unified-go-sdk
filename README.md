@@ -91,6 +91,8 @@ func main() {
 ### [Accounting](docs/sdks/accounting/README.md)
 
 * [CreateAccountingAccount](docs/sdks/accounting/README.md#createaccountingaccount) - Create an account
+* [CreateAccountingBankfeedaccount](docs/sdks/accounting/README.md#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [CreateAccountingBankfeedtransaction](docs/sdks/accounting/README.md#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
 * [CreateAccountingBill](docs/sdks/accounting/README.md#createaccountingbill) - Create a bill
 * [CreateAccountingCategory](docs/sdks/accounting/README.md#createaccountingcategory) - Create a category
 * [CreateAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
@@ -110,6 +112,8 @@ func main() {
 * [GetAccountingAgedpayable](docs/sdks/accounting/README.md#getaccountingagedpayable) - Retrieve an agedpayable
 * [GetAccountingAgedreceivable](docs/sdks/accounting/README.md#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [GetAccountingBalancesheet](docs/sdks/accounting/README.md#getaccountingbalancesheet) - Retrieve a balancesheet
+* [GetAccountingBankfeedaccount](docs/sdks/accounting/README.md#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [GetAccountingBankfeedtransaction](docs/sdks/accounting/README.md#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
 * [GetAccountingBill](docs/sdks/accounting/README.md#getaccountingbill) - Retrieve a bill
 * [GetAccountingCashflow](docs/sdks/accounting/README.md#getaccountingcashflow) - Retrieve a cashflow
 * [GetAccountingCategory](docs/sdks/accounting/README.md#getaccountingcategory) - Retrieve a category
@@ -134,6 +138,8 @@ func main() {
 * [ListAccountingAgedpayables](docs/sdks/accounting/README.md#listaccountingagedpayables) - List all agedpayables
 * [ListAccountingAgedreceivables](docs/sdks/accounting/README.md#listaccountingagedreceivables) - List all agedreceivables
 * [ListAccountingBalancesheets](docs/sdks/accounting/README.md#listaccountingbalancesheets) - List all balancesheets
+* [ListAccountingBankfeedaccounts](docs/sdks/accounting/README.md#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [ListAccountingBankfeedtransactions](docs/sdks/accounting/README.md#listaccountingbankfeedtransactions) - List all bankfeedtransactions
 * [ListAccountingBills](docs/sdks/accounting/README.md#listaccountingbills) - List all bills
 * [ListAccountingCashflows](docs/sdks/accounting/README.md#listaccountingcashflows) - List all cashflows
 * [ListAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
@@ -155,6 +161,8 @@ func main() {
 * [ListAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
 * [ListAccountingVendorcredits](docs/sdks/accounting/README.md#listaccountingvendorcredits) - List all vendorcredits
 * [PatchAccountingAccount](docs/sdks/accounting/README.md#patchaccountingaccount) - Update an account
+* [PatchAccountingBankfeedaccount](docs/sdks/accounting/README.md#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [PatchAccountingBankfeedtransaction](docs/sdks/accounting/README.md#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [PatchAccountingBill](docs/sdks/accounting/README.md#patchaccountingbill) - Update a bill
 * [PatchAccountingCategory](docs/sdks/accounting/README.md#patchaccountingcategory) - Update a category
 * [PatchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
@@ -171,6 +179,8 @@ func main() {
 * [PatchAccountingTransaction](docs/sdks/accounting/README.md#patchaccountingtransaction) - Update a transaction
 * [PatchAccountingVendorcredit](docs/sdks/accounting/README.md#patchaccountingvendorcredit) - Update a vendorcredit
 * [RemoveAccountingAccount](docs/sdks/accounting/README.md#removeaccountingaccount) - Remove an account
+* [RemoveAccountingBankfeedaccount](docs/sdks/accounting/README.md#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [RemoveAccountingBankfeedtransaction](docs/sdks/accounting/README.md#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
 * [RemoveAccountingBill](docs/sdks/accounting/README.md#removeaccountingbill) - Remove a bill
 * [RemoveAccountingCategory](docs/sdks/accounting/README.md#removeaccountingcategory) - Remove a category
 * [RemoveAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
@@ -187,6 +197,8 @@ func main() {
 * [RemoveAccountingTransaction](docs/sdks/accounting/README.md#removeaccountingtransaction) - Remove a transaction
 * [RemoveAccountingVendorcredit](docs/sdks/accounting/README.md#removeaccountingvendorcredit) - Remove a vendorcredit
 * [UpdateAccountingAccount](docs/sdks/accounting/README.md#updateaccountingaccount) - Update an account
+* [UpdateAccountingBankfeedaccount](docs/sdks/accounting/README.md#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+* [UpdateAccountingBankfeedtransaction](docs/sdks/accounting/README.md#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [UpdateAccountingBill](docs/sdks/accounting/README.md#updateaccountingbill) - Update a bill
 * [UpdateAccountingCategory](docs/sdks/accounting/README.md#updateaccountingcategory) - Update a category
 * [UpdateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
@@ -435,6 +447,24 @@ func main() {
 * [PatchHrisBankaccount](docs/sdks/bankaccount/README.md#patchhrisbankaccount) - Update a bankaccount
 * [RemoveHrisBankaccount](docs/sdks/bankaccount/README.md#removehrisbankaccount) - Remove a bankaccount
 * [UpdateHrisBankaccount](docs/sdks/bankaccount/README.md#updatehrisbankaccount) - Update a bankaccount
+
+### [Bankfeedaccount](docs/sdks/bankfeedaccount/README.md)
+
+* [CreateAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [GetAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [ListAccountingBankfeedaccounts](docs/sdks/bankfeedaccount/README.md#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [PatchAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [RemoveAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [UpdateAccountingBankfeedaccount](docs/sdks/bankfeedaccount/README.md#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+
+### [Bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md)
+
+* [CreateAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
+* [GetAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
+* [ListAccountingBankfeedtransactions](docs/sdks/bankfeedtransaction/README.md#listaccountingbankfeedtransactions) - List all bankfeedtransactions
+* [PatchAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
+* [RemoveAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
+* [UpdateAccountingBankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 
 ### [Benefit](docs/sdks/benefit/README.md)
 

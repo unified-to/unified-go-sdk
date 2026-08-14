@@ -16,7 +16,10 @@ custom := shared.AccountType("custom_value")
 
 ## Values
 
-| Name                  | Value                 |
-| --------------------- | --------------------- |
-| `AccountTypeChecking` | CHECKING              |
-| `AccountTypeSavings`  | SAVINGS               |
+| Name                    | Value                   |
+| ----------------------- | ----------------------- |
+| `AccountTypeChecking`   | CHECKING                |
+| `AccountTypeSavings`    | SAVINGS                 |
+| `AccountTypeCreditCard` | CREDIT_CARD             |
+| `AccountTypeLoan`       | LOAN                    |
+| `AccountTypeOther`      | OTHER                   |
