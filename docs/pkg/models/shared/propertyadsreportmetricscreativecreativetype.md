@@ -27,4 +27,5 @@ custom := shared.PropertyAdsReportMetricsCreativeCreativeType("custom_value")
 | `PropertyAdsReportMetricsCreativeCreativeTypePublisherHosted` | PUBLISHER_HOSTED                                              |
 | `PropertyAdsReportMetricsCreativeCreativeTypeAssetBased`      | ASSET_BASED                                                   |
 | `PropertyAdsReportMetricsCreativeCreativeTypeImage`           | IMAGE                                                         |
+| `PropertyAdsReportMetricsCreativeCreativeTypeShare`           | SHARE                                                         |
 | `PropertyAdsReportMetricsCreativeCreativeTypeDocument`        | DOCUMENT                                                      |

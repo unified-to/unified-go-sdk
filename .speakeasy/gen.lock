@@ -1,26 +1,26 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: c2c443fb3eedde0720e069b060bd03ca
+  docChecksum: adb495d6e549f77377fe9efbe72717f5
   docVersion: "1.0"
-  speakeasyVersion: 1.793.1
-  generationVersion: 2.928.0
-  releaseVersion: 0.36.111
-  configChecksum: 2d29d4011c393f80d8ca6290e6c2bc4e
+  speakeasyVersion: 1.794.0
+  generationVersion: 2.930.0
+  releaseVersion: 0.36.112
+  configChecksum: 94501ee89c357f007d1ac75e7b19ce5f
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 662d1955-b2a6-4e35-ad67-06555a29d656
-  pristine_commit_hash: 24d22c43d693ca1cfba49627ffc46c1de143facc
-  pristine_tree_hash: f38d616a7ae5a033b17795b3ff1ef28452e94be0
+  generation_id: fb8f9c4d-8a79-4ce4-a628-eec2f27878e3
+  pristine_commit_hash: 41810d27f1da475621afc344c33ff591da243625
+  pristine_tree_hash: da5ff8afb2fcceca627c16f342b1dd181516fb68
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.14
-    core: 3.13.47
+    core: 3.13.48
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -34,7 +34,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.3
     sdkHooks: 0.3.0
-    unions: 2.87.8
+    unions: 2.87.9
     uploadStreams: 0.1.0
 trackedFiles:
   .gitattributes:
@@ -10707,8 +10707,8 @@ trackedFiles:
     pristine_git_object: e5859dd6e524555789923fa10217f236be5322c9
   docs/pkg/models/shared/creativetype.md:
     id: 7a51b5d97aca
-    last_write_checksum: sha1:97a78dab963a518a8bdbf2895f6b9c5ee7daef5d
-    pristine_git_object: 83bc985b645db80a40ad634a619ad74f7f8dc17e
+    last_write_checksum: sha1:3a9eacabaa87908c1059da64f54e26ff8e61eb94
+    pristine_git_object: 9a11c3a06af121e80c5fd46c9649ee701bdf9af0
   docs/pkg/models/shared/crmcompany.md:
     id: d76ddf726597
     last_write_checksum: sha1:32d995cdadd2d01b3f4bc6bc8e3162e65972d3c1
@@ -12491,8 +12491,8 @@ trackedFiles:
     pristine_git_object: 2eb65033cd300949c31d995c39559b48a21cd676
   docs/pkg/models/shared/propertyadsreportmetricscreativecreativetype.md:
     id: 88a4249a007c
-    last_write_checksum: sha1:123aca46a4c8c60df0768bdc97658d4f10510add
-    pristine_git_object: 8aec2fc66d1482e0afaa9a92695e97a5c2e68c72
+    last_write_checksum: sha1:fa293c71ebd5ec3210b72e4fb80df2323e4add17
+    pristine_git_object: 13387e70797e7d9042dacd01db9932542a748179
   docs/pkg/models/shared/propertyadsreportmetricscreativehostingsource.md:
     id: f81f334d680c
     last_write_checksum: sha1:ae7722d250859b1d6aeb18eb3c7b35f518692d97
@@ -18419,8 +18419,8 @@ trackedFiles:
     pristine_git_object: f659558e2b680bd142176920b16e7ef54bdfd37a
   pkg/models/shared/adscreative.go:
     id: 3ae937d1ecd2
-    last_write_checksum: sha1:626aa360e8601df28f3244929018e4f1ef12c95c
-    pristine_git_object: ec337cbf6818ad46a6260bd8a3c35742868e8b55
+    last_write_checksum: sha1:8eb1d34d0a62a4856469a45d77f77c1872789229
+    pristine_git_object: dcf45e1aa461142493c01dff2d6729a84f847ad8
   pkg/models/shared/adsgroup.go:
     id: a18403b37226
     last_write_checksum: sha1:162b927b7f0d48a82d6355cc01b40165a4f5d3f4
@@ -19519,8 +19519,8 @@ trackedFiles:
     pristine_git_object: 0cb4c360dcfb0270b47420a86d9a59fa15b9bcb1
   pkg/models/shared/propertyadsreportmetricscreative.go:
     id: 2960876fcb10
-    last_write_checksum: sha1:d09e243033d781158567aa098f24b8527bfcdaa8
-    pristine_git_object: 3e1deb880ca4c98b0160745259e3b54720f63b2c
+    last_write_checksum: sha1:177db5fa98d131c90e4b573c5e20be3541160221
+    pristine_git_object: 1e87af460d8ff76b1b2acffbcd210822ae326f10
   pkg/models/shared/propertyadsreportmetricsgroup.go:
     id: 629a3f50f3b0
     last_write_checksum: sha1:a75ef2e95f7403f067c22160cb574f6c0fc6e928
@@ -20543,8 +20543,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:acc8ac3c94fa388baaaf8c14ff854f2d2f87739f
-    pristine_git_object: bce4a74d9996fd000f83ce5f871b4651d087489f
+    last_write_checksum: sha1:ac2bbaadae6cdbc0c4bb25d523163b2765e5cca8
+    pristine_git_object: b089997b8af68954fc3e587333291dec57043c72
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -34463,7 +34463,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Accounting.CreateAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Accounting.CreateAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Accounting.GetAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Accounting.GetAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Accounting.ListAccountingBankfeedaccounts()`: **Added**\n* `UnifiedTo.Accounting.ListAccountingBankfeedtransactions()`: **Added**\n* `UnifiedTo.Accounting.PatchAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Accounting.PatchAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Accounting.RemoveAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Accounting.RemoveAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Accounting.UpdateAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Accounting.UpdateAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Bankfeedaccount.CreateAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Bankfeedaccount.GetAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Bankfeedaccount.ListAccountingBankfeedaccounts()`: **Added**\n* `UnifiedTo.Bankfeedaccount.PatchAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Bankfeedaccount.RemoveAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Bankfeedaccount.UpdateAccountingBankfeedaccount()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.CreateAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.GetAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.ListAccountingBankfeedtransactions()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.PatchAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.RemoveAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Bankfeedtransaction.UpdateAccountingBankfeedtransaction()`: **Added**\n* `UnifiedTo.Unified.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Unified.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Unified.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Connection.CreateUnifiedConnection()`: \n  *  `request.Request.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.GetUnifiedConnection()`:  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.ListUnifiedConnections()`:  `response.[].Permissions[]` **Changed**\n* `UnifiedTo.Connection.PatchUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Connection.UpdateUnifiedConnection()`: \n  *  `request.Request.Connection.Permissions[]` **Changed**\n  *  `response.Permissions[]` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrationWorkspaces()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Integration.ListUnifiedIntegrations()`:  `response.[].Support.Map<IntegrationSupport>` **Changed**\n* `UnifiedTo.Webhook.CreateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.GetUnifiedWebhook()`:  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.ListUnifiedWebhooks()`:  `response.[].ObjectType` **Changed**\n* `UnifiedTo.Webhook.PatchUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n* `UnifiedTo.Webhook.UpdateUnifiedWebhook()`: \n  *  `request.Request.Webhook.ObjectType` **Changed**\n  *  `response.ObjectType` **Changed**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Report.ListAdsReports()`:  `response.[].Metrics[].Creative.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.CreateAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.GetAdsCreative()`:  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.ListAdsCreatives()`:  `response.[].CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.ListAdsReports()`:  `response.[].Metrics[].Creative.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.PatchAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Ads.UpdateAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Creative.CreateAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Creative.GetAdsCreative()`:  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Creative.ListAdsCreatives()`:  `response.[].CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Creative.PatchAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n* `UnifiedTo.Creative.UpdateAdsCreative()`: \n  *  `request.Request.AdsCreative.CreativeType.Enum(share)` **Added**\n  *  `response.CreativeType.Enum(share)` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go

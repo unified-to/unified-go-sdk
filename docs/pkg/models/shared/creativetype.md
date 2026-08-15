@@ -27,4 +27,5 @@ custom := shared.CreativeType("custom_value")
 | `CreativeTypePublisherHosted` | PUBLISHER_HOSTED              |
 | `CreativeTypeAssetBased`      | ASSET_BASED                   |
 | `CreativeTypeImage`           | IMAGE                         |
+| `CreativeTypeShare`           | SHARE                         |
 | `CreativeTypeDocument`        | DOCUMENT                      |
