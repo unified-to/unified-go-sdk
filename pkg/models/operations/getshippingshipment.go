@@ -16,6 +16,7 @@ const (
 	GetShippingShipmentQueryParamFieldsCreatedAt                 GetShippingShipmentQueryParamFields = "created_at"
 	GetShippingShipmentQueryParamFieldsUpdatedAt                 GetShippingShipmentQueryParamFields = "updated_at"
 	GetShippingShipmentQueryParamFieldsOrderID                   GetShippingShipmentQueryParamFields = "order_id"
+	GetShippingShipmentQueryParamFieldsOrganizationID            GetShippingShipmentQueryParamFields = "organization_id"
 	GetShippingShipmentQueryParamFieldsFromAddress               GetShippingShipmentQueryParamFields = "from_address"
 	GetShippingShipmentQueryParamFieldsToAddress                 GetShippingShipmentQueryParamFields = "to_address"
 	GetShippingShipmentQueryParamFieldsPackages                  GetShippingShipmentQueryParamFields = "packages"
@@ -47,6 +48,9 @@ const (
 	GetShippingShipmentQueryParamFieldsOriginalShipmentID        GetShippingShipmentQueryParamFields = "original_shipment_id"
 	GetShippingShipmentQueryParamFieldsReturnReason              GetShippingShipmentQueryParamFields = "return_reason"
 	GetShippingShipmentQueryParamFieldsReturnType                GetShippingShipmentQueryParamFields = "return_type"
+	GetShippingShipmentQueryParamFieldsCarrierName               GetShippingShipmentQueryParamFields = "carrier_name"
+	GetShippingShipmentQueryParamFieldsTrackingURL               GetShippingShipmentQueryParamFields = "tracking_url"
+	GetShippingShipmentQueryParamFieldsLineitems                 GetShippingShipmentQueryParamFields = "lineitems"
 	GetShippingShipmentQueryParamFieldsRaw                       GetShippingShipmentQueryParamFields = "raw"
 )
 
@@ -66,6 +70,8 @@ func (e *GetShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "updated_at":
 		fallthrough
 	case "order_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "from_address":
 		fallthrough
@@ -128,6 +134,12 @@ func (e *GetShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "return_reason":
 		fallthrough
 	case "return_type":
+		fallthrough
+	case "carrier_name":
+		fallthrough
+	case "tracking_url":
+		fallthrough
+	case "lineitems":
 		fallthrough
 	case "raw":
 		*e = GetShippingShipmentQueryParamFields(v)

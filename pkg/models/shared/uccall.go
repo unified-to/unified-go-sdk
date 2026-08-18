@@ -36,6 +36,7 @@ type UcCall struct {
 	EndAt     *time.Time     `json:"end_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	IsPrivate *bool          `json:"is_private,omitempty"`
+	Metadata  []UcMetadata   `json:"metadata,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	StartAt   *time.Time     `json:"start_at,omitempty"`
 	// The telephone number called
@@ -98,6 +99,13 @@ func (u *UcCall) GetIsPrivate() *bool {
 		return nil
 	}
 	return u.IsPrivate
+}
+
+func (u *UcCall) GetMetadata() []UcMetadata {
+	if u == nil {
+		return nil
+	}
+	return u.Metadata
 }
 
 func (u *UcCall) GetRaw() map[string]any {

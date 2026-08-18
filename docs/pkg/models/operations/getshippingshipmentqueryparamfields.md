@@ -19,6 +19,7 @@ value := operations.GetShippingShipmentQueryParamFieldsID
 | `GetShippingShipmentQueryParamFieldsCreatedAt`                 | created_at                                                     |
 | `GetShippingShipmentQueryParamFieldsUpdatedAt`                 | updated_at                                                     |
 | `GetShippingShipmentQueryParamFieldsOrderID`                   | order_id                                                       |
+| `GetShippingShipmentQueryParamFieldsOrganizationID`            | organization_id                                                |
 | `GetShippingShipmentQueryParamFieldsFromAddress`               | from_address                                                   |
 | `GetShippingShipmentQueryParamFieldsToAddress`                 | to_address                                                     |
 | `GetShippingShipmentQueryParamFieldsPackages`                  | packages                                                       |
@@ -50,4 +51,7 @@ value := operations.GetShippingShipmentQueryParamFieldsID
 | `GetShippingShipmentQueryParamFieldsOriginalShipmentID`        | original_shipment_id                                           |
 | `GetShippingShipmentQueryParamFieldsReturnReason`              | return_reason                                                  |
 | `GetShippingShipmentQueryParamFieldsReturnType`                | return_type                                                    |
+| `GetShippingShipmentQueryParamFieldsCarrierName`               | carrier_name                                                   |
+| `GetShippingShipmentQueryParamFieldsTrackingURL`               | tracking_url                                                   |
+| `GetShippingShipmentQueryParamFieldsLineitems`                 | lineitems                                                      |
 | `GetShippingShipmentQueryParamFieldsRaw`                       | raw                                                            |

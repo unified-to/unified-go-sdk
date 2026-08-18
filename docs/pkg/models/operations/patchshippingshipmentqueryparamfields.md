@@ -19,6 +19,7 @@ value := operations.PatchShippingShipmentQueryParamFieldsID
 | `PatchShippingShipmentQueryParamFieldsCreatedAt`                 | created_at                                                       |
 | `PatchShippingShipmentQueryParamFieldsUpdatedAt`                 | updated_at                                                       |
 | `PatchShippingShipmentQueryParamFieldsOrderID`                   | order_id                                                         |
+| `PatchShippingShipmentQueryParamFieldsOrganizationID`            | organization_id                                                  |
 | `PatchShippingShipmentQueryParamFieldsFromAddress`               | from_address                                                     |
 | `PatchShippingShipmentQueryParamFieldsToAddress`                 | to_address                                                       |
 | `PatchShippingShipmentQueryParamFieldsPackages`                  | packages                                                         |
@@ -50,4 +51,7 @@ value := operations.PatchShippingShipmentQueryParamFieldsID
 | `PatchShippingShipmentQueryParamFieldsOriginalShipmentID`        | original_shipment_id                                             |
 | `PatchShippingShipmentQueryParamFieldsReturnReason`              | return_reason                                                    |
 | `PatchShippingShipmentQueryParamFieldsReturnType`                | return_type                                                      |
+| `PatchShippingShipmentQueryParamFieldsCarrierName`               | carrier_name                                                     |
+| `PatchShippingShipmentQueryParamFieldsTrackingURL`               | tracking_url                                                     |
+| `PatchShippingShipmentQueryParamFieldsLineitems`                 | lineitems                                                        |
 | `PatchShippingShipmentQueryParamFieldsRaw`                       | raw                                                              |

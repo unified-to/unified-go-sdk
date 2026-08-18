@@ -16,6 +16,7 @@ const (
 	PatchShippingShipmentQueryParamFieldsCreatedAt                 PatchShippingShipmentQueryParamFields = "created_at"
 	PatchShippingShipmentQueryParamFieldsUpdatedAt                 PatchShippingShipmentQueryParamFields = "updated_at"
 	PatchShippingShipmentQueryParamFieldsOrderID                   PatchShippingShipmentQueryParamFields = "order_id"
+	PatchShippingShipmentQueryParamFieldsOrganizationID            PatchShippingShipmentQueryParamFields = "organization_id"
 	PatchShippingShipmentQueryParamFieldsFromAddress               PatchShippingShipmentQueryParamFields = "from_address"
 	PatchShippingShipmentQueryParamFieldsToAddress                 PatchShippingShipmentQueryParamFields = "to_address"
 	PatchShippingShipmentQueryParamFieldsPackages                  PatchShippingShipmentQueryParamFields = "packages"
@@ -47,6 +48,9 @@ const (
 	PatchShippingShipmentQueryParamFieldsOriginalShipmentID        PatchShippingShipmentQueryParamFields = "original_shipment_id"
 	PatchShippingShipmentQueryParamFieldsReturnReason              PatchShippingShipmentQueryParamFields = "return_reason"
 	PatchShippingShipmentQueryParamFieldsReturnType                PatchShippingShipmentQueryParamFields = "return_type"
+	PatchShippingShipmentQueryParamFieldsCarrierName               PatchShippingShipmentQueryParamFields = "carrier_name"
+	PatchShippingShipmentQueryParamFieldsTrackingURL               PatchShippingShipmentQueryParamFields = "tracking_url"
+	PatchShippingShipmentQueryParamFieldsLineitems                 PatchShippingShipmentQueryParamFields = "lineitems"
 	PatchShippingShipmentQueryParamFieldsRaw                       PatchShippingShipmentQueryParamFields = "raw"
 )
 
@@ -66,6 +70,8 @@ func (e *PatchShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error
 	case "updated_at":
 		fallthrough
 	case "order_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "from_address":
 		fallthrough
@@ -128,6 +134,12 @@ func (e *PatchShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error
 	case "return_reason":
 		fallthrough
 	case "return_type":
+		fallthrough
+	case "carrier_name":
+		fallthrough
+	case "tracking_url":
+		fallthrough
+	case "lineitems":
 		fallthrough
 	case "raw":
 		*e = PatchShippingShipmentQueryParamFields(v)

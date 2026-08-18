@@ -16,6 +16,7 @@ const (
 	ListShippingShipmentsQueryParamFieldsCreatedAt                 ListShippingShipmentsQueryParamFields = "created_at"
 	ListShippingShipmentsQueryParamFieldsUpdatedAt                 ListShippingShipmentsQueryParamFields = "updated_at"
 	ListShippingShipmentsQueryParamFieldsOrderID                   ListShippingShipmentsQueryParamFields = "order_id"
+	ListShippingShipmentsQueryParamFieldsOrganizationID            ListShippingShipmentsQueryParamFields = "organization_id"
 	ListShippingShipmentsQueryParamFieldsFromAddress               ListShippingShipmentsQueryParamFields = "from_address"
 	ListShippingShipmentsQueryParamFieldsToAddress                 ListShippingShipmentsQueryParamFields = "to_address"
 	ListShippingShipmentsQueryParamFieldsPackages                  ListShippingShipmentsQueryParamFields = "packages"
@@ -47,6 +48,9 @@ const (
 	ListShippingShipmentsQueryParamFieldsOriginalShipmentID        ListShippingShipmentsQueryParamFields = "original_shipment_id"
 	ListShippingShipmentsQueryParamFieldsReturnReason              ListShippingShipmentsQueryParamFields = "return_reason"
 	ListShippingShipmentsQueryParamFieldsReturnType                ListShippingShipmentsQueryParamFields = "return_type"
+	ListShippingShipmentsQueryParamFieldsCarrierName               ListShippingShipmentsQueryParamFields = "carrier_name"
+	ListShippingShipmentsQueryParamFieldsTrackingURL               ListShippingShipmentsQueryParamFields = "tracking_url"
+	ListShippingShipmentsQueryParamFieldsLineitems                 ListShippingShipmentsQueryParamFields = "lineitems"
 	ListShippingShipmentsQueryParamFieldsRaw                       ListShippingShipmentsQueryParamFields = "raw"
 )
 
@@ -66,6 +70,8 @@ func (e *ListShippingShipmentsQueryParamFields) UnmarshalJSON(data []byte) error
 	case "updated_at":
 		fallthrough
 	case "order_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "from_address":
 		fallthrough
@@ -129,6 +135,12 @@ func (e *ListShippingShipmentsQueryParamFields) UnmarshalJSON(data []byte) error
 		fallthrough
 	case "return_type":
 		fallthrough
+	case "carrier_name":
+		fallthrough
+	case "tracking_url":
+		fallthrough
+	case "lineitems":
+		fallthrough
 	case "raw":
 		*e = ListShippingShipmentsQueryParamFields(v)
 		return nil
@@ -149,6 +161,8 @@ type ListShippingShipmentsRequest struct {
 	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
 	// The AccountingOrder ID to filter by
 	OrderID *string `queryParam:"style=form,explode=true,name=order_id"`
+	// The org ID to filter by
+	OrgID *string `queryParam:"style=form,explode=true,name=org_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -205,6 +219,13 @@ func (l *ListShippingShipmentsRequest) GetOrderID() *string {
 		return nil
 	}
 	return l.OrderID
+}
+
+func (l *ListShippingShipmentsRequest) GetOrgID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.OrgID
 }
 
 func (l *ListShippingShipmentsRequest) GetQuery() *string {

@@ -28,4 +28,5 @@ value := operations.GetUcCallQueryParamFieldsID
 | `GetUcCallQueryParamFieldsUserName`  | user_name                            |
 | `GetUcCallQueryParamFieldsUserPhone` | user_phone                           |
 | `GetUcCallQueryParamFieldsType`      | type                                 |
+| `GetUcCallQueryParamFieldsMetadata`  | metadata                             |
 | `GetUcCallQueryParamFieldsRaw`       | raw                                  |

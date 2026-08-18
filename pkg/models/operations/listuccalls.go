@@ -25,6 +25,7 @@ const (
 	ListUcCallsQueryParamFieldsUserName  ListUcCallsQueryParamFields = "user_name"
 	ListUcCallsQueryParamFieldsUserPhone ListUcCallsQueryParamFields = "user_phone"
 	ListUcCallsQueryParamFieldsType      ListUcCallsQueryParamFields = "type"
+	ListUcCallsQueryParamFieldsMetadata  ListUcCallsQueryParamFields = "metadata"
 	ListUcCallsQueryParamFieldsRaw       ListUcCallsQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *ListUcCallsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_phone":
 		fallthrough
 	case "type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListUcCallsQueryParamFields(v)

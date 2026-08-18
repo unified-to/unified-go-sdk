@@ -67,8 +67,9 @@ func (e *ShippingShipmentStatus) IsExact() bool {
 }
 
 type ShippingShipment struct {
-	CarrierID *string    `json:"carrier_id,omitempty"`
-	CreatedAt *time.Time `json:"created_at,omitempty"`
+	CarrierID   *string    `json:"carrier_id,omitempty"`
+	CarrierName *string    `json:"carrier_name,omitempty"`
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	// Customs information
 	Customs *PropertyShippingShipmentCustoms `json:"customs,omitempty"`
 	// Origin address
@@ -82,8 +83,11 @@ type ShippingShipment struct {
 	IsReturn                 *bool                              `json:"is_return,omitempty"`
 	IsSignatureRequired      *bool                              `json:"is_signature_required,omitempty"`
 	LabelID                  *string                            `json:"label_id,omitempty"`
-	OrderID                  *string                            `json:"order_id,omitempty"`
-	OriginalShipmentID       *string                            `json:"original_shipment_id,omitempty"`
+	// Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+	Lineitems          []ShippingShipmentLineitem `json:"lineitems,omitempty"`
+	OrderID            *string                    `json:"order_id,omitempty"`
+	OrganizationID     *string                    `json:"organization_id,omitempty"`
+	OriginalShipmentID *string                    `json:"original_shipment_id,omitempty"`
 	// Array of packages in this shipment
 	Packages                []ShippingPackage `json:"packages,omitempty"`
 	RateAmount              *float64          `json:"rate_amount,omitempty"`
@@ -107,6 +111,7 @@ type ShippingShipment struct {
 	// Destination address
 	ToAddress             *PropertyShippingShipmentToAddress `json:"to_address,omitempty"`
 	TrackingID            *string                            `json:"tracking_id,omitempty"`
+	TrackingURL           *string                            `json:"tracking_url,omitempty"`
 	UpdatedAt             *time.Time                         `json:"updated_at,omitempty"`
 	WarehouseLocationID   *string                            `json:"warehouse_location_id,omitempty"`
 	WarehouseLocationName *string                            `json:"warehouse_location_name,omitempty"`
@@ -128,6 +133,13 @@ func (s *ShippingShipment) GetCarrierID() *string {
 		return nil
 	}
 	return s.CarrierID
+}
+
+func (s *ShippingShipment) GetCarrierName() *string {
+	if s == nil {
+		return nil
+	}
+	return s.CarrierName
 }
 
 func (s *ShippingShipment) GetCreatedAt() *time.Time {
@@ -207,11 +219,25 @@ func (s *ShippingShipment) GetLabelID() *string {
 	return s.LabelID
 }
 
+func (s *ShippingShipment) GetLineitems() []ShippingShipmentLineitem {
+	if s == nil {
+		return nil
+	}
+	return s.Lineitems
+}
+
 func (s *ShippingShipment) GetOrderID() *string {
 	if s == nil {
 		return nil
 	}
 	return s.OrderID
+}
+
+func (s *ShippingShipment) GetOrganizationID() *string {
+	if s == nil {
+		return nil
+	}
+	return s.OrganizationID
 }
 
 func (s *ShippingShipment) GetOriginalShipmentID() *string {
@@ -352,6 +378,13 @@ func (s *ShippingShipment) GetTrackingID() *string {
 		return nil
 	}
 	return s.TrackingID
+}
+
+func (s *ShippingShipment) GetTrackingURL() *string {
+	if s == nil {
+		return nil
+	}
+	return s.TrackingURL
 }
 
 func (s *ShippingShipment) GetUpdatedAt() *time.Time {

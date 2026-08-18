@@ -1,0 +1,13 @@
+# UcMetadata
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ExtraData`                                                                      | [*shared.UcMetadataExtraData](../../../pkg/models/shared/ucmetadataextradata.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Format`                                                                         | [*shared.UcMetadataFormat](../../../pkg/models/shared/ucmetadataformat.md)       | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ID`                                                                             | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Namespace`                                                                      | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Slug`                                                                           | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Value`                                                                          | [*shared.UcMetadataValue](../../../pkg/models/shared/ucmetadatavalue.md)         | :heavy_minus_sign:                                                               | N/A                                                                              |

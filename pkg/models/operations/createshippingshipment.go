@@ -16,6 +16,7 @@ const (
 	CreateShippingShipmentQueryParamFieldsCreatedAt                 CreateShippingShipmentQueryParamFields = "created_at"
 	CreateShippingShipmentQueryParamFieldsUpdatedAt                 CreateShippingShipmentQueryParamFields = "updated_at"
 	CreateShippingShipmentQueryParamFieldsOrderID                   CreateShippingShipmentQueryParamFields = "order_id"
+	CreateShippingShipmentQueryParamFieldsOrganizationID            CreateShippingShipmentQueryParamFields = "organization_id"
 	CreateShippingShipmentQueryParamFieldsFromAddress               CreateShippingShipmentQueryParamFields = "from_address"
 	CreateShippingShipmentQueryParamFieldsToAddress                 CreateShippingShipmentQueryParamFields = "to_address"
 	CreateShippingShipmentQueryParamFieldsPackages                  CreateShippingShipmentQueryParamFields = "packages"
@@ -47,6 +48,9 @@ const (
 	CreateShippingShipmentQueryParamFieldsOriginalShipmentID        CreateShippingShipmentQueryParamFields = "original_shipment_id"
 	CreateShippingShipmentQueryParamFieldsReturnReason              CreateShippingShipmentQueryParamFields = "return_reason"
 	CreateShippingShipmentQueryParamFieldsReturnType                CreateShippingShipmentQueryParamFields = "return_type"
+	CreateShippingShipmentQueryParamFieldsCarrierName               CreateShippingShipmentQueryParamFields = "carrier_name"
+	CreateShippingShipmentQueryParamFieldsTrackingURL               CreateShippingShipmentQueryParamFields = "tracking_url"
+	CreateShippingShipmentQueryParamFieldsLineitems                 CreateShippingShipmentQueryParamFields = "lineitems"
 	CreateShippingShipmentQueryParamFieldsRaw                       CreateShippingShipmentQueryParamFields = "raw"
 )
 
@@ -66,6 +70,8 @@ func (e *CreateShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "updated_at":
 		fallthrough
 	case "order_id":
+		fallthrough
+	case "organization_id":
 		fallthrough
 	case "from_address":
 		fallthrough
@@ -128,6 +134,12 @@ func (e *CreateShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "return_reason":
 		fallthrough
 	case "return_type":
+		fallthrough
+	case "carrier_name":
+		fallthrough
+	case "tracking_url":
+		fallthrough
+	case "lineitems":
 		fallthrough
 	case "raw":
 		*e = CreateShippingShipmentQueryParamFields(v)

@@ -28,4 +28,5 @@ value := operations.ListUcCallsQueryParamFieldsID
 | `ListUcCallsQueryParamFieldsUserName`  | user_name                              |
 | `ListUcCallsQueryParamFieldsUserPhone` | user_phone                             |
 | `ListUcCallsQueryParamFieldsType`      | type                                   |
+| `ListUcCallsQueryParamFieldsMetadata`  | metadata                               |
 | `ListUcCallsQueryParamFieldsRaw`       | raw                                    |

@@ -79,6 +79,8 @@ type ListShippingTrackingsRequest struct {
 	Limit  *float64                                `queryParam:"style=form,explode=true,name=limit"`
 	Offset *float64                                `queryParam:"style=form,explode=true,name=offset"`
 	Order  *string                                 `queryParam:"style=form,explode=true,name=order"`
+	// The AccountingOrder ID to filter by
+	OrderID *string `queryParam:"style=form,explode=true,name=order_id"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -121,6 +123,13 @@ func (l *ListShippingTrackingsRequest) GetOrder() *string {
 		return nil
 	}
 	return l.Order
+}
+
+func (l *ListShippingTrackingsRequest) GetOrderID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.OrderID
 }
 
 func (l *ListShippingTrackingsRequest) GetQuery() *string {
