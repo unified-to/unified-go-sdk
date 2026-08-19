@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 0c936c60770ab094bb7fea41b06b41b6
+  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
   docVersion: "1.0"
-  speakeasyVersion: 1.794.1
+  speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 0.36.113
-  configChecksum: 663935e1c690167bd47526e370f9ce23
+  releaseVersion: 0.36.114
+  configChecksum: 05e47b95b03d7530bef24aa132e9a977
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: 3ba4406c-361c-4b20-b5c3-a8bd2c3ebe4d
-  pristine_commit_hash: afa716417de49739efd7375ebc305cfc9b80a0d8
-  pristine_tree_hash: a0e961940b3d8f64a395cdeee6941cd515ac77ac
+  generation_id: d016d989-5570-4301-af50-ff5facd16f5f
+  pristine_commit_hash: 0709f294c3664397b5e2f7abb14bdad14cb283fc
+  pristine_tree_hash: b493d31f4daf39d4752fe99c7dc5994d87c80811
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4207,8 +4207,8 @@ trackedFiles:
     pristine_git_object: f580ab0d1cb0fd5331c331697813a46d7b4e4d36
   docs/pkg/models/operations/listatsapplicationstatusesrequest.md:
     id: 6c0e869c4c3e
-    last_write_checksum: sha1:0dcefec2b91027d214dc432befe71ed06e2b8f23
-    pristine_git_object: 2152400050d2e6071aa4f70c7534b5ea1551ae21
+    last_write_checksum: sha1:73413b96194d103bc8317bb81786fed1e8c8737a
+    pristine_git_object: 9a3d455090dfa3dffdc803368dcfcbb21e2ba101
   docs/pkg/models/operations/listatsapplicationstatusesresponse.md:
     id: 6da6484c3f87
     last_write_checksum: sha1:84256b0151671170bbd6aa073ceb2f5066f21196
@@ -16231,8 +16231,8 @@ trackedFiles:
     pristine_git_object: dd70b37bb63e61a86404d098c47262e822eeb21b
   pkg/models/operations/listatsapplicationstatuses.go:
     id: 152634562ef1
-    last_write_checksum: sha1:1a194332ca1733b53f751f0f538f0f389f1752f7
-    pristine_git_object: 99b3e0205dacf7d52ae1a14909dea945c69af4aa
+    last_write_checksum: sha1:8110913373bdddaabde4ddc8c1a4486b459bff83
+    pristine_git_object: 1e90a78c60be9b1aed7bb01906d1deb656b27355
   pkg/models/operations/listatscandidates.go:
     id: 7fd7565e9ec4
     last_write_checksum: sha1:db9ff9fcd4cc72b7f7d294331a5dfd3acd527266
@@ -20587,8 +20587,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:e5d3ddf6f9b8631c8950a1670a469e25d93338b9
-    pristine_git_object: 7b4ce7e9229b1a88d993155d66d1876dc322bb2a
+    last_write_checksum: sha1:5a937bc53aa9563aee9f2eacf345dbe7dd47f97d
+    pristine_git_object: 56afd4068b0408b49a6b77421b3b8a3a1365a04f
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -34507,7 +34507,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Shipping.CreateShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipping.GetShippingShipment()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipping.ListShippingShipments()`: \n  *  `request.Request` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Shipping.ListShippingTrackings()`: \n  *  `request.Request.OrderId` **Added**\n* `UnifiedTo.Shipping.PatchShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipping.UpdateShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipment.CreateShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipment.GetShippingShipment()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipment.ListShippingShipments()`: \n  *  `request.Request` **Changed**\n  *  `response.[]` **Changed**\n* `UnifiedTo.Shipment.PatchShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Shipment.UpdateShippingShipment()`: \n  *  `request.Request` **Changed**\n  *  `response` **Changed**\n* `UnifiedTo.Tracking.ListShippingTrackings()`: \n  *  `request.Request.OrderId` **Added**\n* `UnifiedTo.Uc.GetUcCall()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Uc.ListUcCalls()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Metadata` **Added**\n* `UnifiedTo.Call.GetUcCall()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.Metadata` **Added**\n* `UnifiedTo.Call.ListUcCalls()`: \n  *  `request.Request.Fields` **Changed**\n  *  `response.[].Metadata` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ats.ListAtsApplicationstatuses()`: \n  *  `request.Request.JobId` **Added**\n* `UnifiedTo.Applicationstatus.ListAtsApplicationstatuses()`: \n  *  `request.Request.JobId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
