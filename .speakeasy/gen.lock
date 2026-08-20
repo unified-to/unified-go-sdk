@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 7a4cabbb-c7bf-4eca-9d1a-995415b600ef
 management:
-  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
+  docChecksum: f1b21bdacc13bdae2d4bb40a40b83aba
   docVersion: "1.0"
   speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 0.36.114
-  configChecksum: 05e47b95b03d7530bef24aa132e9a977
+  releaseVersion: 0.36.115
+  configChecksum: df392bf1daf03adf3c9dd16e0cf87eb6
   repoURL: https://github.com/unified-to/unified-go-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-go-sdk
   published: true
 persistentEdits:
-  generation_id: d016d989-5570-4301-af50-ff5facd16f5f
-  pristine_commit_hash: 0709f294c3664397b5e2f7abb14bdad14cb283fc
-  pristine_tree_hash: b493d31f4daf39d4752fe99c7dc5994d87c80811
+  generation_id: 6f5c4a86-9f7c-46fd-8df7-10e89ed148a6
+  pristine_commit_hash: aa8c418c0179625abbf6f9fcd163e8c75e300339
+  pristine_tree_hash: c81eb3dd5949e3005a344e5382453fe9861001ba
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4883,8 +4883,8 @@ trackedFiles:
     pristine_git_object: 58309b872925306829f522114ab47abb710ba8c9
   docs/pkg/models/operations/listhrislocationsrequest.md:
     id: 377eb314b114
-    last_write_checksum: sha1:96f4350fc2c2003ea3d4d5244f6c1f3c7a2395ba
-    pristine_git_object: 635d575be9609fbddaa7bfc6f399a0748e1dbc46
+    last_write_checksum: sha1:ddc891871a1ccb70725dedee8d044a73db130d51
+    pristine_git_object: bf205fe00f513b86d13edaa28c40eda24fbd8891
   docs/pkg/models/operations/listhrislocationsresponse.md:
     id: abb9e2778ac9
     last_write_checksum: sha1:ba673aebdcf7d3d6453d84384c6815814752ab97
@@ -14715,8 +14715,8 @@ trackedFiles:
     pristine_git_object: e32237b71b9c54af00a2495e5d2d7a9b3aa38c00
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:c969c31dcdd82c5985bd33473ffc36ac4ecce782
-    pristine_git_object: 8dd1d5e1feb756a8117a8fc8d36676ce44c232df
+    last_write_checksum: sha1:434f10f6dcd1250568508a221ff9d7d17a196342
+    pristine_git_object: f86e8fdb85891d883ea84fdf0b6e0c5981e49b98
   goal.go:
     id: 3510397e3284
     last_write_checksum: sha1:9714414b626693e2b5f7577fe5e9d20883b4ad2b
@@ -16459,8 +16459,8 @@ trackedFiles:
     pristine_git_object: 9d6adf55d74343fb631fc9a059b0e82701fb7ff2
   pkg/models/operations/listhrislocations.go:
     id: a3b192af1153
-    last_write_checksum: sha1:4b643f3b5022269b856b47e40f52439f2b5ac221
-    pristine_git_object: 53b95142ea50951e345acc407d5b233fc2fa8bf5
+    last_write_checksum: sha1:e24f6f44e9456abf6c1ef64345b98e3fa3e4e595
+    pristine_git_object: 43a58c6ca0fc4edd316ba4218274b298689cde5e
   pkg/models/operations/listhrispayslips.go:
     id: 8bb262255ac6
     last_write_checksum: sha1:72e747712e3a89d260e3c6f323e4a0dae72e0492
@@ -20587,8 +20587,8 @@ trackedFiles:
     pristine_git_object: b7f984763c6e327ca7d4626c4e2c3b67ba4ae3d5
   unifiedto.go:
     id: ac9736c715bf
-    last_write_checksum: sha1:5a937bc53aa9563aee9f2eacf345dbe7dd47f97d
-    pristine_git_object: 56afd4068b0408b49a6b77421b3b8a3a1365a04f
+    last_write_checksum: sha1:0282638d2adb9aa2777adb239e9fa52223d3e9a3
+    pristine_git_object: ac2b47c61260472bacb88c60b82128fe22d06aaa
   user.go:
     id: 5aa421f647ef
     last_write_checksum: sha1:dcb1e5d81f556fca0f8a6e38eee7dac8243c9249
@@ -34507,7 +34507,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Ats.ListAtsApplicationstatuses()`: \n  *  `request.Request.JobId` **Added**\n* `UnifiedTo.Applicationstatus.ListAtsApplicationstatuses()`: \n  *  `request.Request.JobId` **Added**\n"
+releaseNotes: "## Go SDK Changes:\n* `UnifiedTo.Location.ListHrisLocations()`: \n  *  `request.Request.ParentId` **Added**\n* `UnifiedTo.Hris.ListHrisLocations()`: \n  *  `request.Request.ParentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /pkg/models/operations/createaccountingaccount.go
