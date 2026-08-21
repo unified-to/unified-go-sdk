@@ -16,6 +16,7 @@ const (
 	HrisTaxonomyTypeAbility       HrisTaxonomyType = "ABILITY"
 	HrisTaxonomyTypeCertification HrisTaxonomyType = "CERTIFICATION"
 	HrisTaxonomyTypeRole          HrisTaxonomyType = "ROLE"
+	HrisTaxonomyTypeHoliday       HrisTaxonomyType = "HOLIDAY"
 )
 
 func (e HrisTaxonomyType) ToPointer() *HrisTaxonomyType {
@@ -26,7 +27,7 @@ func (e HrisTaxonomyType) ToPointer() *HrisTaxonomyType {
 func (e *HrisTaxonomyType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "SKILL", "KNOWLEDGE", "COMPETENCE", "ABILITY", "CERTIFICATION", "ROLE":
+		case "SKILL", "KNOWLEDGE", "COMPETENCE", "ABILITY", "CERTIFICATION", "ROLE", "HOLIDAY":
 			return true
 		}
 	}

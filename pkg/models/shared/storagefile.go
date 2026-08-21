@@ -43,12 +43,13 @@ type StorageFile struct {
 	Raw         map[string]any      `json:"raw,omitempty"`
 	References  []StorageReference  `json:"references,omitempty"`
 	Size        *float64            `json:"size,omitempty"`
-	Tags        []string            `json:"tags,omitempty"`
-	Type        *StorageFileType    `json:"type,omitempty"`
-	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
-	UserID      *string             `json:"user_id,omitempty"`
-	Version     *string             `json:"version,omitempty"`
-	WebURL      *string             `json:"web_url,omitempty"`
+	// labels
+	Tags      []string         `json:"tags,omitempty"`
+	Type      *StorageFileType `json:"type,omitempty"`
+	UpdatedAt *time.Time       `json:"updated_at,omitempty"`
+	UserID    *string          `json:"user_id,omitempty"`
+	Version   *string          `json:"version,omitempty"`
+	WebURL    *string          `json:"web_url,omitempty"`
 }
 
 func (s StorageFile) MarshalJSON() ([]byte, error) {

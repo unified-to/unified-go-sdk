@@ -10,11 +10,17 @@ import (
 type SecretsManagerType string
 
 const (
-	SecretsManagerTypeAws       SecretsManagerType = "aws"
-	SecretsManagerTypeAzure     SecretsManagerType = "azure"
-	SecretsManagerTypeGcp       SecretsManagerType = "gcp"
-	SecretsManagerTypeHashicorp SecretsManagerType = "hashicorp"
-	SecretsManagerTypeComposio  SecretsManagerType = "composio"
+	SecretsManagerTypeAws          SecretsManagerType = "aws"
+	SecretsManagerTypeAzure        SecretsManagerType = "azure"
+	SecretsManagerTypeGcp          SecretsManagerType = "gcp"
+	SecretsManagerTypeHashicorp    SecretsManagerType = "hashicorp"
+	SecretsManagerTypeComposio     SecretsManagerType = "composio"
+	SecretsManagerTypeOnepassword  SecretsManagerType = "1password"
+	SecretsManagerTypeBitwarden    SecretsManagerType = "bitwarden"
+	SecretsManagerTypeDoppler      SecretsManagerType = "doppler"
+	SecretsManagerTypeAkeyless     SecretsManagerType = "akeyless"
+	SecretsManagerTypePipedream    SecretsManagerType = "pipedream"
+	SecretsManagerTypeAlibabacloud SecretsManagerType = "alibabacloud"
 )
 
 func (e SecretsManagerType) ToPointer() *SecretsManagerType {
@@ -25,7 +31,7 @@ func (e SecretsManagerType) ToPointer() *SecretsManagerType {
 func (e *SecretsManagerType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "aws", "azure", "gcp", "hashicorp", "composio":
+		case "aws", "azure", "gcp", "hashicorp", "composio", "1password", "bitwarden", "doppler", "akeyless", "pipedream", "alibabacloud":
 			return true
 		}
 	}

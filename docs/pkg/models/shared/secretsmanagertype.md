@@ -16,10 +16,16 @@ custom := shared.SecretsManagerType("custom_value")
 
 ## Values
 
-| Name                          | Value                         |
-| ----------------------------- | ----------------------------- |
-| `SecretsManagerTypeAws`       | aws                           |
-| `SecretsManagerTypeAzure`     | azure                         |
-| `SecretsManagerTypeGcp`       | gcp                           |
-| `SecretsManagerTypeHashicorp` | hashicorp                     |
-| `SecretsManagerTypeComposio`  | composio                      |
+| Name                             | Value                            |
+| -------------------------------- | -------------------------------- |
+| `SecretsManagerTypeAws`          | aws                              |
+| `SecretsManagerTypeAzure`        | azure                            |
+| `SecretsManagerTypeGcp`          | gcp                              |
+| `SecretsManagerTypeHashicorp`    | hashicorp                        |
+| `SecretsManagerTypeComposio`     | composio                         |
+| `SecretsManagerTypeOnepassword`  | 1password                        |
+| `SecretsManagerTypeBitwarden`    | bitwarden                        |
+| `SecretsManagerTypeDoppler`      | doppler                          |
+| `SecretsManagerTypeAkeyless`     | akeyless                         |
+| `SecretsManagerTypePipedream`    | pipedream                        |
+| `SecretsManagerTypeAlibabacloud` | alibabacloud                     |
