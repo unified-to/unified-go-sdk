@@ -20,6 +20,7 @@
 * [ListUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](#listunifiedissues) - List support issues
+* [ListUnifiedNotifications](#listunifiednotifications) - List event notifications
 * [ListUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [ListUnifiedWorkspaceSecretsmanagers](#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [PatchUnifiedConnection](#patchunifiedconnection) - Update connection
@@ -170,7 +171,7 @@ func main() {
     res, err := s.Unified.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventCreated,
+            Event: shared.WebhookEventCreated,
             ObjectType: shared.WebhookObjectTypeAtsScorecard,
         },
     })
@@ -896,6 +897,58 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListUnifiedNotifications
+
+List event notifications
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUnifiedNotifications" method="get" path="/unified/notification" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Unified.ListUnifiedNotifications(ctx, operations.ListUnifiedNotificationsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.Notifications != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListUnifiedNotificationsRequest](../../pkg/models/operations/listunifiednotificationsrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.ListUnifiedNotificationsResponse](../../pkg/models/operations/listunifiednotificationsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListUnifiedWebhooks
 
 Returns all registered webhooks
@@ -1092,7 +1145,7 @@ func main() {
     res, err := s.Unified.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventUpdated,
+            Event: shared.WebhookEventUpdated,
             ObjectType: shared.WebhookObjectTypeTicketingCustomer,
         },
         ID: "<id>",
@@ -1485,7 +1538,7 @@ func main() {
     res, err := s.Unified.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventDeleted,
+            Event: shared.WebhookEventDeleted,
             ObjectType: shared.WebhookObjectTypeMessagingChannel,
         },
         ID: "<id>",

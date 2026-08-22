@@ -34,20 +34,20 @@ func (e *DbType) IsExact() bool {
 	return false
 }
 
-type Event string
+type WebhookEvent string
 
 const (
-	EventUpdated Event = "updated"
-	EventCreated Event = "created"
-	EventDeleted Event = "deleted"
+	WebhookEventUpdated WebhookEvent = "updated"
+	WebhookEventCreated WebhookEvent = "created"
+	WebhookEventDeleted WebhookEvent = "deleted"
 )
 
-func (e Event) ToPointer() *Event {
+func (e WebhookEvent) ToPointer() *WebhookEvent {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Event) IsExact() bool {
+func (e *WebhookEvent) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "updated", "created", "deleted":
@@ -277,7 +277,7 @@ type Webhook struct {
 	DbType          *DbType           `json:"db_type,omitempty"`
 	DbURL           *string           `json:"db_url,omitempty"`
 	Environment     *string           `default:"Production" json:"environment"`
-	Event           Event             `json:"event"`
+	Event           WebhookEvent      `json:"event"`
 	Fields          *string           `json:"fields,omitempty"`
 	Filters         map[string]string `json:"filters,omitempty"`
 	HookURL         *string           `json:"hook_url,omitempty"`
@@ -363,9 +363,9 @@ func (w *Webhook) GetEnvironment() *string {
 	return w.Environment
 }
 
-func (w *Webhook) GetEvent() Event {
+func (w *Webhook) GetEvent() WebhookEvent {
 	if w == nil {
-		return Event("")
+		return WebhookEvent("")
 	}
 	return w.Event
 }

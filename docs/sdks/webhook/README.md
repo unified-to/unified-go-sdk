@@ -41,7 +41,7 @@ func main() {
     res, err := s.Webhook.CreateUnifiedWebhook(ctx, operations.CreateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventCreated,
+            Event: shared.WebhookEventCreated,
             ObjectType: shared.WebhookObjectTypeAtsScorecard,
         },
     })
@@ -206,7 +206,7 @@ func main() {
     res, err := s.Webhook.PatchUnifiedWebhook(ctx, operations.PatchUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventUpdated,
+            Event: shared.WebhookEventUpdated,
             ObjectType: shared.WebhookObjectTypeTicketingCustomer,
         },
         ID: "<id>",
@@ -374,7 +374,7 @@ func main() {
     res, err := s.Webhook.UpdateUnifiedWebhook(ctx, operations.UpdateUnifiedWebhookRequest{
         Webhook: shared.Webhook{
             ConnectionID: "<id>",
-            Event: shared.EventDeleted,
+            Event: shared.WebhookEventDeleted,
             ObjectType: shared.WebhookObjectTypeMessagingChannel,
         },
         ID: "<id>",
