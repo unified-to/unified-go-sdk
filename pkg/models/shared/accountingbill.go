@@ -142,20 +142,21 @@ type AccountingBill struct {
 	PaymentCollectionMethod *PaymentCollectionMethod `json:"payment_collection_method,omitempty"`
 	PaymentTerms            *PaymentTerms            `json:"payment_terms,omitempty"`
 	// read-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
-	Payments     []AccountingPaymentReference `json:"payments,omitempty"`
-	PostedAt     *time.Time                   `json:"posted_at,omitempty"`
-	ProjectID    *string                      `json:"project_id,omitempty"`
-	Raw          map[string]any               `json:"raw,omitempty"`
-	RefundAmount *float64                     `json:"refund_amount,omitempty"`
-	RefundReason *string                      `json:"refund_reason,omitempty"`
-	RefundedAt   *time.Time                   `json:"refunded_at,omitempty"`
-	Send         *bool                        `json:"send,omitempty"`
-	Status       *AccountingBillStatus        `json:"status,omitempty"`
-	TaxAmount    *float64                     `json:"tax_amount,omitempty"`
-	Term         *Term                        `json:"term,omitempty"`
-	TotalAmount  *float64                     `json:"total_amount,omitempty"`
-	UpdatedAt    *time.Time                   `json:"updated_at,omitempty"`
-	URL          *string                      `json:"url,omitempty"`
+	Payments      []AccountingPaymentReference `json:"payments,omitempty"`
+	PaymenttermID *string                      `json:"paymentterm_id,omitempty"`
+	PostedAt      *time.Time                   `json:"posted_at,omitempty"`
+	ProjectID     *string                      `json:"project_id,omitempty"`
+	Raw           map[string]any               `json:"raw,omitempty"`
+	RefundAmount  *float64                     `json:"refund_amount,omitempty"`
+	RefundReason  *string                      `json:"refund_reason,omitempty"`
+	RefundedAt    *time.Time                   `json:"refunded_at,omitempty"`
+	Send          *bool                        `json:"send,omitempty"`
+	Status        *AccountingBillStatus        `json:"status,omitempty"`
+	TaxAmount     *float64                     `json:"tax_amount,omitempty"`
+	Term          *Term                        `json:"term,omitempty"`
+	TotalAmount   *float64                     `json:"total_amount,omitempty"`
+	UpdatedAt     *time.Time                   `json:"updated_at,omitempty"`
+	URL           *string                      `json:"url,omitempty"`
 }
 
 func (a AccountingBill) MarshalJSON() ([]byte, error) {
@@ -307,6 +308,13 @@ func (a *AccountingBill) GetPayments() []AccountingPaymentReference {
 		return nil
 	}
 	return a.Payments
+}
+
+func (a *AccountingBill) GetPaymenttermID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.PaymenttermID
 }
 
 func (a *AccountingBill) GetPostedAt() *time.Time {

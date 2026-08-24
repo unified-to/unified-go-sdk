@@ -15,6 +15,7 @@
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](#createaccountingorder) - Create an order
+* [CreateAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [CreateAccountingProject](#createaccountingproject) - Create a project
 * [CreateAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
 * [CreateAccountingQuote](#createaccountingquote) - Create a quote
@@ -38,6 +39,7 @@
 * [GetAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [GetAccountingOrder](#getaccountingorder) - Retrieve an order
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [GetAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [GetAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
 * [GetAccountingProject](#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -64,6 +66,7 @@
 * [ListAccountingJournals](#listaccountingjournals) - List all journals
 * [ListAccountingOrders](#listaccountingorders) - List all orders
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [ListAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [ListAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 * [ListAccountingProjects](#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
@@ -85,6 +88,7 @@
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](#patchaccountingorder) - Update an order
+* [PatchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [PatchAccountingProject](#patchaccountingproject) - Update a project
 * [PatchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
 * [PatchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -103,6 +107,7 @@
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](#removeaccountingorder) - Remove an order
+* [RemoveAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [RemoveAccountingProject](#removeaccountingproject) - Remove a project
 * [RemoveAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [RemoveAccountingQuote](#removeaccountingquote) - Remove a quote
@@ -121,6 +126,7 @@
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](#updateaccountingorder) - Update an order
+* [UpdateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [UpdateAccountingProject](#updateaccountingproject) - Update a project
 * [UpdateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
 * [UpdateAccountingQuote](#updateaccountingquote) - Update a quote
@@ -738,6 +744,62 @@ func main() {
 ### Response
 
 **[*operations.CreateAccountingOrderResponse](../../pkg/models/operations/createaccountingorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateAccountingPaymentterm
+
+Create a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.CreateAccountingPaymentterm(ctx, operations.CreateAccountingPaymenttermRequest{
+        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPaymentterm != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.CreateAccountingPaymenttermRequest](../../pkg/models/operations/createaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.CreateAccountingPaymenttermResponse](../../pkg/models/operations/createaccountingpaymenttermresponse.md), error**
 
 ### Errors
 
@@ -2010,6 +2072,61 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingOrganizationResponse](../../pkg/models/operations/getaccountingorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAccountingPaymentterm
+
+Retrieve a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingPaymentterm" method="get" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingPaymentterm(ctx, operations.GetAccountingPaymenttermRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPaymentterm != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.GetAccountingPaymenttermRequest](../../pkg/models/operations/getaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.GetAccountingPaymenttermResponse](../../pkg/models/operations/getaccountingpaymenttermresponse.md), error**
 
 ### Errors
 
@@ -3431,6 +3548,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAccountingPaymentterms
+
+List all paymentterms
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingPaymentterms" method="get" path="/accounting/{connection_id}/paymentterm" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingPaymentterms(ctx, operations.ListAccountingPaymenttermsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPaymentterms != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.ListAccountingPaymenttermsRequest](../../pkg/models/operations/listaccountingpaymenttermsrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+
+### Response
+
+**[*operations.ListAccountingPaymenttermsResponse](../../pkg/models/operations/listaccountingpaymenttermsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAccountingProfitlosses
 
 List all profitlosses
@@ -4598,6 +4769,63 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## PatchAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.PatchAccountingPaymentterm(ctx, operations.PatchAccountingPaymenttermRequest{
+        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPaymentterm != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.PatchAccountingPaymenttermRequest](../../pkg/models/operations/patchaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+
+### Response
+
+**[*operations.PatchAccountingPaymenttermResponse](../../pkg/models/operations/patchaccountingpaymenttermresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchAccountingProject
 
 Update a project
@@ -5595,6 +5823,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveAccountingOrderResponse](../../pkg/models/operations/removeaccountingorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAccountingPaymentterm
+
+Remove a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingPaymentterm" method="delete" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.RemoveAccountingPaymentterm(ctx, operations.RemoveAccountingPaymenttermRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.RemoveAccountingPaymenttermRequest](../../pkg/models/operations/removeaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.RemoveAccountingPaymenttermResponse](../../pkg/models/operations/removeaccountingpaymenttermresponse.md), error**
 
 ### Errors
 
@@ -6607,6 +6890,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateAccountingOrderResponse](../../pkg/models/operations/updateaccountingorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.UpdateAccountingPaymentterm(ctx, operations.UpdateAccountingPaymenttermRequest{
+        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPaymentterm != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.UpdateAccountingPaymenttermRequest](../../pkg/models/operations/updateaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.UpdateAccountingPaymenttermResponse](../../pkg/models/operations/updateaccountingpaymenttermresponse.md), error**
 
 ### Errors
 

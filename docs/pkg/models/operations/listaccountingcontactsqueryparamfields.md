@@ -38,4 +38,5 @@ value := operations.ListAccountingContactsQueryParamFieldsID
 | `ListAccountingContactsQueryParamFieldsAssociatedContacts` | associated_contacts                                        |
 | `ListAccountingContactsQueryParamFieldsOrganizationID`     | organization_id                                            |
 | `ListAccountingContactsQueryParamFieldsPaymentTerms`       | payment_terms                                              |
+| `ListAccountingContactsQueryParamFieldsPaymenttermID`      | paymentterm_id                                             |
 | `ListAccountingContactsQueryParamFieldsRaw`                | raw                                                        |

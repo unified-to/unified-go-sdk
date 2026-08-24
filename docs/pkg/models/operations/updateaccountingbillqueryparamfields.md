@@ -43,6 +43,7 @@ value := operations.UpdateAccountingBillQueryParamFieldsID
 | `UpdateAccountingBillQueryParamFieldsOrganizationID`          | organization_id                                               |
 | `UpdateAccountingBillQueryParamFieldsTerm`                    | term                                                          |
 | `UpdateAccountingBillQueryParamFieldsPaymentTerms`            | payment_terms                                                 |
+| `UpdateAccountingBillQueryParamFieldsPaymenttermID`           | paymentterm_id                                                |
 | `UpdateAccountingBillQueryParamFieldsPayments`                | payments                                                      |
 | `UpdateAccountingBillQueryParamFieldsCategoryIds`             | category_ids                                                  |
 | `UpdateAccountingBillQueryParamFieldsProjectID`               | project_id                                                    |

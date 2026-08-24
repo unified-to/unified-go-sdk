@@ -74,6 +74,7 @@ type UnifiedTo struct {
 	Journal             *Journal
 	Order               *Order
 	Organization        *Organization
+	Paymentterm         *Paymentterm
 	Profitloss          *Profitloss
 	Project             *Project
 	Purchaseorder       *Purchaseorder
@@ -304,9 +305,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.117",
+		SDKVersion: "0.36.118",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.117 2.932.9 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.118 2.932.9 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -344,6 +345,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Journal = newJournal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Organization = newOrganization(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Paymentterm = newPaymentterm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Profitloss = newProfitloss(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Purchaseorder = newPurchaseorder(sdk, sdk.sdkConfiguration, sdk.hooks)

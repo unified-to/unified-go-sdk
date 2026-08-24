@@ -35,6 +35,7 @@ const (
 	ListAccountingContactsQueryParamFieldsAssociatedContacts ListAccountingContactsQueryParamFields = "associated_contacts"
 	ListAccountingContactsQueryParamFieldsOrganizationID     ListAccountingContactsQueryParamFields = "organization_id"
 	ListAccountingContactsQueryParamFieldsPaymentTerms       ListAccountingContactsQueryParamFields = "payment_terms"
+	ListAccountingContactsQueryParamFieldsPaymenttermID      ListAccountingContactsQueryParamFields = "paymentterm_id"
 	ListAccountingContactsQueryParamFieldsRaw                ListAccountingContactsQueryParamFields = "raw"
 )
 
@@ -92,6 +93,8 @@ func (e *ListAccountingContactsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "organization_id":
 		fallthrough
 	case "payment_terms":
+		fallthrough
+	case "paymentterm_id":
 		fallthrough
 	case "raw":
 		*e = ListAccountingContactsQueryParamFields(v)

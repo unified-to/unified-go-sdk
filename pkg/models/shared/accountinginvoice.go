@@ -165,22 +165,23 @@ type AccountingInvoice struct {
 	PaymentCollectionMethod *AccountingInvoicePaymentCollectionMethod `json:"payment_collection_method,omitempty"`
 	PaymentTerms            *AccountingInvoicePaymentTerms            `json:"payment_terms,omitempty"`
 	// ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
-	Payments     []AccountingPaymentReference `json:"payments,omitempty"`
-	PostedAt     *time.Time                   `json:"posted_at,omitempty"`
-	ProjectID    *string                      `json:"project_id,omitempty"`
-	Raw          map[string]any               `json:"raw,omitempty"`
-	Reference    *string                      `json:"reference,omitempty"`
-	RefundAmount *float64                     `json:"refund_amount,omitempty"`
-	RefundReason *string                      `json:"refund_reason,omitempty"`
-	RefundedAt   *time.Time                   `json:"refunded_at,omitempty"`
-	Send         *bool                        `json:"send,omitempty"`
-	Status       *AccountingInvoiceStatus     `json:"status,omitempty"`
-	TaxAmount    *float64                     `json:"tax_amount,omitempty"`
-	Term         *AccountingInvoiceTerm       `json:"term,omitempty"`
-	TotalAmount  *float64                     `json:"total_amount,omitempty"`
-	Type         *AccountingInvoiceType       `json:"type,omitempty"`
-	UpdatedAt    *time.Time                   `json:"updated_at,omitempty"`
-	URL          *string                      `json:"url,omitempty"`
+	Payments      []AccountingPaymentReference `json:"payments,omitempty"`
+	PaymenttermID *string                      `json:"paymentterm_id,omitempty"`
+	PostedAt      *time.Time                   `json:"posted_at,omitempty"`
+	ProjectID     *string                      `json:"project_id,omitempty"`
+	Raw           map[string]any               `json:"raw,omitempty"`
+	Reference     *string                      `json:"reference,omitempty"`
+	RefundAmount  *float64                     `json:"refund_amount,omitempty"`
+	RefundReason  *string                      `json:"refund_reason,omitempty"`
+	RefundedAt    *time.Time                   `json:"refunded_at,omitempty"`
+	Send          *bool                        `json:"send,omitempty"`
+	Status        *AccountingInvoiceStatus     `json:"status,omitempty"`
+	TaxAmount     *float64                     `json:"tax_amount,omitempty"`
+	Term          *AccountingInvoiceTerm       `json:"term,omitempty"`
+	TotalAmount   *float64                     `json:"total_amount,omitempty"`
+	Type          *AccountingInvoiceType       `json:"type,omitempty"`
+	UpdatedAt     *time.Time                   `json:"updated_at,omitempty"`
+	URL           *string                      `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -332,6 +333,13 @@ func (a *AccountingInvoice) GetPayments() []AccountingPaymentReference {
 		return nil
 	}
 	return a.Payments
+}
+
+func (a *AccountingInvoice) GetPaymenttermID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.PaymenttermID
 }
 
 func (a *AccountingInvoice) GetPostedAt() *time.Time {

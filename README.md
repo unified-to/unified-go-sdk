@@ -101,6 +101,7 @@ func main() {
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
+* [CreateAccountingPaymentterm](docs/sdks/accounting/README.md#createaccountingpaymentterm) - Create a paymentterm
 * [CreateAccountingProject](docs/sdks/accounting/README.md#createaccountingproject) - Create a project
 * [CreateAccountingPurchaseorder](docs/sdks/accounting/README.md#createaccountingpurchaseorder) - Create a purchaseorder
 * [CreateAccountingQuote](docs/sdks/accounting/README.md#createaccountingquote) - Create a quote
@@ -124,6 +125,7 @@ func main() {
 * [GetAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [GetAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
 * [GetAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
+* [GetAccountingPaymentterm](docs/sdks/accounting/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
 * [GetAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
 * [GetAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -150,6 +152,7 @@ func main() {
 * [ListAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
 * [ListAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
 * [ListAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
+* [ListAccountingPaymentterms](docs/sdks/accounting/README.md#listaccountingpaymentterms) - List all paymentterms
 * [ListAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
 * [ListAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
@@ -171,6 +174,7 @@ func main() {
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
+* [PatchAccountingPaymentterm](docs/sdks/accounting/README.md#patchaccountingpaymentterm) - Update a paymentterm
 * [PatchAccountingProject](docs/sdks/accounting/README.md#patchaccountingproject) - Update a project
 * [PatchAccountingPurchaseorder](docs/sdks/accounting/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
 * [PatchAccountingQuote](docs/sdks/accounting/README.md#patchaccountingquote) - Update a quote
@@ -189,6 +193,7 @@ func main() {
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
+* [RemoveAccountingPaymentterm](docs/sdks/accounting/README.md#removeaccountingpaymentterm) - Remove a paymentterm
 * [RemoveAccountingProject](docs/sdks/accounting/README.md#removeaccountingproject) - Remove a project
 * [RemoveAccountingPurchaseorder](docs/sdks/accounting/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [RemoveAccountingQuote](docs/sdks/accounting/README.md#removeaccountingquote) - Remove a quote
@@ -207,6 +212,7 @@ func main() {
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
+* [UpdateAccountingPaymentterm](docs/sdks/accounting/README.md#updateaccountingpaymentterm) - Update a paymentterm
 * [UpdateAccountingProject](docs/sdks/accounting/README.md#updateaccountingproject) - Update a project
 * [UpdateAccountingPurchaseorder](docs/sdks/accounting/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
 * [UpdateAccountingQuote](docs/sdks/accounting/README.md#updateaccountingquote) - Update a quote
@@ -1587,6 +1593,15 @@ func main() {
 * [UpdatePaymentLink](docs/sdks/payment/README.md#updatepaymentlink) - Update a link
 * [UpdatePaymentPayment](docs/sdks/payment/README.md#updatepaymentpayment) - Update a payment
 * [UpdatePaymentSubscription](docs/sdks/payment/README.md#updatepaymentsubscription) - Update a subscription
+
+### [Paymentterm](docs/sdks/paymentterm/README.md)
+
+* [CreateAccountingPaymentterm](docs/sdks/paymentterm/README.md#createaccountingpaymentterm) - Create a paymentterm
+* [GetAccountingPaymentterm](docs/sdks/paymentterm/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
+* [ListAccountingPaymentterms](docs/sdks/paymentterm/README.md#listaccountingpaymentterms) - List all paymentterms
+* [PatchAccountingPaymentterm](docs/sdks/paymentterm/README.md#patchaccountingpaymentterm) - Update a paymentterm
+* [RemoveAccountingPaymentterm](docs/sdks/paymentterm/README.md#removeaccountingpaymentterm) - Remove a paymentterm
+* [UpdateAccountingPaymentterm](docs/sdks/paymentterm/README.md#updateaccountingpaymentterm) - Update a paymentterm
 
 ### [Payout](docs/sdks/payout/README.md)
 

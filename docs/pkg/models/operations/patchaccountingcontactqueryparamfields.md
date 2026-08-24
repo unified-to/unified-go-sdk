@@ -38,4 +38,5 @@ value := operations.PatchAccountingContactQueryParamFieldsID
 | `PatchAccountingContactQueryParamFieldsAssociatedContacts` | associated_contacts                                        |
 | `PatchAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                            |
 | `PatchAccountingContactQueryParamFieldsPaymentTerms`       | payment_terms                                              |
+| `PatchAccountingContactQueryParamFieldsPaymenttermID`      | paymentterm_id                                             |
 | `PatchAccountingContactQueryParamFieldsRaw`                | raw                                                        |

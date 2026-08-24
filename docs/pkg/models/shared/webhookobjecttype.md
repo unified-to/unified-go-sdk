@@ -27,6 +27,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeAccountingVendorcredit`        | accounting_vendorcredit                          |
 | `WebhookObjectTypeAccountingCreditmemo`          | accounting_creditmemo                            |
 | `WebhookObjectTypeAccountingTaxrate`             | accounting_taxrate                               |
+| `WebhookObjectTypeAccountingPaymentterm`         | accounting_paymentterm                           |
 | `WebhookObjectTypeAccountingOrganization`        | accounting_organization                          |
 | `WebhookObjectTypeAccountingOrder`               | accounting_order                                 |
 | `WebhookObjectTypeAccountingSalesorder`          | accounting_salesorder                            |

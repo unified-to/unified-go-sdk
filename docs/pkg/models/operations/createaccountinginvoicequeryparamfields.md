@@ -37,6 +37,7 @@ value := operations.CreateAccountingInvoiceQueryParamFieldsID
 | `CreateAccountingInvoiceQueryParamFieldsRefundReason`            | refund_reason                                                    |
 | `CreateAccountingInvoiceQueryParamFieldsTerm`                    | term                                                             |
 | `CreateAccountingInvoiceQueryParamFieldsPaymentTerms`            | payment_terms                                                    |
+| `CreateAccountingInvoiceQueryParamFieldsPaymenttermID`           | paymentterm_id                                                   |
 | `CreateAccountingInvoiceQueryParamFieldsLineitems`               | lineitems                                                        |
 | `CreateAccountingInvoiceQueryParamFieldsStatus`                  | status                                                           |
 | `CreateAccountingInvoiceQueryParamFieldsURL`                     | url                                                              |

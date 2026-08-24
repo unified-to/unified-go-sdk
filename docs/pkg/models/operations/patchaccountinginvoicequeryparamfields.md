@@ -37,6 +37,7 @@ value := operations.PatchAccountingInvoiceQueryParamFieldsID
 | `PatchAccountingInvoiceQueryParamFieldsRefundReason`            | refund_reason                                                   |
 | `PatchAccountingInvoiceQueryParamFieldsTerm`                    | term                                                            |
 | `PatchAccountingInvoiceQueryParamFieldsPaymentTerms`            | payment_terms                                                   |
+| `PatchAccountingInvoiceQueryParamFieldsPaymenttermID`           | paymentterm_id                                                  |
 | `PatchAccountingInvoiceQueryParamFieldsLineitems`               | lineitems                                                       |
 | `PatchAccountingInvoiceQueryParamFieldsStatus`                  | status                                                          |
 | `PatchAccountingInvoiceQueryParamFieldsURL`                     | url                                                             |

@@ -87,6 +87,7 @@ type AccountingContact struct {
 	OrganizationID     *string                                   `json:"organization_id,omitempty"`
 	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
 	PaymentTerms       *AccountingContactPaymentTerms            `json:"payment_terms,omitempty"`
+	PaymenttermID      *string                                   `json:"paymentterm_id,omitempty"`
 	PortalURL          *string                                   `json:"portal_url,omitempty"`
 	Raw                map[string]any                            `json:"raw,omitempty"`
 	ShippingAddress    *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
@@ -224,6 +225,13 @@ func (a *AccountingContact) GetPaymentTerms() *AccountingContactPaymentTerms {
 		return nil
 	}
 	return a.PaymentTerms
+}
+
+func (a *AccountingContact) GetPaymenttermID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.PaymenttermID
 }
 
 func (a *AccountingContact) GetPortalURL() *string {

@@ -34,6 +34,7 @@ const (
 	GetAccountingInvoiceQueryParamFieldsRefundReason            GetAccountingInvoiceQueryParamFields = "refund_reason"
 	GetAccountingInvoiceQueryParamFieldsTerm                    GetAccountingInvoiceQueryParamFields = "term"
 	GetAccountingInvoiceQueryParamFieldsPaymentTerms            GetAccountingInvoiceQueryParamFields = "payment_terms"
+	GetAccountingInvoiceQueryParamFieldsPaymenttermID           GetAccountingInvoiceQueryParamFields = "paymentterm_id"
 	GetAccountingInvoiceQueryParamFieldsLineitems               GetAccountingInvoiceQueryParamFields = "lineitems"
 	GetAccountingInvoiceQueryParamFieldsStatus                  GetAccountingInvoiceQueryParamFields = "status"
 	GetAccountingInvoiceQueryParamFieldsURL                     GetAccountingInvoiceQueryParamFields = "url"
@@ -101,6 +102,8 @@ func (e *GetAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "term":
 		fallthrough
 	case "payment_terms":
+		fallthrough
+	case "paymentterm_id":
 		fallthrough
 	case "lineitems":
 		fallthrough
