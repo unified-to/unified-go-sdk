@@ -7,7 +7,7 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 )
 
-value := shared.PeriodUnspecified
+value := shared.PeriodDay
 
 // Open enum: custom values can be created with a direct type cast
 custom := shared.Period("custom_value")
@@ -16,8 +16,11 @@ custom := shared.Period("custom_value")
 
 ## Values
 
-| Name                | Value               |
-| ------------------- | ------------------- |
-| `PeriodUnspecified` | UNSPECIFIED         |
-| `PeriodDaily`       | DAILY               |
-| `PeriodFlight`      | FLIGHT              |
+| Name             | Value            |
+| ---------------- | ---------------- |
+| `PeriodDay`      | DAY              |
+| `PeriodWeek`     | WEEK             |
+| `PeriodMonth`    | MONTH            |
+| `PeriodLifetime` | LIFETIME         |
+| `PeriodTotal`    | TOTAL            |
+| `PeriodOther`    | OTHER            |

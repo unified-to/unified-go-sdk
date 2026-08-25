@@ -1405,6 +1405,29 @@ func (e *ListPipelineID) IsExact() bool {
 	return false
 }
 
+type ListPostID string
+
+const (
+	ListPostIDSupportedRequired ListPostID = "supported-required"
+	ListPostIDSupported         ListPostID = "supported"
+	ListPostIDNotSupported      ListPostID = "not-supported"
+)
+
+func (e ListPostID) ToPointer() *ListPostID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListPostID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListProfileID string
 
 const (
@@ -3866,6 +3889,29 @@ func (e *VirtualWebhookPipelineID) IsExact() bool {
 	return false
 }
 
+type VirtualWebhookPostID string
+
+const (
+	VirtualWebhookPostIDSupportedRequired VirtualWebhookPostID = "supported-required"
+	VirtualWebhookPostIDSupported         VirtualWebhookPostID = "supported"
+	VirtualWebhookPostIDNotSupported      VirtualWebhookPostID = "not-supported"
+)
+
+func (e VirtualWebhookPostID) ToPointer() *VirtualWebhookPostID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookPostID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type VirtualWebhookProfileID string
 
 const (
@@ -4412,6 +4458,7 @@ type IntegrationSupport struct {
 	ListPaymentID           *ListPaymentID           `json:"list_payment_id,omitempty"`
 	ListPayslipID           *ListPayslipID           `json:"list_payslip_id,omitempty"`
 	ListPipelineID          *ListPipelineID          `json:"list_pipeline_id,omitempty"`
+	ListPostID              *ListPostID              `json:"list_post_id,omitempty"`
 	ListProfileID           *ListProfileID           `json:"list_profile_id,omitempty"`
 	ListProjectID           *ListProjectID           `json:"list_project_id,omitempty"`
 	ListPropertyID          *ListPropertyID          `json:"list_property_id,omitempty"`
@@ -4524,6 +4571,7 @@ type IntegrationSupport struct {
 	VirtualWebhookParentID          *VirtualWebhookParentID                  `json:"virtual_webhook_parent_id,omitempty"`
 	VirtualWebhookPaymentID         *VirtualWebhookPaymentID                 `json:"virtual_webhook_payment_id,omitempty"`
 	VirtualWebhookPipelineID        *VirtualWebhookPipelineID                `json:"virtual_webhook_pipeline_id,omitempty"`
+	VirtualWebhookPostID            *VirtualWebhookPostID                    `json:"virtual_webhook_post_id,omitempty"`
 	VirtualWebhookProfileID         *VirtualWebhookProfileID                 `json:"virtual_webhook_profile_id,omitempty"`
 	VirtualWebhookProjectID         *VirtualWebhookProjectID                 `json:"virtual_webhook_project_id,omitempty"`
 	VirtualWebhookPropertyID        *VirtualWebhookPropertyID                `json:"virtual_webhook_property_id,omitempty"`
@@ -4980,6 +5028,13 @@ func (i *IntegrationSupport) GetListPipelineID() *ListPipelineID {
 		return nil
 	}
 	return i.ListPipelineID
+}
+
+func (i *IntegrationSupport) GetListPostID() *ListPostID {
+	if i == nil {
+		return nil
+	}
+	return i.ListPostID
 }
 
 func (i *IntegrationSupport) GetListProfileID() *ListProfileID {
@@ -5757,6 +5812,13 @@ func (i *IntegrationSupport) GetVirtualWebhookPipelineID() *VirtualWebhookPipeli
 		return nil
 	}
 	return i.VirtualWebhookPipelineID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookPostID() *VirtualWebhookPostID {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookPostID
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookProfileID() *VirtualWebhookProfileID {

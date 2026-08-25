@@ -19,8 +19,8 @@ const (
 	PropertyAdsReportMetricsCreativeCreativeTypePublisherHosted PropertyAdsReportMetricsCreativeCreativeType = "PUBLISHER_HOSTED"
 	PropertyAdsReportMetricsCreativeCreativeTypeAssetBased      PropertyAdsReportMetricsCreativeCreativeType = "ASSET_BASED"
 	PropertyAdsReportMetricsCreativeCreativeTypeImage           PropertyAdsReportMetricsCreativeCreativeType = "IMAGE"
-	PropertyAdsReportMetricsCreativeCreativeTypeShare           PropertyAdsReportMetricsCreativeCreativeType = "SHARE"
 	PropertyAdsReportMetricsCreativeCreativeTypeDocument        PropertyAdsReportMetricsCreativeCreativeType = "DOCUMENT"
+	PropertyAdsReportMetricsCreativeCreativeTypeShare           PropertyAdsReportMetricsCreativeCreativeType = "SHARE"
 )
 
 func (e PropertyAdsReportMetricsCreativeCreativeType) ToPointer() *PropertyAdsReportMetricsCreativeCreativeType {
@@ -31,7 +31,7 @@ func (e PropertyAdsReportMetricsCreativeCreativeType) ToPointer() *PropertyAdsRe
 func (e *PropertyAdsReportMetricsCreativeCreativeType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "AUDIO", "PUBLISHER_HOSTED", "ASSET_BASED", "IMAGE", "SHARE", "DOCUMENT":
+		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "AUDIO", "PUBLISHER_HOSTED", "ASSET_BASED", "IMAGE", "DOCUMENT", "SHARE":
 			return true
 		}
 	}

@@ -14,8 +14,10 @@ type ListUnifiedWebhooksRequest struct {
 	CreatedLte *string `queryParam:"style=form,explode=true,name=created_lte"`
 	Env        *string `queryParam:"style=form,explode=true,name=env"`
 	// Filter the results to just this integration
-	IntegrationType *string  `queryParam:"style=form,explode=true,name=integration_type"`
-	Limit           *float64 `queryParam:"style=form,explode=true,name=limit"`
+	IntegrationType *string `queryParam:"style=form,explode=true,name=integration_type"`
+	// Filter by health. Omit to return all.
+	IsHealthy *bool    `queryParam:"style=form,explode=true,name=is_healthy"`
+	Limit     *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// Filter the results for webhooks for only this object
 	Object *string  `queryParam:"style=form,explode=true,name=object"`
 	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -51,6 +53,13 @@ func (l *ListUnifiedWebhooksRequest) GetIntegrationType() *string {
 		return nil
 	}
 	return l.IntegrationType
+}
+
+func (l *ListUnifiedWebhooksRequest) GetIsHealthy() *bool {
+	if l == nil {
+		return nil
+	}
+	return l.IsHealthy
 }
 
 func (l *ListUnifiedWebhooksRequest) GetLimit() *float64 {

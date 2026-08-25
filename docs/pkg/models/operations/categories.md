@@ -49,3 +49,4 @@ value := operations.CategoriesPassthrough
 | `CategoriesDatastore`    | datastore                |
 | `CategoriesCdp`          | cdp                      |
 | `CategoriesPerformance`  | performance              |
+| `CategoriesSocial`       | social                   |

@@ -52,3 +52,4 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesDatastore`    | datastore                                   |
 | `PropertyIntegrationCategoriesCdp`          | cdp                                         |
 | `PropertyIntegrationCategoriesPerformance`  | performance                                 |
+| `PropertyIntegrationCategoriesSocial`       | social                                      |

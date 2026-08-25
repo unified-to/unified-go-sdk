@@ -6,7 +6,9 @@
 
 * [CreateCdpProfile](#createcdpprofile) - Create a profile
 * [GetCdpProfile](#getcdpprofile) - Retrieve a profile
+* [GetSocialProfile](#getsocialprofile) - Retrieve a profile
 * [ListCdpProfiles](#listcdpprofiles) - List all profiles
+* [ListSocialProfiles](#listsocialprofiles) - List all profiles
 * [PatchCdpProfile](#patchcdpprofile) - Update a profile
 * [RemoveCdpProfile](#removecdpprofile) - Remove a profile
 * [UpdateCdpProfile](#updatecdpprofile) - Update a profile
@@ -122,6 +124,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetSocialProfile
+
+Retrieve a profile
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getSocialProfile" method="get" path="/social/{connection_id}/profile/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Profile.GetSocialProfile(ctx, operations.GetSocialProfileRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialProfile != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.GetSocialProfileRequest](../../pkg/models/operations/getsocialprofilerequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.GetSocialProfileResponse](../../pkg/models/operations/getsocialprofileresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListCdpProfiles
 
 List all profiles
@@ -169,6 +226,60 @@ func main() {
 ### Response
 
 **[*operations.ListCdpProfilesResponse](../../pkg/models/operations/listcdpprofilesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListSocialProfiles
+
+List all profiles
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listSocialProfiles" method="get" path="/social/{connection_id}/profile" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Profile.ListSocialProfiles(ctx, operations.ListSocialProfilesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialProfiles != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.ListSocialProfilesRequest](../../pkg/models/operations/listsocialprofilesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.ListSocialProfilesResponse](../../pkg/models/operations/listsocialprofilesresponse.md), error**
 
 ### Errors
 

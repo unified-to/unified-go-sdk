@@ -38,4 +38,5 @@ value := operations.ListAdsCampaignsQueryParamFieldsID
 | `ListAdsCampaignsQueryParamFieldsCategory`                 | category                                                   |
 | `ListAdsCampaignsQueryParamFieldsHasEuPoliticalAds`        | has_eu_political_ads                                       |
 | `ListAdsCampaignsQueryParamFieldsLabels`                   | labels                                                     |
+| `ListAdsCampaignsQueryParamFieldsKpi`                      | kpi                                                        |
 | `ListAdsCampaignsQueryParamFieldsRaw`                      | raw                                                        |

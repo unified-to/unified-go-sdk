@@ -2,20 +2,20 @@
 
 package shared
 
-type Period string
+type PropertyAdsGroupPacingPeriod string
 
 const (
-	PeriodUnspecified Period = "UNSPECIFIED"
-	PeriodDaily       Period = "DAILY"
-	PeriodFlight      Period = "FLIGHT"
+	PropertyAdsGroupPacingPeriodUnspecified PropertyAdsGroupPacingPeriod = "UNSPECIFIED"
+	PropertyAdsGroupPacingPeriodDaily       PropertyAdsGroupPacingPeriod = "DAILY"
+	PropertyAdsGroupPacingPeriodFlight      PropertyAdsGroupPacingPeriod = "FLIGHT"
 )
 
-func (e Period) ToPointer() *Period {
+func (e PropertyAdsGroupPacingPeriod) ToPointer() *PropertyAdsGroupPacingPeriod {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *Period) IsExact() bool {
+func (e *PropertyAdsGroupPacingPeriod) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "UNSPECIFIED", "DAILY", "FLIGHT":
@@ -26,10 +26,10 @@ func (e *Period) IsExact() bool {
 }
 
 type PropertyAdsGroupPacing struct {
-	DailyMaxAmount      *float64 `json:"daily_max_amount,omitempty"`
-	DailyMaxImpressions *float64 `json:"daily_max_impressions,omitempty"`
-	Period              *Period  `json:"period,omitempty"`
-	Type                *string  `json:"type,omitempty"`
+	DailyMaxAmount      *float64                      `json:"daily_max_amount,omitempty"`
+	DailyMaxImpressions *float64                      `json:"daily_max_impressions,omitempty"`
+	Period              *PropertyAdsGroupPacingPeriod `json:"period,omitempty"`
+	Type                *string                       `json:"type,omitempty"`
 }
 
 func (p *PropertyAdsGroupPacing) GetDailyMaxAmount() *float64 {
@@ -46,7 +46,7 @@ func (p *PropertyAdsGroupPacing) GetDailyMaxImpressions() *float64 {
 	return p.DailyMaxImpressions
 }
 
-func (p *PropertyAdsGroupPacing) GetPeriod() *Period {
+func (p *PropertyAdsGroupPacing) GetPeriod() *PropertyAdsGroupPacingPeriod {
 	if p == nil {
 		return nil
 	}

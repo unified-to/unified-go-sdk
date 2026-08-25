@@ -38,4 +38,5 @@ value := operations.PatchAdsCampaignQueryParamFieldsID
 | `PatchAdsCampaignQueryParamFieldsCategory`                 | category                                                   |
 | `PatchAdsCampaignQueryParamFieldsHasEuPoliticalAds`        | has_eu_political_ads                                       |
 | `PatchAdsCampaignQueryParamFieldsLabels`                   | labels                                                     |
+| `PatchAdsCampaignQueryParamFieldsKpi`                      | kpi                                                        |
 | `PatchAdsCampaignQueryParamFieldsRaw`                      | raw                                                        |

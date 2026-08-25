@@ -7,11 +7,15 @@
 * [CreateCommerceReview](#createcommercereview) - Create a review
 * [GetCommerceReview](#getcommercereview) - Retrieve a review
 * [GetPerformanceReview](#getperformancereview) - Retrieve a review
+* [GetSocialReview](#getsocialreview) - Retrieve a review
 * [ListCommerceReviews](#listcommercereviews) - List all reviews
 * [ListPerformanceReviews](#listperformancereviews) - List all reviews
+* [ListSocialReviews](#listsocialreviews) - List all reviews
 * [PatchCommerceReview](#patchcommercereview) - Update a review
+* [PatchSocialReview](#patchsocialreview) - Update a review
 * [RemoveCommerceReview](#removecommercereview) - Remove a review
 * [UpdateCommerceReview](#updatecommercereview) - Update a review
+* [UpdateSocialReview](#updatesocialreview) - Update a review
 
 ## CreateCommerceReview
 
@@ -179,6 +183,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetSocialReview
+
+Retrieve a review
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getSocialReview" method="get" path="/social/{connection_id}/review/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.GetSocialReview(ctx, operations.GetSocialReviewRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.GetSocialReviewRequest](../../pkg/models/operations/getsocialreviewrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.GetSocialReviewResponse](../../pkg/models/operations/getsocialreviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListCommerceReviews
 
 List all reviews
@@ -287,6 +346,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListSocialReviews
+
+List all reviews
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listSocialReviews" method="get" path="/social/{connection_id}/review" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.ListSocialReviews(ctx, operations.ListSocialReviewsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialReviews != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListSocialReviewsRequest](../../pkg/models/operations/listsocialreviewsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListSocialReviewsResponse](../../pkg/models/operations/listsocialreviewsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchCommerceReview
 
 Update a review
@@ -337,6 +450,63 @@ func main() {
 ### Response
 
 **[*operations.PatchCommerceReviewResponse](../../pkg/models/operations/patchcommercereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchSocialReview
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchSocialReview" method="patch" path="/social/{connection_id}/review/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.PatchSocialReview(ctx, operations.PatchSocialReviewRequest{
+        SocialReview: shared.SocialReview{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.PatchSocialReviewRequest](../../pkg/models/operations/patchsocialreviewrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.PatchSocialReviewResponse](../../pkg/models/operations/patchsocialreviewresponse.md), error**
 
 ### Errors
 
@@ -449,6 +619,63 @@ func main() {
 ### Response
 
 **[*operations.UpdateCommerceReviewResponse](../../pkg/models/operations/updatecommercereviewresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateSocialReview
+
+Update a review
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateSocialReview" method="put" path="/social/{connection_id}/review/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Review.UpdateSocialReview(ctx, operations.UpdateSocialReviewRequest{
+        SocialReview: shared.SocialReview{},
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.SocialReview != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
+| `request`                                                                                        | [operations.UpdateSocialReviewRequest](../../pkg/models/operations/updatesocialreviewrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `opts`                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                     | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+
+### Response
+
+**[*operations.UpdateSocialReviewResponse](../../pkg/models/operations/updatesocialreviewresponse.md), error**
 
 ### Errors
 

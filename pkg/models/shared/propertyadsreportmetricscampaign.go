@@ -192,6 +192,7 @@ type PropertyAdsReportMetricsCampaign struct {
 	Goal                     *PropertyAdsReportMetricsCampaignGoal                   `json:"goal,omitempty"`
 	HasEuPoliticalAds        *bool                                                   `json:"has_eu_political_ads,omitempty"`
 	ID                       *string                                                 `json:"id,omitempty"`
+	Kpi                      *PropertyAdsReportMetricsCampaignKpi                    `json:"kpi,omitempty"`
 	Labels                   []string                                                `json:"labels,omitempty"`
 	Name                     *string                                                 `json:"name,omitempty"`
 	OrganizationID           *string                                                 `json:"organization_id,omitempty"`
@@ -311,6 +312,13 @@ func (p *PropertyAdsReportMetricsCampaign) GetID() *string {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PropertyAdsReportMetricsCampaign) GetKpi() *PropertyAdsReportMetricsCampaignKpi {
+	if p == nil {
+		return nil
+	}
+	return p.Kpi
 }
 
 func (p *PropertyAdsReportMetricsCampaign) GetLabels() []string {

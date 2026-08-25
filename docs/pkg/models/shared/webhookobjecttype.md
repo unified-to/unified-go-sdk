@@ -187,3 +187,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypePerformanceReview`             | performance_review                               |
 | `WebhookObjectTypePerformanceGoal`               | performance_goal                                 |
 | `WebhookObjectTypePerformanceFeedback`           | performance_feedback                             |
+| `WebhookObjectTypeSocialPost`                    | social_post                                      |
+| `WebhookObjectTypeSocialProfile`                 | social_profile                                   |
+| `WebhookObjectTypeSocialReview`                  | social_review                                    |
+| `WebhookObjectTypeSocialInsight`                 | social_insight                                   |

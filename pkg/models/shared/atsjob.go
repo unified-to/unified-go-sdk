@@ -75,6 +75,7 @@ type AtsJob struct {
 	HiringManagerIds       []string        `json:"hiring_manager_ids,omitempty"`
 	HiringManagers         []AtsReference  `json:"hiring_managers,omitempty"`
 	ID                     *string         `json:"id,omitempty"`
+	Industry               *string         `json:"industry,omitempty"`
 	LanguageLocale         *string         `json:"language_locale,omitempty"`
 	Metadata               []AtsMetadata   `json:"metadata,omitempty"`
 	MinimumDegree          *string         `json:"minimum_degree,omitempty"`
@@ -182,6 +183,13 @@ func (a *AtsJob) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AtsJob) GetIndustry() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Industry
 }
 
 func (a *AtsJob) GetLanguageLocale() *string {

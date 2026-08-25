@@ -330,3 +330,11 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsPerformanceGoalWrite`               | performance_goal_write                                            |
 | `PropertyConnectionPermissionsPerformanceFeedbackRead`            | performance_feedback_read                                         |
 | `PropertyConnectionPermissionsPerformanceFeedbackWrite`           | performance_feedback_write                                        |
+| `PropertyConnectionPermissionsSocialPostRead`                     | social_post_read                                                  |
+| `PropertyConnectionPermissionsSocialPostWrite`                    | social_post_write                                                 |
+| `PropertyConnectionPermissionsSocialProfileRead`                  | social_profile_read                                               |
+| `PropertyConnectionPermissionsSocialProfileWrite`                 | social_profile_write                                              |
+| `PropertyConnectionPermissionsSocialReviewRead`                   | social_review_read                                                |
+| `PropertyConnectionPermissionsSocialReviewWrite`                  | social_review_write                                               |
+| `PropertyConnectionPermissionsSocialInsightRead`                  | social_insight_read                                               |
+| `PropertyConnectionPermissionsSocialInsightWrite`                 | social_insight_write                                              |

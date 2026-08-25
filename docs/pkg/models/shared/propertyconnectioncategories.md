@@ -52,3 +52,4 @@ custom := shared.PropertyConnectionCategories("custom_value")
 | `PropertyConnectionCategoriesDatastore`    | datastore                                  |
 | `PropertyConnectionCategoriesCdp`          | cdp                                        |
 | `PropertyConnectionCategoriesPerformance`  | performance                                |
+| `PropertyConnectionCategoriesSocial`       | social                                     |

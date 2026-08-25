@@ -19,8 +19,8 @@ const (
 	CreativeTypePublisherHosted CreativeType = "PUBLISHER_HOSTED"
 	CreativeTypeAssetBased      CreativeType = "ASSET_BASED"
 	CreativeTypeImage           CreativeType = "IMAGE"
-	CreativeTypeShare           CreativeType = "SHARE"
 	CreativeTypeDocument        CreativeType = "DOCUMENT"
+	CreativeTypeShare           CreativeType = "SHARE"
 )
 
 func (e CreativeType) ToPointer() *CreativeType {
@@ -31,7 +31,7 @@ func (e CreativeType) ToPointer() *CreativeType {
 func (e *CreativeType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "AUDIO", "PUBLISHER_HOSTED", "ASSET_BASED", "IMAGE", "SHARE", "DOCUMENT":
+		case "UNSPECIFIED", "STANDARD", "EXPANDABLE", "VIDEO", "NATIVE", "AUDIO", "PUBLISHER_HOSTED", "ASSET_BASED", "IMAGE", "DOCUMENT", "SHARE":
 			return true
 		}
 	}
