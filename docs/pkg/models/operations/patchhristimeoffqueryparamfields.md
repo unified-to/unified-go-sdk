@@ -28,6 +28,7 @@ value := operations.PatchHrisTimeoffQueryParamFieldsID
 | `PatchHrisTimeoffQueryParamFieldsApprovedAt`     | approved_at                                      |
 | `PatchHrisTimeoffQueryParamFieldsComments`       | comments                                         |
 | `PatchHrisTimeoffQueryParamFieldsReason`         | reason                                           |
+| `PatchHrisTimeoffQueryParamFieldsOriginalType`   | original_type                                    |
 | `PatchHrisTimeoffQueryParamFieldsType`           | type                                             |
 | `PatchHrisTimeoffQueryParamFieldsDuration`       | duration                                         |
 | `PatchHrisTimeoffQueryParamFieldsDurationType`   | duration_type                                    |

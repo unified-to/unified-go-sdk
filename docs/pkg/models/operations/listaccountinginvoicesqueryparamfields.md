@@ -34,6 +34,7 @@ value := operations.ListAccountingInvoicesQueryParamFieldsID
 | `ListAccountingInvoicesQueryParamFieldsContactID`               | contact_id                                                      |
 | `ListAccountingInvoicesQueryParamFieldsCurrency`                | currency                                                        |
 | `ListAccountingInvoicesQueryParamFieldsNotes`                   | notes                                                           |
+| `ListAccountingInvoicesQueryParamFieldsExtendedNotes`           | extended_notes                                                  |
 | `ListAccountingInvoicesQueryParamFieldsRefundReason`            | refund_reason                                                   |
 | `ListAccountingInvoicesQueryParamFieldsTerm`                    | term                                                            |
 | `ListAccountingInvoicesQueryParamFieldsPaymentTerms`            | payment_terms                                                   |

@@ -154,6 +154,7 @@ type AccountingInvoice struct {
 	Currency                *string                                   `json:"currency,omitempty"`
 	DiscountAmount          *float64                                  `json:"discount_amount,omitempty"`
 	DueAt                   *time.Time                                `json:"due_at,omitempty"`
+	ExtendedNotes           []AccountingExtendedNote                  `json:"extended_notes,omitempty"`
 	ID                      *string                                   `json:"id,omitempty"`
 	InvoiceNumber           *string                                   `json:"invoice_number,omitempty"`
 	Lineitems               []AccountingLineitem                      `json:"lineitems,omitempty"`
@@ -256,6 +257,13 @@ func (a *AccountingInvoice) GetDueAt() *time.Time {
 		return nil
 	}
 	return a.DueAt
+}
+
+func (a *AccountingInvoice) GetExtendedNotes() []AccountingExtendedNote {
+	if a == nil {
+		return nil
+	}
+	return a.ExtendedNotes
 }
 
 func (a *AccountingInvoice) GetID() *string {

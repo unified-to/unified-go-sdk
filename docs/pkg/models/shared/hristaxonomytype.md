@@ -25,3 +25,4 @@ custom := shared.HrisTaxonomyType("custom_value")
 | `HrisTaxonomyTypeCertification` | CERTIFICATION                   |
 | `HrisTaxonomyTypeRole`          | ROLE                            |
 | `HrisTaxonomyTypeHoliday`       | HOLIDAY                         |
+| `HrisTaxonomyTypeLeave`         | LEAVE                           |

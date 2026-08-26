@@ -92,6 +92,7 @@ type HrisTimeoff struct {
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
 	IsPaid         *bool              `json:"is_paid,omitempty"`
+	OriginalType   *string            `json:"original_type,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
 	Reason         *string            `json:"reason,omitempty"`
 	StartAt        *time.Time         `json:"start_at,omitempty"`
@@ -180,6 +181,13 @@ func (h *HrisTimeoff) GetIsPaid() *bool {
 		return nil
 	}
 	return h.IsPaid
+}
+
+func (h *HrisTimeoff) GetOriginalType() *string {
+	if h == nil {
+		return nil
+	}
+	return h.OriginalType
 }
 
 func (h *HrisTimeoff) GetRaw() map[string]any {

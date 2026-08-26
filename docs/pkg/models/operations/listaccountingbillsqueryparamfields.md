@@ -33,6 +33,7 @@ value := operations.ListAccountingBillsQueryParamFieldsID
 | `ListAccountingBillsQueryParamFieldsContactID`               | contact_id                                                   |
 | `ListAccountingBillsQueryParamFieldsCurrency`                | currency                                                     |
 | `ListAccountingBillsQueryParamFieldsNotes`                   | notes                                                        |
+| `ListAccountingBillsQueryParamFieldsExtendedNotes`           | extended_notes                                               |
 | `ListAccountingBillsQueryParamFieldsRefundReason`            | refund_reason                                                |
 | `ListAccountingBillsQueryParamFieldsLineitems`               | lineitems                                                    |
 | `ListAccountingBillsQueryParamFieldsStatus`                  | status                                                       |

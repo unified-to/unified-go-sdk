@@ -31,6 +31,7 @@ const (
 	CreateAccountingInvoiceQueryParamFieldsContactID               CreateAccountingInvoiceQueryParamFields = "contact_id"
 	CreateAccountingInvoiceQueryParamFieldsCurrency                CreateAccountingInvoiceQueryParamFields = "currency"
 	CreateAccountingInvoiceQueryParamFieldsNotes                   CreateAccountingInvoiceQueryParamFields = "notes"
+	CreateAccountingInvoiceQueryParamFieldsExtendedNotes           CreateAccountingInvoiceQueryParamFields = "extended_notes"
 	CreateAccountingInvoiceQueryParamFieldsRefundReason            CreateAccountingInvoiceQueryParamFields = "refund_reason"
 	CreateAccountingInvoiceQueryParamFieldsTerm                    CreateAccountingInvoiceQueryParamFields = "term"
 	CreateAccountingInvoiceQueryParamFieldsPaymentTerms            CreateAccountingInvoiceQueryParamFields = "payment_terms"
@@ -96,6 +97,8 @@ func (e *CreateAccountingInvoiceQueryParamFields) UnmarshalJSON(data []byte) err
 	case "currency":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "extended_notes":
 		fallthrough
 	case "refund_reason":
 		fallthrough

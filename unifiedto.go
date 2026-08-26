@@ -137,8 +137,8 @@ type UnifiedTo struct {
 	Crm                 *Crm
 	Deal                *Deal
 	Lead                *Lead
-	Picklist            *Picklist
 	Pipeline            *Pipeline
+	Taxonomy            *Taxonomy
 	Datastore           *Datastore
 	Database            *Database
 	Query               *Query
@@ -161,7 +161,6 @@ type UnifiedTo struct {
 	Device              *Device
 	Employee            *Employee
 	Payslip             *Payslip
-	Taxonomy            *Taxonomy
 	Timeoff             *Timeoff
 	Timeshift           *Timeshift
 	Kms                 *Kms
@@ -308,9 +307,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.119",
+		SDKVersion: "0.36.120",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.36.119 2.932.9 1.0 github.com/unified-to/unified-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.36.120 2.932.9 1.0 github.com/unified-to/unified-go-sdk",
 			ServerList: ServerList,
 		},
 		hooks: hooks.New(),
@@ -411,8 +410,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Crm = newCrm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Picklist = newPicklist(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Pipeline = newPipeline(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Taxonomy = newTaxonomy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Datastore = newDatastore(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Database = newDatabase(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Query = newQuery(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -435,7 +434,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Employee = newEmployee(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Taxonomy = newTaxonomy(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Kms = newKms(sdk, sdk.sdkConfiguration, sdk.hooks)

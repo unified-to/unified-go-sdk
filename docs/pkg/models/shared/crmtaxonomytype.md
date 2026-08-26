@@ -1,4 +1,4 @@
-# CrmPicklistType
+# CrmTaxonomyType
 
 ## Example Usage
 
@@ -7,10 +7,10 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 )
 
-value := shared.CrmPicklistTypeIndustry
+value := shared.CrmTaxonomyTypeIndustry
 
 // Open enum: custom values can be created with a direct type cast
-custom := shared.CrmPicklistType("custom_value")
+custom := shared.CrmTaxonomyType("custom_value")
 ```
 
 
@@ -18,4 +18,4 @@ custom := shared.CrmPicklistType("custom_value")
 
 | Name                      | Value                     |
 | ------------------------- | ------------------------- |
-| `CrmPicklistTypeIndustry` | INDUSTRY                  |
+| `CrmTaxonomyTypeIndustry` | INDUSTRY                  |

@@ -9,20 +9,20 @@ import (
 	"net/http"
 )
 
-type ListCrmPicklistsQueryParamFields string
+type ListCrmTaxonomiesQueryParamFields string
 
 const (
-	ListCrmPicklistsQueryParamFieldsID    ListCrmPicklistsQueryParamFields = "id"
-	ListCrmPicklistsQueryParamFieldsName  ListCrmPicklistsQueryParamFields = "name"
-	ListCrmPicklistsQueryParamFieldsLabel ListCrmPicklistsQueryParamFields = "label"
-	ListCrmPicklistsQueryParamFieldsType  ListCrmPicklistsQueryParamFields = "type"
-	ListCrmPicklistsQueryParamFieldsRaw   ListCrmPicklistsQueryParamFields = "raw"
+	ListCrmTaxonomiesQueryParamFieldsID    ListCrmTaxonomiesQueryParamFields = "id"
+	ListCrmTaxonomiesQueryParamFieldsName  ListCrmTaxonomiesQueryParamFields = "name"
+	ListCrmTaxonomiesQueryParamFieldsLabel ListCrmTaxonomiesQueryParamFields = "label"
+	ListCrmTaxonomiesQueryParamFieldsType  ListCrmTaxonomiesQueryParamFields = "type"
+	ListCrmTaxonomiesQueryParamFieldsRaw   ListCrmTaxonomiesQueryParamFields = "raw"
 )
 
-func (e ListCrmPicklistsQueryParamFields) ToPointer() *ListCrmPicklistsQueryParamFields {
+func (e ListCrmTaxonomiesQueryParamFields) ToPointer() *ListCrmTaxonomiesQueryParamFields {
 	return &e
 }
-func (e *ListCrmPicklistsQueryParamFields) UnmarshalJSON(data []byte) error {
+func (e *ListCrmTaxonomiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -37,21 +37,21 @@ func (e *ListCrmPicklistsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "raw":
-		*e = ListCrmPicklistsQueryParamFields(v)
+		*e = ListCrmTaxonomiesQueryParamFields(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCrmPicklistsQueryParamFields: %v", v)
+		return fmt.Errorf("invalid value for ListCrmTaxonomiesQueryParamFields: %v", v)
 	}
 }
 
-type ListCrmPicklistsRequest struct {
+type ListCrmTaxonomiesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
-	Fields []ListCrmPicklistsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                           `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                           `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                            `queryParam:"style=form,explode=true,name=order"`
+	Fields []ListCrmTaxonomiesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
+	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -62,109 +62,109 @@ type ListCrmPicklistsRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 }
 
-func (l *ListCrmPicklistsRequest) GetConnectionID() string {
+func (l *ListCrmTaxonomiesRequest) GetConnectionID() string {
 	if l == nil {
 		return ""
 	}
 	return l.ConnectionID
 }
 
-func (l *ListCrmPicklistsRequest) GetFields() []ListCrmPicklistsQueryParamFields {
+func (l *ListCrmTaxonomiesRequest) GetFields() []ListCrmTaxonomiesQueryParamFields {
 	if l == nil {
 		return nil
 	}
 	return l.Fields
 }
 
-func (l *ListCrmPicklistsRequest) GetLimit() *float64 {
+func (l *ListCrmTaxonomiesRequest) GetLimit() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Limit
 }
 
-func (l *ListCrmPicklistsRequest) GetOffset() *float64 {
+func (l *ListCrmTaxonomiesRequest) GetOffset() *float64 {
 	if l == nil {
 		return nil
 	}
 	return l.Offset
 }
 
-func (l *ListCrmPicklistsRequest) GetOrder() *string {
+func (l *ListCrmTaxonomiesRequest) GetOrder() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Order
 }
 
-func (l *ListCrmPicklistsRequest) GetQuery() *string {
+func (l *ListCrmTaxonomiesRequest) GetQuery() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Query
 }
 
-func (l *ListCrmPicklistsRequest) GetRaw() *string {
+func (l *ListCrmTaxonomiesRequest) GetRaw() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Raw
 }
 
-func (l *ListCrmPicklistsRequest) GetSort() *string {
+func (l *ListCrmTaxonomiesRequest) GetSort() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Sort
 }
 
-func (l *ListCrmPicklistsRequest) GetType() *string {
+func (l *ListCrmTaxonomiesRequest) GetType() *string {
 	if l == nil {
 		return nil
 	}
 	return l.Type
 }
 
-func (l *ListCrmPicklistsRequest) GetUpdatedGte() *string {
+func (l *ListCrmTaxonomiesRequest) GetUpdatedGte() *string {
 	if l == nil {
 		return nil
 	}
 	return l.UpdatedGte
 }
 
-type ListCrmPicklistsResponse struct {
+type ListCrmTaxonomiesResponse struct {
 	// HTTP response content type for this operation
 	ContentType string
 	// Successful
-	CrmPicklists []shared.CrmPicklist
+	CrmTaxonomies []shared.CrmTaxonomy
 	// HTTP response status code for this operation
 	StatusCode int
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 }
 
-func (l *ListCrmPicklistsResponse) GetContentType() string {
+func (l *ListCrmTaxonomiesResponse) GetContentType() string {
 	if l == nil {
 		return ""
 	}
 	return l.ContentType
 }
 
-func (l *ListCrmPicklistsResponse) GetCrmPicklists() []shared.CrmPicklist {
+func (l *ListCrmTaxonomiesResponse) GetCrmTaxonomies() []shared.CrmTaxonomy {
 	if l == nil {
 		return nil
 	}
-	return l.CrmPicklists
+	return l.CrmTaxonomies
 }
 
-func (l *ListCrmPicklistsResponse) GetStatusCode() int {
+func (l *ListCrmTaxonomiesResponse) GetStatusCode() int {
 	if l == nil {
 		return 0
 	}
 	return l.StatusCode
 }
 
-func (l *ListCrmPicklistsResponse) GetRawResponse() *http.Response {
+func (l *ListCrmTaxonomiesResponse) GetRawResponse() *http.Response {
 	if l == nil {
 		return nil
 	}

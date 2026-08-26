@@ -2,18 +2,18 @@
 
 package shared
 
-type CrmPicklistType string
+type CrmTaxonomyType string
 
 const (
-	CrmPicklistTypeIndustry CrmPicklistType = "INDUSTRY"
+	CrmTaxonomyTypeIndustry CrmTaxonomyType = "INDUSTRY"
 )
 
-func (e CrmPicklistType) ToPointer() *CrmPicklistType {
+func (e CrmTaxonomyType) ToPointer() *CrmTaxonomyType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *CrmPicklistType) IsExact() bool {
+func (e *CrmTaxonomyType) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "INDUSTRY":
@@ -23,43 +23,43 @@ func (e *CrmPicklistType) IsExact() bool {
 	return false
 }
 
-type CrmPicklist struct {
+type CrmTaxonomy struct {
 	ID    string           `json:"id"`
 	Label *string          `json:"label,omitempty"`
 	Name  *string          `json:"name,omitempty"`
 	Raw   map[string]any   `json:"raw,omitempty"`
-	Type  *CrmPicklistType `json:"type,omitempty"`
+	Type  *CrmTaxonomyType `json:"type,omitempty"`
 }
 
-func (c *CrmPicklist) GetID() string {
+func (c *CrmTaxonomy) GetID() string {
 	if c == nil {
 		return ""
 	}
 	return c.ID
 }
 
-func (c *CrmPicklist) GetLabel() *string {
+func (c *CrmTaxonomy) GetLabel() *string {
 	if c == nil {
 		return nil
 	}
 	return c.Label
 }
 
-func (c *CrmPicklist) GetName() *string {
+func (c *CrmTaxonomy) GetName() *string {
 	if c == nil {
 		return nil
 	}
 	return c.Name
 }
 
-func (c *CrmPicklist) GetRaw() map[string]any {
+func (c *CrmTaxonomy) GetRaw() map[string]any {
 	if c == nil {
 		return nil
 	}
 	return c.Raw
 }
 
-func (c *CrmPicklist) GetType() *CrmPicklistType {
+func (c *CrmTaxonomy) GetType() *CrmTaxonomyType {
 	if c == nil {
 		return nil
 	}

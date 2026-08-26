@@ -866,8 +866,8 @@ func main() {
 * [ListCrmDeals](docs/sdks/crm/README.md#listcrmdeals) - List all deals
 * [ListCrmEvents](docs/sdks/crm/README.md#listcrmevents) - List all events
 * [ListCrmLeads](docs/sdks/crm/README.md#listcrmleads) - List all leads
-* [ListCrmPicklists](docs/sdks/crm/README.md#listcrmpicklists) - List all picklists
 * [ListCrmPipelines](docs/sdks/crm/README.md#listcrmpipelines) - List all pipelines
+* [ListCrmTaxonomies](docs/sdks/crm/README.md#listcrmtaxonomies) - List all taxonomies
 * [PatchCrmCompany](docs/sdks/crm/README.md#patchcrmcompany) - Update a company
 * [PatchCrmContact](docs/sdks/crm/README.md#patchcrmcontact) - Update a contact
 * [PatchCrmDeal](docs/sdks/crm/README.md#patchcrmdeal) - Update a deal
@@ -1638,10 +1638,6 @@ func main() {
 
 * [ListEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [Picklist](docs/sdks/picklist/README.md)
-
-* [ListCrmPicklists](docs/sdks/picklist/README.md#listcrmpicklists) - List all picklists
-
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [CreateCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
@@ -2081,6 +2077,7 @@ func main() {
 ### [Taxonomy](docs/sdks/taxonomy/README.md)
 
 * [GetHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [ListCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [ListHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)

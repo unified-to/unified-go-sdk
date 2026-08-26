@@ -130,7 +130,7 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsCrmLeadWrite`                       | crm_lead_write                                                    |
 | `PropertyConnectionPermissionsCrmPipelineRead`                    | crm_pipeline_read                                                 |
 | `PropertyConnectionPermissionsCrmPipelineWrite`                   | crm_pipeline_write                                                |
-| `PropertyConnectionPermissionsCrmPicklistRead`                    | crm_picklist_read                                                 |
+| `PropertyConnectionPermissionsCrmTaxonomyRead`                    | crm_taxonomy_read                                                 |
 | `PropertyConnectionPermissionsMartechListRead`                    | martech_list_read                                                 |
 | `PropertyConnectionPermissionsMartechListWrite`                   | martech_list_write                                                |
 | `PropertyConnectionPermissionsMartechMemberRead`                  | martech_member_read                                               |

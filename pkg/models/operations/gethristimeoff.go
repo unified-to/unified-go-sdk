@@ -25,6 +25,7 @@ const (
 	GetHrisTimeoffQueryParamFieldsApprovedAt     GetHrisTimeoffQueryParamFields = "approved_at"
 	GetHrisTimeoffQueryParamFieldsComments       GetHrisTimeoffQueryParamFields = "comments"
 	GetHrisTimeoffQueryParamFieldsReason         GetHrisTimeoffQueryParamFields = "reason"
+	GetHrisTimeoffQueryParamFieldsOriginalType   GetHrisTimeoffQueryParamFields = "original_type"
 	GetHrisTimeoffQueryParamFieldsType           GetHrisTimeoffQueryParamFields = "type"
 	GetHrisTimeoffQueryParamFieldsDuration       GetHrisTimeoffQueryParamFields = "duration"
 	GetHrisTimeoffQueryParamFieldsDurationType   GetHrisTimeoffQueryParamFields = "duration_type"
@@ -65,6 +66,8 @@ func (e *GetHrisTimeoffQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "comments":
 		fallthrough
 	case "reason":
+		fallthrough
+	case "original_type":
 		fallthrough
 	case "type":
 		fallthrough

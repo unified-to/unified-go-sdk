@@ -30,6 +30,7 @@ const (
 	PatchAccountingBillQueryParamFieldsContactID               PatchAccountingBillQueryParamFields = "contact_id"
 	PatchAccountingBillQueryParamFieldsCurrency                PatchAccountingBillQueryParamFields = "currency"
 	PatchAccountingBillQueryParamFieldsNotes                   PatchAccountingBillQueryParamFields = "notes"
+	PatchAccountingBillQueryParamFieldsExtendedNotes           PatchAccountingBillQueryParamFields = "extended_notes"
 	PatchAccountingBillQueryParamFieldsRefundReason            PatchAccountingBillQueryParamFields = "refund_reason"
 	PatchAccountingBillQueryParamFieldsLineitems               PatchAccountingBillQueryParamFields = "lineitems"
 	PatchAccountingBillQueryParamFieldsStatus                  PatchAccountingBillQueryParamFields = "status"
@@ -92,6 +93,8 @@ func (e *PatchAccountingBillQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "currency":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "extended_notes":
 		fallthrough
 	case "refund_reason":
 		fallthrough

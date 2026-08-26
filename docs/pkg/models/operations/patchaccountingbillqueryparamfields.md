@@ -33,6 +33,7 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | `PatchAccountingBillQueryParamFieldsContactID`               | contact_id                                                   |
 | `PatchAccountingBillQueryParamFieldsCurrency`                | currency                                                     |
 | `PatchAccountingBillQueryParamFieldsNotes`                   | notes                                                        |
+| `PatchAccountingBillQueryParamFieldsExtendedNotes`           | extended_notes                                               |
 | `PatchAccountingBillQueryParamFieldsRefundReason`            | refund_reason                                                |
 | `PatchAccountingBillQueryParamFieldsLineitems`               | lineitems                                                    |
 | `PatchAccountingBillQueryParamFieldsStatus`                  | status                                                       |

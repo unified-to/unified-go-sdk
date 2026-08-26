@@ -78,7 +78,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeCrmEvent`                      | crm_event                                        |
 | `WebhookObjectTypeCrmLead`                       | crm_lead                                         |
 | `WebhookObjectTypeCrmPipeline`                   | crm_pipeline                                     |
-| `WebhookObjectTypeCrmPicklist`                   | crm_picklist                                     |
+| `WebhookObjectTypeCrmTaxonomy`                   | crm_taxonomy                                     |
 | `WebhookObjectTypeHrisEmployee`                  | hris_employee                                    |
 | `WebhookObjectTypeHrisGroup`                     | hris_group                                       |
 | `WebhookObjectTypeHrisPayslip`                   | hris_payslip                                     |
