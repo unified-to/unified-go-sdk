@@ -4669,3 +4669,13 @@ Based on:
 - [go v0.36.120] .
 ### Releases
 - [Go v0.36.120] https://github.com/unified-to/unified-go-sdk/releases/tag/v0.36.120 - .
+
+## 2026-08-28 03:10:05
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.796.1 (2.933.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.36.121] .
+### Releases
+- [Go v0.36.121] https://github.com/unified-to/unified-go-sdk/releases/tag/v0.36.121 - .

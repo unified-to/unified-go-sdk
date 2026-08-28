@@ -354,7 +354,9 @@ func main() {
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
+* [CreateAssessmentOrder](docs/sdks/assessment/README.md#createassessmentorder) - Create an order
 * [CreateAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [GetAssessmentOrder](docs/sdks/assessment/README.md#getassessmentorder) - Retrieve an order
 * [GetAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
 * [ListAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
 * [PatchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
@@ -1518,7 +1520,9 @@ func main() {
 ### [Order](docs/sdks/order/README.md)
 
 * [CreateAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [CreateAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
 * [GetAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [GetAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
 * [ListAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [PatchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
 * [PatchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
