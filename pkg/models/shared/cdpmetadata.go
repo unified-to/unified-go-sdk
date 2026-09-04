@@ -79,7 +79,14 @@ func CreateCdpMetadata5Boolean(boolean bool) CdpMetadata5 {
 	}
 }
 
-func (u *CdpMetadata5) UnmarshalJSON(data []byte) error {
+func (u *CdpMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CdpMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var cdpMetadata1 CdpMetadata1 = CdpMetadata1{}
 	if err := utils.UnmarshalJSON(data, &cdpMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateCdpMetadataExtraDataArrayOfCdpMetadata5(arrayOfCdpMetadata5 []CdpMeta
 	}
 }
 
-func (u *CdpMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *CdpMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CdpMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -358,7 +372,14 @@ func CreateCdpMetadataSchemas5Boolean(boolean bool) CdpMetadataSchemas5 {
 	}
 }
 
-func (u *CdpMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *CdpMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CdpMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var cdpMetadataSchemas1 CdpMetadataSchemas1 = CdpMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &cdpMetadataSchemas1, "", true, nil); err == nil {
@@ -476,7 +497,14 @@ func CreateCdpMetadataValueArrayOfCdpMetadataSchemas5(arrayOfCdpMetadataSchemas5
 	}
 }
 
-func (u *CdpMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *CdpMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CdpMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

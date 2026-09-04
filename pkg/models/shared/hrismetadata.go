@@ -79,7 +79,14 @@ func CreateHrisMetadata5Boolean(boolean bool) HrisMetadata5 {
 	}
 }
 
-func (u *HrisMetadata5) UnmarshalJSON(data []byte) error {
+func (u *HrisMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = HrisMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var hrisMetadata1 HrisMetadata1 = HrisMetadata1{}
 	if err := utils.UnmarshalJSON(data, &hrisMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateHrisMetadataExtraDataArrayOfHrisMetadata5(arrayOfHrisMetadata5 []Hris
 	}
 }
 
-func (u *HrisMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *HrisMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = HrisMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateHrisMetadataSchemas5Boolean(boolean bool) HrisMetadataSchemas5 {
 	}
 }
 
-func (u *HrisMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *HrisMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = HrisMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var hrisMetadataSchemas1 HrisMetadataSchemas1 = HrisMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &hrisMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateHrisMetadataValueArrayOfHrisMetadataSchemas5(arrayOfHrisMetadataSchem
 	}
 }
 
-func (u *HrisMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *HrisMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = HrisMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

@@ -79,7 +79,14 @@ func CreateTaskMetadata5Boolean(boolean bool) TaskMetadata5 {
 	}
 }
 
-func (u *TaskMetadata5) UnmarshalJSON(data []byte) error {
+func (u *TaskMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = TaskMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var taskMetadata1 TaskMetadata1 = TaskMetadata1{}
 	if err := utils.UnmarshalJSON(data, &taskMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateTaskMetadataExtraDataArrayOfTaskMetadata5(arrayOfTaskMetadata5 []Task
 	}
 }
 
-func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *TaskMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = TaskMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateTaskMetadataSchemas5Boolean(boolean bool) TaskMetadataSchemas5 {
 	}
 }
 
-func (u *TaskMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *TaskMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = TaskMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var taskMetadataSchemas1 TaskMetadataSchemas1 = TaskMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &taskMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateTaskMetadataValueArrayOfTaskMetadataSchemas5(arrayOfTaskMetadataSchem
 	}
 }
 
-func (u *TaskMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *TaskMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = TaskMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

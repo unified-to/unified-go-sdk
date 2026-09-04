@@ -79,7 +79,14 @@ func CreateAtsMetadata5Boolean(boolean bool) AtsMetadata5 {
 	}
 }
 
-func (u *AtsMetadata5) UnmarshalJSON(data []byte) error {
+func (u *AtsMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AtsMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var atsMetadata1 AtsMetadata1 = AtsMetadata1{}
 	if err := utils.UnmarshalJSON(data, &atsMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateAtsMetadataExtraDataArrayOfAtsMetadata5(arrayOfAtsMetadata5 []AtsMeta
 	}
 }
 
-func (u *AtsMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *AtsMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AtsMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateAtsMetadataSchemas5Boolean(boolean bool) AtsMetadataSchemas5 {
 	}
 }
 
-func (u *AtsMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *AtsMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AtsMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var atsMetadataSchemas1 AtsMetadataSchemas1 = AtsMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &atsMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateAtsMetadataValueArrayOfAtsMetadataSchemas5(arrayOfAtsMetadataSchemas5
 	}
 }
 
-func (u *AtsMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *AtsMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AtsMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

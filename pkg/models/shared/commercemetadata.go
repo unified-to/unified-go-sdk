@@ -79,7 +79,14 @@ func CreateCommerceMetadata5Boolean(boolean bool) CommerceMetadata5 {
 	}
 }
 
-func (u *CommerceMetadata5) UnmarshalJSON(data []byte) error {
+func (u *CommerceMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CommerceMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var commerceMetadata1 CommerceMetadata1 = CommerceMetadata1{}
 	if err := utils.UnmarshalJSON(data, &commerceMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateCommerceMetadataExtraDataArrayOfCommerceMetadata5(arrayOfCommerceMeta
 	}
 }
 
-func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *CommerceMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CommerceMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateCommerceMetadataSchemas5Boolean(boolean bool) CommerceMetadataSchemas
 	}
 }
 
-func (u *CommerceMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *CommerceMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CommerceMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var commerceMetadataSchemas1 CommerceMetadataSchemas1 = CommerceMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &commerceMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateCommerceMetadataValueArrayOfCommerceMetadataSchemas5(arrayOfCommerceM
 	}
 }
 
-func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *CommerceMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CommerceMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

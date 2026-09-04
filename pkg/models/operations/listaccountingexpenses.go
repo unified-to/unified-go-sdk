@@ -111,6 +111,8 @@ func (e *ListAccountingExpensesQueryParamFields) UnmarshalJSON(data []byte) erro
 }
 
 type ListAccountingExpensesRequest struct {
+	// The expense approver user/employee ID to filter by (reference to HrisEmployee)
+	ApproverUserID *string `queryParam:"style=form,explode=true,name=approver_user_id"`
 	// The category ID to filter by (reference to AccountingCategory)
 	CategoryID *string `queryParam:"style=form,explode=true,name=category_id"`
 	// ID of the connection
@@ -141,6 +143,13 @@ type ListAccountingExpensesRequest struct {
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
 	UserID *string `queryParam:"style=form,explode=true,name=user_id"`
+}
+
+func (l *ListAccountingExpensesRequest) GetApproverUserID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.ApproverUserID
 }
 
 func (l *ListAccountingExpensesRequest) GetCategoryID() *string {

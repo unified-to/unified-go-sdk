@@ -76,7 +76,14 @@ func CreateFiveBoolean(boolean bool) Five {
 	}
 }
 
-func (u *Five) UnmarshalJSON(data []byte) error {
+func (u *Five) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Five{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var one One = One{}
 	if err := utils.UnmarshalJSON(data, &one, "", true, nil); err == nil {
@@ -194,7 +201,14 @@ func CreateExtraDataArrayOf5(arrayOf5 []Five) ExtraData {
 	}
 }
 
-func (u *ExtraData) UnmarshalJSON(data []byte) error {
+func (u *ExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = ExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -362,7 +376,14 @@ func CreateAccountingMetadata5Boolean(boolean bool) AccountingMetadata5 {
 	}
 }
 
-func (u *AccountingMetadata5) UnmarshalJSON(data []byte) error {
+func (u *AccountingMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AccountingMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var accountingMetadata1 AccountingMetadata1 = AccountingMetadata1{}
 	if err := utils.UnmarshalJSON(data, &accountingMetadata1, "", true, nil); err == nil {
@@ -480,7 +501,14 @@ func CreateValueArrayOfAccountingMetadata5(arrayOfAccountingMetadata5 []Accounti
 	}
 }
 
-func (u *Value) UnmarshalJSON(data []byte) error {
+func (u *Value) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Value{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

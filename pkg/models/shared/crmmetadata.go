@@ -79,7 +79,14 @@ func CreateCrmMetadata5Boolean(boolean bool) CrmMetadata5 {
 	}
 }
 
-func (u *CrmMetadata5) UnmarshalJSON(data []byte) error {
+func (u *CrmMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CrmMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var crmMetadata1 CrmMetadata1 = CrmMetadata1{}
 	if err := utils.UnmarshalJSON(data, &crmMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateCrmMetadataExtraDataArrayOfCrmMetadata5(arrayOfCrmMetadata5 []CrmMeta
 	}
 }
 
-func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *CrmMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CrmMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateCrmMetadataSchemas5Boolean(boolean bool) CrmMetadataSchemas5 {
 	}
 }
 
-func (u *CrmMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *CrmMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CrmMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var crmMetadataSchemas1 CrmMetadataSchemas1 = CrmMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &crmMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateCrmMetadataValueArrayOfCrmMetadataSchemas5(arrayOfCrmMetadataSchemas5
 	}
 }
 
-func (u *CrmMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *CrmMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = CrmMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

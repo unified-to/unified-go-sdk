@@ -80,7 +80,14 @@ func CreateIntegration5Boolean(boolean bool) Integration5 {
 	}
 }
 
-func (u *Integration5) UnmarshalJSON(data []byte) error {
+func (u *Integration5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Integration5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var integration1 Integration1 = Integration1{}
 	if err := utils.UnmarshalJSON(data, &integration1, "", true, nil); err == nil {
@@ -198,7 +205,14 @@ func CreateAPIArrayOfIntegration5(arrayOfIntegration5 []Integration5) API {
 	}
 }
 
-func (u *API) UnmarshalJSON(data []byte) error {
+func (u *API) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = API{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -333,7 +347,14 @@ func CreateIntegrationSchemas5Boolean(boolean bool) IntegrationSchemas5 {
 	}
 }
 
-func (u *IntegrationSchemas5) UnmarshalJSON(data []byte) error {
+func (u *IntegrationSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = IntegrationSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var integrationSchemas1 IntegrationSchemas1 = IntegrationSchemas1{}
 	if err := utils.UnmarshalJSON(data, &integrationSchemas1, "", true, nil); err == nil {
@@ -451,7 +472,14 @@ func CreatePartnershipArrayOfIntegrationSchemas5(arrayOfIntegrationSchemas5 []In
 	}
 }
 
-func (u *Partnership) UnmarshalJSON(data []byte) error {
+func (u *Partnership) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Partnership{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -586,7 +614,14 @@ func CreateIntegrationSchemasSaml5Boolean(boolean bool) IntegrationSchemasSaml5 
 	}
 }
 
-func (u *IntegrationSchemasSaml5) UnmarshalJSON(data []byte) error {
+func (u *IntegrationSchemasSaml5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = IntegrationSchemasSaml5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var integrationSchemasSaml1 IntegrationSchemasSaml1 = IntegrationSchemasSaml1{}
 	if err := utils.UnmarshalJSON(data, &integrationSchemasSaml1, "", true, nil); err == nil {
@@ -704,7 +739,14 @@ func CreateSamlArrayOfIntegrationSchemasSaml5(arrayOfIntegrationSchemasSaml5 []I
 	}
 }
 
-func (u *Saml) UnmarshalJSON(data []byte) error {
+func (u *Saml) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Saml{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -839,7 +881,14 @@ func CreateIntegrationSchemasSandbox5Boolean(boolean bool) IntegrationSchemasSan
 	}
 }
 
-func (u *IntegrationSchemasSandbox5) UnmarshalJSON(data []byte) error {
+func (u *IntegrationSchemasSandbox5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = IntegrationSchemasSandbox5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var integrationSchemasSandbox1 IntegrationSchemasSandbox1 = IntegrationSchemasSandbox1{}
 	if err := utils.UnmarshalJSON(data, &integrationSchemasSandbox1, "", true, nil); err == nil {
@@ -957,7 +1006,14 @@ func CreateSandboxArrayOfIntegrationSchemasSandbox5(arrayOfIntegrationSchemasSan
 	}
 }
 
-func (u *Sandbox) UnmarshalJSON(data []byte) error {
+func (u *Sandbox) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Sandbox{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

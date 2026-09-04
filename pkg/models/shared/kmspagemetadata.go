@@ -79,7 +79,14 @@ func CreateKmsPageMetadata5Boolean(boolean bool) KmsPageMetadata5 {
 	}
 }
 
-func (u *KmsPageMetadata5) UnmarshalJSON(data []byte) error {
+func (u *KmsPageMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = KmsPageMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var kmsPageMetadata1 KmsPageMetadata1 = KmsPageMetadata1{}
 	if err := utils.UnmarshalJSON(data, &kmsPageMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateKmsPageMetadataExtraDataArrayOfKmsPageMetadata5(arrayOfKmsPageMetadat
 	}
 }
 
-func (u *KmsPageMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *KmsPageMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = KmsPageMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -370,7 +384,14 @@ func CreateKmsPageMetadataSchemas5Boolean(boolean bool) KmsPageMetadataSchemas5 
 	}
 }
 
-func (u *KmsPageMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *KmsPageMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = KmsPageMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var kmsPageMetadataSchemas1 KmsPageMetadataSchemas1 = KmsPageMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &kmsPageMetadataSchemas1, "", true, nil); err == nil {
@@ -488,7 +509,14 @@ func CreateKmsPageMetadataValueArrayOfKmsPageMetadataSchemas5(arrayOfKmsPageMeta
 	}
 }
 
-func (u *KmsPageMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *KmsPageMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = KmsPageMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {

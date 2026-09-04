@@ -73,10 +73,17 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", opURL, bodyReader)
@@ -267,6 +274,8 @@ func (s *Passthrough) CreatePassthroughJSON(ctx context.Context, request operati
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -327,10 +336,17 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", opURL, bodyReader)
@@ -521,6 +537,8 @@ func (s *Passthrough) CreatePassthroughRaw(ctx context.Context, request operatio
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -577,10 +595,17 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
@@ -768,6 +793,8 @@ func (s *Passthrough) ListPassthroughs(ctx context.Context, request operations.L
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -828,10 +855,17 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", opURL, bodyReader)
@@ -1022,6 +1056,8 @@ func (s *Passthrough) PatchPassthroughJSON(ctx context.Context, request operatio
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -1082,10 +1118,17 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", opURL, bodyReader)
@@ -1276,6 +1319,8 @@ func (s *Passthrough) PatchPassthroughRaw(ctx context.Context, request operation
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -1332,10 +1377,17 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", opURL, nil)
@@ -1523,6 +1575,8 @@ func (s *Passthrough) RemovePassthrough(ctx context.Context, request operations.
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -1583,10 +1637,17 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", opURL, bodyReader)
@@ -1777,6 +1838,8 @@ func (s *Passthrough) UpdatePassthroughJSON(ctx context.Context, request operati
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil
@@ -1837,10 +1900,17 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 		timeout = s.sdkConfiguration.Timeout
 	}
 
+	var streamCancel context.CancelFunc
+
 	if timeout != nil {
 		var cancel context.CancelFunc
 		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
+		streamCancel = cancel
+		defer func() {
+			if streamCancel != nil {
+				streamCancel()
+			}
+		}()
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", opURL, bodyReader)
@@ -2031,6 +2101,8 @@ func (s *Passthrough) UpdatePassthroughRaw(ctx context.Context, request operatio
 			out := string(rawBody)
 			res.DefaultTextPlainRes = &out
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `*/*`):
+			httpRes.Body = utils.BodyWithCancel(httpRes.Body, streamCancel)
+			streamCancel = nil
 			res.DefaultWildcardWildcardResponseStream = httpRes.Body
 
 			return res, nil

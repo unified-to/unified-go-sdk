@@ -79,7 +79,14 @@ func CreateUcMetadata5Boolean(boolean bool) UcMetadata5 {
 	}
 }
 
-func (u *UcMetadata5) UnmarshalJSON(data []byte) error {
+func (u *UcMetadata5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = UcMetadata5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var ucMetadata1 UcMetadata1 = UcMetadata1{}
 	if err := utils.UnmarshalJSON(data, &ucMetadata1, "", true, nil); err == nil {
@@ -197,7 +204,14 @@ func CreateUcMetadataExtraDataArrayOfUcMetadata5(arrayOfUcMetadata5 []UcMetadata
 	}
 }
 
-func (u *UcMetadataExtraData) UnmarshalJSON(data []byte) error {
+func (u *UcMetadataExtraData) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = UcMetadataExtraData{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
@@ -365,7 +379,14 @@ func CreateUcMetadataSchemas5Boolean(boolean bool) UcMetadataSchemas5 {
 	}
 }
 
-func (u *UcMetadataSchemas5) UnmarshalJSON(data []byte) error {
+func (u *UcMetadataSchemas5) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = UcMetadataSchemas5{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var ucMetadataSchemas1 UcMetadataSchemas1 = UcMetadataSchemas1{}
 	if err := utils.UnmarshalJSON(data, &ucMetadataSchemas1, "", true, nil); err == nil {
@@ -483,7 +504,14 @@ func CreateUcMetadataValueArrayOfUcMetadataSchemas5(arrayOfUcMetadataSchemas5 []
 	}
 }
 
-func (u *UcMetadataValue) UnmarshalJSON(data []byte) error {
+func (u *UcMetadataValue) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = UcMetadataValue{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var mapOfAny map[string]any = map[string]any{}
 	if err := utils.UnmarshalJSON(data, &mapOfAny, "", true, nil); err == nil {
