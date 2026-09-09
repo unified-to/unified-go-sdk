@@ -12,19 +12,17 @@ import (
 type PatchLmsClassQueryParamFields string
 
 const (
-	PatchLmsClassQueryParamFieldsID            PatchLmsClassQueryParamFields = "id"
-	PatchLmsClassQueryParamFieldsCreatedAt     PatchLmsClassQueryParamFields = "created_at"
-	PatchLmsClassQueryParamFieldsUpdatedAt     PatchLmsClassQueryParamFields = "updated_at"
-	PatchLmsClassQueryParamFieldsName          PatchLmsClassQueryParamFields = "name"
-	PatchLmsClassQueryParamFieldsDescription   PatchLmsClassQueryParamFields = "description"
-	PatchLmsClassQueryParamFieldsMedia         PatchLmsClassQueryParamFields = "media"
-	PatchLmsClassQueryParamFieldsCourseID      PatchLmsClassQueryParamFields = "course_id"
-	PatchLmsClassQueryParamFieldsInstructorIds PatchLmsClassQueryParamFields = "instructor_ids"
-	PatchLmsClassQueryParamFieldsStudentIds    PatchLmsClassQueryParamFields = "student_ids"
-	PatchLmsClassQueryParamFieldsLanguages     PatchLmsClassQueryParamFields = "languages"
-	PatchLmsClassQueryParamFieldsInstructors   PatchLmsClassQueryParamFields = "instructors"
-	PatchLmsClassQueryParamFieldsStudents      PatchLmsClassQueryParamFields = "students"
-	PatchLmsClassQueryParamFieldsRaw           PatchLmsClassQueryParamFields = "raw"
+	PatchLmsClassQueryParamFieldsID          PatchLmsClassQueryParamFields = "id"
+	PatchLmsClassQueryParamFieldsCreatedAt   PatchLmsClassQueryParamFields = "created_at"
+	PatchLmsClassQueryParamFieldsUpdatedAt   PatchLmsClassQueryParamFields = "updated_at"
+	PatchLmsClassQueryParamFieldsName        PatchLmsClassQueryParamFields = "name"
+	PatchLmsClassQueryParamFieldsDescription PatchLmsClassQueryParamFields = "description"
+	PatchLmsClassQueryParamFieldsMedia       PatchLmsClassQueryParamFields = "media"
+	PatchLmsClassQueryParamFieldsCourseID    PatchLmsClassQueryParamFields = "course_id"
+	PatchLmsClassQueryParamFieldsLanguages   PatchLmsClassQueryParamFields = "languages"
+	PatchLmsClassQueryParamFieldsInstructors PatchLmsClassQueryParamFields = "instructors"
+	PatchLmsClassQueryParamFieldsStudents    PatchLmsClassQueryParamFields = "students"
+	PatchLmsClassQueryParamFieldsRaw         PatchLmsClassQueryParamFields = "raw"
 )
 
 func (e PatchLmsClassQueryParamFields) ToPointer() *PatchLmsClassQueryParamFields {
@@ -49,10 +47,6 @@ func (e *PatchLmsClassQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "media":
 		fallthrough
 	case "course_id":
-		fallthrough
-	case "instructor_ids":
-		fallthrough
-	case "student_ids":
 		fallthrough
 	case "languages":
 		fallthrough

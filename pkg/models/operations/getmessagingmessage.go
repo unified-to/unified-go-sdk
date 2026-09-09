@@ -15,11 +15,8 @@ const (
 	GetMessagingMessageQueryParamFieldsID                      GetMessagingMessageQueryParamFields = "id"
 	GetMessagingMessageQueryParamFieldsCreatedAt               GetMessagingMessageQueryParamFields = "created_at"
 	GetMessagingMessageQueryParamFieldsUpdatedAt               GetMessagingMessageQueryParamFields = "updated_at"
-	GetMessagingMessageQueryParamFieldsChannelID               GetMessagingMessageQueryParamFields = "channel_id"
-	GetMessagingMessageQueryParamFieldsChannelIds              GetMessagingMessageQueryParamFields = "channel_ids"
 	GetMessagingMessageQueryParamFieldsChannels                GetMessagingMessageQueryParamFields = "channels"
 	GetMessagingMessageQueryParamFieldsParentID                GetMessagingMessageQueryParamFields = "parent_id"
-	GetMessagingMessageQueryParamFieldsRootMessageID           GetMessagingMessageQueryParamFields = "root_message_id"
 	GetMessagingMessageQueryParamFieldsMessageThreadIdentifier GetMessagingMessageQueryParamFields = "message_thread_identifier"
 	GetMessagingMessageQueryParamFieldsAuthorMember            GetMessagingMessageQueryParamFields = "author_member"
 	GetMessagingMessageQueryParamFieldsDestinationMembers      GetMessagingMessageQueryParamFields = "destination_members"
@@ -54,15 +51,9 @@ func (e *GetMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "updated_at":
 		fallthrough
-	case "channel_id":
-		fallthrough
-	case "channel_ids":
-		fallthrough
 	case "channels":
 		fallthrough
 	case "parent_id":
-		fallthrough
-	case "root_message_id":
 		fallthrough
 	case "message_thread_identifier":
 		fallthrough

@@ -18,11 +18,8 @@ value := operations.UpdateMessagingMessageQueryParamFieldsID
 | `UpdateMessagingMessageQueryParamFieldsID`                      | id                                                              |
 | `UpdateMessagingMessageQueryParamFieldsCreatedAt`               | created_at                                                      |
 | `UpdateMessagingMessageQueryParamFieldsUpdatedAt`               | updated_at                                                      |
-| `UpdateMessagingMessageQueryParamFieldsChannelID`               | channel_id                                                      |
-| `UpdateMessagingMessageQueryParamFieldsChannelIds`              | channel_ids                                                     |
 | `UpdateMessagingMessageQueryParamFieldsChannels`                | channels                                                        |
 | `UpdateMessagingMessageQueryParamFieldsParentID`                | parent_id                                                       |
-| `UpdateMessagingMessageQueryParamFieldsRootMessageID`           | root_message_id                                                 |
 | `UpdateMessagingMessageQueryParamFieldsMessageThreadIdentifier` | message_thread_identifier                                       |
 | `UpdateMessagingMessageQueryParamFieldsAuthorMember`            | author_member                                                   |
 | `UpdateMessagingMessageQueryParamFieldsDestinationMembers`      | destination_members                                             |

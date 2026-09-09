@@ -16,18 +16,15 @@ type CrmDeal struct {
 	ContactIds  []string       `json:"contact_ids,omitempty"`
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Currency    *string        `json:"currency,omitempty"`
+	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	LostReason  *string        `json:"lost_reason,omitempty"`
 	Metadata    []CrmMetadata  `json:"metadata,omitempty"`
 	Name        *string        `json:"name,omitempty"`
-	Pipeline    *string        `json:"pipeline,omitempty"`
-	PipelineID  *string        `json:"pipeline_id,omitempty"`
 	Pipelines   []CrmReference `json:"pipelines,omitempty"`
 	Probability *float64       `json:"probability,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	Source      *string        `json:"source,omitempty"`
-	Stage       *string        `json:"stage,omitempty"`
-	StageID     *string        `json:"stage_id,omitempty"`
 	Stages      []CrmReference `json:"stages,omitempty"`
 	Tags        []string       `json:"tags,omitempty"`
 	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
@@ -95,6 +92,13 @@ func (c *CrmDeal) GetCurrency() *string {
 	return c.Currency
 }
 
+func (c *CrmDeal) GetDescription() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Description
+}
+
 func (c *CrmDeal) GetID() *string {
 	if c == nil {
 		return nil
@@ -123,20 +127,6 @@ func (c *CrmDeal) GetName() *string {
 	return c.Name
 }
 
-func (c *CrmDeal) GetPipeline() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Pipeline
-}
-
-func (c *CrmDeal) GetPipelineID() *string {
-	if c == nil {
-		return nil
-	}
-	return c.PipelineID
-}
-
 func (c *CrmDeal) GetPipelines() []CrmReference {
 	if c == nil {
 		return nil
@@ -163,20 +153,6 @@ func (c *CrmDeal) GetSource() *string {
 		return nil
 	}
 	return c.Source
-}
-
-func (c *CrmDeal) GetStage() *string {
-	if c == nil {
-		return nil
-	}
-	return c.Stage
-}
-
-func (c *CrmDeal) GetStageID() *string {
-	if c == nil {
-		return nil
-	}
-	return c.StageID
 }
 
 func (c *CrmDeal) GetStages() []CrmReference {

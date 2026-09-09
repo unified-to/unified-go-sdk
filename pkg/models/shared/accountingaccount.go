@@ -66,17 +66,13 @@ type AccountingAccount struct {
 	Currency            *string                     `json:"currency,omitempty"`
 	CustomerDefinedCode *string                     `json:"customer_defined_code,omitempty"`
 	Description         *string                     `json:"description,omitempty"`
-	Group               *string                     `json:"group,omitempty"`
 	ID                  *string                     `json:"id,omitempty"`
 	IsPayable           *bool                       `json:"is_payable,omitempty"`
 	Name                *string                     `json:"name,omitempty"`
 	OrganizationID      *string                     `json:"organization_id,omitempty"`
 	ParentID            *string                     `json:"parent_id,omitempty"`
 	Raw                 map[string]any              `json:"raw,omitempty"`
-	Section             *string                     `json:"section,omitempty"`
 	Status              *Status                     `json:"status,omitempty"`
-	Subgroup            *string                     `json:"subgroup,omitempty"`
-	Subsection          *string                     `json:"subsection,omitempty"`
 	Taxonomy            []AccountingAccountTaxonomy `json:"taxonomy,omitempty"`
 	Type                *Type                       `json:"type,omitempty"`
 	UpdatedAt           *time.Time                  `json:"updated_at,omitempty"`
@@ -128,13 +124,6 @@ func (a *AccountingAccount) GetDescription() *string {
 	return a.Description
 }
 
-func (a *AccountingAccount) GetGroup() *string {
-	if a == nil {
-		return nil
-	}
-	return a.Group
-}
-
 func (a *AccountingAccount) GetID() *string {
 	if a == nil {
 		return nil
@@ -177,32 +166,11 @@ func (a *AccountingAccount) GetRaw() map[string]any {
 	return a.Raw
 }
 
-func (a *AccountingAccount) GetSection() *string {
-	if a == nil {
-		return nil
-	}
-	return a.Section
-}
-
 func (a *AccountingAccount) GetStatus() *Status {
 	if a == nil {
 		return nil
 	}
 	return a.Status
-}
-
-func (a *AccountingAccount) GetSubgroup() *string {
-	if a == nil {
-		return nil
-	}
-	return a.Subgroup
-}
-
-func (a *AccountingAccount) GetSubsection() *string {
-	if a == nil {
-		return nil
-	}
-	return a.Subsection
 }
 
 func (a *AccountingAccount) GetTaxonomy() []AccountingAccountTaxonomy {

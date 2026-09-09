@@ -13,18 +13,16 @@ value := operations.PatchLmsClassQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `PatchLmsClassQueryParamFieldsID`            | id                                           |
-| `PatchLmsClassQueryParamFieldsCreatedAt`     | created_at                                   |
-| `PatchLmsClassQueryParamFieldsUpdatedAt`     | updated_at                                   |
-| `PatchLmsClassQueryParamFieldsName`          | name                                         |
-| `PatchLmsClassQueryParamFieldsDescription`   | description                                  |
-| `PatchLmsClassQueryParamFieldsMedia`         | media                                        |
-| `PatchLmsClassQueryParamFieldsCourseID`      | course_id                                    |
-| `PatchLmsClassQueryParamFieldsInstructorIds` | instructor_ids                               |
-| `PatchLmsClassQueryParamFieldsStudentIds`    | student_ids                                  |
-| `PatchLmsClassQueryParamFieldsLanguages`     | languages                                    |
-| `PatchLmsClassQueryParamFieldsInstructors`   | instructors                                  |
-| `PatchLmsClassQueryParamFieldsStudents`      | students                                     |
-| `PatchLmsClassQueryParamFieldsRaw`           | raw                                          |
+| Name                                       | Value                                      |
+| ------------------------------------------ | ------------------------------------------ |
+| `PatchLmsClassQueryParamFieldsID`          | id                                         |
+| `PatchLmsClassQueryParamFieldsCreatedAt`   | created_at                                 |
+| `PatchLmsClassQueryParamFieldsUpdatedAt`   | updated_at                                 |
+| `PatchLmsClassQueryParamFieldsName`        | name                                       |
+| `PatchLmsClassQueryParamFieldsDescription` | description                                |
+| `PatchLmsClassQueryParamFieldsMedia`       | media                                      |
+| `PatchLmsClassQueryParamFieldsCourseID`    | course_id                                  |
+| `PatchLmsClassQueryParamFieldsLanguages`   | languages                                  |
+| `PatchLmsClassQueryParamFieldsInstructors` | instructors                                |
+| `PatchLmsClassQueryParamFieldsStudents`    | students                                   |
+| `PatchLmsClassQueryParamFieldsRaw`         | raw                                        |

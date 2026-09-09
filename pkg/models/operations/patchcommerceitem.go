@@ -36,7 +36,6 @@ const (
 	PatchCommerceItemQueryParamFieldsVariants          PatchCommerceItemQueryParamFields = "variants"
 	PatchCommerceItemQueryParamFieldsTags              PatchCommerceItemQueryParamFields = "tags"
 	PatchCommerceItemQueryParamFieldsMedia             PatchCommerceItemQueryParamFields = "media"
-	PatchCommerceItemQueryParamFieldsCollectionIds     PatchCommerceItemQueryParamFields = "collection_ids"
 	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
 	PatchCommerceItemQueryParamFieldsMetadata          PatchCommerceItemQueryParamFields = "metadata"
 	PatchCommerceItemQueryParamFieldsCollections       PatchCommerceItemQueryParamFields = "collections"
@@ -102,8 +101,6 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "tags":
 		fallthrough
 	case "media":
-		fallthrough
-	case "collection_ids":
 		fallthrough
 	case "account_id":
 		fallthrough

@@ -23,10 +23,6 @@ value := operations.CreateCrmDealQueryParamFieldsID
 | `CreateCrmDealQueryParamFieldsCurrency`    | currency                                   |
 | `CreateCrmDealQueryParamFieldsClosedAt`    | closed_at                                  |
 | `CreateCrmDealQueryParamFieldsClosingAt`   | closing_at                                 |
-| `CreateCrmDealQueryParamFieldsStage`       | stage                                      |
-| `CreateCrmDealQueryParamFieldsStageID`     | stage_id                                   |
-| `CreateCrmDealQueryParamFieldsPipeline`    | pipeline                                   |
-| `CreateCrmDealQueryParamFieldsPipelineID`  | pipeline_id                                |
 | `CreateCrmDealQueryParamFieldsStages`      | stages                                     |
 | `CreateCrmDealQueryParamFieldsPipelines`   | pipelines                                  |
 | `CreateCrmDealQueryParamFieldsSource`      | source                                     |
@@ -38,4 +34,5 @@ value := operations.CreateCrmDealQueryParamFieldsID
 | `CreateCrmDealQueryParamFieldsContactIds`  | contact_ids                                |
 | `CreateCrmDealQueryParamFieldsCompanyIds`  | company_ids                                |
 | `CreateCrmDealQueryParamFieldsMetadata`    | metadata                                   |
+| `CreateCrmDealQueryParamFieldsDescription` | description                                |
 | `CreateCrmDealQueryParamFieldsRaw`         | raw                                        |

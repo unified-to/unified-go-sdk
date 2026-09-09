@@ -23,10 +23,6 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsCurrency`    | currency                                  |
 | `PatchCrmDealQueryParamFieldsClosedAt`    | closed_at                                 |
 | `PatchCrmDealQueryParamFieldsClosingAt`   | closing_at                                |
-| `PatchCrmDealQueryParamFieldsStage`       | stage                                     |
-| `PatchCrmDealQueryParamFieldsStageID`     | stage_id                                  |
-| `PatchCrmDealQueryParamFieldsPipeline`    | pipeline                                  |
-| `PatchCrmDealQueryParamFieldsPipelineID`  | pipeline_id                               |
 | `PatchCrmDealQueryParamFieldsStages`      | stages                                    |
 | `PatchCrmDealQueryParamFieldsPipelines`   | pipelines                                 |
 | `PatchCrmDealQueryParamFieldsSource`      | source                                    |
@@ -38,4 +34,5 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsContactIds`  | contact_ids                               |
 | `PatchCrmDealQueryParamFieldsCompanyIds`  | company_ids                               |
 | `PatchCrmDealQueryParamFieldsMetadata`    | metadata                                  |
+| `PatchCrmDealQueryParamFieldsDescription` | description                               |
 | `PatchCrmDealQueryParamFieldsRaw`         | raw                                       |

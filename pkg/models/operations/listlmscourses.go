@@ -24,9 +24,7 @@ const (
 	ListLmsCoursesQueryParamFieldsCategories          ListLmsCoursesQueryParamFields = "categories"
 	ListLmsCoursesQueryParamFieldsCurrency            ListLmsCoursesQueryParamFields = "currency"
 	ListLmsCoursesQueryParamFieldsMedia               ListLmsCoursesQueryParamFields = "media"
-	ListLmsCoursesQueryParamFieldsInstructorIds       ListLmsCoursesQueryParamFields = "instructor_ids"
 	ListLmsCoursesQueryParamFieldsInstructors         ListLmsCoursesQueryParamFields = "instructors"
-	ListLmsCoursesQueryParamFieldsStudentIds          ListLmsCoursesQueryParamFields = "student_ids"
 	ListLmsCoursesQueryParamFieldsStudents            ListLmsCoursesQueryParamFields = "students"
 	ListLmsCoursesQueryParamFieldsContentIds          ListLmsCoursesQueryParamFields = "content_ids"
 	ListLmsCoursesQueryParamFieldsSkills              ListLmsCoursesQueryParamFields = "skills"
@@ -70,11 +68,7 @@ func (e *ListLmsCoursesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "media":
 		fallthrough
-	case "instructor_ids":
-		fallthrough
 	case "instructors":
-		fallthrough
-	case "student_ids":
 		fallthrough
 	case "students":
 		fallthrough

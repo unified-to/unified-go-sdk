@@ -30,24 +30,21 @@ func (e *UcRecordingType) IsExact() bool {
 }
 
 type UcRecording struct {
-	CallID       *string            `json:"call_id,omitempty"`
-	ContactID    *string            `json:"contact_id,omitempty"`
-	ContactName  *string            `json:"contact_name,omitempty"`
-	ContactPhone *string            `json:"contact_phone,omitempty"`
-	Contacts     []UcContact        `json:"contacts,omitempty"`
-	CreatedAt    *time.Time         `json:"created_at,omitempty"`
-	EndAt        *time.Time         `json:"end_at,omitempty"`
-	ExpiresAt    *time.Time         `json:"expires_at,omitempty"`
-	ID           *string            `json:"id,omitempty"`
-	Media        []UcRecordingMedia `json:"media,omitempty"`
-	Raw          map[string]any     `json:"raw,omitempty"`
-	StartAt      *time.Time         `json:"start_at,omitempty"`
-	Type         *UcRecordingType   `json:"type,omitempty"`
-	UpdatedAt    *time.Time         `json:"updated_at,omitempty"`
-	UserID       *string            `json:"user_id,omitempty"`
-	UserName     *string            `json:"user_name,omitempty"`
-	UserPhone    *string            `json:"user_phone,omitempty"`
-	WebURL       *string            `json:"web_url,omitempty"`
+	CallID    *string            `json:"call_id,omitempty"`
+	Contacts  []UcContact        `json:"contacts,omitempty"`
+	CreatedAt *time.Time         `json:"created_at,omitempty"`
+	EndAt     *time.Time         `json:"end_at,omitempty"`
+	ExpiresAt *time.Time         `json:"expires_at,omitempty"`
+	ID        *string            `json:"id,omitempty"`
+	Media     []UcRecordingMedia `json:"media,omitempty"`
+	Raw       map[string]any     `json:"raw,omitempty"`
+	StartAt   *time.Time         `json:"start_at,omitempty"`
+	Type      *UcRecordingType   `json:"type,omitempty"`
+	UpdatedAt *time.Time         `json:"updated_at,omitempty"`
+	UserID    *string            `json:"user_id,omitempty"`
+	UserName  *string            `json:"user_name,omitempty"`
+	UserPhone *string            `json:"user_phone,omitempty"`
+	WebURL    *string            `json:"web_url,omitempty"`
 }
 
 func (u UcRecording) MarshalJSON() ([]byte, error) {
@@ -66,27 +63,6 @@ func (u *UcRecording) GetCallID() *string {
 		return nil
 	}
 	return u.CallID
-}
-
-func (u *UcRecording) GetContactID() *string {
-	if u == nil {
-		return nil
-	}
-	return u.ContactID
-}
-
-func (u *UcRecording) GetContactName() *string {
-	if u == nil {
-		return nil
-	}
-	return u.ContactName
-}
-
-func (u *UcRecording) GetContactPhone() *string {
-	if u == nil {
-		return nil
-	}
-	return u.ContactPhone
 }
 
 func (u *UcRecording) GetContacts() []UcContact {

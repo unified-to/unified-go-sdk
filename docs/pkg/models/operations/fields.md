@@ -26,10 +26,6 @@ value := operations.FieldsID
 | `FieldsCurrency`            | currency                    |
 | `FieldsCustomerDefinedCode` | customer_defined_code       |
 | `FieldsIsPayable`           | is_payable                  |
-| `FieldsSection`             | section                     |
-| `FieldsSubsection`          | subsection                  |
-| `FieldsGroup`               | group                       |
-| `FieldsSubgroup`            | subgroup                    |
 | `FieldsParentID`            | parent_id                   |
 | `FieldsTaxonomy`            | taxonomy                    |
 | `FieldsOrganizationID`      | organization_id             |

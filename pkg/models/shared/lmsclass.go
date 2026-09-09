@@ -8,21 +8,17 @@ import (
 )
 
 type LmsClass struct {
-	CourseID    *string    `json:"course_id,omitempty"`
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	// @deprecated; use instructors
-	InstructorIds []string       `json:"instructor_ids,omitempty"`
-	Instructors   []LmsReference `json:"instructors,omitempty"`
-	Languages     []string       `json:"languages,omitempty"`
-	Media         []LmsMedia     `json:"media,omitempty"`
-	Name          *string        `json:"name,omitempty"`
-	Raw           map[string]any `json:"raw,omitempty"`
-	// @deprecated; use students
-	StudentIds []string       `json:"student_ids,omitempty"`
-	Students   []LmsReference `json:"students,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
+	CourseID    *string        `json:"course_id,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	Instructors []LmsReference `json:"instructors,omitempty"`
+	Languages   []string       `json:"languages,omitempty"`
+	Media       []LmsMedia     `json:"media,omitempty"`
+	Name        *string        `json:"name,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	Students    []LmsReference `json:"students,omitempty"`
+	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
 }
 
 func (l LmsClass) MarshalJSON() ([]byte, error) {
@@ -64,13 +60,6 @@ func (l *LmsClass) GetID() *string {
 	return l.ID
 }
 
-func (l *LmsClass) GetInstructorIds() []string {
-	if l == nil {
-		return nil
-	}
-	return l.InstructorIds
-}
-
 func (l *LmsClass) GetInstructors() []LmsReference {
 	if l == nil {
 		return nil
@@ -104,13 +93,6 @@ func (l *LmsClass) GetRaw() map[string]any {
 		return nil
 	}
 	return l.Raw
-}
-
-func (l *LmsClass) GetStudentIds() []string {
-	if l == nil {
-		return nil
-	}
-	return l.StudentIds
 }
 
 func (l *LmsClass) GetStudents() []LmsReference {

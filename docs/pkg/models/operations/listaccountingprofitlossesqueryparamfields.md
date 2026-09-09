@@ -23,11 +23,6 @@ value := operations.ListAccountingProfitlossesQueryParamFieldsID
 | `ListAccountingProfitlossesQueryParamFieldsEndAt`                      | end_at                                                                 |
 | `ListAccountingProfitlossesQueryParamFieldsName`                       | name                                                                   |
 | `ListAccountingProfitlossesQueryParamFieldsCurrency`                   | currency                                                               |
-| `ListAccountingProfitlossesQueryParamFieldsIncome`                     | income                                                                 |
-| `ListAccountingProfitlossesQueryParamFieldsExpenses`                   | expenses                                                               |
-| `ListAccountingProfitlossesQueryParamFieldsCostOfGoodsSold`            | cost_of_goods_sold                                                     |
-| `ListAccountingProfitlossesQueryParamFieldsGrossProfitAmount`          | gross_profit_amount                                                    |
-| `ListAccountingProfitlossesQueryParamFieldsNetProfitAmount`            | net_profit_amount                                                      |
 | `ListAccountingProfitlossesQueryParamFieldsIncomeTotalAmount`          | income_total_amount                                                    |
 | `ListAccountingProfitlossesQueryParamFieldsNetIncomeAmount`            | net_income_amount                                                      |
 | `ListAccountingProfitlossesQueryParamFieldsExpensesTotalAmount`        | expenses_total_amount                                                  |

@@ -27,9 +27,7 @@ value := operations.PatchLmsCourseQueryParamFieldsID
 | `PatchLmsCourseQueryParamFieldsCategories`          | categories                                          |
 | `PatchLmsCourseQueryParamFieldsCurrency`            | currency                                            |
 | `PatchLmsCourseQueryParamFieldsMedia`               | media                                               |
-| `PatchLmsCourseQueryParamFieldsInstructorIds`       | instructor_ids                                      |
 | `PatchLmsCourseQueryParamFieldsInstructors`         | instructors                                         |
-| `PatchLmsCourseQueryParamFieldsStudentIds`          | student_ids                                         |
 | `PatchLmsCourseQueryParamFieldsStudents`            | students                                            |
 | `PatchLmsCourseQueryParamFieldsContentIds`          | content_ids                                         |
 | `PatchLmsCourseQueryParamFieldsSkills`              | skills                                              |

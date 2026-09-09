@@ -23,10 +23,6 @@ const (
 	FieldsCurrency            Fields = "currency"
 	FieldsCustomerDefinedCode Fields = "customer_defined_code"
 	FieldsIsPayable           Fields = "is_payable"
-	FieldsSection             Fields = "section"
-	FieldsSubsection          Fields = "subsection"
-	FieldsGroup               Fields = "group"
-	FieldsSubgroup            Fields = "subgroup"
 	FieldsParentID            Fields = "parent_id"
 	FieldsTaxonomy            Fields = "taxonomy"
 	FieldsOrganizationID      Fields = "organization_id"
@@ -63,14 +59,6 @@ func (e *Fields) UnmarshalJSON(data []byte) error {
 	case "customer_defined_code":
 		fallthrough
 	case "is_payable":
-		fallthrough
-	case "section":
-		fallthrough
-	case "subsection":
-		fallthrough
-	case "group":
-		fallthrough
-	case "subgroup":
 		fallthrough
 	case "parent_id":
 		fallthrough

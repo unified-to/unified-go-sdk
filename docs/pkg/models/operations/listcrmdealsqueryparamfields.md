@@ -23,10 +23,6 @@ value := operations.ListCrmDealsQueryParamFieldsID
 | `ListCrmDealsQueryParamFieldsCurrency`    | currency                                  |
 | `ListCrmDealsQueryParamFieldsClosedAt`    | closed_at                                 |
 | `ListCrmDealsQueryParamFieldsClosingAt`   | closing_at                                |
-| `ListCrmDealsQueryParamFieldsStage`       | stage                                     |
-| `ListCrmDealsQueryParamFieldsStageID`     | stage_id                                  |
-| `ListCrmDealsQueryParamFieldsPipeline`    | pipeline                                  |
-| `ListCrmDealsQueryParamFieldsPipelineID`  | pipeline_id                               |
 | `ListCrmDealsQueryParamFieldsStages`      | stages                                    |
 | `ListCrmDealsQueryParamFieldsPipelines`   | pipelines                                 |
 | `ListCrmDealsQueryParamFieldsSource`      | source                                    |
@@ -38,4 +34,5 @@ value := operations.ListCrmDealsQueryParamFieldsID
 | `ListCrmDealsQueryParamFieldsContactIds`  | contact_ids                               |
 | `ListCrmDealsQueryParamFieldsCompanyIds`  | company_ids                               |
 | `ListCrmDealsQueryParamFieldsMetadata`    | metadata                                  |
+| `ListCrmDealsQueryParamFieldsDescription` | description                               |
 | `ListCrmDealsQueryParamFieldsRaw`         | raw                                       |

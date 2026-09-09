@@ -13,23 +13,20 @@ value := operations.ListUcRecordingsQueryParamFieldsID
 
 ## Values
 
-| Name                                           | Value                                          |
-| ---------------------------------------------- | ---------------------------------------------- |
-| `ListUcRecordingsQueryParamFieldsID`           | id                                             |
-| `ListUcRecordingsQueryParamFieldsCreatedAt`    | created_at                                     |
-| `ListUcRecordingsQueryParamFieldsUpdatedAt`    | updated_at                                     |
-| `ListUcRecordingsQueryParamFieldsStartAt`      | start_at                                       |
-| `ListUcRecordingsQueryParamFieldsEndAt`        | end_at                                         |
-| `ListUcRecordingsQueryParamFieldsExpiresAt`    | expires_at                                     |
-| `ListUcRecordingsQueryParamFieldsCallID`       | call_id                                        |
-| `ListUcRecordingsQueryParamFieldsWebURL`       | web_url                                        |
-| `ListUcRecordingsQueryParamFieldsContactID`    | contact_id                                     |
-| `ListUcRecordingsQueryParamFieldsContactName`  | contact_name                                   |
-| `ListUcRecordingsQueryParamFieldsContactPhone` | contact_phone                                  |
-| `ListUcRecordingsQueryParamFieldsContacts`     | contacts                                       |
-| `ListUcRecordingsQueryParamFieldsUserID`       | user_id                                        |
-| `ListUcRecordingsQueryParamFieldsMedia`        | media                                          |
-| `ListUcRecordingsQueryParamFieldsUserName`     | user_name                                      |
-| `ListUcRecordingsQueryParamFieldsUserPhone`    | user_phone                                     |
-| `ListUcRecordingsQueryParamFieldsType`         | type                                           |
-| `ListUcRecordingsQueryParamFieldsRaw`          | raw                                            |
+| Name                                        | Value                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| `ListUcRecordingsQueryParamFieldsID`        | id                                          |
+| `ListUcRecordingsQueryParamFieldsCreatedAt` | created_at                                  |
+| `ListUcRecordingsQueryParamFieldsUpdatedAt` | updated_at                                  |
+| `ListUcRecordingsQueryParamFieldsStartAt`   | start_at                                    |
+| `ListUcRecordingsQueryParamFieldsEndAt`     | end_at                                      |
+| `ListUcRecordingsQueryParamFieldsExpiresAt` | expires_at                                  |
+| `ListUcRecordingsQueryParamFieldsCallID`    | call_id                                     |
+| `ListUcRecordingsQueryParamFieldsWebURL`    | web_url                                     |
+| `ListUcRecordingsQueryParamFieldsContacts`  | contacts                                    |
+| `ListUcRecordingsQueryParamFieldsUserID`    | user_id                                     |
+| `ListUcRecordingsQueryParamFieldsMedia`     | media                                       |
+| `ListUcRecordingsQueryParamFieldsUserName`  | user_name                                   |
+| `ListUcRecordingsQueryParamFieldsUserPhone` | user_phone                                  |
+| `ListUcRecordingsQueryParamFieldsType`      | type                                        |
+| `ListUcRecordingsQueryParamFieldsRaw`       | raw                                         |

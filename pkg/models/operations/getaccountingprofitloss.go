@@ -20,11 +20,6 @@ const (
 	GetAccountingProfitlossQueryParamFieldsEndAt                      GetAccountingProfitlossQueryParamFields = "end_at"
 	GetAccountingProfitlossQueryParamFieldsName                       GetAccountingProfitlossQueryParamFields = "name"
 	GetAccountingProfitlossQueryParamFieldsCurrency                   GetAccountingProfitlossQueryParamFields = "currency"
-	GetAccountingProfitlossQueryParamFieldsIncome                     GetAccountingProfitlossQueryParamFields = "income"
-	GetAccountingProfitlossQueryParamFieldsExpenses                   GetAccountingProfitlossQueryParamFields = "expenses"
-	GetAccountingProfitlossQueryParamFieldsCostOfGoodsSold            GetAccountingProfitlossQueryParamFields = "cost_of_goods_sold"
-	GetAccountingProfitlossQueryParamFieldsGrossProfitAmount          GetAccountingProfitlossQueryParamFields = "gross_profit_amount"
-	GetAccountingProfitlossQueryParamFieldsNetProfitAmount            GetAccountingProfitlossQueryParamFields = "net_profit_amount"
 	GetAccountingProfitlossQueryParamFieldsIncomeTotalAmount          GetAccountingProfitlossQueryParamFields = "income_total_amount"
 	GetAccountingProfitlossQueryParamFieldsNetIncomeAmount            GetAccountingProfitlossQueryParamFields = "net_income_amount"
 	GetAccountingProfitlossQueryParamFieldsExpensesTotalAmount        GetAccountingProfitlossQueryParamFields = "expenses_total_amount"
@@ -59,16 +54,6 @@ func (e *GetAccountingProfitlossQueryParamFields) UnmarshalJSON(data []byte) err
 	case "name":
 		fallthrough
 	case "currency":
-		fallthrough
-	case "income":
-		fallthrough
-	case "expenses":
-		fallthrough
-	case "cost_of_goods_sold":
-		fallthrough
-	case "gross_profit_amount":
-		fallthrough
-	case "net_profit_amount":
 		fallthrough
 	case "income_total_amount":
 		fallthrough

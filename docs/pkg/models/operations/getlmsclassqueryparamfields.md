@@ -13,18 +13,16 @@ value := operations.GetLmsClassQueryParamFieldsID
 
 ## Values
 
-| Name                                       | Value                                      |
-| ------------------------------------------ | ------------------------------------------ |
-| `GetLmsClassQueryParamFieldsID`            | id                                         |
-| `GetLmsClassQueryParamFieldsCreatedAt`     | created_at                                 |
-| `GetLmsClassQueryParamFieldsUpdatedAt`     | updated_at                                 |
-| `GetLmsClassQueryParamFieldsName`          | name                                       |
-| `GetLmsClassQueryParamFieldsDescription`   | description                                |
-| `GetLmsClassQueryParamFieldsMedia`         | media                                      |
-| `GetLmsClassQueryParamFieldsCourseID`      | course_id                                  |
-| `GetLmsClassQueryParamFieldsInstructorIds` | instructor_ids                             |
-| `GetLmsClassQueryParamFieldsStudentIds`    | student_ids                                |
-| `GetLmsClassQueryParamFieldsLanguages`     | languages                                  |
-| `GetLmsClassQueryParamFieldsInstructors`   | instructors                                |
-| `GetLmsClassQueryParamFieldsStudents`      | students                                   |
-| `GetLmsClassQueryParamFieldsRaw`           | raw                                        |
+| Name                                     | Value                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| `GetLmsClassQueryParamFieldsID`          | id                                       |
+| `GetLmsClassQueryParamFieldsCreatedAt`   | created_at                               |
+| `GetLmsClassQueryParamFieldsUpdatedAt`   | updated_at                               |
+| `GetLmsClassQueryParamFieldsName`        | name                                     |
+| `GetLmsClassQueryParamFieldsDescription` | description                              |
+| `GetLmsClassQueryParamFieldsMedia`       | media                                    |
+| `GetLmsClassQueryParamFieldsCourseID`    | course_id                                |
+| `GetLmsClassQueryParamFieldsLanguages`   | languages                                |
+| `GetLmsClassQueryParamFieldsInstructors` | instructors                              |
+| `GetLmsClassQueryParamFieldsStudents`    | students                                 |
+| `GetLmsClassQueryParamFieldsRaw`         | raw                                      |

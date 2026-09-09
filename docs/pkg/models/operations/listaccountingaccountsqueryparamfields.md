@@ -26,10 +26,6 @@ value := operations.ListAccountingAccountsQueryParamFieldsID
 | `ListAccountingAccountsQueryParamFieldsCurrency`            | currency                                                    |
 | `ListAccountingAccountsQueryParamFieldsCustomerDefinedCode` | customer_defined_code                                       |
 | `ListAccountingAccountsQueryParamFieldsIsPayable`           | is_payable                                                  |
-| `ListAccountingAccountsQueryParamFieldsSection`             | section                                                     |
-| `ListAccountingAccountsQueryParamFieldsSubsection`          | subsection                                                  |
-| `ListAccountingAccountsQueryParamFieldsGroup`               | group                                                       |
-| `ListAccountingAccountsQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `ListAccountingAccountsQueryParamFieldsParentID`            | parent_id                                                   |
 | `ListAccountingAccountsQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `ListAccountingAccountsQueryParamFieldsOrganizationID`      | organization_id                                             |

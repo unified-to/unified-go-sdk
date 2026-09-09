@@ -26,10 +26,6 @@ value := operations.QueryParamFieldsID
 | `QueryParamFieldsCurrency`            | currency                              |
 | `QueryParamFieldsCustomerDefinedCode` | customer_defined_code                 |
 | `QueryParamFieldsIsPayable`           | is_payable                            |
-| `QueryParamFieldsSection`             | section                               |
-| `QueryParamFieldsSubsection`          | subsection                            |
-| `QueryParamFieldsGroup`               | group                                 |
-| `QueryParamFieldsSubgroup`            | subgroup                              |
 | `QueryParamFieldsParentID`            | parent_id                             |
 | `QueryParamFieldsTaxonomy`            | taxonomy                              |
 | `QueryParamFieldsOrganizationID`      | organization_id                       |

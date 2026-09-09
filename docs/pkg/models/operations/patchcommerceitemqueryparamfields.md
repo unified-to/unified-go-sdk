@@ -39,7 +39,6 @@ value := operations.PatchCommerceItemQueryParamFieldsID
 | `PatchCommerceItemQueryParamFieldsVariants`          | variants                                             |
 | `PatchCommerceItemQueryParamFieldsTags`              | tags                                                 |
 | `PatchCommerceItemQueryParamFieldsMedia`             | media                                                |
-| `PatchCommerceItemQueryParamFieldsCollectionIds`     | collection_ids                                       |
 | `PatchCommerceItemQueryParamFieldsAccountID`         | account_id                                           |
 | `PatchCommerceItemQueryParamFieldsMetadata`          | metadata                                             |
 | `PatchCommerceItemQueryParamFieldsCollections`       | collections                                          |

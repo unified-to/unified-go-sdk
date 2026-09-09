@@ -18,11 +18,8 @@ value := operations.PatchMessagingMessageQueryParamFieldsID
 | `PatchMessagingMessageQueryParamFieldsID`                      | id                                                             |
 | `PatchMessagingMessageQueryParamFieldsCreatedAt`               | created_at                                                     |
 | `PatchMessagingMessageQueryParamFieldsUpdatedAt`               | updated_at                                                     |
-| `PatchMessagingMessageQueryParamFieldsChannelID`               | channel_id                                                     |
-| `PatchMessagingMessageQueryParamFieldsChannelIds`              | channel_ids                                                    |
 | `PatchMessagingMessageQueryParamFieldsChannels`                | channels                                                       |
 | `PatchMessagingMessageQueryParamFieldsParentID`                | parent_id                                                      |
-| `PatchMessagingMessageQueryParamFieldsRootMessageID`           | root_message_id                                                |
 | `PatchMessagingMessageQueryParamFieldsMessageThreadIdentifier` | message_thread_identifier                                      |
 | `PatchMessagingMessageQueryParamFieldsAuthorMember`            | author_member                                                  |
 | `PatchMessagingMessageQueryParamFieldsDestinationMembers`      | destination_members                                            |

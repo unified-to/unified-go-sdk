@@ -12,24 +12,21 @@ import (
 type PatchUcRecordingQueryParamFields string
 
 const (
-	PatchUcRecordingQueryParamFieldsID           PatchUcRecordingQueryParamFields = "id"
-	PatchUcRecordingQueryParamFieldsCreatedAt    PatchUcRecordingQueryParamFields = "created_at"
-	PatchUcRecordingQueryParamFieldsUpdatedAt    PatchUcRecordingQueryParamFields = "updated_at"
-	PatchUcRecordingQueryParamFieldsStartAt      PatchUcRecordingQueryParamFields = "start_at"
-	PatchUcRecordingQueryParamFieldsEndAt        PatchUcRecordingQueryParamFields = "end_at"
-	PatchUcRecordingQueryParamFieldsExpiresAt    PatchUcRecordingQueryParamFields = "expires_at"
-	PatchUcRecordingQueryParamFieldsCallID       PatchUcRecordingQueryParamFields = "call_id"
-	PatchUcRecordingQueryParamFieldsWebURL       PatchUcRecordingQueryParamFields = "web_url"
-	PatchUcRecordingQueryParamFieldsContactID    PatchUcRecordingQueryParamFields = "contact_id"
-	PatchUcRecordingQueryParamFieldsContactName  PatchUcRecordingQueryParamFields = "contact_name"
-	PatchUcRecordingQueryParamFieldsContactPhone PatchUcRecordingQueryParamFields = "contact_phone"
-	PatchUcRecordingQueryParamFieldsContacts     PatchUcRecordingQueryParamFields = "contacts"
-	PatchUcRecordingQueryParamFieldsUserID       PatchUcRecordingQueryParamFields = "user_id"
-	PatchUcRecordingQueryParamFieldsMedia        PatchUcRecordingQueryParamFields = "media"
-	PatchUcRecordingQueryParamFieldsUserName     PatchUcRecordingQueryParamFields = "user_name"
-	PatchUcRecordingQueryParamFieldsUserPhone    PatchUcRecordingQueryParamFields = "user_phone"
-	PatchUcRecordingQueryParamFieldsType         PatchUcRecordingQueryParamFields = "type"
-	PatchUcRecordingQueryParamFieldsRaw          PatchUcRecordingQueryParamFields = "raw"
+	PatchUcRecordingQueryParamFieldsID        PatchUcRecordingQueryParamFields = "id"
+	PatchUcRecordingQueryParamFieldsCreatedAt PatchUcRecordingQueryParamFields = "created_at"
+	PatchUcRecordingQueryParamFieldsUpdatedAt PatchUcRecordingQueryParamFields = "updated_at"
+	PatchUcRecordingQueryParamFieldsStartAt   PatchUcRecordingQueryParamFields = "start_at"
+	PatchUcRecordingQueryParamFieldsEndAt     PatchUcRecordingQueryParamFields = "end_at"
+	PatchUcRecordingQueryParamFieldsExpiresAt PatchUcRecordingQueryParamFields = "expires_at"
+	PatchUcRecordingQueryParamFieldsCallID    PatchUcRecordingQueryParamFields = "call_id"
+	PatchUcRecordingQueryParamFieldsWebURL    PatchUcRecordingQueryParamFields = "web_url"
+	PatchUcRecordingQueryParamFieldsContacts  PatchUcRecordingQueryParamFields = "contacts"
+	PatchUcRecordingQueryParamFieldsUserID    PatchUcRecordingQueryParamFields = "user_id"
+	PatchUcRecordingQueryParamFieldsMedia     PatchUcRecordingQueryParamFields = "media"
+	PatchUcRecordingQueryParamFieldsUserName  PatchUcRecordingQueryParamFields = "user_name"
+	PatchUcRecordingQueryParamFieldsUserPhone PatchUcRecordingQueryParamFields = "user_phone"
+	PatchUcRecordingQueryParamFieldsType      PatchUcRecordingQueryParamFields = "type"
+	PatchUcRecordingQueryParamFieldsRaw       PatchUcRecordingQueryParamFields = "raw"
 )
 
 func (e PatchUcRecordingQueryParamFields) ToPointer() *PatchUcRecordingQueryParamFields {
@@ -56,12 +53,6 @@ func (e *PatchUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "call_id":
 		fallthrough
 	case "web_url":
-		fallthrough
-	case "contact_id":
-		fallthrough
-	case "contact_name":
-		fallthrough
-	case "contact_phone":
 		fallthrough
 	case "contacts":
 		fallthrough

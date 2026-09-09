@@ -36,7 +36,6 @@ const (
 	CreateCommerceItemQueryParamFieldsVariants          CreateCommerceItemQueryParamFields = "variants"
 	CreateCommerceItemQueryParamFieldsTags              CreateCommerceItemQueryParamFields = "tags"
 	CreateCommerceItemQueryParamFieldsMedia             CreateCommerceItemQueryParamFields = "media"
-	CreateCommerceItemQueryParamFieldsCollectionIds     CreateCommerceItemQueryParamFields = "collection_ids"
 	CreateCommerceItemQueryParamFieldsAccountID         CreateCommerceItemQueryParamFields = "account_id"
 	CreateCommerceItemQueryParamFieldsMetadata          CreateCommerceItemQueryParamFields = "metadata"
 	CreateCommerceItemQueryParamFieldsCollections       CreateCommerceItemQueryParamFields = "collections"
@@ -102,8 +101,6 @@ func (e *CreateCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "tags":
 		fallthrough
 	case "media":
-		fallthrough
-	case "collection_ids":
 		fallthrough
 	case "account_id":
 		fallthrough

@@ -8,30 +8,22 @@ import (
 )
 
 type PropertyAccountingReportProfitAndLoss struct {
-	CategoryIds []string `json:"category_ids,omitempty"`
-	// @deprecated – use cost_of_goods_sold_sections instead
-	CostOfGoodsSold            []AccountingProfitlossCategory `json:"cost_of_goods_sold,omitempty"`
-	CostOfGoodsSoldSections    []AccountingProfitlossSection  `json:"cost_of_goods_sold_sections,omitempty"`
-	CostOfGoodsSoldTotalAmount *float64                       `json:"cost_of_goods_sold_total_amount,omitempty"`
-	CreatedAt                  *time.Time                     `json:"created_at,omitempty"`
-	Currency                   *string                        `json:"currency,omitempty"`
-	EndAt                      *time.Time                     `json:"end_at,omitempty"`
-	// @deprecated – use expenses_sections instead
-	Expenses            []AccountingProfitlossCategory `json:"expenses,omitempty"`
-	ExpensesSections    []AccountingProfitlossSection  `json:"expenses_sections,omitempty"`
-	ExpensesTotalAmount *float64                       `json:"expenses_total_amount,omitempty"`
-	GrossProfitAmount   *float64                       `json:"gross_profit_amount,omitempty"`
-	ID                  *string                        `json:"id,omitempty"`
-	// @deprecated – use income_sections instead
-	Income            []AccountingProfitlossCategory `json:"income,omitempty"`
-	IncomeSections    []AccountingProfitlossSection  `json:"income_sections,omitempty"`
-	IncomeTotalAmount *float64                       `json:"income_total_amount,omitempty"`
-	Name              *string                        `json:"name,omitempty"`
-	NetIncomeAmount   *float64                       `json:"net_income_amount,omitempty"`
-	NetProfitAmount   *float64                       `json:"net_profit_amount,omitempty"`
-	Raw               map[string]any                 `json:"raw,omitempty"`
-	StartAt           *time.Time                     `json:"start_at,omitempty"`
-	UpdatedAt         *time.Time                     `json:"updated_at,omitempty"`
+	CategoryIds                []string                      `json:"category_ids,omitempty"`
+	CostOfGoodsSoldSections    []AccountingProfitlossSection `json:"cost_of_goods_sold_sections,omitempty"`
+	CostOfGoodsSoldTotalAmount *float64                      `json:"cost_of_goods_sold_total_amount,omitempty"`
+	CreatedAt                  *time.Time                    `json:"created_at,omitempty"`
+	Currency                   *string                       `json:"currency,omitempty"`
+	EndAt                      *time.Time                    `json:"end_at,omitempty"`
+	ExpensesSections           []AccountingProfitlossSection `json:"expenses_sections,omitempty"`
+	ExpensesTotalAmount        *float64                      `json:"expenses_total_amount,omitempty"`
+	ID                         *string                       `json:"id,omitempty"`
+	IncomeSections             []AccountingProfitlossSection `json:"income_sections,omitempty"`
+	IncomeTotalAmount          *float64                      `json:"income_total_amount,omitempty"`
+	Name                       *string                       `json:"name,omitempty"`
+	NetIncomeAmount            *float64                      `json:"net_income_amount,omitempty"`
+	Raw                        map[string]any                `json:"raw,omitempty"`
+	StartAt                    *time.Time                    `json:"start_at,omitempty"`
+	UpdatedAt                  *time.Time                    `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAccountingReportProfitAndLoss) MarshalJSON() ([]byte, error) {
@@ -50,13 +42,6 @@ func (p *PropertyAccountingReportProfitAndLoss) GetCategoryIds() []string {
 		return nil
 	}
 	return p.CategoryIds
-}
-
-func (p *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSold() []AccountingProfitlossCategory {
-	if p == nil {
-		return nil
-	}
-	return p.CostOfGoodsSold
 }
 
 func (p *PropertyAccountingReportProfitAndLoss) GetCostOfGoodsSoldSections() []AccountingProfitlossSection {
@@ -94,13 +79,6 @@ func (p *PropertyAccountingReportProfitAndLoss) GetEndAt() *time.Time {
 	return p.EndAt
 }
 
-func (p *PropertyAccountingReportProfitAndLoss) GetExpenses() []AccountingProfitlossCategory {
-	if p == nil {
-		return nil
-	}
-	return p.Expenses
-}
-
 func (p *PropertyAccountingReportProfitAndLoss) GetExpensesSections() []AccountingProfitlossSection {
 	if p == nil {
 		return nil
@@ -115,25 +93,11 @@ func (p *PropertyAccountingReportProfitAndLoss) GetExpensesTotalAmount() *float6
 	return p.ExpensesTotalAmount
 }
 
-func (p *PropertyAccountingReportProfitAndLoss) GetGrossProfitAmount() *float64 {
-	if p == nil {
-		return nil
-	}
-	return p.GrossProfitAmount
-}
-
 func (p *PropertyAccountingReportProfitAndLoss) GetID() *string {
 	if p == nil {
 		return nil
 	}
 	return p.ID
-}
-
-func (p *PropertyAccountingReportProfitAndLoss) GetIncome() []AccountingProfitlossCategory {
-	if p == nil {
-		return nil
-	}
-	return p.Income
 }
 
 func (p *PropertyAccountingReportProfitAndLoss) GetIncomeSections() []AccountingProfitlossSection {
@@ -162,13 +126,6 @@ func (p *PropertyAccountingReportProfitAndLoss) GetNetIncomeAmount() *float64 {
 		return nil
 	}
 	return p.NetIncomeAmount
-}
-
-func (p *PropertyAccountingReportProfitAndLoss) GetNetProfitAmount() *float64 {
-	if p == nil {
-		return nil
-	}
-	return p.NetProfitAmount
 }
 
 func (p *PropertyAccountingReportProfitAndLoss) GetRaw() map[string]any {

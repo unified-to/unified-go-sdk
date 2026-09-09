@@ -23,10 +23,6 @@ const (
 	UpdateAccountingAccountQueryParamFieldsCurrency            UpdateAccountingAccountQueryParamFields = "currency"
 	UpdateAccountingAccountQueryParamFieldsCustomerDefinedCode UpdateAccountingAccountQueryParamFields = "customer_defined_code"
 	UpdateAccountingAccountQueryParamFieldsIsPayable           UpdateAccountingAccountQueryParamFields = "is_payable"
-	UpdateAccountingAccountQueryParamFieldsSection             UpdateAccountingAccountQueryParamFields = "section"
-	UpdateAccountingAccountQueryParamFieldsSubsection          UpdateAccountingAccountQueryParamFields = "subsection"
-	UpdateAccountingAccountQueryParamFieldsGroup               UpdateAccountingAccountQueryParamFields = "group"
-	UpdateAccountingAccountQueryParamFieldsSubgroup            UpdateAccountingAccountQueryParamFields = "subgroup"
 	UpdateAccountingAccountQueryParamFieldsParentID            UpdateAccountingAccountQueryParamFields = "parent_id"
 	UpdateAccountingAccountQueryParamFieldsTaxonomy            UpdateAccountingAccountQueryParamFields = "taxonomy"
 	UpdateAccountingAccountQueryParamFieldsOrganizationID      UpdateAccountingAccountQueryParamFields = "organization_id"
@@ -63,14 +59,6 @@ func (e *UpdateAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) err
 	case "customer_defined_code":
 		fallthrough
 	case "is_payable":
-		fallthrough
-	case "section":
-		fallthrough
-	case "subsection":
-		fallthrough
-	case "group":
-		fallthrough
-	case "subgroup":
 		fallthrough
 	case "parent_id":
 		fallthrough

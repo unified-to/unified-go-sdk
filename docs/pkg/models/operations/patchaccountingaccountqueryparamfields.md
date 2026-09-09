@@ -26,10 +26,6 @@ value := operations.PatchAccountingAccountQueryParamFieldsID
 | `PatchAccountingAccountQueryParamFieldsCurrency`            | currency                                                    |
 | `PatchAccountingAccountQueryParamFieldsCustomerDefinedCode` | customer_defined_code                                       |
 | `PatchAccountingAccountQueryParamFieldsIsPayable`           | is_payable                                                  |
-| `PatchAccountingAccountQueryParamFieldsSection`             | section                                                     |
-| `PatchAccountingAccountQueryParamFieldsSubsection`          | subsection                                                  |
-| `PatchAccountingAccountQueryParamFieldsGroup`               | group                                                       |
-| `PatchAccountingAccountQueryParamFieldsSubgroup`            | subgroup                                                    |
 | `PatchAccountingAccountQueryParamFieldsParentID`            | parent_id                                                   |
 | `PatchAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `PatchAccountingAccountQueryParamFieldsOrganizationID`      | organization_id                                             |

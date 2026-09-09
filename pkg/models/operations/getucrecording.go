@@ -12,24 +12,21 @@ import (
 type GetUcRecordingQueryParamFields string
 
 const (
-	GetUcRecordingQueryParamFieldsID           GetUcRecordingQueryParamFields = "id"
-	GetUcRecordingQueryParamFieldsCreatedAt    GetUcRecordingQueryParamFields = "created_at"
-	GetUcRecordingQueryParamFieldsUpdatedAt    GetUcRecordingQueryParamFields = "updated_at"
-	GetUcRecordingQueryParamFieldsStartAt      GetUcRecordingQueryParamFields = "start_at"
-	GetUcRecordingQueryParamFieldsEndAt        GetUcRecordingQueryParamFields = "end_at"
-	GetUcRecordingQueryParamFieldsExpiresAt    GetUcRecordingQueryParamFields = "expires_at"
-	GetUcRecordingQueryParamFieldsCallID       GetUcRecordingQueryParamFields = "call_id"
-	GetUcRecordingQueryParamFieldsWebURL       GetUcRecordingQueryParamFields = "web_url"
-	GetUcRecordingQueryParamFieldsContactID    GetUcRecordingQueryParamFields = "contact_id"
-	GetUcRecordingQueryParamFieldsContactName  GetUcRecordingQueryParamFields = "contact_name"
-	GetUcRecordingQueryParamFieldsContactPhone GetUcRecordingQueryParamFields = "contact_phone"
-	GetUcRecordingQueryParamFieldsContacts     GetUcRecordingQueryParamFields = "contacts"
-	GetUcRecordingQueryParamFieldsUserID       GetUcRecordingQueryParamFields = "user_id"
-	GetUcRecordingQueryParamFieldsMedia        GetUcRecordingQueryParamFields = "media"
-	GetUcRecordingQueryParamFieldsUserName     GetUcRecordingQueryParamFields = "user_name"
-	GetUcRecordingQueryParamFieldsUserPhone    GetUcRecordingQueryParamFields = "user_phone"
-	GetUcRecordingQueryParamFieldsType         GetUcRecordingQueryParamFields = "type"
-	GetUcRecordingQueryParamFieldsRaw          GetUcRecordingQueryParamFields = "raw"
+	GetUcRecordingQueryParamFieldsID        GetUcRecordingQueryParamFields = "id"
+	GetUcRecordingQueryParamFieldsCreatedAt GetUcRecordingQueryParamFields = "created_at"
+	GetUcRecordingQueryParamFieldsUpdatedAt GetUcRecordingQueryParamFields = "updated_at"
+	GetUcRecordingQueryParamFieldsStartAt   GetUcRecordingQueryParamFields = "start_at"
+	GetUcRecordingQueryParamFieldsEndAt     GetUcRecordingQueryParamFields = "end_at"
+	GetUcRecordingQueryParamFieldsExpiresAt GetUcRecordingQueryParamFields = "expires_at"
+	GetUcRecordingQueryParamFieldsCallID    GetUcRecordingQueryParamFields = "call_id"
+	GetUcRecordingQueryParamFieldsWebURL    GetUcRecordingQueryParamFields = "web_url"
+	GetUcRecordingQueryParamFieldsContacts  GetUcRecordingQueryParamFields = "contacts"
+	GetUcRecordingQueryParamFieldsUserID    GetUcRecordingQueryParamFields = "user_id"
+	GetUcRecordingQueryParamFieldsMedia     GetUcRecordingQueryParamFields = "media"
+	GetUcRecordingQueryParamFieldsUserName  GetUcRecordingQueryParamFields = "user_name"
+	GetUcRecordingQueryParamFieldsUserPhone GetUcRecordingQueryParamFields = "user_phone"
+	GetUcRecordingQueryParamFieldsType      GetUcRecordingQueryParamFields = "type"
+	GetUcRecordingQueryParamFieldsRaw       GetUcRecordingQueryParamFields = "raw"
 )
 
 func (e GetUcRecordingQueryParamFields) ToPointer() *GetUcRecordingQueryParamFields {
@@ -56,12 +53,6 @@ func (e *GetUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "call_id":
 		fallthrough
 	case "web_url":
-		fallthrough
-	case "contact_id":
-		fallthrough
-	case "contact_name":
-		fallthrough
-	case "contact_phone":
 		fallthrough
 	case "contacts":
 		fallthrough

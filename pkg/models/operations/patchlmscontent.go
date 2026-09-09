@@ -32,7 +32,6 @@ const (
 	PatchLmsContentQueryParamFieldsProviderName      PatchLmsContentQueryParamFields = "provider_name"
 	PatchLmsContentQueryParamFieldsShortDescription  PatchLmsContentQueryParamFields = "short_description"
 	PatchLmsContentQueryParamFieldsLocalizations     PatchLmsContentQueryParamFields = "localizations"
-	PatchLmsContentQueryParamFieldsInstructorIds     PatchLmsContentQueryParamFields = "instructor_ids"
 	PatchLmsContentQueryParamFieldsCollectionIds     PatchLmsContentQueryParamFields = "collection_ids"
 	PatchLmsContentQueryParamFieldsInstructors       PatchLmsContentQueryParamFields = "instructors"
 	PatchLmsContentQueryParamFieldsPublishedAt       PatchLmsContentQueryParamFields = "published_at"
@@ -87,8 +86,6 @@ func (e *PatchLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "short_description":
 		fallthrough
 	case "localizations":
-		fallthrough
-	case "instructor_ids":
 		fallthrough
 	case "collection_ids":
 		fallthrough

@@ -35,7 +35,6 @@ value := operations.ListLmsContentsQueryParamFieldsID
 | `ListLmsContentsQueryParamFieldsProviderName`      | provider_name                                      |
 | `ListLmsContentsQueryParamFieldsShortDescription`  | short_description                                  |
 | `ListLmsContentsQueryParamFieldsLocalizations`     | localizations                                      |
-| `ListLmsContentsQueryParamFieldsInstructorIds`     | instructor_ids                                     |
 | `ListLmsContentsQueryParamFieldsCollectionIds`     | collection_ids                                     |
 | `ListLmsContentsQueryParamFieldsInstructors`       | instructors                                        |
 | `ListLmsContentsQueryParamFieldsPublishedAt`       | published_at                                       |

@@ -20,10 +20,6 @@ const (
 	PatchCrmDealQueryParamFieldsCurrency    PatchCrmDealQueryParamFields = "currency"
 	PatchCrmDealQueryParamFieldsClosedAt    PatchCrmDealQueryParamFields = "closed_at"
 	PatchCrmDealQueryParamFieldsClosingAt   PatchCrmDealQueryParamFields = "closing_at"
-	PatchCrmDealQueryParamFieldsStage       PatchCrmDealQueryParamFields = "stage"
-	PatchCrmDealQueryParamFieldsStageID     PatchCrmDealQueryParamFields = "stage_id"
-	PatchCrmDealQueryParamFieldsPipeline    PatchCrmDealQueryParamFields = "pipeline"
-	PatchCrmDealQueryParamFieldsPipelineID  PatchCrmDealQueryParamFields = "pipeline_id"
 	PatchCrmDealQueryParamFieldsStages      PatchCrmDealQueryParamFields = "stages"
 	PatchCrmDealQueryParamFieldsPipelines   PatchCrmDealQueryParamFields = "pipelines"
 	PatchCrmDealQueryParamFieldsSource      PatchCrmDealQueryParamFields = "source"
@@ -35,6 +31,7 @@ const (
 	PatchCrmDealQueryParamFieldsContactIds  PatchCrmDealQueryParamFields = "contact_ids"
 	PatchCrmDealQueryParamFieldsCompanyIds  PatchCrmDealQueryParamFields = "company_ids"
 	PatchCrmDealQueryParamFieldsMetadata    PatchCrmDealQueryParamFields = "metadata"
+	PatchCrmDealQueryParamFieldsDescription PatchCrmDealQueryParamFields = "description"
 	PatchCrmDealQueryParamFieldsRaw         PatchCrmDealQueryParamFields = "raw"
 )
 
@@ -63,14 +60,6 @@ func (e *PatchCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "closing_at":
 		fallthrough
-	case "stage":
-		fallthrough
-	case "stage_id":
-		fallthrough
-	case "pipeline":
-		fallthrough
-	case "pipeline_id":
-		fallthrough
 	case "stages":
 		fallthrough
 	case "pipelines":
@@ -92,6 +81,8 @@ func (e *PatchCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "company_ids":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "description":
 		fallthrough
 	case "raw":
 		*e = PatchCrmDealQueryParamFields(v)

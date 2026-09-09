@@ -12,19 +12,17 @@ import (
 type GetLmsClassQueryParamFields string
 
 const (
-	GetLmsClassQueryParamFieldsID            GetLmsClassQueryParamFields = "id"
-	GetLmsClassQueryParamFieldsCreatedAt     GetLmsClassQueryParamFields = "created_at"
-	GetLmsClassQueryParamFieldsUpdatedAt     GetLmsClassQueryParamFields = "updated_at"
-	GetLmsClassQueryParamFieldsName          GetLmsClassQueryParamFields = "name"
-	GetLmsClassQueryParamFieldsDescription   GetLmsClassQueryParamFields = "description"
-	GetLmsClassQueryParamFieldsMedia         GetLmsClassQueryParamFields = "media"
-	GetLmsClassQueryParamFieldsCourseID      GetLmsClassQueryParamFields = "course_id"
-	GetLmsClassQueryParamFieldsInstructorIds GetLmsClassQueryParamFields = "instructor_ids"
-	GetLmsClassQueryParamFieldsStudentIds    GetLmsClassQueryParamFields = "student_ids"
-	GetLmsClassQueryParamFieldsLanguages     GetLmsClassQueryParamFields = "languages"
-	GetLmsClassQueryParamFieldsInstructors   GetLmsClassQueryParamFields = "instructors"
-	GetLmsClassQueryParamFieldsStudents      GetLmsClassQueryParamFields = "students"
-	GetLmsClassQueryParamFieldsRaw           GetLmsClassQueryParamFields = "raw"
+	GetLmsClassQueryParamFieldsID          GetLmsClassQueryParamFields = "id"
+	GetLmsClassQueryParamFieldsCreatedAt   GetLmsClassQueryParamFields = "created_at"
+	GetLmsClassQueryParamFieldsUpdatedAt   GetLmsClassQueryParamFields = "updated_at"
+	GetLmsClassQueryParamFieldsName        GetLmsClassQueryParamFields = "name"
+	GetLmsClassQueryParamFieldsDescription GetLmsClassQueryParamFields = "description"
+	GetLmsClassQueryParamFieldsMedia       GetLmsClassQueryParamFields = "media"
+	GetLmsClassQueryParamFieldsCourseID    GetLmsClassQueryParamFields = "course_id"
+	GetLmsClassQueryParamFieldsLanguages   GetLmsClassQueryParamFields = "languages"
+	GetLmsClassQueryParamFieldsInstructors GetLmsClassQueryParamFields = "instructors"
+	GetLmsClassQueryParamFieldsStudents    GetLmsClassQueryParamFields = "students"
+	GetLmsClassQueryParamFieldsRaw         GetLmsClassQueryParamFields = "raw"
 )
 
 func (e GetLmsClassQueryParamFields) ToPointer() *GetLmsClassQueryParamFields {
@@ -49,10 +47,6 @@ func (e *GetLmsClassQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "media":
 		fallthrough
 	case "course_id":
-		fallthrough
-	case "instructor_ids":
-		fallthrough
-	case "student_ids":
 		fallthrough
 	case "languages":
 		fallthrough

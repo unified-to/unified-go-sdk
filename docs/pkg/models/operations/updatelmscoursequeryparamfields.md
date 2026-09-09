@@ -27,9 +27,7 @@ value := operations.UpdateLmsCourseQueryParamFieldsID
 | `UpdateLmsCourseQueryParamFieldsCategories`          | categories                                           |
 | `UpdateLmsCourseQueryParamFieldsCurrency`            | currency                                             |
 | `UpdateLmsCourseQueryParamFieldsMedia`               | media                                                |
-| `UpdateLmsCourseQueryParamFieldsInstructorIds`       | instructor_ids                                       |
 | `UpdateLmsCourseQueryParamFieldsInstructors`         | instructors                                          |
-| `UpdateLmsCourseQueryParamFieldsStudentIds`          | student_ids                                          |
 | `UpdateLmsCourseQueryParamFieldsStudents`            | students                                             |
 | `UpdateLmsCourseQueryParamFieldsContentIds`          | content_ids                                          |
 | `UpdateLmsCourseQueryParamFieldsSkills`              | skills                                               |

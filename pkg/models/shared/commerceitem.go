@@ -33,8 +33,6 @@ func (e *WeightUnit) IsExact() bool {
 
 type CommerceItem struct {
 	AccountID *string `json:"account_id,omitempty"`
-	//  @deprecated; use collections instead
-	CollectionIds []string `json:"collection_ids,omitempty"`
 	// points to Collection with id, name, and type fields
 	Collections       []CommerceReference `json:"collections,omitempty"`
 	CreatedAt         *time.Time          `json:"created_at,omitempty"`
@@ -85,13 +83,6 @@ func (c *CommerceItem) GetAccountID() *string {
 		return nil
 	}
 	return c.AccountID
-}
-
-func (c *CommerceItem) GetCollectionIds() []string {
-	if c == nil {
-		return nil
-	}
-	return c.CollectionIds
 }
 
 func (c *CommerceItem) GetCollections() []CommerceReference {

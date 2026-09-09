@@ -35,7 +35,6 @@ value := operations.PatchLmsContentQueryParamFieldsID
 | `PatchLmsContentQueryParamFieldsProviderName`      | provider_name                                      |
 | `PatchLmsContentQueryParamFieldsShortDescription`  | short_description                                  |
 | `PatchLmsContentQueryParamFieldsLocalizations`     | localizations                                      |
-| `PatchLmsContentQueryParamFieldsInstructorIds`     | instructor_ids                                     |
 | `PatchLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                     |
 | `PatchLmsContentQueryParamFieldsInstructors`       | instructors                                        |
 | `PatchLmsContentQueryParamFieldsPublishedAt`       | published_at                                       |

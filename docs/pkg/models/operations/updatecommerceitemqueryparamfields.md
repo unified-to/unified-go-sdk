@@ -39,7 +39,6 @@ value := operations.UpdateCommerceItemQueryParamFieldsID
 | `UpdateCommerceItemQueryParamFieldsVariants`          | variants                                              |
 | `UpdateCommerceItemQueryParamFieldsTags`              | tags                                                  |
 | `UpdateCommerceItemQueryParamFieldsMedia`             | media                                                 |
-| `UpdateCommerceItemQueryParamFieldsCollectionIds`     | collection_ids                                        |
 | `UpdateCommerceItemQueryParamFieldsAccountID`         | account_id                                            |
 | `UpdateCommerceItemQueryParamFieldsMetadata`          | metadata                                              |
 | `UpdateCommerceItemQueryParamFieldsCollections`       | collections                                           |

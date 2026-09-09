@@ -13,23 +13,20 @@ value := operations.GetUcRecordingQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `GetUcRecordingQueryParamFieldsID`           | id                                           |
-| `GetUcRecordingQueryParamFieldsCreatedAt`    | created_at                                   |
-| `GetUcRecordingQueryParamFieldsUpdatedAt`    | updated_at                                   |
-| `GetUcRecordingQueryParamFieldsStartAt`      | start_at                                     |
-| `GetUcRecordingQueryParamFieldsEndAt`        | end_at                                       |
-| `GetUcRecordingQueryParamFieldsExpiresAt`    | expires_at                                   |
-| `GetUcRecordingQueryParamFieldsCallID`       | call_id                                      |
-| `GetUcRecordingQueryParamFieldsWebURL`       | web_url                                      |
-| `GetUcRecordingQueryParamFieldsContactID`    | contact_id                                   |
-| `GetUcRecordingQueryParamFieldsContactName`  | contact_name                                 |
-| `GetUcRecordingQueryParamFieldsContactPhone` | contact_phone                                |
-| `GetUcRecordingQueryParamFieldsContacts`     | contacts                                     |
-| `GetUcRecordingQueryParamFieldsUserID`       | user_id                                      |
-| `GetUcRecordingQueryParamFieldsMedia`        | media                                        |
-| `GetUcRecordingQueryParamFieldsUserName`     | user_name                                    |
-| `GetUcRecordingQueryParamFieldsUserPhone`    | user_phone                                   |
-| `GetUcRecordingQueryParamFieldsType`         | type                                         |
-| `GetUcRecordingQueryParamFieldsRaw`          | raw                                          |
+| Name                                      | Value                                     |
+| ----------------------------------------- | ----------------------------------------- |
+| `GetUcRecordingQueryParamFieldsID`        | id                                        |
+| `GetUcRecordingQueryParamFieldsCreatedAt` | created_at                                |
+| `GetUcRecordingQueryParamFieldsUpdatedAt` | updated_at                                |
+| `GetUcRecordingQueryParamFieldsStartAt`   | start_at                                  |
+| `GetUcRecordingQueryParamFieldsEndAt`     | end_at                                    |
+| `GetUcRecordingQueryParamFieldsExpiresAt` | expires_at                                |
+| `GetUcRecordingQueryParamFieldsCallID`    | call_id                                   |
+| `GetUcRecordingQueryParamFieldsWebURL`    | web_url                                   |
+| `GetUcRecordingQueryParamFieldsContacts`  | contacts                                  |
+| `GetUcRecordingQueryParamFieldsUserID`    | user_id                                   |
+| `GetUcRecordingQueryParamFieldsMedia`     | media                                     |
+| `GetUcRecordingQueryParamFieldsUserName`  | user_name                                 |
+| `GetUcRecordingQueryParamFieldsUserPhone` | user_phone                                |
+| `GetUcRecordingQueryParamFieldsType`      | type                                      |
+| `GetUcRecordingQueryParamFieldsRaw`       | raw                                       |

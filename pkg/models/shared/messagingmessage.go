@@ -12,9 +12,6 @@ type MessagingMessage struct {
 	// for email systems, this field represents the From value
 	AuthorMember *PropertyMessagingMessageAuthorMember `json:"author_member,omitempty"`
 	Buttons      []MessagingButton                     `json:"buttons,omitempty"`
-	ChannelID    *string                               `json:"channel_id,omitempty"`
-	// @deprecated; use channels instead
-	ChannelIds []string `json:"channel_ids,omitempty"`
 	// Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
 	Channels  []MessagingReference `json:"channels,omitempty"`
 	CreatedAt *time.Time           `json:"created_at,omitempty"`
@@ -35,7 +32,6 @@ type MessagingMessage struct {
 	Raw                     map[string]any      `json:"raw,omitempty"`
 	Reactions               []MessagingReaction `json:"reactions,omitempty"`
 	Reference               *string             `json:"reference,omitempty"`
-	RootMessageID           *string             `json:"root_message_id,omitempty"`
 	Subject                 *string             `json:"subject,omitempty"`
 	UpdatedAt               *time.Time          `json:"updated_at,omitempty"`
 	WebURL                  *string             `json:"web_url,omitempty"`
@@ -71,20 +67,6 @@ func (m *MessagingMessage) GetButtons() []MessagingButton {
 		return nil
 	}
 	return m.Buttons
-}
-
-func (m *MessagingMessage) GetChannelID() *string {
-	if m == nil {
-		return nil
-	}
-	return m.ChannelID
-}
-
-func (m *MessagingMessage) GetChannelIds() []string {
-	if m == nil {
-		return nil
-	}
-	return m.ChannelIds
 }
 
 func (m *MessagingMessage) GetChannels() []MessagingReference {
@@ -197,13 +179,6 @@ func (m *MessagingMessage) GetReference() *string {
 		return nil
 	}
 	return m.Reference
-}
-
-func (m *MessagingMessage) GetRootMessageID() *string {
-	if m == nil {
-		return nil
-	}
-	return m.RootMessageID
 }
 
 func (m *MessagingMessage) GetSubject() *string {

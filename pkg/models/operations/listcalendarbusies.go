@@ -48,7 +48,7 @@ func (e *ListCalendarBusiesQueryParamFields) UnmarshalJSON(data []byte) error {
 }
 
 type ListCalendarBusiesRequest struct {
-	// The calendar ID to filter by (reference to CalendarCalendar)
+	// The calendar ID to get availability for. Typically user's email or user ID. (reference to CalendarCalendar)
 	CalendarID *string `queryParam:"style=form,explode=true,name=calendar_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

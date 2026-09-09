@@ -13,18 +13,16 @@ value := operations.ListLmsClassesQueryParamFieldsID
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `ListLmsClassesQueryParamFieldsID`            | id                                            |
-| `ListLmsClassesQueryParamFieldsCreatedAt`     | created_at                                    |
-| `ListLmsClassesQueryParamFieldsUpdatedAt`     | updated_at                                    |
-| `ListLmsClassesQueryParamFieldsName`          | name                                          |
-| `ListLmsClassesQueryParamFieldsDescription`   | description                                   |
-| `ListLmsClassesQueryParamFieldsMedia`         | media                                         |
-| `ListLmsClassesQueryParamFieldsCourseID`      | course_id                                     |
-| `ListLmsClassesQueryParamFieldsInstructorIds` | instructor_ids                                |
-| `ListLmsClassesQueryParamFieldsStudentIds`    | student_ids                                   |
-| `ListLmsClassesQueryParamFieldsLanguages`     | languages                                     |
-| `ListLmsClassesQueryParamFieldsInstructors`   | instructors                                   |
-| `ListLmsClassesQueryParamFieldsStudents`      | students                                      |
-| `ListLmsClassesQueryParamFieldsRaw`           | raw                                           |
+| Name                                        | Value                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| `ListLmsClassesQueryParamFieldsID`          | id                                          |
+| `ListLmsClassesQueryParamFieldsCreatedAt`   | created_at                                  |
+| `ListLmsClassesQueryParamFieldsUpdatedAt`   | updated_at                                  |
+| `ListLmsClassesQueryParamFieldsName`        | name                                        |
+| `ListLmsClassesQueryParamFieldsDescription` | description                                 |
+| `ListLmsClassesQueryParamFieldsMedia`       | media                                       |
+| `ListLmsClassesQueryParamFieldsCourseID`    | course_id                                   |
+| `ListLmsClassesQueryParamFieldsLanguages`   | languages                                   |
+| `ListLmsClassesQueryParamFieldsInstructors` | instructors                                 |
+| `ListLmsClassesQueryParamFieldsStudents`    | students                                    |
+| `ListLmsClassesQueryParamFieldsRaw`         | raw                                         |

@@ -23,10 +23,6 @@ const (
 	QueryParamFieldsCurrency            QueryParamFields = "currency"
 	QueryParamFieldsCustomerDefinedCode QueryParamFields = "customer_defined_code"
 	QueryParamFieldsIsPayable           QueryParamFields = "is_payable"
-	QueryParamFieldsSection             QueryParamFields = "section"
-	QueryParamFieldsSubsection          QueryParamFields = "subsection"
-	QueryParamFieldsGroup               QueryParamFields = "group"
-	QueryParamFieldsSubgroup            QueryParamFields = "subgroup"
 	QueryParamFieldsParentID            QueryParamFields = "parent_id"
 	QueryParamFieldsTaxonomy            QueryParamFields = "taxonomy"
 	QueryParamFieldsOrganizationID      QueryParamFields = "organization_id"
@@ -63,14 +59,6 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 	case "customer_defined_code":
 		fallthrough
 	case "is_payable":
-		fallthrough
-	case "section":
-		fallthrough
-	case "subsection":
-		fallthrough
-	case "group":
-		fallthrough
-	case "subgroup":
 		fallthrough
 	case "parent_id":
 		fallthrough

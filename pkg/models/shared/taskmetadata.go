@@ -579,10 +579,8 @@ type TaskMetadata struct {
 	ExtraData *TaskMetadataExtraData `json:"extra_data,omitempty"`
 	Format    *TaskMetadataFormat    `json:"format,omitempty"`
 	ID        *string                `json:"id,omitempty"`
-	Key       *string                `json:"key,omitempty"`
 	Namespace *string                `json:"namespace,omitempty"`
 	Slug      *string                `json:"slug,omitempty"`
-	Type      *string                `json:"type,omitempty"`
 	Value     *TaskMetadataValue     `json:"value,omitempty"`
 }
 
@@ -607,13 +605,6 @@ func (t *TaskMetadata) GetID() *string {
 	return t.ID
 }
 
-func (t *TaskMetadata) GetKey() *string {
-	if t == nil {
-		return nil
-	}
-	return t.Key
-}
-
 func (t *TaskMetadata) GetNamespace() *string {
 	if t == nil {
 		return nil
@@ -626,13 +617,6 @@ func (t *TaskMetadata) GetSlug() *string {
 		return nil
 	}
 	return t.Slug
-}
-
-func (t *TaskMetadata) GetType() *string {
-	if t == nil {
-		return nil
-	}
-	return t.Type
 }
 
 func (t *TaskMetadata) GetValue() *TaskMetadataValue {
