@@ -79,7 +79,6 @@ type UnifiedTo struct {
 	Project             *Project
 	Purchaseorder       *Purchaseorder
 	Quote               *Quote
-	Report              *Report
 	Salesorder          *Salesorder
 	Taxrate             *Taxrate
 	Transaction         *Transaction
@@ -93,6 +92,7 @@ type UnifiedTo struct {
 	Group               *Group
 	Insertionorder      *Insertionorder
 	Promoted            *Promoted
+	Report              *Report
 	Target              *Target
 	Analytics           *Analytics
 	Event               *Event
@@ -307,10 +307,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.123",
+		SDKVersion: "0.36.124",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.36.123 2.935.1 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.36.123",
+			UserAgent:         "speakeasy-sdk/go 0.36.124 2.935.1 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.36.124",
 			GenVersion:        "2.935.1",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -355,7 +355,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Purchaseorder = newPurchaseorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Quote = newQuote(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Salesorder = newSalesorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -369,6 +368,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Group = newGroup(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Insertionorder = newInsertionorder(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Promoted = newPromoted(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Report = newReport(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Target = newTarget(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Analytics = newAnalytics(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Event = newEvent(sdk, sdk.sdkConfiguration, sdk.hooks)

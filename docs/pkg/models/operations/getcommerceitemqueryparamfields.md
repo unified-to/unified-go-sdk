@@ -36,7 +36,6 @@ value := operations.GetCommerceItemQueryParamFieldsID
 | `GetCommerceItemQueryParamFieldsPrices`            | prices                                             |
 | `GetCommerceItemQueryParamFieldsInventoryID`       | inventory_id                                       |
 | `GetCommerceItemQueryParamFieldsTotalStock`        | total_stock                                        |
-| `GetCommerceItemQueryParamFieldsVariants`          | variants                                           |
 | `GetCommerceItemQueryParamFieldsTags`              | tags                                               |
 | `GetCommerceItemQueryParamFieldsMedia`             | media                                              |
 | `GetCommerceItemQueryParamFieldsAccountID`         | account_id                                         |

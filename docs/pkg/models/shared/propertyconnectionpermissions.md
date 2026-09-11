@@ -47,8 +47,6 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsAccountingPurchaseorderWrite`       | accounting_purchaseorder_write                                    |
 | `PropertyConnectionPermissionsAccountingSalesorderRead`           | accounting_salesorder_read                                        |
 | `PropertyConnectionPermissionsAccountingSalesorderWrite`          | accounting_salesorder_write                                       |
-| `PropertyConnectionPermissionsAccountingReportRead`               | accounting_report_read                                            |
-| `PropertyConnectionPermissionsAccountingReportWrite`              | accounting_report_write                                           |
 | `PropertyConnectionPermissionsAccountingTrialbalanceRead`         | accounting_trialbalance_read                                      |
 | `PropertyConnectionPermissionsAccountingTrialbalanceWrite`        | accounting_trialbalance_write                                     |
 | `PropertyConnectionPermissionsAccountingProfitlossRead`           | accounting_profitloss_read                                        |

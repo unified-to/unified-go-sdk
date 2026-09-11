@@ -60,11 +60,9 @@ type CommerceItem struct {
 	TotalStock        *float64            `json:"total_stock,omitempty"`
 	Type              *string             `json:"type,omitempty"`
 	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
-	// first variant is the default variant
-	Variants   []CommerceItemvariant `json:"variants,omitempty"`
-	VendorName *string               `json:"vendor_name,omitempty"`
-	Weight     *float64              `json:"weight,omitempty"`
-	WeightUnit *WeightUnit           `json:"weight_unit,omitempty"`
+	VendorName        *string             `json:"vendor_name,omitempty"`
+	Weight            *float64            `json:"weight,omitempty"`
+	WeightUnit        *WeightUnit         `json:"weight_unit,omitempty"`
 }
 
 func (c CommerceItem) MarshalJSON() ([]byte, error) {
@@ -265,13 +263,6 @@ func (c *CommerceItem) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return c.UpdatedAt
-}
-
-func (c *CommerceItem) GetVariants() []CommerceItemvariant {
-	if c == nil {
-		return nil
-	}
-	return c.Variants
 }
 
 func (c *CommerceItem) GetVendorName() *string {

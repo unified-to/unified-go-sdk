@@ -124,7 +124,6 @@ func (e *AccountingInvoiceTerm) IsExact() bool {
 type AccountingInvoiceType string
 
 const (
-	AccountingInvoiceTypeBill       AccountingInvoiceType = "BILL"
 	AccountingInvoiceTypeInvoice    AccountingInvoiceType = "INVOICE"
 	AccountingInvoiceTypeCreditmemo AccountingInvoiceType = "CREDITMEMO"
 )
@@ -137,7 +136,7 @@ func (e AccountingInvoiceType) ToPointer() *AccountingInvoiceType {
 func (e *AccountingInvoiceType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "BILL", "INVOICE", "CREDITMEMO":
+		case "INVOICE", "CREDITMEMO":
 			return true
 		}
 	}

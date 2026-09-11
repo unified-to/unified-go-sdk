@@ -130,7 +130,6 @@ func main() {
 * [GetAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
 * [GetAccountingQuote](docs/sdks/accounting/README.md#getaccountingquote) - Retrieve a quote
-* [GetAccountingReport](docs/sdks/accounting/README.md#getaccountingreport) - Retrieve a report
 * [GetAccountingSalesorder](docs/sdks/accounting/README.md#getaccountingsalesorder) - Retrieve a salesorder
 * [GetAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
@@ -157,7 +156,6 @@ func main() {
 * [ListAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
 * [ListAccountingQuotes](docs/sdks/accounting/README.md#listaccountingquotes) - List all quotes
-* [ListAccountingReports](docs/sdks/accounting/README.md#listaccountingreports) - List all reports
 * [ListAccountingSalesorders](docs/sdks/accounting/README.md#listaccountingsalesorders) - List all salesorders
 * [ListAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
@@ -1805,8 +1803,6 @@ func main() {
 
 ### [Report](docs/sdks/report/README.md)
 
-* [GetAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
-* [ListAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 * [ListAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 * [ListAnalyticsReports](docs/sdks/report/README.md#listanalyticsreports) - List all reports
 * [ListMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports

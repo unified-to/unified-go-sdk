@@ -33,7 +33,6 @@ const (
 	PatchCommerceItemQueryParamFieldsPrices            PatchCommerceItemQueryParamFields = "prices"
 	PatchCommerceItemQueryParamFieldsInventoryID       PatchCommerceItemQueryParamFields = "inventory_id"
 	PatchCommerceItemQueryParamFieldsTotalStock        PatchCommerceItemQueryParamFields = "total_stock"
-	PatchCommerceItemQueryParamFieldsVariants          PatchCommerceItemQueryParamFields = "variants"
 	PatchCommerceItemQueryParamFieldsTags              PatchCommerceItemQueryParamFields = "tags"
 	PatchCommerceItemQueryParamFieldsMedia             PatchCommerceItemQueryParamFields = "media"
 	PatchCommerceItemQueryParamFieldsAccountID         PatchCommerceItemQueryParamFields = "account_id"
@@ -95,8 +94,6 @@ func (e *PatchCommerceItemQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "inventory_id":
 		fallthrough
 	case "total_stock":
-		fallthrough
-	case "variants":
 		fallthrough
 	case "tags":
 		fallthrough

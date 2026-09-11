@@ -36,7 +36,6 @@ value := operations.PatchCommerceItemQueryParamFieldsID
 | `PatchCommerceItemQueryParamFieldsPrices`            | prices                                               |
 | `PatchCommerceItemQueryParamFieldsInventoryID`       | inventory_id                                         |
 | `PatchCommerceItemQueryParamFieldsTotalStock`        | total_stock                                          |
-| `PatchCommerceItemQueryParamFieldsVariants`          | variants                                             |
 | `PatchCommerceItemQueryParamFieldsTags`              | tags                                                 |
 | `PatchCommerceItemQueryParamFieldsMedia`             | media                                                |
 | `PatchCommerceItemQueryParamFieldsAccountID`         | account_id                                           |

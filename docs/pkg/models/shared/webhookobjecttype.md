@@ -32,7 +32,6 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeAccountingOrder`               | accounting_order                                 |
 | `WebhookObjectTypeAccountingSalesorder`          | accounting_salesorder                            |
 | `WebhookObjectTypeAccountingPurchaseorder`       | accounting_purchaseorder                         |
-| `WebhookObjectTypeAccountingReport`              | accounting_report                                |
 | `WebhookObjectTypeAccountingBalancesheet`        | accounting_balancesheet                          |
 | `WebhookObjectTypeAccountingProfitloss`          | accounting_profitloss                            |
 | `WebhookObjectTypeAccountingTrialbalance`        | accounting_trialbalance                          |

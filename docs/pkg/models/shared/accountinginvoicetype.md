@@ -7,7 +7,7 @@ import (
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 )
 
-value := shared.AccountingInvoiceTypeBill
+value := shared.AccountingInvoiceTypeInvoice
 
 // Open enum: custom values can be created with a direct type cast
 custom := shared.AccountingInvoiceType("custom_value")
@@ -18,6 +18,5 @@ custom := shared.AccountingInvoiceType("custom_value")
 
 | Name                              | Value                             |
 | --------------------------------- | --------------------------------- |
-| `AccountingInvoiceTypeBill`       | BILL                              |
 | `AccountingInvoiceTypeInvoice`    | INVOICE                           |
 | `AccountingInvoiceTypeCreditmemo` | CREDITMEMO                        |

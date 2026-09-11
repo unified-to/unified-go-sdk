@@ -36,7 +36,6 @@ value := operations.CreateCommerceItemQueryParamFieldsID
 | `CreateCommerceItemQueryParamFieldsPrices`            | prices                                                |
 | `CreateCommerceItemQueryParamFieldsInventoryID`       | inventory_id                                          |
 | `CreateCommerceItemQueryParamFieldsTotalStock`        | total_stock                                           |
-| `CreateCommerceItemQueryParamFieldsVariants`          | variants                                              |
 | `CreateCommerceItemQueryParamFieldsTags`              | tags                                                  |
 | `CreateCommerceItemQueryParamFieldsMedia`             | media                                                 |
 | `CreateCommerceItemQueryParamFieldsAccountID`         | account_id                                            |
