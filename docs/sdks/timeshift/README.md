@@ -17,13 +17,14 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,7 +39,24 @@ func main() {
 
     res, err := s.Timeshift.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.585Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.762Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("5aa54cc4-5823-4860-ba55-793bbf0c56e9"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.426Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.696Z"),
         },
         ConnectionID: "<id>",
     })
@@ -184,13 +202,14 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -205,7 +224,24 @@ func main() {
 
     res, err := s.Timeshift.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.590Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.770Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("283863e4-1f7f-437d-8924-38675c79eb46"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.698Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -298,13 +334,14 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -319,7 +356,24 @@ func main() {
 
     res, err := s.Timeshift.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.590Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.770Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("283863e4-1f7f-437d-8924-38675c79eb46"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.698Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

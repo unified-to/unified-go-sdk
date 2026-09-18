@@ -23,7 +23,7 @@ Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="go" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" example="commerce_review" -->
 ```go
 package main
 
@@ -31,6 +31,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -43,7 +44,84 @@ func main() {
     )
 
     res, err := s.Review.CreateCommerceReview(ctx, operations.CreateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{},
+        CommerceReview: shared.CommerceReview{
+            AuthorAvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/ix4Br3LA/2245/1245"),
+            AuthorEmail: unifiedgosdk.Pointer("Cleve_Yundt@hotmail.com"),
+            AuthorLocation: unifiedgosdk.Pointer("ipsum"),
+            AuthorName: unifiedgosdk.Pointer("Marsha Krajcik"),
+            Comments: []shared.CommerceReviewComment{},
+            Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
+            CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
+            HelpfulVotes: unifiedgosdk.Pointer[float64](26.0),
+            ID: unifiedgosdk.Pointer("fdb676a7-2bef-4c8c-81c2-0417adcd57e9"),
+            IsFeatured: unifiedgosdk.Pointer(true),
+            IsPublic: unifiedgosdk.Pointer(true),
+            IsVerified: unifiedgosdk.Pointer(false),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Adulescens."),
+                    Height: unifiedgosdk.Pointer[float64](519.0),
+                    ID: unifiedgosdk.Pointer("93cfaf41-e1d2-481c-b0a5-7bdfd4780096"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("306f3f8e-83f6-4e23-bd1b-21cafb23a063"),
+                            Slug: unifiedgosdk.Pointer("aggero"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "tero",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/882/1004?lock=7448492654002422",
+                    Width: unifiedgosdk.Pointer[float64](75.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Pauci timidus sol comburo thema."),
+                    Height: unifiedgosdk.Pointer[float64](297.0),
+                    ID: unifiedgosdk.Pointer("678b99be-d99e-406e-bdaf-fc178a5460eb"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("18fcb2d2-907a-4209-8d72-8b26458ab456"),
+                            Slug: unifiedgosdk.Pointer("vito"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "cuppedia",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](61.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/3QDZ8/1208/2171",
+                    Width: unifiedgosdk.Pointer[float64](96.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Cuppedia vestrum patruus."),
+                    Height: unifiedgosdk.Pointer[float64](6.0),
+                    ID: unifiedgosdk.Pointer("982726b9-d78b-42f1-8328-156f2a0612ec"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("1108a4f5-7c47-4b22-ad10-99ce319aa352"),
+                            Slug: unifiedgosdk.Pointer("arbitro"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "villa",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://picsum.photos/seed/ytybC/2616/710",
+                    Width: unifiedgosdk.Pointer[float64](74.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{},
+            Rating: unifiedgosdk.Pointer[float64](3.0),
+            Status: shared.CommerceReviewStatusApproved.ToPointer(),
+            Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
+            UnhelpfulVotes: unifiedgosdk.Pointer[float64](49.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T00:05:43.301Z"),
+            URL: unifiedgosdk.Pointer("https://excitable-underneath.com"),
+            VerifiedPurchase: unifiedgosdk.Pointer(false),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -406,7 +484,7 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```go
 package main
 
@@ -414,6 +492,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -426,7 +505,84 @@ func main() {
     )
 
     res, err := s.Review.PatchCommerceReview(ctx, operations.PatchCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{},
+        CommerceReview: shared.CommerceReview{
+            AuthorAvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/ix4Br3LA/2245/1245"),
+            AuthorEmail: unifiedgosdk.Pointer("Cleve_Yundt@hotmail.com"),
+            AuthorLocation: unifiedgosdk.Pointer("ipsum"),
+            AuthorName: unifiedgosdk.Pointer("Marsha Krajcik"),
+            Comments: []shared.CommerceReviewComment{},
+            Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
+            CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
+            HelpfulVotes: unifiedgosdk.Pointer[float64](26.0),
+            ID: unifiedgosdk.Pointer("bb075d72-139f-4326-9e15-09e658a4c1b5"),
+            IsFeatured: unifiedgosdk.Pointer(true),
+            IsPublic: unifiedgosdk.Pointer(true),
+            IsVerified: unifiedgosdk.Pointer(false),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Adulescens."),
+                    Height: unifiedgosdk.Pointer[float64](519.0),
+                    ID: unifiedgosdk.Pointer("9b102df0-eaab-4238-af7c-c06346975739"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("54928f54-2456-413c-80b4-c11e2b8f2584"),
+                            Slug: unifiedgosdk.Pointer("aggero"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "tero",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/882/1004?lock=7448492654002422",
+                    Width: unifiedgosdk.Pointer[float64](75.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Pauci timidus sol comburo thema."),
+                    Height: unifiedgosdk.Pointer[float64](297.0),
+                    ID: unifiedgosdk.Pointer("dd6e6f6f-c50a-4ccc-9a91-fcdc374b7d00"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("3d1cb5ae-364d-4dbf-b43d-1c7bb0206bef"),
+                            Slug: unifiedgosdk.Pointer("vito"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "cuppedia",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](61.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/3QDZ8/1208/2171",
+                    Width: unifiedgosdk.Pointer[float64](96.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Cuppedia vestrum patruus."),
+                    Height: unifiedgosdk.Pointer[float64](6.0),
+                    ID: unifiedgosdk.Pointer("5983a5a3-d140-4c48-97c0-1a387737aa78"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("43d15278-487b-4093-8506-97d23093236a"),
+                            Slug: unifiedgosdk.Pointer("arbitro"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "villa",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://picsum.photos/seed/ytybC/2616/710",
+                    Width: unifiedgosdk.Pointer[float64](74.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{},
+            Rating: unifiedgosdk.Pointer[float64](3.0),
+            Status: shared.CommerceReviewStatusApproved.ToPointer(),
+            Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
+            UnhelpfulVotes: unifiedgosdk.Pointer[float64](49.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T00:05:43.336Z"),
+            URL: unifiedgosdk.Pointer("https://excitable-underneath.com"),
+            VerifiedPurchase: unifiedgosdk.Pointer(false),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -575,7 +731,7 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```go
 package main
 
@@ -583,6 +739,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -595,7 +752,84 @@ func main() {
     )
 
     res, err := s.Review.UpdateCommerceReview(ctx, operations.UpdateCommerceReviewRequest{
-        CommerceReview: shared.CommerceReview{},
+        CommerceReview: shared.CommerceReview{
+            AuthorAvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/ix4Br3LA/2245/1245"),
+            AuthorEmail: unifiedgosdk.Pointer("Cleve_Yundt@hotmail.com"),
+            AuthorLocation: unifiedgosdk.Pointer("ipsum"),
+            AuthorName: unifiedgosdk.Pointer("Marsha Krajcik"),
+            Comments: []shared.CommerceReviewComment{},
+            Content: unifiedgosdk.Pointer("Taedium thymum adipiscor amicitia cui."),
+            CreatedAt: types.MustNewTimeFromString("2019-12-12T18:10:22.988Z"),
+            HelpfulVotes: unifiedgosdk.Pointer[float64](26.0),
+            ID: unifiedgosdk.Pointer("bb075d72-139f-4326-9e15-09e658a4c1b5"),
+            IsFeatured: unifiedgosdk.Pointer(true),
+            IsPublic: unifiedgosdk.Pointer(true),
+            IsVerified: unifiedgosdk.Pointer(false),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Adulescens."),
+                    Height: unifiedgosdk.Pointer[float64](519.0),
+                    ID: unifiedgosdk.Pointer("9b102df0-eaab-4238-af7c-c06346975739"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("54928f54-2456-413c-80b4-c11e2b8f2584"),
+                            Slug: unifiedgosdk.Pointer("aggero"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "tero",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](72.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/882/1004?lock=7448492654002422",
+                    Width: unifiedgosdk.Pointer[float64](75.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Pauci timidus sol comburo thema."),
+                    Height: unifiedgosdk.Pointer[float64](297.0),
+                    ID: unifiedgosdk.Pointer("dd6e6f6f-c50a-4ccc-9a91-fcdc374b7d00"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("3d1cb5ae-364d-4dbf-b43d-1c7bb0206bef"),
+                            Slug: unifiedgosdk.Pointer("vito"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "cuppedia",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](61.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/3QDZ8/1208/2171",
+                    Width: unifiedgosdk.Pointer[float64](96.0),
+                },
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Cuppedia vestrum patruus."),
+                    Height: unifiedgosdk.Pointer[float64](6.0),
+                    ID: unifiedgosdk.Pointer("5983a5a3-d140-4c48-97c0-1a387737aa78"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("43d15278-487b-4093-8506-97d23093236a"),
+                            Slug: unifiedgosdk.Pointer("arbitro"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "villa",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](60.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://picsum.photos/seed/ytybC/2616/710",
+                    Width: unifiedgosdk.Pointer[float64](74.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{},
+            Rating: unifiedgosdk.Pointer[float64](3.0),
+            Status: shared.CommerceReviewStatusApproved.ToPointer(),
+            Title: unifiedgosdk.Pointer("Coepi adamo amicitia auxilium toties."),
+            UnhelpfulVotes: unifiedgosdk.Pointer[float64](49.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-25T00:05:43.336Z"),
+            URL: unifiedgosdk.Pointer("https://excitable-underneath.com"),
+            VerifiedPurchase: unifiedgosdk.Pointer(false),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

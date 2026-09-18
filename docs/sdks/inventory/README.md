@@ -17,13 +17,14 @@ Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="go" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,10 @@ func main() {
     )
 
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{},
+        CommerceInventory: shared.CommerceInventory{
+            Available: unifiedgosdk.Pointer[float64](337.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.500Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +186,14 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +207,10 @@ func main() {
     )
 
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{},
+        CommerceInventory: shared.CommerceInventory{
+            Available: unifiedgosdk.Pointer[float64](337.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.505Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +302,14 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +323,10 @@ func main() {
     )
 
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
-        CommerceInventory: shared.CommerceInventory{},
+        CommerceInventory: shared.CommerceInventory{
+            Available: unifiedgosdk.Pointer[float64](337.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.505Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

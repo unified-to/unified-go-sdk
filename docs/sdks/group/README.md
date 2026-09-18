@@ -31,7 +31,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```go
 package main
 
@@ -39,6 +39,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -51,7 +52,22 @@ func main() {
     )
 
     res, err := s.Group.CreateAdsGroup(ctx, operations.CreateAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.302Z"),
+            ID: unifiedgosdk.Pointer("497eb0be-612c-416e-be9f-14f379e66106"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.683Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.220Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -87,13 +103,14 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -107,7 +124,15 @@ func main() {
     )
 
     res, err := s.Group.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("099c5936-1edd-4222-968a-7c0ef8c876be"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.475Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -637,7 +662,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```go
 package main
 
@@ -645,6 +670,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -657,7 +683,22 @@ func main() {
     )
 
     res, err := s.Group.PatchAdsGroup(ctx, operations.PatchAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.401Z"),
+            ID: unifiedgosdk.Pointer("4e613cf5-3cb2-4316-a124-d5d7b5cb0cce"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.775Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.254Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -694,13 +735,14 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -714,7 +756,15 @@ func main() {
     )
 
     res, err := s.Group.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("c763447d-e407-47b1-8de4-dccc188d37ff"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.480Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -975,7 +1025,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```go
 package main
 
@@ -983,6 +1033,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -995,7 +1046,22 @@ func main() {
     )
 
     res, err := s.Group.UpdateAdsGroup(ctx, operations.UpdateAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.401Z"),
+            ID: unifiedgosdk.Pointer("4e613cf5-3cb2-4316-a124-d5d7b5cb0cce"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.775Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.254Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1032,13 +1098,14 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1052,7 +1119,15 @@ func main() {
     )
 
     res, err := s.Group.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("c763447d-e407-47b1-8de4-dccc188d37ff"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.480Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

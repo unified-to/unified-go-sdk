@@ -17,13 +17,14 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,19 @@ func main() {
     )
 
     res, err := s.Visitor.CreateAnalyticsVisitor(ctx, operations.CreateAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("ab2b6a1f-cce4-4953-9e88-df24182041a1"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.311Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.712Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +195,14 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +216,19 @@ func main() {
     )
 
     res, err := s.Visitor.PatchAnalyticsVisitor(ctx, operations.PatchAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("0b4b25d8-df6a-4624-842b-2ef30c63b760"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.314Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.719Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +320,14 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +341,19 @@ func main() {
     )
 
     res, err := s.Visitor.UpdateAnalyticsVisitor(ctx, operations.UpdateAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("0b4b25d8-df6a-4624-842b-2ef30c63b760"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.314Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.719Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

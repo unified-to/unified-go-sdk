@@ -17,13 +17,14 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,21 @@ func main() {
     )
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.304Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("77083448-74aa-4bc6-a4f5-56c68df82b5b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.126Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +197,14 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +218,21 @@ func main() {
     )
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.308Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("6646d180-626b-4c04-8bc0-19f4b51f0a4b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.129Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +324,14 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +345,21 @@ func main() {
     )
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.308Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("6646d180-626b-4c04-8bc0-19f4b51f0a4b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.129Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

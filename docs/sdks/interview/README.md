@@ -17,13 +17,14 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="go" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,16 @@ func main() {
     )
 
     res, err := s.Interview.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
-        AtsInterview: shared.AtsInterview{},
+        AtsInterview: shared.AtsInterview{
+            CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
+            EndAt: types.MustNewTimeFromString("2025-09-23T09:05:48.481Z"),
+            ExternalEventXref: unifiedgosdk.Pointer("84a23905-2281-4581-a23e-0fe132967e08"),
+            ID: unifiedgosdk.Pointer("2f355a5b-ce70-4e7b-9094-242a4ec62347"),
+            Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
+            StartAt: types.MustNewTimeFromString("2025-05-19T07:09:26.800Z"),
+            Status: shared.AtsInterviewStatusScheduled.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-04T01:29:49.305Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +192,14 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +213,16 @@ func main() {
     )
 
     res, err := s.Interview.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
-        AtsInterview: shared.AtsInterview{},
+        AtsInterview: shared.AtsInterview{
+            CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
+            EndAt: types.MustNewTimeFromString("2025-09-23T09:05:48.485Z"),
+            ExternalEventXref: unifiedgosdk.Pointer("1de17c7c-ddd1-4bcd-b7ed-b76dcc514dc2"),
+            ID: unifiedgosdk.Pointer("00714ef5-c15e-44bf-aeb6-721aa281713e"),
+            Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
+            StartAt: types.MustNewTimeFromString("2025-05-19T07:09:26.803Z"),
+            Status: shared.AtsInterviewStatusScheduled.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-04T01:29:49.309Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +314,14 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +335,16 @@ func main() {
     )
 
     res, err := s.Interview.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
-        AtsInterview: shared.AtsInterview{},
+        AtsInterview: shared.AtsInterview{
+            CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
+            EndAt: types.MustNewTimeFromString("2025-09-23T09:05:48.485Z"),
+            ExternalEventXref: unifiedgosdk.Pointer("1de17c7c-ddd1-4bcd-b7ed-b76dcc514dc2"),
+            ID: unifiedgosdk.Pointer("00714ef5-c15e-44bf-aeb6-721aa281713e"),
+            Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
+            StartAt: types.MustNewTimeFromString("2025-05-19T07:09:26.803Z"),
+            Status: shared.AtsInterviewStatusScheduled.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-04T01:29:49.309Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -25,13 +25,14 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="go" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -45,7 +46,18 @@ func main() {
     )
 
     res, err := s.Messaging.CreateMessagingChannel(ctx, operations.CreateMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("24bac585-b154-4c1b-859e-9751816e04b1"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.577Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -81,7 +93,7 @@ Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="go" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```go
 package main
 
@@ -89,6 +101,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,7 +114,39 @@ func main() {
     )
 
     res, err := s.Messaging.CreateMessagingMessage(ctx, operations.CreateMessagingMessageRequest{
-        MessagingMessage: shared.MessagingMessage{},
+        MessagingMessage: shared.MessagingMessage{
+            Attachments: []shared.MessagingAttachment{
+                shared.MessagingAttachment{
+                    ContentIdentifier: unifiedgosdk.Pointer("dcbbbd22-fbe7-4d58-8c1a-f868d90f7f46"),
+                    ContentType: unifiedgosdk.Pointer("coaegresco"),
+                    DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
+                    Filename: unifiedgosdk.Pointer("super"),
+                    MessageID: unifiedgosdk.Pointer("3dbc3e68-3f4f-4041-b650-268411e66492"),
+                    Size: unifiedgosdk.Pointer[float64](327.0),
+                },
+            },
+            Buttons: []shared.MessagingButton{
+                shared.MessagingButton{
+                    ID: "05031570-3444-488e-aabc-5d5838a0c623",
+                    Text: unifiedgosdk.Pointer("denuo"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-11-26T09:26:33.973Z"),
+            DestinationMembers: []shared.MessagingMember{},
+            HasChildren: unifiedgosdk.Pointer(true),
+            HiddenMembers: []shared.MessagingMember{},
+            ID: unifiedgosdk.Pointer("3dbc3e68-3f4f-4041-b650-268411e66492"),
+            IsUnread: unifiedgosdk.Pointer(false),
+            MentionedMembers: []shared.MessagingMember{},
+            Message: unifiedgosdk.Pointer("Sum utique aliquid."),
+            MessageHTML: unifiedgosdk.Pointer("Articulus tardus tergiversatio."),
+            MessageMarkdown: unifiedgosdk.Pointer("Territo uterque tergo curiositas."),
+            Reactions: []shared.MessagingReaction{},
+            Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
+            Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.370Z"),
+            WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -355,13 +400,14 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -375,7 +421,18 @@ func main() {
     )
 
     res, err := s.Messaging.PatchMessagingChannel(ctx, operations.PatchMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("b108583d-fb24-4ece-9f1f-f72eb82efeee"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.582Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -412,7 +469,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```go
 package main
 
@@ -420,6 +477,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -432,7 +490,16 @@ func main() {
     )
 
     res, err := s.Messaging.PatchMessagingEvent(ctx, operations.PatchMessagingEventRequest{
-        MessagingEvent: shared.MessagingEvent{},
+        MessagingEvent: shared.MessagingEvent{
+            Channel: &shared.PropertyMessagingEventChannel{
+                ID: unifiedgosdk.Pointer(""),
+                Name: unifiedgosdk.Pointer(""),
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-05-30T19:44:46.461Z"),
+            ID: unifiedgosdk.Pointer("80251efb-7cca-4045-9ecd-d72a471d768d"),
+            IsReplacingOriginal: unifiedgosdk.Pointer(false),
+            Type: shared.MessagingEventTypeButtonClick.ToPointer(),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -469,7 +536,7 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```go
 package main
 
@@ -477,6 +544,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -489,7 +557,39 @@ func main() {
     )
 
     res, err := s.Messaging.PatchMessagingMessage(ctx, operations.PatchMessagingMessageRequest{
-        MessagingMessage: shared.MessagingMessage{},
+        MessagingMessage: shared.MessagingMessage{
+            Attachments: []shared.MessagingAttachment{
+                shared.MessagingAttachment{
+                    ContentIdentifier: unifiedgosdk.Pointer("ba1ea251-fd50-4498-8c30-e7fbb2bcaebb"),
+                    ContentType: unifiedgosdk.Pointer("coaegresco"),
+                    DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
+                    Filename: unifiedgosdk.Pointer("super"),
+                    MessageID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+                    Size: unifiedgosdk.Pointer[float64](327.0),
+                },
+            },
+            Buttons: []shared.MessagingButton{
+                shared.MessagingButton{
+                    ID: "973c0bd5-12e9-4075-b53c-e1ae96e509f9",
+                    Text: unifiedgosdk.Pointer("denuo"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-11-26T09:26:33.973Z"),
+            DestinationMembers: []shared.MessagingMember{},
+            HasChildren: unifiedgosdk.Pointer(true),
+            HiddenMembers: []shared.MessagingMember{},
+            ID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+            IsUnread: unifiedgosdk.Pointer(false),
+            MentionedMembers: []shared.MessagingMember{},
+            Message: unifiedgosdk.Pointer("Sum utique aliquid."),
+            MessageHTML: unifiedgosdk.Pointer("Articulus tardus tergiversatio."),
+            MessageMarkdown: unifiedgosdk.Pointer("Territo uterque tergo curiositas."),
+            Reactions: []shared.MessagingReaction{},
+            Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
+            Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.377Z"),
+            WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -636,13 +736,14 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -656,7 +757,18 @@ func main() {
     )
 
     res, err := s.Messaging.UpdateMessagingChannel(ctx, operations.UpdateMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("b108583d-fb24-4ece-9f1f-f72eb82efeee"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.582Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -693,7 +805,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```go
 package main
 
@@ -701,6 +813,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -713,7 +826,16 @@ func main() {
     )
 
     res, err := s.Messaging.UpdateMessagingEvent(ctx, operations.UpdateMessagingEventRequest{
-        MessagingEvent: shared.MessagingEvent{},
+        MessagingEvent: shared.MessagingEvent{
+            Channel: &shared.PropertyMessagingEventChannel{
+                ID: unifiedgosdk.Pointer(""),
+                Name: unifiedgosdk.Pointer(""),
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-05-30T19:44:46.461Z"),
+            ID: unifiedgosdk.Pointer("80251efb-7cca-4045-9ecd-d72a471d768d"),
+            IsReplacingOriginal: unifiedgosdk.Pointer(false),
+            Type: shared.MessagingEventTypeButtonClick.ToPointer(),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -750,7 +872,7 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```go
 package main
 
@@ -758,6 +880,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -770,7 +893,39 @@ func main() {
     )
 
     res, err := s.Messaging.UpdateMessagingMessage(ctx, operations.UpdateMessagingMessageRequest{
-        MessagingMessage: shared.MessagingMessage{},
+        MessagingMessage: shared.MessagingMessage{
+            Attachments: []shared.MessagingAttachment{
+                shared.MessagingAttachment{
+                    ContentIdentifier: unifiedgosdk.Pointer("ba1ea251-fd50-4498-8c30-e7fbb2bcaebb"),
+                    ContentType: unifiedgosdk.Pointer("coaegresco"),
+                    DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
+                    Filename: unifiedgosdk.Pointer("super"),
+                    MessageID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+                    Size: unifiedgosdk.Pointer[float64](327.0),
+                },
+            },
+            Buttons: []shared.MessagingButton{
+                shared.MessagingButton{
+                    ID: "973c0bd5-12e9-4075-b53c-e1ae96e509f9",
+                    Text: unifiedgosdk.Pointer("denuo"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-11-26T09:26:33.973Z"),
+            DestinationMembers: []shared.MessagingMember{},
+            HasChildren: unifiedgosdk.Pointer(true),
+            HiddenMembers: []shared.MessagingMember{},
+            ID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+            IsUnread: unifiedgosdk.Pointer(false),
+            MentionedMembers: []shared.MessagingMember{},
+            Message: unifiedgosdk.Pointer("Sum utique aliquid."),
+            MessageHTML: unifiedgosdk.Pointer("Articulus tardus tergiversatio."),
+            MessageMarkdown: unifiedgosdk.Pointer("Territo uterque tergo curiositas."),
+            Reactions: []shared.MessagingReaction{},
+            Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
+            Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.377Z"),
+            WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,7 +17,7 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,37 @@ func main() {
     )
 
     res, err := s.Creditmemo.CreateAccountingCreditmemo(ctx, operations.CreateAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("1488ad93-84a6-49ed-932e-b13b61f4aec9"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("aea99f00-408b-4a75-85a6-157c219f02cf"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.682Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.062Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +213,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -190,6 +221,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +234,37 @@ func main() {
     )
 
     res, err := s.Creditmemo.PatchAccountingCreditmemo(ctx, operations.PatchAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("92ebacd2-bd76-47ed-a2c3-8354d39cbb0d"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("f0ec1da8-b326-4f28-a43e-b4ff7e926358"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.704Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.074Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +356,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -302,6 +364,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +377,37 @@ func main() {
     )
 
     res, err := s.Creditmemo.UpdateAccountingCreditmemo(ctx, operations.UpdateAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("92ebacd2-bd76-47ed-a2c3-8354d39cbb0d"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("f0ec1da8-b326-4f28-a43e-b4ff7e926358"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.704Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.074Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

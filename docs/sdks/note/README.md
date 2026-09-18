@@ -17,13 +17,14 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="go" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,12 @@ func main() {
     )
 
     res, err := s.Note.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("138a6769-b4ce-42a5-b39c-a7b74cffb814"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.420Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +188,14 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +209,12 @@ func main() {
     )
 
     res, err := s.Note.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("971baacd-8b5f-433b-8fd1-ce1feb163fad"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.423Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +306,14 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +327,12 @@ func main() {
     )
 
     res, err := s.Note.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("971baacd-8b5f-433b-8fd1-ce1feb163fad"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.423Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

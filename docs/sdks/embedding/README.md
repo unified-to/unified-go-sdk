@@ -12,7 +12,7 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="go" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```go
 package main
 
@@ -32,7 +32,20 @@ func main() {
     )
 
     res, err := s.Embedding.CreateGenaiEmbedding(ctx, operations.CreateGenaiEmbeddingRequest{
-        GenaiEmbedding: shared.GenaiEmbedding{},
+        GenaiEmbedding: shared.GenaiEmbedding{
+            Content: []shared.GenaiEmbeddingContent{
+                shared.GenaiEmbeddingContent{
+                    Text: "Utrimque temptatio pecco demulceo.",
+                },
+            },
+            Dimension: unifiedgosdk.Pointer[float64](423.0),
+            Embeddings: unifiedgosdk.Pointer("Est."),
+            EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
+            ID: unifiedgosdk.Pointer("fc42dab3-7eb8-4c34-b06d-d2c31a656c4a"),
+            MaxTokens: unifiedgosdk.Pointer[float64](223.0),
+            TokensUsed: unifiedgosdk.Pointer[float64](836.0),
+            Type: unifiedgosdk.Pointer("classification"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {

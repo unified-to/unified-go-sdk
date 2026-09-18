@@ -17,7 +17,7 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="go" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,18 @@ func main() {
     )
 
     res, err := s.Bankaccount.CreateHrisBankaccount(ctx, operations.CreateHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("051d327b-0297-4e9c-b8d0-df8ea1dd201a"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.454Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +194,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -190,6 +202,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +215,18 @@ func main() {
     )
 
     res, err := s.Bankaccount.PatchHrisBankaccount(ctx, operations.PatchHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("dd4ed56d-0c27-4644-b8de-e65b1d9a2ee0"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.458Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +318,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -302,6 +326,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +339,18 @@ func main() {
     )
 
     res, err := s.Bankaccount.UpdateHrisBankaccount(ctx, operations.UpdateHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("dd4ed56d-0c27-4644-b8de-e65b1d9a2ee0"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.458Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

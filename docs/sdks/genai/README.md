@@ -15,7 +15,7 @@ Create an embedding
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="go" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```go
 package main
 
@@ -35,7 +35,20 @@ func main() {
     )
 
     res, err := s.Genai.CreateGenaiEmbedding(ctx, operations.CreateGenaiEmbeddingRequest{
-        GenaiEmbedding: shared.GenaiEmbedding{},
+        GenaiEmbedding: shared.GenaiEmbedding{
+            Content: []shared.GenaiEmbeddingContent{
+                shared.GenaiEmbeddingContent{
+                    Text: "Utrimque temptatio pecco demulceo.",
+                },
+            },
+            Dimension: unifiedgosdk.Pointer[float64](423.0),
+            Embeddings: unifiedgosdk.Pointer("Est."),
+            EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
+            ID: unifiedgosdk.Pointer("fc42dab3-7eb8-4c34-b06d-d2c31a656c4a"),
+            MaxTokens: unifiedgosdk.Pointer[float64](223.0),
+            TokensUsed: unifiedgosdk.Pointer[float64](836.0),
+            Type: unifiedgosdk.Pointer("classification"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -71,7 +84,7 @@ Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="go" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" example="genai_prompt" -->
 ```go
 package main
 
@@ -91,7 +104,27 @@ func main() {
     )
 
     res, err := s.Genai.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
-        GenaiPrompt: shared.GenaiPrompt{},
+        GenaiPrompt: shared.GenaiPrompt{
+            MaxTokens: unifiedgosdk.Pointer[float64](0.4677782787475735),
+            McpAuthorizationToken: unifiedgosdk.Pointer("f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4"),
+            McpDeferredTools: []string{},
+            McpURL: unifiedgosdk.Pointer("https://unsung-dusk.info/"),
+            Messages: []shared.GenaiContent{
+                shared.GenaiContent{
+                    Content: "Aegre repudiandae verecundia facere statua.",
+                    Role: shared.RoleAssistant.ToPointer(),
+                },
+                shared.GenaiContent{
+                    Content: "Speciosus xiphias soleo trepide crinis.",
+                    Role: shared.RoleSystem.ToPointer(),
+                },
+            },
+            Responses: []string{
+                "Balbus vobis circumvenio una.",
+            },
+            Temperature: unifiedgosdk.Pointer[float64](0.0),
+            TokensUsed: unifiedgosdk.Pointer[float64](975.0),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {

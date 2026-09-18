@@ -307,10 +307,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.125",
+		SDKVersion: "0.36.126",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.36.125 2.937.18 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.36.125",
+			UserAgent:         "speakeasy-sdk/go 0.36.126 2.937.18 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.36.126",
 			GenVersion:        "2.937.18",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,

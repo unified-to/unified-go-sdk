@@ -17,13 +17,14 @@ Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="go" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" example="signing_signatory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,15 @@ func main() {
     )
 
     res, err := s.Signatory.CreateSigningSignatory(ctx, operations.CreateSigningSignatoryRequest{
-        SigningSignatory: shared.SigningSignatory{},
+        SigningSignatory: shared.SigningSignatory{
+            CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
+            Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
+            ID: unifiedgosdk.Pointer("c4ca0b65-9176-4cfe-a09d-e27c905b9848"),
+            Order: unifiedgosdk.Pointer[float64](5.0),
+            Role: shared.SigningSignatoryRoleSigner.ToPointer(),
+            Status: shared.SigningSignatoryStatusSigned.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-10T20:02:03.718Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +191,14 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +212,15 @@ func main() {
     )
 
     res, err := s.Signatory.PatchSigningSignatory(ctx, operations.PatchSigningSignatoryRequest{
-        SigningSignatory: shared.SigningSignatory{},
+        SigningSignatory: shared.SigningSignatory{
+            CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
+            Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
+            ID: unifiedgosdk.Pointer("a326b9e7-ff5b-42d5-bc98-1531014c2de9"),
+            Order: unifiedgosdk.Pointer[float64](5.0),
+            Role: shared.SigningSignatoryRoleSigner.ToPointer(),
+            Status: shared.SigningSignatoryStatusSigned.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-10T20:02:03.724Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +312,14 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +333,15 @@ func main() {
     )
 
     res, err := s.Signatory.UpdateSigningSignatory(ctx, operations.UpdateSigningSignatoryRequest{
-        SigningSignatory: shared.SigningSignatory{},
+        SigningSignatory: shared.SigningSignatory{
+            CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
+            Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
+            ID: unifiedgosdk.Pointer("a326b9e7-ff5b-42d5-bc98-1531014c2de9"),
+            Order: unifiedgosdk.Pointer[float64](5.0),
+            Role: shared.SigningSignatoryRoleSigner.ToPointer(),
+            Status: shared.SigningSignatoryStatusSigned.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-08-10T20:02:03.724Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

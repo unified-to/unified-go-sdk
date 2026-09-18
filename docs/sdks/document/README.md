@@ -29,13 +29,14 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="go" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -49,7 +50,14 @@ func main() {
     )
 
     res, err := s.Document.CreateAtsDocument(ctx, operations.CreateAtsDocumentRequest{
-        AtsDocument: shared.AtsDocument{},
+        AtsDocument: shared.AtsDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
+            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
+            ID: unifiedgosdk.Pointer("7d1d06b0-1e73-44a7-b3ce-69659ac4ee65"),
+            Type: shared.AtsDocumentTypeResume.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-28T22:24:37.091Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -85,13 +93,14 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="go" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -105,7 +114,14 @@ func main() {
     )
 
     res, err := s.Document.CreateHrisDocument(ctx, operations.CreateHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("0dadcf98-ce9e-4114-a2bc-1829210dd647"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.278Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -141,13 +157,14 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="go" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -161,7 +178,14 @@ func main() {
     )
 
     res, err := s.Document.CreateSigningDocument(ctx, operations.CreateSigningDocumentRequest{
-        SigningDocument: shared.SigningDocument{},
+        SigningDocument: shared.SigningDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-12-16T11:16:51.343Z"),
+            ID: unifiedgosdk.Pointer("6bf800ed-300f-438f-8565-a61896ecd1f6"),
+            Name: unifiedgosdk.Pointer("nam audax absens"),
+            Status: shared.SigningDocumentStatusVoided.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-07T18:59:10.056Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -524,13 +548,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -544,7 +569,14 @@ func main() {
     )
 
     res, err := s.Document.PatchAtsDocument(ctx, operations.PatchAtsDocumentRequest{
-        AtsDocument: shared.AtsDocument{},
+        AtsDocument: shared.AtsDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
+            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
+            ID: unifiedgosdk.Pointer("26c5ceec-8508-4921-b26d-d5cb448877d2"),
+            Type: shared.AtsDocumentTypeResume.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-28T22:24:37.093Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -581,13 +613,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -601,7 +634,14 @@ func main() {
     )
 
     res, err := s.Document.PatchHrisDocument(ctx, operations.PatchHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("9e1f0c7a-1b08-4619-bf5a-39ca8b38ddf4"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.283Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -638,13 +678,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -658,7 +699,14 @@ func main() {
     )
 
     res, err := s.Document.PatchSigningDocument(ctx, operations.PatchSigningDocumentRequest{
-        SigningDocument: shared.SigningDocument{},
+        SigningDocument: shared.SigningDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-12-16T11:16:51.349Z"),
+            ID: unifiedgosdk.Pointer("b0e3a799-0546-4c54-890c-8ff8c03e93c5"),
+            Name: unifiedgosdk.Pointer("nam audax absens"),
+            Status: shared.SigningDocumentStatusVoided.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-07T18:59:10.061Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -860,13 +908,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -880,7 +929,14 @@ func main() {
     )
 
     res, err := s.Document.UpdateAtsDocument(ctx, operations.UpdateAtsDocumentRequest{
-        AtsDocument: shared.AtsDocument{},
+        AtsDocument: shared.AtsDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
+            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
+            ID: unifiedgosdk.Pointer("26c5ceec-8508-4921-b26d-d5cb448877d2"),
+            Type: shared.AtsDocumentTypeResume.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-11-28T22:24:37.093Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -917,13 +973,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -937,7 +994,14 @@ func main() {
     )
 
     res, err := s.Document.UpdateHrisDocument(ctx, operations.UpdateHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("9e1f0c7a-1b08-4619-bf5a-39ca8b38ddf4"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.283Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -974,13 +1038,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -994,7 +1059,14 @@ func main() {
     )
 
     res, err := s.Document.UpdateSigningDocument(ctx, operations.UpdateSigningDocumentRequest{
-        SigningDocument: shared.SigningDocument{},
+        SigningDocument: shared.SigningDocument{
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-12-16T11:16:51.349Z"),
+            ID: unifiedgosdk.Pointer("b0e3a799-0546-4c54-890c-8ff8c03e93c5"),
+            Name: unifiedgosdk.Pointer("nam audax absens"),
+            Status: shared.SigningDocumentStatusVoided.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-07T18:59:10.061Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

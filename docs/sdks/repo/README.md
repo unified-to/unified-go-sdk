@@ -41,13 +41,14 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -62,8 +63,11 @@ func main() {
 
     res, err := s.Repo.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("c587ce9d-9be6-4633-941a-b58549359337"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.512Z"),
         },
         ConnectionID: "<id>",
     })
@@ -100,13 +104,14 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -121,7 +126,14 @@ func main() {
 
     res, err := s.Repo.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("71f505c0-07f0-414a-bedc-b93949046a8a"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.271Z"),
         },
         ConnectionID: "<id>",
     })
@@ -158,13 +170,14 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -178,7 +191,15 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoOrganization(ctx, operations.CreateRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("b2f2cd49-1d37-4ece-98b2-c8b3597c0ed1"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.998Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -214,13 +235,14 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="go" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -234,7 +256,21 @@ func main() {
     )
 
     res, err := s.Repo.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.304Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("77083448-74aa-4bc6-a4f5-56c68df82b5b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.126Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -270,13 +306,14 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -291,7 +328,14 @@ func main() {
 
     res, err := s.Repo.CreateRepoRepository(ctx, operations.CreateRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("ab880381-c0c7-497f-abdd-6f36cb580e91"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.847Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
     })
@@ -873,13 +917,14 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -894,8 +939,11 @@ func main() {
 
     res, err := s.Repo.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -933,13 +981,14 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -954,7 +1003,14 @@ func main() {
 
     res, err := s.Repo.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("2e56f35b-d2b4-4d7f-a043-c1d337939d6b"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.273Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -992,13 +1048,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1012,7 +1069,15 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoOrganization(ctx, operations.PatchRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("2fad646a-5b09-4ea1-ab3f-93bf3135759f"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.999Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1049,13 +1114,14 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1069,7 +1135,21 @@ func main() {
     )
 
     res, err := s.Repo.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.308Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("6646d180-626b-4c04-8bc0-19f4b51f0a4b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.129Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1106,13 +1186,14 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1127,7 +1208,14 @@ func main() {
 
     res, err := s.Repo.PatchRepoRepository(ctx, operations.PatchRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("8d3c25c0-c7f4-402f-a5c0-259e9371539f"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.848Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1440,13 +1528,14 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1461,8 +1550,11 @@ func main() {
 
     res, err := s.Repo.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1500,13 +1592,14 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1521,7 +1614,14 @@ func main() {
 
     res, err := s.Repo.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("2e56f35b-d2b4-4d7f-a043-c1d337939d6b"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.273Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1559,13 +1659,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1579,7 +1680,15 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoOrganization(ctx, operations.UpdateRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("2fad646a-5b09-4ea1-ab3f-93bf3135759f"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.999Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1616,13 +1725,14 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1636,7 +1746,21 @@ func main() {
     )
 
     res, err := s.Repo.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
-        RepoPullrequest: shared.RepoPullrequest{},
+        RepoPullrequest: shared.RepoPullrequest{
+            ClosedAt: types.MustNewTimeFromString("2025-04-11T22:04:43.308Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
+            ID: unifiedgosdk.Pointer("6646d180-626b-4c04-8bc0-19f4b51f0a4b"),
+            Labels: []string{
+                "adhuc",
+                "quaerat",
+            },
+            Notes: unifiedgosdk.Pointer("Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus."),
+            SourceBranchID: unifiedgosdk.Pointer("microchip-navigate"),
+            Status: shared.RepoPullrequestStatusRejected.ToPointer(),
+            TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
+            Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
+            UpdatedAt: types.MustNewTimeFromString("2024-12-31T00:14:04.129Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1673,13 +1797,14 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1694,7 +1819,14 @@ func main() {
 
     res, err := s.Repo.UpdateRepoRepository(ctx, operations.UpdateRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("8d3c25c0-c7f4-402f-a5c0-259e9371539f"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.848Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -17,7 +17,7 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="go" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,19 @@ func main() {
     )
 
     res, err := s.Deduction.CreateHrisDeduction(ctx, operations.CreateHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.233Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("503c0ab1-c417-4c26-b608-4b51f680df00"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.321Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.924Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +195,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```go
 package main
 
@@ -190,6 +203,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +216,19 @@ func main() {
     )
 
     res, err := s.Deduction.PatchHrisDeduction(ctx, operations.PatchHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.240Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("6f1c6795-c283-44ed-90a2-23fd5867c098"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.326Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.929Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +320,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```go
 package main
 
@@ -302,6 +328,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +341,19 @@ func main() {
     )
 
     res, err := s.Deduction.UpdateHrisDeduction(ctx, operations.UpdateHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.240Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("6f1c6795-c283-44ed-90a2-23fd5867c098"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.326Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.929Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

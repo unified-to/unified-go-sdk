@@ -88,15 +88,15 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="go" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -110,9 +110,39 @@ func main() {
 
     res, err := s.Hris.CreateHrisAttendance(ctx, operations.CreateHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.982Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.202Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2026-07-01T14:10:09.942Z"),
-            StartAt: types.MustTimeFromString("2026-03-31T03:51:43.280Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.343Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("65b5216f-55de-4670-a9d9-80ec16ad8827"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.525Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.682Z"),
         },
         ConnectionID: "<id>",
     })
@@ -149,7 +179,7 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="go" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -157,6 +187,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -169,7 +200,18 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisBankaccount(ctx, operations.CreateHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("051d327b-0297-4e9c-b8d0-df8ea1dd201a"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.454Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -205,7 +247,7 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="go" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```go
 package main
 
@@ -213,6 +255,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -225,7 +268,22 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisBenefit(ctx, operations.CreateHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("11bf77cb-4233-426d-9a77-f0c996faef95"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.390Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -261,7 +319,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```go
 package main
 
@@ -269,6 +327,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -281,7 +340,21 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("171cb978-475c-423e-ba5f-b80b9200c771"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.103Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -317,7 +390,7 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="go" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```go
 package main
 
@@ -325,6 +398,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -337,7 +411,19 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisDeduction(ctx, operations.CreateHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.233Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("503c0ab1-c417-4c26-b608-4b51f680df00"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.321Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.924Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -373,13 +459,14 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -393,7 +480,25 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisDevice(ctx, operations.CreateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("674dc515-c0bf-44d9-988f-d2253e7099ea"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.361Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -429,13 +534,14 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="go" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -449,7 +555,14 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisDocument(ctx, operations.CreateHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("0dadcf98-ce9e-4114-a2bc-1829210dd647"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.278Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -485,7 +598,7 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="go" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```go
 package main
 
@@ -493,6 +606,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -505,7 +619,125 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisEmployee(ctx, operations.CreateHrisEmployeeRequest{
-        HrisEmployee: shared.HrisEmployee{},
+        HrisEmployee: shared.HrisEmployee{
+            Address: &shared.PropertyHrisEmployeeAddress{
+                Address1: unifiedgosdk.Pointer("52008 Lansdowne Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 101"),
+                City: unifiedgosdk.Pointer("Connellyberg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("18978"),
+                Region: unifiedgosdk.Pointer("South Dakota"),
+                RegionCode: unifiedgosdk.Pointer("NM"),
+            },
+            Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Currency: unifiedgosdk.Pointer("CRC"),
+                    Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
+                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
+            Currency: unifiedgosdk.Pointer("IDR"),
+            DateOfBirth: types.MustNewTimeFromString("2001-04-22"),
+            Emails: []shared.HrisEmail{
+                shared.HrisEmail{
+                    Email: "Zetta_Prohaska67@hotmail.com",
+                    Type: shared.HrisEmailTypeHome.ToPointer(),
+                },
+            },
+            EmployeeNumber: unifiedgosdk.Pointer("YuOt169CGu"),
+            EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
+            FirstName: unifiedgosdk.Pointer("Zetta"),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HasMfa: unifiedgosdk.Pointer(true),
+            HiredAt: types.MustNewTimeFromString("2023-05-10T16:46:05.546Z"),
+            ID: unifiedgosdk.Pointer("0792cba9-58ab-4f6e-b7b7-1700366df6b1"),
+            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
+            LanguageLocale: unifiedgosdk.Pointer("es"),
+            LastName: unifiedgosdk.Pointer("Prohaska"),
+            Locations: []shared.HrisLocation{},
+            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            Metadata: []shared.HrisMetadata{
+                shared.HrisMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.HrisMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("5351a4f7-879b-4ddb-8a70-516e1c9f7572"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
+                        "tenetur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            Pronouns: unifiedgosdk.Pointer("she/her"),
+            Relationships: []shared.HrisEmployeerelationship{
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Deshaun.Sanford24@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Hester80@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Automotive"),
+                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Benedict_Wisozk83@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Princess_Rath43@gmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Elmira92@yahoo.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Music"),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Jane30@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Jewelry"),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                },
+            },
+            Salutation: unifiedgosdk.Pointer("Miss"),
+            SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(409) 801-3705",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            TerminationReason: unifiedgosdk.Pointer("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro."),
+            TimeoffDaysTotal: unifiedgosdk.Pointer[float64](12.0),
+            TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
+            Timezone: unifiedgosdk.Pointer("Africa/Harare"),
+            Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-19T07:22:52.039Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -541,13 +773,14 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -561,7 +794,15 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisGroup(ctx, operations.CreateHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("099c5936-1edd-4222-968a-7c0ef8c876be"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.475Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -597,7 +838,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```go
 package main
 
@@ -605,6 +846,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -617,7 +859,42 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("344d4490-37b2-4a83-94fd-733423486619"),
+            ID: unifiedgosdk.Pointer("11bdec76-2654-4efb-8275-55a9487d6cef"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.900Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -653,13 +930,14 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="go" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -673,7 +951,22 @@ func main() {
     )
 
     res, err := s.Hris.CreateHrisTaxonomy(ctx, operations.CreateHrisTaxonomyRequest{
-        HrisTaxonomy: shared.HrisTaxonomy{},
+        HrisTaxonomy: shared.HrisTaxonomy{
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Apto demonstro audacia adstringo cursim tristis solio careo."),
+            Domain: unifiedgosdk.Pointer("Electronics"),
+            ID: unifiedgosdk.Pointer("ede085db-5709-4d53-a490-746f3de5be17"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            ParentID: unifiedgosdk.Pointer("6524b2a7-6520-4e15-8c4e-1aa6793db837"),
+            RoleIds: []string{
+                "2b1ef757-eb4c-4207-8af1-929afe49cd65",
+            },
+            Subcategory: unifiedgosdk.Pointer("Bamboo"),
+            Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-22T05:10:31.235Z"),
+            URL: unifiedgosdk.Pointer("https://our-polarisation.name"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -709,13 +1002,14 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="go" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -730,6 +1024,20 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.941Z"),
+            ID: unifiedgosdk.Pointer("3ee13fe9-0aac-4371-afea-5daa7b9d6853"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.950Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.022Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -767,13 +1075,14 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="go" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -788,7 +1097,24 @@ func main() {
 
     res, err := s.Hris.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.585Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.762Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("5aa54cc4-5823-4860-ba55-793bbf0c56e9"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.426Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.696Z"),
         },
         ConnectionID: "<id>",
     })
@@ -2351,15 +2677,15 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2373,9 +2699,39 @@ func main() {
 
     res, err := s.Hris.PatchHrisAttendance(ctx, operations.PatchHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.989Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.209Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-09-28T22:23:28.906Z"),
-            StartAt: types.MustTimeFromString("2025-01-18T09:17:09.936Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.351Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("ead77d2b-4b8c-46f2-9d88-b589437bc6ec"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.526Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.683Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2413,7 +2769,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -2421,6 +2777,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2433,7 +2790,18 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisBankaccount(ctx, operations.PatchHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("dd4ed56d-0c27-4644-b8de-e65b1d9a2ee0"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.458Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2470,7 +2838,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```go
 package main
 
@@ -2478,6 +2846,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2490,7 +2859,22 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisBenefit(ctx, operations.PatchHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("451b7ef4-8796-4357-af9f-35a09d55dfa4"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.395Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2527,7 +2911,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```go
 package main
 
@@ -2535,6 +2919,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2547,7 +2932,21 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("0d33c599-fc8f-439a-a86f-71c2999ea6fc"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.109Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2584,7 +2983,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```go
 package main
 
@@ -2592,6 +2991,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2604,7 +3004,19 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisDeduction(ctx, operations.PatchHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.240Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("6f1c6795-c283-44ed-90a2-23fd5867c098"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.326Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.929Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2641,13 +3053,14 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2661,7 +3074,25 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisDevice(ctx, operations.PatchHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("815ae151-c664-4723-b33e-b7b64a72d9ee"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.365Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2698,13 +3129,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2718,7 +3150,14 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisDocument(ctx, operations.PatchHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("9e1f0c7a-1b08-4619-bf5a-39ca8b38ddf4"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.283Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2755,7 +3194,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```go
 package main
 
@@ -2763,6 +3202,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2775,7 +3215,125 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisEmployee(ctx, operations.PatchHrisEmployeeRequest{
-        HrisEmployee: shared.HrisEmployee{},
+        HrisEmployee: shared.HrisEmployee{
+            Address: &shared.PropertyHrisEmployeeAddress{
+                Address1: unifiedgosdk.Pointer("52008 Lansdowne Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 101"),
+                City: unifiedgosdk.Pointer("Connellyberg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("18978"),
+                Region: unifiedgosdk.Pointer("South Dakota"),
+                RegionCode: unifiedgosdk.Pointer("NM"),
+            },
+            Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Currency: unifiedgosdk.Pointer("CRC"),
+                    Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
+                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
+            Currency: unifiedgosdk.Pointer("IDR"),
+            DateOfBirth: types.MustNewTimeFromString("2001-04-22"),
+            Emails: []shared.HrisEmail{
+                shared.HrisEmail{
+                    Email: "Zetta_Prohaska67@hotmail.com",
+                    Type: shared.HrisEmailTypeHome.ToPointer(),
+                },
+            },
+            EmployeeNumber: unifiedgosdk.Pointer("YuOt169CGu"),
+            EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
+            FirstName: unifiedgosdk.Pointer("Zetta"),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HasMfa: unifiedgosdk.Pointer(true),
+            HiredAt: types.MustNewTimeFromString("2023-05-10T16:46:05.574Z"),
+            ID: unifiedgosdk.Pointer("772f5fa0-7b1b-4cd2-a01f-141bd546f0a4"),
+            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
+            LanguageLocale: unifiedgosdk.Pointer("es"),
+            LastName: unifiedgosdk.Pointer("Prohaska"),
+            Locations: []shared.HrisLocation{},
+            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            Metadata: []shared.HrisMetadata{
+                shared.HrisMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.HrisMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("560029bb-a4a8-49b1-b9ee-c7ffcccd53a3"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
+                        "tenetur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            Pronouns: unifiedgosdk.Pointer("she/her"),
+            Relationships: []shared.HrisEmployeerelationship{
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Deshaun.Sanford24@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Hester80@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Automotive"),
+                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Benedict_Wisozk83@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Princess_Rath43@gmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Elmira92@yahoo.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Music"),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Jane30@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Jewelry"),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                },
+            },
+            Salutation: unifiedgosdk.Pointer("Miss"),
+            SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(409) 801-3705",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            TerminationReason: unifiedgosdk.Pointer("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro."),
+            TimeoffDaysTotal: unifiedgosdk.Pointer[float64](12.0),
+            TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
+            Timezone: unifiedgosdk.Pointer("Africa/Harare"),
+            Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-19T07:22:52.057Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2812,13 +3370,14 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2832,7 +3391,15 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisGroup(ctx, operations.PatchHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("c763447d-e407-47b1-8de4-dccc188d37ff"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.480Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2869,7 +3436,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```go
 package main
 
@@ -2877,6 +3444,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2889,7 +3457,42 @@ func main() {
     )
 
     res, err := s.Hris.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("ad504204-f481-465f-ab77-4582a547c143"),
+            ID: unifiedgosdk.Pointer("0cf5dc45-c04c-4fb7-a9da-5249ac0fbf6b"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.904Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2926,13 +3529,14 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2947,6 +3551,20 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.948Z"),
+            ID: unifiedgosdk.Pointer("f14d12e3-7aa7-45d7-adbe-82dcf153e592"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.954Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.024Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -2985,13 +3603,14 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -3006,7 +3625,24 @@ func main() {
 
     res, err := s.Hris.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.590Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.770Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("283863e4-1f7f-437d-8924-38675c79eb46"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.698Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3704,15 +4340,15 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3726,9 +4362,39 @@ func main() {
 
     res, err := s.Hris.UpdateHrisAttendance(ctx, operations.UpdateHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.989Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.209Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-07-06T19:51:15.352Z"),
-            StartAt: types.MustTimeFromString("2024-05-22T08:12:53.996Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.351Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("ead77d2b-4b8c-46f2-9d88-b589437bc6ec"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.526Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.683Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3766,7 +4432,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```go
 package main
 
@@ -3774,6 +4440,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3786,7 +4453,18 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisBankaccount(ctx, operations.UpdateHrisBankaccountRequest{
-        HrisBankaccount: shared.HrisBankaccount{},
+        HrisBankaccount: shared.HrisBankaccount{
+            AccountNumber: unifiedgosdk.Pointer("****3777"),
+            AccountNumberLast4: unifiedgosdk.Pointer("3777"),
+            AccountType: shared.HrisBankaccountAccountTypeChecking.ToPointer(),
+            BankName: unifiedgosdk.Pointer("Huel Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-11-16T16:43:45.976Z"),
+            ID: unifiedgosdk.Pointer("dd4ed56d-0c27-4644-b8de-e65b1d9a2ee0"),
+            IsPrimary: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Checking Account"),
+            RoutingNumber: unifiedgosdk.Pointer("448650724"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-04T12:19:53.458Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -3823,7 +4501,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```go
 package main
 
@@ -3831,6 +4509,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3843,7 +4522,22 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisBenefit(ctx, operations.UpdateHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("451b7ef4-8796-4357-af9f-35a09d55dfa4"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.395Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -3880,7 +4574,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```go
 package main
 
@@ -3888,6 +4582,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3900,7 +4595,21 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("0d33c599-fc8f-439a-a86f-71c2999ea6fc"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.109Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -3937,7 +4646,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```go
 package main
 
@@ -3945,6 +4654,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3957,7 +4667,19 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisDeduction(ctx, operations.UpdateHrisDeductionRequest{
-        HrisDeduction: shared.HrisDeduction{},
+        HrisDeduction: shared.HrisDeduction{
+            Amount: unifiedgosdk.Pointer[float64](139655.0),
+            CoverageLevel: shared.HrisDeductionCoverageLevelEmployeeOnly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-02-05T01:46:31.384Z"),
+            EndAt: types.MustNewTimeFromString("2026-05-22T23:49:35.240Z"),
+            Frequency: shared.HrisDeductionFrequencyMonth.ToPointer(),
+            ID: unifiedgosdk.Pointer("6f1c6795-c283-44ed-90a2-23fd5867c098"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Notes: unifiedgosdk.Pointer("Carmen desidero."),
+            StartAt: types.MustNewTimeFromString("2025-02-18T05:24:01.326Z"),
+            Type: shared.HrisDeductionTypeFixed.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-03-02T00:19:07.929Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -3994,13 +4716,14 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4014,7 +4737,25 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisDevice(ctx, operations.UpdateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("815ae151-c664-4723-b33e-b7b64a72d9ee"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.365Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4051,13 +4792,14 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4071,7 +4813,14 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisDocument(ctx, operations.UpdateHrisDocumentRequest{
-        HrisDocument: shared.HrisDocument{},
+        HrisDocument: shared.HrisDocument{
+            CreatedAt: types.MustNewTimeFromString("2022-10-27T11:47:26.086Z"),
+            DocumentURL: unifiedgosdk.Pointer("https://sore-decision.biz/"),
+            Filename: unifiedgosdk.Pointer("ridge_forager.xsl"),
+            ID: unifiedgosdk.Pointer("9e1f0c7a-1b08-4619-bf5a-39ca8b38ddf4"),
+            Type: shared.HrisDocumentTypePolicy.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-17T02:39:45.283Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4108,7 +4857,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```go
 package main
 
@@ -4116,6 +4865,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4128,7 +4878,125 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisEmployee(ctx, operations.UpdateHrisEmployeeRequest{
-        HrisEmployee: shared.HrisEmployee{},
+        HrisEmployee: shared.HrisEmployee{
+            Address: &shared.PropertyHrisEmployeeAddress{
+                Address1: unifiedgosdk.Pointer("52008 Lansdowne Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 101"),
+                City: unifiedgosdk.Pointer("Connellyberg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("18978"),
+                Region: unifiedgosdk.Pointer("South Dakota"),
+                RegionCode: unifiedgosdk.Pointer("NM"),
+            },
+            Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Currency: unifiedgosdk.Pointer("CRC"),
+                    Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
+                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
+            Currency: unifiedgosdk.Pointer("IDR"),
+            DateOfBirth: types.MustNewTimeFromString("2001-04-22"),
+            Emails: []shared.HrisEmail{
+                shared.HrisEmail{
+                    Email: "Zetta_Prohaska67@hotmail.com",
+                    Type: shared.HrisEmailTypeHome.ToPointer(),
+                },
+            },
+            EmployeeNumber: unifiedgosdk.Pointer("YuOt169CGu"),
+            EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
+            EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
+            FirstName: unifiedgosdk.Pointer("Zetta"),
+            Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
+            HasMfa: unifiedgosdk.Pointer(true),
+            HiredAt: types.MustNewTimeFromString("2023-05-10T16:46:05.574Z"),
+            ID: unifiedgosdk.Pointer("772f5fa0-7b1b-4cd2-a01f-141bd546f0a4"),
+            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
+            LanguageLocale: unifiedgosdk.Pointer("es"),
+            LastName: unifiedgosdk.Pointer("Prohaska"),
+            Locations: []shared.HrisLocation{},
+            MaritalStatus: shared.MaritalStatusMarried.ToPointer(),
+            Metadata: []shared.HrisMetadata{
+                shared.HrisMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateHrisMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.HrisMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("560029bb-a4a8-49b1-b9ee-c7ffcccd53a3"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
+                        "tenetur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            Pronouns: unifiedgosdk.Pointer("she/her"),
+            Relationships: []shared.HrisEmployeerelationship{
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Deshaun.Sanford24@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Rebeca.Dibbert11@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Hester80@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Automotive"),
+                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Benedict_Wisozk83@hotmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Princess_Rath43@gmail.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Elmira92@yahoo.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Music"),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                },
+                shared.HrisEmployeerelationship{
+                    Emails: []shared.HrisEmail{
+                        shared.HrisEmail{
+                            Email: "Jane30@gmail.com",
+                        },
+                    },
+                    Name: unifiedgosdk.Pointer("Jewelry"),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                },
+            },
+            Salutation: unifiedgosdk.Pointer("Miss"),
+            SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(409) 801-3705",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            TerminationReason: unifiedgosdk.Pointer("Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro."),
+            TimeoffDaysTotal: unifiedgosdk.Pointer[float64](12.0),
+            TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
+            Timezone: unifiedgosdk.Pointer("Africa/Harare"),
+            Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-19T07:22:52.057Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4165,13 +5033,14 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4185,7 +5054,15 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisGroup(ctx, operations.UpdateHrisGroupRequest{
-        HrisGroup: shared.HrisGroup{},
+        HrisGroup: shared.HrisGroup{
+            CreatedAt: types.MustNewTimeFromString("2023-11-01T13:13:40.714Z"),
+            Description: unifiedgosdk.Pointer("Absorbeo casso."),
+            ID: unifiedgosdk.Pointer("c763447d-e407-47b1-8de4-dccc188d37ff"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Games"),
+            Type: shared.HrisGroupTypeBusinessUnit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T15:16:56.480Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4222,7 +5099,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```go
 package main
 
@@ -4230,6 +5107,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4242,7 +5120,42 @@ func main() {
     )
 
     res, err := s.Hris.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("ad504204-f481-465f-ab77-4582a547c143"),
+            ID: unifiedgosdk.Pointer("0cf5dc45-c04c-4fb7-a9da-5249ac0fbf6b"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.904Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4279,13 +5192,14 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4300,6 +5214,20 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.948Z"),
+            ID: unifiedgosdk.Pointer("f14d12e3-7aa7-45d7-adbe-82dcf153e592"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.954Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.024Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -4338,13 +5266,14 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4359,7 +5288,24 @@ func main() {
 
     res, err := s.Hris.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
+            ApprovedAt: types.MustNewTimeFromString("2023-06-05T15:04:46.590Z"),
+            Compensation: []shared.HrisCompensation{
+                shared.HrisCompensation{
+                    Amount: unifiedgosdk.Pointer[float64](76761.0),
+                    Currency: unifiedgosdk.Pointer("JPY"),
+                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
+                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
+            EndAt: types.MustNewTimeFromString("2026-08-25T09:28:30.770Z"),
+            Hours: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("283863e4-1f7f-437d-8924-38675c79eb46"),
+            IsApproved: unifiedgosdk.Pointer(true),
+            StartAt: types.MustNewTimeFromString("2023-06-24T20:03:03.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-22T21:09:54.698Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -17,13 +17,14 @@ Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="go" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,23 @@ func main() {
     )
 
     res, err := s.Subscription.CreatePaymentSubscription(ctx, operations.CreatePaymentSubscriptionRequest{
-        PaymentSubscription: shared.PaymentSubscription{},
+        PaymentSubscription: shared.PaymentSubscription{
+            CreatedAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
+            Currency: unifiedgosdk.Pointer("WST"),
+            CurrentPeriodEndAt: types.MustNewTimeFromString("2023-06-03T04:20:29.157Z"),
+            CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-21T03:55:58.846Z"),
+            DayOfMonth: unifiedgosdk.Pointer[float64](1.0),
+            Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
+            EndAt: types.MustNewTimeFromString("2023-05-21T12:36:09.234Z"),
+            ID: unifiedgosdk.Pointer("c2ed811e-d596-40c1-b92f-0621b2d87170"),
+            Interval: unifiedgosdk.Pointer[float64](1.0),
+            IntervalUnit: shared.IntervalUnitMonth.ToPointer(),
+            Lineitems: []shared.PaymentLineitem{},
+            StartAt: types.MustNewTimeFromString("2023-05-29T06:04:51.030Z"),
+            Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](75616.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T22:44:10.313Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +199,14 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +220,23 @@ func main() {
     )
 
     res, err := s.Subscription.PatchPaymentSubscription(ctx, operations.PatchPaymentSubscriptionRequest{
-        PaymentSubscription: shared.PaymentSubscription{},
+        PaymentSubscription: shared.PaymentSubscription{
+            CreatedAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
+            Currency: unifiedgosdk.Pointer("WST"),
+            CurrentPeriodEndAt: types.MustNewTimeFromString("2023-06-03T04:20:29.157Z"),
+            CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-21T03:55:58.846Z"),
+            DayOfMonth: unifiedgosdk.Pointer[float64](1.0),
+            Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
+            EndAt: types.MustNewTimeFromString("2023-05-21T12:36:09.234Z"),
+            ID: unifiedgosdk.Pointer("6249d129-ee85-4832-8809-76fc874df010"),
+            Interval: unifiedgosdk.Pointer[float64](1.0),
+            IntervalUnit: shared.IntervalUnitMonth.ToPointer(),
+            Lineitems: []shared.PaymentLineitem{},
+            StartAt: types.MustNewTimeFromString("2023-05-29T06:04:51.030Z"),
+            Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](75616.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T22:44:10.315Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +328,14 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="go" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +349,23 @@ func main() {
     )
 
     res, err := s.Subscription.UpdatePaymentSubscription(ctx, operations.UpdatePaymentSubscriptionRequest{
-        PaymentSubscription: shared.PaymentSubscription{},
+        PaymentSubscription: shared.PaymentSubscription{
+            CreatedAt: types.MustNewTimeFromString("2023-05-08T10:11:03.414Z"),
+            Currency: unifiedgosdk.Pointer("WST"),
+            CurrentPeriodEndAt: types.MustNewTimeFromString("2023-06-03T04:20:29.157Z"),
+            CurrentPeriodStartAt: types.MustNewTimeFromString("2023-05-21T03:55:58.846Z"),
+            DayOfMonth: unifiedgosdk.Pointer[float64](1.0),
+            Description: unifiedgosdk.Pointer("Innovative Mouse featuring important technology and Bamboo construction"),
+            EndAt: types.MustNewTimeFromString("2023-05-21T12:36:09.234Z"),
+            ID: unifiedgosdk.Pointer("6249d129-ee85-4832-8809-76fc874df010"),
+            Interval: unifiedgosdk.Pointer[float64](1.0),
+            IntervalUnit: shared.IntervalUnitMonth.ToPointer(),
+            Lineitems: []shared.PaymentLineitem{},
+            StartAt: types.MustNewTimeFromString("2023-05-29T06:04:51.030Z"),
+            Status: shared.PaymentSubscriptionStatusActive.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](75616.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T22:44:10.315Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

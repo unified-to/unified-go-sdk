@@ -31,7 +31,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```go
 package main
 
@@ -51,7 +51,12 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcComment(ctx, operations.CreateUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("66ec505c-6ea0-4bec-8c60-4f2021e49e2f"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.318Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -87,13 +92,14 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="go" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -107,7 +113,36 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcContact(ctx, operations.CreateUcContactRequest{
-        UcContact: shared.UcContact{},
+        UcContact: shared.UcContact{
+            Company: unifiedgosdk.Pointer("Tillman Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-10-28T11:06:56.460Z"),
+            Emails: []shared.UcEmail{
+                shared.UcEmail{
+                    Email: "Luther_Rogahn32@yahoo.com",
+                    Type: shared.UcEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Luther"),
+            ID: unifiedgosdk.Pointer("b2dd4613-5226-4301-8b8b-3bffb89fb624"),
+            LastName: unifiedgosdk.Pointer("Rogahn"),
+            Name: unifiedgosdk.Pointer("Luther Rogahn"),
+            Telephones: []shared.UcTelephone{
+                shared.UcTelephone{
+                    Telephone: "(809) 992-1681",
+                    Type: shared.UcTelephoneTypeFax.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(868) 238-2746",
+                    Type: shared.UcTelephoneTypeHome.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(219) 736-0357",
+                    Type: shared.UcTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T23:05:48.569Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -143,7 +178,7 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```go
 package main
 
@@ -151,6 +186,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -163,7 +199,20 @@ func main() {
     )
 
     res, err := s.Uc.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.549Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.543Z"),
+            ID: unifiedgosdk.Pointer("150de76c-e74b-4af5-91eb-2a439b628ac0"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.859Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.499Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -635,7 +684,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```go
 package main
 
@@ -655,7 +704,12 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcComment(ctx, operations.PatchUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("16638cd0-8adc-4668-8d00-43f120bdac37"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.319Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -692,13 +746,14 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -712,7 +767,36 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcContact(ctx, operations.PatchUcContactRequest{
-        UcContact: shared.UcContact{},
+        UcContact: shared.UcContact{
+            Company: unifiedgosdk.Pointer("Tillman Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-10-28T11:06:56.460Z"),
+            Emails: []shared.UcEmail{
+                shared.UcEmail{
+                    Email: "Luther_Rogahn32@yahoo.com",
+                    Type: shared.UcEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Luther"),
+            ID: unifiedgosdk.Pointer("4d6bd0a4-076d-43c6-952e-9d02a85726b1"),
+            LastName: unifiedgosdk.Pointer("Rogahn"),
+            Name: unifiedgosdk.Pointer("Luther Rogahn"),
+            Telephones: []shared.UcTelephone{
+                shared.UcTelephone{
+                    Telephone: "(809) 992-1681",
+                    Type: shared.UcTelephoneTypeFax.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(868) 238-2746",
+                    Type: shared.UcTelephoneTypeHome.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(219) 736-0357",
+                    Type: shared.UcTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T23:05:48.575Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -749,7 +833,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```go
 package main
 
@@ -757,6 +841,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -769,7 +854,20 @@ func main() {
     )
 
     res, err := s.Uc.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.555Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.556Z"),
+            ID: unifiedgosdk.Pointer("77fab6ff-1c02-4d90-a045-09b049016a8b"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.861Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.508Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -971,7 +1069,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```go
 package main
 
@@ -991,7 +1089,12 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("16638cd0-8adc-4668-8d00-43f120bdac37"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.319Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1028,13 +1131,14 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1048,7 +1152,36 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcContact(ctx, operations.UpdateUcContactRequest{
-        UcContact: shared.UcContact{},
+        UcContact: shared.UcContact{
+            Company: unifiedgosdk.Pointer("Tillman Group"),
+            CreatedAt: types.MustNewTimeFromString("2019-10-28T11:06:56.460Z"),
+            Emails: []shared.UcEmail{
+                shared.UcEmail{
+                    Email: "Luther_Rogahn32@yahoo.com",
+                    Type: shared.UcEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Luther"),
+            ID: unifiedgosdk.Pointer("4d6bd0a4-076d-43c6-952e-9d02a85726b1"),
+            LastName: unifiedgosdk.Pointer("Rogahn"),
+            Name: unifiedgosdk.Pointer("Luther Rogahn"),
+            Telephones: []shared.UcTelephone{
+                shared.UcTelephone{
+                    Telephone: "(809) 992-1681",
+                    Type: shared.UcTelephoneTypeFax.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(868) 238-2746",
+                    Type: shared.UcTelephoneTypeHome.ToPointer(),
+                },
+                shared.UcTelephone{
+                    Telephone: "(219) 736-0357",
+                    Type: shared.UcTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-18T23:05:48.575Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1085,7 +1218,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```go
 package main
 
@@ -1093,6 +1226,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1105,7 +1239,20 @@ func main() {
     )
 
     res, err := s.Uc.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.555Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.556Z"),
+            ID: unifiedgosdk.Pointer("77fab6ff-1c02-4d90-a045-09b049016a8b"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.861Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.508Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

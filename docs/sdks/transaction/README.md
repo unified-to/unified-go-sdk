@@ -17,13 +17,14 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,26 @@ func main() {
     )
 
     res, err := s.Transaction.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("d7a8841f-6d3f-46bb-a65b-dee4a8b2213e"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("3ff2fab5-8212-4bb6-a290-f86913ee1992"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.067Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +202,14 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +223,26 @@ func main() {
     )
 
     res, err := s.Transaction.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +334,14 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +355,26 @@ func main() {
     )
 
     res, err := s.Transaction.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

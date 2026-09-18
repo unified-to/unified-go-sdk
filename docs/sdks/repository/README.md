@@ -17,13 +17,14 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="go" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,7 +39,14 @@ func main() {
 
     res, err := s.Repository.CreateRepoRepository(ctx, operations.CreateRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("ab880381-c0c7-497f-abdd-6f36cb580e91"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.847Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
     })
@@ -184,13 +192,14 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -205,7 +214,14 @@ func main() {
 
     res, err := s.Repository.PatchRepoRepository(ctx, operations.PatchRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("8d3c25c0-c7f4-402f-a5c0-259e9371539f"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.848Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -298,13 +314,14 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -319,7 +336,14 @@ func main() {
 
     res, err := s.Repository.UpdateRepoRepository(ctx, operations.UpdateRepoRepositoryRequest{
         RepoRepository: shared.RepoRepository{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-06-12T09:42:00.080Z"),
+            Description: unifiedgosdk.Pointer("Tribuo torqueo aetas ustulo illum."),
+            ID: unifiedgosdk.Pointer("8d3c25c0-c7f4-402f-a5c0-259e9371539f"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Name: "suggero",
+            Owner: unifiedgosdk.Pointer("Marcella Kuhic"),
+            UpdatedAt: types.MustNewTimeFromString("2024-02-23T00:40:17.848Z"),
+            WebURL: unifiedgosdk.Pointer("https://brown-phrase.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

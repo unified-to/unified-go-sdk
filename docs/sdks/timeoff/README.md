@@ -17,13 +17,14 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="go" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,6 +39,20 @@ func main() {
 
     res, err := s.Timeoff.CreateHrisTimeoff(ctx, operations.CreateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.941Z"),
+            ID: unifiedgosdk.Pointer("3ee13fe9-0aac-4371-afea-5daa7b9d6853"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.950Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.022Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -184,13 +199,14 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -205,6 +221,20 @@ func main() {
 
     res, err := s.Timeoff.PatchHrisTimeoff(ctx, operations.PatchHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.948Z"),
+            ID: unifiedgosdk.Pointer("f14d12e3-7aa7-45d7-adbe-82dcf153e592"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.954Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.024Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -298,13 +328,14 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -319,6 +350,20 @@ func main() {
 
     res, err := s.Timeoff.UpdateHrisTimeoff(ctx, operations.UpdateHrisTimeoffRequest{
         HrisTimeoff: shared.HrisTimeoff{
+            ApprovedAt: types.MustNewTimeFromString("2022-02-20T21:07:14.772Z"),
+            Comments: unifiedgosdk.Pointer("Blandior ventus curiositas amplitudo."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-06T18:00:20.615Z"),
+            Duration: unifiedgosdk.Pointer[float64](4.0),
+            DurationType: shared.DurationTypeDay.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2024-12-07T14:29:54.948Z"),
+            ID: unifiedgosdk.Pointer("f14d12e3-7aa7-45d7-adbe-82dcf153e592"),
+            IsPaid: unifiedgosdk.Pointer(true),
+            OriginalType: unifiedgosdk.Pointer("acerbitas ut"),
+            Reason: unifiedgosdk.Pointer("verto"),
+            StartAt: types.MustNewTimeFromString("2023-08-23T07:19:49.954Z"),
+            Status: shared.HrisTimeoffStatusDenied.ToPointer(),
+            Type: shared.HrisTimeoffTypeInLieu.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-07-07T19:44:08.024Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

@@ -17,13 +17,14 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,18 @@ func main() {
     )
 
     res, err := s.Creative.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("4d31950c-af56-406c-bac7-75ce978929c1"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.795Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +194,14 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +215,18 @@ func main() {
     )
 
     res, err := s.Creative.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("fba66c03-d68d-4007-8ae9-cf369d858311"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.798Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +318,14 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +339,18 @@ func main() {
     )
 
     res, err := s.Creative.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("fba66c03-d68d-4007-8ae9-cf369d858311"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.798Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

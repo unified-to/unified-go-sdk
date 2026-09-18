@@ -19,13 +19,14 @@ Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="go" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" example="verification_request" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -39,7 +40,19 @@ func main() {
     )
 
     res, err := s.Verification.CreateVerificationRequest(ctx, operations.CreateVerificationRequestRequest{
-        VerificationRequest: shared.VerificationRequest{},
+        VerificationRequest: shared.VerificationRequest{
+            CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
+            ID: unifiedgosdk.Pointer("61958084-224e-4d69-9674-fcf461557706"),
+            Parameters: []shared.VerificationParameterInput{},
+            ProfileAddresses: []shared.VerificationAddress{},
+            ProfileEmails: []string{},
+            ProfileTelephones: []string{},
+            ResponseDetails: []shared.VerificationResponseDetail{},
+            ResponseDownloadUrls: []string{},
+            ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
+            ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-26T03:35:30.500Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -293,13 +306,14 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -313,7 +327,19 @@ func main() {
     )
 
     res, err := s.Verification.PatchVerificationRequest(ctx, operations.PatchVerificationRequestRequest{
-        VerificationRequest: shared.VerificationRequest{},
+        VerificationRequest: shared.VerificationRequest{
+            CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
+            ID: unifiedgosdk.Pointer("d3ede52c-e32c-4af1-bbcd-d5462c2851bb"),
+            Parameters: []shared.VerificationParameterInput{},
+            ProfileAddresses: []shared.VerificationAddress{},
+            ProfileEmails: []string{},
+            ProfileTelephones: []string{},
+            ResponseDetails: []shared.VerificationResponseDetail{},
+            ResponseDownloadUrls: []string{},
+            ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
+            ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-26T03:35:30.500Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -405,13 +431,14 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -425,7 +452,19 @@ func main() {
     )
 
     res, err := s.Verification.UpdateVerificationRequest(ctx, operations.UpdateVerificationRequestRequest{
-        VerificationRequest: shared.VerificationRequest{},
+        VerificationRequest: shared.VerificationRequest{
+            CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
+            ID: unifiedgosdk.Pointer("d3ede52c-e32c-4af1-bbcd-d5462c2851bb"),
+            Parameters: []shared.VerificationParameterInput{},
+            ProfileAddresses: []shared.VerificationAddress{},
+            ProfileEmails: []string{},
+            ProfileTelephones: []string{},
+            ResponseDetails: []shared.VerificationResponseDetail{},
+            ResponseDownloadUrls: []string{},
+            ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
+            ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-26T03:35:30.500Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

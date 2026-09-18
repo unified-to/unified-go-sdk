@@ -17,13 +17,14 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,31 @@ func main() {
     )
 
     res, err := s.Account.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("fbfeb00a-af7c-43a2-ba61-48379b5ed0db"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.268Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +207,14 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +228,31 @@ func main() {
     )
 
     res, err := s.Account.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("a6d1874f-5149-4cf4-ab92-841ac5eade59"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.270Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +344,14 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +365,31 @@ func main() {
     )
 
     res, err := s.Account.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("a6d1874f-5149-4cf4-ab92-841ac5eade59"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.270Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

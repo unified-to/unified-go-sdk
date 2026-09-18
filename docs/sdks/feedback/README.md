@@ -14,13 +14,14 @@ Create a feedback
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="go" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -35,6 +36,16 @@ func main() {
 
     res, err := s.Feedback.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
+            CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
+            ID: unifiedgosdk.Pointer("0c17b39e-c074-4b98-bfe5-5afe16b16c94"),
+            IsVisible: unifiedgosdk.Pointer(true),
+            Message: unifiedgosdk.Pointer("Tabernus corpus voluptate aestus."),
+            Tags: []string{
+                "well-to-do",
+                "hexagon",
+            },
+            Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-12T16:18:46.524Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

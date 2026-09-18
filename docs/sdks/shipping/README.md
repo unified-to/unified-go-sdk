@@ -28,13 +28,14 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="go" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -48,7 +49,19 @@ func main() {
     )
 
     res, err := s.Shipping.CreateShippingLabel(ctx, operations.CreateShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("d64a026b-8f62-4b07-8bce-ac44e8999e22"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.800Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -84,13 +97,14 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="go" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -104,7 +118,25 @@ func main() {
     )
 
     res, err := s.Shipping.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
-        ShippingRate: shared.ShippingRate{},
+        ShippingRate: shared.ShippingRate{
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("282be3e2-3b21-4c4e-a8d8-f9bf73fabea4"),
+            Rates: []shared.ShippingRateRate{
+                shared.ShippingRateRate{
+                    Amount: unifiedgosdk.Pointer[float64](54.679719475097954),
+                    BaseAmount: unifiedgosdk.Pointer[float64](76.45537888631225),
+                    Currency: unifiedgosdk.Pointer("USD"),
+                    DeliveryDays: unifiedgosdk.Pointer[float64](8.0),
+                    Description: unifiedgosdk.Pointer("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum."),
+                    EstimatedDays: unifiedgosdk.Pointer[float64](10.0),
+                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2024-01-31T23:40:52.547Z"),
+                    IsGuaranteed: unifiedgosdk.Pointer(true),
+                    IsNegotiatedRate: unifiedgosdk.Pointer(true),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2.2701712837442756),
+                    Title: "Turcotte Inc",
+                },
+            },
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -140,13 +172,14 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="go" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -160,7 +193,20 @@ func main() {
     )
 
     res, err := s.Shipping.CreateShippingShipment(ctx, operations.CreateShippingShipmentRequest{
-        ShippingShipment: shared.ShippingShipment{},
+        ShippingShipment: shared.ShippingShipment{
+            CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
+            CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
+            ID: unifiedgosdk.Pointer("04eb90d8-c4d6-4a12-a014-b29fe96672d2"),
+            RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
+            RateCurrency: unifiedgosdk.Pointer("USD"),
+            RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
+            RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
+            ServiceCode: unifiedgosdk.Pointer("F7U"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.740Z"),
+            Status: shared.ShippingShipmentStatusPending.ToPointer(),
+            TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.232Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -632,13 +678,14 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -652,7 +699,19 @@ func main() {
     )
 
     res, err := s.Shipping.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -689,13 +748,14 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -709,7 +769,20 @@ func main() {
     )
 
     res, err := s.Shipping.PatchShippingShipment(ctx, operations.PatchShippingShipmentRequest{
-        ShippingShipment: shared.ShippingShipment{},
+        ShippingShipment: shared.ShippingShipment{
+            CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
+            CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
+            ID: unifiedgosdk.Pointer("998c4b1e-2e8c-4fd7-abde-fb56d6f2caa8"),
+            RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
+            RateCurrency: unifiedgosdk.Pointer("USD"),
+            RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
+            RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
+            ServiceCode: unifiedgosdk.Pointer("F7U"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.789Z"),
+            Status: shared.ShippingShipmentStatusPending.ToPointer(),
+            TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.278Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -856,13 +929,14 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -876,7 +950,19 @@ func main() {
     )
 
     res, err := s.Shipping.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -913,13 +999,14 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -933,7 +1020,20 @@ func main() {
     )
 
     res, err := s.Shipping.UpdateShippingShipment(ctx, operations.UpdateShippingShipmentRequest{
-        ShippingShipment: shared.ShippingShipment{},
+        ShippingShipment: shared.ShippingShipment{
+            CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
+            CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
+            ID: unifiedgosdk.Pointer("998c4b1e-2e8c-4fd7-abde-fb56d6f2caa8"),
+            RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
+            RateCurrency: unifiedgosdk.Pointer("USD"),
+            RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
+            RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
+            ServiceCode: unifiedgosdk.Pointer("F7U"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.789Z"),
+            Status: shared.ShippingShipmentStatusPending.ToPointer(),
+            TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.278Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,7 +17,7 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="go" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,34 @@ func main() {
     )
 
     res, err := s.Student.CreateLmsStudent(ctx, operations.CreateLmsStudentRequest{
-        LmsStudent: shared.LmsStudent{},
+        LmsStudent: shared.LmsStudent{
+            Address: &shared.PropertyLmsStudentAddress{
+                Address1: unifiedgosdk.Pointer("94082 Kassandra Camp"),
+                Address2: unifiedgosdk.Pointer("Apt. 461"),
+                City: unifiedgosdk.Pointer("New Ibrahimmouth"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("52851"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-03-23T06:59:29.777Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Marcella"),
+            ID: unifiedgosdk.Pointer("d4188163-3b82-495e-af69-58af5d991f39"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
+            LastName: unifiedgosdk.Pointer("Murazik"),
+            Name: unifiedgosdk.Pointer("Marcella Murazik"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(482) 469-8067",
+                    Type: shared.LmsTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-06-19T14:16:48.184Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +210,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```go
 package main
 
@@ -190,6 +218,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +231,34 @@ func main() {
     )
 
     res, err := s.Student.PatchLmsStudent(ctx, operations.PatchLmsStudentRequest{
-        LmsStudent: shared.LmsStudent{},
+        LmsStudent: shared.LmsStudent{
+            Address: &shared.PropertyLmsStudentAddress{
+                Address1: unifiedgosdk.Pointer("94082 Kassandra Camp"),
+                Address2: unifiedgosdk.Pointer("Apt. 461"),
+                City: unifiedgosdk.Pointer("New Ibrahimmouth"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("52851"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-03-23T06:59:29.777Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Marcella"),
+            ID: unifiedgosdk.Pointer("9cd03af6-3555-4f93-92fb-b2b9423568d8"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
+            LastName: unifiedgosdk.Pointer("Murazik"),
+            Name: unifiedgosdk.Pointer("Marcella Murazik"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(482) 469-8067",
+                    Type: shared.LmsTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-06-19T14:16:48.187Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +350,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```go
 package main
 
@@ -302,6 +358,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +371,34 @@ func main() {
     )
 
     res, err := s.Student.UpdateLmsStudent(ctx, operations.UpdateLmsStudentRequest{
-        LmsStudent: shared.LmsStudent{},
+        LmsStudent: shared.LmsStudent{
+            Address: &shared.PropertyLmsStudentAddress{
+                Address1: unifiedgosdk.Pointer("94082 Kassandra Camp"),
+                Address2: unifiedgosdk.Pointer("Apt. 461"),
+                City: unifiedgosdk.Pointer("New Ibrahimmouth"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("52851"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-03-23T06:59:29.777Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Marcella"),
+            ID: unifiedgosdk.Pointer("9cd03af6-3555-4f93-92fb-b2b9423568d8"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
+            LastName: unifiedgosdk.Pointer("Murazik"),
+            Name: unifiedgosdk.Pointer("Marcella Murazik"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(482) 469-8067",
+                    Type: shared.LmsTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-06-19T14:16:48.187Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

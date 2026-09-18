@@ -25,7 +25,7 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="go" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```go
 package main
 
@@ -33,6 +33,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -45,7 +46,87 @@ func main() {
     )
 
     res, err := s.Activity.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
-        AtsActivity: shared.AtsActivity{},
+        AtsActivity: shared.AtsActivity{
+            Bcc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+            },
+            Cc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sasha24@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Rosetta_Donnelly@gmail.com",
+                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Kathryne_Jast@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Eldred95@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Edna Bogan"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
+            Description: unifiedgosdk.Pointer("Amplus."),
+            From: &shared.PropertyAtsActivityFrom{
+                Email: "Norwood.Wiza47@yahoo.com",
+                Name: unifiedgosdk.Pointer("Toby Grant"),
+                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
+            },
+            ID: unifiedgosdk.Pointer("6b27e773-7da4-47bd-a08a-81c9c8c5dcc1"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("8c2856c9-1248-4ee1-88da-2a18b129d261"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("acer"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                    )),
+                },
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("eb7b17c8-fd59-4c8d-aea9-99cbff44d4aa"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("tremo"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Amita delectus dicta temptatio utroque ex.",
+                    )),
+                },
+            },
+            SubType: unifiedgosdk.Pointer("TASK"),
+            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
+            To: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sister91@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
+                    Type: shared.AtsEmailTypeWork.ToPointer(),
+                },
+            },
+            Type: shared.AtsActivityTypeTask.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-06T14:26:09.905Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -81,13 +162,14 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="go" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -101,7 +183,17 @@ func main() {
     )
 
     res, err := s.Activity.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
-        LmsActivity: shared.LmsActivity{},
+        LmsActivity: shared.LmsActivity{
+            AssignedGrade: unifiedgosdk.Pointer("summopere"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-12T21:36:58.402Z"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
+            ID: unifiedgosdk.Pointer("346f5399-7fa5-4643-bcd3-c9cedc1207c5"),
+            IsCompleted: unifiedgosdk.Pointer(true),
+            ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
+            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-23T21:57:49.703Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -464,7 +556,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```go
 package main
 
@@ -472,6 +564,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -484,7 +577,87 @@ func main() {
     )
 
     res, err := s.Activity.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
-        AtsActivity: shared.AtsActivity{},
+        AtsActivity: shared.AtsActivity{
+            Bcc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+            },
+            Cc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sasha24@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Rosetta_Donnelly@gmail.com",
+                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Kathryne_Jast@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Eldred95@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Edna Bogan"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
+            Description: unifiedgosdk.Pointer("Amplus."),
+            From: &shared.PropertyAtsActivityFrom{
+                Email: "Norwood.Wiza47@yahoo.com",
+                Name: unifiedgosdk.Pointer("Toby Grant"),
+                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
+            },
+            ID: unifiedgosdk.Pointer("9d9529f4-aee6-48f7-9f08-e985957b6a88"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("03261c0c-67de-4e26-a341-9d39e9970742"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("acer"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                    )),
+                },
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("a83efdb1-fcd3-4ae4-ae92-1d77eb60dc92"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("tremo"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Amita delectus dicta temptatio utroque ex.",
+                    )),
+                },
+            },
+            SubType: unifiedgosdk.Pointer("TASK"),
+            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
+            To: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sister91@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
+                    Type: shared.AtsEmailTypeWork.ToPointer(),
+                },
+            },
+            Type: shared.AtsActivityTypeTask.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-06T14:26:09.924Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -521,13 +694,14 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -541,7 +715,17 @@ func main() {
     )
 
     res, err := s.Activity.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
-        LmsActivity: shared.LmsActivity{},
+        LmsActivity: shared.LmsActivity{
+            AssignedGrade: unifiedgosdk.Pointer("summopere"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-12T21:36:58.404Z"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
+            ID: unifiedgosdk.Pointer("45739c5e-b76c-4232-93a4-f9424dded91a"),
+            IsCompleted: unifiedgosdk.Pointer(true),
+            ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
+            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-23T21:57:49.704Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -688,7 +872,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```go
 package main
 
@@ -696,6 +880,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -708,7 +893,87 @@ func main() {
     )
 
     res, err := s.Activity.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
-        AtsActivity: shared.AtsActivity{},
+        AtsActivity: shared.AtsActivity{
+            Bcc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+            },
+            Cc: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sasha24@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Rosetta_Donnelly@gmail.com",
+                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Kathryne_Jast@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+                shared.AtsEmail{
+                    Email: "Eldred95@yahoo.com",
+                    Name: unifiedgosdk.Pointer("Edna Bogan"),
+                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
+            Description: unifiedgosdk.Pointer("Amplus."),
+            From: &shared.PropertyAtsActivityFrom{
+                Email: "Norwood.Wiza47@yahoo.com",
+                Name: unifiedgosdk.Pointer("Toby Grant"),
+                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
+            },
+            ID: unifiedgosdk.Pointer("9d9529f4-aee6-48f7-9f08-e985957b6a88"),
+            IsPrivate: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("03261c0c-67de-4e26-a341-9d39e9970742"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("acer"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
+                    )),
+                },
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("a83efdb1-fcd3-4ae4-ae92-1d77eb60dc92"),
+                    Namespace: unifiedgosdk.Pointer("activity"),
+                    Slug: unifiedgosdk.Pointer("tremo"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Amita delectus dicta temptatio utroque ex.",
+                    )),
+                },
+            },
+            SubType: unifiedgosdk.Pointer("TASK"),
+            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
+            To: []shared.AtsEmail{
+                shared.AtsEmail{
+                    Email: "Sister91@hotmail.com",
+                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
+                    Type: shared.AtsEmailTypeWork.ToPointer(),
+                },
+            },
+            Type: shared.AtsActivityTypeTask.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-06T14:26:09.924Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -745,13 +1010,14 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -765,7 +1031,17 @@ func main() {
     )
 
     res, err := s.Activity.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
-        LmsActivity: shared.LmsActivity{},
+        LmsActivity: shared.LmsActivity{
+            AssignedGrade: unifiedgosdk.Pointer("summopere"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-12T21:36:58.404Z"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
+            ID: unifiedgosdk.Pointer("45739c5e-b76c-4232-93a4-f9424dded91a"),
+            IsCompleted: unifiedgosdk.Pointer(true),
+            ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
+            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-23T21:57:49.704Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

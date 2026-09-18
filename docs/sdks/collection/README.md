@@ -23,13 +23,14 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="go" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -44,7 +45,52 @@ func main() {
 
     res, err := s.Collection.CreateCommerceCollection(ctx, operations.CreateCommerceCollectionRequest{
         CommerceCollection: shared.CommerceCollection{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
+            Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
+            ID: unifiedgosdk.Pointer("b2131e95-9776-4b8d-86ce-6dbfb251756b"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsFeatured: unifiedgosdk.Pointer(false),
+            IsVisible: unifiedgosdk.Pointer(false),
+            ItemMetadata: []shared.CommerceMetadata{},
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
+                    Height: unifiedgosdk.Pointer[float64](759.0),
+                    ID: unifiedgosdk.Pointer("1d3d55ce-3045-470b-81e2-285e91758186"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("6c998c97-7c71-46de-9a32-bbc95c16c567"),
+                            Slug: unifiedgosdk.Pointer("censura"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "toties",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](80.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    Width: unifiedgosdk.Pointer[float64](40.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{
+                shared.CommerceMetadata{
+                    ID: unifiedgosdk.Pointer("2ee5b141-d1fd-4cd7-bd83-57fa29a1c05a"),
+                    Slug: unifiedgosdk.Pointer("aetas"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                        "consuasor",
+                    )),
+                },
+            },
+            Name: "Small Marble Chips",
+            PublicDescription: unifiedgosdk.Pointer("Generic Gloves designed with Cotton for miserable performance"),
+            PublicName: unifiedgosdk.Pointer("Small Marble Chips"),
+            Tags: []string{
+                "ambulo",
+                "adeptio",
+                "contego",
+            },
+            Type: shared.CommerceCollectionTypeCollection.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T05:28:02.230Z"),
         },
         ConnectionID: "<id>",
     })
@@ -81,13 +127,14 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="go" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -101,7 +148,27 @@ func main() {
     )
 
     res, err := s.Collection.CreateLmsCollection(ctx, operations.CreateLmsCollectionRequest{
-        LmsCollection: shared.LmsCollection{},
+        LmsCollection: shared.LmsCollection{
+            CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
+            Description: unifiedgosdk.Pointer("Ab."),
+            ID: unifiedgosdk.Pointer("80c93993-eef0-4ab6-830e-da2ab05153e6"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus."),
+                    Description: unifiedgosdk.Pointer("Aliquam tardus careo hic umbra."),
+                    Languages: []string{
+                        "gl",
+                    },
+                    Name: unifiedgosdk.Pointer("thymum"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/15O5EfV/2982/752"),
+                    Type: shared.LmsMediaTypeHeadshot.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2679/70?lock=6078357625960554"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ara"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-28T08:59:23.953Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -355,13 +422,14 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -376,7 +444,52 @@ func main() {
 
     res, err := s.Collection.PatchCommerceCollection(ctx, operations.PatchCommerceCollectionRequest{
         CommerceCollection: shared.CommerceCollection{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
+            Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
+            ID: unifiedgosdk.Pointer("ef542a21-6283-4d6b-8448-b1058d2b49df"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsFeatured: unifiedgosdk.Pointer(false),
+            IsVisible: unifiedgosdk.Pointer(false),
+            ItemMetadata: []shared.CommerceMetadata{},
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
+                    Height: unifiedgosdk.Pointer[float64](759.0),
+                    ID: unifiedgosdk.Pointer("82ecf120-f90e-4aa1-8bea-991a3a6b1d25"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("99d8093f-ca79-45e8-a522-82caa730efb8"),
+                            Slug: unifiedgosdk.Pointer("censura"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "toties",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](80.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    Width: unifiedgosdk.Pointer[float64](40.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{
+                shared.CommerceMetadata{
+                    ID: unifiedgosdk.Pointer("27666888-790f-46c7-8a46-904d22d5058d"),
+                    Slug: unifiedgosdk.Pointer("aetas"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                        "consuasor",
+                    )),
+                },
+            },
+            Name: "Small Marble Chips",
+            PublicDescription: unifiedgosdk.Pointer("Generic Gloves designed with Cotton for miserable performance"),
+            PublicName: unifiedgosdk.Pointer("Small Marble Chips"),
+            Tags: []string{
+                "ambulo",
+                "adeptio",
+                "contego",
+            },
+            Type: shared.CommerceCollectionTypeCollection.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T05:28:02.244Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -414,13 +527,14 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -434,7 +548,27 @@ func main() {
     )
 
     res, err := s.Collection.PatchLmsCollection(ctx, operations.PatchLmsCollectionRequest{
-        LmsCollection: shared.LmsCollection{},
+        LmsCollection: shared.LmsCollection{
+            CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
+            Description: unifiedgosdk.Pointer("Ab."),
+            ID: unifiedgosdk.Pointer("ce0158a5-5bf7-4d3c-b207-94ac9e643014"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus."),
+                    Description: unifiedgosdk.Pointer("Aliquam tardus careo hic umbra."),
+                    Languages: []string{
+                        "gl",
+                    },
+                    Name: unifiedgosdk.Pointer("thymum"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/15O5EfV/2982/752"),
+                    Type: shared.LmsMediaTypeHeadshot.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2679/70?lock=6078357625960554"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ara"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-28T08:59:23.963Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -581,13 +715,14 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -602,7 +737,52 @@ func main() {
 
     res, err := s.Collection.UpdateCommerceCollection(ctx, operations.UpdateCommerceCollectionRequest{
         CommerceCollection: shared.CommerceCollection{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2023-07-14T00:42:54.742Z"),
+            Description: unifiedgosdk.Pointer("The Integrated leading edge website Cheese offers reliable performance and productive design"),
+            ID: unifiedgosdk.Pointer("ef542a21-6283-4d6b-8448-b1058d2b49df"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsFeatured: unifiedgosdk.Pointer(false),
+            IsVisible: unifiedgosdk.Pointer(false),
+            ItemMetadata: []shared.CommerceMetadata{},
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Defungo adopto thorax."),
+                    Height: unifiedgosdk.Pointer[float64](759.0),
+                    ID: unifiedgosdk.Pointer("82ecf120-f90e-4aa1-8bea-991a3a6b1d25"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("99d8093f-ca79-45e8-a522-82caa730efb8"),
+                            Slug: unifiedgosdk.Pointer("censura"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "toties",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](80.0),
+                    Type: shared.CommerceItemMediaTypeVideo.ToPointer(),
+                    URL: "https://loremflickr.com/1319/1257?lock=7280448425732025",
+                    Width: unifiedgosdk.Pointer[float64](40.0),
+                },
+            },
+            Metadata: []shared.CommerceMetadata{
+                shared.CommerceMetadata{
+                    ID: unifiedgosdk.Pointer("27666888-790f-46c7-8a46-904d22d5058d"),
+                    Slug: unifiedgosdk.Pointer("aetas"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                        "consuasor",
+                    )),
+                },
+            },
+            Name: "Small Marble Chips",
+            PublicDescription: unifiedgosdk.Pointer("Generic Gloves designed with Cotton for miserable performance"),
+            PublicName: unifiedgosdk.Pointer("Small Marble Chips"),
+            Tags: []string{
+                "ambulo",
+                "adeptio",
+                "contego",
+            },
+            Type: shared.CommerceCollectionTypeCollection.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T05:28:02.244Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -640,13 +820,14 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -660,7 +841,27 @@ func main() {
     )
 
     res, err := s.Collection.UpdateLmsCollection(ctx, operations.UpdateLmsCollectionRequest{
-        LmsCollection: shared.LmsCollection{},
+        LmsCollection: shared.LmsCollection{
+            CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
+            Description: unifiedgosdk.Pointer("Ab."),
+            ID: unifiedgosdk.Pointer("ce0158a5-5bf7-4d3c-b207-94ac9e643014"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus."),
+                    Description: unifiedgosdk.Pointer("Aliquam tardus careo hic umbra."),
+                    Languages: []string{
+                        "gl",
+                    },
+                    Name: unifiedgosdk.Pointer("thymum"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/15O5EfV/2982/752"),
+                    Type: shared.LmsMediaTypeHeadshot.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2679/70?lock=6078357625960554"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ara"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-28T08:59:23.963Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

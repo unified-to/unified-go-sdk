@@ -35,13 +35,14 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -55,7 +56,14 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingCategory(ctx, operations.CreateTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("d4494546-4671-4859-a49c-0e57d159af7e"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.254Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -91,13 +99,14 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="go" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -111,7 +120,36 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("d5a3df0f-3326-439e-b316-db3e9a7cf935"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.331Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -147,13 +185,14 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="go" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -167,7 +206,12 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingNote(ctx, operations.CreateTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("138a6769-b4ce-42a5-b39c-a7b74cffb814"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.420Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -203,13 +247,14 @@ Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="go" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" example="ticketing_ticket" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -223,7 +268,29 @@ func main() {
     )
 
     res, err := s.Ticketing.CreateTicketingTicket(ctx, operations.CreateTicketingTicketRequest{
-        TicketingTicket: shared.TicketingTicket{},
+        TicketingTicket: shared.TicketingTicket{
+            AttachmentIds: []string{
+                "69425dd4-f539-4065-b5bc-480248461157",
+                "c86192d9-3698-4f71-b0d2-6b66f4814c84",
+            },
+            CategoryID: unifiedgosdk.Pointer("vilicus"),
+            CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
+            Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
+            DueAt: types.MustNewTimeFromString("2025-07-20T04:44:17.194Z"),
+            ID: unifiedgosdk.Pointer("a5de714a-b3fd-40d9-b93e-506f6876e3ea"),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Source: unifiedgosdk.Pointer("atavus"),
+            SourceRef: unifiedgosdk.Pointer("6861883d-19d8-4462-bf4c-9c74cbf2cd43"),
+            Status: shared.TicketingTicketStatusActive.ToPointer(),
+            Subject: unifiedgosdk.Pointer("Thymbra ratione minus arbitro tricesimus cetera validus."),
+            Tags: []string{
+                "tamen",
+                "vitae",
+                "torrens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-05-28T07:47:40.236Z"),
+            URL: unifiedgosdk.Pointer("https://yellowish-testimonial.biz"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -695,13 +762,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -715,7 +783,14 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingCategory(ctx, operations.PatchTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("491cd296-9d88-4b8d-aa44-df6bff836b4c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.258Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -752,13 +827,14 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -772,7 +848,36 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("cd38b12c-f511-4850-b3cd-a33b13dfcdc5"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.337Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -809,13 +914,14 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -829,7 +935,12 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingNote(ctx, operations.PatchTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("971baacd-8b5f-433b-8fd1-ce1feb163fad"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.423Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -866,13 +977,14 @@ Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" example="ticketing_ticket" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -886,7 +998,29 @@ func main() {
     )
 
     res, err := s.Ticketing.PatchTicketingTicket(ctx, operations.PatchTicketingTicketRequest{
-        TicketingTicket: shared.TicketingTicket{},
+        TicketingTicket: shared.TicketingTicket{
+            AttachmentIds: []string{
+                "fd0c224e-47d7-4b83-86e9-ea7749c489e0",
+                "b29bb217-5c4c-47f8-b85a-138890e9b662",
+            },
+            CategoryID: unifiedgosdk.Pointer("vilicus"),
+            CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
+            Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
+            DueAt: types.MustNewTimeFromString("2025-07-20T04:44:17.204Z"),
+            ID: unifiedgosdk.Pointer("9d7a3dfb-281a-454f-92eb-122a5a1b5f6c"),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Source: unifiedgosdk.Pointer("atavus"),
+            SourceRef: unifiedgosdk.Pointer("5963f755-1720-41d8-92fe-7b2d6d2c852e"),
+            Status: shared.TicketingTicketStatusActive.ToPointer(),
+            Subject: unifiedgosdk.Pointer("Thymbra ratione minus arbitro tricesimus cetera validus."),
+            Tags: []string{
+                "tamen",
+                "vitae",
+                "torrens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-05-28T07:47:40.241Z"),
+            URL: unifiedgosdk.Pointer("https://yellowish-testimonial.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1143,13 +1277,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1163,7 +1298,14 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingCategory(ctx, operations.UpdateTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("491cd296-9d88-4b8d-aa44-df6bff836b4c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.258Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1200,13 +1342,14 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1220,7 +1363,36 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("cd38b12c-f511-4850-b3cd-a33b13dfcdc5"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.337Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1257,13 +1429,14 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1277,7 +1450,12 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingNote(ctx, operations.UpdateTicketingNoteRequest{
-        TicketingNote: shared.TicketingNote{},
+        TicketingNote: shared.TicketingNote{
+            CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
+            Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
+            ID: unifiedgosdk.Pointer("971baacd-8b5f-433b-8fd1-ce1feb163fad"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-05T16:21:42.423Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1314,13 +1492,14 @@ Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" example="ticketing_ticket" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1334,7 +1513,29 @@ func main() {
     )
 
     res, err := s.Ticketing.UpdateTicketingTicket(ctx, operations.UpdateTicketingTicketRequest{
-        TicketingTicket: shared.TicketingTicket{},
+        TicketingTicket: shared.TicketingTicket{
+            AttachmentIds: []string{
+                "fd0c224e-47d7-4b83-86e9-ea7749c489e0",
+                "b29bb217-5c4c-47f8-b85a-138890e9b662",
+            },
+            CategoryID: unifiedgosdk.Pointer("vilicus"),
+            CreatedAt: types.MustNewTimeFromString("2021-06-25T19:19:31.279Z"),
+            Description: unifiedgosdk.Pointer("Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium."),
+            DueAt: types.MustNewTimeFromString("2025-07-20T04:44:17.204Z"),
+            ID: unifiedgosdk.Pointer("9d7a3dfb-281a-454f-92eb-122a5a1b5f6c"),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Source: unifiedgosdk.Pointer("atavus"),
+            SourceRef: unifiedgosdk.Pointer("5963f755-1720-41d8-92fe-7b2d6d2c852e"),
+            Status: shared.TicketingTicketStatusActive.ToPointer(),
+            Subject: unifiedgosdk.Pointer("Thymbra ratione minus arbitro tricesimus cetera validus."),
+            Tags: []string{
+                "tamen",
+                "vitae",
+                "torrens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-05-28T07:47:40.241Z"),
+            URL: unifiedgosdk.Pointer("https://yellowish-testimonial.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

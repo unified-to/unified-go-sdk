@@ -17,13 +17,14 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="go" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,32 @@ func main() {
     )
 
     res, err := s.Class.CreateLmsClass(ctx, operations.CreateLmsClassRequest{
-        LmsClass: shared.LmsClass{},
+        LmsClass: shared.LmsClass{
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
+            Description: unifiedgosdk.Pointer("Anser sperno decerno."),
+            ID: unifiedgosdk.Pointer("6216bb21-e805-4860-8073-3f3432c321e1"),
+            Instructors: []shared.LmsReference{},
+            Languages: []string{
+                "in",
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana."),
+                    Description: unifiedgosdk.Pointer("Esse confido."),
+                    Languages: []string{
+                        "fa",
+                        "da",
+                    },
+                    Name: unifiedgosdk.Pointer("illo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/199/1934?lock=4323325966476891"),
+                    Type: shared.LmsMediaTypeVideo.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("virtus"),
+            Students: []shared.LmsReference{},
+            UpdatedAt: types.MustNewTimeFromString("2025-07-07T22:25:54.088Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +208,14 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +229,32 @@ func main() {
     )
 
     res, err := s.Class.PatchLmsClass(ctx, operations.PatchLmsClassRequest{
-        LmsClass: shared.LmsClass{},
+        LmsClass: shared.LmsClass{
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
+            Description: unifiedgosdk.Pointer("Anser sperno decerno."),
+            ID: unifiedgosdk.Pointer("fcbd51ed-fc99-4bce-9a89-92b0c5dc6a74"),
+            Instructors: []shared.LmsReference{},
+            Languages: []string{
+                "in",
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana."),
+                    Description: unifiedgosdk.Pointer("Esse confido."),
+                    Languages: []string{
+                        "fa",
+                        "da",
+                    },
+                    Name: unifiedgosdk.Pointer("illo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/199/1934?lock=4323325966476891"),
+                    Type: shared.LmsMediaTypeVideo.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("virtus"),
+            Students: []shared.LmsReference{},
+            UpdatedAt: types.MustNewTimeFromString("2025-07-07T22:25:54.098Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +346,14 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +367,32 @@ func main() {
     )
 
     res, err := s.Class.UpdateLmsClass(ctx, operations.UpdateLmsClassRequest{
-        LmsClass: shared.LmsClass{},
+        LmsClass: shared.LmsClass{
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
+            Description: unifiedgosdk.Pointer("Anser sperno decerno."),
+            ID: unifiedgosdk.Pointer("fcbd51ed-fc99-4bce-9a89-92b0c5dc6a74"),
+            Instructors: []shared.LmsReference{},
+            Languages: []string{
+                "in",
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana."),
+                    Description: unifiedgosdk.Pointer("Esse confido."),
+                    Languages: []string{
+                        "fa",
+                        "da",
+                    },
+                    Name: unifiedgosdk.Pointer("illo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/199/1934?lock=4323325966476891"),
+                    Type: shared.LmsMediaTypeVideo.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("virtus"),
+            Students: []shared.LmsReference{},
+            UpdatedAt: types.MustNewTimeFromString("2025-07-07T22:25:54.098Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

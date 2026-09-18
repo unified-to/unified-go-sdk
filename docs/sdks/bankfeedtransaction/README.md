@@ -17,13 +17,14 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,25 @@ func main() {
     )
 
     res, err := s.Bankfeedtransaction.CreateAccountingBankfeedtransaction(ctx, operations.CreateAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("41b61ce9-f467-4bcf-9569-6010d776fd07"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.708Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.141Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +201,14 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +222,25 @@ func main() {
     )
 
     res, err := s.Bankfeedtransaction.PatchAccountingBankfeedtransaction(ctx, operations.PatchAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("c2e879ca-1b07-4689-9790-88de6a69f748"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.714Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.142Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +332,14 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +353,25 @@ func main() {
     )
 
     res, err := s.Bankfeedtransaction.UpdateAccountingBankfeedtransaction(ctx, operations.UpdateAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("c2e879ca-1b07-4689-9790-88de6a69f748"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.714Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.142Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

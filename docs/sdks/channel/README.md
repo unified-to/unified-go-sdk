@@ -17,13 +17,14 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="go" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,18 @@ func main() {
     )
 
     res, err := s.Channel.CreateMessagingChannel(ctx, operations.CreateMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("24bac585-b154-4c1b-859e-9751816e04b1"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.577Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +194,14 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +215,18 @@ func main() {
     )
 
     res, err := s.Channel.PatchMessagingChannel(ctx, operations.PatchMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("b108583d-fb24-4ece-9f1f-f72eb82efeee"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.582Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +318,14 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +339,18 @@ func main() {
     )
 
     res, err := s.Channel.UpdateMessagingChannel(ctx, operations.UpdateMessagingChannelRequest{
-        MessagingChannel: shared.MessagingChannel{},
+        MessagingChannel: shared.MessagingChannel{
+            CreatedAt: types.MustNewTimeFromString("2023-10-05T02:09:22.795Z"),
+            Description: unifiedgosdk.Pointer("Dolores tutis."),
+            HasSubchannels: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("b108583d-fb24-4ece-9f1f-f72eb82efeee"),
+            IsActive: unifiedgosdk.Pointer(false),
+            IsPrivate: unifiedgosdk.Pointer(true),
+            Members: []shared.MessagingMember{},
+            Name: unifiedgosdk.Pointer("tego"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-23T03:15:33.582Z"),
+            WebURL: unifiedgosdk.Pointer("https://svelte-rule.name/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

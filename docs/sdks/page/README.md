@@ -17,13 +17,14 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,7 +39,16 @@ func main() {
 
     res, err := s.Page.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeText,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("12674b1d-8fdb-4ca9-8870-c8a3aa31aa82"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.984Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
     })
@@ -184,13 +194,14 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -205,7 +216,16 @@ func main() {
 
     res, err := s.Page.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeOther,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("5ee389c9-a3e6-4faa-a53e-d1fb589a5edf"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.996Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -298,13 +318,14 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -319,7 +340,16 @@ func main() {
 
     res, err := s.Page.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeOther,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("5ee389c9-a3e6-4faa-a53e-d1fb589a5edf"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.996Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

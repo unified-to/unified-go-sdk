@@ -17,7 +17,7 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="go" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,19 @@ func main() {
     )
 
     res, err := s.Ad.CreateAdsAd(ctx, operations.CreateAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("7d6bc006-9a9e-4304-a7d3-61419c806e1a"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.902Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +195,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```go
 package main
 
@@ -190,6 +203,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +216,19 @@ func main() {
     )
 
     res, err := s.Ad.PatchAdsAd(ctx, operations.PatchAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("8c3e2ac1-38e0-499b-9b46-12e44c25b14c"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.909Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +320,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```go
 package main
 
@@ -302,6 +328,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +341,19 @@ func main() {
     )
 
     res, err := s.Ad.UpdateAdsAd(ctx, operations.UpdateAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("8c3e2ac1-38e0-499b-9b46-12e44c25b14c"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.909Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

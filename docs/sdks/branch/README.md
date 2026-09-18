@@ -17,13 +17,14 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="go" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,8 +39,11 @@ func main() {
 
     res, err := s.Branch.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("c587ce9d-9be6-4633-941a-b58549359337"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.512Z"),
         },
         ConnectionID: "<id>",
     })
@@ -185,13 +189,14 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -206,8 +211,11 @@ func main() {
 
     res, err := s.Branch.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -300,13 +308,14 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -321,8 +330,11 @@ func main() {
 
     res, err := s.Branch.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
-            Name: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
+            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            Name: "voluptas",
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

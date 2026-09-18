@@ -17,13 +17,14 @@ Create a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="go" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" example="storage_file" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,36 @@ func main() {
     )
 
     res, err := s.File.CreateStorageFile(ctx, operations.CreateStorageFileRequest{
-        StorageFile: shared.StorageFile{},
+        StorageFile: shared.StorageFile{
+            CreatedAt: types.MustNewTimeFromString("2021-09-12T16:48:23.774Z"),
+            Data: unifiedgosdk.Pointer("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+"),
+            Description: unifiedgosdk.Pointer("Crastinus cupiditate debilito cimentarius virgo."),
+            DownloadURL: unifiedgosdk.Pointer("https://stingy-casement.name/"),
+            Hash: unifiedgosdk.Pointer("fe6a659e-75cd-4079-9b76-351f9af2205a"),
+            ID: unifiedgosdk.Pointer("95123b8e-7519-4a15-ab98-73fabbc42d7e"),
+            MimeType: unifiedgosdk.Pointer("FOLDER"),
+            Name: unifiedgosdk.Pointer("softly.tiff"),
+            References: []shared.StorageReference{
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("ab705f3b-e368-4a94-8b22-d5f693c14a76"),
+                    Name: unifiedgosdk.Pointer("tamisium viduo odio cauda"),
+                    Type: unifiedgosdk.Pointer("accounting_bill"),
+                },
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140"),
+                    Name: unifiedgosdk.Pointer("quia"),
+                    Type: unifiedgosdk.Pointer("accounting_expense"),
+                },
+            },
+            Size: unifiedgosdk.Pointer[float64](10276.0),
+            Tags: []string{
+                "spoliatio",
+            },
+            Type: shared.StorageFileTypeFile.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-27T12:14:29.966Z"),
+            Version: unifiedgosdk.Pointer("1"),
+            WebURL: unifiedgosdk.Pointer("https://sandy-distinction.info/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +212,14 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +233,36 @@ func main() {
     )
 
     res, err := s.File.PatchStorageFile(ctx, operations.PatchStorageFileRequest{
-        StorageFile: shared.StorageFile{},
+        StorageFile: shared.StorageFile{
+            CreatedAt: types.MustNewTimeFromString("2021-09-12T16:48:23.774Z"),
+            Data: unifiedgosdk.Pointer("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+"),
+            Description: unifiedgosdk.Pointer("Crastinus cupiditate debilito cimentarius virgo."),
+            DownloadURL: unifiedgosdk.Pointer("https://stingy-casement.name/"),
+            Hash: unifiedgosdk.Pointer("fe6a659e-75cd-4079-9b76-351f9af2205a"),
+            ID: unifiedgosdk.Pointer("2e793823-5c9b-4c2f-9c61-a5bdee064605"),
+            MimeType: unifiedgosdk.Pointer("FOLDER"),
+            Name: unifiedgosdk.Pointer("softly.tiff"),
+            References: []shared.StorageReference{
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("ab705f3b-e368-4a94-8b22-d5f693c14a76"),
+                    Name: unifiedgosdk.Pointer("tamisium viduo odio cauda"),
+                    Type: unifiedgosdk.Pointer("accounting_bill"),
+                },
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140"),
+                    Name: unifiedgosdk.Pointer("quia"),
+                    Type: unifiedgosdk.Pointer("accounting_expense"),
+                },
+            },
+            Size: unifiedgosdk.Pointer[float64](10276.0),
+            Tags: []string{
+                "spoliatio",
+            },
+            Type: shared.StorageFileTypeFile.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-27T12:14:29.970Z"),
+            Version: unifiedgosdk.Pointer("1"),
+            WebURL: unifiedgosdk.Pointer("https://sandy-distinction.info/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +354,14 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +375,36 @@ func main() {
     )
 
     res, err := s.File.UpdateStorageFile(ctx, operations.UpdateStorageFileRequest{
-        StorageFile: shared.StorageFile{},
+        StorageFile: shared.StorageFile{
+            CreatedAt: types.MustNewTimeFromString("2021-09-12T16:48:23.774Z"),
+            Data: unifiedgosdk.Pointer("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+"),
+            Description: unifiedgosdk.Pointer("Crastinus cupiditate debilito cimentarius virgo."),
+            DownloadURL: unifiedgosdk.Pointer("https://stingy-casement.name/"),
+            Hash: unifiedgosdk.Pointer("fe6a659e-75cd-4079-9b76-351f9af2205a"),
+            ID: unifiedgosdk.Pointer("2e793823-5c9b-4c2f-9c61-a5bdee064605"),
+            MimeType: unifiedgosdk.Pointer("FOLDER"),
+            Name: unifiedgosdk.Pointer("softly.tiff"),
+            References: []shared.StorageReference{
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("ab705f3b-e368-4a94-8b22-d5f693c14a76"),
+                    Name: unifiedgosdk.Pointer("tamisium viduo odio cauda"),
+                    Type: unifiedgosdk.Pointer("accounting_bill"),
+                },
+                shared.StorageReference{
+                    ID: unifiedgosdk.Pointer("9f0f694e-b6f4-4c12-b5f6-ab08d4e81140"),
+                    Name: unifiedgosdk.Pointer("quia"),
+                    Type: unifiedgosdk.Pointer("accounting_expense"),
+                },
+            },
+            Size: unifiedgosdk.Pointer[float64](10276.0),
+            Tags: []string{
+                "spoliatio",
+            },
+            Type: shared.StorageFileTypeFile.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-27T12:14:29.970Z"),
+            Version: unifiedgosdk.Pointer("1"),
+            WebURL: unifiedgosdk.Pointer("https://sandy-distinction.info/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -31,13 +31,14 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -51,7 +52,14 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("d6055da6-657e-416c-8565-856e90354101"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.004Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -87,13 +95,14 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -107,7 +116,45 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("3687e4c3-b243-4270-99b2-c844cfc26462"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("97e50e71-e1ed-4d6c-90b6-094016d24768"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("6010bbb0-510c-4b9c-8b1d-27fc0418ecd4"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -143,13 +190,14 @@ Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="go" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" example="task_task" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -163,7 +211,32 @@ func main() {
     )
 
     res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
-        TaskTask: shared.TaskTask{},
+        TaskTask: shared.TaskTask{
+            AttachmentIds: []string{},
+            CompletedAt: types.MustNewTimeFromString("2022-03-24T12:16:02.229Z"),
+            CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-23T09:38:15.654Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-13T17:51:18.132Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("59e40094-d497-4608-93d5-1f6d1c0f4c3c"),
+            Metadata: []shared.TaskMetadata{},
+            Name: unifiedgosdk.Pointer("Direct Markets Architect"),
+            Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Progress: unifiedgosdk.Pointer[float64](2.0),
+            StartAt: types.MustNewTimeFromString("2022-01-19T11:46:59.440Z"),
+            Status: shared.TaskTaskStatusInProgress.ToPointer(),
+            StoryPoints: unifiedgosdk.Pointer[float64](0.0),
+            Tags: []string{
+                "concido",
+                "rerum",
+            },
+            TimeSpent: unifiedgosdk.Pointer[float64](957.0),
+            TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
+            Type: unifiedgosdk.Pointer("tubineus"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T10:52:39.955Z"),
+            URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -635,13 +708,14 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -655,7 +729,14 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("4f9bb369-67f3-478f-b7f9-73df24044738"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.005Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -692,13 +773,14 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -712,7 +794,45 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("a8597f9e-fdb3-4244-bcd3-c62331ca5ba9"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("20b84b41-2336-4083-bba1-4867b5ccbb3b"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("417b98cd-43b3-462e-b109-2362cc1aacf9"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -749,13 +869,14 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -769,7 +890,32 @@ func main() {
     )
 
     res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
-        TaskTask: shared.TaskTask{},
+        TaskTask: shared.TaskTask{
+            AttachmentIds: []string{},
+            CompletedAt: types.MustNewTimeFromString("2022-03-24T12:16:02.235Z"),
+            CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-23T09:38:15.670Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-13T17:51:18.140Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("eb02963c-f722-4ea6-ba76-a9b8519874cc"),
+            Metadata: []shared.TaskMetadata{},
+            Name: unifiedgosdk.Pointer("Direct Markets Architect"),
+            Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Progress: unifiedgosdk.Pointer[float64](2.0),
+            StartAt: types.MustNewTimeFromString("2022-01-19T11:46:59.446Z"),
+            Status: shared.TaskTaskStatusInProgress.ToPointer(),
+            StoryPoints: unifiedgosdk.Pointer[float64](0.0),
+            Tags: []string{
+                "concido",
+                "rerum",
+            },
+            TimeSpent: unifiedgosdk.Pointer[float64](957.0),
+            TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
+            Type: unifiedgosdk.Pointer("tubineus"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T10:52:39.955Z"),
+            URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -971,13 +1117,14 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -991,7 +1138,14 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("4f9bb369-67f3-478f-b7f9-73df24044738"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.005Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1028,13 +1182,14 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1048,7 +1203,45 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("a8597f9e-fdb3-4244-bcd3-c62331ca5ba9"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("20b84b41-2336-4083-bba1-4867b5ccbb3b"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("417b98cd-43b3-462e-b109-2362cc1aacf9"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1085,13 +1278,14 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1105,7 +1299,32 @@ func main() {
     )
 
     res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
-        TaskTask: shared.TaskTask{},
+        TaskTask: shared.TaskTask{
+            AttachmentIds: []string{},
+            CompletedAt: types.MustNewTimeFromString("2022-03-24T12:16:02.235Z"),
+            CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-23T09:38:15.670Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-13T17:51:18.140Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("eb02963c-f722-4ea6-ba76-a9b8519874cc"),
+            Metadata: []shared.TaskMetadata{},
+            Name: unifiedgosdk.Pointer("Direct Markets Architect"),
+            Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
+            Priority: unifiedgosdk.Pointer("LOW"),
+            Progress: unifiedgosdk.Pointer[float64](2.0),
+            StartAt: types.MustNewTimeFromString("2022-01-19T11:46:59.446Z"),
+            Status: shared.TaskTaskStatusInProgress.ToPointer(),
+            StoryPoints: unifiedgosdk.Pointer[float64](0.0),
+            Tags: []string{
+                "concido",
+                "rerum",
+            },
+            TimeSpent: unifiedgosdk.Pointer[float64](957.0),
+            TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
+            Type: unifiedgosdk.Pointer("tubineus"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T10:52:39.955Z"),
+            URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

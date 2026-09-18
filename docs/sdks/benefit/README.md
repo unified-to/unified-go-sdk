@@ -17,7 +17,7 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="go" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,22 @@ func main() {
     )
 
     res, err := s.Benefit.CreateHrisBenefit(ctx, operations.CreateHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("11bf77cb-4233-426d-9a77-f0c996faef95"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.390Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +198,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```go
 package main
 
@@ -190,6 +206,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +219,22 @@ func main() {
     )
 
     res, err := s.Benefit.PatchHrisBenefit(ctx, operations.PatchHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("451b7ef4-8796-4357-af9f-35a09d55dfa4"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.395Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +326,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```go
 package main
 
@@ -302,6 +334,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +347,22 @@ func main() {
     )
 
     res, err := s.Benefit.UpdateHrisBenefit(ctx, operations.UpdateHrisBenefitRequest{
-        HrisBenefit: shared.HrisBenefit{},
+        HrisBenefit: shared.HrisBenefit{
+            CoverageLevel: shared.CoverageLevelEmployeeSpouse.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T01:24:05.654Z"),
+            Currency: unifiedgosdk.Pointer("JOD"),
+            Description: unifiedgosdk.Pointer("Vomito voluptas dolor sed."),
+            EmployerContributionAmount: unifiedgosdk.Pointer[float64](185006.0),
+            EmployerContributionMaxAmount: unifiedgosdk.Pointer[float64](179093.0),
+            EmployerContributionType: shared.EmployerContributionTypePercentage.ToPointer(),
+            Frequency: shared.HrisBenefitFrequencyHour.ToPointer(),
+            ID: unifiedgosdk.Pointer("451b7ef4-8796-4357-af9f-35a09d55dfa4"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Frozen Wooden Ball"),
+            Tax: shared.TaxPreTax.ToPointer(),
+            Type: shared.HrisBenefitTypeGarnishment.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-03-06T11:26:53.395Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

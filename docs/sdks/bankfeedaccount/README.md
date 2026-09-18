@@ -17,7 +17,7 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,22 @@ func main() {
     )
 
     res, err := s.Bankfeedaccount.CreateAccountingBankfeedaccount(ctx, operations.CreateAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("988177bf-5488-4d1c-9e96-18adca907a91"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.169Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +198,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -190,6 +206,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +219,22 @@ func main() {
     )
 
     res, err := s.Bankfeedaccount.PatchAccountingBankfeedaccount(ctx, operations.PatchAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("05218a4b-be3a-4065-ae6f-05b753fbaa9e"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.171Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +326,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -302,6 +334,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +347,22 @@ func main() {
     )
 
     res, err := s.Bankfeedaccount.UpdateAccountingBankfeedaccount(ctx, operations.UpdateAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("05218a4b-be3a-4065-ae6f-05b753fbaa9e"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.171Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

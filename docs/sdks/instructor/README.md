@@ -17,13 +17,14 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="go" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,26 @@ func main() {
     )
 
     res, err := s.Instructor.CreateLmsInstructor(ctx, operations.CreateLmsInstructorRequest{
-        LmsInstructor: shared.LmsInstructor{},
+        LmsInstructor: shared.LmsInstructor{
+            CreatedAt: types.MustNewTimeFromString("2021-10-12T16:38:54.979Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Deangelo"),
+            ID: unifiedgosdk.Pointer("2abdf9c3-7c43-490d-8aa8-9f34d0631e20"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
+            LastName: unifiedgosdk.Pointer("Ritchie"),
+            Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(352) 551-7989",
+                    Type: shared.LmsTelephoneTypeHome.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-29T14:52:02.059Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +202,14 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +223,26 @@ func main() {
     )
 
     res, err := s.Instructor.PatchLmsInstructor(ctx, operations.PatchLmsInstructorRequest{
-        LmsInstructor: shared.LmsInstructor{},
+        LmsInstructor: shared.LmsInstructor{
+            CreatedAt: types.MustNewTimeFromString("2021-10-12T16:38:54.979Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Deangelo"),
+            ID: unifiedgosdk.Pointer("d05a1560-35c6-418a-81e7-6746e39c822e"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
+            LastName: unifiedgosdk.Pointer("Ritchie"),
+            Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(352) 551-7989",
+                    Type: shared.LmsTelephoneTypeHome.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-29T14:52:02.064Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +334,14 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +355,26 @@ func main() {
     )
 
     res, err := s.Instructor.UpdateLmsInstructor(ctx, operations.UpdateLmsInstructorRequest{
-        LmsInstructor: shared.LmsInstructor{},
+        LmsInstructor: shared.LmsInstructor{
+            CreatedAt: types.MustNewTimeFromString("2021-10-12T16:38:54.979Z"),
+            Emails: []shared.LmsEmail{
+                shared.LmsEmail{},
+                shared.LmsEmail{},
+            },
+            FirstName: unifiedgosdk.Pointer("Deangelo"),
+            ID: unifiedgosdk.Pointer("d05a1560-35c6-418a-81e7-6746e39c822e"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
+            LastName: unifiedgosdk.Pointer("Ritchie"),
+            Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
+            Telephones: []shared.LmsTelephone{
+                shared.LmsTelephone{
+                    Telephone: "(352) 551-7989",
+                    Type: shared.LmsTelephoneTypeHome.ToPointer(),
+                },
+            },
+            Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-29T14:52:02.064Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

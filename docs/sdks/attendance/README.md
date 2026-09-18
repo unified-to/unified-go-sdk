@@ -17,15 +17,15 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="go" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -39,9 +39,39 @@ func main() {
 
     res, err := s.Attendance.CreateHrisAttendance(ctx, operations.CreateHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.982Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.202Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2026-07-01T14:10:09.942Z"),
-            StartAt: types.MustTimeFromString("2026-03-31T03:51:43.280Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.343Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("65b5216f-55de-4670-a9d9-80ec16ad8827"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.525Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.682Z"),
         },
         ConnectionID: "<id>",
     })
@@ -187,15 +217,15 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -209,9 +239,39 @@ func main() {
 
     res, err := s.Attendance.PatchHrisAttendance(ctx, operations.PatchHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.989Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.209Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-09-28T22:23:28.906Z"),
-            StartAt: types.MustTimeFromString("2025-01-18T09:17:09.936Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.351Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("ead77d2b-4b8c-46f2-9d88-b589437bc6ec"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.526Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.683Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -304,15 +364,15 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -326,9 +386,39 @@ func main() {
 
     res, err := s.Attendance.UpdateHrisAttendance(ctx, operations.UpdateHrisAttendanceRequest{
         HrisAttendance: shared.HrisAttendance{
+            Address: &shared.PropertyHrisAttendanceAddress{
+                Address1: unifiedgosdk.Pointer("14108 Allie Flats"),
+                City: unifiedgosdk.Pointer("Kearaborough"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("23844-2344"),
+                Region: unifiedgosdk.Pointer("Tennessee"),
+                RegionCode: unifiedgosdk.Pointer("CA"),
+            },
+            ApprovedAt: types.MustNewTimeFromString("2021-08-13T10:36:07.714Z"),
+            Breaks: []shared.HrisAttendanceBreak{
+                shared.HrisAttendanceBreak{
+                    DurationMinutes: unifiedgosdk.Pointer[float64](12.0),
+                    EndAt: types.MustNewTimeFromString("2023-10-22T16:48:33.989Z"),
+                    ID: unifiedgosdk.Pointer("d60a1001-5a8a-4991-8c21-f4da6036cc87"),
+                    IsPaid: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Lunch"),
+                    StartAt: types.MustNewTimeFromString("2023-10-15T21:14:40.209Z"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-08-10T19:43:18.452Z"),
+            Currency: unifiedgosdk.Pointer("UGX"),
+            DeclaredTipsAmount: unifiedgosdk.Pointer[float64](161.0),
             EmployeeUserID: "<id>",
-            EndAt: types.MustTimeFromString("2024-07-06T19:51:15.352Z"),
-            StartAt: types.MustTimeFromString("2024-05-22T08:12:53.996Z"),
+            EndAt: types.MustTimeFromString("2024-04-06T04:27:30.351Z"),
+            HourlyRate: unifiedgosdk.Pointer[float64](53.0),
+            Hours: unifiedgosdk.Pointer[float64](10.0),
+            ID: unifiedgosdk.Pointer("ead77d2b-4b8c-46f2-9d88-b589437bc6ec"),
+            JobName: unifiedgosdk.Pointer("Global Creative Supervisor"),
+            NonCashTipsAmount: unifiedgosdk.Pointer[float64](54.0),
+            StartAt: types.MustTimeFromString("2021-11-09T10:28:54.526Z"),
+            Status: shared.HrisAttendanceStatusClosed.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("America/Atikokan"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-17T01:30:11.683Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

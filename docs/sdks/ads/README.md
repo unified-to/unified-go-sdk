@@ -55,7 +55,7 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="go" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```go
 package main
 
@@ -63,6 +63,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -75,7 +76,19 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsAd(ctx, operations.CreateAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("7d6bc006-9a9e-4304-a7d3-61419c806e1a"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.902Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -111,13 +124,14 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="go" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -131,7 +145,17 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsAsset(ctx, operations.CreateAdsAssetRequest{
-        AdsAsset: shared.AdsAsset{},
+        AdsAsset: shared.AdsAsset{
+            CreatedAt: types.MustNewTimeFromString("2020-03-27T20:14:38.603Z"),
+            Height: unifiedgosdk.Pointer[float64](400.0),
+            ID: unifiedgosdk.Pointer("69ac339c-ea18-45a6-8c03-fadb8ed8e424"),
+            MimeType: unifiedgosdk.Pointer("IMAGE_PNG"),
+            Name: unifiedgosdk.Pointer("Lockman - DuBuque"),
+            Type: shared.AdsAssetTypeImage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-03-15T04:43:22.538Z"),
+            URL: unifiedgosdk.Pointer("https://informal-perfection.com/"),
+            Width: unifiedgosdk.Pointer[float64](600.0),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -167,7 +191,7 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```go
 package main
 
@@ -175,6 +199,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -187,7 +212,25 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsCampaign(ctx, operations.CreateAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.604Z"),
+            ID: unifiedgosdk.Pointer("751e775a-d107-436d-beae-0b6e29a81866"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.349Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.564Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -223,13 +266,14 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="go" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -243,7 +287,18 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsCreative(ctx, operations.CreateAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("4d31950c-af56-406c-bac7-75ce978929c1"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.795Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -279,7 +334,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="go" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```go
 package main
 
@@ -287,6 +342,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -299,7 +355,22 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsGroup(ctx, operations.CreateAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.302Z"),
+            ID: unifiedgosdk.Pointer("497eb0be-612c-416e-be9f-14f379e66106"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.683Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.220Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -335,13 +406,14 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="go" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -355,7 +427,13 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("0025631a-c198-4691-9215-01f54de73cae"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -391,13 +469,14 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -411,7 +490,22 @@ func main() {
     )
 
     res, err := s.Ads.CreateAdsOrganization(ctx, operations.CreateAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("09562003-d3da-4510-9573-e932b1798d06"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.210Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1482,7 +1576,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```go
 package main
 
@@ -1490,6 +1584,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1502,7 +1597,19 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsAd(ctx, operations.PatchAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("8c3e2ac1-38e0-499b-9b46-12e44c25b14c"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.909Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1539,7 +1646,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```go
 package main
 
@@ -1547,6 +1654,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1559,7 +1667,25 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsCampaign(ctx, operations.PatchAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.668Z"),
+            ID: unifiedgosdk.Pointer("2d02c149-981a-4c0b-b778-b196fd997f46"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.352Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.640Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1596,13 +1722,14 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1616,7 +1743,18 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsCreative(ctx, operations.PatchAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("fba66c03-d68d-4007-8ae9-cf369d858311"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.798Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1653,7 +1791,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```go
 package main
 
@@ -1661,6 +1799,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1673,7 +1812,22 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsGroup(ctx, operations.PatchAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.401Z"),
+            ID: unifiedgosdk.Pointer("4e613cf5-3cb2-4316-a124-d5d7b5cb0cce"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.775Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.254Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1710,13 +1864,14 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1730,7 +1885,13 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("658ad6f8-cf35-434b-9652-34e030c35b64"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1767,13 +1928,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1787,7 +1949,22 @@ func main() {
     )
 
     res, err := s.Ads.PatchAdsOrganization(ctx, operations.PatchAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("1e7c6471-0081-404e-9c97-a7cd17942a76"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.216Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2154,7 +2331,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```go
 package main
 
@@ -2162,6 +2339,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2174,7 +2352,19 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsAd(ctx, operations.UpdateAdsAdRequest{
-        AdsAd: shared.AdsAd{},
+        AdsAd: shared.AdsAd{
+            AdCopy: unifiedgosdk.Pointer("Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio."),
+            AdType: shared.AdTypeSocial.ToPointer(),
+            AdvertiserName: unifiedgosdk.Pointer("Robel, Nader and Rau"),
+            CreatedAt: types.MustNewTimeFromString("2022-11-08T03:38:20.978Z"),
+            CreativeAssetURL: unifiedgosdk.Pointer("https://picsum.photos/seed/LwOzrpr9/948/2793"),
+            Description: unifiedgosdk.Pointer("Accedo vespillo carpo dolor decet stillicidium comptus tenuis."),
+            FinalURL: unifiedgosdk.Pointer("https://improbable-sanity.com"),
+            ID: unifiedgosdk.Pointer("8c3e2ac1-38e0-499b-9b46-12e44c25b14c"),
+            Name: unifiedgosdk.Pointer("Hermiston Group"),
+            Status: shared.AdsAdStatusArchived.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-06-05T03:02:50.909Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2211,7 +2401,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```go
 package main
 
@@ -2219,6 +2409,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2231,7 +2422,25 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsCampaign(ctx, operations.UpdateAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.668Z"),
+            ID: unifiedgosdk.Pointer("2d02c149-981a-4c0b-b778-b196fd997f46"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.352Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.640Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2268,13 +2477,14 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2288,7 +2498,18 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsCreative(ctx, operations.UpdateAdsCreativeRequest{
-        AdsCreative: shared.AdsCreative{},
+        AdsCreative: shared.AdsCreative{
+            CreatedAt: types.MustNewTimeFromString("2020-02-17T11:24:51.093Z"),
+            ID: unifiedgosdk.Pointer("fba66c03-d68d-4007-8ae9-cf369d858311"),
+            Labels: []string{
+                "coma",
+                "accedo",
+                "termes",
+            },
+            Name: unifiedgosdk.Pointer("Brekke, Bradtke and Robel"),
+            Status: shared.AdsCreativeStatusPaused.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-21T01:13:41.798Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2325,7 +2546,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```go
 package main
 
@@ -2333,6 +2554,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -2345,7 +2567,22 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsGroup(ctx, operations.UpdateAdsGroupRequest{
-        AdsGroup: shared.AdsGroup{},
+        AdsGroup: shared.AdsGroup{
+            BidAmount: unifiedgosdk.Pointer[float64](26.16030164062977),
+            BudgetAmount: unifiedgosdk.Pointer[float64](5099.175239447504),
+            BudgetPeriod: shared.AdsGroupBudgetPeriodMonthly.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2019-08-29T17:59:41.045Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.AdsGroupEffectiveStatusPaused.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2026-05-24T14:15:58.401Z"),
+            ID: unifiedgosdk.Pointer("4e613cf5-3cb2-4316-a124-d5d7b5cb0cce"),
+            LanguageLocale: unifiedgosdk.Pointer("fr-FR"),
+            Name: unifiedgosdk.Pointer("Stark - Baumbach"),
+            StartAt: types.MustNewTimeFromString("2025-12-10T22:04:10.775Z"),
+            Status: shared.AdsGroupStatusProcessing.ToPointer(),
+            Targeting: &shared.PropertyAdsGroupTargeting{},
+            UpdatedAt: types.MustNewTimeFromString("2022-01-02T17:05:47.254Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2382,13 +2619,14 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2402,7 +2640,13 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("658ad6f8-cf35-434b-9652-34e030c35b64"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -2439,13 +2683,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -2459,7 +2704,22 @@ func main() {
     )
 
     res, err := s.Ads.UpdateAdsOrganization(ctx, operations.UpdateAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("1e7c6471-0081-404e-9c97-a7cd17942a76"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.216Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

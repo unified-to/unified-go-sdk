@@ -29,7 +29,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```go
 package main
 
@@ -37,6 +37,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -49,7 +50,14 @@ func main() {
     )
 
     res, err := s.Comment.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("5393a955-52d2-4f2f-9ca4-d31932803e88"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.175Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -85,13 +93,14 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -105,7 +114,14 @@ func main() {
     )
 
     res, err := s.Comment.CreateTaskComment(ctx, operations.CreateTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("d6055da6-657e-416c-8565-856e90354101"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.004Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -141,7 +157,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```go
 package main
 
@@ -161,7 +177,12 @@ func main() {
     )
 
     res, err := s.Comment.CreateUcComment(ctx, operations.CreateUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("66ec505c-6ea0-4bec-8c60-4f2021e49e2f"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.318Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -524,7 +545,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```go
 package main
 
@@ -532,6 +553,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -544,7 +566,14 @@ func main() {
     )
 
     res, err := s.Comment.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("f4bbf399-b220-4290-92d8-e4b4de8a27c3"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.176Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -581,13 +610,14 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -601,7 +631,14 @@ func main() {
     )
 
     res, err := s.Comment.PatchTaskComment(ctx, operations.PatchTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("4f9bb369-67f3-478f-b7f9-73df24044738"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.005Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -638,7 +675,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```go
 package main
 
@@ -658,7 +695,12 @@ func main() {
     )
 
     res, err := s.Comment.PatchUcComment(ctx, operations.PatchUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("16638cd0-8adc-4668-8d00-43f120bdac37"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.319Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -860,7 +902,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```go
 package main
 
@@ -868,6 +910,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -880,7 +923,14 @@ func main() {
     )
 
     res, err := s.Comment.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("f4bbf399-b220-4290-92d8-e4b4de8a27c3"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.176Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -917,13 +967,14 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -937,7 +988,14 @@ func main() {
     )
 
     res, err := s.Comment.UpdateTaskComment(ctx, operations.UpdateTaskCommentRequest{
-        TaskComment: shared.TaskComment{},
+        TaskComment: shared.TaskComment{
+            CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("4f9bb369-67f3-478f-b7f9-73df24044738"),
+            Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T01:29:44.005Z"),
+            UserName: unifiedgosdk.Pointer("Santina Abbott"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -974,7 +1032,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```go
 package main
 
@@ -994,7 +1052,12 @@ func main() {
     )
 
     res, err := s.Comment.UpdateUcComment(ctx, operations.UpdateUcCommentRequest{
-        UcComment: shared.UcComment{},
+        UcComment: shared.UcComment{
+            Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
+            CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
+            ID: unifiedgosdk.Pointer("16638cd0-8adc-4668-8d00-43f120bdac37"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-01T19:43:42.319Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

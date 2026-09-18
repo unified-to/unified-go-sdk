@@ -12,13 +12,14 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="go" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -32,7 +33,25 @@ func main() {
     )
 
     res, err := s.Rate.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
-        ShippingRate: shared.ShippingRate{},
+        ShippingRate: shared.ShippingRate{
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("282be3e2-3b21-4c4e-a8d8-f9bf73fabea4"),
+            Rates: []shared.ShippingRateRate{
+                shared.ShippingRateRate{
+                    Amount: unifiedgosdk.Pointer[float64](54.679719475097954),
+                    BaseAmount: unifiedgosdk.Pointer[float64](76.45537888631225),
+                    Currency: unifiedgosdk.Pointer("USD"),
+                    DeliveryDays: unifiedgosdk.Pointer[float64](8.0),
+                    Description: unifiedgosdk.Pointer("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum."),
+                    EstimatedDays: unifiedgosdk.Pointer[float64](10.0),
+                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2024-01-31T23:40:52.547Z"),
+                    IsGuaranteed: unifiedgosdk.Pointer(true),
+                    IsNegotiatedRate: unifiedgosdk.Pointer(true),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2.2701712837442756),
+                    Title: "Turcotte Inc",
+                },
+            },
+        },
         ConnectionID: "<id>",
     })
     if err != nil {

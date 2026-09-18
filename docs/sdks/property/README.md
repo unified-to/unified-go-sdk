@@ -17,13 +17,14 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,14 @@ func main() {
     )
 
     res, err := s.Property.CreateAnalyticsProperty(ctx, operations.CreateAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("4e69af5b-e23d-4594-a928-1a677375a8b1"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +190,14 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +211,14 @@ func main() {
     )
 
     res, err := s.Property.PatchAnalyticsProperty(ctx, operations.PatchAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("f49ca387-ced0-472d-a38e-d5851ddb9619"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +310,14 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +331,14 @@ func main() {
     )
 
     res, err := s.Property.UpdateAnalyticsProperty(ctx, operations.UpdateAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("f49ca387-ced0-472d-a38e-d5851ddb9619"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

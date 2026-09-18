@@ -30,13 +30,14 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="go" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -50,7 +51,14 @@ func main() {
     )
 
     res, err := s.Company.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{},
+        AtsCompany: shared.AtsCompany{
+            CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
+            ID: unifiedgosdk.Pointer("c9f0e664-3fe3-4d98-8984-f787e8478385"),
+            Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
+            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-24T19:41:52.489Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -86,7 +94,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="go" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```go
 package main
 
@@ -94,6 +102,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -106,7 +115,87 @@ func main() {
     )
 
     res, err := s.Company.CreateCrmCompany(ctx, operations.CreateCrmCompanyRequest{
-        CrmCompany: shared.CrmCompany{},
+        CrmCompany: shared.CrmCompany{
+            Address: &shared.PropertyCrmCompanyAddress{
+                Address1: unifiedgosdk.Pointer("7261 Salisbury Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 778"),
+                City: unifiedgosdk.Pointer("Harrisburg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("56293-3678"),
+                Region: unifiedgosdk.Pointer("Pennsylvania"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-05-11T18:26:32.925Z"),
+            Description: unifiedgosdk.Pointer("Balbus crapula spiculum."),
+            Domains: []string{
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            },
+            Emails: []shared.CrmEmail{
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@hotmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@gmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine.Jacobi@yahoo.com"),
+                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                },
+            },
+            Employees: unifiedgosdk.Pointer[float64](967.0),
+            ID: unifiedgosdk.Pointer("5d55b38f-f95a-441b-9a9f-3189d7a2042a"),
+            Industry: unifiedgosdk.Pointer("Infrastructure"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LinkUrls: []string{
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            },
+            Metadata: []shared.CrmMetadata{
+                shared.CrmMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.CrmMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("98af0ded-f893-4126-aca1-be6c3576e8bf"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
+                        "esse",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Goodwin and Sons"),
+            Tags: []string{
+                "quaerat",
+                "valeo",
+            },
+            Telephones: []shared.CrmTelephone{
+                shared.CrmTelephone{
+                    Telephone: "(432) 849-2690",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(606) 871-2046",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(842) 258-9395",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-06T13:18:27.884Z"),
+            Websites: []string{
+                "https://wise-possession.org",
+            },
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,7 +231,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="go" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```go
 package main
 
@@ -150,6 +239,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -162,7 +252,21 @@ func main() {
     )
 
     res, err := s.Company.CreateHrisCompany(ctx, operations.CreateHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("171cb978-475c-423e-ba5f-b80b9200c771"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.103Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -579,13 +683,14 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -599,7 +704,14 @@ func main() {
     )
 
     res, err := s.Company.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{},
+        AtsCompany: shared.AtsCompany{
+            CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
+            ID: unifiedgosdk.Pointer("fb27f9d6-8084-4aad-99e2-ef2e045b7f7e"),
+            Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
+            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-24T19:41:52.491Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -636,7 +748,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```go
 package main
 
@@ -644,6 +756,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -656,7 +769,87 @@ func main() {
     )
 
     res, err := s.Company.PatchCrmCompany(ctx, operations.PatchCrmCompanyRequest{
-        CrmCompany: shared.CrmCompany{},
+        CrmCompany: shared.CrmCompany{
+            Address: &shared.PropertyCrmCompanyAddress{
+                Address1: unifiedgosdk.Pointer("7261 Salisbury Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 778"),
+                City: unifiedgosdk.Pointer("Harrisburg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("56293-3678"),
+                Region: unifiedgosdk.Pointer("Pennsylvania"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-05-11T18:26:32.925Z"),
+            Description: unifiedgosdk.Pointer("Balbus crapula spiculum."),
+            Domains: []string{
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            },
+            Emails: []shared.CrmEmail{
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@hotmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@gmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine.Jacobi@yahoo.com"),
+                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                },
+            },
+            Employees: unifiedgosdk.Pointer[float64](967.0),
+            ID: unifiedgosdk.Pointer("8a8e1ec3-7505-48d9-81b2-8742a2acd376"),
+            Industry: unifiedgosdk.Pointer("Infrastructure"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LinkUrls: []string{
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            },
+            Metadata: []shared.CrmMetadata{
+                shared.CrmMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.CrmMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("ac104ef4-bd16-44d6-baaf-cce3cdba57dd"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
+                        "esse",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Goodwin and Sons"),
+            Tags: []string{
+                "quaerat",
+                "valeo",
+            },
+            Telephones: []shared.CrmTelephone{
+                shared.CrmTelephone{
+                    Telephone: "(432) 849-2690",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(606) 871-2046",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(842) 258-9395",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-06T13:18:27.899Z"),
+            Websites: []string{
+                "https://wise-possession.org",
+            },
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -693,7 +886,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```go
 package main
 
@@ -701,6 +894,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -713,7 +907,21 @@ func main() {
     )
 
     res, err := s.Company.PatchHrisCompany(ctx, operations.PatchHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("0d33c599-fc8f-439a-a86f-71c2999ea6fc"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.109Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -915,13 +1123,14 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -935,7 +1144,14 @@ func main() {
     )
 
     res, err := s.Company.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
-        AtsCompany: shared.AtsCompany{},
+        AtsCompany: shared.AtsCompany{
+            CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
+            ID: unifiedgosdk.Pointer("fb27f9d6-8084-4aad-99e2-ef2e045b7f7e"),
+            Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
+            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-24T19:41:52.491Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -972,7 +1188,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```go
 package main
 
@@ -980,6 +1196,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -992,7 +1209,87 @@ func main() {
     )
 
     res, err := s.Company.UpdateCrmCompany(ctx, operations.UpdateCrmCompanyRequest{
-        CrmCompany: shared.CrmCompany{},
+        CrmCompany: shared.CrmCompany{
+            Address: &shared.PropertyCrmCompanyAddress{
+                Address1: unifiedgosdk.Pointer("7261 Salisbury Road"),
+                Address2: unifiedgosdk.Pointer("Apt. 778"),
+                City: unifiedgosdk.Pointer("Harrisburg"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("56293-3678"),
+                Region: unifiedgosdk.Pointer("Pennsylvania"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-05-11T18:26:32.925Z"),
+            Description: unifiedgosdk.Pointer("Balbus crapula spiculum."),
+            Domains: []string{
+                "fussy-nerve.info",
+                "sturdy-lobster.org",
+                "greedy-offset.name",
+            },
+            Emails: []shared.CrmEmail{
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@hotmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine_Jacobi@gmail.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
+                },
+                shared.CrmEmail{
+                    Email: unifiedgosdk.Pointer("Sandrine.Jacobi@yahoo.com"),
+                    Type: shared.CrmEmailTypeOther.ToPointer(),
+                },
+            },
+            Employees: unifiedgosdk.Pointer[float64](967.0),
+            ID: unifiedgosdk.Pointer("8a8e1ec3-7505-48d9-81b2-8742a2acd376"),
+            Industry: unifiedgosdk.Pointer("Infrastructure"),
+            IsActive: unifiedgosdk.Pointer(true),
+            LinkUrls: []string{
+                "https://blue-license.org",
+                "https://minor-formation.com",
+                "https://ecstatic-hammock.com",
+            },
+            Metadata: []shared.CrmMetadata{
+                shared.CrmMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
+                        map[string]any{
+                            "display_name": "Custom Property",
+                        },
+                    )),
+                    Format: shared.CrmMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("ac104ef4-bd16-44d6-baaf-cce3cdba57dd"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("custom_property"),
+                    Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
+                        "esse",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Goodwin and Sons"),
+            Tags: []string{
+                "quaerat",
+                "valeo",
+            },
+            Telephones: []shared.CrmTelephone{
+                shared.CrmTelephone{
+                    Telephone: "(432) 849-2690",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(606) 871-2046",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(842) 258-9395",
+                    Type: shared.CrmTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-06T13:18:27.899Z"),
+            Websites: []string{
+                "https://wise-possession.org",
+            },
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1029,7 +1326,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```go
 package main
 
@@ -1037,6 +1334,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1049,7 +1347,21 @@ func main() {
     )
 
     res, err := s.Company.UpdateHrisCompany(ctx, operations.UpdateHrisCompanyRequest{
-        HrisCompany: shared.HrisCompany{},
+        HrisCompany: shared.HrisCompany{
+            Address: &shared.PropertyHrisCompanyAddress{
+                Address1: unifiedgosdk.Pointer("2549 Church Walk"),
+                City: unifiedgosdk.Pointer("Lake Nettiebury"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("32877-4898"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("PA"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
+            ID: unifiedgosdk.Pointer("0d33c599-fc8f-439a-a86f-71c2999ea6fc"),
+            LegalName: unifiedgosdk.Pointer("Schultz LLC"),
+            Name: unifiedgosdk.Pointer("Gottlieb Group"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-05T22:11:26.109Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,13 +17,14 @@ Create a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" -->
+<!-- UsageSnippet language="go" operationID="createMetadataMetadata" method="post" path="/metadata/{connection_id}/metadata" example="metadata_metadata" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,8 +39,19 @@ func main() {
 
     res, err := s.Metadata.CreateMetadataMetadata(ctx, operations.CreateMetadataMetadataRequest{
         MetadataMetadata: shared.MetadataMetadata{
-            Name: "<value>",
-            ObjectType: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
+            Format: shared.MetadataMetadataFormatPrice.ToPointer(),
+            ID: unifiedgosdk.Pointer("da2aee51-87b4-4205-965a-dc91a9c73dd9"),
+            IsRequired: unifiedgosdk.Pointer(false),
+            Name: "autem",
+            ObjectType: "clubs_group",
+            Objects: map[string]any{
+
+            },
+            Options: []string{},
+            OriginalFormat: unifiedgosdk.Pointer("advoco"),
+            Slug: unifiedgosdk.Pointer("arbustum"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T08:43:36.161Z"),
         },
         ConnectionID: "<id>",
     })
@@ -185,13 +197,14 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMetadataMetadata" method="patch" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -206,8 +219,19 @@ func main() {
 
     res, err := s.Metadata.PatchMetadataMetadata(ctx, operations.PatchMetadataMetadataRequest{
         MetadataMetadata: shared.MetadataMetadata{
-            Name: "<value>",
-            ObjectType: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
+            Format: shared.MetadataMetadataFormatPrice.ToPointer(),
+            ID: unifiedgosdk.Pointer("d4a545d2-0719-493e-a936-8b46198b371c"),
+            IsRequired: unifiedgosdk.Pointer(false),
+            Name: "autem",
+            ObjectType: "clubs_group",
+            Objects: map[string]any{
+
+            },
+            Options: []string{},
+            OriginalFormat: unifiedgosdk.Pointer("advoco"),
+            Slug: unifiedgosdk.Pointer("arbustum"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T08:43:36.165Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -300,13 +324,14 @@ Update a metadata
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMetadataMetadata" method="put" path="/metadata/{connection_id}/metadata/{id}" example="metadata_metadata" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -321,8 +346,19 @@ func main() {
 
     res, err := s.Metadata.UpdateMetadataMetadata(ctx, operations.UpdateMetadataMetadataRequest{
         MetadataMetadata: shared.MetadataMetadata{
-            Name: "<value>",
-            ObjectType: "<value>",
+            CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
+            Format: shared.MetadataMetadataFormatPrice.ToPointer(),
+            ID: unifiedgosdk.Pointer("d4a545d2-0719-493e-a936-8b46198b371c"),
+            IsRequired: unifiedgosdk.Pointer(false),
+            Name: "autem",
+            ObjectType: "clubs_group",
+            Objects: map[string]any{
+
+            },
+            Options: []string{},
+            OriginalFormat: unifiedgosdk.Pointer("advoco"),
+            Slug: unifiedgosdk.Pointer("arbustum"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-26T08:43:36.165Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

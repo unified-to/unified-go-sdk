@@ -30,13 +30,14 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -50,7 +51,23 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechCampaign(ctx, operations.CreateMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("429f23e8-28a5-4533-a66d-46de29192df8"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -86,7 +103,7 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="go" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```go
 package main
 
@@ -94,6 +111,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -106,7 +124,28 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechList(ctx, operations.CreateMartechListRequest{
-        MarketingList: shared.MarketingList{},
+        MarketingList: shared.MarketingList{
+            Address: &shared.PropertyMarketingListAddress{
+                Address1: unifiedgosdk.Pointer("922 Elmore Manor"),
+                Address2: unifiedgosdk.Pointer("Suite 925"),
+                City: unifiedgosdk.Pointer("Deerfield Beach"),
+                Country: unifiedgosdk.Pointer("Bahrain"),
+                PostalCode: unifiedgosdk.Pointer("30765-6471"),
+                Region: unifiedgosdk.Pointer("FL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
+            Description: unifiedgosdk.Pointer("Currus."),
+            ID: unifiedgosdk.Pointer("7dfc2134-8499-4eeb-8e64-80fe26ea7463"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Language: unifiedgosdk.Pointer("it"),
+            Name: unifiedgosdk.Pointer("Annette Nolan"),
+            SenderCompany: unifiedgosdk.Pointer("Hickle - Homenick"),
+            SenderEmail: unifiedgosdk.Pointer("Matt_Steuber@hotmail.com"),
+            SenderName: unifiedgosdk.Pointer("Salvatore Roob"),
+            SenderPhone: unifiedgosdk.Pointer("896-328-1153 x4957"),
+            Subject: unifiedgosdk.Pointer("Tenetur thymum circumvenio triumphus celo."),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-30T12:48:16.645Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -142,13 +181,14 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="go" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -162,7 +202,34 @@ func main() {
     )
 
     res, err := s.Martech.CreateMartechMember(ctx, operations.CreateMartechMemberRequest{
-        MarketingMember: shared.MarketingMember{},
+        MarketingMember: shared.MarketingMember{
+            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
+            Emails: []shared.MarketingEmail{
+                shared.MarketingEmail{
+                    Email: "Thalia.Abernathy61@gmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Maymie59@hotmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Coty27@hotmail.com",
+                    Type: shared.MarketingEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Jude"),
+            ID: unifiedgosdk.Pointer("7c0bf07a-a844-4ddc-8275-30a481cbe115"),
+            LastName: unifiedgosdk.Pointer("Leffler"),
+            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
+            Tags: []string{
+                "vinco",
+                "ceno",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-06-15T05:49:46.084Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -579,13 +646,14 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -599,7 +667,23 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechCampaign(ctx, operations.PatchMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("2062d840-fdc3-44ac-9ead-6ff30a5209df"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -636,7 +720,7 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```go
 package main
 
@@ -644,6 +728,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -656,7 +741,28 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechList(ctx, operations.PatchMartechListRequest{
-        MarketingList: shared.MarketingList{},
+        MarketingList: shared.MarketingList{
+            Address: &shared.PropertyMarketingListAddress{
+                Address1: unifiedgosdk.Pointer("922 Elmore Manor"),
+                Address2: unifiedgosdk.Pointer("Suite 925"),
+                City: unifiedgosdk.Pointer("Deerfield Beach"),
+                Country: unifiedgosdk.Pointer("Bahrain"),
+                PostalCode: unifiedgosdk.Pointer("30765-6471"),
+                Region: unifiedgosdk.Pointer("FL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
+            Description: unifiedgosdk.Pointer("Currus."),
+            ID: unifiedgosdk.Pointer("c833e90a-458b-44ba-9b5a-ae7512e05f6c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Language: unifiedgosdk.Pointer("it"),
+            Name: unifiedgosdk.Pointer("Annette Nolan"),
+            SenderCompany: unifiedgosdk.Pointer("Hickle - Homenick"),
+            SenderEmail: unifiedgosdk.Pointer("Matt_Steuber@hotmail.com"),
+            SenderName: unifiedgosdk.Pointer("Salvatore Roob"),
+            SenderPhone: unifiedgosdk.Pointer("896-328-1153 x4957"),
+            Subject: unifiedgosdk.Pointer("Tenetur thymum circumvenio triumphus celo."),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-30T12:48:16.651Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -693,13 +799,14 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -713,7 +820,34 @@ func main() {
     )
 
     res, err := s.Martech.PatchMartechMember(ctx, operations.PatchMartechMemberRequest{
-        MarketingMember: shared.MarketingMember{},
+        MarketingMember: shared.MarketingMember{
+            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
+            Emails: []shared.MarketingEmail{
+                shared.MarketingEmail{
+                    Email: "Thalia.Abernathy61@gmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Maymie59@hotmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Coty27@hotmail.com",
+                    Type: shared.MarketingEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Jude"),
+            ID: unifiedgosdk.Pointer("d9b0a048-5779-4ea1-8b22-8f3c37e5a839"),
+            LastName: unifiedgosdk.Pointer("Leffler"),
+            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
+            Tags: []string{
+                "vinco",
+                "ceno",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-06-15T05:49:46.090Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -915,13 +1049,14 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -935,7 +1070,23 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechCampaign(ctx, operations.UpdateMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("2062d840-fdc3-44ac-9ead-6ff30a5209df"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -972,7 +1123,7 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```go
 package main
 
@@ -980,6 +1131,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -992,7 +1144,28 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechList(ctx, operations.UpdateMartechListRequest{
-        MarketingList: shared.MarketingList{},
+        MarketingList: shared.MarketingList{
+            Address: &shared.PropertyMarketingListAddress{
+                Address1: unifiedgosdk.Pointer("922 Elmore Manor"),
+                Address2: unifiedgosdk.Pointer("Suite 925"),
+                City: unifiedgosdk.Pointer("Deerfield Beach"),
+                Country: unifiedgosdk.Pointer("Bahrain"),
+                PostalCode: unifiedgosdk.Pointer("30765-6471"),
+                Region: unifiedgosdk.Pointer("FL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2019-09-18T02:01:36.950Z"),
+            Description: unifiedgosdk.Pointer("Currus."),
+            ID: unifiedgosdk.Pointer("c833e90a-458b-44ba-9b5a-ae7512e05f6c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Language: unifiedgosdk.Pointer("it"),
+            Name: unifiedgosdk.Pointer("Annette Nolan"),
+            SenderCompany: unifiedgosdk.Pointer("Hickle - Homenick"),
+            SenderEmail: unifiedgosdk.Pointer("Matt_Steuber@hotmail.com"),
+            SenderName: unifiedgosdk.Pointer("Salvatore Roob"),
+            SenderPhone: unifiedgosdk.Pointer("896-328-1153 x4957"),
+            Subject: unifiedgosdk.Pointer("Tenetur thymum circumvenio triumphus celo."),
+            UpdatedAt: types.MustNewTimeFromString("2022-08-30T12:48:16.651Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -1029,13 +1202,14 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1049,7 +1223,34 @@ func main() {
     )
 
     res, err := s.Martech.UpdateMartechMember(ctx, operations.UpdateMartechMemberRequest{
-        MarketingMember: shared.MarketingMember{},
+        MarketingMember: shared.MarketingMember{
+            Company: unifiedgosdk.Pointer("Miller - Franecki"),
+            CreatedAt: types.MustNewTimeFromString("2022-04-15T15:32:38.496Z"),
+            Emails: []shared.MarketingEmail{
+                shared.MarketingEmail{
+                    Email: "Thalia.Abernathy61@gmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Maymie59@hotmail.com",
+                    Type: shared.MarketingEmailTypeHome.ToPointer(),
+                },
+                shared.MarketingEmail{
+                    Email: "Coty27@hotmail.com",
+                    Type: shared.MarketingEmailTypeWork.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Jude"),
+            ID: unifiedgosdk.Pointer("d9b0a048-5779-4ea1-8b22-8f3c37e5a839"),
+            LastName: unifiedgosdk.Pointer("Leffler"),
+            Name: unifiedgosdk.Pointer("Jude Leffler"),
+            Status: shared.MarketingMemberStatusUnsubscribed.ToPointer(),
+            Tags: []string{
+                "vinco",
+                "ceno",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-06-15T05:49:46.090Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

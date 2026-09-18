@@ -17,13 +17,14 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="go" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,19 @@ func main() {
     )
 
     res, err := s.Label.CreateShippingLabel(ctx, operations.CreateShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("d64a026b-8f62-4b07-8bce-ac44e8999e22"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.800Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +195,14 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +216,19 @@ func main() {
     )
 
     res, err := s.Label.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +320,14 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +341,19 @@ func main() {
     )
 
     res, err := s.Label.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
-        ShippingLabel: shared.ShippingLabel{},
+        ShippingLabel: shared.ShippingLabel{
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
+            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            IsVoided: unifiedgosdk.Pointer(false),
+            LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
+            LabelCostCurrency: unifiedgosdk.Pointer("USD"),
+            LabelFormat: shared.LabelFormatPng.ToPointer(),
+            LabelURL: unifiedgosdk.Pointer("https://optimal-meadow.net"),
+            ServiceCode: unifiedgosdk.Pointer("GIz"),
+            Status: shared.ShippingLabelStatusException.ToPointer(),
+            TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

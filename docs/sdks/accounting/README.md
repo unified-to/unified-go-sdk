@@ -139,13 +139,14 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="go" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -159,7 +160,31 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingAccount(ctx, operations.CreateAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("fbfeb00a-af7c-43a2-ba61-48379b5ed0db"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.268Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -195,7 +220,7 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -203,6 +228,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -215,7 +241,22 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingBankfeedaccount(ctx, operations.CreateAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("988177bf-5488-4d1c-9e96-18adca907a91"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.169Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -251,13 +292,14 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -271,7 +313,25 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingBankfeedtransaction(ctx, operations.CreateAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("41b61ce9-f467-4bcf-9569-6010d776fd07"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.708Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.141Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -307,7 +367,7 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```go
 package main
 
@@ -315,6 +375,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -327,7 +388,30 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingBill(ctx, operations.CreateAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("2328cc2a-4dcc-4ad4-98f1-9868828bc615"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.182Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.552Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -363,13 +447,14 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -383,7 +468,15 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingCategory(ctx, operations.CreateAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("cb740d27-cc47-441e-b9fa-3f5367f21a9a"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.773Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -419,7 +512,7 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="go" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```go
 package main
 
@@ -427,6 +520,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -439,7 +533,74 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingContact(ctx, operations.CreateAccountingContactRequest{
-        AccountingContact: shared.AccountingContact{},
+        AccountingContact: shared.AccountingContact{
+            AssociatedContacts: []shared.AccountingAssociatedContact{
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("baf3e38d-5d86-4b51-9415-911fa0b3b50d"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("ec665826-3fc5-4aa8-9da5-6d90cb4af02b"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+            },
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{
+                Address1: unifiedgosdk.Pointer("2633 Stoney Lane"),
+                Address2: unifiedgosdk.Pointer("Suite 176"),
+                City: unifiedgosdk.Pointer("Ladariusboro"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("70131-2908"),
+                Region: unifiedgosdk.Pointer("Illinois"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CompanyName: unifiedgosdk.Pointer("Marquardt Inc"),
+            CreatedAt: types.MustNewTimeFromString("2021-08-15T14:56:50.258Z"),
+            Currency: unifiedgosdk.Pointer("ISK"),
+            Emails: []shared.AccountingEmail{
+                shared.AccountingEmail{
+                    Email: unifiedgosdk.Pointer("Delores.Reynolds10@hotmail.com"),
+                    Type: shared.AccountingEmailTypeHome.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Delores"),
+            ID: unifiedgosdk.Pointer("b391043f-f984-43ea-8163-5f82c962fb5b"),
+            Identification: unifiedgosdk.Pointer("amicitia"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCustomer: unifiedgosdk.Pointer(true),
+            LastName: unifiedgosdk.Pointer("Reynolds"),
+            Name: unifiedgosdk.Pointer("Delores Reynolds"),
+            PaymentMethods: []shared.AccountingContactPaymentMethod{
+                shared.AccountingContactPaymentMethod{
+                    Default: unifiedgosdk.Pointer(true),
+                    ID: unifiedgosdk.Pointer("adc60878-1ce4-4c00-8ce3-e4f45d54b104"),
+                    Name: unifiedgosdk.Pointer("Visa 1234"),
+                    Type: shared.AccountingContactPaymentMethodTypeCard,
+                },
+            },
+            PortalURL: unifiedgosdk.Pointer("https://scented-t-shirt.info/"),
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{
+                Address1: unifiedgosdk.Pointer("786 Renner Stream"),
+                Address2: unifiedgosdk.Pointer("Apt. 555"),
+                City: unifiedgosdk.Pointer("Roanoke"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("80686-7556"),
+                Region: unifiedgosdk.Pointer("Vermont"),
+                RegionCode: unifiedgosdk.Pointer("NE"),
+            },
+            TaxExemption: shared.TaxExemptionResale.ToPointer(),
+            TaxNumber: unifiedgosdk.Pointer("amplexus"),
+            Telephones: []shared.AccountingTelephone{
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(427) 701-7160"),
+                    Type: shared.AccountingTelephoneTypeHome.ToPointer(),
+                },
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(540) 913-9171"),
+                    Type: shared.AccountingTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-12-04T22:55:12.007Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -475,7 +636,7 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="go" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -483,6 +644,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -495,7 +657,37 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingCreditmemo(ctx, operations.CreateAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("1488ad93-84a6-49ed-932e-b13b61f4aec9"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("aea99f00-408b-4a75-85a6-157c219f02cf"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.682Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.062Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -531,13 +723,14 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="go" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -551,7 +744,44 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingExpense(ctx, operations.CreateAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.786Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("3a745810-cda4-4306-a9d6-a2c786ddab8e"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("35319f13-6dc3-40cd-a06a-5f51b29b91ea"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("c2a490ea-0f7f-43fd-a02f-57a8dc0fe850"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.222Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.786Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -587,7 +817,7 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="go" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```go
 package main
 
@@ -595,6 +825,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -607,7 +838,42 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingInvoice(ctx, operations.CreateAccountingInvoiceRequest{
-        AccountingInvoice: shared.AccountingInvoice{},
+        AccountingInvoice: shared.AccountingInvoice{
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
+                    ID: unifiedgosdk.Pointer("303b7a3d-ee08-43b0-8309-cf65f89f3663"),
+                    MimeType: unifiedgosdk.Pointer("benevolentia"),
+                    Name: unifiedgosdk.Pointer("vespillo"),
+                },
+            },
+            BalanceAmount: unifiedgosdk.Pointer[float64](-1.0),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-11-07T14:17:29.587Z"),
+            Currency: unifiedgosdk.Pointer("RWF"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("39a69b08-afad-4ece-bc21-a7b2d720ea31"),
+            InvoiceNumber: unifiedgosdk.Pointer("vinco"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Auctus comburo clarus ubi."),
+            PaidAmount: unifiedgosdk.Pointer[float64](0.0),
+            PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
+            PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-03-26T23:39:39.026Z"),
+            Reference: unifiedgosdk.Pointer("adinventitias"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingInvoiceStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.AccountingInvoiceTermNet45.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-06T06:52:37.967Z"),
+            URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -643,7 +909,7 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```go
 package main
 
@@ -651,6 +917,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -663,7 +930,19 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("3d0b7527-bb53-4d13-9fe9-a4e3437f68e6"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.678Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.882Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -699,7 +978,7 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="go" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```go
 package main
 
@@ -707,6 +986,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -719,7 +999,35 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingOrder(ctx, operations.CreateAccountingOrderRequest{
-        AccountingOrder: shared.AccountingOrder{},
+        AccountingOrder: shared.AccountingOrder{
+            BillingAddress: &shared.PropertyAccountingOrderBillingAddress{
+                Address1: unifiedgosdk.Pointer("802 Bechtelar Park"),
+                Address2: unifiedgosdk.Pointer("Apt. 436"),
+                City: unifiedgosdk.Pointer("Daniellaville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("36947"),
+                Region: unifiedgosdk.Pointer("Wisconsin"),
+                RegionCode: unifiedgosdk.Pointer("NY"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("77e39f9e-6f44-41d4-9e9d-e7ecb27a1543"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2022-04-05T00:28:38.595Z"),
+            ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
+                City: unifiedgosdk.Pointer("South Alainaland"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("25274-7654"),
+                Region: unifiedgosdk.Pointer("New Hampshire"),
+                RegionCode: unifiedgosdk.Pointer("LA"),
+            },
+            Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingOrderTypePurchase.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-17T22:46:34.526Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -755,7 +1063,7 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="go" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -763,6 +1071,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -775,7 +1084,23 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingPaymentterm(ctx, operations.CreateAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("3de80ca4-dce8-4d75-afbd-c41ae901091f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.430Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -867,7 +1192,7 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -875,6 +1200,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -887,7 +1213,34 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingPurchaseorder(ctx, operations.CreateAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("6857ac2f-1ba0-477a-b3c3-cd29565fac37"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.357Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.326Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -979,7 +1332,7 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="go" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```go
 package main
 
@@ -987,6 +1340,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -999,7 +1353,56 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingSalesorder(ctx, operations.CreateAccountingSalesorderRequest{
-        AccountingSalesorder: shared.AccountingSalesorder{},
+        AccountingSalesorder: shared.AccountingSalesorder{
+            BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("26530 Stroman Rest"),
+                Address2: unifiedgosdk.Pointer("Suite 801"),
+                City: unifiedgosdk.Pointer("Pocatello"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("05015-8546"),
+                Region: unifiedgosdk.Pointer("Louisiana"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
+            },
+            CategoryIds: []string{},
+            ClosedAt: types.MustNewTimeFromString("2023-08-16T22:07:51.357Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
+            Currency: unifiedgosdk.Pointer("ANG"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
+            EmployeeUserID: unifiedgosdk.Pointer("4a6b8990-c85a-499f-82d0-5011c3c95a0b"),
+            Fees: []shared.AccountingFee{
+                shared.AccountingFee{
+                    Amount: 519.0,
+                    Currency: unifiedgosdk.Pointer("XCD"),
+                    Type: shared.AccountingFeeTypePromotion,
+                },
+            },
+            FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
+            GuestCount: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("d2ba8d2f-b9c4-45f4-854f-bcabb966443e"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            OrderNumber: unifiedgosdk.Pointer("988187"),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-01-11T03:02:26.042Z"),
+            RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
+            SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
+            ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
+            ShippingAddress: &shared.PropertyAccountingSalesorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9878 Bradley Mill"),
+                Address2: unifiedgosdk.Pointer("Apt. 215"),
+                City: unifiedgosdk.Pointer("Port Matildestad"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("07989-2148"),
+                Region: unifiedgosdk.Pointer("Arkansas"),
+                RegionCode: unifiedgosdk.Pointer("AK"),
+            },
+            Status: shared.AccountingSalesorderStatusRefunded.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            TaxAmount: unifiedgosdk.Pointer[float64](63.0),
+            TipAmount: unifiedgosdk.Pointer[float64](34.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-10T18:49:59.962Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1035,13 +1438,14 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1055,7 +1459,16 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("7bfb2899-b518-48bb-9593-e4ac1d83f288"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.851Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1091,13 +1504,14 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="go" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1111,7 +1525,26 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("d7a8841f-6d3f-46bb-a65b-dee4a8b2213e"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("3ff2fab5-8212-4bb6-a290-f86913ee1992"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.067Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -1147,7 +1580,7 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="go" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -1155,6 +1588,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1167,7 +1601,22 @@ func main() {
     )
 
     res, err := s.Accounting.CreateAccountingVendorcredit(ctx, operations.CreateAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("d6749b72-c100-45c9-9216-28db1dfa1317"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.327Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.261Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -4037,13 +4486,14 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4057,7 +4507,31 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingAccount(ctx, operations.PatchAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("a6d1874f-5149-4cf4-ab92-841ac5eade59"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.270Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4094,7 +4568,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -4102,6 +4576,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4114,7 +4589,22 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingBankfeedaccount(ctx, operations.PatchAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("05218a4b-be3a-4065-ae6f-05b753fbaa9e"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.171Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4151,13 +4641,14 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4171,7 +4662,25 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingBankfeedtransaction(ctx, operations.PatchAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("c2e879ca-1b07-4689-9790-88de6a69f748"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.714Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.142Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4208,7 +4717,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```go
 package main
 
@@ -4216,6 +4725,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4228,7 +4738,30 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingBill(ctx, operations.PatchAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("b02281eb-9865-42a4-959a-cfbd3a254545"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.207Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.582Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4265,13 +4798,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4285,7 +4819,15 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingCategory(ctx, operations.PatchAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("b08a0425-e9d0-4769-8146-74d3e7905974"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.778Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4322,7 +4864,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```go
 package main
 
@@ -4330,6 +4872,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4342,7 +4885,74 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingContact(ctx, operations.PatchAccountingContactRequest{
-        AccountingContact: shared.AccountingContact{},
+        AccountingContact: shared.AccountingContact{
+            AssociatedContacts: []shared.AccountingAssociatedContact{
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("fa1dc178-8f01-4158-96c2-c0dd8e0c5da7"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("eb07646d-f816-49b4-b382-3f0fc601bfde"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+            },
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{
+                Address1: unifiedgosdk.Pointer("2633 Stoney Lane"),
+                Address2: unifiedgosdk.Pointer("Suite 176"),
+                City: unifiedgosdk.Pointer("Ladariusboro"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("70131-2908"),
+                Region: unifiedgosdk.Pointer("Illinois"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CompanyName: unifiedgosdk.Pointer("Marquardt Inc"),
+            CreatedAt: types.MustNewTimeFromString("2021-08-15T14:56:50.258Z"),
+            Currency: unifiedgosdk.Pointer("ISK"),
+            Emails: []shared.AccountingEmail{
+                shared.AccountingEmail{
+                    Email: unifiedgosdk.Pointer("Delores.Reynolds10@hotmail.com"),
+                    Type: shared.AccountingEmailTypeHome.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Delores"),
+            ID: unifiedgosdk.Pointer("799d076b-92ba-4c91-8c2a-67d69083afb5"),
+            Identification: unifiedgosdk.Pointer("amicitia"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCustomer: unifiedgosdk.Pointer(true),
+            LastName: unifiedgosdk.Pointer("Reynolds"),
+            Name: unifiedgosdk.Pointer("Delores Reynolds"),
+            PaymentMethods: []shared.AccountingContactPaymentMethod{
+                shared.AccountingContactPaymentMethod{
+                    Default: unifiedgosdk.Pointer(true),
+                    ID: unifiedgosdk.Pointer("34e37621-ac3e-4d52-a7c3-ce63fde7b445"),
+                    Name: unifiedgosdk.Pointer("Visa 1234"),
+                    Type: shared.AccountingContactPaymentMethodTypeCard,
+                },
+            },
+            PortalURL: unifiedgosdk.Pointer("https://scented-t-shirt.info/"),
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{
+                Address1: unifiedgosdk.Pointer("786 Renner Stream"),
+                Address2: unifiedgosdk.Pointer("Apt. 555"),
+                City: unifiedgosdk.Pointer("Roanoke"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("80686-7556"),
+                Region: unifiedgosdk.Pointer("Vermont"),
+                RegionCode: unifiedgosdk.Pointer("NE"),
+            },
+            TaxExemption: shared.TaxExemptionResale.ToPointer(),
+            TaxNumber: unifiedgosdk.Pointer("amplexus"),
+            Telephones: []shared.AccountingTelephone{
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(427) 701-7160"),
+                    Type: shared.AccountingTelephoneTypeHome.ToPointer(),
+                },
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(540) 913-9171"),
+                    Type: shared.AccountingTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-12-04T22:55:12.019Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4379,7 +4989,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -4387,6 +4997,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4399,7 +5010,37 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingCreditmemo(ctx, operations.PatchAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("92ebacd2-bd76-47ed-a2c3-8354d39cbb0d"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("f0ec1da8-b326-4f28-a43e-b4ff7e926358"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.704Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.074Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4436,13 +5077,14 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4456,7 +5098,44 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingExpense(ctx, operations.PatchAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("92657900-c101-4575-8c23-e9d0cdae9429"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("9fc52e09-65e4-4420-b04e-90386c127655"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("af94ff9d-aa8b-4328-9607-d97c7fd0ef35"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.227Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4493,7 +5172,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```go
 package main
 
@@ -4501,6 +5180,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4513,7 +5193,42 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingInvoice(ctx, operations.PatchAccountingInvoiceRequest{
-        AccountingInvoice: shared.AccountingInvoice{},
+        AccountingInvoice: shared.AccountingInvoice{
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
+                    ID: unifiedgosdk.Pointer("59d3011a-bf64-4d54-8e04-853300101cf1"),
+                    MimeType: unifiedgosdk.Pointer("benevolentia"),
+                    Name: unifiedgosdk.Pointer("vespillo"),
+                },
+            },
+            BalanceAmount: unifiedgosdk.Pointer[float64](-1.0),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-11-07T14:17:29.587Z"),
+            Currency: unifiedgosdk.Pointer("RWF"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("13c46be5-2a4b-4030-80ee-aa0215e03e50"),
+            InvoiceNumber: unifiedgosdk.Pointer("vinco"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Auctus comburo clarus ubi."),
+            PaidAmount: unifiedgosdk.Pointer[float64](0.0),
+            PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
+            PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-03-26T23:39:39.056Z"),
+            Reference: unifiedgosdk.Pointer("adinventitias"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingInvoiceStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.AccountingInvoiceTermNet45.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-06T06:52:37.970Z"),
+            URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4550,7 +5265,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```go
 package main
 
@@ -4558,6 +5273,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4570,7 +5286,19 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("08ebd0be-97e9-4a3d-b153-e0a6d981d560"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.686Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.885Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4607,7 +5335,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```go
 package main
 
@@ -4615,6 +5343,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4627,7 +5356,35 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingOrder(ctx, operations.PatchAccountingOrderRequest{
-        AccountingOrder: shared.AccountingOrder{},
+        AccountingOrder: shared.AccountingOrder{
+            BillingAddress: &shared.PropertyAccountingOrderBillingAddress{
+                Address1: unifiedgosdk.Pointer("802 Bechtelar Park"),
+                Address2: unifiedgosdk.Pointer("Apt. 436"),
+                City: unifiedgosdk.Pointer("Daniellaville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("36947"),
+                Region: unifiedgosdk.Pointer("Wisconsin"),
+                RegionCode: unifiedgosdk.Pointer("NY"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("d4016fb5-81f7-4acc-af53-e4ff827d86a3"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2022-04-05T00:28:38.601Z"),
+            ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
+                City: unifiedgosdk.Pointer("South Alainaland"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("25274-7654"),
+                Region: unifiedgosdk.Pointer("New Hampshire"),
+                RegionCode: unifiedgosdk.Pointer("LA"),
+            },
+            Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingOrderTypePurchase.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-17T22:46:34.529Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4664,7 +5421,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -4672,6 +5429,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4684,7 +5442,23 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingPaymentterm(ctx, operations.PatchAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("f447960a-b7a9-4d75-90a8-fa8880f9c42f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.438Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4778,7 +5552,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -4786,6 +5560,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4798,7 +5573,34 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingPurchaseorder(ctx, operations.PatchAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("9877cde7-dc3c-472c-a7a4-dce741132778"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.379Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.327Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4892,7 +5694,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```go
 package main
 
@@ -4900,6 +5702,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -4912,7 +5715,56 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingSalesorder(ctx, operations.PatchAccountingSalesorderRequest{
-        AccountingSalesorder: shared.AccountingSalesorder{},
+        AccountingSalesorder: shared.AccountingSalesorder{
+            BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("26530 Stroman Rest"),
+                Address2: unifiedgosdk.Pointer("Suite 801"),
+                City: unifiedgosdk.Pointer("Pocatello"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("05015-8546"),
+                Region: unifiedgosdk.Pointer("Louisiana"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
+            },
+            CategoryIds: []string{},
+            ClosedAt: types.MustNewTimeFromString("2023-08-16T22:07:51.371Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
+            Currency: unifiedgosdk.Pointer("ANG"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
+            EmployeeUserID: unifiedgosdk.Pointer("4a6b8990-c85a-499f-82d0-5011c3c95a0b"),
+            Fees: []shared.AccountingFee{
+                shared.AccountingFee{
+                    Amount: 519.0,
+                    Currency: unifiedgosdk.Pointer("XCD"),
+                    Type: shared.AccountingFeeTypePromotion,
+                },
+            },
+            FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
+            GuestCount: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("c04ce8ee-5603-40be-bb0d-52a3b7551325"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            OrderNumber: unifiedgosdk.Pointer("988187"),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-01-11T03:02:26.077Z"),
+            RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
+            SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
+            ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
+            ShippingAddress: &shared.PropertyAccountingSalesorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9878 Bradley Mill"),
+                Address2: unifiedgosdk.Pointer("Apt. 215"),
+                City: unifiedgosdk.Pointer("Port Matildestad"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("07989-2148"),
+                Region: unifiedgosdk.Pointer("Arkansas"),
+                RegionCode: unifiedgosdk.Pointer("AK"),
+            },
+            Status: shared.AccountingSalesorderStatusRefunded.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            TaxAmount: unifiedgosdk.Pointer[float64](63.0),
+            TipAmount: unifiedgosdk.Pointer[float64](34.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-10T18:49:59.963Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -4949,13 +5801,14 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -4969,7 +5822,16 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("c2ce61f3-a58c-4db3-b7d2-7c4c851127c5"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.858Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -5006,13 +5868,14 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -5026,7 +5889,26 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -5063,7 +5945,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -5071,6 +5953,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -5083,7 +5966,22 @@ func main() {
     )
 
     res, err := s.Accounting.PatchAccountingVendorcredit(ctx, operations.PatchAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("3a284793-58f5-455d-a706-44f8cdcce7fe"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.330Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.265Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6165,13 +7063,14 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -6185,7 +7084,31 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingAccount(ctx, operations.UpdateAccountingAccountRequest{
-        AccountingAccount: shared.AccountingAccount{},
+        AccountingAccount: shared.AccountingAccount{
+            Balance: unifiedgosdk.Pointer[float64](12092.0),
+            CreatedAt: types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
+            Currency: unifiedgosdk.Pointer("BOB"),
+            CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
+            Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
+            ID: unifiedgosdk.Pointer("a6d1874f-5149-4cf4-ab92-841ac5eade59"),
+            IsPayable: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+            Status: shared.StatusArchived.ToPointer(),
+            Taxonomy: []shared.AccountingAccountTaxonomy{
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("vesper"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "iste",
+                },
+                shared.AccountingAccountTaxonomy{
+                    OriginalType: unifiedgosdk.Pointer("adamo"),
+                    Type: shared.AccountingAccountTaxonomyTypeSubgroup,
+                    Value: "peccatus",
+                },
+            },
+            Type: shared.TypeBank.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-03T03:18:32.270Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6222,7 +7145,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```go
 package main
 
@@ -6230,6 +7153,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6242,7 +7166,22 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingBankfeedaccount(ctx, operations.UpdateAccountingBankfeedaccountRequest{
-        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{},
+        AccountingBankfeedaccount: shared.AccountingBankfeedaccount{
+            AccountID: unifiedgosdk.Pointer("baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1"),
+            AccountNumber: unifiedgosdk.Pointer("30369722"),
+            AccountNumberLast4: unifiedgosdk.Pointer("9722"),
+            AccountType: shared.AccountTypeLoan.ToPointer(),
+            Balance: unifiedgosdk.Pointer[float64](90358.0),
+            BankName: unifiedgosdk.Pointer("Weissnat Inc"),
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
+            ID: unifiedgosdk.Pointer("05218a4b-be3a-4065-ae6f-05b753fbaa9e"),
+            Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
+            RoutingNumber: unifiedgosdk.Pointer("667753156"),
+            Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-11T13:19:16.171Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6279,13 +7218,14 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -6299,7 +7239,25 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingBankfeedtransaction(ctx, operations.UpdateAccountingBankfeedtransactionRequest{
-        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{},
+        AccountingBankfeedtransaction: shared.AccountingBankfeedtransaction{
+            AccountID: unifiedgosdk.Pointer("b7dc4175-1368-4b89-a700-d621b6666648"),
+            Amount: unifiedgosdk.Pointer[float64](60889.0),
+            BankCategory: unifiedgosdk.Pointer("Games"),
+            BankfeedaccountID: unifiedgosdk.Pointer("34c1d05f-5b62-4bcd-9121-3be8b720941f"),
+            CategoryIds: []string{},
+            ContactID: unifiedgosdk.Pointer("1ef58ebe-f9c9-46f6-9d9c-2df2658503be"),
+            CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
+            Currency: unifiedgosdk.Pointer("SRD"),
+            Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
+            ID: unifiedgosdk.Pointer("c2e879ca-1b07-4689-9790-88de6a69f748"),
+            IsPending: unifiedgosdk.Pointer(true),
+            MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
+            PostedAt: types.MustNewTimeFromString("2025-03-23T19:14:32.714Z"),
+            Reference: unifiedgosdk.Pointer("93642593"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-27T19:52:47.142Z"),
+            Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-23T20:49:32.262Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6336,7 +7294,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```go
 package main
 
@@ -6344,6 +7302,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6356,7 +7315,30 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingBill(ctx, operations.UpdateAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("b02281eb-9865-42a4-959a-cfbd3a254545"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.207Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.582Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6393,13 +7375,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -6413,7 +7396,15 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingCategory(ctx, operations.UpdateAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("b08a0425-e9d0-4769-8146-74d3e7905974"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.778Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6450,7 +7441,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```go
 package main
 
@@ -6458,6 +7449,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6470,7 +7462,74 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingContact(ctx, operations.UpdateAccountingContactRequest{
-        AccountingContact: shared.AccountingContact{},
+        AccountingContact: shared.AccountingContact{
+            AssociatedContacts: []shared.AccountingAssociatedContact{
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("fa1dc178-8f01-4158-96c2-c0dd8e0c5da7"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+                shared.AccountingAssociatedContact{
+                    ID: unifiedgosdk.Pointer("eb07646d-f816-49b4-b382-3f0fc601bfde"),
+                    Name: unifiedgosdk.Pointer("Delores Reynolds"),
+                },
+            },
+            BillingAddress: &shared.PropertyAccountingContactBillingAddress{
+                Address1: unifiedgosdk.Pointer("2633 Stoney Lane"),
+                Address2: unifiedgosdk.Pointer("Suite 176"),
+                City: unifiedgosdk.Pointer("Ladariusboro"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("70131-2908"),
+                Region: unifiedgosdk.Pointer("Illinois"),
+                RegionCode: unifiedgosdk.Pointer("NV"),
+            },
+            CompanyName: unifiedgosdk.Pointer("Marquardt Inc"),
+            CreatedAt: types.MustNewTimeFromString("2021-08-15T14:56:50.258Z"),
+            Currency: unifiedgosdk.Pointer("ISK"),
+            Emails: []shared.AccountingEmail{
+                shared.AccountingEmail{
+                    Email: unifiedgosdk.Pointer("Delores.Reynolds10@hotmail.com"),
+                    Type: shared.AccountingEmailTypeHome.ToPointer(),
+                },
+            },
+            FirstName: unifiedgosdk.Pointer("Delores"),
+            ID: unifiedgosdk.Pointer("799d076b-92ba-4c91-8c2a-67d69083afb5"),
+            Identification: unifiedgosdk.Pointer("amicitia"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsCustomer: unifiedgosdk.Pointer(true),
+            LastName: unifiedgosdk.Pointer("Reynolds"),
+            Name: unifiedgosdk.Pointer("Delores Reynolds"),
+            PaymentMethods: []shared.AccountingContactPaymentMethod{
+                shared.AccountingContactPaymentMethod{
+                    Default: unifiedgosdk.Pointer(true),
+                    ID: unifiedgosdk.Pointer("34e37621-ac3e-4d52-a7c3-ce63fde7b445"),
+                    Name: unifiedgosdk.Pointer("Visa 1234"),
+                    Type: shared.AccountingContactPaymentMethodTypeCard,
+                },
+            },
+            PortalURL: unifiedgosdk.Pointer("https://scented-t-shirt.info/"),
+            ShippingAddress: &shared.PropertyAccountingContactShippingAddress{
+                Address1: unifiedgosdk.Pointer("786 Renner Stream"),
+                Address2: unifiedgosdk.Pointer("Apt. 555"),
+                City: unifiedgosdk.Pointer("Roanoke"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("80686-7556"),
+                Region: unifiedgosdk.Pointer("Vermont"),
+                RegionCode: unifiedgosdk.Pointer("NE"),
+            },
+            TaxExemption: shared.TaxExemptionResale.ToPointer(),
+            TaxNumber: unifiedgosdk.Pointer("amplexus"),
+            Telephones: []shared.AccountingTelephone{
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(427) 701-7160"),
+                    Type: shared.AccountingTelephoneTypeHome.ToPointer(),
+                },
+                shared.AccountingTelephone{
+                    Telephone: unifiedgosdk.Pointer("(540) 913-9171"),
+                    Type: shared.AccountingTelephoneTypeFax.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2023-12-04T22:55:12.019Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6507,7 +7566,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```go
 package main
 
@@ -6515,6 +7574,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6527,7 +7587,37 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingCreditmemo(ctx, operations.UpdateAccountingCreditmemoRequest{
-        AccountingCreditmemo: shared.AccountingCreditmemo{},
+        AccountingCreditmemo: shared.AccountingCreditmemo{
+            Applications: []shared.AccountingCreditApplication{},
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
+                    ID: unifiedgosdk.Pointer("92ebacd2-bd76-47ed-a2c3-8354d39cbb0d"),
+                    MimeType: unifiedgosdk.Pointer("complectus"),
+                    Name: unifiedgosdk.Pointer("thesis"),
+                },
+            },
+            CreatedAt: types.MustNewTimeFromString("2023-09-20T01:47:01.571Z"),
+            CreditmemoNumber: unifiedgosdk.Pointer("ulterius"),
+            Currency: unifiedgosdk.Pointer("MKD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
+            ID: unifiedgosdk.Pointer("f0ec1da8-b326-4f28-a43e-b4ff7e926358"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
+            PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
+            PostedAt: types.MustNewTimeFromString("2025-11-15T11:46:05.704Z"),
+            RefundAmount: unifiedgosdk.Pointer[float64](0.0),
+            RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
+            RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
+            Send: unifiedgosdk.Pointer(false),
+            Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-15T13:55:49.074Z"),
+            URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6564,13 +7654,14 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -6584,7 +7675,44 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingExpense(ctx, operations.UpdateAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("92657900-c101-4575-8c23-e9d0cdae9429"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("9fc52e09-65e4-4420-b04e-90386c127655"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("af94ff9d-aa8b-4328-9607-d97c7fd0ef35"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.227Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6621,7 +7749,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```go
 package main
 
@@ -6629,6 +7757,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6641,7 +7770,42 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingInvoice(ctx, operations.UpdateAccountingInvoiceRequest{
-        AccountingInvoice: shared.AccountingInvoice{},
+        AccountingInvoice: shared.AccountingInvoice{
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
+                    ID: unifiedgosdk.Pointer("59d3011a-bf64-4d54-8e04-853300101cf1"),
+                    MimeType: unifiedgosdk.Pointer("benevolentia"),
+                    Name: unifiedgosdk.Pointer("vespillo"),
+                },
+            },
+            BalanceAmount: unifiedgosdk.Pointer[float64](-1.0),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-11-07T14:17:29.587Z"),
+            Currency: unifiedgosdk.Pointer("RWF"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("13c46be5-2a4b-4030-80ee-aa0215e03e50"),
+            InvoiceNumber: unifiedgosdk.Pointer("vinco"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Auctus comburo clarus ubi."),
+            PaidAmount: unifiedgosdk.Pointer[float64](0.0),
+            PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
+            PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-03-26T23:39:39.056Z"),
+            Reference: unifiedgosdk.Pointer("adinventitias"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingInvoiceStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.AccountingInvoiceTermNet45.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-06T06:52:37.970Z"),
+            URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6678,7 +7842,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```go
 package main
 
@@ -6686,6 +7850,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6698,7 +7863,19 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("08ebd0be-97e9-4a3d-b153-e0a6d981d560"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.686Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.885Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6735,7 +7912,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```go
 package main
 
@@ -6743,6 +7920,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6755,7 +7933,35 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingOrder(ctx, operations.UpdateAccountingOrderRequest{
-        AccountingOrder: shared.AccountingOrder{},
+        AccountingOrder: shared.AccountingOrder{
+            BillingAddress: &shared.PropertyAccountingOrderBillingAddress{
+                Address1: unifiedgosdk.Pointer("802 Bechtelar Park"),
+                Address2: unifiedgosdk.Pointer("Apt. 436"),
+                City: unifiedgosdk.Pointer("Daniellaville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("36947"),
+                Region: unifiedgosdk.Pointer("Wisconsin"),
+                RegionCode: unifiedgosdk.Pointer("NY"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("d4016fb5-81f7-4acc-af53-e4ff827d86a3"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2022-04-05T00:28:38.601Z"),
+            ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
+                City: unifiedgosdk.Pointer("South Alainaland"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("25274-7654"),
+                Region: unifiedgosdk.Pointer("New Hampshire"),
+                RegionCode: unifiedgosdk.Pointer("LA"),
+            },
+            Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            Type: shared.AccountingOrderTypePurchase.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-17T22:46:34.529Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6792,7 +7998,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -6800,6 +8006,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6812,7 +8019,23 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingPaymentterm(ctx, operations.UpdateAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("f447960a-b7a9-4d75-90a8-fa8880f9c42f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.438Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -6906,7 +8129,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -6914,6 +8137,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -6926,7 +8150,34 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingPurchaseorder(ctx, operations.UpdateAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("9877cde7-dc3c-472c-a7a4-dce741132778"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.379Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.327Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -7020,7 +8271,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```go
 package main
 
@@ -7028,6 +8279,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -7040,7 +8292,56 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingSalesorder(ctx, operations.UpdateAccountingSalesorderRequest{
-        AccountingSalesorder: shared.AccountingSalesorder{},
+        AccountingSalesorder: shared.AccountingSalesorder{
+            BillingAddress: &shared.PropertyAccountingSalesorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("26530 Stroman Rest"),
+                Address2: unifiedgosdk.Pointer("Suite 801"),
+                City: unifiedgosdk.Pointer("Pocatello"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("05015-8546"),
+                Region: unifiedgosdk.Pointer("Louisiana"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
+            },
+            CategoryIds: []string{},
+            ClosedAt: types.MustNewTimeFromString("2023-08-16T22:07:51.371Z"),
+            CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
+            Currency: unifiedgosdk.Pointer("ANG"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
+            EmployeeUserID: unifiedgosdk.Pointer("4a6b8990-c85a-499f-82d0-5011c3c95a0b"),
+            Fees: []shared.AccountingFee{
+                shared.AccountingFee{
+                    Amount: 519.0,
+                    Currency: unifiedgosdk.Pointer("XCD"),
+                    Type: shared.AccountingFeeTypePromotion,
+                },
+            },
+            FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
+            GuestCount: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("c04ce8ee-5603-40be-bb0d-52a3b7551325"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            OrderNumber: unifiedgosdk.Pointer("988187"),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2026-01-11T03:02:26.077Z"),
+            RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
+            SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
+            ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
+            ShippingAddress: &shared.PropertyAccountingSalesorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("9878 Bradley Mill"),
+                Address2: unifiedgosdk.Pointer("Apt. 215"),
+                City: unifiedgosdk.Pointer("Port Matildestad"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("07989-2148"),
+                Region: unifiedgosdk.Pointer("Arkansas"),
+                RegionCode: unifiedgosdk.Pointer("AK"),
+            },
+            Status: shared.AccountingSalesorderStatusRefunded.ToPointer(),
+            SubtotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            TaxAmount: unifiedgosdk.Pointer[float64](63.0),
+            TipAmount: unifiedgosdk.Pointer[float64](34.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-10T18:49:59.963Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -7077,13 +8378,14 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -7097,7 +8399,16 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("c2ce61f3-a58c-4db3-b7d2-7c4c851127c5"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.858Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -7134,13 +8445,14 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -7154,7 +8466,26 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
-        AccountingTransaction: shared.AccountingTransaction{},
+        AccountingTransaction: shared.AccountingTransaction{
+            CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
+            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            Lineitems: []shared.AccountingTransactionLineItem{
+                shared.AccountingTransactionLineItem{
+                    CategoryIds: []string{},
+                    Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
+                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    Name: unifiedgosdk.Pointer("Salad"),
+                    ObjectType: unifiedgosdk.Pointer("delicate"),
+                    TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](536.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](91.0),
+                },
+            },
+            Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -7191,7 +8522,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -7199,6 +8530,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -7211,7 +8543,22 @@ func main() {
     )
 
     res, err := s.Accounting.UpdateAccountingVendorcredit(ctx, operations.UpdateAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("3a284793-58f5-455d-a706-44f8cdcce7fe"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.330Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.265Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

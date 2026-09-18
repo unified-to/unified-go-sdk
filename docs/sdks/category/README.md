@@ -23,13 +23,14 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -43,7 +44,15 @@ func main() {
     )
 
     res, err := s.Category.CreateAccountingCategory(ctx, operations.CreateAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("cb740d27-cc47-441e-b9fa-3f5367f21a9a"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.773Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -79,13 +88,14 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="go" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -99,7 +109,14 @@ func main() {
     )
 
     res, err := s.Category.CreateTicketingCategory(ctx, operations.CreateTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("d4494546-4671-4859-a49c-0e57d159af7e"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.254Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -353,13 +370,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -373,7 +391,15 @@ func main() {
     )
 
     res, err := s.Category.PatchAccountingCategory(ctx, operations.PatchAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("b08a0425-e9d0-4769-8146-74d3e7905974"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.778Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -410,13 +436,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -430,7 +457,14 @@ func main() {
     )
 
     res, err := s.Category.PatchTicketingCategory(ctx, operations.PatchTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("491cd296-9d88-4b8d-aa44-df6bff836b4c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.258Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -577,13 +611,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -597,7 +632,15 @@ func main() {
     )
 
     res, err := s.Category.UpdateAccountingCategory(ctx, operations.UpdateAccountingCategoryRequest{
-        AccountingCategory: shared.AccountingCategory{},
+        AccountingCategory: shared.AccountingCategory{
+            CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
+            Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
+            ID: unifiedgosdk.Pointer("b08a0425-e9d0-4769-8146-74d3e7905974"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-20T07:16:08.778Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -634,13 +677,14 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -654,7 +698,14 @@ func main() {
     )
 
     res, err := s.Category.UpdateTicketingCategory(ctx, operations.UpdateTicketingCategoryRequest{
-        TicketingCategory: shared.TicketingCategory{},
+        TicketingCategory: shared.TicketingCategory{
+            CreatedAt: types.MustNewTimeFromString("2019-10-19T22:02:51.067Z"),
+            Description: unifiedgosdk.Pointer("Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero."),
+            ID: unifiedgosdk.Pointer("491cd296-9d88-4b8d-aa44-df6bff836b4c"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("amicitia"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-15T16:04:43.258Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

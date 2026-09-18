@@ -29,7 +29,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="go" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```go
 package main
 
@@ -37,6 +37,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -49,7 +50,14 @@ func main() {
     )
 
     res, err := s.Kms.CreateKmsComment(ctx, operations.CreateKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("5393a955-52d2-4f2f-9ca4-d31932803e88"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.175Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -85,13 +93,14 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="go" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -106,7 +115,16 @@ func main() {
 
     res, err := s.Kms.CreateKmsPage(ctx, operations.CreateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeText,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("12674b1d-8fdb-4ca9-8870-c8a3aa31aa82"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.984Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
     })
@@ -143,13 +161,14 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -163,7 +182,14 @@ func main() {
     )
 
     res, err := s.Kms.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("825eddf8-be9d-422c-8b00-7fd3ff90cc8d"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.354Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -526,7 +552,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```go
 package main
 
@@ -534,6 +560,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -546,7 +573,14 @@ func main() {
     )
 
     res, err := s.Kms.PatchKmsComment(ctx, operations.PatchKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("f4bbf399-b220-4290-92d8-e4b4de8a27c3"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.176Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -583,13 +617,14 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -604,7 +639,16 @@ func main() {
 
     res, err := s.Kms.PatchKmsPage(ctx, operations.PatchKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeOther,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("5ee389c9-a3e6-4faa-a53e-d1fb589a5edf"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.996Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -642,13 +686,14 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -662,7 +707,14 @@ func main() {
     )
 
     res, err := s.Kms.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("c772b3c3-99e4-4c01-b0d6-3486bba10508"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.359Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -864,7 +916,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```go
 package main
 
@@ -872,6 +924,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -884,7 +937,14 @@ func main() {
     )
 
     res, err := s.Kms.UpdateKmsComment(ctx, operations.UpdateKmsCommentRequest{
-        KmsComment: shared.KmsComment{},
+        KmsComment: shared.KmsComment{
+            Content: unifiedgosdk.Pointer("Decimus tolero viriliter usque."),
+            ContentType: shared.ContentTypeHTML.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2022-08-26T14:40:49.732Z"),
+            ID: unifiedgosdk.Pointer("f4bbf399-b220-4290-92d8-e4b4de8a27c3"),
+            Type: shared.KmsCommentTypePage.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-16T08:33:25.176Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -921,13 +981,14 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -942,7 +1003,16 @@ func main() {
 
     res, err := s.Kms.UpdateKmsPage(ctx, operations.UpdateKmsPageRequest{
         KmsPage: shared.KmsPage{
-            Type: shared.KmsPageTypeOther,
+            CreatedAt: types.MustNewTimeFromString("2019-05-20T18:06:50.749Z"),
+            DownloadURL: unifiedgosdk.Pointer("https://agitated-validity.info"),
+            HasChildren: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("5ee389c9-a3e6-4faa-a53e-d1fb589a5edf"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Metadata: []shared.KmsPageMetadata{},
+            Title: unifiedgosdk.Pointer("even minister extract"),
+            Type: shared.KmsPageTypeHTML,
+            UpdatedAt: types.MustNewTimeFromString("2025-09-10T19:17:34.996Z"),
+            WebURL: unifiedgosdk.Pointer("https://another-petticoat.info"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -980,13 +1050,14 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -1000,7 +1071,14 @@ func main() {
     )
 
     res, err := s.Kms.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("c772b3c3-99e4-4c01-b0d6-3486bba10508"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.359Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

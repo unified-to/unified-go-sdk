@@ -29,13 +29,14 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" example="analytics_event" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -49,7 +50,16 @@ func main() {
     )
 
     res, err := s.Analytics.CreateAnalyticsEvent(ctx, operations.CreateAnalyticsEventRequest{
-        AnalyticsEvent: shared.AnalyticsEvent{},
+        AnalyticsEvent: shared.AnalyticsEvent{
+            CreatedAt: types.MustNewTimeFromString("2023-06-21T03:13:22.954Z"),
+            EventType: shared.EventTypeScreenView.ToPointer(),
+            ID: unifiedgosdk.Pointer("c957441c-85b4-43f7-a5a6-d77725a5b68f"),
+            Metadata: map[string]shared.PropertyAnalyticsEventMetadata{
+                "key": shared.PropertyAnalyticsEventMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Xk707ttsb51v"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-22T02:19:12.368Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -85,13 +95,14 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -105,7 +116,14 @@ func main() {
     )
 
     res, err := s.Analytics.CreateAnalyticsProperty(ctx, operations.CreateAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("4e69af5b-e23d-4594-a928-1a677375a8b1"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -141,13 +159,14 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="go" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -161,7 +180,19 @@ func main() {
     )
 
     res, err := s.Analytics.CreateAnalyticsVisitor(ctx, operations.CreateAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("ab2b6a1f-cce4-4953-9e88-df24182041a1"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.311Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.712Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -687,13 +718,14 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -707,7 +739,14 @@ func main() {
     )
 
     res, err := s.Analytics.PatchAnalyticsProperty(ctx, operations.PatchAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("f49ca387-ced0-472d-a38e-d5851ddb9619"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -744,13 +783,14 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -764,7 +804,19 @@ func main() {
     )
 
     res, err := s.Analytics.PatchAnalyticsVisitor(ctx, operations.PatchAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("0b4b25d8-df6a-4624-842b-2ef30c63b760"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.314Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.719Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -911,13 +963,14 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -931,7 +984,14 @@ func main() {
     )
 
     res, err := s.Analytics.UpdateAnalyticsProperty(ctx, operations.UpdateAnalyticsPropertyRequest{
-        AnalyticsProperty: shared.AnalyticsProperty{},
+        AnalyticsProperty: shared.AnalyticsProperty{
+            CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("f49ca387-ced0-472d-a38e-d5851ddb9619"),
+            Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
+            Timezone: unifiedgosdk.Pointer("UTC"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T16:36:34.900Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -968,13 +1028,14 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -988,7 +1049,19 @@ func main() {
     )
 
     res, err := s.Analytics.UpdateAnalyticsVisitor(ctx, operations.UpdateAnalyticsVisitorRequest{
-        AnalyticsVisitor: shared.AnalyticsVisitor{},
+        AnalyticsVisitor: shared.AnalyticsVisitor{
+            CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
+            ID: unifiedgosdk.Pointer("0b4b25d8-df6a-4624-842b-2ef30c63b760"),
+            LastSeenAt: types.MustNewTimeFromString("2021-12-04T18:24:38.314Z"),
+            Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
+                "segment": shared.PropertyAnalyticsVisitorMetadata{},
+            },
+            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
+            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-03T09:16:24.719Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

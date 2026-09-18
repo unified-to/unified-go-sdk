@@ -25,7 +25,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="go" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```go
 package main
 
@@ -33,6 +33,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -45,7 +46,63 @@ func main() {
     )
 
     res, err := s.Location.CreateCommerceLocation(ctx, operations.CreateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{},
+        CommerceLocation: shared.CommerceLocation{
+            Address: &shared.PropertyCommerceLocationAddress{
+                Address1: unifiedgosdk.Pointer("29896 The Limes"),
+                City: unifiedgosdk.Pointer("New Kenny"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("14490-0609"),
+                Region: unifiedgosdk.Pointer("Virginia"),
+                RegionCode: unifiedgosdk.Pointer("MS"),
+            },
+            Categories: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
+            Currency: unifiedgosdk.Pointer("XCD"),
+            Description: unifiedgosdk.Pointer("Adsidue audentia."),
+            ID: unifiedgosdk.Pointer("b55515cc-439a-4c4c-8664-f0d808daa410"),
+            ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
+            IsActive: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
+            Latitude: unifiedgosdk.Pointer[float64](0.0),
+            LocationType: shared.LocationTypeRestaurant.ToPointer(),
+            Longitude: unifiedgosdk.Pointer[float64](0.0),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Addo."),
+                    Height: unifiedgosdk.Pointer[float64](283.0),
+                    ID: unifiedgosdk.Pointer("0d79866b-8e35-4e3e-b08e-7a18a2d0f7d2"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("4bea1eda-d9ea-4ad9-bdc8-1d69f5cf585e"),
+                            Slug: unifiedgosdk.Pointer("abutor"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "damno",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](40.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    Width: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Olson - Mraz"),
+            PriceLevel: unifiedgosdk.Pointer(""),
+            Rating: unifiedgosdk.Pointer[float64](0.0),
+            ReviewCount: unifiedgosdk.Pointer[float64](0.0),
+            Telephones: []shared.CommerceTelephone{
+                shared.CommerceTelephone{
+                    Telephone: "(872) 522-3201",
+                    Type: shared.CommerceTelephoneTypeOther.ToPointer(),
+                },
+                shared.CommerceTelephone{
+                    Telephone: "(236) 274-2445",
+                    Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2024-04-09T09:56:28.117Z"),
+            WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -81,7 +138,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="go" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```go
 package main
 
@@ -89,6 +146,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -101,7 +159,42 @@ func main() {
     )
 
     res, err := s.Location.CreateHrisLocation(ctx, operations.CreateHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("344d4490-37b2-4a83-94fd-733423486619"),
+            ID: unifiedgosdk.Pointer("11bdec76-2654-4efb-8275-55a9487d6cef"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.900Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -464,7 +557,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```go
 package main
 
@@ -472,6 +565,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -484,7 +578,63 @@ func main() {
     )
 
     res, err := s.Location.PatchCommerceLocation(ctx, operations.PatchCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{},
+        CommerceLocation: shared.CommerceLocation{
+            Address: &shared.PropertyCommerceLocationAddress{
+                Address1: unifiedgosdk.Pointer("29896 The Limes"),
+                City: unifiedgosdk.Pointer("New Kenny"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("14490-0609"),
+                Region: unifiedgosdk.Pointer("Virginia"),
+                RegionCode: unifiedgosdk.Pointer("MS"),
+            },
+            Categories: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
+            Currency: unifiedgosdk.Pointer("XCD"),
+            Description: unifiedgosdk.Pointer("Adsidue audentia."),
+            ID: unifiedgosdk.Pointer("f0eb40de-a9c2-4a73-aa8c-90cfd1c9e75e"),
+            ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
+            IsActive: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
+            Latitude: unifiedgosdk.Pointer[float64](0.0),
+            LocationType: shared.LocationTypeRestaurant.ToPointer(),
+            Longitude: unifiedgosdk.Pointer[float64](0.0),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Addo."),
+                    Height: unifiedgosdk.Pointer[float64](283.0),
+                    ID: unifiedgosdk.Pointer("bec18d5b-9801-406e-9eaf-a2522954b7eb"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("e9f7ef44-8164-426e-80cb-ca02ee9852fd"),
+                            Slug: unifiedgosdk.Pointer("abutor"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "damno",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](40.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    Width: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Olson - Mraz"),
+            PriceLevel: unifiedgosdk.Pointer(""),
+            Rating: unifiedgosdk.Pointer[float64](0.0),
+            ReviewCount: unifiedgosdk.Pointer[float64](0.0),
+            Telephones: []shared.CommerceTelephone{
+                shared.CommerceTelephone{
+                    Telephone: "(872) 522-3201",
+                    Type: shared.CommerceTelephoneTypeOther.ToPointer(),
+                },
+                shared.CommerceTelephone{
+                    Telephone: "(236) 274-2445",
+                    Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2024-04-09T09:56:28.124Z"),
+            WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -521,7 +671,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```go
 package main
 
@@ -529,6 +679,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -541,7 +692,42 @@ func main() {
     )
 
     res, err := s.Location.PatchHrisLocation(ctx, operations.PatchHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("ad504204-f481-465f-ab77-4582a547c143"),
+            ID: unifiedgosdk.Pointer("0cf5dc45-c04c-4fb7-a9da-5249ac0fbf6b"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.904Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -688,7 +874,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```go
 package main
 
@@ -696,6 +882,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -708,7 +895,63 @@ func main() {
     )
 
     res, err := s.Location.UpdateCommerceLocation(ctx, operations.UpdateCommerceLocationRequest{
-        CommerceLocation: shared.CommerceLocation{},
+        CommerceLocation: shared.CommerceLocation{
+            Address: &shared.PropertyCommerceLocationAddress{
+                Address1: unifiedgosdk.Pointer("29896 The Limes"),
+                City: unifiedgosdk.Pointer("New Kenny"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("14490-0609"),
+                Region: unifiedgosdk.Pointer("Virginia"),
+                RegionCode: unifiedgosdk.Pointer("MS"),
+            },
+            Categories: []string{},
+            CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
+            Currency: unifiedgosdk.Pointer("XCD"),
+            Description: unifiedgosdk.Pointer("Adsidue audentia."),
+            ID: unifiedgosdk.Pointer("f0eb40de-a9c2-4a73-aa8c-90cfd1c9e75e"),
+            ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
+            IsActive: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
+            Latitude: unifiedgosdk.Pointer[float64](0.0),
+            LocationType: shared.LocationTypeRestaurant.ToPointer(),
+            Longitude: unifiedgosdk.Pointer[float64](0.0),
+            Media: []shared.CommerceItemMedia{
+                shared.CommerceItemMedia{
+                    Alt: unifiedgosdk.Pointer("Addo."),
+                    Height: unifiedgosdk.Pointer[float64](283.0),
+                    ID: unifiedgosdk.Pointer("bec18d5b-9801-406e-9eaf-a2522954b7eb"),
+                    Metadata: []shared.CommerceMetadata{
+                        shared.CommerceMetadata{
+                            ID: unifiedgosdk.Pointer("e9f7ef44-8164-426e-80cb-ca02ee9852fd"),
+                            Slug: unifiedgosdk.Pointer("abutor"),
+                            Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
+                                "damno",
+                            )),
+                        },
+                    },
+                    Position: unifiedgosdk.Pointer[float64](40.0),
+                    Type: shared.CommerceItemMediaTypeImage.ToPointer(),
+                    URL: "https://picsum.photos/seed/QVh7ViTV/3964/1567",
+                    Width: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Olson - Mraz"),
+            PriceLevel: unifiedgosdk.Pointer(""),
+            Rating: unifiedgosdk.Pointer[float64](0.0),
+            ReviewCount: unifiedgosdk.Pointer[float64](0.0),
+            Telephones: []shared.CommerceTelephone{
+                shared.CommerceTelephone{
+                    Telephone: "(872) 522-3201",
+                    Type: shared.CommerceTelephoneTypeOther.ToPointer(),
+                },
+                shared.CommerceTelephone{
+                    Telephone: "(236) 274-2445",
+                    Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2024-04-09T09:56:28.124Z"),
+            WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -745,7 +988,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```go
 package main
 
@@ -753,6 +996,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -765,7 +1009,42 @@ func main() {
     )
 
     res, err := s.Location.UpdateHrisLocation(ctx, operations.UpdateHrisLocationRequest{
-        HrisLocation: shared.HrisLocation{},
+        HrisLocation: shared.HrisLocation{
+            Address: &shared.PropertyHrisLocationAddress{
+                Address1: unifiedgosdk.Pointer("2743 Connelly Summit"),
+                Address2: unifiedgosdk.Pointer("Apt. 350"),
+                City: unifiedgosdk.Pointer("Titusville"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("16154-1095"),
+                Region: unifiedgosdk.Pointer("Oregon"),
+                RegionCode: unifiedgosdk.Pointer("AL"),
+            },
+            CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
+            Currency: unifiedgosdk.Pointer("MUR"),
+            Description: unifiedgosdk.Pointer("Acervus caries."),
+            ExternalIdentifier: unifiedgosdk.Pointer("ad504204-f481-465f-ab77-4582a547c143"),
+            ID: unifiedgosdk.Pointer("0cf5dc45-c04c-4fb7-a9da-5249ac0fbf6b"),
+            IsActive: unifiedgosdk.Pointer(true),
+            IsHq: unifiedgosdk.Pointer(false),
+            LanguageLocale: unifiedgosdk.Pointer("fr"),
+            Name: unifiedgosdk.Pointer("adhuc"),
+            Telephones: []shared.HrisTelephone{
+                shared.HrisTelephone{
+                    Telephone: "(710) 550-6997",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(208) 555-8542",
+                    Type: shared.HrisTelephoneTypeHome.ToPointer(),
+                },
+                shared.HrisTelephone{
+                    Telephone: "(712) 473-5482",
+                    Type: shared.HrisTelephoneTypeFax.ToPointer(),
+                },
+            },
+            Timezone: unifiedgosdk.Pointer("America/Guyana"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-09T01:02:07.904Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

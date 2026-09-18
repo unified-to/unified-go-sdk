@@ -17,13 +17,14 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="go" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,27 @@ func main() {
     )
 
     res, err := s.Pipeline.CreateCrmPipeline(ctx, operations.CreateCrmPipelineRequest{
-        CrmPipeline: shared.CrmPipeline{},
+        CrmPipeline: shared.CrmPipeline{
+            CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+            DealProbability: unifiedgosdk.Pointer[float64](99.0),
+            DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("b388cbda-72d5-4044-bccd-67d0724bd126"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Small Steel Bacon"),
+            Stages: []shared.CrmStage{
+                shared.CrmStage{
+                    Active: unifiedgosdk.Pointer(false),
+                    CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+                    DealProbability: unifiedgosdk.Pointer[float64](84.0),
+                    DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
+                    ID: unifiedgosdk.Pointer("0cd1f42f-7ac9-45d2-8afb-b762e3ffdfc5"),
+                    IsClosed: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Veniam."),
+                    UpdatedAt: types.MustNewTimeFromString("2025-09-16T10:43:21.282Z"),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-10-07T15:49:04.531Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +203,14 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +224,27 @@ func main() {
     )
 
     res, err := s.Pipeline.PatchCrmPipeline(ctx, operations.PatchCrmPipelineRequest{
-        CrmPipeline: shared.CrmPipeline{},
+        CrmPipeline: shared.CrmPipeline{
+            CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+            DealProbability: unifiedgosdk.Pointer[float64](99.0),
+            DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("5d1eccd1-d1f6-409e-92f9-ddc7e9c13849"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Small Steel Bacon"),
+            Stages: []shared.CrmStage{
+                shared.CrmStage{
+                    Active: unifiedgosdk.Pointer(false),
+                    CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+                    DealProbability: unifiedgosdk.Pointer[float64](84.0),
+                    DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
+                    ID: unifiedgosdk.Pointer("703758d2-9c19-4305-8901-b31afa9f845c"),
+                    IsClosed: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Veniam."),
+                    UpdatedAt: types.MustNewTimeFromString("2025-09-16T10:43:21.286Z"),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-10-07T15:49:04.534Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +336,14 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +357,27 @@ func main() {
     )
 
     res, err := s.Pipeline.UpdateCrmPipeline(ctx, operations.UpdateCrmPipelineRequest{
-        CrmPipeline: shared.CrmPipeline{},
+        CrmPipeline: shared.CrmPipeline{
+            CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+            DealProbability: unifiedgosdk.Pointer[float64](99.0),
+            DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
+            ID: unifiedgosdk.Pointer("5d1eccd1-d1f6-409e-92f9-ddc7e9c13849"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Small Steel Bacon"),
+            Stages: []shared.CrmStage{
+                shared.CrmStage{
+                    Active: unifiedgosdk.Pointer(false),
+                    CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
+                    DealProbability: unifiedgosdk.Pointer[float64](84.0),
+                    DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
+                    ID: unifiedgosdk.Pointer("703758d2-9c19-4305-8901-b31afa9f845c"),
+                    IsClosed: unifiedgosdk.Pointer(true),
+                    Name: unifiedgosdk.Pointer("Veniam."),
+                    UpdatedAt: types.MustNewTimeFromString("2025-09-16T10:43:21.286Z"),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2025-10-07T15:49:04.534Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

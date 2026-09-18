@@ -19,7 +19,7 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="go" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```go
 package main
 
@@ -27,6 +27,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -39,7 +40,20 @@ func main() {
     )
 
     res, err := s.Recording.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.549Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.543Z"),
+            ID: unifiedgosdk.Pointer("150de76c-e74b-4af5-91eb-2a439b628ac0"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.859Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.499Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -293,7 +307,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```go
 package main
 
@@ -301,6 +315,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -313,7 +328,20 @@ func main() {
     )
 
     res, err := s.Recording.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.555Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.556Z"),
+            ID: unifiedgosdk.Pointer("77fab6ff-1c02-4d90-a045-09b049016a8b"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.861Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.508Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -405,7 +433,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```go
 package main
 
@@ -413,6 +441,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -425,7 +454,20 @@ func main() {
     )
 
     res, err := s.Recording.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
-        UcRecording: shared.UcRecording{},
+        UcRecording: shared.UcRecording{
+            Contacts: []shared.UcContact{},
+            CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
+            EndAt: types.MustNewTimeFromString("2024-04-21T20:49:18.555Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-03-28T17:14:24.556Z"),
+            ID: unifiedgosdk.Pointer("77fab6ff-1c02-4d90-a045-09b049016a8b"),
+            Media: []shared.UcRecordingMedia{},
+            StartAt: types.MustNewTimeFromString("2023-04-22T20:34:21.861Z"),
+            Type: shared.UcRecordingTypeInbound.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T09:00:40.508Z"),
+            UserName: unifiedgosdk.Pointer("Melyna Larson"),
+            UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
+            WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

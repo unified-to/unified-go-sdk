@@ -17,13 +17,14 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="go" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,13 @@ func main() {
     )
 
     res, err := s.Insertionorder.CreateAdsInsertionorder(ctx, operations.CreateAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("0025631a-c198-4691-9215-01f54de73cae"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +189,14 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +210,13 @@ func main() {
     )
 
     res, err := s.Insertionorder.PatchAdsInsertionorder(ctx, operations.PatchAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("658ad6f8-cf35-434b-9652-34e030c35b64"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +308,14 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +329,13 @@ func main() {
     )
 
     res, err := s.Insertionorder.UpdateAdsInsertionorder(ctx, operations.UpdateAdsInsertionorderRequest{
-        AdsInsertionorder: shared.AdsInsertionorder{},
+        AdsInsertionorder: shared.AdsInsertionorder{
+            CreatedAt: types.MustNewTimeFromString("2021-04-10T06:57:36.611Z"),
+            ID: unifiedgosdk.Pointer("658ad6f8-cf35-434b-9652-34e030c35b64"),
+            Name: unifiedgosdk.Pointer("Kunde, Smith and Reinger"),
+            Status: shared.AdsInsertionorderStatusUnspecified.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2021-04-28T12:31:55.184Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

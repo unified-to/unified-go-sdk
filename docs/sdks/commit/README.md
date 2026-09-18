@@ -17,13 +17,14 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="go" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,7 +39,14 @@ func main() {
 
     res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("71f505c0-07f0-414a-bedc-b93949046a8a"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.271Z"),
         },
         ConnectionID: "<id>",
     })
@@ -184,13 +192,14 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -205,7 +214,14 @@ func main() {
 
     res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("2e56f35b-d2b4-4d7f-a043-c1d337939d6b"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.273Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -298,13 +314,14 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -319,7 +336,14 @@ func main() {
 
     res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
+            CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
+            ID: unifiedgosdk.Pointer("2e56f35b-d2b4-4d7f-a043-c1d337939d6b"),
+            LinesAdded: unifiedgosdk.Pointer[float64](313.0),
+            LinesChanged: unifiedgosdk.Pointer[float64](659.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
+            Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
+            UpdatedAt: types.MustNewTimeFromString("2023-05-16T03:26:57.273Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -17,13 +17,14 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="go" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,16 @@ func main() {
     )
 
     res, err := s.Taxrate.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("7bfb2899-b518-48bb-9593-e4ac1d83f288"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.851Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +192,14 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +213,16 @@ func main() {
     )
 
     res, err := s.Taxrate.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("c2ce61f3-a58c-4db3-b7d2-7c4c851127c5"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.858Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +314,14 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +335,16 @@ func main() {
     )
 
     res, err := s.Taxrate.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
-        AccountingTaxrate: shared.AccountingTaxrate{},
+        AccountingTaxrate: shared.AccountingTaxrate{
+            CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
+            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
+            ID: unifiedgosdk.Pointer("c2ce61f3-a58c-4db3-b7d2-7c4c851127c5"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("cogo"),
+            Rate: unifiedgosdk.Pointer[float64](1.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-04T08:46:04.858Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -79,13 +79,14 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="go" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -99,7 +100,45 @@ func main() {
     )
 
     res, err := s.Project.CreateTaskProject(ctx, operations.CreateTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("3687e4c3-b243-4270-99b2-c844cfc26462"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("97e50e71-e1ed-4d6c-90b6-094016d24768"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("6010bbb0-510c-4b9c-8b1d-27fc0418ecd4"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -410,13 +449,14 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -430,7 +470,45 @@ func main() {
     )
 
     res, err := s.Project.PatchTaskProject(ctx, operations.PatchTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("a8597f9e-fdb3-4244-bcd3-c62331ca5ba9"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("20b84b41-2336-4083-bba1-4867b5ccbb3b"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("417b98cd-43b3-462e-b109-2362cc1aacf9"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -634,13 +712,14 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -654,7 +733,45 @@ func main() {
     )
 
     res, err := s.Project.UpdateTaskProject(ctx, operations.UpdateTaskProjectRequest{
-        TaskProject: shared.TaskProject{},
+        TaskProject: shared.TaskProject{
+            CreatedAt: types.MustNewTimeFromString("2023-06-23T16:39:40.446Z"),
+            Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
+            HasChildren: unifiedgosdk.Pointer(false),
+            HasTasks: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("a8597f9e-fdb3-4244-bcd3-c62331ca5ba9"),
+            Metadata: []shared.TaskMetadata{
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("20b84b41-2336-4083-bba1-4867b5ccbb3b"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("decens"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "uterque",
+                    )),
+                },
+                shared.TaskMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.TaskMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("417b98cd-43b3-462e-b109-2362cc1aacf9"),
+                    Namespace: unifiedgosdk.Pointer("custom"),
+                    Slug: unifiedgosdk.Pointer("benevolentia"),
+                    Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
+                        "pariatur",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Garden"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T14:57:56.362Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

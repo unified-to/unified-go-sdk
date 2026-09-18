@@ -12,7 +12,7 @@ Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" example="datastore_query" -->
 ```go
 package main
 
@@ -32,7 +32,17 @@ func main() {
     )
 
     res, err := s.Query.CreateDatastoreQuery(ctx, operations.CreateDatastoreQueryRequest{
-        DatastoreQuery: shared.DatastoreQuery{},
+        DatastoreQuery: shared.DatastoreQuery{
+            Query: &shared.PropertyDatastoreQueryQuery{
+                Filter: &shared.PropertyDatastoreQueryQueryFilter{
+                    Type: shared.PropertyDatastoreQueryQueryFilterTypeOr,
+                },
+                Select: []string{
+                    "*",
+                },
+                SQL: unifiedgosdk.Pointer(""),
+            },
+        },
         ConnectionID: "<id>",
     })
     if err != nil {

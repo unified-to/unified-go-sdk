@@ -17,13 +17,14 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="go" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,25 @@ func main() {
     )
 
     res, err := s.Device.CreateHrisDevice(ctx, operations.CreateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("674dc515-c0bf-44d9-988f-d2253e7099ea"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.361Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +201,14 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +222,25 @@ func main() {
     )
 
     res, err := s.Device.PatchHrisDevice(ctx, operations.PatchHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("815ae151-c664-4723-b33e-b7b64a72d9ee"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.365Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +332,14 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +353,25 @@ func main() {
     )
 
     res, err := s.Device.UpdateHrisDevice(ctx, operations.UpdateHrisDeviceRequest{
-        HrisDevice: shared.HrisDevice{},
+        HrisDevice: shared.HrisDevice{
+            AdminUserIds: []string{},
+            AssetTag: unifiedgosdk.Pointer("dpho9OuFNG"),
+            CreatedAt: types.MustNewTimeFromString("2019-04-04T17:11:40.322Z"),
+            HasAntivirus: unifiedgosdk.Pointer(false),
+            HasFirewall: unifiedgosdk.Pointer(true),
+            HasHdEncrypted: unifiedgosdk.Pointer(true),
+            HasPasswordManager: unifiedgosdk.Pointer(true),
+            HasScreenlock: unifiedgosdk.Pointer(true),
+            ID: unifiedgosdk.Pointer("815ae151-c664-4723-b33e-b7b64a72d9ee"),
+            IsMissing: unifiedgosdk.Pointer(false),
+            Manufacturer: unifiedgosdk.Pointer("Sanford - Hamill"),
+            Model: unifiedgosdk.Pointer("Refined"),
+            Name: unifiedgosdk.Pointer("cross_contamination_if.rar"),
+            Os: unifiedgosdk.Pointer("monitor"),
+            OsVersion: unifiedgosdk.Pointer("1.12.16"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-21T01:29:46.365Z"),
+            Version: unifiedgosdk.Pointer("2.20.17"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,7 +17,7 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="go" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,23 @@ func main() {
     )
 
     res, err := s.Paymentterm.CreateAccountingPaymentterm(ctx, operations.CreateAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("3de80ca4-dce8-4d75-afbd-c41ae901091f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.430Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +199,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -190,6 +207,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +220,23 @@ func main() {
     )
 
     res, err := s.Paymentterm.PatchAccountingPaymentterm(ctx, operations.PatchAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("f447960a-b7a9-4d75-90a8-fa8880f9c42f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.438Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +328,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```go
 package main
 
@@ -302,6 +336,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +349,23 @@ func main() {
     )
 
     res, err := s.Paymentterm.UpdateAccountingPaymentterm(ctx, operations.UpdateAccountingPaymenttermRequest{
-        AccountingPaymentterm: shared.AccountingPaymentterm{},
+        AccountingPaymentterm: shared.AccountingPaymentterm{
+            Category: shared.CategoryStandard.ToPointer(),
+            CreatedAt: types.MustNewTimeFromString("2021-08-22T22:42:42.265Z"),
+            DayOfMonthDue: unifiedgosdk.Pointer[float64](4.0),
+            Description: unifiedgosdk.Pointer("Cogito pecco eos cultura."),
+            DiscountDayOfMonth: unifiedgosdk.Pointer[float64](13.0),
+            DiscountDays: unifiedgosdk.Pointer[float64](4.0),
+            DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
+            DueDays: unifiedgosdk.Pointer[float64](57.0),
+            DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
+            ID: unifiedgosdk.Pointer("f447960a-b7a9-4d75-90a8-fa8880f9c42f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Net 30"),
+            Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-11T11:57:59.438Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

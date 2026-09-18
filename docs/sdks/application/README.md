@@ -17,7 +17,7 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="go" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,37 @@ func main() {
     )
 
     res, err := s.Application.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
-        AtsApplication: shared.AtsApplication{},
+        AtsApplication: shared.AtsApplication{
+            Answers: []shared.AtsApplicationAnswer{},
+            AppliedAt: types.MustNewTimeFromString("2025-09-08T09:27:07.388Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
+            HiredAt: types.MustNewTimeFromString("2026-04-14T15:24:57.272Z"),
+            ID: unifiedgosdk.Pointer("ca6707d5-3b99-42dc-be8c-1577b0b79aad"),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    Namespace: unifiedgosdk.Pointer("application"),
+                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                    )),
+                },
+            },
+            Offers: []shared.AtsOffer{},
+            OriginalStatus: unifiedgosdk.Pointer("vomica"),
+            OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
+            RejectedAt: types.MustNewTimeFromString("2026-09-08T20:50:36.015Z"),
+            RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
+            Source: unifiedgosdk.Pointer("credo"),
+            Status: shared.AtsApplicationStatusReviewing.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-15T12:09:30.438Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +213,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```go
 package main
 
@@ -190,6 +221,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +234,37 @@ func main() {
     )
 
     res, err := s.Application.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
-        AtsApplication: shared.AtsApplication{},
+        AtsApplication: shared.AtsApplication{
+            Answers: []shared.AtsApplicationAnswer{},
+            AppliedAt: types.MustNewTimeFromString("2025-09-08T09:27:07.400Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
+            HiredAt: types.MustNewTimeFromString("2026-04-14T15:24:57.287Z"),
+            ID: unifiedgosdk.Pointer("3c8c04e1-39f9-4fb3-a362-09282c99620a"),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    Namespace: unifiedgosdk.Pointer("application"),
+                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                    )),
+                },
+            },
+            Offers: []shared.AtsOffer{},
+            OriginalStatus: unifiedgosdk.Pointer("vomica"),
+            OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
+            RejectedAt: types.MustNewTimeFromString("2026-09-08T20:50:36.032Z"),
+            RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
+            Source: unifiedgosdk.Pointer("credo"),
+            Status: shared.AtsApplicationStatusReviewing.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-15T12:09:30.456Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +356,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```go
 package main
 
@@ -302,6 +364,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +377,37 @@ func main() {
     )
 
     res, err := s.Application.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
-        AtsApplication: shared.AtsApplication{},
+        AtsApplication: shared.AtsApplication{
+            Answers: []shared.AtsApplicationAnswer{},
+            AppliedAt: types.MustNewTimeFromString("2025-09-08T09:27:07.400Z"),
+            CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
+            HiredAt: types.MustNewTimeFromString("2026-04-14T15:24:57.287Z"),
+            ID: unifiedgosdk.Pointer("3c8c04e1-39f9-4fb3-a362-09282c99620a"),
+            Metadata: []shared.AtsMetadata{
+                shared.AtsMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.AtsMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    Namespace: unifiedgosdk.Pointer("application"),
+                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
+                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                    )),
+                },
+            },
+            Offers: []shared.AtsOffer{},
+            OriginalStatus: unifiedgosdk.Pointer("vomica"),
+            OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
+            RejectedAt: types.MustNewTimeFromString("2026-09-08T20:50:36.032Z"),
+            RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
+            Source: unifiedgosdk.Pointer("credo"),
+            Status: shared.AtsApplicationStatusReviewing.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-15T12:09:30.456Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

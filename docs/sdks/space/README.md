@@ -17,13 +17,14 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="go" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,14 @@ func main() {
     )
 
     res, err := s.Space.CreateKmsSpace(ctx, operations.CreateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("825eddf8-be9d-422c-8b00-7fd3ff90cc8d"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.354Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +190,14 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +211,14 @@ func main() {
     )
 
     res, err := s.Space.PatchKmsSpace(ctx, operations.PatchKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("c772b3c3-99e4-4c01-b0d6-3486bba10508"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.359Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +310,14 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +331,14 @@ func main() {
     )
 
     res, err := s.Space.UpdateKmsSpace(ctx, operations.UpdateKmsSpaceRequest{
-        KmsSpace: shared.KmsSpace{},
+        KmsSpace: shared.KmsSpace{
+            CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
+            Description: unifiedgosdk.Pointer("Acer."),
+            ID: unifiedgosdk.Pointer("c772b3c3-99e4-4c01-b0d6-3486bba10508"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("into nor afore"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-03T16:39:50.359Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

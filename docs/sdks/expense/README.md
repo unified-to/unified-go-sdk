@@ -17,13 +17,14 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="go" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,44 @@ func main() {
     )
 
     res, err := s.Expense.CreateAccountingExpense(ctx, operations.CreateAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.786Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("3a745810-cda4-4306-a9d6-a2c786ddab8e"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("35319f13-6dc3-40cd-a06a-5f51b29b91ea"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("c2a490ea-0f7f-43fd-a02f-57a8dc0fe850"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.222Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.786Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +220,14 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +241,44 @@ func main() {
     )
 
     res, err := s.Expense.PatchAccountingExpense(ctx, operations.PatchAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("92657900-c101-4575-8c23-e9d0cdae9429"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("9fc52e09-65e4-4420-b04e-90386c127655"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("af94ff9d-aa8b-4328-9607-d97c7fd0ef35"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.227Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +370,14 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +391,44 @@ func main() {
     )
 
     res, err := s.Expense.UpdateAccountingExpense(ctx, operations.UpdateAccountingExpenseRequest{
-        AccountingExpense: shared.AccountingExpense{},
+        AccountingExpense: shared.AccountingExpense{
+            ApprovedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+            Attachments: []shared.AccountingAttachment{
+                shared.AccountingAttachment{
+                    DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
+                    ID: unifiedgosdk.Pointer("92657900-c101-4575-8c23-e9d0cdae9429"),
+                    MimeType: unifiedgosdk.Pointer("annus"),
+                    Name: unifiedgosdk.Pointer("cohibeo"),
+                },
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
+            Currency: unifiedgosdk.Pointer("SSP"),
+            ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
+            ID: unifiedgosdk.Pointer("9fc52e09-65e4-4420-b04e-90386c127655"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("af94ff9d-aa8b-4328-9607-d97c7fd0ef35"),
+                    ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
+                    ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
+                    Notes: unifiedgosdk.Pointer("Degusto conventus defendo valetudo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](2501.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](168.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](3059.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
+            PaymentMethod: unifiedgosdk.Pointer("CASH"),
+            PostedAt: types.MustNewTimeFromString("2021-06-04T05:13:20.227Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
+            Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-09T19:20:05.814Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

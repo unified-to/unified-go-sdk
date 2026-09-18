@@ -25,13 +25,14 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -45,7 +46,22 @@ func main() {
     )
 
     res, err := s.Organization.CreateAdsOrganization(ctx, operations.CreateAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("09562003-d3da-4510-9573-e932b1798d06"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.210Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -81,13 +97,14 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="go" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -101,7 +118,15 @@ func main() {
     )
 
     res, err := s.Organization.CreateRepoOrganization(ctx, operations.CreateRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("b2f2cd49-1d37-4ece-98b2-c8b3597c0ed1"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.998Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -464,13 +489,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -484,7 +510,22 @@ func main() {
     )
 
     res, err := s.Organization.PatchAdsOrganization(ctx, operations.PatchAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("1e7c6471-0081-404e-9c97-a7cd17942a76"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.216Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -521,13 +562,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -541,7 +583,15 @@ func main() {
     )
 
     res, err := s.Organization.PatchRepoOrganization(ctx, operations.PatchRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("2fad646a-5b09-4ea1-ab3f-93bf3135759f"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.999Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -688,13 +738,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -708,7 +759,22 @@ func main() {
     )
 
     res, err := s.Organization.UpdateAdsOrganization(ctx, operations.UpdateAdsOrganizationRequest{
-        AdsOrganization: shared.AdsOrganization{},
+        AdsOrganization: shared.AdsOrganization{
+            AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
+            CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            ID: unifiedgosdk.Pointer("1e7c6471-0081-404e-9c97-a7cd17942a76"),
+            Managers: []shared.AdsManager{
+                shared.AdsManager{
+                    ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
+                    Name: unifiedgosdk.Pointer("Parker, Leannon and Gibson"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("Ankunding Inc"),
+            Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
+            Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-27T03:26:08.216Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -745,13 +811,14 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -765,7 +832,15 @@ func main() {
     )
 
     res, err := s.Organization.UpdateRepoOrganization(ctx, operations.UpdateRepoOrganizationRequest{
-        RepoOrganization: shared.RepoOrganization{},
+        RepoOrganization: shared.RepoOrganization{
+            AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
+            CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
+            Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
+            ID: unifiedgosdk.Pointer("2fad646a-5b09-4ea1-ab3f-93bf3135759f"),
+            Name: unifiedgosdk.Pointer("Denesik - Lemke"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-12T23:50:36.999Z"),
+            WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

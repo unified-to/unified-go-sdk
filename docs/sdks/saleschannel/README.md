@@ -17,7 +17,7 @@ Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="go" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,15 @@ func main() {
     )
 
     res, err := s.Saleschannel.CreateCommerceSaleschannel(ctx, operations.CreateCommerceSaleschannelRequest{
-        CommerceSaleschannel: shared.CommerceSaleschannel{},
+        CommerceSaleschannel: shared.CommerceSaleschannel{
+            Collections: []shared.CommerceReference{},
+            CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
+            Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
+            ID: unifiedgosdk.Pointer("0da3d794-fceb-4204-8a89-b100cba14a32"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-06T18:22:48.559Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +191,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```go
 package main
 
@@ -190,6 +199,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +212,15 @@ func main() {
     )
 
     res, err := s.Saleschannel.PatchCommerceSaleschannel(ctx, operations.PatchCommerceSaleschannelRequest{
-        CommerceSaleschannel: shared.CommerceSaleschannel{},
+        CommerceSaleschannel: shared.CommerceSaleschannel{
+            Collections: []shared.CommerceReference{},
+            CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
+            Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
+            ID: unifiedgosdk.Pointer("b8de9c8f-07e8-45bf-bb38-bccc1a7d4712"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-06T18:22:48.562Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +312,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```go
 package main
 
@@ -302,6 +320,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +333,15 @@ func main() {
     )
 
     res, err := s.Saleschannel.UpdateCommerceSaleschannel(ctx, operations.UpdateCommerceSaleschannelRequest{
-        CommerceSaleschannel: shared.CommerceSaleschannel{},
+        CommerceSaleschannel: shared.CommerceSaleschannel{
+            Collections: []shared.CommerceReference{},
+            CreatedAt: types.MustNewTimeFromString("2021-12-12T06:19:55.421Z"),
+            Description: unifiedgosdk.Pointer("Utroque denuncio solutio."),
+            ID: unifiedgosdk.Pointer("b8de9c8f-07e8-45bf-bb38-bccc1a7d4712"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Slug: unifiedgosdk.Pointer("amiculum-congregatio-suspendo"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-06T18:22:48.562Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

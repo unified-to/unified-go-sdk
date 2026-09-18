@@ -23,7 +23,7 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```go
 package main
 
@@ -31,6 +31,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -43,7 +44,25 @@ func main() {
     )
 
     res, err := s.Campaign.CreateAdsCampaign(ctx, operations.CreateAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.604Z"),
+            ID: unifiedgosdk.Pointer("751e775a-d107-436d-beae-0b6e29a81866"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.349Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.564Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -79,13 +98,14 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="go" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -99,7 +119,23 @@ func main() {
     )
 
     res, err := s.Campaign.CreateMartechCampaign(ctx, operations.CreateMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("429f23e8-28a5-4533-a66d-46de29192df8"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -353,7 +389,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```go
 package main
 
@@ -361,6 +397,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -373,7 +410,25 @@ func main() {
     )
 
     res, err := s.Campaign.PatchAdsCampaign(ctx, operations.PatchAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.668Z"),
+            ID: unifiedgosdk.Pointer("2d02c149-981a-4c0b-b778-b196fd997f46"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.352Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.640Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -410,13 +465,14 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -430,7 +486,23 @@ func main() {
     )
 
     res, err := s.Campaign.PatchMartechCampaign(ctx, operations.PatchMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("2062d840-fdc3-44ac-9ead-6ff30a5209df"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -577,7 +649,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```go
 package main
 
@@ -585,6 +657,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -597,7 +670,25 @@ func main() {
     )
 
     res, err := s.Campaign.UpdateAdsCampaign(ctx, operations.UpdateAdsCampaignRequest{
-        AdsCampaign: shared.AdsCampaign{},
+        AdsCampaign: shared.AdsCampaign{
+            BudgetAmount: unifiedgosdk.Pointer[float64](8743.179536121897),
+            BudgetPeriod: shared.BudgetPeriodMonthly.ToPointer(),
+            Category: unifiedgosdk.Pointer("CREDIT"),
+            CreatedAt: types.MustNewTimeFromString("2022-05-21T08:51:41.868Z"),
+            Currency: unifiedgosdk.Pointer("USD"),
+            EffectiveStatus: shared.EffectiveStatusNotEligible.ToPointer(),
+            EndAt: types.MustNewTimeFromString("2025-05-09T08:59:51.668Z"),
+            ID: unifiedgosdk.Pointer("2d02c149-981a-4c0b-b778-b196fd997f46"),
+            Labels: []string{
+                "comedo",
+            },
+            Name: unifiedgosdk.Pointer("Emard Inc"),
+            StartAt: types.MustNewTimeFromString("2022-07-20T04:53:38.352Z"),
+            Status: shared.AdsCampaignStatusProcessingFailed.ToPointer(),
+            Targeting: &shared.PropertyAdsCampaignTargeting{},
+            TotalSpendAmount: unifiedgosdk.Pointer[float64](2349.8642875347286),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-05T14:24:38.640Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -634,13 +725,14 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -654,7 +746,23 @@ func main() {
     )
 
     res, err := s.Campaign.UpdateMartechCampaign(ctx, operations.UpdateMartechCampaignRequest{
-        MarketingCampaign: shared.MarketingCampaign{},
+        MarketingCampaign: shared.MarketingCampaign{
+            CreatedAt: types.MustNewTimeFromString("2023-08-01T22:29:12.121Z"),
+            FromEmail: unifiedgosdk.Pointer("Nick.Beahan@hotmail.com"),
+            FromName: unifiedgosdk.Pointer("Javier Rempel"),
+            ID: unifiedgosdk.Pointer("2062d840-fdc3-44ac-9ead-6ff30a5209df"),
+            ListIds: []string{
+                "bde5cab9-cf2f-4ed5-adab-b33c88bac5af",
+            },
+            Name: unifiedgosdk.Pointer("Consequatur atqui sustineo."),
+            PreviewText: unifiedgosdk.Pointer("Bellicus tener cinis causa cavus toties."),
+            ReplyToEmail: unifiedgosdk.Pointer("Antwan.Abshire@hotmail.com"),
+            SendAt: types.MustNewTimeFromString("2023-03-28T12:33:25.052Z"),
+            Status: shared.MarketingCampaignStatusSent.ToPointer(),
+            SubjectLine: unifiedgosdk.Pointer("Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio."),
+            Type: unifiedgosdk.Pointer("plaintext"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-17T22:11:31.702Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,7 +17,7 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="go" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,34 @@ func main() {
     )
 
     res, err := s.Purchaseorder.CreateAccountingPurchaseorder(ctx, operations.CreateAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("6857ac2f-1ba0-477a-b3c3-cd29565fac37"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.357Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.326Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +210,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -190,6 +218,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +231,34 @@ func main() {
     )
 
     res, err := s.Purchaseorder.PatchAccountingPurchaseorder(ctx, operations.PatchAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("9877cde7-dc3c-472c-a7a4-dce741132778"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.379Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.327Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +350,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```go
 package main
 
@@ -302,6 +358,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +371,34 @@ func main() {
     )
 
     res, err := s.Purchaseorder.UpdateAccountingPurchaseorder(ctx, operations.UpdateAccountingPurchaseorderRequest{
-        AccountingPurchaseorder: shared.AccountingPurchaseorder{},
+        AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
+                Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
+                City: unifiedgosdk.Pointer("South Annabelleton"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("30337"),
+                Region: unifiedgosdk.Pointer("Nevada"),
+                RegionCode: unifiedgosdk.Pointer("MA"),
+            },
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
+            Currency: unifiedgosdk.Pointer("ZMW"),
+            ID: unifiedgosdk.Pointer("9877cde7-dc3c-472c-a7a4-dce741132778"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            PostedAt: types.MustNewTimeFromString("2025-04-25T04:17:06.379Z"),
+            ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
+                Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
+                City: unifiedgosdk.Pointer("Lake Jaylan"),
+                CountryCode: unifiedgosdk.Pointer("US"),
+                PostalCode: unifiedgosdk.Pointer("99211-6547"),
+                Region: unifiedgosdk.Pointer("North Carolina"),
+                RegionCode: unifiedgosdk.Pointer("ID"),
+            },
+            Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T03:20:57.327Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

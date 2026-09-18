@@ -17,7 +17,7 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="go" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,22 @@ func main() {
     )
 
     res, err := s.Vendorcredit.CreateAccountingVendorcredit(ctx, operations.CreateAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("d6749b72-c100-45c9-9216-28db1dfa1317"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.327Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.261Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +198,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -190,6 +206,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +219,22 @@ func main() {
     )
 
     res, err := s.Vendorcredit.PatchAccountingVendorcredit(ctx, operations.PatchAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("3a284793-58f5-455d-a706-44f8cdcce7fe"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.330Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.265Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +326,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```go
 package main
 
@@ -302,6 +334,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +347,22 @@ func main() {
     )
 
     res, err := s.Vendorcredit.UpdateAccountingVendorcredit(ctx, operations.UpdateAccountingVendorcreditRequest{
-        AccountingVendorcredit: shared.AccountingVendorcredit{},
+        AccountingVendorcredit: shared.AccountingVendorcredit{
+            Applications: []shared.AccountingCreditApplication{},
+            ApplyAmount: unifiedgosdk.Pointer[float64](1.0),
+            BalanceAmount: unifiedgosdk.Pointer[float64](0.0),
+            CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
+            Currency: unifiedgosdk.Pointer("KGS"),
+            DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
+            ID: unifiedgosdk.Pointer("3a284793-58f5-455d-a706-44f8cdcce7fe"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
+            PostedAt: types.MustNewTimeFromString("2023-09-28T16:51:39.330Z"),
+            Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-26T14:46:34.265Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

@@ -17,13 +17,14 @@ Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" example="datastore_record" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -38,9 +39,13 @@ func main() {
 
     res, err := s.Record.CreateDatastoreRecord(ctx, operations.CreateDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
+            CreatedAt: types.MustNewTimeFromString("2022-07-10T04:42:03.076Z"),
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
+            ID: unifiedgosdk.Pointer("b26609f0-b72d-445d-9428-9970e9b15874"),
+            RowNumber: unifiedgosdk.Pointer[float64](33.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-12T17:01:24.453Z"),
         },
         ConnectionID: "<id>",
     })
@@ -186,13 +191,14 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -207,9 +213,13 @@ func main() {
 
     res, err := s.Record.PatchDatastoreRecord(ctx, operations.PatchDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
+            CreatedAt: types.MustNewTimeFromString("2022-07-10T04:42:03.076Z"),
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
+            ID: unifiedgosdk.Pointer("fb61fde8-cee5-49db-9314-28ade618192f"),
+            RowNumber: unifiedgosdk.Pointer[float64](33.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-12T17:01:24.458Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -302,13 +312,14 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -323,9 +334,13 @@ func main() {
 
     res, err := s.Record.UpdateDatastoreRecord(ctx, operations.UpdateDatastoreRecordRequest{
         DatastoreRecord: shared.DatastoreRecord{
+            CreatedAt: types.MustNewTimeFromString("2022-07-10T04:42:03.076Z"),
             Fields: map[string]shared.DatastoreFieldValue{
 
             },
+            ID: unifiedgosdk.Pointer("fb61fde8-cee5-49db-9314-28ade618192f"),
+            RowNumber: unifiedgosdk.Pointer[float64](33.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-12T17:01:24.458Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

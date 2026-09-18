@@ -17,13 +17,14 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="go" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,24 @@ func main() {
     )
 
     res, err := s.Scorecard.CreateAtsScorecard(ctx, operations.CreateAtsScorecardRequest{
-        AtsScorecard: shared.AtsScorecard{},
+        AtsScorecard: shared.AtsScorecard{
+            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
+            ID: unifiedgosdk.Pointer("9e0c36ac-24e1-44ed-868a-3862edded1a4"),
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
+                    Text: "Aliquam.",
+                },
+                shared.AtsScorecardQuestion{
+                    Answer: unifiedgosdk.Pointer("Decretum."),
+                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Text: "Pecto vulpes libero vomer comburo.",
+                },
+            },
+            Recommendation: shared.RecommendationStrongYes.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.232Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +200,14 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +221,24 @@ func main() {
     )
 
     res, err := s.Scorecard.PatchAtsScorecard(ctx, operations.PatchAtsScorecardRequest{
-        AtsScorecard: shared.AtsScorecard{},
+        AtsScorecard: shared.AtsScorecard{
+            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
+            ID: unifiedgosdk.Pointer("447e8ec4-ab91-4d7b-8fbc-3b0e82395379"),
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
+                    Text: "Aliquam.",
+                },
+                shared.AtsScorecardQuestion{
+                    Answer: unifiedgosdk.Pointer("Decretum."),
+                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Text: "Pecto vulpes libero vomer comburo.",
+                },
+            },
+            Recommendation: shared.RecommendationStrongYes.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.234Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +330,14 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +351,24 @@ func main() {
     )
 
     res, err := s.Scorecard.UpdateAtsScorecard(ctx, operations.UpdateAtsScorecardRequest{
-        AtsScorecard: shared.AtsScorecard{},
+        AtsScorecard: shared.AtsScorecard{
+            Comment: unifiedgosdk.Pointer("Maiores enim."),
+            CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
+            ID: unifiedgosdk.Pointer("447e8ec4-ab91-4d7b-8fbc-3b0e82395379"),
+            Questions: []shared.AtsScorecardQuestion{
+                shared.AtsScorecardQuestion{
+                    Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
+                    Text: "Aliquam.",
+                },
+                shared.AtsScorecardQuestion{
+                    Answer: unifiedgosdk.Pointer("Decretum."),
+                    Description: unifiedgosdk.Pointer("Conatus cicuta doloremque statua bonus."),
+                    Text: "Pecto vulpes libero vomer comburo.",
+                },
+            },
+            Recommendation: shared.RecommendationStrongYes.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.234Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

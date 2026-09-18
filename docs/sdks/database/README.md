@@ -17,13 +17,14 @@ Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="go" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" example="datastore_database" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,17 @@ func main() {
     )
 
     res, err := s.Database.CreateDatastoreDatabase(ctx, operations.CreateDatastoreDatabaseRequest{
-        DatastoreDatabase: shared.DatastoreDatabase{},
+        DatastoreDatabase: shared.DatastoreDatabase{
+            CreatedAt: types.MustNewTimeFromString("2019-03-05T14:31:00.223Z"),
+            Description: unifiedgosdk.Pointer("Substantia tantillus coniuratio repellat coerceo amet vito vorago."),
+            ID: unifiedgosdk.Pointer("248dacec-4e52-4609-b2c7-e41d6c6914c7"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Rau - O'Reilly"),
+            Password: unifiedgosdk.Pointer("iYLhYwOHm0NLDvI"),
+            Region: unifiedgosdk.Pointer("France"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-12T03:44:55.015Z"),
+            WebURL: unifiedgosdk.Pointer("https://optimal-signature.name"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +193,14 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +214,17 @@ func main() {
     )
 
     res, err := s.Database.PatchDatastoreDatabase(ctx, operations.PatchDatastoreDatabaseRequest{
-        DatastoreDatabase: shared.DatastoreDatabase{},
+        DatastoreDatabase: shared.DatastoreDatabase{
+            CreatedAt: types.MustNewTimeFromString("2019-03-05T14:31:00.223Z"),
+            Description: unifiedgosdk.Pointer("Substantia tantillus coniuratio repellat coerceo amet vito vorago."),
+            ID: unifiedgosdk.Pointer("0e934f4e-7ae2-4389-b0e9-8d29134505c8"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Rau - O'Reilly"),
+            Password: unifiedgosdk.Pointer("iYLhYwOHm0NLDvI"),
+            Region: unifiedgosdk.Pointer("France"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-12T03:44:55.018Z"),
+            WebURL: unifiedgosdk.Pointer("https://optimal-signature.name"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +316,14 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +337,17 @@ func main() {
     )
 
     res, err := s.Database.UpdateDatastoreDatabase(ctx, operations.UpdateDatastoreDatabaseRequest{
-        DatastoreDatabase: shared.DatastoreDatabase{},
+        DatastoreDatabase: shared.DatastoreDatabase{
+            CreatedAt: types.MustNewTimeFromString("2019-03-05T14:31:00.223Z"),
+            Description: unifiedgosdk.Pointer("Substantia tantillus coniuratio repellat coerceo amet vito vorago."),
+            ID: unifiedgosdk.Pointer("0e934f4e-7ae2-4389-b0e9-8d29134505c8"),
+            IsActive: unifiedgosdk.Pointer(true),
+            Name: unifiedgosdk.Pointer("Rau - O'Reilly"),
+            Password: unifiedgosdk.Pointer("iYLhYwOHm0NLDvI"),
+            Region: unifiedgosdk.Pointer("France"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-12T03:44:55.018Z"),
+            WebURL: unifiedgosdk.Pointer("https://optimal-signature.name"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

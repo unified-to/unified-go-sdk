@@ -17,13 +17,14 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="go" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,36 @@ func main() {
     )
 
     res, err := s.Customer.CreateTicketingCustomer(ctx, operations.CreateTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("d5a3df0f-3326-439e-b316-db3e9a7cf935"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.331Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +212,14 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +233,36 @@ func main() {
     )
 
     res, err := s.Customer.PatchTicketingCustomer(ctx, operations.PatchTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("cd38b12c-f511-4850-b3cd-a33b13dfcdc5"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.337Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +354,14 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +375,36 @@ func main() {
     )
 
     res, err := s.Customer.UpdateTicketingCustomer(ctx, operations.UpdateTicketingCustomerRequest{
-        TicketingCustomer: shared.TicketingCustomer{},
+        TicketingCustomer: shared.TicketingCustomer{
+            CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
+            Emails: []shared.TicketingEmail{
+                shared.TicketingEmail{
+                    Email: "Christian_Windler@gmail.com",
+                    Type: shared.TicketingEmailTypeHome.ToPointer(),
+                },
+            },
+            ID: unifiedgosdk.Pointer("cd38b12c-f511-4850-b3cd-a33b13dfcdc5"),
+            Name: unifiedgosdk.Pointer("Christian Windler"),
+            Tags: []string{
+                "casso",
+                "peccatus",
+            },
+            Telephones: []shared.TicketingTelephone{
+                shared.TicketingTelephone{
+                    Telephone: "(532) 242-0482",
+                    Type: shared.TicketingTelephoneTypeOther.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(826) 283-7431",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+                shared.TicketingTelephone{
+                    Telephone: "(483) 314-6826",
+                    Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
+                },
+            },
+            UpdatedAt: types.MustNewTimeFromString("2026-05-04T08:35:36.337Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

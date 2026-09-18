@@ -19,13 +19,14 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="go" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -40,7 +41,28 @@ func main() {
 
     res, err := s.Package.CreateAssessmentPackage(ctx, operations.CreateAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            Type: shared.AssessmentPackageTypeReferenceCheck,
+            Aliases: []string{
+                "quia",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T19:48:39.433Z"),
+            Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
+            HasRedirectURL: unifiedgosdk.Pointer(true),
+            HasTargetURL: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("b5c3a4cc-2da0-49d3-aa18-cbd03d5213ce"),
+            InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
+            IntegrationTypes: []string{
+                "viridis",
+            },
+            MaxScore: unifiedgosdk.Pointer[float64](22.0),
+            Name: unifiedgosdk.Pointer("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus."),
+            NeedsIPAddress: unifiedgosdk.Pointer(true),
+            Parameters: []shared.AssessmentParameter{},
+            Regions: []shared.AssessmentPackageRegion{},
+            Tags: []string{
+                "clamo",
+            },
+            Type: shared.AssessmentPackageTypeVideoInterview,
+            UpdatedAt: types.MustNewTimeFromString("2023-09-18T05:42:09.559Z"),
         },
         ConnectionID: "<id>",
     })
@@ -295,13 +317,14 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -316,7 +339,28 @@ func main() {
 
     res, err := s.Package.PatchAssessmentPackage(ctx, operations.PatchAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            Type: shared.AssessmentPackageTypeBackgroundCheck,
+            Aliases: []string{
+                "quia",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T19:48:39.433Z"),
+            Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
+            HasRedirectURL: unifiedgosdk.Pointer(true),
+            HasTargetURL: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("6632ab60-bde2-454d-a228-59b2e47451f4"),
+            InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
+            IntegrationTypes: []string{
+                "viridis",
+            },
+            MaxScore: unifiedgosdk.Pointer[float64](22.0),
+            Name: unifiedgosdk.Pointer("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus."),
+            NeedsIPAddress: unifiedgosdk.Pointer(true),
+            Parameters: []shared.AssessmentParameter{},
+            Regions: []shared.AssessmentPackageRegion{},
+            Tags: []string{
+                "clamo",
+            },
+            Type: shared.AssessmentPackageTypeVideoInterview,
+            UpdatedAt: types.MustNewTimeFromString("2023-09-18T05:42:09.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -409,13 +453,14 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -430,7 +475,28 @@ func main() {
 
     res, err := s.Package.UpdateAssessmentPackage(ctx, operations.UpdateAssessmentPackageRequest{
         AssessmentPackage: shared.AssessmentPackage{
-            Type: shared.AssessmentPackageTypeOther,
+            Aliases: []string{
+                "quia",
+            },
+            CreatedAt: types.MustNewTimeFromString("2022-11-18T19:48:39.433Z"),
+            Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
+            HasRedirectURL: unifiedgosdk.Pointer(true),
+            HasTargetURL: unifiedgosdk.Pointer(false),
+            ID: unifiedgosdk.Pointer("6632ab60-bde2-454d-a228-59b2e47451f4"),
+            InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
+            IntegrationTypes: []string{
+                "viridis",
+            },
+            MaxScore: unifiedgosdk.Pointer[float64](22.0),
+            Name: unifiedgosdk.Pointer("Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus."),
+            NeedsIPAddress: unifiedgosdk.Pointer(true),
+            Parameters: []shared.AssessmentParameter{},
+            Regions: []shared.AssessmentPackageRegion{},
+            Tags: []string{
+                "clamo",
+            },
+            Type: shared.AssessmentPackageTypeVideoInterview,
+            UpdatedAt: types.MustNewTimeFromString("2023-09-18T05:42:09.562Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

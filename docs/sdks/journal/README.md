@@ -17,7 +17,7 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="go" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,19 @@ func main() {
     )
 
     res, err := s.Journal.CreateAccountingJournal(ctx, operations.CreateAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("3d0b7527-bb53-4d13-9fe9-a4e3437f68e6"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.678Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.882Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +195,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```go
 package main
 
@@ -190,6 +203,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +216,19 @@ func main() {
     )
 
     res, err := s.Journal.PatchAccountingJournal(ctx, operations.PatchAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("08ebd0be-97e9-4a3d-b153-e0a6d981d560"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.686Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.885Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +320,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```go
 package main
 
@@ -302,6 +328,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +341,19 @@ func main() {
     )
 
     res, err := s.Journal.UpdateAccountingJournal(ctx, operations.UpdateAccountingJournalRequest{
-        AccountingJournal: shared.AccountingJournal{},
+        AccountingJournal: shared.AccountingJournal{
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
+            Currency: unifiedgosdk.Pointer("FKP"),
+            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
+            ID: unifiedgosdk.Pointer("08ebd0be-97e9-4a3d-b153-e0a6d981d560"),
+            PostedAt: types.MustNewTimeFromString("2023-10-19T02:25:22.686Z"),
+            Reference: unifiedgosdk.Pointer("ullam"),
+            Source: unifiedgosdk.Pointer("crustulum"),
+            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-01T11:25:54.885Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

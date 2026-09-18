@@ -17,13 +17,14 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="go" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -37,7 +38,96 @@ func main() {
     )
 
     res, err := s.Content.CreateLmsContent(ctx, operations.CreateLmsContentRequest{
-        LmsContent: shared.LmsContent{},
+        LmsContent: shared.LmsContent{
+            Categories: []string{
+                "territo",
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-10-22T22:30:50.963Z"),
+            Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
+            Difficulty: unifiedgosdk.Pointer("Beginner"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
+            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
+            ID: unifiedgosdk.Pointer("66cad5f0-7b3f-4edb-b8ce-40e7f385b6fa"),
+            Instructors: []shared.LmsReference{
+                shared.LmsReference{
+                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
+                    Name: unifiedgosdk.Pointer("Winston Ferry"),
+                },
+            },
+            IsActive: unifiedgosdk.Pointer(true),
+            Languages: []string{
+                "despecto",
+                "suppellex",
+            },
+            Localizations: []shared.LmsContentLocalization{
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("validus"),
+                },
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Callide."),
+                    Language: unifiedgosdk.Pointer("fr"),
+                    Name: unifiedgosdk.Pointer("crux"),
+                },
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer."),
+                    Description: unifiedgosdk.Pointer("Venia aeternus tandem spargo."),
+                    Languages: []string{
+                        "zu",
+                        "ba",
+                    },
+                    Name: unifiedgosdk.Pointer("subiungo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/2056/3712?lock=5644845642923518"),
+                    Type: shared.LmsMediaTypeOther.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2593/1553?lock=8591263400111785"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas."),
+                    Description: unifiedgosdk.Pointer("Comedo valde caste combibo."),
+                    Languages: []string{
+                        "it",
+                        "hu",
+                    },
+                    Name: unifiedgosdk.Pointer("beneficium"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/pNFr1/2597/885"),
+                    Type: shared.LmsMediaTypeWeb.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3597/239?lock=7142808124990633"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus."),
+                    Description: unifiedgosdk.Pointer("Tunc barba decens."),
+                    Languages: []string{
+                        "bn",
+                        "yo",
+                    },
+                    Name: unifiedgosdk.Pointer("qui"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/1375/3377?lock=6601832177607674"),
+                    Type: shared.LmsMediaTypeImage.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ut"),
+            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
+            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
+            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            Skills: []string{
+                "trucido",
+            },
+            SortOrder: unifiedgosdk.Pointer[float64](3.0),
+            Subjects: []shared.LmsSubject{
+                shared.LmsSubject{
+                    Name: unifiedgosdk.Pointer("tibi"),
+                    Rank: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Tags: []string{
+                "dens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-09-23T11:33:10.875Z"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,13 +272,14 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -202,7 +293,96 @@ func main() {
     )
 
     res, err := s.Content.PatchLmsContent(ctx, operations.PatchLmsContentRequest{
-        LmsContent: shared.LmsContent{},
+        LmsContent: shared.LmsContent{
+            Categories: []string{
+                "territo",
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-10-22T22:30:50.963Z"),
+            Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
+            Difficulty: unifiedgosdk.Pointer("Beginner"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
+            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
+            ID: unifiedgosdk.Pointer("85cb2e02-5568-4bc8-b95f-ec6ae95ef317"),
+            Instructors: []shared.LmsReference{
+                shared.LmsReference{
+                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
+                    Name: unifiedgosdk.Pointer("Winston Ferry"),
+                },
+            },
+            IsActive: unifiedgosdk.Pointer(true),
+            Languages: []string{
+                "despecto",
+                "suppellex",
+            },
+            Localizations: []shared.LmsContentLocalization{
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("validus"),
+                },
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Callide."),
+                    Language: unifiedgosdk.Pointer("fr"),
+                    Name: unifiedgosdk.Pointer("crux"),
+                },
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer."),
+                    Description: unifiedgosdk.Pointer("Venia aeternus tandem spargo."),
+                    Languages: []string{
+                        "zu",
+                        "ba",
+                    },
+                    Name: unifiedgosdk.Pointer("subiungo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/2056/3712?lock=5644845642923518"),
+                    Type: shared.LmsMediaTypeOther.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2593/1553?lock=8591263400111785"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas."),
+                    Description: unifiedgosdk.Pointer("Comedo valde caste combibo."),
+                    Languages: []string{
+                        "it",
+                        "hu",
+                    },
+                    Name: unifiedgosdk.Pointer("beneficium"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/pNFr1/2597/885"),
+                    Type: shared.LmsMediaTypeWeb.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3597/239?lock=7142808124990633"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus."),
+                    Description: unifiedgosdk.Pointer("Tunc barba decens."),
+                    Languages: []string{
+                        "bn",
+                        "yo",
+                    },
+                    Name: unifiedgosdk.Pointer("qui"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/1375/3377?lock=6601832177607674"),
+                    Type: shared.LmsMediaTypeImage.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ut"),
+            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
+            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
+            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            Skills: []string{
+                "trucido",
+            },
+            SortOrder: unifiedgosdk.Pointer[float64](3.0),
+            Subjects: []shared.LmsSubject{
+                shared.LmsSubject{
+                    Name: unifiedgosdk.Pointer("tibi"),
+                    Rank: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Tags: []string{
+                "dens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-09-23T11:33:10.882Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,13 +474,14 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```go
 package main
 
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
@@ -314,7 +495,96 @@ func main() {
     )
 
     res, err := s.Content.UpdateLmsContent(ctx, operations.UpdateLmsContentRequest{
-        LmsContent: shared.LmsContent{},
+        LmsContent: shared.LmsContent{
+            Categories: []string{
+                "territo",
+            },
+            CreatedAt: types.MustNewTimeFromString("2020-10-22T22:30:50.963Z"),
+            Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
+            Difficulty: unifiedgosdk.Pointer("Beginner"),
+            DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
+            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
+            ID: unifiedgosdk.Pointer("85cb2e02-5568-4bc8-b95f-ec6ae95ef317"),
+            Instructors: []shared.LmsReference{
+                shared.LmsReference{
+                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
+                    Name: unifiedgosdk.Pointer("Winston Ferry"),
+                },
+            },
+            IsActive: unifiedgosdk.Pointer(true),
+            Languages: []string{
+                "despecto",
+                "suppellex",
+            },
+            Localizations: []shared.LmsContentLocalization{
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("validus"),
+                },
+                shared.LmsContentLocalization{
+                    Description: unifiedgosdk.Pointer("Callide."),
+                    Language: unifiedgosdk.Pointer("fr"),
+                    Name: unifiedgosdk.Pointer("crux"),
+                },
+            },
+            Media: []shared.LmsMedia{
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer."),
+                    Description: unifiedgosdk.Pointer("Venia aeternus tandem spargo."),
+                    Languages: []string{
+                        "zu",
+                        "ba",
+                    },
+                    Name: unifiedgosdk.Pointer("subiungo"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/2056/3712?lock=5644845642923518"),
+                    Type: shared.LmsMediaTypeOther.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/2593/1553?lock=8591263400111785"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas."),
+                    Description: unifiedgosdk.Pointer("Comedo valde caste combibo."),
+                    Languages: []string{
+                        "it",
+                        "hu",
+                    },
+                    Name: unifiedgosdk.Pointer("beneficium"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://picsum.photos/seed/pNFr1/2597/885"),
+                    Type: shared.LmsMediaTypeWeb.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3597/239?lock=7142808124990633"),
+                },
+                shared.LmsMedia{
+                    Content: unifiedgosdk.Pointer("Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus."),
+                    Description: unifiedgosdk.Pointer("Tunc barba decens."),
+                    Languages: []string{
+                        "bn",
+                        "yo",
+                    },
+                    Name: unifiedgosdk.Pointer("qui"),
+                    ThumbnailURL: unifiedgosdk.Pointer("https://loremflickr.com/1375/3377?lock=6601832177607674"),
+                    Type: shared.LmsMediaTypeImage.ToPointer(),
+                    URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
+                },
+            },
+            Name: unifiedgosdk.Pointer("ut"),
+            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
+            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
+            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            Skills: []string{
+                "trucido",
+            },
+            SortOrder: unifiedgosdk.Pointer[float64](3.0),
+            Subjects: []shared.LmsSubject{
+                shared.LmsSubject{
+                    Name: unifiedgosdk.Pointer("tibi"),
+                    Rank: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Tags: []string{
+                "dens",
+            },
+            UpdatedAt: types.MustNewTimeFromString("2022-09-23T11:33:10.882Z"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })

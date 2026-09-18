@@ -17,7 +17,7 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="go" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```go
 package main
 
@@ -25,6 +25,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -37,7 +38,30 @@ func main() {
     )
 
     res, err := s.Bill.CreateAccountingBill(ctx, operations.CreateAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("2328cc2a-4dcc-4ad4-98f1-9868828bc615"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.182Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.552Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
     })
     if err != nil {
@@ -182,7 +206,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="go" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```go
 package main
 
@@ -190,6 +214,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -202,7 +227,30 @@ func main() {
     )
 
     res, err := s.Bill.PatchAccountingBill(ctx, operations.PatchAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("b02281eb-9865-42a4-959a-cfbd3a254545"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.207Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.582Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
@@ -294,7 +342,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="go" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```go
 package main
 
@@ -302,6 +350,7 @@ import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -314,7 +363,30 @@ func main() {
     )
 
     res, err := s.Bill.UpdateAccountingBill(ctx, operations.UpdateAccountingBillRequest{
-        AccountingBill: shared.AccountingBill{},
+        AccountingBill: shared.AccountingBill{
+            Attachments: []shared.AccountingAttachment{},
+            BillNumber: unifiedgosdk.Pointer("vitae"),
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2019-08-08T23:03:14.104Z"),
+            Currency: unifiedgosdk.Pointer("AUD"),
+            DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
+            DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
+            ExtendedNotes: []shared.AccountingExtendedNote{},
+            ID: unifiedgosdk.Pointer("b02281eb-9865-42a4-959a-cfbd3a254545"),
+            Lineitems: []shared.AccountingLineitem{},
+            Metadata: []shared.AccountingMetadata{},
+            Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
+            PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
+            Payments: []shared.AccountingPaymentReference{},
+            PostedAt: types.MustNewTimeFromString("2024-04-04T08:02:45.207Z"),
+            Send: unifiedgosdk.Pointer(true),
+            Status: shared.AccountingBillStatusDeleted.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](0.0),
+            Term: shared.TermNet10.ToPointer(),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-29T01:44:16.582Z"),
+            URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
+        },
         ConnectionID: "<id>",
         ID: "<id>",
     })
