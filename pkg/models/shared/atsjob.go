@@ -93,6 +93,7 @@ type AtsJob struct {
 	Remote        *bool            `json:"remote,omitempty"`
 	Skills        []string         `json:"skills,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
+	Summary       *string          `json:"summary,omitempty"`
 	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
 	UserID        *string          `json:"user_id,omitempty"`
 }
@@ -295,6 +296,13 @@ func (a *AtsJob) GetStatus() *AtsJobStatus {
 		return nil
 	}
 	return a.Status
+}
+
+func (a *AtsJob) GetSummary() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Summary
 }
 
 func (a *AtsJob) GetUpdatedAt() *time.Time {

@@ -58,6 +58,7 @@ type AtsApplication struct {
 	RejectedReason    *string                `json:"rejected_reason,omitempty"`
 	Source            *string                `json:"source,omitempty"`
 	Status            *AtsApplicationStatus  `json:"status,omitempty"`
+	Summary           *string                `json:"summary,omitempty"`
 	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
 	UserID            *string                `json:"user_id,omitempty"`
 }
@@ -183,6 +184,13 @@ func (a *AtsApplication) GetStatus() *AtsApplicationStatus {
 		return nil
 	}
 	return a.Status
+}
+
+func (a *AtsApplication) GetSummary() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Summary
 }
 
 func (a *AtsApplication) GetUpdatedAt() *time.Time {

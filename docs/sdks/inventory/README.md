@@ -40,7 +40,7 @@ func main() {
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.500Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-25T13:37:31.830Z"),
         },
         ConnectionID: "<id>",
     })
@@ -209,7 +209,7 @@ func main() {
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.505Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-25T13:37:31.836Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -325,7 +325,7 @@ func main() {
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-24T20:25:04.505Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-25T13:37:31.836Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

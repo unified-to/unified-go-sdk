@@ -40,6 +40,7 @@ const (
 	PatchAtsJobQueryParamFieldsMetadata               PatchAtsJobQueryParamFields = "metadata"
 	PatchAtsJobQueryParamFieldsUserID                 PatchAtsJobQueryParamFields = "user_id"
 	PatchAtsJobQueryParamFieldsIndustry               PatchAtsJobQueryParamFields = "industry"
+	PatchAtsJobQueryParamFieldsSummary                PatchAtsJobQueryParamFields = "summary"
 	PatchAtsJobQueryParamFieldsRaw                    PatchAtsJobQueryParamFields = "raw"
 )
 
@@ -107,6 +108,8 @@ func (e *PatchAtsJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "industry":
+		fallthrough
+	case "summary":
 		fallthrough
 	case "raw":
 		*e = PatchAtsJobQueryParamFields(v)

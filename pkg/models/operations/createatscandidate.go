@@ -39,6 +39,7 @@ const (
 	CreateAtsCandidateQueryParamFieldsSkills             CreateAtsCandidateQueryParamFields = "skills"
 	CreateAtsCandidateQueryParamFieldsJobIds             CreateAtsCandidateQueryParamFields = "job_ids"
 	CreateAtsCandidateQueryParamFieldsMetadata           CreateAtsCandidateQueryParamFields = "metadata"
+	CreateAtsCandidateQueryParamFieldsSummary            CreateAtsCandidateQueryParamFields = "summary"
 	CreateAtsCandidateQueryParamFieldsRaw                CreateAtsCandidateQueryParamFields = "raw"
 )
 
@@ -104,6 +105,8 @@ func (e *CreateAtsCandidateQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "job_ids":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "summary":
 		fallthrough
 	case "raw":
 		*e = CreateAtsCandidateQueryParamFields(v)

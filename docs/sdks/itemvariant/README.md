@@ -43,7 +43,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance"),
             Height: unifiedgosdk.Pointer[float64](52.0),
-            ID: unifiedgosdk.Pointer("8416af0b-cf3d-4cac-ae89-2696be5b9cb1"),
+            ID: unifiedgosdk.Pointer("618b9cb5-8c37-4b36-9b2b-e045d8975715"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -52,10 +52,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Calcar delibero cursim summisse."),
                     Height: unifiedgosdk.Pointer[float64](394.0),
-                    ID: unifiedgosdk.Pointer("b5a07fec-9e6b-4b62-b5e0-772dbc1a1824"),
+                    ID: unifiedgosdk.Pointer("ae4a1d86-3fb7-4ce8-8e90-c39ebe5a2530"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("2b880eaa-8ee8-4b22-bb06-d0275a1abfda"),
+                            ID: unifiedgosdk.Pointer("3f9e367f-1476-4682-b8cf-83443f762dd0"),
                             Slug: unifiedgosdk.Pointer("illo"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quia",
@@ -70,10 +70,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Civitas acies substantia tergo."),
                     Height: unifiedgosdk.Pointer[float64](351.0),
-                    ID: unifiedgosdk.Pointer("403b1268-62e0-43a9-858b-3c860cb5f4af"),
+                    ID: unifiedgosdk.Pointer("64dc46c4-476e-4488-8824-df1948249132"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8d4267de-b75b-4b4d-9559-5170753974d8"),
+                            ID: unifiedgosdk.Pointer("ddd56205-a20a-4da8-ac42-3e91d0bb516b"),
                             Slug: unifiedgosdk.Pointer("libero"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "capitulus",
@@ -94,7 +94,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5a0f2126-833c-4f80-a95b-0732e64b1a17"),
+                    ID: unifiedgosdk.Pointer("9afdbab5-7438-4811-b9b0-6a4cb735e369"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -105,7 +105,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Keyboard"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("9d83f0c7-ab4f-4b9a-84b6-bf4f412b89ab"),
+                    ID: unifiedgosdk.Pointer("a9481e93-92ce-4a86-8d75-6ea96db69c6a"),
                     Name: "Steel",
                     Position: unifiedgosdk.Pointer[float64](97.0),
                     Values: []string{
@@ -141,7 +141,7 @@ func main() {
                 "custodia",
             },
             TotalStock: unifiedgosdk.Pointer[float64](929.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-05-24T10:27:22.168Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-05-25T01:46:03.416Z"),
             Weight: unifiedgosdk.Pointer[float64](61.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](26.0),
@@ -316,7 +316,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance"),
             Height: unifiedgosdk.Pointer[float64](52.0),
-            ID: unifiedgosdk.Pointer("a3f4a1df-db95-4eb0-9340-98431a0eda32"),
+            ID: unifiedgosdk.Pointer("eadbfffd-73f1-4b0c-a9d2-863bc87199e3"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -325,10 +325,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Calcar delibero cursim summisse."),
                     Height: unifiedgosdk.Pointer[float64](394.0),
-                    ID: unifiedgosdk.Pointer("45b5819d-5201-4f78-875b-425d88e840a2"),
+                    ID: unifiedgosdk.Pointer("c820a804-1b36-4c9a-8287-1709262a432b"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("e1c22f25-5fed-4b3a-bb05-e07b0fc0472f"),
+                            ID: unifiedgosdk.Pointer("a522f4d0-7438-4f9e-8258-83396f447e36"),
                             Slug: unifiedgosdk.Pointer("illo"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quia",
@@ -343,10 +343,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Civitas acies substantia tergo."),
                     Height: unifiedgosdk.Pointer[float64](351.0),
-                    ID: unifiedgosdk.Pointer("d05589f4-80a9-453c-a3ae-68a7d8c4471c"),
+                    ID: unifiedgosdk.Pointer("0503d1dd-5f34-487e-853c-4ff521c430e1"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("b58cb202-f9a7-4ed3-82e8-5daad5caac05"),
+                            ID: unifiedgosdk.Pointer("67a03d22-fb35-4d92-be27-db0e33f3ada6"),
                             Slug: unifiedgosdk.Pointer("libero"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "capitulus",
@@ -367,7 +367,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5e5e7b6c-3dc3-41c6-bac7-25b661043f80"),
+                    ID: unifiedgosdk.Pointer("f84ce569-8d6b-4c86-9c94-17b304106466"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -378,7 +378,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Keyboard"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("9d2e4b67-7618-41cc-84ad-d0bef5e90c26"),
+                    ID: unifiedgosdk.Pointer("ecc3d943-9805-4b90-ad6b-73fbdb1aabe3"),
                     Name: "Steel",
                     Position: unifiedgosdk.Pointer[float64](97.0),
                     Values: []string{
@@ -414,7 +414,7 @@ func main() {
                 "custodia",
             },
             TotalStock: unifiedgosdk.Pointer[float64](929.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-05-24T10:27:22.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-05-25T01:46:03.440Z"),
             Weight: unifiedgosdk.Pointer[float64](61.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](26.0),
@@ -536,7 +536,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-01-20T13:49:12.968Z"),
             Description: unifiedgosdk.Pointer("Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance"),
             Height: unifiedgosdk.Pointer[float64](52.0),
-            ID: unifiedgosdk.Pointer("a3f4a1df-db95-4eb0-9340-98431a0eda32"),
+            ID: unifiedgosdk.Pointer("eadbfffd-73f1-4b0c-a9d2-863bc87199e3"),
             IsActive: unifiedgosdk.Pointer(false),
             IsFeatured: unifiedgosdk.Pointer(false),
             IsVisible: unifiedgosdk.Pointer(false),
@@ -545,10 +545,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Calcar delibero cursim summisse."),
                     Height: unifiedgosdk.Pointer[float64](394.0),
-                    ID: unifiedgosdk.Pointer("45b5819d-5201-4f78-875b-425d88e840a2"),
+                    ID: unifiedgosdk.Pointer("c820a804-1b36-4c9a-8287-1709262a432b"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("e1c22f25-5fed-4b3a-bb05-e07b0fc0472f"),
+                            ID: unifiedgosdk.Pointer("a522f4d0-7438-4f9e-8258-83396f447e36"),
                             Slug: unifiedgosdk.Pointer("illo"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "quia",
@@ -563,10 +563,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Civitas acies substantia tergo."),
                     Height: unifiedgosdk.Pointer[float64](351.0),
-                    ID: unifiedgosdk.Pointer("d05589f4-80a9-453c-a3ae-68a7d8c4471c"),
+                    ID: unifiedgosdk.Pointer("0503d1dd-5f34-487e-853c-4ff521c430e1"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("b58cb202-f9a7-4ed3-82e8-5daad5caac05"),
+                            ID: unifiedgosdk.Pointer("67a03d22-fb35-4d92-be27-db0e33f3ada6"),
                             Slug: unifiedgosdk.Pointer("libero"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "capitulus",
@@ -587,7 +587,7 @@ func main() {
                         },
                     )),
                     Format: shared.CommerceMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5e5e7b6c-3dc3-41c6-bac7-25b661043f80"),
+                    ID: unifiedgosdk.Pointer("f84ce569-8d6b-4c86-9c94-17b304106466"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
@@ -598,7 +598,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Keyboard"),
             Options: []shared.CommerceItemOption{
                 shared.CommerceItemOption{
-                    ID: unifiedgosdk.Pointer("9d2e4b67-7618-41cc-84ad-d0bef5e90c26"),
+                    ID: unifiedgosdk.Pointer("ecc3d943-9805-4b90-ad6b-73fbdb1aabe3"),
                     Name: "Steel",
                     Position: unifiedgosdk.Pointer[float64](97.0),
                     Values: []string{
@@ -634,7 +634,7 @@ func main() {
                 "custodia",
             },
             TotalStock: unifiedgosdk.Pointer[float64](929.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-05-24T10:27:22.185Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-05-25T01:46:03.440Z"),
             Weight: unifiedgosdk.Pointer[float64](61.0),
             WeightUnit: shared.CommerceItemvariantWeightUnitOz.ToPointer(),
             Width: unifiedgosdk.Pointer[float64](26.0),

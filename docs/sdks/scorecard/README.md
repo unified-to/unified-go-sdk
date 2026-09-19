@@ -41,7 +41,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("9e0c36ac-24e1-44ed-868a-3862edded1a4"),
+            ID: unifiedgosdk.Pointer("3d0136f9-a469-4411-8579-0e7797c26da0"),
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -54,7 +54,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.232Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T17:20:25.330Z"),
         },
         ConnectionID: "<id>",
     })
@@ -224,7 +224,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("447e8ec4-ab91-4d7b-8fbc-3b0e82395379"),
+            ID: unifiedgosdk.Pointer("4d13b04e-1874-4ed1-bb99-814c287a4137"),
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -237,7 +237,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.234Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T17:20:25.334Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -354,7 +354,7 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("447e8ec4-ab91-4d7b-8fbc-3b0e82395379"),
+            ID: unifiedgosdk.Pointer("4d13b04e-1874-4ed1-bb99-814c287a4137"),
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -367,7 +367,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-27T11:26:57.234Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-27T17:20:25.334Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

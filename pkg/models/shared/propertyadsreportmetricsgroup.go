@@ -224,22 +224,23 @@ func (e *PropertyAdsReportMetricsGroupStatus) IsExact() bool {
 type PropertyAdsReportMetricsGroupType string
 
 const (
-	PropertyAdsReportMetricsGroupTypeText       PropertyAdsReportMetricsGroupType = "TEXT"
-	PropertyAdsReportMetricsGroupTypeImage      PropertyAdsReportMetricsGroupType = "IMAGE"
-	PropertyAdsReportMetricsGroupTypeVideo      PropertyAdsReportMetricsGroupType = "VIDEO"
-	PropertyAdsReportMetricsGroupTypeResponsive PropertyAdsReportMetricsGroupType = "RESPONSIVE"
-	PropertyAdsReportMetricsGroupTypeShopping   PropertyAdsReportMetricsGroupType = "SHOPPING"
-	PropertyAdsReportMetricsGroupTypeApp        PropertyAdsReportMetricsGroupType = "APP"
-	PropertyAdsReportMetricsGroupTypeCall       PropertyAdsReportMetricsGroupType = "CALL"
-	PropertyAdsReportMetricsGroupTypeCarousel   PropertyAdsReportMetricsGroupType = "CAROUSEL"
-	PropertyAdsReportMetricsGroupTypeSocial     PropertyAdsReportMetricsGroupType = "SOCIAL"
-	PropertyAdsReportMetricsGroupTypeDisplay    PropertyAdsReportMetricsGroupType = "DISPLAY"
-	PropertyAdsReportMetricsGroupTypeSearch     PropertyAdsReportMetricsGroupType = "SEARCH"
-	PropertyAdsReportMetricsGroupTypeAudio      PropertyAdsReportMetricsGroupType = "AUDIO"
-	PropertyAdsReportMetricsGroupTypeYoutube    PropertyAdsReportMetricsGroupType = "YOUTUBE"
-	PropertyAdsReportMetricsGroupTypeNative     PropertyAdsReportMetricsGroupType = "NATIVE"
-	PropertyAdsReportMetricsGroupTypeCtv        PropertyAdsReportMetricsGroupType = "CTV"
-	PropertyAdsReportMetricsGroupTypeDooh       PropertyAdsReportMetricsGroupType = "DOOH"
+	PropertyAdsReportMetricsGroupTypeText           PropertyAdsReportMetricsGroupType = "TEXT"
+	PropertyAdsReportMetricsGroupTypeImage          PropertyAdsReportMetricsGroupType = "IMAGE"
+	PropertyAdsReportMetricsGroupTypeVideo          PropertyAdsReportMetricsGroupType = "VIDEO"
+	PropertyAdsReportMetricsGroupTypeResponsive     PropertyAdsReportMetricsGroupType = "RESPONSIVE"
+	PropertyAdsReportMetricsGroupTypeShopping       PropertyAdsReportMetricsGroupType = "SHOPPING"
+	PropertyAdsReportMetricsGroupTypeApp            PropertyAdsReportMetricsGroupType = "APP"
+	PropertyAdsReportMetricsGroupTypeCall           PropertyAdsReportMetricsGroupType = "CALL"
+	PropertyAdsReportMetricsGroupTypeCarousel       PropertyAdsReportMetricsGroupType = "CAROUSEL"
+	PropertyAdsReportMetricsGroupTypeSocial         PropertyAdsReportMetricsGroupType = "SOCIAL"
+	PropertyAdsReportMetricsGroupTypeDisplay        PropertyAdsReportMetricsGroupType = "DISPLAY"
+	PropertyAdsReportMetricsGroupTypeSearch         PropertyAdsReportMetricsGroupType = "SEARCH"
+	PropertyAdsReportMetricsGroupTypeAudio          PropertyAdsReportMetricsGroupType = "AUDIO"
+	PropertyAdsReportMetricsGroupTypeYoutube        PropertyAdsReportMetricsGroupType = "YOUTUBE"
+	PropertyAdsReportMetricsGroupTypeNative         PropertyAdsReportMetricsGroupType = "NATIVE"
+	PropertyAdsReportMetricsGroupTypeCtv            PropertyAdsReportMetricsGroupType = "CTV"
+	PropertyAdsReportMetricsGroupTypeDooh           PropertyAdsReportMetricsGroupType = "DOOH"
+	PropertyAdsReportMetricsGroupTypePerformanceMax PropertyAdsReportMetricsGroupType = "PERFORMANCE_MAX"
 )
 
 func (e PropertyAdsReportMetricsGroupType) ToPointer() *PropertyAdsReportMetricsGroupType {
@@ -250,7 +251,7 @@ func (e PropertyAdsReportMetricsGroupType) ToPointer() *PropertyAdsReportMetrics
 func (e *PropertyAdsReportMetricsGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

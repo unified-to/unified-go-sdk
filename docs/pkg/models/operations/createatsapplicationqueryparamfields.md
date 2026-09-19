@@ -32,4 +32,5 @@ value := operations.CreateAtsApplicationQueryParamFieldsID
 | `CreateAtsApplicationQueryParamFieldsUserID`            | user_id                                                 |
 | `CreateAtsApplicationQueryParamFieldsMetadata`          | metadata                                                |
 | `CreateAtsApplicationQueryParamFieldsOriginalSubstatus` | original_substatus                                      |
+| `CreateAtsApplicationQueryParamFieldsSummary`           | summary                                                 |
 | `CreateAtsApplicationQueryParamFieldsRaw`               | raw                                                     |

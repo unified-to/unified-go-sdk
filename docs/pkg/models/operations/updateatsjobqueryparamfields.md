@@ -43,4 +43,5 @@ value := operations.UpdateAtsJobQueryParamFieldsID
 | `UpdateAtsJobQueryParamFieldsMetadata`               | metadata                                             |
 | `UpdateAtsJobQueryParamFieldsUserID`                 | user_id                                              |
 | `UpdateAtsJobQueryParamFieldsIndustry`               | industry                                             |
+| `UpdateAtsJobQueryParamFieldsSummary`                | summary                                              |
 | `UpdateAtsJobQueryParamFieldsRaw`                    | raw                                                  |

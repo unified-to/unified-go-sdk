@@ -40,12 +40,12 @@ func main() {
     res, err := s.Transaction.CreateAccountingTransaction(ctx, operations.CreateAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("d7a8841f-6d3f-46bb-a65b-dee4a8b2213e"),
+            ID: unifiedgosdk.Pointer("526a7f5e-dc74-4e09-8629-ab996345f9c8"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("3ff2fab5-8212-4bb6-a290-f86913ee1992"),
+                    ID: unifiedgosdk.Pointer("f661010a-80e4-46bd-8743-9733f07f4866"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -56,7 +56,7 @@ func main() {
             Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.067Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T08:53:11.171Z"),
         },
         ConnectionID: "<id>",
     })
@@ -225,12 +225,12 @@ func main() {
     res, err := s.Transaction.PatchAccountingTransaction(ctx, operations.PatchAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            ID: unifiedgosdk.Pointer("3cedf1af-33ac-469e-a3bf-264cc42f7a5b"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    ID: unifiedgosdk.Pointer("40e36247-1472-4fa5-998f-c09ac830f4e2"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -241,7 +241,7 @@ func main() {
             Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T08:53:11.176Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -357,12 +357,12 @@ func main() {
     res, err := s.Transaction.UpdateAccountingTransaction(ctx, operations.UpdateAccountingTransactionRequest{
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            ID: unifiedgosdk.Pointer("6919d246-1d5f-41b7-8e29-5b09c178dd25"),
+            ID: unifiedgosdk.Pointer("3cedf1af-33ac-469e-a3bf-264cc42f7a5b"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("bce40565-4370-47f6-8a53-182ef8ece94f"),
+                    ID: unifiedgosdk.Pointer("40e36247-1472-4fa5-998f-c09ac830f4e2"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -373,7 +373,7 @@ func main() {
             Memo: unifiedgosdk.Pointer("withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022."),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T02:53:31.070Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-10T08:53:11.176Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

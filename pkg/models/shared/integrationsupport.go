@@ -623,6 +623,29 @@ func (e *ListDealID) IsExact() bool {
 	return false
 }
 
+type ListDestinationID string
+
+const (
+	ListDestinationIDSupportedRequired ListDestinationID = "supported-required"
+	ListDestinationIDSupported         ListDestinationID = "supported"
+	ListDestinationIDNotSupported      ListDestinationID = "not-supported"
+)
+
+func (e ListDestinationID) ToPointer() *ListDestinationID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListDestinationID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListDimension string
 
 const (
@@ -2716,6 +2739,29 @@ func (e *NativeWebhookType) IsExact() bool {
 	return false
 }
 
+type NativeWebhookUpdatedGte string
+
+const (
+	NativeWebhookUpdatedGteSupportedRequired NativeWebhookUpdatedGte = "supported-required"
+	NativeWebhookUpdatedGteSupported         NativeWebhookUpdatedGte = "supported"
+	NativeWebhookUpdatedGteNotSupported      NativeWebhookUpdatedGte = "not-supported"
+)
+
+func (e NativeWebhookUpdatedGte) ToPointer() *NativeWebhookUpdatedGte {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NativeWebhookUpdatedGte) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type NativeWebhookVisitorID string
 
 const (
@@ -3374,6 +3420,29 @@ func (e VirtualWebhookDealID) ToPointer() *VirtualWebhookDealID {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *VirtualWebhookDealID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type VirtualWebhookEffectiveStatus string
+
+const (
+	VirtualWebhookEffectiveStatusSupportedRequired VirtualWebhookEffectiveStatus = "supported-required"
+	VirtualWebhookEffectiveStatusSupported         VirtualWebhookEffectiveStatus = "supported"
+	VirtualWebhookEffectiveStatusNotSupported      VirtualWebhookEffectiveStatus = "not-supported"
+)
+
+func (e VirtualWebhookEffectiveStatus) ToPointer() *VirtualWebhookEffectiveStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VirtualWebhookEffectiveStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -4470,6 +4539,7 @@ type IntegrationSupport struct {
 	ListCycleID             *ListCycleID             `json:"list_cycle_id,omitempty"`
 	ListDatabaseID          *ListDatabaseID          `json:"list_database_id,omitempty"`
 	ListDealID              *ListDealID              `json:"list_deal_id,omitempty"`
+	ListDestinationID       *ListDestinationID       `json:"list_destination_id,omitempty"`
 	ListDimension           *ListDimension           `json:"list_dimension,omitempty"`
 	ListDocumentID          *ListDocumentID          `json:"list_document_id,omitempty"`
 	ListEffectiveStatus     *ListEffectiveStatus     `json:"list_effective_status,omitempty"`
@@ -4562,6 +4632,7 @@ type IntegrationSupport struct {
 	NativeWebhookTaskID     *NativeWebhookTaskID     `json:"native_webhook_task_id,omitempty"`
 	NativeWebhookTemplateID *NativeWebhookTemplateID `json:"native_webhook_template_id,omitempty"`
 	NativeWebhookType       *NativeWebhookType       `json:"native_webhook_type,omitempty"`
+	NativeWebhookUpdatedGte *NativeWebhookUpdatedGte `json:"native_webhook_updated_gte,omitempty"`
 	NativeWebhookVisitorID  *NativeWebhookVisitorID  `json:"native_webhook_visitor_id,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
@@ -4595,6 +4666,7 @@ type IntegrationSupport struct {
 	VirtualWebhookCycleID           *VirtualWebhookCycleID                   `json:"virtual_webhook_cycle_id,omitempty"`
 	VirtualWebhookDatabaseID        *VirtualWebhookDatabaseID                `json:"virtual_webhook_database_id,omitempty"`
 	VirtualWebhookDealID            *VirtualWebhookDealID                    `json:"virtual_webhook_deal_id,omitempty"`
+	VirtualWebhookEffectiveStatus   *VirtualWebhookEffectiveStatus           `json:"virtual_webhook_effective_status,omitempty"`
 	VirtualWebhookEndLt             *VirtualWebhookEndLt                     `json:"virtual_webhook_end_lt,omitempty"`
 	VirtualWebhookEventID           *VirtualWebhookEventID                   `json:"virtual_webhook_event_id,omitempty"`
 	VirtualWebhookExpand            *VirtualWebhookExpand                    `json:"virtual_webhook_expand,omitempty"`
@@ -4838,6 +4910,13 @@ func (i *IntegrationSupport) GetListDealID() *ListDealID {
 		return nil
 	}
 	return i.ListDealID
+}
+
+func (i *IntegrationSupport) GetListDestinationID() *ListDestinationID {
+	if i == nil {
+		return nil
+	}
+	return i.ListDestinationID
 }
 
 func (i *IntegrationSupport) GetListDimension() *ListDimension {
@@ -5484,6 +5563,13 @@ func (i *IntegrationSupport) GetNativeWebhookType() *NativeWebhookType {
 	return i.NativeWebhookType
 }
 
+func (i *IntegrationSupport) GetNativeWebhookUpdatedGte() *NativeWebhookUpdatedGte {
+	if i == nil {
+		return nil
+	}
+	return i.NativeWebhookUpdatedGte
+}
+
 func (i *IntegrationSupport) GetNativeWebhookVisitorID() *NativeWebhookVisitorID {
 	if i == nil {
 		return nil
@@ -5706,6 +5792,13 @@ func (i *IntegrationSupport) GetVirtualWebhookDealID() *VirtualWebhookDealID {
 		return nil
 	}
 	return i.VirtualWebhookDealID
+}
+
+func (i *IntegrationSupport) GetVirtualWebhookEffectiveStatus() *VirtualWebhookEffectiveStatus {
+	if i == nil {
+		return nil
+	}
+	return i.VirtualWebhookEffectiveStatus
 }
 
 func (i *IntegrationSupport) GetVirtualWebhookEndLt() *VirtualWebhookEndLt {

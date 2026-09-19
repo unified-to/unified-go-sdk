@@ -224,22 +224,23 @@ func (e *AdsGroupStatus) IsExact() bool {
 type AdsGroupType string
 
 const (
-	AdsGroupTypeText       AdsGroupType = "TEXT"
-	AdsGroupTypeImage      AdsGroupType = "IMAGE"
-	AdsGroupTypeVideo      AdsGroupType = "VIDEO"
-	AdsGroupTypeResponsive AdsGroupType = "RESPONSIVE"
-	AdsGroupTypeShopping   AdsGroupType = "SHOPPING"
-	AdsGroupTypeApp        AdsGroupType = "APP"
-	AdsGroupTypeCall       AdsGroupType = "CALL"
-	AdsGroupTypeCarousel   AdsGroupType = "CAROUSEL"
-	AdsGroupTypeSocial     AdsGroupType = "SOCIAL"
-	AdsGroupTypeDisplay    AdsGroupType = "DISPLAY"
-	AdsGroupTypeSearch     AdsGroupType = "SEARCH"
-	AdsGroupTypeAudio      AdsGroupType = "AUDIO"
-	AdsGroupTypeYoutube    AdsGroupType = "YOUTUBE"
-	AdsGroupTypeNative     AdsGroupType = "NATIVE"
-	AdsGroupTypeCtv        AdsGroupType = "CTV"
-	AdsGroupTypeDooh       AdsGroupType = "DOOH"
+	AdsGroupTypeText           AdsGroupType = "TEXT"
+	AdsGroupTypeImage          AdsGroupType = "IMAGE"
+	AdsGroupTypeVideo          AdsGroupType = "VIDEO"
+	AdsGroupTypeResponsive     AdsGroupType = "RESPONSIVE"
+	AdsGroupTypeShopping       AdsGroupType = "SHOPPING"
+	AdsGroupTypeApp            AdsGroupType = "APP"
+	AdsGroupTypeCall           AdsGroupType = "CALL"
+	AdsGroupTypeCarousel       AdsGroupType = "CAROUSEL"
+	AdsGroupTypeSocial         AdsGroupType = "SOCIAL"
+	AdsGroupTypeDisplay        AdsGroupType = "DISPLAY"
+	AdsGroupTypeSearch         AdsGroupType = "SEARCH"
+	AdsGroupTypeAudio          AdsGroupType = "AUDIO"
+	AdsGroupTypeYoutube        AdsGroupType = "YOUTUBE"
+	AdsGroupTypeNative         AdsGroupType = "NATIVE"
+	AdsGroupTypeCtv            AdsGroupType = "CTV"
+	AdsGroupTypeDooh           AdsGroupType = "DOOH"
+	AdsGroupTypePerformanceMax AdsGroupType = "PERFORMANCE_MAX"
 )
 
 func (e AdsGroupType) ToPointer() *AdsGroupType {
@@ -250,7 +251,7 @@ func (e AdsGroupType) ToPointer() *AdsGroupType {
 func (e *AdsGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

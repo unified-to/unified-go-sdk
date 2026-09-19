@@ -10,22 +10,23 @@ import (
 type PropertyAdsReportMetricsAdAdType string
 
 const (
-	PropertyAdsReportMetricsAdAdTypeText       PropertyAdsReportMetricsAdAdType = "TEXT"
-	PropertyAdsReportMetricsAdAdTypeImage      PropertyAdsReportMetricsAdAdType = "IMAGE"
-	PropertyAdsReportMetricsAdAdTypeVideo      PropertyAdsReportMetricsAdAdType = "VIDEO"
-	PropertyAdsReportMetricsAdAdTypeResponsive PropertyAdsReportMetricsAdAdType = "RESPONSIVE"
-	PropertyAdsReportMetricsAdAdTypeShopping   PropertyAdsReportMetricsAdAdType = "SHOPPING"
-	PropertyAdsReportMetricsAdAdTypeApp        PropertyAdsReportMetricsAdAdType = "APP"
-	PropertyAdsReportMetricsAdAdTypeCall       PropertyAdsReportMetricsAdAdType = "CALL"
-	PropertyAdsReportMetricsAdAdTypeCarousel   PropertyAdsReportMetricsAdAdType = "CAROUSEL"
-	PropertyAdsReportMetricsAdAdTypeSocial     PropertyAdsReportMetricsAdAdType = "SOCIAL"
-	PropertyAdsReportMetricsAdAdTypeDisplay    PropertyAdsReportMetricsAdAdType = "DISPLAY"
-	PropertyAdsReportMetricsAdAdTypeSearch     PropertyAdsReportMetricsAdAdType = "SEARCH"
-	PropertyAdsReportMetricsAdAdTypeAudio      PropertyAdsReportMetricsAdAdType = "AUDIO"
-	PropertyAdsReportMetricsAdAdTypeYoutube    PropertyAdsReportMetricsAdAdType = "YOUTUBE"
-	PropertyAdsReportMetricsAdAdTypeNative     PropertyAdsReportMetricsAdAdType = "NATIVE"
-	PropertyAdsReportMetricsAdAdTypeCtv        PropertyAdsReportMetricsAdAdType = "CTV"
-	PropertyAdsReportMetricsAdAdTypeDooh       PropertyAdsReportMetricsAdAdType = "DOOH"
+	PropertyAdsReportMetricsAdAdTypeText           PropertyAdsReportMetricsAdAdType = "TEXT"
+	PropertyAdsReportMetricsAdAdTypeImage          PropertyAdsReportMetricsAdAdType = "IMAGE"
+	PropertyAdsReportMetricsAdAdTypeVideo          PropertyAdsReportMetricsAdAdType = "VIDEO"
+	PropertyAdsReportMetricsAdAdTypeResponsive     PropertyAdsReportMetricsAdAdType = "RESPONSIVE"
+	PropertyAdsReportMetricsAdAdTypeShopping       PropertyAdsReportMetricsAdAdType = "SHOPPING"
+	PropertyAdsReportMetricsAdAdTypeApp            PropertyAdsReportMetricsAdAdType = "APP"
+	PropertyAdsReportMetricsAdAdTypeCall           PropertyAdsReportMetricsAdAdType = "CALL"
+	PropertyAdsReportMetricsAdAdTypeCarousel       PropertyAdsReportMetricsAdAdType = "CAROUSEL"
+	PropertyAdsReportMetricsAdAdTypeSocial         PropertyAdsReportMetricsAdAdType = "SOCIAL"
+	PropertyAdsReportMetricsAdAdTypeDisplay        PropertyAdsReportMetricsAdAdType = "DISPLAY"
+	PropertyAdsReportMetricsAdAdTypeSearch         PropertyAdsReportMetricsAdAdType = "SEARCH"
+	PropertyAdsReportMetricsAdAdTypeAudio          PropertyAdsReportMetricsAdAdType = "AUDIO"
+	PropertyAdsReportMetricsAdAdTypeYoutube        PropertyAdsReportMetricsAdAdType = "YOUTUBE"
+	PropertyAdsReportMetricsAdAdTypeNative         PropertyAdsReportMetricsAdAdType = "NATIVE"
+	PropertyAdsReportMetricsAdAdTypeCtv            PropertyAdsReportMetricsAdAdType = "CTV"
+	PropertyAdsReportMetricsAdAdTypeDooh           PropertyAdsReportMetricsAdAdType = "DOOH"
+	PropertyAdsReportMetricsAdAdTypePerformanceMax PropertyAdsReportMetricsAdAdType = "PERFORMANCE_MAX"
 )
 
 func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsAdAdType {
@@ -36,7 +37,7 @@ func (e PropertyAdsReportMetricsAdAdType) ToPointer() *PropertyAdsReportMetricsA
 func (e *PropertyAdsReportMetricsAdAdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

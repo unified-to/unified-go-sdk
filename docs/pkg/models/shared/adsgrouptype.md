@@ -16,21 +16,22 @@ custom := shared.AdsGroupType("custom_value")
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `AdsGroupTypeText`       | TEXT                     |
-| `AdsGroupTypeImage`      | IMAGE                    |
-| `AdsGroupTypeVideo`      | VIDEO                    |
-| `AdsGroupTypeResponsive` | RESPONSIVE               |
-| `AdsGroupTypeShopping`   | SHOPPING                 |
-| `AdsGroupTypeApp`        | APP                      |
-| `AdsGroupTypeCall`       | CALL                     |
-| `AdsGroupTypeCarousel`   | CAROUSEL                 |
-| `AdsGroupTypeSocial`     | SOCIAL                   |
-| `AdsGroupTypeDisplay`    | DISPLAY                  |
-| `AdsGroupTypeSearch`     | SEARCH                   |
-| `AdsGroupTypeAudio`      | AUDIO                    |
-| `AdsGroupTypeYoutube`    | YOUTUBE                  |
-| `AdsGroupTypeNative`     | NATIVE                   |
-| `AdsGroupTypeCtv`        | CTV                      |
-| `AdsGroupTypeDooh`       | DOOH                     |
+| Name                         | Value                        |
+| ---------------------------- | ---------------------------- |
+| `AdsGroupTypeText`           | TEXT                         |
+| `AdsGroupTypeImage`          | IMAGE                        |
+| `AdsGroupTypeVideo`          | VIDEO                        |
+| `AdsGroupTypeResponsive`     | RESPONSIVE                   |
+| `AdsGroupTypeShopping`       | SHOPPING                     |
+| `AdsGroupTypeApp`            | APP                          |
+| `AdsGroupTypeCall`           | CALL                         |
+| `AdsGroupTypeCarousel`       | CAROUSEL                     |
+| `AdsGroupTypeSocial`         | SOCIAL                       |
+| `AdsGroupTypeDisplay`        | DISPLAY                      |
+| `AdsGroupTypeSearch`         | SEARCH                       |
+| `AdsGroupTypeAudio`          | AUDIO                        |
+| `AdsGroupTypeYoutube`        | YOUTUBE                      |
+| `AdsGroupTypeNative`         | NATIVE                       |
+| `AdsGroupTypeCtv`            | CTV                          |
+| `AdsGroupTypeDooh`           | DOOH                         |
+| `AdsGroupTypePerformanceMax` | PERFORMANCE_MAX              |

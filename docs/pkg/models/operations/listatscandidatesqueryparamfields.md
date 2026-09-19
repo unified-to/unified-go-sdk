@@ -42,4 +42,5 @@ value := operations.ListAtsCandidatesQueryParamFieldsID
 | `ListAtsCandidatesQueryParamFieldsSkills`             | skills                                                |
 | `ListAtsCandidatesQueryParamFieldsJobIds`             | job_ids                                               |
 | `ListAtsCandidatesQueryParamFieldsMetadata`           | metadata                                              |
+| `ListAtsCandidatesQueryParamFieldsSummary`            | summary                                               |
 | `ListAtsCandidatesQueryParamFieldsRaw`                | raw                                                   |

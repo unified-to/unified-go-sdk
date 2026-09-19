@@ -10,22 +10,23 @@ import (
 type PropertyAdsReportMetricsCampaignAdvertisingChannelType string
 
 const (
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeText       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "TEXT"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeImage      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "IMAGE"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeVideo      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "VIDEO"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeResponsive PropertyAdsReportMetricsCampaignAdvertisingChannelType = "RESPONSIVE"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeShopping   PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SHOPPING"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeApp        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "APP"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCall       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CALL"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCarousel   PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CAROUSEL"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSocial     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SOCIAL"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDisplay    PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DISPLAY"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SEARCH"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio      PropertyAdsReportMetricsCampaignAdvertisingChannelType = "AUDIO"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube    PropertyAdsReportMetricsCampaignAdvertisingChannelType = "YOUTUBE"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeNative     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "NATIVE"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCtv        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CTV"
-	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDooh       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DOOH"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeText           PropertyAdsReportMetricsCampaignAdvertisingChannelType = "TEXT"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeImage          PropertyAdsReportMetricsCampaignAdvertisingChannelType = "IMAGE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeVideo          PropertyAdsReportMetricsCampaignAdvertisingChannelType = "VIDEO"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeResponsive     PropertyAdsReportMetricsCampaignAdvertisingChannelType = "RESPONSIVE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeShopping       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SHOPPING"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeApp            PropertyAdsReportMetricsCampaignAdvertisingChannelType = "APP"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCall           PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CALL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCarousel       PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CAROUSEL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSocial         PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SOCIAL"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDisplay        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DISPLAY"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeSearch         PropertyAdsReportMetricsCampaignAdvertisingChannelType = "SEARCH"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeAudio          PropertyAdsReportMetricsCampaignAdvertisingChannelType = "AUDIO"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeYoutube        PropertyAdsReportMetricsCampaignAdvertisingChannelType = "YOUTUBE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeNative         PropertyAdsReportMetricsCampaignAdvertisingChannelType = "NATIVE"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeCtv            PropertyAdsReportMetricsCampaignAdvertisingChannelType = "CTV"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypeDooh           PropertyAdsReportMetricsCampaignAdvertisingChannelType = "DOOH"
+	PropertyAdsReportMetricsCampaignAdvertisingChannelTypePerformanceMax PropertyAdsReportMetricsCampaignAdvertisingChannelType = "PERFORMANCE_MAX"
 )
 
 func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *PropertyAdsReportMetricsCampaignAdvertisingChannelType {
@@ -36,7 +37,7 @@ func (e PropertyAdsReportMetricsCampaignAdvertisingChannelType) ToPointer() *Pro
 func (e *PropertyAdsReportMetricsCampaignAdvertisingChannelType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

@@ -32,4 +32,5 @@ value := operations.ListAtsApplicationsQueryParamFieldsID
 | `ListAtsApplicationsQueryParamFieldsUserID`            | user_id                                                |
 | `ListAtsApplicationsQueryParamFieldsMetadata`          | metadata                                               |
 | `ListAtsApplicationsQueryParamFieldsOriginalSubstatus` | original_substatus                                     |
+| `ListAtsApplicationsQueryParamFieldsSummary`           | summary                                                |
 | `ListAtsApplicationsQueryParamFieldsRaw`               | raw                                                    |

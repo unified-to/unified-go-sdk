@@ -29,6 +29,7 @@ const (
 	GetAtsApplicationQueryParamFieldsUserID            GetAtsApplicationQueryParamFields = "user_id"
 	GetAtsApplicationQueryParamFieldsMetadata          GetAtsApplicationQueryParamFields = "metadata"
 	GetAtsApplicationQueryParamFieldsOriginalSubstatus GetAtsApplicationQueryParamFields = "original_substatus"
+	GetAtsApplicationQueryParamFieldsSummary           GetAtsApplicationQueryParamFields = "summary"
 	GetAtsApplicationQueryParamFieldsRaw               GetAtsApplicationQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *GetAtsApplicationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "original_substatus":
+		fallthrough
+	case "summary":
 		fallthrough
 	case "raw":
 		*e = GetAtsApplicationQueryParamFields(v)

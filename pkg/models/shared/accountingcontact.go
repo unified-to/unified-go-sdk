@@ -71,6 +71,7 @@ func (e *TaxExemption) IsExact() bool {
 
 type AccountingContact struct {
 	AssociatedContacts []AccountingAssociatedContact             `json:"associated_contacts,omitempty"`
+	BalanceAmount      *float64                                  `json:"balance_amount,omitempty"`
 	BillingAddress     *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`
 	CompanyName        *string                                   `json:"company_name,omitempty"`
 	CreatedAt          *time.Time                                `json:"created_at,omitempty"`
@@ -84,6 +85,7 @@ type AccountingContact struct {
 	IsSupplier         *bool                                     `json:"is_supplier,omitempty"`
 	LastName           *string                                   `json:"last_name,omitempty"`
 	Name               *string                                   `json:"name,omitempty"`
+	Notes              *string                                   `json:"notes,omitempty"`
 	OrganizationID     *string                                   `json:"organization_id,omitempty"`
 	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
 	PaymentTerms       *AccountingContactPaymentTerms            `json:"payment_terms,omitempty"`
@@ -95,6 +97,7 @@ type AccountingContact struct {
 	TaxNumber          *string                                   `json:"tax_number,omitempty"`
 	Telephones         []AccountingTelephone                     `json:"telephones,omitempty"`
 	UpdatedAt          *time.Time                                `json:"updated_at,omitempty"`
+	Website            *string                                   `json:"website,omitempty"`
 }
 
 func (a AccountingContact) MarshalJSON() ([]byte, error) {
@@ -113,6 +116,13 @@ func (a *AccountingContact) GetAssociatedContacts() []AccountingAssociatedContac
 		return nil
 	}
 	return a.AssociatedContacts
+}
+
+func (a *AccountingContact) GetBalanceAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.BalanceAmount
 }
 
 func (a *AccountingContact) GetBillingAddress() *PropertyAccountingContactBillingAddress {
@@ -206,6 +216,13 @@ func (a *AccountingContact) GetName() *string {
 	return a.Name
 }
 
+func (a *AccountingContact) GetNotes() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Notes
+}
+
 func (a *AccountingContact) GetOrganizationID() *string {
 	if a == nil {
 		return nil
@@ -281,4 +298,11 @@ func (a *AccountingContact) GetUpdatedAt() *time.Time {
 		return nil
 	}
 	return a.UpdatedAt
+}
+
+func (a *AccountingContact) GetWebsite() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Website
 }

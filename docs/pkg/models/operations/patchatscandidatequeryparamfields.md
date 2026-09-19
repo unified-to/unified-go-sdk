@@ -42,4 +42,5 @@ value := operations.PatchAtsCandidateQueryParamFieldsID
 | `PatchAtsCandidateQueryParamFieldsSkills`             | skills                                                |
 | `PatchAtsCandidateQueryParamFieldsJobIds`             | job_ids                                               |
 | `PatchAtsCandidateQueryParamFieldsMetadata`           | metadata                                              |
+| `PatchAtsCandidateQueryParamFieldsSummary`            | summary                                               |
 | `PatchAtsCandidateQueryParamFieldsRaw`                | raw                                                   |

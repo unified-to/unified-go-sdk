@@ -51,7 +51,7 @@ func main() {
     res, err := s.Shipping.CreateShippingLabel(ctx, operations.CreateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("d64a026b-8f62-4b07-8bce-ac44e8999e22"),
+            ID: unifiedgosdk.Pointer("7c5cebee-0b0d-47bc-9bb5-78438fae047c"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -60,7 +60,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.800Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T02:34:23.972Z"),
         },
         ConnectionID: "<id>",
     })
@@ -120,7 +120,7 @@ func main() {
     res, err := s.Shipping.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
         ShippingRate: shared.ShippingRate{
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("282be3e2-3b21-4c4e-a8d8-f9bf73fabea4"),
+            ID: unifiedgosdk.Pointer("98dc289e-fae5-4140-98e2-373842a83c76"),
             Rates: []shared.ShippingRateRate{
                 shared.ShippingRateRate{
                     Amount: unifiedgosdk.Pointer[float64](54.679719475097954),
@@ -129,7 +129,7 @@ func main() {
                     DeliveryDays: unifiedgosdk.Pointer[float64](8.0),
                     Description: unifiedgosdk.Pointer("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum."),
                     EstimatedDays: unifiedgosdk.Pointer[float64](10.0),
-                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2024-01-31T23:40:52.547Z"),
+                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2024-02-01T09:54:05.053Z"),
                     IsGuaranteed: unifiedgosdk.Pointer(true),
                     IsNegotiatedRate: unifiedgosdk.Pointer(true),
                     TaxAmount: unifiedgosdk.Pointer[float64](2.2701712837442756),
@@ -196,16 +196,16 @@ func main() {
         ShippingShipment: shared.ShippingShipment{
             CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("04eb90d8-c4d6-4a12-a014-b29fe96672d2"),
+            ID: unifiedgosdk.Pointer("2951157d-e276-4ea3-bfb5-f44e3f2fe2ff"),
             RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
             RateCurrency: unifiedgosdk.Pointer("USD"),
             RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
             RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
             ServiceCode: unifiedgosdk.Pointer("F7U"),
-            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.740Z"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-25T10:45:44.568Z"),
             Status: shared.ShippingShipmentStatusPending.ToPointer(),
             TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.232Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T17:44:38.125Z"),
         },
         ConnectionID: "<id>",
     })
@@ -701,7 +701,7 @@ func main() {
     res, err := s.Shipping.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            ID: unifiedgosdk.Pointer("e7ea19df-dca5-474e-8e80-000ff7a0c861"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -710,7 +710,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T02:34:23.978Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -772,16 +772,16 @@ func main() {
         ShippingShipment: shared.ShippingShipment{
             CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("998c4b1e-2e8c-4fd7-abde-fb56d6f2caa8"),
+            ID: unifiedgosdk.Pointer("0cd3aa59-df9f-49b7-8442-aa7f4a0b0232"),
             RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
             RateCurrency: unifiedgosdk.Pointer("USD"),
             RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
             RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
             ServiceCode: unifiedgosdk.Pointer("F7U"),
-            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.789Z"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-25T10:45:44.634Z"),
             Status: shared.ShippingShipmentStatusPending.ToPointer(),
             TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.278Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T17:44:38.187Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -952,7 +952,7 @@ func main() {
     res, err := s.Shipping.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("4e75db1f-3d4a-4b8f-aafd-71d770747559"),
+            ID: unifiedgosdk.Pointer("e7ea19df-dca5-474e-8e80-000ff7a0c861"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -961,7 +961,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-16T18:42:43.803Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T02:34:23.978Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1023,16 +1023,16 @@ func main() {
         ShippingShipment: shared.ShippingShipment{
             CarrierName: unifiedgosdk.Pointer("Bogisich, Franey and Koelpin"),
             CreatedAt: types.MustNewTimeFromString("2022-09-12T03:11:28.960Z"),
-            ID: unifiedgosdk.Pointer("998c4b1e-2e8c-4fd7-abde-fb56d6f2caa8"),
+            ID: unifiedgosdk.Pointer("0cd3aa59-df9f-49b7-8442-aa7f4a0b0232"),
             RateAmount: unifiedgosdk.Pointer[float64](8.86546263936907),
             RateCurrency: unifiedgosdk.Pointer("USD"),
             RateEstimatedDays: unifiedgosdk.Pointer[float64](8.0),
             RateServiceName: unifiedgosdk.Pointer("Fisher - Kilback"),
             ServiceCode: unifiedgosdk.Pointer("F7U"),
-            ShippedAt: types.MustNewTimeFromString("2025-08-24T19:04:21.789Z"),
+            ShippedAt: types.MustNewTimeFromString("2025-08-25T10:45:44.634Z"),
             Status: shared.ShippingShipmentStatusPending.ToPointer(),
             TrackingURL: unifiedgosdk.Pointer("https://shallow-secrecy.info/"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-03T02:49:16.278Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-03T17:44:38.187Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

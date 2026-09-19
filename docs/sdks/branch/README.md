@@ -40,10 +40,10 @@ func main() {
     res, err := s.Branch.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("c587ce9d-9be6-4633-941a-b58549359337"),
+            ID: unifiedgosdk.Pointer("862e92c3-1b75-438b-ab2c-fca046bfb282"),
             Name: "voluptas",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.512Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T16:47:11.793Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,10 +212,10 @@ func main() {
     res, err := s.Branch.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            ID: unifiedgosdk.Pointer("7eea8ed8-3c92-479e-95a7-2cf90ba7387e"),
             Name: "voluptas",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T16:47:11.794Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -331,10 +331,10 @@ func main() {
     res, err := s.Branch.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("00659df6-01d0-4bb5-b372-44372d8d765c"),
+            ID: unifiedgosdk.Pointer("7eea8ed8-3c92-479e-95a7-2cf90ba7387e"),
             Name: "voluptas",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-03T14:21:55.513Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-03T16:47:11.794Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

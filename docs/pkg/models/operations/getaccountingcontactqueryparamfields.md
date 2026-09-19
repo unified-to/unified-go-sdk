@@ -39,4 +39,7 @@ value := operations.GetAccountingContactQueryParamFieldsID
 | `GetAccountingContactQueryParamFieldsOrganizationID`     | organization_id                                          |
 | `GetAccountingContactQueryParamFieldsPaymentTerms`       | payment_terms                                            |
 | `GetAccountingContactQueryParamFieldsPaymenttermID`      | paymentterm_id                                           |
+| `GetAccountingContactQueryParamFieldsBalanceAmount`      | balance_amount                                           |
+| `GetAccountingContactQueryParamFieldsWebsite`            | website                                                  |
+| `GetAccountingContactQueryParamFieldsNotes`              | notes                                                    |
 | `GetAccountingContactQueryParamFieldsRaw`                | raw                                                      |

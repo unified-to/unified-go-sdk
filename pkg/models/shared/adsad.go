@@ -10,22 +10,23 @@ import (
 type AdType string
 
 const (
-	AdTypeText       AdType = "TEXT"
-	AdTypeImage      AdType = "IMAGE"
-	AdTypeVideo      AdType = "VIDEO"
-	AdTypeResponsive AdType = "RESPONSIVE"
-	AdTypeShopping   AdType = "SHOPPING"
-	AdTypeApp        AdType = "APP"
-	AdTypeCall       AdType = "CALL"
-	AdTypeCarousel   AdType = "CAROUSEL"
-	AdTypeSocial     AdType = "SOCIAL"
-	AdTypeDisplay    AdType = "DISPLAY"
-	AdTypeSearch     AdType = "SEARCH"
-	AdTypeAudio      AdType = "AUDIO"
-	AdTypeYoutube    AdType = "YOUTUBE"
-	AdTypeNative     AdType = "NATIVE"
-	AdTypeCtv        AdType = "CTV"
-	AdTypeDooh       AdType = "DOOH"
+	AdTypeText           AdType = "TEXT"
+	AdTypeImage          AdType = "IMAGE"
+	AdTypeVideo          AdType = "VIDEO"
+	AdTypeResponsive     AdType = "RESPONSIVE"
+	AdTypeShopping       AdType = "SHOPPING"
+	AdTypeApp            AdType = "APP"
+	AdTypeCall           AdType = "CALL"
+	AdTypeCarousel       AdType = "CAROUSEL"
+	AdTypeSocial         AdType = "SOCIAL"
+	AdTypeDisplay        AdType = "DISPLAY"
+	AdTypeSearch         AdType = "SEARCH"
+	AdTypeAudio          AdType = "AUDIO"
+	AdTypeYoutube        AdType = "YOUTUBE"
+	AdTypeNative         AdType = "NATIVE"
+	AdTypeCtv            AdType = "CTV"
+	AdTypeDooh           AdType = "DOOH"
+	AdTypePerformanceMax AdType = "PERFORMANCE_MAX"
 )
 
 func (e AdType) ToPointer() *AdType {
@@ -36,7 +37,7 @@ func (e AdType) ToPointer() *AdType {
 func (e *AdType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

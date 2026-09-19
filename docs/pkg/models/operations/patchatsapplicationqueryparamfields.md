@@ -32,4 +32,5 @@ value := operations.PatchAtsApplicationQueryParamFieldsID
 | `PatchAtsApplicationQueryParamFieldsUserID`            | user_id                                                |
 | `PatchAtsApplicationQueryParamFieldsMetadata`          | metadata                                               |
 | `PatchAtsApplicationQueryParamFieldsOriginalSubstatus` | original_substatus                                     |
+| `PatchAtsApplicationQueryParamFieldsSummary`           | summary                                                |
 | `PatchAtsApplicationQueryParamFieldsRaw`               | raw                                                    |

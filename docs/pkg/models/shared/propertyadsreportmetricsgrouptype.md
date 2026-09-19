@@ -16,21 +16,22 @@ custom := shared.PropertyAdsReportMetricsGroupType("custom_value")
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `PropertyAdsReportMetricsGroupTypeText`       | TEXT                                          |
-| `PropertyAdsReportMetricsGroupTypeImage`      | IMAGE                                         |
-| `PropertyAdsReportMetricsGroupTypeVideo`      | VIDEO                                         |
-| `PropertyAdsReportMetricsGroupTypeResponsive` | RESPONSIVE                                    |
-| `PropertyAdsReportMetricsGroupTypeShopping`   | SHOPPING                                      |
-| `PropertyAdsReportMetricsGroupTypeApp`        | APP                                           |
-| `PropertyAdsReportMetricsGroupTypeCall`       | CALL                                          |
-| `PropertyAdsReportMetricsGroupTypeCarousel`   | CAROUSEL                                      |
-| `PropertyAdsReportMetricsGroupTypeSocial`     | SOCIAL                                        |
-| `PropertyAdsReportMetricsGroupTypeDisplay`    | DISPLAY                                       |
-| `PropertyAdsReportMetricsGroupTypeSearch`     | SEARCH                                        |
-| `PropertyAdsReportMetricsGroupTypeAudio`      | AUDIO                                         |
-| `PropertyAdsReportMetricsGroupTypeYoutube`    | YOUTUBE                                       |
-| `PropertyAdsReportMetricsGroupTypeNative`     | NATIVE                                        |
-| `PropertyAdsReportMetricsGroupTypeCtv`        | CTV                                           |
-| `PropertyAdsReportMetricsGroupTypeDooh`       | DOOH                                          |
+| Name                                              | Value                                             |
+| ------------------------------------------------- | ------------------------------------------------- |
+| `PropertyAdsReportMetricsGroupTypeText`           | TEXT                                              |
+| `PropertyAdsReportMetricsGroupTypeImage`          | IMAGE                                             |
+| `PropertyAdsReportMetricsGroupTypeVideo`          | VIDEO                                             |
+| `PropertyAdsReportMetricsGroupTypeResponsive`     | RESPONSIVE                                        |
+| `PropertyAdsReportMetricsGroupTypeShopping`       | SHOPPING                                          |
+| `PropertyAdsReportMetricsGroupTypeApp`            | APP                                               |
+| `PropertyAdsReportMetricsGroupTypeCall`           | CALL                                              |
+| `PropertyAdsReportMetricsGroupTypeCarousel`       | CAROUSEL                                          |
+| `PropertyAdsReportMetricsGroupTypeSocial`         | SOCIAL                                            |
+| `PropertyAdsReportMetricsGroupTypeDisplay`        | DISPLAY                                           |
+| `PropertyAdsReportMetricsGroupTypeSearch`         | SEARCH                                            |
+| `PropertyAdsReportMetricsGroupTypeAudio`          | AUDIO                                             |
+| `PropertyAdsReportMetricsGroupTypeYoutube`        | YOUTUBE                                           |
+| `PropertyAdsReportMetricsGroupTypeNative`         | NATIVE                                            |
+| `PropertyAdsReportMetricsGroupTypeCtv`            | CTV                                               |
+| `PropertyAdsReportMetricsGroupTypeDooh`           | DOOH                                              |
+| `PropertyAdsReportMetricsGroupTypePerformanceMax` | PERFORMANCE_MAX                                   |

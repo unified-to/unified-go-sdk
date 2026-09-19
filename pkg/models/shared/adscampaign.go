@@ -10,22 +10,23 @@ import (
 type AdvertisingChannelType string
 
 const (
-	AdvertisingChannelTypeText       AdvertisingChannelType = "TEXT"
-	AdvertisingChannelTypeImage      AdvertisingChannelType = "IMAGE"
-	AdvertisingChannelTypeVideo      AdvertisingChannelType = "VIDEO"
-	AdvertisingChannelTypeResponsive AdvertisingChannelType = "RESPONSIVE"
-	AdvertisingChannelTypeShopping   AdvertisingChannelType = "SHOPPING"
-	AdvertisingChannelTypeApp        AdvertisingChannelType = "APP"
-	AdvertisingChannelTypeCall       AdvertisingChannelType = "CALL"
-	AdvertisingChannelTypeCarousel   AdvertisingChannelType = "CAROUSEL"
-	AdvertisingChannelTypeSocial     AdvertisingChannelType = "SOCIAL"
-	AdvertisingChannelTypeDisplay    AdvertisingChannelType = "DISPLAY"
-	AdvertisingChannelTypeSearch     AdvertisingChannelType = "SEARCH"
-	AdvertisingChannelTypeAudio      AdvertisingChannelType = "AUDIO"
-	AdvertisingChannelTypeYoutube    AdvertisingChannelType = "YOUTUBE"
-	AdvertisingChannelTypeNative     AdvertisingChannelType = "NATIVE"
-	AdvertisingChannelTypeCtv        AdvertisingChannelType = "CTV"
-	AdvertisingChannelTypeDooh       AdvertisingChannelType = "DOOH"
+	AdvertisingChannelTypeText           AdvertisingChannelType = "TEXT"
+	AdvertisingChannelTypeImage          AdvertisingChannelType = "IMAGE"
+	AdvertisingChannelTypeVideo          AdvertisingChannelType = "VIDEO"
+	AdvertisingChannelTypeResponsive     AdvertisingChannelType = "RESPONSIVE"
+	AdvertisingChannelTypeShopping       AdvertisingChannelType = "SHOPPING"
+	AdvertisingChannelTypeApp            AdvertisingChannelType = "APP"
+	AdvertisingChannelTypeCall           AdvertisingChannelType = "CALL"
+	AdvertisingChannelTypeCarousel       AdvertisingChannelType = "CAROUSEL"
+	AdvertisingChannelTypeSocial         AdvertisingChannelType = "SOCIAL"
+	AdvertisingChannelTypeDisplay        AdvertisingChannelType = "DISPLAY"
+	AdvertisingChannelTypeSearch         AdvertisingChannelType = "SEARCH"
+	AdvertisingChannelTypeAudio          AdvertisingChannelType = "AUDIO"
+	AdvertisingChannelTypeYoutube        AdvertisingChannelType = "YOUTUBE"
+	AdvertisingChannelTypeNative         AdvertisingChannelType = "NATIVE"
+	AdvertisingChannelTypeCtv            AdvertisingChannelType = "CTV"
+	AdvertisingChannelTypeDooh           AdvertisingChannelType = "DOOH"
+	AdvertisingChannelTypePerformanceMax AdvertisingChannelType = "PERFORMANCE_MAX"
 )
 
 func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
@@ -36,7 +37,7 @@ func (e AdvertisingChannelType) ToPointer() *AdvertisingChannelType {
 func (e *AdvertisingChannelType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH":
+		case "TEXT", "IMAGE", "VIDEO", "RESPONSIVE", "SHOPPING", "APP", "CALL", "CAROUSEL", "SOCIAL", "DISPLAY", "SEARCH", "AUDIO", "YOUTUBE", "NATIVE", "CTV", "DOOH", "PERFORMANCE_MAX":
 			return true
 		}
 	}

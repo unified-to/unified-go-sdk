@@ -67,7 +67,8 @@ func (e *ListCdpActivationsQueryParamFields) UnmarshalJSON(data []byte) error {
 
 type ListCdpActivationsRequest struct {
 	// ID of the connection
-	ConnectionID  string  `pathParam:"style=simple,explode=false,name=connection_id"`
+	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The destination ID to filter by
 	DestinationID *string `queryParam:"style=form,explode=true,name=destination_id"`
 	// Fields to return
 	Fields []ListCdpActivationsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`

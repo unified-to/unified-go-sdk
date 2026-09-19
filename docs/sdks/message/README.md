@@ -41,17 +41,17 @@ func main() {
         MessagingMessage: shared.MessagingMessage{
             Attachments: []shared.MessagingAttachment{
                 shared.MessagingAttachment{
-                    ContentIdentifier: unifiedgosdk.Pointer("dcbbbd22-fbe7-4d58-8c1a-f868d90f7f46"),
+                    ContentIdentifier: unifiedgosdk.Pointer("337b39df-61c6-4b44-add8-445296ceea85"),
                     ContentType: unifiedgosdk.Pointer("coaegresco"),
                     DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
                     Filename: unifiedgosdk.Pointer("super"),
-                    MessageID: unifiedgosdk.Pointer("3dbc3e68-3f4f-4041-b650-268411e66492"),
+                    MessageID: unifiedgosdk.Pointer("7bafa90d-f227-4eb2-85d2-e0096fcb7d30"),
                     Size: unifiedgosdk.Pointer[float64](327.0),
                 },
             },
             Buttons: []shared.MessagingButton{
                 shared.MessagingButton{
-                    ID: "05031570-3444-488e-aabc-5d5838a0c623",
+                    ID: "46f47804-6489-4d7b-a9d5-cf50a8837b3a",
                     Text: unifiedgosdk.Pointer("denuo"),
                 },
             },
@@ -59,7 +59,7 @@ func main() {
             DestinationMembers: []shared.MessagingMember{},
             HasChildren: unifiedgosdk.Pointer(true),
             HiddenMembers: []shared.MessagingMember{},
-            ID: unifiedgosdk.Pointer("3dbc3e68-3f4f-4041-b650-268411e66492"),
+            ID: unifiedgosdk.Pointer("7bafa90d-f227-4eb2-85d2-e0096fcb7d30"),
             IsUnread: unifiedgosdk.Pointer(false),
             MentionedMembers: []shared.MessagingMember{},
             Message: unifiedgosdk.Pointer("Sum utique aliquid."),
@@ -68,7 +68,7 @@ func main() {
             Reactions: []shared.MessagingReaction{},
             Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
             Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.370Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T18:41:48.053Z"),
             WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
         },
         ConnectionID: "<id>",
@@ -239,17 +239,17 @@ func main() {
         MessagingMessage: shared.MessagingMessage{
             Attachments: []shared.MessagingAttachment{
                 shared.MessagingAttachment{
-                    ContentIdentifier: unifiedgosdk.Pointer("ba1ea251-fd50-4498-8c30-e7fbb2bcaebb"),
+                    ContentIdentifier: unifiedgosdk.Pointer("7e7d0d55-2223-4184-bf38-301931be502a"),
                     ContentType: unifiedgosdk.Pointer("coaegresco"),
                     DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
                     Filename: unifiedgosdk.Pointer("super"),
-                    MessageID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+                    MessageID: unifiedgosdk.Pointer("a2c4e85b-8c1c-4d50-a011-6858cc2d0cf9"),
                     Size: unifiedgosdk.Pointer[float64](327.0),
                 },
             },
             Buttons: []shared.MessagingButton{
                 shared.MessagingButton{
-                    ID: "973c0bd5-12e9-4075-b53c-e1ae96e509f9",
+                    ID: "90a9a925-be60-4ce7-9874-8de3b33bea9c",
                     Text: unifiedgosdk.Pointer("denuo"),
                 },
             },
@@ -257,7 +257,7 @@ func main() {
             DestinationMembers: []shared.MessagingMember{},
             HasChildren: unifiedgosdk.Pointer(true),
             HiddenMembers: []shared.MessagingMember{},
-            ID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+            ID: unifiedgosdk.Pointer("a2c4e85b-8c1c-4d50-a011-6858cc2d0cf9"),
             IsUnread: unifiedgosdk.Pointer(false),
             MentionedMembers: []shared.MessagingMember{},
             Message: unifiedgosdk.Pointer("Sum utique aliquid."),
@@ -266,7 +266,7 @@ func main() {
             Reactions: []shared.MessagingReaction{},
             Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
             Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.377Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T18:41:48.061Z"),
             WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
         },
         ConnectionID: "<id>",
@@ -384,17 +384,17 @@ func main() {
         MessagingMessage: shared.MessagingMessage{
             Attachments: []shared.MessagingAttachment{
                 shared.MessagingAttachment{
-                    ContentIdentifier: unifiedgosdk.Pointer("ba1ea251-fd50-4498-8c30-e7fbb2bcaebb"),
+                    ContentIdentifier: unifiedgosdk.Pointer("7e7d0d55-2223-4184-bf38-301931be502a"),
                     ContentType: unifiedgosdk.Pointer("coaegresco"),
                     DownloadURL: unifiedgosdk.Pointer("https://rotating-advertisement.org"),
                     Filename: unifiedgosdk.Pointer("super"),
-                    MessageID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+                    MessageID: unifiedgosdk.Pointer("a2c4e85b-8c1c-4d50-a011-6858cc2d0cf9"),
                     Size: unifiedgosdk.Pointer[float64](327.0),
                 },
             },
             Buttons: []shared.MessagingButton{
                 shared.MessagingButton{
-                    ID: "973c0bd5-12e9-4075-b53c-e1ae96e509f9",
+                    ID: "90a9a925-be60-4ce7-9874-8de3b33bea9c",
                     Text: unifiedgosdk.Pointer("denuo"),
                 },
             },
@@ -402,7 +402,7 @@ func main() {
             DestinationMembers: []shared.MessagingMember{},
             HasChildren: unifiedgosdk.Pointer(true),
             HiddenMembers: []shared.MessagingMember{},
-            ID: unifiedgosdk.Pointer("223e26c5-80cd-41eb-813c-bed9dff3869f"),
+            ID: unifiedgosdk.Pointer("a2c4e85b-8c1c-4d50-a011-6858cc2d0cf9"),
             IsUnread: unifiedgosdk.Pointer(false),
             MentionedMembers: []shared.MessagingMember{},
             Message: unifiedgosdk.Pointer("Sum utique aliquid."),
@@ -411,7 +411,7 @@ func main() {
             Reactions: []shared.MessagingReaction{},
             Reference: unifiedgosdk.Pointer("571483f2-d95b-4f06-8b78-d35e7046bb74"),
             Subject: unifiedgosdk.Pointer("Cernuus optio cohaero summisse in."),
-            UpdatedAt: types.MustNewTimeFromString("2023-07-06T11:33:33.377Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-07-06T18:41:48.061Z"),
             WebURL: unifiedgosdk.Pointer("https://grumpy-kit.net"),
         },
         ConnectionID: "<id>",
