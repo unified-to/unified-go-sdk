@@ -35,4 +35,7 @@ value := operations.GetAccountingTransactionQueryParamFieldsID
 | `GetAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                           |
 | `GetAccountingTransactionQueryParamFieldsCategoryIds`     | category_ids                                              |
 | `GetAccountingTransactionQueryParamFieldsProjectID`       | project_id                                                |
+| `GetAccountingTransactionQueryParamFieldsTransactionAt`   | transaction_at                                            |
+| `GetAccountingTransactionQueryParamFieldsExchangeRate`    | exchange_rate                                             |
+| `GetAccountingTransactionQueryParamFieldsStatus`          | status                                                    |
 | `GetAccountingTransactionQueryParamFieldsRaw`             | raw                                                       |

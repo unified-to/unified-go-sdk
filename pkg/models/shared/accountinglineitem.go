@@ -13,8 +13,10 @@ type AccountingLineitem struct {
 	ContactID       *string               `json:"contact_id,omitempty"`
 	CreatedAt       *time.Time            `json:"created_at,omitempty"`
 	DiscountAmount  *float64              `json:"discount_amount,omitempty"`
+	ExchangeRate    *float64              `json:"exchange_rate,omitempty"`
 	Fees            []AccountingFee       `json:"fees,omitempty"`
 	ID              *string               `json:"id,omitempty"`
+	IsBillable      *bool                 `json:"is_billable,omitempty"`
 	ItemDescription *string               `json:"item_description,omitempty"`
 	ItemID          *string               `json:"item_id,omitempty"`
 	ItemName        *string               `json:"item_name,omitempty"`
@@ -22,6 +24,7 @@ type AccountingLineitem struct {
 	ItemVariants    []AccountingReference `json:"item_variants,omitempty"`
 	Locations       []AccountingReference `json:"locations,omitempty"`
 	Notes           *string               `json:"notes,omitempty"`
+	ProjectID       *string               `json:"project_id,omitempty"`
 	RefundAmount    *float64              `json:"refund_amount,omitempty"`
 	RefundedAt      *time.Time            `json:"refunded_at,omitempty"`
 	TaxAmount       *float64              `json:"tax_amount,omitempty"`
@@ -78,6 +81,13 @@ func (a *AccountingLineitem) GetDiscountAmount() *float64 {
 	return a.DiscountAmount
 }
 
+func (a *AccountingLineitem) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
+}
+
 func (a *AccountingLineitem) GetFees() []AccountingFee {
 	if a == nil {
 		return nil
@@ -90,6 +100,13 @@ func (a *AccountingLineitem) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AccountingLineitem) GetIsBillable() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsBillable
 }
 
 func (a *AccountingLineitem) GetItemDescription() *string {
@@ -139,6 +156,13 @@ func (a *AccountingLineitem) GetNotes() *string {
 		return nil
 	}
 	return a.Notes
+}
+
+func (a *AccountingLineitem) GetProjectID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ProjectID
 }
 
 func (a *AccountingLineitem) GetRefundAmount() *float64 {

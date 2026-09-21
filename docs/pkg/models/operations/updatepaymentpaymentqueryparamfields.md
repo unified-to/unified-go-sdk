@@ -40,4 +40,8 @@ value := operations.UpdatePaymentPaymentQueryParamFieldsID
 | `UpdatePaymentPaymentQueryParamFieldsDeviceID`       | device_id                                            |
 | `UpdatePaymentPaymentQueryParamFieldsCardBrand`      | card_brand                                           |
 | `UpdatePaymentPaymentQueryParamFieldsCardLast4`      | card_last4                                           |
+| `UpdatePaymentPaymentQueryParamFieldsPaidAt`         | paid_at                                              |
+| `UpdatePaymentPaymentQueryParamFieldsExchangeRate`   | exchange_rate                                        |
+| `UpdatePaymentPaymentQueryParamFieldsCategoryIds`    | category_ids                                         |
+| `UpdatePaymentPaymentQueryParamFieldsNetAmount`      | net_amount                                           |
 | `UpdatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |

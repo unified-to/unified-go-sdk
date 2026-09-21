@@ -18,4 +18,5 @@
 | `PaymentID`        | `*string`          | :heavy_minus_sign: | N/A                |
 | `ProjectID`        | `*string`          | :heavy_minus_sign: | N/A                |
 | `TaxAmount`        | `*float64`         | :heavy_minus_sign: | N/A                |
+| `TaxrateID`        | `*string`          | :heavy_minus_sign: | N/A                |
 | `TotalAmount`      | `*float64`         | :heavy_minus_sign: | N/A                |

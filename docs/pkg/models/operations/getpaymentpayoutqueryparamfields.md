@@ -22,4 +22,9 @@ value := operations.GetPaymentPayoutQueryParamFieldsID
 | `GetPaymentPayoutQueryParamFieldsCurrency`    | currency                                      |
 | `GetPaymentPayoutQueryParamFieldsNotes`       | notes                                         |
 | `GetPaymentPayoutQueryParamFieldsStatus`      | status                                        |
+| `GetPaymentPayoutQueryParamFieldsArrivalAt`   | arrival_at                                    |
+| `GetPaymentPayoutQueryParamFieldsFeeAmount`   | fee_amount                                    |
+| `GetPaymentPayoutQueryParamFieldsNetAmount`   | net_amount                                    |
+| `GetPaymentPayoutQueryParamFieldsAccountID`   | account_id                                    |
+| `GetPaymentPayoutQueryParamFieldsLineitems`   | lineitems                                     |
 | `GetPaymentPayoutQueryParamFieldsRaw`         | raw                                           |

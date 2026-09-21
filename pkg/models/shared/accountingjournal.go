@@ -7,13 +7,39 @@ import (
 	"time"
 )
 
+type AccountingJournalStatus string
+
+const (
+	AccountingJournalStatusDraft  AccountingJournalStatus = "DRAFT"
+	AccountingJournalStatusPosted AccountingJournalStatus = "POSTED"
+	AccountingJournalStatusVoid   AccountingJournalStatus = "VOID"
+	AccountingJournalStatusOther  AccountingJournalStatus = "OTHER"
+)
+
+func (e AccountingJournalStatus) ToPointer() *AccountingJournalStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingJournalStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DRAFT", "POSTED", "VOID", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingJournal struct {
-	Attachments []AccountingAttachment `json:"attachments,omitempty"`
-	CategoryIds []string               `json:"category_ids,omitempty"`
-	CreatedAt   *time.Time             `json:"created_at,omitempty"`
-	Currency    *string                `json:"currency,omitempty"`
-	Description *string                `json:"description,omitempty"`
-	ID          *string                `json:"id,omitempty"`
+	Attachments      []AccountingAttachment `json:"attachments,omitempty"`
+	CategoryIds      []string               `json:"category_ids,omitempty"`
+	CreatedAt        *time.Time             `json:"created_at,omitempty"`
+	Currency         *string                `json:"currency,omitempty"`
+	Description      *string                `json:"description,omitempty"`
+	ExchangeRate     *float64               `json:"exchange_rate,omitempty"`
+	ID               *string                `json:"id,omitempty"`
+	IsInclusiveOfTax *bool                  `json:"is_inclusive_of_tax,omitempty"`
 	// new field name
 	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	OrganizationID *string                     `json:"organization_id,omitempty"`
@@ -22,8 +48,10 @@ type AccountingJournal struct {
 	Raw            map[string]any              `json:"raw,omitempty"`
 	Reference      *string                     `json:"reference,omitempty"`
 	Source         *string                     `json:"source,omitempty"`
+	Status         *AccountingJournalStatus    `json:"status,omitempty"`
 	TaxAmount      *float64                    `json:"tax_amount,omitempty"`
 	TaxrateID      *string                     `json:"taxrate_id,omitempty"`
+	TotalAmount    *float64                    `json:"total_amount,omitempty"`
 	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
 }
 
@@ -73,11 +101,25 @@ func (a *AccountingJournal) GetDescription() *string {
 	return a.Description
 }
 
+func (a *AccountingJournal) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
+}
+
 func (a *AccountingJournal) GetID() *string {
 	if a == nil {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AccountingJournal) GetIsInclusiveOfTax() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsInclusiveOfTax
 }
 
 func (a *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
@@ -129,6 +171,13 @@ func (a *AccountingJournal) GetSource() *string {
 	return a.Source
 }
 
+func (a *AccountingJournal) GetStatus() *AccountingJournalStatus {
+	if a == nil {
+		return nil
+	}
+	return a.Status
+}
+
 func (a *AccountingJournal) GetTaxAmount() *float64 {
 	if a == nil {
 		return nil
@@ -141,6 +190,13 @@ func (a *AccountingJournal) GetTaxrateID() *string {
 		return nil
 	}
 	return a.TaxrateID
+}
+
+func (a *AccountingJournal) GetTotalAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.TotalAmount
 }
 
 func (a *AccountingJournal) GetUpdatedAt() *time.Time {

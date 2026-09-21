@@ -150,9 +150,11 @@ type UnifiedTo struct {
 	Form                *Form
 	Submission          *Submission
 	Genai               *Genai
+	Agent               *Agent
 	Embedding           *Embedding
 	Model               *Model
 	Prompt              *Prompt
+	Task                *Task
 	Hris                *Hris
 	Attendance          *Attendance
 	Bankaccount         *Bankaccount
@@ -209,7 +211,6 @@ type UnifiedTo struct {
 	Post                *Post
 	Storage             *Storage
 	File                *File
-	Task                *Task
 	Change              *Change
 	Ticketing           *Ticketing
 	Customer            *Customer
@@ -307,10 +308,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.127",
+		SDKVersion: "0.36.128",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.36.127 2.938.0 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.36.127",
+			UserAgent:         "speakeasy-sdk/go 0.36.128 2.938.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.36.128",
 			GenVersion:        "2.938.0",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -426,9 +427,11 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Form = newForm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Submission = newSubmission(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Genai = newGenai(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Agent = newAgent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Embedding = newEmbedding(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Attendance = newAttendance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Bankaccount = newBankaccount(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -485,7 +488,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Post = newPost(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Storage = newStorage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.File = newFile(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Change = newChange(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Ticketing = newTicketing(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Customer = newCustomer(sdk, sdk.sdkConfiguration, sdk.hooks)

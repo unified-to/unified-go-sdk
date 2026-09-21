@@ -7,6 +7,30 @@ import (
 	"time"
 )
 
+type AccountingTransactionStatus string
+
+const (
+	AccountingTransactionStatusPending AccountingTransactionStatus = "PENDING"
+	AccountingTransactionStatusPosted  AccountingTransactionStatus = "POSTED"
+	AccountingTransactionStatusVoid    AccountingTransactionStatus = "VOID"
+	AccountingTransactionStatusOther   AccountingTransactionStatus = "OTHER"
+)
+
+func (e AccountingTransactionStatus) ToPointer() *AccountingTransactionStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingTransactionStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PENDING", "POSTED", "VOID", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingTransaction struct {
 	AccountID       *string                         `json:"account_id,omitempty"`
 	CategoryIds     []string                        `json:"category_ids,omitempty"`
@@ -14,6 +38,7 @@ type AccountingTransaction struct {
 	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
 	Currency        *string                         `json:"currency,omitempty"`
 	CustomerMessage *string                         `json:"customer_message,omitempty"`
+	ExchangeRate    *float64                        `json:"exchange_rate,omitempty"`
 	ID              *string                         `json:"id,omitempty"`
 	Lineitems       []AccountingTransactionLineItem `json:"lineitems,omitempty"`
 	Memo            *string                         `json:"memo,omitempty"`
@@ -24,9 +49,11 @@ type AccountingTransaction struct {
 	Raw             map[string]any                  `json:"raw,omitempty"`
 	Reference       *string                         `json:"reference,omitempty"`
 	SplitAccountID  *string                         `json:"split_account_id,omitempty"`
+	Status          *AccountingTransactionStatus    `json:"status,omitempty"`
 	SubTotalAmount  *float64                        `json:"sub_total_amount,omitempty"`
 	TaxAmount       *float64                        `json:"tax_amount,omitempty"`
 	TotalAmount     *float64                        `json:"total_amount,omitempty"`
+	TransactionAt   *time.Time                      `json:"transaction_at,omitempty"`
 	Type            *string                         `json:"type,omitempty"`
 	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
 }
@@ -82,6 +109,13 @@ func (a *AccountingTransaction) GetCustomerMessage() *string {
 		return nil
 	}
 	return a.CustomerMessage
+}
+
+func (a *AccountingTransaction) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
 }
 
 func (a *AccountingTransaction) GetID() *string {
@@ -154,6 +188,13 @@ func (a *AccountingTransaction) GetSplitAccountID() *string {
 	return a.SplitAccountID
 }
 
+func (a *AccountingTransaction) GetStatus() *AccountingTransactionStatus {
+	if a == nil {
+		return nil
+	}
+	return a.Status
+}
+
 func (a *AccountingTransaction) GetSubTotalAmount() *float64 {
 	if a == nil {
 		return nil
@@ -173,6 +214,13 @@ func (a *AccountingTransaction) GetTotalAmount() *float64 {
 		return nil
 	}
 	return a.TotalAmount
+}
+
+func (a *AccountingTransaction) GetTransactionAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.TransactionAt
 }
 
 func (a *AccountingTransaction) GetType() *string {

@@ -7,6 +7,30 @@ import (
 	"time"
 )
 
+type Reason string
+
+const (
+	ReasonDuplicate           Reason = "DUPLICATE"
+	ReasonFraudulent          Reason = "FRAUDULENT"
+	ReasonRequestedByCustomer Reason = "REQUESTED_BY_CUSTOMER"
+	ReasonOther               Reason = "OTHER"
+)
+
+func (e Reason) ToPointer() *Reason {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Reason) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "DUPLICATE", "FRAUDULENT", "REQUESTED_BY_CUSTOMER", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentRefundStatus string
 
 const (
@@ -31,17 +55,50 @@ func (e *PaymentRefundStatus) IsExact() bool {
 	return false
 }
 
+type PaymentRefundTenderType string
+
+const (
+	PaymentRefundTenderTypeCard           PaymentRefundTenderType = "CARD"
+	PaymentRefundTenderTypeCash           PaymentRefundTenderType = "CASH"
+	PaymentRefundTenderTypeGiftCard       PaymentRefundTenderType = "GIFT_CARD"
+	PaymentRefundTenderTypeBankTransfer   PaymentRefundTenderType = "BANK_TRANSFER"
+	PaymentRefundTenderTypeWallet         PaymentRefundTenderType = "WALLET"
+	PaymentRefundTenderTypeCheck          PaymentRefundTenderType = "CHECK"
+	PaymentRefundTenderTypeStoreCredit    PaymentRefundTenderType = "STORE_CREDIT"
+	PaymentRefundTenderTypeBuyNowPayLater PaymentRefundTenderType = "BUY_NOW_PAY_LATER"
+	PaymentRefundTenderTypeExternal       PaymentRefundTenderType = "EXTERNAL"
+	PaymentRefundTenderTypeOther          PaymentRefundTenderType = "OTHER"
+)
+
+func (e PaymentRefundTenderType) ToPointer() *PaymentRefundTenderType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PaymentRefundTenderType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CARD", "CASH", "GIFT_CARD", "BANK_TRANSFER", "WALLET", "CHECK", "STORE_CREDIT", "BUY_NOW_PAY_LATER", "EXTERNAL", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type PaymentRefund struct {
-	CreatedAt   *time.Time           `json:"created_at,omitempty"`
-	Currency    *string              `json:"currency,omitempty"`
-	ID          *string              `json:"id,omitempty"`
-	Notes       *string              `json:"notes,omitempty"`
-	PaymentID   *string              `json:"payment_id,omitempty"`
-	Raw         map[string]any       `json:"raw,omitempty"`
-	Reference   *string              `json:"reference,omitempty"`
-	Status      *PaymentRefundStatus `json:"status,omitempty"`
-	TotalAmount *float64             `json:"total_amount,omitempty"`
-	UpdatedAt   *time.Time           `json:"updated_at,omitempty"`
+	CreatedAt   *time.Time               `json:"created_at,omitempty"`
+	Currency    *string                  `json:"currency,omitempty"`
+	ID          *string                  `json:"id,omitempty"`
+	Notes       *string                  `json:"notes,omitempty"`
+	PaymentID   *string                  `json:"payment_id,omitempty"`
+	Raw         map[string]any           `json:"raw,omitempty"`
+	Reason      *Reason                  `json:"reason,omitempty"`
+	Reference   *string                  `json:"reference,omitempty"`
+	RefundedAt  *time.Time               `json:"refunded_at,omitempty"`
+	Status      *PaymentRefundStatus     `json:"status,omitempty"`
+	TenderType  *PaymentRefundTenderType `json:"tender_type,omitempty"`
+	TotalAmount *float64                 `json:"total_amount,omitempty"`
+	UpdatedAt   *time.Time               `json:"updated_at,omitempty"`
 }
 
 func (p PaymentRefund) MarshalJSON() ([]byte, error) {
@@ -97,6 +154,13 @@ func (p *PaymentRefund) GetRaw() map[string]any {
 	return p.Raw
 }
 
+func (p *PaymentRefund) GetReason() *Reason {
+	if p == nil {
+		return nil
+	}
+	return p.Reason
+}
+
 func (p *PaymentRefund) GetReference() *string {
 	if p == nil {
 		return nil
@@ -104,11 +168,25 @@ func (p *PaymentRefund) GetReference() *string {
 	return p.Reference
 }
 
+func (p *PaymentRefund) GetRefundedAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.RefundedAt
+}
+
 func (p *PaymentRefund) GetStatus() *PaymentRefundStatus {
 	if p == nil {
 		return nil
 	}
 	return p.Status
+}
+
+func (p *PaymentRefund) GetTenderType() *PaymentRefundTenderType {
+	if p == nil {
+		return nil
+	}
+	return p.TenderType
 }
 
 func (p *PaymentRefund) GetTotalAmount() *float64 {

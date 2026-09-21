@@ -13,21 +13,25 @@ value := operations.PatchAccountingJournalQueryParamFieldsID
 
 ## Values
 
-| Name                                                   | Value                                                  |
-| ------------------------------------------------------ | ------------------------------------------------------ |
-| `PatchAccountingJournalQueryParamFieldsID`             | id                                                     |
-| `PatchAccountingJournalQueryParamFieldsCreatedAt`      | created_at                                             |
-| `PatchAccountingJournalQueryParamFieldsUpdatedAt`      | updated_at                                             |
-| `PatchAccountingJournalQueryParamFieldsReference`      | reference                                              |
-| `PatchAccountingJournalQueryParamFieldsTaxAmount`      | tax_amount                                             |
-| `PatchAccountingJournalQueryParamFieldsCurrency`       | currency                                               |
-| `PatchAccountingJournalQueryParamFieldsLineitems`      | lineitems                                              |
-| `PatchAccountingJournalQueryParamFieldsTaxrateID`      | taxrate_id                                             |
-| `PatchAccountingJournalQueryParamFieldsDescription`    | description                                            |
-| `PatchAccountingJournalQueryParamFieldsPostedAt`       | posted_at                                              |
-| `PatchAccountingJournalQueryParamFieldsSource`         | source                                                 |
-| `PatchAccountingJournalQueryParamFieldsOrganizationID` | organization_id                                        |
-| `PatchAccountingJournalQueryParamFieldsCategoryIds`    | category_ids                                           |
-| `PatchAccountingJournalQueryParamFieldsProjectID`      | project_id                                             |
-| `PatchAccountingJournalQueryParamFieldsAttachments`    | attachments                                            |
-| `PatchAccountingJournalQueryParamFieldsRaw`            | raw                                                    |
+| Name                                                     | Value                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| `PatchAccountingJournalQueryParamFieldsID`               | id                                                       |
+| `PatchAccountingJournalQueryParamFieldsCreatedAt`        | created_at                                               |
+| `PatchAccountingJournalQueryParamFieldsUpdatedAt`        | updated_at                                               |
+| `PatchAccountingJournalQueryParamFieldsReference`        | reference                                                |
+| `PatchAccountingJournalQueryParamFieldsTaxAmount`        | tax_amount                                               |
+| `PatchAccountingJournalQueryParamFieldsCurrency`         | currency                                                 |
+| `PatchAccountingJournalQueryParamFieldsLineitems`        | lineitems                                                |
+| `PatchAccountingJournalQueryParamFieldsTaxrateID`        | taxrate_id                                               |
+| `PatchAccountingJournalQueryParamFieldsDescription`      | description                                              |
+| `PatchAccountingJournalQueryParamFieldsPostedAt`         | posted_at                                                |
+| `PatchAccountingJournalQueryParamFieldsSource`           | source                                                   |
+| `PatchAccountingJournalQueryParamFieldsOrganizationID`   | organization_id                                          |
+| `PatchAccountingJournalQueryParamFieldsCategoryIds`      | category_ids                                             |
+| `PatchAccountingJournalQueryParamFieldsProjectID`        | project_id                                               |
+| `PatchAccountingJournalQueryParamFieldsAttachments`      | attachments                                              |
+| `PatchAccountingJournalQueryParamFieldsTotalAmount`      | total_amount                                             |
+| `PatchAccountingJournalQueryParamFieldsExchangeRate`     | exchange_rate                                            |
+| `PatchAccountingJournalQueryParamFieldsStatus`           | status                                                   |
+| `PatchAccountingJournalQueryParamFieldsIsInclusiveOfTax` | is_inclusive_of_tax                                      |
+| `PatchAccountingJournalQueryParamFieldsRaw`              | raw                                                      |

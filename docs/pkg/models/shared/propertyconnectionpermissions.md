@@ -187,6 +187,12 @@ custom := shared.PropertyConnectionPermissions("custom_value")
 | `PropertyConnectionPermissionsGenaiPromptWrite`                   | genai_prompt_write                                                |
 | `PropertyConnectionPermissionsGenaiEmbeddingRead`                 | genai_embedding_read                                              |
 | `PropertyConnectionPermissionsGenaiEmbeddingWrite`                | genai_embedding_write                                             |
+| `PropertyConnectionPermissionsGenaiTaskRead`                      | genai_task_read                                                   |
+| `PropertyConnectionPermissionsGenaiTaskWrite`                     | genai_task_write                                                  |
+| `PropertyConnectionPermissionsGenaiAgentRead`                     | genai_agent_read                                                  |
+| `PropertyConnectionPermissionsGenaiAgentWrite`                    | genai_agent_write                                                 |
+| `PropertyConnectionPermissionsGenaiOrganizationRead`              | genai_organization_read                                           |
+| `PropertyConnectionPermissionsGenaiOrganizationWrite`             | genai_organization_write                                          |
 | `PropertyConnectionPermissionsMessagingMessageRead`               | messaging_message_read                                            |
 | `PropertyConnectionPermissionsMessagingMessageWrite`              | messaging_message_write                                           |
 | `PropertyConnectionPermissionsMessagingChannelRead`               | messaging_channel_read                                            |

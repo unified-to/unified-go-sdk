@@ -4,13 +4,16 @@
 
 ### Available Operations
 
+* [CreateGenaiTask](#creategenaitask) - Create a task
 * [CreateTaskComment](#createtaskcomment) - Create a comment
 * [CreateTaskProject](#createtaskproject) - Create a project
 * [CreateTaskTask](#createtasktask) - Create a task
+* [GetGenaiTask](#getgenaitask) - Retrieve a task
 * [GetTaskChange](#gettaskchange) - Retrieve a change
 * [GetTaskComment](#gettaskcomment) - Retrieve a comment
 * [GetTaskProject](#gettaskproject) - Retrieve a project
 * [GetTaskTask](#gettasktask) - Retrieve a task
+* [ListGenaiTasks](#listgenaitasks) - List all tasks
 * [ListTaskChanges](#listtaskchanges) - List all changes
 * [ListTaskComments](#listtaskcomments) - List all comments
 * [ListTaskProjects](#listtaskprojects) - List all projects
@@ -18,12 +21,95 @@
 * [PatchTaskComment](#patchtaskcomment) - Update a comment
 * [PatchTaskProject](#patchtaskproject) - Update a project
 * [PatchTaskTask](#patchtasktask) - Update a task
+* [RemoveGenaiTask](#removegenaitask) - Remove a task
 * [RemoveTaskComment](#removetaskcomment) - Remove a comment
 * [RemoveTaskProject](#removetaskproject) - Remove a project
 * [RemoveTaskTask](#removetasktask) - Remove a task
 * [UpdateTaskComment](#updatetaskcomment) - Update a comment
 * [UpdateTaskProject](#updatetaskproject) - Update a project
 * [UpdateTaskTask](#updatetasktask) - Update a task
+
+## CreateGenaiTask
+
+Create a task
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Task.CreateGenaiTask(ctx, operations.CreateGenaiTaskRequest{
+        GenaiTask: shared.GenaiTask{
+            CompletedAt: types.MustNewTimeFromString("2025-09-06T09:18:49.674Z"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
+            FilesChanged: unifiedgosdk.Pointer[float64](19.0),
+            ID: unifiedgosdk.Pointer("586f6326-fe69-435c-8548-3150816342b0"),
+            Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
+            LinesAdded: unifiedgosdk.Pointer[float64](244.0),
+            LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
+            Messages: []shared.GenaiContent{
+                shared.GenaiContent{
+                    Content: "Stultus esse cursim stabilis tenetur amet contigo tristis.",
+                    Role: shared.RoleAssistant.ToPointer(),
+                },
+            },
+            Name: unifiedgosdk.Pointer("connect multi-byte port"),
+            PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
+            RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
+            SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
+            StartedAt: types.MustNewTimeFromString("2024-05-03T10:13:29.849Z"),
+            Status: shared.GenaiTaskStatusBlocked.ToPointer(),
+            Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
+            TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
+            TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-14T12:14:43.464Z"),
+            WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiTask != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.CreateGenaiTaskRequest](../../pkg/models/operations/creategenaitaskrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.CreateGenaiTaskResponse](../../pkg/models/operations/creategenaitaskresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## CreateTaskComment
 
@@ -55,9 +141,9 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("f38f41c8-dc53-4190-92f3-0d38c4a47d87"),
+            ID: unifiedgosdk.Pointer("0df5753a-ad90-4d22-bca0-59412dfde752"),
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-24T07:30:08.291Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T20:05:50.704Z"),
             UserName: unifiedgosdk.Pointer("Santina Abbott"),
         },
         ConnectionID: "<id>",
@@ -121,7 +207,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("f8913030-92fd-4072-a50a-91883225c1b2"),
+            ID: unifiedgosdk.Pointer("19df8b1d-5ab7-42af-b402-22c0efd2b9cc"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -130,7 +216,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("da6e86f5-9333-461f-89ca-229ab9593bab"),
+                    ID: unifiedgosdk.Pointer("69b253d6-578b-4ee7-a0c8-82f2a3568e17"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -144,7 +230,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5a19ab51-58dc-4f5c-8029-c3e1ec02bcba"),
+                    ID: unifiedgosdk.Pointer("bac38dfa-2149-4334-b944-5ba4dff681d3"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -153,7 +239,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-08T16:53:49.593Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T20:56:49.330Z"),
         },
         ConnectionID: "<id>",
     })
@@ -213,18 +299,18 @@ func main() {
     res, err := s.Task.CreateTaskTask(ctx, operations.CreateTaskTaskRequest{
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
-            CompletedAt: types.MustNewTimeFromString("2022-03-24T21:03:59.206Z"),
+            CompletedAt: types.MustNewTimeFromString("2022-03-25T15:31:00.389Z"),
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2026-04-24T05:51:45.547Z"),
-            EndAt: types.MustNewTimeFromString("2022-10-14T04:12:42.201Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-26T00:16:15.392Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-15T01:55:40.491Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("e4dc5d9c-edc1-426e-b93a-825d5b60536a"),
+            ID: unifiedgosdk.Pointer("8764a502-52ee-4c02-bded-d8e164ceba6e"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("Direct Markets Architect"),
             Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
             Priority: unifiedgosdk.Pointer("LOW"),
             Progress: unifiedgosdk.Pointer[float64](2.0),
-            StartAt: types.MustNewTimeFromString("2022-01-19T20:05:30.133Z"),
+            StartAt: types.MustNewTimeFromString("2022-01-20T13:30:47.721Z"),
             Status: shared.TaskTaskStatusInProgress.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -234,7 +320,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](957.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("tubineus"),
-            UpdatedAt: types.MustNewTimeFromString("2019-07-13T12:07:39.681Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T14:44:54.836Z"),
             URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
         },
         ConnectionID: "<id>",
@@ -259,6 +345,61 @@ func main() {
 ### Response
 
 **[*operations.CreateTaskTaskResponse](../../pkg/models/operations/createtasktaskresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetGenaiTask
+
+Retrieve a task
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getGenaiTask" method="get" path="/genai/{connection_id}/task/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Task.GetGenaiTask(ctx, operations.GetGenaiTaskRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiTask != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.GetGenaiTaskRequest](../../pkg/models/operations/getgenaitaskrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.GetGenaiTaskResponse](../../pkg/models/operations/getgenaitaskresponse.md), error**
 
 ### Errors
 
@@ -479,6 +620,60 @@ func main() {
 ### Response
 
 **[*operations.GetTaskTaskResponse](../../pkg/models/operations/gettasktaskresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListGenaiTasks
+
+List all tasks
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listGenaiTasks" method="get" path="/genai/{connection_id}/task" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Task.ListGenaiTasks(ctx, operations.ListGenaiTasksRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiTasks != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListGenaiTasksRequest](../../pkg/models/operations/listgenaitasksrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.ListGenaiTasksResponse](../../pkg/models/operations/listgenaitasksresponse.md), error**
 
 ### Errors
 
@@ -732,9 +927,9 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("f353db94-7dae-4731-94da-a60f346d53a5"),
+            ID: unifiedgosdk.Pointer("381761fa-8766-492d-97d4-83c75cda22e0"),
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-24T07:30:08.292Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T20:05:50.706Z"),
             UserName: unifiedgosdk.Pointer("Santina Abbott"),
         },
         ConnectionID: "<id>",
@@ -799,7 +994,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b98bafb4-261c-48b8-be36-ef4b0e5e46dc"),
+            ID: unifiedgosdk.Pointer("15f47efb-fcb7-4b67-81e2-a0d26a9da494"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -808,7 +1003,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("99cc8852-277e-458e-bd29-704b297c5922"),
+                    ID: unifiedgosdk.Pointer("b5927698-96fc-4eac-bf28-dc286ccc3b89"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -822,7 +1017,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c7c432b8-71c7-4b78-9927-ab3909bb44da"),
+                    ID: unifiedgosdk.Pointer("be30191d-043c-42e2-bb97-f5c110e47983"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -831,7 +1026,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-08T16:53:49.595Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T20:56:49.332Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -892,18 +1087,18 @@ func main() {
     res, err := s.Task.PatchTaskTask(ctx, operations.PatchTaskTaskRequest{
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
-            CompletedAt: types.MustNewTimeFromString("2022-03-24T21:03:59.218Z"),
+            CompletedAt: types.MustNewTimeFromString("2022-03-25T15:31:00.401Z"),
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2026-04-24T05:51:45.573Z"),
-            EndAt: types.MustNewTimeFromString("2022-10-14T04:12:42.214Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-26T00:16:15.419Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-15T01:55:40.505Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("998084ff-bfcd-4c59-925e-d3c44b1f9347"),
+            ID: unifiedgosdk.Pointer("a9e4eaee-df24-473b-ac7f-b4f1605269c2"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("Direct Markets Architect"),
             Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
             Priority: unifiedgosdk.Pointer("LOW"),
             Progress: unifiedgosdk.Pointer[float64](2.0),
-            StartAt: types.MustNewTimeFromString("2022-01-19T20:05:30.144Z"),
+            StartAt: types.MustNewTimeFromString("2022-01-20T13:30:47.733Z"),
             Status: shared.TaskTaskStatusInProgress.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -913,7 +1108,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](957.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("tubineus"),
-            UpdatedAt: types.MustNewTimeFromString("2019-07-13T12:07:39.683Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T14:44:54.838Z"),
             URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
         },
         ConnectionID: "<id>",
@@ -939,6 +1134,61 @@ func main() {
 ### Response
 
 **[*operations.PatchTaskTaskResponse](../../pkg/models/operations/patchtasktaskresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveGenaiTask
+
+Remove a task
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeGenaiTask" method="delete" path="/genai/{connection_id}/task/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Task.RemoveGenaiTask(ctx, operations.RemoveGenaiTaskRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                      | :heavy_check_mark:                                                                         | The context to use for the request.                                                        |
+| `request`                                                                                  | [operations.RemoveGenaiTaskRequest](../../pkg/models/operations/removegenaitaskrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `opts`                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                               | :heavy_minus_sign:                                                                         | The options for this request.                                                              |
+
+### Response
+
+**[*operations.RemoveGenaiTaskResponse](../../pkg/models/operations/removegenaitaskresponse.md), error**
 
 ### Errors
 
@@ -1141,9 +1391,9 @@ func main() {
         TaskComment: shared.TaskComment{
             CreatedAt: types.MustNewTimeFromString("2019-10-12T20:33:37.879Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("f353db94-7dae-4731-94da-a60f346d53a5"),
+            ID: unifiedgosdk.Pointer("381761fa-8766-492d-97d4-83c75cda22e0"),
             Text: unifiedgosdk.Pointer("Colo ulciscor sublime tabernus."),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-24T07:30:08.292Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-24T20:05:50.706Z"),
             UserName: unifiedgosdk.Pointer("Santina Abbott"),
         },
         ConnectionID: "<id>",
@@ -1208,7 +1458,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Valetudo aggredior accommodo curiositas vox."),
             HasChildren: unifiedgosdk.Pointer(false),
             HasTasks: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("b98bafb4-261c-48b8-be36-ef4b0e5e46dc"),
+            ID: unifiedgosdk.Pointer("15f47efb-fcb7-4b67-81e2-a0d26a9da494"),
             Metadata: []shared.TaskMetadata{
                 shared.TaskMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateTaskMetadataExtraDataMapOfAny(
@@ -1217,7 +1467,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("99cc8852-277e-458e-bd29-704b297c5922"),
+                    ID: unifiedgosdk.Pointer("b5927698-96fc-4eac-bf28-dc286ccc3b89"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("decens"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1231,7 +1481,7 @@ func main() {
                         },
                     )),
                     Format: shared.TaskMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c7c432b8-71c7-4b78-9927-ab3909bb44da"),
+                    ID: unifiedgosdk.Pointer("be30191d-043c-42e2-bb97-f5c110e47983"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("benevolentia"),
                     Value: unifiedgosdk.Pointer(shared.CreateTaskMetadataValueStr(
@@ -1240,7 +1490,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Garden"),
-            UpdatedAt: types.MustNewTimeFromString("2023-10-08T16:53:49.595Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-10-08T20:56:49.332Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1301,18 +1551,18 @@ func main() {
     res, err := s.Task.UpdateTaskTask(ctx, operations.UpdateTaskTaskRequest{
         TaskTask: shared.TaskTask{
             AttachmentIds: []string{},
-            CompletedAt: types.MustNewTimeFromString("2022-03-24T21:03:59.218Z"),
+            CompletedAt: types.MustNewTimeFromString("2022-03-25T15:31:00.401Z"),
             CreatedAt: types.MustNewTimeFromString("2019-01-31T08:34:55.626Z"),
-            DueAt: types.MustNewTimeFromString("2026-04-24T05:51:45.573Z"),
-            EndAt: types.MustNewTimeFromString("2022-10-14T04:12:42.214Z"),
+            DueAt: types.MustNewTimeFromString("2026-04-26T00:16:15.419Z"),
+            EndAt: types.MustNewTimeFromString("2022-10-15T01:55:40.505Z"),
             HasChildren: unifiedgosdk.Pointer(true),
-            ID: unifiedgosdk.Pointer("998084ff-bfcd-4c59-925e-d3c44b1f9347"),
+            ID: unifiedgosdk.Pointer("a9e4eaee-df24-473b-ac7f-b4f1605269c2"),
             Metadata: []shared.TaskMetadata{},
             Name: unifiedgosdk.Pointer("Direct Markets Architect"),
             Notes: unifiedgosdk.Pointer("Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero."),
             Priority: unifiedgosdk.Pointer("LOW"),
             Progress: unifiedgosdk.Pointer[float64](2.0),
-            StartAt: types.MustNewTimeFromString("2022-01-19T20:05:30.144Z"),
+            StartAt: types.MustNewTimeFromString("2022-01-20T13:30:47.733Z"),
             Status: shared.TaskTaskStatusInProgress.ToPointer(),
             StoryPoints: unifiedgosdk.Pointer[float64](0.0),
             Tags: []string{
@@ -1322,7 +1572,7 @@ func main() {
             TimeSpent: unifiedgosdk.Pointer[float64](957.0),
             TimeSpentUnit: unifiedgosdk.Pointer("SECONDS"),
             Type: unifiedgosdk.Pointer("tubineus"),
-            UpdatedAt: types.MustNewTimeFromString("2019-07-13T12:07:39.683Z"),
+            UpdatedAt: types.MustNewTimeFromString("2019-07-13T14:44:54.838Z"),
             URL: unifiedgosdk.Pointer("https://dismal-silk.net/"),
         },
         ConnectionID: "<id>",

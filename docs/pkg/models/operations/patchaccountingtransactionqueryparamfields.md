@@ -35,4 +35,7 @@ value := operations.PatchAccountingTransactionQueryParamFieldsID
 | `PatchAccountingTransactionQueryParamFieldsOrganizationID`  | organization_id                                             |
 | `PatchAccountingTransactionQueryParamFieldsCategoryIds`     | category_ids                                                |
 | `PatchAccountingTransactionQueryParamFieldsProjectID`       | project_id                                                  |
+| `PatchAccountingTransactionQueryParamFieldsTransactionAt`   | transaction_at                                              |
+| `PatchAccountingTransactionQueryParamFieldsExchangeRate`    | exchange_rate                                               |
+| `PatchAccountingTransactionQueryParamFieldsStatus`          | status                                                      |
 | `PatchAccountingTransactionQueryParamFieldsRaw`             | raw                                                         |

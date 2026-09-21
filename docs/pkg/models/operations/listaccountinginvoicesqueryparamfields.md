@@ -51,4 +51,8 @@ value := operations.ListAccountingInvoicesQueryParamFieldsID
 | `ListAccountingInvoicesQueryParamFieldsCategoryIds`             | category_ids                                                    |
 | `ListAccountingInvoicesQueryParamFieldsProjectID`               | project_id                                                      |
 | `ListAccountingInvoicesQueryParamFieldsMetadata`                | metadata                                                        |
+| `ListAccountingInvoicesQueryParamFieldsSubTotalAmount`          | sub_total_amount                                                |
+| `ListAccountingInvoicesQueryParamFieldsExchangeRate`            | exchange_rate                                                   |
+| `ListAccountingInvoicesQueryParamFieldsIsInclusiveOfTax`        | is_inclusive_of_tax                                             |
+| `ListAccountingInvoicesQueryParamFieldsSalesorderIds`           | salesorder_ids                                                  |
 | `ListAccountingInvoicesQueryParamFieldsRaw`                     | raw                                                             |

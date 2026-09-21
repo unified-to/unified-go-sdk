@@ -49,4 +49,7 @@ value := operations.ListAccountingBillsQueryParamFieldsID
 | `ListAccountingBillsQueryParamFieldsCategoryIds`             | category_ids                                                 |
 | `ListAccountingBillsQueryParamFieldsProjectID`               | project_id                                                   |
 | `ListAccountingBillsQueryParamFieldsMetadata`                | metadata                                                     |
+| `ListAccountingBillsQueryParamFieldsSubTotalAmount`          | sub_total_amount                                             |
+| `ListAccountingBillsQueryParamFieldsExchangeRate`            | exchange_rate                                                |
+| `ListAccountingBillsQueryParamFieldsPurchaseorderIds`        | purchaseorder_ids                                            |
 | `ListAccountingBillsQueryParamFieldsRaw`                     | raw                                                          |

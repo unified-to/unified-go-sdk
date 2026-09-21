@@ -153,9 +153,11 @@ type AccountingInvoice struct {
 	Currency                *string                                   `json:"currency,omitempty"`
 	DiscountAmount          *float64                                  `json:"discount_amount,omitempty"`
 	DueAt                   *time.Time                                `json:"due_at,omitempty"`
+	ExchangeRate            *float64                                  `json:"exchange_rate,omitempty"`
 	ExtendedNotes           []AccountingExtendedNote                  `json:"extended_notes,omitempty"`
 	ID                      *string                                   `json:"id,omitempty"`
 	InvoiceNumber           *string                                   `json:"invoice_number,omitempty"`
+	IsInclusiveOfTax        *bool                                     `json:"is_inclusive_of_tax,omitempty"`
 	Lineitems               []AccountingLineitem                      `json:"lineitems,omitempty"`
 	Metadata                []AccountingMetadata                      `json:"metadata,omitempty"`
 	Notes                   *string                                   `json:"notes,omitempty"`
@@ -174,14 +176,17 @@ type AccountingInvoice struct {
 	RefundAmount  *float64                     `json:"refund_amount,omitempty"`
 	RefundReason  *string                      `json:"refund_reason,omitempty"`
 	RefundedAt    *time.Time                   `json:"refunded_at,omitempty"`
-	Send          *bool                        `json:"send,omitempty"`
-	Status        *AccountingInvoiceStatus     `json:"status,omitempty"`
-	TaxAmount     *float64                     `json:"tax_amount,omitempty"`
-	Term          *AccountingInvoiceTerm       `json:"term,omitempty"`
-	TotalAmount   *float64                     `json:"total_amount,omitempty"`
-	Type          *AccountingInvoiceType       `json:"type,omitempty"`
-	UpdatedAt     *time.Time                   `json:"updated_at,omitempty"`
-	URL           *string                      `json:"url,omitempty"`
+	// refs -> AccountingSalesorder; the sales orders this invoice was raised from
+	SalesorderIds  []string                 `json:"salesorder_ids,omitempty"`
+	Send           *bool                    `json:"send,omitempty"`
+	Status         *AccountingInvoiceStatus `json:"status,omitempty"`
+	SubTotalAmount *float64                 `json:"sub_total_amount,omitempty"`
+	TaxAmount      *float64                 `json:"tax_amount,omitempty"`
+	Term           *AccountingInvoiceTerm   `json:"term,omitempty"`
+	TotalAmount    *float64                 `json:"total_amount,omitempty"`
+	Type           *AccountingInvoiceType   `json:"type,omitempty"`
+	UpdatedAt      *time.Time               `json:"updated_at,omitempty"`
+	URL            *string                  `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {
@@ -258,6 +263,13 @@ func (a *AccountingInvoice) GetDueAt() *time.Time {
 	return a.DueAt
 }
 
+func (a *AccountingInvoice) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
+}
+
 func (a *AccountingInvoice) GetExtendedNotes() []AccountingExtendedNote {
 	if a == nil {
 		return nil
@@ -277,6 +289,13 @@ func (a *AccountingInvoice) GetInvoiceNumber() *string {
 		return nil
 	}
 	return a.InvoiceNumber
+}
+
+func (a *AccountingInvoice) GetIsInclusiveOfTax() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsInclusiveOfTax
 }
 
 func (a *AccountingInvoice) GetLineitems() []AccountingLineitem {
@@ -398,6 +417,13 @@ func (a *AccountingInvoice) GetRefundedAt() *time.Time {
 	return a.RefundedAt
 }
 
+func (a *AccountingInvoice) GetSalesorderIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.SalesorderIds
+}
+
 func (a *AccountingInvoice) GetSend() *bool {
 	if a == nil {
 		return nil
@@ -410,6 +436,13 @@ func (a *AccountingInvoice) GetStatus() *AccountingInvoiceStatus {
 		return nil
 	}
 	return a.Status
+}
+
+func (a *AccountingInvoice) GetSubTotalAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.SubTotalAmount
 }
 
 func (a *AccountingInvoice) GetTaxAmount() *float64 {

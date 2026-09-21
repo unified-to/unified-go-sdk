@@ -49,4 +49,7 @@ value := operations.PatchAccountingBillQueryParamFieldsID
 | `PatchAccountingBillQueryParamFieldsCategoryIds`             | category_ids                                                 |
 | `PatchAccountingBillQueryParamFieldsProjectID`               | project_id                                                   |
 | `PatchAccountingBillQueryParamFieldsMetadata`                | metadata                                                     |
+| `PatchAccountingBillQueryParamFieldsSubTotalAmount`          | sub_total_amount                                             |
+| `PatchAccountingBillQueryParamFieldsExchangeRate`            | exchange_rate                                                |
+| `PatchAccountingBillQueryParamFieldsPurchaseorderIds`        | purchaseorder_ids                                            |
 | `PatchAccountingBillQueryParamFieldsRaw`                     | raw                                                          |

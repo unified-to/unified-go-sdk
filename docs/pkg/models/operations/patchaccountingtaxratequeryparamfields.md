@@ -24,4 +24,11 @@ value := operations.PatchAccountingTaxrateQueryParamFieldsID
 | `PatchAccountingTaxrateQueryParamFieldsIsActive`       | is_active                                              |
 | `PatchAccountingTaxrateQueryParamFieldsOrganizationID` | organization_id                                        |
 | `PatchAccountingTaxrateQueryParamFieldsMetadata`       | metadata                                               |
+| `PatchAccountingTaxrateQueryParamFieldsEffectiveRate`  | effective_rate                                         |
+| `PatchAccountingTaxrateQueryParamFieldsTotalRate`      | total_rate                                             |
+| `PatchAccountingTaxrateQueryParamFieldsComponents`     | components                                             |
+| `PatchAccountingTaxrateQueryParamFieldsType`           | type                                                   |
+| `PatchAccountingTaxrateQueryParamFieldsIsCompound`     | is_compound                                            |
+| `PatchAccountingTaxrateQueryParamFieldsCountry`        | country                                                |
+| `PatchAccountingTaxrateQueryParamFieldsRegion`         | region                                                 |
 | `PatchAccountingTaxrateQueryParamFieldsRaw`            | raw                                                    |

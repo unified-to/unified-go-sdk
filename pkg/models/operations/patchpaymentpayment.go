@@ -37,6 +37,10 @@ const (
 	PatchPaymentPaymentQueryParamFieldsDeviceID       PatchPaymentPaymentQueryParamFields = "device_id"
 	PatchPaymentPaymentQueryParamFieldsCardBrand      PatchPaymentPaymentQueryParamFields = "card_brand"
 	PatchPaymentPaymentQueryParamFieldsCardLast4      PatchPaymentPaymentQueryParamFields = "card_last4"
+	PatchPaymentPaymentQueryParamFieldsPaidAt         PatchPaymentPaymentQueryParamFields = "paid_at"
+	PatchPaymentPaymentQueryParamFieldsExchangeRate   PatchPaymentPaymentQueryParamFields = "exchange_rate"
+	PatchPaymentPaymentQueryParamFieldsCategoryIds    PatchPaymentPaymentQueryParamFields = "category_ids"
+	PatchPaymentPaymentQueryParamFieldsNetAmount      PatchPaymentPaymentQueryParamFields = "net_amount"
 	PatchPaymentPaymentQueryParamFieldsRaw            PatchPaymentPaymentQueryParamFields = "raw"
 )
 
@@ -98,6 +102,14 @@ func (e *PatchPaymentPaymentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "card_brand":
 		fallthrough
 	case "card_last4":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "exchange_rate":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "net_amount":
 		fallthrough
 	case "raw":
 		*e = PatchPaymentPaymentQueryParamFields(v)

@@ -7,17 +7,49 @@ import (
 	"time"
 )
 
+type AccountingTaxrateType string
+
+const (
+	AccountingTaxrateTypeSales    AccountingTaxrateType = "SALES"
+	AccountingTaxrateTypePurchase AccountingTaxrateType = "PURCHASE"
+	AccountingTaxrateTypeBoth     AccountingTaxrateType = "BOTH"
+	AccountingTaxrateTypeOther    AccountingTaxrateType = "OTHER"
+)
+
+func (e AccountingTaxrateType) ToPointer() *AccountingTaxrateType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingTaxrateType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "SALES", "PURCHASE", "BOTH", "OTHER":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingTaxrate struct {
-	CreatedAt      *time.Time           `json:"created_at,omitempty"`
-	Description    *string              `json:"description,omitempty"`
-	ID             *string              `json:"id,omitempty"`
-	IsActive       *bool                `json:"is_active,omitempty"`
-	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
-	Name           *string              `json:"name,omitempty"`
-	OrganizationID *string              `json:"organization_id,omitempty"`
-	Rate           *float64             `json:"rate,omitempty"`
-	Raw            map[string]any       `json:"raw,omitempty"`
-	UpdatedAt      *time.Time           `json:"updated_at,omitempty"`
+	// Component parts of a compound or multi-component tax
+	Components     []AccountingTaxrateComponent `json:"components,omitempty"`
+	Country        *string                      `json:"country,omitempty"`
+	CreatedAt      *time.Time                   `json:"created_at,omitempty"`
+	Description    *string                      `json:"description,omitempty"`
+	EffectiveRate  *float64                     `json:"effective_rate,omitempty"`
+	ID             *string                      `json:"id,omitempty"`
+	IsActive       *bool                        `json:"is_active,omitempty"`
+	IsCompound     *bool                        `json:"is_compound,omitempty"`
+	Metadata       []AccountingMetadata         `json:"metadata,omitempty"`
+	Name           *string                      `json:"name,omitempty"`
+	OrganizationID *string                      `json:"organization_id,omitempty"`
+	Rate           *float64                     `json:"rate,omitempty"`
+	Raw            map[string]any               `json:"raw,omitempty"`
+	Region         *string                      `json:"region,omitempty"`
+	TotalRate      *float64                     `json:"total_rate,omitempty"`
+	Type           *AccountingTaxrateType       `json:"type,omitempty"`
+	UpdatedAt      *time.Time                   `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTaxrate) MarshalJSON() ([]byte, error) {
@@ -29,6 +61,20 @@ func (a *AccountingTaxrate) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (a *AccountingTaxrate) GetComponents() []AccountingTaxrateComponent {
+	if a == nil {
+		return nil
+	}
+	return a.Components
+}
+
+func (a *AccountingTaxrate) GetCountry() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Country
 }
 
 func (a *AccountingTaxrate) GetCreatedAt() *time.Time {
@@ -45,6 +91,13 @@ func (a *AccountingTaxrate) GetDescription() *string {
 	return a.Description
 }
 
+func (a *AccountingTaxrate) GetEffectiveRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.EffectiveRate
+}
+
 func (a *AccountingTaxrate) GetID() *string {
 	if a == nil {
 		return nil
@@ -57,6 +110,13 @@ func (a *AccountingTaxrate) GetIsActive() *bool {
 		return nil
 	}
 	return a.IsActive
+}
+
+func (a *AccountingTaxrate) GetIsCompound() *bool {
+	if a == nil {
+		return nil
+	}
+	return a.IsCompound
 }
 
 func (a *AccountingTaxrate) GetMetadata() []AccountingMetadata {
@@ -92,6 +152,27 @@ func (a *AccountingTaxrate) GetRaw() map[string]any {
 		return nil
 	}
 	return a.Raw
+}
+
+func (a *AccountingTaxrate) GetRegion() *string {
+	if a == nil {
+		return nil
+	}
+	return a.Region
+}
+
+func (a *AccountingTaxrate) GetTotalRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.TotalRate
+}
+
+func (a *AccountingTaxrate) GetType() *AccountingTaxrateType {
+	if a == nil {
+		return nil
+	}
+	return a.Type
 }
 
 func (a *AccountingTaxrate) GetUpdatedAt() *time.Time {

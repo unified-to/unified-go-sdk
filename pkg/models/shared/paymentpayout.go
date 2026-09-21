@@ -2,6 +2,11 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type PaymentPayoutStatus string
 
 const (
@@ -27,14 +32,45 @@ func (e *PaymentPayoutStatus) IsExact() bool {
 }
 
 type PaymentPayout struct {
-	CreatedAt   *string              `json:"created_at,omitempty"`
-	Currency    *string              `json:"currency,omitempty"`
-	ID          *string              `json:"id,omitempty"`
-	Notes       *string              `json:"notes,omitempty"`
-	Raw         map[string]any       `json:"raw,omitempty"`
-	Status      *PaymentPayoutStatus `json:"status,omitempty"`
-	TotalAmount *float64             `json:"total_amount,omitempty"`
-	UpdatedAt   *string              `json:"updated_at,omitempty"`
+	AccountID *string    `json:"account_id,omitempty"`
+	ArrivalAt *time.Time `json:"arrival_at,omitempty"`
+	CreatedAt *string    `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	FeeAmount *float64   `json:"fee_amount,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	// The transactions included in this payout
+	Lineitems   []PaymentPayoutLineitem `json:"lineitems,omitempty"`
+	NetAmount   *float64                `json:"net_amount,omitempty"`
+	Notes       *string                 `json:"notes,omitempty"`
+	Raw         map[string]any          `json:"raw,omitempty"`
+	Status      *PaymentPayoutStatus    `json:"status,omitempty"`
+	TotalAmount *float64                `json:"total_amount,omitempty"`
+	UpdatedAt   *string                 `json:"updated_at,omitempty"`
+}
+
+func (p PaymentPayout) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PaymentPayout) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (p *PaymentPayout) GetAccountID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.AccountID
+}
+
+func (p *PaymentPayout) GetArrivalAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.ArrivalAt
 }
 
 func (p *PaymentPayout) GetCreatedAt() *string {
@@ -51,11 +87,32 @@ func (p *PaymentPayout) GetCurrency() *string {
 	return p.Currency
 }
 
+func (p *PaymentPayout) GetFeeAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.FeeAmount
+}
+
 func (p *PaymentPayout) GetID() *string {
 	if p == nil {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PaymentPayout) GetLineitems() []PaymentPayoutLineitem {
+	if p == nil {
+		return nil
+	}
+	return p.Lineitems
+}
+
+func (p *PaymentPayout) GetNetAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.NetAmount
 }
 
 func (p *PaymentPayout) GetNotes() *string {

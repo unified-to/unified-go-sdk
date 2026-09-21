@@ -19,6 +19,11 @@ const (
 	GetPaymentPayoutQueryParamFieldsCurrency    GetPaymentPayoutQueryParamFields = "currency"
 	GetPaymentPayoutQueryParamFieldsNotes       GetPaymentPayoutQueryParamFields = "notes"
 	GetPaymentPayoutQueryParamFieldsStatus      GetPaymentPayoutQueryParamFields = "status"
+	GetPaymentPayoutQueryParamFieldsArrivalAt   GetPaymentPayoutQueryParamFields = "arrival_at"
+	GetPaymentPayoutQueryParamFieldsFeeAmount   GetPaymentPayoutQueryParamFields = "fee_amount"
+	GetPaymentPayoutQueryParamFieldsNetAmount   GetPaymentPayoutQueryParamFields = "net_amount"
+	GetPaymentPayoutQueryParamFieldsAccountID   GetPaymentPayoutQueryParamFields = "account_id"
+	GetPaymentPayoutQueryParamFieldsLineitems   GetPaymentPayoutQueryParamFields = "lineitems"
 	GetPaymentPayoutQueryParamFieldsRaw         GetPaymentPayoutQueryParamFields = "raw"
 )
 
@@ -44,6 +49,16 @@ func (e *GetPaymentPayoutQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "notes":
 		fallthrough
 	case "status":
+		fallthrough
+	case "arrival_at":
+		fallthrough
+	case "fee_amount":
+		fallthrough
+	case "net_amount":
+		fallthrough
+	case "account_id":
+		fallthrough
+	case "lineitems":
 		fallthrough
 	case "raw":
 		*e = GetPaymentPayoutQueryParamFields(v)

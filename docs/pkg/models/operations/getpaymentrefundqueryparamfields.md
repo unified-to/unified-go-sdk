@@ -24,4 +24,7 @@ value := operations.GetPaymentRefundQueryParamFieldsID
 | `GetPaymentRefundQueryParamFieldsNotes`       | notes                                         |
 | `GetPaymentRefundQueryParamFieldsStatus`      | status                                        |
 | `GetPaymentRefundQueryParamFieldsReference`   | reference                                     |
+| `GetPaymentRefundQueryParamFieldsRefundedAt`  | refunded_at                                   |
+| `GetPaymentRefundQueryParamFieldsReason`      | reason                                        |
+| `GetPaymentRefundQueryParamFieldsTenderType`  | tender_type                                   |
 | `GetPaymentRefundQueryParamFieldsRaw`         | raw                                           |

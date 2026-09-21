@@ -74,7 +74,7 @@ func main() {
                     Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
                 },
             },
-            ID: unifiedgosdk.Pointer("75b6d077-2d72-42f4-a8a7-0b855cb42d9f"),
+            ID: unifiedgosdk.Pointer("a4e564ca-17df-4b25-9e7c-4e8bd4b8c91e"),
             Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -85,7 +85,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("29c0f65a-9797-4258-bf1a-71b296d295bc"),
+                    ID: unifiedgosdk.Pointer("0922852e-0bdd-4572-8490-0c07e2162c8d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -100,7 +100,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-10T08:49:09.246Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.827Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -114,14 +114,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Maine"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-03T01:07:52.512Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.779Z"),
                     Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
                     ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("6788 Oxford Road"),
                     Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
                     PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-28T15:56:59.964Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.530Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -169,7 +169,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-01T12:24:34.770Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.747Z"),
         },
         ConnectionID: "<id>",
     })
@@ -372,7 +372,7 @@ func main() {
                     Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
                 },
             },
-            ID: unifiedgosdk.Pointer("73ff78f4-5549-459d-b2df-dc2a833a4322"),
+            ID: unifiedgosdk.Pointer("78c9bfcb-beac-4ae7-adf1-cb11fb046603"),
             Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -383,7 +383,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b514a558-5f19-4182-abe3-5d5cd6ae1f4c"),
+                    ID: unifiedgosdk.Pointer("d7b24ca2-56c7-478f-96e3-9af999ae067d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -398,7 +398,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-10T08:49:09.286Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.877Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -412,14 +412,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Maine"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-03T01:07:52.554Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.831Z"),
                     Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
                     ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("6788 Oxford Road"),
                     Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
                     PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-28T15:57:00.007Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.584Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -467,7 +467,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-01T12:24:34.807Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -617,7 +617,7 @@ func main() {
                     Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
                 },
             },
-            ID: unifiedgosdk.Pointer("73ff78f4-5549-459d-b2df-dc2a833a4322"),
+            ID: unifiedgosdk.Pointer("78c9bfcb-beac-4ae7-adf1-cb11fb046603"),
             Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
@@ -628,7 +628,7 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b514a558-5f19-4182-abe3-5d5cd6ae1f4c"),
+                    ID: unifiedgosdk.Pointer("d7b24ca2-56c7-478f-96e3-9af999ae067d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
@@ -643,7 +643,7 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-10T08:49:09.286Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.877Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
@@ -657,14 +657,14 @@ func main() {
                         Region: unifiedgosdk.Pointer("Maine"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-03T01:07:52.554Z"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.831Z"),
                     Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
                     ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
                     IsActive: unifiedgosdk.Pointer(false),
                     Location: unifiedgosdk.Pointer("6788 Oxford Road"),
                     Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
                     PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-28T15:57:00.007Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.584Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -712,7 +712,7 @@ func main() {
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
             Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-01T12:24:34.807Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.792Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

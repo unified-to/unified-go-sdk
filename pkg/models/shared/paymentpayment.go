@@ -87,21 +87,26 @@ func (e *PaymentPaymentType) IsExact() bool {
 type PaymentPayment struct {
 	AccountID *string `json:"account_id,omitempty"`
 	// What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints.
-	Allocations    []PaymentAllocation   `json:"allocations,omitempty"`
-	BillID         *string               `json:"bill_id,omitempty"`
-	CardBrand      *string               `json:"card_brand,omitempty"`
-	CardLast4      *string               `json:"card_last4,omitempty"`
+	Allocations []PaymentAllocation `json:"allocations,omitempty"`
+	BillID      *string             `json:"bill_id,omitempty"`
+	CardBrand   *string             `json:"card_brand,omitempty"`
+	CardLast4   *string             `json:"card_last4,omitempty"`
+	// dimension refs -> AccountingCategory
+	CategoryIds    []string              `json:"category_ids,omitempty"`
 	ContactID      *string               `json:"contact_id,omitempty"`
 	CreatedAt      *time.Time            `json:"created_at,omitempty"`
 	Currency       *string               `default:"USD" json:"currency"`
 	DeviceID       *string               `json:"device_id,omitempty"`
+	ExchangeRate   *float64              `json:"exchange_rate,omitempty"`
 	FeeAmount      *float64              `json:"fee_amount,omitempty"`
 	ID             *string               `json:"id,omitempty"`
 	InvoiceID      *string               `json:"invoice_id,omitempty"`
 	LinkID         *string               `json:"link_id,omitempty"`
 	LocationID     *string               `json:"location_id,omitempty"`
+	NetAmount      *float64              `json:"net_amount,omitempty"`
 	Notes          *string               `json:"notes,omitempty"`
 	OrganizationID *string               `json:"organization_id,omitempty"`
+	PaidAt         *time.Time            `json:"paid_at,omitempty"`
 	PaymentMethod  *string               `json:"payment_method,omitempty"`
 	Raw            map[string]any        `json:"raw,omitempty"`
 	Reference      *string               `json:"reference,omitempty"`
@@ -160,6 +165,13 @@ func (p *PaymentPayment) GetCardLast4() *string {
 	return p.CardLast4
 }
 
+func (p *PaymentPayment) GetCategoryIds() []string {
+	if p == nil {
+		return nil
+	}
+	return p.CategoryIds
+}
+
 func (p *PaymentPayment) GetContactID() *string {
 	if p == nil {
 		return nil
@@ -186,6 +198,13 @@ func (p *PaymentPayment) GetDeviceID() *string {
 		return nil
 	}
 	return p.DeviceID
+}
+
+func (p *PaymentPayment) GetExchangeRate() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.ExchangeRate
 }
 
 func (p *PaymentPayment) GetFeeAmount() *float64 {
@@ -223,6 +242,13 @@ func (p *PaymentPayment) GetLocationID() *string {
 	return p.LocationID
 }
 
+func (p *PaymentPayment) GetNetAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.NetAmount
+}
+
 func (p *PaymentPayment) GetNotes() *string {
 	if p == nil {
 		return nil
@@ -235,6 +261,13 @@ func (p *PaymentPayment) GetOrganizationID() *string {
 		return nil
 	}
 	return p.OrganizationID
+}
+
+func (p *PaymentPayment) GetPaidAt() *time.Time {
+	if p == nil {
+		return nil
+	}
+	return p.PaidAt
 }
 
 func (p *PaymentPayment) GetPaymentMethod() *string {

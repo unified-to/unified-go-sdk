@@ -33,6 +33,7 @@ func (e *AccountingOrganizationType) IsExact() bool {
 
 type AccountingOrganization struct {
 	Address            *PropertyAccountingOrganizationAddress `json:"address,omitempty"`
+	BooksCloseAt       *time.Time                             `json:"books_close_at,omitempty"`
 	CreatedAt          *time.Time                             `json:"created_at,omitempty"`
 	Currency           *string                                `json:"currency,omitempty"`
 	FiscalYearEndMonth *float64                               `json:"fiscal_year_end_month,omitempty"`
@@ -66,6 +67,13 @@ func (a *AccountingOrganization) GetAddress() *PropertyAccountingOrganizationAdd
 		return nil
 	}
 	return a.Address
+}
+
+func (a *AccountingOrganization) GetBooksCloseAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.BooksCloseAt
 }
 
 func (a *AccountingOrganization) GetCreatedAt() *time.Time {

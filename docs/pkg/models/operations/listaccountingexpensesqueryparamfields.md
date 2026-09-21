@@ -41,4 +41,6 @@ value := operations.ListAccountingExpensesQueryParamFieldsID
 | `ListAccountingExpensesQueryParamFieldsCategoryIds`      | category_ids                                             |
 | `ListAccountingExpensesQueryParamFieldsProjectID`        | project_id                                               |
 | `ListAccountingExpensesQueryParamFieldsMetadata`         | metadata                                                 |
+| `ListAccountingExpensesQueryParamFieldsTaxrateID`        | taxrate_id                                               |
+| `ListAccountingExpensesQueryParamFieldsExchangeRate`     | exchange_rate                                            |
 | `ListAccountingExpensesQueryParamFieldsRaw`              | raw                                                      |

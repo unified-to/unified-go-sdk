@@ -9,6 +9,7 @@ type AccountingTransactionLineItem struct {
 	ID           *string  `json:"id,omitempty"`
 	Name         *string  `json:"name,omitempty"`
 	ObjectType   *string  `json:"object_type,omitempty"`
+	TaxrateID    *string  `json:"taxrate_id,omitempty"`
 	TotalAmount  *float64 `json:"total_amount,omitempty"`
 	UnitAmount   *float64 `json:"unit_amount,omitempty"`
 	UnitQuantity *float64 `json:"unit_quantity,omitempty"`
@@ -54,6 +55,13 @@ func (a *AccountingTransactionLineItem) GetObjectType() *string {
 		return nil
 	}
 	return a.ObjectType
+}
+
+func (a *AccountingTransactionLineItem) GetTaxrateID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.TaxrateID
 }
 
 func (a *AccountingTransactionLineItem) GetTotalAmount() *float64 {

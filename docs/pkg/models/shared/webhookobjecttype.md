@@ -111,6 +111,9 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeGenaiModel`                    | genai_model                                      |
 | `WebhookObjectTypeGenaiPrompt`                   | genai_prompt                                     |
 | `WebhookObjectTypeGenaiEmbedding`                | genai_embedding                                  |
+| `WebhookObjectTypeGenaiTask`                     | genai_task                                       |
+| `WebhookObjectTypeGenaiAgent`                    | genai_agent                                      |
+| `WebhookObjectTypeGenaiOrganization`             | genai_organization                               |
 | `WebhookObjectTypeMessagingMessage`              | messaging_message                                |
 | `WebhookObjectTypeMessagingChannel`              | messaging_channel                                |
 | `WebhookObjectTypeMessagingEvent`                | messaging_event                                  |

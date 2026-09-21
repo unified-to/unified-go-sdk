@@ -41,8 +41,8 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("d35a55cf-a6ca-41b6-aa91-586bc8bdcfae"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-06T07:39:05.403Z"),
+            ID: unifiedgosdk.Pointer("33819eee-d1fe-476e-8ddd-049a502ee523"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-07T15:42:43.004Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,8 +212,8 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("3bbc7a7d-977b-444d-90a7-ef3e61a6e80c"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-06T07:39:05.408Z"),
+            ID: unifiedgosdk.Pointer("16019c3a-bb5b-4de6-b8d8-93f2be7fbb5b"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-07T15:42:43.007Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -330,8 +330,8 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("3bbc7a7d-977b-444d-90a7-ef3e61a6e80c"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-06T07:39:05.408Z"),
+            ID: unifiedgosdk.Pointer("16019c3a-bb5b-4de6-b8d8-93f2be7fbb5b"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-07T15:42:43.007Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

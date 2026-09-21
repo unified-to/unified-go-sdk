@@ -37,6 +37,10 @@ const (
 	ListPaymentPaymentsQueryParamFieldsDeviceID       ListPaymentPaymentsQueryParamFields = "device_id"
 	ListPaymentPaymentsQueryParamFieldsCardBrand      ListPaymentPaymentsQueryParamFields = "card_brand"
 	ListPaymentPaymentsQueryParamFieldsCardLast4      ListPaymentPaymentsQueryParamFields = "card_last4"
+	ListPaymentPaymentsQueryParamFieldsPaidAt         ListPaymentPaymentsQueryParamFields = "paid_at"
+	ListPaymentPaymentsQueryParamFieldsExchangeRate   ListPaymentPaymentsQueryParamFields = "exchange_rate"
+	ListPaymentPaymentsQueryParamFieldsCategoryIds    ListPaymentPaymentsQueryParamFields = "category_ids"
+	ListPaymentPaymentsQueryParamFieldsNetAmount      ListPaymentPaymentsQueryParamFields = "net_amount"
 	ListPaymentPaymentsQueryParamFieldsRaw            ListPaymentPaymentsQueryParamFields = "raw"
 )
 
@@ -98,6 +102,14 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "card_brand":
 		fallthrough
 	case "card_last4":
+		fallthrough
+	case "paid_at":
+		fallthrough
+	case "exchange_rate":
+		fallthrough
+	case "category_ids":
+		fallthrough
+	case "net_amount":
 		fallthrough
 	case "raw":
 		*e = ListPaymentPaymentsQueryParamFields(v)

@@ -12,22 +12,26 @@ import (
 type ListAccountingJournalsQueryParamFields string
 
 const (
-	ListAccountingJournalsQueryParamFieldsID             ListAccountingJournalsQueryParamFields = "id"
-	ListAccountingJournalsQueryParamFieldsCreatedAt      ListAccountingJournalsQueryParamFields = "created_at"
-	ListAccountingJournalsQueryParamFieldsUpdatedAt      ListAccountingJournalsQueryParamFields = "updated_at"
-	ListAccountingJournalsQueryParamFieldsReference      ListAccountingJournalsQueryParamFields = "reference"
-	ListAccountingJournalsQueryParamFieldsTaxAmount      ListAccountingJournalsQueryParamFields = "tax_amount"
-	ListAccountingJournalsQueryParamFieldsCurrency       ListAccountingJournalsQueryParamFields = "currency"
-	ListAccountingJournalsQueryParamFieldsLineitems      ListAccountingJournalsQueryParamFields = "lineitems"
-	ListAccountingJournalsQueryParamFieldsTaxrateID      ListAccountingJournalsQueryParamFields = "taxrate_id"
-	ListAccountingJournalsQueryParamFieldsDescription    ListAccountingJournalsQueryParamFields = "description"
-	ListAccountingJournalsQueryParamFieldsPostedAt       ListAccountingJournalsQueryParamFields = "posted_at"
-	ListAccountingJournalsQueryParamFieldsSource         ListAccountingJournalsQueryParamFields = "source"
-	ListAccountingJournalsQueryParamFieldsOrganizationID ListAccountingJournalsQueryParamFields = "organization_id"
-	ListAccountingJournalsQueryParamFieldsCategoryIds    ListAccountingJournalsQueryParamFields = "category_ids"
-	ListAccountingJournalsQueryParamFieldsProjectID      ListAccountingJournalsQueryParamFields = "project_id"
-	ListAccountingJournalsQueryParamFieldsAttachments    ListAccountingJournalsQueryParamFields = "attachments"
-	ListAccountingJournalsQueryParamFieldsRaw            ListAccountingJournalsQueryParamFields = "raw"
+	ListAccountingJournalsQueryParamFieldsID               ListAccountingJournalsQueryParamFields = "id"
+	ListAccountingJournalsQueryParamFieldsCreatedAt        ListAccountingJournalsQueryParamFields = "created_at"
+	ListAccountingJournalsQueryParamFieldsUpdatedAt        ListAccountingJournalsQueryParamFields = "updated_at"
+	ListAccountingJournalsQueryParamFieldsReference        ListAccountingJournalsQueryParamFields = "reference"
+	ListAccountingJournalsQueryParamFieldsTaxAmount        ListAccountingJournalsQueryParamFields = "tax_amount"
+	ListAccountingJournalsQueryParamFieldsCurrency         ListAccountingJournalsQueryParamFields = "currency"
+	ListAccountingJournalsQueryParamFieldsLineitems        ListAccountingJournalsQueryParamFields = "lineitems"
+	ListAccountingJournalsQueryParamFieldsTaxrateID        ListAccountingJournalsQueryParamFields = "taxrate_id"
+	ListAccountingJournalsQueryParamFieldsDescription      ListAccountingJournalsQueryParamFields = "description"
+	ListAccountingJournalsQueryParamFieldsPostedAt         ListAccountingJournalsQueryParamFields = "posted_at"
+	ListAccountingJournalsQueryParamFieldsSource           ListAccountingJournalsQueryParamFields = "source"
+	ListAccountingJournalsQueryParamFieldsOrganizationID   ListAccountingJournalsQueryParamFields = "organization_id"
+	ListAccountingJournalsQueryParamFieldsCategoryIds      ListAccountingJournalsQueryParamFields = "category_ids"
+	ListAccountingJournalsQueryParamFieldsProjectID        ListAccountingJournalsQueryParamFields = "project_id"
+	ListAccountingJournalsQueryParamFieldsAttachments      ListAccountingJournalsQueryParamFields = "attachments"
+	ListAccountingJournalsQueryParamFieldsTotalAmount      ListAccountingJournalsQueryParamFields = "total_amount"
+	ListAccountingJournalsQueryParamFieldsExchangeRate     ListAccountingJournalsQueryParamFields = "exchange_rate"
+	ListAccountingJournalsQueryParamFieldsStatus           ListAccountingJournalsQueryParamFields = "status"
+	ListAccountingJournalsQueryParamFieldsIsInclusiveOfTax ListAccountingJournalsQueryParamFields = "is_inclusive_of_tax"
+	ListAccountingJournalsQueryParamFieldsRaw              ListAccountingJournalsQueryParamFields = "raw"
 )
 
 func (e ListAccountingJournalsQueryParamFields) ToPointer() *ListAccountingJournalsQueryParamFields {
@@ -68,6 +72,14 @@ func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "project_id":
 		fallthrough
 	case "attachments":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "exchange_rate":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_inclusive_of_tax":
 		fallthrough
 	case "raw":
 		*e = ListAccountingJournalsQueryParamFields(v)

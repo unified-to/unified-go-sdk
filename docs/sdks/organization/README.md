@@ -5,18 +5,24 @@
 ### Available Operations
 
 * [CreateAdsOrganization](#createadsorganization) - Create an organization
+* [CreateGenaiOrganization](#creategenaiorganization) - Create an organization
 * [CreateRepoOrganization](#createrepoorganization) - Create an organization
 * [GetAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [GetAdsOrganization](#getadsorganization) - Retrieve an organization
+* [GetGenaiOrganization](#getgenaiorganization) - Retrieve an organization
 * [GetRepoOrganization](#getrepoorganization) - Retrieve an organization
 * [ListAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [ListAdsOrganizations](#listadsorganizations) - List all organizations
+* [ListGenaiOrganizations](#listgenaiorganizations) - List all organizations
 * [ListRepoOrganizations](#listrepoorganizations) - List all organizations
 * [PatchAdsOrganization](#patchadsorganization) - Update an organization
+* [PatchGenaiOrganization](#patchgenaiorganization) - Update an organization
 * [PatchRepoOrganization](#patchrepoorganization) - Update an organization
 * [RemoveAdsOrganization](#removeadsorganization) - Remove an organization
+* [RemoveGenaiOrganization](#removegenaiorganization) - Remove an organization
 * [RemoveRepoOrganization](#removerepoorganization) - Remove an organization
 * [UpdateAdsOrganization](#updateadsorganization) - Update an organization
+* [UpdateGenaiOrganization](#updategenaiorganization) - Update an organization
 * [UpdateRepoOrganization](#updaterepoorganization) - Update an organization
 
 ## CreateAdsOrganization
@@ -50,7 +56,7 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("78fda14e-099f-40d2-ba57-c7563ca6c5e1"),
+            ID: unifiedgosdk.Pointer("7aa99529-0bf9-46b7-8885-0326ecbc4707"),
             Managers: []shared.AdsManager{
                 shared.AdsManager{
                     ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
@@ -60,7 +66,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-27T22:51:49.617Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T15:36:04.753Z"),
         },
         ConnectionID: "<id>",
     })
@@ -84,6 +90,70 @@ func main() {
 ### Response
 
 **[*operations.CreateAdsOrganizationResponse](../../pkg/models/operations/createadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateGenaiOrganization
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" example="genai_organization" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.CreateGenaiOrganization(ctx, operations.CreateGenaiOrganizationRequest{
+        GenaiOrganization: shared.GenaiOrganization{
+            CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
+            Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
+            ID: unifiedgosdk.Pointer("c6b6737d-7782-41e3-a20e-674fb9c33d86"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("officially about"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-15T02:14:43.003Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.CreateGenaiOrganizationRequest](../../pkg/models/operations/creategenaiorganizationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.CreateGenaiOrganizationResponse](../../pkg/models/operations/creategenaiorganizationresponse.md), error**
 
 ### Errors
 
@@ -122,9 +192,9 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("a6f5416b-645f-4c02-ad72-c8b5e4835590"),
+            ID: unifiedgosdk.Pointer("e5e80293-ffea-4c50-8f72-f34ace46e72d"),
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-13T05:26:23.874Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-13T17:10:28.255Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -259,6 +329,61 @@ func main() {
 ### Response
 
 **[*operations.GetAdsOrganizationResponse](../../pkg/models/operations/getadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetGenaiOrganization
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getGenaiOrganization" method="get" path="/genai/{connection_id}/organization/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.GetGenaiOrganization(ctx, operations.GetGenaiOrganizationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                | :heavy_check_mark:                                                                                   | The context to use for the request.                                                                  |
+| `request`                                                                                            | [operations.GetGenaiOrganizationRequest](../../pkg/models/operations/getgenaiorganizationrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `opts`                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                         | :heavy_minus_sign:                                                                                   | The options for this request.                                                                        |
+
+### Response
+
+**[*operations.GetGenaiOrganizationResponse](../../pkg/models/operations/getgenaiorganizationresponse.md), error**
 
 ### Errors
 
@@ -429,6 +554,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListGenaiOrganizations
+
+List all organizations
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listGenaiOrganizations" method="get" path="/genai/{connection_id}/organization" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.ListGenaiOrganizations(ctx, operations.ListGenaiOrganizationsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiOrganizations != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.ListGenaiOrganizationsRequest](../../pkg/models/operations/listgenaiorganizationsrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.ListGenaiOrganizationsResponse](../../pkg/models/operations/listgenaiorganizationsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListRepoOrganizations
 
 List all organizations
@@ -514,7 +693,7 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("c2fdea04-dda1-42ac-9029-0a0896c73fa7"),
+            ID: unifiedgosdk.Pointer("efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3"),
             Managers: []shared.AdsManager{
                 shared.AdsManager{
                     ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
@@ -524,7 +703,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-27T22:51:49.625Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T15:36:04.765Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -549,6 +728,71 @@ func main() {
 ### Response
 
 **[*operations.PatchAdsOrganizationResponse](../../pkg/models/operations/patchadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchGenaiOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.PatchGenaiOrganization(ctx, operations.PatchGenaiOrganizationRequest{
+        GenaiOrganization: shared.GenaiOrganization{
+            CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
+            Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
+            ID: unifiedgosdk.Pointer("e466e490-09c0-476e-9a38-d324960c1635"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("officially about"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-15T02:14:43.005Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.PatchGenaiOrganizationRequest](../../pkg/models/operations/patchgenaiorganizationrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.PatchGenaiOrganizationResponse](../../pkg/models/operations/patchgenaiorganizationresponse.md), error**
 
 ### Errors
 
@@ -587,9 +831,9 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("030efcf6-1aad-42d2-8555-cea87f22b1ba"),
+            ID: unifiedgosdk.Pointer("2c0e48fb-7221-429b-aeed-0a403672f821"),
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-13T05:26:23.875Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-13T17:10:28.257Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",
@@ -670,6 +914,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveAdsOrganizationResponse](../../pkg/models/operations/removeadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveGenaiOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeGenaiOrganization" method="delete" path="/genai/{connection_id}/organization/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.RemoveGenaiOrganization(ctx, operations.RemoveGenaiOrganizationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.RemoveGenaiOrganizationRequest](../../pkg/models/operations/removegenaiorganizationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.RemoveGenaiOrganizationResponse](../../pkg/models/operations/removegenaiorganizationresponse.md), error**
 
 ### Errors
 
@@ -763,7 +1062,7 @@ func main() {
             AccountNumber: unifiedgosdk.Pointer("LQUJx8zQBW"),
             CreatedAt: types.MustNewTimeFromString("2020-07-23T21:47:11.440Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("c2fdea04-dda1-42ac-9029-0a0896c73fa7"),
+            ID: unifiedgosdk.Pointer("efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3"),
             Managers: []shared.AdsManager{
                 shared.AdsManager{
                     ID: unifiedgosdk.Pointer("e4fd87df-9f8b-4fa0-a77b-b7d18669e350"),
@@ -773,7 +1072,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Ankunding Inc"),
             Status: shared.AdsOrganizationStatusProcessing.ToPointer(),
             Timezone: unifiedgosdk.Pointer("Europe/Chisinau"),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-27T22:51:49.625Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-01T15:36:04.765Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -798,6 +1097,71 @@ func main() {
 ### Response
 
 **[*operations.UpdateAdsOrganizationResponse](../../pkg/models/operations/updateadsorganizationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateGenaiOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Organization.UpdateGenaiOrganization(ctx, operations.UpdateGenaiOrganizationRequest{
+        GenaiOrganization: shared.GenaiOrganization{
+            CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
+            Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
+            ID: unifiedgosdk.Pointer("e466e490-09c0-476e-9a38-d324960c1635"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("officially about"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-15T02:14:43.005Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiOrganization != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.UpdateGenaiOrganizationRequest](../../pkg/models/operations/updategenaiorganizationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.UpdateGenaiOrganizationResponse](../../pkg/models/operations/updategenaiorganizationresponse.md), error**
 
 ### Errors
 
@@ -836,9 +1200,9 @@ func main() {
             AvatarURL: unifiedgosdk.Pointer("https://picsum.photos/seed/fGl6Lb/3157/3173"),
             CreatedAt: types.MustNewTimeFromString("2022-07-07T00:18:40.748Z"),
             Description: unifiedgosdk.Pointer("Trepide defendo supra testimonium ager."),
-            ID: unifiedgosdk.Pointer("030efcf6-1aad-42d2-8555-cea87f22b1ba"),
+            ID: unifiedgosdk.Pointer("2c0e48fb-7221-429b-aeed-0a403672f821"),
             Name: unifiedgosdk.Pointer("Denesik - Lemke"),
-            UpdatedAt: types.MustNewTimeFromString("2023-08-13T05:26:23.875Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-08-13T17:10:28.257Z"),
             WebURL: unifiedgosdk.Pointer("https://turbulent-overheard.biz"),
         },
         ConnectionID: "<id>",

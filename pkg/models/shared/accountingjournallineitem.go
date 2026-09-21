@@ -16,6 +16,7 @@ type AccountingJournalLineitem struct {
 	PaymentID      *string  `json:"payment_id,omitempty"`
 	ProjectID      *string  `json:"project_id,omitempty"`
 	TaxAmount      *float64 `json:"tax_amount,omitempty"`
+	TaxrateID      *string  `json:"taxrate_id,omitempty"`
 	TotalAmount    *float64 `json:"total_amount,omitempty"`
 }
 
@@ -108,6 +109,13 @@ func (a *AccountingJournalLineitem) GetTaxAmount() *float64 {
 		return nil
 	}
 	return a.TaxAmount
+}
+
+func (a *AccountingJournalLineitem) GetTaxrateID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.TaxrateID
 }
 
 func (a *AccountingJournalLineitem) GetTotalAmount() *float64 {

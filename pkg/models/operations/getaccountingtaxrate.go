@@ -21,6 +21,13 @@ const (
 	GetAccountingTaxrateQueryParamFieldsIsActive       GetAccountingTaxrateQueryParamFields = "is_active"
 	GetAccountingTaxrateQueryParamFieldsOrganizationID GetAccountingTaxrateQueryParamFields = "organization_id"
 	GetAccountingTaxrateQueryParamFieldsMetadata       GetAccountingTaxrateQueryParamFields = "metadata"
+	GetAccountingTaxrateQueryParamFieldsEffectiveRate  GetAccountingTaxrateQueryParamFields = "effective_rate"
+	GetAccountingTaxrateQueryParamFieldsTotalRate      GetAccountingTaxrateQueryParamFields = "total_rate"
+	GetAccountingTaxrateQueryParamFieldsComponents     GetAccountingTaxrateQueryParamFields = "components"
+	GetAccountingTaxrateQueryParamFieldsType           GetAccountingTaxrateQueryParamFields = "type"
+	GetAccountingTaxrateQueryParamFieldsIsCompound     GetAccountingTaxrateQueryParamFields = "is_compound"
+	GetAccountingTaxrateQueryParamFieldsCountry        GetAccountingTaxrateQueryParamFields = "country"
+	GetAccountingTaxrateQueryParamFieldsRegion         GetAccountingTaxrateQueryParamFields = "region"
 	GetAccountingTaxrateQueryParamFieldsRaw            GetAccountingTaxrateQueryParamFields = "raw"
 )
 
@@ -50,6 +57,20 @@ func (e *GetAccountingTaxrateQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "organization_id":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "effective_rate":
+		fallthrough
+	case "total_rate":
+		fallthrough
+	case "components":
+		fallthrough
+	case "type":
+		fallthrough
+	case "is_compound":
+		fallthrough
+	case "country":
+		fallthrough
+	case "region":
 		fallthrough
 	case "raw":
 		*e = GetAccountingTaxrateQueryParamFields(v)

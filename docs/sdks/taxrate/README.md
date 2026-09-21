@@ -24,8 +24,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -39,14 +39,27 @@ func main() {
 
     res, err := s.Taxrate.CreateAccountingTaxrate(ctx, operations.CreateAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{
+            Components: []shared.AccountingTaxrateComponent{
+                shared.AccountingTaxrateComponent{
+                    IsCompound: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("cogo"),
+                    Rate: unifiedgosdk.Pointer[float64](53.0),
+                },
+            },
+            Country: unifiedgosdk.Pointer("BY"),
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
-            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
-            ID: unifiedgosdk.Pointer("3f13e77f-745f-4952-8af5-eb31b96c84cd"),
+            Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
+            EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
+            ID: unifiedgosdk.Pointer("9d45b1ab-9993-41c7-9148-b552b5883179"),
             IsActive: unifiedgosdk.Pointer(false),
+            IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("cogo"),
-            Rate: unifiedgosdk.Pointer[float64](1.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-05T03:21:12.858Z"),
+            Name: unifiedgosdk.Pointer("villa"),
+            Rate: unifiedgosdk.Pointer[float64](53.0),
+            Region: unifiedgosdk.Pointer("TX"),
+            TotalRate: unifiedgosdk.Pointer[float64](53.0),
+            Type: shared.AccountingTaxrateTypeOther.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.223Z"),
         },
         ConnectionID: "<id>",
     })
@@ -199,8 +212,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -214,14 +227,27 @@ func main() {
 
     res, err := s.Taxrate.PatchAccountingTaxrate(ctx, operations.PatchAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{
+            Components: []shared.AccountingTaxrateComponent{
+                shared.AccountingTaxrateComponent{
+                    IsCompound: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("cogo"),
+                    Rate: unifiedgosdk.Pointer[float64](53.0),
+                },
+            },
+            Country: unifiedgosdk.Pointer("BY"),
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
-            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
-            ID: unifiedgosdk.Pointer("439fce5d-ac5b-46f5-9ad7-51223794f11a"),
+            Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
+            EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
+            ID: unifiedgosdk.Pointer("6b146958-8711-4255-89a5-4e504a6d2a0f"),
             IsActive: unifiedgosdk.Pointer(false),
+            IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("cogo"),
-            Rate: unifiedgosdk.Pointer[float64](1.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-05T03:21:12.873Z"),
+            Name: unifiedgosdk.Pointer("villa"),
+            Rate: unifiedgosdk.Pointer[float64](53.0),
+            Region: unifiedgosdk.Pointer("TX"),
+            TotalRate: unifiedgosdk.Pointer[float64](53.0),
+            Type: shared.AccountingTaxrateTypeOther.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.226Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -321,8 +347,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -336,14 +362,27 @@ func main() {
 
     res, err := s.Taxrate.UpdateAccountingTaxrate(ctx, operations.UpdateAccountingTaxrateRequest{
         AccountingTaxrate: shared.AccountingTaxrate{
+            Components: []shared.AccountingTaxrateComponent{
+                shared.AccountingTaxrateComponent{
+                    IsCompound: unifiedgosdk.Pointer(false),
+                    Name: unifiedgosdk.Pointer("cogo"),
+                    Rate: unifiedgosdk.Pointer[float64](53.0),
+                },
+            },
+            Country: unifiedgosdk.Pointer("BY"),
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
-            Description: unifiedgosdk.Pointer("Nemo atrox tricesimus creator aranea."),
-            ID: unifiedgosdk.Pointer("439fce5d-ac5b-46f5-9ad7-51223794f11a"),
+            Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
+            EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
+            ID: unifiedgosdk.Pointer("6b146958-8711-4255-89a5-4e504a6d2a0f"),
             IsActive: unifiedgosdk.Pointer(false),
+            IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
-            Name: unifiedgosdk.Pointer("cogo"),
-            Rate: unifiedgosdk.Pointer[float64](1.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-05T03:21:12.873Z"),
+            Name: unifiedgosdk.Pointer("villa"),
+            Rate: unifiedgosdk.Pointer[float64](53.0),
+            Region: unifiedgosdk.Pointer("TX"),
+            TotalRate: unifiedgosdk.Pointer[float64](53.0),
+            Type: shared.AccountingTaxrateTypeOther.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.226Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

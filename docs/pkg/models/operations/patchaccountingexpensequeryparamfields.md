@@ -41,4 +41,6 @@ value := operations.PatchAccountingExpenseQueryParamFieldsID
 | `PatchAccountingExpenseQueryParamFieldsCategoryIds`      | category_ids                                             |
 | `PatchAccountingExpenseQueryParamFieldsProjectID`        | project_id                                               |
 | `PatchAccountingExpenseQueryParamFieldsMetadata`         | metadata                                                 |
+| `PatchAccountingExpenseQueryParamFieldsTaxrateID`        | taxrate_id                                               |
+| `PatchAccountingExpenseQueryParamFieldsExchangeRate`     | exchange_rate                                            |
 | `PatchAccountingExpenseQueryParamFieldsRaw`              | raw                                                      |

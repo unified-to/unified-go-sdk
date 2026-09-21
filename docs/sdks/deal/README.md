@@ -40,12 +40,12 @@ func main() {
     res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-03T18:25:07.157Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-10T12:25:24.798Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-04T03:42:33.293Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-11T17:45:27.374Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("c9004d07-19f0-4019-8440-5a8b1eb5d700"),
+            ID: unifiedgosdk.Pointer("e77492f0-b53c-4d4d-b3ef-85d2d39be486"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -54,7 +54,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("cf056924-be61-45fc-80ba-08f4b5707492"),
+                    ID: unifiedgosdk.Pointer("e1c225b7-8757-4f46-8c4d-ee1d832af116"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -65,7 +65,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("e02d478c-0127-4bc0-a84f-39bda75465f7"),
+                    ID: unifiedgosdk.Pointer("8922651b-a8c6-4754-a2fc-da9720b7ce19"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -73,11 +73,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("c65bebc0-18e6-4782-8052-22bb5db6b028"),
+                    ID: unifiedgosdk.Pointer("0c4358bb-e675-499a-9912-7251e4ede38c"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("647b6e03-2567-4e60-807f-fc34b4edd2ad"),
+                    ID: unifiedgosdk.Pointer("ef1f5757-5d28-46e5-bbbc-0efde5730f83"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -85,7 +85,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T11:49:58.133Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-30T05:08:02.851Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -255,12 +255,12 @@ func main() {
     res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-03T18:25:07.161Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-10T12:25:24.810Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-04T03:42:33.297Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-11T17:45:27.385Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("3a6e8668-3844-4cc2-835f-2558e259c72b"),
+            ID: unifiedgosdk.Pointer("a6dd5bf7-ba96-4e40-a0a0-9e3d65c59226"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -269,7 +269,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("50178aa4-8c34-4091-af1d-2ae7dcdda5ee"),
+                    ID: unifiedgosdk.Pointer("464a8175-f552-4506-9788-c870b7a0cb49"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -280,7 +280,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("f1e1683f-5340-4297-8c9c-f2817ce3704d"),
+                    ID: unifiedgosdk.Pointer("ffafefa5-2e31-4297-94a4-77985a194477"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -288,11 +288,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("170e883c-03eb-4aab-bed6-60f951121073"),
+                    ID: unifiedgosdk.Pointer("e574073c-430c-424c-a2ef-cad6abbbe0a4"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("193c6c87-af1f-4ee4-9274-984e2d09eb6b"),
+                    ID: unifiedgosdk.Pointer("e0b01341-4d13-4d8b-9014-191221d8348c"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -300,7 +300,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T11:49:58.140Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-30T05:08:02.858Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -417,12 +417,12 @@ func main() {
     res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-03T18:25:07.161Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-10T12:25:24.810Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-04T03:42:33.297Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-11T17:45:27.385Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("3a6e8668-3844-4cc2-835f-2558e259c72b"),
+            ID: unifiedgosdk.Pointer("a6dd5bf7-ba96-4e40-a0a0-9e3d65c59226"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -431,7 +431,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("50178aa4-8c34-4091-af1d-2ae7dcdda5ee"),
+                    ID: unifiedgosdk.Pointer("464a8175-f552-4506-9788-c870b7a0cb49"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -442,7 +442,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("f1e1683f-5340-4297-8c9c-f2817ce3704d"),
+                    ID: unifiedgosdk.Pointer("ffafefa5-2e31-4297-94a4-77985a194477"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -450,11 +450,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("170e883c-03eb-4aab-bed6-60f951121073"),
+                    ID: unifiedgosdk.Pointer("e574073c-430c-424c-a2ef-cad6abbbe0a4"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("193c6c87-af1f-4ee4-9274-984e2d09eb6b"),
+                    ID: unifiedgosdk.Pointer("e0b01341-4d13-4d8b-9014-191221d8348c"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -462,7 +462,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-09-29T11:49:58.140Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-09-30T05:08:02.858Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",

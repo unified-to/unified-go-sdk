@@ -12,22 +12,26 @@ import (
 type PatchAccountingJournalQueryParamFields string
 
 const (
-	PatchAccountingJournalQueryParamFieldsID             PatchAccountingJournalQueryParamFields = "id"
-	PatchAccountingJournalQueryParamFieldsCreatedAt      PatchAccountingJournalQueryParamFields = "created_at"
-	PatchAccountingJournalQueryParamFieldsUpdatedAt      PatchAccountingJournalQueryParamFields = "updated_at"
-	PatchAccountingJournalQueryParamFieldsReference      PatchAccountingJournalQueryParamFields = "reference"
-	PatchAccountingJournalQueryParamFieldsTaxAmount      PatchAccountingJournalQueryParamFields = "tax_amount"
-	PatchAccountingJournalQueryParamFieldsCurrency       PatchAccountingJournalQueryParamFields = "currency"
-	PatchAccountingJournalQueryParamFieldsLineitems      PatchAccountingJournalQueryParamFields = "lineitems"
-	PatchAccountingJournalQueryParamFieldsTaxrateID      PatchAccountingJournalQueryParamFields = "taxrate_id"
-	PatchAccountingJournalQueryParamFieldsDescription    PatchAccountingJournalQueryParamFields = "description"
-	PatchAccountingJournalQueryParamFieldsPostedAt       PatchAccountingJournalQueryParamFields = "posted_at"
-	PatchAccountingJournalQueryParamFieldsSource         PatchAccountingJournalQueryParamFields = "source"
-	PatchAccountingJournalQueryParamFieldsOrganizationID PatchAccountingJournalQueryParamFields = "organization_id"
-	PatchAccountingJournalQueryParamFieldsCategoryIds    PatchAccountingJournalQueryParamFields = "category_ids"
-	PatchAccountingJournalQueryParamFieldsProjectID      PatchAccountingJournalQueryParamFields = "project_id"
-	PatchAccountingJournalQueryParamFieldsAttachments    PatchAccountingJournalQueryParamFields = "attachments"
-	PatchAccountingJournalQueryParamFieldsRaw            PatchAccountingJournalQueryParamFields = "raw"
+	PatchAccountingJournalQueryParamFieldsID               PatchAccountingJournalQueryParamFields = "id"
+	PatchAccountingJournalQueryParamFieldsCreatedAt        PatchAccountingJournalQueryParamFields = "created_at"
+	PatchAccountingJournalQueryParamFieldsUpdatedAt        PatchAccountingJournalQueryParamFields = "updated_at"
+	PatchAccountingJournalQueryParamFieldsReference        PatchAccountingJournalQueryParamFields = "reference"
+	PatchAccountingJournalQueryParamFieldsTaxAmount        PatchAccountingJournalQueryParamFields = "tax_amount"
+	PatchAccountingJournalQueryParamFieldsCurrency         PatchAccountingJournalQueryParamFields = "currency"
+	PatchAccountingJournalQueryParamFieldsLineitems        PatchAccountingJournalQueryParamFields = "lineitems"
+	PatchAccountingJournalQueryParamFieldsTaxrateID        PatchAccountingJournalQueryParamFields = "taxrate_id"
+	PatchAccountingJournalQueryParamFieldsDescription      PatchAccountingJournalQueryParamFields = "description"
+	PatchAccountingJournalQueryParamFieldsPostedAt         PatchAccountingJournalQueryParamFields = "posted_at"
+	PatchAccountingJournalQueryParamFieldsSource           PatchAccountingJournalQueryParamFields = "source"
+	PatchAccountingJournalQueryParamFieldsOrganizationID   PatchAccountingJournalQueryParamFields = "organization_id"
+	PatchAccountingJournalQueryParamFieldsCategoryIds      PatchAccountingJournalQueryParamFields = "category_ids"
+	PatchAccountingJournalQueryParamFieldsProjectID        PatchAccountingJournalQueryParamFields = "project_id"
+	PatchAccountingJournalQueryParamFieldsAttachments      PatchAccountingJournalQueryParamFields = "attachments"
+	PatchAccountingJournalQueryParamFieldsTotalAmount      PatchAccountingJournalQueryParamFields = "total_amount"
+	PatchAccountingJournalQueryParamFieldsExchangeRate     PatchAccountingJournalQueryParamFields = "exchange_rate"
+	PatchAccountingJournalQueryParamFieldsStatus           PatchAccountingJournalQueryParamFields = "status"
+	PatchAccountingJournalQueryParamFieldsIsInclusiveOfTax PatchAccountingJournalQueryParamFields = "is_inclusive_of_tax"
+	PatchAccountingJournalQueryParamFieldsRaw              PatchAccountingJournalQueryParamFields = "raw"
 )
 
 func (e PatchAccountingJournalQueryParamFields) ToPointer() *PatchAccountingJournalQueryParamFields {
@@ -68,6 +72,14 @@ func (e *PatchAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "project_id":
 		fallthrough
 	case "attachments":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "exchange_rate":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_inclusive_of_tax":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingJournalQueryParamFields(v)

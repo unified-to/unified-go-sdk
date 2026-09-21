@@ -44,6 +44,7 @@ type AccountingExpense struct {
 	ContactID        *string                  `json:"contact_id,omitempty"`
 	CreatedAt        *time.Time               `json:"created_at,omitempty"`
 	Currency         *string                  `json:"currency,omitempty"`
+	ExchangeRate     *float64                 `json:"exchange_rate,omitempty"`
 	ExternalNumber   *string                  `json:"external_number,omitempty"`
 	ID               *string                  `json:"id,omitempty"`
 	Lineitems        []AccountingLineitem     `json:"lineitems,omitempty"`
@@ -58,6 +59,7 @@ type AccountingExpense struct {
 	ReimbursedAt     *time.Time               `json:"reimbursed_at,omitempty"`
 	Status           *AccountingExpenseStatus `json:"status,omitempty"`
 	TaxAmount        *float64                 `json:"tax_amount,omitempty"`
+	TaxrateID        *string                  `json:"taxrate_id,omitempty"`
 	TotalAmount      *float64                 `json:"total_amount,omitempty"`
 	UpdatedAt        *time.Time               `json:"updated_at,omitempty"`
 	UserID           *string                  `json:"user_id,omitempty"`
@@ -136,6 +138,13 @@ func (a *AccountingExpense) GetCurrency() *string {
 		return nil
 	}
 	return a.Currency
+}
+
+func (a *AccountingExpense) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
 }
 
 func (a *AccountingExpense) GetExternalNumber() *string {
@@ -234,6 +243,13 @@ func (a *AccountingExpense) GetTaxAmount() *float64 {
 		return nil
 	}
 	return a.TaxAmount
+}
+
+func (a *AccountingExpense) GetTaxrateID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.TaxrateID
 }
 
 func (a *AccountingExpense) GetTotalAmount() *float64 {

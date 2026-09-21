@@ -24,4 +24,11 @@ value := operations.UpdateAccountingTaxrateQueryParamFieldsID
 | `UpdateAccountingTaxrateQueryParamFieldsIsActive`       | is_active                                               |
 | `UpdateAccountingTaxrateQueryParamFieldsOrganizationID` | organization_id                                         |
 | `UpdateAccountingTaxrateQueryParamFieldsMetadata`       | metadata                                                |
+| `UpdateAccountingTaxrateQueryParamFieldsEffectiveRate`  | effective_rate                                          |
+| `UpdateAccountingTaxrateQueryParamFieldsTotalRate`      | total_rate                                              |
+| `UpdateAccountingTaxrateQueryParamFieldsComponents`     | components                                              |
+| `UpdateAccountingTaxrateQueryParamFieldsType`           | type                                                    |
+| `UpdateAccountingTaxrateQueryParamFieldsIsCompound`     | is_compound                                             |
+| `UpdateAccountingTaxrateQueryParamFieldsCountry`        | country                                                 |
+| `UpdateAccountingTaxrateQueryParamFieldsRegion`         | region                                                  |
 | `UpdateAccountingTaxrateQueryParamFieldsRaw`            | raw                                                     |

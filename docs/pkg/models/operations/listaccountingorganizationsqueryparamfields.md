@@ -30,4 +30,5 @@ value := operations.ListAccountingOrganizationsQueryParamFieldsID
 | `ListAccountingOrganizationsQueryParamFieldsOrganizationCode`   | organization_code                                               |
 | `ListAccountingOrganizationsQueryParamFieldsType`               | type                                                            |
 | `ListAccountingOrganizationsQueryParamFieldsIsElimination`      | is_elimination                                                  |
+| `ListAccountingOrganizationsQueryParamFieldsBooksCloseAt`       | books_close_at                                                  |
 | `ListAccountingOrganizationsQueryParamFieldsRaw`                | raw                                                             |

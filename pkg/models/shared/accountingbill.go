@@ -132,6 +132,7 @@ type AccountingBill struct {
 	Currency                *string                  `json:"currency,omitempty"`
 	DiscountAmount          *float64                 `json:"discount_amount,omitempty"`
 	DueAt                   *time.Time               `json:"due_at,omitempty"`
+	ExchangeRate            *float64                 `json:"exchange_rate,omitempty"`
 	ExtendedNotes           []AccountingExtendedNote `json:"extended_notes,omitempty"`
 	ID                      *string                  `json:"id,omitempty"`
 	Lineitems               []AccountingLineitem     `json:"lineitems,omitempty"`
@@ -147,17 +148,20 @@ type AccountingBill struct {
 	PaymenttermID *string                      `json:"paymentterm_id,omitempty"`
 	PostedAt      *time.Time                   `json:"posted_at,omitempty"`
 	ProjectID     *string                      `json:"project_id,omitempty"`
-	Raw           map[string]any               `json:"raw,omitempty"`
-	RefundAmount  *float64                     `json:"refund_amount,omitempty"`
-	RefundReason  *string                      `json:"refund_reason,omitempty"`
-	RefundedAt    *time.Time                   `json:"refunded_at,omitempty"`
-	Send          *bool                        `json:"send,omitempty"`
-	Status        *AccountingBillStatus        `json:"status,omitempty"`
-	TaxAmount     *float64                     `json:"tax_amount,omitempty"`
-	Term          *Term                        `json:"term,omitempty"`
-	TotalAmount   *float64                     `json:"total_amount,omitempty"`
-	UpdatedAt     *time.Time                   `json:"updated_at,omitempty"`
-	URL           *string                      `json:"url,omitempty"`
+	// refs -> AccountingPurchaseorder; the purchase orders this bill was raised from
+	PurchaseorderIds []string              `json:"purchaseorder_ids,omitempty"`
+	Raw              map[string]any        `json:"raw,omitempty"`
+	RefundAmount     *float64              `json:"refund_amount,omitempty"`
+	RefundReason     *string               `json:"refund_reason,omitempty"`
+	RefundedAt       *time.Time            `json:"refunded_at,omitempty"`
+	Send             *bool                 `json:"send,omitempty"`
+	Status           *AccountingBillStatus `json:"status,omitempty"`
+	SubTotalAmount   *float64              `json:"sub_total_amount,omitempty"`
+	TaxAmount        *float64              `json:"tax_amount,omitempty"`
+	Term             *Term                 `json:"term,omitempty"`
+	TotalAmount      *float64              `json:"total_amount,omitempty"`
+	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
+	URL              *string               `json:"url,omitempty"`
 }
 
 func (a AccountingBill) MarshalJSON() ([]byte, error) {
@@ -239,6 +243,13 @@ func (a *AccountingBill) GetDueAt() *time.Time {
 		return nil
 	}
 	return a.DueAt
+}
+
+func (a *AccountingBill) GetExchangeRate() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.ExchangeRate
 }
 
 func (a *AccountingBill) GetExtendedNotes() []AccountingExtendedNote {
@@ -339,6 +350,13 @@ func (a *AccountingBill) GetProjectID() *string {
 	return a.ProjectID
 }
 
+func (a *AccountingBill) GetPurchaseorderIds() []string {
+	if a == nil {
+		return nil
+	}
+	return a.PurchaseorderIds
+}
+
 func (a *AccountingBill) GetRaw() map[string]any {
 	if a == nil {
 		return nil
@@ -379,6 +397,13 @@ func (a *AccountingBill) GetStatus() *AccountingBillStatus {
 		return nil
 	}
 	return a.Status
+}
+
+func (a *AccountingBill) GetSubTotalAmount() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.SubTotalAmount
 }
 
 func (a *AccountingBill) GetTaxAmount() *float64 {

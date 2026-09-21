@@ -12,22 +12,26 @@ import (
 type UpdateAccountingJournalQueryParamFields string
 
 const (
-	UpdateAccountingJournalQueryParamFieldsID             UpdateAccountingJournalQueryParamFields = "id"
-	UpdateAccountingJournalQueryParamFieldsCreatedAt      UpdateAccountingJournalQueryParamFields = "created_at"
-	UpdateAccountingJournalQueryParamFieldsUpdatedAt      UpdateAccountingJournalQueryParamFields = "updated_at"
-	UpdateAccountingJournalQueryParamFieldsReference      UpdateAccountingJournalQueryParamFields = "reference"
-	UpdateAccountingJournalQueryParamFieldsTaxAmount      UpdateAccountingJournalQueryParamFields = "tax_amount"
-	UpdateAccountingJournalQueryParamFieldsCurrency       UpdateAccountingJournalQueryParamFields = "currency"
-	UpdateAccountingJournalQueryParamFieldsLineitems      UpdateAccountingJournalQueryParamFields = "lineitems"
-	UpdateAccountingJournalQueryParamFieldsTaxrateID      UpdateAccountingJournalQueryParamFields = "taxrate_id"
-	UpdateAccountingJournalQueryParamFieldsDescription    UpdateAccountingJournalQueryParamFields = "description"
-	UpdateAccountingJournalQueryParamFieldsPostedAt       UpdateAccountingJournalQueryParamFields = "posted_at"
-	UpdateAccountingJournalQueryParamFieldsSource         UpdateAccountingJournalQueryParamFields = "source"
-	UpdateAccountingJournalQueryParamFieldsOrganizationID UpdateAccountingJournalQueryParamFields = "organization_id"
-	UpdateAccountingJournalQueryParamFieldsCategoryIds    UpdateAccountingJournalQueryParamFields = "category_ids"
-	UpdateAccountingJournalQueryParamFieldsProjectID      UpdateAccountingJournalQueryParamFields = "project_id"
-	UpdateAccountingJournalQueryParamFieldsAttachments    UpdateAccountingJournalQueryParamFields = "attachments"
-	UpdateAccountingJournalQueryParamFieldsRaw            UpdateAccountingJournalQueryParamFields = "raw"
+	UpdateAccountingJournalQueryParamFieldsID               UpdateAccountingJournalQueryParamFields = "id"
+	UpdateAccountingJournalQueryParamFieldsCreatedAt        UpdateAccountingJournalQueryParamFields = "created_at"
+	UpdateAccountingJournalQueryParamFieldsUpdatedAt        UpdateAccountingJournalQueryParamFields = "updated_at"
+	UpdateAccountingJournalQueryParamFieldsReference        UpdateAccountingJournalQueryParamFields = "reference"
+	UpdateAccountingJournalQueryParamFieldsTaxAmount        UpdateAccountingJournalQueryParamFields = "tax_amount"
+	UpdateAccountingJournalQueryParamFieldsCurrency         UpdateAccountingJournalQueryParamFields = "currency"
+	UpdateAccountingJournalQueryParamFieldsLineitems        UpdateAccountingJournalQueryParamFields = "lineitems"
+	UpdateAccountingJournalQueryParamFieldsTaxrateID        UpdateAccountingJournalQueryParamFields = "taxrate_id"
+	UpdateAccountingJournalQueryParamFieldsDescription      UpdateAccountingJournalQueryParamFields = "description"
+	UpdateAccountingJournalQueryParamFieldsPostedAt         UpdateAccountingJournalQueryParamFields = "posted_at"
+	UpdateAccountingJournalQueryParamFieldsSource           UpdateAccountingJournalQueryParamFields = "source"
+	UpdateAccountingJournalQueryParamFieldsOrganizationID   UpdateAccountingJournalQueryParamFields = "organization_id"
+	UpdateAccountingJournalQueryParamFieldsCategoryIds      UpdateAccountingJournalQueryParamFields = "category_ids"
+	UpdateAccountingJournalQueryParamFieldsProjectID        UpdateAccountingJournalQueryParamFields = "project_id"
+	UpdateAccountingJournalQueryParamFieldsAttachments      UpdateAccountingJournalQueryParamFields = "attachments"
+	UpdateAccountingJournalQueryParamFieldsTotalAmount      UpdateAccountingJournalQueryParamFields = "total_amount"
+	UpdateAccountingJournalQueryParamFieldsExchangeRate     UpdateAccountingJournalQueryParamFields = "exchange_rate"
+	UpdateAccountingJournalQueryParamFieldsStatus           UpdateAccountingJournalQueryParamFields = "status"
+	UpdateAccountingJournalQueryParamFieldsIsInclusiveOfTax UpdateAccountingJournalQueryParamFields = "is_inclusive_of_tax"
+	UpdateAccountingJournalQueryParamFieldsRaw              UpdateAccountingJournalQueryParamFields = "raw"
 )
 
 func (e UpdateAccountingJournalQueryParamFields) ToPointer() *UpdateAccountingJournalQueryParamFields {
@@ -68,6 +72,14 @@ func (e *UpdateAccountingJournalQueryParamFields) UnmarshalJSON(data []byte) err
 	case "project_id":
 		fallthrough
 	case "attachments":
+		fallthrough
+	case "total_amount":
+		fallthrough
+	case "exchange_rate":
+		fallthrough
+	case "status":
+		fallthrough
+	case "is_inclusive_of_tax":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingJournalQueryParamFields(v)
