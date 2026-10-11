@@ -12,21 +12,26 @@ import (
 type CreateHrisDeductionQueryParamFields string
 
 const (
-	CreateHrisDeductionQueryParamFieldsID            CreateHrisDeductionQueryParamFields = "id"
-	CreateHrisDeductionQueryParamFieldsCreatedAt     CreateHrisDeductionQueryParamFields = "created_at"
-	CreateHrisDeductionQueryParamFieldsUpdatedAt     CreateHrisDeductionQueryParamFields = "updated_at"
-	CreateHrisDeductionQueryParamFieldsUserID        CreateHrisDeductionQueryParamFields = "user_id"
-	CreateHrisDeductionQueryParamFieldsCompanyID     CreateHrisDeductionQueryParamFields = "company_id"
-	CreateHrisDeductionQueryParamFieldsBenefitID     CreateHrisDeductionQueryParamFields = "benefit_id"
-	CreateHrisDeductionQueryParamFieldsAmount        CreateHrisDeductionQueryParamFields = "amount"
-	CreateHrisDeductionQueryParamFieldsType          CreateHrisDeductionQueryParamFields = "type"
-	CreateHrisDeductionQueryParamFieldsCoverageLevel CreateHrisDeductionQueryParamFields = "coverage_level"
-	CreateHrisDeductionQueryParamFieldsFrequency     CreateHrisDeductionQueryParamFields = "frequency"
-	CreateHrisDeductionQueryParamFieldsStartAt       CreateHrisDeductionQueryParamFields = "start_at"
-	CreateHrisDeductionQueryParamFieldsEndAt         CreateHrisDeductionQueryParamFields = "end_at"
-	CreateHrisDeductionQueryParamFieldsIsActive      CreateHrisDeductionQueryParamFields = "is_active"
-	CreateHrisDeductionQueryParamFieldsNotes         CreateHrisDeductionQueryParamFields = "notes"
-	CreateHrisDeductionQueryParamFieldsRaw           CreateHrisDeductionQueryParamFields = "raw"
+	CreateHrisDeductionQueryParamFieldsID              CreateHrisDeductionQueryParamFields = "id"
+	CreateHrisDeductionQueryParamFieldsCreatedAt       CreateHrisDeductionQueryParamFields = "created_at"
+	CreateHrisDeductionQueryParamFieldsUpdatedAt       CreateHrisDeductionQueryParamFields = "updated_at"
+	CreateHrisDeductionQueryParamFieldsUserID          CreateHrisDeductionQueryParamFields = "user_id"
+	CreateHrisDeductionQueryParamFieldsCompanyID       CreateHrisDeductionQueryParamFields = "company_id"
+	CreateHrisDeductionQueryParamFieldsBenefitID       CreateHrisDeductionQueryParamFields = "benefit_id"
+	CreateHrisDeductionQueryParamFieldsAmount          CreateHrisDeductionQueryParamFields = "amount"
+	CreateHrisDeductionQueryParamFieldsType            CreateHrisDeductionQueryParamFields = "type"
+	CreateHrisDeductionQueryParamFieldsCoverageLevel   CreateHrisDeductionQueryParamFields = "coverage_level"
+	CreateHrisDeductionQueryParamFieldsFrequency       CreateHrisDeductionQueryParamFields = "frequency"
+	CreateHrisDeductionQueryParamFieldsStartAt         CreateHrisDeductionQueryParamFields = "start_at"
+	CreateHrisDeductionQueryParamFieldsEndAt           CreateHrisDeductionQueryParamFields = "end_at"
+	CreateHrisDeductionQueryParamFieldsIsActive        CreateHrisDeductionQueryParamFields = "is_active"
+	CreateHrisDeductionQueryParamFieldsNotes           CreateHrisDeductionQueryParamFields = "notes"
+	CreateHrisDeductionQueryParamFieldsEmployerAmount  CreateHrisDeductionQueryParamFields = "employer_amount"
+	CreateHrisDeductionQueryParamFieldsEmployerType    CreateHrisDeductionQueryParamFields = "employer_type"
+	CreateHrisDeductionQueryParamFieldsMaxAmount       CreateHrisDeductionQueryParamFields = "max_amount"
+	CreateHrisDeductionQueryParamFieldsPaycodeID       CreateHrisDeductionQueryParamFields = "paycode_id"
+	CreateHrisDeductionQueryParamFieldsGarnishmentType CreateHrisDeductionQueryParamFields = "garnishment_type"
+	CreateHrisDeductionQueryParamFieldsRaw             CreateHrisDeductionQueryParamFields = "raw"
 )
 
 func (e CreateHrisDeductionQueryParamFields) ToPointer() *CreateHrisDeductionQueryParamFields {
@@ -65,6 +70,16 @@ func (e *CreateHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "employer_amount":
+		fallthrough
+	case "employer_type":
+		fallthrough
+	case "max_amount":
+		fallthrough
+	case "paycode_id":
+		fallthrough
+	case "garnishment_type":
 		fallthrough
 	case "raw":
 		*e = CreateHrisDeductionQueryParamFields(v)

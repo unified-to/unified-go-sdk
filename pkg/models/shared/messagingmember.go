@@ -6,7 +6,8 @@ type MessagingMember struct {
 	Email    *string `json:"email,omitempty"`
 	ImageURL *string `json:"image_url,omitempty"`
 	Name     *string `json:"name,omitempty"`
-	UserID   *string `json:"user_id,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (m *MessagingMember) GetEmail() *string {

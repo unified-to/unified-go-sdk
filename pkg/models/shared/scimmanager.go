@@ -26,11 +26,15 @@ func (e *ScimManagerType) IsExact() bool {
 
 // ScimManager - "id" attribute of another User.
 type ScimManager struct {
-	DollarRef   *string          `json:"$ref,omitempty"`
-	DisplayName *string          `json:"displayName,omitempty"`
-	ManagerID   *string          `json:"managerId,omitempty"`
-	Type        *ScimManagerType `json:"type,omitempty"`
-	Value       *string          `json:"value,omitempty"`
+	// The URI of the SCIM resource representing the User's manager.  RECOMMENDED.
+	DollarRef *string `json:"$ref,omitempty"`
+	// The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is "readOnly".
+	DisplayName *string `json:"displayName,omitempty"`
+	// alias for value?
+	ManagerID *string          `json:"managerId,omitempty"`
+	Type      *ScimManagerType `json:"type,omitempty"`
+	// The "id" of the SCIM resource representing the user's manager.  RECOMMENDED.
+	Value *string `json:"value,omitempty"`
 }
 
 func (s *ScimManager) GetDollarRef() *string {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Metric - The metric being reported
 type Metric string
 
 const (
@@ -41,6 +42,7 @@ func (e *Metric) IsExact() bool {
 	return false
 }
 
+// Period - The aggregation period of the value
 type Period string
 
 const (
@@ -68,15 +70,24 @@ func (e *Period) IsExact() bool {
 }
 
 type SocialInsight struct {
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	Date      *time.Time     `json:"date,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	Metric    *Metric        `json:"metric,omitempty"`
-	Period    *Period        `json:"period,omitempty"`
-	PostID    *string        `json:"post_id,omitempty"`
-	ProfileID *string        `json:"profile_id,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	Value     *float64       `json:"value,omitempty"`
+	// When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The day/timestamp of the data point
+	Date *time.Time `json:"date,omitempty"`
+	// Unique identifier for the insight data point
+	ID *string `json:"id,omitempty"`
+	// The metric being reported
+	Metric *Metric `json:"metric,omitempty"`
+	// The aggregation period of the value
+	Period *Period `json:"period,omitempty"`
+	// Optional: the post these stats belong to
+	PostID *string `json:"post_id,omitempty"`
+	// The social profile these stats belong to
+	ProfileID *string `json:"profile_id,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// The metric value
+	Value *float64 `json:"value,omitempty"`
 }
 
 func (s SocialInsight) MarshalJSON() ([]byte, error) {

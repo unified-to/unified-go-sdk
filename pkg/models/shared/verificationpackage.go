@@ -39,24 +39,33 @@ type VerificationPackage struct {
 	Aliases []string `json:"aliases,omitempty"`
 	// average processing time in minutes
 	AverageProcessingTimes []VerificationTime `json:"average_processing_times,omitempty"`
-	CostAmount             *float64           `json:"cost_amount,omitempty"`
-	CreatedAt              *time.Time         `json:"created_at,omitempty"`
-	Currency               *string            `json:"currency,omitempty"`
-	Description            *string            `json:"description,omitempty"`
-	HasRedirectURL         *bool              `json:"has_redirect_url,omitempty"`
-	HasTargetURL           *bool              `json:"has_target_url,omitempty"`
-	ID                     *string            `json:"id,omitempty"`
-	InfoURL                *string            `json:"info_url,omitempty"`
-	MaxScore               *float64           `json:"max_score,omitempty"`
-	Name                   string             `json:"name"`
-	NeedsIPAddress         *bool              `json:"needs_ip_address,omitempty"`
+	// Cost-related information
+	CostAmount *float64 `json:"cost_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// Detailed description
+	Description    *string `json:"description,omitempty"`
+	HasRedirectURL *bool   `json:"has_redirect_url,omitempty"`
+	// where the provider will redirect the user to after the verification
+	HasTargetURL *bool `json:"has_target_url,omitempty"`
+	// Unique identifier for the verification type
+	ID *string `json:"id,omitempty"`
+	// where to find additional information
+	InfoURL *string `json:"info_url,omitempty"`
+	// if this verification returns a score, what is the maximum?
+	MaxScore *float64 `json:"max_score,omitempty"`
+	// Name of the verification type
+	Name           string `json:"name"`
+	NeedsIPAddress *bool  `json:"needs_ip_address,omitempty"`
 	// Questions that need to be answered for this verification
 	Parameters []VerificationParameter `json:"parameters,omitempty"`
 	Raw        map[string]any          `json:"raw,omitempty"`
 	// Category (Verification, Validation, Background Check)
-	Tags      []string                `json:"tags,omitempty"`
-	Type      VerificationPackageType `json:"type"`
-	UpdatedAt *time.Time              `json:"updated_at,omitempty"`
+	Tags []string                `json:"tags,omitempty"`
+	Type VerificationPackageType `json:"type"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// {country}-{state/province/territory} or just {country} 2-digit ISO codes
 	ValidRegions []string `json:"valid_regions,omitempty"`
 }

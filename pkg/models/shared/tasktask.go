@@ -33,33 +33,43 @@ func (e *TaskTaskStatus) IsExact() bool {
 type TaskTask struct {
 	AssignedUserIds []string `json:"assigned_user_ids,omitempty"`
 	// Array of attachment IDs retrieved from StorageFile.Get endpoint
-	AttachmentIds   []string        `json:"attachment_ids,omitempty"`
-	CompletedAt     *time.Time      `json:"completed_at,omitempty"`
-	CreatedAt       *time.Time      `json:"created_at,omitempty"`
-	CreatorUserID   *string         `json:"creator_user_id,omitempty"`
-	DueAt           *time.Time      `json:"due_at,omitempty"`
-	EndAt           *time.Time      `json:"end_at,omitempty"`
-	FollowerUserIds []string        `json:"follower_user_ids,omitempty"`
-	GroupIds        []string        `json:"group_ids,omitempty"`
-	HasChildren     *bool           `json:"has_children,omitempty"`
-	ID              *string         `json:"id,omitempty"`
-	Metadata        []TaskMetadata  `json:"metadata,omitempty"`
-	Name            *string         `json:"name,omitempty"`
-	Notes           *string         `json:"notes,omitempty"`
-	ParentID        *string         `json:"parent_id,omitempty"`
-	Priority        *string         `json:"priority,omitempty"`
-	Progress        *float64        `json:"progress,omitempty"`
-	ProjectID       *string         `json:"project_id,omitempty"`
-	Raw             map[string]any  `json:"raw,omitempty"`
-	StartAt         *time.Time      `json:"start_at,omitempty"`
-	Status          *TaskTaskStatus `json:"status,omitempty"`
-	StoryPoints     *float64        `json:"story_points,omitempty"`
-	Tags            []string        `json:"tags,omitempty"`
-	TimeSpent       *float64        `json:"time_spent,omitempty"`
-	TimeSpentUnit   *string         `json:"time_spent_unit,omitempty"`
-	Type            *string         `json:"type,omitempty"`
-	UpdatedAt       *time.Time      `json:"updated_at,omitempty"`
-	URL             *string         `json:"url,omitempty"`
+	AttachmentIds []string `json:"attachment_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CompletedAt *time.Time `json:"completed_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The user who created this task (reference to HrisEmployee)
+	CreatorUserID *string `json:"creator_user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt           *time.Time     `json:"end_at,omitempty"`
+	FollowerUserIds []string       `json:"follower_user_ids,omitempty"`
+	GroupIds        []string       `json:"group_ids,omitempty"`
+	HasChildren     *bool          `json:"has_children,omitempty"`
+	ID              *string        `json:"id,omitempty"`
+	Metadata        []TaskMetadata `json:"metadata,omitempty"`
+	Name            *string        `json:"name,omitempty"`
+	Notes           *string        `json:"notes,omitempty"`
+	ParentID        *string        `json:"parent_id,omitempty"`
+	Priority        *string        `json:"priority,omitempty"`
+	// 0-100
+	Progress *float64 `json:"progress,omitempty"`
+	// (reference to TaskProject)
+	ProjectID *string        `json:"project_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt       *time.Time      `json:"start_at,omitempty"`
+	Status        *TaskTaskStatus `json:"status,omitempty"`
+	StoryPoints   *float64        `json:"story_points,omitempty"`
+	Tags          []string        `json:"tags,omitempty"`
+	TimeSpent     *float64        `json:"time_spent,omitempty"`
+	TimeSpentUnit *string         `json:"time_spent_unit,omitempty"`
+	// The task/issue type name (e.g. Jira issue type).
+	Type *string `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	URL       *string    `json:"url,omitempty"`
 }
 
 func (t TaskTask) MarshalJSON() ([]byte, error) {

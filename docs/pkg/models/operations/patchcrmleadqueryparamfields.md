@@ -32,6 +32,7 @@ value := operations.PatchCrmLeadQueryParamFieldsID
 | `PatchCrmLeadQueryParamFieldsTelephones`    | telephones                                  |
 | `PatchCrmLeadQueryParamFieldsSource`        | source                                      |
 | `PatchCrmLeadQueryParamFieldsStatus`        | status                                      |
+| `PatchCrmLeadQueryParamFieldsTitle`         | title                                       |
 | `PatchCrmLeadQueryParamFieldsLinkUrls`      | link_urls                                   |
 | `PatchCrmLeadQueryParamFieldsMetadata`      | metadata                                    |
 | `PatchCrmLeadQueryParamFieldsRaw`           | raw                                         |

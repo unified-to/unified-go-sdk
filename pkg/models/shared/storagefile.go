@@ -30,9 +30,12 @@ func (e *StorageFileType) IsExact() bool {
 }
 
 type StorageFile struct {
-	CreatedAt   *time.Time          `json:"created_at,omitempty"`
-	Data        *string             `json:"data,omitempty"`
-	Description *string             `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// base64 encoded file contents used to create/update only
+	Data        *string `json:"data,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve a file" endpoint again to get a new download_url.
 	DownloadURL *string             `json:"download_url,omitempty"`
 	Hash        *string             `json:"hash,omitempty"`
 	ID          *string             `json:"id,omitempty"`
@@ -44,12 +47,14 @@ type StorageFile struct {
 	References  []StorageReference  `json:"references,omitempty"`
 	Size        *float64            `json:"size,omitempty"`
 	// labels
-	Tags      []string         `json:"tags,omitempty"`
-	Type      *StorageFileType `json:"type,omitempty"`
-	UpdatedAt *time.Time       `json:"updated_at,omitempty"`
-	UserID    *string          `json:"user_id,omitempty"`
-	Version   *string          `json:"version,omitempty"`
-	WebURL    *string          `json:"web_url,omitempty"`
+	Tags []string         `json:"tags,omitempty"`
+	Type *StorageFileType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID  *string `json:"user_id,omitempty"`
+	Version *string `json:"version,omitempty"`
+	WebURL  *string `json:"web_url,omitempty"`
 }
 
 func (s StorageFile) MarshalJSON() ([]byte, error) {

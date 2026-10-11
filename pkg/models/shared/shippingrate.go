@@ -8,17 +8,21 @@ import (
 )
 
 type ShippingRate struct {
+	// Reference to the carrier
 	CarrierID *string `json:"carrier_id,omitempty"`
 	Currency  *string `json:"currency,omitempty"`
 	// Origin address
 	FromAddress *PropertyShippingRateFromAddress `json:"from_address,omitempty"`
-	ID          *string                          `json:"id,omitempty"`
+	// Unique identifier for this rate object
+	ID *string `json:"id,omitempty"`
 	// Multiple packages (alternative to package)
-	Packages   []ShippingPackage  `json:"packages,omitempty"`
-	Rates      []ShippingRateRate `json:"rates,omitempty"`
-	Raw        map[string]any     `json:"raw,omitempty"`
-	ShipByAt   *time.Time         `json:"ship_by_at,omitempty"`
-	ShipmentID *string            `json:"shipment_id,omitempty"`
+	Packages []ShippingPackage  `json:"packages,omitempty"`
+	Rates    []ShippingRateRate `json:"rates,omitempty"`
+	Raw      map[string]any     `json:"raw,omitempty"`
+	// Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ShipByAt *time.Time `json:"ship_by_at,omitempty"`
+	// Reference to the shipping object (if rate is for existing shipment)
+	ShipmentID *string `json:"shipment_id,omitempty"`
 	// Destination address
 	ToAddress *PropertyShippingRateToAddress `json:"to_address,omitempty"`
 }

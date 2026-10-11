@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Direction - DESTINATION, or BIDIRECTIONAL for import+export connectors
 type Direction string
 
 const (
@@ -31,15 +32,24 @@ func (e *Direction) IsExact() bool {
 }
 
 type CdpDestination struct {
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	Direction *Direction     `json:"direction,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	IsEnabled *bool          `json:"is_enabled,omitempty"`
-	Name      *string        `json:"name,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	Slug      *string        `json:"slug,omitempty"`
-	Type      *string        `json:"type,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	// The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// DESTINATION, or BIDIRECTIONAL for import+export connectors
+	Direction *Direction `json:"direction,omitempty"`
+	// Unique identifier for this destination object
+	ID *string `json:"id,omitempty"`
+	// Whether the destination is active/enabled
+	IsEnabled *bool `json:"is_enabled,omitempty"`
+	// The name of the outbound activation destination
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this destination
+	Raw map[string]any `json:"raw,omitempty"`
+	// A stable handle/key for the destination
+	Slug *string `json:"slug,omitempty"`
+	// The connector/destination type (eg. the provider's connector slug or plugin id)
+	Type *string `json:"type,omitempty"`
+	// The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpDestination) MarshalJSON() ([]byte, error) {

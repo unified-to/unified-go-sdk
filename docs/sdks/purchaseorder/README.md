@@ -39,6 +39,7 @@ func main() {
 
     res, err := s.Purchaseorder.CreateAccountingPurchaseorder(ctx, operations.CreateAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -50,10 +51,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("2c15629f-d92a-450f-9a90-c739019fa131"),
+            ID: unifiedgosdk.Pointer("fcb307fc-6c22-47df-b1ec-904ef8da0eb8"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.375Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.288Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -64,7 +65,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.981Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.329Z"),
         },
         ConnectionID: "<id>",
     })
@@ -232,6 +233,7 @@ func main() {
 
     res, err := s.Purchaseorder.PatchAccountingPurchaseorder(ctx, operations.PatchAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -243,10 +245,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("ccae6f41-dac0-491f-9987-35fe17107580"),
+            ID: unifiedgosdk.Pointer("3e6054cd-72c6-4446-84b8-e073aad5b11a"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.417Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.316Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -257,7 +259,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.330Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -372,6 +374,7 @@ func main() {
 
     res, err := s.Purchaseorder.UpdateAccountingPurchaseorder(ctx, operations.UpdateAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -383,10 +386,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("ccae6f41-dac0-491f-9987-35fe17107580"),
+            ID: unifiedgosdk.Pointer("3e6054cd-72c6-4446-84b8-e073aad5b11a"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.417Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.316Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -397,7 +400,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.330Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

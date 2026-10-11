@@ -8,22 +8,26 @@ import (
 )
 
 type HrisLocation struct {
-	Address            *PropertyHrisLocationAddress `json:"address,omitempty"`
-	CompanyID          *string                      `json:"company_id,omitempty"`
-	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
-	Currency           *string                      `json:"currency,omitempty"`
-	Description        *string                      `json:"description,omitempty"`
-	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
-	ID                 *string                      `json:"id,omitempty"`
-	IsActive           *bool                        `json:"is_active,omitempty"`
-	IsHq               *bool                        `json:"is_hq,omitempty"`
-	LanguageLocale     *string                      `json:"language_locale,omitempty"`
-	Name               *string                      `json:"name,omitempty"`
-	ParentID           *string                      `json:"parent_id,omitempty"`
-	Raw                map[string]any               `json:"raw,omitempty"`
-	Telephones         []HrisTelephone              `json:"telephones,omitempty"`
-	Timezone           *string                      `json:"timezone,omitempty"`
-	UpdatedAt          *time.Time                   `json:"updated_at,omitempty"`
+	Address *PropertyHrisLocationAddress `json:"address,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt          *time.Time `json:"created_at,omitempty"`
+	Currency           *string    `json:"currency,omitempty"`
+	Description        *string    `json:"description,omitempty"`
+	ExternalIdentifier *string    `json:"external_identifier,omitempty"`
+	ID                 *string    `json:"id,omitempty"`
+	IsActive           *bool      `json:"is_active,omitempty"`
+	// if this location is the headquarters of the company
+	IsHq           *bool           `json:"is_hq,omitempty"`
+	LanguageLocale *string         `json:"language_locale,omitempty"`
+	Name           *string         `json:"name,omitempty"`
+	ParentID       *string         `json:"parent_id,omitempty"`
+	Raw            map[string]any  `json:"raw,omitempty"`
+	Telephones     []HrisTelephone `json:"telephones,omitempty"`
+	Timezone       *string         `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (h HrisLocation) MarshalJSON() ([]byte, error) {

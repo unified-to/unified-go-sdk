@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// BillingEvent - Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
 type BillingEvent string
 
 const (
@@ -108,6 +109,7 @@ func (e *AdsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+// CreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
 type CreativeSelection string
 
 const (
@@ -161,6 +163,7 @@ func (e *AdsGroupEffectiveStatus) IsExact() bool {
 	return false
 }
 
+// OptimizationGoal - Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
 type OptimizationGoal string
 
 const (
@@ -261,37 +264,45 @@ func (e *AdsGroupType) IsExact() bool {
 type AdsGroup struct {
 	BidAmount *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
-	BidStrategy          *PropertyAdsGroupBidStrategy  `json:"bid_strategy,omitempty"`
-	BillingEvent         *BillingEvent                 `json:"billing_event,omitempty"`
-	BudgetAllocationType *BudgetAllocationType         `json:"budget_allocation_type,omitempty"`
-	BudgetAmount         *float64                      `json:"budget_amount,omitempty"`
-	BudgetMaxAmount      *float64                      `json:"budget_max_amount,omitempty"`
-	BudgetPeriod         *AdsGroupBudgetPeriod         `json:"budget_period,omitempty"`
-	BudgetUnit           *AdsGroupBudgetUnit           `json:"budget_unit,omitempty"`
-	CampaignID           *string                       `json:"campaign_id,omitempty"`
-	CreatedAt            *time.Time                    `json:"created_at,omitempty"`
-	CreativeIds          []string                      `json:"creative_ids,omitempty"`
-	CreativeSelection    *CreativeSelection            `json:"creative_selection,omitempty"`
-	Currency             *string                       `json:"currency,omitempty"`
-	EffectiveStatus      *AdsGroupEffectiveStatus      `json:"effective_status,omitempty"`
-	EndAt                *time.Time                    `json:"end_at,omitempty"`
-	FrequencyCap         *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
-	HasEuPoliticalAds    *bool                         `json:"has_eu_political_ads,omitempty"`
-	ID                   *string                       `json:"id,omitempty"`
-	InsertionorderID     *string                       `json:"insertionorder_id,omitempty"`
-	LanguageLocale       *string                       `json:"language_locale,omitempty"`
-	Name                 *string                       `json:"name,omitempty"`
-	OptimizationGoal     *OptimizationGoal             `json:"optimization_goal,omitempty"`
-	OrganizationID       *string                       `json:"organization_id,omitempty"`
-	Pacing               *PropertyAdsGroupPacing       `json:"pacing,omitempty"`
-	ParentID             *string                       `json:"parent_id,omitempty"`
-	Promoted             []AdsPromoted                 `json:"promoted,omitempty"`
-	Raw                  map[string]any                `json:"raw,omitempty"`
-	StartAt              *time.Time                    `json:"start_at,omitempty"`
-	Status               *AdsGroupStatus               `json:"status,omitempty"`
-	Targeting            *PropertyAdsGroupTargeting    `json:"targeting,omitempty"`
-	Type                 *AdsGroupType                 `json:"type,omitempty"`
-	UpdatedAt            *time.Time                    `json:"updated_at,omitempty"`
+	BidStrategy *PropertyAdsGroupBidStrategy `json:"bid_strategy,omitempty"`
+	// Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
+	BillingEvent         *BillingEvent         `json:"billing_event,omitempty"`
+	BudgetAllocationType *BudgetAllocationType `json:"budget_allocation_type,omitempty"`
+	BudgetAmount         *float64              `json:"budget_amount,omitempty"`
+	BudgetMaxAmount      *float64              `json:"budget_max_amount,omitempty"`
+	BudgetPeriod         *AdsGroupBudgetPeriod `json:"budget_period,omitempty"`
+	BudgetUnit           *AdsGroupBudgetUnit   `json:"budget_unit,omitempty"`
+	CampaignID           *string               `json:"campaign_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	CreativeIds []string   `json:"creative_ids,omitempty"`
+	// Creative rotation strategy (LinkedIn creativeSelection)
+	CreativeSelection *CreativeSelection       `json:"creative_selection,omitempty"`
+	Currency          *string                  `json:"currency,omitempty"`
+	EffectiveStatus   *AdsGroupEffectiveStatus `json:"effective_status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt             *time.Time                    `json:"end_at,omitempty"`
+	FrequencyCap      *PropertyAdsGroupFrequencyCap `json:"frequency_cap,omitempty"`
+	HasEuPoliticalAds *bool                         `json:"has_eu_political_ads,omitempty"`
+	ID                *string                       `json:"id,omitempty"`
+	InsertionorderID  *string                       `json:"insertionorder_id,omitempty"`
+	// Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+	LanguageLocale *string `json:"language_locale,omitempty"`
+	Name           *string `json:"name,omitempty"`
+	// Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+	OptimizationGoal *OptimizationGoal       `json:"optimization_goal,omitempty"`
+	OrganizationID   *string                 `json:"organization_id,omitempty"`
+	Pacing           *PropertyAdsGroupPacing `json:"pacing,omitempty"`
+	ParentID         *string                 `json:"parent_id,omitempty"`
+	Promoted         []AdsPromoted           `json:"promoted,omitempty"`
+	Raw              map[string]any          `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt   *time.Time                 `json:"start_at,omitempty"`
+	Status    *AdsGroupStatus            `json:"status,omitempty"`
+	Targeting *PropertyAdsGroupTargeting `json:"targeting,omitempty"`
+	Type      *AdsGroupType              `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AdsGroup) MarshalJSON() ([]byte, error) {

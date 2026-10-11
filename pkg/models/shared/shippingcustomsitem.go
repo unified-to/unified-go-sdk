@@ -27,15 +27,22 @@ func (e *ShippingCustomsItemWeightUnit) IsExact() bool {
 }
 
 type ShippingCustomsItem struct {
-	Amount               *float64                       `json:"amount,omitempty"`
-	CountryOfOrigin      *string                        `json:"country_of_origin,omitempty"`
-	Currency             *string                        `json:"currency,omitempty"`
-	Description          *string                        `json:"description,omitempty"`
-	HarmonizedTariffCode *string                        `json:"harmonized_tariff_code,omitempty"`
-	Quantity             *float64                       `json:"quantity,omitempty"`
-	Sku                  *string                        `json:"sku,omitempty"`
-	Weight               *float64                       `json:"weight,omitempty"`
-	WeightUnit           *ShippingCustomsItemWeightUnit `json:"weight_unit,omitempty"`
+	// Value per unit
+	Amount *float64 `json:"amount,omitempty"`
+	// Country of origin (ISO code)
+	CountryOfOrigin *string `json:"country_of_origin,omitempty"`
+	Currency        *string `json:"currency,omitempty"`
+	// Item description
+	Description *string `json:"description,omitempty"`
+	// HS code
+	HarmonizedTariffCode *string `json:"harmonized_tariff_code,omitempty"`
+	// Quantity
+	Quantity *float64 `json:"quantity,omitempty"`
+	// SKU
+	Sku *string `json:"sku,omitempty"`
+	// Weight per unit
+	Weight     *float64                       `json:"weight,omitempty"`
+	WeightUnit *ShippingCustomsItemWeightUnit `json:"weight_unit,omitempty"`
 }
 
 func (s *ShippingCustomsItem) GetAmount() *float64 {

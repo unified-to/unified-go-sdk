@@ -32,21 +32,24 @@ func (e *CommerceReviewCommentStatus) IsExact() bool {
 }
 
 type CommerceReviewComment struct {
-	AuthorAvatarURL *string                      `json:"author_avatar_url,omitempty"`
-	AuthorEmail     *string                      `json:"author_email,omitempty"`
-	AuthorLocation  *string                      `json:"author_location,omitempty"`
-	AuthorName      *string                      `json:"author_name,omitempty"`
-	Content         *string                      `json:"content,omitempty"`
-	CreatedAt       *time.Time                   `json:"created_at,omitempty"`
-	HelpfulVotes    *float64                     `json:"helpful_votes,omitempty"`
-	ID              *string                      `json:"id,omitempty"`
-	IsPublic        *bool                        `json:"is_public,omitempty"`
-	IsVerified      *bool                        `json:"is_verified,omitempty"`
-	Metadata        []CommerceMetadata           `json:"metadata,omitempty"`
-	Raw             map[string]any               `json:"raw,omitempty"`
-	Status          *CommerceReviewCommentStatus `json:"status,omitempty"`
-	UnhelpfulVotes  *float64                     `json:"unhelpful_votes,omitempty"`
-	UpdatedAt       *time.Time                   `json:"updated_at,omitempty"`
+	AuthorAvatarURL *string `json:"author_avatar_url,omitempty"`
+	AuthorEmail     *string `json:"author_email,omitempty"`
+	AuthorLocation  *string `json:"author_location,omitempty"`
+	AuthorName      *string `json:"author_name,omitempty"`
+	Content         *string `json:"content,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *time.Time         `json:"created_at,omitempty"`
+	HelpfulVotes *float64           `json:"helpful_votes,omitempty"`
+	ID           *string            `json:"id,omitempty"`
+	IsPublic     *bool              `json:"is_public,omitempty"`
+	IsVerified   *bool              `json:"is_verified,omitempty"`
+	Metadata     []CommerceMetadata `json:"metadata,omitempty"`
+	// Original review data from source platform
+	Raw            map[string]any               `json:"raw,omitempty"`
+	Status         *CommerceReviewCommentStatus `json:"status,omitempty"`
+	UnhelpfulVotes *float64                     `json:"unhelpful_votes,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CommerceReviewComment) MarshalJSON() ([]byte, error) {

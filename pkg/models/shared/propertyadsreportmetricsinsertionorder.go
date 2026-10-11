@@ -60,10 +60,11 @@ func (e *PropertyAdsReportMetricsInsertionorderStatus) IsExact() bool {
 
 type PropertyAdsReportMetricsInsertionorder struct {
 	// YOUTUBE_AND_PARTNERS
-	BidStrategy    *PropertyAdsReportMetricsInsertionorderBidStrategy  `json:"bid_strategy,omitempty"`
-	BudgetSegments []AdsInsertionorderBudgetSegment                    `json:"budget_segments,omitempty"`
-	BudgetUnit     *PropertyAdsReportMetricsInsertionorderBudgetUnit   `json:"budget_unit,omitempty"`
-	CampaignID     *string                                             `json:"campaign_id,omitempty"`
+	BidStrategy    *PropertyAdsReportMetricsInsertionorderBidStrategy `json:"bid_strategy,omitempty"`
+	BudgetSegments []AdsInsertionorderBudgetSegment                   `json:"budget_segments,omitempty"`
+	BudgetUnit     *PropertyAdsReportMetricsInsertionorderBudgetUnit  `json:"budget_unit,omitempty"`
+	CampaignID     *string                                            `json:"campaign_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt      *time.Time                                          `json:"created_at,omitempty"`
 	FrequencyCap   *PropertyAdsReportMetricsInsertionorderFrequencyCap `json:"frequency_cap,omitempty"`
 	ID             *string                                             `json:"id,omitempty"`
@@ -72,9 +73,11 @@ type PropertyAdsReportMetricsInsertionorder struct {
 	OrganizationID *string                                             `json:"organization_id,omitempty"`
 	Pacing         *PropertyAdsReportMetricsInsertionorderPacing       `json:"pacing,omitempty"`
 	Raw            map[string]any                                      `json:"raw,omitempty"`
-	Reference      *string                                             `json:"reference,omitempty"`
-	Status         *PropertyAdsReportMetricsInsertionorderStatus       `json:"status,omitempty"`
-	UpdatedAt      *time.Time                                          `json:"updated_at,omitempty"`
+	// client's reference ID for the insertion order
+	Reference *string                                       `json:"reference,omitempty"`
+	Status    *PropertyAdsReportMetricsInsertionorderStatus `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsInsertionorder) MarshalJSON() ([]byte, error) {

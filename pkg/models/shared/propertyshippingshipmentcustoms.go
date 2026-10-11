@@ -98,19 +98,25 @@ func (e *TaxesPaidBy) IsExact() bool {
 
 // PropertyShippingShipmentCustoms - Customs information
 type PropertyShippingShipmentCustoms struct {
+	// Customs declared value
 	Amount       *float64      `json:"amount,omitempty"`
 	ContentsType *ContentsType `json:"contents_type,omitempty"`
 	Currency     *string       `json:"currency,omitempty"`
+	// Explanation of contents
 	Description  *string       `json:"description,omitempty"`
 	DutiesPaidBy *DutiesPaidBy `json:"duties_paid_by,omitempty"`
 	// Customs items
-	Items              []ShippingCustomsItem `json:"items,omitempty"`
-	NonDeliveryOption  *NonDeliveryOption    `json:"non_delivery_option,omitempty"`
-	RecipientEori      *string               `json:"recipient_eori,omitempty"`
-	RecipientTaxNumber *string               `json:"recipient_tax_number,omitempty"`
+	Items             []ShippingCustomsItem `json:"items,omitempty"`
+	NonDeliveryOption *NonDeliveryOption    `json:"non_delivery_option,omitempty"`
+	// Importer EORI number
+	RecipientEori *string `json:"recipient_eori,omitempty"`
+	// Importer tax ID
+	RecipientTaxNumber *string `json:"recipient_tax_number,omitempty"`
 	// Any restrictions
-	Restrictions     []string     `json:"restrictions,omitempty"`
-	ShipperEori      *string      `json:"shipper_eori,omitempty"`
+	Restrictions []string `json:"restrictions,omitempty"`
+	// Exporter EORI number
+	ShipperEori *string `json:"shipper_eori,omitempty"`
+	// Exporter tax ID
 	ShipperTaxNumber *string      `json:"shipper_tax_number,omitempty"`
 	TaxesPaidBy      *TaxesPaidBy `json:"taxes_paid_by,omitempty"`
 }

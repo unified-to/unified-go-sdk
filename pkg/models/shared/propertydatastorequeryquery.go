@@ -34,7 +34,8 @@ type PropertyDatastoreQueryQuery struct {
 	Select      []string                              `json:"select,omitempty"`
 	SortFields  []string                              `json:"sort_fields,omitempty"`
 	SortOrder   *SortOrder                            `json:"sort_order,omitempty"`
-	SQL         *string                               `json:"sql,omitempty"`
+	// Raw SQL – when set, executed directly (table_id optional)
+	SQL *string `json:"sql,omitempty"`
 }
 
 func (p *PropertyDatastoreQueryQuery) GetAggregate() *PropertyDatastoreQueryQueryAggregate {

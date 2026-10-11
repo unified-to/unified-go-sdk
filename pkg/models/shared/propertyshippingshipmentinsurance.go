@@ -27,14 +27,19 @@ func (e *CoverageType) IsExact() bool {
 
 // PropertyShippingShipmentInsurance - Insurance details
 type PropertyShippingShipmentInsurance struct {
-	CoverageAmount        *float64      `json:"coverage_amount,omitempty"`
-	CoverageType          *CoverageType `json:"coverage_type,omitempty"`
-	Currency              *string       `json:"currency,omitempty"`
-	InsuranceCost         *float64      `json:"insurance_cost,omitempty"`
-	InsuranceCostCurrency *string       `json:"insurance_cost_currency,omitempty"`
-	InsuranceProvider     *string       `json:"insurance_provider,omitempty"`
-	InsuranceProviderCode *string       `json:"insurance_provider_code,omitempty"`
-	InsuredValue          *float64      `json:"insured_value,omitempty"`
+	// Coverage amount (may differ from insured_value)
+	CoverageAmount *float64      `json:"coverage_amount,omitempty"`
+	CoverageType   *CoverageType `json:"coverage_type,omitempty"`
+	Currency       *string       `json:"currency,omitempty"`
+	// Cost of insurance
+	InsuranceCost         *float64 `json:"insurance_cost,omitempty"`
+	InsuranceCostCurrency *string  `json:"insurance_cost_currency,omitempty"`
+	// Insurance provider name
+	InsuranceProvider *string `json:"insurance_provider,omitempty"`
+	// Provider code
+	InsuranceProviderCode *string `json:"insurance_provider_code,omitempty"`
+	// Insured value
+	InsuredValue *float64 `json:"insured_value,omitempty"`
 }
 
 func (p *PropertyShippingShipmentInsurance) GetCoverageAmount() *float64 {

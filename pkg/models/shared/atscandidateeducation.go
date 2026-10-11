@@ -8,12 +8,14 @@ import (
 )
 
 type AtsCandidateEducation struct {
-	Degree       *string    `json:"degree,omitempty"`
+	Degree *string `json:"degree,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt        *time.Time `json:"end_at,omitempty"`
 	FieldOfStudy *string    `json:"field_of_study,omitempty"`
 	Institution  *string    `json:"institution,omitempty"`
 	Level        *string    `json:"level,omitempty"`
-	StartAt      *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 }
 
 func (a AtsCandidateEducation) MarshalJSON() ([]byte, error) {

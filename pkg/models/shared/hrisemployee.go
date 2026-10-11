@@ -59,6 +59,31 @@ func (e *HrisEmployeeEmploymentType) IsExact() bool {
 	return false
 }
 
+// FlsaStatus - US Fair Labor Standards Act classification
+type FlsaStatus string
+
+const (
+	FlsaStatusExempt            FlsaStatus = "EXEMPT"
+	FlsaStatusNonExempt         FlsaStatus = "NON_EXEMPT"
+	FlsaStatusSalariedNonexempt FlsaStatus = "SALARIED_NONEXEMPT"
+	FlsaStatusOwner             FlsaStatus = "OWNER"
+)
+
+func (e FlsaStatus) ToPointer() *FlsaStatus {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *FlsaStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EXEMPT", "NON_EXEMPT", "SALARIED_NONEXEMPT", "OWNER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmployeeGender string
 
 const (
@@ -106,27 +131,68 @@ func (e *MaritalStatus) IsExact() bool {
 	return false
 }
 
+// PayFrequency - how often the employee is paid (eg. BIWEEKLY)
+type PayFrequency string
+
+const (
+	PayFrequencyOneTime     PayFrequency = "ONE_TIME"
+	PayFrequencyDay         PayFrequency = "DAY"
+	PayFrequencyQuarter     PayFrequency = "QUARTER"
+	PayFrequencyYear        PayFrequency = "YEAR"
+	PayFrequencyHour        PayFrequency = "HOUR"
+	PayFrequencyMonth       PayFrequency = "MONTH"
+	PayFrequencyWeek        PayFrequency = "WEEK"
+	PayFrequencyBiweekly    PayFrequency = "BIWEEKLY"
+	PayFrequencySemimonthly PayFrequency = "SEMIMONTHLY"
+)
+
+func (e PayFrequency) ToPointer() *PayFrequency {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PayFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisEmployee struct {
-	Address          *PropertyHrisEmployeeAddress        `json:"address,omitempty"`
-	Bio              *string                             `json:"bio,omitempty"`
-	CompanyID        *string                             `json:"company_id,omitempty"`
-	Compensation     []HrisCompensation                  `json:"compensation,omitempty"`
-	CreatedAt        *time.Time                          `json:"created_at,omitempty"`
-	Currency         *string                             `json:"currency,omitempty"`
-	DateOfBirth      *time.Time                          `json:"date_of_birth,omitempty"`
-	Emails           []HrisEmail                         `json:"emails,omitempty"`
+	Address *PropertyHrisEmployeeAddress `json:"address,omitempty"`
+	Bio     *string                      `json:"bio,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID    *string            `json:"company_id,omitempty"`
+	Compensation []HrisCompensation `json:"compensation,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// YYYYMM/DD
+	DateOfBirth *time.Time  `json:"date_of_birth,omitempty"`
+	Emails      []HrisEmail `json:"emails,omitempty"`
+	// the company's ID for this employee
 	EmployeeNumber   *string                             `json:"employee_number,omitempty"`
 	EmployeeRoles    []PropertyHrisEmployeeEmployeeRoles `json:"employee_roles,omitempty"`
 	EmploymentStatus *EmploymentStatus                   `json:"employment_status,omitempty"`
 	EmploymentType   *HrisEmployeeEmploymentType         `json:"employment_type,omitempty"`
 	FirstName        *string                             `json:"first_name,omitempty"`
-	Gender           *HrisEmployeeGender                 `json:"gender,omitempty"`
+	// US Fair Labor Standards Act classification
+	FlsaStatus *FlsaStatus         `json:"flsa_status,omitempty"`
+	Gender     *HrisEmployeeGender `json:"gender,omitempty"`
 	// Which groups/teams/units that this employee/user belongs to.  May not have all of the Group fields present, but should have id, name, or email.
-	Groups         []HrisGroup    `json:"groups,omitempty"`
-	HasMfa         *bool          `json:"has_mfa,omitempty"`
-	HiredAt        *time.Time     `json:"hired_at,omitempty"`
-	ID             *string        `json:"id,omitempty"`
-	ImageURL       *string        `json:"image_url,omitempty"`
+	Groups []HrisGroup `json:"groups,omitempty"`
+	// does the user/employee have multi-factor authentication enabled
+	HasMfa *bool `json:"has_mfa,omitempty"`
+	// The employee's start date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	HiredAt *time.Time `json:"hired_at,omitempty"`
+	ID      *string    `json:"id,omitempty"`
+	// This link expires after 1 hour.
+	ImageURL *string `json:"image_url,omitempty"`
+	// the hris_job (position) this employee holds; their primary job when they hold more than one
+	JobID          *string        `json:"job_id,omitempty"`
 	LanguageLocale *string        `json:"language_locale,omitempty"`
 	LastName       *string        `json:"last_name,omitempty"`
 	Locations      []HrisLocation `json:"locations,omitempty"`
@@ -134,23 +200,30 @@ type HrisEmployee struct {
 	MaritalStatus  *MaritalStatus `json:"marital_status,omitempty"`
 	Metadata       []HrisMetadata `json:"metadata,omitempty"`
 	Name           *string        `json:"name,omitempty"`
-	Pronouns       *string        `json:"pronouns,omitempty"`
-	Raw            map[string]any `json:"raw,omitempty"`
+	// how often the employee is paid (eg. BIWEEKLY)
+	PayFrequency *PayFrequency  `json:"pay_frequency,omitempty"`
+	Pronouns     *string        `json:"pronouns,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
 	// the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
-	Relationships         []HrisEmployeerelationship `json:"relationships,omitempty"`
-	Salutation            *string                    `json:"salutation,omitempty"`
-	SsnSin                *string                    `json:"ssn_sin,omitempty"`
-	StorageQuotaAllocated *float64                   `json:"storage_quota_allocated,omitempty"`
-	StorageQuotaAvailable *float64                   `json:"storage_quota_available,omitempty"`
-	StorageQuotaUsed      *float64                   `json:"storage_quota_used,omitempty"`
-	Telephones            []HrisTelephone            `json:"telephones,omitempty"`
-	TerminatedAt          *time.Time                 `json:"terminated_at,omitempty"`
-	TerminationReason     *string                    `json:"termination_reason,omitempty"`
-	TimeoffDaysTotal      *float64                   `json:"timeoff_days_total,omitempty"`
-	TimeoffDaysUsed       *float64                   `json:"timeoff_days_used,omitempty"`
-	Timezone              *string                    `json:"timezone,omitempty"`
-	Title                 *string                    `json:"title,omitempty"`
-	UpdatedAt             *time.Time                 `json:"updated_at,omitempty"`
+	Relationships []HrisEmployeerelationship `json:"relationships,omitempty"`
+	// Mr. Mrs. Ms.
+	Salutation            *string         `json:"salutation,omitempty"`
+	SsnSin                *string         `json:"ssn_sin,omitempty"`
+	StorageQuotaAllocated *float64        `json:"storage_quota_allocated,omitempty"`
+	StorageQuotaAvailable *float64        `json:"storage_quota_available,omitempty"`
+	StorageQuotaUsed      *float64        `json:"storage_quota_used,omitempty"`
+	Telephones            []HrisTelephone `json:"telephones,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	TerminatedAt      *time.Time `json:"terminated_at,omitempty"`
+	TerminationReason *string    `json:"termination_reason,omitempty"`
+	// Total time off allowance for the current leave period, in days (when reported by the provider)
+	TimeoffDaysTotal *float64 `json:"timeoff_days_total,omitempty"`
+	// Time off days used or booked in the current leave period (when reported by the provider)
+	TimeoffDaysUsed *float64 `json:"timeoff_days_used,omitempty"`
+	Timezone        *string  `json:"timezone,omitempty"`
+	Title           *string  `json:"title,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (h HrisEmployee) MarshalJSON() ([]byte, error) {
@@ -255,6 +328,13 @@ func (h *HrisEmployee) GetFirstName() *string {
 	return h.FirstName
 }
 
+func (h *HrisEmployee) GetFlsaStatus() *FlsaStatus {
+	if h == nil {
+		return nil
+	}
+	return h.FlsaStatus
+}
+
 func (h *HrisEmployee) GetGender() *HrisEmployeeGender {
 	if h == nil {
 		return nil
@@ -295,6 +375,13 @@ func (h *HrisEmployee) GetImageURL() *string {
 		return nil
 	}
 	return h.ImageURL
+}
+
+func (h *HrisEmployee) GetJobID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.JobID
 }
 
 func (h *HrisEmployee) GetLanguageLocale() *string {
@@ -344,6 +431,13 @@ func (h *HrisEmployee) GetName() *string {
 		return nil
 	}
 	return h.Name
+}
+
+func (h *HrisEmployee) GetPayFrequency() *PayFrequency {
+	if h == nil {
+		return nil
+	}
+	return h.PayFrequency
 }
 
 func (h *HrisEmployee) GetPronouns() *string {

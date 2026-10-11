@@ -34,18 +34,23 @@ func (e *AtsDocumentType) IsExact() bool {
 }
 
 type AtsDocument struct {
-	ApplicationID *string          `json:"application_id,omitempty"`
-	CandidateID   *string          `json:"candidate_id,omitempty"`
-	CreatedAt     *time.Time       `json:"created_at,omitempty"`
-	DocumentData  *string          `json:"document_data,omitempty"`
-	DocumentURL   *string          `json:"document_url,omitempty"`
-	Filename      *string          `json:"filename,omitempty"`
-	ID            *string          `json:"id,omitempty"`
-	JobID         *string          `json:"job_id,omitempty"`
-	Raw           map[string]any   `json:"raw,omitempty"`
-	Type          *AtsDocumentType `json:"type,omitempty"`
-	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
-	UserID        *string          `json:"user_id,omitempty"`
+	ApplicationID *string `json:"application_id,omitempty"`
+	CandidateID   *string `json:"candidate_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content
+	DocumentData *string `json:"document_data,omitempty"`
+	// This link expires after 1 hour.
+	DocumentURL *string          `json:"document_url,omitempty"`
+	Filename    *string          `json:"filename,omitempty"`
+	ID          *string          `json:"id,omitempty"`
+	JobID       *string          `json:"job_id,omitempty"`
+	Raw         map[string]any   `json:"raw,omitempty"`
+	Type        *AtsDocumentType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (a AtsDocument) MarshalJSON() ([]byte, error) {

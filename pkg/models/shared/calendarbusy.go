@@ -8,12 +8,14 @@ import (
 )
 
 type CalendarBusy struct {
-	Description *string        `json:"description,omitempty"`
-	EndAt       time.Time      `json:"end_at"`
-	ID          *string        `json:"id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	StartAt     time.Time      `json:"start_at"`
-	Timezone    *string        `json:"timezone,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt time.Time      `json:"end_at"`
+	ID    *string        `json:"id,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt  time.Time `json:"start_at"`
+	Timezone *string   `json:"timezone,omitempty"`
 }
 
 func (c CalendarBusy) MarshalJSON() ([]byte, error) {

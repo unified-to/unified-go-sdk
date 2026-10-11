@@ -31,21 +31,30 @@ func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender
 
 // PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User - an organization.
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User struct {
-	AdditionalManagers []ScimManager                                                            `json:"additionalManagers,omitempty"`
-	Birthday           *time.Time                                                               `json:"birthday,omitempty"`
-	CostCenter         *string                                                                  `json:"costCenter,omitempty"`
-	Currency           *string                                                                  `json:"currency,omitempty"`
-	Department         *string                                                                  `json:"department,omitempty"`
-	Division           *string                                                                  `json:"division,omitempty"`
-	EmployeeNumber     *string                                                                  `json:"employeeNumber,omitempty"`
-	EndDate            *time.Time                                                               `json:"endDate,omitempty"`
-	Gender             *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender `json:"gender,omitempty"`
-	Level              *string                                                                  `json:"level,omitempty"`
-	Location           *string                                                                  `json:"location,omitempty"`
+	AdditionalManagers []ScimManager `json:"additionalManagers,omitempty"`
+	// 1985-07-20
+	Birthday *time.Time `json:"birthday,omitempty"`
+	// Identifies the name of a cost center.
+	CostCenter *string `json:"costCenter,omitempty"`
+	// User currency
+	Currency *string `json:"currency,omitempty"`
+	// Identifies the name of a department.
+	Department *string `json:"department,omitempty"`
+	// Identifies the name of a division.
+	Division       *string `json:"division,omitempty"`
+	EmployeeNumber *string `json:"employeeNumber,omitempty"`
+	// 2022-02-25
+	EndDate *time.Time                                                               `json:"endDate,omitempty"`
+	Gender  *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender `json:"gender,omitempty"`
+	Level   *string                                                                  `json:"level,omitempty"`
+	// Berlin
+	Location *string `json:"location,omitempty"`
 	// "id" attribute of another User.
-	Manager      *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager `json:"manager,omitempty"`
-	Organization *string                                                                   `json:"organization,omitempty"`
-	StartDate    *time.Time                                                                `json:"startDate,omitempty"`
+	Manager *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager `json:"manager,omitempty"`
+	// Identifies the name of an organization.
+	Organization *string `json:"organization,omitempty"`
+	// 2011-03-25
+	StartDate *time.Time `json:"startDate,omitempty"`
 }
 
 func (p PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User) MarshalJSON() ([]byte, error) {

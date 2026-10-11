@@ -3,13 +3,19 @@
 package shared
 
 type GenaiModel struct {
-	Description    *string        `json:"description,omitempty"`
-	HasTemperature *bool          `json:"has_temperature,omitempty"`
-	ID             *string        `json:"id,omitempty"`
-	MaxTokens      *float64       `json:"max_tokens,omitempty"`
-	Name           *string        `json:"name,omitempty"`
-	Raw            map[string]any `json:"raw,omitempty"`
-	WebURL         *string        `json:"web_url,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the typed questions of a prompt with answers instead of generating text responses.
+	HasQuestions *bool `json:"has_questions,omitempty"`
+	// Controls randomness of responses. A lower temperature leads to more predictable outputs while a higher temperature results in more varies and sometimes more creative outputs. 0-1
+	HasTemperature *bool `json:"has_temperature,omitempty"`
+	// Whether the model accepts images as input (see the images on each prompt message).
+	HasVision *bool   `json:"has_vision,omitempty"`
+	ID        *string `json:"id,omitempty"`
+	// The maximum number of tokens that the model can process in a single response. This limits ensures computational efficiency and resource management.
+	MaxTokens *float64       `json:"max_tokens,omitempty"`
+	Name      *string        `json:"name,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	WebURL    *string        `json:"web_url,omitempty"`
 }
 
 func (g *GenaiModel) GetDescription() *string {
@@ -19,11 +25,25 @@ func (g *GenaiModel) GetDescription() *string {
 	return g.Description
 }
 
+func (g *GenaiModel) GetHasQuestions() *bool {
+	if g == nil {
+		return nil
+	}
+	return g.HasQuestions
+}
+
 func (g *GenaiModel) GetHasTemperature() *bool {
 	if g == nil {
 		return nil
 	}
 	return g.HasTemperature
+}
+
+func (g *GenaiModel) GetHasVision() *bool {
+	if g == nil {
+		return nil
+	}
+	return g.HasVision
 }
 
 func (g *GenaiModel) GetID() *string {

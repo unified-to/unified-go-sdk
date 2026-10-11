@@ -30,30 +30,46 @@ func (e *HrisAttendanceStatus) IsExact() bool {
 	return false
 }
 
+// HrisAttendance - Also called timesheets
 type HrisAttendance struct {
-	Address            *PropertyHrisAttendanceAddress `json:"address,omitempty"`
-	ApprovedAt         *time.Time                     `json:"approved_at,omitempty"`
-	ApproverUserID     *string                        `json:"approver_user_id,omitempty"`
-	Breaks             []HrisAttendanceBreak          `json:"breaks,omitempty"`
-	CompanyID          *string                        `json:"company_id,omitempty"`
-	CreatedAt          *time.Time                     `json:"created_at,omitempty"`
-	Currency           *string                        `json:"currency,omitempty"`
-	DeclaredTipsAmount *float64                       `json:"declared_tips_amount,omitempty"`
-	EmployeeUserID     string                         `json:"employee_user_id"`
-	EndAt              time.Time                      `json:"end_at"`
-	GroupID            *string                        `json:"group_id,omitempty"`
-	HourlyRate         *float64                       `json:"hourly_rate,omitempty"`
-	Hours              *float64                       `json:"hours,omitempty"`
-	ID                 *string                        `json:"id,omitempty"`
-	JobName            *string                        `json:"job_name,omitempty"`
-	LocationID         *string                        `json:"location_id,omitempty"`
-	NonCashTipsAmount  *float64                       `json:"non_cash_tips_amount,omitempty"`
-	Raw                map[string]any                 `json:"raw,omitempty"`
-	StartAt            time.Time                      `json:"start_at"`
-	Status             *HrisAttendanceStatus          `json:"status,omitempty"`
-	TimeshiftID        *string                        `json:"timeshift_id,omitempty"`
-	Timezone           *string                        `json:"timezone,omitempty"`
-	UpdatedAt          *time.Time                     `json:"updated_at,omitempty"`
+	Address *PropertyHrisAttendanceAddress `json:"address,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ApprovedAt *time.Time `json:"approved_at,omitempty"`
+	// (reference to HrisEmployee)
+	ApproverUserID *string               `json:"approver_user_id,omitempty"`
+	Breaks         []HrisAttendanceBreak `json:"breaks,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// pairs with hourly_rate and tip amounts
+	Currency *string `json:"currency,omitempty"`
+	// cash tips declared by the employee for this attendance record
+	DeclaredTipsAmount *float64 `json:"declared_tips_amount,omitempty"`
+	// (reference to HrisEmployee)
+	EmployeeUserID string `json:"employee_user_id"`
+	// clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt time.Time `json:"end_at"`
+	// department, team, etc. (reference to HrisGroup)
+	GroupID    *string  `json:"group_id,omitempty"`
+	HourlyRate *float64 `json:"hourly_rate,omitempty"`
+	// worked hours
+	Hours   *float64 `json:"hours,omitempty"`
+	ID      *string  `json:"id,omitempty"`
+	JobName *string  `json:"job_name,omitempty"`
+	// (reference to HrisLocation)
+	LocationID *string `json:"location_id,omitempty"`
+	// card/non-cash tips attributed to this attendance record
+	NonCashTipsAmount *float64       `json:"non_cash_tips_amount,omitempty"`
+	Raw               map[string]any `json:"raw,omitempty"`
+	// clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt time.Time             `json:"start_at"`
+	Status  *HrisAttendanceStatus `json:"status,omitempty"`
+	// the scheduled hris_timeshift this attendance record fulfils
+	TimeshiftID *string `json:"timeshift_id,omitempty"`
+	Timezone    *string `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (h HrisAttendance) MarshalJSON() ([]byte, error) {

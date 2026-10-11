@@ -39,11 +39,11 @@ func main() {
 
     res, err := s.Expense.CreateAccountingExpense(ctx, operations.CreateAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.236Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.814Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("fef67b87-0957-42c3-adcf-43c0c46d6107"),
+                    ID: unifiedgosdk.Pointer("a31f87a7-4eb4-4302-b833-915ecb235046"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -52,10 +52,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("ffa6e9c7-9193-4696-85f6-b19d35be2a3b"),
+            ID: unifiedgosdk.Pointer("9984dbbc-0b26-48c0-8a8e-1e73ac0f709e"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("271f95a7-bbfc-403d-919c-785e59b3c427"),
+                    ID: unifiedgosdk.Pointer("6f21535d-972a-4fdc-926e-2321c794ccd9"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -69,12 +69,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.453Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.969Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.236Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.814Z"),
         },
         ConnectionID: "<id>",
     })
@@ -242,11 +243,11 @@ func main() {
 
     res, err := s.Expense.PatchAccountingExpense(ctx, operations.PatchAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("952638a5-c054-405a-9014-96aef0753c77"),
+                    ID: unifiedgosdk.Pointer("5476b7b2-d37e-4977-957f-aa4d8ec5c5a1"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -255,10 +256,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("fa30c86b-1dc7-447f-99a5-bb2137a4e4c2"),
+            ID: unifiedgosdk.Pointer("7a5365f5-1bd4-4cac-8131-6bd2366ba182"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8b534c2b-fe41-4494-86df-02ef8117de50"),
+                    ID: unifiedgosdk.Pointer("4e568a1a-bcad-4e8a-b51d-faaafbd22415"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -272,12 +273,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.462Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.977Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -392,11 +394,11 @@ func main() {
 
     res, err := s.Expense.UpdateAccountingExpense(ctx, operations.UpdateAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("952638a5-c054-405a-9014-96aef0753c77"),
+                    ID: unifiedgosdk.Pointer("5476b7b2-d37e-4977-957f-aa4d8ec5c5a1"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -405,10 +407,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("fa30c86b-1dc7-447f-99a5-bb2137a4e4c2"),
+            ID: unifiedgosdk.Pointer("7a5365f5-1bd4-4cac-8131-6bd2366ba182"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8b534c2b-fe41-4494-86df-02ef8117de50"),
+                    ID: unifiedgosdk.Pointer("4e568a1a-bcad-4e8a-b51d-faaafbd22415"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -422,12 +424,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.462Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.977Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -3,6 +3,7 @@
 package shared
 
 type MessagingAttachment struct {
+	// the inline attachment's content_id
 	ContentIdentifier *string  `json:"content_identifier,omitempty"`
 	ContentType       *string  `json:"content_type,omitempty"`
 	DownloadURL       *string  `json:"download_url,omitempty"`

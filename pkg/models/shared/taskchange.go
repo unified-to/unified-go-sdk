@@ -8,13 +8,17 @@ import (
 )
 
 type TaskChange struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time       `json:"created_at,omitempty"`
 	ID        *string          `json:"id,omitempty"`
 	Items     []TaskChangeItem `json:"items,omitempty"`
 	Raw       map[string]any   `json:"raw,omitempty"`
-	TaskID    *string          `json:"task_id,omitempty"`
-	UpdatedAt *time.Time       `json:"updated_at,omitempty"`
-	UserID    *string          `json:"user_id,omitempty"`
+	// (reference to TaskTask)
+	TaskID *string `json:"task_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (t TaskChange) MarshalJSON() ([]byte, error) {

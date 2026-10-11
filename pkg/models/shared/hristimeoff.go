@@ -82,24 +82,33 @@ func (e *HrisTimeoffType) IsExact() bool {
 }
 
 type HrisTimeoff struct {
-	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
-	ApproverUserID *string            `json:"approver_user_id,omitempty"`
-	Comments       *string            `json:"comments,omitempty"`
-	CompanyID      *string            `json:"company_id,omitempty"`
-	CreatedAt      *time.Time         `json:"created_at,omitempty"`
-	Duration       *float64           `json:"duration,omitempty"`
-	DurationType   *DurationType      `json:"duration_type,omitempty"`
-	EndAt          *time.Time         `json:"end_at,omitempty"`
-	ID             *string            `json:"id,omitempty"`
-	IsPaid         *bool              `json:"is_paid,omitempty"`
-	OriginalType   *string            `json:"original_type,omitempty"`
-	Raw            map[string]any     `json:"raw,omitempty"`
-	Reason         *string            `json:"reason,omitempty"`
-	StartAt        *time.Time         `json:"start_at,omitempty"`
-	Status         *HrisTimeoffStatus `json:"status,omitempty"`
-	Type           *HrisTimeoffType   `json:"type,omitempty"`
-	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
-	UserID         string             `json:"user_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ApprovedAt *time.Time `json:"approved_at,omitempty"`
+	// (reference to HrisEmployee)
+	ApproverUserID *string `json:"approver_user_id,omitempty"`
+	Comments       *string `json:"comments,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *time.Time    `json:"created_at,omitempty"`
+	Duration     *float64      `json:"duration,omitempty"`
+	DurationType *DurationType `json:"duration_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt  *time.Time `json:"end_at,omitempty"`
+	ID     *string    `json:"id,omitempty"`
+	IsPaid *bool      `json:"is_paid,omitempty"`
+	// integration leave-type label before normalization
+	OriginalType *string        `json:"original_type,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
+	Reason       *string        `json:"reason,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time         `json:"start_at,omitempty"`
+	Status  *HrisTimeoffStatus `json:"status,omitempty"`
+	Type    *HrisTimeoffType   `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// employee ID (reference to HrisEmployee)
+	UserID string `json:"user_id"`
 }
 
 func (h HrisTimeoff) MarshalJSON() ([]byte, error) {

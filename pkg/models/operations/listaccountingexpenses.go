@@ -40,6 +40,7 @@ const (
 	ListAccountingExpensesQueryParamFieldsMetadata         ListAccountingExpensesQueryParamFields = "metadata"
 	ListAccountingExpensesQueryParamFieldsTaxrateID        ListAccountingExpensesQueryParamFields = "taxrate_id"
 	ListAccountingExpensesQueryParamFieldsExchangeRate     ListAccountingExpensesQueryParamFields = "exchange_rate"
+	ListAccountingExpensesQueryParamFieldsType             ListAccountingExpensesQueryParamFields = "type"
 	ListAccountingExpensesQueryParamFieldsRaw              ListAccountingExpensesQueryParamFields = "raw"
 )
 
@@ -108,6 +109,8 @@ func (e *ListAccountingExpensesQueryParamFields) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "exchange_rate":
 		fallthrough
+	case "type":
+		fallthrough
 	case "raw":
 		*e = ListAccountingExpensesQueryParamFields(v)
 		return nil
@@ -143,8 +146,8 @@ type ListAccountingExpensesRequest struct {
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 	// The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartGte *string `queryParam:"style=form,explode=true,name=start_gte"`
-	// The status to filter by
-	Status *string `queryParam:"style=form,explode=true,name=status"`
+	Status   *string `queryParam:"style=form,explode=true,name=status"`
+	Type     *string `queryParam:"style=form,explode=true,name=type"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
 	// The user/employee ID to filter by (reference to HrisEmployee)
@@ -261,6 +264,13 @@ func (l *ListAccountingExpensesRequest) GetStatus() *string {
 		return nil
 	}
 	return l.Status
+}
+
+func (l *ListAccountingExpensesRequest) GetType() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Type
 }
 
 func (l *ListAccountingExpensesRequest) GetUpdatedGte() *string {

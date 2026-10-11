@@ -3,8 +3,10 @@
 package shared
 
 type CalendarLink struct {
-	CreatedAt     *string        `json:"created_at,omitempty"`
-	Description   *string        `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *string `json:"created_at,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// minutes
 	Duration      *float64       `json:"duration,omitempty"`
 	ID            *string        `json:"id,omitempty"`
 	IsActive      *bool          `json:"is_active,omitempty"`
@@ -12,8 +14,9 @@ type CalendarLink struct {
 	PriceAmount   *float64       `json:"price_amount,omitempty"`
 	PriceCurrency *string        `json:"price_currency,omitempty"`
 	Raw           map[string]any `json:"raw,omitempty"`
-	UpdatedAt     *string        `json:"updated_at,omitempty"`
-	URL           string         `json:"url"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	URL       string  `json:"url"`
 }
 
 func (c *CalendarLink) GetCreatedAt() *string {

@@ -8,9 +8,12 @@ import (
 )
 
 type UcRecordingMedia struct {
-	EndAt                 *time.Time              `json:"end_at,omitempty"`
-	Language              *string                 `json:"language,omitempty"`
-	RecordingDownloadURL  *string                 `json:"recording_download_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// two digit ISO code
+	Language             *string `json:"language,omitempty"`
+	RecordingDownloadURL *string `json:"recording_download_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt               *time.Time              `json:"start_at,omitempty"`
 	TranscriptDownloadURL *string                 `json:"transcript_download_url,omitempty"`
 	Transcripts           []UcRecordingTranscript `json:"transcripts,omitempty"`

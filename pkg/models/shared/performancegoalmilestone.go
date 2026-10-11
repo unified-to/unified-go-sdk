@@ -8,15 +8,17 @@ import (
 )
 
 type PerformanceGoalMilestone struct {
-	CurrentValue *float64   `json:"current_value,omitempty"`
-	Description  *string    `json:"description,omitempty"`
-	DueAt        *time.Time `json:"due_at,omitempty"`
-	ID           *string    `json:"id,omitempty"`
-	IsCompleted  *bool      `json:"is_completed,omitempty"`
-	Name         string     `json:"name"`
-	TargetValue  *float64   `json:"target_value,omitempty"`
-	Unit         *string    `json:"unit,omitempty"`
-	Weight       *float64   `json:"weight,omitempty"`
+	CurrentValue *float64 `json:"current_value,omitempty"`
+	Description  *string  `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt       *time.Time `json:"due_at,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	IsCompleted *bool      `json:"is_completed,omitempty"`
+	Name        string     `json:"name"`
+	TargetValue *float64   `json:"target_value,omitempty"`
+	// unit of the target/current values (e.g. %, USD, count)
+	Unit   *string  `json:"unit,omitempty"`
+	Weight *float64 `json:"weight,omitempty"`
 }
 
 func (p PerformanceGoalMilestone) MarshalJSON() ([]byte, error) {

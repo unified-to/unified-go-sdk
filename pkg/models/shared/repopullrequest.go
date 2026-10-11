@@ -31,20 +31,24 @@ func (e *RepoPullrequestStatus) IsExact() bool {
 }
 
 type RepoPullrequest struct {
-	ClosedAt       *time.Time             `json:"closed_at,omitempty"`
-	CommitIds      []string               `json:"commit_ids,omitempty"`
-	CreatedAt      *time.Time             `json:"created_at,omitempty"`
-	ID             *string                `json:"id,omitempty"`
-	Labels         []string               `json:"labels,omitempty"`
-	Notes          *string                `json:"notes,omitempty"`
-	Raw            map[string]any         `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt  *time.Time `json:"closed_at,omitempty"`
+	CommitIds []string   `json:"commit_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time     `json:"created_at,omitempty"`
+	ID        *string        `json:"id,omitempty"`
+	Labels    []string       `json:"labels,omitempty"`
+	Notes     *string        `json:"notes,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// (reference to RepoRepository)
 	RepoID         *string                `json:"repo_id,omitempty"`
 	SourceBranchID *string                `json:"source_branch_id,omitempty"`
 	Status         *RepoPullrequestStatus `json:"status,omitempty"`
 	TargetBranchID *string                `json:"target_branch_id,omitempty"`
 	Title          *string                `json:"title,omitempty"`
-	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
-	UserIds        []string               `json:"user_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	UserIds   []string   `json:"user_ids,omitempty"`
 }
 
 func (r RepoPullrequest) MarshalJSON() ([]byte, error) {

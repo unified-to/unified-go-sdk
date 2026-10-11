@@ -31,7 +31,8 @@ type PropertyCalendarRecordingTranscriptAttendee struct {
 	Name     *string                                            `json:"name,omitempty"`
 	Required *bool                                              `json:"required,omitempty"`
 	Status   *PropertyCalendarRecordingTranscriptAttendeeStatus `json:"status,omitempty"`
-	UserID   *string                                            `json:"user_id,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (p *PropertyCalendarRecordingTranscriptAttendee) GetEmail() *string {

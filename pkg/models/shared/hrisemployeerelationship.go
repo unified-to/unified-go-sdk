@@ -35,17 +35,19 @@ func (e *HrisEmployeerelationshipType) IsExact() bool {
 }
 
 type HrisEmployeerelationship struct {
-	Address       *PropertyHrisEmployeerelationshipAddress `json:"address,omitempty"`
-	Emails        []HrisEmail                              `json:"emails,omitempty"`
-	EndAt         *time.Time                               `json:"end_at,omitempty"`
-	FirstName     *string                                  `json:"first_name,omitempty"`
-	IsBeneficiary *bool                                    `json:"is_beneficiary,omitempty"`
-	IsDependent   *bool                                    `json:"is_dependent,omitempty"`
-	LastName      *string                                  `json:"last_name,omitempty"`
-	Name          *string                                  `json:"name,omitempty"`
-	StartAt       *time.Time                               `json:"start_at,omitempty"`
-	Telephones    []HrisTelephone                          `json:"telephones,omitempty"`
-	Type          *HrisEmployeerelationshipType            `json:"type,omitempty"`
+	Address *PropertyHrisEmployeerelationshipAddress `json:"address,omitempty"`
+	Emails  []HrisEmail                              `json:"emails,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt         *time.Time `json:"end_at,omitempty"`
+	FirstName     *string    `json:"first_name,omitempty"`
+	IsBeneficiary *bool      `json:"is_beneficiary,omitempty"`
+	IsDependent   *bool      `json:"is_dependent,omitempty"`
+	LastName      *string    `json:"last_name,omitempty"`
+	Name          *string    `json:"name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt    *time.Time                    `json:"start_at,omitempty"`
+	Telephones []HrisTelephone               `json:"telephones,omitempty"`
+	Type       *HrisEmployeerelationshipType `json:"type,omitempty"`
 }
 
 func (h HrisEmployeerelationship) MarshalJSON() ([]byte, error) {

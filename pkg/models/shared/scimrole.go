@@ -6,7 +6,8 @@ type ScimRole struct {
 	Display *string `json:"display,omitempty"`
 	Primary *bool   `json:"primary,omitempty"`
 	Type    *string `json:"type,omitempty"`
-	Value   string  `json:"value"`
+	// value of the role
+	Value string `json:"value"`
 }
 
 func (s *ScimRole) GetDisplay() *string {

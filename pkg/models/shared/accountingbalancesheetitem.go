@@ -3,6 +3,7 @@
 package shared
 
 type AccountingBalancesheetItem struct {
+	// (reference to AccountingAccount)
 	AccountID *string                      `json:"account_id,omitempty"`
 	Amount    *float64                     `json:"amount,omitempty"`
 	Name      *string                      `json:"name,omitempty"`

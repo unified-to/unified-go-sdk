@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CdpConsentStatus - The consent status for this purpose
 type CdpConsentStatus string
 
 const (
@@ -31,9 +32,12 @@ func (e *CdpConsentStatus) IsExact() bool {
 }
 
 type CdpConsent struct {
-	Purpose   *string           `json:"purpose,omitempty"`
-	Status    *CdpConsentStatus `json:"status,omitempty"`
-	UpdatedAt *time.Time        `json:"updated_at,omitempty"`
+	// The consent purpose or objective (eg. marketing, analytics)
+	Purpose *string `json:"purpose,omitempty"`
+	// The consent status for this purpose
+	Status *CdpConsentStatus `json:"status,omitempty"`
+	// When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpConsent) MarshalJSON() ([]byte, error) {

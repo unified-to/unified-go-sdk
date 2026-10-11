@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ClubsEventStatus - The event status
 type ClubsEventStatus string
 
 const (
@@ -31,6 +32,7 @@ func (e *ClubsEventStatus) IsExact() bool {
 	return false
 }
 
+// ClubsEventType - The event type
 type ClubsEventType string
 
 const (
@@ -56,31 +58,56 @@ func (e *ClubsEventType) IsExact() bool {
 
 // ClubsEvent - (home-vs-away competitors with scores). Distinct from the fitness-oriented IClubsActivity.
 type ClubsEvent struct {
-	AwayScore       *float64          `json:"away_score,omitempty"`
-	AwayTeamName    *string           `json:"away_team_name,omitempty"`
-	CreatedAt       *time.Time        `json:"created_at,omitempty"`
-	Description     *string           `json:"description,omitempty"`
-	DurationMinutes *float64          `json:"duration_minutes,omitempty"`
-	EndAt           *time.Time        `json:"end_at,omitempty"`
-	GroupID         *string           `json:"group_id,omitempty"`
-	HomeScore       *float64          `json:"home_score,omitempty"`
-	HomeTeamName    *string           `json:"home_team_name,omitempty"`
-	ID              *string           `json:"id,omitempty"`
-	IsHome          *bool             `json:"is_home,omitempty"`
-	LocationID      *string           `json:"location_id,omitempty"`
-	LocationName    *string           `json:"location_name,omitempty"`
-	Name            *string           `json:"name,omitempty"`
-	OpponentID      *string           `json:"opponent_id,omitempty"`
-	OpponentName    *string           `json:"opponent_name,omitempty"`
-	Raw             map[string]any    `json:"raw,omitempty"`
-	ScoreAgainst    *float64          `json:"score_against,omitempty"`
-	ScoreFor        *float64          `json:"score_for,omitempty"`
-	StartAt         *time.Time        `json:"start_at,omitempty"`
-	Status          *ClubsEventStatus `json:"status,omitempty"`
-	Timezone        *string           `json:"timezone,omitempty"`
-	Type            *ClubsEventType   `json:"type,omitempty"`
-	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
-	URL             *string           `json:"url,omitempty"`
+	// The away team's score
+	AwayScore *float64 `json:"away_score,omitempty"`
+	// The away team's name (homeaway providers)
+	AwayTeamName *string `json:"away_team_name,omitempty"`
+	// The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// A description or notes for the event
+	Description *string `json:"description,omitempty"`
+	// The scheduled duration, in minutes
+	DurationMinutes *float64 `json:"duration_minutes,omitempty"`
+	// When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// The group this event belongs to (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	// The home team's score
+	HomeScore *float64 `json:"home_score,omitempty"`
+	// The home team's name (homeaway providers)
+	HomeTeamName *string `json:"home_team_name,omitempty"`
+	// Unique identifier for this event
+	ID *string `json:"id,omitempty"`
+	// Whether the connected groupteam is the home side
+	IsHome *bool `json:"is_home,omitempty"`
+	// The id of the location for this event (reference to ClubsLocation)
+	LocationID *string `json:"location_id,omitempty"`
+	// The name of the location for this event
+	LocationName *string `json:"location_name,omitempty"`
+	// The event name (or a "Home vs Away" matchup label)
+	Name *string `json:"name,omitempty"`
+	// The id of the opposing team (single-opponent providers)
+	OpponentID *string `json:"opponent_id,omitempty"`
+	// The name of the opposing team
+	OpponentName *string `json:"opponent_name,omitempty"`
+	// The raw data returned by the integration for this event
+	Raw map[string]any `json:"raw,omitempty"`
+	// The opponent's score (team-vs-opponent providers)
+	ScoreAgainst *float64 `json:"score_against,omitempty"`
+	// The connected groupteam's score (team-vs-opponent providers)
+	ScoreFor *float64 `json:"score_for,omitempty"`
+	// When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// The event status
+	Status *ClubsEventStatus `json:"status,omitempty"`
+	// The timezone of the event
+	Timezone *string `json:"timezone,omitempty"`
+	// The event type
+	Type *ClubsEventType `json:"type,omitempty"`
+	// The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// A URL to the event
+	URL *string `json:"url,omitempty"`
 }
 
 func (c ClubsEvent) MarshalJSON() ([]byte, error) {

@@ -3,7 +3,8 @@
 package shared
 
 type LmsSubject struct {
-	Name *string  `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
+	// Depth of this subject in the provider's topic hierarchy (0 = top level)
 	Rank *float64 `json:"rank,omitempty"`
 }
 

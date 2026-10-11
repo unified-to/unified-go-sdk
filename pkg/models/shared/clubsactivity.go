@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ClubsActivityType - The activity type
 type ClubsActivityType string
 
 const (
@@ -36,49 +37,92 @@ func (e *ClubsActivityType) IsExact() bool {
 
 // ClubsActivity - ClubActivity (getClubActivitiesById, NO id) and the full DetailedActivity (getActivityById).
 type ClubsActivity struct {
-	AchievementCount     *float64           `json:"achievement_count,omitempty"`
-	AthleteCount         *float64           `json:"athlete_count,omitempty"`
-	AthleteID            *string            `json:"athlete_id,omitempty"`
-	AthleteName          *string            `json:"athlete_name,omitempty"`
-	AverageCadence       *float64           `json:"average_cadence,omitempty"`
-	AverageHeartrate     *float64           `json:"average_heartrate,omitempty"`
-	AverageSpeed         *float64           `json:"average_speed,omitempty"`
-	AverageWatts         *float64           `json:"average_watts,omitempty"`
-	Calories             *float64           `json:"calories,omitempty"`
-	CommentCount         *float64           `json:"comment_count,omitempty"`
-	CreatedAt            *time.Time         `json:"created_at,omitempty"`
-	Description          *string            `json:"description,omitempty"`
-	Distance             *float64           `json:"distance,omitempty"`
-	ElapsedTime          *float64           `json:"elapsed_time,omitempty"`
-	ElevationHigh        *float64           `json:"elevation_high,omitempty"`
-	ElevationLow         *float64           `json:"elevation_low,omitempty"`
-	GroupID              *string            `json:"group_id,omitempty"`
-	HasHeartrate         *bool              `json:"has_heartrate,omitempty"`
-	ID                   *string            `json:"id,omitempty"`
-	IsCommute            *bool              `json:"is_commute,omitempty"`
-	IsManual             *bool              `json:"is_manual,omitempty"`
-	IsPrivate            *bool              `json:"is_private,omitempty"`
-	IsTrainer            *bool              `json:"is_trainer,omitempty"`
-	Kilojoules           *float64           `json:"kilojoules,omitempty"`
-	KudosCount           *float64           `json:"kudos_count,omitempty"`
-	MapPolyline          *string            `json:"map_polyline,omitempty"`
-	MapSummaryPolyline   *string            `json:"map_summary_polyline,omitempty"`
-	MaxHeartrate         *float64           `json:"max_heartrate,omitempty"`
-	MaxSpeed             *float64           `json:"max_speed,omitempty"`
-	MaxWatts             *float64           `json:"max_watts,omitempty"`
-	MovingTime           *float64           `json:"moving_time,omitempty"`
-	Name                 *string            `json:"name,omitempty"`
-	PhotoCount           *float64           `json:"photo_count,omitempty"`
-	PrCount              *float64           `json:"pr_count,omitempty"`
-	Raw                  map[string]any     `json:"raw,omitempty"`
-	StartAt              *time.Time         `json:"start_at,omitempty"`
-	SufferScore          *float64           `json:"suffer_score,omitempty"`
-	Timezone             *string            `json:"timezone,omitempty"`
-	TotalElevationGain   *float64           `json:"total_elevation_gain,omitempty"`
-	Type                 *ClubsActivityType `json:"type,omitempty"`
-	UpdatedAt            *time.Time         `json:"updated_at,omitempty"`
-	WeightedAverageWatts *float64           `json:"weighted_average_watts,omitempty"`
-	WorkoutType          *float64           `json:"workout_type,omitempty"`
+	// The number of achievements gained during this activity
+	AchievementCount *float64 `json:"achievement_count,omitempty"`
+	// The number of athletes that took part in this activity
+	AthleteCount *float64 `json:"athlete_count,omitempty"`
+	// The id of the athlete who performed the activity (DetailedActivity only)
+	AthleteID *string `json:"athlete_id,omitempty"`
+	// The full name of the athlete
+	AthleteName *string `json:"athlete_name,omitempty"`
+	// The activity's average cadence
+	AverageCadence *float64 `json:"average_cadence,omitempty"`
+	// The activity's average heart rate, in beats per minute
+	AverageHeartrate *float64 `json:"average_heartrate,omitempty"`
+	// The activity's average speed, in meters per second
+	AverageSpeed *float64 `json:"average_speed,omitempty"`
+	// The activity's average power output, in watts
+	AverageWatts *float64 `json:"average_watts,omitempty"`
+	// The number of kilocalories consumed during this activity
+	Calories *float64 `json:"calories,omitempty"`
+	// The number of comments for this activity
+	CommentCount *float64 `json:"comment_count,omitempty"`
+	// The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The description of the activity (DetailedActivity only)
+	Description *string `json:"description,omitempty"`
+	// The activity's distance, in meters
+	Distance *float64 `json:"distance,omitempty"`
+	// The activity's elapsed time, in seconds
+	ElapsedTime *float64 `json:"elapsed_time,omitempty"`
+	// The activity's highest elevation, in meters (DetailedActivity only)
+	ElevationHigh *float64 `json:"elevation_high,omitempty"`
+	// The activity's lowest elevation, in meters (DetailedActivity only)
+	ElevationLow *float64 `json:"elevation_low,omitempty"`
+	// The group this activity was listed under (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	// Whether the activity has heart rate data
+	HasHeartrate *bool `json:"has_heartrate,omitempty"`
+	// Unique identifier for this activity (not provided by ClubActivity)
+	ID *string `json:"id,omitempty"`
+	// Whether this activity is a commute
+	IsCommute *bool `json:"is_commute,omitempty"`
+	// Whether this activity was created manually
+	IsManual *bool `json:"is_manual,omitempty"`
+	// Whether this activity is private
+	IsPrivate *bool `json:"is_private,omitempty"`
+	// Whether this activity was recorded on a training machine
+	IsTrainer *bool `json:"is_trainer,omitempty"`
+	// The total work done, in kilojoules
+	Kilojoules *float64 `json:"kilojoules,omitempty"`
+	// The number of kudos given for this activity
+	KudosCount *float64 `json:"kudos_count,omitempty"`
+	// The detailed polyline of the activity's map
+	MapPolyline *string `json:"map_polyline,omitempty"`
+	// The summary polyline of the activity's map
+	MapSummaryPolyline *string `json:"map_summary_polyline,omitempty"`
+	// The activity's max heart rate, in beats per minute
+	MaxHeartrate *float64 `json:"max_heartrate,omitempty"`
+	// The activity's max speed, in meters per second
+	MaxSpeed *float64 `json:"max_speed,omitempty"`
+	// The activity's max power output, in watts
+	MaxWatts *float64 `json:"max_watts,omitempty"`
+	// The activity's moving time, in seconds
+	MovingTime *float64 `json:"moving_time,omitempty"`
+	// The name of the activity
+	Name *string `json:"name,omitempty"`
+	// The number of Instagram photos for this activity
+	PhotoCount *float64 `json:"photo_count,omitempty"`
+	// The number of personal records set during this activity
+	PrCount *float64 `json:"pr_count,omitempty"`
+	// The raw data returned by the integration for this activity
+	Raw map[string]any `json:"raw,omitempty"`
+	// When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// The activity's relative effort score
+	SufferScore *float64 `json:"suffer_score,omitempty"`
+	// The timezone of the activity
+	Timezone *string `json:"timezone,omitempty"`
+	// The activity's total elevation gain, in meters
+	TotalElevationGain *float64 `json:"total_elevation_gain,omitempty"`
+	// The activity type
+	Type *ClubsActivityType `json:"type,omitempty"`
+	// The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The activity's weighted average power output, in watts
+	WeightedAverageWatts *float64 `json:"weighted_average_watts,omitempty"`
+	// The activity's workout type
+	WorkoutType *float64 `json:"workout_type,omitempty"`
 }
 
 func (c ClubsActivity) MarshalJSON() ([]byte, error) {

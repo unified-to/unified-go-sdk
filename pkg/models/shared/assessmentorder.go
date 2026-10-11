@@ -83,50 +83,72 @@ func (e *AssessmentOrderStatus) IsExact() bool {
 }
 
 type AssessmentOrder struct {
-	ApplicationID *string    `json:"application_id,omitempty"`
-	CandidateID   *string    `json:"candidate_id,omitempty"`
-	CompanyID     *string    `json:"company_id,omitempty"`
-	ConnectionID  string     `json:"connection_id"`
-	CreatedAt     *time.Time `json:"created_at,omitempty"`
-	EmployeeID    *string    `json:"employee_id,omitempty"`
-	ID            *string    `json:"id,omitempty"`
-	JobID         *string    `json:"job_id,omitempty"`
-	PackageID     *string    `json:"package_id,omitempty"`
+	// ATS application ID
+	ApplicationID *string `json:"application_id,omitempty"`
+	// ATS candidate ID
+	CandidateID *string `json:"candidate_id,omitempty"`
+	// ATS company ID (reference to AtsCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// Connection ID that this order belongs to
+	ConnectionID string `json:"connection_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ATS employee ID
+	EmployeeID *string `json:"employee_id,omitempty"`
+	ID         *string `json:"id,omitempty"`
+	// ATS job ID
+	JobID *string `json:"job_id,omitempty"`
+	// Assessment package ID
+	PackageID *string `json:"package_id,omitempty"`
 	// Filled-in answers to the package's parameter questions
-	Parameters                []AssessmentParameterInput `json:"parameters,omitempty"`
-	ProfileAddresses          []AssessmentAddress        `json:"profile_addresses,omitempty"`
-	ProfileDateOfBirth        *string                    `json:"profile_date_of_birth,omitempty"`
-	ProfileEmails             []string                   `json:"profile_emails,omitempty"`
-	ProfileFirstName          *string                    `json:"profile_first_name,omitempty"`
-	ProfileGender             *ProfileGender             `json:"profile_gender,omitempty"`
-	ProfileIPAddress          *string                    `json:"profile_ip_address,omitempty"`
-	ProfileLastName           *string                    `json:"profile_last_name,omitempty"`
-	ProfileName               *string                    `json:"profile_name,omitempty"`
-	ProfileNationalIdentifier *string                    `json:"profile_national_identifier,omitempty"`
-	ProfileResumeURL          *string                    `json:"profile_resume_url,omitempty"`
-	ProfileSocialMediaUrls    []string                   `json:"profile_social_media_urls,omitempty"`
-	ProfileTelephones         []string                   `json:"profile_telephones,omitempty"`
-	Raw                       map[string]any             `json:"raw,omitempty"`
-	Reference                 *string                    `json:"reference,omitempty"`
+	Parameters       []AssessmentParameterInput `json:"parameters,omitempty"`
+	ProfileAddresses []AssessmentAddress        `json:"profile_addresses,omitempty"`
+	// YYYY-MM-DD
+	ProfileDateOfBirth *string        `json:"profile_date_of_birth,omitempty"`
+	ProfileEmails      []string       `json:"profile_emails,omitempty"`
+	ProfileFirstName   *string        `json:"profile_first_name,omitempty"`
+	ProfileGender      *ProfileGender `json:"profile_gender,omitempty"`
+	// XXX.XXX.XXX.XXX
+	ProfileIPAddress          *string        `json:"profile_ip_address,omitempty"`
+	ProfileLastName           *string        `json:"profile_last_name,omitempty"`
+	ProfileName               *string        `json:"profile_name,omitempty"`
+	ProfileNationalIdentifier *string        `json:"profile_national_identifier,omitempty"`
+	ProfileResumeURL          *string        `json:"profile_resume_url,omitempty"`
+	ProfileSocialMediaUrls    []string       `json:"profile_social_media_urls,omitempty"`
+	ProfileTelephones         []string       `json:"profile_telephones,omitempty"`
+	Raw                       map[string]any `json:"raw,omitempty"`
+	// ATS-specific reference ID
+	Reference *string `json:"reference,omitempty"`
 	// Additional result attributes
-	ResponseAttributes  []AssessmentAttribute      `json:"response_attributes,omitempty"`
+	ResponseAttributes []AssessmentAttribute `json:"response_attributes,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ResponseCompletedAt *time.Time                 `json:"response_completed_at,omitempty"`
 	ResponseDetails     []AssessmentResponseDetail `json:"response_details,omitempty"`
 	// Report download URLs
-	ResponseDownloadUrls []string               `json:"response_download_urls,omitempty"`
-	ResponseExpiresAt    *time.Time             `json:"response_expires_at,omitempty"`
-	ResponseIssuedAt     *time.Time             `json:"response_issued_at,omitempty"`
-	ResponseMaxScore     *float64               `json:"response_max_score,omitempty"`
-	ResponseRedirectURL  *string                `json:"response_redirect_url,omitempty"`
-	ResponseScore        *float64               `json:"response_score,omitempty"`
-	ResponseSource       *string                `json:"response_source,omitempty"`
-	ResponseStatus       *ResponseStatus        `json:"response_status,omitempty"`
-	ResponseURL          *string                `json:"response_url,omitempty"`
-	Status               *AssessmentOrderStatus `json:"status,omitempty"`
-	TargetURL            *string                `json:"target_url,omitempty"`
-	UpdatedAt            *time.Time             `json:"updated_at,omitempty"`
-	WebhookID            *string                `json:"webhook_id,omitempty"`
-	WorkspaceID          string                 `json:"workspace_id"`
+	ResponseDownloadUrls []string `json:"response_download_urls,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ResponseExpiresAt *time.Time `json:"response_expires_at,omitempty"`
+	// Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ResponseIssuedAt *time.Time `json:"response_issued_at,omitempty"`
+	// Maximum possible score
+	ResponseMaxScore *float64 `json:"response_max_score,omitempty"`
+	// URL to redirect the user to complete assessment
+	ResponseRedirectURL *string `json:"response_redirect_url,omitempty"`
+	// Assessment score (e.g., 0-100)
+	ResponseScore  *float64        `json:"response_score,omitempty"`
+	ResponseSource *string         `json:"response_source,omitempty"`
+	ResponseStatus *ResponseStatus `json:"response_status,omitempty"`
+	// URL to view detailed results
+	ResponseURL *string                `json:"response_url,omitempty"`
+	Status      *AssessmentOrderStatus `json:"status,omitempty"`
+	// URL to redirect user to after assessment
+	TargetURL *string `json:"target_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Webhook ID that this order belongs to
+	WebhookID *string `json:"webhook_id,omitempty"`
+	// Workspace ID that this order belongs to (reference to KmsSpace)
+	WorkspaceID string `json:"workspace_id"`
 }
 
 func (a AssessmentOrder) MarshalJSON() ([]byte, error) {

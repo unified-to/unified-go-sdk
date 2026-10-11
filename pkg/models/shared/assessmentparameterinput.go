@@ -3,9 +3,10 @@
 package shared
 
 type AssessmentParameterInput struct {
-	Inputs      []string `json:"inputs,omitempty"`
-	Name        *string  `json:"name,omitempty"`
-	ParameterID *string  `json:"parameter_id,omitempty"`
+	Inputs []string `json:"inputs,omitempty"`
+	// Name of parameter
+	Name        *string `json:"name,omitempty"`
+	ParameterID *string `json:"parameter_id,omitempty"`
 }
 
 func (a *AssessmentParameterInput) GetInputs() []string {

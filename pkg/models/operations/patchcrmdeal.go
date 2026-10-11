@@ -30,8 +30,8 @@ const (
 	PatchCrmDealQueryParamFieldsUserID      PatchCrmDealQueryParamFields = "user_id"
 	PatchCrmDealQueryParamFieldsContactIds  PatchCrmDealQueryParamFields = "contact_ids"
 	PatchCrmDealQueryParamFieldsCompanyIds  PatchCrmDealQueryParamFields = "company_ids"
-	PatchCrmDealQueryParamFieldsMetadata    PatchCrmDealQueryParamFields = "metadata"
 	PatchCrmDealQueryParamFieldsDescription PatchCrmDealQueryParamFields = "description"
+	PatchCrmDealQueryParamFieldsMetadata    PatchCrmDealQueryParamFields = "metadata"
 	PatchCrmDealQueryParamFieldsRaw         PatchCrmDealQueryParamFields = "raw"
 )
 
@@ -80,9 +80,9 @@ func (e *PatchCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "company_ids":
 		fallthrough
-	case "metadata":
-		fallthrough
 	case "description":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCrmDealQueryParamFields(v)

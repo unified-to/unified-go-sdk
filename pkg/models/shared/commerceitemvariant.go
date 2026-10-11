@@ -54,7 +54,9 @@ func (e *CommerceItemvariantWeightUnit) IsExact() bool {
 }
 
 type CommerceItemvariant struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	AvailableAt *time.Time `json:"available_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	Description *string    `json:"description,omitempty"`
 	Height      *float64   `json:"height,omitempty"`
@@ -64,25 +66,27 @@ type CommerceItemvariant struct {
 	IsFeatured  *bool      `json:"is_featured,omitempty"`
 	IsVisible   *bool      `json:"is_visible,omitempty"`
 	// references CommerceItem
-	Items             []CommerceReference            `json:"items,omitempty"`
-	Length            *float64                       `json:"length,omitempty"`
-	Media             []CommerceItemMedia            `json:"media,omitempty"`
-	Metadata          []CommerceMetadata             `json:"metadata,omitempty"`
-	Name              *string                        `json:"name,omitempty"`
-	Options           []CommerceItemOption           `json:"options,omitempty"`
-	Prices            []CommerceItemPrice            `json:"prices,omitempty"`
-	PublicDescription *string                        `json:"public_description,omitempty"`
-	PublicName        *string                        `json:"public_name,omitempty"`
-	Raw               map[string]any                 `json:"raw,omitempty"`
-	RequiresShipping  *bool                          `json:"requires_shipping,omitempty"`
-	SizeUnit          *SizeUnit                      `json:"size_unit,omitempty"`
-	Sku               *string                        `json:"sku,omitempty"`
-	Tags              []string                       `json:"tags,omitempty"`
-	TotalStock        *float64                       `json:"total_stock,omitempty"`
-	UpdatedAt         *time.Time                     `json:"updated_at,omitempty"`
-	Weight            *float64                       `json:"weight,omitempty"`
-	WeightUnit        *CommerceItemvariantWeightUnit `json:"weight_unit,omitempty"`
-	Width             *float64                       `json:"width,omitempty"`
+	Items             []CommerceReference  `json:"items,omitempty"`
+	Length            *float64             `json:"length,omitempty"`
+	Media             []CommerceItemMedia  `json:"media,omitempty"`
+	Metadata          []CommerceMetadata   `json:"metadata,omitempty"`
+	Name              *string              `json:"name,omitempty"`
+	Options           []CommerceItemOption `json:"options,omitempty"`
+	Prices            []CommerceItemPrice  `json:"prices,omitempty"`
+	PublicDescription *string              `json:"public_description,omitempty"`
+	PublicName        *string              `json:"public_name,omitempty"`
+	Raw               map[string]any       `json:"raw,omitempty"`
+	RequiresShipping  *bool                `json:"requires_shipping,omitempty"`
+	SizeUnit          *SizeUnit            `json:"size_unit,omitempty"`
+	// barcode, UPC, isbn, etc
+	Sku        *string  `json:"sku,omitempty"`
+	Tags       []string `json:"tags,omitempty"`
+	TotalStock *float64 `json:"total_stock,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt  *time.Time                     `json:"updated_at,omitempty"`
+	Weight     *float64                       `json:"weight,omitempty"`
+	WeightUnit *CommerceItemvariantWeightUnit `json:"weight_unit,omitempty"`
+	Width      *float64                       `json:"width,omitempty"`
 }
 
 func (c CommerceItemvariant) MarshalJSON() ([]byte, error) {

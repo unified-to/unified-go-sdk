@@ -8,14 +8,16 @@ import (
 )
 
 type FormsSubmission struct {
-	Answers         []FormAnswer   `json:"answers"`
+	Answers []FormAnswer `json:"answers"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt       *time.Time     `json:"created_at,omitempty"`
 	FormID          string         `json:"form_id"`
 	ID              *string        `json:"id,omitempty"`
 	Raw             map[string]any `json:"raw,omitempty"`
 	RespondentEmail *string        `json:"respondent_email,omitempty"`
 	RespondentName  *string        `json:"respondent_name,omitempty"`
-	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (f FormsSubmission) MarshalJSON() ([]byte, error) {

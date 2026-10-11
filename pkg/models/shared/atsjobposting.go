@@ -9,15 +9,20 @@ import (
 
 type AtsJobPosting struct {
 	// job-post-specific address
-	Address     *PropertyAtsJobPostingAddress `json:"address,omitempty"`
-	CreatedAt   *time.Time                    `json:"created_at,omitempty"`
-	Description *string                       `json:"description,omitempty"`
-	ID          *string                       `json:"id,omitempty"`
-	IsActive    *bool                         `json:"is_active,omitempty"`
-	Location    *string                       `json:"location,omitempty"`
-	Name        *string                       `json:"name,omitempty"`
-	PostingURL  *string                       `json:"posting_url,omitempty"`
-	UpdatedAt   *time.Time                    `json:"updated_at,omitempty"`
+	Address *PropertyAtsJobPostingAddress `json:"address,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// job-post-specific description
+	Description *string `json:"description,omitempty"`
+	ID          *string `json:"id,omitempty"`
+	IsActive    *bool   `json:"is_active,omitempty"`
+	// job-post-specific location
+	Location *string `json:"location,omitempty"`
+	// job-post-specific name
+	Name       *string `json:"name,omitempty"`
+	PostingURL *string `json:"posting_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AtsJobPosting) MarshalJSON() ([]byte, error) {

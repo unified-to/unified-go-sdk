@@ -3,6 +3,7 @@
 package shared
 
 type TaskChangeItem struct {
+	// unified field in ITaskTask
 	Field string  `json:"field"`
 	From  *string `json:"from,omitempty"`
 	To    *string `json:"to,omitempty"`

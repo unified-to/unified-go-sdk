@@ -25,8 +25,9 @@ func (e *DatastoreRelationshipType) IsExact() bool {
 }
 
 type DatastoreRelationship struct {
-	Field   string                    `json:"field"`
-	Name    string                    `json:"name"`
+	Field string `json:"field"`
+	Name  string `json:"name"`
+	// target Database Table ID
 	TableID string                    `json:"table_id"`
 	Type    DatastoreRelationshipType `json:"type"`
 }

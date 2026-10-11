@@ -8,26 +8,34 @@ import (
 )
 
 type CrmLead struct {
-	Address       *PropertyCrmLeadAddress `json:"address,omitempty"`
-	CompanyID     *string                 `json:"company_id,omitempty"`
-	CompanyName   *string                 `json:"company_name,omitempty"`
-	ContactID     *string                 `json:"contact_id,omitempty"`
-	CreatedAt     *time.Time              `json:"created_at,omitempty"`
-	CreatorUserID *string                 `json:"creator_user_id,omitempty"`
-	Emails        []CrmEmail              `json:"emails,omitempty"`
-	FirstName     *string                 `json:"first_name,omitempty"`
-	ID            *string                 `json:"id,omitempty"`
-	IsActive      *bool                   `json:"is_active,omitempty"`
-	LastName      *string                 `json:"last_name,omitempty"`
-	LinkUrls      []string                `json:"link_urls,omitempty"`
-	Metadata      []CrmMetadata           `json:"metadata,omitempty"`
-	Name          *string                 `json:"name,omitempty"`
-	Raw           map[string]any          `json:"raw,omitempty"`
-	Source        *string                 `json:"source,omitempty"`
-	Status        *string                 `json:"status,omitempty"`
-	Telephones    []CrmTelephone          `json:"telephones,omitempty"`
-	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
-	UserID        *string                 `json:"user_id,omitempty"`
+	Address *PropertyCrmLeadAddress `json:"address,omitempty"`
+	// (reference to CrmCompany)
+	CompanyID   *string `json:"company_id,omitempty"`
+	CompanyName *string `json:"company_name,omitempty"`
+	// (reference to CrmContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (reference to HrisEmployee)
+	CreatorUserID *string        `json:"creator_user_id,omitempty"`
+	Emails        []CrmEmail     `json:"emails,omitempty"`
+	FirstName     *string        `json:"first_name,omitempty"`
+	ID            *string        `json:"id,omitempty"`
+	IsActive      *bool          `json:"is_active,omitempty"`
+	LastName      *string        `json:"last_name,omitempty"`
+	LinkUrls      []string       `json:"link_urls,omitempty"`
+	Metadata      []CrmMetadata  `json:"metadata,omitempty"`
+	Name          *string        `json:"name,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	Source        *string        `json:"source,omitempty"`
+	Status        *string        `json:"status,omitempty"`
+	Telephones    []CrmTelephone `json:"telephones,omitempty"`
+	// The job title of the lead
+	Title *string `json:"title,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (c CrmLead) MarshalJSON() ([]byte, error) {
@@ -165,6 +173,13 @@ func (c *CrmLead) GetTelephones() []CrmTelephone {
 		return nil
 	}
 	return c.Telephones
+}
+
+func (c *CrmLead) GetTitle() *string {
+	if c == nil {
+		return nil
+	}
+	return c.Title
 }
 
 func (c *CrmLead) GetUpdatedAt() *time.Time {

@@ -3,13 +3,13 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `Address1`         | `*string`          | :heavy_minus_sign: | N/A                |
-| `Address2`         | `*string`          | :heavy_minus_sign: | N/A                |
-| `City`             | `*string`          | :heavy_minus_sign: | N/A                |
-| `Country`          | `*string`          | :heavy_minus_sign: | N/A                |
-| `CountryCode`      | `*string`          | :heavy_minus_sign: | N/A                |
-| `PostalCode`       | `*string`          | :heavy_minus_sign: | N/A                |
-| `Region`           | `*string`          | :heavy_minus_sign: | N/A                |
-| `RegionCode`       | `*string`          | :heavy_minus_sign: | N/A                |
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `Address1`                                                                 | `*string`                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Address2`                                                                 | `*string`                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `City`                                                                     | `*string`                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Country`                                                                  | `*string`                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `CountryCode`                                                              | `*string`                                                                  | :heavy_minus_sign:                                                         | Country code in ISO 3166 A-2 format                                        |
+| `PostalCode`                                                               | `*string`                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Region`                                                                   | `*string`                                                                  | :heavy_minus_sign:                                                         | Regional area (e.g., state in the U.S., province in Canada)                |
+| `RegionCode`                                                               | `*string`                                                                  | :heavy_minus_sign:                                                         | Short form for regional area (e.g., two-letter stateprovince abbreviation) |

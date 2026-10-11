@@ -60,24 +60,37 @@ func (e *PerformanceReviewType) IsExact() bool {
 }
 
 type PerformanceReview struct {
-	Comment            *string                     `json:"comment,omitempty"`
-	CompletedAt        *time.Time                  `json:"completed_at,omitempty"`
-	CreatedAt          *time.Time                  `json:"created_at,omitempty"`
-	CycleID            *string                     `json:"cycle_id,omitempty"`
-	ID                 *string                     `json:"id,omitempty"`
-	IsAcknowledged     *bool                       `json:"is_acknowledged,omitempty"`
-	Questions          []PerformanceReviewQuestion `json:"questions,omitempty"`
-	Rating             *float64                    `json:"rating,omitempty"`
-	RatingDescription  *string                     `json:"rating_description,omitempty"`
-	RatingMaximum      *float64                    `json:"rating_maximum,omitempty"`
-	Raw                map[string]any              `json:"raw,omitempty"`
-	ReviewerUserID     *string                     `json:"reviewer_user_id,omitempty"`
-	Status             *PerformanceReviewStatus    `json:"status,omitempty"`
-	SubmittedAt        *time.Time                  `json:"submitted_at,omitempty"`
-	TemplateIdentifier *string                     `json:"template_identifier,omitempty"`
-	Type               *PerformanceReviewType      `json:"type,omitempty"`
-	UpdatedAt          *time.Time                  `json:"updated_at,omitempty"`
-	UserID             string                      `json:"user_id"`
+	// the overall/summary comment of this review
+	Comment *string `json:"comment,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CompletedAt *time.Time `json:"completed_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// pointer to the Performance Cycle object
+	CycleID *string `json:"cycle_id,omitempty"`
+	ID      *string `json:"id,omitempty"`
+	// whether the reviewee acknowledged this review
+	IsAcknowledged *bool                       `json:"is_acknowledged,omitempty"`
+	Questions      []PerformanceReviewQuestion `json:"questions,omitempty"`
+	// the overall rating/score of this review
+	Rating *float64 `json:"rating,omitempty"`
+	// label of the rating on the provider's scale (e.g. "Exceeds expectations")
+	RatingDescription *string `json:"rating_description,omitempty"`
+	// the maximum possible rating/score on the provider's scale
+	RatingMaximum *float64       `json:"rating_maximum,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	// the HR Employee that wrote this review (reference to HrisEmployee)
+	ReviewerUserID *string                  `json:"reviewer_user_id,omitempty"`
+	Status         *PerformanceReviewStatus `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SubmittedAt *time.Time `json:"submitted_at,omitempty"`
+	// id of the review template/form this review is based on
+	TemplateIdentifier *string                `json:"template_identifier,omitempty"`
+	Type               *PerformanceReviewType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// the HR Employee being reviewed (reference to HrisEmployee)
+	UserID string `json:"user_id"`
 }
 
 func (p PerformanceReview) MarshalJSON() ([]byte, error) {

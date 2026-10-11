@@ -30,19 +30,24 @@ func (e *IssueStatus) IsExact() bool {
 }
 
 type Issue struct {
-	CreatedAt      *string     `json:"created_at,omitempty"`
-	CustomerNote   *string     `json:"customer_note,omitempty"`
-	ID             *string     `json:"id,omitempty"`
-	Importance     *float64    `json:"importance,omitempty"`
-	ResolutionTime *float64    `json:"resolution_time,omitempty"`
-	Size           *float64    `json:"size,omitempty"`
-	Status         IssueStatus `json:"status"`
-	TicketRef      string      `json:"ticket_ref"`
-	Title          string      `json:"title"`
-	Type           []string    `json:"type,omitempty"`
-	UpdatedAt      *string     `json:"updated_at,omitempty"`
-	URL            *string     `json:"url,omitempty"`
-	WorkspaceID    string      `json:"workspace_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *string `json:"created_at,omitempty"`
+	CustomerNote *string `json:"customer_note,omitempty"`
+	ID           *string `json:"id,omitempty"`
+	// 1-5, 1 is lowest
+	Importance     *float64 `json:"importance,omitempty"`
+	ResolutionTime *float64 `json:"resolution_time,omitempty"`
+	// 1-5, 1 is lowest
+	Size      *float64    `json:"size,omitempty"`
+	Status    IssueStatus `json:"status"`
+	TicketRef string      `json:"ticket_ref"`
+	Title     string      `json:"title"`
+	Type      []string    `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	URL       *string `json:"url,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID string `json:"workspace_id"`
 }
 
 func (i *Issue) GetCreatedAt() *string {

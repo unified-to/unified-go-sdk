@@ -7,7 +7,8 @@ type FormAnswer struct {
 	FieldName *string `json:"field_name,omitempty"`
 	// references StorageFile ID
 	FileIds []string `json:"file_ids,omitempty"`
-	Value   *string  `json:"value,omitempty"`
+	// Can be string, number, boolean, array, etc.
+	Value *string `json:"value,omitempty"`
 }
 
 func (f *FormAnswer) GetFieldID() string {

@@ -3,12 +3,12 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `ID`               | `*string`          | :heavy_minus_sign: | N/A                |
-| `ItemID`           | `*string`          | :heavy_minus_sign: | N/A                |
-| `ItemName`         | `*string`          | :heavy_minus_sign: | N/A                |
-| `ItemVariantID`    | `*string`          | :heavy_minus_sign: | N/A                |
-| `OrderLineitemID`  | `*string`          | :heavy_minus_sign: | N/A                |
-| `Quantity`         | `*float64`         | :heavy_minus_sign: | N/A                |
-| `Sku`              | `*string`          | :heavy_minus_sign: | N/A                |
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `ID`                                                                                            | `*string`                                                                                       | :heavy_minus_sign:                                                                              | Unique identifier for this fulfillment line                                                     |
+| `ItemID`                                                                                        | `*string`                                                                                       | :heavy_minus_sign:                                                                              | Reference to the CommerceItem being fulfilled (reference to CommerceItem)                       |
+| `ItemName`                                                                                      | `*string`                                                                                       | :heavy_minus_sign:                                                                              | Item name (for display)                                                                         |
+| `ItemVariantID`                                                                                 | `*string`                                                                                       | :heavy_minus_sign:                                                                              | Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant) |
+| `OrderLineitemID`                                                                               | `*string`                                                                                       | :heavy_minus_sign:                                                                              | The order line being fulfilled                                                                  |
+| `Quantity`                                                                                      | `*float64`                                                                                      | :heavy_minus_sign:                                                                              | Units fulfilled on this line                                                                    |
+| `Sku`                                                                                           | `*string`                                                                                       | :heavy_minus_sign:                                                                              | Item SKU                                                                                        |

@@ -3,8 +3,10 @@
 package shared
 
 type AssessmentPackageRegion struct {
-	CostAmount     *float64 `json:"cost_amount,omitempty"`
-	Currency       *string  `json:"currency,omitempty"`
+	CostAmount *float64 `json:"cost_amount,omitempty"`
+	// ISO 4217 format
+	Currency *string `json:"currency,omitempty"`
+	// Processing time in milliseconds
 	ProcessingTime *float64 `json:"processing_time,omitempty"`
 	// Countryregion codes where this package is available ({country}-{state} or {country})
 	Regions []string `json:"regions,omitempty"`

@@ -8,6 +8,7 @@ import (
 )
 
 type PropertyCrmEventForm struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ArchivedAt  *time.Time          `json:"archived_at,omitempty"`
 	Fields      []CrmEventFormField `json:"fields,omitempty"`
 	Name        *string             `json:"name,omitempty"`

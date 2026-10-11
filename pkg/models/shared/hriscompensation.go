@@ -5,13 +5,15 @@ package shared
 type HrisCompensationFrequency string
 
 const (
-	HrisCompensationFrequencyOneTime HrisCompensationFrequency = "ONE_TIME"
-	HrisCompensationFrequencyDay     HrisCompensationFrequency = "DAY"
-	HrisCompensationFrequencyQuarter HrisCompensationFrequency = "QUARTER"
-	HrisCompensationFrequencyYear    HrisCompensationFrequency = "YEAR"
-	HrisCompensationFrequencyHour    HrisCompensationFrequency = "HOUR"
-	HrisCompensationFrequencyMonth   HrisCompensationFrequency = "MONTH"
-	HrisCompensationFrequencyWeek    HrisCompensationFrequency = "WEEK"
+	HrisCompensationFrequencyOneTime     HrisCompensationFrequency = "ONE_TIME"
+	HrisCompensationFrequencyDay         HrisCompensationFrequency = "DAY"
+	HrisCompensationFrequencyQuarter     HrisCompensationFrequency = "QUARTER"
+	HrisCompensationFrequencyYear        HrisCompensationFrequency = "YEAR"
+	HrisCompensationFrequencyHour        HrisCompensationFrequency = "HOUR"
+	HrisCompensationFrequencyMonth       HrisCompensationFrequency = "MONTH"
+	HrisCompensationFrequencyWeek        HrisCompensationFrequency = "WEEK"
+	HrisCompensationFrequencyBiweekly    HrisCompensationFrequency = "BIWEEKLY"
+	HrisCompensationFrequencySemimonthly HrisCompensationFrequency = "SEMIMONTHLY"
 )
 
 func (e HrisCompensationFrequency) ToPointer() *HrisCompensationFrequency {
@@ -22,7 +24,7 @@ func (e HrisCompensationFrequency) ToPointer() *HrisCompensationFrequency {
 func (e *HrisCompensationFrequency) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
 			return true
 		}
 	}
@@ -37,6 +39,8 @@ const (
 	HrisCompensationTypeStockOptions HrisCompensationType = "STOCK_OPTIONS"
 	HrisCompensationTypeEquity       HrisCompensationType = "EQUITY"
 	HrisCompensationTypeOther        HrisCompensationType = "OTHER"
+	HrisCompensationTypeHourly       HrisCompensationType = "HOURLY"
+	HrisCompensationTypeCommission   HrisCompensationType = "COMMISSION"
 )
 
 func (e HrisCompensationType) ToPointer() *HrisCompensationType {
@@ -47,7 +51,7 @@ func (e HrisCompensationType) ToPointer() *HrisCompensationType {
 func (e *HrisCompensationType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "SALARY", "BONUS", "STOCK_OPTIONS", "EQUITY", "OTHER":
+		case "SALARY", "BONUS", "STOCK_OPTIONS", "EQUITY", "OTHER", "HOURLY", "COMMISSION":
 			return true
 		}
 	}
@@ -58,9 +62,10 @@ type HrisCompensation struct {
 	Amount    *float64                   `json:"amount,omitempty"`
 	Currency  *string                    `json:"currency,omitempty"`
 	Frequency *HrisCompensationFrequency `json:"frequency,omitempty"`
-	GroupID   *string                    `json:"group_id,omitempty"`
-	Notes     *string                    `json:"notes,omitempty"`
-	Type      *HrisCompensationType      `json:"type,omitempty"`
+	// (reference to HrisGroup)
+	GroupID *string               `json:"group_id,omitempty"`
+	Notes   *string               `json:"notes,omitempty"`
+	Type    *HrisCompensationType `json:"type,omitempty"`
 }
 
 func (h *HrisCompensation) GetAmount() *float64 {

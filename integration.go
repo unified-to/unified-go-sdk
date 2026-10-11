@@ -31,8 +31,8 @@ func newIntegration(rootSDK *UnifiedTo, sdkConfig config.SDKConfiguration, hooks
 	}
 }
 
-// GetUnifiedIntegrationAuth - Authorize new connection
-// Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+// GetUnifiedIntegrationAuth - Authorize or re-authorize a connection
+// Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 func (s *Integration) GetUnifiedIntegrationAuth(ctx context.Context, request operations.GetUnifiedIntegrationAuthRequest, opts ...operations.Option) (*operations.GetUnifiedIntegrationAuthResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

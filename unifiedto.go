@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.938.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.946.0
 
 import (
 	"context"
@@ -70,6 +70,7 @@ type UnifiedTo struct {
 	Contact             *Contact
 	Creditmemo          *Creditmemo
 	Expense             *Expense
+	Expensereport       *Expensereport
 	Invoice             *Invoice
 	Journal             *Journal
 	Order               *Order
@@ -78,8 +79,10 @@ type UnifiedTo struct {
 	Profitloss          *Profitloss
 	Project             *Project
 	Purchaseorder       *Purchaseorder
+	Purchasereceipt     *Purchasereceipt
 	Quote               *Quote
 	Salesorder          *Salesorder
+	Salesreceipt        *Salesreceipt
 	Taxrate             *Taxrate
 	Transaction         *Transaction
 	Trialbalance        *Trialbalance
@@ -154,6 +157,7 @@ type UnifiedTo struct {
 	Embedding           *Embedding
 	Model               *Model
 	Prompt              *Prompt
+	Skill               *Skill
 	Task                *Task
 	Hris                *Hris
 	Attendance          *Attendance
@@ -161,7 +165,10 @@ type UnifiedTo struct {
 	Benefit             *Benefit
 	Deduction           *Deduction
 	Device              *Device
+	Earning             *Earning
 	Employee            *Employee
+	Paycode             *Paycode
+	Payroll             *Payroll
 	Payslip             *Payslip
 	Timeoff             *Timeoff
 	Timeshift           *Timeshift
@@ -218,6 +225,7 @@ type UnifiedTo struct {
 	Ticket              *Ticket
 	Uc                  *Uc
 	Call                *Call
+	Scorecardtemplate   *Scorecardtemplate
 	Unified             *Unified
 	Apicall             *Apicall
 	Connection          *Connection
@@ -228,8 +236,8 @@ type UnifiedTo struct {
 	Saml                *Saml
 	Issue               *Issue
 	Notification        *Notification
-	Webhook             *Webhook
 	Secretsmanager      *Secretsmanager
+	Webhook             *Webhook
 	Verification        *Verification
 	Request             *Request
 
@@ -308,11 +316,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.36.128",
+		SDKVersion: "0.37.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.36.128 2.938.0 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.36.128",
-			GenVersion:        "2.938.0",
+			UserAgent:         "speakeasy-sdk/go 0.37.0 2.946.0 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.37.0",
+			GenVersion:        "2.946.0",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},
@@ -347,6 +355,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Contact = newContact(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Creditmemo = newCreditmemo(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Expense = newExpense(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Expensereport = newExpensereport(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Invoice = newInvoice(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Journal = newJournal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Order = newOrder(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -355,8 +364,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Profitloss = newProfitloss(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Project = newProject(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Purchaseorder = newPurchaseorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Purchasereceipt = newPurchasereceipt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Quote = newQuote(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Salesorder = newSalesorder(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Salesreceipt = newSalesreceipt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Taxrate = newTaxrate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Transaction = newTransaction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Trialbalance = newTrialbalance(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -431,6 +442,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Embedding = newEmbedding(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Skill = newSkill(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Attendance = newAttendance(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -438,7 +450,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Benefit = newBenefit(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deduction = newDeduction(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Device = newDevice(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Earning = newEarning(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Employee = newEmployee(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Paycode = newPaycode(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Payroll = newPayroll(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Payslip = newPayslip(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeoff = newTimeoff(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Timeshift = newTimeshift(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -495,6 +510,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Ticket = newTicket(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Uc = newUc(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Call = newCall(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Scorecardtemplate = newScorecardtemplate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Unified = newUnified(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Apicall = newApicall(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Connection = newConnection(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -505,8 +521,8 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Saml = newSaml(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Issue = newIssue(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Notification = newNotification(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Secretsmanager = newSecretsmanager(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Webhook = newWebhook(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Verification = newVerification(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Request = newRequest(sdk, sdk.sdkConfiguration, sdk.hooks)
 

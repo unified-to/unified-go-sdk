@@ -12,9 +12,10 @@ type PropertyMessagingEventMessage struct {
 	// for email systems, this field represents the From value
 	AuthorMember *PropertyMessagingEventMessageAuthorMember `json:"author_member,omitempty"`
 	Buttons      []MessagingButton                          `json:"buttons,omitempty"`
-	// Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
-	Channels  []MessagingReference `json:"channels,omitempty"`
-	CreatedAt *time.Time           `json:"created_at,omitempty"`
+	// Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the "Draft" channel/folder, use a channel ID "DRAFT".
+	Channels []MessagingReference `json:"channels,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// for email systems, this field represents the To value
 	DestinationMembers []MessagingMember `json:"destination_members,omitempty"`
 	HasChildren        *bool             `json:"has_children,omitempty"`
@@ -23,18 +24,22 @@ type PropertyMessagingEventMessage struct {
 	ID            *string           `json:"id,omitempty"`
 	IsUnread      *bool             `json:"is_unread,omitempty"`
 	// for email systems, this field represents the CC value
-	MentionedMembers        []MessagingMember   `json:"mentioned_members,omitempty"`
-	Message                 *string             `json:"message,omitempty"`
-	MessageHTML             *string             `json:"message_html,omitempty"`
-	MessageMarkdown         *string             `json:"message_markdown,omitempty"`
-	MessageThreadIdentifier *string             `json:"message_thread_identifier,omitempty"`
-	ParentID                *string             `json:"parent_id,omitempty"`
-	Raw                     map[string]any      `json:"raw,omitempty"`
-	Reactions               []MessagingReaction `json:"reactions,omitempty"`
-	Reference               *string             `json:"reference,omitempty"`
-	Subject                 *string             `json:"subject,omitempty"`
-	UpdatedAt               *time.Time          `json:"updated_at,omitempty"`
-	WebURL                  *string             `json:"web_url,omitempty"`
+	MentionedMembers []MessagingMember `json:"mentioned_members,omitempty"`
+	Message          *string           `json:"message,omitempty"`
+	MessageHTML      *string           `json:"message_html,omitempty"`
+	MessageMarkdown  *string           `json:"message_markdown,omitempty"`
+	// the opaque identifier for the first message in a thread
+	MessageThreadIdentifier *string `json:"message_thread_identifier,omitempty"`
+	// Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
+	ParentID  *string             `json:"parent_id,omitempty"`
+	Raw       map[string]any      `json:"raw,omitempty"`
+	Reactions []MessagingReaction `json:"reactions,omitempty"`
+	// eg. RFC822 MessageID
+	Reference *string `json:"reference,omitempty"`
+	Subject   *string `json:"subject,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (p PropertyMessagingEventMessage) MarshalJSON() ([]byte, error) {

@@ -31,10 +31,13 @@ func (e *CalendarWebinarStatus) IsExact() bool {
 }
 
 type CalendarWebinar struct {
-	CalendarID         *string                           `json:"calendar_id,omitempty"`
-	Capacity           *float64                          `json:"capacity,omitempty"`
-	Conference         []CalendarConference              `json:"conference,omitempty"`
-	CreatedAt          *time.Time                        `json:"created_at,omitempty"`
+	// (reference to CalendarCalendar)
+	CalendarID *string              `json:"calendar_id,omitempty"`
+	Capacity   *float64             `json:"capacity,omitempty"`
+	Conference []CalendarConference `json:"conference,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt              *time.Time                        `json:"end_at,omitempty"`
 	HasPolls           *bool                             `json:"has_polls,omitempty"`
 	HasQa              *bool                             `json:"has_qa,omitempty"`
@@ -59,12 +62,15 @@ type CalendarWebinar struct {
 	RequireJobTitle    *bool                             `json:"require_job_title,omitempty"`
 	RequireLastName    *bool                             `json:"require_last_name,omitempty"`
 	RequirePhone       *bool                             `json:"require_phone,omitempty"`
-	StartAt            *time.Time                        `json:"start_at,omitempty"`
-	Status             *CalendarWebinarStatus            `json:"status,omitempty"`
-	Subject            *string                           `json:"subject,omitempty"`
-	Timezone           *string                           `json:"timezone,omitempty"`
-	UpdatedAt          *time.Time                        `json:"updated_at,omitempty"`
-	WebURL             *string                           `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt  *time.Time             `json:"start_at,omitempty"`
+	Status   *CalendarWebinarStatus `json:"status,omitempty"`
+	Subject  *string                `json:"subject,omitempty"`
+	Timezone *string                `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// information
+	WebURL *string `json:"web_url,omitempty"`
 }
 
 func (c CalendarWebinar) MarshalJSON() ([]byte, error) {

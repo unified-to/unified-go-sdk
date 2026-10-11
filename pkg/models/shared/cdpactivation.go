@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CdpActivationStatus - The current status of the activation
 type CdpActivationStatus string
 
 const (
@@ -32,18 +33,30 @@ func (e *CdpActivationStatus) IsExact() bool {
 }
 
 type CdpActivation struct {
-	CreatedAt     *time.Time           `json:"created_at,omitempty"`
-	DestinationID *string              `json:"destination_id,omitempty"`
-	ID            *string              `json:"id,omitempty"`
-	IsEnabled     *bool                `json:"is_enabled,omitempty"`
-	LastRunAt     *time.Time           `json:"last_run_at,omitempty"`
-	Name          *string              `json:"name,omitempty"`
-	Raw           map[string]any       `json:"raw,omitempty"`
-	Schedule      *string              `json:"schedule,omitempty"`
-	SegmentID     *string              `json:"segment_id,omitempty"`
-	SourceID      *string              `json:"source_id,omitempty"`
-	Status        *CdpActivationStatus `json:"status,omitempty"`
-	UpdatedAt     *time.Time           `json:"updated_at,omitempty"`
+	// The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The cdp_destination the data is sent to; points to CdpDestination
+	DestinationID *string `json:"destination_id,omitempty"`
+	// Unique identifier for this activation object
+	ID *string `json:"id,omitempty"`
+	// Whether the activation is active/enabled
+	IsEnabled *bool `json:"is_enabled,omitempty"`
+	// When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastRunAt *time.Time `json:"last_run_at,omitempty"`
+	// The name of the activation/sync job
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this activation
+	Raw map[string]any `json:"raw,omitempty"`
+	// The activation schedule or mode (eg. cron, interval, realtime, batch)
+	Schedule *string `json:"schedule,omitempty"`
+	// The cdp_segment being activated; points to CdpSegment
+	SegmentID *string `json:"segment_id,omitempty"`
+	// The cdp_source the data originates from; points to CdpSource
+	SourceID *string `json:"source_id,omitempty"`
+	// The current status of the activation
+	Status *CdpActivationStatus `json:"status,omitempty"`
+	// The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpActivation) MarshalJSON() ([]byte, error) {

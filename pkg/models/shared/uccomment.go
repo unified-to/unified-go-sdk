@@ -3,13 +3,16 @@
 package shared
 
 type UcComment struct {
-	CallID    *string        `json:"call_id,omitempty"`
-	Content   *string        `json:"content,omitempty"`
+	CallID  *string `json:"call_id,omitempty"`
+	Content *string `json:"content,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *string        `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
-	UpdatedAt *string        `json:"updated_at,omitempty"`
-	UserID    *string        `json:"user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	// reference to HrisEmployee (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (u *UcComment) GetCallID() *string {

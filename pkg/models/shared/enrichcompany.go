@@ -10,34 +10,59 @@ import (
 // EnrichCompany - A company object from an enrichment integration
 type EnrichCompany struct {
 	// The address of the company
-	Address       *PropertyEnrichCompanyAddress `json:"address,omitempty"`
-	AlexaRank     *float64                      `json:"alexa_rank,omitempty"`
-	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
-	CrunchbaseURL *string                       `json:"crunchbase_url,omitempty"`
-	Description   *string                       `json:"description,omitempty"`
-	Domain        *string                       `json:"domain,omitempty"`
-	Employees     *string                       `json:"employees,omitempty"`
-	Exchange      *string                       `json:"exchange,omitempty"`
-	FacebookURL   *string                       `json:"facebook_url,omitempty"`
-	ID            *string                       `json:"id,omitempty"`
-	Industry      *string                       `json:"industry,omitempty"`
-	InstagramURL  *string                       `json:"instagram_url,omitempty"`
-	LinkedinURL   *string                       `json:"linkedin_url,omitempty"`
-	LogoURL       *string                       `json:"logo_url,omitempty"`
-	NaicsCode     *float64                      `json:"naics_code,omitempty"`
-	Name          *string                       `json:"name,omitempty"`
-	Raw           map[string]any                `json:"raw,omitempty"`
-	Revenue       *string                       `json:"revenue,omitempty"`
-	SicCode       *float64                      `json:"sic_code,omitempty"`
-	Stock         *string                       `json:"stock,omitempty"`
+	Address *PropertyEnrichCompanyAddress `json:"address,omitempty"`
+	// The Alexa rank of the company
+	AlexaRank *float64 `json:"alexa_rank,omitempty"`
+	// The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The Crunchbase URL of the company
+	CrunchbaseURL *string `json:"crunchbase_url,omitempty"`
+	// The description of the company
+	Description *string `json:"description,omitempty"`
+	// The webmail domain of the company
+	Domain *string `json:"domain,omitempty"`
+	// The number of employees at the company
+	Employees *string `json:"employees,omitempty"`
+	// The public exchange of the company (eg. NASDAQ)
+	Exchange *string `json:"exchange,omitempty"`
+	// The Facebook URL of the company
+	FacebookURL *string `json:"facebook_url,omitempty"`
+	// Unique identifier for this company object
+	ID *string `json:"id,omitempty"`
+	// The industry of the company
+	Industry *string `json:"industry,omitempty"`
+	// The Crunchbase URL of the company
+	InstagramURL *string `json:"instagram_url,omitempty"`
+	// The LinkedIn URL of the company
+	LinkedinURL *string `json:"linkedin_url,omitempty"`
+	// The URL of the logo of the company
+	LogoURL *string `json:"logo_url,omitempty"`
+	// The NAICS code of the company
+	NaicsCode *float64 `json:"naics_code,omitempty"`
+	// The name of the company
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this company
+	Raw map[string]any `json:"raw,omitempty"`
+	// The approximate revenue of the company
+	Revenue *string `json:"revenue,omitempty"`
+	// The SIC code of the company
+	SicCode *float64 `json:"sic_code,omitempty"`
+	// The stock ticker of the company (eg. AMZN)
+	Stock *string `json:"stock,omitempty"`
 	// An array of telephones for this company
-	Telephones    []EnrichTelephone `json:"telephones,omitempty"`
-	TwitterHandle *string           `json:"twitter_handle,omitempty"`
-	TwitterURL    *string           `json:"twitter_url,omitempty"`
-	UpdatedAt     *time.Time        `json:"updated_at,omitempty"`
-	YearFounded   *float64          `json:"year_founded,omitempty"`
-	YelpURL       *string           `json:"yelp_url,omitempty"`
-	YoutubeURL    *string           `json:"youtube_url,omitempty"`
+	Telephones []EnrichTelephone `json:"telephones,omitempty"`
+	// The twitter handle of the company
+	TwitterHandle *string `json:"twitter_handle,omitempty"`
+	// The twitter URL of the company
+	TwitterURL *string `json:"twitter_url,omitempty"`
+	// The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The year that the company was founded
+	YearFounded *float64 `json:"year_founded,omitempty"`
+	// The Yelp URL of the company
+	YelpURL *string `json:"yelp_url,omitempty"`
+	// The Youtube URL of the company
+	YoutubeURL *string `json:"youtube_url,omitempty"`
 }
 
 func (e EnrichCompany) MarshalJSON() ([]byte, error) {

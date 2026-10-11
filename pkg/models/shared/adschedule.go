@@ -30,12 +30,17 @@ func (e *DayOfWeek) IsExact() bool {
 }
 
 type AdSchedule struct {
+	// 0.1-10.0
 	BidModifier *float64  `json:"bid_modifier,omitempty"`
 	DayOfWeek   DayOfWeek `json:"day_of_week"`
-	EndHour     float64   `json:"end_hour"`
-	EndMinute   *float64  `json:"end_minute,omitempty"`
-	StartHour   float64   `json:"start_hour"`
-	StartMinute *float64  `json:"start_minute,omitempty"`
+	// 0-24 (24 = end of day)
+	EndHour float64 `json:"end_hour"`
+	// 0, 15, 30, 45
+	EndMinute *float64 `json:"end_minute,omitempty"`
+	// 0-23
+	StartHour float64 `json:"start_hour"`
+	// 0, 15, 30, 45
+	StartMinute *float64 `json:"start_minute,omitempty"`
 }
 
 func (a *AdSchedule) GetBidModifier() *float64 {

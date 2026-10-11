@@ -9,8 +9,11 @@ import (
 
 // PropertySocialReviewReply - The business's reply to the review
 type PropertySocialReviewReply struct {
-	Content   *string    `json:"content,omitempty"`
+	// The reply text from the business
+	Content *string `json:"content,omitempty"`
+	// When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 

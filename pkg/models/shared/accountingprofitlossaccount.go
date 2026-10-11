@@ -3,6 +3,7 @@
 package shared
 
 type AccountingProfitlossAccount struct {
+	// (reference to AccountingAccount)
 	AccountID      *string  `json:"account_id,omitempty"`
 	AccountName    *string  `json:"account_name,omitempty"`
 	TotalAmount    *float64 `json:"total_amount,omitempty"`

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// EnrichPersonGender - The gender of the person
 type EnrichPersonGender string
 
 const (
@@ -32,32 +33,52 @@ func (e *EnrichPersonGender) IsExact() bool {
 // EnrichPerson - A person object from an enrichment integration
 type EnrichPerson struct {
 	// The address of the person
-	Address       *PropertyEnrichPersonAddress `json:"address,omitempty"`
-	Bio           *string                      `json:"bio,omitempty"`
-	Birthdate     *string                      `json:"birthdate,omitempty"`
-	Company       *string                      `json:"company,omitempty"`
-	CompanyDomain *string                      `json:"company_domain,omitempty"`
-	CreatedAt     *time.Time                   `json:"created_at,omitempty"`
+	Address *PropertyEnrichPersonAddress `json:"address,omitempty"`
+	// The biography description of the person
+	Bio *string `json:"bio,omitempty"`
+	// The birth date of the person
+	Birthdate *string `json:"birthdate,omitempty"`
+	// The companyorganization name  of the person
+	Company *string `json:"company,omitempty"`
+	// The company's domain
+	CompanyDomain *string `json:"company_domain,omitempty"`
+	// The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this person
-	Emails         []EnrichEmail       `json:"emails,omitempty"`
-	FacebookURL    *string             `json:"facebook_url,omitempty"`
-	FirstName      *string             `json:"first_name,omitempty"`
-	Gender         *EnrichPersonGender `json:"gender,omitempty"`
-	GithubURL      *string             `json:"github_url,omitempty"`
-	GithubUsername *string             `json:"github_username,omitempty"`
-	ID             *string             `json:"id,omitempty"`
-	ImageURL       *string             `json:"image_url,omitempty"`
-	LastName       *string             `json:"last_name,omitempty"`
-	LinkedinURL    *string             `json:"linkedin_url,omitempty"`
-	Name           *string             `json:"name,omitempty"`
-	Raw            map[string]any      `json:"raw,omitempty"`
+	Emails []EnrichEmail `json:"emails,omitempty"`
+	// The Facebook URL of the person
+	FacebookURL *string `json:"facebook_url,omitempty"`
+	FirstName   *string `json:"first_name,omitempty"`
+	// The gender of the person
+	Gender *EnrichPersonGender `json:"gender,omitempty"`
+	// The GitHub URL of the person
+	GithubURL *string `json:"github_url,omitempty"`
+	// The GitHub username of the person
+	GithubUsername *string `json:"github_username,omitempty"`
+	// Unique identifier for this person object
+	ID *string `json:"id,omitempty"`
+	// The image URL of the person
+	ImageURL *string `json:"image_url,omitempty"`
+	LastName *string `json:"last_name,omitempty"`
+	// The LinkedIn URL of the person
+	LinkedinURL *string `json:"linkedin_url,omitempty"`
+	// The name of the person
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this person
+	Raw map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this person
-	Telephones    []EnrichTelephone         `json:"telephones,omitempty"`
-	Timezone      *string                   `json:"timezone,omitempty"`
-	Title         *string                   `json:"title,omitempty"`
-	TwitterHandle *string                   `json:"twitter_handle,omitempty"`
-	TwitterURL    *string                   `json:"twitter_url,omitempty"`
-	UpdatedAt     *time.Time                `json:"updated_at,omitempty"`
+	Telephones []EnrichTelephone `json:"telephones,omitempty"`
+	// The timezone code of the person
+	Timezone *string `json:"timezone,omitempty"`
+	// The job title of the person
+	Title *string `json:"title,omitempty"`
+	// The twitter handle of the person
+	TwitterHandle *string `json:"twitter_handle,omitempty"`
+	// The twitter URL of the person
+	TwitterURL *string `json:"twitter_url,omitempty"`
+	// The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The timezone's hourly offset from UTC of the person
 	UtcOffset     *float64                  `json:"utc_offset,omitempty"`
 	WorkHistories []EnrichPersonWorkHistory `json:"work_histories,omitempty"`
 }

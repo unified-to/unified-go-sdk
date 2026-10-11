@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ObjectType - The type of object this credit was applied to
 type ObjectType string
 
 const (
@@ -30,9 +31,13 @@ func (e *ObjectType) IsExact() bool {
 }
 
 type AccountingCreditApplication struct {
-	Amount     *float64    `json:"amount,omitempty"`
-	AppliedAt  *time.Time  `json:"applied_at,omitempty"`
-	ObjectID   *string     `json:"object_id,omitempty"`
+	// The amount of credit applied to this object
+	Amount *float64 `json:"amount,omitempty"`
+	// Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	AppliedAt *time.Time `json:"applied_at,omitempty"`
+	// The id of the object this credit was applied to
+	ObjectID *string `json:"object_id,omitempty"`
+	// The type of object this credit was applied to
 	ObjectType *ObjectType `json:"object_type,omitempty"`
 }
 

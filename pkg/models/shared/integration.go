@@ -1081,36 +1081,51 @@ func (u Sandbox) MarshalJSON() ([]byte, error) {
 type Integration struct {
 	ActiveHealthyConnections *float64 `json:"active_healthy_connections,omitempty"`
 	API                      *API     `json:"api,omitempty"`
-	APIDocsURL               *string  `json:"api_docs_url,omitempty"`
-	Beta                     *bool    `json:"beta,omitempty"`
+	// The URL of the integration's API documentation
+	APIDocsURL *string `json:"api_docs_url,omitempty"`
+	// This integration is new and is still considered "beta"
+	Beta *bool `json:"beta,omitempty"`
 	// The categories of support solutions that this integration has
-	Categories           []PropertyIntegrationCategories `json:"categories"`
-	Color                *string                         `json:"color,omitempty"`
-	CreatedAt            *string                         `json:"created_at,omitempty"`
-	Description          *string                         `json:"description,omitempty"`
-	FaIcon               *string                         `json:"fa_icon,omitempty"`
-	Featured             *bool                           `json:"featured,omitempty"`
-	InProgress           *bool                           `json:"in_progress,omitempty"`
-	IsActive             *bool                           `json:"is_active,omitempty"`
-	IsHidden             *bool                           `json:"is_hidden,omitempty"`
-	LogoURL              *string                         `json:"logo_url,omitempty"`
-	Name                 string                          `json:"name"`
-	Partnership          *Partnership                    `json:"partnership,omitempty"`
-	Popularity           *float64                        `json:"popularity,omitempty"`
-	RateLimitDescription *string                         `json:"rate_limit_description,omitempty"`
-	RequiresCname        *bool                           `json:"requires_cname,omitempty"`
-	Saml                 *Saml                           `json:"saml,omitempty"`
-	Sandbox              *Sandbox                        `json:"sandbox,omitempty"`
-	Support              map[string]IntegrationSupport   `json:"support,omitempty"`
-	TestedAt             *time.Time                      `json:"tested_at,omitempty"`
-	TextColor            *string                         `json:"text_color,omitempty"`
+	Categories []PropertyIntegrationCategories `json:"categories"`
+	// button background color for AUTH
+	Color *string `json:"color,omitempty"`
+	// Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *string `json:"created_at,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// font-awesome icon
+	FaIcon   *string `json:"fa_icon,omitempty"`
+	Featured *bool   `json:"featured,omitempty"`
+	// If this integration is not yet available as it is currently being built by unified.to
+	InProgress *bool `json:"in_progress,omitempty"`
+	// Is this integration active in this workspace
+	IsActive *bool `json:"is_active,omitempty"`
+	IsHidden *bool `json:"is_hidden,omitempty"`
+	// The URL of the integration's logo
+	LogoURL *string `json:"logo_url,omitempty"`
+	// The integration's name
+	Name                 string       `json:"name"`
+	Partnership          *Partnership `json:"partnership,omitempty"`
+	Popularity           *float64     `json:"popularity,omitempty"`
+	RateLimitDescription *string      `json:"rate_limit_description,omitempty"`
+	// OAuth requires a custom API domain (CNAME) for provider verification
+	RequiresCname *bool                         `json:"requires_cname,omitempty"`
+	Saml          *Saml                         `json:"saml,omitempty"`
+	Sandbox       *Sandbox                      `json:"sandbox,omitempty"`
+	Support       map[string]IntegrationSupport `json:"support,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	TestedAt *time.Time `json:"tested_at,omitempty"`
+	// text color for AUTH
+	TextColor *string `json:"text_color,omitempty"`
 	// instructions for the user on how to find the token/key
 	TokenInstructions []string `json:"token_instructions,omitempty"`
 	// if auth_types = 'token'
 	TokenNames []string `json:"token_names,omitempty"`
-	Type       string   `json:"type"`
-	UpdatedAt  *string  `json:"updated_at,omitempty"`
-	WebURL     *string  `json:"web_url,omitempty"`
+	// Identifier for this integration
+	Type string `json:"type"`
+	// YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	// URL for the software vendor
+	WebURL *string `json:"web_url,omitempty"`
 }
 
 func (i Integration) MarshalJSON() ([]byte, error) {

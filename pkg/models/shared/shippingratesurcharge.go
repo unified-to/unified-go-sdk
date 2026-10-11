@@ -3,10 +3,14 @@
 package shared
 
 type ShippingRateSurcharge struct {
-	Amount      *float64 `json:"amount,omitempty"`
-	Code        *string  `json:"code,omitempty"`
-	Description *string  `json:"description,omitempty"`
-	Name        *string  `json:"name,omitempty"`
+	// Surcharge amount
+	Amount *float64 `json:"amount,omitempty"`
+	// Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
+	Code *string `json:"code,omitempty"`
+	// Description of surcharge
+	Description *string `json:"description,omitempty"`
+	// Human-readable name
+	Name *string `json:"name,omitempty"`
 }
 
 func (s *ShippingRateSurcharge) GetAmount() *float64 {

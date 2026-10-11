@@ -27,4 +27,11 @@ value := operations.UpdateHrisBankaccountQueryParamFieldsID
 | `UpdateHrisBankaccountQueryParamFieldsAccountNumberLast4` | account_number_last4                                      |
 | `UpdateHrisBankaccountQueryParamFieldsName`               | name                                                      |
 | `UpdateHrisBankaccountQueryParamFieldsIsPrimary`          | is_primary                                                |
+| `UpdateHrisBankaccountQueryParamFieldsIban`               | iban                                                      |
+| `UpdateHrisBankaccountQueryParamFieldsBic`                | bic                                                       |
+| `UpdateHrisBankaccountQueryParamFieldsCountryCode`        | country_code                                              |
+| `UpdateHrisBankaccountQueryParamFieldsCurrency`           | currency                                                  |
+| `UpdateHrisBankaccountQueryParamFieldsSplitType`          | split_type                                                |
+| `UpdateHrisBankaccountQueryParamFieldsSplitAmount`        | split_amount                                              |
+| `UpdateHrisBankaccountQueryParamFieldsPriority`           | priority                                                  |
 | `UpdateHrisBankaccountQueryParamFieldsRaw`                | raw                                                       |

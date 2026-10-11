@@ -2,6 +2,7 @@
 
 package shared
 
+// AssessmentAttributeStatus - For SUB_RESULT type
 type AssessmentAttributeStatus string
 
 const (
@@ -51,13 +52,16 @@ func (e *AssessmentAttributeType) IsExact() bool {
 }
 
 type AssessmentAttribute struct {
-	Label      string                     `json:"label"`
-	Reference  *string                    `json:"reference,omitempty"`
-	ScoreMax   *float64                   `json:"score_max,omitempty"`
-	ScoreValue *float64                   `json:"score_value,omitempty"`
-	Status     *AssessmentAttributeStatus `json:"status,omitempty"`
-	Type       AssessmentAttributeType    `json:"type"`
-	Value      *string                    `json:"value,omitempty"`
+	Label string `json:"label"`
+	// For SUB_RESULT type
+	Reference  *string  `json:"reference,omitempty"`
+	ScoreMax   *float64 `json:"score_max,omitempty"`
+	ScoreValue *float64 `json:"score_value,omitempty"`
+	// For SUB_RESULT type
+	Status *AssessmentAttributeStatus `json:"status,omitempty"`
+	Type   AssessmentAttributeType    `json:"type"`
+	// For TEXT and NUMBER types
+	Value *string `json:"value,omitempty"`
 }
 
 func (a *AssessmentAttribute) GetLabel() string {

@@ -12,18 +12,20 @@ import (
 type GetHrisGroupQueryParamFields string
 
 const (
-	GetHrisGroupQueryParamFieldsID          GetHrisGroupQueryParamFields = "id"
-	GetHrisGroupQueryParamFieldsCreatedAt   GetHrisGroupQueryParamFields = "created_at"
-	GetHrisGroupQueryParamFieldsUpdatedAt   GetHrisGroupQueryParamFields = "updated_at"
-	GetHrisGroupQueryParamFieldsName        GetHrisGroupQueryParamFields = "name"
-	GetHrisGroupQueryParamFieldsDescription GetHrisGroupQueryParamFields = "description"
-	GetHrisGroupQueryParamFieldsParentID    GetHrisGroupQueryParamFields = "parent_id"
-	GetHrisGroupQueryParamFieldsType        GetHrisGroupQueryParamFields = "type"
-	GetHrisGroupQueryParamFieldsUserIds     GetHrisGroupQueryParamFields = "user_ids"
-	GetHrisGroupQueryParamFieldsManagerIds  GetHrisGroupQueryParamFields = "manager_ids"
-	GetHrisGroupQueryParamFieldsIsActive    GetHrisGroupQueryParamFields = "is_active"
-	GetHrisGroupQueryParamFieldsCompanyID   GetHrisGroupQueryParamFields = "company_id"
-	GetHrisGroupQueryParamFieldsRaw         GetHrisGroupQueryParamFields = "raw"
+	GetHrisGroupQueryParamFieldsID           GetHrisGroupQueryParamFields = "id"
+	GetHrisGroupQueryParamFieldsCreatedAt    GetHrisGroupQueryParamFields = "created_at"
+	GetHrisGroupQueryParamFieldsUpdatedAt    GetHrisGroupQueryParamFields = "updated_at"
+	GetHrisGroupQueryParamFieldsName         GetHrisGroupQueryParamFields = "name"
+	GetHrisGroupQueryParamFieldsDescription  GetHrisGroupQueryParamFields = "description"
+	GetHrisGroupQueryParamFieldsParentID     GetHrisGroupQueryParamFields = "parent_id"
+	GetHrisGroupQueryParamFieldsType         GetHrisGroupQueryParamFields = "type"
+	GetHrisGroupQueryParamFieldsUserIds      GetHrisGroupQueryParamFields = "user_ids"
+	GetHrisGroupQueryParamFieldsManagerIds   GetHrisGroupQueryParamFields = "manager_ids"
+	GetHrisGroupQueryParamFieldsIsActive     GetHrisGroupQueryParamFields = "is_active"
+	GetHrisGroupQueryParamFieldsCompanyID    GetHrisGroupQueryParamFields = "company_id"
+	GetHrisGroupQueryParamFieldsPayFrequency GetHrisGroupQueryParamFields = "pay_frequency"
+	GetHrisGroupQueryParamFieldsNextPaidAt   GetHrisGroupQueryParamFields = "next_paid_at"
+	GetHrisGroupQueryParamFieldsRaw          GetHrisGroupQueryParamFields = "raw"
 )
 
 func (e GetHrisGroupQueryParamFields) ToPointer() *GetHrisGroupQueryParamFields {
@@ -56,6 +58,10 @@ func (e *GetHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "pay_frequency":
+		fallthrough
+	case "next_paid_at":
 		fallthrough
 	case "raw":
 		*e = GetHrisGroupQueryParamFields(v)

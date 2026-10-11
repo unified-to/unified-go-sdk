@@ -22,6 +22,29 @@ const (
 	HrisPayslipDetailTypePosttaxBenefit                 HrisPayslipDetailType = "POSTTAX_BENEFIT"
 	HrisPayslipDetailTypePosttaxGarnishment             HrisPayslipDetailType = "POSTTAX_GARNISHMENT"
 	HrisPayslipDetailTypeReimbursement                  HrisPayslipDetailType = "REIMBURSEMENT"
+	HrisPayslipDetailTypeEarningRegular                 HrisPayslipDetailType = "EARNING_REGULAR"
+	HrisPayslipDetailTypeEarningDoubleOvertime          HrisPayslipDetailType = "EARNING_DOUBLE_OVERTIME"
+	HrisPayslipDetailTypeEarningPto                     HrisPayslipDetailType = "EARNING_PTO"
+	HrisPayslipDetailTypeEarningSick                    HrisPayslipDetailType = "EARNING_SICK"
+	HrisPayslipDetailTypeEarningHoliday                 HrisPayslipDetailType = "EARNING_HOLIDAY"
+	HrisPayslipDetailTypeEarningSeverance               HrisPayslipDetailType = "EARNING_SEVERANCE"
+	HrisPayslipDetailTypeEarningReimbursement           HrisPayslipDetailType = "EARNING_REIMBURSEMENT"
+	HrisPayslipDetailTypeTaxSocialSecurity              HrisPayslipDetailType = "TAX_SOCIAL_SECURITY"
+	HrisPayslipDetailTypeTaxMedicare                    HrisPayslipDetailType = "TAX_MEDICARE"
+	HrisPayslipDetailTypeTaxUnemployment                HrisPayslipDetailType = "TAX_UNEMPLOYMENT"
+	HrisPayslipDetailTypeTaxEmployer                    HrisPayslipDetailType = "TAX_EMPLOYER"
+	HrisPayslipDetailTypePretaxDeductionHsa             HrisPayslipDetailType = "PRETAX_DEDUCTION_HSA"
+	HrisPayslipDetailTypePretaxDeductionFsa             HrisPayslipDetailType = "PRETAX_DEDUCTION_FSA"
+	HrisPayslipDetailTypePretaxDeductionDependentCare   HrisPayslipDetailType = "PRETAX_DEDUCTION_DEPENDENT_CARE"
+	HrisPayslipDetailTypePretaxDeductionCommuter        HrisPayslipDetailType = "PRETAX_DEDUCTION_COMMUTER"
+	HrisPayslipDetailTypePretaxDeductionDental          HrisPayslipDetailType = "PRETAX_DEDUCTION_DENTAL"
+	HrisPayslipDetailTypePretaxDeductionVision          HrisPayslipDetailType = "PRETAX_DEDUCTION_VISION"
+	HrisPayslipDetailTypePosttaxDeduction               HrisPayslipDetailType = "POSTTAX_DEDUCTION"
+	HrisPayslipDetailTypePosttaxRetirementRoth          HrisPayslipDetailType = "POSTTAX_RETIREMENT_ROTH"
+	HrisPayslipDetailTypePosttaxLoanRepayment           HrisPayslipDetailType = "POSTTAX_LOAN_REPAYMENT"
+	HrisPayslipDetailTypeEmployerContribution           HrisPayslipDetailType = "EMPLOYER_CONTRIBUTION"
+	HrisPayslipDetailTypePension                        HrisPayslipDetailType = "PENSION"
+	HrisPayslipDetailTypeEarningCashInLieu              HrisPayslipDetailType = "EARNING_CASH_IN_LIEU"
 )
 
 func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
@@ -32,7 +55,7 @@ func (e HrisPayslipDetailType) ToPointer() *HrisPayslipDetailType {
 func (e *HrisPayslipDetailType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT":
+		case "EARNING_SALARY", "EARNING_OVERTIME", "EARNING_TIP", "EARNING_BONUS", "EARNING_COMMISSION", "EARNING_ADJUSTMENT", "EARNING", "PRETAX_DEDUCTION", "PRETAX_DEDUCTION_HEALTH_INSURANCE", "PRETAX_DEDUCTION_RETIREMENT", "PRETAX_DEDUCTION_HRA", "TAX_FEDERAL", "TAX_REGION", "TAX_LOCAL", "POSTTAX_BENEFIT", "POSTTAX_GARNISHMENT", "REIMBURSEMENT", "EARNING_REGULAR", "EARNING_DOUBLE_OVERTIME", "EARNING_PTO", "EARNING_SICK", "EARNING_HOLIDAY", "EARNING_SEVERANCE", "EARNING_REIMBURSEMENT", "TAX_SOCIAL_SECURITY", "TAX_MEDICARE", "TAX_UNEMPLOYMENT", "TAX_EMPLOYER", "PRETAX_DEDUCTION_HSA", "PRETAX_DEDUCTION_FSA", "PRETAX_DEDUCTION_DEPENDENT_CARE", "PRETAX_DEDUCTION_COMMUTER", "PRETAX_DEDUCTION_DENTAL", "PRETAX_DEDUCTION_VISION", "POSTTAX_DEDUCTION", "POSTTAX_RETIREMENT_ROTH", "POSTTAX_LOAN_REPAYMENT", "EMPLOYER_CONTRIBUTION", "PENSION", "EARNING_CASH_IN_LIEU":
 			return true
 		}
 	}
@@ -40,12 +63,26 @@ func (e *HrisPayslipDetailType) IsExact() bool {
 }
 
 type HrisPayslipDetail struct {
-	Amount         float64                `json:"amount"`
-	CompanyAmount  *float64               `json:"company_amount,omitempty"`
-	Description    *string                `json:"description,omitempty"`
-	EmployeeAmount *float64               `json:"employee_amount,omitempty"`
-	Name           *string                `json:"name,omitempty"`
-	Type           *HrisPayslipDetailType `json:"type,omitempty"`
+	Amount         float64  `json:"amount"`
+	BenefitID      *string  `json:"benefit_id,omitempty"`
+	CompanyAmount  *float64 `json:"company_amount,omitempty"`
+	DeductionID    *string  `json:"deduction_id,omitempty"`
+	Description    *string  `json:"description,omitempty"`
+	EmployeeAmount *float64 `json:"employee_amount,omitempty"`
+	Hours          *float64 `json:"hours,omitempty"`
+	// true when this line is paid by the employer (employer tax or contribution)
+	IsEmployer *bool   `json:"is_employer,omitempty"`
+	IsPreTax   *bool   `json:"is_pre_tax,omitempty"`
+	Name       *string `json:"name,omitempty"`
+	// integration pay-code label before normalization
+	OriginalType *string `json:"original_type,omitempty"`
+	// the hris_paycode for this line
+	PaycodeID *string `json:"paycode_id,omitempty"`
+	// pay rate for hourly/unit-based lines
+	RateAmount *float64               `json:"rate_amount,omitempty"`
+	Type       *HrisPayslipDetailType `json:"type,omitempty"`
+	// year-to-date amount for this line
+	YtdAmount *float64 `json:"ytd_amount,omitempty"`
 }
 
 func (h *HrisPayslipDetail) GetAmount() float64 {
@@ -55,11 +92,25 @@ func (h *HrisPayslipDetail) GetAmount() float64 {
 	return h.Amount
 }
 
+func (h *HrisPayslipDetail) GetBenefitID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.BenefitID
+}
+
 func (h *HrisPayslipDetail) GetCompanyAmount() *float64 {
 	if h == nil {
 		return nil
 	}
 	return h.CompanyAmount
+}
+
+func (h *HrisPayslipDetail) GetDeductionID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.DeductionID
 }
 
 func (h *HrisPayslipDetail) GetDescription() *string {
@@ -76,6 +127,27 @@ func (h *HrisPayslipDetail) GetEmployeeAmount() *float64 {
 	return h.EmployeeAmount
 }
 
+func (h *HrisPayslipDetail) GetHours() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.Hours
+}
+
+func (h *HrisPayslipDetail) GetIsEmployer() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.IsEmployer
+}
+
+func (h *HrisPayslipDetail) GetIsPreTax() *bool {
+	if h == nil {
+		return nil
+	}
+	return h.IsPreTax
+}
+
 func (h *HrisPayslipDetail) GetName() *string {
 	if h == nil {
 		return nil
@@ -83,9 +155,37 @@ func (h *HrisPayslipDetail) GetName() *string {
 	return h.Name
 }
 
+func (h *HrisPayslipDetail) GetOriginalType() *string {
+	if h == nil {
+		return nil
+	}
+	return h.OriginalType
+}
+
+func (h *HrisPayslipDetail) GetPaycodeID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.PaycodeID
+}
+
+func (h *HrisPayslipDetail) GetRateAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.RateAmount
+}
+
 func (h *HrisPayslipDetail) GetType() *HrisPayslipDetailType {
 	if h == nil {
 		return nil
 	}
 	return h.Type
+}
+
+func (h *HrisPayslipDetail) GetYtdAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.YtdAmount
 }

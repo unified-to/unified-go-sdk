@@ -8,16 +8,22 @@ import (
 )
 
 type CalendarRecording struct {
-	CreatedAt *time.Time               `json:"created_at,omitempty"`
-	EndAt     *time.Time               `json:"end_at,omitempty"`
-	EventID   *string                  `json:"event_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (reference to CalendarEvent)
+	EventID *string `json:"event_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ExpiresAt *time.Time               `json:"expires_at,omitempty"`
 	ID        *string                  `json:"id,omitempty"`
 	Media     []CalendarRecordingMedia `json:"media,omitempty"`
 	Raw       map[string]any           `json:"raw,omitempty"`
-	StartAt   *time.Time               `json:"start_at,omitempty"`
-	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
-	WebURL    *string                  `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (c CalendarRecording) MarshalJSON() ([]byte, error) {

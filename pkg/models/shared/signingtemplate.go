@@ -8,14 +8,22 @@ import (
 )
 
 type SigningTemplate struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	CreatorID   *string        `json:"creator_id,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	// The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// User who created the template
+	CreatorID *string `json:"creator_id,omitempty"`
+	// Template description
+	Description *string `json:"description,omitempty"`
+	// Unique identifier for this template
+	ID *string `json:"id,omitempty"`
+	// Whether the template is active/available
+	IsActive *bool `json:"is_active,omitempty"`
+	// Template name
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (s SigningTemplate) MarshalJSON() ([]byte, error) {

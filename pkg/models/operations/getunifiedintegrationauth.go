@@ -7,7 +7,9 @@ import (
 )
 
 type GetUnifiedIntegrationAuthRequest struct {
-	Env *string `queryParam:"style=form,explode=true,name=env"`
+	// Existing connection ID to re-authorize in place instead of creating a duplicate. Requires reauth_token.
+	ConnectionID *string `queryParam:"style=form,explode=true,name=connection_id"`
+	Env          *string `queryParam:"style=form,explode=true,name=env"`
 	// Your user identifier to associate with the new Integration
 	ExternalXref *string `queryParam:"style=form,explode=true,name=external_xref"`
 	// The URL where you want the user to be redirect to after an unsuccessful authentication. An "error" variable will be appended.
@@ -15,8 +17,10 @@ type GetUnifiedIntegrationAuthRequest struct {
 	// Type of the supported integration
 	IntegrationType string `pathParam:"style=simple,explode=false,name=integration_type"`
 	// Language: en, fr, es, it, pt, zh, hi
-	Lang     *string `queryParam:"style=form,explode=true,name=lang"`
-	Redirect *bool   `queryParam:"style=form,explode=true,name=redirect"`
+	Lang *string `queryParam:"style=form,explode=true,name=lang"`
+	// Single-use token from "Create a re-authorization token for a connection" (POST /unified/connection/{id}/reauth); required with connection_id.
+	ReauthToken *string `queryParam:"style=form,explode=true,name=reauth_token"`
+	Redirect    *bool   `queryParam:"style=form,explode=true,name=redirect"`
 	// Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true.
 	Region *string  `queryParam:"style=form,explode=true,name=region"`
 	Scopes []string `queryParam:"style=form,explode=true,name=scopes"`
@@ -28,6 +32,13 @@ type GetUnifiedIntegrationAuthRequest struct {
 	SuccessRedirect *string `queryParam:"style=form,explode=true,name=success_redirect"`
 	// The ID of the workspace
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspace_id"`
+}
+
+func (g *GetUnifiedIntegrationAuthRequest) GetConnectionID() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ConnectionID
 }
 
 func (g *GetUnifiedIntegrationAuthRequest) GetEnv() *string {
@@ -63,6 +74,13 @@ func (g *GetUnifiedIntegrationAuthRequest) GetLang() *string {
 		return nil
 	}
 	return g.Lang
+}
+
+func (g *GetUnifiedIntegrationAuthRequest) GetReauthToken() *string {
+	if g == nil {
+		return nil
+	}
+	return g.ReauthToken
 }
 
 func (g *GetUnifiedIntegrationAuthRequest) GetRedirect() *bool {

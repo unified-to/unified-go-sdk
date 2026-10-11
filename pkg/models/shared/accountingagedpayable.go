@@ -8,18 +8,26 @@ import (
 )
 
 type AccountingAgedpayable struct {
-	CreatedAt          *time.Time             `json:"created_at,omitempty"`
-	Currency           *string                `json:"currency,omitempty"`
-	EndAt              *time.Time             `json:"end_at,omitempty"`
-	ID                 *string                `json:"id,omitempty"`
-	OrganizationID     *string                `json:"organization_id,omitempty"`
-	Periods            []AccountingAgedPeriod `json:"periods,omitempty"`
-	Raw                map[string]any         `json:"raw,omitempty"`
-	StartAt            *time.Time             `json:"start_at,omitempty"`
-	TotalAmount        *float64               `json:"total_amount,omitempty"`
-	TotalCurrentAmount *float64               `json:"total_current_amount,omitempty"`
-	TotalOverdueAmount *float64               `json:"total_overdue_amount,omitempty"`
-	UpdatedAt          *time.Time             `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217
+	Currency *string `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// synthetic, one row per currency / date window
+	ID             *string                `json:"id,omitempty"`
+	OrganizationID *string                `json:"organization_id,omitempty"`
+	Periods        []AccountingAgedPeriod `json:"periods,omitempty"`
+	Raw            map[string]any         `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt     *time.Time `json:"start_at,omitempty"`
+	TotalAmount *float64   `json:"total_amount,omitempty"`
+	// open balances not yet past due; distinct from the first past-due period
+	TotalCurrentAmount *float64 `json:"total_current_amount,omitempty"`
+	// sum of open balances across all past-due periods
+	TotalOverdueAmount *float64 `json:"total_overdue_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAgedpayable) MarshalJSON() ([]byte, error) {

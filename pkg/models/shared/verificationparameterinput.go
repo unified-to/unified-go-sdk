@@ -5,7 +5,8 @@ package shared
 type VerificationParameterInput struct {
 	ID     *string  `json:"id,omitempty"`
 	Inputs []string `json:"inputs,omitempty"`
-	Name   *string  `json:"name,omitempty"`
+	// name of parameter
+	Name *string `json:"name,omitempty"`
 }
 
 func (v *VerificationParameterInput) GetID() *string {

@@ -32,6 +32,7 @@ func (e *CommerceCollectionType) IsExact() bool {
 
 // CommerceCollection - A collection of items/products/services
 type CommerceCollection struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt         *time.Time              `json:"created_at,omitempty"`
 	Description       *string                 `json:"description,omitempty"`
 	ID                *string                 `json:"id,omitempty"`
@@ -48,7 +49,8 @@ type CommerceCollection struct {
 	Raw               map[string]any          `json:"raw,omitempty"`
 	Tags              []string                `json:"tags,omitempty"`
 	Type              *CommerceCollectionType `json:"type,omitempty"`
-	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CommerceCollection) MarshalJSON() ([]byte, error) {

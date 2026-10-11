@@ -27,4 +27,11 @@ value := operations.PatchHrisBankaccountQueryParamFieldsID
 | `PatchHrisBankaccountQueryParamFieldsAccountNumberLast4` | account_number_last4                                     |
 | `PatchHrisBankaccountQueryParamFieldsName`               | name                                                     |
 | `PatchHrisBankaccountQueryParamFieldsIsPrimary`          | is_primary                                               |
+| `PatchHrisBankaccountQueryParamFieldsIban`               | iban                                                     |
+| `PatchHrisBankaccountQueryParamFieldsBic`                | bic                                                      |
+| `PatchHrisBankaccountQueryParamFieldsCountryCode`        | country_code                                             |
+| `PatchHrisBankaccountQueryParamFieldsCurrency`           | currency                                                 |
+| `PatchHrisBankaccountQueryParamFieldsSplitType`          | split_type                                               |
+| `PatchHrisBankaccountQueryParamFieldsSplitAmount`        | split_amount                                             |
+| `PatchHrisBankaccountQueryParamFieldsPriority`           | priority                                                 |
 | `PatchHrisBankaccountQueryParamFieldsRaw`                | raw                                                      |

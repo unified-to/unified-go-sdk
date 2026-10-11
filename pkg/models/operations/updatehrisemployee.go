@@ -20,6 +20,7 @@ const (
 	UpdateHrisEmployeeQueryParamFieldsLastName              UpdateHrisEmployeeQueryParamFields = "last_name"
 	UpdateHrisEmployeeQueryParamFieldsEmails                UpdateHrisEmployeeQueryParamFields = "emails"
 	UpdateHrisEmployeeQueryParamFieldsTitle                 UpdateHrisEmployeeQueryParamFields = "title"
+	UpdateHrisEmployeeQueryParamFieldsJobID                 UpdateHrisEmployeeQueryParamFields = "job_id"
 	UpdateHrisEmployeeQueryParamFieldsManagerID             UpdateHrisEmployeeQueryParamFields = "manager_id"
 	UpdateHrisEmployeeQueryParamFieldsEmploymentStatus      UpdateHrisEmployeeQueryParamFields = "employment_status"
 	UpdateHrisEmployeeQueryParamFieldsGender                UpdateHrisEmployeeQueryParamFields = "gender"
@@ -53,6 +54,8 @@ const (
 	UpdateHrisEmployeeQueryParamFieldsHasMfa                UpdateHrisEmployeeQueryParamFields = "has_mfa"
 	UpdateHrisEmployeeQueryParamFieldsTimeoffDaysTotal      UpdateHrisEmployeeQueryParamFields = "timeoff_days_total"
 	UpdateHrisEmployeeQueryParamFieldsTimeoffDaysUsed       UpdateHrisEmployeeQueryParamFields = "timeoff_days_used"
+	UpdateHrisEmployeeQueryParamFieldsFlsaStatus            UpdateHrisEmployeeQueryParamFields = "flsa_status"
+	UpdateHrisEmployeeQueryParamFieldsPayFrequency          UpdateHrisEmployeeQueryParamFields = "pay_frequency"
 	UpdateHrisEmployeeQueryParamFieldsRaw                   UpdateHrisEmployeeQueryParamFields = "raw"
 )
 
@@ -80,6 +83,8 @@ func (e *UpdateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "emails":
 		fallthrough
 	case "title":
+		fallthrough
+	case "job_id":
 		fallthrough
 	case "manager_id":
 		fallthrough
@@ -146,6 +151,10 @@ func (e *UpdateHrisEmployeeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "timeoff_days_total":
 		fallthrough
 	case "timeoff_days_used":
+		fallthrough
+	case "flsa_status":
+		fallthrough
+	case "pay_frequency":
 		fallthrough
 	case "raw":
 		*e = UpdateHrisEmployeeQueryParamFields(v)

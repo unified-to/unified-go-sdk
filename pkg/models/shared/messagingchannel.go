@@ -8,6 +8,7 @@ import (
 )
 
 type MessagingChannel struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt      *time.Time        `json:"created_at,omitempty"`
 	Description    *string           `json:"description,omitempty"`
 	HasSubchannels *bool             `json:"has_subchannels,omitempty"`
@@ -18,8 +19,9 @@ type MessagingChannel struct {
 	Name           *string           `json:"name,omitempty"`
 	ParentID       *string           `json:"parent_id,omitempty"`
 	Raw            map[string]any    `json:"raw,omitempty"`
-	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
-	WebURL         *string           `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (m MessagingChannel) MarshalJSON() ([]byte, error) {

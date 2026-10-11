@@ -8,6 +8,7 @@ import (
 )
 
 type CalendarCalendar struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
@@ -15,7 +16,8 @@ type CalendarCalendar struct {
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	Timezone    *string        `json:"timezone,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CalendarCalendar) MarshalJSON() ([]byte, error) {

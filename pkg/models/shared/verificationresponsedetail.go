@@ -6,9 +6,10 @@ type VerificationResponseDetail struct {
 	DownloadURL    *string `json:"download_url,omitempty"`
 	IsFailedReason *bool   `json:"is_failed_reason,omitempty"`
 	IsPrivate      *bool   `json:"is_private,omitempty"`
-	ParameterID    *string `json:"parameter_id,omitempty"`
-	Text           *string `json:"text,omitempty"`
-	Title          *string `json:"title,omitempty"`
+	// in reference to the parameter input
+	ParameterID *string `json:"parameter_id,omitempty"`
+	Text        *string `json:"text,omitempty"`
+	Title       *string `json:"title,omitempty"`
 }
 
 func (v *VerificationResponseDetail) GetDownloadURL() *string {

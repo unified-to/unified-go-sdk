@@ -63,22 +63,27 @@ func (e *AccountingOrderType) IsExact() bool {
 
 // AccountingOrder - @deprecated; use AccountingSalesorder or AccountingPurchaseorder
 type AccountingOrder struct {
-	AccountID       *string                                 `json:"account_id,omitempty"`
-	BillingAddress  *PropertyAccountingOrderBillingAddress  `json:"billing_address,omitempty"`
-	ContactID       *string                                 `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time                              `json:"created_at,omitempty"`
-	Currency        *string                                 `json:"currency,omitempty"`
-	ID              *string                                 `json:"id,omitempty"`
-	Lineitems       []AccountingLineitem                    `json:"lineitems,omitempty"`
-	Metadata        []AccountingMetadata                    `json:"metadata,omitempty"`
-	OrganizationID  *string                                 `json:"organization_id,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID      *string                                `json:"account_id,omitempty"`
+	BillingAddress *PropertyAccountingOrderBillingAddress `json:"billing_address,omitempty"`
+	// Customer, Supplier (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time           `json:"created_at,omitempty"`
+	Currency       *string              `json:"currency,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PostedAt        *time.Time                              `json:"posted_at,omitempty"`
 	Raw             map[string]any                          `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingOrderShippingAddress `json:"shipping_address,omitempty"`
 	Status          *AccountingOrderStatus                  `json:"status,omitempty"`
 	TotalAmount     *float64                                `json:"total_amount,omitempty"`
 	Type            *AccountingOrderType                    `json:"type,omitempty"`
-	UpdatedAt       *time.Time                              `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingOrder) MarshalJSON() ([]byte, error) {

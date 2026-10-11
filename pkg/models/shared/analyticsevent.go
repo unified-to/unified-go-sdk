@@ -44,10 +44,11 @@ func (e *EventType) IsExact() bool {
 }
 
 type AnalyticsEvent struct {
-	Browser      *string                                   `json:"browser,omitempty"`
-	City         *string                                   `json:"city,omitempty"`
-	Country      *string                                   `json:"country,omitempty"`
-	CountryCode  *string                                   `json:"country_code,omitempty"`
+	Browser     *string `json:"browser,omitempty"`
+	City        *string `json:"city,omitempty"`
+	Country     *string `json:"country,omitempty"`
+	CountryCode *string `json:"country_code,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt    *time.Time                                `json:"created_at,omitempty"`
 	Currency     *string                                   `json:"currency,omitempty"`
 	Device       *string                                   `json:"device,omitempty"`
@@ -59,18 +60,22 @@ type AnalyticsEvent struct {
 	PageReferrer *string                                   `json:"page_referrer,omitempty"`
 	PageTitle    *string                                   `json:"page_title,omitempty"`
 	PageURL      *string                                   `json:"page_url,omitempty"`
-	PropertyID   *string                                   `json:"property_id,omitempty"`
-	Raw          map[string]any                            `json:"raw,omitempty"`
-	Region       *string                                   `json:"region,omitempty"`
-	SessionID    *string                                   `json:"session_id,omitempty"`
-	UpdatedAt    *time.Time                                `json:"updated_at,omitempty"`
-	UtmCampaign  *string                                   `json:"utm_campaign,omitempty"`
-	UtmContent   *string                                   `json:"utm_content,omitempty"`
-	UtmMedium    *string                                   `json:"utm_medium,omitempty"`
-	UtmSource    *string                                   `json:"utm_source,omitempty"`
-	UtmTerm      *string                                   `json:"utm_term,omitempty"`
-	Value        *float64                                  `json:"value,omitempty"`
-	VisitorID    *string                                   `json:"visitor_id,omitempty"`
+	// points to AnalyticsProperty
+	PropertyID *string        `json:"property_id,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Region     *string        `json:"region,omitempty"`
+	// points to AnalyticsSession
+	SessionID *string `json:"session_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt   *time.Time `json:"updated_at,omitempty"`
+	UtmCampaign *string    `json:"utm_campaign,omitempty"`
+	UtmContent  *string    `json:"utm_content,omitempty"`
+	UtmMedium   *string    `json:"utm_medium,omitempty"`
+	UtmSource   *string    `json:"utm_source,omitempty"`
+	UtmTerm     *string    `json:"utm_term,omitempty"`
+	Value       *float64   `json:"value,omitempty"`
+	// points to AnalyticsVisitor
+	VisitorID *string `json:"visitor_id,omitempty"`
 }
 
 func (a AnalyticsEvent) MarshalJSON() ([]byte, error) {

@@ -33,6 +33,6 @@ value := operations.PatchCrmDealQueryParamFieldsID
 | `PatchCrmDealQueryParamFieldsUserID`      | user_id                                   |
 | `PatchCrmDealQueryParamFieldsContactIds`  | contact_ids                               |
 | `PatchCrmDealQueryParamFieldsCompanyIds`  | company_ids                               |
-| `PatchCrmDealQueryParamFieldsMetadata`    | metadata                                  |
 | `PatchCrmDealQueryParamFieldsDescription` | description                               |
+| `PatchCrmDealQueryParamFieldsMetadata`    | metadata                                  |
 | `PatchCrmDealQueryParamFieldsRaw`         | raw                                       |

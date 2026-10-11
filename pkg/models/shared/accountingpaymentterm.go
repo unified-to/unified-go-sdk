@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Category - STANDARD (days-based) or DATE_DRIVEN (month-based)
 type Category string
 
 const (
@@ -62,23 +63,33 @@ func (e *AccountingPaymenttermType) IsExact() bool {
 }
 
 type AccountingPaymentterm struct {
-	Category           *Category                  `json:"category,omitempty"`
-	CreatedAt          *time.Time                 `json:"created_at,omitempty"`
-	DayOfMonthDue      *float64                   `json:"day_of_month_due,omitempty"`
-	Description        *string                    `json:"description,omitempty"`
-	DiscountDayOfMonth *float64                   `json:"discount_day_of_month,omitempty"`
-	DiscountDays       *float64                   `json:"discount_days,omitempty"`
-	DiscountPercent    *float64                   `json:"discount_percent,omitempty"`
-	DueDays            *float64                   `json:"due_days,omitempty"`
-	DueNextMonthDays   *float64                   `json:"due_next_month_days,omitempty"`
-	ID                 *string                    `json:"id,omitempty"`
-	IsActive           *bool                      `json:"is_active,omitempty"`
-	Metadata           []AccountingMetadata       `json:"metadata,omitempty"`
-	Name               *string                    `json:"name,omitempty"`
-	OrganizationID     *string                    `json:"organization_id,omitempty"`
-	Raw                map[string]any             `json:"raw,omitempty"`
-	Type               *AccountingPaymenttermType `json:"type,omitempty"`
-	UpdatedAt          *time.Time                 `json:"updated_at,omitempty"`
+	// STANDARD (days-based) or DATE_DRIVEN (month-based)
+	Category *Category `json:"category,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (date-driven) day of month payment is due (1–31)
+	DayOfMonthDue *float64 `json:"day_of_month_due,omitempty"`
+	Description   *string  `json:"description,omitempty"`
+	// (date-driven) pay before this day of month for the discount
+	DiscountDayOfMonth *float64 `json:"discount_day_of_month,omitempty"`
+	// (standard) days within which an early-pay discount applies
+	DiscountDays *float64 `json:"discount_days,omitempty"`
+	// (standard) early-pay discount rate
+	DiscountPercent *float64 `json:"discount_percent,omitempty"`
+	// (standard) days until payment is due
+	DueDays *float64 `json:"due_days,omitempty"`
+	// (date-driven) if invoiced within N days of month-end, due next month
+	DueNextMonthDays *float64             `json:"due_next_month_days,omitempty"`
+	ID               *string              `json:"id,omitempty"`
+	IsActive         *bool                `json:"is_active,omitempty"`
+	Metadata         []AccountingMetadata `json:"metadata,omitempty"`
+	// term label, e.g. "Net 30"
+	Name           *string                    `json:"name,omitempty"`
+	OrganizationID *string                    `json:"organization_id,omitempty"`
+	Raw            map[string]any             `json:"raw,omitempty"`
+	Type           *AccountingPaymenttermType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingPaymentterm) MarshalJSON() ([]byte, error) {

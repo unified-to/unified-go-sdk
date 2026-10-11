@@ -8,12 +8,18 @@ import (
 )
 
 type MarketingReportLink struct {
-	ClickPercentage       *float64   `json:"click_percentage,omitempty"`
-	LastClickAt           *time.Time `json:"last_click_at,omitempty"`
-	TotalClicks           *float64   `json:"total_clicks,omitempty"`
-	UniqueClickPercentage *float64   `json:"unique_click_percentage,omitempty"`
-	UniqueClicks          *float64   `json:"unique_clicks,omitempty"`
-	URL                   *string    `json:"url,omitempty"`
+	// Percentage of total clicks
+	ClickPercentage *float64 `json:"click_percentage,omitempty"`
+	// Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastClickAt *time.Time `json:"last_click_at,omitempty"`
+	// Total clicks on this link
+	TotalClicks *float64 `json:"total_clicks,omitempty"`
+	// Percentage of unique clicks
+	UniqueClickPercentage *float64 `json:"unique_click_percentage,omitempty"`
+	// Unique clicks on this link
+	UniqueClicks *float64 `json:"unique_clicks,omitempty"`
+	// The URL
+	URL *string `json:"url,omitempty"`
 }
 
 func (m MarketingReportLink) MarshalJSON() ([]byte, error) {

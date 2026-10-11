@@ -8,8 +8,10 @@ import (
 )
 
 type PaymentLink struct {
-	Amount          *float64          `json:"amount,omitempty"`
-	ContactID       *string           `json:"contact_id,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	// ID of the AccountingContact (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt       *time.Time        `json:"created_at,omitempty"`
 	Currency        *string           `json:"currency,omitempty"`
 	Description     *string           `json:"description,omitempty"`
@@ -17,11 +19,14 @@ type PaymentLink struct {
 	IsActive        *bool             `json:"is_active,omitempty"`
 	IsChargeableNow *bool             `json:"is_chargeable_now,omitempty"`
 	Lineitems       []PaymentLineitem `json:"lineitems,omitempty"`
-	PaymentID       *string           `json:"payment_id,omitempty"`
-	Raw             map[string]any    `json:"raw,omitempty"`
-	SuccessURL      *string           `json:"success_url,omitempty"`
-	UpdatedAt       *time.Time        `json:"updated_at,omitempty"`
-	URL             *string           `json:"url,omitempty"`
+	// (reference to PaymentPayment)
+	PaymentID  *string        `json:"payment_id,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	SuccessURL *string        `json:"success_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// the payment link
+	URL *string `json:"url,omitempty"`
 }
 
 func (p PaymentLink) MarshalJSON() ([]byte, error) {

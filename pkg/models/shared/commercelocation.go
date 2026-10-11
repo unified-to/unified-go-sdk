@@ -33,28 +33,30 @@ func (e *LocationType) IsExact() bool {
 }
 
 type CommerceLocation struct {
-	Address        *PropertyCommerceLocationAddress `json:"address,omitempty"`
-	Categories     []string                         `json:"categories,omitempty"`
-	CreatedAt      *time.Time                       `json:"created_at,omitempty"`
-	Currency       *string                          `json:"currency,omitempty"`
-	Description    *string                          `json:"description,omitempty"`
-	ID             *string                          `json:"id,omitempty"`
-	ImageURL       *string                          `json:"image_url,omitempty"`
-	IsActive       *bool                            `json:"is_active,omitempty"`
-	LanguageLocale *string                          `json:"language_locale,omitempty"`
-	Latitude       *float64                         `json:"latitude,omitempty"`
-	LocationType   *LocationType                    `json:"location_type,omitempty"`
-	Longitude      *float64                         `json:"longitude,omitempty"`
-	Media          []CommerceItemMedia              `json:"media,omitempty"`
-	Name           *string                          `json:"name,omitempty"`
-	ParentID       *string                          `json:"parent_id,omitempty"`
-	PriceLevel     *string                          `json:"price_level,omitempty"`
-	Rating         *float64                         `json:"rating,omitempty"`
-	Raw            map[string]any                   `json:"raw,omitempty"`
-	ReviewCount    *float64                         `json:"review_count,omitempty"`
-	Telephones     []CommerceTelephone              `json:"telephones,omitempty"`
-	UpdatedAt      *time.Time                       `json:"updated_at,omitempty"`
-	WebURL         *string                          `json:"web_url,omitempty"`
+	Address    *PropertyCommerceLocationAddress `json:"address,omitempty"`
+	Categories []string                         `json:"categories,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time          `json:"created_at,omitempty"`
+	Currency       *string             `json:"currency,omitempty"`
+	Description    *string             `json:"description,omitempty"`
+	ID             *string             `json:"id,omitempty"`
+	ImageURL       *string             `json:"image_url,omitempty"`
+	IsActive       *bool               `json:"is_active,omitempty"`
+	LanguageLocale *string             `json:"language_locale,omitempty"`
+	Latitude       *float64            `json:"latitude,omitempty"`
+	LocationType   *LocationType       `json:"location_type,omitempty"`
+	Longitude      *float64            `json:"longitude,omitempty"`
+	Media          []CommerceItemMedia `json:"media,omitempty"`
+	Name           *string             `json:"name,omitempty"`
+	ParentID       *string             `json:"parent_id,omitempty"`
+	PriceLevel     *string             `json:"price_level,omitempty"`
+	Rating         *float64            `json:"rating,omitempty"`
+	Raw            map[string]any      `json:"raw,omitempty"`
+	ReviewCount    *float64            `json:"review_count,omitempty"`
+	Telephones     []CommerceTelephone `json:"telephones,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (c CommerceLocation) MarshalJSON() ([]byte, error) {

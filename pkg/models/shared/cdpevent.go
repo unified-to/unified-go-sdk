@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CdpEventType - The unified structural category of the event
 type CdpEventType string
 
 const (
@@ -34,19 +35,28 @@ func (e *CdpEventType) IsExact() bool {
 }
 
 type CdpEvent struct {
+	// The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
-	ID        *string    `json:"id,omitempty"`
+	// Unique identifier for this event object
+	ID *string `json:"id,omitempty"`
 	// The identifiers that link this event to a profile
 	Identifiers []CdpIdentifier `json:"identifiers,omitempty"`
 	// The event payload/properties
-	Metadata   []CdpMetadata  `json:"metadata,omitempty"`
-	Name       *string        `json:"name,omitempty"`
-	OccurredAt *time.Time     `json:"occurred_at,omitempty"`
-	ProfileID  *string        `json:"profile_id,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	Source     *string        `json:"source,omitempty"`
-	SourceID   *string        `json:"source_id,omitempty"`
-	Type       *CdpEventType  `json:"type,omitempty"`
+	Metadata []CdpMetadata `json:"metadata,omitempty"`
+	// The specific event name (eg. "Product Purchased")
+	Name *string `json:"name,omitempty"`
+	// When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	OccurredAt *time.Time `json:"occurred_at,omitempty"`
+	// The profile this event is associated with; points to CdpProfile
+	ProfileID *string `json:"profile_id,omitempty"`
+	// The raw data returned by the integration for this event
+	Raw map[string]any `json:"raw,omitempty"`
+	// The source that produced this event
+	Source *string `json:"source,omitempty"`
+	// The cdp_source this event originated from; points to CdpSource
+	SourceID *string `json:"source_id,omitempty"`
+	// The unified structural category of the event
+	Type *CdpEventType `json:"type,omitempty"`
 }
 
 func (c CdpEvent) MarshalJSON() ([]byte, error) {

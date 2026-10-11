@@ -34,3 +34,7 @@ custom := shared.HrisBenefitType("custom_value")
 | `HrisBenefitTypeLoanRepayment`           | LOAN_REPAYMENT                           |
 | `HrisBenefitTypeCharitableContribution`  | CHARITABLE_CONTRIBUTION                  |
 | `HrisBenefitTypeOther`                   | OTHER                                    |
+| `HrisBenefitTypeRetirementRoth`          | RETIREMENT_ROTH                          |
+| `HrisBenefitTypeCommuter`                | COMMUTER                                 |
+| `HrisBenefitTypeDependentCare`           | DEPENDENT_CARE                           |
+| `HrisBenefitTypePension`                 | PENSION                                  |

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// PaymentAllocationObjectType - The type of object this payment was applied to
 type PaymentAllocationObjectType string
 
 const (
@@ -34,12 +35,18 @@ func (e *PaymentAllocationObjectType) IsExact() bool {
 }
 
 type PaymentAllocation struct {
-	AllocatedAt  *time.Time                   `json:"allocated_at,omitempty"`
-	Amount       *float64                     `json:"amount,omitempty"`
-	Currency     *string                      `json:"currency,omitempty"`
-	ExchangeRate *float64                     `json:"exchange_rate,omitempty"`
-	ObjectID     *string                      `json:"object_id,omitempty"`
-	ObjectType   *PaymentAllocationObjectType `json:"object_type,omitempty"`
+	// Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	AllocatedAt *time.Time `json:"allocated_at,omitempty"`
+	// The amount of the payment applied to this object
+	Amount *float64 `json:"amount,omitempty"`
+	// ISO 4217 currency code of the applied amount
+	Currency *string `json:"currency,omitempty"`
+	// The exchange rate at the time the payment was applied, for multi-currency
+	ExchangeRate *float64 `json:"exchange_rate,omitempty"`
+	// The id of the object this payment was applied to
+	ObjectID *string `json:"object_id,omitempty"`
+	// The type of object this payment was applied to
+	ObjectType *PaymentAllocationObjectType `json:"object_type,omitempty"`
 }
 
 func (p PaymentAllocation) MarshalJSON() ([]byte, error) {

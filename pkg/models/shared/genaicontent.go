@@ -27,7 +27,9 @@ func (e *Role) IsExact() bool {
 
 type GenaiContent struct {
 	Content string `json:"content"`
-	Role    *Role  `json:"role,omitempty"`
+	// Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...). Only for models with has_vision.
+	Images []string `json:"images,omitempty"`
+	Role   *Role    `json:"role,omitempty"`
 }
 
 func (g *GenaiContent) GetContent() string {
@@ -35,6 +37,13 @@ func (g *GenaiContent) GetContent() string {
 		return ""
 	}
 	return g.Content
+}
+
+func (g *GenaiContent) GetImages() []string {
+	if g == nil {
+		return nil
+	}
+	return g.Images
 }
 
 func (g *GenaiContent) GetRole() *Role {

@@ -9,17 +9,27 @@ import (
 
 // ClubsLocation - formatted address string + lat/long) and PlayHQ venues (structured address parts).
 type ClubsLocation struct {
-	Address   *PropertyClubsLocationAddress `json:"address,omitempty"`
-	CreatedAt *time.Time                    `json:"created_at,omitempty"`
-	GroupID   *string                       `json:"group_id,omitempty"`
-	ID        *string                       `json:"id,omitempty"`
-	Latitude  *float64                      `json:"latitude,omitempty"`
-	Longitude *float64                      `json:"longitude,omitempty"`
-	Name      *string                       `json:"name,omitempty"`
-	Raw       map[string]any                `json:"raw,omitempty"`
-	Telephone *string                       `json:"telephone,omitempty"`
-	UpdatedAt *time.Time                    `json:"updated_at,omitempty"`
-	URL       *string                       `json:"url,omitempty"`
+	Address *PropertyClubsLocationAddress `json:"address,omitempty"`
+	// The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The group this location is associated with (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	// Unique identifier for this location
+	ID *string `json:"id,omitempty"`
+	// The latitude
+	Latitude *float64 `json:"latitude,omitempty"`
+	// The longitude
+	Longitude *float64 `json:"longitude,omitempty"`
+	// The location name
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this location
+	Raw map[string]any `json:"raw,omitempty"`
+	// A contact phone number for the location
+	Telephone *string `json:"telephone,omitempty"`
+	// The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// A URL for the location
+	URL *string `json:"url,omitempty"`
 }
 
 func (c ClubsLocation) MarshalJSON() ([]byte, error) {

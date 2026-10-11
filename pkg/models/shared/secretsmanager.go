@@ -40,15 +40,18 @@ func (e *SecretsManagerType) IsExact() bool {
 
 type SecretsManager struct {
 	// secrets-manager specific authentication values
-	Auth      map[string]string `json:"auth"`
-	CreatedAt *time.Time        `json:"created_at,omitempty"`
+	Auth map[string]string `json:"auth"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// data-regions
-	Dcs         []string           `json:"dcs,omitempty"`
-	ID          *string            `json:"id,omitempty"`
-	Name        string             `json:"name"`
-	Type        SecretsManagerType `json:"type"`
-	UpdatedAt   *time.Time         `json:"updated_at,omitempty"`
-	WorkspaceID *string            `json:"workspace_id,omitempty"`
+	Dcs  []string           `json:"dcs,omitempty"`
+	ID   *string            `json:"id,omitempty"`
+	Name string             `json:"name"`
+	Type SecretsManagerType `json:"type"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID *string `json:"workspace_id,omitempty"`
 }
 
 func (s SecretsManager) MarshalJSON() ([]byte, error) {

@@ -8,13 +8,15 @@ import (
 )
 
 type RepoOrganization struct {
-	AvatarURL   *string        `json:"avatar_url,omitempty"`
+	AvatarURL *string `json:"avatar_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// id values of the users/employees associated with this organization
 	UserIds []string `json:"user_ids,omitempty"`
 	WebURL  *string  `json:"web_url,omitempty"`

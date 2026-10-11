@@ -35,7 +35,8 @@ type AssessmentParameter struct {
 	IsRequired *bool    `json:"is_required,omitempty"`
 	Name       *string  `json:"name,omitempty"`
 	// Options for MULTIPLE_CHOICE and MULTIPLE_SELECT
-	Options        []string                 `json:"options,omitempty"`
+	Options []string `json:"options,omitempty"`
+	// Question to ask the candidateuser
 	PublicQuestion *string                  `json:"public_question,omitempty"`
 	Type           *AssessmentParameterType `json:"type,omitempty"`
 	// Regions where this parameter is valid ({country}-{state} or {country})

@@ -34,34 +34,41 @@ func (e *Origin) IsExact() bool {
 }
 
 type AtsCandidate struct {
-	Address            *PropertyAtsCandidateAddress `json:"address,omitempty"`
-	CompanyID          *string                      `json:"company_id,omitempty"`
-	CompanyName        *string                      `json:"company_name,omitempty"`
-	CreatedAt          *time.Time                   `json:"created_at,omitempty"`
-	DateOfBirth        *time.Time                   `json:"date_of_birth,omitempty"`
-	Education          []AtsCandidateEducation      `json:"education,omitempty"`
-	Emails             []AtsEmail                   `json:"emails,omitempty"`
-	Experiences        []AtsCandidateExperience     `json:"experiences,omitempty"`
-	ExternalIdentifier *string                      `json:"external_identifier,omitempty"`
-	FirstName          *string                      `json:"first_name,omitempty"`
-	ID                 *string                      `json:"id,omitempty"`
-	ImageURL           *string                      `json:"image_url,omitempty"`
-	JobIds             []string                     `json:"job_ids,omitempty"`
-	LastName           *string                      `json:"last_name,omitempty"`
+	Address *PropertyAtsCandidateAddress `json:"address,omitempty"`
+	// (reference to AtsCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// Name of company where candidate currently works
+	CompanyName *string `json:"company_name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt          *time.Time               `json:"created_at,omitempty"`
+	DateOfBirth        *time.Time               `json:"date_of_birth,omitempty"`
+	Education          []AtsCandidateEducation  `json:"education,omitempty"`
+	Emails             []AtsEmail               `json:"emails,omitempty"`
+	Experiences        []AtsCandidateExperience `json:"experiences,omitempty"`
+	ExternalIdentifier *string                  `json:"external_identifier,omitempty"`
+	FirstName          *string                  `json:"first_name,omitempty"`
+	ID                 *string                  `json:"id,omitempty"`
+	ImageURL           *string                  `json:"image_url,omitempty"`
+	JobIds             []string                 `json:"job_ids,omitempty"`
+	LastName           *string                  `json:"last_name,omitempty"`
 	// URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)
-	LinkUrls   []string       `json:"link_urls,omitempty"`
-	Metadata   []AtsMetadata  `json:"metadata,omitempty"`
-	Name       *string        `json:"name,omitempty"`
-	Origin     *Origin        `json:"origin,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	Skills     []string       `json:"skills,omitempty"`
-	Sources    []string       `json:"sources,omitempty"`
+	LinkUrls []string       `json:"link_urls,omitempty"`
+	Metadata []AtsMetadata  `json:"metadata,omitempty"`
+	Name     *string        `json:"name,omitempty"`
+	Origin   *Origin        `json:"origin,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	Skills   []string       `json:"skills,omitempty"`
+	Sources  []string       `json:"sources,omitempty"`
+	// Personal / professional bio
 	Summary    *string        `json:"summary,omitempty"`
 	Tags       []string       `json:"tags,omitempty"`
 	Telephones []AtsTelephone `json:"telephones,omitempty"`
-	Title      *string        `json:"title,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
-	UserID     *string        `json:"user_id,omitempty"`
+	// Candidate’s current job title
+	Title *string `json:"title,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 	// references hris employees
 	UserIds []string `json:"user_ids,omitempty"`
 	WebURL  *string  `json:"web_url,omitempty"`

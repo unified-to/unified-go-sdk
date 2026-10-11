@@ -9,10 +9,13 @@ import (
 
 type CalendarRecordingTranscript struct {
 	Attendee *PropertyCalendarRecordingTranscriptAttendee `json:"attendee,omitempty"`
-	EndAt    *time.Time                                   `json:"end_at,omitempty"`
-	Language *string                                      `json:"language,omitempty"`
-	StartAt  *time.Time                                   `json:"start_at,omitempty"`
-	Text     string                                       `json:"text"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// two digit ISO code
+	Language *string `json:"language,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	Text    string     `json:"text"`
 }
 
 func (c CalendarRecordingTranscript) MarshalJSON() ([]byte, error) {

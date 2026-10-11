@@ -54,16 +54,20 @@ func (e *KmsCommentType) IsExact() bool {
 }
 
 type KmsComment struct {
-	Content     *string         `json:"content,omitempty"`
-	ContentType *ContentType    `json:"content_type,omitempty"`
-	CreatedAt   *time.Time      `json:"created_at,omitempty"`
-	ID          *string         `json:"id,omitempty"`
-	PageID      *string         `json:"page_id,omitempty"`
-	ParentID    *string         `json:"parent_id,omitempty"`
-	Raw         map[string]any  `json:"raw,omitempty"`
-	Type        *KmsCommentType `json:"type,omitempty"`
-	UpdatedAt   *time.Time      `json:"updated_at,omitempty"`
-	UserID      *string         `json:"user_id,omitempty"`
+	Content     *string      `json:"content,omitempty"`
+	ContentType *ContentType `json:"content_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	// (reference to KmsPage)
+	PageID   *string         `json:"page_id,omitempty"`
+	ParentID *string         `json:"parent_id,omitempty"`
+	Raw      map[string]any  `json:"raw,omitempty"`
+	Type     *KmsCommentType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (k KmsComment) MarshalJSON() ([]byte, error) {

@@ -30,6 +30,7 @@ func (e *Priority) IsExact() bool {
 	return false
 }
 
+// PropertyCrmEventTaskStatus - The event task's status
 type PropertyCrmEventTaskStatus string
 
 const (
@@ -56,11 +57,15 @@ func (e *PropertyCrmEventTaskStatus) IsExact() bool {
 
 // PropertyCrmEventTask - The task object, when type = task
 type PropertyCrmEventTask struct {
-	Description *string                     `json:"description,omitempty"`
-	DueAt       *time.Time                  `json:"due_at,omitempty"`
-	Name        *string                     `json:"name,omitempty"`
-	Priority    *Priority                   `json:"priority,omitempty"`
-	Status      *PropertyCrmEventTaskStatus `json:"status,omitempty"`
+	// The event task's descriptionnote
+	Description *string `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// The event task's nametitle/subject
+	Name     *string   `json:"name,omitempty"`
+	Priority *Priority `json:"priority,omitempty"`
+	// The event task's status
+	Status *PropertyCrmEventTaskStatus `json:"status,omitempty"`
 }
 
 func (p PropertyCrmEventTask) MarshalJSON() ([]byte, error) {

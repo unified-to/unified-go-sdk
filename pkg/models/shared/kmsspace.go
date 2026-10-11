@@ -8,16 +8,20 @@ import (
 )
 
 type KmsSpace struct {
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	Description  *string        `json:"description,omitempty"`
-	ID           *string        `json:"id,omitempty"`
-	IsActive     *bool          `json:"is_active,omitempty"`
-	Name         *string        `json:"name,omitempty"`
-	ParentID     *string        `json:"parent_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	IsActive    *bool      `json:"is_active,omitempty"`
+	Name        *string    `json:"name,omitempty"`
+	ParentID    *string    `json:"parent_id,omitempty"`
+	// (reference to KmsPage)
 	ParentPageID *string        `json:"parent_page_id,omitempty"`
 	Raw          map[string]any `json:"raw,omitempty"`
-	UpdatedAt    *time.Time     `json:"updated_at,omitempty"`
-	UserID       *string        `json:"user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (k KmsSpace) MarshalJSON() ([]byte, error) {

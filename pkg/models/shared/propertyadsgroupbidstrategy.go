@@ -88,16 +88,17 @@ func (e *YoutubeAndPartnersType) IsExact() bool {
 
 // PropertyAdsGroupBidStrategy - YOUTUBE_AND_PARTNERS
 type PropertyAdsGroupBidStrategy struct {
-	CustomBiddingAlgorithmID *string                         `json:"custom_bidding_algorithm_id,omitempty"`
-	FixedBidAmount           *float64                        `json:"fixed_bid_amount,omitempty"`
-	MaxAverageCpmBidAmount   *float64                        `json:"max_average_cpm_bid_amount,omitempty"`
-	PerformanceGoalAmount    *float64                        `json:"performance_goal_amount,omitempty"`
-	PerformanceGoalType      *PerformanceGoalType            `json:"performance_goal_type,omitempty"`
-	RaiseBidForDeals         *bool                           `json:"raise_bid_for_deals,omitempty"`
-	TargetRoas               *float64                        `json:"target_roas,omitempty"`
-	Type                     PropertyAdsGroupBidStrategyType `json:"type"`
-	YoutubeAndPartnersType   *YoutubeAndPartnersType         `json:"youtube_and_partners_type,omitempty"`
-	YoutubeAndPartnersValue  *string                         `json:"youtube_and_partners_value,omitempty"`
+	CustomBiddingAlgorithmID *string              `json:"custom_bidding_algorithm_id,omitempty"`
+	FixedBidAmount           *float64             `json:"fixed_bid_amount,omitempty"`
+	MaxAverageCpmBidAmount   *float64             `json:"max_average_cpm_bid_amount,omitempty"`
+	PerformanceGoalAmount    *float64             `json:"performance_goal_amount,omitempty"`
+	PerformanceGoalType      *PerformanceGoalType `json:"performance_goal_type,omitempty"`
+	RaiseBidForDeals         *bool                `json:"raise_bid_for_deals,omitempty"`
+	// Target ROAS e.g. 2.5 = 250% (Google)
+	TargetRoas              *float64                        `json:"target_roas,omitempty"`
+	Type                    PropertyAdsGroupBidStrategyType `json:"type"`
+	YoutubeAndPartnersType  *YoutubeAndPartnersType         `json:"youtube_and_partners_type,omitempty"`
+	YoutubeAndPartnersValue *string                         `json:"youtube_and_partners_value,omitempty"`
 }
 
 func (p *PropertyAdsGroupBidStrategy) GetCustomBiddingAlgorithmID() *string {

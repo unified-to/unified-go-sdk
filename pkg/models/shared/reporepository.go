@@ -8,16 +8,19 @@ import (
 )
 
 type RepoRepository struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsPrivate   *bool          `json:"is_private,omitempty"`
-	Name        string         `json:"name"`
-	OrgID       *string        `json:"org_id,omitempty"`
-	Owner       *string        `json:"owner,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	WebURL      *string        `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	IsPrivate   *bool      `json:"is_private,omitempty"`
+	Name        string     `json:"name"`
+	// (reference to RepoOrganization)
+	OrgID *string        `json:"org_id,omitempty"`
+	Owner *string        `json:"owner,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (r RepoRepository) MarshalJSON() ([]byte, error) {

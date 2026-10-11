@@ -3,9 +3,12 @@
 package shared
 
 type AccountingTaxrateComponent struct {
-	IsCompound *bool    `json:"is_compound,omitempty"`
-	Name       *string  `json:"name,omitempty"`
-	Rate       *float64 `json:"rate,omitempty"`
+	// True when this component is charged on top of the other components
+	IsCompound *bool `json:"is_compound,omitempty"`
+	// Name of the tax component, e.g. GST or PST
+	Name *string `json:"name,omitempty"`
+	// Rate of this component, in %
+	Rate *float64 `json:"rate,omitempty"`
 }
 
 func (a *AccountingTaxrateComponent) GetIsCompound() *bool {

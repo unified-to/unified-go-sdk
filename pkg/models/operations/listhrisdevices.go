@@ -92,11 +92,15 @@ func (e *ListHrisDevicesQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListHrisDevicesRequest struct {
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
+	// The email address to filter by
+	Email *string `queryParam:"style=form,explode=true,name=email"`
 	// Fields to return
 	Fields []ListHrisDevicesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                          `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                          `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                           `queryParam:"style=form,explode=true,name=order"`
+	// The group ID to filter by (reference to HrisGroup)
+	GroupID *string  `queryParam:"style=form,explode=true,name=group_id"`
+	Limit   *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset  *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order   *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -115,11 +119,25 @@ func (l *ListHrisDevicesRequest) GetConnectionID() string {
 	return l.ConnectionID
 }
 
+func (l *ListHrisDevicesRequest) GetEmail() *string {
+	if l == nil {
+		return nil
+	}
+	return l.Email
+}
+
 func (l *ListHrisDevicesRequest) GetFields() []ListHrisDevicesQueryParamFields {
 	if l == nil {
 		return nil
 	}
 	return l.Fields
+}
+
+func (l *ListHrisDevicesRequest) GetGroupID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.GroupID
 }
 
 func (l *ListHrisDevicesRequest) GetLimit() *float64 {

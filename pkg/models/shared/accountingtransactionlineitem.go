@@ -3,13 +3,16 @@
 package shared
 
 type AccountingTransactionLineItem struct {
-	AccountID    *string  `json:"account_id,omitempty"`
-	CategoryIds  []string `json:"category_ids,omitempty"`
-	Description  *string  `json:"description,omitempty"`
-	ID           *string  `json:"id,omitempty"`
-	Name         *string  `json:"name,omitempty"`
-	ObjectType   *string  `json:"object_type,omitempty"`
-	TaxrateID    *string  `json:"taxrate_id,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID   *string  `json:"account_id,omitempty"`
+	CategoryIds []string `json:"category_ids,omitempty"`
+	Description *string  `json:"description,omitempty"`
+	ID          *string  `json:"id,omitempty"`
+	Name        *string  `json:"name,omitempty"`
+	ObjectType  *string  `json:"object_type,omitempty"`
+	// ref -> AccountingTaxrate applied to the line
+	TaxrateID *string `json:"taxrate_id,omitempty"`
+	// will be a positive value for a debit and negative for a credit
 	TotalAmount  *float64 `json:"total_amount,omitempty"`
 	UnitAmount   *float64 `json:"unit_amount,omitempty"`
 	UnitQuantity *float64 `json:"unit_quantity,omitempty"`

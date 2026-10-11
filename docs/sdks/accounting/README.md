@@ -12,6 +12,7 @@
 * [CreateAccountingContact](#createaccountingcontact) - Create a contact
 * [CreateAccountingCreditmemo](#createaccountingcreditmemo) - Create a creditmemo
 * [CreateAccountingExpense](#createaccountingexpense) - Create an expense
+* [CreateAccountingExpensereport](#createaccountingexpensereport) - Create an expensereport
 * [CreateAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](#createaccountingorder) - Create an order
@@ -35,6 +36,7 @@
 * [GetAccountingContact](#getaccountingcontact) - Retrieve a contact
 * [GetAccountingCreditmemo](#getaccountingcreditmemo) - Retrieve a creditmemo
 * [GetAccountingExpense](#getaccountingexpense) - Retrieve an expense
+* [GetAccountingExpensereport](#getaccountingexpensereport) - Retrieve an expensereport
 * [GetAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [GetAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [GetAccountingOrder](#getaccountingorder) - Retrieve an order
@@ -43,8 +45,10 @@
 * [GetAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
 * [GetAccountingProject](#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [GetAccountingPurchasereceipt](#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [GetAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [GetAccountingSalesorder](#getaccountingsalesorder) - Retrieve a salesorder
+* [GetAccountingSalesreceipt](#getaccountingsalesreceipt) - Retrieve a salesreceipt
 * [GetAccountingTaxrate](#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](#getaccountingtransaction) - Retrieve a transaction
 * [GetAccountingTrialbalance](#getaccountingtrialbalance) - Retrieve a trialbalance
@@ -60,6 +64,7 @@
 * [ListAccountingCategories](#listaccountingcategories) - List all categories
 * [ListAccountingContacts](#listaccountingcontacts) - List all contacts
 * [ListAccountingCreditmemoes](#listaccountingcreditmemoes) - List all creditmemoes
+* [ListAccountingExpensereports](#listaccountingexpensereports) - List all expensereports
 * [ListAccountingExpenses](#listaccountingexpenses) - List all expenses
 * [ListAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [ListAccountingJournals](#listaccountingjournals) - List all journals
@@ -69,8 +74,10 @@
 * [ListAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 * [ListAccountingProjects](#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
+* [ListAccountingPurchasereceipts](#listaccountingpurchasereceipts) - List all purchasereceipts
 * [ListAccountingQuotes](#listaccountingquotes) - List all quotes
 * [ListAccountingSalesorders](#listaccountingsalesorders) - List all salesorders
+* [ListAccountingSalesreceipts](#listaccountingsalesreceipts) - List all salesreceipts
 * [ListAccountingTaxrates](#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](#listaccountingtransactions) - List all transactions
 * [ListAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
@@ -83,6 +90,7 @@
 * [PatchAccountingContact](#patchaccountingcontact) - Update a contact
 * [PatchAccountingCreditmemo](#patchaccountingcreditmemo) - Update a creditmemo
 * [PatchAccountingExpense](#patchaccountingexpense) - Update an expense
+* [PatchAccountingExpensereport](#patchaccountingexpensereport) - Update an expensereport
 * [PatchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](#patchaccountingorder) - Update an order
@@ -102,6 +110,7 @@
 * [RemoveAccountingContact](#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingCreditmemo](#removeaccountingcreditmemo) - Remove a creditmemo
 * [RemoveAccountingExpense](#removeaccountingexpense) - Remove an expense
+* [RemoveAccountingExpensereport](#removeaccountingexpensereport) - Remove an expensereport
 * [RemoveAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](#removeaccountingorder) - Remove an order
@@ -121,6 +130,7 @@
 * [UpdateAccountingContact](#updateaccountingcontact) - Update a contact
 * [UpdateAccountingCreditmemo](#updateaccountingcreditmemo) - Update a creditmemo
 * [UpdateAccountingExpense](#updateaccountingexpense) - Update an expense
+* [UpdateAccountingExpensereport](#updateaccountingexpensereport) - Update an expensereport
 * [UpdateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](#updateaccountingorder) - Update an order
@@ -166,7 +176,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("BOB"),
             CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
             Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-            ID: unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+            ID: unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
             IsPayable: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
             Status: shared.StatusArchived.ToPointer(),
@@ -183,7 +193,7 @@ func main() {
                 },
             },
             Type: shared.TypeBank.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
         },
         ConnectionID: "<id>",
     })
@@ -251,11 +261,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("218719f8-8226-4e63-9a83-e71deec58055"),
+            ID: unifiedgosdk.Pointer("d24c7eed-6260-4646-b879-c1b2b5d4633e"),
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
             RoutingNumber: unifiedgosdk.Pointer("667753156"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-12T13:57:09.405Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-20T02:35:25.217Z"),
         },
         ConnectionID: "<id>",
     })
@@ -323,14 +333,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("SRD"),
             Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
-            ID: unifiedgosdk.Pointer("149a7dcd-1137-4fc6-9014-f73511481cb8"),
+            ID: unifiedgosdk.Pointer("e17c73bc-3a48-49eb-9ec3-53d4ef89d58f"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
-            PostedAt: types.MustNewTimeFromString("2025-03-25T15:26:46.355Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-08T03:37:11.941Z"),
             Reference: unifiedgosdk.Pointer("93642593"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-28T00:55:13.105Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-29T13:53:08.693Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-23T23:14:36.067Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-24T16:58:26.460Z"),
         },
         ConnectionID: "<id>",
     })
@@ -397,13 +407,13 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("47aff446-04b3-478f-a547-1dfef16a2da3"),
+            ID: unifiedgosdk.Pointer("93de5bc7-06ff-4223-b00b-5119ff6188e7"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
             PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2024-04-06T03:20:50.873Z"),
+            PostedAt: types.MustNewTimeFromString("2024-04-19T08:54:19.935Z"),
             PurchaseorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
             Status: shared.AccountingBillStatusDeleted.ToPointer(),
@@ -411,7 +421,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet10.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-31T04:40:21.326Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-15T18:12:32.002Z"),
             URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
         },
         ConnectionID: "<id>",
@@ -473,11 +483,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
-            ID: unifiedgosdk.Pointer("bd82d66f-0901-40ed-81c3-24bc2c90b469"),
+            ID: unifiedgosdk.Pointer("fdd21fd5-c17b-4699-b534-5ec5f899070d"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T03:49:23.607Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-04T18:33:59.171Z"),
         },
         ConnectionID: "<id>",
     })
@@ -538,11 +548,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("9bebb770-590a-4626-9e91-a1e3f6a1a152"),
+                    ID: unifiedgosdk.Pointer("4397621d-1152-4118-97cd-0b4ec62f002b"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("98dc7b2b-a61a-4a86-a865-2c32e436115f"),
+                    ID: unifiedgosdk.Pointer("9eb442e9-4f82-41db-b651-40250f8549da"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -565,7 +575,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("8ed22c78-3f9d-4b74-8667-42e4fe13d6d2"),
+            ID: unifiedgosdk.Pointer("c2079aaa-6553-4fca-9590-c1ab1b3f66ec"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -575,7 +585,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("ebd23a6a-340a-4205-bc59-1ccf6a918747"),
+                    ID: unifiedgosdk.Pointer("5ec455cb-a1f1-419a-badc-d627701e5a3b"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -602,7 +612,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T04:50:42.426Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T08:18:18.532Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -666,7 +676,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
-                    ID: unifiedgosdk.Pointer("1db49fd3-7f25-4080-b187-04bcbc9f3bc1"),
+                    ID: unifiedgosdk.Pointer("eb7d45dd-de09-4b88-af0c-e8d84f099f0b"),
                     MimeType: unifiedgosdk.Pointer("complectus"),
                     Name: unifiedgosdk.Pointer("thesis"),
                 },
@@ -676,12 +686,12 @@ func main() {
             Currency: unifiedgosdk.Pointer("MKD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
-            ID: unifiedgosdk.Pointer("d04c0986-5cc3-4c55-a5b5-1caa37d81dd4"),
+            ID: unifiedgosdk.Pointer("8a36aa30-1292-445e-b65c-996c3b7aeef4"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
             PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
-            PostedAt: types.MustNewTimeFromString("2025-11-17T11:22:22.052Z"),
+            PostedAt: types.MustNewTimeFromString("2025-12-02T00:29:13.787Z"),
             RefundAmount: unifiedgosdk.Pointer[float64](0.0),
             RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
             RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
@@ -689,7 +699,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-11-16T15:28:24.980Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-24T10:47:56.110Z"),
             URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
         },
         ConnectionID: "<id>",
@@ -749,11 +759,11 @@ func main() {
 
     res, err := s.Accounting.CreateAccountingExpense(ctx, operations.CreateAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.236Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.814Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("fef67b87-0957-42c3-adcf-43c0c46d6107"),
+                    ID: unifiedgosdk.Pointer("a31f87a7-4eb4-4302-b833-915ecb235046"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -762,10 +772,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("ffa6e9c7-9193-4696-85f6-b19d35be2a3b"),
+            ID: unifiedgosdk.Pointer("9984dbbc-0b26-48c0-8a8e-1e73ac0f709e"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("271f95a7-bbfc-403d-919c-785e59b3c427"),
+                    ID: unifiedgosdk.Pointer("6f21535d-972a-4fdc-926e-2321c794ccd9"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -779,12 +789,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.453Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.969Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.236Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.814Z"),
         },
         ConnectionID: "<id>",
     })
@@ -808,6 +819,103 @@ func main() {
 ### Response
 
 **[*operations.CreateAccountingExpenseResponse](../../pkg/models/operations/createaccountingexpenseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateAccountingExpensereport
+
+Create an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createAccountingExpensereport" method="post" path="/accounting/{connection_id}/expensereport" example="accounting_expensereport" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.CreateAccountingExpensereport(ctx, operations.CreateAccountingExpensereportRequest{
+        AccountingExpensereport: shared.AccountingExpensereport{
+            ApprovedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.554Z"),
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
+            Currency: unifiedgosdk.Pointer("BMD"),
+            ExternalNumber: unifiedgosdk.Pointer("asporto"),
+            ID: unifiedgosdk.Pointer("5cc3e5ae-9728-4cc1-ac0e-b0ecca46b23e"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("8ee4223d-5e90-4930-8787-efa0f90ccea8"),
+                    ItemDescription: unifiedgosdk.Pointer("The Synchronised motivating software Car offers reliable performance and webbed design"),
+                    ItemName: unifiedgosdk.Pointer("Intelligent Gold Cheese"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-6550-0228-4"),
+                    Notes: unifiedgosdk.Pointer("Utrimque quas vesica spes."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](448.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](10875.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](4092.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("44b3c8aa-a228-430f-8874-0092ec8d271f"),
+                    ItemDescription: unifiedgosdk.Pointer("Ergonomic Bike made with Marble for all-day coordinated support"),
+                    ItemName: unifiedgosdk.Pointer("Practical Steel Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-1-4129-9332-6"),
+                    Notes: unifiedgosdk.Pointer("Corrumpo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](875.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](12363.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](6783.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Rustic Aluminum Car"),
+            PostedAt: types.MustNewTimeFromString("2022-10-30T06:39:38.734Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](6696.0),
+            Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](983.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](13931.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.554Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingExpensereport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.CreateAccountingExpensereportRequest](../../pkg/models/operations/createaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.CreateAccountingExpensereportResponse](../../pkg/models/operations/createaccountingexpensereportresponse.md), error**
 
 ### Errors
 
@@ -846,7 +954,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("a086fefd-c55c-4086-8542-9968b04e5561"),
+                    ID: unifiedgosdk.Pointer("e3639a48-ff4f-4839-b893-9a0b19c147e4"),
                     MimeType: unifiedgosdk.Pointer("benevolentia"),
                     Name: unifiedgosdk.Pointer("vespillo"),
                 },
@@ -858,7 +966,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("a3e2a8ae-f055-408c-a0f6-ab0bb70b14f7"),
+            ID: unifiedgosdk.Pointer("55bf2c55-6a5d-4db9-848c-9fe29259a430"),
             InvoiceNumber: unifiedgosdk.Pointer("vinco"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingLineitem{},
@@ -868,7 +976,7 @@ func main() {
             PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
             PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-03-29T09:35:22.722Z"),
+            PostedAt: types.MustNewTimeFromString("2026-04-16T02:25:06.860Z"),
             Reference: unifiedgosdk.Pointer("adinventitias"),
             SalesorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
@@ -878,7 +986,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet45.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-06T11:07:47.339Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T18:19:00.742Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
         },
         ConnectionID: "<id>",
@@ -941,17 +1049,18 @@ func main() {
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
-            Currency: unifiedgosdk.Pointer("FKP"),
-            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("fa50e556-5eab-4cb7-afd1-a16ff072dcc4"),
-            IsInclusiveOfTax: unifiedgosdk.Pointer(true),
-            PostedAt: types.MustNewTimeFromString("2023-10-20T15:13:49.802Z"),
-            Reference: unifiedgosdk.Pointer("ullam"),
-            Source: unifiedgosdk.Pointer("crustulum"),
+            Currency: unifiedgosdk.Pointer("RUB"),
+            Description: unifiedgosdk.Pointer("Solum commemoro conor nemo ultio."),
+            ExchangeRate: unifiedgosdk.Pointer[float64](1.0625),
+            ID: unifiedgosdk.Pointer("0e601b3e-d851-4e4a-bb97-4a7f2ed1be85"),
+            IsInclusiveOfTax: unifiedgosdk.Pointer(false),
+            Lineitems: []shared.AccountingJournalLineitem{},
+            PostedAt: types.MustNewTimeFromString("2023-10-31T21:09:49.601Z"),
+            Reference: unifiedgosdk.Pointer("82523039"),
+            Source: unifiedgosdk.Pointer("amplitudo"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
-            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
-            TotalAmount: unifiedgosdk.Pointer[float64](74094.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-02T06:10:58.511Z"),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-07T23:41:45.956Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1021,10 +1130,10 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("445e9028-1570-4f8f-9d13-775af36237a6"),
+            ID: unifiedgosdk.Pointer("16e86dac-3377-4af6-b713-9b538cee62f7"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2022-04-05T16:02:41.218Z"),
+            PostedAt: types.MustNewTimeFromString("2022-04-10T10:12:37.179Z"),
             ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
                 Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
                 City: unifiedgosdk.Pointer("South Alainaland"),
@@ -1036,7 +1145,7 @@ func main() {
             Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypePurchase.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-18T05:17:48.570Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-20T05:06:58.566Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1104,12 +1213,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("6c9516f3-8973-4fc0-b9eb-6b8b42fe52f0"),
+            ID: unifiedgosdk.Pointer("7f92edc2-78f8-40bb-9047-958ee23b7cb9"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-13T20:05:08.549Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T23:38:35.930Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1224,6 +1333,7 @@ func main() {
 
     res, err := s.Accounting.CreateAccountingPurchaseorder(ctx, operations.CreateAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -1235,10 +1345,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("2c15629f-d92a-450f-9a90-c739019fa131"),
+            ID: unifiedgosdk.Pointer("fcb307fc-6c22-47df-b1ec-904ef8da0eb8"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.375Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.288Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -1249,7 +1359,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.981Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.329Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1374,7 +1484,7 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-08-17T20:29:31.172Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-08-24T16:28:46.845Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("ANG"),
             DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
@@ -1388,12 +1498,12 @@ func main() {
             },
             FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
             GuestCount: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("566ad961-babd-4344-bdd8-6636f2c1f2fa"),
+            ID: unifiedgosdk.Pointer("86262349-70b0-4eca-be12-3db5899dcc77"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("988187"),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-01-13T11:28:48.101Z"),
+            PostedAt: types.MustNewTimeFromString("2026-01-30T17:23:09.696Z"),
             RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
             SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
             ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
@@ -1411,7 +1521,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](63.0),
             TipAmount: unifiedgosdk.Pointer[float64](34.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-10T19:46:08.025Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-11T02:37:48.148Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1481,7 +1591,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
             EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
-            ID: unifiedgosdk.Pointer("9d45b1ab-9993-41c7-9148-b552b5883179"),
+            ID: unifiedgosdk.Pointer("083e9301-ee22-462c-a205-9b9a08019e09"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
@@ -1490,7 +1600,7 @@ func main() {
             Region: unifiedgosdk.Pointer("TX"),
             TotalRate: unifiedgosdk.Pointer[float64](53.0),
             Type: shared.AccountingTaxrateTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.223Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-20T04:27:44.555Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1551,12 +1661,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("17615f5e-0ebb-445a-b676-67eeac8b692b"),
+            ID: unifiedgosdk.Pointer("be4e624e-49d6-44cb-a925-9bca1b3dbfaf"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("211e7819-c286-480e-bcae-2c7237cdef02"),
+                    ID: unifiedgosdk.Pointer("3efb3863-4c56-4152-a851-9e0d03fbc572"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -1569,7 +1679,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T21:27:21.377Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-16T13:35:50.876Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1634,14 +1744,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("KGS"),
             DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
-            ID: unifiedgosdk.Pointer("a277fafd-6a45-453a-a250-b99677d7a27d"),
+            ID: unifiedgosdk.Pointer("48f0273c-0d65-45d0-9b77-01fd92760ac3"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
-            PostedAt: types.MustNewTimeFromString("2023-09-29T01:37:34.419Z"),
+            PostedAt: types.MustNewTimeFromString("2023-10-01T17:54:27.922Z"),
             Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-27T02:39:20.516Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-30T17:46:32.583Z"),
         },
         ConnectionID: "<id>",
     })
@@ -2332,6 +2442,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetAccountingExpensereport
+
+Retrieve an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingExpensereport" method="get" path="/accounting/{connection_id}/expensereport/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingExpensereport(ctx, operations.GetAccountingExpensereportRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingExpensereport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                            | :heavy_check_mark:                                                                                               | The context to use for the request.                                                                              |
+| `request`                                                                                                        | [operations.GetAccountingExpensereportRequest](../../pkg/models/operations/getaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `opts`                                                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                               | The options for this request.                                                                                    |
+
+### Response
+
+**[*operations.GetAccountingExpensereportResponse](../../pkg/models/operations/getaccountingexpensereportresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetAccountingInvoice
 
 Retrieve an invoice
@@ -2772,6 +2937,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetAccountingPurchasereceipt
+
+Retrieve a purchasereceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingPurchasereceipt" method="get" path="/accounting/{connection_id}/purchasereceipt/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingPurchasereceipt(ctx, operations.GetAccountingPurchasereceiptRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPurchasereceipt != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.GetAccountingPurchasereceiptRequest](../../pkg/models/operations/getaccountingpurchasereceiptrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `opts`                                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                                         | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.GetAccountingPurchasereceiptResponse](../../pkg/models/operations/getaccountingpurchasereceiptresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## GetAccountingQuote
 
 Retrieve a quote
@@ -2875,6 +3095,61 @@ func main() {
 ### Response
 
 **[*operations.GetAccountingSalesorderResponse](../../pkg/models/operations/getaccountingsalesorderresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetAccountingSalesreceipt
+
+Retrieve a salesreceipt
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getAccountingSalesreceipt" method="get" path="/accounting/{connection_id}/salesreceipt/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.GetAccountingSalesreceipt(ctx, operations.GetAccountingSalesreceiptRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingSalesreceipt != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                          | :heavy_check_mark:                                                                                             | The context to use for the request.                                                                            |
+| `request`                                                                                                      | [operations.GetAccountingSalesreceiptRequest](../../pkg/models/operations/getaccountingsalesreceiptrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `opts`                                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                             | The options for this request.                                                                                  |
+
+### Response
+
+**[*operations.GetAccountingSalesreceiptResponse](../../pkg/models/operations/getaccountingsalesreceiptresponse.md), error**
 
 ### Errors
 
@@ -3696,6 +3971,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAccountingExpensereports
+
+List all expensereports
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingExpensereports" method="get" path="/accounting/{connection_id}/expensereport" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingExpensereports(ctx, operations.ListAccountingExpensereportsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingExpensereports != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.ListAccountingExpensereportsRequest](../../pkg/models/operations/listaccountingexpensereportsrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `opts`                                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                                         | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.ListAccountingExpensereportsResponse](../../pkg/models/operations/listaccountingexpensereportsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAccountingExpenses
 
 List all expenses
@@ -4182,6 +4511,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListAccountingPurchasereceipts
+
+List all purchasereceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingPurchasereceipts" method="get" path="/accounting/{connection_id}/purchasereceipt" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingPurchasereceipts(ctx, operations.ListAccountingPurchasereceiptsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingPurchasereceipts != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.ListAccountingPurchasereceiptsRequest](../../pkg/models/operations/listaccountingpurchasereceiptsrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `opts`                                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                                             | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+
+### Response
+
+**[*operations.ListAccountingPurchasereceiptsResponse](../../pkg/models/operations/listaccountingpurchasereceiptsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAccountingQuotes
 
 List all quotes
@@ -4283,6 +4666,60 @@ func main() {
 ### Response
 
 **[*operations.ListAccountingSalesordersResponse](../../pkg/models/operations/listaccountingsalesordersresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListAccountingSalesreceipts
+
+List all salesreceipts
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listAccountingSalesreceipts" method="get" path="/accounting/{connection_id}/salesreceipt" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.ListAccountingSalesreceipts(ctx, operations.ListAccountingSalesreceiptsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingSalesreceipts != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.ListAccountingSalesreceiptsRequest](../../pkg/models/operations/listaccountingsalesreceiptsrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../pkg/models/operations/option.md)                                                       | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.ListAccountingSalesreceiptsResponse](../../pkg/models/operations/listaccountingsalesreceiptsresponse.md), error**
 
 ### Errors
 
@@ -4539,7 +4976,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("BOB"),
             CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
             Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-            ID: unifiedgosdk.Pointer("d91a9733-3a17-4074-a1b1-aa422f50d958"),
+            ID: unifiedgosdk.Pointer("06c3b45c-ba9c-4882-a181-f3cfc5e6a837"),
             IsPayable: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
             Status: shared.StatusArchived.ToPointer(),
@@ -4556,7 +4993,7 @@ func main() {
                 },
             },
             Type: shared.TypeBank.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.469Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.375Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4625,11 +5062,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("d019420d-033e-4e21-8a76-2104d7cbef79"),
+            ID: unifiedgosdk.Pointer("7102d1b1-656e-4677-9f0c-1082f2c8956c"),
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
             RoutingNumber: unifiedgosdk.Pointer("667753156"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-12T13:57:09.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-20T02:35:25.222Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4698,14 +5135,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("SRD"),
             Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
-            ID: unifiedgosdk.Pointer("a27d611c-a43a-436c-94bf-16e1266c55f2"),
+            ID: unifiedgosdk.Pointer("200794a5-c24e-46a8-953a-494fd6e67fcb"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
-            PostedAt: types.MustNewTimeFromString("2025-03-25T15:26:46.365Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-08T03:37:11.948Z"),
             Reference: unifiedgosdk.Pointer("93642593"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-28T00:55:13.106Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-29T13:53:08.694Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-23T23:14:36.068Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-24T16:58:26.460Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4773,13 +5210,13 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("f9268e84-980f-40e0-a64b-2c964ec54a34"),
+            ID: unifiedgosdk.Pointer("bab9d251-e1a7-4914-8c35-942d148ef93e"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
             PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2024-04-06T03:20:50.910Z"),
+            PostedAt: types.MustNewTimeFromString("2024-04-19T08:54:19.964Z"),
             PurchaseorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
             Status: shared.AccountingBillStatusDeleted.ToPointer(),
@@ -4787,7 +5224,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet10.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-31T04:40:21.369Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-15T18:12:32.036Z"),
             URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
         },
         ConnectionID: "<id>",
@@ -4850,11 +5287,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
-            ID: unifiedgosdk.Pointer("517496d1-823c-438e-b1e0-ca87622b0590"),
+            ID: unifiedgosdk.Pointer("14ff8cb0-ebd4-4c75-a81a-70675e637a25"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T03:49:23.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-04T18:33:59.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -4916,11 +5353,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("260f83a7-e7b8-4ae9-b0ce-be94b41a7b35"),
+                    ID: unifiedgosdk.Pointer("8a8efa3e-5cb5-49b9-bbbc-df541a41ee09"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("870d6f8b-7ceb-4ba0-b3be-5fe402b0b281"),
+                    ID: unifiedgosdk.Pointer("b0b576ff-e82f-4235-aaba-8dd61d552653"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -4943,7 +5380,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("4a153b39-b59a-47be-a636-304762d04879"),
+            ID: unifiedgosdk.Pointer("597bca1b-241c-4726-a69d-44e26b42878c"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -4953,7 +5390,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("7483f4d4-8c30-45ce-837b-caf96891cfe5"),
+                    ID: unifiedgosdk.Pointer("1b28a768-215b-42c0-a38e-b02aa6834e50"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -4980,7 +5417,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T04:50:42.446Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T08:18:18.548Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -5045,7 +5482,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
-                    ID: unifiedgosdk.Pointer("1c286351-0ae3-4808-afca-05d66fa97fc4"),
+                    ID: unifiedgosdk.Pointer("930c38a2-f505-493c-8c2d-f1d7f79a1458"),
                     MimeType: unifiedgosdk.Pointer("complectus"),
                     Name: unifiedgosdk.Pointer("thesis"),
                 },
@@ -5055,12 +5492,12 @@ func main() {
             Currency: unifiedgosdk.Pointer("MKD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
-            ID: unifiedgosdk.Pointer("d40e3d9c-5b72-4e11-99da-b9debead5a6b"),
+            ID: unifiedgosdk.Pointer("9d37fdaf-d11d-4ed6-b6b4-bba2091b84fc"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
             PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
-            PostedAt: types.MustNewTimeFromString("2025-11-17T11:22:22.083Z"),
+            PostedAt: types.MustNewTimeFromString("2025-12-02T00:29:13.815Z"),
             RefundAmount: unifiedgosdk.Pointer[float64](0.0),
             RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
             RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
@@ -5068,7 +5505,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-11-16T15:28:24.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-24T10:47:56.125Z"),
             URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
         },
         ConnectionID: "<id>",
@@ -5129,11 +5566,11 @@ func main() {
 
     res, err := s.Accounting.PatchAccountingExpense(ctx, operations.PatchAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("952638a5-c054-405a-9014-96aef0753c77"),
+                    ID: unifiedgosdk.Pointer("5476b7b2-d37e-4977-957f-aa4d8ec5c5a1"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -5142,10 +5579,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("fa30c86b-1dc7-447f-99a5-bb2137a4e4c2"),
+            ID: unifiedgosdk.Pointer("7a5365f5-1bd4-4cac-8131-6bd2366ba182"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8b534c2b-fe41-4494-86df-02ef8117de50"),
+                    ID: unifiedgosdk.Pointer("4e568a1a-bcad-4e8a-b51d-faaafbd22415"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -5159,12 +5596,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.462Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.977Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5189,6 +5627,104 @@ func main() {
 ### Response
 
 **[*operations.PatchAccountingExpenseResponse](../../pkg/models/operations/patchaccountingexpenseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchAccountingExpensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchAccountingExpensereport" method="patch" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.PatchAccountingExpensereport(ctx, operations.PatchAccountingExpensereportRequest{
+        AccountingExpensereport: shared.AccountingExpensereport{
+            ApprovedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.580Z"),
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
+            Currency: unifiedgosdk.Pointer("BMD"),
+            ExternalNumber: unifiedgosdk.Pointer("asporto"),
+            ID: unifiedgosdk.Pointer("ffc14074-5d47-4758-b84b-894cd168e9a4"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("95a46ec8-1094-49ae-a7d7-e5a066beb145"),
+                    ItemDescription: unifiedgosdk.Pointer("The Synchronised motivating software Car offers reliable performance and webbed design"),
+                    ItemName: unifiedgosdk.Pointer("Intelligent Gold Cheese"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-6550-0228-4"),
+                    Notes: unifiedgosdk.Pointer("Utrimque quas vesica spes."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](448.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](10875.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](4092.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("eb99ff14-ffa0-4b46-a27a-ba0f828b4fa4"),
+                    ItemDescription: unifiedgosdk.Pointer("Ergonomic Bike made with Marble for all-day coordinated support"),
+                    ItemName: unifiedgosdk.Pointer("Practical Steel Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-1-4129-9332-6"),
+                    Notes: unifiedgosdk.Pointer("Corrumpo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](875.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](12363.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](6783.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Rustic Aluminum Car"),
+            PostedAt: types.MustNewTimeFromString("2022-10-30T06:39:38.747Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](6696.0),
+            Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](983.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](13931.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.580Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingExpensereport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.PatchAccountingExpensereportRequest](../../pkg/models/operations/patchaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `opts`                                                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                                                         | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.PatchAccountingExpensereportResponse](../../pkg/models/operations/patchaccountingexpensereportresponse.md), error**
 
 ### Errors
 
@@ -5227,7 +5763,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("42f96d4c-bad4-4392-8233-a33df24a8c6c"),
+                    ID: unifiedgosdk.Pointer("194141c2-445a-40f7-9dd6-819bf3413e1f"),
                     MimeType: unifiedgosdk.Pointer("benevolentia"),
                     Name: unifiedgosdk.Pointer("vespillo"),
                 },
@@ -5239,7 +5775,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("06ca1e6c-52aa-4fe5-8ec5-54e9da3aa325"),
+            ID: unifiedgosdk.Pointer("af9e2ade-b378-453f-a94a-dbd92c8b09a4"),
             InvoiceNumber: unifiedgosdk.Pointer("vinco"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingLineitem{},
@@ -5249,7 +5785,7 @@ func main() {
             PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
             PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-03-29T09:35:22.780Z"),
+            PostedAt: types.MustNewTimeFromString("2026-04-16T02:25:06.900Z"),
             Reference: unifiedgosdk.Pointer("adinventitias"),
             SalesorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
@@ -5259,7 +5795,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet45.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-06T11:07:47.343Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T18:19:00.745Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
         },
         ConnectionID: "<id>",
@@ -5323,17 +5859,18 @@ func main() {
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
-            Currency: unifiedgosdk.Pointer("FKP"),
-            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("f7779d43-9388-4634-8682-5de7127545a9"),
-            IsInclusiveOfTax: unifiedgosdk.Pointer(true),
-            PostedAt: types.MustNewTimeFromString("2023-10-20T15:13:49.817Z"),
-            Reference: unifiedgosdk.Pointer("ullam"),
-            Source: unifiedgosdk.Pointer("crustulum"),
+            Currency: unifiedgosdk.Pointer("RUB"),
+            Description: unifiedgosdk.Pointer("Solum commemoro conor nemo ultio."),
+            ExchangeRate: unifiedgosdk.Pointer[float64](1.0625),
+            ID: unifiedgosdk.Pointer("c6510716-6c54-4440-a86a-72cac3705f85"),
+            IsInclusiveOfTax: unifiedgosdk.Pointer(false),
+            Lineitems: []shared.AccountingJournalLineitem{},
+            PostedAt: types.MustNewTimeFromString("2023-10-31T21:09:49.610Z"),
+            Reference: unifiedgosdk.Pointer("82523039"),
+            Source: unifiedgosdk.Pointer("amplitudo"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
-            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
-            TotalAmount: unifiedgosdk.Pointer[float64](74094.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-02T06:10:58.518Z"),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-07T23:41:45.961Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5404,10 +5941,10 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("bdf36a05-6b7f-4eef-9179-63e8d329f593"),
+            ID: unifiedgosdk.Pointer("da3eefbe-36cf-48dd-8d68-584949d7fb74"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2022-04-05T16:02:41.231Z"),
+            PostedAt: types.MustNewTimeFromString("2022-04-10T10:12:37.188Z"),
             ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
                 Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
                 City: unifiedgosdk.Pointer("South Alainaland"),
@@ -5419,7 +5956,7 @@ func main() {
             Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypePurchase.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-18T05:17:48.576Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-20T05:06:58.570Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5488,12 +6025,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("708643f5-baec-4dfc-8c39-cc2303907aa2"),
+            ID: unifiedgosdk.Pointer("df125725-c898-4749-bd3d-e0bf7d75c79c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-13T20:05:08.559Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T23:38:35.940Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5610,6 +6147,7 @@ func main() {
 
     res, err := s.Accounting.PatchAccountingPurchaseorder(ctx, operations.PatchAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -5621,10 +6159,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("ccae6f41-dac0-491f-9987-35fe17107580"),
+            ID: unifiedgosdk.Pointer("3e6054cd-72c6-4446-84b8-e073aad5b11a"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.417Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.316Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -5635,7 +6173,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.330Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5762,7 +6300,7 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-08-17T20:29:31.196Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-08-24T16:28:46.860Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("ANG"),
             DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
@@ -5776,12 +6314,12 @@ func main() {
             },
             FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
             GuestCount: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("06b6c05e-10dc-4e23-9cd8-d13c368864b3"),
+            ID: unifiedgosdk.Pointer("894f6094-be58-463a-81e8-b5408af2fa24"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("988187"),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-01-13T11:28:48.163Z"),
+            PostedAt: types.MustNewTimeFromString("2026-01-30T17:23:09.735Z"),
             RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
             SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
             ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
@@ -5799,7 +6337,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](63.0),
             TipAmount: unifiedgosdk.Pointer[float64](34.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-10T19:46:08.026Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-11T02:37:48.149Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5870,7 +6408,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
             EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
-            ID: unifiedgosdk.Pointer("6b146958-8711-4255-89a5-4e504a6d2a0f"),
+            ID: unifiedgosdk.Pointer("96149177-44f0-4c0f-9d19-3e7b29a92abe"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
@@ -5879,7 +6417,7 @@ func main() {
             Region: unifiedgosdk.Pointer("TX"),
             TotalRate: unifiedgosdk.Pointer[float64](53.0),
             Type: shared.AccountingTaxrateTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-20T04:27:44.561Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -5941,12 +6479,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("81bf7ef2-8ff2-4ddc-b703-024288cc4b75"),
+            ID: unifiedgosdk.Pointer("d5d0b4cb-930e-4dba-89af-66e1e4c500c8"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("5dceaa79-1e95-4cee-928e-c57d24727437"),
+                    ID: unifiedgosdk.Pointer("804a7946-9ebd-45e1-94e3-79e0b92f49e6"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -5959,7 +6497,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T21:27:21.384Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-16T13:35:50.881Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6025,14 +6563,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("KGS"),
             DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
-            ID: unifiedgosdk.Pointer("b6f8e422-65bf-48c8-ad52-a5537ca85940"),
+            ID: unifiedgosdk.Pointer("99c1efcf-4a95-4a94-bdde-6ebbd51b4746"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
-            PostedAt: types.MustNewTimeFromString("2023-09-29T01:37:34.425Z"),
+            PostedAt: types.MustNewTimeFromString("2023-10-01T17:54:27.925Z"),
             Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-27T02:39:20.523Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-30T17:46:32.588Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -6497,6 +7035,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveAccountingExpenseResponse](../../pkg/models/operations/removeaccountingexpenseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveAccountingExpensereport
+
+Remove an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeAccountingExpensereport" method="delete" path="/accounting/{connection_id}/expensereport/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.RemoveAccountingExpensereport(ctx, operations.RemoveAccountingExpensereportRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.RemoveAccountingExpensereportRequest](../../pkg/models/operations/removeaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.RemoveAccountingExpensereportResponse](../../pkg/models/operations/removeaccountingexpensereportresponse.md), error**
 
 ### Errors
 
@@ -7142,7 +7735,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("BOB"),
             CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
             Description: unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-            ID: unifiedgosdk.Pointer("d91a9733-3a17-4074-a1b1-aa422f50d958"),
+            ID: unifiedgosdk.Pointer("06c3b45c-ba9c-4882-a181-f3cfc5e6a837"),
             IsPayable: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
             Status: shared.StatusArchived.ToPointer(),
@@ -7159,7 +7752,7 @@ func main() {
                 },
             },
             Type: shared.TypeBank.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.469Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.375Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7228,11 +7821,11 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             FeedStartAt: types.MustNewTimeFromString("2022-10-31T16:42:19.277Z"),
-            ID: unifiedgosdk.Pointer("d019420d-033e-4e21-8a76-2104d7cbef79"),
+            ID: unifiedgosdk.Pointer("7102d1b1-656e-4677-9f0c-1082f2c8956c"),
             Name: unifiedgosdk.Pointer("Corwin, Donnelly and Connelly Savings"),
             RoutingNumber: unifiedgosdk.Pointer("667753156"),
             Status: shared.AccountingBankfeedaccountStatusActive.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-12T13:57:09.411Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-20T02:35:25.222Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7301,14 +7894,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-03-24T23:41:08.374Z"),
             Currency: unifiedgosdk.Pointer("SRD"),
             Description: unifiedgosdk.Pointer("payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523."),
-            ID: unifiedgosdk.Pointer("a27d611c-a43a-436c-94bf-16e1266c55f2"),
+            ID: unifiedgosdk.Pointer("200794a5-c24e-46a8-953a-494fd6e67fcb"),
             IsPending: unifiedgosdk.Pointer(true),
             MerchantName: unifiedgosdk.Pointer("Reichert, Erdman and Tillman"),
-            PostedAt: types.MustNewTimeFromString("2025-03-25T15:26:46.365Z"),
+            PostedAt: types.MustNewTimeFromString("2025-04-08T03:37:11.948Z"),
             Reference: unifiedgosdk.Pointer("93642593"),
-            TransactionAt: types.MustNewTimeFromString("2022-07-28T00:55:13.106Z"),
+            TransactionAt: types.MustNewTimeFromString("2022-07-29T13:53:08.694Z"),
             Type: shared.AccountingBankfeedtransactionTypeCredit.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-05-23T23:14:36.068Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-05-24T16:58:26.460Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7376,13 +7969,13 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2019-08-11T20:52:55.321Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("f9268e84-980f-40e0-a64b-2c964ec54a34"),
+            ID: unifiedgosdk.Pointer("bab9d251-e1a7-4914-8c35-942d148ef93e"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Tutamen cilicium infit."),
             PaymentCollectionMethod: shared.PaymentCollectionMethodChargeAutomatically.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2024-04-06T03:20:50.910Z"),
+            PostedAt: types.MustNewTimeFromString("2024-04-19T08:54:19.964Z"),
             PurchaseorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
             Status: shared.AccountingBillStatusDeleted.ToPointer(),
@@ -7390,7 +7983,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             Term: shared.TermNet10.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-31T04:40:21.369Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-15T18:12:32.036Z"),
             URL: unifiedgosdk.Pointer("https://coarse-interviewer.biz/"),
         },
         ConnectionID: "<id>",
@@ -7453,11 +8046,11 @@ func main() {
         AccountingCategory: shared.AccountingCategory{
             CreatedAt: types.MustNewTimeFromString("2023-05-30T12:29:04.257Z"),
             Description: unifiedgosdk.Pointer("Discover the koala-like agility of our Chair, perfect for imaginary users"),
-            ID: unifiedgosdk.Pointer("517496d1-823c-438e-b1e0-ca87622b0590"),
+            ID: unifiedgosdk.Pointer("14ff8cb0-ebd4-4c75-a81a-70675e637a25"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Electronic Cotton Shoes"),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-22T03:49:23.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-04T18:33:59.183Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7519,11 +8112,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("260f83a7-e7b8-4ae9-b0ce-be94b41a7b35"),
+                    ID: unifiedgosdk.Pointer("8a8efa3e-5cb5-49b9-bbbc-df541a41ee09"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("870d6f8b-7ceb-4ba0-b3be-5fe402b0b281"),
+                    ID: unifiedgosdk.Pointer("b0b576ff-e82f-4235-aaba-8dd61d552653"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -7546,7 +8139,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("4a153b39-b59a-47be-a636-304762d04879"),
+            ID: unifiedgosdk.Pointer("597bca1b-241c-4726-a69d-44e26b42878c"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -7556,7 +8149,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("7483f4d4-8c30-45ce-837b-caf96891cfe5"),
+                    ID: unifiedgosdk.Pointer("1b28a768-215b-42c0-a38e-b02aa6834e50"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -7583,7 +8176,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T04:50:42.446Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-15T08:18:18.548Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -7648,7 +8241,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://enlightened-chairperson.com/"),
-                    ID: unifiedgosdk.Pointer("1c286351-0ae3-4808-afca-05d66fa97fc4"),
+                    ID: unifiedgosdk.Pointer("930c38a2-f505-493c-8c2d-f1d7f79a1458"),
                     MimeType: unifiedgosdk.Pointer("complectus"),
                     Name: unifiedgosdk.Pointer("thesis"),
                 },
@@ -7658,12 +8251,12 @@ func main() {
             Currency: unifiedgosdk.Pointer("MKD"),
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2023-10-18T04:35:00.543Z"),
-            ID: unifiedgosdk.Pointer("d40e3d9c-5b72-4e11-99da-b9debead5a6b"),
+            ID: unifiedgosdk.Pointer("9d37fdaf-d11d-4ed6-b6b4-bba2091b84fc"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Dedecor amo adfero torqueo quas."),
             PaymentCollectionMethod: shared.AccountingCreditmemoPaymentCollectionMethodChargeAutomatically.ToPointer(),
-            PostedAt: types.MustNewTimeFromString("2025-11-17T11:22:22.083Z"),
+            PostedAt: types.MustNewTimeFromString("2025-12-02T00:29:13.815Z"),
             RefundAmount: unifiedgosdk.Pointer[float64](0.0),
             RefundReason: unifiedgosdk.Pointer("Virgo inflammatio quibusdam aestivus magnam."),
             RefundedAt: types.MustNewTimeFromString("2023-10-23T00:35:36.814Z"),
@@ -7671,7 +8264,7 @@ func main() {
             Status: shared.AccountingCreditmemoStatusPaid.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2024-11-16T15:28:24.996Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-11-24T10:47:56.125Z"),
             URL: unifiedgosdk.Pointer("https://lighthearted-bandwidth.net/"),
         },
         ConnectionID: "<id>",
@@ -7732,11 +8325,11 @@ func main() {
 
     res, err := s.Accounting.UpdateAccountingExpense(ctx, operations.UpdateAccountingExpenseRequest{
         AccountingExpense: shared.AccountingExpense{
-            ApprovedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            ApprovedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://ripe-napkin.biz/"),
-                    ID: unifiedgosdk.Pointer("952638a5-c054-405a-9014-96aef0753c77"),
+                    ID: unifiedgosdk.Pointer("5476b7b2-d37e-4977-957f-aa4d8ec5c5a1"),
                     MimeType: unifiedgosdk.Pointer("annus"),
                     Name: unifiedgosdk.Pointer("cohibeo"),
                 },
@@ -7745,10 +8338,10 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-06-11T03:39:37.305Z"),
             Currency: unifiedgosdk.Pointer("SSP"),
             ExternalNumber: unifiedgosdk.Pointer("necessitatibus"),
-            ID: unifiedgosdk.Pointer("fa30c86b-1dc7-447f-99a5-bb2137a4e4c2"),
+            ID: unifiedgosdk.Pointer("7a5365f5-1bd4-4cac-8131-6bd2366ba182"),
             Lineitems: []shared.AccountingLineitem{
                 shared.AccountingLineitem{
-                    ID: unifiedgosdk.Pointer("8b534c2b-fe41-4494-86df-02ef8117de50"),
+                    ID: unifiedgosdk.Pointer("4e568a1a-bcad-4e8a-b51d-faaafbd22415"),
                     ItemDescription: unifiedgosdk.Pointer("Innovative Table featuring left technology and Rubber construction"),
                     ItemName: unifiedgosdk.Pointer("Luxurious Cotton Pizza"),
                     ItemSku: unifiedgosdk.Pointer("978-0-8324-6620-5"),
@@ -7762,12 +8355,13 @@ func main() {
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Refined Steel Shoes"),
             PaymentMethod: unifiedgosdk.Pointer("CASH"),
-            PostedAt: types.MustNewTimeFromString("2021-06-04T15:33:50.462Z"),
+            PostedAt: types.MustNewTimeFromString("2021-06-07T19:24:22.977Z"),
             ReimbursedAmount: unifiedgosdk.Pointer[float64](1833.0),
             Status: shared.AccountingExpenseStatusSubmitted.ToPointer(),
             TaxAmount: unifiedgosdk.Pointer[float64](2602.0),
             TotalAmount: unifiedgosdk.Pointer[float64](3580.0),
-            UpdatedAt: types.MustNewTimeFromString("2026-05-12T09:40:54.291Z"),
+            Type: shared.AccountingExpenseTypeUser.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-31T10:54:34.862Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -7792,6 +8386,104 @@ func main() {
 ### Response
 
 **[*operations.UpdateAccountingExpenseResponse](../../pkg/models/operations/updateaccountingexpenseresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateAccountingExpensereport
+
+Update an expensereport
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateAccountingExpensereport" method="put" path="/accounting/{connection_id}/expensereport/{id}" example="accounting_expensereport" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Accounting.UpdateAccountingExpensereport(ctx, operations.UpdateAccountingExpensereportRequest{
+        AccountingExpensereport: shared.AccountingExpensereport{
+            ApprovedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.580Z"),
+            Attachments: []shared.AccountingAttachment{},
+            CategoryIds: []string{},
+            CreatedAt: types.MustNewTimeFromString("2020-05-29T02:04:59.078Z"),
+            Currency: unifiedgosdk.Pointer("BMD"),
+            ExternalNumber: unifiedgosdk.Pointer("asporto"),
+            ID: unifiedgosdk.Pointer("ffc14074-5d47-4758-b84b-894cd168e9a4"),
+            Lineitems: []shared.AccountingLineitem{
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("95a46ec8-1094-49ae-a7d7-e5a066beb145"),
+                    ItemDescription: unifiedgosdk.Pointer("The Synchronised motivating software Car offers reliable performance and webbed design"),
+                    ItemName: unifiedgosdk.Pointer("Intelligent Gold Cheese"),
+                    ItemSku: unifiedgosdk.Pointer("978-0-6550-0228-4"),
+                    Notes: unifiedgosdk.Pointer("Utrimque quas vesica spes."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](448.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](10875.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](4092.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+                shared.AccountingLineitem{
+                    ID: unifiedgosdk.Pointer("eb99ff14-ffa0-4b46-a27a-ba0f828b4fa4"),
+                    ItemDescription: unifiedgosdk.Pointer("Ergonomic Bike made with Marble for all-day coordinated support"),
+                    ItemName: unifiedgosdk.Pointer("Practical Steel Pizza"),
+                    ItemSku: unifiedgosdk.Pointer("978-1-4129-9332-6"),
+                    Notes: unifiedgosdk.Pointer("Corrumpo."),
+                    TaxAmount: unifiedgosdk.Pointer[float64](875.0),
+                    TotalAmount: unifiedgosdk.Pointer[float64](12363.0),
+                    UnitAmount: unifiedgosdk.Pointer[float64](6783.0),
+                    UnitQuantity: unifiedgosdk.Pointer[float64](1.0),
+                },
+            },
+            Metadata: []shared.AccountingMetadata{},
+            Name: unifiedgosdk.Pointer("Rustic Aluminum Car"),
+            PostedAt: types.MustNewTimeFromString("2022-10-30T06:39:38.747Z"),
+            ReimbursedAmount: unifiedgosdk.Pointer[float64](6696.0),
+            Status: shared.AccountingExpensereportStatusPaid.ToPointer(),
+            TaxAmount: unifiedgosdk.Pointer[float64](983.0),
+            TotalAmount: unifiedgosdk.Pointer[float64](13931.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-04-06T09:46:05.580Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountingExpensereport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.UpdateAccountingExpensereportRequest](../../pkg/models/operations/updateaccountingexpensereportrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.UpdateAccountingExpensereportResponse](../../pkg/models/operations/updateaccountingexpensereportresponse.md), error**
 
 ### Errors
 
@@ -7830,7 +8522,7 @@ func main() {
             Attachments: []shared.AccountingAttachment{
                 shared.AccountingAttachment{
                     DownloadURL: unifiedgosdk.Pointer("https://glossy-markup.net/"),
-                    ID: unifiedgosdk.Pointer("42f96d4c-bad4-4392-8233-a33df24a8c6c"),
+                    ID: unifiedgosdk.Pointer("194141c2-445a-40f7-9dd6-819bf3413e1f"),
                     MimeType: unifiedgosdk.Pointer("benevolentia"),
                     Name: unifiedgosdk.Pointer("vespillo"),
                 },
@@ -7842,7 +8534,7 @@ func main() {
             DiscountAmount: unifiedgosdk.Pointer[float64](0.0),
             DueAt: types.MustNewTimeFromString("2022-11-27T21:25:37.363Z"),
             ExtendedNotes: []shared.AccountingExtendedNote{},
-            ID: unifiedgosdk.Pointer("06ca1e6c-52aa-4fe5-8ec5-54e9da3aa325"),
+            ID: unifiedgosdk.Pointer("af9e2ade-b378-453f-a94a-dbd92c8b09a4"),
             InvoiceNumber: unifiedgosdk.Pointer("vinco"),
             IsInclusiveOfTax: unifiedgosdk.Pointer(true),
             Lineitems: []shared.AccountingLineitem{},
@@ -7852,7 +8544,7 @@ func main() {
             PaidAt: types.MustNewTimeFromString("2022-11-25T15:00:28.871Z"),
             PaymentCollectionMethod: shared.AccountingInvoicePaymentCollectionMethodSendInvoice.ToPointer(),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-03-29T09:35:22.780Z"),
+            PostedAt: types.MustNewTimeFromString("2026-04-16T02:25:06.900Z"),
             Reference: unifiedgosdk.Pointer("adinventitias"),
             SalesorderIds: []string{},
             Send: unifiedgosdk.Pointer(true),
@@ -7862,7 +8554,7 @@ func main() {
             Term: shared.AccountingInvoiceTermNet45.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingInvoiceTypeCreditmemo.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-06T11:07:47.343Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-07T18:19:00.745Z"),
             URL: unifiedgosdk.Pointer("https://gifted-yarmulke.info/"),
         },
         ConnectionID: "<id>",
@@ -7926,17 +8618,18 @@ func main() {
             Attachments: []shared.AccountingAttachment{},
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-02-20T15:14:55.881Z"),
-            Currency: unifiedgosdk.Pointer("FKP"),
-            Description: unifiedgosdk.Pointer("Calco constans adipisci."),
-            ID: unifiedgosdk.Pointer("f7779d43-9388-4634-8682-5de7127545a9"),
-            IsInclusiveOfTax: unifiedgosdk.Pointer(true),
-            PostedAt: types.MustNewTimeFromString("2023-10-20T15:13:49.817Z"),
-            Reference: unifiedgosdk.Pointer("ullam"),
-            Source: unifiedgosdk.Pointer("crustulum"),
+            Currency: unifiedgosdk.Pointer("RUB"),
+            Description: unifiedgosdk.Pointer("Solum commemoro conor nemo ultio."),
+            ExchangeRate: unifiedgosdk.Pointer[float64](1.0625),
+            ID: unifiedgosdk.Pointer("c6510716-6c54-4440-a86a-72cac3705f85"),
+            IsInclusiveOfTax: unifiedgosdk.Pointer(false),
+            Lineitems: []shared.AccountingJournalLineitem{},
+            PostedAt: types.MustNewTimeFromString("2023-10-31T21:09:49.610Z"),
+            Reference: unifiedgosdk.Pointer("82523039"),
+            Source: unifiedgosdk.Pointer("amplitudo"),
             Status: shared.AccountingJournalStatusVoid.ToPointer(),
-            TaxAmount: unifiedgosdk.Pointer[float64](78672.0),
-            TotalAmount: unifiedgosdk.Pointer[float64](74094.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-02T06:10:58.518Z"),
+            TotalAmount: unifiedgosdk.Pointer[float64](0.0),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-07T23:41:45.961Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8007,10 +8700,10 @@ func main() {
             },
             CreatedAt: types.MustNewTimeFromString("2020-11-20T03:46:49.837Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("bdf36a05-6b7f-4eef-9179-63e8d329f593"),
+            ID: unifiedgosdk.Pointer("da3eefbe-36cf-48dd-8d68-584949d7fb74"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2022-04-05T16:02:41.231Z"),
+            PostedAt: types.MustNewTimeFromString("2022-04-10T10:12:37.188Z"),
             ShippingAddress: &shared.PropertyAccountingOrderShippingAddress{
                 Address1: unifiedgosdk.Pointer("9745 Betty Shore"),
                 City: unifiedgosdk.Pointer("South Alainaland"),
@@ -8022,7 +8715,7 @@ func main() {
             Status: shared.AccountingOrderStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
             Type: shared.AccountingOrderTypePurchase.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-18T05:17:48.576Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-20T05:06:58.570Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8091,12 +8784,12 @@ func main() {
             DiscountPercent: unifiedgosdk.Pointer[float64](5.0),
             DueDays: unifiedgosdk.Pointer[float64](57.0),
             DueNextMonthDays: unifiedgosdk.Pointer[float64](9.0),
-            ID: unifiedgosdk.Pointer("708643f5-baec-4dfc-8c39-cc2303907aa2"),
+            ID: unifiedgosdk.Pointer("df125725-c898-4749-bd3d-e0bf7d75c79c"),
             IsActive: unifiedgosdk.Pointer(false),
             Metadata: []shared.AccountingMetadata{},
             Name: unifiedgosdk.Pointer("Net 30"),
             Type: shared.AccountingPaymenttermTypeNet15.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-13T20:05:08.559Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-30T23:38:35.940Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8213,6 +8906,7 @@ func main() {
 
     res, err := s.Accounting.UpdateAccountingPurchaseorder(ctx, operations.UpdateAccountingPurchaseorderRequest{
         AccountingPurchaseorder: shared.AccountingPurchaseorder{
+            Attachments: []shared.AccountingAttachment{},
             BillingAddress: &shared.PropertyAccountingPurchaseorderBillingAddress{
                 Address1: unifiedgosdk.Pointer("37214 Tanya Walks"),
                 City: unifiedgosdk.Pointer("South Annabelleton"),
@@ -8224,10 +8918,10 @@ func main() {
             CategoryIds: []string{},
             CreatedAt: types.MustNewTimeFromString("2020-12-12T07:17:47.021Z"),
             Currency: unifiedgosdk.Pointer("ZMW"),
-            ID: unifiedgosdk.Pointer("ccae6f41-dac0-491f-9987-35fe17107580"),
+            ID: unifiedgosdk.Pointer("3e6054cd-72c6-4446-84b8-e073aad5b11a"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
-            PostedAt: types.MustNewTimeFromString("2025-04-27T06:22:37.417Z"),
+            PostedAt: types.MustNewTimeFromString("2025-05-12T13:43:58.316Z"),
             ShippingAddress: &shared.PropertyAccountingPurchaseorderShippingAddress{
                 Address1: unifiedgosdk.Pointer("649 Maggio Overpass"),
                 City: unifiedgosdk.Pointer("Lake Jaylan"),
@@ -8238,7 +8932,7 @@ func main() {
             },
             Status: shared.AccountingPurchaseorderStatusPartiallyRefunded.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-26T05:43:51.983Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-26T23:11:55.330Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8365,7 +9059,7 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CategoryIds: []string{},
-            ClosedAt: types.MustNewTimeFromString("2023-08-17T20:29:31.196Z"),
+            ClosedAt: types.MustNewTimeFromString("2023-08-24T16:28:46.860Z"),
             CreatedAt: types.MustNewTimeFromString("2022-01-17T16:11:50.310Z"),
             Currency: unifiedgosdk.Pointer("ANG"),
             DiscountAmount: unifiedgosdk.Pointer[float64](99.0),
@@ -8379,12 +9073,12 @@ func main() {
             },
             FulfillmentType: shared.FulfillmentTypeTakeout.ToPointer(),
             GuestCount: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("06b6c05e-10dc-4e23-9cd8-d13c368864b3"),
+            ID: unifiedgosdk.Pointer("894f6094-be58-463a-81e8-b5408af2fa24"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             OrderNumber: unifiedgosdk.Pointer("988187"),
             Payments: []shared.AccountingPaymentReference{},
-            PostedAt: types.MustNewTimeFromString("2026-01-13T11:28:48.163Z"),
+            PostedAt: types.MustNewTimeFromString("2026-01-30T17:23:09.735Z"),
             RefundedAmount: unifiedgosdk.Pointer[float64](0.0),
             SalesChannel: unifiedgosdk.Pointer("Harvey, Collier and Weimann"),
             ServiceChargeAmount: unifiedgosdk.Pointer[float64](63.0),
@@ -8402,7 +9096,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](63.0),
             TipAmount: unifiedgosdk.Pointer[float64](34.0),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-10T19:46:08.026Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-11T02:37:48.149Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8473,7 +9167,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2020-01-04T10:37:56.894Z"),
             Description: unifiedgosdk.Pointer("Atrox tricesimus creator."),
             EffectiveRate: unifiedgosdk.Pointer[float64](53.0),
-            ID: unifiedgosdk.Pointer("6b146958-8711-4255-89a5-4e504a6d2a0f"),
+            ID: unifiedgosdk.Pointer("96149177-44f0-4c0f-9d19-3e7b29a92abe"),
             IsActive: unifiedgosdk.Pointer(false),
             IsCompound: unifiedgosdk.Pointer(true),
             Metadata: []shared.AccountingMetadata{},
@@ -8482,7 +9176,7 @@ func main() {
             Region: unifiedgosdk.Pointer("TX"),
             TotalRate: unifiedgosdk.Pointer[float64](53.0),
             Type: shared.AccountingTaxrateTypeOther.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-04-13T08:15:29.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-04-20T04:27:44.561Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8544,12 +9238,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("81bf7ef2-8ff2-4ddc-b703-024288cc4b75"),
+            ID: unifiedgosdk.Pointer("d5d0b4cb-930e-4dba-89af-66e1e4c500c8"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("5dceaa79-1e95-4cee-928e-c57d24727437"),
+                    ID: unifiedgosdk.Pointer("804a7946-9ebd-45e1-94e3-79e0b92f49e6"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -8562,7 +9256,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-10T21:27:21.384Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-16T13:35:50.881Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -8628,14 +9322,14 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-15T21:14:08.197Z"),
             Currency: unifiedgosdk.Pointer("KGS"),
             DueAt: types.MustNewTimeFromString("2023-05-06T20:38:46.775Z"),
-            ID: unifiedgosdk.Pointer("b6f8e422-65bf-48c8-ad52-a5537ca85940"),
+            ID: unifiedgosdk.Pointer("99c1efcf-4a95-4a94-bdde-6ebbd51b4746"),
             Lineitems: []shared.AccountingLineitem{},
             Metadata: []shared.AccountingMetadata{},
             Notes: unifiedgosdk.Pointer("Conatus cruciamentum decor avaritia tantum."),
-            PostedAt: types.MustNewTimeFromString("2023-09-29T01:37:34.425Z"),
+            PostedAt: types.MustNewTimeFromString("2023-10-01T17:54:27.925Z"),
             Status: shared.AccountingVendorcreditStatusSubmitted.ToPointer(),
             TotalAmount: unifiedgosdk.Pointer[float64](0.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-27T02:39:20.523Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-11-30T17:46:32.588Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -37,8 +37,9 @@ func (e *AtsStatusStatus) IsExact() bool {
 }
 
 type AtsStatus struct {
-	Description    *string          `json:"description,omitempty"`
-	ID             *string          `json:"id,omitempty"`
+	Description *string `json:"description,omitempty"`
+	ID          *string `json:"id,omitempty"`
+	// The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
 	JobID          *string          `json:"job_id,omitempty"`
 	OriginalStatus *string          `json:"original_status,omitempty"`
 	Raw            map[string]any   `json:"raw,omitempty"`

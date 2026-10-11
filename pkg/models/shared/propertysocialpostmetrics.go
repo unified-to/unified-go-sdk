@@ -4,12 +4,18 @@ package shared
 
 // PropertySocialPostMetrics - Engagement metrics for the post
 type PropertySocialPostMetrics struct {
+	// Number of bookmarks/saves
 	BookmarkCount *float64 `json:"bookmark_count,omitempty"`
-	CommentCount  *float64 `json:"comment_count,omitempty"`
-	LikeCount     *float64 `json:"like_count,omitempty"`
-	QuoteCount    *float64 `json:"quote_count,omitempty"`
-	ShareCount    *float64 `json:"share_count,omitempty"`
-	ViewCount     *float64 `json:"view_count,omitempty"`
+	// Number of comments/replies
+	CommentCount *float64 `json:"comment_count,omitempty"`
+	// Number of likes/reactions
+	LikeCount *float64 `json:"like_count,omitempty"`
+	// Number of quotes
+	QuoteCount *float64 `json:"quote_count,omitempty"`
+	// Number of shares/reposts
+	ShareCount *float64 `json:"share_count,omitempty"`
+	// Number of views/impressions
+	ViewCount *float64 `json:"view_count,omitempty"`
 }
 
 func (p *PropertySocialPostMetrics) GetBookmarkCount() *float64 {

@@ -18,6 +18,8 @@ const (
 	GetGenaiModelQueryParamFieldsMaxTokens      GetGenaiModelQueryParamFields = "max_tokens"
 	GetGenaiModelQueryParamFieldsWebURL         GetGenaiModelQueryParamFields = "web_url"
 	GetGenaiModelQueryParamFieldsHasTemperature GetGenaiModelQueryParamFields = "has_temperature"
+	GetGenaiModelQueryParamFieldsHasQuestions   GetGenaiModelQueryParamFields = "has_questions"
+	GetGenaiModelQueryParamFieldsHasVision      GetGenaiModelQueryParamFields = "has_vision"
 	GetGenaiModelQueryParamFieldsRaw            GetGenaiModelQueryParamFields = "raw"
 )
 
@@ -41,6 +43,10 @@ func (e *GetGenaiModelQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "has_temperature":
+		fallthrough
+	case "has_questions":
+		fallthrough
+	case "has_vision":
 		fallthrough
 	case "raw":
 		*e = GetGenaiModelQueryParamFields(v)

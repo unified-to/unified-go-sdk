@@ -3,15 +3,17 @@
 package shared
 
 type CalendarConference struct {
-	ConferenceIdentifier  *string `json:"conference_identifier,omitempty"`
+	ConferenceIdentifier *string `json:"conference_identifier,omitempty"`
+	// ISO 2-digit country code
 	CountryCode           *string `json:"country_code,omitempty"`
 	HostAccessCode        *string `json:"host_access_code,omitempty"`
 	Label                 *string `json:"label,omitempty"`
 	Notes                 *string `json:"notes,omitempty"`
 	ParticipantAccessCode *string `json:"participant_access_code,omitempty"`
-	RegionCode            *string `json:"region_code,omitempty"`
-	Telephone             *string `json:"telephone,omitempty"`
-	URL                   *string `json:"url,omitempty"`
+	// ISO 2-digit region code
+	RegionCode *string `json:"region_code,omitempty"`
+	Telephone  *string `json:"telephone,omitempty"`
+	URL        *string `json:"url,omitempty"`
 }
 
 func (c *CalendarConference) GetConferenceIdentifier() *string {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// PropertyAdsReportMetricsGroupBillingEvent - Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
 type PropertyAdsReportMetricsGroupBillingEvent string
 
 const (
@@ -108,6 +109,7 @@ func (e *PropertyAdsReportMetricsGroupBudgetUnit) IsExact() bool {
 	return false
 }
 
+// PropertyAdsReportMetricsGroupCreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
 type PropertyAdsReportMetricsGroupCreativeSelection string
 
 const (
@@ -161,6 +163,7 @@ func (e *PropertyAdsReportMetricsGroupEffectiveStatus) IsExact() bool {
 	return false
 }
 
+// PropertyAdsReportMetricsGroupOptimizationGoal - Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
 type PropertyAdsReportMetricsGroupOptimizationGoal string
 
 const (
@@ -261,7 +264,8 @@ func (e *PropertyAdsReportMetricsGroupType) IsExact() bool {
 type PropertyAdsReportMetricsGroup struct {
 	BidAmount *float64 `json:"bid_amount,omitempty"`
 	// YOUTUBE_AND_PARTNERS
-	BidStrategy          *PropertyAdsReportMetricsGroupBidStrategy          `json:"bid_strategy,omitempty"`
+	BidStrategy *PropertyAdsReportMetricsGroupBidStrategy `json:"bid_strategy,omitempty"`
+	// Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
 	BillingEvent         *PropertyAdsReportMetricsGroupBillingEvent         `json:"billing_event,omitempty"`
 	BudgetAllocationType *PropertyAdsReportMetricsGroupBudgetAllocationType `json:"budget_allocation_type,omitempty"`
 	BudgetAmount         *float64                                           `json:"budget_amount,omitempty"`
@@ -269,29 +273,36 @@ type PropertyAdsReportMetricsGroup struct {
 	BudgetPeriod         *PropertyAdsReportMetricsGroupBudgetPeriod         `json:"budget_period,omitempty"`
 	BudgetUnit           *PropertyAdsReportMetricsGroupBudgetUnit           `json:"budget_unit,omitempty"`
 	CampaignID           *string                                            `json:"campaign_id,omitempty"`
-	CreatedAt            *time.Time                                         `json:"created_at,omitempty"`
-	CreativeIds          []string                                           `json:"creative_ids,omitempty"`
-	CreativeSelection    *PropertyAdsReportMetricsGroupCreativeSelection    `json:"creative_selection,omitempty"`
-	Currency             *string                                            `json:"currency,omitempty"`
-	EffectiveStatus      *PropertyAdsReportMetricsGroupEffectiveStatus      `json:"effective_status,omitempty"`
-	EndAt                *time.Time                                         `json:"end_at,omitempty"`
-	FrequencyCap         *PropertyAdsReportMetricsGroupFrequencyCap         `json:"frequency_cap,omitempty"`
-	HasEuPoliticalAds    *bool                                              `json:"has_eu_political_ads,omitempty"`
-	ID                   *string                                            `json:"id,omitempty"`
-	InsertionorderID     *string                                            `json:"insertionorder_id,omitempty"`
-	LanguageLocale       *string                                            `json:"language_locale,omitempty"`
-	Name                 *string                                            `json:"name,omitempty"`
-	OptimizationGoal     *PropertyAdsReportMetricsGroupOptimizationGoal     `json:"optimization_goal,omitempty"`
-	OrganizationID       *string                                            `json:"organization_id,omitempty"`
-	Pacing               *PropertyAdsReportMetricsGroupPacing               `json:"pacing,omitempty"`
-	ParentID             *string                                            `json:"parent_id,omitempty"`
-	Promoted             []AdsPromoted                                      `json:"promoted,omitempty"`
-	Raw                  map[string]any                                     `json:"raw,omitempty"`
-	StartAt              *time.Time                                         `json:"start_at,omitempty"`
-	Status               *PropertyAdsReportMetricsGroupStatus               `json:"status,omitempty"`
-	Targeting            *PropertyAdsReportMetricsGroupTargeting            `json:"targeting,omitempty"`
-	Type                 *PropertyAdsReportMetricsGroupType                 `json:"type,omitempty"`
-	UpdatedAt            *time.Time                                         `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	CreativeIds []string   `json:"creative_ids,omitempty"`
+	// Creative rotation strategy (LinkedIn creativeSelection)
+	CreativeSelection *PropertyAdsReportMetricsGroupCreativeSelection `json:"creative_selection,omitempty"`
+	Currency          *string                                         `json:"currency,omitempty"`
+	EffectiveStatus   *PropertyAdsReportMetricsGroupEffectiveStatus   `json:"effective_status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt             *time.Time                                 `json:"end_at,omitempty"`
+	FrequencyCap      *PropertyAdsReportMetricsGroupFrequencyCap `json:"frequency_cap,omitempty"`
+	HasEuPoliticalAds *bool                                      `json:"has_eu_political_ads,omitempty"`
+	ID                *string                                    `json:"id,omitempty"`
+	InsertionorderID  *string                                    `json:"insertionorder_id,omitempty"`
+	// Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
+	LanguageLocale *string `json:"language_locale,omitempty"`
+	Name           *string `json:"name,omitempty"`
+	// Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
+	OptimizationGoal *PropertyAdsReportMetricsGroupOptimizationGoal `json:"optimization_goal,omitempty"`
+	OrganizationID   *string                                        `json:"organization_id,omitempty"`
+	Pacing           *PropertyAdsReportMetricsGroupPacing           `json:"pacing,omitempty"`
+	ParentID         *string                                        `json:"parent_id,omitempty"`
+	Promoted         []AdsPromoted                                  `json:"promoted,omitempty"`
+	Raw              map[string]any                                 `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt   *time.Time                              `json:"start_at,omitempty"`
+	Status    *PropertyAdsReportMetricsGroupStatus    `json:"status,omitempty"`
+	Targeting *PropertyAdsReportMetricsGroupTargeting `json:"targeting,omitempty"`
+	Type      *PropertyAdsReportMetricsGroupType      `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsGroup) MarshalJSON() ([]byte, error) {

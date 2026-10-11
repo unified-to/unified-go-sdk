@@ -8,15 +8,19 @@ import (
 )
 
 type GenaiAgent struct {
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	Description  *string        `json:"description,omitempty"`
-	ID           *string        `json:"id,omitempty"`
-	Instructions *string        `json:"instructions,omitempty"`
-	IsActive     *bool          `json:"is_active,omitempty"`
-	ModelID      *string        `json:"model_id,omitempty"`
-	Name         *string        `json:"name,omitempty"`
-	Raw          map[string]any `json:"raw,omitempty"`
-	UpdatedAt    *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	// The system prompt or stored procedure that the agent follows.
+	Instructions *string `json:"instructions,omitempty"`
+	IsActive     *bool   `json:"is_active,omitempty"`
+	// The model that the agent runs on.
+	ModelID *string        `json:"model_id,omitempty"`
+	Name    *string        `json:"name,omitempty"`
+	Raw     map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (g GenaiAgent) MarshalJSON() ([]byte, error) {

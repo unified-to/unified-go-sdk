@@ -3,11 +3,13 @@
 package shared
 
 type StoragePermission struct {
+	// (reference to HrisGroup)
 	GroupID  *string                          `json:"group_id,omitempty"`
 	IsHidden *bool                            `json:"is_hidden,omitempty"`
 	IsPublic *bool                            `json:"is_public,omitempty"`
 	Roles    []PropertyStoragePermissionRoles `json:"roles"`
-	UserID   *string                          `json:"user_id,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (s *StoragePermission) GetGroupID() *string {

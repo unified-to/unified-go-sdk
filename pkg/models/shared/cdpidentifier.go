@@ -2,6 +2,7 @@
 
 package shared
 
+// CdpIdentifierType - The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
 type CdpIdentifierType string
 
 const (
@@ -31,11 +32,16 @@ func (e *CdpIdentifierType) IsExact() bool {
 }
 
 type CdpIdentifier struct {
-	Encoding  *string            `json:"encoding,omitempty"`
-	IsPrimary *bool              `json:"is_primary,omitempty"`
-	Source    *string            `json:"source,omitempty"`
-	Type      *CdpIdentifierType `json:"type,omitempty"`
-	Value     string             `json:"value"`
+	// The encoding of the identifier value (eg. raw, sha256)
+	Encoding *string `json:"encoding,omitempty"`
+	// Whether this is the primary identifier for the profile
+	IsPrimary *bool `json:"is_primary,omitempty"`
+	// The source that provided this identifier
+	Source *string `json:"source,omitempty"`
+	// The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
+	Type *CdpIdentifierType `json:"type,omitempty"`
+	// The identifier value that resolves to the profile
+	Value string `json:"value"`
 }
 
 func (c *CdpIdentifier) GetEncoding() *string {

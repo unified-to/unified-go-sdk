@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CrmEventType - The type of event
 type CrmEventType string
 
 const (
@@ -42,13 +43,15 @@ type CrmEvent struct {
 	// An array of company IDs associated with this event
 	CompanyIds []string `json:"company_ids,omitempty"`
 	// An array of contact IDs associated with this event
-	ContactIds []string   `json:"contact_ids,omitempty"`
-	CreatedAt  *time.Time `json:"created_at,omitempty"`
+	ContactIds []string `json:"contact_ids,omitempty"`
+	// The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this event
 	DealIds []string `json:"deal_ids,omitempty"`
 	// The email object, when type = email
-	Email          *PropertyCrmEventEmail          `json:"email,omitempty"`
-	Form           *PropertyCrmEventForm           `json:"form,omitempty"`
+	Email *PropertyCrmEventEmail `json:"email,omitempty"`
+	Form  *PropertyCrmEventForm  `json:"form,omitempty"`
+	// Unique identifier for this event object
 	ID             *string                         `json:"id,omitempty"`
 	LeadIds        []string                        `json:"lead_ids,omitempty"`
 	MarketingEmail *PropertyCrmEventMarketingEmail `json:"marketing_email,omitempty"`
@@ -57,12 +60,16 @@ type CrmEvent struct {
 	// The note object, when type = note
 	Note     *PropertyCrmEventNote     `json:"note,omitempty"`
 	PageView *PropertyCrmEventPageView `json:"page_view,omitempty"`
-	Raw      map[string]any            `json:"raw,omitempty"`
+	// The raw data returned by the integration for this event.
+	Raw map[string]any `json:"raw,omitempty"`
 	// The task object, when type = task
-	Task      *PropertyCrmEventTask `json:"task,omitempty"`
-	Type      *CrmEventType         `json:"type,omitempty"`
-	UpdatedAt *time.Time            `json:"updated_at,omitempty"`
-	UserID    *string               `json:"user_id,omitempty"`
+	Task *PropertyCrmEventTask `json:"task,omitempty"`
+	// The type of event
+	Type *CrmEventType `json:"type,omitempty"`
+	// The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (c CrmEvent) MarshalJSON() ([]byte, error) {

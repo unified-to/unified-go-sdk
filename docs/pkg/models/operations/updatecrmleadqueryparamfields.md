@@ -32,6 +32,7 @@ value := operations.UpdateCrmLeadQueryParamFieldsID
 | `UpdateCrmLeadQueryParamFieldsTelephones`    | telephones                                   |
 | `UpdateCrmLeadQueryParamFieldsSource`        | source                                       |
 | `UpdateCrmLeadQueryParamFieldsStatus`        | status                                       |
+| `UpdateCrmLeadQueryParamFieldsTitle`         | title                                        |
 | `UpdateCrmLeadQueryParamFieldsLinkUrls`      | link_urls                                    |
 | `UpdateCrmLeadQueryParamFieldsMetadata`      | metadata                                     |
 | `UpdateCrmLeadQueryParamFieldsRaw`           | raw                                          |

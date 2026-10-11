@@ -29,16 +29,19 @@ func (e *EncondingFormat) IsExact() bool {
 }
 
 type GenaiEmbedding struct {
-	Content         []GenaiEmbeddingContent `json:"content,omitempty"`
-	Dimension       *float64                `json:"dimension,omitempty"`
-	Embeddings      *string                 `json:"embeddings,omitempty"`
-	EncondingFormat *EncondingFormat        `json:"enconding_format,omitempty"`
-	ID              *string                 `json:"id,omitempty"`
-	MaxTokens       *float64                `json:"max_tokens,omitempty"`
-	ModelID         *string                 `json:"model_id,omitempty"`
-	Raw             map[string]any          `json:"raw,omitempty"`
-	TokensUsed      *float64                `json:"tokens_used,omitempty"`
-	Type            *string                 `json:"type,omitempty"`
+	Content []GenaiEmbeddingContent `json:"content,omitempty"`
+	// 256, 512, 1024, and 1536
+	Dimension *float64 `json:"dimension,omitempty"`
+	// JSON string based off of the format
+	Embeddings      *string          `json:"embeddings,omitempty"`
+	EncondingFormat *EncondingFormat `json:"enconding_format,omitempty"`
+	ID              *string          `json:"id,omitempty"`
+	MaxTokens       *float64         `json:"max_tokens,omitempty"`
+	ModelID         *string          `json:"model_id,omitempty"`
+	Raw             map[string]any   `json:"raw,omitempty"`
+	TokensUsed      *float64         `json:"tokens_used,omitempty"`
+	// 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
+	Type *string `json:"type,omitempty"`
 }
 
 func (g *GenaiEmbedding) GetContent() []GenaiEmbeddingContent {

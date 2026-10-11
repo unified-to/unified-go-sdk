@@ -9,24 +9,26 @@ import (
 
 // PropertyConnectionAuth - An authentication object that represents a specific authorized user's connection to an integration.
 type PropertyConnectionAuth struct {
-	AccessToken    *string        `json:"access_token,omitempty"`
-	APIURL         *string        `json:"api_url,omitempty"`
-	AppID          *string        `json:"app_id,omitempty"`
-	Audience       *string        `json:"audience,omitempty"`
-	AuthorizeURL   *string        `json:"authorize_url,omitempty"`
-	ClientID       *string        `json:"client_id,omitempty"`
-	ClientSecret   *string        `json:"client_secret,omitempty"`
-	ConsumerKey    *string        `json:"consumer_key,omitempty"`
-	ConsumerSecret *string        `json:"consumer_secret,omitempty"`
-	DevAPIKey      *string        `json:"dev_api_key,omitempty"`
-	Emails         []string       `json:"emails,omitempty"`
-	ExpiresIn      *float64       `json:"expires_in,omitempty"`
-	ExpiryDate     *time.Time     `json:"expiry_date,omitempty"`
-	Key            *string        `json:"key,omitempty"`
-	Meta           map[string]any `json:"meta,omitempty"`
-	Name           *string        `json:"name,omitempty"`
+	AccessToken    *string    `json:"access_token,omitempty"`
+	APIURL         *string    `json:"api_url,omitempty"`
+	AppID          *string    `json:"app_id,omitempty"`
+	Audience       *string    `json:"audience,omitempty"`
+	AuthorizeURL   *string    `json:"authorize_url,omitempty"`
+	ClientID       *string    `json:"client_id,omitempty"`
+	ClientSecret   *string    `json:"client_secret,omitempty"`
+	ConsumerKey    *string    `json:"consumer_key,omitempty"`
+	ConsumerSecret *string    `json:"consumer_secret,omitempty"`
+	DevAPIKey      *string    `json:"dev_api_key,omitempty"`
+	Emails         []string   `json:"emails,omitempty"`
+	ExpiresIn      *float64   `json:"expires_in,omitempty"`
+	ExpiryDate     *time.Time `json:"expiry_date,omitempty"`
+	// the private KEY X.509 certificate in Base64 ASCII format
+	Key  *string        `json:"key,omitempty"`
+	Meta map[string]any `json:"meta,omitempty"`
+	Name *string        `json:"name,omitempty"`
 	// When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
-	OtherAuthInfo           []string   `json:"other_auth_info,omitempty"`
+	OtherAuthInfo []string `json:"other_auth_info,omitempty"`
+	// the PEM X.509 certificate in Base64 ASCII format
 	Pem                     *string    `json:"pem,omitempty"`
 	RefreshToken            *string    `json:"refresh_token,omitempty"`
 	RefreshTokenExpiresDate *time.Time `json:"refresh_token_expires_date,omitempty"`
@@ -35,7 +37,8 @@ type PropertyConnectionAuth struct {
 	State                   *string    `json:"state,omitempty"`
 	Token                   *string    `json:"token,omitempty"`
 	TokenURL                *string    `json:"token_url,omitempty"`
-	UserID                  *string    `json:"user_id,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (p PropertyConnectionAuth) MarshalJSON() ([]byte, error) {

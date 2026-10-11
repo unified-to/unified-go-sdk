@@ -41,17 +41,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("a66e402b-9ccd-461c-9d94-1a40e872793e"),
+            ID: unifiedgosdk.Pointer("0d50010f-fe15-4320-9085-e750d1f5c117"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "signing_template",
+            ObjectType: "signing_signatory",
             Objects: map[string]any{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T08:05:10.351Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-14T19:24:03.223Z"),
         },
         ConnectionID: "<id>",
     })
@@ -221,17 +221,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("a0d83ad7-5bf9-4c3b-ae13-626991f33c1b"),
+            ID: unifiedgosdk.Pointer("77cd83fb-e2c5-447e-9767-0de767b4e59f"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "signing_template",
+            ObjectType: "signing_signatory",
             Objects: map[string]any{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T08:05:10.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-14T19:24:03.228Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -348,17 +348,17 @@ func main() {
         MetadataMetadata: shared.MetadataMetadata{
             CreatedAt: types.MustNewTimeFromString("2021-03-25T03:02:17.656Z"),
             Format: shared.MetadataMetadataFormatPrice.ToPointer(),
-            ID: unifiedgosdk.Pointer("a0d83ad7-5bf9-4c3b-ae13-626991f33c1b"),
+            ID: unifiedgosdk.Pointer("77cd83fb-e2c5-447e-9767-0de767b4e59f"),
             IsRequired: unifiedgosdk.Pointer(false),
             Name: "autem",
-            ObjectType: "signing_template",
+            ObjectType: "signing_signatory",
             Objects: map[string]any{
 
             },
             Options: []string{},
             OriginalFormat: unifiedgosdk.Pointer("advoco"),
             Slug: unifiedgosdk.Pointer("arbustum"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-28T08:05:10.358Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-14T19:24:03.228Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

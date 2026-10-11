@@ -9,27 +9,38 @@ import (
 
 // CrmDeal - A deal represents an opportunity with companies and/or contacts
 type CrmDeal struct {
-	Amount      *float64       `json:"amount,omitempty"`
-	ClosedAt    *time.Time     `json:"closed_at,omitempty"`
-	ClosingAt   *time.Time     `json:"closing_at,omitempty"`
-	CompanyIds  []string       `json:"company_ids,omitempty"`
-	ContactIds  []string       `json:"contact_ids,omitempty"`
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Currency    *string        `json:"currency,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	LostReason  *string        `json:"lost_reason,omitempty"`
-	Metadata    []CrmMetadata  `json:"metadata,omitempty"`
+	// The potential amount that deal could be worth
+	Amount *float64 `json:"amount,omitempty"`
+	// The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt *time.Time `json:"closed_at,omitempty"`
+	// expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosingAt  *time.Time `json:"closing_at,omitempty"`
+	CompanyIds []string   `json:"company_ids,omitempty"`
+	ContactIds []string   `json:"contact_ids,omitempty"`
+	// The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The currency for the deal amount (3 letter ISO code; eg. USD)
+	Currency    *string `json:"currency,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// Unique identifier for this deal object
+	ID         *string       `json:"id,omitempty"`
+	LostReason *string       `json:"lost_reason,omitempty"`
+	Metadata   []CrmMetadata `json:"metadata,omitempty"`
+	// The name of this deal
 	Name        *string        `json:"name,omitempty"`
 	Pipelines   []CrmReference `json:"pipelines,omitempty"`
 	Probability *float64       `json:"probability,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	Source      *string        `json:"source,omitempty"`
-	Stages      []CrmReference `json:"stages,omitempty"`
-	Tags        []string       `json:"tags,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserID      *string        `json:"user_id,omitempty"`
-	WonReason   *string        `json:"won_reason,omitempty"`
+	// The raw data returned by the integration for this deal
+	Raw map[string]any `json:"raw,omitempty"`
+	// The source for this deal
+	Source *string        `json:"source,omitempty"`
+	Stages []CrmReference `json:"stages,omitempty"`
+	Tags   []string       `json:"tags,omitempty"`
+	// The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID    *string `json:"user_id,omitempty"`
+	WonReason *string `json:"won_reason,omitempty"`
 }
 
 func (c CrmDeal) MarshalJSON() ([]byte, error) {

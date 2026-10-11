@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -83,7 +83,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -123,6 +123,7 @@ func main() {
 * [CreateAccountingContact](docs/sdks/accounting/README.md#createaccountingcontact) - Create a contact
 * [CreateAccountingCreditmemo](docs/sdks/accounting/README.md#createaccountingcreditmemo) - Create a creditmemo
 * [CreateAccountingExpense](docs/sdks/accounting/README.md#createaccountingexpense) - Create an expense
+* [CreateAccountingExpensereport](docs/sdks/accounting/README.md#createaccountingexpensereport) - Create an expensereport
 * [CreateAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [CreateAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
 * [CreateAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
@@ -146,6 +147,7 @@ func main() {
 * [GetAccountingContact](docs/sdks/accounting/README.md#getaccountingcontact) - Retrieve a contact
 * [GetAccountingCreditmemo](docs/sdks/accounting/README.md#getaccountingcreditmemo) - Retrieve a creditmemo
 * [GetAccountingExpense](docs/sdks/accounting/README.md#getaccountingexpense) - Retrieve an expense
+* [GetAccountingExpensereport](docs/sdks/accounting/README.md#getaccountingexpensereport) - Retrieve an expensereport
 * [GetAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [GetAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
 * [GetAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
@@ -154,8 +156,10 @@ func main() {
 * [GetAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
 * [GetAccountingProject](docs/sdks/accounting/README.md#getaccountingproject) - Retrieve a project
 * [GetAccountingPurchaseorder](docs/sdks/accounting/README.md#getaccountingpurchaseorder) - Retrieve a purchaseorder
+* [GetAccountingPurchasereceipt](docs/sdks/accounting/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [GetAccountingQuote](docs/sdks/accounting/README.md#getaccountingquote) - Retrieve a quote
 * [GetAccountingSalesorder](docs/sdks/accounting/README.md#getaccountingsalesorder) - Retrieve a salesorder
+* [GetAccountingSalesreceipt](docs/sdks/accounting/README.md#getaccountingsalesreceipt) - Retrieve a salesreceipt
 * [GetAccountingTaxrate](docs/sdks/accounting/README.md#getaccountingtaxrate) - Retrieve a taxrate
 * [GetAccountingTransaction](docs/sdks/accounting/README.md#getaccountingtransaction) - Retrieve a transaction
 * [GetAccountingTrialbalance](docs/sdks/accounting/README.md#getaccountingtrialbalance) - Retrieve a trialbalance
@@ -171,6 +175,7 @@ func main() {
 * [ListAccountingCategories](docs/sdks/accounting/README.md#listaccountingcategories) - List all categories
 * [ListAccountingContacts](docs/sdks/accounting/README.md#listaccountingcontacts) - List all contacts
 * [ListAccountingCreditmemoes](docs/sdks/accounting/README.md#listaccountingcreditmemoes) - List all creditmemoes
+* [ListAccountingExpensereports](docs/sdks/accounting/README.md#listaccountingexpensereports) - List all expensereports
 * [ListAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [ListAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [ListAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
@@ -180,8 +185,10 @@ func main() {
 * [ListAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
 * [ListAccountingProjects](docs/sdks/accounting/README.md#listaccountingprojects) - List all projects
 * [ListAccountingPurchaseorders](docs/sdks/accounting/README.md#listaccountingpurchaseorders) - List all purchaseorders
+* [ListAccountingPurchasereceipts](docs/sdks/accounting/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
 * [ListAccountingQuotes](docs/sdks/accounting/README.md#listaccountingquotes) - List all quotes
 * [ListAccountingSalesorders](docs/sdks/accounting/README.md#listaccountingsalesorders) - List all salesorders
+* [ListAccountingSalesreceipts](docs/sdks/accounting/README.md#listaccountingsalesreceipts) - List all salesreceipts
 * [ListAccountingTaxrates](docs/sdks/accounting/README.md#listaccountingtaxrates) - List all taxrates
 * [ListAccountingTransactions](docs/sdks/accounting/README.md#listaccountingtransactions) - List all transactions
 * [ListAccountingTrialbalances](docs/sdks/accounting/README.md#listaccountingtrialbalances) - List all trialbalances
@@ -194,6 +201,7 @@ func main() {
 * [PatchAccountingContact](docs/sdks/accounting/README.md#patchaccountingcontact) - Update a contact
 * [PatchAccountingCreditmemo](docs/sdks/accounting/README.md#patchaccountingcreditmemo) - Update a creditmemo
 * [PatchAccountingExpense](docs/sdks/accounting/README.md#patchaccountingexpense) - Update an expense
+* [PatchAccountingExpensereport](docs/sdks/accounting/README.md#patchaccountingexpensereport) - Update an expensereport
 * [PatchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [PatchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
 * [PatchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
@@ -213,6 +221,7 @@ func main() {
 * [RemoveAccountingContact](docs/sdks/accounting/README.md#removeaccountingcontact) - Remove a contact
 * [RemoveAccountingCreditmemo](docs/sdks/accounting/README.md#removeaccountingcreditmemo) - Remove a creditmemo
 * [RemoveAccountingExpense](docs/sdks/accounting/README.md#removeaccountingexpense) - Remove an expense
+* [RemoveAccountingExpensereport](docs/sdks/accounting/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [RemoveAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [RemoveAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
 * [RemoveAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
@@ -232,6 +241,7 @@ func main() {
 * [UpdateAccountingContact](docs/sdks/accounting/README.md#updateaccountingcontact) - Update a contact
 * [UpdateAccountingCreditmemo](docs/sdks/accounting/README.md#updateaccountingcreditmemo) - Update a creditmemo
 * [UpdateAccountingExpense](docs/sdks/accounting/README.md#updateaccountingexpense) - Update an expense
+* [UpdateAccountingExpensereport](docs/sdks/accounting/README.md#updateaccountingexpensereport) - Update an expensereport
 * [UpdateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [UpdateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
 * [UpdateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
@@ -382,6 +392,7 @@ func main() {
 
 ### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
+* [GetAtsApplicationstatus](docs/sdks/applicationstatus/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [ListAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
 
 ### [Assessment](docs/sdks/assessment/README.md)
@@ -415,6 +426,7 @@ func main() {
 * [CreateAtsScorecard](docs/sdks/ats/README.md#createatsscorecard) - Create a scorecard
 * [GetAtsActivity](docs/sdks/ats/README.md#getatsactivity) - Retrieve an activity
 * [GetAtsApplication](docs/sdks/ats/README.md#getatsapplication) - Retrieve an application
+* [GetAtsApplicationstatus](docs/sdks/ats/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [GetAtsCandidate](docs/sdks/ats/README.md#getatscandidate) - Retrieve a candidate
 * [GetAtsCompany](docs/sdks/ats/README.md#getatscompany) - Retrieve a company
 * [GetAtsDocument](docs/sdks/ats/README.md#getatsdocument) - Retrieve a document
@@ -466,7 +478,7 @@ func main() {
 
 ### [Auth](docs/sdks/auth/README.md)
 
-* [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
+* [GetUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
 * [GetUnifiedIntegrationSaml](docs/sdks/auth/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
@@ -818,6 +830,7 @@ func main() {
 ### [Connection](docs/sdks/connection/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
+* [CreateUnifiedConnectionReauth](docs/sdks/connection/README.md#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [GetUnifiedConnection](docs/sdks/connection/README.md#getunifiedconnection) - Retrieve connection
 * [ListUnifiedConnections](docs/sdks/connection/README.md#listunifiedconnections) - List all connections
 * [PatchUnifiedConnection](docs/sdks/connection/README.md#patchunifiedconnection) - Update connection
@@ -1023,6 +1036,15 @@ func main() {
 * [UpdateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [UpdateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
+### [Earning](docs/sdks/earning/README.md)
+
+* [CreateHrisEarning](docs/sdks/earning/README.md#createhrisearning) - Create an earning
+* [GetHrisEarning](docs/sdks/earning/README.md#gethrisearning) - Retrieve an earning
+* [ListHrisEarnings](docs/sdks/earning/README.md#listhrisearnings) - List all earnings
+* [PatchHrisEarning](docs/sdks/earning/README.md#patchhrisearning) - Update an earning
+* [RemoveHrisEarning](docs/sdks/earning/README.md#removehrisearning) - Remove an earning
+* [UpdateHrisEarning](docs/sdks/earning/README.md#updatehrisearning) - Update an earning
+
 ### [Embedding](docs/sdks/embedding/README.md)
 
 * [CreateGenaiEmbedding](docs/sdks/embedding/README.md#creategenaiembedding) - Create an embedding
@@ -1084,6 +1106,15 @@ func main() {
 * [RemoveAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
 * [UpdateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
 
+### [Expensereport](docs/sdks/expensereport/README.md)
+
+* [CreateAccountingExpensereport](docs/sdks/expensereport/README.md#createaccountingexpensereport) - Create an expensereport
+* [GetAccountingExpensereport](docs/sdks/expensereport/README.md#getaccountingexpensereport) - Retrieve an expensereport
+* [ListAccountingExpensereports](docs/sdks/expensereport/README.md#listaccountingexpensereports) - List all expensereports
+* [PatchAccountingExpensereport](docs/sdks/expensereport/README.md#patchaccountingexpensereport) - Update an expensereport
+* [RemoveAccountingExpensereport](docs/sdks/expensereport/README.md#removeaccountingexpensereport) - Remove an expensereport
+* [UpdateAccountingExpensereport](docs/sdks/expensereport/README.md#updateaccountingexpensereport) - Update an expensereport
+
 ### [Feedback](docs/sdks/feedback/README.md)
 
 * [CreatePerformanceFeedback](docs/sdks/feedback/README.md#createperformancefeedback) - Create a feedback
@@ -1129,18 +1160,23 @@ func main() {
 * [GetGenaiAgent](docs/sdks/genai/README.md#getgenaiagent) - Retrieve an agent
 * [GetGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [GetGenaiOrganization](docs/sdks/genai/README.md#getgenaiorganization) - Retrieve an organization
+* [GetGenaiSkill](docs/sdks/genai/README.md#getgenaiskill) - Retrieve a skill
 * [GetGenaiTask](docs/sdks/genai/README.md#getgenaitask) - Retrieve a task
 * [ListGenaiAgents](docs/sdks/genai/README.md#listgenaiagents) - List all agents
 * [ListGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 * [ListGenaiOrganizations](docs/sdks/genai/README.md#listgenaiorganizations) - List all organizations
+* [ListGenaiSkills](docs/sdks/genai/README.md#listgenaiskills) - List all skills
 * [ListGenaiTasks](docs/sdks/genai/README.md#listgenaitasks) - List all tasks
 * [PatchGenaiAgent](docs/sdks/genai/README.md#patchgenaiagent) - Update an agent
 * [PatchGenaiOrganization](docs/sdks/genai/README.md#patchgenaiorganization) - Update an organization
+* [PatchGenaiTask](docs/sdks/genai/README.md#patchgenaitask) - Update a task
 * [RemoveGenaiAgent](docs/sdks/genai/README.md#removegenaiagent) - Remove an agent
 * [RemoveGenaiOrganization](docs/sdks/genai/README.md#removegenaiorganization) - Remove an organization
+* [RemoveGenaiSkill](docs/sdks/genai/README.md#removegenaiskill) - Remove a skill
 * [RemoveGenaiTask](docs/sdks/genai/README.md#removegenaitask) - Remove a task
 * [UpdateGenaiAgent](docs/sdks/genai/README.md#updategenaiagent) - Update an agent
 * [UpdateGenaiOrganization](docs/sdks/genai/README.md#updategenaiorganization) - Update an organization
+* [UpdateGenaiTask](docs/sdks/genai/README.md#updategenaitask) - Update a task
 
 ### [Goal](docs/sdks/goal/README.md)
 
@@ -1183,8 +1219,10 @@ func main() {
 * [CreateHrisDeduction](docs/sdks/hris/README.md#createhrisdeduction) - Create a deduction
 * [CreateHrisDevice](docs/sdks/hris/README.md#createhrisdevice) - Create a device
 * [CreateHrisDocument](docs/sdks/hris/README.md#createhrisdocument) - Create a document
+* [CreateHrisEarning](docs/sdks/hris/README.md#createhrisearning) - Create an earning
 * [CreateHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [CreateHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
+* [CreateHrisJob](docs/sdks/hris/README.md#createhrisjob) - Create a job
 * [CreateHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
 * [CreateHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
 * [CreateHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
@@ -1196,9 +1234,13 @@ func main() {
 * [GetHrisDeduction](docs/sdks/hris/README.md#gethrisdeduction) - Retrieve a deduction
 * [GetHrisDevice](docs/sdks/hris/README.md#gethrisdevice) - Retrieve a device
 * [GetHrisDocument](docs/sdks/hris/README.md#gethrisdocument) - Retrieve a document
+* [GetHrisEarning](docs/sdks/hris/README.md#gethrisearning) - Retrieve an earning
 * [GetHrisEmployee](docs/sdks/hris/README.md#gethrisemployee) - Retrieve an employee
 * [GetHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
+* [GetHrisJob](docs/sdks/hris/README.md#gethrisjob) - Retrieve a job
 * [GetHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
+* [GetHrisPaycode](docs/sdks/hris/README.md#gethrispaycode) - Retrieve a paycode
+* [GetHrisPayroll](docs/sdks/hris/README.md#gethrispayroll) - Retrieve a payroll
 * [GetHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
 * [GetHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [GetHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
@@ -1210,9 +1252,13 @@ func main() {
 * [ListHrisDeductions](docs/sdks/hris/README.md#listhrisdeductions) - List all deductions
 * [ListHrisDevices](docs/sdks/hris/README.md#listhrisdevices) - List all devices
 * [ListHrisDocuments](docs/sdks/hris/README.md#listhrisdocuments) - List all documents
+* [ListHrisEarnings](docs/sdks/hris/README.md#listhrisearnings) - List all earnings
 * [ListHrisEmployees](docs/sdks/hris/README.md#listhrisemployees) - List all employees
 * [ListHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
+* [ListHrisJobs](docs/sdks/hris/README.md#listhrisjobs) - List all jobs
 * [ListHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
+* [ListHrisPaycodes](docs/sdks/hris/README.md#listhrispaycodes) - List all paycodes
+* [ListHrisPayrolls](docs/sdks/hris/README.md#listhrispayrolls) - List all payrolls
 * [ListHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
 * [ListHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [ListHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
@@ -1224,8 +1270,10 @@ func main() {
 * [PatchHrisDeduction](docs/sdks/hris/README.md#patchhrisdeduction) - Update a deduction
 * [PatchHrisDevice](docs/sdks/hris/README.md#patchhrisdevice) - Update a device
 * [PatchHrisDocument](docs/sdks/hris/README.md#patchhrisdocument) - Update a document
+* [PatchHrisEarning](docs/sdks/hris/README.md#patchhrisearning) - Update an earning
 * [PatchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [PatchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
+* [PatchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [PatchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
 * [PatchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [PatchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
@@ -1236,8 +1284,10 @@ func main() {
 * [RemoveHrisDeduction](docs/sdks/hris/README.md#removehrisdeduction) - Remove a deduction
 * [RemoveHrisDevice](docs/sdks/hris/README.md#removehrisdevice) - Remove a device
 * [RemoveHrisDocument](docs/sdks/hris/README.md#removehrisdocument) - Remove a document
+* [RemoveHrisEarning](docs/sdks/hris/README.md#removehrisearning) - Remove an earning
 * [RemoveHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [RemoveHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
+* [RemoveHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [RemoveHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
 * [RemoveHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [RemoveHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
@@ -1248,8 +1298,10 @@ func main() {
 * [UpdateHrisDeduction](docs/sdks/hris/README.md#updatehrisdeduction) - Update a deduction
 * [UpdateHrisDevice](docs/sdks/hris/README.md#updatehrisdevice) - Update a device
 * [UpdateHrisDocument](docs/sdks/hris/README.md#updatehrisdocument) - Update a document
+* [UpdateHrisEarning](docs/sdks/hris/README.md#updatehrisearning) - Update an earning
 * [UpdateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [UpdateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
+* [UpdateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [UpdateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [UpdateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
@@ -1279,7 +1331,7 @@ func main() {
 
 ### [Integration](docs/sdks/integration/README.md)
 
-* [GetUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Authorize new connection
+* [GetUnifiedIntegrationAuth](docs/sdks/integration/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [ListUnifiedIntegrationWorkspaces](docs/sdks/integration/README.md#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [ListUnifiedIntegrations](docs/sdks/integration/README.md#listunifiedintegrations) - Returns all integrations
 
@@ -1336,11 +1388,17 @@ func main() {
 ### [Job](docs/sdks/job/README.md)
 
 * [CreateAtsJob](docs/sdks/job/README.md#createatsjob) - Create a job
+* [CreateHrisJob](docs/sdks/job/README.md#createhrisjob) - Create a job
 * [GetAtsJob](docs/sdks/job/README.md#getatsjob) - Retrieve a job
+* [GetHrisJob](docs/sdks/job/README.md#gethrisjob) - Retrieve a job
 * [ListAtsJobs](docs/sdks/job/README.md#listatsjobs) - List all jobs
+* [ListHrisJobs](docs/sdks/job/README.md#listhrisjobs) - List all jobs
 * [PatchAtsJob](docs/sdks/job/README.md#patchatsjob) - Update a job
+* [PatchHrisJob](docs/sdks/job/README.md#patchhrisjob) - Update a job
 * [RemoveAtsJob](docs/sdks/job/README.md#removeatsjob) - Remove a job
+* [RemoveHrisJob](docs/sdks/job/README.md#removehrisjob) - Remove a job
 * [UpdateAtsJob](docs/sdks/job/README.md#updateatsjob) - Update a job
+* [UpdateHrisJob](docs/sdks/job/README.md#updatehrisjob) - Update a job
 
 ### [Journal](docs/sdks/journal/README.md)
 
@@ -1633,6 +1691,11 @@ func main() {
 * [UpdatePassthroughJSON](docs/sdks/passthrough/README.md#updatepassthroughjson) - Passthrough PUT
 * [UpdatePassthroughRaw](docs/sdks/passthrough/README.md#updatepassthroughraw) - Passthrough PUT
 
+### [Paycode](docs/sdks/paycode/README.md)
+
+* [GetHrisPaycode](docs/sdks/paycode/README.md#gethrispaycode) - Retrieve a paycode
+* [ListHrisPaycodes](docs/sdks/paycode/README.md#listhrispaycodes) - List all paycodes
+
 ### [Payment](docs/sdks/payment/README.md)
 
 * [CreatePaymentLink](docs/sdks/payment/README.md#createpaymentlink) - Create a link
@@ -1671,6 +1734,11 @@ func main() {
 
 * [GetPaymentPayout](docs/sdks/payout/README.md#getpaymentpayout) - Retrieve a payout
 * [ListPaymentPayouts](docs/sdks/payout/README.md#listpaymentpayouts) - List all payouts
+
+### [Payroll](docs/sdks/payroll/README.md)
+
+* [GetHrisPayroll](docs/sdks/payroll/README.md#gethrispayroll) - Retrieve a payroll
+* [ListHrisPayrolls](docs/sdks/payroll/README.md#listhrispayrolls) - List all payrolls
 
 ### [Payslip](docs/sdks/payslip/README.md)
 
@@ -1781,6 +1849,11 @@ func main() {
 * [PatchAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
 * [RemoveAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [UpdateAccountingPurchaseorder](docs/sdks/purchaseorder/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
+
+### [Purchasereceipt](docs/sdks/purchasereceipt/README.md)
+
+* [GetAccountingPurchasereceipt](docs/sdks/purchasereceipt/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
+* [ListAccountingPurchasereceipts](docs/sdks/purchasereceipt/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -1923,6 +1996,11 @@ func main() {
 * [RemoveAccountingSalesorder](docs/sdks/salesorder/README.md#removeaccountingsalesorder) - Remove a salesorder
 * [UpdateAccountingSalesorder](docs/sdks/salesorder/README.md#updateaccountingsalesorder) - Update a salesorder
 
+### [Salesreceipt](docs/sdks/salesreceipt/README.md)
+
+* [GetAccountingSalesreceipt](docs/sdks/salesreceipt/README.md#getaccountingsalesreceipt) - Retrieve a salesreceipt
+* [ListAccountingSalesreceipts](docs/sdks/salesreceipt/README.md#listaccountingsalesreceipts) - List all salesreceipts
+
 ### [Saml](docs/sdks/saml/README.md)
 
 * [GetUnifiedIntegrationSaml](docs/sdks/saml/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
@@ -1946,17 +2024,26 @@ func main() {
 
 * [CreateAtsScorecard](docs/sdks/scorecard/README.md#createatsscorecard) - Create a scorecard
 * [GetAtsScorecard](docs/sdks/scorecard/README.md#getatsscorecard) - Retrieve a scorecard
+* [GetUcScorecard](docs/sdks/scorecard/README.md#getucscorecard) - Retrieve a scorecard
 * [ListAtsScorecards](docs/sdks/scorecard/README.md#listatsscorecards) - List all scorecards
+* [ListUcScorecards](docs/sdks/scorecard/README.md#listucscorecards) - List all scorecards
 * [PatchAtsScorecard](docs/sdks/scorecard/README.md#patchatsscorecard) - Update a scorecard
 * [RemoveAtsScorecard](docs/sdks/scorecard/README.md#removeatsscorecard) - Remove a scorecard
 * [UpdateAtsScorecard](docs/sdks/scorecard/README.md#updateatsscorecard) - Update a scorecard
 
+### [Scorecardtemplate](docs/sdks/scorecardtemplate/README.md)
+
+* [GetUcScorecardtemplate](docs/sdks/scorecardtemplate/README.md#getucscorecardtemplate) - Retrieve a scorecardtemplate
+* [ListUcScorecardtemplates](docs/sdks/scorecardtemplate/README.md#listucscorecardtemplates) - List all scorecardtemplates
+
 ### [Secretsmanager](docs/sdks/secretsmanager/README.md)
 
-* [CreateUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
-* [GetUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
-* [ListUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
-* [RemoveUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
+* [CreateUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#createunifiedsecretsmanager) - Create secrets manager
+* [GetUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
+* [ListUnifiedSecretsmanagerInstructions](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [ListUnifiedSecretsmanagerSecrets](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [ListUnifiedSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagers) - List secrets managers
+* [RemoveUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2026,6 +2113,12 @@ func main() {
 * [RemoveSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
 * [UpdateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
 * [UpdateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
+### [Skill](docs/sdks/skill/README.md)
+
+* [GetGenaiSkill](docs/sdks/skill/README.md#getgenaiskill) - Retrieve a skill
+* [ListGenaiSkills](docs/sdks/skill/README.md#listgenaiskills) - List all skills
+* [RemoveGenaiSkill](docs/sdks/skill/README.md#removegenaiskill) - Remove a skill
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2124,6 +2217,7 @@ func main() {
 * [ListTaskComments](docs/sdks/task/README.md#listtaskcomments) - List all comments
 * [ListTaskProjects](docs/sdks/task/README.md#listtaskprojects) - List all projects
 * [ListTaskTasks](docs/sdks/task/README.md#listtasktasks) - List all tasks
+* [PatchGenaiTask](docs/sdks/task/README.md#patchgenaitask) - Update a task
 * [PatchTaskComment](docs/sdks/task/README.md#patchtaskcomment) - Update a comment
 * [PatchTaskProject](docs/sdks/task/README.md#patchtaskproject) - Update a project
 * [PatchTaskTask](docs/sdks/task/README.md#patchtasktask) - Update a task
@@ -2131,6 +2225,7 @@ func main() {
 * [RemoveTaskComment](docs/sdks/task/README.md#removetaskcomment) - Remove a comment
 * [RemoveTaskProject](docs/sdks/task/README.md#removetaskproject) - Remove a project
 * [RemoveTaskTask](docs/sdks/task/README.md#removetasktask) - Remove a task
+* [UpdateGenaiTask](docs/sdks/task/README.md#updategenaitask) - Update a task
 * [UpdateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [UpdateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [UpdateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
@@ -2238,10 +2333,14 @@ func main() {
 * [GetUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [GetUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
 * [GetUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording
+* [GetUcScorecard](docs/sdks/uc/README.md#getucscorecard) - Retrieve a scorecard
+* [GetUcScorecardtemplate](docs/sdks/uc/README.md#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [ListUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
 * [ListUcComments](docs/sdks/uc/README.md#listuccomments) - List all comments
 * [ListUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
 * [ListUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
+* [ListUcScorecards](docs/sdks/uc/README.md#listucscorecards) - List all scorecards
+* [ListUcScorecardtemplates](docs/sdks/uc/README.md#listucscorecardtemplates) - List all scorecardtemplates
 * [PatchUcComment](docs/sdks/uc/README.md#patchuccomment) - Update a comment
 * [PatchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
 * [PatchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
@@ -2255,15 +2354,16 @@ func main() {
 ### [Unified](docs/sdks/unified/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/unified/README.md#createunifiedconnection) - Create connection
+* [CreateUnifiedConnectionReauth](docs/sdks/unified/README.md#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [CreateUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
+* [CreateUnifiedSecretsmanager](docs/sdks/unified/README.md#createunifiedsecretsmanager) - Create secrets manager
 * [CreateUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
-* [CreateUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [GetUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [GetUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
-* [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize new connection
+* [GetUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [GetUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
+* [GetUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [GetUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
-* [GetUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [ListUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [ListUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [ListUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -2271,15 +2371,17 @@ func main() {
 * [ListUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [ListUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [ListUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
+* [ListUnifiedSecretsmanagerInstructions](docs/sdks/unified/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [ListUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [ListUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
 * [ListUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
-* [ListUnifiedWorkspaceSecretsmanagers](docs/sdks/unified/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [PatchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [PatchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [PatchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [RemoveUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [RemoveUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
+* [RemoveUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [RemoveUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
-* [RemoveUnifiedWorkspaceSecretsmanager](docs/sdks/unified/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [UpdateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
@@ -2396,7 +2498,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2413,7 +2515,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2474,7 +2576,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2491,7 +2593,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2535,7 +2637,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2552,7 +2654,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2639,7 +2741,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2656,7 +2758,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2705,7 +2807,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2722,7 +2824,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -2785,7 +2887,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2802,7 +2904,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})

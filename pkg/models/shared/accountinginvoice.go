@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingInvoicePaymentCollectionMethod - When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
 type AccountingInvoicePaymentCollectionMethod string
 
 const (
@@ -90,6 +91,7 @@ func (e *AccountingInvoiceStatus) IsExact() bool {
 	return false
 }
 
+// AccountingInvoiceTerm - @deprecated use payment_terms instead
 type AccountingInvoiceTerm string
 
 const (
@@ -121,6 +123,7 @@ func (e *AccountingInvoiceTerm) IsExact() bool {
 	return false
 }
 
+// AccountingInvoiceType - BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
 type AccountingInvoiceType string
 
 const (
@@ -144,49 +147,66 @@ func (e *AccountingInvoiceType) IsExact() bool {
 }
 
 type AccountingInvoice struct {
-	Attachments             []AccountingAttachment                    `json:"attachments,omitempty"`
-	BalanceAmount           *float64                                  `json:"balance_amount,omitempty"`
-	CancelledAt             *time.Time                                `json:"cancelled_at,omitempty"`
-	CategoryIds             []string                                  `json:"category_ids,omitempty"`
-	ContactID               *string                                   `json:"contact_id,omitempty"`
-	CreatedAt               *time.Time                                `json:"created_at,omitempty"`
-	Currency                *string                                   `json:"currency,omitempty"`
-	DiscountAmount          *float64                                  `json:"discount_amount,omitempty"`
-	DueAt                   *time.Time                                `json:"due_at,omitempty"`
-	ExchangeRate            *float64                                  `json:"exchange_rate,omitempty"`
-	ExtendedNotes           []AccountingExtendedNote                  `json:"extended_notes,omitempty"`
-	ID                      *string                                   `json:"id,omitempty"`
-	InvoiceNumber           *string                                   `json:"invoice_number,omitempty"`
-	IsInclusiveOfTax        *bool                                     `json:"is_inclusive_of_tax,omitempty"`
-	Lineitems               []AccountingLineitem                      `json:"lineitems,omitempty"`
-	Metadata                []AccountingMetadata                      `json:"metadata,omitempty"`
-	Notes                   *string                                   `json:"notes,omitempty"`
-	OrganizationID          *string                                   `json:"organization_id,omitempty"`
-	PaidAmount              *float64                                  `json:"paid_amount,omitempty"`
-	PaidAt                  *time.Time                                `json:"paid_at,omitempty"`
+	Attachments   []AccountingAttachment `json:"attachments,omitempty"`
+	BalanceAmount *float64               `json:"balance_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CancelledAt *time.Time `json:"cancelled_at,omitempty"`
+	CategoryIds []string   `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time `json:"created_at,omitempty"`
+	Currency       *string    `json:"currency,omitempty"`
+	DiscountAmount *float64   `json:"discount_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// Exchange rate to the base/home currency at the document date
+	ExchangeRate  *float64                 `json:"exchange_rate,omitempty"`
+	ExtendedNotes []AccountingExtendedNote `json:"extended_notes,omitempty"`
+	ID            *string                  `json:"id,omitempty"`
+	// External identifier (ie. reference) for this invoice
+	InvoiceNumber *string `json:"invoice_number,omitempty"`
+	// True when the document amounts already include tax
+	IsInclusiveOfTax *bool                `json:"is_inclusive_of_tax,omitempty"`
+	Lineitems        []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata         []AccountingMetadata `json:"metadata,omitempty"`
+	Notes            *string              `json:"notes,omitempty"`
+	OrganizationID   *string              `json:"organization_id,omitempty"`
+	PaidAmount       *float64             `json:"paid_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PaidAt *time.Time `json:"paid_at,omitempty"`
+	// When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
 	PaymentCollectionMethod *AccountingInvoicePaymentCollectionMethod `json:"payment_collection_method,omitempty"`
 	PaymentTerms            *AccountingInvoicePaymentTerms            `json:"payment_terms,omitempty"`
 	// ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
 	Payments      []AccountingPaymentReference `json:"payments,omitempty"`
 	PaymenttermID *string                      `json:"paymentterm_id,omitempty"`
-	PostedAt      *time.Time                   `json:"posted_at,omitempty"`
-	ProjectID     *string                      `json:"project_id,omitempty"`
-	Raw           map[string]any               `json:"raw,omitempty"`
-	Reference     *string                      `json:"reference,omitempty"`
-	RefundAmount  *float64                     `json:"refund_amount,omitempty"`
-	RefundReason  *string                      `json:"refund_reason,omitempty"`
-	RefundedAt    *time.Time                   `json:"refunded_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt *time.Time `json:"posted_at,omitempty"`
+	// (reference to TaskProject)
+	ProjectID    *string        `json:"project_id,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
+	Reference    *string        `json:"reference,omitempty"`
+	RefundAmount *float64       `json:"refund_amount,omitempty"`
+	RefundReason *string        `json:"refund_reason,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RefundedAt *time.Time `json:"refunded_at,omitempty"`
 	// refs -> AccountingSalesorder; the sales orders this invoice was raised from
-	SalesorderIds  []string                 `json:"salesorder_ids,omitempty"`
-	Send           *bool                    `json:"send,omitempty"`
-	Status         *AccountingInvoiceStatus `json:"status,omitempty"`
-	SubTotalAmount *float64                 `json:"sub_total_amount,omitempty"`
-	TaxAmount      *float64                 `json:"tax_amount,omitempty"`
-	Term           *AccountingInvoiceTerm   `json:"term,omitempty"`
-	TotalAmount    *float64                 `json:"total_amount,omitempty"`
-	Type           *AccountingInvoiceType   `json:"type,omitempty"`
-	UpdatedAt      *time.Time               `json:"updated_at,omitempty"`
-	URL            *string                  `json:"url,omitempty"`
+	SalesorderIds []string                 `json:"salesorder_ids,omitempty"`
+	Send          *bool                    `json:"send,omitempty"`
+	Status        *AccountingInvoiceStatus `json:"status,omitempty"`
+	// Total before tax
+	SubTotalAmount *float64 `json:"sub_total_amount,omitempty"`
+	TaxAmount      *float64 `json:"tax_amount,omitempty"`
+	// @deprecated use payment_terms instead
+	Term        *AccountingInvoiceTerm `json:"term,omitempty"`
+	TotalAmount *float64               `json:"total_amount,omitempty"`
+	// BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
+	Type *AccountingInvoiceType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The public URL for the invoice to send to a customer to view or pay.
+	URL *string `json:"url,omitempty"`
 }
 
 func (a AccountingInvoice) MarshalJSON() ([]byte, error) {

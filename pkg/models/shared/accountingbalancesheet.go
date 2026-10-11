@@ -8,9 +8,11 @@ import (
 )
 
 type AccountingBalancesheet struct {
-	Assets          []AccountingBalancesheetItem `json:"assets,omitempty"`
-	CreatedAt       *time.Time                   `json:"created_at,omitempty"`
-	Currency        *string                      `json:"currency,omitempty"`
+	Assets []AccountingBalancesheetItem `json:"assets,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt           *time.Time                   `json:"end_at,omitempty"`
 	Equity          []AccountingBalancesheetItem `json:"equity,omitempty"`
 	ID              *string                      `json:"id,omitempty"`
@@ -18,8 +20,10 @@ type AccountingBalancesheet struct {
 	Name            *string                      `json:"name,omitempty"`
 	NetAssetsAmount *float64                     `json:"net_assets_amount,omitempty"`
 	Raw             map[string]any               `json:"raw,omitempty"`
-	StartAt         *time.Time                   `json:"start_at,omitempty"`
-	UpdatedAt       *time.Time                   `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingBalancesheet) MarshalJSON() ([]byte, error) {

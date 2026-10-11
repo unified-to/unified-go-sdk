@@ -3,13 +3,20 @@
 package shared
 
 type ShippingShipmentLineitem struct {
-	ID              *string  `json:"id,omitempty"`
-	ItemID          *string  `json:"item_id,omitempty"`
-	ItemName        *string  `json:"item_name,omitempty"`
-	ItemVariantID   *string  `json:"item_variant_id,omitempty"`
-	OrderLineitemID *string  `json:"order_lineitem_id,omitempty"`
-	Quantity        *float64 `json:"quantity,omitempty"`
-	Sku             *string  `json:"sku,omitempty"`
+	// Unique identifier for this fulfillment line
+	ID *string `json:"id,omitempty"`
+	// Reference to the CommerceItem being fulfilled (reference to CommerceItem)
+	ItemID *string `json:"item_id,omitempty"`
+	// Item name (for display)
+	ItemName *string `json:"item_name,omitempty"`
+	// Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
+	ItemVariantID *string `json:"item_variant_id,omitempty"`
+	// The order line being fulfilled
+	OrderLineitemID *string `json:"order_lineitem_id,omitempty"`
+	// Units fulfilled on this line
+	Quantity *float64 `json:"quantity,omitempty"`
+	// Item SKU
+	Sku *string `json:"sku,omitempty"`
 }
 
 func (s *ShippingShipmentLineitem) GetID() *string {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Status - Account status, such as ACTIVE or ARCHIVED
 type Status string
 
 const (
@@ -29,6 +30,7 @@ func (e *Status) IsExact() bool {
 	return false
 }
 
+// Type - Account type, such as BANK. EQUITY, ASSET, ...
 type Type string
 
 const (
@@ -61,21 +63,34 @@ func (e *Type) IsExact() bool {
 
 // AccountingAccount - Chart of accounts
 type AccountingAccount struct {
-	Balance             *float64                    `json:"balance,omitempty"`
-	CreatedAt           *time.Time                  `json:"created_at,omitempty"`
-	Currency            *string                     `json:"currency,omitempty"`
-	CustomerDefinedCode *string                     `json:"customer_defined_code,omitempty"`
-	Description         *string                     `json:"description,omitempty"`
-	ID                  *string                     `json:"id,omitempty"`
-	IsPayable           *bool                       `json:"is_payable,omitempty"`
-	Name                *string                     `json:"name,omitempty"`
-	OrganizationID      *string                     `json:"organization_id,omitempty"`
-	ParentID            *string                     `json:"parent_id,omitempty"`
-	Raw                 map[string]any              `json:"raw,omitempty"`
-	Status              *Status                     `json:"status,omitempty"`
-	Taxonomy            []AccountingAccountTaxonomy `json:"taxonomy,omitempty"`
-	Type                *Type                       `json:"type,omitempty"`
-	UpdatedAt           *time.Time                  `json:"updated_at,omitempty"`
+	// Balance of the account.
+	Balance *float64 `json:"balance,omitempty"`
+	// Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
+	Currency *string `json:"currency,omitempty"`
+	// Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined by the end-customer
+	CustomerDefinedCode *string `json:"customer_defined_code,omitempty"`
+	// Account description
+	Description *string `json:"description,omitempty"`
+	// Identifier used by the SaaS application to uniquely identify the Account
+	ID *string `json:"id,omitempty"`
+	// True if the account is an “accounts payable” account
+	IsPayable *bool `json:"is_payable,omitempty"`
+	// Account name
+	Name           *string `json:"name,omitempty"`
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// The parent account ID for this account
+	ParentID *string `json:"parent_id,omitempty"`
+	// The original data from the integration's API
+	Raw map[string]any `json:"raw,omitempty"`
+	// Account status, such as ACTIVE or ARCHIVED
+	Status   *Status                     `json:"status,omitempty"`
+	Taxonomy []AccountingAccountTaxonomy `json:"taxonomy,omitempty"`
+	// Account type, such as BANK. EQUITY, ASSET, ...
+	Type *Type `json:"type,omitempty"`
+	// Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingAccount) MarshalJSON() ([]byte, error) {

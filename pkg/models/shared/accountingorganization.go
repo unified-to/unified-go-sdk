@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingOrganizationType - Entity type within a consolidation hierarchy
 type AccountingOrganizationType string
 
 const (
@@ -32,23 +33,32 @@ func (e *AccountingOrganizationType) IsExact() bool {
 }
 
 type AccountingOrganization struct {
-	Address            *PropertyAccountingOrganizationAddress `json:"address,omitempty"`
-	BooksCloseAt       *time.Time                             `json:"books_close_at,omitempty"`
-	CreatedAt          *time.Time                             `json:"created_at,omitempty"`
-	Currency           *string                                `json:"currency,omitempty"`
-	FiscalYearEndMonth *float64                               `json:"fiscal_year_end_month,omitempty"`
-	ID                 *string                                `json:"id,omitempty"`
-	IsElimination      *bool                                  `json:"is_elimination,omitempty"`
-	LegalName          *string                                `json:"legal_name,omitempty"`
-	Name               *string                                `json:"name,omitempty"`
-	OrganizationCode   *string                                `json:"organization_code,omitempty"`
-	ParentID           *string                                `json:"parent_id,omitempty"`
-	Raw                map[string]any                         `json:"raw,omitempty"`
-	TaxNumber          *string                                `json:"tax_number,omitempty"`
-	Timezone           *string                                `json:"timezone,omitempty"`
-	Type               *AccountingOrganizationType            `json:"type,omitempty"`
-	UpdatedAt          *time.Time                             `json:"updated_at,omitempty"`
-	Website            *string                                `json:"website,omitempty"`
+	Address *PropertyAccountingOrganizationAddress `json:"address,omitempty"`
+	// Company-wide books close / lock date; transactions on or before this date fall in a closed accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	BooksCloseAt *time.Time `json:"books_close_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
+	Currency *string `json:"currency,omitempty"`
+	// Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
+	FiscalYearEndMonth *float64 `json:"fiscal_year_end_month,omitempty"`
+	ID                 *string  `json:"id,omitempty"`
+	// True for consolidation/elimination entities
+	IsElimination *bool   `json:"is_elimination,omitempty"`
+	LegalName     *string `json:"legal_name,omitempty"`
+	Name          *string `json:"name,omitempty"`
+	// Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer
+	OrganizationCode *string        `json:"organization_code,omitempty"`
+	ParentID         *string        `json:"parent_id,omitempty"`
+	Raw              map[string]any `json:"raw,omitempty"`
+	// Organization's tax number.  For example, in the U.S., this is an Employer Identification Number (EIN).
+	TaxNumber *string `json:"tax_number,omitempty"`
+	Timezone  *string `json:"timezone,omitempty"`
+	// Entity type within a consolidation hierarchy
+	Type *AccountingOrganizationType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	Website   *string    `json:"website,omitempty"`
 }
 
 func (a AccountingOrganization) MarshalJSON() ([]byte, error) {

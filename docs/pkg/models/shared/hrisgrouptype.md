@@ -25,3 +25,4 @@ custom := shared.HrisGroupType("custom_value")
 | `HrisGroupTypeBusinessUnit`  | BUSINESS_UNIT                |
 | `HrisGroupTypeBranch`        | BRANCH                       |
 | `HrisGroupTypeSubDepartment` | SUB_DEPARTMENT               |
+| `HrisGroupTypePayGroup`      | PAY_GROUP                    |

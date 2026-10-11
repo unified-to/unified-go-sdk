@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// GroupType - The group type
 type GroupType string
 
 const (
@@ -32,6 +33,7 @@ func (e *GroupType) IsExact() bool {
 	return false
 }
 
+// MembershipStatus - The authenticated user's membership status
 type MembershipStatus string
 
 const (
@@ -55,6 +57,7 @@ func (e *MembershipStatus) IsExact() bool {
 	return false
 }
 
+// SportType - The primary sport of the group
 type SportType string
 
 const (
@@ -87,27 +90,47 @@ type ClubsGroup struct {
 	// The activity types the group focuses on
 	ActivityTypes []string `json:"activity_types,omitempty"`
 	// The group's address
-	Address          *PropertyClubsGroupAddress `json:"address,omitempty"`
-	CoverImageURL    *string                    `json:"cover_image_url,omitempty"`
-	CreatedAt        *time.Time                 `json:"created_at,omitempty"`
-	Description      *string                    `json:"description,omitempty"`
-	FollowingCount   *float64                   `json:"following_count,omitempty"`
-	GroupType        *GroupType                 `json:"group_type,omitempty"`
-	ID               *string                    `json:"id,omitempty"`
-	IsAdmin          *bool                      `json:"is_admin,omitempty"`
-	IsFeatured       *bool                      `json:"is_featured,omitempty"`
-	IsOwner          *bool                      `json:"is_owner,omitempty"`
-	IsPrivate        *bool                      `json:"is_private,omitempty"`
-	IsVerified       *bool                      `json:"is_verified,omitempty"`
-	MemberCount      *float64                   `json:"member_count,omitempty"`
-	MembershipStatus *MembershipStatus          `json:"membership_status,omitempty"`
-	Name             *string                    `json:"name,omitempty"`
-	PostCount        *float64                   `json:"post_count,omitempty"`
-	ProfileImageURL  *string                    `json:"profile_image_url,omitempty"`
-	Raw              map[string]any             `json:"raw,omitempty"`
-	SportType        *SportType                 `json:"sport_type,omitempty"`
-	UpdatedAt        *time.Time                 `json:"updated_at,omitempty"`
-	URL              *string                    `json:"url,omitempty"`
+	Address *PropertyClubsGroupAddress `json:"address,omitempty"`
+	// URL to the group's cover photo
+	CoverImageURL *string `json:"cover_image_url,omitempty"`
+	// The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The group's description
+	Description *string `json:"description,omitempty"`
+	// The number of athletes the group follows
+	FollowingCount *float64 `json:"following_count,omitempty"`
+	// The group type
+	GroupType *GroupType `json:"group_type,omitempty"`
+	// Unique identifier for this group
+	ID *string `json:"id,omitempty"`
+	// Whether the authenticated user is an admin of the group
+	IsAdmin *bool `json:"is_admin,omitempty"`
+	// Whether the group is featured
+	IsFeatured *bool `json:"is_featured,omitempty"`
+	// Whether the authenticated user is the owner of the group
+	IsOwner *bool `json:"is_owner,omitempty"`
+	// Whether the group is private
+	IsPrivate *bool `json:"is_private,omitempty"`
+	// Whether the group is verified
+	IsVerified *bool `json:"is_verified,omitempty"`
+	// The number of members in the group
+	MemberCount *float64 `json:"member_count,omitempty"`
+	// The authenticated user's membership status
+	MembershipStatus *MembershipStatus `json:"membership_status,omitempty"`
+	// The group's name
+	Name *string `json:"name,omitempty"`
+	// The number of posts in the group
+	PostCount *float64 `json:"post_count,omitempty"`
+	// URL to the group's profile picture
+	ProfileImageURL *string `json:"profile_image_url,omitempty"`
+	// The raw data returned by the integration for this group
+	Raw map[string]any `json:"raw,omitempty"`
+	// The primary sport of the group
+	SportType *SportType `json:"sport_type,omitempty"`
+	// The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The group's vanity URL
+	URL *string `json:"url,omitempty"`
 }
 
 func (c ClubsGroup) MarshalJSON() ([]byte, error) {

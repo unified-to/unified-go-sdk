@@ -28,7 +28,8 @@ type ScimUserGroups struct {
 	DollarRef *string             `json:"$ref,omitempty"`
 	Display   *string             `json:"display,omitempty"`
 	Type      *ScimUserGroupsType `json:"type,omitempty"`
-	Value     string              `json:"value"`
+	// ID
+	Value string `json:"value"`
 }
 
 func (s *ScimUserGroups) GetDollarRef() *string {

@@ -12,21 +12,22 @@ import (
 type GetUcCallQueryParamFields string
 
 const (
-	GetUcCallQueryParamFieldsID        GetUcCallQueryParamFields = "id"
-	GetUcCallQueryParamFieldsCreatedAt GetUcCallQueryParamFields = "created_at"
-	GetUcCallQueryParamFieldsUpdatedAt GetUcCallQueryParamFields = "updated_at"
-	GetUcCallQueryParamFieldsContactID GetUcCallQueryParamFields = "contact_id"
-	GetUcCallQueryParamFieldsTelephone GetUcCallQueryParamFields = "telephone"
-	GetUcCallQueryParamFieldsStartAt   GetUcCallQueryParamFields = "start_at"
-	GetUcCallQueryParamFieldsEndAt     GetUcCallQueryParamFields = "end_at"
-	GetUcCallQueryParamFieldsUserID    GetUcCallQueryParamFields = "user_id"
-	GetUcCallQueryParamFieldsContacts  GetUcCallQueryParamFields = "contacts"
-	GetUcCallQueryParamFieldsIsPrivate GetUcCallQueryParamFields = "is_private"
-	GetUcCallQueryParamFieldsUserName  GetUcCallQueryParamFields = "user_name"
-	GetUcCallQueryParamFieldsUserPhone GetUcCallQueryParamFields = "user_phone"
-	GetUcCallQueryParamFieldsType      GetUcCallQueryParamFields = "type"
-	GetUcCallQueryParamFieldsMetadata  GetUcCallQueryParamFields = "metadata"
-	GetUcCallQueryParamFieldsRaw       GetUcCallQueryParamFields = "raw"
+	GetUcCallQueryParamFieldsID                     GetUcCallQueryParamFields = "id"
+	GetUcCallQueryParamFieldsCreatedAt              GetUcCallQueryParamFields = "created_at"
+	GetUcCallQueryParamFieldsUpdatedAt              GetUcCallQueryParamFields = "updated_at"
+	GetUcCallQueryParamFieldsContactID              GetUcCallQueryParamFields = "contact_id"
+	GetUcCallQueryParamFieldsTelephone              GetUcCallQueryParamFields = "telephone"
+	GetUcCallQueryParamFieldsStartAt                GetUcCallQueryParamFields = "start_at"
+	GetUcCallQueryParamFieldsEndAt                  GetUcCallQueryParamFields = "end_at"
+	GetUcCallQueryParamFieldsUserID                 GetUcCallQueryParamFields = "user_id"
+	GetUcCallQueryParamFieldsContacts               GetUcCallQueryParamFields = "contacts"
+	GetUcCallQueryParamFieldsIsPrivate              GetUcCallQueryParamFields = "is_private"
+	GetUcCallQueryParamFieldsUserName               GetUcCallQueryParamFields = "user_name"
+	GetUcCallQueryParamFieldsUserPhone              GetUcCallQueryParamFields = "user_phone"
+	GetUcCallQueryParamFieldsType                   GetUcCallQueryParamFields = "type"
+	GetUcCallQueryParamFieldsMetadata               GetUcCallQueryParamFields = "metadata"
+	GetUcCallQueryParamFieldsRaw                    GetUcCallQueryParamFields = "raw"
+	GetUcCallQueryParamFieldsConversationIdentifier GetUcCallQueryParamFields = "conversation_identifier"
 )
 
 func (e GetUcCallQueryParamFields) ToPointer() *GetUcCallQueryParamFields {
@@ -67,6 +68,8 @@ func (e *GetUcCallQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "conversation_identifier":
 		*e = GetUcCallQueryParamFields(v)
 		return nil
 	default:

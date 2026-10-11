@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// SigningDocumentStatus - Current status of the signing document
 type SigningDocumentStatus string
 
 const (
@@ -36,19 +37,32 @@ func (e *SigningDocumentStatus) IsExact() bool {
 }
 
 type SigningDocument struct {
-	CompletedAt *time.Time             `json:"completed_at,omitempty"`
-	CreatedAt   *time.Time             `json:"created_at,omitempty"`
-	CreatorID   *string                `json:"creator_id,omitempty"`
-	Description *string                `json:"description,omitempty"`
-	DownloadURL *string                `json:"download_url,omitempty"`
-	ExpiresAt   *time.Time             `json:"expires_at,omitempty"`
-	ID          *string                `json:"id,omitempty"`
-	Name        *string                `json:"name,omitempty"`
-	Raw         map[string]any         `json:"raw,omitempty"`
-	SentAt      *time.Time             `json:"sent_at,omitempty"`
-	Status      *SigningDocumentStatus `json:"status,omitempty"`
-	TemplateID  *string                `json:"template_id,omitempty"`
-	UpdatedAt   *time.Time             `json:"updated_at,omitempty"`
+	// When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CompletedAt *time.Time `json:"completed_at,omitempty"`
+	// The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// User who created the signing document
+	CreatorID *string `json:"creator_id,omitempty"`
+	// Message to signers
+	Description *string `json:"description,omitempty"`
+	// URL to download the signed document
+	DownloadURL *string `json:"download_url,omitempty"`
+	// Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ExpiresAt *time.Time `json:"expires_at,omitempty"`
+	// Unique identifier for this signing document
+	ID *string `json:"id,omitempty"`
+	// Document/envelope title
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SentAt *time.Time `json:"sent_at,omitempty"`
+	// Current status of the signing document
+	Status *SigningDocumentStatus `json:"status,omitempty"`
+	// If created from a template; points to SigningTemplate
+	TemplateID *string `json:"template_id,omitempty"`
+	// The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (s SigningDocument) MarshalJSON() ([]byte, error) {

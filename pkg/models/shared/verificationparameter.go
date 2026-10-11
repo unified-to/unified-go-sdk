@@ -35,7 +35,8 @@ type VerificationParameter struct {
 	IsRequired *bool    `json:"is_required,omitempty"`
 	Name       string   `json:"name"`
 	// options for MULTIPLE_CHOICE and MULTIPLE_SELECT
-	Options        []string                   `json:"options,omitempty"`
+	Options []string `json:"options,omitempty"`
+	// question to ask the human
 	PublicQuestion *string                    `json:"public_question,omitempty"`
 	Type           *VerificationParameterType `json:"type,omitempty"`
 	// {country}-{stateprovince/territory} or just {country} 2-digit ISO codes

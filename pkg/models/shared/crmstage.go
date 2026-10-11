@@ -8,14 +8,16 @@ import (
 )
 
 type CrmStage struct {
-	Active          *bool      `json:"active,omitempty"`
+	Active *bool `json:"active,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt       *time.Time `json:"created_at,omitempty"`
 	DealProbability *float64   `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64   `json:"display_order,omitempty"`
 	ID              *string    `json:"id,omitempty"`
 	IsClosed        *bool      `json:"is_closed,omitempty"`
 	Name            *string    `json:"name,omitempty"`
-	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CrmStage) MarshalJSON() ([]byte, error) {

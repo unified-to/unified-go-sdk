@@ -3,6 +3,7 @@
 package shared
 
 type AccountingTrialbalanceSubItem struct {
+	// (reference to AccountingAccount)
 	AccountID   *string  `json:"account_id,omitempty"`
 	AccountName *string  `json:"account_name,omitempty"`
 	Amount      *float64 `json:"amount,omitempty"`

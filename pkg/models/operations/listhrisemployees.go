@@ -20,6 +20,7 @@ const (
 	ListHrisEmployeesQueryParamFieldsLastName              ListHrisEmployeesQueryParamFields = "last_name"
 	ListHrisEmployeesQueryParamFieldsEmails                ListHrisEmployeesQueryParamFields = "emails"
 	ListHrisEmployeesQueryParamFieldsTitle                 ListHrisEmployeesQueryParamFields = "title"
+	ListHrisEmployeesQueryParamFieldsJobID                 ListHrisEmployeesQueryParamFields = "job_id"
 	ListHrisEmployeesQueryParamFieldsManagerID             ListHrisEmployeesQueryParamFields = "manager_id"
 	ListHrisEmployeesQueryParamFieldsEmploymentStatus      ListHrisEmployeesQueryParamFields = "employment_status"
 	ListHrisEmployeesQueryParamFieldsGender                ListHrisEmployeesQueryParamFields = "gender"
@@ -53,6 +54,8 @@ const (
 	ListHrisEmployeesQueryParamFieldsHasMfa                ListHrisEmployeesQueryParamFields = "has_mfa"
 	ListHrisEmployeesQueryParamFieldsTimeoffDaysTotal      ListHrisEmployeesQueryParamFields = "timeoff_days_total"
 	ListHrisEmployeesQueryParamFieldsTimeoffDaysUsed       ListHrisEmployeesQueryParamFields = "timeoff_days_used"
+	ListHrisEmployeesQueryParamFieldsFlsaStatus            ListHrisEmployeesQueryParamFields = "flsa_status"
+	ListHrisEmployeesQueryParamFieldsPayFrequency          ListHrisEmployeesQueryParamFields = "pay_frequency"
 	ListHrisEmployeesQueryParamFieldsRaw                   ListHrisEmployeesQueryParamFields = "raw"
 )
 
@@ -80,6 +83,8 @@ func (e *ListHrisEmployeesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "emails":
 		fallthrough
 	case "title":
+		fallthrough
+	case "job_id":
 		fallthrough
 	case "manager_id":
 		fallthrough
@@ -147,6 +152,10 @@ func (e *ListHrisEmployeesQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "timeoff_days_used":
 		fallthrough
+	case "flsa_status":
+		fallthrough
+	case "pay_frequency":
+		fallthrough
 	case "raw":
 		*e = ListHrisEmployeesQueryParamFields(v)
 		return nil
@@ -163,8 +172,10 @@ type ListHrisEmployeesRequest struct {
 	// Fields to return
 	Fields []ListHrisEmployeesQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	// The group ID to filter by (reference to HrisGroup)
-	GroupID *string  `queryParam:"style=form,explode=true,name=group_id"`
-	Limit   *float64 `queryParam:"style=form,explode=true,name=limit"`
+	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
+	// The job ID to filter by
+	JobID *string  `queryParam:"style=form,explode=true,name=job_id"`
+	Limit *float64 `queryParam:"style=form,explode=true,name=limit"`
 	// The location ID to filter by (reference to HrisLocation)
 	LocationID *string  `queryParam:"style=form,explode=true,name=location_id"`
 	Offset     *float64 `queryParam:"style=form,explode=true,name=offset"`
@@ -204,6 +215,13 @@ func (l *ListHrisEmployeesRequest) GetGroupID() *string {
 		return nil
 	}
 	return l.GroupID
+}
+
+func (l *ListHrisEmployeesRequest) GetJobID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.JobID
 }
 
 func (l *ListHrisEmployeesRequest) GetLimit() *float64 {

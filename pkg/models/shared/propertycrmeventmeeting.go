@@ -9,10 +9,14 @@ import (
 
 // PropertyCrmEventMeeting - The meeting object, when type = meeting
 type PropertyCrmEventMeeting struct {
-	Description *string    `json:"description,omitempty"`
-	EndAt       *time.Time `json:"end_at,omitempty"`
-	StartAt     *time.Time `json:"start_at,omitempty"`
-	Title       *string    `json:"title,omitempty"`
+	// The event meeting's agendadescription
+	Description *string `json:"description,omitempty"`
+	// The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// The event meeting's topicsubject
+	Title *string `json:"title,omitempty"`
 }
 
 func (p PropertyCrmEventMeeting) MarshalJSON() ([]byte, error) {

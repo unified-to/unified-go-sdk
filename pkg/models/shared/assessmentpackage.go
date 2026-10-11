@@ -36,28 +36,40 @@ func (e *AssessmentPackageType) IsExact() bool {
 // AssessmentPackage - Used by assessment providers to SUBMIT packages to ATS systems
 type AssessmentPackage struct {
 	// Alternative namesidentifiers for this package
-	Aliases        []string   `json:"aliases,omitempty"`
-	ConnectionID   *string    `json:"connection_id,omitempty"`
-	CreatedAt      *time.Time `json:"created_at,omitempty"`
-	Description    *string    `json:"description,omitempty"`
-	HasRedirectURL *bool      `json:"has_redirect_url,omitempty"`
-	HasTargetURL   *bool      `json:"has_target_url,omitempty"`
-	ID             *string    `json:"id,omitempty"`
-	InfoURL        *string    `json:"info_url,omitempty"`
+	Aliases []string `json:"aliases,omitempty"`
+	// Connection ID that this package belongs to
+	ConnectionID *string `json:"connection_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Detailed description
+	Description *string `json:"description,omitempty"`
+	// Whether provider redirects user to complete assessment
+	HasRedirectURL *bool `json:"has_redirect_url,omitempty"`
+	// Where provider redirects user after completion
+	HasTargetURL *bool `json:"has_target_url,omitempty"`
+	// Unique identifier for the assessment package
+	ID *string `json:"id,omitempty"`
+	// URL to find additional information about this package
+	InfoURL *string `json:"info_url,omitempty"`
 	// Integration types that support this package
 	IntegrationTypes []string `json:"integration_types,omitempty"`
-	MaxScore         *float64 `json:"max_score,omitempty"`
-	Name             *string  `json:"name,omitempty"`
-	NeedsIPAddress   *bool    `json:"needs_ip_address,omitempty"`
+	// Maximum possible score if this assessment returns a score
+	MaxScore *float64 `json:"max_score,omitempty"`
+	// Name of the assessment package
+	Name *string `json:"name,omitempty"`
+	// Whether IP address is required
+	NeedsIPAddress *bool `json:"needs_ip_address,omitempty"`
 	// Questionsinputs needed for this assessment (aligned with verification)
 	Parameters []AssessmentParameter     `json:"parameters,omitempty"`
 	Raw        map[string]any            `json:"raw,omitempty"`
 	Regions    []AssessmentPackageRegion `json:"regions,omitempty"`
 	// Category tags (e.g., "Assessment", "Background Check")
-	Tags        []string              `json:"tags,omitempty"`
-	Type        AssessmentPackageType `json:"type"`
-	UpdatedAt   *time.Time            `json:"updated_at,omitempty"`
-	WorkspaceID *string               `json:"workspace_id,omitempty"`
+	Tags []string              `json:"tags,omitempty"`
+	Type AssessmentPackageType `json:"type"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Workspace ID that this package belongs to (reference to KmsSpace)
+	WorkspaceID *string `json:"workspace_id,omitempty"`
 }
 
 func (a AssessmentPackage) MarshalJSON() ([]byte, error) {

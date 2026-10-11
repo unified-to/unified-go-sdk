@@ -23,6 +23,7 @@ value := operations.ListHrisEmployeesQueryParamFieldsID
 | `ListHrisEmployeesQueryParamFieldsLastName`              | last_name                                                |
 | `ListHrisEmployeesQueryParamFieldsEmails`                | emails                                                   |
 | `ListHrisEmployeesQueryParamFieldsTitle`                 | title                                                    |
+| `ListHrisEmployeesQueryParamFieldsJobID`                 | job_id                                                   |
 | `ListHrisEmployeesQueryParamFieldsManagerID`             | manager_id                                               |
 | `ListHrisEmployeesQueryParamFieldsEmploymentStatus`      | employment_status                                        |
 | `ListHrisEmployeesQueryParamFieldsGender`                | gender                                                   |
@@ -56,4 +57,6 @@ value := operations.ListHrisEmployeesQueryParamFieldsID
 | `ListHrisEmployeesQueryParamFieldsHasMfa`                | has_mfa                                                  |
 | `ListHrisEmployeesQueryParamFieldsTimeoffDaysTotal`      | timeoff_days_total                                       |
 | `ListHrisEmployeesQueryParamFieldsTimeoffDaysUsed`       | timeoff_days_used                                        |
+| `ListHrisEmployeesQueryParamFieldsFlsaStatus`            | flsa_status                                              |
+| `ListHrisEmployeesQueryParamFieldsPayFrequency`          | pay_frequency                                            |
 | `ListHrisEmployeesQueryParamFieldsRaw`                   | raw                                                      |

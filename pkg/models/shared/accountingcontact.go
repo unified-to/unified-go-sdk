@@ -70,34 +70,40 @@ func (e *TaxExemption) IsExact() bool {
 }
 
 type AccountingContact struct {
-	AssociatedContacts []AccountingAssociatedContact             `json:"associated_contacts,omitempty"`
-	BalanceAmount      *float64                                  `json:"balance_amount,omitempty"`
-	BillingAddress     *PropertyAccountingContactBillingAddress  `json:"billing_address,omitempty"`
-	CompanyName        *string                                   `json:"company_name,omitempty"`
-	CreatedAt          *time.Time                                `json:"created_at,omitempty"`
-	Currency           *string                                   `default:"USD" json:"currency"`
-	Emails             []AccountingEmail                         `json:"emails,omitempty"`
-	FirstName          *string                                   `json:"first_name,omitempty"`
-	ID                 *string                                   `json:"id,omitempty"`
-	Identification     *string                                   `json:"identification,omitempty"`
-	IsActive           *bool                                     `json:"is_active,omitempty"`
-	IsCustomer         *bool                                     `json:"is_customer,omitempty"`
-	IsSupplier         *bool                                     `json:"is_supplier,omitempty"`
-	LastName           *string                                   `json:"last_name,omitempty"`
-	Name               *string                                   `json:"name,omitempty"`
-	Notes              *string                                   `json:"notes,omitempty"`
-	OrganizationID     *string                                   `json:"organization_id,omitempty"`
-	PaymentMethods     []AccountingContactPaymentMethod          `json:"payment_methods,omitempty"`
-	PaymentTerms       *AccountingContactPaymentTerms            `json:"payment_terms,omitempty"`
-	PaymenttermID      *string                                   `json:"paymentterm_id,omitempty"`
-	PortalURL          *string                                   `json:"portal_url,omitempty"`
-	Raw                map[string]any                            `json:"raw,omitempty"`
-	ShippingAddress    *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
-	TaxExemption       *TaxExemption                             `json:"tax_exemption,omitempty"`
-	TaxNumber          *string                                   `json:"tax_number,omitempty"`
-	Telephones         []AccountingTelephone                     `json:"telephones,omitempty"`
-	UpdatedAt          *time.Time                                `json:"updated_at,omitempty"`
-	Website            *string                                   `json:"website,omitempty"`
+	AssociatedContacts []AccountingAssociatedContact `json:"associated_contacts,omitempty"`
+	// Outstanding AR/AP balance for this contact
+	BalanceAmount  *float64                                 `json:"balance_amount,omitempty"`
+	BillingAddress *PropertyAccountingContactBillingAddress `json:"billing_address,omitempty"`
+	CompanyName    *string                                  `json:"company_name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time        `json:"created_at,omitempty"`
+	Currency  *string           `default:"USD" json:"currency"`
+	Emails    []AccountingEmail `json:"emails,omitempty"`
+	FirstName *string           `json:"first_name,omitempty"`
+	ID        *string           `json:"id,omitempty"`
+	// contact account numbers such as registration, A membership or identification reference to help to identify and search customers
+	Identification *string                          `json:"identification,omitempty"`
+	IsActive       *bool                            `json:"is_active,omitempty"`
+	IsCustomer     *bool                            `json:"is_customer,omitempty"`
+	IsSupplier     *bool                            `json:"is_supplier,omitempty"`
+	LastName       *string                          `json:"last_name,omitempty"`
+	Name           *string                          `json:"name,omitempty"`
+	Notes          *string                          `json:"notes,omitempty"`
+	OrganizationID *string                          `json:"organization_id,omitempty"`
+	PaymentMethods []AccountingContactPaymentMethod `json:"payment_methods,omitempty"`
+	PaymentTerms   *AccountingContactPaymentTerms   `json:"payment_terms,omitempty"`
+	PaymenttermID  *string                          `json:"paymentterm_id,omitempty"`
+	// URL for the contact’s portal
+	PortalURL       *string                                   `json:"portal_url,omitempty"`
+	Raw             map[string]any                            `json:"raw,omitempty"`
+	ShippingAddress *PropertyAccountingContactShippingAddress `json:"shipping_address,omitempty"`
+	TaxExemption    *TaxExemption                             `json:"tax_exemption,omitempty"`
+	// The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
+	TaxNumber  *string               `json:"tax_number,omitempty"`
+	Telephones []AccountingTelephone `json:"telephones,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	Website   *string    `json:"website,omitempty"`
 }
 
 func (a AccountingContact) MarshalJSON() ([]byte, error) {

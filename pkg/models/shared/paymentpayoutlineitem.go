@@ -2,6 +2,7 @@
 
 package shared
 
+// PaymentPayoutLineitemObjectType - What this payout line settles
 type PaymentPayoutLineitemObjectType string
 
 const (
@@ -29,11 +30,17 @@ func (e *PaymentPayoutLineitemObjectType) IsExact() bool {
 }
 
 type PaymentPayoutLineitem struct {
-	Amount     *float64                         `json:"amount,omitempty"`
-	Currency   *string                          `json:"currency,omitempty"`
-	FeeAmount  *float64                         `json:"fee_amount,omitempty"`
-	NetAmount  *float64                         `json:"net_amount,omitempty"`
-	ObjectID   *string                          `json:"object_id,omitempty"`
+	// Gross amount of this line
+	Amount *float64 `json:"amount,omitempty"`
+	// ISO 4217 currency code of the line amount
+	Currency *string `json:"currency,omitempty"`
+	// Processor fee attributed to this line
+	FeeAmount *float64 `json:"fee_amount,omitempty"`
+	// amount minus fee_amount
+	NetAmount *float64 `json:"net_amount,omitempty"`
+	// id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
+	ObjectID *string `json:"object_id,omitempty"`
+	// What this payout line settles
 	ObjectType *PaymentPayoutLineitemObjectType `json:"object_type,omitempty"`
 }
 

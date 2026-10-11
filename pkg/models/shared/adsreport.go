@@ -8,15 +8,19 @@ import (
 )
 
 type AdsReport struct {
-	CreatedAt      *time.Time         `json:"created_at,omitempty"`
-	Currency       *string            `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
 	Metrics        []AdsReportMetrics `json:"metrics,omitempty"`
 	OrganizationID *string            `json:"organization_id,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
-	StartAt        *time.Time         `json:"start_at,omitempty"`
-	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AdsReport) MarshalJSON() ([]byte, error) {

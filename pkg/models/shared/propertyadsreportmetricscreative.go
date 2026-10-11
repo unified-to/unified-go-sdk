@@ -94,36 +94,44 @@ func (e *PropertyAdsReportMetricsCreativeStatus) IsExact() bool {
 
 type PropertyAdsReportMetricsCreative struct {
 	// Hosted asset mode (best-effort, provider-specific
-	AssetUrls                  []string                                       `json:"asset_urls,omitempty"`
-	Body                       *string                                        `json:"body,omitempty"`
-	CampaignID                 *string                                        `json:"campaign_id,omitempty"`
-	CreatedAt                  *time.Time                                     `json:"created_at,omitempty"`
-	CreativeType               *PropertyAdsReportMetricsCreativeCreativeType  `json:"creative_type,omitempty"`
-	Cta                        *string                                        `json:"cta,omitempty"`
-	Data                       *string                                        `json:"data,omitempty"`
-	ExternalAdReference        *string                                        `json:"external_ad_reference,omitempty"`
-	ExternalCreativeReference  *string                                        `json:"external_creative_reference,omitempty"`
-	ExternalPlacementReference *string                                        `json:"external_placement_reference,omitempty"`
-	GroupID                    *string                                        `json:"group_id,omitempty"`
-	Height                     *float64                                       `json:"height,omitempty"`
-	HostingSource              *PropertyAdsReportMetricsCreativeHostingSource `json:"hosting_source,omitempty"`
-	ID                         *string                                        `json:"id,omitempty"`
-	ItemID                     *string                                        `json:"item_id,omitempty"`
-	Labels                     []string                                       `json:"labels,omitempty"`
-	LinkURL                    *string                                        `json:"link_url,omitempty"`
-	Name                       *string                                        `json:"name,omitempty"`
-	OrganizationID             *string                                        `json:"organization_id,omitempty"`
-	Path1                      *string                                        `json:"path1,omitempty"`
-	Path2                      *string                                        `json:"path2,omitempty"`
-	Promoted                   []AdsPromoted                                  `json:"promoted,omitempty"`
-	Raw                        map[string]any                                 `json:"raw,omitempty"`
-	Status                     *PropertyAdsReportMetricsCreativeStatus        `json:"status,omitempty"`
-	ThirdPartyTag              *string                                        `json:"third_party_tag,omitempty"`
-	Title                      *string                                        `json:"title,omitempty"`
-	UpdatedAt                  *time.Time                                     `json:"updated_at,omitempty"`
-	URLTags                    *string                                        `json:"url_tags,omitempty"`
-	VastTagURL                 *string                                        `json:"vast_tag_url,omitempty"`
-	Width                      *float64                                       `json:"width,omitempty"`
+	AssetUrls  []string `json:"asset_urls,omitempty"`
+	Body       *string  `json:"body,omitempty"`
+	CampaignID *string  `json:"campaign_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt                  *time.Time                                    `json:"created_at,omitempty"`
+	CreativeType               *PropertyAdsReportMetricsCreativeCreativeType `json:"creative_type,omitempty"`
+	Cta                        *string                                       `json:"cta,omitempty"`
+	Data                       *string                                       `json:"data,omitempty"`
+	ExternalAdReference        *string                                       `json:"external_ad_reference,omitempty"`
+	ExternalCreativeReference  *string                                       `json:"external_creative_reference,omitempty"`
+	ExternalPlacementReference *string                                       `json:"external_placement_reference,omitempty"`
+	// (reference to AdsGroup)
+	GroupID       *string                                        `json:"group_id,omitempty"`
+	Height        *float64                                       `json:"height,omitempty"`
+	HostingSource *PropertyAdsReportMetricsCreativeHostingSource `json:"hosting_source,omitempty"`
+	ID            *string                                        `json:"id,omitempty"`
+	// references Commerce Item ID (reference to CommerceItem)
+	ItemID *string  `json:"item_id,omitempty"`
+	Labels []string `json:"labels,omitempty"`
+	// Destination URL for creatives with links
+	LinkURL        *string `json:"link_url,omitempty"`
+	Name           *string `json:"name,omitempty"`
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// Display URL path 1 (Microsoft RSA Path1)
+	Path1 *string `json:"path1,omitempty"`
+	// Display URL path 2 (Microsoft RSA Path2)
+	Path2         *string                                 `json:"path2,omitempty"`
+	Promoted      []AdsPromoted                           `json:"promoted,omitempty"`
+	Raw           map[string]any                          `json:"raw,omitempty"`
+	Status        *PropertyAdsReportMetricsCreativeStatus `json:"status,omitempty"`
+	ThirdPartyTag *string                                 `json:"third_party_tag,omitempty"`
+	Title         *string                                 `json:"title,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Appended URL tracking params (e.g. utm_source=..&utm_medium=..); Meta url_tags, Google tracking template
+	URLTags    *string  `json:"url_tags,omitempty"`
+	VastTagURL *string  `json:"vast_tag_url,omitempty"`
+	Width      *float64 `json:"width,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsCreative) MarshalJSON() ([]byte, error) {

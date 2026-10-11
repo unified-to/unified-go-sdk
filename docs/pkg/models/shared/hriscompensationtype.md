@@ -23,3 +23,5 @@ custom := shared.HrisCompensationType("custom_value")
 | `HrisCompensationTypeStockOptions` | STOCK_OPTIONS                      |
 | `HrisCompensationTypeEquity`       | EQUITY                             |
 | `HrisCompensationTypeOther`        | OTHER                              |
+| `HrisCompensationTypeHourly`       | HOURLY                             |
+| `HrisCompensationTypeCommission`   | COMMISSION                         |

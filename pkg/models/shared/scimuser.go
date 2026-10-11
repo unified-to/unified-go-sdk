@@ -31,8 +31,9 @@ type ScimUser struct {
 	UrnIetfParamsScimSchemasExtensionLatticeAttributes10User *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User `json:"urn:ietf:params:scim:schemas:extension:lattice:attributes:1.0:User,omitempty"`
 	UrnIetfParamsScimSchemasExtensionPeakon20User            *PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User            `json:"urn:ietf:params:scim:schemas:extension:peakon:2.0:User,omitempty"`
 	UserName                                                 *string                                                                   `json:"userName,omitempty"`
-	UserType                                                 *string                                                                   `json:"userType,omitempty"`
-	X509Certificates                                         []ScimRole                                                                `json:"x509Certificates,omitempty"`
+	// 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager', 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
+	UserType         *string    `json:"userType,omitempty"`
+	X509Certificates []ScimRole `json:"x509Certificates,omitempty"`
 }
 
 func (s *ScimUser) GetActive() *bool {

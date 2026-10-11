@@ -21,4 +21,6 @@ value := operations.GetGenaiModelQueryParamFieldsID
 | `GetGenaiModelQueryParamFieldsMaxTokens`      | max_tokens                                    |
 | `GetGenaiModelQueryParamFieldsWebURL`         | web_url                                       |
 | `GetGenaiModelQueryParamFieldsHasTemperature` | has_temperature                               |
+| `GetGenaiModelQueryParamFieldsHasQuestions`   | has_questions                                 |
+| `GetGenaiModelQueryParamFieldsHasVision`      | has_vision                                    |
 | `GetGenaiModelQueryParamFieldsRaw`            | raw                                           |

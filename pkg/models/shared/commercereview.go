@@ -38,26 +38,33 @@ type CommerceReview struct {
 	AuthorName      *string                 `json:"author_name,omitempty"`
 	Comments        []CommerceReviewComment `json:"comments,omitempty"`
 	Content         *string                 `json:"content,omitempty"`
-	CreatedAt       *time.Time              `json:"created_at,omitempty"`
-	HelpfulVotes    *float64                `json:"helpful_votes,omitempty"`
-	ID              *string                 `json:"id,omitempty"`
-	IsFeatured      *bool                   `json:"is_featured,omitempty"`
-	IsPublic        *bool                   `json:"is_public,omitempty"`
-	IsVerified      *bool                   `json:"is_verified,omitempty"`
-	ItemID          *string                 `json:"item_id,omitempty"`
-	ItemVariantID   *string                 `json:"item_variant_id,omitempty"`
-	LocationID      *string                 `json:"location_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *time.Time `json:"created_at,omitempty"`
+	HelpfulVotes *float64   `json:"helpful_votes,omitempty"`
+	ID           *string    `json:"id,omitempty"`
+	IsFeatured   *bool      `json:"is_featured,omitempty"`
+	IsPublic     *bool      `json:"is_public,omitempty"`
+	IsVerified   *bool      `json:"is_verified,omitempty"`
+	// Reference to the product being reviewed (reference to CommerceItem)
+	ItemID *string `json:"item_id,omitempty"`
+	// Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
+	ItemVariantID *string `json:"item_variant_id,omitempty"`
+	// (reference to CommerceLocation)
+	LocationID *string `json:"location_id,omitempty"`
 	// Photosvideos attached to the review
-	Media            []CommerceItemMedia   `json:"media,omitempty"`
-	Metadata         []CommerceMetadata    `json:"metadata,omitempty"`
-	Rating           *float64              `json:"rating,omitempty"`
-	Raw              map[string]any        `json:"raw,omitempty"`
-	Status           *CommerceReviewStatus `json:"status,omitempty"`
-	Title            *string               `json:"title,omitempty"`
-	UnhelpfulVotes   *float64              `json:"unhelpful_votes,omitempty"`
-	UpdatedAt        *time.Time            `json:"updated_at,omitempty"`
-	URL              *string               `json:"url,omitempty"`
-	VerifiedPurchase *bool                 `json:"verified_purchase,omitempty"`
+	Media    []CommerceItemMedia `json:"media,omitempty"`
+	Metadata []CommerceMetadata  `json:"metadata,omitempty"`
+	// 1-5 rating
+	Rating *float64 `json:"rating,omitempty"`
+	// Original review data from source platform
+	Raw            map[string]any        `json:"raw,omitempty"`
+	Status         *CommerceReviewStatus `json:"status,omitempty"`
+	Title          *string               `json:"title,omitempty"`
+	UnhelpfulVotes *float64              `json:"unhelpful_votes,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt        *time.Time `json:"updated_at,omitempty"`
+	URL              *string    `json:"url,omitempty"`
+	VerifiedPurchase *bool      `json:"verified_purchase,omitempty"`
 }
 
 func (c CommerceReview) MarshalJSON() ([]byte, error) {

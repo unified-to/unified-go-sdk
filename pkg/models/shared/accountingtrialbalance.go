@@ -8,17 +8,21 @@ import (
 )
 
 type AccountingTrialbalance struct {
-	CreatedAt         *time.Time                      `json:"created_at,omitempty"`
-	Currency          *string                         `json:"currency,omitempty"`
-	EndAt             *time.Time                      `json:"end_at,omitempty"`
-	ID                *string                         `json:"id,omitempty"`
-	Name              *string                         `json:"name,omitempty"`
-	Raw               map[string]any                  `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time     `json:"end_at,omitempty"`
+	ID    *string        `json:"id,omitempty"`
+	Name  *string        `json:"name,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt           *time.Time                      `json:"start_at,omitempty"`
 	SubItems          []AccountingTrialbalanceSubItem `json:"sub_items,omitempty"`
 	TotalCreditAmount *float64                        `json:"total_credit_amount,omitempty"`
 	TotalDebitAmount  *float64                        `json:"total_debit_amount,omitempty"`
-	UpdatedAt         *time.Time                      `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTrialbalance) MarshalJSON() ([]byte, error) {

@@ -31,6 +31,7 @@ func (e *CalendarEventRecurrenceFrequency) IsExact() bool {
 	return false
 }
 
+// WeekStart - week start day, defaults to undefined (no week start day)
 type WeekStart string
 
 const (
@@ -59,14 +60,17 @@ func (e *WeekStart) IsExact() bool {
 }
 
 type CalendarEventRecurrence struct {
-	Count *float64   `json:"count,omitempty"`
+	// how many occurrences, defaults to undefined (no limit)
+	Count *float64 `json:"count,omitempty"`
+	// until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// dates to exclude from the recurrence, defaults to undefined (no exclusions)
 	ExcludedDates []string                          `json:"excluded_dates,omitempty"`
 	Frequency     *CalendarEventRecurrenceFrequency `json:"frequency,omitempty"`
 	// dates to include in the recurrence, defaults to undefined (no inclusions)
 	IncludedDates []string `json:"included_dates,omitempty"`
-	Interval      *float64 `json:"interval,omitempty"`
+	// how many "units" between occurrences, defaults to 1
+	Interval *float64 `json:"interval,omitempty"`
 	// days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
 	OnDays []PropertyCalendarEventRecurrenceOnDays `json:"on_days,omitempty"`
 	// days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
@@ -76,9 +80,11 @@ type CalendarEventRecurrence struct {
 	// week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only used with on_days. 0 is used for days without week ordinals.
 	OnWeeks []float64 `json:"on_weeks,omitempty"`
 	// days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
-	OnYearDays []float64  `json:"on_year_days,omitempty"`
-	Timezone   *string    `json:"timezone,omitempty"`
-	WeekStart  *WeekStart `json:"week_start,omitempty"`
+	OnYearDays []float64 `json:"on_year_days,omitempty"`
+	// timezone, defaults to undefined (no timezone)
+	Timezone *string `json:"timezone,omitempty"`
+	// week start day, defaults to undefined (no week start day)
+	WeekStart *WeekStart `json:"week_start,omitempty"`
 }
 
 func (c CalendarEventRecurrence) MarshalJSON() ([]byte, error) {

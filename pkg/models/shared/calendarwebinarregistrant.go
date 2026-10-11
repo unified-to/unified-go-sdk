@@ -32,8 +32,9 @@ func (e *RegistrationStatus) IsExact() bool {
 }
 
 type CalendarWebinarRegistrant struct {
-	Email                 *string             `json:"email,omitempty"`
-	Name                  *string             `json:"name,omitempty"`
+	Email *string `json:"email,omitempty"`
+	Name  *string `json:"name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	RegisteredAt          *time.Time          `json:"registered_at,omitempty"`
 	RegistrationReference *string             `json:"registration_reference,omitempty"`
 	RegistrationStatus    *RegistrationStatus `json:"registration_status,omitempty"`

@@ -34,20 +34,26 @@ func (e *MarketingMemberStatus) IsExact() bool {
 
 // MarketingMember - A member represents a person
 type MarketingMember struct {
-	Company   *string    `json:"company,omitempty"`
+	// The name of the company/organization the member belongs to
+	Company *string `json:"company,omitempty"`
+	// The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this member
 	Emails    []MarketingEmail `json:"emails,omitempty"`
 	FirstName *string          `json:"first_name,omitempty"`
-	ID        *string          `json:"id,omitempty"`
-	LastName  *string          `json:"last_name,omitempty"`
+	// Unique identifier for this member object
+	ID       *string `json:"id,omitempty"`
+	LastName *string `json:"last_name,omitempty"`
 	// An array of list IDs associated with this member
-	ListIds []string               `json:"list_ids,omitempty"`
-	Name    *string                `json:"name,omitempty"`
-	Raw     map[string]any         `json:"raw,omitempty"`
-	Status  *MarketingMemberStatus `json:"status,omitempty"`
+	ListIds []string `json:"list_ids,omitempty"`
+	// The name of the member
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this member
+	Raw    map[string]any         `json:"raw,omitempty"`
+	Status *MarketingMemberStatus `json:"status,omitempty"`
 	// An array of tags associated with this member
-	Tags      []string   `json:"tags,omitempty"`
+	Tags []string `json:"tags,omitempty"`
+	// The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 

@@ -8,9 +8,12 @@ import (
 )
 
 type AccountingPaymentReference struct {
+	// Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	AllocatedAt *time.Time `json:"allocated_at,omitempty"`
-	Amount      *float64   `json:"amount,omitempty"`
-	PaymentID   *string    `json:"payment_id,omitempty"`
+	// amount of the payment applied to this object
+	Amount *float64 `json:"amount,omitempty"`
+	// references a PaymentPayment that was applied to this object (reference to PaymentPayment)
+	PaymentID *string `json:"payment_id,omitempty"`
 }
 
 func (a AccountingPaymentReference) MarshalJSON() ([]byte, error) {

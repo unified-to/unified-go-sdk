@@ -38,26 +38,32 @@ func (e *AccountingVendorcreditStatus) IsExact() bool {
 }
 
 type AccountingVendorcredit struct {
+	// (reference to AccountingAccount)
 	AccountID *string `json:"account_id,omitempty"`
 	// What this vendor credit was applied to (invoices/bills). Writable inline on create/update.
-	Applications   []AccountingCreditApplication `json:"applications,omitempty"`
-	ApplyAmount    *float64                      `json:"apply_amount,omitempty"`
-	BalanceAmount  *float64                      `json:"balance_amount,omitempty"`
-	BillID         *string                       `json:"bill_id,omitempty"`
-	ContactID      *string                       `json:"contact_id,omitempty"`
-	CreatedAt      *time.Time                    `json:"created_at,omitempty"`
-	Currency       *string                       `json:"currency,omitempty"`
-	DueAt          *time.Time                    `json:"due_at,omitempty"`
-	ID             *string                       `json:"id,omitempty"`
-	Lineitems      []AccountingLineitem          `json:"lineitems,omitempty"`
-	Metadata       []AccountingMetadata          `json:"metadata,omitempty"`
-	Notes          *string                       `json:"notes,omitempty"`
-	OrganizationID *string                       `json:"organization_id,omitempty"`
-	PostedAt       *time.Time                    `json:"posted_at,omitempty"`
-	Raw            map[string]any                `json:"raw,omitempty"`
-	Status         *AccountingVendorcreditStatus `json:"status,omitempty"`
-	TotalAmount    *float64                      `json:"total_amount,omitempty"`
-	UpdatedAt      *time.Time                    `json:"updated_at,omitempty"`
+	Applications  []AccountingCreditApplication `json:"applications,omitempty"`
+	ApplyAmount   *float64                      `json:"apply_amount,omitempty"`
+	BalanceAmount *float64                      `json:"balance_amount,omitempty"`
+	BillID        *string                       `json:"bill_id,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt          *time.Time           `json:"due_at,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Notes          *string              `json:"notes,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt    *time.Time                    `json:"posted_at,omitempty"`
+	Raw         map[string]any                `json:"raw,omitempty"`
+	Status      *AccountingVendorcreditStatus `json:"status,omitempty"`
+	TotalAmount *float64                      `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingVendorcredit) MarshalJSON() ([]byte, error) {

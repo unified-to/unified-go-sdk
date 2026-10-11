@@ -8,7 +8,7 @@ import (
 )
 
 type CreateUnifiedWebhookRequest struct {
-	// A webhook is used to POST new/updated information to your server.
+	// A webhook is used to POST new, updated, or deleted records to your server.
 	Webhook shared.Webhook `request:"mediaType=application/json"`
 	// When true, send existing/historic data. When false, no historic data is sent.
 	IncludeAll *bool `queryParam:"style=form,explode=true,name=include_all"`

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ShippingTrackingStatus - Current status of the shipment
 type ShippingTrackingStatus string
 
 const (
@@ -42,21 +43,34 @@ func (e *ShippingTrackingStatus) IsExact() bool {
 }
 
 type ShippingTracking struct {
-	ActualDeliveryAt         *time.Time `json:"actual_delivery_at,omitempty"`
-	CarrierID                *string    `json:"carrier_id,omitempty"`
-	CarrierStatusCode        *string    `json:"carrier_status_code,omitempty"`
-	CarrierStatusDescription *string    `json:"carrier_status_description,omitempty"`
-	CreatedAt                *time.Time `json:"created_at,omitempty"`
-	EstimatedDelivery        *time.Time `json:"estimated_delivery,omitempty"`
+	// Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ActualDeliveryAt *time.Time `json:"actual_delivery_at,omitempty"`
+	// Reference to the carrier
+	CarrierID *string `json:"carrier_id,omitempty"`
+	// Carrier's status code
+	CarrierStatusCode *string `json:"carrier_status_code,omitempty"`
+	// Carrier's status description
+	CarrierStatusDescription *string `json:"carrier_status_description,omitempty"`
+	// The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Estimated delivery date
+	EstimatedDelivery *time.Time `json:"estimated_delivery,omitempty"`
 	// Array of tracking events
-	Events            []ShippingTrackingEvent `json:"events,omitempty"`
-	ID                *string                 `json:"id,omitempty"`
-	Raw               map[string]any          `json:"raw,omitempty"`
-	ShipmentID        *string                 `json:"shipment_id,omitempty"`
-	Status            *ShippingTrackingStatus `json:"status,omitempty"`
-	StatusDescription *string                 `json:"status_description,omitempty"`
-	TrackingNumber    *string                 `json:"tracking_number,omitempty"`
-	UpdatedAt         *time.Time              `json:"updated_at,omitempty"`
+	Events []ShippingTrackingEvent `json:"events,omitempty"`
+	// Unique identifier for this tracking object
+	ID *string `json:"id,omitempty"`
+	// The raw data returned by the integration for this tracking
+	Raw map[string]any `json:"raw,omitempty"`
+	// Reference to the shipment
+	ShipmentID *string `json:"shipment_id,omitempty"`
+	// Current status of the shipment
+	Status *ShippingTrackingStatus `json:"status,omitempty"`
+	// Human-readable status
+	StatusDescription *string `json:"status_description,omitempty"`
+	// Tracking number for the shipment
+	TrackingNumber *string `json:"tracking_number,omitempty"`
+	// The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (s ShippingTracking) MarshalJSON() ([]byte, error) {

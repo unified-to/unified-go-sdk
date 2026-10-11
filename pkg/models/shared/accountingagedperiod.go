@@ -8,8 +8,10 @@ import (
 )
 
 type AccountingAgedPeriod struct {
-	EndAt       *time.Time          `json:"end_at,omitempty"`
-	Name        *string             `json:"name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	Name  *string    `json:"name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt     *time.Time          `json:"start_at,omitempty"`
 	SubItems    []AccountingAgedRow `json:"sub_items,omitempty"`
 	TotalAmount *float64            `json:"total_amount,omitempty"`

@@ -32,9 +32,10 @@ func (e *Recommendation) IsExact() bool {
 }
 
 type AtsScorecard struct {
-	ApplicationID  *string                `json:"application_id,omitempty"`
-	CandidateID    *string                `json:"candidate_id,omitempty"`
-	Comment        *string                `json:"comment,omitempty"`
+	ApplicationID *string `json:"application_id,omitempty"`
+	CandidateID   *string `json:"candidate_id,omitempty"`
+	Comment       *string `json:"comment,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt      *time.Time             `json:"created_at,omitempty"`
 	ID             *string                `json:"id,omitempty"`
 	InterviewID    *string                `json:"interview_id,omitempty"`
@@ -43,7 +44,8 @@ type AtsScorecard struct {
 	Questions      []AtsScorecardQuestion `json:"questions,omitempty"`
 	Raw            map[string]any         `json:"raw,omitempty"`
 	Recommendation *Recommendation        `json:"recommendation,omitempty"`
-	UpdatedAt      *time.Time             `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AtsScorecard) MarshalJSON() ([]byte, error) {

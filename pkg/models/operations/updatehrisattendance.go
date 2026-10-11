@@ -99,6 +99,7 @@ func (e *UpdateHrisAttendanceQueryParamFields) UnmarshalJSON(data []byte) error 
 }
 
 type UpdateHrisAttendanceRequest struct {
+	// Also called timesheets
 	HrisAttendance shared.HrisAttendance `request:"mediaType=application/json"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`

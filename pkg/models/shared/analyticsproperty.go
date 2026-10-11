@@ -8,15 +8,18 @@ import (
 )
 
 type AnalyticsProperty struct {
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	Currency  *string        `json:"currency,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	Industry  *string        `json:"industry,omitempty"`
-	Name      *string        `json:"name,omitempty"`
-	ParentID  *string        `json:"parent_id,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	Timezone  *string        `json:"timezone,omitempty"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	Industry  *string    `json:"industry,omitempty"`
+	Name      *string    `json:"name,omitempty"`
+	// points to AnalyticsProperty
+	ParentID *string        `json:"parent_id,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	Timezone *string        `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AnalyticsProperty) MarshalJSON() ([]byte, error) {

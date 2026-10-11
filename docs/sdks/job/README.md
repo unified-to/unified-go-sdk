@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [CreateAtsJob](#createatsjob) - Create a job
+* [CreateHrisJob](#createhrisjob) - Create a job
 * [GetAtsJob](#getatsjob) - Retrieve a job
+* [GetHrisJob](#gethrisjob) - Retrieve a job
 * [ListAtsJobs](#listatsjobs) - List all jobs
+* [ListHrisJobs](#listhrisjobs) - List all jobs
 * [PatchAtsJob](#patchatsjob) - Update a job
+* [PatchHrisJob](#patchhrisjob) - Update a job
 * [RemoveAtsJob](#removeatsjob) - Remove a job
+* [RemoveHrisJob](#removehrisjob) - Remove a job
 * [UpdateAtsJob](#updateatsjob) - Update a job
+* [UpdateHrisJob](#updatehrisjob) - Update a job
 
 ## CreateAtsJob
 
@@ -70,12 +76,12 @@ func main() {
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{
                 shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("fd9852e3-9035-4f42-beb3-bbf4e4022122"),
-                    Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
+                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
+                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
                 },
             },
-            ID: unifiedgosdk.Pointer("a4e564ca-17df-4b25-9e7c-4e8bd4b8c91e"),
-            Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
+            ID: unifiedgosdk.Pointer("0ee8f1dd-d2a4-4d3f-b110-115d71aceb41"),
+            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -85,11 +91,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("0922852e-0bdd-4572-8490-0c07e2162c8d"),
+                    ID: unifiedgosdk.Pointer("4bbebe6a-9dc3-4841-a1f9-fae0230b783c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "acceptus",
+                        "vomica",
                     )),
                 },
             },
@@ -100,28 +106,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.827Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-30T00:04:25.024Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("8460 Nils Trace"),
-                        City: unifiedgosdk.Pointer("West Mervinburgh"),
+                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
+                        City: unifiedgosdk.Pointer("Logancester"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("14162"),
-                        Region: unifiedgosdk.Pointer("Maine"),
+                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
+                        Region: unifiedgosdk.Pointer("Vermont"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.779Z"),
-                    Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
-                    ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-23T16:16:36.686Z"),
+                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
+                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("6788 Oxford Road"),
-                    Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
-                    PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.530Z"),
+                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
+                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
+                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-18T18:29:49.765Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -132,6 +138,8 @@ func main() {
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
                     ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
+                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
                         "censura",
                         "tum",
@@ -142,34 +150,38 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("b3a0b53b-38f3-4e8d-84b9-f413a900d79b"),
+                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
+                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "odit",
+                        "aetas",
                     },
-                    Prompt: unifiedgosdk.Pointer("Similique absque temeritas celebrer enim."),
-                    Question: "Vinitor sodalitas desino sollers viduo volo.",
+                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
+                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Abstergo possimus quibusdam deinde amoveo."),
-                    ID: unifiedgosdk.Pointer("568be61d-060e-4d8c-a8ab-8a17cb25edf3"),
+                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
+                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
+                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "vallum",
+                        "utroque",
                     },
-                    Prompt: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    Question: "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
+                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.747Z"),
+            Summary: unifiedgosdk.Pointer("Iste sto communis."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-19T08:06:49.474Z"),
         },
         ConnectionID: "<id>",
     })
@@ -193,6 +205,72 @@ func main() {
 ### Response
 
 **[*operations.CreateAtsJobResponse](../../pkg/models/operations/createatsjobresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateHrisJob
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.CreateHrisJob(ctx, operations.CreateHrisJobRequest{
+        HrisJob: shared.HrisJob{
+            Code: unifiedgosdk.Pointer("P-05547"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
+            Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
+            EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
+            ID: unifiedgosdk.Pointer("00e817dd-4168-4184-b834-7236d1199e80"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:46:31.821Z"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.CreateHrisJobRequest](../../pkg/models/operations/createhrisjobrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.CreateHrisJobResponse](../../pkg/models/operations/createhrisjobresponse.md), error**
 
 ### Errors
 
@@ -255,6 +333,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetHrisJob
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.GetHrisJob(ctx, operations.GetHrisJobRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [operations.GetHrisJobRequest](../../pkg/models/operations/gethrisjobrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../pkg/models/operations/option.md)                     | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+
+### Response
+
+**[*operations.GetHrisJobResponse](../../pkg/models/operations/gethrisjobresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListAtsJobs
 
 List all jobs
@@ -302,6 +435,60 @@ func main() {
 ### Response
 
 **[*operations.ListAtsJobsResponse](../../pkg/models/operations/listatsjobsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListHrisJobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.ListHrisJobs(ctx, operations.ListHrisJobsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisJobs != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.ListHrisJobsRequest](../../pkg/models/operations/listhrisjobsrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.ListHrisJobsResponse](../../pkg/models/operations/listhrisjobsresponse.md), error**
 
 ### Errors
 
@@ -368,12 +555,12 @@ func main() {
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{
                 shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("fd9852e3-9035-4f42-beb3-bbf4e4022122"),
-                    Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
+                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
+                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
                 },
             },
-            ID: unifiedgosdk.Pointer("78c9bfcb-beac-4ae7-adf1-cb11fb046603"),
-            Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
+            ID: unifiedgosdk.Pointer("af418507-1c9c-4c5b-920c-26766149192c"),
+            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -383,11 +570,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("d7b24ca2-56c7-478f-96e3-9af999ae067d"),
+                    ID: unifiedgosdk.Pointer("62defe21-ae2b-42cb-9737-922337bda35c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "acceptus",
+                        "vomica",
                     )),
                 },
             },
@@ -398,28 +585,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.877Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-30T00:04:25.089Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("8460 Nils Trace"),
-                        City: unifiedgosdk.Pointer("West Mervinburgh"),
+                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
+                        City: unifiedgosdk.Pointer("Logancester"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("14162"),
-                        Region: unifiedgosdk.Pointer("Maine"),
+                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
+                        Region: unifiedgosdk.Pointer("Vermont"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.831Z"),
-                    Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
-                    ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-23T16:16:36.754Z"),
+                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
+                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("6788 Oxford Road"),
-                    Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
-                    PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.584Z"),
+                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
+                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
+                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-18T18:29:49.834Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -430,6 +617,8 @@ func main() {
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
                     ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
+                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
                         "censura",
                         "tum",
@@ -440,34 +629,38 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("b3a0b53b-38f3-4e8d-84b9-f413a900d79b"),
+                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
+                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "odit",
+                        "aetas",
                     },
-                    Prompt: unifiedgosdk.Pointer("Similique absque temeritas celebrer enim."),
-                    Question: "Vinitor sodalitas desino sollers viduo volo.",
+                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
+                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Abstergo possimus quibusdam deinde amoveo."),
-                    ID: unifiedgosdk.Pointer("568be61d-060e-4d8c-a8ab-8a17cb25edf3"),
+                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
+                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
+                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "vallum",
+                        "utroque",
                     },
-                    Prompt: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    Question: "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
+                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.792Z"),
+            Summary: unifiedgosdk.Pointer("Iste sto communis."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-19T08:06:49.533Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -492,6 +685,73 @@ func main() {
 ### Response
 
 **[*operations.PatchAtsJobResponse](../../pkg/models/operations/patchatsjobresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.PatchHrisJob(ctx, operations.PatchHrisJobRequest{
+        HrisJob: shared.HrisJob{
+            Code: unifiedgosdk.Pointer("P-05547"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
+            Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
+            EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
+            ID: unifiedgosdk.Pointer("f6c68600-9698-4e15-bc64-586f729ee803"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:46:31.859Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
+| `request`                                                                            | [operations.PatchHrisJobRequest](../../pkg/models/operations/patchhrisjobrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `opts`                                                                               | [][operations.Option](../../pkg/models/operations/option.md)                         | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+
+### Response
+
+**[*operations.PatchHrisJobResponse](../../pkg/models/operations/patchhrisjobresponse.md), error**
 
 ### Errors
 
@@ -547,6 +807,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveAtsJobResponse](../../pkg/models/operations/removeatsjobresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveHrisJob
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.RemoveHrisJob(ctx, operations.RemoveHrisJobRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.RemoveHrisJobRequest](../../pkg/models/operations/removehrisjobrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.RemoveHrisJobResponse](../../pkg/models/operations/removehrisjobresponse.md), error**
 
 ### Errors
 
@@ -613,12 +928,12 @@ func main() {
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
             HiringManagers: []shared.AtsReference{
                 shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("fd9852e3-9035-4f42-beb3-bbf4e4022122"),
-                    Name: unifiedgosdk.Pointer("Eloise Mueller PhD"),
+                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
+                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
                 },
             },
-            ID: unifiedgosdk.Pointer("78c9bfcb-beac-4ae7-adf1-cb11fb046603"),
-            Industry: unifiedgosdk.Pointer("Gorgeous Plastic Computer"),
+            ID: unifiedgosdk.Pointer("af418507-1c9c-4c5b-920c-26766149192c"),
+            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -628,11 +943,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("d7b24ca2-56c7-478f-96e3-9af999ae067d"),
+                    ID: unifiedgosdk.Pointer("62defe21-ae2b-42cb-9737-922337bda35c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "acceptus",
+                        "vomica",
                     )),
                 },
             },
@@ -643,28 +958,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-05-12T00:39:03.877Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-05-30T00:04:25.089Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("8460 Nils Trace"),
-                        City: unifiedgosdk.Pointer("West Mervinburgh"),
+                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
+                        City: unifiedgosdk.Pointer("Logancester"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("14162"),
-                        Region: unifiedgosdk.Pointer("Maine"),
+                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
+                        Region: unifiedgosdk.Pointer("Vermont"),
                         RegionCode: unifiedgosdk.Pointer("MO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-04T18:58:56.831Z"),
-                    Description: unifiedgosdk.Pointer("Deduco cultellus alii terebro depono thesaurus."),
-                    ID: unifiedgosdk.Pointer("f6101769-deb3-4721-978c-d205638870ee"),
+                    CreatedAt: types.MustNewTimeFromString("2026-07-23T16:16:36.754Z"),
+                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
+                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("6788 Oxford Road"),
-                    Name: unifiedgosdk.Pointer("Forward Security Orchestrator"),
-                    PostingURL: unifiedgosdk.Pointer("https://ajar-metabolite.net/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-07-30T10:45:53.584Z"),
+                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
+                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
+                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-18T18:29:49.834Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -675,6 +990,8 @@ func main() {
                 shared.AtsJobQuestion{
                     Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
                     ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
+                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
                         "censura",
                         "tum",
@@ -685,34 +1002,38 @@ func main() {
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("b3a0b53b-38f3-4e8d-84b9-f413a900d79b"),
+                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
+                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "odit",
+                        "aetas",
                     },
-                    Prompt: unifiedgosdk.Pointer("Similique absque temeritas celebrer enim."),
-                    Question: "Vinitor sodalitas desino sollers viduo volo.",
+                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
+                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Abstergo possimus quibusdam deinde amoveo."),
-                    ID: unifiedgosdk.Pointer("568be61d-060e-4d8c-a8ab-8a17cb25edf3"),
+                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
+                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
+                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "vallum",
+                        "utroque",
                     },
-                    Prompt: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    Question: "Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.",
+                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
+                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "amiculum",
-                "crux",
+                "coaegresco",
+                "appello",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Amicitia vergo hic."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-03T00:33:37.792Z"),
+            Summary: unifiedgosdk.Pointer("Iste sto communis."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-19T08:06:49.533Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -737,6 +1058,73 @@ func main() {
 ### Response
 
 **[*operations.UpdateAtsJobResponse](../../pkg/models/operations/updateatsjobresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Job.UpdateHrisJob(ctx, operations.UpdateHrisJobRequest{
+        HrisJob: shared.HrisJob{
+            Code: unifiedgosdk.Pointer("P-05547"),
+            CreatedAt: types.MustNewTimeFromString("2020-10-28T01:13:19.491Z"),
+            Description: unifiedgosdk.Pointer("Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo."),
+            EmploymentType: shared.HrisJobEmploymentTypeFreelance.ToPointer(),
+            ID: unifiedgosdk.Pointer("f6c68600-9698-4e15-bc64-586f729ee803"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Name: unifiedgosdk.Pointer("Internal Integration Specialist"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T10:46:31.859Z"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HrisJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `ctx`                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                  | :heavy_check_mark:                                                                     | The context to use for the request.                                                    |
+| `request`                                                                              | [operations.UpdateHrisJobRequest](../../pkg/models/operations/updatehrisjobrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `opts`                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                           | :heavy_minus_sign:                                                                     | The options for this request.                                                          |
+
+### Response
+
+**[*operations.UpdateHrisJobResponse](../../pkg/models/operations/updatehrisjobresponse.md), error**
 
 ### Errors
 

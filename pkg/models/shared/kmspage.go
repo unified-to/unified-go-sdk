@@ -32,6 +32,7 @@ func (e *KmsPageType) IsExact() bool {
 }
 
 type KmsPage struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time        `json:"created_at,omitempty"`
 	DownloadURL *string           `json:"download_url,omitempty"`
 	HasChildren *bool             `json:"has_children,omitempty"`
@@ -40,12 +41,15 @@ type KmsPage struct {
 	Metadata    []KmsPageMetadata `json:"metadata,omitempty"`
 	ParentID    *string           `json:"parent_id,omitempty"`
 	Raw         map[string]any    `json:"raw,omitempty"`
-	SpaceID     *string           `json:"space_id,omitempty"`
-	Title       *string           `json:"title,omitempty"`
-	Type        KmsPageType       `json:"type"`
-	UpdatedAt   *time.Time        `json:"updated_at,omitempty"`
-	UserID      *string           `json:"user_id,omitempty"`
-	WebURL      *string           `json:"web_url,omitempty"`
+	// (reference to KmsSpace)
+	SpaceID *string     `json:"space_id,omitempty"`
+	Title   *string     `json:"title,omitempty"`
+	Type    KmsPageType `json:"type"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
+	WebURL *string `json:"web_url,omitempty"`
 }
 
 func (k KmsPage) MarshalJSON() ([]byte, error) {

@@ -51,11 +51,11 @@ func main() {
             Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
-                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Amount: unifiedgosdk.Pointer[float64](60136.0),
                     Currency: unifiedgosdk.Pointer("CRC"),
                     Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
-                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                    Type: shared.HrisCompensationTypeStockOptions.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
@@ -71,10 +71,11 @@ func main() {
             EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
             FirstName: unifiedgosdk.Pointer("Zetta"),
+            FlsaStatus: shared.FlsaStatusSalariedNonexempt.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HasMfa: unifiedgosdk.Pointer(true),
-            HiredAt: types.MustNewTimeFromString("2023-05-12T03:12:11.486Z"),
-            ID: unifiedgosdk.Pointer("38a79fa8-80b1-4659-b0a6-327121c773f1"),
+            HasMfa: unifiedgosdk.Pointer(false),
+            HiredAt: types.MustNewTimeFromString("2023-05-22T15:44:14.310Z"),
+            ID: unifiedgosdk.Pointer("17ed493b-6e5c-4453-bf9f-c4ae590fc095"),
             ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
             LanguageLocale: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -88,15 +89,16 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f5bf964b-886a-4dd4-bc29-e4151986a960"),
+                    ID: unifiedgosdk.Pointer("26a1704a-8a68-4f61-b9cb-080b07a7d39b"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
-                        "tenetur",
+                        "appono",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            PayFrequency: shared.PayFrequencyBiweekly.ToPointer(),
             Pronouns: unifiedgosdk.Pointer("she/her"),
             Relationships: []shared.HrisEmployeerelationship{
                 shared.HrisEmployeerelationship{
@@ -112,38 +114,35 @@ func main() {
                         },
                     },
                     Name: unifiedgosdk.Pointer("Automotive"),
-                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
                             Email: "Benedict_Wisozk83@hotmail.com",
                         },
-                        shared.HrisEmail{
-                            Email: "Princess_Rath43@gmail.com",
-                        },
-                        shared.HrisEmail{
-                            Email: "Elmira92@yahoo.com",
-                        },
                     },
                     Name: unifiedgosdk.Pointer("Music"),
-                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
-                            Email: "Jane30@gmail.com",
+                            Email: "Margot11@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Jaden_Miller@gmail.com",
                         },
                     },
-                    Name: unifiedgosdk.Pointer("Jewelry"),
-                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                    Name: unifiedgosdk.Pointer("Electronics"),
+                    Type: shared.HrisEmployeerelationshipTypeOther.ToPointer(),
                 },
             },
             Salutation: unifiedgosdk.Pointer("Miss"),
             SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
-            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
-            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
-            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](1590710.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](730343.0),
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "(409) 801-3705",
@@ -155,7 +154,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
             Timezone: unifiedgosdk.Pointer("Africa/Harare"),
             Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-20T06:18:08.630Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-27T06:23:56.438Z"),
         },
         ConnectionID: "<id>",
     })
@@ -335,11 +334,11 @@ func main() {
             Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
-                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Amount: unifiedgosdk.Pointer[float64](60136.0),
                     Currency: unifiedgosdk.Pointer("CRC"),
                     Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
-                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                    Type: shared.HrisCompensationTypeStockOptions.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
@@ -355,10 +354,11 @@ func main() {
             EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
             FirstName: unifiedgosdk.Pointer("Zetta"),
+            FlsaStatus: shared.FlsaStatusSalariedNonexempt.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HasMfa: unifiedgosdk.Pointer(true),
-            HiredAt: types.MustNewTimeFromString("2023-05-12T03:12:11.541Z"),
-            ID: unifiedgosdk.Pointer("58337faa-4e32-4102-b7c8-c1d452691dbf"),
+            HasMfa: unifiedgosdk.Pointer(false),
+            HiredAt: types.MustNewTimeFromString("2023-05-22T15:44:14.369Z"),
+            ID: unifiedgosdk.Pointer("f8e282cf-d934-44ec-a6e9-aa6ac2875cb7"),
             ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
             LanguageLocale: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -372,15 +372,16 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dc9e304c-74a8-4e11-aa99-780c6ad1af40"),
+                    ID: unifiedgosdk.Pointer("1e5ed876-f4a7-4735-b4b6-66d2390b286b"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
-                        "tenetur",
+                        "appono",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            PayFrequency: shared.PayFrequencyBiweekly.ToPointer(),
             Pronouns: unifiedgosdk.Pointer("she/her"),
             Relationships: []shared.HrisEmployeerelationship{
                 shared.HrisEmployeerelationship{
@@ -396,38 +397,35 @@ func main() {
                         },
                     },
                     Name: unifiedgosdk.Pointer("Automotive"),
-                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
                             Email: "Benedict_Wisozk83@hotmail.com",
                         },
-                        shared.HrisEmail{
-                            Email: "Princess_Rath43@gmail.com",
-                        },
-                        shared.HrisEmail{
-                            Email: "Elmira92@yahoo.com",
-                        },
                     },
                     Name: unifiedgosdk.Pointer("Music"),
-                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
-                            Email: "Jane30@gmail.com",
+                            Email: "Margot11@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Jaden_Miller@gmail.com",
                         },
                     },
-                    Name: unifiedgosdk.Pointer("Jewelry"),
-                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                    Name: unifiedgosdk.Pointer("Electronics"),
+                    Type: shared.HrisEmployeerelationshipTypeOther.ToPointer(),
                 },
             },
             Salutation: unifiedgosdk.Pointer("Miss"),
             SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
-            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
-            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
-            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](1590710.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](730343.0),
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "(409) 801-3705",
@@ -439,7 +437,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
             Timezone: unifiedgosdk.Pointer("Africa/Harare"),
             Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-20T06:18:08.666Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-27T06:23:56.477Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -566,11 +564,11 @@ func main() {
             Bio: unifiedgosdk.Pointer("sushi devotee, singer"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
-                    Amount: unifiedgosdk.Pointer[float64](69148.0),
+                    Amount: unifiedgosdk.Pointer[float64](60136.0),
                     Currency: unifiedgosdk.Pointer("CRC"),
                     Frequency: shared.HrisCompensationFrequencyQuarter.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Tergeo laborum laboriosam tutis."),
-                    Type: shared.HrisCompensationTypeEquity.ToPointer(),
+                    Type: shared.HrisCompensationTypeStockOptions.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-09-16T15:08:53.262Z"),
@@ -586,10 +584,11 @@ func main() {
             EmploymentStatus: shared.EmploymentStatusActive.ToPointer(),
             EmploymentType: shared.HrisEmployeeEmploymentTypeVolunteer.ToPointer(),
             FirstName: unifiedgosdk.Pointer("Zetta"),
+            FlsaStatus: shared.FlsaStatusSalariedNonexempt.ToPointer(),
             Gender: shared.HrisEmployeeGenderIntersex.ToPointer(),
-            HasMfa: unifiedgosdk.Pointer(true),
-            HiredAt: types.MustNewTimeFromString("2023-05-12T03:12:11.541Z"),
-            ID: unifiedgosdk.Pointer("58337faa-4e32-4102-b7c8-c1d452691dbf"),
+            HasMfa: unifiedgosdk.Pointer(false),
+            HiredAt: types.MustNewTimeFromString("2023-05-22T15:44:14.369Z"),
+            ID: unifiedgosdk.Pointer("f8e282cf-d934-44ec-a6e9-aa6ac2875cb7"),
             ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/3684/2116?lock=4686991638584456"),
             LanguageLocale: unifiedgosdk.Pointer("es"),
             LastName: unifiedgosdk.Pointer("Prohaska"),
@@ -603,15 +602,16 @@ func main() {
                         },
                     )),
                     Format: shared.HrisMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("dc9e304c-74a8-4e11-aa99-780c6ad1af40"),
+                    ID: unifiedgosdk.Pointer("1e5ed876-f4a7-4735-b4b6-66d2390b286b"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateHrisMetadataValueStr(
-                        "tenetur",
+                        "appono",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Zetta Prohaska"),
+            PayFrequency: shared.PayFrequencyBiweekly.ToPointer(),
             Pronouns: unifiedgosdk.Pointer("she/her"),
             Relationships: []shared.HrisEmployeerelationship{
                 shared.HrisEmployeerelationship{
@@ -627,38 +627,35 @@ func main() {
                         },
                     },
                     Name: unifiedgosdk.Pointer("Automotive"),
-                    Type: shared.HrisEmployeerelationshipTypeEmergency.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
                             Email: "Benedict_Wisozk83@hotmail.com",
                         },
-                        shared.HrisEmail{
-                            Email: "Princess_Rath43@gmail.com",
-                        },
-                        shared.HrisEmail{
-                            Email: "Elmira92@yahoo.com",
-                        },
                     },
                     Name: unifiedgosdk.Pointer("Music"),
-                    Type: shared.HrisEmployeerelationshipTypeFriend.ToPointer(),
+                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
                 },
                 shared.HrisEmployeerelationship{
                     Emails: []shared.HrisEmail{
                         shared.HrisEmail{
-                            Email: "Jane30@gmail.com",
+                            Email: "Margot11@yahoo.com",
+                        },
+                        shared.HrisEmail{
+                            Email: "Jaden_Miller@gmail.com",
                         },
                     },
-                    Name: unifiedgosdk.Pointer("Jewelry"),
-                    Type: shared.HrisEmployeerelationshipTypeSibling.ToPointer(),
+                    Name: unifiedgosdk.Pointer("Electronics"),
+                    Type: shared.HrisEmployeerelationshipTypeOther.ToPointer(),
                 },
             },
             Salutation: unifiedgosdk.Pointer("Miss"),
             SsnSin: unifiedgosdk.Pointer("yMRtj0Q3xO"),
-            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](3674489.0),
-            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](7748057.0),
-            StorageQuotaUsed: unifiedgosdk.Pointer[float64](301727.0),
+            StorageQuotaAllocated: unifiedgosdk.Pointer[float64](7748057.0),
+            StorageQuotaAvailable: unifiedgosdk.Pointer[float64](1590710.0),
+            StorageQuotaUsed: unifiedgosdk.Pointer[float64](730343.0),
             Telephones: []shared.HrisTelephone{
                 shared.HrisTelephone{
                     Telephone: "(409) 801-3705",
@@ -670,7 +667,7 @@ func main() {
             TimeoffDaysUsed: unifiedgosdk.Pointer[float64](6.0),
             Timezone: unifiedgosdk.Pointer("Africa/Harare"),
             Title: unifiedgosdk.Pointer("Investor Paradigm Liaison"),
-            UpdatedAt: types.MustNewTimeFromString("2022-02-20T06:18:08.666Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-02-27T06:23:56.477Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

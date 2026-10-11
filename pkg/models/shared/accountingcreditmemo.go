@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingCreditmemoPaymentCollectionMethod - When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
 type AccountingCreditmemoPaymentCollectionMethod string
 
 const (
@@ -61,37 +62,49 @@ func (e *AccountingCreditmemoStatus) IsExact() bool {
 
 type AccountingCreditmemo struct {
 	// What this credit memo was applied to (invoices/bills). Writable inline on create/update.
-	Applications            []AccountingCreditApplication                `json:"applications,omitempty"`
-	ApplyAmount             *float64                                     `json:"apply_amount,omitempty"`
-	Attachments             []AccountingAttachment                       `json:"attachments,omitempty"`
-	BalanceAmount           *float64                                     `json:"balance_amount,omitempty"`
-	CancelledAt             *time.Time                                   `json:"cancelled_at,omitempty"`
-	ContactID               *string                                      `json:"contact_id,omitempty"`
-	CreatedAt               *time.Time                                   `json:"created_at,omitempty"`
-	CreditmemoNumber        *string                                      `json:"creditmemo_number,omitempty"`
-	Currency                *string                                      `json:"currency,omitempty"`
-	DiscountAmount          *float64                                     `json:"discount_amount,omitempty"`
-	DueAt                   *time.Time                                   `json:"due_at,omitempty"`
-	ID                      *string                                      `json:"id,omitempty"`
-	InvoiceID               *string                                      `json:"invoice_id,omitempty"`
-	Lineitems               []AccountingLineitem                         `json:"lineitems,omitempty"`
-	Metadata                []AccountingMetadata                         `json:"metadata,omitempty"`
-	Notes                   *string                                      `json:"notes,omitempty"`
-	OrganizationID          *string                                      `json:"organization_id,omitempty"`
-	PaidAmount              *float64                                     `json:"paid_amount,omitempty"`
-	PaidAt                  *time.Time                                   `json:"paid_at,omitempty"`
+	Applications  []AccountingCreditApplication `json:"applications,omitempty"`
+	ApplyAmount   *float64                      `json:"apply_amount,omitempty"`
+	Attachments   []AccountingAttachment        `json:"attachments,omitempty"`
+	BalanceAmount *float64                      `json:"balance_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CancelledAt *time.Time `json:"cancelled_at,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// External identifier for this invoice
+	CreditmemoNumber *string  `json:"creditmemo_number,omitempty"`
+	Currency         *string  `json:"currency,omitempty"`
+	DiscountAmount   *float64 `json:"discount_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	ID    *string    `json:"id,omitempty"`
+	// (reference to AccountingInvoice)
+	InvoiceID      *string              `json:"invoice_id,omitempty"`
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Notes          *string              `json:"notes,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	PaidAmount     *float64             `json:"paid_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PaidAt *time.Time `json:"paid_at,omitempty"`
+	// When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
 	PaymentCollectionMethod *AccountingCreditmemoPaymentCollectionMethod `json:"payment_collection_method,omitempty"`
-	PostedAt                *time.Time                                   `json:"posted_at,omitempty"`
-	Raw                     map[string]any                               `json:"raw,omitempty"`
-	RefundAmount            *float64                                     `json:"refund_amount,omitempty"`
-	RefundReason            *string                                      `json:"refund_reason,omitempty"`
-	RefundedAt              *time.Time                                   `json:"refunded_at,omitempty"`
-	Send                    *bool                                        `json:"send,omitempty"`
-	Status                  *AccountingCreditmemoStatus                  `json:"status,omitempty"`
-	TaxAmount               *float64                                     `json:"tax_amount,omitempty"`
-	TotalAmount             *float64                                     `json:"total_amount,omitempty"`
-	UpdatedAt               *time.Time                                   `json:"updated_at,omitempty"`
-	URL                     *string                                      `json:"url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt     *time.Time     `json:"posted_at,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
+	RefundAmount *float64       `json:"refund_amount,omitempty"`
+	RefundReason *string        `json:"refund_reason,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RefundedAt  *time.Time                  `json:"refunded_at,omitempty"`
+	Send        *bool                       `json:"send,omitempty"`
+	Status      *AccountingCreditmemoStatus `json:"status,omitempty"`
+	TaxAmount   *float64                    `json:"tax_amount,omitempty"`
+	TotalAmount *float64                    `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The public URL for the invoice to send to a customer to view or pay.
+	URL *string `json:"url,omitempty"`
 }
 
 func (a AccountingCreditmemo) MarshalJSON() ([]byte, error) {

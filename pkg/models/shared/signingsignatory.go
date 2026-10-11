@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// SigningSignatoryRole - Role of the signatory
 type SigningSignatoryRole string
 
 const (
@@ -32,6 +33,7 @@ func (e *SigningSignatoryRole) IsExact() bool {
 	return false
 }
 
+// SigningSignatoryStatus - Current status of this signatory
 type SigningSignatoryStatus string
 
 const (
@@ -59,18 +61,30 @@ func (e *SigningSignatoryStatus) IsExact() bool {
 }
 
 type SigningSignatory struct {
-	CreatedAt     *time.Time              `json:"created_at,omitempty"`
-	DeclineReason *string                 `json:"decline_reason,omitempty"`
-	DocumentID    *string                 `json:"document_id,omitempty"`
-	Email         *string                 `json:"email,omitempty"`
-	ID            *string                 `json:"id,omitempty"`
-	Name          *string                 `json:"name,omitempty"`
-	Order         *float64                `json:"order,omitempty"`
-	Raw           map[string]any          `json:"raw,omitempty"`
-	Role          *SigningSignatoryRole   `json:"role,omitempty"`
-	SignedAt      *time.Time              `json:"signed_at,omitempty"`
-	Status        *SigningSignatoryStatus `json:"status,omitempty"`
-	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
+	// The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Reason for declining (if status is DECLINED)
+	DeclineReason *string `json:"decline_reason,omitempty"`
+	// Parent signing document; points to SigningDocument
+	DocumentID *string `json:"document_id,omitempty"`
+	// Email address of the signatory
+	Email *string `json:"email,omitempty"`
+	// Unique identifier for this signatory
+	ID *string `json:"id,omitempty"`
+	// Full name of the signatory
+	Name *string `json:"name,omitempty"`
+	// Signing order (1, 2, 3...)
+	Order *float64 `json:"order,omitempty"`
+	// The raw data returned by the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// Role of the signatory
+	Role *SigningSignatoryRole `json:"role,omitempty"`
+	// When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SignedAt *time.Time `json:"signed_at,omitempty"`
+	// Current status of this signatory
+	Status *SigningSignatoryStatus `json:"status,omitempty"`
+	// The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (s SigningSignatory) MarshalJSON() ([]byte, error) {

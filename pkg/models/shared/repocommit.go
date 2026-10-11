@@ -8,7 +8,9 @@ import (
 )
 
 type RepoCommit struct {
-	BranchID       *string        `json:"branch_id,omitempty"`
+	// (reference to RepoBranch)
+	BranchID *string `json:"branch_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt      *time.Time     `json:"created_at,omitempty"`
 	ID             *string        `json:"id,omitempty"`
 	LinesAdded     *float64       `json:"lines_added,omitempty"`
@@ -17,9 +19,12 @@ type RepoCommit struct {
 	Message        *string        `json:"message,omitempty"`
 	PullrequestIds []string       `json:"pullrequest_ids,omitempty"`
 	Raw            map[string]any `json:"raw,omitempty"`
-	RepoID         string         `json:"repo_id"`
-	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
-	UserID         *string        `json:"user_id,omitempty"`
+	// (reference to RepoRepository)
+	RepoID string `json:"repo_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (r RepoCommit) MarshalJSON() ([]byte, error) {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountType - CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
 type AccountType string
 
 const (
@@ -32,6 +33,7 @@ func (e *AccountType) IsExact() bool {
 	return false
 }
 
+// AccountingBankfeedaccountStatus - feed state: ACTIVE, INACTIVE
 type AccountingBankfeedaccountStatus string
 
 const (
@@ -55,22 +57,37 @@ func (e *AccountingBankfeedaccountStatus) IsExact() bool {
 }
 
 type AccountingBankfeedaccount struct {
-	AccountID          *string                          `json:"account_id,omitempty"`
-	AccountNumber      *string                          `json:"account_number,omitempty"`
-	AccountNumberLast4 *string                          `json:"account_number_last4,omitempty"`
-	AccountType        *AccountType                     `json:"account_type,omitempty"`
-	Balance            *float64                         `json:"balance,omitempty"`
-	BankName           *string                          `json:"bank_name,omitempty"`
-	CreatedAt          *time.Time                       `json:"created_at,omitempty"`
-	Currency           *string                          `json:"currency,omitempty"`
-	FeedStartAt        *time.Time                       `json:"feed_start_at,omitempty"`
-	ID                 *string                          `json:"id,omitempty"`
-	Name               *string                          `json:"name,omitempty"`
-	OrganizationID     *string                          `json:"organization_id,omitempty"`
-	Raw                map[string]any                   `json:"raw,omitempty"`
-	RoutingNumber      *string                          `json:"routing_number,omitempty"`
-	Status             *AccountingBankfeedaccountStatus `json:"status,omitempty"`
-	UpdatedAt          *time.Time                       `json:"updated_at,omitempty"`
+	// ref -> AccountingAccount: the target GL account the feed posts into (reference to AccountingAccount)
+	AccountID *string `json:"account_id,omitempty"`
+	// full account number where available
+	AccountNumber *string `json:"account_number,omitempty"`
+	// last-4 when the full number isn't returned
+	AccountNumberLast4 *string `json:"account_number_last4,omitempty"`
+	// CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
+	AccountType *AccountType `json:"account_type,omitempty"`
+	// current balance of the source account
+	Balance *float64 `json:"balance,omitempty"`
+	// bank / institution name
+	BankName *string `json:"bank_name,omitempty"`
+	// creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217 currency of the account
+	Currency *string `json:"currency,omitempty"`
+	// date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	FeedStartAt *time.Time `json:"feed_start_at,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	// account nickname / source name
+	Name *string `json:"name,omitempty"`
+	// ref -> accounting Organization this record belongs to
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// The original data from the integration's API
+	Raw map[string]any `json:"raw,omitempty"`
+	// bank routing number
+	RoutingNumber *string `json:"routing_number,omitempty"`
+	// feed state: ACTIVE, INACTIVE
+	Status *AccountingBankfeedaccountStatus `json:"status,omitempty"`
+	// last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingBankfeedaccount) MarshalJSON() ([]byte, error) {

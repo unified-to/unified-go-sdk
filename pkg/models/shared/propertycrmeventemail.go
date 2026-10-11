@@ -5,11 +5,14 @@ package shared
 // PropertyCrmEventEmail - The email object, when type = email
 type PropertyCrmEventEmail struct {
 	AttachmentFileIds []string `json:"attachment_file_ids,omitempty"`
-	Body              *string  `json:"body,omitempty"`
+	// The event email's body
+	Body *string `json:"body,omitempty"`
 	// The event email's cc name & email (name <test@test.com>)
-	Cc      []string `json:"cc,omitempty"`
-	From    *string  `json:"from,omitempty"`
-	Subject *string  `json:"subject,omitempty"`
+	Cc []string `json:"cc,omitempty"`
+	// The event email's from name & email address (name <test@test.com>)
+	From *string `json:"from,omitempty"`
+	// The event email's subject
+	Subject *string `json:"subject,omitempty"`
 	// The event email's "to" name & email (name <test@test.com>)
 	To []string `json:"to,omitempty"`
 }

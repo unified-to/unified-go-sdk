@@ -8,20 +8,32 @@ import (
 )
 
 type SocialReview struct {
-	AuthorAvatarURL *string        `json:"author_avatar_url,omitempty"`
-	AuthorLocation  *string        `json:"author_location,omitempty"`
-	AuthorName      *string        `json:"author_name,omitempty"`
-	Content         *string        `json:"content,omitempty"`
-	CreatedAt       *time.Time     `json:"created_at,omitempty"`
-	ID              *string        `json:"id,omitempty"`
-	ProfileID       *string        `json:"profile_id,omitempty"`
-	Rating          *float64       `json:"rating,omitempty"`
-	Raw             map[string]any `json:"raw,omitempty"`
+	// Profile image URL of the reviewer
+	AuthorAvatarURL *string `json:"author_avatar_url,omitempty"`
+	// Free-text location of the reviewer
+	AuthorLocation *string `json:"author_location,omitempty"`
+	// Display name of the reviewer
+	AuthorName *string `json:"author_name,omitempty"`
+	// The review text
+	Content *string `json:"content,omitempty"`
+	// When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Unique identifier for the review
+	ID *string `json:"id,omitempty"`
+	// The social profile (page/handle/listing) being reviewed
+	ProfileID *string `json:"profile_id,omitempty"`
+	// Star rating, typically 1-5
+	Rating *float64 `json:"rating,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
 	// The business's reply to the review
-	Reply     *PropertySocialReviewReply `json:"reply,omitempty"`
-	Title     *string                    `json:"title,omitempty"`
-	UpdatedAt *time.Time                 `json:"updated_at,omitempty"`
-	URL       *string                    `json:"url,omitempty"`
+	Reply *PropertySocialReviewReply `json:"reply,omitempty"`
+	// Optional review title/headline
+	Title *string `json:"title,omitempty"`
+	// When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Public permalink to the review
+	URL *string `json:"url,omitempty"`
 }
 
 func (s SocialReview) MarshalJSON() ([]byte, error) {

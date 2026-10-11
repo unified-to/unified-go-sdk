@@ -8,10 +8,12 @@ import (
 )
 
 type AdsInsertionorderBudgetSegment struct {
-	BudgetAmount *float64   `json:"budget_amount,omitempty"`
-	Description  *string    `json:"description,omitempty"`
-	EndAt        *time.Time `json:"end_at,omitempty"`
-	StartAt      *time.Time `json:"start_at,omitempty"`
+	BudgetAmount *float64 `json:"budget_amount,omitempty"`
+	Description  *string  `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 }
 
 func (a AdsInsertionorderBudgetSegment) MarshalJSON() ([]byte, error) {

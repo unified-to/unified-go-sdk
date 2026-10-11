@@ -9,19 +9,26 @@ import (
 
 // UcContact - A contact represents a person that optionally is associated with a call
 type UcContact struct {
-	Company   *string    `json:"company,omitempty"`
+	// The company/organization name  of the contact
+	Company *string `json:"company,omitempty"`
+	// The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of email addresses for this contact
-	Emails    []UcEmail      `json:"emails,omitempty"`
-	FirstName *string        `json:"first_name,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	LastName  *string        `json:"last_name,omitempty"`
-	Name      *string        `json:"name,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
+	Emails    []UcEmail `json:"emails,omitempty"`
+	FirstName *string   `json:"first_name,omitempty"`
+	// Unique identifier for this contact object
+	ID       *string `json:"id,omitempty"`
+	LastName *string `json:"last_name,omitempty"`
+	// The name of the contact
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this contact
+	Raw map[string]any `json:"raw,omitempty"`
 	// An array of telephones for this contact
 	Telephones []UcTelephone `json:"telephones,omitempty"`
-	Title      *string       `json:"title,omitempty"`
-	UpdatedAt  *time.Time    `json:"updated_at,omitempty"`
+	// The job title of the contact
+	Title *string `json:"title,omitempty"`
+	// The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (u UcContact) MarshalJSON() ([]byte, error) {

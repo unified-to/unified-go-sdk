@@ -68,27 +68,36 @@ func (e *AccountingSalesorderStatus) IsExact() bool {
 }
 
 type AccountingSalesorder struct {
-	AccountID       *string                                     `json:"account_id,omitempty"`
-	BillingAddress  *PropertyAccountingSalesorderBillingAddress `json:"billing_address,omitempty"`
-	CategoryIds     []string                                    `json:"category_ids,omitempty"`
-	ClosedAt        *time.Time                                  `json:"closed_at,omitempty"`
-	ContactID       *string                                     `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time                                  `json:"created_at,omitempty"`
-	Currency        *string                                     `json:"currency,omitempty"`
-	DeviceID        *string                                     `json:"device_id,omitempty"`
-	DiscountAmount  *float64                                    `json:"discount_amount,omitempty"`
-	EmployeeUserID  *string                                     `json:"employee_user_id,omitempty"`
-	Fees            []AccountingFee                             `json:"fees,omitempty"`
-	FulfillmentType *FulfillmentType                            `json:"fulfillment_type,omitempty"`
-	GuestCount      *float64                                    `json:"guest_count,omitempty"`
-	ID              *string                                     `json:"id,omitempty"`
-	Lineitems       []AccountingLineitem                        `json:"lineitems,omitempty"`
-	LocationID      *string                                     `json:"location_id,omitempty"`
-	Metadata        []AccountingMetadata                        `json:"metadata,omitempty"`
-	OrderNumber     *string                                     `json:"order_number,omitempty"`
-	OrganizationID  *string                                     `json:"organization_id,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID      *string                                     `json:"account_id,omitempty"`
+	BillingAddress *PropertyAccountingSalesorderBillingAddress `json:"billing_address,omitempty"`
+	CategoryIds    []string                                    `json:"category_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt *time.Time `json:"closed_at,omitempty"`
+	// Customer, Supplier (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// POS register/terminal/device (HRIS Device)
+	DeviceID       *string  `json:"device_id,omitempty"`
+	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	// selling/serving HR employee (server, cashier) (reference to HrisEmployee)
+	EmployeeUserID  *string              `json:"employee_user_id,omitempty"`
+	Fees            []AccountingFee      `json:"fees,omitempty"`
+	FulfillmentType *FulfillmentType     `json:"fulfillment_type,omitempty"`
+	GuestCount      *float64             `json:"guest_count,omitempty"`
+	ID              *string              `json:"id,omitempty"`
+	Lineitems       []AccountingLineitem `json:"lineitems,omitempty"`
+	// store/site; reference to a commerce_location or hris_location
+	LocationID *string              `json:"location_id,omitempty"`
+	Metadata   []AccountingMetadata `json:"metadata,omitempty"`
+	// human-facing receipt/ticket/check number, distinct from id
+	OrderNumber    *string `json:"order_number,omitempty"`
+	OrganizationID *string `json:"organization_id,omitempty"`
 	// read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
-	Payments            []AccountingPaymentReference                 `json:"payments,omitempty"`
+	Payments []AccountingPaymentReference `json:"payments,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PostedAt            *time.Time                                   `json:"posted_at,omitempty"`
 	Raw                 map[string]any                               `json:"raw,omitempty"`
 	RefundedAmount      *float64                                     `json:"refunded_amount,omitempty"`
@@ -96,12 +105,15 @@ type AccountingSalesorder struct {
 	ServiceChargeAmount *float64                                     `json:"service_charge_amount,omitempty"`
 	ShippingAddress     *PropertyAccountingSalesorderShippingAddress `json:"shipping_address,omitempty"`
 	Status              *AccountingSalesorderStatus                  `json:"status,omitempty"`
-	SubscriptionID      *string                                      `json:"subscription_id,omitempty"`
-	SubtotalAmount      *float64                                     `json:"subtotal_amount,omitempty"`
-	TaxAmount           *float64                                     `json:"tax_amount,omitempty"`
-	TipAmount           *float64                                     `json:"tip_amount,omitempty"`
-	TotalAmount         *float64                                     `json:"total_amount,omitempty"`
-	UpdatedAt           *time.Time                                   `json:"updated_at,omitempty"`
+	// payment_subscription that generated this order, if recurring
+	SubscriptionID *string `json:"subscription_id,omitempty"`
+	// pre-tax, pre-tip amount
+	SubtotalAmount *float64 `json:"subtotal_amount,omitempty"`
+	TaxAmount      *float64 `json:"tax_amount,omitempty"`
+	TipAmount      *float64 `json:"tip_amount,omitempty"`
+	TotalAmount    *float64 `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingSalesorder) MarshalJSON() ([]byte, error) {

@@ -13,20 +13,25 @@ value := operations.PatchHrisDeductionQueryParamFieldsID
 
 ## Values
 
-| Name                                              | Value                                             |
-| ------------------------------------------------- | ------------------------------------------------- |
-| `PatchHrisDeductionQueryParamFieldsID`            | id                                                |
-| `PatchHrisDeductionQueryParamFieldsCreatedAt`     | created_at                                        |
-| `PatchHrisDeductionQueryParamFieldsUpdatedAt`     | updated_at                                        |
-| `PatchHrisDeductionQueryParamFieldsUserID`        | user_id                                           |
-| `PatchHrisDeductionQueryParamFieldsCompanyID`     | company_id                                        |
-| `PatchHrisDeductionQueryParamFieldsBenefitID`     | benefit_id                                        |
-| `PatchHrisDeductionQueryParamFieldsAmount`        | amount                                            |
-| `PatchHrisDeductionQueryParamFieldsType`          | type                                              |
-| `PatchHrisDeductionQueryParamFieldsCoverageLevel` | coverage_level                                    |
-| `PatchHrisDeductionQueryParamFieldsFrequency`     | frequency                                         |
-| `PatchHrisDeductionQueryParamFieldsStartAt`       | start_at                                          |
-| `PatchHrisDeductionQueryParamFieldsEndAt`         | end_at                                            |
-| `PatchHrisDeductionQueryParamFieldsIsActive`      | is_active                                         |
-| `PatchHrisDeductionQueryParamFieldsNotes`         | notes                                             |
-| `PatchHrisDeductionQueryParamFieldsRaw`           | raw                                               |
+| Name                                                | Value                                               |
+| --------------------------------------------------- | --------------------------------------------------- |
+| `PatchHrisDeductionQueryParamFieldsID`              | id                                                  |
+| `PatchHrisDeductionQueryParamFieldsCreatedAt`       | created_at                                          |
+| `PatchHrisDeductionQueryParamFieldsUpdatedAt`       | updated_at                                          |
+| `PatchHrisDeductionQueryParamFieldsUserID`          | user_id                                             |
+| `PatchHrisDeductionQueryParamFieldsCompanyID`       | company_id                                          |
+| `PatchHrisDeductionQueryParamFieldsBenefitID`       | benefit_id                                          |
+| `PatchHrisDeductionQueryParamFieldsAmount`          | amount                                              |
+| `PatchHrisDeductionQueryParamFieldsType`            | type                                                |
+| `PatchHrisDeductionQueryParamFieldsCoverageLevel`   | coverage_level                                      |
+| `PatchHrisDeductionQueryParamFieldsFrequency`       | frequency                                           |
+| `PatchHrisDeductionQueryParamFieldsStartAt`         | start_at                                            |
+| `PatchHrisDeductionQueryParamFieldsEndAt`           | end_at                                              |
+| `PatchHrisDeductionQueryParamFieldsIsActive`        | is_active                                           |
+| `PatchHrisDeductionQueryParamFieldsNotes`           | notes                                               |
+| `PatchHrisDeductionQueryParamFieldsEmployerAmount`  | employer_amount                                     |
+| `PatchHrisDeductionQueryParamFieldsEmployerType`    | employer_type                                       |
+| `PatchHrisDeductionQueryParamFieldsMaxAmount`       | max_amount                                          |
+| `PatchHrisDeductionQueryParamFieldsPaycodeID`       | paycode_id                                          |
+| `PatchHrisDeductionQueryParamFieldsGarnishmentType` | garnishment_type                                    |
+| `PatchHrisDeductionQueryParamFieldsRaw`             | raw                                                 |

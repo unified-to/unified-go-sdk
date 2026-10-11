@@ -2,6 +2,7 @@
 
 package shared
 
+// PropertyAdsReportMetricsCampaignTargetingOptimizationMode - Google: bid_only falsetrue
 type PropertyAdsReportMetricsCampaignTargetingOptimizationMode string
 
 const (
@@ -26,8 +27,9 @@ func (e *PropertyAdsReportMetricsCampaignTargetingOptimizationMode) IsExact() bo
 
 // PropertyAdsReportMetricsCampaignTargetingOptimization - Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
 type PropertyAdsReportMetricsCampaignTargetingOptimization struct {
-	AdvantageAudience                 *bool                                                      `json:"advantage_audience,omitempty"`
-	AdvantagePlacements               *bool                                                      `json:"advantage_placements,omitempty"`
+	AdvantageAudience   *bool `json:"advantage_audience,omitempty"`
+	AdvantagePlacements *bool `json:"advantage_placements,omitempty"`
+	// Google: bid_only falsetrue
 	Mode                              *PropertyAdsReportMetricsCampaignTargetingOptimizationMode `json:"mode,omitempty"`
 	TargetingOptimizationExpansionAll *bool                                                      `json:"targeting_optimization_expansion_all,omitempty"`
 }

@@ -30,22 +30,32 @@ func (e *UcCallType) IsExact() bool {
 }
 
 type UcCall struct {
-	ContactID *string        `json:"contact_id,omitempty"`
-	Contacts  []UcContact    `json:"contacts,omitempty"`
-	CreatedAt *time.Time     `json:"created_at,omitempty"`
-	EndAt     *time.Time     `json:"end_at,omitempty"`
-	ID        *string        `json:"id,omitempty"`
-	IsPrivate *bool          `json:"is_private,omitempty"`
-	Metadata  []UcMetadata   `json:"metadata,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
-	StartAt   *time.Time     `json:"start_at,omitempty"`
+	// The contact ID for call (reference to UcContact)
+	ContactID *string     `json:"contact_id,omitempty"`
+	Contacts  []UcContact `json:"contacts,omitempty"`
+	// opaque identifier shared across legs of one interaction
+	ConversationIdentifier *string `json:"conversation_identifier,omitempty"`
+	// The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Unique identifier for this call object
+	ID        *string      `json:"id,omitempty"`
+	IsPrivate *bool        `json:"is_private,omitempty"`
+	Metadata  []UcMetadata `json:"metadata,omitempty"`
+	// The raw data returned by the integration for this call
+	Raw map[string]any `json:"raw,omitempty"`
+	// The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 	// The telephone number called
 	Telephone *PropertyUcCallTelephone `json:"telephone,omitempty"`
 	Type      *UcCallType              `json:"type,omitempty"`
-	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
-	UserID    *string                  `json:"user_id,omitempty"`
-	UserName  *string                  `json:"user_name,omitempty"`
-	UserPhone *string                  `json:"user_phone,omitempty"`
+	// The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID    *string `json:"user_id,omitempty"`
+	UserName  *string `json:"user_name,omitempty"`
+	UserPhone *string `json:"user_phone,omitempty"`
 }
 
 func (u UcCall) MarshalJSON() ([]byte, error) {
@@ -71,6 +81,13 @@ func (u *UcCall) GetContacts() []UcContact {
 		return nil
 	}
 	return u.Contacts
+}
+
+func (u *UcCall) GetConversationIdentifier() *string {
+	if u == nil {
+		return nil
+	}
+	return u.ConversationIdentifier
 }
 
 func (u *UcCall) GetCreatedAt() *time.Time {

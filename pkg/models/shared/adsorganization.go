@@ -36,18 +36,21 @@ func (e *AdsOrganizationStatus) IsExact() bool {
 }
 
 type AdsOrganization struct {
-	AccountNumber *string    `json:"account_number,omitempty"`
-	CreatedAt     *time.Time `json:"created_at,omitempty"`
-	Currency      *string    `json:"currency,omitempty"`
-	ID            *string    `json:"id,omitempty"`
+	// Integration-specific account number distinct from id (Microsoft AccountNumber)
+	AccountNumber *string `json:"account_number,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	ID        *string    `json:"id,omitempty"`
 	// Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
-	Managers  []AdsManager           `json:"managers,omitempty"`
-	Name      *string                `json:"name,omitempty"`
-	ParentID  *string                `json:"parent_id,omitempty"`
-	Raw       map[string]any         `json:"raw,omitempty"`
-	Status    *AdsOrganizationStatus `json:"status,omitempty"`
-	Timezone  *string                `json:"timezone,omitempty"`
-	UpdatedAt *time.Time             `json:"updated_at,omitempty"`
+	Managers []AdsManager           `json:"managers,omitempty"`
+	Name     *string                `json:"name,omitempty"`
+	ParentID *string                `json:"parent_id,omitempty"`
+	Raw      map[string]any         `json:"raw,omitempty"`
+	Status   *AdsOrganizationStatus `json:"status,omitempty"`
+	Timezone *string                `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AdsOrganization) MarshalJSON() ([]byte, error) {

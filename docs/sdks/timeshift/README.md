@@ -39,24 +39,24 @@ func main() {
 
     res, err := s.Timeshift.CreateHrisTimeshift(ctx, operations.CreateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2023-06-07T03:05:14.680Z"),
+            ApprovedAt: types.MustNewTimeFromString("2023-06-18T03:09:21.270Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
                     Currency: unifiedgosdk.Pointer("JPY"),
-                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Frequency: shared.HrisCompensationFrequencyWeek.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
-                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                    Type: shared.HrisCompensationTypeCommission.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-08-28T03:01:07.094Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-17T03:41:27.361Z"),
             Hours: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("9f128688-46cc-481b-a41e-503d0c962370"),
+            ID: unifiedgosdk.Pointer("019ea5ad-589d-41bc-bc20-1df4380434fb"),
             IsApproved: unifiedgosdk.Pointer(true),
-            StartAt: types.MustNewTimeFromString("2023-06-26T08:32:27.006Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-23T15:17:01.677Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-07T12:08:41.034Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:09:33.284Z"),
         },
         ConnectionID: "<id>",
     })
@@ -224,24 +224,24 @@ func main() {
 
     res, err := s.Timeshift.PatchHrisTimeshift(ctx, operations.PatchHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2023-06-07T03:05:14.688Z"),
+            ApprovedAt: types.MustNewTimeFromString("2023-06-18T03:09:21.276Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
                     Currency: unifiedgosdk.Pointer("JPY"),
-                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Frequency: shared.HrisCompensationFrequencyWeek.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
-                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                    Type: shared.HrisCompensationTypeCommission.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-08-28T03:01:07.109Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-17T03:41:27.371Z"),
             Hours: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("2492c6df-e2c6-450f-af6d-7db5a8f448c0"),
+            ID: unifiedgosdk.Pointer("2115c4ae-1887-4cad-b775-61a475b5af0f"),
             IsApproved: unifiedgosdk.Pointer(true),
-            StartAt: types.MustNewTimeFromString("2023-06-26T08:32:27.015Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-23T15:17:01.681Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-07T12:08:41.040Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:09:33.287Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -356,24 +356,24 @@ func main() {
 
     res, err := s.Timeshift.UpdateHrisTimeshift(ctx, operations.UpdateHrisTimeshiftRequest{
         HrisTimeshift: shared.HrisTimeshift{
-            ApprovedAt: types.MustNewTimeFromString("2023-06-07T03:05:14.688Z"),
+            ApprovedAt: types.MustNewTimeFromString("2023-06-18T03:09:21.276Z"),
             Compensation: []shared.HrisCompensation{
                 shared.HrisCompensation{
                     Amount: unifiedgosdk.Pointer[float64](76761.0),
                     Currency: unifiedgosdk.Pointer("JPY"),
-                    Frequency: shared.HrisCompensationFrequencyHour.ToPointer(),
+                    Frequency: shared.HrisCompensationFrequencyWeek.ToPointer(),
                     Notes: unifiedgosdk.Pointer("Annus adficio suasoria architecto aggero."),
-                    Type: shared.HrisCompensationTypeOther.ToPointer(),
+                    Type: shared.HrisCompensationTypeCommission.ToPointer(),
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2019-07-01T23:53:15.738Z"),
             EmployeeUserID: "<id>",
-            EndAt: types.MustNewTimeFromString("2026-08-28T03:01:07.109Z"),
+            EndAt: types.MustNewTimeFromString("2026-09-17T03:41:27.371Z"),
             Hours: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("2492c6df-e2c6-450f-af6d-7db5a8f448c0"),
+            ID: unifiedgosdk.Pointer("2115c4ae-1887-4cad-b775-61a475b5af0f"),
             IsApproved: unifiedgosdk.Pointer(true),
-            StartAt: types.MustNewTimeFromString("2023-06-26T08:32:27.015Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-06-23T15:17:01.681Z"),
+            StartAt: types.MustNewTimeFromString("2023-07-07T12:08:41.040Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-06-29T04:09:33.287Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

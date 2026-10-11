@@ -12,21 +12,26 @@ import (
 type ListHrisDeductionsQueryParamFields string
 
 const (
-	ListHrisDeductionsQueryParamFieldsID            ListHrisDeductionsQueryParamFields = "id"
-	ListHrisDeductionsQueryParamFieldsCreatedAt     ListHrisDeductionsQueryParamFields = "created_at"
-	ListHrisDeductionsQueryParamFieldsUpdatedAt     ListHrisDeductionsQueryParamFields = "updated_at"
-	ListHrisDeductionsQueryParamFieldsUserID        ListHrisDeductionsQueryParamFields = "user_id"
-	ListHrisDeductionsQueryParamFieldsCompanyID     ListHrisDeductionsQueryParamFields = "company_id"
-	ListHrisDeductionsQueryParamFieldsBenefitID     ListHrisDeductionsQueryParamFields = "benefit_id"
-	ListHrisDeductionsQueryParamFieldsAmount        ListHrisDeductionsQueryParamFields = "amount"
-	ListHrisDeductionsQueryParamFieldsType          ListHrisDeductionsQueryParamFields = "type"
-	ListHrisDeductionsQueryParamFieldsCoverageLevel ListHrisDeductionsQueryParamFields = "coverage_level"
-	ListHrisDeductionsQueryParamFieldsFrequency     ListHrisDeductionsQueryParamFields = "frequency"
-	ListHrisDeductionsQueryParamFieldsStartAt       ListHrisDeductionsQueryParamFields = "start_at"
-	ListHrisDeductionsQueryParamFieldsEndAt         ListHrisDeductionsQueryParamFields = "end_at"
-	ListHrisDeductionsQueryParamFieldsIsActive      ListHrisDeductionsQueryParamFields = "is_active"
-	ListHrisDeductionsQueryParamFieldsNotes         ListHrisDeductionsQueryParamFields = "notes"
-	ListHrisDeductionsQueryParamFieldsRaw           ListHrisDeductionsQueryParamFields = "raw"
+	ListHrisDeductionsQueryParamFieldsID              ListHrisDeductionsQueryParamFields = "id"
+	ListHrisDeductionsQueryParamFieldsCreatedAt       ListHrisDeductionsQueryParamFields = "created_at"
+	ListHrisDeductionsQueryParamFieldsUpdatedAt       ListHrisDeductionsQueryParamFields = "updated_at"
+	ListHrisDeductionsQueryParamFieldsUserID          ListHrisDeductionsQueryParamFields = "user_id"
+	ListHrisDeductionsQueryParamFieldsCompanyID       ListHrisDeductionsQueryParamFields = "company_id"
+	ListHrisDeductionsQueryParamFieldsBenefitID       ListHrisDeductionsQueryParamFields = "benefit_id"
+	ListHrisDeductionsQueryParamFieldsAmount          ListHrisDeductionsQueryParamFields = "amount"
+	ListHrisDeductionsQueryParamFieldsType            ListHrisDeductionsQueryParamFields = "type"
+	ListHrisDeductionsQueryParamFieldsCoverageLevel   ListHrisDeductionsQueryParamFields = "coverage_level"
+	ListHrisDeductionsQueryParamFieldsFrequency       ListHrisDeductionsQueryParamFields = "frequency"
+	ListHrisDeductionsQueryParamFieldsStartAt         ListHrisDeductionsQueryParamFields = "start_at"
+	ListHrisDeductionsQueryParamFieldsEndAt           ListHrisDeductionsQueryParamFields = "end_at"
+	ListHrisDeductionsQueryParamFieldsIsActive        ListHrisDeductionsQueryParamFields = "is_active"
+	ListHrisDeductionsQueryParamFieldsNotes           ListHrisDeductionsQueryParamFields = "notes"
+	ListHrisDeductionsQueryParamFieldsEmployerAmount  ListHrisDeductionsQueryParamFields = "employer_amount"
+	ListHrisDeductionsQueryParamFieldsEmployerType    ListHrisDeductionsQueryParamFields = "employer_type"
+	ListHrisDeductionsQueryParamFieldsMaxAmount       ListHrisDeductionsQueryParamFields = "max_amount"
+	ListHrisDeductionsQueryParamFieldsPaycodeID       ListHrisDeductionsQueryParamFields = "paycode_id"
+	ListHrisDeductionsQueryParamFieldsGarnishmentType ListHrisDeductionsQueryParamFields = "garnishment_type"
+	ListHrisDeductionsQueryParamFieldsRaw             ListHrisDeductionsQueryParamFields = "raw"
 )
 
 func (e ListHrisDeductionsQueryParamFields) ToPointer() *ListHrisDeductionsQueryParamFields {
@@ -65,6 +70,16 @@ func (e *ListHrisDeductionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "employer_amount":
+		fallthrough
+	case "employer_type":
+		fallthrough
+	case "max_amount":
+		fallthrough
+	case "paycode_id":
+		fallthrough
+	case "garnishment_type":
 		fallthrough
 	case "raw":
 		*e = ListHrisDeductionsQueryParamFields(v)

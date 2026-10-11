@@ -8,6 +8,7 @@ import (
 )
 
 type TicketingCustomer struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt  *time.Time           `json:"created_at,omitempty"`
 	Emails     []TicketingEmail     `json:"emails,omitempty"`
 	ID         *string              `json:"id,omitempty"`
@@ -15,7 +16,8 @@ type TicketingCustomer struct {
 	Raw        map[string]any       `json:"raw,omitempty"`
 	Tags       []string             `json:"tags,omitempty"`
 	Telephones []TicketingTelephone `json:"telephones,omitempty"`
-	UpdatedAt  *time.Time           `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (t TicketingCustomer) MarshalJSON() ([]byte, error) {

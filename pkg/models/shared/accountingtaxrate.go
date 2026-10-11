@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingTaxrateType - Whether the rate applies to sales, purchases, or both
 type AccountingTaxrateType string
 
 const (
@@ -33,23 +34,32 @@ func (e *AccountingTaxrateType) IsExact() bool {
 
 type AccountingTaxrate struct {
 	// Component parts of a compound or multi-component tax
-	Components     []AccountingTaxrateComponent `json:"components,omitempty"`
-	Country        *string                      `json:"country,omitempty"`
-	CreatedAt      *time.Time                   `json:"created_at,omitempty"`
-	Description    *string                      `json:"description,omitempty"`
-	EffectiveRate  *float64                     `json:"effective_rate,omitempty"`
-	ID             *string                      `json:"id,omitempty"`
-	IsActive       *bool                        `json:"is_active,omitempty"`
-	IsCompound     *bool                        `json:"is_compound,omitempty"`
-	Metadata       []AccountingMetadata         `json:"metadata,omitempty"`
-	Name           *string                      `json:"name,omitempty"`
-	OrganizationID *string                      `json:"organization_id,omitempty"`
-	Rate           *float64                     `json:"rate,omitempty"`
-	Raw            map[string]any               `json:"raw,omitempty"`
-	Region         *string                      `json:"region,omitempty"`
-	TotalRate      *float64                     `json:"total_rate,omitempty"`
-	Type           *AccountingTaxrateType       `json:"type,omitempty"`
-	UpdatedAt      *time.Time                   `json:"updated_at,omitempty"`
+	Components []AccountingTaxrateComponent `json:"components,omitempty"`
+	// Jurisdiction country
+	Country *string `json:"country,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// Net effective rate in %, where it differs from the nominal rate
+	EffectiveRate *float64 `json:"effective_rate,omitempty"`
+	ID            *string  `json:"id,omitempty"`
+	IsActive      *bool    `json:"is_active,omitempty"`
+	// True when the rate stacks on top of other taxes
+	IsCompound     *bool                `json:"is_compound,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Name           *string              `json:"name,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	// %
+	Rate *float64       `json:"rate,omitempty"`
+	Raw  map[string]any `json:"raw,omitempty"`
+	// Jurisdiction state / province
+	Region *string `json:"region,omitempty"`
+	// Sum of all components, in %
+	TotalRate *float64 `json:"total_rate,omitempty"`
+	// Whether the rate applies to sales, purchases, or both
+	Type *AccountingTaxrateType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTaxrate) MarshalJSON() ([]byte, error) {

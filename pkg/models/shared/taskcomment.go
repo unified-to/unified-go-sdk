@@ -8,16 +8,20 @@ import (
 )
 
 type TaskComment struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	HasChildren *bool          `json:"has_children,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
-	TaskID      *string        `json:"task_id,omitempty"`
-	Text        *string        `json:"text,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserID      *string        `json:"user_id,omitempty"`
-	UserName    *string        `json:"user_name,omitempty"`
+	// (reference to TaskTask)
+	TaskID *string `json:"task_id,omitempty"`
+	Text   *string `json:"text,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID   *string `json:"user_id,omitempty"`
+	UserName *string `json:"user_name,omitempty"`
 }
 
 func (t TaskComment) MarshalJSON() ([]byte, error) {

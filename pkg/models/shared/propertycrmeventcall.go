@@ -9,9 +9,12 @@ import (
 
 // PropertyCrmEventCall - The call object, when type = call
 type PropertyCrmEventCall struct {
-	Description *string    `json:"description,omitempty"`
-	Duration    *float64   `json:"duration,omitempty"`
-	StartAt     *time.Time `json:"start_at,omitempty"`
+	// The event call's descriptionnotes
+	Description *string `json:"description,omitempty"`
+	// The event call's duration in minutes
+	Duration *float64 `json:"duration,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 }
 
 func (p PropertyCrmEventCall) MarshalJSON() ([]byte, error) {

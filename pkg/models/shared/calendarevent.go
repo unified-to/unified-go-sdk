@@ -26,30 +26,36 @@ func (e *CalendarEventStatus) IsExact() bool {
 }
 
 type CalendarEvent struct {
-	Attachments       []CalendarAttachment            `json:"attachments,omitempty"`
-	Attendees         []CalendarAttendee              `json:"attendees,omitempty"`
-	CalendarID        *string                         `json:"calendar_id,omitempty"`
-	Conference        []CalendarConference            `json:"conference,omitempty"`
-	CreatedAt         *string                         `json:"created_at,omitempty"`
-	EndAt             *string                         `json:"end_at,omitempty"`
-	HasConference     *bool                           `json:"has_conference,omitempty"`
-	ID                *string                         `json:"id,omitempty"`
-	IsAllDay          *bool                           `json:"is_all_day,omitempty"`
-	IsFree            *bool                           `json:"is_free,omitempty"`
-	IsPrivate         *bool                           `json:"is_private,omitempty"`
-	Location          *string                         `json:"location,omitempty"`
-	Notes             *string                         `json:"notes,omitempty"`
-	Organizer         *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
-	Raw               map[string]any                  `json:"raw,omitempty"`
-	Recurrence        []CalendarEventRecurrence       `json:"recurrence,omitempty"`
-	RecurringEventID  *string                         `json:"recurring_event_id,omitempty"`
-	SendNotifications *bool                           `json:"send_notifications,omitempty"`
-	StartAt           *string                         `json:"start_at,omitempty"`
-	Status            *CalendarEventStatus            `json:"status,omitempty"`
-	Subject           *string                         `json:"subject,omitempty"`
-	Timezone          *string                         `json:"timezone,omitempty"`
-	UpdatedAt         *string                         `json:"updated_at,omitempty"`
-	WebURL            *string                         `json:"web_url,omitempty"`
+	Attachments []CalendarAttachment `json:"attachments,omitempty"`
+	Attendees   []CalendarAttendee   `json:"attendees,omitempty"`
+	// (reference to CalendarCalendar)
+	CalendarID *string              `json:"calendar_id,omitempty"`
+	Conference []CalendarConference `json:"conference,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *string `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt         *string                         `json:"end_at,omitempty"`
+	HasConference *bool                           `json:"has_conference,omitempty"`
+	ID            *string                         `json:"id,omitempty"`
+	IsAllDay      *bool                           `json:"is_all_day,omitempty"`
+	IsFree        *bool                           `json:"is_free,omitempty"`
+	IsPrivate     *bool                           `json:"is_private,omitempty"`
+	Location      *string                         `json:"location,omitempty"`
+	Notes         *string                         `json:"notes,omitempty"`
+	Organizer     *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
+	Raw           map[string]any                  `json:"raw,omitempty"`
+	Recurrence    []CalendarEventRecurrence       `json:"recurrence,omitempty"`
+	// (reference to CalendarEvent)
+	RecurringEventID  *string `json:"recurring_event_id,omitempty"`
+	SendNotifications *bool   `json:"send_notifications,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt  *string              `json:"start_at,omitempty"`
+	Status   *CalendarEventStatus `json:"status,omitempty"`
+	Subject  *string              `json:"subject,omitempty"`
+	Timezone *string              `json:"timezone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
+	WebURL    *string `json:"web_url,omitempty"`
 }
 
 func (c *CalendarEvent) GetAttachments() []CalendarAttachment {

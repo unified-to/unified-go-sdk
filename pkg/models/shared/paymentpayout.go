@@ -32,20 +32,26 @@ func (e *PaymentPayoutStatus) IsExact() bool {
 }
 
 type PaymentPayout struct {
-	AccountID *string    `json:"account_id,omitempty"`
+	// ref -> AccountingAccount; the destination account (reference to AccountingAccount)
+	AccountID *string `json:"account_id,omitempty"`
+	// Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ArrivalAt *time.Time `json:"arrival_at,omitempty"`
-	CreatedAt *string    `json:"created_at,omitempty"`
-	Currency  *string    `json:"currency,omitempty"`
-	FeeAmount *float64   `json:"fee_amount,omitempty"`
-	ID        *string    `json:"id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *string `json:"created_at,omitempty"`
+	Currency  *string `json:"currency,omitempty"`
+	// Processor fee deducted from the payout
+	FeeAmount *float64 `json:"fee_amount,omitempty"`
+	ID        *string  `json:"id,omitempty"`
 	// The transactions included in this payout
-	Lineitems   []PaymentPayoutLineitem `json:"lineitems,omitempty"`
-	NetAmount   *float64                `json:"net_amount,omitempty"`
-	Notes       *string                 `json:"notes,omitempty"`
-	Raw         map[string]any          `json:"raw,omitempty"`
-	Status      *PaymentPayoutStatus    `json:"status,omitempty"`
-	TotalAmount *float64                `json:"total_amount,omitempty"`
-	UpdatedAt   *string                 `json:"updated_at,omitempty"`
+	Lineitems []PaymentPayoutLineitem `json:"lineitems,omitempty"`
+	// total_amount minus fee_amount
+	NetAmount   *float64             `json:"net_amount,omitempty"`
+	Notes       *string              `json:"notes,omitempty"`
+	Raw         map[string]any       `json:"raw,omitempty"`
+	Status      *PaymentPayoutStatus `json:"status,omitempty"`
+	TotalAmount *float64             `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *string `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayout) MarshalJSON() ([]byte, error) {

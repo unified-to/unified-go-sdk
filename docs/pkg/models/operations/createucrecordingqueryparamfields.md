@@ -13,20 +13,21 @@ value := operations.CreateUcRecordingQueryParamFieldsID
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `CreateUcRecordingQueryParamFieldsID`        | id                                           |
-| `CreateUcRecordingQueryParamFieldsCreatedAt` | created_at                                   |
-| `CreateUcRecordingQueryParamFieldsUpdatedAt` | updated_at                                   |
-| `CreateUcRecordingQueryParamFieldsStartAt`   | start_at                                     |
-| `CreateUcRecordingQueryParamFieldsEndAt`     | end_at                                       |
-| `CreateUcRecordingQueryParamFieldsExpiresAt` | expires_at                                   |
-| `CreateUcRecordingQueryParamFieldsCallID`    | call_id                                      |
-| `CreateUcRecordingQueryParamFieldsWebURL`    | web_url                                      |
-| `CreateUcRecordingQueryParamFieldsContacts`  | contacts                                     |
-| `CreateUcRecordingQueryParamFieldsUserID`    | user_id                                      |
-| `CreateUcRecordingQueryParamFieldsMedia`     | media                                        |
-| `CreateUcRecordingQueryParamFieldsUserName`  | user_name                                    |
-| `CreateUcRecordingQueryParamFieldsUserPhone` | user_phone                                   |
-| `CreateUcRecordingQueryParamFieldsType`      | type                                         |
-| `CreateUcRecordingQueryParamFieldsRaw`       | raw                                          |
+| Name                                                      | Value                                                     |
+| --------------------------------------------------------- | --------------------------------------------------------- |
+| `CreateUcRecordingQueryParamFieldsID`                     | id                                                        |
+| `CreateUcRecordingQueryParamFieldsCreatedAt`              | created_at                                                |
+| `CreateUcRecordingQueryParamFieldsUpdatedAt`              | updated_at                                                |
+| `CreateUcRecordingQueryParamFieldsStartAt`                | start_at                                                  |
+| `CreateUcRecordingQueryParamFieldsEndAt`                  | end_at                                                    |
+| `CreateUcRecordingQueryParamFieldsExpiresAt`              | expires_at                                                |
+| `CreateUcRecordingQueryParamFieldsCallID`                 | call_id                                                   |
+| `CreateUcRecordingQueryParamFieldsWebURL`                 | web_url                                                   |
+| `CreateUcRecordingQueryParamFieldsContacts`               | contacts                                                  |
+| `CreateUcRecordingQueryParamFieldsUserID`                 | user_id                                                   |
+| `CreateUcRecordingQueryParamFieldsMedia`                  | media                                                     |
+| `CreateUcRecordingQueryParamFieldsUserName`               | user_name                                                 |
+| `CreateUcRecordingQueryParamFieldsUserPhone`              | user_phone                                                |
+| `CreateUcRecordingQueryParamFieldsType`                   | type                                                      |
+| `CreateUcRecordingQueryParamFieldsConversationIdentifier` | conversation_identifier                                   |
+| `CreateUcRecordingQueryParamFieldsRaw`                    | raw                                                       |

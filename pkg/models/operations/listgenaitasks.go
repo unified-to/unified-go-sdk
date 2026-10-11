@@ -105,6 +105,8 @@ func (e *ListGenaiTasksQueryParamFields) UnmarshalJSON(data []byte) error {
 }
 
 type ListGenaiTasksRequest struct {
+	// The agent ID to filter by
+	AgentID *string `queryParam:"style=form,explode=true,name=agent_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
@@ -120,6 +122,13 @@ type ListGenaiTasksRequest struct {
 	Status *string `queryParam:"style=form,explode=true,name=status"`
 	// Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedGte *string `queryParam:"style=form,explode=true,name=updated_gte"`
+}
+
+func (l *ListGenaiTasksRequest) GetAgentID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.AgentID
 }
 
 func (l *ListGenaiTasksRequest) GetConnectionID() string {

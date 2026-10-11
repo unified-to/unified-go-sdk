@@ -7,6 +7,36 @@ import (
 	"time"
 )
 
+// HrisGroupPayFrequency - pay cycle when type is PAY_GROUP
+type HrisGroupPayFrequency string
+
+const (
+	HrisGroupPayFrequencyOneTime     HrisGroupPayFrequency = "ONE_TIME"
+	HrisGroupPayFrequencyDay         HrisGroupPayFrequency = "DAY"
+	HrisGroupPayFrequencyQuarter     HrisGroupPayFrequency = "QUARTER"
+	HrisGroupPayFrequencyYear        HrisGroupPayFrequency = "YEAR"
+	HrisGroupPayFrequencyHour        HrisGroupPayFrequency = "HOUR"
+	HrisGroupPayFrequencyMonth       HrisGroupPayFrequency = "MONTH"
+	HrisGroupPayFrequencyWeek        HrisGroupPayFrequency = "WEEK"
+	HrisGroupPayFrequencyBiweekly    HrisGroupPayFrequency = "BIWEEKLY"
+	HrisGroupPayFrequencySemimonthly HrisGroupPayFrequency = "SEMIMONTHLY"
+)
+
+func (e HrisGroupPayFrequency) ToPointer() *HrisGroupPayFrequency {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisGroupPayFrequency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisGroupType string
 
 const (
@@ -17,6 +47,7 @@ const (
 	HrisGroupTypeBusinessUnit  HrisGroupType = "BUSINESS_UNIT"
 	HrisGroupTypeBranch        HrisGroupType = "BRANCH"
 	HrisGroupTypeSubDepartment HrisGroupType = "SUB_DEPARTMENT"
+	HrisGroupTypePayGroup      HrisGroupType = "PAY_GROUP"
 )
 
 func (e HrisGroupType) ToPointer() *HrisGroupType {
@@ -27,7 +58,7 @@ func (e HrisGroupType) ToPointer() *HrisGroupType {
 func (e *HrisGroupType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "TEAM", "GROUP", "DEPARTMENT", "DIVISION", "BUSINESS_UNIT", "BRANCH", "SUB_DEPARTMENT":
+		case "TEAM", "GROUP", "DEPARTMENT", "DIVISION", "BUSINESS_UNIT", "BRANCH", "SUB_DEPARTMENT", "PAY_GROUP":
 			return true
 		}
 	}
@@ -35,18 +66,25 @@ func (e *HrisGroupType) IsExact() bool {
 }
 
 type HrisGroup struct {
-	CompanyID   *string        `json:"company_id,omitempty"`
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	ManagerIds  []string       `json:"manager_ids,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	ParentID    *string        `json:"parent_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	Type        *HrisGroupType `json:"type,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserIds     []string       `json:"user_ids,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	IsActive    *bool      `json:"is_active,omitempty"`
+	ManagerIds  []string   `json:"manager_ids,omitempty"`
+	Name        *string    `json:"name,omitempty"`
+	// next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	NextPaidAt *time.Time `json:"next_paid_at,omitempty"`
+	ParentID   *string    `json:"parent_id,omitempty"`
+	// pay cycle when type is PAY_GROUP
+	PayFrequency *HrisGroupPayFrequency `json:"pay_frequency,omitempty"`
+	Raw          map[string]any         `json:"raw,omitempty"`
+	Type         *HrisGroupType         `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	UserIds   []string   `json:"user_ids,omitempty"`
 }
 
 func (h HrisGroup) MarshalJSON() ([]byte, error) {
@@ -109,11 +147,25 @@ func (h *HrisGroup) GetName() *string {
 	return h.Name
 }
 
+func (h *HrisGroup) GetNextPaidAt() *time.Time {
+	if h == nil {
+		return nil
+	}
+	return h.NextPaidAt
+}
+
 func (h *HrisGroup) GetParentID() *string {
 	if h == nil {
 		return nil
 	}
 	return h.ParentID
+}
+
+func (h *HrisGroup) GetPayFrequency() *HrisGroupPayFrequency {
+	if h == nil {
+		return nil
+	}
+	return h.PayFrequency
 }
 
 func (h *HrisGroup) GetRaw() map[string]any {

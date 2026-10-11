@@ -2,6 +2,7 @@
 
 package shared
 
+// AccountingFeeType - Unified fee category
 type AccountingFeeType string
 
 const (
@@ -33,10 +34,13 @@ func (e *AccountingFeeType) IsExact() bool {
 }
 
 type AccountingFee struct {
-	Amount       float64           `json:"amount"`
-	Currency     *string           `json:"currency,omitempty"`
-	OriginalType *string           `json:"original_type,omitempty"`
-	Type         AccountingFeeType `json:"type"`
+	Amount float64 `json:"amount"`
+	// ISO 4217 currency code, e.g. USD
+	Currency *string `json:"currency,omitempty"`
+	// The provider's original fee label, e.g. "VAT" or a shipping carrier name
+	OriginalType *string `json:"original_type,omitempty"`
+	// Unified fee category
+	Type AccountingFeeType `json:"type"`
 }
 
 func (a *AccountingFee) GetAmount() float64 {

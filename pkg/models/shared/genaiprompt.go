@@ -3,16 +3,33 @@
 package shared
 
 type GenaiPrompt struct {
-	MaxTokens             *float64       `json:"max_tokens,omitempty"`
-	McpAuthorizationToken *string        `json:"mcp_authorization_token,omitempty"`
-	McpDeferredTools      []string       `json:"mcp_deferred_tools,omitempty"`
-	McpURL                *string        `json:"mcp_url,omitempty"`
-	Messages              []GenaiContent `json:"messages,omitempty"`
-	ModelID               *string        `json:"model_id,omitempty"`
-	Raw                   map[string]any `json:"raw,omitempty"`
-	Responses             []string       `json:"responses,omitempty"`
-	Temperature           *float64       `json:"temperature,omitempty"`
-	TokensUsed            *float64       `json:"tokens_used,omitempty"`
+	// One answer per question, matched by id.
+	Answers []GenaiAnswer `json:"answers,omitempty"`
+	// a float between 0-1
+	MaxTokens *float64 `json:"max_tokens,omitempty"`
+	// OAuth Bearer token for MCP servers that require authentication.
+	McpAuthorizationToken *string  `json:"mcp_authorization_token,omitempty"`
+	McpDeferredTools      []string `json:"mcp_deferred_tools,omitempty"`
+	// Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs.
+	McpURL   *string        `json:"mcp_url,omitempty"`
+	Messages []GenaiContent `json:"messages,omitempty"`
+	ModelID  *string        `json:"model_id,omitempty"`
+	// Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+	Questions []GenaiQuestion `json:"questions,omitempty"`
+	Raw       map[string]any  `json:"raw,omitempty"`
+	Responses []string        `json:"responses,omitempty"`
+	// ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+	SkillIds []string `json:"skill_ids,omitempty"`
+	// 0-1
+	Temperature *float64 `json:"temperature,omitempty"`
+	TokensUsed  *float64 `json:"tokens_used,omitempty"`
+}
+
+func (g *GenaiPrompt) GetAnswers() []GenaiAnswer {
+	if g == nil {
+		return nil
+	}
+	return g.Answers
 }
 
 func (g *GenaiPrompt) GetMaxTokens() *float64 {
@@ -57,6 +74,13 @@ func (g *GenaiPrompt) GetModelID() *string {
 	return g.ModelID
 }
 
+func (g *GenaiPrompt) GetQuestions() []GenaiQuestion {
+	if g == nil {
+		return nil
+	}
+	return g.Questions
+}
+
 func (g *GenaiPrompt) GetRaw() map[string]any {
 	if g == nil {
 		return nil
@@ -69,6 +93,13 @@ func (g *GenaiPrompt) GetResponses() []string {
 		return nil
 	}
 	return g.Responses
+}
+
+func (g *GenaiPrompt) GetSkillIds() []string {
+	if g == nil {
+		return nil
+	}
+	return g.SkillIds
 }
 
 func (g *GenaiPrompt) GetTemperature() *float64 {

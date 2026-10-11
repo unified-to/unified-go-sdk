@@ -33,26 +33,31 @@ func (e *Gender) IsExact() bool {
 }
 
 type AnalyticsVisitor struct {
-	Age            *float64                                    `json:"age,omitempty"`
-	City           *string                                     `json:"city,omitempty"`
-	Country        *string                                     `json:"country,omitempty"`
-	CountryCode    *string                                     `json:"country_code,omitempty"`
-	CreatedAt      *time.Time                                  `json:"created_at,omitempty"`
-	Email          *string                                     `json:"email,omitempty"`
-	FirstSeenAt    *time.Time                                  `json:"first_seen_at,omitempty"`
-	Gender         *Gender                                     `json:"gender,omitempty"`
-	ID             *string                                     `json:"id,omitempty"`
-	Language       *string                                     `json:"language,omitempty"`
-	LastSeenAt     *time.Time                                  `json:"last_seen_at,omitempty"`
-	Metadata       map[string]PropertyAnalyticsVisitorMetadata `json:"metadata,omitempty"`
-	Name           *string                                     `json:"name,omitempty"`
-	PropertyID     *string                                     `json:"property_id,omitempty"`
-	Raw            map[string]any                              `json:"raw,omitempty"`
-	Timezone       *string                                     `json:"timezone,omitempty"`
-	TotalEvents    *float64                                    `json:"total_events,omitempty"`
-	TotalPageViews *float64                                    `json:"total_page_views,omitempty"`
-	TotalSessions  *float64                                    `json:"total_sessions,omitempty"`
-	UpdatedAt      *time.Time                                  `json:"updated_at,omitempty"`
+	Age         *float64 `json:"age,omitempty"`
+	City        *string  `json:"city,omitempty"`
+	Country     *string  `json:"country,omitempty"`
+	CountryCode *string  `json:"country_code,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Email     *string    `json:"email,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	FirstSeenAt *time.Time `json:"first_seen_at,omitempty"`
+	Gender      *Gender    `json:"gender,omitempty"`
+	ID          *string    `json:"id,omitempty"`
+	Language    *string    `json:"language,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastSeenAt *time.Time                                  `json:"last_seen_at,omitempty"`
+	Metadata   map[string]PropertyAnalyticsVisitorMetadata `json:"metadata,omitempty"`
+	Name       *string                                     `json:"name,omitempty"`
+	// points to AnalyticsProperty
+	PropertyID     *string        `json:"property_id,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	Timezone       *string        `json:"timezone,omitempty"`
+	TotalEvents    *float64       `json:"total_events,omitempty"`
+	TotalPageViews *float64       `json:"total_page_views,omitempty"`
+	TotalSessions  *float64       `json:"total_sessions,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AnalyticsVisitor) MarshalJSON() ([]byte, error) {

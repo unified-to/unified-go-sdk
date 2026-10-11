@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// HrisDeductionCoverageLevel - Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
 type HrisDeductionCoverageLevel string
 
 const (
@@ -34,16 +35,41 @@ func (e *HrisDeductionCoverageLevel) IsExact() bool {
 	return false
 }
 
+type EmployerType string
+
+const (
+	EmployerTypePercentage EmployerType = "PERCENTAGE"
+	EmployerTypeFixed      EmployerType = "FIXED"
+)
+
+func (e EmployerType) ToPointer() *EmployerType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EmployerType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PERCENTAGE", "FIXED":
+			return true
+		}
+	}
+	return false
+}
+
+// HrisDeductionFrequency - Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
 type HrisDeductionFrequency string
 
 const (
-	HrisDeductionFrequencyOneTime HrisDeductionFrequency = "ONE_TIME"
-	HrisDeductionFrequencyDay     HrisDeductionFrequency = "DAY"
-	HrisDeductionFrequencyQuarter HrisDeductionFrequency = "QUARTER"
-	HrisDeductionFrequencyYear    HrisDeductionFrequency = "YEAR"
-	HrisDeductionFrequencyHour    HrisDeductionFrequency = "HOUR"
-	HrisDeductionFrequencyMonth   HrisDeductionFrequency = "MONTH"
-	HrisDeductionFrequencyWeek    HrisDeductionFrequency = "WEEK"
+	HrisDeductionFrequencyOneTime     HrisDeductionFrequency = "ONE_TIME"
+	HrisDeductionFrequencyDay         HrisDeductionFrequency = "DAY"
+	HrisDeductionFrequencyQuarter     HrisDeductionFrequency = "QUARTER"
+	HrisDeductionFrequencyYear        HrisDeductionFrequency = "YEAR"
+	HrisDeductionFrequencyHour        HrisDeductionFrequency = "HOUR"
+	HrisDeductionFrequencyMonth       HrisDeductionFrequency = "MONTH"
+	HrisDeductionFrequencyWeek        HrisDeductionFrequency = "WEEK"
+	HrisDeductionFrequencyBiweekly    HrisDeductionFrequency = "BIWEEKLY"
+	HrisDeductionFrequencySemimonthly HrisDeductionFrequency = "SEMIMONTHLY"
 )
 
 func (e HrisDeductionFrequency) ToPointer() *HrisDeductionFrequency {
@@ -54,7 +80,34 @@ func (e HrisDeductionFrequency) ToPointer() *HrisDeductionFrequency {
 func (e *HrisDeductionFrequency) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
+			return true
+		}
+	}
+	return false
+}
+
+// GarnishmentType - set when this deduction is a court-ordered garnishment
+type GarnishmentType string
+
+const (
+	GarnishmentTypeChildSupport GarnishmentType = "CHILD_SUPPORT"
+	GarnishmentTypeTaxLevy      GarnishmentType = "TAX_LEVY"
+	GarnishmentTypeStudentLoan  GarnishmentType = "STUDENT_LOAN"
+	GarnishmentTypeCreditor     GarnishmentType = "CREDITOR"
+	GarnishmentTypeBankruptcy   GarnishmentType = "BANKRUPTCY"
+	GarnishmentTypeOther        GarnishmentType = "OTHER"
+)
+
+func (e GarnishmentType) ToPointer() *GarnishmentType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *GarnishmentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CHILD_SUPPORT", "TAX_LEVY", "STUDENT_LOAN", "CREDITOR", "BANKRUPTCY", "OTHER":
 			return true
 		}
 	}
@@ -85,21 +138,39 @@ func (e *HrisDeductionType) IsExact() bool {
 
 // HrisDeduction - Employee-specific deduction/benefit enrolment.
 type HrisDeduction struct {
-	Amount        *float64                    `json:"amount,omitempty"`
-	BenefitID     *string                     `json:"benefit_id,omitempty"`
-	CompanyID     *string                     `json:"company_id,omitempty"`
+	// percentage or absolute amount (employee's portion)
+	Amount    *float64 `json:"amount,omitempty"`
+	BenefitID *string  `json:"benefit_id,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
 	CoverageLevel *HrisDeductionCoverageLevel `json:"coverage_level,omitempty"`
-	CreatedAt     *time.Time                  `json:"created_at,omitempty"`
-	EndAt         *time.Time                  `json:"end_at,omitempty"`
-	Frequency     *HrisDeductionFrequency     `json:"frequency,omitempty"`
-	ID            *string                     `json:"id,omitempty"`
-	IsActive      *bool                       `json:"is_active,omitempty"`
-	Notes         *string                     `json:"notes,omitempty"`
-	Raw           map[string]any              `json:"raw,omitempty"`
-	StartAt       *time.Time                  `json:"start_at,omitempty"`
-	Type          *HrisDeductionType          `json:"type,omitempty"`
-	UpdatedAt     *time.Time                  `json:"updated_at,omitempty"`
-	UserID        *string                     `json:"user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// percentage or absolute amount (employer's portion/match)
+	EmployerAmount *float64      `json:"employer_amount,omitempty"`
+	EmployerType   *EmployerType `json:"employer_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+	Frequency *HrisDeductionFrequency `json:"frequency,omitempty"`
+	// set when this deduction is a court-ordered garnishment
+	GarnishmentType *GarnishmentType `json:"garnishment_type,omitempty"`
+	ID              *string          `json:"id,omitempty"`
+	IsActive        *bool            `json:"is_active,omitempty"`
+	// annual maximum employee amount (always money)
+	MaxAmount *float64 `json:"max_amount,omitempty"`
+	Notes     *string  `json:"notes,omitempty"`
+	// the hris_paycode (deduction code) this deduction uses
+	PaycodeID *string        `json:"paycode_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time         `json:"start_at,omitempty"`
+	Type    *HrisDeductionType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// employee ID (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (h HrisDeduction) MarshalJSON() ([]byte, error) {
@@ -148,6 +219,20 @@ func (h *HrisDeduction) GetCreatedAt() *time.Time {
 	return h.CreatedAt
 }
 
+func (h *HrisDeduction) GetEmployerAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.EmployerAmount
+}
+
+func (h *HrisDeduction) GetEmployerType() *EmployerType {
+	if h == nil {
+		return nil
+	}
+	return h.EmployerType
+}
+
 func (h *HrisDeduction) GetEndAt() *time.Time {
 	if h == nil {
 		return nil
@@ -160,6 +245,13 @@ func (h *HrisDeduction) GetFrequency() *HrisDeductionFrequency {
 		return nil
 	}
 	return h.Frequency
+}
+
+func (h *HrisDeduction) GetGarnishmentType() *GarnishmentType {
+	if h == nil {
+		return nil
+	}
+	return h.GarnishmentType
 }
 
 func (h *HrisDeduction) GetID() *string {
@@ -176,11 +268,25 @@ func (h *HrisDeduction) GetIsActive() *bool {
 	return h.IsActive
 }
 
+func (h *HrisDeduction) GetMaxAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.MaxAmount
+}
+
 func (h *HrisDeduction) GetNotes() *string {
 	if h == nil {
 		return nil
 	}
 	return h.Notes
+}
+
+func (h *HrisDeduction) GetPaycodeID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.PaycodeID
 }
 
 func (h *HrisDeduction) GetRaw() map[string]any {

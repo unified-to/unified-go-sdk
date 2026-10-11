@@ -71,6 +71,29 @@ func (e *ListAdID) IsExact() bool {
 	return false
 }
 
+type ListAgentID string
+
+const (
+	ListAgentIDSupportedRequired ListAgentID = "supported-required"
+	ListAgentIDSupported         ListAgentID = "supported"
+	ListAgentIDNotSupported      ListAgentID = "not-supported"
+)
+
+func (e ListAgentID) ToPointer() *ListAgentID {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListAgentID) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
 type ListApplicationID string
 
 const (
@@ -706,6 +729,29 @@ func (e ListEffectiveStatus) ToPointer() *ListEffectiveStatus {
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
 func (e *ListEffectiveStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "supported-required", "supported", "not-supported":
+			return true
+		}
+	}
+	return false
+}
+
+type ListEmail string
+
+const (
+	ListEmailSupportedRequired ListEmail = "supported-required"
+	ListEmailSupported         ListEmail = "supported"
+	ListEmailNotSupported      ListEmail = "not-supported"
+)
+
+func (e ListEmail) ToPointer() *ListEmail {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ListEmail) IsExact() bool {
 	if e != nil {
 		switch *e {
 		case "supported-required", "supported", "not-supported":
@@ -4515,6 +4561,7 @@ type IntegrationSupport struct {
 	InboundFields           map[string]string        `json:"inbound_fields,omitempty"`
 	ListAccountID           *ListAccountID           `json:"list_account_id,omitempty"`
 	ListAdID                *ListAdID                `json:"list_ad_id,omitempty"`
+	ListAgentID             *ListAgentID             `json:"list_agent_id,omitempty"`
 	ListApplicationID       *ListApplicationID       `json:"list_application_id,omitempty"`
 	ListApproverUserID      *ListApproverUserID      `json:"list_approver_user_id,omitempty"`
 	ListAssignedUserID      *ListAssignedUserID      `json:"list_assigned_user_id,omitempty"`
@@ -4543,6 +4590,7 @@ type IntegrationSupport struct {
 	ListDimension           *ListDimension           `json:"list_dimension,omitempty"`
 	ListDocumentID          *ListDocumentID          `json:"list_document_id,omitempty"`
 	ListEffectiveStatus     *ListEffectiveStatus     `json:"list_effective_status,omitempty"`
+	ListEmail               *ListEmail               `json:"list_email,omitempty"`
 	ListEndLt               *ListEndLt               `json:"list_end_lt,omitempty"`
 	ListEventID             *ListEventID             `json:"list_event_id,omitempty"`
 	ListExpand              *ListExpand              `json:"list_expand,omitempty"`
@@ -4636,7 +4684,7 @@ type IntegrationSupport struct {
 	NativeWebhookVisitorID  *NativeWebhookVisitorID  `json:"native_webhook_visitor_id,omitempty"`
 	OutboundFields          map[string]string        `json:"outbound_fields,omitempty"`
 	// objects that we map from in the integration
-	RawObjects                      []string                                 `json:"raw_objects,omitempty"`
+	RawObjects                      []string                                 `json:"raw_objects"`
 	SearchDomain                    *SearchDomain                            `json:"search_domain,omitempty"`
 	SearchEmail                     *SearchEmail                             `json:"search_email,omitempty"`
 	SearchLinkedinurl               *SearchLinkedinurl                       `json:"search_linkedinurl,omitempty"`
@@ -4742,6 +4790,13 @@ func (i *IntegrationSupport) GetListAdID() *ListAdID {
 		return nil
 	}
 	return i.ListAdID
+}
+
+func (i *IntegrationSupport) GetListAgentID() *ListAgentID {
+	if i == nil {
+		return nil
+	}
+	return i.ListAgentID
 }
 
 func (i *IntegrationSupport) GetListApplicationID() *ListApplicationID {
@@ -4938,6 +4993,13 @@ func (i *IntegrationSupport) GetListEffectiveStatus() *ListEffectiveStatus {
 		return nil
 	}
 	return i.ListEffectiveStatus
+}
+
+func (i *IntegrationSupport) GetListEmail() *ListEmail {
+	if i == nil {
+		return nil
+	}
+	return i.ListEmail
 }
 
 func (i *IntegrationSupport) GetListEndLt() *ListEndLt {
@@ -5586,7 +5648,7 @@ func (i *IntegrationSupport) GetOutboundFields() map[string]string {
 
 func (i *IntegrationSupport) GetRawObjects() []string {
 	if i == nil {
-		return nil
+		return []string{}
 	}
 	return i.RawObjects
 }

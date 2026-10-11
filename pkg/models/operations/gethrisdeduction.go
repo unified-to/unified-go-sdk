@@ -12,21 +12,26 @@ import (
 type GetHrisDeductionQueryParamFields string
 
 const (
-	GetHrisDeductionQueryParamFieldsID            GetHrisDeductionQueryParamFields = "id"
-	GetHrisDeductionQueryParamFieldsCreatedAt     GetHrisDeductionQueryParamFields = "created_at"
-	GetHrisDeductionQueryParamFieldsUpdatedAt     GetHrisDeductionQueryParamFields = "updated_at"
-	GetHrisDeductionQueryParamFieldsUserID        GetHrisDeductionQueryParamFields = "user_id"
-	GetHrisDeductionQueryParamFieldsCompanyID     GetHrisDeductionQueryParamFields = "company_id"
-	GetHrisDeductionQueryParamFieldsBenefitID     GetHrisDeductionQueryParamFields = "benefit_id"
-	GetHrisDeductionQueryParamFieldsAmount        GetHrisDeductionQueryParamFields = "amount"
-	GetHrisDeductionQueryParamFieldsType          GetHrisDeductionQueryParamFields = "type"
-	GetHrisDeductionQueryParamFieldsCoverageLevel GetHrisDeductionQueryParamFields = "coverage_level"
-	GetHrisDeductionQueryParamFieldsFrequency     GetHrisDeductionQueryParamFields = "frequency"
-	GetHrisDeductionQueryParamFieldsStartAt       GetHrisDeductionQueryParamFields = "start_at"
-	GetHrisDeductionQueryParamFieldsEndAt         GetHrisDeductionQueryParamFields = "end_at"
-	GetHrisDeductionQueryParamFieldsIsActive      GetHrisDeductionQueryParamFields = "is_active"
-	GetHrisDeductionQueryParamFieldsNotes         GetHrisDeductionQueryParamFields = "notes"
-	GetHrisDeductionQueryParamFieldsRaw           GetHrisDeductionQueryParamFields = "raw"
+	GetHrisDeductionQueryParamFieldsID              GetHrisDeductionQueryParamFields = "id"
+	GetHrisDeductionQueryParamFieldsCreatedAt       GetHrisDeductionQueryParamFields = "created_at"
+	GetHrisDeductionQueryParamFieldsUpdatedAt       GetHrisDeductionQueryParamFields = "updated_at"
+	GetHrisDeductionQueryParamFieldsUserID          GetHrisDeductionQueryParamFields = "user_id"
+	GetHrisDeductionQueryParamFieldsCompanyID       GetHrisDeductionQueryParamFields = "company_id"
+	GetHrisDeductionQueryParamFieldsBenefitID       GetHrisDeductionQueryParamFields = "benefit_id"
+	GetHrisDeductionQueryParamFieldsAmount          GetHrisDeductionQueryParamFields = "amount"
+	GetHrisDeductionQueryParamFieldsType            GetHrisDeductionQueryParamFields = "type"
+	GetHrisDeductionQueryParamFieldsCoverageLevel   GetHrisDeductionQueryParamFields = "coverage_level"
+	GetHrisDeductionQueryParamFieldsFrequency       GetHrisDeductionQueryParamFields = "frequency"
+	GetHrisDeductionQueryParamFieldsStartAt         GetHrisDeductionQueryParamFields = "start_at"
+	GetHrisDeductionQueryParamFieldsEndAt           GetHrisDeductionQueryParamFields = "end_at"
+	GetHrisDeductionQueryParamFieldsIsActive        GetHrisDeductionQueryParamFields = "is_active"
+	GetHrisDeductionQueryParamFieldsNotes           GetHrisDeductionQueryParamFields = "notes"
+	GetHrisDeductionQueryParamFieldsEmployerAmount  GetHrisDeductionQueryParamFields = "employer_amount"
+	GetHrisDeductionQueryParamFieldsEmployerType    GetHrisDeductionQueryParamFields = "employer_type"
+	GetHrisDeductionQueryParamFieldsMaxAmount       GetHrisDeductionQueryParamFields = "max_amount"
+	GetHrisDeductionQueryParamFieldsPaycodeID       GetHrisDeductionQueryParamFields = "paycode_id"
+	GetHrisDeductionQueryParamFieldsGarnishmentType GetHrisDeductionQueryParamFields = "garnishment_type"
+	GetHrisDeductionQueryParamFieldsRaw             GetHrisDeductionQueryParamFields = "raw"
 )
 
 func (e GetHrisDeductionQueryParamFields) ToPointer() *GetHrisDeductionQueryParamFields {
@@ -65,6 +70,16 @@ func (e *GetHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "employer_amount":
+		fallthrough
+	case "employer_type":
+		fallthrough
+	case "max_amount":
+		fallthrough
+	case "paycode_id":
+		fallthrough
+	case "garnishment_type":
 		fallthrough
 	case "raw":
 		*e = GetHrisDeductionQueryParamFields(v)

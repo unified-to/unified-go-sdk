@@ -24,6 +24,13 @@ const (
 	CreateHrisBankaccountQueryParamFieldsAccountNumberLast4 CreateHrisBankaccountQueryParamFields = "account_number_last4"
 	CreateHrisBankaccountQueryParamFieldsName               CreateHrisBankaccountQueryParamFields = "name"
 	CreateHrisBankaccountQueryParamFieldsIsPrimary          CreateHrisBankaccountQueryParamFields = "is_primary"
+	CreateHrisBankaccountQueryParamFieldsIban               CreateHrisBankaccountQueryParamFields = "iban"
+	CreateHrisBankaccountQueryParamFieldsBic                CreateHrisBankaccountQueryParamFields = "bic"
+	CreateHrisBankaccountQueryParamFieldsCountryCode        CreateHrisBankaccountQueryParamFields = "country_code"
+	CreateHrisBankaccountQueryParamFieldsCurrency           CreateHrisBankaccountQueryParamFields = "currency"
+	CreateHrisBankaccountQueryParamFieldsSplitType          CreateHrisBankaccountQueryParamFields = "split_type"
+	CreateHrisBankaccountQueryParamFieldsSplitAmount        CreateHrisBankaccountQueryParamFields = "split_amount"
+	CreateHrisBankaccountQueryParamFieldsPriority           CreateHrisBankaccountQueryParamFields = "priority"
 	CreateHrisBankaccountQueryParamFieldsRaw                CreateHrisBankaccountQueryParamFields = "raw"
 )
 
@@ -59,6 +66,20 @@ func (e *CreateHrisBankaccountQueryParamFields) UnmarshalJSON(data []byte) error
 	case "name":
 		fallthrough
 	case "is_primary":
+		fallthrough
+	case "iban":
+		fallthrough
+	case "bic":
+		fallthrough
+	case "country_code":
+		fallthrough
+	case "currency":
+		fallthrough
+	case "split_type":
+		fallthrough
+	case "split_amount":
+		fallthrough
+	case "priority":
 		fallthrough
 	case "raw":
 		*e = CreateHrisBankaccountQueryParamFields(v)

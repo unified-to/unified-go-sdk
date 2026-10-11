@@ -11,19 +11,23 @@ type AccountingProfitloss struct {
 	CategoryIds                []string                      `json:"category_ids,omitempty"`
 	CostOfGoodsSoldSections    []AccountingProfitlossSection `json:"cost_of_goods_sold_sections,omitempty"`
 	CostOfGoodsSoldTotalAmount *float64                      `json:"cost_of_goods_sold_total_amount,omitempty"`
-	CreatedAt                  *time.Time                    `json:"created_at,omitempty"`
-	Currency                   *string                       `json:"currency,omitempty"`
-	EndAt                      *time.Time                    `json:"end_at,omitempty"`
-	ExpensesSections           []AccountingProfitlossSection `json:"expenses_sections,omitempty"`
-	ExpensesTotalAmount        *float64                      `json:"expenses_total_amount,omitempty"`
-	ID                         *string                       `json:"id,omitempty"`
-	IncomeSections             []AccountingProfitlossSection `json:"income_sections,omitempty"`
-	IncomeTotalAmount          *float64                      `json:"income_total_amount,omitempty"`
-	Name                       *string                       `json:"name,omitempty"`
-	NetIncomeAmount            *float64                      `json:"net_income_amount,omitempty"`
-	Raw                        map[string]any                `json:"raw,omitempty"`
-	StartAt                    *time.Time                    `json:"start_at,omitempty"`
-	UpdatedAt                  *time.Time                    `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt               *time.Time                    `json:"end_at,omitempty"`
+	ExpensesSections    []AccountingProfitlossSection `json:"expenses_sections,omitempty"`
+	ExpensesTotalAmount *float64                      `json:"expenses_total_amount,omitempty"`
+	ID                  *string                       `json:"id,omitempty"`
+	IncomeSections      []AccountingProfitlossSection `json:"income_sections,omitempty"`
+	IncomeTotalAmount   *float64                      `json:"income_total_amount,omitempty"`
+	Name                *string                       `json:"name,omitempty"`
+	NetIncomeAmount     *float64                      `json:"net_income_amount,omitempty"`
+	Raw                 map[string]any                `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingProfitloss) MarshalJSON() ([]byte, error) {

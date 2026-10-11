@@ -8,11 +8,13 @@ import (
 )
 
 type LmsContent struct {
-	Categories        []string                 `json:"categories,omitempty"`
-	CollectionIds     []string                 `json:"collection_ids,omitempty"`
-	CourseIds         []string                 `json:"course_ids,omitempty"`
-	CreatedAt         *time.Time               `json:"created_at,omitempty"`
-	Description       *string                  `json:"description,omitempty"`
+	Categories    []string `json:"categories,omitempty"`
+	CollectionIds []string `json:"collection_ids,omitempty"`
+	CourseIds     []string `json:"course_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
 	Difficulty        *string                  `json:"difficulty,omitempty"`
 	DurationMinutes   *float64                 `json:"duration_minutes,omitempty"`
 	ExternalReference *string                  `json:"external_reference,omitempty"`
@@ -24,15 +26,17 @@ type LmsContent struct {
 	Media             []LmsMedia               `json:"media,omitempty"`
 	Name              *string                  `json:"name,omitempty"`
 	ProviderName      *string                  `json:"provider_name,omitempty"`
-	PublishedAt       *time.Time               `json:"published_at,omitempty"`
-	Raw               map[string]any           `json:"raw,omitempty"`
-	ShortDescription  *string                  `json:"short_description,omitempty"`
-	Skills            []string                 `json:"skills,omitempty"`
-	SortOrder         *float64                 `json:"sort_order,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PublishedAt      *time.Time     `json:"published_at,omitempty"`
+	Raw              map[string]any `json:"raw,omitempty"`
+	ShortDescription *string        `json:"short_description,omitempty"`
+	Skills           []string       `json:"skills,omitempty"`
+	SortOrder        *float64       `json:"sort_order,omitempty"`
 	// Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
-	Subjects  []LmsSubject `json:"subjects,omitempty"`
-	Tags      []string     `json:"tags,omitempty"`
-	UpdatedAt *time.Time   `json:"updated_at,omitempty"`
+	Subjects []LmsSubject `json:"subjects,omitempty"`
+	Tags     []string     `json:"tags,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (l LmsContent) MarshalJSON() ([]byte, error) {

@@ -4,6 +4,7 @@ package shared
 
 // PropertyCrmEventNote - The note object, when type = note
 type PropertyCrmEventNote struct {
+	// The event note's description
 	Description *string `json:"description,omitempty"`
 	Title       *string `json:"title,omitempty"`
 }

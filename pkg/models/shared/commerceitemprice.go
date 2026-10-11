@@ -3,6 +3,7 @@
 package shared
 
 type CommerceItemPrice struct {
+	// The original price of the item before an adjustment or a sale.
 	CompareAtPrice *float64 `json:"compare_at_price,omitempty"`
 	Currency       *string  `json:"currency,omitempty"`
 	Price          float64  `json:"price"`

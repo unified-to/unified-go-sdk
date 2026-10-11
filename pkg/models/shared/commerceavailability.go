@@ -8,13 +8,18 @@ import (
 )
 
 type CommerceAvailability struct {
-	EndAt       *time.Time     `json:"end_at,omitempty"`
-	ItemID      *string        `json:"item_id,omitempty"`
-	LocationID  *string        `json:"location_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	Size        *float64       `json:"size,omitempty"`
-	StaffUserID *string        `json:"staff_user_id,omitempty"`
-	StartAt     *time.Time     `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (reference to CommerceItem)
+	ItemID *string `json:"item_id,omitempty"`
+	// (reference to CommerceLocation)
+	LocationID *string        `json:"location_id,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Size       *float64       `json:"size,omitempty"`
+	// (reference to HrisEmployee)
+	StaffUserID *string `json:"staff_user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 }
 
 func (c CommerceAvailability) MarshalJSON() ([]byte, error) {

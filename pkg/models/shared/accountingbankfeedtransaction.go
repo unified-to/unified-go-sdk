@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingBankfeedtransactionType - direction: DEBIT, CREDIT
 type AccountingBankfeedtransactionType string
 
 const (
@@ -30,26 +31,43 @@ func (e *AccountingBankfeedtransactionType) IsExact() bool {
 }
 
 type AccountingBankfeedtransaction struct {
-	AccountID         *string  `json:"account_id,omitempty"`
-	Amount            *float64 `json:"amount,omitempty"`
-	BankCategory      *string  `json:"bank_category,omitempty"`
-	BankfeedaccountID *string  `json:"bankfeedaccount_id,omitempty"`
+	// GL account once categorized (reference to AccountingAccount)
+	AccountID *string `json:"account_id,omitempty"`
+	// transaction amount (positive; direction from type)
+	Amount *float64 `json:"amount,omitempty"`
+	// the bank's own category label
+	BankCategory *string `json:"bank_category,omitempty"`
+	// ref -> BankfeedAccount this transaction belongs to
+	BankfeedaccountID *string `json:"bankfeedaccount_id,omitempty"`
 	// dimension refs -> AccountingCategory (class/department/location)
-	CategoryIds    []string                           `json:"category_ids,omitempty"`
-	ContactID      *string                            `json:"contact_id,omitempty"`
-	CreatedAt      *time.Time                         `json:"created_at,omitempty"`
-	Currency       *string                            `json:"currency,omitempty"`
-	Description    *string                            `json:"description,omitempty"`
-	ID             *string                            `json:"id,omitempty"`
-	IsPending      *bool                              `json:"is_pending,omitempty"`
-	MerchantName   *string                            `json:"merchant_name,omitempty"`
-	OrganizationID *string                            `json:"organization_id,omitempty"`
-	PostedAt       *time.Time                         `json:"posted_at,omitempty"`
-	Raw            map[string]any                     `json:"raw,omitempty"`
-	Reference      *string                            `json:"reference,omitempty"`
-	TransactionAt  *time.Time                         `json:"transaction_at,omitempty"`
-	Type           *AccountingBankfeedtransactionType `json:"type,omitempty"`
-	UpdatedAt      *time.Time                         `json:"updated_at,omitempty"`
+	CategoryIds []string `json:"category_ids,omitempty"`
+	// matched vendor/customer once reconciled (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217
+	Currency *string `json:"currency,omitempty"`
+	// bank memo / statement text
+	Description *string `json:"description,omitempty"`
+	ID          *string `json:"id,omitempty"`
+	// true if not yet cleared
+	IsPending *bool `json:"is_pending,omitempty"`
+	// counterparty as reported by the bank
+	MerchantName *string `json:"merchant_name,omitempty"`
+	// ref -> accounting Organization this record belongs to
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt *time.Time `json:"posted_at,omitempty"`
+	// The original data from the integration's API
+	Raw map[string]any `json:"raw,omitempty"`
+	// bank reference or check number
+	Reference *string `json:"reference,omitempty"`
+	// when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	TransactionAt *time.Time `json:"transaction_at,omitempty"`
+	// direction: DEBIT, CREDIT
+	Type *AccountingBankfeedtransactionType `json:"type,omitempty"`
+	// last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingBankfeedtransaction) MarshalJSON() ([]byte, error) {

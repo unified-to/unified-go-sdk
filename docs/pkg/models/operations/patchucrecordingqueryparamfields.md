@@ -13,20 +13,21 @@ value := operations.PatchUcRecordingQueryParamFieldsID
 
 ## Values
 
-| Name                                        | Value                                       |
-| ------------------------------------------- | ------------------------------------------- |
-| `PatchUcRecordingQueryParamFieldsID`        | id                                          |
-| `PatchUcRecordingQueryParamFieldsCreatedAt` | created_at                                  |
-| `PatchUcRecordingQueryParamFieldsUpdatedAt` | updated_at                                  |
-| `PatchUcRecordingQueryParamFieldsStartAt`   | start_at                                    |
-| `PatchUcRecordingQueryParamFieldsEndAt`     | end_at                                      |
-| `PatchUcRecordingQueryParamFieldsExpiresAt` | expires_at                                  |
-| `PatchUcRecordingQueryParamFieldsCallID`    | call_id                                     |
-| `PatchUcRecordingQueryParamFieldsWebURL`    | web_url                                     |
-| `PatchUcRecordingQueryParamFieldsContacts`  | contacts                                    |
-| `PatchUcRecordingQueryParamFieldsUserID`    | user_id                                     |
-| `PatchUcRecordingQueryParamFieldsMedia`     | media                                       |
-| `PatchUcRecordingQueryParamFieldsUserName`  | user_name                                   |
-| `PatchUcRecordingQueryParamFieldsUserPhone` | user_phone                                  |
-| `PatchUcRecordingQueryParamFieldsType`      | type                                        |
-| `PatchUcRecordingQueryParamFieldsRaw`       | raw                                         |
+| Name                                                     | Value                                                    |
+| -------------------------------------------------------- | -------------------------------------------------------- |
+| `PatchUcRecordingQueryParamFieldsID`                     | id                                                       |
+| `PatchUcRecordingQueryParamFieldsCreatedAt`              | created_at                                               |
+| `PatchUcRecordingQueryParamFieldsUpdatedAt`              | updated_at                                               |
+| `PatchUcRecordingQueryParamFieldsStartAt`                | start_at                                                 |
+| `PatchUcRecordingQueryParamFieldsEndAt`                  | end_at                                                   |
+| `PatchUcRecordingQueryParamFieldsExpiresAt`              | expires_at                                               |
+| `PatchUcRecordingQueryParamFieldsCallID`                 | call_id                                                  |
+| `PatchUcRecordingQueryParamFieldsWebURL`                 | web_url                                                  |
+| `PatchUcRecordingQueryParamFieldsContacts`               | contacts                                                 |
+| `PatchUcRecordingQueryParamFieldsUserID`                 | user_id                                                  |
+| `PatchUcRecordingQueryParamFieldsMedia`                  | media                                                    |
+| `PatchUcRecordingQueryParamFieldsUserName`               | user_name                                                |
+| `PatchUcRecordingQueryParamFieldsUserPhone`              | user_phone                                               |
+| `PatchUcRecordingQueryParamFieldsType`                   | type                                                     |
+| `PatchUcRecordingQueryParamFieldsConversationIdentifier` | conversation_identifier                                  |
+| `PatchUcRecordingQueryParamFieldsRaw`                    | raw                                                      |

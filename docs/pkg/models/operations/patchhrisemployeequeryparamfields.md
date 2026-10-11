@@ -23,6 +23,7 @@ value := operations.PatchHrisEmployeeQueryParamFieldsID
 | `PatchHrisEmployeeQueryParamFieldsLastName`              | last_name                                                |
 | `PatchHrisEmployeeQueryParamFieldsEmails`                | emails                                                   |
 | `PatchHrisEmployeeQueryParamFieldsTitle`                 | title                                                    |
+| `PatchHrisEmployeeQueryParamFieldsJobID`                 | job_id                                                   |
 | `PatchHrisEmployeeQueryParamFieldsManagerID`             | manager_id                                               |
 | `PatchHrisEmployeeQueryParamFieldsEmploymentStatus`      | employment_status                                        |
 | `PatchHrisEmployeeQueryParamFieldsGender`                | gender                                                   |
@@ -56,4 +57,6 @@ value := operations.PatchHrisEmployeeQueryParamFieldsID
 | `PatchHrisEmployeeQueryParamFieldsHasMfa`                | has_mfa                                                  |
 | `PatchHrisEmployeeQueryParamFieldsTimeoffDaysTotal`      | timeoff_days_total                                       |
 | `PatchHrisEmployeeQueryParamFieldsTimeoffDaysUsed`       | timeoff_days_used                                        |
+| `PatchHrisEmployeeQueryParamFieldsFlsaStatus`            | flsa_status                                              |
+| `PatchHrisEmployeeQueryParamFieldsPayFrequency`          | pay_frequency                                            |
 | `PatchHrisEmployeeQueryParamFieldsRaw`                   | raw                                                      |

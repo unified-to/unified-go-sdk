@@ -4,9 +4,12 @@ package shared
 
 // PropertySocialProfileMetrics - Audience metrics for the profile
 type PropertySocialProfileMetrics struct {
-	FollowerCount  *float64 `json:"follower_count,omitempty"`
+	// Number of followers
+	FollowerCount *float64 `json:"follower_count,omitempty"`
+	// Number of accounts this profile follows
 	FollowingCount *float64 `json:"following_count,omitempty"`
-	PostCount      *float64 `json:"post_count,omitempty"`
+	// Total number of posts published by this profile
+	PostCount *float64 `json:"post_count,omitempty"`
 }
 
 func (p *PropertySocialProfileMetrics) GetFollowerCount() *float64 {

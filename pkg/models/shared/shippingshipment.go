@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ReturnType - Type of return
 type ReturnType string
 
 const (
@@ -32,6 +33,7 @@ func (e *ReturnType) IsExact() bool {
 	return false
 }
 
+// ShippingShipmentStatus - Current status of the shipment
 type ShippingShipmentStatus string
 
 const (
@@ -67,54 +69,86 @@ func (e *ShippingShipmentStatus) IsExact() bool {
 }
 
 type ShippingShipment struct {
-	CarrierID   *string    `json:"carrier_id,omitempty"`
-	CarrierName *string    `json:"carrier_name,omitempty"`
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	// Reference to the carrier
+	CarrierID *string `json:"carrier_id,omitempty"`
+	// Human-readable carrier/provider name when there is no carrier record to reference (e.g. commerce-platform fulfillments)
+	CarrierName *string `json:"carrier_name,omitempty"`
+	// The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Customs information
 	Customs *PropertyShippingShipmentCustoms `json:"customs,omitempty"`
 	// Origin address
 	FromAddress *PropertyShippingShipmentFromAddress `json:"from_address,omitempty"`
-	ID          *string                              `json:"id,omitempty"`
+	// Unique identifier for this shipment object
+	ID *string `json:"id,omitempty"`
 	// Insurance details
-	Insurance                *PropertyShippingShipmentInsurance `json:"insurance,omitempty"`
-	IsAdultSignatureRequired *bool                              `json:"is_adult_signature_required,omitempty"`
-	IsInternational          *bool                              `json:"is_international,omitempty"`
-	IsRateGuaranteed         *bool                              `json:"is_rate_guaranteed,omitempty"`
-	IsReturn                 *bool                              `json:"is_return,omitempty"`
-	IsSignatureRequired      *bool                              `json:"is_signature_required,omitempty"`
-	LabelID                  *string                            `json:"label_id,omitempty"`
+	Insurance *PropertyShippingShipmentInsurance `json:"insurance,omitempty"`
+	// Adult signature required
+	IsAdultSignatureRequired *bool `json:"is_adult_signature_required,omitempty"`
+	// Whether shipment is international
+	IsInternational *bool `json:"is_international,omitempty"`
+	// Whether delivery is guaranteed (from rate)
+	IsRateGuaranteed *bool `json:"is_rate_guaranteed,omitempty"`
+	// Whether this is a return shipment
+	IsReturn *bool `json:"is_return,omitempty"`
+	// Signature required on delivery
+	IsSignatureRequired *bool `json:"is_signature_required,omitempty"`
+	// Optional reference to the shipping label
+	LabelID *string `json:"label_id,omitempty"`
 	// Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
-	Lineitems          []ShippingShipmentLineitem `json:"lineitems,omitempty"`
-	OrderID            *string                    `json:"order_id,omitempty"`
-	OrganizationID     *string                    `json:"organization_id,omitempty"`
-	OriginalShipmentID *string                    `json:"original_shipment_id,omitempty"`
+	Lineitems []ShippingShipmentLineitem `json:"lineitems,omitempty"`
+	// Reference to commerce_order or accounting_order
+	OrderID *string `json:"order_id,omitempty"`
+	// ref -> accounting Organization this shipment belongs to (multi-company ERPs)
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// Reference to original shipment if return; points to ShippingShipment
+	OriginalShipmentID *string `json:"original_shipment_id,omitempty"`
 	// Array of packages in this shipment
-	Packages                []ShippingPackage `json:"packages,omitempty"`
-	RateAmount              *float64          `json:"rate_amount,omitempty"`
-	RateCurrency            *string           `json:"rate_currency,omitempty"`
-	RateEstimatedDays       *float64          `json:"rate_estimated_days,omitempty"`
-	RateEstimatedDeliveryAt *time.Time        `json:"rate_estimated_delivery_at,omitempty"`
-	RateID                  *string           `json:"rate_id,omitempty"`
-	RateServiceName         *string           `json:"rate_service_name,omitempty"`
-	Raw                     map[string]any    `json:"raw,omitempty"`
-	ReferenceNumber         *string           `json:"reference_number,omitempty"`
+	Packages []ShippingPackage `json:"packages,omitempty"`
+	// The rate amount used (may differ from shipping_cost due to adjustments)
+	RateAmount *float64 `json:"rate_amount,omitempty"`
+	// Currency for rate_amount
+	RateCurrency *string `json:"rate_currency,omitempty"`
+	// Estimated delivery days from the rate
+	RateEstimatedDays *float64 `json:"rate_estimated_days,omitempty"`
+	// Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RateEstimatedDeliveryAt *time.Time `json:"rate_estimated_delivery_at,omitempty"`
+	// Optional reference to the selected rate (for traceability)
+	RateID *string `json:"rate_id,omitempty"`
+	// Service name from the rate (e.g., "Priority Mail")
+	RateServiceName *string `json:"rate_service_name,omitempty"`
+	// The raw data returned by the integration for this shipment
+	Raw map[string]any `json:"raw,omitempty"`
+	// Customer reference number
+	ReferenceNumber *string `json:"reference_number,omitempty"`
 	// Return address (may differ from from_address)
-	ReturnAddress             *PropertyShippingShipmentReturnAddress `json:"return_address,omitempty"`
-	ReturnAuthorizationNumber *string                                `json:"return_authorization_number,omitempty"`
-	ReturnReason              *string                                `json:"return_reason,omitempty"`
-	ReturnType                *ReturnType                            `json:"return_type,omitempty"`
-	ServiceCode               *string                                `json:"service_code,omitempty"`
-	ShippedAt                 *time.Time                             `json:"shipped_at,omitempty"`
+	ReturnAddress *PropertyShippingShipmentReturnAddress `json:"return_address,omitempty"`
+	// RMA number if return shipment
+	ReturnAuthorizationNumber *string `json:"return_authorization_number,omitempty"`
+	// Reason for return
+	ReturnReason *string `json:"return_reason,omitempty"`
+	// Type of return
+	ReturnType *ReturnType `json:"return_type,omitempty"`
+	// Code for the shipping service used
+	ServiceCode *string `json:"service_code,omitempty"`
+	// When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ShippedAt *time.Time `json:"shipped_at,omitempty"`
 	// Array of special instructions
-	SpecialInstructions []string                `json:"special_instructions,omitempty"`
-	Status              *ShippingShipmentStatus `json:"status,omitempty"`
+	SpecialInstructions []string `json:"special_instructions,omitempty"`
+	// Current status of the shipment
+	Status *ShippingShipmentStatus `json:"status,omitempty"`
 	// Destination address
-	ToAddress             *PropertyShippingShipmentToAddress `json:"to_address,omitempty"`
-	TrackingID            *string                            `json:"tracking_id,omitempty"`
-	TrackingURL           *string                            `json:"tracking_url,omitempty"`
-	UpdatedAt             *time.Time                         `json:"updated_at,omitempty"`
-	WarehouseLocationID   *string                            `json:"warehouse_location_id,omitempty"`
-	WarehouseLocationName *string                            `json:"warehouse_location_name,omitempty"`
+	ToAddress *PropertyShippingShipmentToAddress `json:"to_address,omitempty"`
+	// Optional reference to the tracking information
+	TrackingID *string `json:"tracking_id,omitempty"`
+	// Carrier tracking URL for this shipment
+	TrackingURL *string `json:"tracking_url,omitempty"`
+	// The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Origin warehouselocation ID; points to CommerceLocation
+	WarehouseLocationID *string `json:"warehouse_location_id,omitempty"`
+	// Origin warehouse location name
+	WarehouseLocationName *string `json:"warehouse_location_name,omitempty"`
 }
 
 func (s ShippingShipment) MarshalJSON() ([]byte, error) {

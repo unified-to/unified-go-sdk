@@ -21,6 +21,9 @@ const (
 	CreateGenaiPromptQueryParamFieldsMcpURL                CreateGenaiPromptQueryParamFields = "mcp_url"
 	CreateGenaiPromptQueryParamFieldsMcpDeferredTools      CreateGenaiPromptQueryParamFields = "mcp_deferred_tools"
 	CreateGenaiPromptQueryParamFieldsMcpAuthorizationToken CreateGenaiPromptQueryParamFields = "mcp_authorization_token"
+	CreateGenaiPromptQueryParamFieldsQuestions             CreateGenaiPromptQueryParamFields = "questions"
+	CreateGenaiPromptQueryParamFieldsAnswers               CreateGenaiPromptQueryParamFields = "answers"
+	CreateGenaiPromptQueryParamFieldsSkillIds              CreateGenaiPromptQueryParamFields = "skill_ids"
 	CreateGenaiPromptQueryParamFieldsRaw                   CreateGenaiPromptQueryParamFields = "raw"
 )
 
@@ -50,6 +53,12 @@ func (e *CreateGenaiPromptQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "mcp_deferred_tools":
 		fallthrough
 	case "mcp_authorization_token":
+		fallthrough
+	case "questions":
+		fallthrough
+	case "answers":
+		fallthrough
+	case "skill_ids":
 		fallthrough
 	case "raw":
 		*e = CreateGenaiPromptQueryParamFields(v)

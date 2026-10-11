@@ -26,11 +26,15 @@ func (e *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManage
 
 // PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager - "id" attribute of another User.
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager struct {
-	DollarRef   *string                                                                       `json:"$ref,omitempty"`
-	DisplayName *string                                                                       `json:"displayName,omitempty"`
-	ManagerID   *string                                                                       `json:"managerId,omitempty"`
-	Type        *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType `json:"type,omitempty"`
-	Value       *string                                                                       `json:"value,omitempty"`
+	// The URI of the SCIM resource representing the User's manager.  RECOMMENDED.
+	DollarRef *string `json:"$ref,omitempty"`
+	// The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is "readOnly".
+	DisplayName *string `json:"displayName,omitempty"`
+	// alias for value?
+	ManagerID *string                                                                       `json:"managerId,omitempty"`
+	Type      *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType `json:"type,omitempty"`
+	// The "id" of the SCIM resource representing the user's manager.  RECOMMENDED.
+	Value *string `json:"value,omitempty"`
 }
 
 func (p *PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager) GetDollarRef() *string {

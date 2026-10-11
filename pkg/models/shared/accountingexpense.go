@@ -33,37 +33,74 @@ func (e *AccountingExpenseStatus) IsExact() bool {
 	return false
 }
 
+// AccountingExpenseType - USER = employee spend; COMPANY = books/purchase expense
+type AccountingExpenseType string
+
+const (
+	AccountingExpenseTypeUser    AccountingExpenseType = "USER"
+	AccountingExpenseTypeCompany AccountingExpenseType = "COMPANY"
+)
+
+func (e AccountingExpenseType) ToPointer() *AccountingExpenseType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AccountingExpenseType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "USER", "COMPANY":
+			return true
+		}
+	}
+	return false
+}
+
 type AccountingExpense struct {
-	AccountID      *string    `json:"account_id,omitempty"`
-	ApprovedAt     *time.Time `json:"approved_at,omitempty"`
-	ApproverUserID *string    `json:"approver_user_id,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID *string `json:"account_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ApprovedAt *time.Time `json:"approved_at,omitempty"`
+	// references HR employee/user (reference to HrisEmployee)
+	ApproverUserID *string `json:"approver_user_id,omitempty"`
 	// expense approver(s); id is HR employee/user when resolved
-	ApproverUsers    []AccountingReference    `json:"approver_users,omitempty"`
-	Attachments      []AccountingAttachment   `json:"attachments,omitempty"`
-	CategoryIds      []string                 `json:"category_ids,omitempty"`
-	ContactID        *string                  `json:"contact_id,omitempty"`
-	CreatedAt        *time.Time               `json:"created_at,omitempty"`
-	Currency         *string                  `json:"currency,omitempty"`
-	ExchangeRate     *float64                 `json:"exchange_rate,omitempty"`
-	ExternalNumber   *string                  `json:"external_number,omitempty"`
-	ID               *string                  `json:"id,omitempty"`
-	Lineitems        []AccountingLineitem     `json:"lineitems,omitempty"`
-	Metadata         []AccountingMetadata     `json:"metadata,omitempty"`
-	Name             *string                  `json:"name,omitempty"`
-	OrganizationID   *string                  `json:"organization_id,omitempty"`
-	PaymentMethod    *string                  `json:"payment_method,omitempty"`
-	PostedAt         *time.Time               `json:"posted_at,omitempty"`
-	ProjectID        *string                  `json:"project_id,omitempty"`
-	Raw              map[string]any           `json:"raw,omitempty"`
-	ReimbursedAmount *float64                 `json:"reimbursed_amount,omitempty"`
-	ReimbursedAt     *time.Time               `json:"reimbursed_at,omitempty"`
-	Status           *AccountingExpenseStatus `json:"status,omitempty"`
-	TaxAmount        *float64                 `json:"tax_amount,omitempty"`
-	TaxrateID        *string                  `json:"taxrate_id,omitempty"`
-	TotalAmount      *float64                 `json:"total_amount,omitempty"`
-	UpdatedAt        *time.Time               `json:"updated_at,omitempty"`
-	UserID           *string                  `json:"user_id,omitempty"`
-	Users            []AccountingReference    `json:"users,omitempty"`
+	ApproverUsers []AccountingReference  `json:"approver_users,omitempty"`
+	Attachments   []AccountingAttachment `json:"attachments,omitempty"`
+	CategoryIds   []string               `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// Exchange rate to the base/home currency at the expense date
+	ExchangeRate   *float64             `json:"exchange_rate,omitempty"`
+	ExternalNumber *string              `json:"external_number,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Name           *string              `json:"name,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	PaymentMethod  *string              `json:"payment_method,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt *time.Time `json:"posted_at,omitempty"`
+	// (reference to TaskProject)
+	ProjectID        *string        `json:"project_id,omitempty"`
+	Raw              map[string]any `json:"raw,omitempty"`
+	ReimbursedAmount *float64       `json:"reimbursed_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ReimbursedAt *time.Time               `json:"reimbursed_at,omitempty"`
+	Status       *AccountingExpenseStatus `json:"status,omitempty"`
+	TaxAmount    *float64                 `json:"tax_amount,omitempty"`
+	// ref -> AccountingTaxrate applied to the expense
+	TaxrateID   *string  `json:"taxrate_id,omitempty"`
+	TotalAmount *float64 `json:"total_amount,omitempty"`
+	// USER = employee spend; COMPANY = books/purchase expense
+	Type *AccountingExpenseType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// references a HR employee/user (reference to HrisEmployee)
+	UserID *string               `json:"user_id,omitempty"`
+	Users  []AccountingReference `json:"users,omitempty"`
 }
 
 func (a AccountingExpense) MarshalJSON() ([]byte, error) {
@@ -257,6 +294,13 @@ func (a *AccountingExpense) GetTotalAmount() *float64 {
 		return nil
 	}
 	return a.TotalAmount
+}
+
+func (a *AccountingExpense) GetType() *AccountingExpenseType {
+	if a == nil {
+		return nil
+	}
+	return a.Type
 }
 
 func (a *AccountingExpense) GetUpdatedAt() *time.Time {

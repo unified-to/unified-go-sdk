@@ -8,6 +8,7 @@ import (
 )
 
 type LmsCollection struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
@@ -16,7 +17,8 @@ type LmsCollection struct {
 	Name        *string        `json:"name,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (l LmsCollection) MarshalJSON() ([]byte, error) {

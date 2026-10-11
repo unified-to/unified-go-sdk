@@ -8,27 +8,32 @@ import (
 )
 
 type LmsCourse struct {
-	Categories          []string       `json:"categories,omitempty"`
-	ContentIds          []string       `json:"content_ids,omitempty"`
-	CreatedAt           *time.Time     `json:"created_at,omitempty"`
-	Currency            *string        `json:"currency,omitempty"`
-	Description         *string        `json:"description,omitempty"`
-	DurationMinutes     *float64       `json:"duration_minutes,omitempty"`
-	ID                  *string        `json:"id,omitempty"`
-	Instructors         []LmsReference `json:"instructors,omitempty"`
-	IsActive            *bool          `json:"is_active,omitempty"`
-	IsPrivate           *bool          `json:"is_private,omitempty"`
-	Languages           []string       `json:"languages,omitempty"`
-	Media               []LmsMedia     `json:"media,omitempty"`
-	Name                *string        `json:"name,omitempty"`
-	PriceAmount         *float64       `json:"price_amount,omitempty"`
-	ProviderName        *string        `json:"provider_name,omitempty"`
+	Categories []string `json:"categories,omitempty"`
+	ContentIds []string `json:"content_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The currency code (ISO) of the course price
+	Currency        *string        `json:"currency,omitempty"`
+	Description     *string        `json:"description,omitempty"`
+	DurationMinutes *float64       `json:"duration_minutes,omitempty"`
+	ID              *string        `json:"id,omitempty"`
+	Instructors     []LmsReference `json:"instructors,omitempty"`
+	IsActive        *bool          `json:"is_active,omitempty"`
+	IsPrivate       *bool          `json:"is_private,omitempty"`
+	Languages       []string       `json:"languages,omitempty"`
+	Media           []LmsMedia     `json:"media,omitempty"`
+	Name            *string        `json:"name,omitempty"`
+	// How much the course costs
+	PriceAmount  *float64 `json:"price_amount,omitempty"`
+	ProviderName *string  `json:"provider_name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PublishedAt         *time.Time     `json:"published_at,omitempty"`
 	Raw                 map[string]any `json:"raw,omitempty"`
 	Skills              []string       `json:"skills,omitempty"`
 	Students            []LmsReference `json:"students,omitempty"`
 	TimeEstimateMinutes *float64       `json:"time_estimate_minutes,omitempty"`
-	UpdatedAt           *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (l LmsCourse) MarshalJSON() ([]byte, error) {

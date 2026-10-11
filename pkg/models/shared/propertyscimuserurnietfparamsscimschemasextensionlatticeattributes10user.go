@@ -83,16 +83,22 @@ func (e *SexualOrientation) IsExact() bool {
 }
 
 type PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User struct {
-	JobLevel             *string                                                                         `json:"Job Level,omitempty"`
-	PeopleManagerReviews *string                                                                         `json:"People Manager (Reviews),omitempty"`
-	RemoteWorkLocation   *string                                                                         `json:"Remote Work - Location,omitempty"`
-	SalaryInformation    *string                                                                         `json:"Salary Information,omitempty"`
-	SubDepartments       *string                                                                         `json:"Sub Departments,omitempty"`
-	BirthDate            *time.Time                                                                      `json:"birthDate,omitempty"`
-	Ethnicity            *Ethnicity                                                                      `json:"ethnicity,omitempty"`
-	Gender               *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender `json:"gender,omitempty"`
-	SexualOrientation    *SexualOrientation                                                              `json:"sexualOrientation,omitempty"`
-	StartDate            *time.Time                                                                      `json:"startDate,omitempty"`
+	// 'M3',
+	JobLevel *string `json:"Job Level,omitempty"`
+	// 'People Manager',
+	PeopleManagerReviews *string `json:"People Manager (Reviews),omitempty"`
+	// 'Ontario',
+	RemoteWorkLocation *string `json:"Remote Work - Location,omitempty"`
+	// '130000',
+	SalaryInformation *string `json:"Salary Information,omitempty"`
+	SubDepartments    *string `json:"Sub Departments,omitempty"`
+	// "1987-10-06",
+	BirthDate         *time.Time                                                                      `json:"birthDate,omitempty"`
+	Ethnicity         *Ethnicity                                                                      `json:"ethnicity,omitempty"`
+	Gender            *PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender `json:"gender,omitempty"`
+	SexualOrientation *SexualOrientation                                                              `json:"sexualOrientation,omitempty"`
+	// "2022-03-08",
+	StartDate *time.Time `json:"startDate,omitempty"`
 }
 
 func (p PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User) MarshalJSON() ([]byte, error) {

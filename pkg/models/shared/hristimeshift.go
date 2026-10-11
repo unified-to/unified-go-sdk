@@ -8,21 +8,31 @@ import (
 )
 
 type HrisTimeshift struct {
-	ApprovedAt     *time.Time         `json:"approved_at,omitempty"`
-	ApproverUserID *string            `json:"approver_user_id,omitempty"`
-	CompanyID      *string            `json:"company_id,omitempty"`
-	Compensation   []HrisCompensation `json:"compensation,omitempty"`
-	CreatedAt      *time.Time         `json:"created_at,omitempty"`
-	EmployeeUserID string             `json:"employee_user_id"`
-	EndAt          *time.Time         `json:"end_at,omitempty"`
-	GroupID        *string            `json:"group_id,omitempty"`
-	Hours          *float64           `json:"hours,omitempty"`
-	ID             *string            `json:"id,omitempty"`
-	IsApproved     *bool              `json:"is_approved,omitempty"`
-	LocationID     *string            `json:"location_id,omitempty"`
-	Raw            map[string]any     `json:"raw,omitempty"`
-	StartAt        *time.Time         `json:"start_at,omitempty"`
-	UpdatedAt      *time.Time         `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ApprovedAt *time.Time `json:"approved_at,omitempty"`
+	// (reference to HrisEmployee)
+	ApproverUserID *string `json:"approver_user_id,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID    *string            `json:"company_id,omitempty"`
+	Compensation []HrisCompensation `json:"compensation,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (reference to HrisEmployee)
+	EmployeeUserID string `json:"employee_user_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// department, team, etc. (reference to HrisGroup)
+	GroupID    *string  `json:"group_id,omitempty"`
+	Hours      *float64 `json:"hours,omitempty"`
+	ID         *string  `json:"id,omitempty"`
+	IsApproved *bool    `json:"is_approved,omitempty"`
+	// (reference to HrisLocation)
+	LocationID *string        `json:"location_id,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (h HrisTimeshift) MarshalJSON() ([]byte, error) {

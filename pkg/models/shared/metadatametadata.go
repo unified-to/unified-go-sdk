@@ -41,18 +41,21 @@ func (e *MetadataMetadataFormat) IsExact() bool {
 }
 
 type MetadataMetadata struct {
-	CreatedAt      *time.Time              `json:"created_at,omitempty"`
-	Format         *MetadataMetadataFormat `json:"format,omitempty"`
-	ID             *string                 `json:"id,omitempty"`
-	IsRequired     *bool                   `json:"is_required,omitempty"`
-	Name           string                  `json:"name"`
-	ObjectType     string                  `json:"object_type"`
-	Objects        map[string]any          `json:"objects,omitempty"`
-	Options        []string                `json:"options,omitempty"`
-	OriginalFormat *string                 `json:"original_format,omitempty"`
-	Raw            map[string]any          `json:"raw,omitempty"`
-	Slug           *string                 `json:"slug,omitempty"`
-	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt  *time.Time              `json:"created_at,omitempty"`
+	Format     *MetadataMetadataFormat `json:"format,omitempty"`
+	ID         *string                 `json:"id,omitempty"`
+	IsRequired *bool                   `json:"is_required,omitempty"`
+	Name       string                  `json:"name"`
+	// This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item
+	ObjectType     string         `json:"object_type"`
+	Objects        map[string]any `json:"objects,omitempty"`
+	Options        []string       `json:"options,omitempty"`
+	OriginalFormat *string        `json:"original_format,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	Slug           *string        `json:"slug,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (m MetadataMetadata) MarshalJSON() ([]byte, error) {

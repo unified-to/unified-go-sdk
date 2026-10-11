@@ -8,11 +8,15 @@ import (
 )
 
 type UcRecordingTranscript struct {
-	ContactID *string    `json:"contact_id,omitempty"`
-	EndAt     *time.Time `json:"end_at,omitempty"`
-	StartAt   *time.Time `json:"start_at,omitempty"`
-	Text      string     `json:"text"`
-	UserID    *string    `json:"user_id,omitempty"`
+	// (reference to UcContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	Text    string     `json:"text"`
+	// reference to HrisEmployee (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (u UcRecordingTranscript) MarshalJSON() ([]byte, error) {

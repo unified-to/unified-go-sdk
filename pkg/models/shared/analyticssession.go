@@ -8,29 +8,41 @@ import (
 )
 
 type AnalyticsSession struct {
-	Browser         *string        `json:"browser,omitempty"`
-	Campaign        *string        `json:"campaign,omitempty"`
-	City            *string        `json:"city,omitempty"`
-	Country         *string        `json:"country,omitempty"`
-	CreatedAt       *time.Time     `json:"created_at,omitempty"`
-	Device          *string        `json:"device,omitempty"`
-	DurationSeconds *float64       `json:"duration_seconds,omitempty"`
-	EndAt           *time.Time     `json:"end_at,omitempty"`
-	EventsCount     *float64       `json:"events_count,omitempty"`
-	ExitPage        *string        `json:"exit_page,omitempty"`
-	ID              *string        `json:"id,omitempty"`
-	IsBounce        *bool          `json:"is_bounce,omitempty"`
-	IsConversion    *bool          `json:"is_conversion,omitempty"`
-	LandingPage     *string        `json:"landing_page,omitempty"`
-	Medium          *string        `json:"medium,omitempty"`
-	Os              *string        `json:"os,omitempty"`
-	PageViews       *float64       `json:"page_views,omitempty"`
-	PropertyID      *string        `json:"property_id,omitempty"`
-	Raw             map[string]any `json:"raw,omitempty"`
-	Source          *string        `json:"source,omitempty"`
-	StartAt         *time.Time     `json:"start_at,omitempty"`
-	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
-	VisitorID       *string        `json:"visitor_id,omitempty"`
+	Browser  *string `json:"browser,omitempty"`
+	Campaign *string `json:"campaign,omitempty"`
+	City     *string `json:"city,omitempty"`
+	Country  *string `json:"country,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt       *time.Time `json:"created_at,omitempty"`
+	Device          *string    `json:"device,omitempty"`
+	DurationSeconds *float64   `json:"duration_seconds,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Session attributes
+	EventsCount *float64 `json:"events_count,omitempty"`
+	// Session attributes
+	ExitPage *string `json:"exit_page,omitempty"`
+	ID       *string `json:"id,omitempty"`
+	// Engagement
+	IsBounce *bool `json:"is_bounce,omitempty"`
+	// Engagement
+	IsConversion *bool `json:"is_conversion,omitempty"`
+	// Session attributes
+	LandingPage *string `json:"landing_page,omitempty"`
+	Medium      *string `json:"medium,omitempty"`
+	Os          *string `json:"os,omitempty"`
+	// Session attributes
+	PageViews *float64 `json:"page_views,omitempty"`
+	// points to AnalyticsProperty
+	PropertyID *string        `json:"property_id,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	// Acquisition
+	Source *string `json:"source,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	VisitorID *string    `json:"visitor_id,omitempty"`
 }
 
 func (a AnalyticsSession) MarshalJSON() ([]byte, error) {

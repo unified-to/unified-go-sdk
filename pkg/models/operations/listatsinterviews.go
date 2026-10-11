@@ -71,13 +71,17 @@ func (e *ListAtsInterviewsQueryParamFields) UnmarshalJSON(data []byte) error {
 type ListAtsInterviewsRequest struct {
 	// The application ID to filter by
 	ApplicationID *string `queryParam:"style=form,explode=true,name=application_id"`
+	// The candidate ID to filter by
+	CandidateID *string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// ID of the connection
 	ConnectionID string `pathParam:"style=simple,explode=false,name=connection_id"`
 	// Fields to return
 	Fields []ListAtsInterviewsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
-	Limit  *float64                            `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                            `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                             `queryParam:"style=form,explode=true,name=order"`
+	// The job ID to filter by
+	JobID  *string  `queryParam:"style=form,explode=true,name=job_id"`
+	Limit  *float64 `queryParam:"style=form,explode=true,name=limit"`
+	Offset *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order  *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -94,6 +98,13 @@ func (l *ListAtsInterviewsRequest) GetApplicationID() *string {
 	return l.ApplicationID
 }
 
+func (l *ListAtsInterviewsRequest) GetCandidateID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.CandidateID
+}
+
 func (l *ListAtsInterviewsRequest) GetConnectionID() string {
 	if l == nil {
 		return ""
@@ -106,6 +117,13 @@ func (l *ListAtsInterviewsRequest) GetFields() []ListAtsInterviewsQueryParamFiel
 		return nil
 	}
 	return l.Fields
+}
+
+func (l *ListAtsInterviewsRequest) GetJobID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.JobID
 }
 
 func (l *ListAtsInterviewsRequest) GetLimit() *float64 {

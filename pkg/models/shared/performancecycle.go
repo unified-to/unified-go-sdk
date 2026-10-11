@@ -32,6 +32,7 @@ func (e *PerformanceCycleStatus) IsExact() bool {
 	return false
 }
 
+// PerformanceCycleType - whether this is a review cycle or a goal cycle/timeframe
 type PerformanceCycleType string
 
 const (
@@ -56,17 +57,23 @@ func (e *PerformanceCycleType) IsExact() bool {
 }
 
 type PerformanceCycle struct {
-	CreatedAt   *time.Time              `json:"created_at,omitempty"`
-	Description *string                 `json:"description,omitempty"`
-	DueAt       *time.Time              `json:"due_at,omitempty"`
-	EndAt       *time.Time              `json:"end_at,omitempty"`
-	ID          *string                 `json:"id,omitempty"`
-	Name        *string                 `json:"name,omitempty"`
-	Raw         map[string]any          `json:"raw,omitempty"`
-	StartAt     *time.Time              `json:"start_at,omitempty"`
-	Status      *PerformanceCycleStatus `json:"status,omitempty"`
-	Type        *PerformanceCycleType   `json:"type,omitempty"`
-	UpdatedAt   *time.Time              `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time     `json:"end_at,omitempty"`
+	ID    *string        `json:"id,omitempty"`
+	Name  *string        `json:"name,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time              `json:"start_at,omitempty"`
+	Status  *PerformanceCycleStatus `json:"status,omitempty"`
+	// whether this is a review cycle or a goal cycle/timeframe
+	Type *PerformanceCycleType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PerformanceCycle) MarshalJSON() ([]byte, error) {

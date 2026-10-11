@@ -31,7 +31,8 @@ type CalendarAttendee struct {
 	Name     *string                 `json:"name,omitempty"`
 	Required *bool                   `json:"required,omitempty"`
 	Status   *CalendarAttendeeStatus `json:"status,omitempty"`
-	UserID   *string                 `json:"user_id,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (c *CalendarAttendee) GetEmail() *string {

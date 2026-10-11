@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingTransactionStatus - Posting state of the transaction
 type AccountingTransactionStatus string
 
 const (
@@ -32,30 +33,40 @@ func (e *AccountingTransactionStatus) IsExact() bool {
 }
 
 type AccountingTransaction struct {
-	AccountID       *string                         `json:"account_id,omitempty"`
-	CategoryIds     []string                        `json:"category_ids,omitempty"`
-	Contacts        []AccountingTransactionContact  `json:"contacts,omitempty"`
-	CreatedAt       *time.Time                      `json:"created_at,omitempty"`
-	Currency        *string                         `json:"currency,omitempty"`
-	CustomerMessage *string                         `json:"customer_message,omitempty"`
-	ExchangeRate    *float64                        `json:"exchange_rate,omitempty"`
-	ID              *string                         `json:"id,omitempty"`
-	Lineitems       []AccountingTransactionLineItem `json:"lineitems,omitempty"`
-	Memo            *string                         `json:"memo,omitempty"`
-	OrganizationID  *string                         `json:"organization_id,omitempty"`
-	PaymentMethod   *string                         `json:"payment_method,omitempty"`
-	PaymentTerms    *string                         `json:"payment_terms,omitempty"`
-	ProjectID       *string                         `json:"project_id,omitempty"`
-	Raw             map[string]any                  `json:"raw,omitempty"`
-	Reference       *string                         `json:"reference,omitempty"`
-	SplitAccountID  *string                         `json:"split_account_id,omitempty"`
-	Status          *AccountingTransactionStatus    `json:"status,omitempty"`
-	SubTotalAmount  *float64                        `json:"sub_total_amount,omitempty"`
-	TaxAmount       *float64                        `json:"tax_amount,omitempty"`
-	TotalAmount     *float64                        `json:"total_amount,omitempty"`
-	TransactionAt   *time.Time                      `json:"transaction_at,omitempty"`
-	Type            *string                         `json:"type,omitempty"`
-	UpdatedAt       *time.Time                      `json:"updated_at,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID   *string                        `json:"account_id,omitempty"`
+	CategoryIds []string                       `json:"category_ids,omitempty"`
+	Contacts    []AccountingTransactionContact `json:"contacts,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt       *time.Time `json:"created_at,omitempty"`
+	Currency        *string    `json:"currency,omitempty"`
+	CustomerMessage *string    `json:"customer_message,omitempty"`
+	// Exchange rate to the base/home currency at the transaction date
+	ExchangeRate   *float64                        `json:"exchange_rate,omitempty"`
+	ID             *string                         `json:"id,omitempty"`
+	Lineitems      []AccountingTransactionLineItem `json:"lineitems,omitempty"`
+	Memo           *string                         `json:"memo,omitempty"`
+	OrganizationID *string                         `json:"organization_id,omitempty"`
+	PaymentMethod  *string                         `json:"payment_method,omitempty"`
+	PaymentTerms   *string                         `json:"payment_terms,omitempty"`
+	// (reference to TaskProject)
+	ProjectID      *string        `json:"project_id,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	Reference      *string        `json:"reference,omitempty"`
+	SplitAccountID *string        `json:"split_account_id,omitempty"`
+	// Posting state of the transaction
+	Status         *AccountingTransactionStatus `json:"status,omitempty"`
+	SubTotalAmount *float64                     `json:"sub_total_amount,omitempty"`
+	// negative for CREDIT, positive for DEBIT
+	TaxAmount *float64 `json:"tax_amount,omitempty"`
+	// negative for CREDIT, positive for DEBIT
+	TotalAmount *float64 `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	TransactionAt *time.Time `json:"transaction_at,omitempty"`
+	// eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit, VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit, BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt, CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment, GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service Tax Defer, Service Tax Partial Utilisation
+	Type *string `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingTransaction) MarshalJSON() ([]byte, error) {

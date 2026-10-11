@@ -4,14 +4,17 @@ package shared
 
 // PropertyAtsJobPostingAddress - job-post-specific address
 type PropertyAtsJobPostingAddress struct {
-	Address1    *string `json:"address1,omitempty"`
-	Address2    *string `json:"address2,omitempty"`
-	City        *string `json:"city,omitempty"`
-	Country     *string `json:"country,omitempty"`
+	Address1 *string `json:"address1,omitempty"`
+	Address2 *string `json:"address2,omitempty"`
+	City     *string `json:"city,omitempty"`
+	Country  *string `json:"country,omitempty"`
+	// Country code for the country, in ISO 3166 A-2 format
 	CountryCode *string `json:"country_code,omitempty"`
 	PostalCode  *string `json:"postal_code,omitempty"`
-	Region      *string `json:"region,omitempty"`
-	RegionCode  *string `json:"region_code,omitempty"`
+	// Regional area of the employee's address.  For example, in the U.S., the region is the employee's state; in Canada, the region is the employee’s province.
+	Region *string `json:"region,omitempty"`
+	// Short form for the regional area of the employee's address.   For example, in the U.S., the region code is the two-letter abbreviation for the employee’s state; in Canada, the region is the two-letter abbreviation for the employee's province.
+	RegionCode *string `json:"region_code,omitempty"`
 }
 
 func (p *PropertyAtsJobPostingAddress) GetAddress1() *string {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// APICallType - The type of API Call being logged
 type APICallType string
 
 const (
@@ -32,26 +33,37 @@ func (e *APICallType) IsExact() bool {
 }
 
 type APICall struct {
-	ConnectionID        *string     `json:"connection_id,omitempty"`
-	CreatedAt           *time.Time  `json:"created_at,omitempty"`
-	EndapiResponseTime  *float64    `json:"endapi_response_time,omitempty"`
-	Environment         *string     `default:"Production" json:"environment"`
-	Error               *string     `json:"error,omitempty"`
-	ExternalXref        *string     `json:"external_xref,omitempty"`
-	ID                  *string     `json:"id,omitempty"`
-	IntegrationType     string      `json:"integration_type"`
-	IPAddress           *string     `json:"ip_address,omitempty"`
-	IsBillable          *bool       `json:"is_billable,omitempty"`
-	Method              string      `json:"method"`
-	Name                string      `json:"name"`
-	Path                string      `json:"path"`
-	Size                *float64    `json:"size,omitempty"`
-	Status              string      `json:"status"`
+	ConnectionID *string `json:"connection_id,omitempty"`
+	// The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt          *time.Time `json:"created_at,omitempty"`
+	EndapiResponseTime *float64   `json:"endapi_response_time,omitempty"`
+	Environment        *string    `default:"Production" json:"environment"`
+	// The error description (if status code is >= 400)
+	Error *string `json:"error,omitempty"`
+	// your customer's user ID
+	ExternalXref *string `json:"external_xref,omitempty"`
+	// Unique identifier for this API call
+	ID *string `json:"id,omitempty"`
+	// The integration type
+	IntegrationType string  `json:"integration_type"`
+	IPAddress       *string `json:"ip_address,omitempty"`
+	IsBillable      *bool   `json:"is_billable,omitempty"`
+	Method          string  `json:"method"`
+	// The called name of the API method
+	Name string `json:"name"`
+	// The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
+	Path string `json:"path"`
+	// The size of the response
+	Size *float64 `json:"size,omitempty"`
+	// The resulting HTTP status code (200)
+	Status string `json:"status"`
+	// The type of API Call being logged
 	Type                APICallType `json:"type"`
 	UnifiedResponseTime *float64    `json:"unified_response_time,omitempty"`
 	UserAgent           *string     `json:"user_agent,omitempty"`
 	WebhookID           *string     `json:"webhook_id,omitempty"`
-	WorkspaceID         *string     `json:"workspace_id,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID *string `json:"workspace_id,omitempty"`
 }
 
 func (a APICall) MarshalJSON() ([]byte, error) {

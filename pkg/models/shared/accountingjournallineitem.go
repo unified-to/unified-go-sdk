@@ -3,21 +3,31 @@
 package shared
 
 type AccountingJournalLineitem struct {
-	AccountID      *string  `json:"account_id,omitempty"`
-	CategoryIds    []string `json:"category_ids,omitempty"`
-	ContactID      *string  `json:"contact_id,omitempty"`
-	CreditAmount   *float64 `json:"credit_amount,omitempty"`
-	DebitAmount    *float64 `json:"debit_amount,omitempty"`
-	Description    *string  `json:"description,omitempty"`
-	GroupID        *string  `json:"group_id,omitempty"`
-	ID             *string  `json:"id,omitempty"`
-	InvoiceID      *string  `json:"invoice_id,omitempty"`
-	OrganizationID *string  `json:"organization_id,omitempty"`
-	PaymentID      *string  `json:"payment_id,omitempty"`
-	ProjectID      *string  `json:"project_id,omitempty"`
-	TaxAmount      *float64 `json:"tax_amount,omitempty"`
-	TaxrateID      *string  `json:"taxrate_id,omitempty"`
-	TotalAmount    *float64 `json:"total_amount,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID   *string  `json:"account_id,omitempty"`
+	CategoryIds []string `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID    *string  `json:"contact_id,omitempty"`
+	CreditAmount *float64 `json:"credit_amount,omitempty"`
+	// will replace total_amount (absolute value)
+	DebitAmount *float64 `json:"debit_amount,omitempty"`
+	Description *string  `json:"description,omitempty"`
+	// points to a HRIS Group (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	ID      *string `json:"id,omitempty"`
+	// (reference to AccountingInvoice)
+	InvoiceID *string `json:"invoice_id,omitempty"`
+	// points to a AccountingOrganization
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// link to PaymentPayment (reference to PaymentPayment)
+	PaymentID *string `json:"payment_id,omitempty"`
+	// (reference to TaskProject)
+	ProjectID *string  `json:"project_id,omitempty"`
+	TaxAmount *float64 `json:"tax_amount,omitempty"`
+	// ref -> AccountingTaxrate applied to the line
+	TaxrateID *string `json:"taxrate_id,omitempty"`
+	// will be a positive value for a debit and negative for a credit
+	TotalAmount *float64 `json:"total_amount,omitempty"`
 }
 
 func (a *AccountingJournalLineitem) GetAccountID() *string {

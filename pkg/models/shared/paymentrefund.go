@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// Reason - Why the refund was issued
 type Reason string
 
 const (
@@ -55,6 +56,7 @@ func (e *PaymentRefundStatus) IsExact() bool {
 	return false
 }
 
+// PaymentRefundTenderType - Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
 type PaymentRefundTenderType string
 
 const (
@@ -86,19 +88,25 @@ func (e *PaymentRefundTenderType) IsExact() bool {
 }
 
 type PaymentRefund struct {
-	CreatedAt   *time.Time               `json:"created_at,omitempty"`
-	Currency    *string                  `json:"currency,omitempty"`
-	ID          *string                  `json:"id,omitempty"`
-	Notes       *string                  `json:"notes,omitempty"`
-	PaymentID   *string                  `json:"payment_id,omitempty"`
-	Raw         map[string]any           `json:"raw,omitempty"`
-	Reason      *Reason                  `json:"reason,omitempty"`
-	Reference   *string                  `json:"reference,omitempty"`
-	RefundedAt  *time.Time               `json:"refunded_at,omitempty"`
-	Status      *PaymentRefundStatus     `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	Notes     *string    `json:"notes,omitempty"`
+	// (reference to PaymentPayment)
+	PaymentID *string        `json:"payment_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// Why the refund was issued
+	Reason    *Reason `json:"reason,omitempty"`
+	Reference *string `json:"reference,omitempty"`
+	// Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RefundedAt *time.Time           `json:"refunded_at,omitempty"`
+	Status     *PaymentRefundStatus `json:"status,omitempty"`
+	// Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
 	TenderType  *PaymentRefundTenderType `json:"tender_type,omitempty"`
 	TotalAmount *float64                 `json:"total_amount,omitempty"`
-	UpdatedAt   *time.Time               `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PaymentRefund) MarshalJSON() ([]byte, error) {

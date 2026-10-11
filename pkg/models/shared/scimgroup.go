@@ -3,10 +3,14 @@
 package shared
 
 type ScimGroup struct {
-	DisplayName string  `json:"displayName"`
-	ExternalID  *string `json:"externalId,omitempty"`
-	GroupType   *string `json:"groupType,omitempty"`
-	ID          *string `json:"id,omitempty"`
+	// The group's display name
+	DisplayName string `json:"displayName"`
+	// A groups id in an external system
+	ExternalID *string `json:"externalId,omitempty"`
+	// Organization [NOT STANDARD]
+	GroupType *string `json:"groupType,omitempty"`
+	// The group's unique id
+	ID *string `json:"id,omitempty"`
 	// An array of members
 	Members []ScimGroupMember      `json:"members,omitempty"`
 	Meta    *PropertyScimGroupMeta `json:"meta,omitempty"`

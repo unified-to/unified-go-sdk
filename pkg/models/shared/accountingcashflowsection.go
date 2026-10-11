@@ -3,9 +3,11 @@
 package shared
 
 type AccountingCashflowSection struct {
-	Items       []AccountingCashflowItem `json:"items,omitempty"`
-	SectionName *string                  `json:"section_name,omitempty"`
-	TotalAmount *float64                 `json:"total_amount,omitempty"`
+	Items []AccountingCashflowItem `json:"items,omitempty"`
+	// e.g. "Operating Activities"
+	SectionName *string `json:"section_name,omitempty"`
+	// Net cash providedused by this section
+	TotalAmount *float64 `json:"total_amount,omitempty"`
 }
 
 func (a *AccountingCashflowSection) GetItems() []AccountingCashflowItem {

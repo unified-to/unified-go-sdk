@@ -8,13 +8,16 @@ import (
 )
 
 type EnrichPersonWorkHistory struct {
-	CompanyDomain *string    `json:"company_domain,omitempty"`
-	CompanyID     *string    `json:"company_id,omitempty"`
-	CompanyName   *string    `json:"company_name,omitempty"`
-	EndAt         *time.Time `json:"end_at,omitempty"`
-	Location      *string    `json:"location,omitempty"`
-	StartAt       *time.Time `json:"start_at,omitempty"`
-	Title         string     `json:"title"`
+	CompanyDomain *string `json:"company_domain,omitempty"`
+	// (reference to EnrichCompany)
+	CompanyID   *string `json:"company_id,omitempty"`
+	CompanyName *string `json:"company_name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt    *time.Time `json:"end_at,omitempty"`
+	Location *string    `json:"location,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	Title   string     `json:"title"`
 }
 
 func (e EnrichPersonWorkHistory) MarshalJSON() ([]byte, error) {

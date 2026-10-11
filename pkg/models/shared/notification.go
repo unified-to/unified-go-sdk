@@ -49,20 +49,27 @@ func (e *Event) IsExact() bool {
 
 // Notification - A notification of an event that occurred in you account.
 type Notification struct {
-	ConnectionID    *string    `json:"connection_id,omitempty"`
-	CreatedAt       *time.Time `json:"created_at,omitempty"`
-	Description     *string    `json:"description,omitempty"`
-	Event           *Event     `json:"event,omitempty"`
-	ID              *string    `json:"id,omitempty"`
-	IntegrationName *string    `json:"integration_name,omitempty"`
-	IntegrationType *string    `json:"integration_type,omitempty"`
-	SentAt          *time.Time `json:"sent_at,omitempty"`
-	UpdatedAt       *time.Time `json:"updated_at,omitempty"`
-	UserID          *string    `json:"user_id,omitempty"`
-	UserName        *string    `json:"user_name,omitempty"`
-	WebhookID       *string    `json:"webhook_id,omitempty"`
-	WorkspaceID     *string    `json:"workspace_id,omitempty"`
-	WorkspaceName   *string    `json:"workspace_name,omitempty"`
+	ConnectionID *string `json:"connection_id,omitempty"`
+	// The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Longer description of this notification
+	Description *string `json:"description,omitempty"`
+	Event       *Event  `json:"event,omitempty"`
+	// Unique identifier for this notification object
+	ID              *string `json:"id,omitempty"`
+	IntegrationName *string `json:"integration_name,omitempty"`
+	IntegrationType *string `json:"integration_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SentAt *time.Time `json:"sent_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID    *string `json:"user_id,omitempty"`
+	UserName  *string `json:"user_name,omitempty"`
+	WebhookID *string `json:"webhook_id,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID   *string `json:"workspace_id,omitempty"`
+	WorkspaceName *string `json:"workspace_name,omitempty"`
 }
 
 func (n Notification) MarshalJSON() ([]byte, error) {

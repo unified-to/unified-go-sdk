@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ShippingTrackingEventStatus - Status at the time of this event
 type ShippingTrackingEventStatus string
 
 const (
@@ -42,16 +43,25 @@ func (e *ShippingTrackingEventStatus) IsExact() bool {
 }
 
 type ShippingTrackingEvent struct {
-	CarrierStatusCode *string                                       `json:"carrier_status_code,omitempty"`
-	CreatedAt         *time.Time                                    `json:"created_at,omitempty"`
-	Description       *string                                       `json:"description,omitempty"`
-	EventCode         *string                                       `json:"event_code,omitempty"`
-	LocationAddress   *PropertyShippingTrackingEventLocationAddress `json:"location_address,omitempty"`
-	LocationID        *string                                       `json:"location_id,omitempty"`
-	LocationName      *string                                       `json:"location_name,omitempty"`
-	Notes             *string                                       `json:"notes,omitempty"`
-	SignedBy          *string                                       `json:"signed_by,omitempty"`
-	Status            *ShippingTrackingEventStatus                  `json:"status,omitempty"`
+	// Carrier's status code at this event
+	CarrierStatusCode *string `json:"carrier_status_code,omitempty"`
+	// The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Description of the tracking event
+	Description *string `json:"description,omitempty"`
+	// Carrier-specific event code
+	EventCode       *string                                       `json:"event_code,omitempty"`
+	LocationAddress *PropertyShippingTrackingEventLocationAddress `json:"location_address,omitempty"`
+	// Location ID; points to CommerceLocation (reference to ShippingLocation)
+	LocationID *string `json:"location_id,omitempty"`
+	// Location name
+	LocationName *string `json:"location_name,omitempty"`
+	// Additional notes
+	Notes *string `json:"notes,omitempty"`
+	// Who signed for delivery
+	SignedBy *string `json:"signed_by,omitempty"`
+	// Status at the time of this event
+	Status *ShippingTrackingEventStatus `json:"status,omitempty"`
 }
 
 func (s ShippingTrackingEvent) MarshalJSON() ([]byte, error) {

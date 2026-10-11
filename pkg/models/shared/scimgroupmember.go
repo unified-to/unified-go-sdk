@@ -2,6 +2,7 @@
 
 package shared
 
+// Operation - ONLY USED ON UPDATES
 type Operation string
 
 const (
@@ -24,6 +25,7 @@ func (e *Operation) IsExact() bool {
 	return false
 }
 
+// ScimGroupMemberType - NOT STANDARD
 type ScimGroupMemberType string
 
 const (
@@ -47,11 +49,16 @@ func (e *ScimGroupMemberType) IsExact() bool {
 }
 
 type ScimGroupMember struct {
-	DollarRef *string              `json:"$ref,omitempty"`
-	Display   *string              `json:"display,omitempty"`
-	Operation *Operation           `json:"operation,omitempty"`
-	Type      *ScimGroupMemberType `json:"type,omitempty"`
-	Value     string               `json:"value"`
+	// url to user
+	DollarRef *string `json:"$ref,omitempty"`
+	// user name
+	Display *string `json:"display,omitempty"`
+	// ONLY USED ON UPDATES
+	Operation *Operation `json:"operation,omitempty"`
+	// NOT STANDARD
+	Type *ScimGroupMemberType `json:"type,omitempty"`
+	// ID of user
+	Value string `json:"value"`
 }
 
 func (s *ScimGroupMember) GetDollarRef() *string {

@@ -25,7 +25,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fe4277ef-5da1-4ca9-9359-50f8d62f8e9f"),
+			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -42,7 +42,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-03T11:11:55.467Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
 		},
 		ConnectionID: "<id>",
 	})

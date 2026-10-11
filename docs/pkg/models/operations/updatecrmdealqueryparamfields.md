@@ -33,6 +33,6 @@ value := operations.UpdateCrmDealQueryParamFieldsID
 | `UpdateCrmDealQueryParamFieldsUserID`      | user_id                                    |
 | `UpdateCrmDealQueryParamFieldsContactIds`  | contact_ids                                |
 | `UpdateCrmDealQueryParamFieldsCompanyIds`  | company_ids                                |
-| `UpdateCrmDealQueryParamFieldsMetadata`    | metadata                                   |
 | `UpdateCrmDealQueryParamFieldsDescription` | description                                |
+| `UpdateCrmDealQueryParamFieldsMetadata`    | metadata                                   |
 | `UpdateCrmDealQueryParamFieldsRaw`         | raw                                        |

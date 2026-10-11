@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// ComputeMode - How the segment membership is computed (REALTIME or BATCH)
 type ComputeMode string
 
 const (
@@ -29,6 +30,7 @@ func (e *ComputeMode) IsExact() bool {
 	return false
 }
 
+// CdpSegmentType - The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
 type CdpSegmentType string
 
 const (
@@ -53,19 +55,32 @@ func (e *CdpSegmentType) IsExact() bool {
 }
 
 type CdpSegment struct {
-	ComputeMode *ComputeMode    `json:"compute_mode,omitempty"`
-	CreatedAt   *time.Time      `json:"created_at,omitempty"`
-	Definition  *string         `json:"definition,omitempty"`
-	Description *string         `json:"description,omitempty"`
-	ID          *string         `json:"id,omitempty"`
-	IsActive    *bool           `json:"is_active,omitempty"`
-	Name        *string         `json:"name,omitempty"`
-	Raw         map[string]any  `json:"raw,omitempty"`
-	Size        *float64        `json:"size,omitempty"`
-	Slug        *string         `json:"slug,omitempty"`
-	SourceID    *string         `json:"source_id,omitempty"`
-	Type        *CdpSegmentType `json:"type,omitempty"`
-	UpdatedAt   *time.Time      `json:"updated_at,omitempty"`
+	// How the segment membership is computed (REALTIME or BATCH)
+	ComputeMode *ComputeMode `json:"compute_mode,omitempty"`
+	// The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The membership rule/query that defines the segment
+	Definition *string `json:"definition,omitempty"`
+	// The description of the segment/audience
+	Description *string `json:"description,omitempty"`
+	// Unique identifier for this segment object
+	ID *string `json:"id,omitempty"`
+	// Whether the segment is active/enabled
+	IsActive *bool `json:"is_active,omitempty"`
+	// The name of the segment/audience
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this segment
+	Raw map[string]any `json:"raw,omitempty"`
+	// The number of profiles currently in the segment
+	Size *float64 `json:"size,omitempty"`
+	// The data-plane handle/key used to identify segment membership in profiles and destinations
+	Slug *string `json:"slug,omitempty"`
+	// The cdp_source this segment originated from; points to CdpSource
+	SourceID *string `json:"source_id,omitempty"`
+	// The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
+	Type *CdpSegmentType `json:"type,omitempty"`
+	// The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpSegment) MarshalJSON() ([]byte, error) {

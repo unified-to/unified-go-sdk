@@ -2,6 +2,7 @@
 
 package shared
 
+// AnalyticsReportMetricsDimension - new vs returning
 type AnalyticsReportMetricsDimension string
 
 const (
@@ -42,6 +43,7 @@ func (e *AnalyticsReportMetricsDimension) IsExact() bool {
 	return false
 }
 
+// AnalyticsReportMetricsType - Traffic metrics
 type AnalyticsReportMetricsType string
 
 const (
@@ -96,10 +98,12 @@ func (e *AnalyticsReportMetricsType) IsExact() bool {
 }
 
 type AnalyticsReportMetrics struct {
+	// new vs returning
 	Dimension      *AnalyticsReportMetricsDimension `json:"dimension,omitempty"`
 	DimensionValue *string                          `json:"dimension_value,omitempty"`
-	Type           *AnalyticsReportMetricsType      `json:"type,omitempty"`
-	Value          *float64                         `json:"value,omitempty"`
+	// Traffic metrics
+	Type  *AnalyticsReportMetricsType `json:"type,omitempty"`
+	Value *float64                    `json:"value,omitempty"`
 }
 
 func (a *AnalyticsReportMetrics) GetDimension() *AnalyticsReportMetricsDimension {

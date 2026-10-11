@@ -275,6 +275,7 @@ func (u CdpMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type CdpMetadataExtraData: all fields are null")
 }
 
+// CdpMetadataFormat - The data type of the attribute value
 type CdpMetadataFormat string
 
 const (
@@ -442,6 +443,7 @@ const (
 	CdpMetadataValueTypeArrayOfCdpMetadataSchemas5 CdpMetadataValueType = "arrayOfCdpMetadataSchemas5"
 )
 
+// CdpMetadataValue - The attribute/trait value
 type CdpMetadataValue struct {
 	MapOfAny                   map[string]any        `queryParam:"inline" union:"member"`
 	Str                        *string               `queryParam:"inline" union:"member"`
@@ -570,11 +572,15 @@ func (u CdpMetadataValue) MarshalJSON() ([]byte, error) {
 
 type CdpMetadata struct {
 	ExtraData *CdpMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *CdpMetadataFormat    `json:"format,omitempty"`
-	ID        *string               `json:"id,omitempty"`
-	Namespace *string               `json:"namespace,omitempty"`
-	Slug      *string               `json:"slug,omitempty"`
-	Value     *CdpMetadataValue     `json:"value,omitempty"`
+	// The data type of the attribute value
+	Format *CdpMetadataFormat `json:"format,omitempty"`
+	ID     *string            `json:"id,omitempty"`
+	// The scope or origin of the attribute (eg. computed, event, visitor)
+	Namespace *string `json:"namespace,omitempty"`
+	// The attribute/trait key (eg. lifetime_value)
+	Slug *string `json:"slug,omitempty"`
+	// The attribute/trait value
+	Value *CdpMetadataValue `json:"value,omitempty"`
 }
 
 func (c *CdpMetadata) GetExtraData() *CdpMetadataExtraData {

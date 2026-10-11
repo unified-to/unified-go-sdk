@@ -25,10 +25,11 @@ func (e *CommerceItemMediaType) IsExact() bool {
 }
 
 type CommerceItemMedia struct {
-	Alt      *string                `json:"alt,omitempty"`
-	Height   *float64               `json:"height,omitempty"`
-	ID       *string                `json:"id,omitempty"`
-	Metadata []CommerceMetadata     `json:"metadata,omitempty"`
+	Alt      *string            `json:"alt,omitempty"`
+	Height   *float64           `json:"height,omitempty"`
+	ID       *string            `json:"id,omitempty"`
+	Metadata []CommerceMetadata `json:"metadata,omitempty"`
+	// 1 is the first
 	Position *float64               `json:"position,omitempty"`
 	Type     *CommerceItemMediaType `json:"type,omitempty"`
 	URL      string                 `json:"url"`

@@ -8,17 +8,19 @@ import (
 )
 
 type AtsCompany struct {
-	Address      *PropertyAtsCompanyAddress `json:"address,omitempty"`
-	CreatedAt    *time.Time                 `json:"created_at,omitempty"`
-	ID           *string                    `json:"id,omitempty"`
-	Metadata     []AtsMetadata              `json:"metadata,omitempty"`
-	Name         *string                    `json:"name,omitempty"`
-	ParentID     *string                    `json:"parent_id,omitempty"`
-	Phone        *string                    `json:"phone,omitempty"`
-	Raw          map[string]any             `json:"raw,omitempty"`
-	RecruiterIds []string                   `json:"recruiter_ids,omitempty"`
-	UpdatedAt    *time.Time                 `json:"updated_at,omitempty"`
-	WebsiteURL   *string                    `json:"website_url,omitempty"`
+	Address *PropertyAtsCompanyAddress `json:"address,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *time.Time     `json:"created_at,omitempty"`
+	ID           *string        `json:"id,omitempty"`
+	Metadata     []AtsMetadata  `json:"metadata,omitempty"`
+	Name         *string        `json:"name,omitempty"`
+	ParentID     *string        `json:"parent_id,omitempty"`
+	Phone        *string        `json:"phone,omitempty"`
+	Raw          map[string]any `json:"raw,omitempty"`
+	RecruiterIds []string       `json:"recruiter_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt  *time.Time `json:"updated_at,omitempty"`
+	WebsiteURL *string    `json:"website_url,omitempty"`
 }
 
 func (a AtsCompany) MarshalJSON() ([]byte, error) {

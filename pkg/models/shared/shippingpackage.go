@@ -2,6 +2,7 @@
 
 package shared
 
+// ShippingPackageSizeUnit - Unit for dimensions (cm, inch)
 type ShippingPackageSizeUnit string
 
 const (
@@ -24,6 +25,7 @@ func (e *ShippingPackageSizeUnit) IsExact() bool {
 	return false
 }
 
+// ShippingPackageWeightUnit - Unit for weight (g, kg, oz, lb)
 type ShippingPackageWeightUnit string
 
 const (
@@ -49,17 +51,28 @@ func (e *ShippingPackageWeightUnit) IsExact() bool {
 }
 
 type ShippingPackage struct {
-	Currency       *string                    `json:"currency,omitempty"`
-	Description    *string                    `json:"description,omitempty"`
-	Height         *float64                   `json:"height,omitempty"`
-	InsuredAmount  *float64                   `json:"insured_amount,omitempty"`
-	Length         *float64                   `json:"length,omitempty"`
-	SizeUnit       *ShippingPackageSizeUnit   `json:"size_unit,omitempty"`
-	TrackingNumber *string                    `json:"tracking_number,omitempty"`
-	Value          *float64                   `json:"value,omitempty"`
-	Weight         *float64                   `json:"weight,omitempty"`
-	WeightUnit     *ShippingPackageWeightUnit `json:"weight_unit,omitempty"`
-	Width          *float64                   `json:"width,omitempty"`
+	// ISO 4217 currency code
+	Currency *string `json:"currency,omitempty"`
+	// Description of the package contents
+	Description *string `json:"description,omitempty"`
+	// Height of the package
+	Height *float64 `json:"height,omitempty"`
+	// Insured value for this package
+	InsuredAmount *float64 `json:"insured_amount,omitempty"`
+	// Length of the package
+	Length *float64 `json:"length,omitempty"`
+	// Unit for dimensions (cm, inch)
+	SizeUnit *ShippingPackageSizeUnit `json:"size_unit,omitempty"`
+	// Package-level tracking (for multi-package shipments)
+	TrackingNumber *string `json:"tracking_number,omitempty"`
+	// Declared value of the package
+	Value *float64 `json:"value,omitempty"`
+	// Weight of the package
+	Weight *float64 `json:"weight,omitempty"`
+	// Unit for weight (g, kg, oz, lb)
+	WeightUnit *ShippingPackageWeightUnit `json:"weight_unit,omitempty"`
+	// Width of the package
+	Width *float64 `json:"width,omitempty"`
 }
 
 func (s *ShippingPackage) GetCurrency() *string {

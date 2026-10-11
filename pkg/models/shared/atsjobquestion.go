@@ -2,6 +2,11 @@
 
 package shared
 
+import (
+	"github.com/unified-to/unified-go-sdk/pkg/utils"
+	"time"
+)
+
 type AtsJobQuestionType string
 
 const (
@@ -35,13 +40,40 @@ func (e *AtsJobQuestionType) IsExact() bool {
 }
 
 type AtsJobQuestion struct {
-	Description *string            `json:"description,omitempty"`
-	ID          *string            `json:"id,omitempty"`
-	Options     []string           `json:"options,omitempty"`
-	Prompt      *string            `json:"prompt,omitempty"`
-	Question    string             `json:"question"`
-	Required    *bool              `json:"required,omitempty"`
-	Type        AtsJobQuestionType `json:"type"`
+	Description *string `json:"description,omitempty"`
+	ID          *string `json:"id,omitempty"`
+	// latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	MaxAt *time.Time `json:"max_at,omitempty"`
+	// maximum answer length (TEXT)
+	MaxLength *float64 `json:"max_length,omitempty"`
+	// maximum answer value (NUMBER)
+	MaxValue *float64 `json:"max_value,omitempty"`
+	// earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	MinAt *time.Time `json:"min_at,omitempty"`
+	// minimum answer length (TEXT)
+	MinLength *float64 `json:"min_length,omitempty"`
+	// minimum answer value (NUMBER)
+	MinValue *float64 `json:"min_value,omitempty"`
+	Options  []string `json:"options,omitempty"`
+	// only ask this question when the parent question's answer is one of these
+	ParentAnswerValues []string `json:"parent_answer_values,omitempty"`
+	// id of the question in this job's questions list that this question depends on
+	ParentID *string            `json:"parent_id,omitempty"`
+	Prompt   *string            `json:"prompt,omitempty"`
+	Question string             `json:"question"`
+	Required *bool              `json:"required,omitempty"`
+	Type     AtsJobQuestionType `json:"type"`
+}
+
+func (a AtsJobQuestion) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AtsJobQuestion) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (a *AtsJobQuestion) GetDescription() *string {
@@ -58,11 +90,67 @@ func (a *AtsJobQuestion) GetID() *string {
 	return a.ID
 }
 
+func (a *AtsJobQuestion) GetMaxAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.MaxAt
+}
+
+func (a *AtsJobQuestion) GetMaxLength() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.MaxLength
+}
+
+func (a *AtsJobQuestion) GetMaxValue() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.MaxValue
+}
+
+func (a *AtsJobQuestion) GetMinAt() *time.Time {
+	if a == nil {
+		return nil
+	}
+	return a.MinAt
+}
+
+func (a *AtsJobQuestion) GetMinLength() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.MinLength
+}
+
+func (a *AtsJobQuestion) GetMinValue() *float64 {
+	if a == nil {
+		return nil
+	}
+	return a.MinValue
+}
+
 func (a *AtsJobQuestion) GetOptions() []string {
 	if a == nil {
 		return nil
 	}
 	return a.Options
+}
+
+func (a *AtsJobQuestion) GetParentAnswerValues() []string {
+	if a == nil {
+		return nil
+	}
+	return a.ParentAnswerValues
+}
+
+func (a *AtsJobQuestion) GetParentID() *string {
+	if a == nil {
+		return nil
+	}
+	return a.ParentID
 }
 
 func (a *AtsJobQuestion) GetPrompt() *string {

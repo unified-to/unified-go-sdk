@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// MarketingCampaignStatus - Campaign status
 type MarketingCampaignStatus string
 
 const (
@@ -36,21 +37,34 @@ func (e *MarketingCampaignStatus) IsExact() bool {
 }
 
 type MarketingCampaign struct {
+	// When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
-	FromEmail *string    `json:"from_email,omitempty"`
-	FromName  *string    `json:"from_name,omitempty"`
-	ID        *string    `json:"id,omitempty"`
+	// Sender email address
+	FromEmail *string `json:"from_email,omitempty"`
+	// Sender name
+	FromName *string `json:"from_name,omitempty"`
+	// Unique identifier for the campaign
+	ID *string `json:"id,omitempty"`
 	// Associated listaudience IDs
-	ListIds      []string                 `json:"list_ids,omitempty"`
-	Name         *string                  `json:"name,omitempty"`
-	PreviewText  *string                  `json:"preview_text,omitempty"`
-	Raw          map[string]any           `json:"raw,omitempty"`
-	ReplyToEmail *string                  `json:"reply_to_email,omitempty"`
-	SendAt       *time.Time               `json:"send_at,omitempty"`
-	Status       *MarketingCampaignStatus `json:"status,omitempty"`
-	SubjectLine  *string                  `json:"subject_line,omitempty"`
-	Type         *string                  `json:"type,omitempty"`
-	UpdatedAt    *time.Time               `json:"updated_at,omitempty"`
+	ListIds []string `json:"list_ids,omitempty"`
+	// Campaign nametitle
+	Name *string `json:"name,omitempty"`
+	// Email preview text
+	PreviewText *string `json:"preview_text,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// Reply-to email address
+	ReplyToEmail *string `json:"reply_to_email,omitempty"`
+	// Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SendAt *time.Time `json:"send_at,omitempty"`
+	// Campaign status
+	Status *MarketingCampaignStatus `json:"status,omitempty"`
+	// Email subject line
+	SubjectLine *string `json:"subject_line,omitempty"`
+	// Campaign type (e.g., regular, automation, ab_test)
+	Type *string `json:"type,omitempty"`
+	// When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (m MarketingCampaign) MarshalJSON() ([]byte, error) {

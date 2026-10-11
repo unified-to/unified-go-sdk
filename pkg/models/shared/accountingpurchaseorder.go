@@ -40,22 +40,28 @@ func (e *AccountingPurchaseorderStatus) IsExact() bool {
 }
 
 type AccountingPurchaseorder struct {
-	AccountID       *string                                         `json:"account_id,omitempty"`
-	BillingAddress  *PropertyAccountingPurchaseorderBillingAddress  `json:"billing_address,omitempty"`
-	CategoryIds     []string                                        `json:"category_ids,omitempty"`
-	ContactID       *string                                         `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time                                      `json:"created_at,omitempty"`
-	Currency        *string                                         `json:"currency,omitempty"`
-	ID              *string                                         `json:"id,omitempty"`
-	Lineitems       []AccountingLineitem                            `json:"lineitems,omitempty"`
-	Metadata        []AccountingMetadata                            `json:"metadata,omitempty"`
-	OrganizationID  *string                                         `json:"organization_id,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID      *string                                        `json:"account_id,omitempty"`
+	Attachments    []AccountingAttachment                         `json:"attachments,omitempty"`
+	BillingAddress *PropertyAccountingPurchaseorderBillingAddress `json:"billing_address,omitempty"`
+	CategoryIds    []string                                       `json:"category_ids,omitempty"`
+	// Customer, Supplier (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time           `json:"created_at,omitempty"`
+	Currency       *string              `json:"currency,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	Lineitems      []AccountingLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PostedAt        *time.Time                                      `json:"posted_at,omitempty"`
 	Raw             map[string]any                                  `json:"raw,omitempty"`
 	ShippingAddress *PropertyAccountingPurchaseorderShippingAddress `json:"shipping_address,omitempty"`
 	Status          *AccountingPurchaseorderStatus                  `json:"status,omitempty"`
 	TotalAmount     *float64                                        `json:"total_amount,omitempty"`
-	UpdatedAt       *time.Time                                      `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingPurchaseorder) MarshalJSON() ([]byte, error) {
@@ -74,6 +80,13 @@ func (a *AccountingPurchaseorder) GetAccountID() *string {
 		return nil
 	}
 	return a.AccountID
+}
+
+func (a *AccountingPurchaseorder) GetAttachments() []AccountingAttachment {
+	if a == nil {
+		return nil
+	}
+	return a.Attachments
 }
 
 func (a *AccountingPurchaseorder) GetBillingAddress() *PropertyAccountingPurchaseorderBillingAddress {

@@ -29,6 +29,7 @@ const (
 	CreateCrmLeadQueryParamFieldsTelephones    CreateCrmLeadQueryParamFields = "telephones"
 	CreateCrmLeadQueryParamFieldsSource        CreateCrmLeadQueryParamFields = "source"
 	CreateCrmLeadQueryParamFieldsStatus        CreateCrmLeadQueryParamFields = "status"
+	CreateCrmLeadQueryParamFieldsTitle         CreateCrmLeadQueryParamFields = "title"
 	CreateCrmLeadQueryParamFieldsLinkUrls      CreateCrmLeadQueryParamFields = "link_urls"
 	CreateCrmLeadQueryParamFieldsMetadata      CreateCrmLeadQueryParamFields = "metadata"
 	CreateCrmLeadQueryParamFieldsRaw           CreateCrmLeadQueryParamFields = "raw"
@@ -76,6 +77,8 @@ func (e *CreateCrmLeadQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "source":
 		fallthrough
 	case "status":
+		fallthrough
+	case "title":
 		fallthrough
 	case "link_urls":
 		fallthrough

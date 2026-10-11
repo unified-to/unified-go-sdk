@@ -8,19 +8,25 @@ import (
 )
 
 type LmsActivity struct {
-	AssignedGrade      *string        `json:"assigned_grade,omitempty"`
-	CompletedAt        *time.Time     `json:"completed_at,omitempty"`
-	ContentID          *string        `json:"content_id,omitempty"`
-	CourseID           *string        `json:"course_id,omitempty"`
+	AssignedGrade *string `json:"assigned_grade,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CompletedAt *time.Time `json:"completed_at,omitempty"`
+	ContentID   *string    `json:"content_id,omitempty"`
+	// For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
+	CourseID *string `json:"course_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt          *time.Time     `json:"created_at,omitempty"`
 	DurationMinutes    *float64       `json:"duration_minutes,omitempty"`
 	ID                 *string        `json:"id,omitempty"`
 	IsCompleted        *bool          `json:"is_completed,omitempty"`
 	ProgressPercentage *float64       `json:"progress_percentage,omitempty"`
 	Raw                map[string]any `json:"raw,omitempty"`
-	StartedAt          *time.Time     `json:"started_at,omitempty"`
-	StudentID          *string        `json:"student_id,omitempty"`
-	UpdatedAt          *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartedAt *time.Time `json:"started_at,omitempty"`
+	// (reference to LmsStudent)
+	StudentID *string `json:"student_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (l LmsActivity) MarshalJSON() ([]byte, error) {

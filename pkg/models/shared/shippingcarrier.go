@@ -8,15 +8,24 @@ import (
 )
 
 type ShippingCarrier struct {
-	Code       *string        `json:"code,omitempty"`
-	CreatedAt  *time.Time     `json:"created_at,omitempty"`
-	ID         *string        `json:"id,omitempty"`
-	IsActive   *bool          `json:"is_active,omitempty"`
-	LogoURL    *string        `json:"logo_url,omitempty"`
-	Name       *string        `json:"name,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
-	WebsiteURL *string        `json:"website_url,omitempty"`
+	// Carrier code (e.g., "usps", "fedex", "ups")
+	Code *string `json:"code,omitempty"`
+	// The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Unique identifier for this carrier object
+	ID *string `json:"id,omitempty"`
+	// Whether the carrier is currently active
+	IsActive *bool `json:"is_active,omitempty"`
+	// Carrier logo URL
+	LogoURL *string `json:"logo_url,omitempty"`
+	// The name of the carrier
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this carrier
+	Raw map[string]any `json:"raw,omitempty"`
+	// The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Carrier website
+	WebsiteURL *string `json:"website_url,omitempty"`
 }
 
 func (s ShippingCarrier) MarshalJSON() ([]byte, error) {

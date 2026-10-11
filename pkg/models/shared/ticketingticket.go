@@ -31,24 +31,34 @@ func (e *TicketingTicketStatus) IsExact() bool {
 
 type TicketingTicket struct {
 	// Array of attachment IDs retrieved from StorageFile.Get endpoint
-	AttachmentIds []string               `json:"attachment_ids,omitempty"`
-	CategoryID    *string                `json:"category_id,omitempty"`
-	ClosedAt      *time.Time             `json:"closed_at,omitempty"`
-	CreatedAt     *time.Time             `json:"created_at,omitempty"`
-	CustomerID    *string                `json:"customer_id,omitempty"`
-	Description   *string                `json:"description,omitempty"`
-	DueAt         *time.Time             `json:"due_at,omitempty"`
-	ID            *string                `json:"id,omitempty"`
-	Priority      *string                `json:"priority,omitempty"`
-	Raw           map[string]any         `json:"raw,omitempty"`
-	Source        *string                `json:"source,omitempty"`
-	SourceRef     *string                `json:"source_ref,omitempty"`
-	Status        *TicketingTicketStatus `json:"status,omitempty"`
-	Subject       *string                `json:"subject,omitempty"`
-	Tags          []string               `json:"tags,omitempty"`
-	UpdatedAt     *time.Time             `json:"updated_at,omitempty"`
-	URL           *string                `json:"url,omitempty"`
-	UserID        *string                `json:"user_id,omitempty"`
+	AttachmentIds []string `json:"attachment_ids,omitempty"`
+	// (reference to AccountingCategory)
+	CategoryID *string `json:"category_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt *time.Time `json:"closed_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt  *time.Time `json:"created_at,omitempty"`
+	CustomerID *string    `json:"customer_id,omitempty"`
+	// Full description of ticket issue
+	Description *string `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt    *time.Time     `json:"due_at,omitempty"`
+	ID       *string        `json:"id,omitempty"`
+	Priority *string        `json:"priority,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	// Channel where ticket was originally submitted
+	Source *string `json:"source,omitempty"`
+	// Reference to source-specific object
+	SourceRef *string                `json:"source_ref,omitempty"`
+	Status    *TicketingTicketStatus `json:"status,omitempty"`
+	// short description of the ticket
+	Subject *string  `json:"subject,omitempty"`
+	Tags    []string `json:"tags,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	URL       *string    `json:"url,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (t TicketingTicket) MarshalJSON() ([]byte, error) {

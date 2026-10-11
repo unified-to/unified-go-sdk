@@ -34,6 +34,7 @@ func (e *DbType) IsExact() bool {
 	return false
 }
 
+// WebhookEvent - The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab.
 type WebhookEvent string
 
 const (
@@ -57,6 +58,7 @@ func (e *WebhookEvent) IsExact() bool {
 	return false
 }
 
+// WebhookObjectType - The object to return (eg. CRM "contact")
 type WebhookObjectType string
 
 const (
@@ -73,12 +75,15 @@ const (
 	WebhookObjectTypeAccountingOrganization        WebhookObjectType = "accounting_organization"
 	WebhookObjectTypeAccountingOrder               WebhookObjectType = "accounting_order"
 	WebhookObjectTypeAccountingSalesorder          WebhookObjectType = "accounting_salesorder"
+	WebhookObjectTypeAccountingSalesreceipt        WebhookObjectType = "accounting_salesreceipt"
 	WebhookObjectTypeAccountingPurchaseorder       WebhookObjectType = "accounting_purchaseorder"
 	WebhookObjectTypeAccountingBalancesheet        WebhookObjectType = "accounting_balancesheet"
 	WebhookObjectTypeAccountingProfitloss          WebhookObjectType = "accounting_profitloss"
 	WebhookObjectTypeAccountingTrialbalance        WebhookObjectType = "accounting_trialbalance"
 	WebhookObjectTypeAccountingCategory            WebhookObjectType = "accounting_category"
 	WebhookObjectTypeAccountingExpense             WebhookObjectType = "accounting_expense"
+	WebhookObjectTypeAccountingExpensereport       WebhookObjectType = "accounting_expensereport"
+	WebhookObjectTypeAccountingPurchasereceipt     WebhookObjectType = "accounting_purchasereceipt"
 	WebhookObjectTypeAccountingCashflow            WebhookObjectType = "accounting_cashflow"
 	WebhookObjectTypeAccountingQuote               WebhookObjectType = "accounting_quote"
 	WebhookObjectTypeAccountingAgedreceivable      WebhookObjectType = "accounting_agedreceivable"
@@ -134,6 +139,10 @@ const (
 	WebhookObjectTypeHrisBankaccount               WebhookObjectType = "hris_bankaccount"
 	WebhookObjectTypeHrisDocument                  WebhookObjectType = "hris_document"
 	WebhookObjectTypeHrisTaxonomy                  WebhookObjectType = "hris_taxonomy"
+	WebhookObjectTypeHrisJob                       WebhookObjectType = "hris_job"
+	WebhookObjectTypeHrisPayroll                   WebhookObjectType = "hris_payroll"
+	WebhookObjectTypeHrisPaycode                   WebhookObjectType = "hris_paycode"
+	WebhookObjectTypeHrisEarning                   WebhookObjectType = "hris_earning"
 	WebhookObjectTypeMartechList                   WebhookObjectType = "martech_list"
 	WebhookObjectTypeMartechMember                 WebhookObjectType = "martech_member"
 	WebhookObjectTypeMartechCampaign               WebhookObjectType = "martech_campaign"
@@ -147,6 +156,8 @@ const (
 	WebhookObjectTypeUcCall                        WebhookObjectType = "uc_call"
 	WebhookObjectTypeUcComment                     WebhookObjectType = "uc_comment"
 	WebhookObjectTypeUcRecording                   WebhookObjectType = "uc_recording"
+	WebhookObjectTypeUcScorecard                   WebhookObjectType = "uc_scorecard"
+	WebhookObjectTypeUcScorecardtemplate           WebhookObjectType = "uc_scorecardtemplate"
 	WebhookObjectTypeEnrichPerson                  WebhookObjectType = "enrich_person"
 	WebhookObjectTypeEnrichCompany                 WebhookObjectType = "enrich_company"
 	WebhookObjectTypeStorageFile                   WebhookObjectType = "storage_file"
@@ -156,6 +167,7 @@ const (
 	WebhookObjectTypeGenaiTask                     WebhookObjectType = "genai_task"
 	WebhookObjectTypeGenaiAgent                    WebhookObjectType = "genai_agent"
 	WebhookObjectTypeGenaiOrganization             WebhookObjectType = "genai_organization"
+	WebhookObjectTypeGenaiSkill                    WebhookObjectType = "genai_skill"
 	WebhookObjectTypeMessagingMessage              WebhookObjectType = "messaging_message"
 	WebhookObjectTypeMessagingChannel              WebhookObjectType = "messaging_channel"
 	WebhookObjectTypeMessagingEvent                WebhookObjectType = "messaging_event"
@@ -245,13 +257,14 @@ func (e WebhookObjectType) ToPointer() *WebhookObjectType {
 func (e *WebhookObjectType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_vendorcredit", "accounting_creditmemo", "accounting_taxrate", "accounting_paymentterm", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_purchaseorder", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_cashflow", "accounting_quote", "accounting_agedreceivable", "accounting_agedpayable", "accounting_project", "accounting_bankfeedaccount", "accounting_bankfeedtransaction", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "commerce_itemvariant", "commerce_reservation", "commerce_availability", "verification_package", "verification_request", "assessment_package", "assessment_order", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "crm_taxonomy", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_attendance", "hris_deduction", "hris_benefit", "hris_bankaccount", "hris_document", "hris_taxonomy", "martech_list", "martech_member", "martech_campaign", "martech_report", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "genai_task", "genai_agent", "genai_organization", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "lms_content", "lms_collection", "lms_activity", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "calendar_webinar", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "ads_creative", "ads_asset", "ads_insertionorder", "ads_target", "ads_promoted", "analytics_property", "analytics_event", "analytics_session", "analytics_visitor", "analytics_report", "forms_form", "forms_submission", "shipping_carrier", "shipping_rate", "shipping_shipment", "shipping_label", "shipping_tracking", "signing_document", "signing_signatory", "signing_template", "clubs_group", "clubs_member", "clubs_activity", "clubs_location", "clubs_event", "datastore_database", "datastore_table", "datastore_record", "datastore_query", "cdp_profile", "cdp_segment", "cdp_event", "cdp_source", "cdp_destination", "cdp_activation", "performance_cycle", "performance_review", "performance_goal", "performance_feedback", "social_post", "social_profile", "social_review", "social_insight":
+		case "accounting_account", "accounting_transaction", "accounting_journal", "accounting_contact", "accounting_invoice", "accounting_bill", "accounting_vendorcredit", "accounting_creditmemo", "accounting_taxrate", "accounting_paymentterm", "accounting_organization", "accounting_order", "accounting_salesorder", "accounting_salesreceipt", "accounting_purchaseorder", "accounting_balancesheet", "accounting_profitloss", "accounting_trialbalance", "accounting_category", "accounting_expense", "accounting_expensereport", "accounting_purchasereceipt", "accounting_cashflow", "accounting_quote", "accounting_agedreceivable", "accounting_agedpayable", "accounting_project", "accounting_bankfeedaccount", "accounting_bankfeedtransaction", "payment_payment", "payment_link", "payment_payout", "payment_refund", "payment_subscription", "commerce_item", "commerce_collection", "commerce_inventory", "commerce_location", "commerce_review", "commerce_saleschannel", "commerce_itemvariant", "commerce_reservation", "commerce_availability", "verification_package", "verification_request", "assessment_package", "assessment_order", "ats_activity", "ats_application", "ats_applicationstatus", "ats_candidate", "ats_document", "ats_interview", "ats_job", "ats_scorecard", "ats_company", "crm_company", "crm_contact", "crm_deal", "crm_event", "crm_lead", "crm_pipeline", "crm_taxonomy", "hris_employee", "hris_group", "hris_payslip", "hris_timeoff", "hris_company", "hris_location", "hris_device", "hris_timeshift", "hris_attendance", "hris_deduction", "hris_benefit", "hris_bankaccount", "hris_document", "hris_taxonomy", "hris_job", "hris_payroll", "hris_paycode", "hris_earning", "martech_list", "martech_member", "martech_campaign", "martech_report", "passthrough", "ticketing_note", "ticketing_ticket", "ticketing_customer", "ticketing_category", "uc_contact", "uc_call", "uc_comment", "uc_recording", "uc_scorecard", "uc_scorecardtemplate", "enrich_person", "enrich_company", "storage_file", "genai_model", "genai_prompt", "genai_embedding", "genai_task", "genai_agent", "genai_organization", "genai_skill", "messaging_message", "messaging_channel", "messaging_event", "kms_space", "kms_page", "kms_comment", "task_project", "task_task", "task_comment", "task_change", "scim_users", "scim_groups", "lms_course", "lms_class", "lms_student", "lms_instructor", "lms_content", "lms_collection", "lms_activity", "repo_organization", "repo_repository", "repo_branch", "repo_commit", "repo_pullrequest", "metadata_metadata", "calendar_calendar", "calendar_event", "calendar_busy", "calendar_link", "calendar_recording", "calendar_webinar", "ads_organization", "ads_ad", "ads_campaign", "ads_report", "ads_group", "ads_creative", "ads_asset", "ads_insertionorder", "ads_target", "ads_promoted", "analytics_property", "analytics_event", "analytics_session", "analytics_visitor", "analytics_report", "forms_form", "forms_submission", "shipping_carrier", "shipping_rate", "shipping_shipment", "shipping_label", "shipping_tracking", "signing_document", "signing_signatory", "signing_template", "clubs_group", "clubs_member", "clubs_activity", "clubs_location", "clubs_event", "datastore_database", "datastore_table", "datastore_record", "datastore_query", "cdp_profile", "cdp_segment", "cdp_event", "cdp_source", "cdp_destination", "cdp_activation", "performance_cycle", "performance_review", "performance_goal", "performance_feedback", "social_post", "social_profile", "social_review", "social_insight":
 			return true
 		}
 	}
 	return false
 }
 
+// WebhookType - "native" registers with the integration, which sends events as they happen. "virtual" checks for changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type.
 type WebhookType string
 
 const (
@@ -274,33 +287,44 @@ func (e *WebhookType) IsExact() bool {
 	return false
 }
 
-// Webhook - A webhook is used to POST new/updated information to your server.
+// Webhook - A webhook is used to POST new, updated, or deleted records to your server.
 type Webhook struct {
-	CheckedAt       *time.Time        `json:"checked_at,omitempty"`
-	ConnectionID    string            `json:"connection_id"`
-	CreatedAt       *time.Time        `json:"created_at,omitempty"`
-	DbNamePrefix    *string           `json:"db_name_prefix,omitempty"`
-	DbSchema        *string           `json:"db_schema,omitempty"`
-	DbType          *DbType           `json:"db_type,omitempty"`
-	DbURL           *string           `json:"db_url,omitempty"`
-	Environment     *string           `default:"Production" json:"environment"`
-	Event           WebhookEvent      `json:"event"`
-	Fields          *string           `json:"fields,omitempty"`
-	Filters         map[string]string `json:"filters,omitempty"`
-	HookURL         *string           `json:"hook_url,omitempty"`
-	ID              *string           `json:"id,omitempty"`
-	IntegrationType *string           `json:"integration_type,omitempty"`
-	Interval        *float64          `json:"interval,omitempty"`
-	IsBeta          *bool             `json:"is_beta,omitempty"`
-	IsHealthy       *bool             `json:"is_healthy,omitempty"`
-	IsPaused        *bool             `json:"is_paused,omitempty"`
-	ObjectType      WebhookObjectType `json:"object_type"`
-	PageMaxLimit    *float64          `json:"page_max_limit,omitempty"`
-	// An array of the most revent virtual webhook runs
-	Runs        []string     `json:"runs,omitempty"`
-	UpdatedAt   *time.Time   `json:"updated_at,omitempty"`
+	// Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook implementation, so don't use this field to tell whether a webhook is still running. Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CheckedAt    *time.Time `json:"checked_at,omitempty"`
+	ConnectionID string     `json:"connection_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt    *time.Time `json:"created_at,omitempty"`
+	DbNamePrefix *string    `json:"db_name_prefix,omitempty"`
+	DbSchema     *string    `json:"db_schema,omitempty"`
+	DbType       *DbType    `json:"db_type,omitempty"`
+	DbURL        *string    `json:"db_url,omitempty"`
+	Environment  *string    `default:"Production" json:"environment"`
+	// The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab.
+	Event  WebhookEvent `json:"event"`
+	Fields *string      `json:"fields,omitempty"`
+	// Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's Feature Support tab for which filters apply. Filters the integration doesn't support are accepted but have no effect. Some integrations require a filter; if it's missing, create returns an error naming the integration and the filter.
+	Filters map[string]string `json:"filters,omitempty"`
+	// The URL of the webhook
+	HookURL         *string `json:"hook_url,omitempty"`
+	ID              *string `json:"id,omitempty"`
+	IntegrationType *string `json:"integration_type,omitempty"`
+	// Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum 1 on paid plans, 60 on free. Ignored for native webhooks.
+	Interval *float64 `json:"interval,omitempty"`
+	IsBeta   *bool    `json:"is_beta,omitempty"`
+	// Read-only. True while the webhook can operate or recover; a transient failure may still be retrying. False after retries are exhausted or a non-retryable failure such as broken connection auth. Cannot be reset; recreate the webhook.
+	IsHealthy *bool `json:"is_healthy,omitempty"`
+	IsPaused  *bool `json:"is_paused,omitempty"`
+	// The object to return (eg. CRM "contact")
+	ObjectType   WebhookObjectType `json:"object_type"`
+	PageMaxLimit *float64          `json:"page_max_limit,omitempty"`
+	// An array of the most recent virtual webhook runs
+	Runs []string `json:"runs,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// "native" registers with the integration, which sends events as they happen. "virtual" checks for changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type.
 	WebhookType *WebhookType `json:"webhook_type,omitempty"`
-	WorkspaceID *string      `json:"workspace_id,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID *string `json:"workspace_id,omitempty"`
 }
 
 func (w Webhook) MarshalJSON() ([]byte, error) {

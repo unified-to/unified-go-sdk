@@ -8,10 +8,14 @@ import (
 )
 
 type CdpProfileSegment struct {
+	// When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ExpiresAt *time.Time `json:"expires_at,omitempty"`
-	JoinedAt  *time.Time `json:"joined_at,omitempty"`
-	Name      *string    `json:"name,omitempty"`
-	SegmentID *string    `json:"segment_id,omitempty"`
+	// When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	JoinedAt *time.Time `json:"joined_at,omitempty"`
+	// The name of the segment/audience
+	Name *string `json:"name,omitempty"`
+	// The segment/audience this profile belongs to; points to CdpSegment
+	SegmentID *string `json:"segment_id,omitempty"`
 }
 
 func (c CdpProfileSegment) MarshalJSON() ([]byte, error) {

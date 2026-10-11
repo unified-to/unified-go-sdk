@@ -580,8 +580,9 @@ type AtsMetadata struct {
 	Format    *AtsMetadataFormat    `json:"format,omitempty"`
 	ID        *string               `json:"id,omitempty"`
 	Namespace *string               `json:"namespace,omitempty"`
-	Slug      *string               `json:"slug,omitempty"`
-	Value     *AtsMetadataValue     `json:"value,omitempty"`
+	// Actual textual value of the slug
+	Slug  *string           `json:"slug,omitempty"`
+	Value *AtsMetadataValue `json:"value,omitempty"`
 }
 
 func (a *AtsMetadata) GetExtraData() *AtsMetadataExtraData {

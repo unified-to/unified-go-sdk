@@ -3,25 +3,25 @@
 
 ## Fields
 
-| Field                                      | Type                                       | Required                                   | Description                                |
-| ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `AdminUserIds`                             | []`string`                                 | :heavy_minus_sign:                         | N/A                                        |
-| `AssetTag`                                 | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
-| `HasAntivirus`                             | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `HasFirewall`                              | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `HasHdEncrypted`                           | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `HasPasswordManager`                       | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `HasScreenlock`                            | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `ID`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `IsMissing`                                | `*bool`                                    | :heavy_minus_sign:                         | N/A                                        |
-| `LocationID`                               | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Manufacturer`                             | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Model`                                    | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Name`                                     | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Os`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `OsVersion`                                | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `Raw`                                      | map[string]`any`                           | :heavy_minus_sign:                         | N/A                                        |
-| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
-| `UserIds`                                  | []`string`                                 | :heavy_minus_sign:                         | users who have this device                 |
-| `Version`                                  | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
+| Field                                                     | Type                                                      | Required                                                  | Description                                               |
+| --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
+| `AdminUserIds`                                            | []`string`                                                | :heavy_minus_sign:                                        | N/A                                                       |
+| `AssetTag`                                                | `*string`                                                 | :heavy_minus_sign:                                        | N/A                                                       |
+| `CreatedAt`                                               | [*time.Time](https://pkg.go.dev/time#Time)                | :heavy_minus_sign:                                        | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                  |
+| `HasAntivirus`                                            | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `HasFirewall`                                             | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `HasHdEncrypted`                                          | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `HasPasswordManager`                                      | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `HasScreenlock`                                           | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `ID`                                                      | `*string`                                                 | :heavy_minus_sign:                                        | N/A                                                       |
+| `IsMissing`                                               | `*bool`                                                   | :heavy_minus_sign:                                        | N/A                                                       |
+| `LocationID`                                              | `*string`                                                 | :heavy_minus_sign:                                        | pointer to HR Location object (reference to HrisLocation) |
+| `Manufacturer`                                            | `*string`                                                 | :heavy_minus_sign:                                        | device manufacturer                                       |
+| `Model`                                                   | `*string`                                                 | :heavy_minus_sign:                                        | device model                                              |
+| `Name`                                                    | `*string`                                                 | :heavy_minus_sign:                                        | N/A                                                       |
+| `Os`                                                      | `*string`                                                 | :heavy_minus_sign:                                        | operating system name                                     |
+| `OsVersion`                                               | `*string`                                                 | :heavy_minus_sign:                                        | N/A                                                       |
+| `Raw`                                                     | map[string]`any`                                          | :heavy_minus_sign:                                        | N/A                                                       |
+| `UpdatedAt`                                               | [*time.Time](https://pkg.go.dev/time#Time)                | :heavy_minus_sign:                                        | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                  |
+| `UserIds`                                                 | []`string`                                                | :heavy_minus_sign:                                        | users who have this device                                |
+| `Version`                                                 | `*string`                                                 | :heavy_minus_sign:                                        | device version                                            |

@@ -27,6 +27,7 @@ const (
 	CreateAccountingPurchaseorderQueryParamFieldsOrganizationID  CreateAccountingPurchaseorderQueryParamFields = "organization_id"
 	CreateAccountingPurchaseorderQueryParamFieldsCategoryIds     CreateAccountingPurchaseorderQueryParamFields = "category_ids"
 	CreateAccountingPurchaseorderQueryParamFieldsMetadata        CreateAccountingPurchaseorderQueryParamFields = "metadata"
+	CreateAccountingPurchaseorderQueryParamFieldsAttachments     CreateAccountingPurchaseorderQueryParamFields = "attachments"
 	CreateAccountingPurchaseorderQueryParamFieldsRaw             CreateAccountingPurchaseorderQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *CreateAccountingPurchaseorderQueryParamFields) UnmarshalJSON(data []byt
 	case "category_ids":
 		fallthrough
 	case "metadata":
+		fallthrough
+	case "attachments":
 		fallthrough
 	case "raw":
 		*e = CreateAccountingPurchaseorderQueryParamFields(v)

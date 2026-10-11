@@ -28,7 +28,8 @@ type ScimPhoto struct {
 	Display *string        `json:"display,omitempty"`
 	Primary *bool          `json:"primary,omitempty"`
 	Type    *ScimPhotoType `json:"type,omitempty"`
-	Value   *string        `json:"value,omitempty"`
+	// URL
+	Value *string `json:"value,omitempty"`
 }
 
 func (s *ScimPhoto) GetDisplay() *string {

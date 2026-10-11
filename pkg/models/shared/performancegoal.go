@@ -58,26 +58,35 @@ func (e *PerformanceGoalSchemasType) IsExact() bool {
 }
 
 type PerformanceGoal struct {
-	CompanyID   *string    `json:"company_id,omitempty"`
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CompletedAt *time.Time `json:"completed_at,omitempty"`
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	CycleID     *string    `json:"cycle_id,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	DueAt       *time.Time `json:"due_at,omitempty"`
-	ID          *string    `json:"id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// pointer to the Performance Cycle object (goal cycle or timeframe)
+	CycleID     *string `json:"cycle_id,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	ID    *string    `json:"id,omitempty"`
 	// milestones or key results for this goal
-	Milestones []PerformanceGoalMilestone  `json:"milestones,omitempty"`
-	Name       *string                     `json:"name,omitempty"`
-	ParentID   *string                     `json:"parent_id,omitempty"`
-	Progress   *float64                    `json:"progress,omitempty"`
-	Raw        map[string]any              `json:"raw,omitempty"`
-	StartAt    *time.Time                  `json:"start_at,omitempty"`
-	Status     *PerformanceGoalStatus      `json:"status,omitempty"`
-	Type       *PerformanceGoalSchemasType `json:"type,omitempty"`
-	UpdatedAt  *time.Time                  `json:"updated_at,omitempty"`
+	Milestones []PerformanceGoalMilestone `json:"milestones,omitempty"`
+	Name       *string                    `json:"name,omitempty"`
+	// id of the parent goal, for goal alignment / OKR trees
+	ParentID *string `json:"parent_id,omitempty"`
+	// progress percentage from 0 to 100
+	Progress *float64       `json:"progress,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time                  `json:"start_at,omitempty"`
+	Status  *PerformanceGoalStatus      `json:"status,omitempty"`
+	Type    *PerformanceGoalSchemasType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// HR Employees that own or share this goal; the first element is the primary owner
 	UserIds []string `json:"user_ids,omitempty"`
-	Weight  *float64 `json:"weight,omitempty"`
+	// the weight of this goal when the provider weighs goals in reviews
+	Weight *float64 `json:"weight,omitempty"`
 }
 
 func (p PerformanceGoal) MarshalJSON() ([]byte, error) {

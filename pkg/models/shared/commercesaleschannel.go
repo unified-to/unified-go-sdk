@@ -10,13 +10,16 @@ import (
 type CommerceSaleschannel struct {
 	// points to a CommerceCollection
 	Collections []CommerceReference `json:"collections,omitempty"`
-	CreatedAt   *time.Time          `json:"created_at,omitempty"`
-	Description *string             `json:"description,omitempty"`
-	ID          *string             `json:"id,omitempty"`
-	IsActive    *bool               `json:"is_active,omitempty"`
-	Raw         map[string]any      `json:"raw,omitempty"`
-	Slug        *string             `json:"slug,omitempty"`
-	UpdatedAt   *time.Time          `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	IsActive    *bool          `json:"is_active,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	// maps to code (name)  a stable identifier per channel
+	Slug *string `json:"slug,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CommerceSaleschannel) MarshalJSON() ([]byte, error) {

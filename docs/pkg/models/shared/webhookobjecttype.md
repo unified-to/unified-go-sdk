@@ -1,5 +1,7 @@
 # WebhookObjectType
 
+The object to return (eg. CRM "contact")
+
 ## Example Usage
 
 ```go
@@ -31,12 +33,15 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeAccountingOrganization`        | accounting_organization                          |
 | `WebhookObjectTypeAccountingOrder`               | accounting_order                                 |
 | `WebhookObjectTypeAccountingSalesorder`          | accounting_salesorder                            |
+| `WebhookObjectTypeAccountingSalesreceipt`        | accounting_salesreceipt                          |
 | `WebhookObjectTypeAccountingPurchaseorder`       | accounting_purchaseorder                         |
 | `WebhookObjectTypeAccountingBalancesheet`        | accounting_balancesheet                          |
 | `WebhookObjectTypeAccountingProfitloss`          | accounting_profitloss                            |
 | `WebhookObjectTypeAccountingTrialbalance`        | accounting_trialbalance                          |
 | `WebhookObjectTypeAccountingCategory`            | accounting_category                              |
 | `WebhookObjectTypeAccountingExpense`             | accounting_expense                               |
+| `WebhookObjectTypeAccountingExpensereport`       | accounting_expensereport                         |
+| `WebhookObjectTypeAccountingPurchasereceipt`     | accounting_purchasereceipt                       |
 | `WebhookObjectTypeAccountingCashflow`            | accounting_cashflow                              |
 | `WebhookObjectTypeAccountingQuote`               | accounting_quote                                 |
 | `WebhookObjectTypeAccountingAgedreceivable`      | accounting_agedreceivable                        |
@@ -92,6 +97,10 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeHrisBankaccount`               | hris_bankaccount                                 |
 | `WebhookObjectTypeHrisDocument`                  | hris_document                                    |
 | `WebhookObjectTypeHrisTaxonomy`                  | hris_taxonomy                                    |
+| `WebhookObjectTypeHrisJob`                       | hris_job                                         |
+| `WebhookObjectTypeHrisPayroll`                   | hris_payroll                                     |
+| `WebhookObjectTypeHrisPaycode`                   | hris_paycode                                     |
+| `WebhookObjectTypeHrisEarning`                   | hris_earning                                     |
 | `WebhookObjectTypeMartechList`                   | martech_list                                     |
 | `WebhookObjectTypeMartechMember`                 | martech_member                                   |
 | `WebhookObjectTypeMartechCampaign`               | martech_campaign                                 |
@@ -105,6 +114,8 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeUcCall`                        | uc_call                                          |
 | `WebhookObjectTypeUcComment`                     | uc_comment                                       |
 | `WebhookObjectTypeUcRecording`                   | uc_recording                                     |
+| `WebhookObjectTypeUcScorecard`                   | uc_scorecard                                     |
+| `WebhookObjectTypeUcScorecardtemplate`           | uc_scorecardtemplate                             |
 | `WebhookObjectTypeEnrichPerson`                  | enrich_person                                    |
 | `WebhookObjectTypeEnrichCompany`                 | enrich_company                                   |
 | `WebhookObjectTypeStorageFile`                   | storage_file                                     |
@@ -114,6 +125,7 @@ custom := shared.WebhookObjectType("custom_value")
 | `WebhookObjectTypeGenaiTask`                     | genai_task                                       |
 | `WebhookObjectTypeGenaiAgent`                    | genai_agent                                      |
 | `WebhookObjectTypeGenaiOrganization`             | genai_organization                               |
+| `WebhookObjectTypeGenaiSkill`                    | genai_skill                                      |
 | `WebhookObjectTypeMessagingMessage`              | messaging_message                                |
 | `WebhookObjectTypeMessagingChannel`              | messaging_channel                                |
 | `WebhookObjectTypeMessagingEvent`                | messaging_event                                  |

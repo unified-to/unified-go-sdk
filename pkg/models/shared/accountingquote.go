@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingQuotePaymentTerms - unified payment terms enum, as on accounting_invoice / accounting_bill
 type AccountingQuotePaymentTerms string
 
 const (
@@ -38,6 +39,7 @@ func (e *AccountingQuotePaymentTerms) IsExact() bool {
 	return false
 }
 
+// AccountingQuoteStatus - where EXPIRED is derived (expires_at < now), the source status is preserved in raw
 type AccountingQuoteStatus string
 
 const (
@@ -66,6 +68,7 @@ func (e *AccountingQuoteStatus) IsExact() bool {
 	return false
 }
 
+// TaxMode - INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
 type TaxMode string
 
 const (
@@ -90,42 +93,64 @@ func (e *TaxMode) IsExact() bool {
 }
 
 type AccountingQuote struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	AcceptedAt *time.Time `json:"accepted_at,omitempty"`
 	// tracking categories / classes (AccountingCategory dimensions)
 	CategoryIds []string `json:"category_ids,omitempty"`
-	ContactID   *string  `json:"contact_id,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
 	// denormalized parties, reusing the transaction contact shape
-	Contacts        []AccountingTransactionContact `json:"contacts,omitempty"`
-	CreatedAt       *time.Time                     `json:"created_at,omitempty"`
-	Currency        *string                        `json:"currency,omitempty"`
-	CurrencyRate    *float64                       `json:"currency_rate,omitempty"`
-	CustomerMessage *string                        `json:"customer_message,omitempty"`
-	DeclinedAt      *time.Time                     `json:"declined_at,omitempty"`
-	DiscountAmount  *float64                       `json:"discount_amount,omitempty"`
-	ExpiresAt       *time.Time                     `json:"expires_at,omitempty"`
-	GroupID         *string                        `json:"group_id,omitempty"`
-	ID              *string                        `json:"id,omitempty"`
-	InvoiceID       *string                        `json:"invoice_id,omitempty"`
-	IssuedAt        *time.Time                     `json:"issued_at,omitempty"`
-	Lineitems       []AccountingLineitem           `json:"lineitems,omitempty"`
-	Memo            *string                        `json:"memo,omitempty"`
-	Metadata        []AccountingMetadata           `json:"metadata,omitempty"`
-	OrganizationID  *string                        `json:"organization_id,omitempty"`
-	PaymentTerms    *AccountingQuotePaymentTerms   `json:"payment_terms,omitempty"`
-	ProjectID       *string                        `json:"project_id,omitempty"`
-	QuoteNumber     *string                        `json:"quote_number,omitempty"`
-	Raw             map[string]any                 `json:"raw,omitempty"`
-	Reference       *string                        `json:"reference,omitempty"`
-	SentAt          *time.Time                     `json:"sent_at,omitempty"`
-	Status          *AccountingQuoteStatus         `json:"status,omitempty"`
-	SubTotalAmount  *float64                       `json:"sub_total_amount,omitempty"`
-	Summary         *string                        `json:"summary,omitempty"`
-	TaxAmount       *float64                       `json:"tax_amount,omitempty"`
-	TaxMode         *TaxMode                       `json:"tax_mode,omitempty"`
-	Title           *string                        `json:"title,omitempty"`
-	TotalAmount     *float64                       `json:"total_amount,omitempty"`
-	UpdatedAt       *time.Time                     `json:"updated_at,omitempty"`
-	URL             *string                        `json:"url,omitempty"`
+	Contacts []AccountingTransactionContact `json:"contacts,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// exchange rate to the organization's base currency
+	CurrencyRate *float64 `json:"currency_rate,omitempty"`
+	// customer-visible message
+	CustomerMessage *string `json:"customer_message,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DeclinedAt     *time.Time `json:"declined_at,omitempty"`
+	DiscountAmount *float64   `json:"discount_amount,omitempty"`
+	// Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ExpiresAt *time.Time `json:"expires_at,omitempty"`
+	// points to a HRIS Group (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	ID      *string `json:"id,omitempty"`
+	// populated once the quote is converted to an invoice; left null when the source cannot supply it (reference to AccountingInvoice)
+	InvoiceID *string `json:"invoice_id,omitempty"`
+	// Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	IssuedAt  *time.Time           `json:"issued_at,omitempty"`
+	Lineitems []AccountingLineitem `json:"lineitems,omitempty"`
+	// internal note, not customer-visible
+	Memo           *string              `json:"memo,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	// unified payment terms enum, as on accounting_invoice / accounting_bill
+	PaymentTerms *AccountingQuotePaymentTerms `json:"payment_terms,omitempty"`
+	// points to an AccountingProject (accounting costing project) (reference to TaskProject)
+	ProjectID *string `json:"project_id,omitempty"`
+	// External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
+	QuoteNumber *string        `json:"quote_number,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	// customer-side reference / PO number
+	Reference *string `json:"reference,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SentAt *time.Time `json:"sent_at,omitempty"`
+	// where EXPIRED is derived (expires_at < now), the source status is preserved in raw
+	Status         *AccountingQuoteStatus `json:"status,omitempty"`
+	SubTotalAmount *float64               `json:"sub_total_amount,omitempty"`
+	// longer summary (Xero Summary, max 3000)
+	Summary   *string  `json:"summary,omitempty"`
+	TaxAmount *float64 `json:"tax_amount,omitempty"`
+	// INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
+	TaxMode *TaxMode `json:"tax_mode,omitempty"`
+	// short title (Xero Title, max 100)
+	Title       *string  `json:"title,omitempty"`
+	TotalAmount *float64 `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// public online-quote link where exposed
+	URL *string `json:"url,omitempty"`
 }
 
 func (a AccountingQuote) MarshalJSON() ([]byte, error) {

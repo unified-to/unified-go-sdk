@@ -39,9 +39,9 @@ func main() {
 
     res, err := s.Pullrequest.CreateRepoPullrequest(ctx, operations.CreateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-04-13T13:31:25.872Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-04-25T14:47:53.190Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("180cb6d6-bd73-4c3a-a6aa-fe91dcbcbe6c"),
+            ID: unifiedgosdk.Pointer("8b872310-8480-43c6-9fac-1fb458d8132c"),
             Labels: []string{
                 "adhuc",
                 "quaerat",
@@ -51,7 +51,7 @@ func main() {
             Status: shared.RepoPullrequestStatusRejected.ToPointer(),
             TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
             Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-01T10:29:22.188Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-11T21:42:05.170Z"),
         },
         ConnectionID: "<id>",
     })
@@ -219,9 +219,9 @@ func main() {
 
     res, err := s.Pullrequest.PatchRepoPullrequest(ctx, operations.PatchRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-04-13T13:31:25.880Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-04-25T14:47:53.195Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("52711ad8-d8ff-496a-839b-5a2193de9d59"),
+            ID: unifiedgosdk.Pointer("6fdeb027-7be6-4209-8dd8-d704dd1d6e1d"),
             Labels: []string{
                 "adhuc",
                 "quaerat",
@@ -231,7 +231,7 @@ func main() {
             Status: shared.RepoPullrequestStatusRejected.ToPointer(),
             TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
             Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-01T10:29:22.195Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-11T21:42:05.174Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -346,9 +346,9 @@ func main() {
 
     res, err := s.Pullrequest.UpdateRepoPullrequest(ctx, operations.UpdateRepoPullrequestRequest{
         RepoPullrequest: shared.RepoPullrequest{
-            ClosedAt: types.MustNewTimeFromString("2025-04-13T13:31:25.880Z"),
+            ClosedAt: types.MustNewTimeFromString("2025-04-25T14:47:53.195Z"),
             CreatedAt: types.MustNewTimeFromString("2023-02-27T09:37:13.663Z"),
-            ID: unifiedgosdk.Pointer("52711ad8-d8ff-496a-839b-5a2193de9d59"),
+            ID: unifiedgosdk.Pointer("6fdeb027-7be6-4209-8dd8-d704dd1d6e1d"),
             Labels: []string{
                 "adhuc",
                 "quaerat",
@@ -358,7 +358,7 @@ func main() {
             Status: shared.RepoPullrequestStatusRejected.ToPointer(),
             TargetBranchID: unifiedgosdk.Pointer("feed-reboot"),
             Title: unifiedgosdk.Pointer("Cunae aegrus averto texo advoco bibo amet asporto."),
-            UpdatedAt: types.MustNewTimeFromString("2025-01-01T10:29:22.195Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-01-11T21:42:05.174Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

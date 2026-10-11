@@ -9,22 +9,33 @@ import (
 
 // AccountingCashflow - Sections
 type AccountingCashflow struct {
-	CashBeginningAmount   *float64                    `json:"cash_beginning_amount,omitempty"`
-	CashEndingAmount      *float64                    `json:"cash_ending_amount,omitempty"`
-	CategoryIds           []string                    `json:"category_ids,omitempty"`
-	ContactID             *string                     `json:"contact_id,omitempty"`
-	CreatedAt             *time.Time                  `json:"created_at,omitempty"`
-	Currency              *string                     `json:"currency,omitempty"`
-	EndAt                 *time.Time                  `json:"end_at,omitempty"`
-	FinancingSections     []AccountingCashflowSection `json:"financing_sections,omitempty"`
-	ID                    *string                     `json:"id,omitempty"`
-	InvestingSections     []AccountingCashflowSection `json:"investing_sections,omitempty"`
-	Name                  *string                     `json:"name,omitempty"`
+	// Cash at beginning of period
+	CashBeginningAmount *float64 `json:"cash_beginning_amount,omitempty"`
+	// Cash at end of period
+	CashEndingAmount *float64 `json:"cash_ending_amount,omitempty"`
+	CategoryIds      []string `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217, e.g. "USD"
+	Currency *string `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt             *time.Time                  `json:"end_at,omitempty"`
+	FinancingSections []AccountingCashflowSection `json:"financing_sections,omitempty"`
+	ID                *string                     `json:"id,omitempty"`
+	InvestingSections []AccountingCashflowSection `json:"investing_sections,omitempty"`
+	// e.g. "Cash Flow Statement Q1 2020"
+	Name *string `json:"name,omitempty"`
+	// Usually ending - beginning
 	NetChangeInCashAmount *float64                    `json:"net_change_in_cash_amount,omitempty"`
 	OperatingSections     []AccountingCashflowSection `json:"operating_sections,omitempty"`
-	Raw                   map[string]any              `json:"raw,omitempty"`
-	StartAt               *time.Time                  `json:"start_at,omitempty"`
-	UpdatedAt             *time.Time                  `json:"updated_at,omitempty"`
+	// Original data from the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingCashflow) MarshalJSON() ([]byte, error) {

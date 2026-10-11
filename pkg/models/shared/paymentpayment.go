@@ -32,6 +32,7 @@ func (e *PaymentPaymentStatus) IsExact() bool {
 	return false
 }
 
+// TenderType - normalized tender category; the provider's original label stays in payment_method
 type TenderType string
 
 const (
@@ -85,38 +86,53 @@ func (e *PaymentPaymentType) IsExact() bool {
 }
 
 type PaymentPayment struct {
+	// (reference to AccountingAccount)
 	AccountID *string `json:"account_id,omitempty"`
 	// What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints.
 	Allocations []PaymentAllocation `json:"allocations,omitempty"`
-	BillID      *string             `json:"bill_id,omitempty"`
-	CardBrand   *string             `json:"card_brand,omitempty"`
-	CardLast4   *string             `json:"card_last4,omitempty"`
+	// references AccountingBill
+	BillID    *string `json:"bill_id,omitempty"`
+	CardBrand *string `json:"card_brand,omitempty"`
+	CardLast4 *string `json:"card_last4,omitempty"`
 	// dimension refs -> AccountingCategory
-	CategoryIds    []string              `json:"category_ids,omitempty"`
-	ContactID      *string               `json:"contact_id,omitempty"`
-	CreatedAt      *time.Time            `json:"created_at,omitempty"`
-	Currency       *string               `default:"USD" json:"currency"`
-	DeviceID       *string               `json:"device_id,omitempty"`
-	ExchangeRate   *float64              `json:"exchange_rate,omitempty"`
-	FeeAmount      *float64              `json:"fee_amount,omitempty"`
-	ID             *string               `json:"id,omitempty"`
-	InvoiceID      *string               `json:"invoice_id,omitempty"`
-	LinkID         *string               `json:"link_id,omitempty"`
-	LocationID     *string               `json:"location_id,omitempty"`
-	NetAmount      *float64              `json:"net_amount,omitempty"`
-	Notes          *string               `json:"notes,omitempty"`
-	OrganizationID *string               `json:"organization_id,omitempty"`
-	PaidAt         *time.Time            `json:"paid_at,omitempty"`
-	PaymentMethod  *string               `json:"payment_method,omitempty"`
-	Raw            map[string]any        `json:"raw,omitempty"`
-	Reference      *string               `json:"reference,omitempty"`
-	SalesorderID   *string               `json:"salesorder_id,omitempty"`
-	Status         *PaymentPaymentStatus `json:"status,omitempty"`
-	TenderType     *TenderType           `json:"tender_type,omitempty"`
-	TipAmount      *float64              `json:"tip_amount,omitempty"`
-	TotalAmount    *float64              `json:"total_amount,omitempty"`
-	Type           *PaymentPaymentType   `json:"type,omitempty"`
-	UpdatedAt      *time.Time            `json:"updated_at,omitempty"`
+	CategoryIds []string `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `default:"USD" json:"currency"`
+	// POS terminal/register/device (hr device)
+	DeviceID *string `json:"device_id,omitempty"`
+	// Exchange rate to the base/home currency at the payment date
+	ExchangeRate *float64 `json:"exchange_rate,omitempty"`
+	// processing/processor fee
+	FeeAmount *float64 `json:"fee_amount,omitempty"`
+	ID        *string  `json:"id,omitempty"`
+	// (reference to AccountingInvoice)
+	InvoiceID *string `json:"invoice_id,omitempty"`
+	LinkID    *string `json:"link_id,omitempty"`
+	// store/site where the payment was taken (commerce_location)
+	LocationID *string `json:"location_id,omitempty"`
+	// total_amount minus fee_amount
+	NetAmount *float64 `json:"net_amount,omitempty"`
+	Notes     *string  `json:"notes,omitempty"`
+	// reference to an AccountingOrganization
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PaidAt        *time.Time     `json:"paid_at,omitempty"`
+	PaymentMethod *string        `json:"payment_method,omitempty"`
+	Raw           map[string]any `json:"raw,omitempty"`
+	Reference     *string        `json:"reference,omitempty"`
+	// reference to an AccountingSalesorder, e.g. the POS order this payment settled
+	SalesorderID *string               `json:"salesorder_id,omitempty"`
+	Status       *PaymentPaymentStatus `json:"status,omitempty"`
+	// normalized tender category; the provider's original label stays in payment_method
+	TenderType  *TenderType         `json:"tender_type,omitempty"`
+	TipAmount   *float64            `json:"tip_amount,omitempty"`
+	TotalAmount *float64            `json:"total_amount,omitempty"`
+	Type        *PaymentPaymentType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PaymentPayment) MarshalJSON() ([]byte, error) {

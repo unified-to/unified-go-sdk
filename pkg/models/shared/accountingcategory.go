@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingCategoryType - The kind of dimension
 type AccountingCategoryType string
 
 const (
@@ -36,18 +37,22 @@ func (e *AccountingCategoryType) IsExact() bool {
 }
 
 type AccountingCategory struct {
-	Code           *string                 `json:"code,omitempty"`
-	CreatedAt      *time.Time              `json:"created_at,omitempty"`
-	Description    *string                 `json:"description,omitempty"`
-	ID             *string                 `json:"id,omitempty"`
-	IsActive       *bool                   `json:"is_active,omitempty"`
-	Metadata       []AccountingMetadata    `json:"metadata,omitempty"`
-	Name           *string                 `json:"name,omitempty"`
-	OrganizationID *string                 `json:"organization_id,omitempty"`
-	ParentID       *string                 `json:"parent_id,omitempty"`
-	Raw            map[string]any          `json:"raw,omitempty"`
-	Type           *AccountingCategoryType `json:"type,omitempty"`
-	UpdatedAt      *time.Time              `json:"updated_at,omitempty"`
+	// platform-side tracking code
+	Code *string `json:"code,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time           `json:"created_at,omitempty"`
+	Description    *string              `json:"description,omitempty"`
+	ID             *string              `json:"id,omitempty"`
+	IsActive       *bool                `json:"is_active,omitempty"`
+	Metadata       []AccountingMetadata `json:"metadata,omitempty"`
+	Name           *string              `json:"name,omitempty"`
+	OrganizationID *string              `json:"organization_id,omitempty"`
+	ParentID       *string              `json:"parent_id,omitempty"`
+	Raw            map[string]any       `json:"raw,omitempty"`
+	// The kind of dimension
+	Type *AccountingCategoryType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingCategory) MarshalJSON() ([]byte, error) {

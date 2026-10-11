@@ -32,6 +32,7 @@ func (e *VerificationRequestProfileGender) IsExact() bool {
 	return false
 }
 
+// VerificationRequestResponseStatus - Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
 type VerificationRequestResponseStatus string
 
 const (
@@ -57,32 +58,43 @@ func (e *VerificationRequestResponseStatus) IsExact() bool {
 }
 
 type VerificationRequest struct {
-	CandidateID               *string                           `json:"candidate_id,omitempty"`
-	CreatedAt                 *time.Time                        `json:"created_at,omitempty"`
-	ID                        *string                           `json:"id,omitempty"`
-	PackageID                 *string                           `json:"package_id,omitempty"`
-	Parameters                []VerificationParameterInput      `json:"parameters,omitempty"`
-	ProfileAddresses          []VerificationAddress             `json:"profile_addresses,omitempty"`
-	ProfileDateOfBirth        *string                           `json:"profile_date_of_birth,omitempty"`
-	ProfileEmails             []string                          `json:"profile_emails,omitempty"`
-	ProfileGender             *VerificationRequestProfileGender `json:"profile_gender,omitempty"`
-	ProfileIPAddress          *string                           `json:"profile_ip_address,omitempty"`
-	ProfileName               *string                           `json:"profile_name,omitempty"`
-	ProfileNationalIdentifier *string                           `json:"profile_national_identifier,omitempty"`
-	ProfileTelephones         []string                          `json:"profile_telephones,omitempty"`
-	Raw                       map[string]any                    `json:"raw,omitempty"`
-	ResponseCompletedAt       *time.Time                        `json:"response_completed_at,omitempty"`
-	ResponseDetails           []VerificationResponseDetail      `json:"response_details,omitempty"`
+	// points to ATS Candidate
+	CandidateID *string `json:"candidate_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt        *time.Time                   `json:"created_at,omitempty"`
+	ID               *string                      `json:"id,omitempty"`
+	PackageID        *string                      `json:"package_id,omitempty"`
+	Parameters       []VerificationParameterInput `json:"parameters,omitempty"`
+	ProfileAddresses []VerificationAddress        `json:"profile_addresses,omitempty"`
+	// YYYY-MM-DD
+	ProfileDateOfBirth *string                           `json:"profile_date_of_birth,omitempty"`
+	ProfileEmails      []string                          `json:"profile_emails,omitempty"`
+	ProfileGender      *VerificationRequestProfileGender `json:"profile_gender,omitempty"`
+	// XXX.XXX.XXX.XXX
+	ProfileIPAddress          *string        `json:"profile_ip_address,omitempty"`
+	ProfileName               *string        `json:"profile_name,omitempty"`
+	ProfileNationalIdentifier *string        `json:"profile_national_identifier,omitempty"`
+	ProfileTelephones         []string       `json:"profile_telephones,omitempty"`
+	Raw                       map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ResponseCompletedAt *time.Time                   `json:"response_completed_at,omitempty"`
+	ResponseDetails     []VerificationResponseDetail `json:"response_details,omitempty"`
 	// report download
-	ResponseDownloadUrls []string                           `json:"response_download_urls,omitempty"`
-	ResponseExpiresAt    *time.Time                         `json:"response_expires_at,omitempty"`
-	ResponseIssuedAt     *time.Time                         `json:"response_issued_at,omitempty"`
-	ResponseRedirectURL  *string                            `json:"response_redirect_url,omitempty"`
-	ResponseScore        *float64                           `json:"response_score,omitempty"`
-	ResponseSource       *string                            `json:"response_source,omitempty"`
-	ResponseStatus       *VerificationRequestResponseStatus `json:"response_status,omitempty"`
-	TargetURL            *string                            `json:"target_url,omitempty"`
-	UpdatedAt            *time.Time                         `json:"updated_at,omitempty"`
+	ResponseDownloadUrls []string `json:"response_download_urls,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ResponseExpiresAt *time.Time `json:"response_expires_at,omitempty"`
+	// datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ResponseIssuedAt *time.Time `json:"response_issued_at,omitempty"`
+	// Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user consent and information. This allows them to properly handle disclosures required by regulations like FCRA. Employment and Education Verification need users to confirm previous employers and schools.
+	ResponseRedirectURL *string `json:"response_redirect_url,omitempty"`
+	// Identity verification services provide confidence scores (e.g., 0-100), Credit checks return specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g., 1-999)
+	ResponseScore  *float64 `json:"response_score,omitempty"`
+	ResponseSource *string  `json:"response_source,omitempty"`
+	// Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
+	ResponseStatus *VerificationRequestResponseStatus `json:"response_status,omitempty"`
+	TargetURL      *string                            `json:"target_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (v VerificationRequest) MarshalJSON() ([]byte, error) {

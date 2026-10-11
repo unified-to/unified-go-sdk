@@ -26,11 +26,14 @@ func (e *ScimAddressType) IsExact() bool {
 }
 
 type ScimAddress struct {
-	Country       *string          `json:"country,omitempty"`
-	Formatted     *string          `json:"formatted,omitempty"`
-	Locality      *string          `json:"locality,omitempty"`
-	PostalCode    *string          `json:"postalCode,omitempty"`
-	Region        *string          `json:"region,omitempty"`
+	Country   *string `json:"country,omitempty"`
+	Formatted *string `json:"formatted,omitempty"`
+	// city
+	Locality   *string `json:"locality,omitempty"`
+	PostalCode *string `json:"postalCode,omitempty"`
+	// stateprovince
+	Region *string `json:"region,omitempty"`
+	// could be multi-line
 	StreetAddress *string          `json:"streetAddress,omitempty"`
 	Type          *ScimAddressType `json:"type,omitempty"`
 }

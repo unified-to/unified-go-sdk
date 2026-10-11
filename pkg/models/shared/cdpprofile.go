@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CdpProfileGender - The gender of the profile
 type CdpProfileGender string
 
 const (
@@ -34,30 +35,45 @@ func (e *CdpProfileGender) IsExact() bool {
 
 type CdpProfile struct {
 	// The address of the profile
-	Address   *PropertyCdpProfileAddress `json:"address,omitempty"`
-	Birthdate *string                    `json:"birthdate,omitempty"`
-	Company   *string                    `json:"company,omitempty"`
+	Address *PropertyCdpProfileAddress `json:"address,omitempty"`
+	// The birth date of the profile
+	Birthdate *string `json:"birthdate,omitempty"`
+	// The company/organization name of the profile
+	Company *string `json:"company,omitempty"`
 	// The consent/privacy preferences of the profile
-	Consent   []CdpConsent      `json:"consent,omitempty"`
-	CreatedAt *time.Time        `json:"created_at,omitempty"`
-	Email     *string           `json:"email,omitempty"`
-	FirstName *string           `json:"first_name,omitempty"`
-	Gender    *CdpProfileGender `json:"gender,omitempty"`
-	ID        *string           `json:"id,omitempty"`
+	Consent []CdpConsent `json:"consent,omitempty"`
+	// The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The primary email address of the profile
+	Email *string `json:"email,omitempty"`
+	// The first name of the profile
+	FirstName *string `json:"first_name,omitempty"`
+	// The gender of the profile
+	Gender *CdpProfileGender `json:"gender,omitempty"`
+	// Unique identifier for this profile object
+	ID *string `json:"id,omitempty"`
 	// The typed identifiers stitched to this profile
 	Identifiers []CdpIdentifier `json:"identifiers,omitempty"`
-	IsAnonymous *bool           `json:"is_anonymous,omitempty"`
-	LastName    *string         `json:"last_name,omitempty"`
+	// Whether the profile is anonymous (no known identity)
+	IsAnonymous *bool `json:"is_anonymous,omitempty"`
+	// The last name of the profile
+	LastName *string `json:"last_name,omitempty"`
 	// The traits/attributes of the profile
-	Metadata []CdpMetadata  `json:"metadata,omitempty"`
-	Name     *string        `json:"name,omitempty"`
-	Raw      map[string]any `json:"raw,omitempty"`
+	Metadata []CdpMetadata `json:"metadata,omitempty"`
+	// The full name of the profile
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this profile
+	Raw map[string]any `json:"raw,omitempty"`
 	// The segments/audiences this profile currently belongs to
-	Segments  []CdpProfileSegment `json:"segments,omitempty"`
-	SourceID  *string             `json:"source_id,omitempty"`
-	Telephone *string             `json:"telephone,omitempty"`
-	Title     *string             `json:"title,omitempty"`
-	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
+	Segments []CdpProfileSegment `json:"segments,omitempty"`
+	// The cdp_source this profile originated from; points to CdpSource
+	SourceID *string `json:"source_id,omitempty"`
+	// The primary telephone number of the profile
+	Telephone *string `json:"telephone,omitempty"`
+	// The job title of the profile
+	Title *string `json:"title,omitempty"`
+	// The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpProfile) MarshalJSON() ([]byte, error) {

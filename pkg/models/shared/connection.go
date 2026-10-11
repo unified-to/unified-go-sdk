@@ -12,22 +12,34 @@ type Connection struct {
 	// An authentication object that represents a specific authorized user's connection to an integration.
 	Auth *PropertyConnectionAuth `json:"auth,omitempty"`
 	// The Integration categories that this connection supports
-	Categories        []PropertyConnectionCategories  `json:"categories"`
-	CreatedAt         *time.Time                      `json:"created_at,omitempty"`
-	Environment       *string                         `default:"Production" json:"environment"`
-	ExternalXref      *string                         `json:"external_xref,omitempty"`
-	ID                *string                         `json:"id,omitempty"`
-	IntegrationName   *string                         `json:"integration_name,omitempty"`
-	IntegrationType   string                          `json:"integration_type"`
-	IsPaused          *bool                           `json:"is_paused,omitempty"`
-	LastHealthyAt     *time.Time                      `json:"last_healthy_at,omitempty"`
-	LastUnhealthyAt   *time.Time                      `json:"last_unhealthy_at,omitempty"`
+	Categories []PropertyConnectionCategories `json:"categories"`
+	// The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Environment *string    `default:"Production" json:"environment"`
+	// customer's user ID
+	ExternalXref *string `json:"external_xref,omitempty"`
+	// Unique identifier for this integration object
+	ID              *string `json:"id,omitempty"`
+	IntegrationName *string `json:"integration_name,omitempty"`
+	// The integration type
+	IntegrationType string `json:"integration_type"`
+	// Whether this integration has exceed the monthly limit of the plan
+	IsPaused *bool `json:"is_paused,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastHealthyAt *time.Time `json:"last_healthy_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastUnhealthyAt *time.Time `json:"last_unhealthy_at,omitempty"`
+	// The HTTP status code that caused the last unhealthy status
 	LastUnhealthyCode *string                         `json:"last_unhealthy_code,omitempty"`
 	Permissions       []PropertyConnectionPermissions `json:"permissions"`
-	SecretsmanagerID  *string                         `json:"secretsmanager_id,omitempty"`
-	SecretsmanagerKey *string                         `json:"secretsmanager_key,omitempty"`
-	UpdatedAt         *time.Time                      `json:"updated_at,omitempty"`
-	WorkspaceID       *string                         `json:"workspace_id,omitempty"`
+	// the ID of the SecretsManager object
+	SecretsmanagerID *string `json:"secretsmanager_id,omitempty"`
+	// the key/path/name of the secret within the vault
+	SecretsmanagerKey *string `json:"secretsmanager_key,omitempty"`
+	// The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to KmsSpace)
+	WorkspaceID *string `json:"workspace_id,omitempty"`
 }
 
 func (c Connection) MarshalJSON() ([]byte, error) {

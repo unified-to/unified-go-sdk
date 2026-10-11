@@ -11,28 +11,34 @@ import (
 type CrmCompany struct {
 	Address *PropertyCrmCompanyAddress `json:"address,omitempty"`
 	// An array of contact IDs associated with this company
-	ContactIds []string   `json:"contact_ids,omitempty"`
-	CreatedAt  *time.Time `json:"created_at,omitempty"`
+	ContactIds []string `json:"contact_ids,omitempty"`
+	// The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// An array of deal IDs associated with this contact
 	DealIds     []string   `json:"deal_ids,omitempty"`
 	Description *string    `json:"description,omitempty"`
 	Domains     []string   `json:"domains,omitempty"`
 	Emails      []CrmEmail `json:"emails,omitempty"`
 	Employees   *float64   `json:"employees,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	Industry    *string    `json:"industry,omitempty"`
-	IsActive    *bool      `json:"is_active,omitempty"`
+	// Unique identifier for this company object
+	ID       *string `json:"id,omitempty"`
+	Industry *string `json:"industry,omitempty"`
+	IsActive *bool   `json:"is_active,omitempty"`
 	// Additional URLs associated with the contact e.g., LinkedIn, website, etc
-	LinkUrls   []string       `json:"link_urls,omitempty"`
-	Metadata   []CrmMetadata  `json:"metadata,omitempty"`
-	Name       *string        `json:"name,omitempty"`
+	LinkUrls []string      `json:"link_urls,omitempty"`
+	Metadata []CrmMetadata `json:"metadata,omitempty"`
+	// The name of the company
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this company
 	Raw        map[string]any `json:"raw,omitempty"`
 	Tags       []string       `json:"tags,omitempty"`
 	Telephones []CrmTelephone `json:"telephones,omitempty"`
 	Timezone   *string        `json:"timezone,omitempty"`
-	UpdatedAt  *time.Time     `json:"updated_at,omitempty"`
-	UserID     *string        `json:"user_id,omitempty"`
-	Websites   []string       `json:"websites,omitempty"`
+	// The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID   *string  `json:"user_id,omitempty"`
+	Websites []string `json:"websites,omitempty"`
 }
 
 func (c CrmCompany) MarshalJSON() ([]byte, error) {

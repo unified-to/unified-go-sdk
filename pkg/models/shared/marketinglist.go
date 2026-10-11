@@ -9,23 +9,31 @@ import (
 
 // MarketingList - Mailing List
 type MarketingList struct {
-	Address       *PropertyMarketingListAddress `json:"address,omitempty"`
-	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
-	Description   *string                       `json:"description,omitempty"`
-	EndAt         *time.Time                    `json:"end_at,omitempty"`
-	ID            *string                       `json:"id,omitempty"`
-	IsActive      *bool                         `json:"is_active,omitempty"`
-	Language      *string                       `json:"language,omitempty"`
-	Name          *string                       `json:"name,omitempty"`
-	Raw           map[string]any                `json:"raw,omitempty"`
-	SenderCompany *string                       `json:"sender_company,omitempty"`
-	SenderEmail   *string                       `json:"sender_email,omitempty"`
-	SenderName    *string                       `json:"sender_name,omitempty"`
-	SenderPhone   *string                       `json:"sender_phone,omitempty"`
-	StartAt       *time.Time                    `json:"start_at,omitempty"`
-	Subject       *string                       `json:"subject,omitempty"`
-	UpdatedAt     *time.Time                    `json:"updated_at,omitempty"`
-	UserID        *string                       `json:"user_id,omitempty"`
+	Address *PropertyMarketingListAddress `json:"address,omitempty"`
+	// Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Identifier for this list
+	ID       *string `json:"id,omitempty"`
+	IsActive *bool   `json:"is_active,omitempty"`
+	Language *string `json:"language,omitempty"`
+	// The list's name
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this list
+	Raw           map[string]any `json:"raw,omitempty"`
+	SenderCompany *string        `json:"sender_company,omitempty"`
+	SenderEmail   *string        `json:"sender_email,omitempty"`
+	SenderName    *string        `json:"sender_name,omitempty"`
+	SenderPhone   *string        `json:"sender_phone,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	Subject *string    `json:"subject,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// The user who created this list (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (m MarketingList) MarshalJSON() ([]byte, error) {

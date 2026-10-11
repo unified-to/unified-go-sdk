@@ -3,9 +3,11 @@
 package shared
 
 type AtsScorecardQuestion struct {
+	// Candidate’s answer to the question
 	Answer      *string `json:"answer,omitempty"`
 	Description *string `json:"description,omitempty"`
-	Text        string  `json:"text"`
+	// The question to ask the interviewer
+	Text string `json:"text"`
 }
 
 func (a *AtsScorecardQuestion) GetAnswer() *string {

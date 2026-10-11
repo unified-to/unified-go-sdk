@@ -8,6 +8,7 @@ import (
 )
 
 type CrmPipeline struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt       *time.Time     `json:"created_at,omitempty"`
 	DealProbability *float64       `json:"deal_probability,omitempty"`
 	DisplayOrder    *float64       `json:"display_order,omitempty"`
@@ -16,7 +17,8 @@ type CrmPipeline struct {
 	Name            *string        `json:"name,omitempty"`
 	Raw             map[string]any `json:"raw,omitempty"`
 	Stages          []CrmStage     `json:"stages,omitempty"`
-	UpdatedAt       *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CrmPipeline) MarshalJSON() ([]byte, error) {

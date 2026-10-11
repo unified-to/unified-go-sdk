@@ -5,8 +5,8 @@
 
 | Field                                      | Type                                       | Required                                   | Description                                |
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
-| `BranchID`                                 | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
+| `BranchID`                                 | `*string`                                  | :heavy_minus_sign:                         | (reference to RepoBranch)                  |
+| `CreatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)   |
 | `ID`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `LinesAdded`                               | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `LinesChanged`                             | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
@@ -14,6 +14,6 @@
 | `Message`                                  | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
 | `PullrequestIds`                           | []`string`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `Raw`                                      | map[string]`any`                           | :heavy_minus_sign:                         | N/A                                        |
-| `RepoID`                                   | `string`                                   | :heavy_check_mark:                         | N/A                                        |
-| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
-| `UserID`                                   | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
+| `RepoID`                                   | `string`                                   | :heavy_check_mark:                         | (reference to RepoRepository)              |
+| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)   |
+| `UserID`                                   | `*string`                                  | :heavy_minus_sign:                         | (reference to HrisEmployee)                |

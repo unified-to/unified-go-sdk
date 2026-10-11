@@ -11,10 +11,14 @@
 * [GetUcComment](#getuccomment) - Retrieve a comment
 * [GetUcContact](#getuccontact) - Retrieve a contact
 * [GetUcRecording](#getucrecording) - Retrieve a recording
+* [GetUcScorecard](#getucscorecard) - Retrieve a scorecard
+* [GetUcScorecardtemplate](#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [ListUcCalls](#listuccalls) - List all calls
 * [ListUcComments](#listuccomments) - List all comments
 * [ListUcContacts](#listuccontacts) - List all contacts
 * [ListUcRecordings](#listucrecordings) - List all recordings
+* [ListUcScorecards](#listucscorecards) - List all scorecards
+* [ListUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
 * [PatchUcComment](#patchuccomment) - Update a comment
 * [PatchUcContact](#patchuccontact) - Update a contact
 * [PatchUcRecording](#patchucrecording) - Update a recording
@@ -54,8 +58,8 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("d421c4ff-cae4-4a9f-82dc-4b463f68c6e2"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-02T11:40:40.170Z"),
+            ID: unifiedgosdk.Pointer("fc6270af-bd1b-498b-84a1-417a917e6b23"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-07T08:38:42.961Z"),
         },
         ConnectionID: "<id>",
     })
@@ -123,7 +127,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("a07b6979-089e-4649-be28-728229ad5c33"),
+            ID: unifiedgosdk.Pointer("31fb04bf-aa72-4a3f-8368-1a735f9cbb23"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -141,7 +145,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T14:03:27.338Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T11:46:56.959Z"),
         },
         ConnectionID: "<id>",
     })
@@ -201,34 +205,35 @@ func main() {
     res, err := s.Uc.CreateUcRecording(ctx, operations.CreateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("2e7a6215-9283-4485-97f2-7432efab202c"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-04-22T23:09:58.257Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-03-31T03:31:56.772Z"),
-            ID: unifiedgosdk.Pointer("8b9b82d0-2e7d-4849-acf6-98a4606897db"),
+            EndAt: types.MustNewTimeFromString("2024-05-01T00:22:00.036Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-17T23:01:40.794Z"),
+            ID: unifiedgosdk.Pointer("2e7a6215-9283-4485-97f2-7432efab202c"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-03-21T10:55:57.895Z"),
+                    EndAt: types.MustNewTimeFromString("2024-03-29T01:21:45.031Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-04-18T10:32:22.668Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-06T12:05:43.683Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-01-30T03:04:30.679Z"),
-                            StartAt: types.MustNewTimeFromString("2024-05-20T15:35:59.030Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-16T02:41:09.438Z"),
+                            StartAt: types.MustNewTimeFromString("2024-05-29T01:58:20.637Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-09-27T06:32:59.084Z"),
-                            StartAt: types.MustNewTimeFromString("2026-07-05T06:34:34.659Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-07T11:52:03.109Z"),
+                            StartAt: types.MustNewTimeFromString("2026-07-24T09:55:10.013Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-04-23T06:23:46.157Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-26T06:26:15.747Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T01:19:09.006Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-10T08:55:24.859Z"),
             UserName: unifiedgosdk.Pointer("Melyna Larson"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
@@ -482,6 +487,116 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## GetUcScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.GetUcScorecard(ctx, operations.GetUcScorecardRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcScorecard != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetUcScorecardRequest](../../pkg/models/operations/getucscorecardrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetUcScorecardResponse](../../pkg/models/operations/getucscorecardresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetUcScorecardtemplate
+
+Retrieve a scorecardtemplate
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getUcScorecardtemplate" method="get" path="/uc/{connection_id}/scorecardtemplate/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.GetUcScorecardtemplate(ctx, operations.GetUcScorecardtemplateRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcScorecardtemplate != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                    | :heavy_check_mark:                                                                                       | The context to use for the request.                                                                      |
+| `request`                                                                                                | [operations.GetUcScorecardtemplateRequest](../../pkg/models/operations/getucscorecardtemplaterequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `opts`                                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                                             | :heavy_minus_sign:                                                                                       | The options for this request.                                                                            |
+
+### Response
+
+**[*operations.GetUcScorecardtemplateResponse](../../pkg/models/operations/getucscorecardtemplateresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListUcCalls
 
 List all calls
@@ -698,6 +813,114 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListUcScorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.ListUcScorecards(ctx, operations.ListUcScorecardsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcScorecards != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.ListUcScorecardsRequest](../../pkg/models/operations/listucscorecardsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.ListUcScorecardsResponse](../../pkg/models/operations/listucscorecardsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListUcScorecardtemplates
+
+List all scorecardtemplates
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listUcScorecardtemplates" method="get" path="/uc/{connection_id}/scorecardtemplate" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Uc.ListUcScorecardtemplates(ctx, operations.ListUcScorecardtemplatesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.UcScorecardtemplates != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.ListUcScorecardtemplatesRequest](../../pkg/models/operations/listucscorecardtemplatesrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                                 | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.ListUcScorecardtemplatesResponse](../../pkg/models/operations/listucscorecardtemplatesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## PatchUcComment
 
 Update a comment
@@ -727,8 +950,8 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("a5ef67a9-9f23-4951-b5e0-dcbf92747aa9"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-02T11:40:40.172Z"),
+            ID: unifiedgosdk.Pointer("73d793f2-5f14-4302-8493-7d95a2346b41"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-07T08:38:42.962Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -797,7 +1020,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("c2fb5726-94f5-4b43-94a5-49c7d7dd7be8"),
+            ID: unifiedgosdk.Pointer("00486aef-8875-463a-8659-4aefd5642aa0"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -815,7 +1038,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T14:03:27.344Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T11:46:56.965Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -876,34 +1099,35 @@ func main() {
     res, err := s.Uc.PatchUcRecording(ctx, operations.PatchUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("5bba1e37-d623-4332-bed9-2a60befe0081"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-04-22T23:09:58.269Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-03-31T03:31:56.797Z"),
-            ID: unifiedgosdk.Pointer("76e6eeb7-e7fc-4942-a26e-c387b757090d"),
+            EndAt: types.MustNewTimeFromString("2024-05-01T00:22:00.045Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-17T23:01:40.814Z"),
+            ID: unifiedgosdk.Pointer("5bba1e37-d623-4332-bed9-2a60befe0081"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-03-21T10:55:57.906Z"),
+                    EndAt: types.MustNewTimeFromString("2024-03-29T01:21:45.040Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-04-18T10:32:22.694Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-06T12:05:43.704Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-01-30T03:04:30.702Z"),
-                            StartAt: types.MustNewTimeFromString("2024-05-20T15:35:59.042Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-16T02:41:09.457Z"),
+                            StartAt: types.MustNewTimeFromString("2024-05-29T01:58:20.646Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-09-27T06:32:59.098Z"),
-                            StartAt: types.MustNewTimeFromString("2026-07-05T06:34:34.685Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-07T11:52:03.120Z"),
+                            StartAt: types.MustNewTimeFromString("2026-07-24T09:55:10.033Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-04-23T06:23:46.161Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-26T06:26:15.750Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T01:19:09.024Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-10T08:55:24.873Z"),
             UserName: unifiedgosdk.Pointer("Melyna Larson"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),
@@ -1132,8 +1356,8 @@ func main() {
         UcComment: shared.UcComment{
             Content: unifiedgosdk.Pointer("Vociferor vitiosus."),
             CreatedAt: unifiedgosdk.Pointer("2023-04-02T23:42:31.571Z"),
-            ID: unifiedgosdk.Pointer("a5ef67a9-9f23-4951-b5e0-dcbf92747aa9"),
-            UpdatedAt: unifiedgosdk.Pointer("2024-02-02T11:40:40.172Z"),
+            ID: unifiedgosdk.Pointer("73d793f2-5f14-4302-8493-7d95a2346b41"),
+            UpdatedAt: unifiedgosdk.Pointer("2024-02-07T08:38:42.962Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1202,7 +1426,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("c2fb5726-94f5-4b43-94a5-49c7d7dd7be8"),
+            ID: unifiedgosdk.Pointer("00486aef-8875-463a-8659-4aefd5642aa0"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -1220,7 +1444,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-11-20T14:03:27.344Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-02T11:46:56.965Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1281,34 +1505,35 @@ func main() {
     res, err := s.Uc.UpdateUcRecording(ctx, operations.UpdateUcRecordingRequest{
         UcRecording: shared.UcRecording{
             Contacts: []shared.UcContact{},
+            ConversationIdentifier: unifiedgosdk.Pointer("5bba1e37-d623-4332-bed9-2a60befe0081"),
             CreatedAt: types.MustNewTimeFromString("2022-09-17T19:41:46.956Z"),
-            EndAt: types.MustNewTimeFromString("2024-04-22T23:09:58.269Z"),
-            ExpiresAt: types.MustNewTimeFromString("2026-03-31T03:31:56.797Z"),
-            ID: unifiedgosdk.Pointer("76e6eeb7-e7fc-4942-a26e-c387b757090d"),
+            EndAt: types.MustNewTimeFromString("2024-05-01T00:22:00.045Z"),
+            ExpiresAt: types.MustNewTimeFromString("2026-04-17T23:01:40.814Z"),
+            ID: unifiedgosdk.Pointer("5bba1e37-d623-4332-bed9-2a60befe0081"),
             Media: []shared.UcRecordingMedia{
                 shared.UcRecordingMedia{
-                    EndAt: types.MustNewTimeFromString("2024-03-21T10:55:57.906Z"),
+                    EndAt: types.MustNewTimeFromString("2024-03-29T01:21:45.040Z"),
                     Language: unifiedgosdk.Pointer("en"),
                     RecordingDownloadURL: unifiedgosdk.Pointer("https://parched-wasabi.com/"),
-                    StartAt: types.MustNewTimeFromString("2026-04-18T10:32:22.694Z"),
+                    StartAt: types.MustNewTimeFromString("2026-05-06T12:05:43.704Z"),
                     TranscriptDownloadURL: unifiedgosdk.Pointer("https://colossal-cuckoo.name"),
                     Transcripts: []shared.UcRecordingTranscript{
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2026-01-30T03:04:30.702Z"),
-                            StartAt: types.MustNewTimeFromString("2024-05-20T15:35:59.042Z"),
+                            EndAt: types.MustNewTimeFromString("2026-02-16T02:41:09.457Z"),
+                            StartAt: types.MustNewTimeFromString("2024-05-29T01:58:20.646Z"),
                             Text: "Turpis maiores ducimus tero speculum.",
                         },
                         shared.UcRecordingTranscript{
-                            EndAt: types.MustNewTimeFromString("2024-09-27T06:32:59.098Z"),
-                            StartAt: types.MustNewTimeFromString("2026-07-05T06:34:34.685Z"),
+                            EndAt: types.MustNewTimeFromString("2024-10-07T11:52:03.120Z"),
+                            StartAt: types.MustNewTimeFromString("2026-07-24T09:55:10.033Z"),
                             Text: "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     },
                 },
             },
-            StartAt: types.MustNewTimeFromString("2023-04-23T06:23:46.161Z"),
+            StartAt: types.MustNewTimeFromString("2023-04-26T06:26:15.750Z"),
             Type: shared.UcRecordingTypeOutbound.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-26T01:19:09.024Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-03-10T08:55:24.873Z"),
             UserName: unifiedgosdk.Pointer("Melyna Larson"),
             UserPhone: unifiedgosdk.Pointer("1-915-327-0429 x509"),
             WebURL: unifiedgosdk.Pointer("https://spherical-comparison.org"),

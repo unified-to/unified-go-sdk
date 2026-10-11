@@ -33,19 +33,24 @@ func (e *AdsAssetType) IsExact() bool {
 }
 
 type AdsAsset struct {
-	Content        *string        `json:"content,omitempty"`
-	CreatedAt      *time.Time     `json:"created_at,omitempty"`
-	FileSize       *float64       `json:"file_size,omitempty"`
-	Height         *float64       `json:"height,omitempty"`
+	// inbound create-only: base64-encoded image/media bytes to upload
+	Content *string `json:"content,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	FileSize  *float64   `json:"file_size,omitempty"`
+	Height    *float64   `json:"height,omitempty"`
+	// provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)
 	ID             *string        `json:"id,omitempty"`
 	MimeType       *string        `json:"mime_type,omitempty"`
 	Name           *string        `json:"name,omitempty"`
 	OrganizationID *string        `json:"organization_id,omitempty"`
 	Raw            map[string]any `json:"raw,omitempty"`
 	Type           *AdsAssetType  `json:"type,omitempty"`
-	UpdatedAt      *time.Time     `json:"updated_at,omitempty"`
-	URL            *string        `json:"url,omitempty"`
-	Width          *float64       `json:"width,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not supplied
+	URL   *string  `json:"url,omitempty"`
+	Width *float64 `json:"width,omitempty"`
 }
 
 func (a AdsAsset) MarshalJSON() ([]byte, error) {

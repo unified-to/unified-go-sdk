@@ -8,10 +8,12 @@ import (
 )
 
 type AtsCandidateExperience struct {
-	CompanyName *string    `json:"company_name,omitempty"`
-	EndAt       *time.Time `json:"end_at,omitempty"`
-	StartAt     *time.Time `json:"start_at,omitempty"`
-	Title       *string    `json:"title,omitempty"`
+	CompanyName *string `json:"company_name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	Title   *string    `json:"title,omitempty"`
 }
 
 func (a AtsCandidateExperience) MarshalJSON() ([]byte, error) {

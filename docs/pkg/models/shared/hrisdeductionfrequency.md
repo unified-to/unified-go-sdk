@@ -1,5 +1,7 @@
 # HrisDeductionFrequency
 
+Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+
 ## Example Usage
 
 ```go
@@ -16,12 +18,14 @@ custom := shared.HrisDeductionFrequency("custom_value")
 
 ## Values
 
-| Name                            | Value                           |
-| ------------------------------- | ------------------------------- |
-| `HrisDeductionFrequencyOneTime` | ONE_TIME                        |
-| `HrisDeductionFrequencyDay`     | DAY                             |
-| `HrisDeductionFrequencyQuarter` | QUARTER                         |
-| `HrisDeductionFrequencyYear`    | YEAR                            |
-| `HrisDeductionFrequencyHour`    | HOUR                            |
-| `HrisDeductionFrequencyMonth`   | MONTH                           |
-| `HrisDeductionFrequencyWeek`    | WEEK                            |
+| Name                                | Value                               |
+| ----------------------------------- | ----------------------------------- |
+| `HrisDeductionFrequencyOneTime`     | ONE_TIME                            |
+| `HrisDeductionFrequencyDay`         | DAY                                 |
+| `HrisDeductionFrequencyQuarter`     | QUARTER                             |
+| `HrisDeductionFrequencyYear`        | YEAR                                |
+| `HrisDeductionFrequencyHour`        | HOUR                                |
+| `HrisDeductionFrequencyMonth`       | MONTH                               |
+| `HrisDeductionFrequencyWeek`        | WEEK                                |
+| `HrisDeductionFrequencyBiweekly`    | BIWEEKLY                            |
+| `HrisDeductionFrequencySemimonthly` | SEMIMONTHLY                         |

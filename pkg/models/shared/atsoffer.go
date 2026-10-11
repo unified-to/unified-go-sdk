@@ -32,18 +32,26 @@ func (e *AtsOfferStatus) IsExact() bool {
 }
 
 type AtsOffer struct {
+	// date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	AcceptedAt *time.Time `json:"accepted_at,omitempty"`
 	// compensation details for the offer
-	Compensation   []AtsCompensation `json:"compensation,omitempty"`
-	CreatedAt      *time.Time        `json:"created_at,omitempty"`
-	CreatorUserID  *string           `json:"creator_user_id,omitempty"`
-	EmployeeUserID *string           `json:"employee_user_id,omitempty"`
-	ID             *string           `json:"id,omitempty"`
-	RejectedAt     *time.Time        `json:"rejected_at,omitempty"`
-	SentAt         *time.Time        `json:"sent_at,omitempty"`
-	StartAt        *time.Time        `json:"start_at,omitempty"`
-	Status         *AtsOfferStatus   `json:"status,omitempty"`
-	UpdatedAt      *time.Time        `json:"updated_at,omitempty"`
+	Compensation []AtsCompensation `json:"compensation,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// user id of the recruiter who created the offer (reference to HrisEmployee)
+	CreatorUserID *string `json:"creator_user_id,omitempty"`
+	// newly hired employee id (reference to HrisEmployee)
+	EmployeeUserID *string `json:"employee_user_id,omitempty"`
+	ID             *string `json:"id,omitempty"`
+	// date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RejectedAt *time.Time `json:"rejected_at,omitempty"`
+	// date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SentAt *time.Time `json:"sent_at,omitempty"`
+	// date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time      `json:"start_at,omitempty"`
+	Status  *AtsOfferStatus `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AtsOffer) MarshalJSON() ([]byte, error) {

@@ -33,19 +33,24 @@ func (e *AtsInterviewStatus) IsExact() bool {
 }
 
 type AtsInterview struct {
-	ApplicationID     *string             `json:"application_id,omitempty"`
-	CandidateID       *string             `json:"candidate_id,omitempty"`
-	CreatedAt         *time.Time          `json:"created_at,omitempty"`
-	EndAt             *time.Time          `json:"end_at,omitempty"`
-	ExternalEventXref *string             `json:"external_event_xref,omitempty"`
-	ID                *string             `json:"id,omitempty"`
-	JobID             *string             `json:"job_id,omitempty"`
-	Location          *string             `json:"location,omitempty"`
-	Raw               map[string]any      `json:"raw,omitempty"`
-	StartAt           *time.Time          `json:"start_at,omitempty"`
-	Status            *AtsInterviewStatus `json:"status,omitempty"`
-	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
-	UserIds           []string            `json:"user_ids,omitempty"`
+	ApplicationID *string `json:"application_id,omitempty"`
+	CandidateID   *string `json:"candidate_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// the ID of the event in a calendar
+	ExternalEventXref *string        `json:"external_event_xref,omitempty"`
+	ID                *string        `json:"id,omitempty"`
+	JobID             *string        `json:"job_id,omitempty"`
+	Location          *string        `json:"location,omitempty"`
+	Raw               map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time          `json:"start_at,omitempty"`
+	Status  *AtsInterviewStatus `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	UserIds   []string   `json:"user_ids,omitempty"`
 }
 
 func (a AtsInterview) MarshalJSON() ([]byte, error) {

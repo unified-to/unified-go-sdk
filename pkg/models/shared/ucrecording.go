@@ -30,21 +30,29 @@ func (e *UcRecordingType) IsExact() bool {
 }
 
 type UcRecording struct {
-	CallID    *string            `json:"call_id,omitempty"`
-	Contacts  []UcContact        `json:"contacts,omitempty"`
-	CreatedAt *time.Time         `json:"created_at,omitempty"`
-	EndAt     *time.Time         `json:"end_at,omitempty"`
+	CallID   *string     `json:"call_id,omitempty"`
+	Contacts []UcContact `json:"contacts,omitempty"`
+	// opaque identifier shared across legs of one interaction
+	ConversationIdentifier *string `json:"conversation_identifier,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ExpiresAt *time.Time         `json:"expires_at,omitempty"`
 	ID        *string            `json:"id,omitempty"`
 	Media     []UcRecordingMedia `json:"media,omitempty"`
 	Raw       map[string]any     `json:"raw,omitempty"`
-	StartAt   *time.Time         `json:"start_at,omitempty"`
-	Type      *UcRecordingType   `json:"type,omitempty"`
-	UpdatedAt *time.Time         `json:"updated_at,omitempty"`
-	UserID    *string            `json:"user_id,omitempty"`
-	UserName  *string            `json:"user_name,omitempty"`
-	UserPhone *string            `json:"user_phone,omitempty"`
-	WebURL    *string            `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time       `json:"start_at,omitempty"`
+	Type    *UcRecordingType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// reference to HrisEmployee (reference to HrisEmployee)
+	UserID    *string `json:"user_id,omitempty"`
+	UserName  *string `json:"user_name,omitempty"`
+	UserPhone *string `json:"user_phone,omitempty"`
+	WebURL    *string `json:"web_url,omitempty"`
 }
 
 func (u UcRecording) MarshalJSON() ([]byte, error) {
@@ -70,6 +78,13 @@ func (u *UcRecording) GetContacts() []UcContact {
 		return nil
 	}
 	return u.Contacts
+}
+
+func (u *UcRecording) GetConversationIdentifier() *string {
+	if u == nil {
+		return nil
+	}
+	return u.ConversationIdentifier
 }
 
 func (u *UcRecording) GetCreatedAt() *time.Time {

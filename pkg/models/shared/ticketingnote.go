@@ -8,14 +8,17 @@ import (
 )
 
 type TicketingNote struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	CustomerID  *string        `json:"customer_id,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	TicketID    *string        `json:"ticket_id,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserID      *string        `json:"user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (t TicketingNote) MarshalJSON() ([]byte, error) {

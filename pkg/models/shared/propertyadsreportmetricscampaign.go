@@ -91,6 +91,7 @@ func (e *PropertyAdsReportMetricsCampaignBudgetUnit) IsExact() bool {
 	return false
 }
 
+// PropertyAdsReportMetricsCampaignEffectiveStatus - read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
 type PropertyAdsReportMetricsCampaignEffectiveStatus string
 
 const (
@@ -179,31 +180,38 @@ func (e *PropertyAdsReportMetricsCampaignStatus) IsExact() bool {
 }
 
 type PropertyAdsReportMetricsCampaign struct {
-	AdvertisingChannelType   *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
-	BudgetAmount             *float64                                                `json:"budget_amount,omitempty"`
-	BudgetPeriod             *PropertyAdsReportMetricsCampaignBudgetPeriod           `json:"budget_period,omitempty"`
-	BudgetUnit               *PropertyAdsReportMetricsCampaignBudgetUnit             `json:"budget_unit,omitempty"`
-	CampaignBudgetIdentifier *string                                                 `json:"campaign_budget_identifier,omitempty"`
-	Category                 *string                                                 `json:"category,omitempty"`
-	CreatedAt                *time.Time                                              `json:"created_at,omitempty"`
-	Currency                 *string                                                 `json:"currency,omitempty"`
-	EffectiveStatus          *PropertyAdsReportMetricsCampaignEffectiveStatus        `json:"effective_status,omitempty"`
-	EndAt                    *time.Time                                              `json:"end_at,omitempty"`
-	FrequencyCap             *PropertyAdsReportMetricsCampaignFrequencyCap           `json:"frequency_cap,omitempty"`
-	Goal                     *PropertyAdsReportMetricsCampaignGoal                   `json:"goal,omitempty"`
-	HasEuPoliticalAds        *bool                                                   `json:"has_eu_political_ads,omitempty"`
-	ID                       *string                                                 `json:"id,omitempty"`
-	Kpi                      *PropertyAdsReportMetricsCampaignKpi                    `json:"kpi,omitempty"`
-	Labels                   []string                                                `json:"labels,omitempty"`
-	Name                     *string                                                 `json:"name,omitempty"`
-	OrganizationID           *string                                                 `json:"organization_id,omitempty"`
-	PlannedSpendAmount       *float64                                                `json:"planned_spend_amount,omitempty"`
-	Raw                      map[string]any                                          `json:"raw,omitempty"`
-	StartAt                  *time.Time                                              `json:"start_at,omitempty"`
-	Status                   *PropertyAdsReportMetricsCampaignStatus                 `json:"status,omitempty"`
-	Targeting                *PropertyAdsReportMetricsCampaignTargeting              `json:"targeting,omitempty"`
-	TotalSpendAmount         *float64                                                `json:"total_spend_amount,omitempty"`
-	UpdatedAt                *time.Time                                              `json:"updated_at,omitempty"`
+	AdvertisingChannelType *PropertyAdsReportMetricsCampaignAdvertisingChannelType `json:"advertising_channel_type,omitempty"`
+	BudgetAmount           *float64                                                `json:"budget_amount,omitempty"`
+	BudgetPeriod           *PropertyAdsReportMetricsCampaignBudgetPeriod           `json:"budget_period,omitempty"`
+	BudgetUnit             *PropertyAdsReportMetricsCampaignBudgetUnit             `json:"budget_unit,omitempty"`
+	// Resource name for existing/shared budget (Google)
+	CampaignBudgetIdentifier *string `json:"campaign_budget_identifier,omitempty"`
+	// Housing, employment, credit, NONE (Meta)
+	Category *string `json:"category,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
+	EffectiveStatus *PropertyAdsReportMetricsCampaignEffectiveStatus `json:"effective_status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt              *time.Time                                    `json:"end_at,omitempty"`
+	FrequencyCap       *PropertyAdsReportMetricsCampaignFrequencyCap `json:"frequency_cap,omitempty"`
+	Goal               *PropertyAdsReportMetricsCampaignGoal         `json:"goal,omitempty"`
+	HasEuPoliticalAds  *bool                                         `json:"has_eu_political_ads,omitempty"`
+	ID                 *string                                       `json:"id,omitempty"`
+	Kpi                *PropertyAdsReportMetricsCampaignKpi          `json:"kpi,omitempty"`
+	Labels             []string                                      `json:"labels,omitempty"`
+	Name               *string                                       `json:"name,omitempty"`
+	OrganizationID     *string                                       `json:"organization_id,omitempty"`
+	PlannedSpendAmount *float64                                      `json:"planned_spend_amount,omitempty"`
+	Raw                map[string]any                                `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt          *time.Time                                 `json:"start_at,omitempty"`
+	Status           *PropertyAdsReportMetricsCampaignStatus    `json:"status,omitempty"`
+	Targeting        *PropertyAdsReportMetricsCampaignTargeting `json:"targeting,omitempty"`
+	TotalSpendAmount *float64                                   `json:"total_spend_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PropertyAdsReportMetricsCampaign) MarshalJSON() ([]byte, error) {

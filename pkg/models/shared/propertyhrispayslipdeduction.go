@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// PropertyHrisPayslipDeductionCoverageLevel - Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
 type PropertyHrisPayslipDeductionCoverageLevel string
 
 const (
@@ -34,16 +35,41 @@ func (e *PropertyHrisPayslipDeductionCoverageLevel) IsExact() bool {
 	return false
 }
 
+type PropertyHrisPayslipDeductionEmployerType string
+
+const (
+	PropertyHrisPayslipDeductionEmployerTypePercentage PropertyHrisPayslipDeductionEmployerType = "PERCENTAGE"
+	PropertyHrisPayslipDeductionEmployerTypeFixed      PropertyHrisPayslipDeductionEmployerType = "FIXED"
+)
+
+func (e PropertyHrisPayslipDeductionEmployerType) ToPointer() *PropertyHrisPayslipDeductionEmployerType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisPayslipDeductionEmployerType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PERCENTAGE", "FIXED":
+			return true
+		}
+	}
+	return false
+}
+
+// PropertyHrisPayslipDeductionFrequency - Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
 type PropertyHrisPayslipDeductionFrequency string
 
 const (
-	PropertyHrisPayslipDeductionFrequencyOneTime PropertyHrisPayslipDeductionFrequency = "ONE_TIME"
-	PropertyHrisPayslipDeductionFrequencyDay     PropertyHrisPayslipDeductionFrequency = "DAY"
-	PropertyHrisPayslipDeductionFrequencyQuarter PropertyHrisPayslipDeductionFrequency = "QUARTER"
-	PropertyHrisPayslipDeductionFrequencyYear    PropertyHrisPayslipDeductionFrequency = "YEAR"
-	PropertyHrisPayslipDeductionFrequencyHour    PropertyHrisPayslipDeductionFrequency = "HOUR"
-	PropertyHrisPayslipDeductionFrequencyMonth   PropertyHrisPayslipDeductionFrequency = "MONTH"
-	PropertyHrisPayslipDeductionFrequencyWeek    PropertyHrisPayslipDeductionFrequency = "WEEK"
+	PropertyHrisPayslipDeductionFrequencyOneTime     PropertyHrisPayslipDeductionFrequency = "ONE_TIME"
+	PropertyHrisPayslipDeductionFrequencyDay         PropertyHrisPayslipDeductionFrequency = "DAY"
+	PropertyHrisPayslipDeductionFrequencyQuarter     PropertyHrisPayslipDeductionFrequency = "QUARTER"
+	PropertyHrisPayslipDeductionFrequencyYear        PropertyHrisPayslipDeductionFrequency = "YEAR"
+	PropertyHrisPayslipDeductionFrequencyHour        PropertyHrisPayslipDeductionFrequency = "HOUR"
+	PropertyHrisPayslipDeductionFrequencyMonth       PropertyHrisPayslipDeductionFrequency = "MONTH"
+	PropertyHrisPayslipDeductionFrequencyWeek        PropertyHrisPayslipDeductionFrequency = "WEEK"
+	PropertyHrisPayslipDeductionFrequencyBiweekly    PropertyHrisPayslipDeductionFrequency = "BIWEEKLY"
+	PropertyHrisPayslipDeductionFrequencySemimonthly PropertyHrisPayslipDeductionFrequency = "SEMIMONTHLY"
 )
 
 func (e PropertyHrisPayslipDeductionFrequency) ToPointer() *PropertyHrisPayslipDeductionFrequency {
@@ -54,7 +80,34 @@ func (e PropertyHrisPayslipDeductionFrequency) ToPointer() *PropertyHrisPayslipD
 func (e *PropertyHrisPayslipDeductionFrequency) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
+			return true
+		}
+	}
+	return false
+}
+
+// PropertyHrisPayslipDeductionGarnishmentType - set when this deduction is a court-ordered garnishment
+type PropertyHrisPayslipDeductionGarnishmentType string
+
+const (
+	PropertyHrisPayslipDeductionGarnishmentTypeChildSupport PropertyHrisPayslipDeductionGarnishmentType = "CHILD_SUPPORT"
+	PropertyHrisPayslipDeductionGarnishmentTypeTaxLevy      PropertyHrisPayslipDeductionGarnishmentType = "TAX_LEVY"
+	PropertyHrisPayslipDeductionGarnishmentTypeStudentLoan  PropertyHrisPayslipDeductionGarnishmentType = "STUDENT_LOAN"
+	PropertyHrisPayslipDeductionGarnishmentTypeCreditor     PropertyHrisPayslipDeductionGarnishmentType = "CREDITOR"
+	PropertyHrisPayslipDeductionGarnishmentTypeBankruptcy   PropertyHrisPayslipDeductionGarnishmentType = "BANKRUPTCY"
+	PropertyHrisPayslipDeductionGarnishmentTypeOther        PropertyHrisPayslipDeductionGarnishmentType = "OTHER"
+)
+
+func (e PropertyHrisPayslipDeductionGarnishmentType) ToPointer() *PropertyHrisPayslipDeductionGarnishmentType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PropertyHrisPayslipDeductionGarnishmentType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "CHILD_SUPPORT", "TAX_LEVY", "STUDENT_LOAN", "CREDITOR", "BANKRUPTCY", "OTHER":
 			return true
 		}
 	}
@@ -85,21 +138,39 @@ func (e *PropertyHrisPayslipDeductionType) IsExact() bool {
 
 // PropertyHrisPayslipDeduction - The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
 type PropertyHrisPayslipDeduction struct {
-	Amount        *float64                                   `json:"amount,omitempty"`
-	BenefitID     *string                                    `json:"benefit_id,omitempty"`
-	CompanyID     *string                                    `json:"company_id,omitempty"`
+	// percentage or absolute amount (employee's portion)
+	Amount    *float64 `json:"amount,omitempty"`
+	BenefitID *string  `json:"benefit_id,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
 	CoverageLevel *PropertyHrisPayslipDeductionCoverageLevel `json:"coverage_level,omitempty"`
-	CreatedAt     *time.Time                                 `json:"created_at,omitempty"`
-	EndAt         *time.Time                                 `json:"end_at,omitempty"`
-	Frequency     *PropertyHrisPayslipDeductionFrequency     `json:"frequency,omitempty"`
-	ID            *string                                    `json:"id,omitempty"`
-	IsActive      *bool                                      `json:"is_active,omitempty"`
-	Notes         *string                                    `json:"notes,omitempty"`
-	Raw           map[string]any                             `json:"raw,omitempty"`
-	StartAt       *time.Time                                 `json:"start_at,omitempty"`
-	Type          *PropertyHrisPayslipDeductionType          `json:"type,omitempty"`
-	UpdatedAt     *time.Time                                 `json:"updated_at,omitempty"`
-	UserID        *string                                    `json:"user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// percentage or absolute amount (employer's portion/match)
+	EmployerAmount *float64                                  `json:"employer_amount,omitempty"`
+	EmployerType   *PropertyHrisPayslipDeductionEmployerType `json:"employer_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
+	Frequency *PropertyHrisPayslipDeductionFrequency `json:"frequency,omitempty"`
+	// set when this deduction is a court-ordered garnishment
+	GarnishmentType *PropertyHrisPayslipDeductionGarnishmentType `json:"garnishment_type,omitempty"`
+	ID              *string                                      `json:"id,omitempty"`
+	IsActive        *bool                                        `json:"is_active,omitempty"`
+	// annual maximum employee amount (always money)
+	MaxAmount *float64 `json:"max_amount,omitempty"`
+	Notes     *string  `json:"notes,omitempty"`
+	// the hris_paycode (deduction code) this deduction uses
+	PaycodeID *string        `json:"paycode_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time                        `json:"start_at,omitempty"`
+	Type    *PropertyHrisPayslipDeductionType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// employee ID (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (p PropertyHrisPayslipDeduction) MarshalJSON() ([]byte, error) {
@@ -148,6 +219,20 @@ func (p *PropertyHrisPayslipDeduction) GetCreatedAt() *time.Time {
 	return p.CreatedAt
 }
 
+func (p *PropertyHrisPayslipDeduction) GetEmployerAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.EmployerAmount
+}
+
+func (p *PropertyHrisPayslipDeduction) GetEmployerType() *PropertyHrisPayslipDeductionEmployerType {
+	if p == nil {
+		return nil
+	}
+	return p.EmployerType
+}
+
 func (p *PropertyHrisPayslipDeduction) GetEndAt() *time.Time {
 	if p == nil {
 		return nil
@@ -160,6 +245,13 @@ func (p *PropertyHrisPayslipDeduction) GetFrequency() *PropertyHrisPayslipDeduct
 		return nil
 	}
 	return p.Frequency
+}
+
+func (p *PropertyHrisPayslipDeduction) GetGarnishmentType() *PropertyHrisPayslipDeductionGarnishmentType {
+	if p == nil {
+		return nil
+	}
+	return p.GarnishmentType
 }
 
 func (p *PropertyHrisPayslipDeduction) GetID() *string {
@@ -176,11 +268,25 @@ func (p *PropertyHrisPayslipDeduction) GetIsActive() *bool {
 	return p.IsActive
 }
 
+func (p *PropertyHrisPayslipDeduction) GetMaxAmount() *float64 {
+	if p == nil {
+		return nil
+	}
+	return p.MaxAmount
+}
+
 func (p *PropertyHrisPayslipDeduction) GetNotes() *string {
 	if p == nil {
 		return nil
 	}
 	return p.Notes
+}
+
+func (p *PropertyHrisPayslipDeduction) GetPaycodeID() *string {
+	if p == nil {
+		return nil
+	}
+	return p.PaycodeID
 }
 
 func (p *PropertyHrisPayslipDeduction) GetRaw() map[string]any {

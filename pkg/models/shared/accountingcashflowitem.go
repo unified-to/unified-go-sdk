@@ -3,10 +3,13 @@
 package shared
 
 type AccountingCashflowItem struct {
-	AccountID *string                  `json:"account_id,omitempty"`
-	Amount    *float64                 `json:"amount,omitempty"`
-	Name      *string                  `json:"name,omitempty"`
-	SubItems  []AccountingCashflowItem `json:"sub_items,omitempty"`
+	// If attributable to a specific GL account (reference to AccountingAccount)
+	AccountID *string `json:"account_id,omitempty"`
+	// Positive = inflow, Negative = outflow
+	Amount *float64 `json:"amount,omitempty"`
+	// e.g. "Net Income", "Depreciation", "Equipment"
+	Name     *string                  `json:"name,omitempty"`
+	SubItems []AccountingCashflowItem `json:"sub_items,omitempty"`
 	// Optional linkage to transactions
 	TransactionIds []string `json:"transaction_ids,omitempty"`
 }

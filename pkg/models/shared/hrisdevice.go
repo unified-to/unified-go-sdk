@@ -8,27 +8,34 @@ import (
 )
 
 type HrisDevice struct {
-	AdminUserIds       []string       `json:"admin_user_ids,omitempty"`
-	AssetTag           *string        `json:"asset_tag,omitempty"`
-	CreatedAt          *time.Time     `json:"created_at,omitempty"`
-	HasAntivirus       *bool          `json:"has_antivirus,omitempty"`
-	HasFirewall        *bool          `json:"has_firewall,omitempty"`
-	HasHdEncrypted     *bool          `json:"has_hd_encrypted,omitempty"`
-	HasPasswordManager *bool          `json:"has_password_manager,omitempty"`
-	HasScreenlock      *bool          `json:"has_screenlock,omitempty"`
-	ID                 *string        `json:"id,omitempty"`
-	IsMissing          *bool          `json:"is_missing,omitempty"`
-	LocationID         *string        `json:"location_id,omitempty"`
-	Manufacturer       *string        `json:"manufacturer,omitempty"`
-	Model              *string        `json:"model,omitempty"`
-	Name               *string        `json:"name,omitempty"`
-	Os                 *string        `json:"os,omitempty"`
-	OsVersion          *string        `json:"os_version,omitempty"`
-	Raw                map[string]any `json:"raw,omitempty"`
-	UpdatedAt          *time.Time     `json:"updated_at,omitempty"`
+	AdminUserIds []string `json:"admin_user_ids,omitempty"`
+	AssetTag     *string  `json:"asset_tag,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt          *time.Time `json:"created_at,omitempty"`
+	HasAntivirus       *bool      `json:"has_antivirus,omitempty"`
+	HasFirewall        *bool      `json:"has_firewall,omitempty"`
+	HasHdEncrypted     *bool      `json:"has_hd_encrypted,omitempty"`
+	HasPasswordManager *bool      `json:"has_password_manager,omitempty"`
+	HasScreenlock      *bool      `json:"has_screenlock,omitempty"`
+	ID                 *string    `json:"id,omitempty"`
+	IsMissing          *bool      `json:"is_missing,omitempty"`
+	// pointer to HR Location object (reference to HrisLocation)
+	LocationID *string `json:"location_id,omitempty"`
+	// device manufacturer
+	Manufacturer *string `json:"manufacturer,omitempty"`
+	// device model
+	Model *string `json:"model,omitempty"`
+	Name  *string `json:"name,omitempty"`
+	// operating system name
+	Os        *string        `json:"os,omitempty"`
+	OsVersion *string        `json:"os_version,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// users who have this device
 	UserIds []string `json:"user_ids,omitempty"`
-	Version *string  `json:"version,omitempty"`
+	// device version
+	Version *string `json:"version,omitempty"`
 }
 
 func (h HrisDevice) MarshalJSON() ([]byte, error) {

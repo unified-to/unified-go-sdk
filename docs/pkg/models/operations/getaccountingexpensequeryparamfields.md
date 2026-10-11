@@ -43,4 +43,5 @@ value := operations.GetAccountingExpenseQueryParamFieldsID
 | `GetAccountingExpenseQueryParamFieldsMetadata`         | metadata                                               |
 | `GetAccountingExpenseQueryParamFieldsTaxrateID`        | taxrate_id                                             |
 | `GetAccountingExpenseQueryParamFieldsExchangeRate`     | exchange_rate                                          |
+| `GetAccountingExpenseQueryParamFieldsType`             | type                                                   |
 | `GetAccountingExpenseQueryParamFieldsRaw`              | raw                                                    |

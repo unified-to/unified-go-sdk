@@ -3,10 +3,11 @@
 package shared
 
 type PropertyCrmContactAddress struct {
-	Address1    *string `json:"address1,omitempty"`
-	Address2    *string `json:"address2,omitempty"`
-	City        *string `json:"city,omitempty"`
-	Country     *string `json:"country,omitempty"`
+	Address1 *string `json:"address1,omitempty"`
+	Address2 *string `json:"address2,omitempty"`
+	City     *string `json:"city,omitempty"`
+	Country  *string `json:"country,omitempty"`
+	// ISO 2-digit country code
 	CountryCode *string `json:"country_code,omitempty"`
 	PostalCode  *string `json:"postal_code,omitempty"`
 	Region      *string `json:"region,omitempty"`

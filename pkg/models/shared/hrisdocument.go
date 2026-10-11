@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// HrisDocumentType - unified, normalized document type (OTHER when unmappable)
 type HrisDocumentType string
 
 const (
@@ -42,16 +43,23 @@ func (e *HrisDocumentType) IsExact() bool {
 }
 
 type HrisDocument struct {
-	CompanyID    *string           `json:"company_id,omitempty"`
-	CreatedAt    *time.Time        `json:"created_at,omitempty"`
-	DocumentData *string           `json:"document_data,omitempty"`
-	DocumentURL  *string           `json:"document_url,omitempty"`
-	Filename     *string           `json:"filename,omitempty"`
-	ID           *string           `json:"id,omitempty"`
-	Raw          map[string]any    `json:"raw,omitempty"`
-	Type         *HrisDocumentType `json:"type,omitempty"`
-	UpdatedAt    *time.Time        `json:"updated_at,omitempty"`
-	UserID       *string           `json:"user_id,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// base64 encoded file contents for create/update
+	DocumentData *string `json:"document_data,omitempty"`
+	// download link, expires after 1 hour
+	DocumentURL *string        `json:"document_url,omitempty"`
+	Filename    *string        `json:"filename,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	Raw         map[string]any `json:"raw,omitempty"`
+	// unified, normalized document type (OTHER when unmappable)
+	Type *HrisDocumentType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// pointer to the HR Employee object that owns this document (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (h HrisDocument) MarshalJSON() ([]byte, error) {

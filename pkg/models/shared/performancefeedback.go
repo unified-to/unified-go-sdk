@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// PerformanceFeedbackType - praise/recognition, constructive feedback, or a response to a feedback request
 type PerformanceFeedbackType string
 
 const (
@@ -32,17 +33,23 @@ func (e *PerformanceFeedbackType) IsExact() bool {
 }
 
 type PerformanceFeedback struct {
-	AuthorUserID *string        `json:"author_user_id,omitempty"`
-	CreatedAt    *time.Time     `json:"created_at,omitempty"`
-	ID           *string        `json:"id,omitempty"`
-	IsVisible    *bool          `json:"is_visible,omitempty"`
-	Message      *string        `json:"message,omitempty"`
-	Raw          map[string]any `json:"raw,omitempty"`
+	// the HR Employee that gave this feedback (reference to HrisEmployee)
+	AuthorUserID *string `json:"author_user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	ID        *string    `json:"id,omitempty"`
+	// true when publicly visible (e.g. praise wall); false when private or manager-only
+	IsVisible *bool          `json:"is_visible,omitempty"`
+	Message   *string        `json:"message,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
 	// badges or company values attached to this feedback
-	Tags      []string                 `json:"tags,omitempty"`
-	Type      *PerformanceFeedbackType `json:"type,omitempty"`
-	UpdatedAt *time.Time               `json:"updated_at,omitempty"`
-	UserID    string                   `json:"user_id"`
+	Tags []string `json:"tags,omitempty"`
+	// praise/recognition, constructive feedback, or a response to a feedback request
+	Type *PerformanceFeedbackType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// the HR Employee that this feedback is about (reference to HrisEmployee)
+	UserID string `json:"user_id"`
 }
 
 func (p PerformanceFeedback) MarshalJSON() ([]byte, error) {

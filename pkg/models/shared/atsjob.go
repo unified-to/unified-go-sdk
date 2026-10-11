@@ -63,26 +63,31 @@ func (e *AtsJobStatus) IsExact() bool {
 }
 
 type AtsJob struct {
-	Addresses      []AtsAddress      `json:"addresses,omitempty"`
-	ClosedAt       *time.Time        `json:"closed_at,omitempty"`
-	CompanyID      *string           `json:"company_id,omitempty"`
-	Compensation   []AtsCompensation `json:"compensation,omitempty"`
-	CreatedAt      *time.Time        `json:"created_at,omitempty"`
-	Description    *string           `json:"description,omitempty"`
-	EmploymentType *EmploymentType   `json:"employment_type,omitempty"`
+	Addresses []AtsAddress `json:"addresses,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt *time.Time `json:"closed_at,omitempty"`
+	// id value of the company associated with the job in the ATS (reference to AtsCompany)
+	CompanyID    *string           `json:"company_id,omitempty"`
+	Compensation []AtsCompensation `json:"compensation,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time      `json:"created_at,omitempty"`
+	Description    *string         `json:"description,omitempty"`
+	EmploymentType *EmploymentType `json:"employment_type,omitempty"`
 	// The departments/divisions/teams that this job belongs to
-	Groups                 []AtsGroup      `json:"groups,omitempty"`
-	HiringManagerIds       []string        `json:"hiring_manager_ids,omitempty"`
-	HiringManagers         []AtsReference  `json:"hiring_managers,omitempty"`
-	ID                     *string         `json:"id,omitempty"`
-	Industry               *string         `json:"industry,omitempty"`
-	LanguageLocale         *string         `json:"language_locale,omitempty"`
-	Metadata               []AtsMetadata   `json:"metadata,omitempty"`
-	MinimumDegree          *string         `json:"minimum_degree,omitempty"`
-	MinimumExperienceYears *float64        `json:"minimum_experience_years,omitempty"`
-	Name                   *string         `json:"name,omitempty"`
-	NumberOfOpenings       *float64        `json:"number_of_openings,omitempty"`
-	Openings               []AtsJobOpening `json:"openings,omitempty"`
+	Groups           []AtsGroup     `json:"groups,omitempty"`
+	HiringManagerIds []string       `json:"hiring_manager_ids,omitempty"`
+	HiringManagers   []AtsReference `json:"hiring_managers,omitempty"`
+	ID               *string        `json:"id,omitempty"`
+	Industry         *string        `json:"industry,omitempty"`
+	// Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
+	LanguageLocale         *string       `json:"language_locale,omitempty"`
+	Metadata               []AtsMetadata `json:"metadata,omitempty"`
+	MinimumDegree          *string       `json:"minimum_degree,omitempty"`
+	MinimumExperienceYears *float64      `json:"minimum_experience_years,omitempty"`
+	Name                   *string       `json:"name,omitempty"`
+	// Number of openings for the job
+	NumberOfOpenings *float64        `json:"number_of_openings,omitempty"`
+	Openings         []AtsJobOpening `json:"openings,omitempty"`
 	// Public job postings
 	Postings []AtsJobPosting `json:"postings,omitempty"`
 	// URLs for pages containing public listings for the job
@@ -93,9 +98,12 @@ type AtsJob struct {
 	Remote        *bool            `json:"remote,omitempty"`
 	Skills        []string         `json:"skills,omitempty"`
 	Status        *AtsJobStatus    `json:"status,omitempty"`
-	Summary       *string          `json:"summary,omitempty"`
-	UpdatedAt     *time.Time       `json:"updated_at,omitempty"`
-	UserID        *string          `json:"user_id,omitempty"`
+	// Short job blurb (distinct from full description when both exist)
+	Summary *string `json:"summary,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (a AtsJob) MarshalJSON() ([]byte, error) {

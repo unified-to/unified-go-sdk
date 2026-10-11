@@ -8,12 +8,15 @@ import (
 )
 
 type RepoBranch struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Name      string         `json:"name"`
 	Raw       map[string]any `json:"raw,omitempty"`
-	RepoID    string         `json:"repo_id"`
-	UpdatedAt *time.Time     `json:"updated_at,omitempty"`
+	// (reference to RepoRepository)
+	RepoID string `json:"repo_id"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (r RepoBranch) MarshalJSON() ([]byte, error) {

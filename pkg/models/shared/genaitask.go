@@ -36,32 +36,48 @@ func (e *GenaiTaskStatus) IsExact() bool {
 }
 
 type GenaiTask struct {
-	AgentID      *string    `json:"agent_id,omitempty"`
-	CompletedAt  *time.Time `json:"completed_at,omitempty"`
-	CreatedAt    *time.Time `json:"created_at,omitempty"`
-	Error        *string    `json:"error,omitempty"`
-	FilesChanged *float64   `json:"files_changed,omitempty"`
-	ID           *string    `json:"id,omitempty"`
-	Instructions *string    `json:"instructions,omitempty"`
-	LinesAdded   *float64   `json:"lines_added,omitempty"`
-	LinesDeleted *float64   `json:"lines_deleted,omitempty"`
+	// id of the genai_agent (the reusable agent/preset configuration) that runs this task.
+	AgentID *string `json:"agent_id,omitempty"`
+	// When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CompletedAt *time.Time `json:"completed_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// The failure description (when the status is FAILED).
+	Error        *string  `json:"error,omitempty"`
+	FilesChanged *float64 `json:"files_changed,omitempty"`
+	ID           *string  `json:"id,omitempty"`
+	// The natural-language instructions given to the coding agent.
+	Instructions *string  `json:"instructions,omitempty"`
+	LinesAdded   *float64 `json:"lines_added,omitempty"`
+	LinesDeleted *float64 `json:"lines_deleted,omitempty"`
 	// The conversation between the user and the coding agent.
-	Messages               []GenaiContent   `json:"messages,omitempty"`
-	ModelID                *string          `json:"model_id,omitempty"`
-	Name                   *string          `json:"name,omitempty"`
-	OrganizationID         *string          `json:"organization_id,omitempty"`
-	PullrequestURL         *string          `json:"pullrequest_url,omitempty"`
-	Raw                    map[string]any   `json:"raw,omitempty"`
-	RepoURL                *string          `json:"repo_url,omitempty"`
-	SourceBranchIdentifier *string          `json:"source_branch_identifier,omitempty"`
-	StartedAt              *time.Time       `json:"started_at,omitempty"`
-	Status                 *GenaiTaskStatus `json:"status,omitempty"`
-	Summary                *string          `json:"summary,omitempty"`
-	TargetBranchIdentifier *string          `json:"target_branch_identifier,omitempty"`
-	TokensUsed             *float64         `json:"tokens_used,omitempty"`
-	UpdatedAt              *time.Time       `json:"updated_at,omitempty"`
-	UserID                 *string          `json:"user_id,omitempty"`
-	WebURL                 *string          `json:"web_url,omitempty"`
+	Messages []GenaiContent `json:"messages,omitempty"`
+	ModelID  *string        `json:"model_id,omitempty"`
+	// A short human-readable title for the coding agent task.
+	Name *string `json:"name,omitempty"`
+	// id of the genai_organization (the organization or execution environment) that this task runs under.
+	OrganizationID *string `json:"organization_id,omitempty"`
+	// The pull/merge request that the coding agent opened for its work.
+	PullrequestURL *string        `json:"pullrequest_url,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	// The git repository that the coding agent works in.
+	RepoURL *string `json:"repo_url,omitempty"`
+	// The name of the branch that the coding agent starts its work from.
+	SourceBranchIdentifier *string `json:"source_branch_identifier,omitempty"`
+	// When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartedAt *time.Time       `json:"started_at,omitempty"`
+	Status    *GenaiTaskStatus `json:"status,omitempty"`
+	// The coding agent's summary of the work that it performed.
+	Summary *string `json:"summary,omitempty"`
+	// The name of the branch that the coding agent pushed its work to.
+	TargetBranchIdentifier *string  `json:"target_branch_identifier,omitempty"`
+	TokensUsed             *float64 `json:"tokens_used,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
+	// The provider's own web page for this task.
+	WebURL *string `json:"web_url,omitempty"`
 }
 
 func (g GenaiTask) MarshalJSON() ([]byte, error) {

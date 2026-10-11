@@ -58,40 +58,52 @@ func (e *AccountingProjectStatus) IsExact() bool {
 }
 
 type AccountingProject struct {
-	ActualCostAmount     *float64                 `json:"actual_cost_amount,omitempty"`
-	BillingType          *BillingType             `json:"billing_type,omitempty"`
-	CategoryIds          []string                 `json:"category_ids,omitempty"`
-	Code                 *string                  `json:"code,omitempty"`
-	ContactID            *string                  `json:"contact_id,omitempty"`
-	CreatedAt            *time.Time               `json:"created_at,omitempty"`
-	CreditNoteAmount     *float64                 `json:"credit_note_amount,omitempty"`
-	Currency             *string                  `json:"currency,omitempty"`
-	DepositAmount        *float64                 `json:"deposit_amount,omitempty"`
-	DepositAppliedAmount *float64                 `json:"deposit_applied_amount,omitempty"`
-	Description          *string                  `json:"description,omitempty"`
-	DueAt                *time.Time               `json:"due_at,omitempty"`
-	EndedAt              *time.Time               `json:"ended_at,omitempty"`
-	EstimateAmount       *float64                 `json:"estimate_amount,omitempty"`
-	EstimatedCostAmount  *float64                 `json:"estimated_cost_amount,omitempty"`
-	ExpenseAmount        *float64                 `json:"expense_amount,omitempty"`
-	ID                   *string                  `json:"id,omitempty"`
-	InvoicedAmount       *float64                 `json:"invoiced_amount,omitempty"`
-	IsActive             *bool                    `json:"is_active,omitempty"`
-	IsBillable           *bool                    `json:"is_billable,omitempty"`
-	LocationID           *string                  `json:"location_id,omitempty"`
-	ManagerUserID        *string                  `json:"manager_user_id,omitempty"`
-	Metadata             []AccountingMetadata     `json:"metadata,omitempty"`
-	MinutesLogged        *float64                 `json:"minutes_logged,omitempty"`
-	MinutesToBeInvoiced  *float64                 `json:"minutes_to_be_invoiced,omitempty"`
-	Name                 *string                  `json:"name,omitempty"`
-	OrganizationID       *string                  `json:"organization_id,omitempty"`
-	ParentID             *string                  `json:"parent_id,omitempty"`
-	PercentComplete      *float64                 `json:"percent_complete,omitempty"`
-	Raw                  map[string]any           `json:"raw,omitempty"`
-	StartedAt            *time.Time               `json:"started_at,omitempty"`
-	Status               *AccountingProjectStatus `json:"status,omitempty"`
-	ToBeInvoicedAmount   *float64                 `json:"to_be_invoiced_amount,omitempty"`
-	UpdatedAt            *time.Time               `json:"updated_at,omitempty"`
+	ActualCostAmount *float64     `json:"actual_cost_amount,omitempty"`
+	BillingType      *BillingType `json:"billing_type,omitempty"`
+	CategoryIds      []string     `json:"category_ids,omitempty"`
+	// provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
+	Code *string `json:"code,omitempty"`
+	// the customer the project is for (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt            *time.Time `json:"created_at,omitempty"`
+	CreditNoteAmount     *float64   `json:"credit_note_amount,omitempty"`
+	Currency             *string    `json:"currency,omitempty"`
+	DepositAmount        *float64   `json:"deposit_amount,omitempty"`
+	DepositAppliedAmount *float64   `json:"deposit_applied_amount,omitempty"`
+	Description          *string    `json:"description,omitempty"`
+	// planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndedAt             *time.Time `json:"ended_at,omitempty"`
+	EstimateAmount      *float64   `json:"estimate_amount,omitempty"`
+	EstimatedCostAmount *float64   `json:"estimated_cost_amount,omitempty"`
+	ExpenseAmount       *float64   `json:"expense_amount,omitempty"`
+	ID                  *string    `json:"id,omitempty"`
+	InvoicedAmount      *float64   `json:"invoiced_amount,omitempty"`
+	IsActive            *bool      `json:"is_active,omitempty"`
+	IsBillable          *bool      `json:"is_billable,omitempty"`
+	LocationID          *string    `json:"location_id,omitempty"`
+	// references a HRIS employee/user (reference to HrisEmployee)
+	ManagerUserID *string              `json:"manager_user_id,omitempty"`
+	Metadata      []AccountingMetadata `json:"metadata,omitempty"`
+	// integer minutes, not hours
+	MinutesLogged *float64 `json:"minutes_logged,omitempty"`
+	// integer minutes, not hours
+	MinutesToBeInvoiced *float64 `json:"minutes_to_be_invoiced,omitempty"`
+	Name                *string  `json:"name,omitempty"`
+	OrganizationID      *string  `json:"organization_id,omitempty"`
+	// parent project / sub-project hierarchy
+	ParentID *string `json:"parent_id,omitempty"`
+	// 0-100
+	PercentComplete *float64       `json:"percent_complete,omitempty"`
+	Raw             map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartedAt          *time.Time               `json:"started_at,omitempty"`
+	Status             *AccountingProjectStatus `json:"status,omitempty"`
+	ToBeInvoicedAmount *float64                 `json:"to_be_invoiced_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingProject) MarshalJSON() ([]byte, error) {

@@ -12,21 +12,26 @@ import (
 type PatchHrisDeductionQueryParamFields string
 
 const (
-	PatchHrisDeductionQueryParamFieldsID            PatchHrisDeductionQueryParamFields = "id"
-	PatchHrisDeductionQueryParamFieldsCreatedAt     PatchHrisDeductionQueryParamFields = "created_at"
-	PatchHrisDeductionQueryParamFieldsUpdatedAt     PatchHrisDeductionQueryParamFields = "updated_at"
-	PatchHrisDeductionQueryParamFieldsUserID        PatchHrisDeductionQueryParamFields = "user_id"
-	PatchHrisDeductionQueryParamFieldsCompanyID     PatchHrisDeductionQueryParamFields = "company_id"
-	PatchHrisDeductionQueryParamFieldsBenefitID     PatchHrisDeductionQueryParamFields = "benefit_id"
-	PatchHrisDeductionQueryParamFieldsAmount        PatchHrisDeductionQueryParamFields = "amount"
-	PatchHrisDeductionQueryParamFieldsType          PatchHrisDeductionQueryParamFields = "type"
-	PatchHrisDeductionQueryParamFieldsCoverageLevel PatchHrisDeductionQueryParamFields = "coverage_level"
-	PatchHrisDeductionQueryParamFieldsFrequency     PatchHrisDeductionQueryParamFields = "frequency"
-	PatchHrisDeductionQueryParamFieldsStartAt       PatchHrisDeductionQueryParamFields = "start_at"
-	PatchHrisDeductionQueryParamFieldsEndAt         PatchHrisDeductionQueryParamFields = "end_at"
-	PatchHrisDeductionQueryParamFieldsIsActive      PatchHrisDeductionQueryParamFields = "is_active"
-	PatchHrisDeductionQueryParamFieldsNotes         PatchHrisDeductionQueryParamFields = "notes"
-	PatchHrisDeductionQueryParamFieldsRaw           PatchHrisDeductionQueryParamFields = "raw"
+	PatchHrisDeductionQueryParamFieldsID              PatchHrisDeductionQueryParamFields = "id"
+	PatchHrisDeductionQueryParamFieldsCreatedAt       PatchHrisDeductionQueryParamFields = "created_at"
+	PatchHrisDeductionQueryParamFieldsUpdatedAt       PatchHrisDeductionQueryParamFields = "updated_at"
+	PatchHrisDeductionQueryParamFieldsUserID          PatchHrisDeductionQueryParamFields = "user_id"
+	PatchHrisDeductionQueryParamFieldsCompanyID       PatchHrisDeductionQueryParamFields = "company_id"
+	PatchHrisDeductionQueryParamFieldsBenefitID       PatchHrisDeductionQueryParamFields = "benefit_id"
+	PatchHrisDeductionQueryParamFieldsAmount          PatchHrisDeductionQueryParamFields = "amount"
+	PatchHrisDeductionQueryParamFieldsType            PatchHrisDeductionQueryParamFields = "type"
+	PatchHrisDeductionQueryParamFieldsCoverageLevel   PatchHrisDeductionQueryParamFields = "coverage_level"
+	PatchHrisDeductionQueryParamFieldsFrequency       PatchHrisDeductionQueryParamFields = "frequency"
+	PatchHrisDeductionQueryParamFieldsStartAt         PatchHrisDeductionQueryParamFields = "start_at"
+	PatchHrisDeductionQueryParamFieldsEndAt           PatchHrisDeductionQueryParamFields = "end_at"
+	PatchHrisDeductionQueryParamFieldsIsActive        PatchHrisDeductionQueryParamFields = "is_active"
+	PatchHrisDeductionQueryParamFieldsNotes           PatchHrisDeductionQueryParamFields = "notes"
+	PatchHrisDeductionQueryParamFieldsEmployerAmount  PatchHrisDeductionQueryParamFields = "employer_amount"
+	PatchHrisDeductionQueryParamFieldsEmployerType    PatchHrisDeductionQueryParamFields = "employer_type"
+	PatchHrisDeductionQueryParamFieldsMaxAmount       PatchHrisDeductionQueryParamFields = "max_amount"
+	PatchHrisDeductionQueryParamFieldsPaycodeID       PatchHrisDeductionQueryParamFields = "paycode_id"
+	PatchHrisDeductionQueryParamFieldsGarnishmentType PatchHrisDeductionQueryParamFields = "garnishment_type"
+	PatchHrisDeductionQueryParamFieldsRaw             PatchHrisDeductionQueryParamFields = "raw"
 )
 
 func (e PatchHrisDeductionQueryParamFields) ToPointer() *PatchHrisDeductionQueryParamFields {
@@ -65,6 +70,16 @@ func (e *PatchHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "employer_amount":
+		fallthrough
+	case "employer_type":
+		fallthrough
+	case "max_amount":
+		fallthrough
+	case "paycode_id":
+		fallthrough
+	case "garnishment_type":
 		fallthrough
 	case "raw":
 		*e = PatchHrisDeductionQueryParamFields(v)

@@ -9,25 +9,41 @@ import (
 
 type SocialProfile struct {
 	// Structured postal address
-	Address     *PropertySocialProfileAddress `json:"address,omitempty"`
-	AvatarURL   *string                       `json:"avatar_url,omitempty"`
-	Category    *string                       `json:"category,omitempty"`
-	CreatedAt   *time.Time                    `json:"created_at,omitempty"`
-	Description *string                       `json:"description,omitempty"`
-	ID          *string                       `json:"id,omitempty"`
-	IsPrivate   *bool                         `json:"is_private,omitempty"`
-	IsVerified  *bool                         `json:"is_verified,omitempty"`
-	Location    *string                       `json:"location,omitempty"`
+	Address *PropertySocialProfileAddress `json:"address,omitempty"`
+	// Profile image URL
+	AvatarURL *string `json:"avatar_url,omitempty"`
+	// Primary category of the profile
+	Category *string `json:"category,omitempty"`
+	// When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Bio or description of the profile
+	Description *string `json:"description,omitempty"`
+	// Unique identifier for the profile
+	ID *string `json:"id,omitempty"`
+	// Whether the profile is private/protected
+	IsPrivate *bool `json:"is_private,omitempty"`
+	// Whether the profile is verified
+	IsVerified *bool `json:"is_verified,omitempty"`
+	// Free-text location/locale string
+	Location *string `json:"location,omitempty"`
 	// Audience metrics for the profile
-	Metrics    *PropertySocialProfileMetrics `json:"metrics,omitempty"`
-	Name       *string                       `json:"name,omitempty"`
-	ParentID   *string                       `json:"parent_id,omitempty"`
-	Phone      *string                       `json:"phone,omitempty"`
-	Raw        map[string]any                `json:"raw,omitempty"`
-	UpdatedAt  *time.Time                    `json:"updated_at,omitempty"`
-	URL        *string                       `json:"url,omitempty"`
-	Username   *string                       `json:"username,omitempty"`
-	WebsiteURL *string                       `json:"website_url,omitempty"`
+	Metrics *PropertySocialProfileMetrics `json:"metrics,omitempty"`
+	// Display name of the profile
+	Name *string `json:"name,omitempty"`
+	// Parent profile id when profiles are nested (e.g. account → location)
+	ParentID *string `json:"parent_id,omitempty"`
+	// Contact phone number
+	Phone *string `json:"phone,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Public URL of the profile
+	URL *string `json:"url,omitempty"`
+	// Handle/username/store code
+	Username *string `json:"username,omitempty"`
+	// External website linked from the profile
+	WebsiteURL *string `json:"website_url,omitempty"`
 }
 
 func (s SocialProfile) MarshalJSON() ([]byte, error) {

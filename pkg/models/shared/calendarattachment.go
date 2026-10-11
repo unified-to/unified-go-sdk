@@ -4,9 +4,10 @@ package shared
 
 type CalendarAttachment struct {
 	DownloadURL *string `json:"download_url,omitempty"`
-	ID          *string `json:"id,omitempty"`
-	MimeType    *string `json:"mime_type,omitempty"`
-	Name        *string `json:"name,omitempty"`
+	// ID for the storage_fileget endpoint
+	ID       *string `json:"id,omitempty"`
+	MimeType *string `json:"mime_type,omitempty"`
+	Name     *string `json:"name,omitempty"`
 }
 
 func (c *CalendarAttachment) GetDownloadURL() *string {

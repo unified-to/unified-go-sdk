@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// AccountingJournalStatus - Posting state of the journal entry
 type AccountingJournalStatus string
 
 const (
@@ -32,27 +33,35 @@ func (e *AccountingJournalStatus) IsExact() bool {
 }
 
 type AccountingJournal struct {
-	Attachments      []AccountingAttachment `json:"attachments,omitempty"`
-	CategoryIds      []string               `json:"category_ids,omitempty"`
-	CreatedAt        *time.Time             `json:"created_at,omitempty"`
-	Currency         *string                `json:"currency,omitempty"`
-	Description      *string                `json:"description,omitempty"`
-	ExchangeRate     *float64               `json:"exchange_rate,omitempty"`
-	ID               *string                `json:"id,omitempty"`
-	IsInclusiveOfTax *bool                  `json:"is_inclusive_of_tax,omitempty"`
+	Attachments []AccountingAttachment `json:"attachments,omitempty"`
+	CategoryIds []string               `json:"category_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Currency    *string    `json:"currency,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// Exchange rate to the base/home currency at the posting date
+	ExchangeRate *float64 `json:"exchange_rate,omitempty"`
+	ID           *string  `json:"id,omitempty"`
+	// True when the line amounts already include tax
+	IsInclusiveOfTax *bool `json:"is_inclusive_of_tax,omitempty"`
 	// new field name
 	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
 	OrganizationID *string                     `json:"organization_id,omitempty"`
-	PostedAt       *time.Time                  `json:"posted_at,omitempty"`
-	ProjectID      *string                     `json:"project_id,omitempty"`
-	Raw            map[string]any              `json:"raw,omitempty"`
-	Reference      *string                     `json:"reference,omitempty"`
-	Source         *string                     `json:"source,omitempty"`
-	Status         *AccountingJournalStatus    `json:"status,omitempty"`
-	TaxAmount      *float64                    `json:"tax_amount,omitempty"`
-	TaxrateID      *string                     `json:"taxrate_id,omitempty"`
-	TotalAmount    *float64                    `json:"total_amount,omitempty"`
-	UpdatedAt      *time.Time                  `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt *time.Time `json:"posted_at,omitempty"`
+	// (reference to TaskProject)
+	ProjectID *string        `json:"project_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	Reference *string        `json:"reference,omitempty"`
+	Source    *string        `json:"source,omitempty"`
+	// Posting state of the journal entry
+	Status    *AccountingJournalStatus `json:"status,omitempty"`
+	TaxAmount *float64                 `json:"tax_amount,omitempty"`
+	TaxrateID *string                  `json:"taxrate_id,omitempty"`
+	// Total of the debit lines; equals the total of the credit lines
+	TotalAmount *float64 `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingJournal) MarshalJSON() ([]byte, error) {

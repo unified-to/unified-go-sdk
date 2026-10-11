@@ -8,7 +8,9 @@ import (
 )
 
 type LmsClass struct {
-	CourseID    *string        `json:"course_id,omitempty"`
+	// (reference to Course)
+	CourseID *string `json:"course_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
@@ -18,7 +20,8 @@ type LmsClass struct {
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	Students    []LmsReference `json:"students,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (l LmsClass) MarshalJSON() ([]byte, error) {

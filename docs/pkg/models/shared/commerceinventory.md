@@ -7,9 +7,9 @@
 | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ |
 | `Available`                                | `*float64`                                 | :heavy_minus_sign:                         | N/A                                        |
 | `ID`                                       | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `ItemID`                                   | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ItemID`                                   | `*string`                                  | :heavy_minus_sign:                         | (reference to CommerceItem)                |
 | `ItemOptionID`                             | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `ItemVariantID`                            | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
-| `LocationID`                               | `*string`                                  | :heavy_minus_sign:                         | N/A                                        |
+| `ItemVariantID`                            | `*string`                                  | :heavy_minus_sign:                         | (reference to CommerceCommerceItemvariant) |
+| `LocationID`                               | `*string`                                  | :heavy_minus_sign:                         | (reference to CommerceLocation)            |
 | `Raw`                                      | map[string]`any`                           | :heavy_minus_sign:                         | N/A                                        |
-| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | N/A                                        |
+| `UpdatedAt`                                | [*time.Time](https://pkg.go.dev/time#Time) | :heavy_minus_sign:                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)   |

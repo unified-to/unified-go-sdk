@@ -2,6 +2,7 @@
 
 package shared
 
+// AdsPromotedType - Promoted entity types for ads_promoted list endpoint
 type AdsPromotedType string
 
 const (
@@ -39,9 +40,10 @@ func (e *AdsPromotedType) IsExact() bool {
 
 // AdsPromoted - Promoted entity (e.g. page, app, product, tweet) for ads create
 type AdsPromoted struct {
-	ID   string          `json:"id"`
-	Name *string         `json:"name,omitempty"`
-	Raw  map[string]any  `json:"raw,omitempty"`
+	ID   string         `json:"id"`
+	Name *string        `json:"name,omitempty"`
+	Raw  map[string]any `json:"raw,omitempty"`
+	// Promoted entity types for ads_promoted list endpoint
 	Type AdsPromotedType `json:"type"`
 }
 

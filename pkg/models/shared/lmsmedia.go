@@ -31,6 +31,7 @@ func (e *LmsMediaType) IsExact() bool {
 }
 
 type LmsMedia struct {
+	// Inline text/HTML/markdown content (use when url is empty or for embedded content)
 	Content     *string `json:"content,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// ISO 2-digit language codes

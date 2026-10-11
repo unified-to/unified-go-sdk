@@ -56,27 +56,40 @@ func (e *PaymentSubscriptionStatus) IsExact() bool {
 }
 
 type PaymentSubscription struct {
-	CanceledAt           *time.Time                 `json:"canceled_at,omitempty"`
-	ContactID            *string                    `json:"contact_id,omitempty"`
-	CreatedAt            *time.Time                 `json:"created_at,omitempty"`
-	Currency             *string                    `json:"currency,omitempty"`
-	CurrentPeriodEndAt   *time.Time                 `json:"current_period_end_at,omitempty"`
-	CurrentPeriodStartAt *time.Time                 `json:"current_period_start_at,omitempty"`
-	DayOfMonth           *float64                   `json:"day_of_month,omitempty"`
-	DayOfWeek            *float64                   `json:"day_of_week,omitempty"`
-	Description          *string                    `json:"description,omitempty"`
-	EndAt                *time.Time                 `json:"end_at,omitempty"`
-	ID                   *string                    `json:"id,omitempty"`
-	Interval             *float64                   `json:"interval,omitempty"`
-	IntervalUnit         *IntervalUnit              `json:"interval_unit,omitempty"`
-	InvoiceID            *string                    `json:"invoice_id,omitempty"`
-	Lineitems            []PaymentLineitem          `json:"lineitems,omitempty"`
-	Month                *float64                   `json:"month,omitempty"`
-	Raw                  map[string]any             `json:"raw,omitempty"`
-	StartAt              *time.Time                 `json:"start_at,omitempty"`
-	Status               *PaymentSubscriptionStatus `json:"status,omitempty"`
-	TotalAmount          *float64                   `json:"total_amount,omitempty"`
-	UpdatedAt            *time.Time                 `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CanceledAt *time.Time `json:"canceled_at,omitempty"`
+	// a reference to an Accounting Contact (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CurrentPeriodEndAt *time.Time `json:"current_period_end_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CurrentPeriodStartAt *time.Time `json:"current_period_start_at,omitempty"`
+	// The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only applies when the interval_unit is MONTH.
+	DayOfMonth *float64 `json:"day_of_month,omitempty"`
+	// The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only applies when the interval_unit is WEEK.
+	DayOfWeek   *float64 `json:"day_of_week,omitempty"`
+	Description *string  `json:"description,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	ID    *string    `json:"id,omitempty"`
+	// The number of intervals between charges within the interval_unit. Defaults to 1.
+	Interval     *float64      `json:"interval,omitempty"`
+	IntervalUnit *IntervalUnit `json:"interval_unit,omitempty"`
+	// a reference to an Accounting Invoice (reference to AccountingInvoice)
+	InvoiceID *string           `json:"invoice_id,omitempty"`
+	Lineitems []PaymentLineitem `json:"lineitems,omitempty"`
+	// the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
+	Month *float64       `json:"month,omitempty"`
+	Raw   map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt     *time.Time                 `json:"start_at,omitempty"`
+	Status      *PaymentSubscriptionStatus `json:"status,omitempty"`
+	TotalAmount *float64                   `json:"total_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (p PaymentSubscription) MarshalJSON() ([]byte, error) {

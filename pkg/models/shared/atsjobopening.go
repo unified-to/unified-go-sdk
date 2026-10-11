@@ -30,11 +30,14 @@ func (e *AtsJobOpeningStatus) IsExact() bool {
 }
 
 type AtsJobOpening struct {
-	ApplicationID *string              `json:"application_id,omitempty"`
-	CloseReason   *string              `json:"close_reason,omitempty"`
-	ClosedAt      *time.Time           `json:"closed_at,omitempty"`
-	OpenedAt      *time.Time           `json:"opened_at,omitempty"`
-	Status        *AtsJobOpeningStatus `json:"status,omitempty"`
+	// points to an application
+	ApplicationID *string `json:"application_id,omitempty"`
+	CloseReason   *string `json:"close_reason,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ClosedAt *time.Time `json:"closed_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	OpenedAt *time.Time           `json:"opened_at,omitempty"`
+	Status   *AtsJobOpeningStatus `json:"status,omitempty"`
 }
 
 func (a AtsJobOpening) MarshalJSON() ([]byte, error) {

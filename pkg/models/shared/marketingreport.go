@@ -8,35 +8,62 @@ import (
 )
 
 type MarketingReport struct {
-	AbuseReports     *float64   `json:"abuse_reports,omitempty"`
-	CampaignID       *string    `json:"campaign_id,omitempty"`
-	ClickRate        *float64   `json:"click_rate,omitempty"`
-	ClicksTotal      *float64   `json:"clicks_total,omitempty"`
-	EmailsSent       *float64   `json:"emails_sent,omitempty"`
-	EndAt            *time.Time `json:"end_at,omitempty"`
-	ForwardsCount    *float64   `json:"forwards_count,omitempty"`
-	ForwardsOpens    *float64   `json:"forwards_opens,omitempty"`
-	HardBounces      *float64   `json:"hard_bounces,omitempty"`
-	HumanOpenRate    *float64   `json:"human_open_rate,omitempty"`
-	HumanOpensTotal  *float64   `json:"human_opens_total,omitempty"`
-	HumanUniqueOpens *float64   `json:"human_unique_opens,omitempty"`
-	ID               *string    `json:"id,omitempty"`
-	LastClickAt      *time.Time `json:"last_click_at,omitempty"`
-	LastOpenAt       *time.Time `json:"last_open_at,omitempty"`
+	// Number of abuse reports
+	AbuseReports *float64 `json:"abuse_reports,omitempty"`
+	// Associated campaign ID
+	CampaignID *string `json:"campaign_id,omitempty"`
+	// Click rate (decimal)
+	ClickRate *float64 `json:"click_rate,omitempty"`
+	// Total clicks
+	ClicksTotal *float64 `json:"clicks_total,omitempty"`
+	// Total emails sent
+	EmailsSent *float64 `json:"emails_sent,omitempty"`
+	// End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt *time.Time `json:"end_at,omitempty"`
+	// Forward count
+	ForwardsCount *float64 `json:"forwards_count,omitempty"`
+	// Forwards opened
+	ForwardsOpens *float64 `json:"forwards_opens,omitempty"`
+	// Hard bounce count
+	HardBounces *float64 `json:"hard_bounces,omitempty"`
+	// Open rate (decimal) excluding automated/bot/proxy opens
+	HumanOpenRate *float64 `json:"human_open_rate,omitempty"`
+	// Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
+	HumanOpensTotal *float64 `json:"human_opens_total,omitempty"`
+	// Unique opens excluding automated/bot/proxy opens
+	HumanUniqueOpens *float64 `json:"human_unique_opens,omitempty"`
+	// Unique identifier for the campaign report
+	ID *string `json:"id,omitempty"`
+	// Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastClickAt *time.Time `json:"last_click_at,omitempty"`
+	// Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	LastOpenAt *time.Time `json:"last_open_at,omitempty"`
 	// URL-specific click data
-	Links                  []MarketingReportLink `json:"links,omitempty"`
-	ListID                 *string               `json:"list_id,omitempty"`
-	OpenRate               *float64              `json:"open_rate,omitempty"`
-	OpensTotal             *float64              `json:"opens_total,omitempty"`
-	Raw                    map[string]any        `json:"raw,omitempty"`
-	SentAt                 *time.Time            `json:"sent_at,omitempty"`
-	SoftBounces            *float64              `json:"soft_bounces,omitempty"`
-	StartAt                *time.Time            `json:"start_at,omitempty"`
-	SyntaxErrors           *float64              `json:"syntax_errors,omitempty"`
-	UniqueClicks           *float64              `json:"unique_clicks,omitempty"`
-	UniqueOpens            *float64              `json:"unique_opens,omitempty"`
-	UniqueSubscriberClicks *float64              `json:"unique_subscriber_clicks,omitempty"`
-	Unsubscribed           *float64              `json:"unsubscribed,omitempty"`
+	Links []MarketingReportLink `json:"links,omitempty"`
+	// Associated list ID
+	ListID *string `json:"list_id,omitempty"`
+	// Open rate (decimal)
+	OpenRate *float64 `json:"open_rate,omitempty"`
+	// Total opens
+	OpensTotal *float64 `json:"opens_total,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	SentAt *time.Time `json:"sent_at,omitempty"`
+	// Soft bounce count
+	SoftBounces *float64 `json:"soft_bounces,omitempty"`
+	// Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
+	// Syntax error count
+	SyntaxErrors *float64 `json:"syntax_errors,omitempty"`
+	// Unique clicks
+	UniqueClicks *float64 `json:"unique_clicks,omitempty"`
+	// Unique opens
+	UniqueOpens *float64 `json:"unique_opens,omitempty"`
+	// Unique subscriber clicks
+	UniqueSubscriberClicks *float64 `json:"unique_subscriber_clicks,omitempty"`
+	// Number of unsubscribes
+	Unsubscribed *float64 `json:"unsubscribed,omitempty"`
 }
 
 func (m MarketingReport) MarshalJSON() ([]byte, error) {

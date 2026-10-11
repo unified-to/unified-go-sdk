@@ -30,24 +30,76 @@ func (e *PaymentType) IsExact() bool {
 	return false
 }
 
+type HrisPayslipType string
+
+const (
+	HrisPayslipTypeRegular     HrisPayslipType = "REGULAR"
+	HrisPayslipTypeOffCycle    HrisPayslipType = "OFF_CYCLE"
+	HrisPayslipTypeBonus       HrisPayslipType = "BONUS"
+	HrisPayslipTypeCorrection  HrisPayslipType = "CORRECTION"
+	HrisPayslipTypeTermination HrisPayslipType = "TERMINATION"
+	HrisPayslipTypeContractor  HrisPayslipType = "CONTRACTOR"
+)
+
+func (e HrisPayslipType) ToPointer() *HrisPayslipType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *HrisPayslipType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "REGULAR", "OFF_CYCLE", "BONUS", "CORRECTION", "TERMINATION", "CONTRACTOR":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisPayslip struct {
-	CompanyID *string    `json:"company_id,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
 	// The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
-	Deduction        *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
-	Details          []HrisPayslipDetail           `json:"details,omitempty"`
-	EndAt            *time.Time                    `json:"end_at,omitempty"`
-	GrossAmount      *float64                      `json:"gross_amount,omitempty"`
-	ID               *string                       `json:"id,omitempty"`
-	NetAmount        *float64                      `json:"net_amount,omitempty"`
-	PaidAt           *time.Time                    `json:"paid_at,omitempty"`
-	PaymentReference *string                       `json:"payment_reference,omitempty"`
-	PaymentType      *PaymentType                  `json:"payment_type,omitempty"`
-	Raw              map[string]any                `json:"raw,omitempty"`
-	StartAt          *time.Time                    `json:"start_at,omitempty"`
-	UpdatedAt        *time.Time                    `json:"updated_at,omitempty"`
-	UserID           *string                       `json:"user_id,omitempty"`
+	Deduction *PropertyHrisPayslipDeduction `json:"deduction,omitempty"`
+	// total employee deductions (pre and post-tax)
+	DeductionAmount *float64            `json:"deduction_amount,omitempty"`
+	Details         []HrisPayslipDetail `json:"details,omitempty"`
+	// total taxes withheld from the employee
+	EmployeeTaxAmount *float64 `json:"employee_tax_amount,omitempty"`
+	// total employer benefit contributions
+	EmployerContributionAmount *float64 `json:"employer_contribution_amount,omitempty"`
+	// total employer-paid taxes
+	EmployerTaxAmount *float64 `json:"employer_tax_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt       *time.Time `json:"end_at,omitempty"`
+	GrossAmount *float64   `json:"gross_amount,omitempty"`
+	// year-to-date gross pay as of this payslip
+	GrossYtdAmount *float64 `json:"gross_ytd_amount,omitempty"`
+	// the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+	GroupID *string `json:"group_id,omitempty"`
+	// total hours paid on this payslip
+	Hours     *float64 `json:"hours,omitempty"`
+	ID        *string  `json:"id,omitempty"`
+	NetAmount *float64 `json:"net_amount,omitempty"`
+	// year-to-date net pay as of this payslip
+	NetYtdAmount *float64 `json:"net_ytd_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PaidAt           *time.Time   `json:"paid_at,omitempty"`
+	PaymentReference *string      `json:"payment_reference,omitempty"`
+	PaymentType      *PaymentType `json:"payment_type,omitempty"`
+	// the hris_payroll (pay run) this payslip belongs to
+	PayrollID *string        `json:"payroll_id,omitempty"`
+	Raw       map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time       `json:"start_at,omitempty"`
+	Type    *HrisPayslipType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// the employee (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (h HrisPayslip) MarshalJSON() ([]byte, error) {
@@ -89,11 +141,39 @@ func (h *HrisPayslip) GetDeduction() *PropertyHrisPayslipDeduction {
 	return h.Deduction
 }
 
+func (h *HrisPayslip) GetDeductionAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.DeductionAmount
+}
+
 func (h *HrisPayslip) GetDetails() []HrisPayslipDetail {
 	if h == nil {
 		return nil
 	}
 	return h.Details
+}
+
+func (h *HrisPayslip) GetEmployeeTaxAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.EmployeeTaxAmount
+}
+
+func (h *HrisPayslip) GetEmployerContributionAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.EmployerContributionAmount
+}
+
+func (h *HrisPayslip) GetEmployerTaxAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.EmployerTaxAmount
 }
 
 func (h *HrisPayslip) GetEndAt() *time.Time {
@@ -110,6 +190,27 @@ func (h *HrisPayslip) GetGrossAmount() *float64 {
 	return h.GrossAmount
 }
 
+func (h *HrisPayslip) GetGrossYtdAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.GrossYtdAmount
+}
+
+func (h *HrisPayslip) GetGroupID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.GroupID
+}
+
+func (h *HrisPayslip) GetHours() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.Hours
+}
+
 func (h *HrisPayslip) GetID() *string {
 	if h == nil {
 		return nil
@@ -122,6 +223,13 @@ func (h *HrisPayslip) GetNetAmount() *float64 {
 		return nil
 	}
 	return h.NetAmount
+}
+
+func (h *HrisPayslip) GetNetYtdAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.NetYtdAmount
 }
 
 func (h *HrisPayslip) GetPaidAt() *time.Time {
@@ -145,6 +253,13 @@ func (h *HrisPayslip) GetPaymentType() *PaymentType {
 	return h.PaymentType
 }
 
+func (h *HrisPayslip) GetPayrollID() *string {
+	if h == nil {
+		return nil
+	}
+	return h.PayrollID
+}
+
 func (h *HrisPayslip) GetRaw() map[string]any {
 	if h == nil {
 		return nil
@@ -157,6 +272,13 @@ func (h *HrisPayslip) GetStartAt() *time.Time {
 		return nil
 	}
 	return h.StartAt
+}
+
+func (h *HrisPayslip) GetType() *HrisPayslipType {
+	if h == nil {
+		return nil
+	}
+	return h.Type
 }
 
 func (h *HrisPayslip) GetUpdatedAt() *time.Time {

@@ -33,24 +33,31 @@ func (e *CommerceReservationStatus) IsExact() bool {
 }
 
 type CommerceReservation struct {
-	CreatedAt   *time.Time                 `json:"created_at,omitempty"`
-	EndAt       *time.Time                 `json:"end_at,omitempty"`
-	GuestEmail  *string                    `json:"guest_email,omitempty"`
-	GuestName   *string                    `json:"guest_name,omitempty"`
-	GuestPhone  *string                    `json:"guest_phone,omitempty"`
-	ID          *string                    `json:"id,omitempty"`
-	ItemID      *string                    `json:"item_id,omitempty"`
-	ItemName    *string                    `json:"item_name,omitempty"`
-	LocationID  *string                    `json:"location_id,omitempty"`
-	Notes       *string                    `json:"notes,omitempty"`
-	Raw         map[string]any             `json:"raw,omitempty"`
-	Size        *float64                   `json:"size,omitempty"`
-	StaffName   *string                    `json:"staff_name,omitempty"`
-	StaffUserID *string                    `json:"staff_user_id,omitempty"`
-	StartAt     *time.Time                 `json:"start_at,omitempty"`
-	Status      *CommerceReservationStatus `json:"status,omitempty"`
-	UpdatedAt   *time.Time                 `json:"updated_at,omitempty"`
-	URL         *string                    `json:"url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt      *time.Time `json:"end_at,omitempty"`
+	GuestEmail *string    `json:"guest_email,omitempty"`
+	GuestName  *string    `json:"guest_name,omitempty"`
+	GuestPhone *string    `json:"guest_phone,omitempty"`
+	ID         *string    `json:"id,omitempty"`
+	// (reference to CommerceItem)
+	ItemID   *string `json:"item_id,omitempty"`
+	ItemName *string `json:"item_name,omitempty"`
+	// (reference to CommerceLocation)
+	LocationID *string        `json:"location_id,omitempty"`
+	Notes      *string        `json:"notes,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
+	Size       *float64       `json:"size,omitempty"`
+	StaffName  *string        `json:"staff_name,omitempty"`
+	// (reference to HrisEmployee)
+	StaffUserID *string `json:"staff_user_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time                 `json:"start_at,omitempty"`
+	Status  *CommerceReservationStatus `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	URL       *string    `json:"url,omitempty"`
 }
 
 func (c CommerceReservation) MarshalJSON() ([]byte, error) {

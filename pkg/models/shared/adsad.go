@@ -73,29 +73,32 @@ func (e *AdsAdStatus) IsExact() bool {
 }
 
 type AdsAd struct {
-	AdCopy           *string        `json:"ad_copy,omitempty"`
-	AdType           *AdType        `json:"ad_type,omitempty"`
-	AdvertiserName   *string        `json:"advertiser_name,omitempty"`
-	CampaignID       *string        `json:"campaign_id,omitempty"`
-	CreatedAt        *time.Time     `json:"created_at,omitempty"`
-	CreativeAssetURL *string        `json:"creative_asset_url,omitempty"`
-	CreativeIds      []string       `json:"creative_ids,omitempty"`
-	Cta              *string        `json:"cta,omitempty"`
-	Description      *string        `json:"description,omitempty"`
-	DisplayURL       *string        `json:"display_url,omitempty"`
-	FinalURL         *string        `json:"final_url,omitempty"`
-	GroupID          *string        `json:"group_id,omitempty"`
-	Headline         *string        `json:"headline,omitempty"`
-	ID               *string        `json:"id,omitempty"`
-	LogoCreativeID   *string        `json:"logo_creative_id,omitempty"`
-	Name             *string        `json:"name,omitempty"`
-	OrganizationID   *string        `json:"organization_id,omitempty"`
-	Path1            *string        `json:"path1,omitempty"`
-	Path2            *string        `json:"path2,omitempty"`
-	Promoted         []AdsPromoted  `json:"promoted,omitempty"`
-	Raw              map[string]any `json:"raw,omitempty"`
-	Status           *AdsAdStatus   `json:"status,omitempty"`
-	UpdatedAt        *time.Time     `json:"updated_at,omitempty"`
+	AdCopy         *string `json:"ad_copy,omitempty"`
+	AdType         *AdType `json:"ad_type,omitempty"`
+	AdvertiserName *string `json:"advertiser_name,omitempty"`
+	CampaignID     *string `json:"campaign_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt        *time.Time `json:"created_at,omitempty"`
+	CreativeAssetURL *string    `json:"creative_asset_url,omitempty"`
+	CreativeIds      []string   `json:"creative_ids,omitempty"`
+	Cta              *string    `json:"cta,omitempty"`
+	Description      *string    `json:"description,omitempty"`
+	DisplayURL       *string    `json:"display_url,omitempty"`
+	FinalURL         *string    `json:"final_url,omitempty"`
+	// (reference to AdsGroup)
+	GroupID        *string        `json:"group_id,omitempty"`
+	Headline       *string        `json:"headline,omitempty"`
+	ID             *string        `json:"id,omitempty"`
+	LogoCreativeID *string        `json:"logo_creative_id,omitempty"`
+	Name           *string        `json:"name,omitempty"`
+	OrganizationID *string        `json:"organization_id,omitempty"`
+	Path1          *string        `json:"path1,omitempty"`
+	Path2          *string        `json:"path2,omitempty"`
+	Promoted       []AdsPromoted  `json:"promoted,omitempty"`
+	Raw            map[string]any `json:"raw,omitempty"`
+	Status         *AdsAdStatus   `json:"status,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AdsAd) MarshalJSON() ([]byte, error) {

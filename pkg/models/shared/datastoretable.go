@@ -8,7 +8,9 @@ import (
 )
 
 type DatastoreTable struct {
-	CreatedAt     *time.Time              `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// source Database ID
 	DatabaseID    *string                 `json:"database_id,omitempty"`
 	Description   *string                 `json:"description,omitempty"`
 	Fields        []DatastoreField        `json:"fields,omitempty"`
@@ -17,8 +19,9 @@ type DatastoreTable struct {
 	ParentID      *string                 `json:"parent_id,omitempty"`
 	Raw           map[string]any          `json:"raw,omitempty"`
 	Relationships []DatastoreRelationship `json:"relationships,omitempty"`
-	UpdatedAt     *time.Time              `json:"updated_at,omitempty"`
-	WebURL        *string                 `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (d DatastoreTable) MarshalJSON() ([]byte, error) {

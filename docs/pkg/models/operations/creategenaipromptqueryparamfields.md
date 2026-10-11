@@ -24,4 +24,7 @@ value := operations.CreateGenaiPromptQueryParamFieldsModelID
 | `CreateGenaiPromptQueryParamFieldsMcpURL`                | mcp_url                                                  |
 | `CreateGenaiPromptQueryParamFieldsMcpDeferredTools`      | mcp_deferred_tools                                       |
 | `CreateGenaiPromptQueryParamFieldsMcpAuthorizationToken` | mcp_authorization_token                                  |
+| `CreateGenaiPromptQueryParamFieldsQuestions`             | questions                                                |
+| `CreateGenaiPromptQueryParamFieldsAnswers`               | answers                                                  |
+| `CreateGenaiPromptQueryParamFieldsSkillIds`              | skill_ids                                                |
 | `CreateGenaiPromptQueryParamFieldsRaw`                   | raw                                                      |

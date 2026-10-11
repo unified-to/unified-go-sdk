@@ -8,12 +8,15 @@ import (
 )
 
 type HrisAttendanceBreak struct {
-	DurationMinutes *float64   `json:"duration_minutes,omitempty"`
-	EndAt           *time.Time `json:"end_at,omitempty"`
-	ID              *string    `json:"id,omitempty"`
-	IsPaid          *bool      `json:"is_paid,omitempty"`
-	Name            *string    `json:"name,omitempty"`
-	StartAt         *time.Time `json:"start_at,omitempty"`
+	DurationMinutes *float64 `json:"duration_minutes,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EndAt  *time.Time `json:"end_at,omitempty"`
+	ID     *string    `json:"id,omitempty"`
+	IsPaid *bool      `json:"is_paid,omitempty"`
+	// break type label, e.g. "Lunch"
+	Name *string `json:"name,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	StartAt *time.Time `json:"start_at,omitempty"`
 }
 
 func (h HrisAttendanceBreak) MarshalJSON() ([]byte, error) {

@@ -47,7 +47,8 @@ func (e *FormFieldType) IsExact() bool {
 
 type FormField struct {
 	// For select/radio/checkbox fields
-	Choices      []string      `json:"choices,omitempty"`
+	Choices []string `json:"choices,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt    *time.Time    `json:"created_at,omitempty"`
 	DefaultValue *string       `json:"default_value,omitempty"`
 	Description  *string       `json:"description,omitempty"`
@@ -62,7 +63,8 @@ type FormField struct {
 	Order        *float64      `json:"order,omitempty"`
 	Pattern      *string       `json:"pattern,omitempty"`
 	Type         FormFieldType `json:"type"`
-	UpdatedAt    *time.Time    `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (f FormField) MarshalJSON() ([]byte, error) {

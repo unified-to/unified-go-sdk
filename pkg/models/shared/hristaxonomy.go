@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// HrisTaxonomyType - the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
 type HrisTaxonomyType string
 
 const (
@@ -37,22 +38,31 @@ func (e *HrisTaxonomyType) IsExact() bool {
 
 type HrisTaxonomy struct {
 	// synonyms / alternative labels
-	AlternativeNames []string       `json:"alternative_names,omitempty"`
-	Category         *string        `json:"category,omitempty"`
-	CreatedAt        *time.Time     `json:"created_at,omitempty"`
-	Description      *string        `json:"description,omitempty"`
-	Domain           *string        `json:"domain,omitempty"`
-	ID               *string        `json:"id,omitempty"`
-	IsActive         *bool          `json:"is_active,omitempty"`
-	Name             *string        `json:"name,omitempty"`
-	ParentID         *string        `json:"parent_id,omitempty"`
-	Raw              map[string]any `json:"raw,omitempty"`
+	AlternativeNames []string `json:"alternative_names,omitempty"`
+	// 2nd-level grouping
+	Category *string `json:"category,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// 1st-level grouping (broadest)
+	Domain   *string `json:"domain,omitempty"`
+	ID       *string `json:"id,omitempty"`
+	IsActive *bool   `json:"is_active,omitempty"`
+	// the preferred label of the skill/role
+	Name *string `json:"name,omitempty"`
+	// id of the parent taxonomy item, for providers exposing arbitrary-depth trees
+	ParentID *string        `json:"parent_id,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
 	// ids of hris_taxonomy items of type ROLE that this skill relates to
-	RoleIds     []string          `json:"role_ids,omitempty"`
-	Subcategory *string           `json:"subcategory,omitempty"`
-	Type        *HrisTaxonomyType `json:"type,omitempty"`
-	UpdatedAt   *time.Time        `json:"updated_at,omitempty"`
-	URL         *string           `json:"url,omitempty"`
+	RoleIds []string `json:"role_ids,omitempty"`
+	// 3rd-level grouping
+	Subcategory *string `json:"subcategory,omitempty"`
+	// the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
+	Type *HrisTaxonomyType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// external reference URL for this item
+	URL *string `json:"url,omitempty"`
 }
 
 func (h HrisTaxonomy) MarshalJSON() ([]byte, error) {

@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// CdpSourceDirection - SOURCE, or BIDIRECTIONAL for import+export connectors
 type CdpSourceDirection string
 
 const (
@@ -31,15 +32,24 @@ func (e *CdpSourceDirection) IsExact() bool {
 }
 
 type CdpSource struct {
-	CreatedAt *time.Time          `json:"created_at,omitempty"`
+	// The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// SOURCE, or BIDIRECTIONAL for import+export connectors
 	Direction *CdpSourceDirection `json:"direction,omitempty"`
-	ID        *string             `json:"id,omitempty"`
-	IsEnabled *bool               `json:"is_enabled,omitempty"`
-	Name      *string             `json:"name,omitempty"`
-	Raw       map[string]any      `json:"raw,omitempty"`
-	Slug      *string             `json:"slug,omitempty"`
-	Type      *string             `json:"type,omitempty"`
-	UpdatedAt *time.Time          `json:"updated_at,omitempty"`
+	// Unique identifier for this source object
+	ID *string `json:"id,omitempty"`
+	// Whether the source is active/enabled
+	IsEnabled *bool `json:"is_enabled,omitempty"`
+	// The name of the inbound data source
+	Name *string `json:"name,omitempty"`
+	// The raw data returned by the integration for this source
+	Raw map[string]any `json:"raw,omitempty"`
+	// A stable handle/key for the source
+	Slug *string `json:"slug,omitempty"`
+	// The connector/source type (eg. the provider's connector slug or plugin id)
+	Type *string `json:"type,omitempty"`
+	// The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (c CdpSource) MarshalJSON() ([]byte, error) {

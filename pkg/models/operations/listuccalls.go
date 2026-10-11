@@ -12,21 +12,22 @@ import (
 type ListUcCallsQueryParamFields string
 
 const (
-	ListUcCallsQueryParamFieldsID        ListUcCallsQueryParamFields = "id"
-	ListUcCallsQueryParamFieldsCreatedAt ListUcCallsQueryParamFields = "created_at"
-	ListUcCallsQueryParamFieldsUpdatedAt ListUcCallsQueryParamFields = "updated_at"
-	ListUcCallsQueryParamFieldsContactID ListUcCallsQueryParamFields = "contact_id"
-	ListUcCallsQueryParamFieldsTelephone ListUcCallsQueryParamFields = "telephone"
-	ListUcCallsQueryParamFieldsStartAt   ListUcCallsQueryParamFields = "start_at"
-	ListUcCallsQueryParamFieldsEndAt     ListUcCallsQueryParamFields = "end_at"
-	ListUcCallsQueryParamFieldsUserID    ListUcCallsQueryParamFields = "user_id"
-	ListUcCallsQueryParamFieldsContacts  ListUcCallsQueryParamFields = "contacts"
-	ListUcCallsQueryParamFieldsIsPrivate ListUcCallsQueryParamFields = "is_private"
-	ListUcCallsQueryParamFieldsUserName  ListUcCallsQueryParamFields = "user_name"
-	ListUcCallsQueryParamFieldsUserPhone ListUcCallsQueryParamFields = "user_phone"
-	ListUcCallsQueryParamFieldsType      ListUcCallsQueryParamFields = "type"
-	ListUcCallsQueryParamFieldsMetadata  ListUcCallsQueryParamFields = "metadata"
-	ListUcCallsQueryParamFieldsRaw       ListUcCallsQueryParamFields = "raw"
+	ListUcCallsQueryParamFieldsID                     ListUcCallsQueryParamFields = "id"
+	ListUcCallsQueryParamFieldsCreatedAt              ListUcCallsQueryParamFields = "created_at"
+	ListUcCallsQueryParamFieldsUpdatedAt              ListUcCallsQueryParamFields = "updated_at"
+	ListUcCallsQueryParamFieldsContactID              ListUcCallsQueryParamFields = "contact_id"
+	ListUcCallsQueryParamFieldsTelephone              ListUcCallsQueryParamFields = "telephone"
+	ListUcCallsQueryParamFieldsStartAt                ListUcCallsQueryParamFields = "start_at"
+	ListUcCallsQueryParamFieldsEndAt                  ListUcCallsQueryParamFields = "end_at"
+	ListUcCallsQueryParamFieldsUserID                 ListUcCallsQueryParamFields = "user_id"
+	ListUcCallsQueryParamFieldsContacts               ListUcCallsQueryParamFields = "contacts"
+	ListUcCallsQueryParamFieldsIsPrivate              ListUcCallsQueryParamFields = "is_private"
+	ListUcCallsQueryParamFieldsUserName               ListUcCallsQueryParamFields = "user_name"
+	ListUcCallsQueryParamFieldsUserPhone              ListUcCallsQueryParamFields = "user_phone"
+	ListUcCallsQueryParamFieldsType                   ListUcCallsQueryParamFields = "type"
+	ListUcCallsQueryParamFieldsMetadata               ListUcCallsQueryParamFields = "metadata"
+	ListUcCallsQueryParamFieldsRaw                    ListUcCallsQueryParamFields = "raw"
+	ListUcCallsQueryParamFieldsConversationIdentifier ListUcCallsQueryParamFields = "conversation_identifier"
 )
 
 func (e ListUcCallsQueryParamFields) ToPointer() *ListUcCallsQueryParamFields {
@@ -67,6 +68,8 @@ func (e *ListUcCallsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metadata":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "conversation_identifier":
 		*e = ListUcCallsQueryParamFields(v)
 		return nil
 	default:

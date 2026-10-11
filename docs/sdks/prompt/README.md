@@ -33,6 +33,25 @@ func main() {
 
     res, err := s.Prompt.CreateGenaiPrompt(ctx, operations.CreateGenaiPromptRequest{
         GenaiPrompt: shared.GenaiPrompt{
+            Answers: []shared.GenaiAnswer{
+                shared.GenaiAnswer{
+                    Confidence: unifiedgosdk.Pointer[float64](0.5384309098590165),
+                    ID: "TeZpueFB",
+                    Probabilities: []shared.GenaiAnswerProbability{
+                        shared.GenaiAnswerProbability{
+                            Option: "veniam",
+                            Probability: 0.05683182482607663,
+                        },
+                        shared.GenaiAnswerProbability{
+                            Option: "comes",
+                            Probability: 0.1404057613108307,
+                        },
+                    },
+                    Score: unifiedgosdk.Pointer[float64](0.05974147981032729),
+                    Type: shared.GenaiAnswerTypeChoice,
+                    Value: unifiedgosdk.Pointer("summisse"),
+                },
+            },
             MaxTokens: unifiedgosdk.Pointer[float64](0.4677782787475735),
             McpAuthorizationToken: unifiedgosdk.Pointer("f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4"),
             McpDeferredTools: []string{},
@@ -40,11 +59,45 @@ func main() {
             Messages: []shared.GenaiContent{
                 shared.GenaiContent{
                     Content: "Aegre repudiandae verecundia facere statua.",
+                    Images: []string{},
                     Role: shared.RoleAssistant.ToPointer(),
                 },
                 shared.GenaiContent{
                     Content: "Speciosus xiphias soleo trepide crinis.",
+                    Images: []string{},
                     Role: shared.RoleSystem.ToPointer(),
+                },
+            },
+            Questions: []shared.GenaiQuestion{
+                shared.GenaiQuestion{
+                    ID: "KtvbYiEq",
+                    Instructions: "Admiratio cura contabesco subvenio venustas architecto vacuus summopere.",
+                    Options: []string{
+                        "vulnero",
+                        "quasi",
+                        "tolero",
+                    },
+                    Type: shared.GenaiQuestionTypeBoolean,
+                },
+                shared.GenaiQuestion{
+                    ID: "oV6IURtv",
+                    Instructions: "Celer deleniti ventus ipsam tendo odit.",
+                    Options: []string{
+                        "nulla",
+                        "aspicio",
+                        "tero",
+                    },
+                    Type: shared.GenaiQuestionTypeChoice,
+                },
+                shared.GenaiQuestion{
+                    ID: "60dBZk2K",
+                    Instructions: "Decretum vesica amet repudiandae.",
+                    Options: []string{
+                        "ducimus",
+                        "civis",
+                        "alter",
+                    },
+                    Type: shared.GenaiQuestionTypeBoolean,
                 },
             },
             Responses: []string{

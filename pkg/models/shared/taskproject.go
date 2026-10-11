@@ -8,18 +8,22 @@ import (
 )
 
 type TaskProject struct {
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	GroupIds    []string       `json:"group_ids,omitempty"`
-	HasChildren *bool          `json:"has_children,omitempty"`
-	HasTasks    *bool          `json:"has_tasks,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	Metadata    []TaskMetadata `json:"metadata,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	ParentID    *string        `json:"parent_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	UserIds     []string       `json:"user_ids,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	GroupIds    []string   `json:"group_ids,omitempty"`
+	// If this project has children folders / lists
+	HasChildren *bool `json:"has_children,omitempty"`
+	// If you can use this project ID to list tasks. Default is true.
+	HasTasks *bool          `json:"has_tasks,omitempty"`
+	ID       *string        `json:"id,omitempty"`
+	Metadata []TaskMetadata `json:"metadata,omitempty"`
+	Name     *string        `json:"name,omitempty"`
+	ParentID *string        `json:"parent_id,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	UserIds   []string   `json:"user_ids,omitempty"`
 }
 
 func (t TaskProject) MarshalJSON() ([]byte, error) {

@@ -8,27 +8,41 @@ import (
 )
 
 type ShippingRateRate struct {
-	Amount                   *float64   `json:"amount,omitempty"`
-	BaseAmount               *float64   `json:"base_amount,omitempty"`
-	Currency                 *string    `json:"currency,omitempty"`
-	DeliveryDays             *float64   `json:"delivery_days,omitempty"`
-	DeliveryTerms            *string    `json:"delivery_terms,omitempty"`
-	Description              *string    `json:"description,omitempty"`
-	DiscountAmount           *float64   `json:"discount_amount,omitempty"`
-	EstimatedDays            *float64   `json:"estimated_days,omitempty"`
-	EstimatedDeliveryEndAt   *time.Time `json:"estimated_delivery_end_at,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	// Base shipping rate
+	BaseAmount *float64 `json:"base_amount,omitempty"`
+	Currency   *string  `json:"currency,omitempty"`
+	// Delivery days (integer)
+	DeliveryDays *float64 `json:"delivery_days,omitempty"`
+	// Delivery duration terms (e.g., "3-5 business days")
+	DeliveryTerms *string `json:"delivery_terms,omitempty"`
+	Description   *string `json:"description,omitempty"`
+	// Applied discount
+	DiscountAmount *float64 `json:"discount_amount,omitempty"`
+	// Estimated delivery time in days
+	EstimatedDays *float64 `json:"estimated_days,omitempty"`
+	// Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	EstimatedDeliveryEndAt *time.Time `json:"estimated_delivery_end_at,omitempty"`
+	// Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EstimatedDeliveryStartAt *time.Time `json:"estimated_delivery_start_at,omitempty"`
-	IsActive                 *bool      `json:"is_active,omitempty"`
-	IsGuaranteed             *bool      `json:"is_guaranteed,omitempty"`
-	IsNegotiatedRate         *bool      `json:"is_negotiated_rate,omitempty"`
-	IsTrackable              *bool      `json:"is_trackable,omitempty"`
-	PackageType              *string    `json:"package_type,omitempty"`
-	RateSource               *string    `json:"rate_source,omitempty"`
+	// Whether rate is currently available
+	IsActive *bool `json:"is_active,omitempty"`
+	// Whether delivery is guaranteed
+	IsGuaranteed *bool `json:"is_guaranteed,omitempty"`
+	// Whether this is a negotiated rate
+	IsNegotiatedRate *bool `json:"is_negotiated_rate,omitempty"`
+	// Whether shipment is trackable
+	IsTrackable *bool `json:"is_trackable,omitempty"`
+	// Package type (e.g., "package", "envelope", "flat")
+	PackageType *string `json:"package_type,omitempty"`
+	// Source of rate (e.g., "carrier", "negotiated", "account")
+	RateSource *string `json:"rate_source,omitempty"`
 	// Additional charges
-	Surcharges   []ShippingRateSurcharge `json:"surcharges,omitempty"`
-	TaxAmount    *float64                `json:"tax_amount,omitempty"`
-	Title        string                  `json:"title"`
-	TransitHours *float64                `json:"transit_hours,omitempty"`
+	Surcharges []ShippingRateSurcharge `json:"surcharges,omitempty"`
+	TaxAmount  *float64                `json:"tax_amount,omitempty"`
+	Title      string                  `json:"title"`
+	// Transit time in hours
+	TransitHours *float64 `json:"transit_hours,omitempty"`
 }
 
 func (s ShippingRateRate) MarshalJSON() ([]byte, error) {

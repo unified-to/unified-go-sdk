@@ -42,25 +42,34 @@ func (e *AtsApplicationStatus) IsExact() bool {
 }
 
 type AtsApplication struct {
-	Answers           []AtsApplicationAnswer `json:"answers,omitempty"`
-	AppliedAt         *time.Time             `json:"applied_at,omitempty"`
-	CandidateID       *string                `json:"candidate_id,omitempty"`
-	CreatedAt         *time.Time             `json:"created_at,omitempty"`
-	HiredAt           *time.Time             `json:"hired_at,omitempty"`
-	ID                *string                `json:"id,omitempty"`
-	JobID             *string                `json:"job_id,omitempty"`
-	Metadata          []AtsMetadata          `json:"metadata,omitempty"`
-	Offers            []AtsOffer             `json:"offers,omitempty"`
-	OriginalStatus    *string                `json:"original_status,omitempty"`
-	OriginalSubstatus *string                `json:"original_substatus,omitempty"`
-	Raw               map[string]any         `json:"raw,omitempty"`
-	RejectedAt        *time.Time             `json:"rejected_at,omitempty"`
-	RejectedReason    *string                `json:"rejected_reason,omitempty"`
-	Source            *string                `json:"source,omitempty"`
-	Status            *AtsApplicationStatus  `json:"status,omitempty"`
-	Summary           *string                `json:"summary,omitempty"`
-	UpdatedAt         *time.Time             `json:"updated_at,omitempty"`
-	UserID            *string                `json:"user_id,omitempty"`
+	Answers []AtsApplicationAnswer `json:"answers,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	AppliedAt   *time.Time `json:"applied_at,omitempty"`
+	CandidateID *string    `json:"candidate_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	HiredAt  *time.Time    `json:"hired_at,omitempty"`
+	ID       *string       `json:"id,omitempty"`
+	JobID    *string       `json:"job_id,omitempty"`
+	Metadata []AtsMetadata `json:"metadata,omitempty"`
+	Offers   []AtsOffer    `json:"offers,omitempty"`
+	// The integration's original status.  Mostly used to have your customers chose the application status/stage so that your software can trigger an event.
+	OriginalStatus *string `json:"original_status,omitempty"`
+	// The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready hiring_stage)
+	OriginalSubstatus *string        `json:"original_substatus,omitempty"`
+	Raw               map[string]any `json:"raw,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RejectedAt     *time.Time            `json:"rejected_at,omitempty"`
+	RejectedReason *string               `json:"rejected_reason,omitempty"`
+	Source         *string               `json:"source,omitempty"`
+	Status         *AtsApplicationStatus `json:"status,omitempty"`
+	// Application personal summary (e.g. Pinpoint Personal Summary)
+	Summary *string `json:"summary,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// HR user/employee ID (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (a AtsApplication) MarshalJSON() ([]byte, error) {

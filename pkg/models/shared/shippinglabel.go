@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// LabelFormat - Format of the label (PDF, PNG, ZPL, EPL2)
 type LabelFormat string
 
 const (
@@ -35,6 +36,7 @@ func (e *LabelFormat) IsExact() bool {
 	return false
 }
 
+// ShippingLabelStatus - Status of the label
 type ShippingLabelStatus string
 
 const (
@@ -70,20 +72,33 @@ func (e *ShippingLabelStatus) IsExact() bool {
 }
 
 type ShippingLabel struct {
-	CreatedAt         *time.Time           `json:"created_at,omitempty"`
-	ID                *string              `json:"id,omitempty"`
-	IsVoided          *bool                `json:"is_voided,omitempty"`
-	LabelCost         *float64             `json:"label_cost,omitempty"`
-	LabelCostCurrency *string              `json:"label_cost_currency,omitempty"`
-	LabelFormat       *LabelFormat         `json:"label_format,omitempty"`
-	LabelURL          *string              `json:"label_url,omitempty"`
-	RateID            *string              `json:"rate_id,omitempty"`
-	Raw               map[string]any       `json:"raw,omitempty"`
-	ServiceCode       *string              `json:"service_code,omitempty"`
-	ShipmentID        *string              `json:"shipment_id,omitempty"`
-	Status            *ShippingLabelStatus `json:"status,omitempty"`
-	TrackingNumber    *string              `json:"tracking_number,omitempty"`
-	UpdatedAt         *time.Time           `json:"updated_at,omitempty"`
+	// The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Unique identifier for this label object
+	ID *string `json:"id,omitempty"`
+	// Whether label has been voided
+	IsVoided *bool `json:"is_voided,omitempty"`
+	// Cost to purchase label
+	LabelCost         *float64 `json:"label_cost,omitempty"`
+	LabelCostCurrency *string  `json:"label_cost_currency,omitempty"`
+	// Format of the label (PDF, PNG, ZPL, EPL2)
+	LabelFormat *LabelFormat `json:"label_format,omitempty"`
+	// URL to download the label
+	LabelURL *string `json:"label_url,omitempty"`
+	// Rate used for this label; points to ShippingRate
+	RateID *string `json:"rate_id,omitempty"`
+	// The raw data returned by the integration for this label
+	Raw map[string]any `json:"raw,omitempty"`
+	// Service code used
+	ServiceCode *string `json:"service_code,omitempty"`
+	// Reference to the shipment
+	ShipmentID *string `json:"shipment_id,omitempty"`
+	// Status of the label
+	Status *ShippingLabelStatus `json:"status,omitempty"`
+	// Tracking number for the shipment
+	TrackingNumber *string `json:"tracking_number,omitempty"`
+	// The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (s ShippingLabel) MarshalJSON() ([]byte, error) {

@@ -56,16 +56,19 @@ func (e *EmployerContributionType) IsExact() bool {
 	return false
 }
 
+// HrisBenefitFrequency - Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
 type HrisBenefitFrequency string
 
 const (
-	HrisBenefitFrequencyOneTime HrisBenefitFrequency = "ONE_TIME"
-	HrisBenefitFrequencyDay     HrisBenefitFrequency = "DAY"
-	HrisBenefitFrequencyQuarter HrisBenefitFrequency = "QUARTER"
-	HrisBenefitFrequencyYear    HrisBenefitFrequency = "YEAR"
-	HrisBenefitFrequencyHour    HrisBenefitFrequency = "HOUR"
-	HrisBenefitFrequencyMonth   HrisBenefitFrequency = "MONTH"
-	HrisBenefitFrequencyWeek    HrisBenefitFrequency = "WEEK"
+	HrisBenefitFrequencyOneTime     HrisBenefitFrequency = "ONE_TIME"
+	HrisBenefitFrequencyDay         HrisBenefitFrequency = "DAY"
+	HrisBenefitFrequencyQuarter     HrisBenefitFrequency = "QUARTER"
+	HrisBenefitFrequencyYear        HrisBenefitFrequency = "YEAR"
+	HrisBenefitFrequencyHour        HrisBenefitFrequency = "HOUR"
+	HrisBenefitFrequencyMonth       HrisBenefitFrequency = "MONTH"
+	HrisBenefitFrequencyWeek        HrisBenefitFrequency = "WEEK"
+	HrisBenefitFrequencyBiweekly    HrisBenefitFrequency = "BIWEEKLY"
+	HrisBenefitFrequencySemimonthly HrisBenefitFrequency = "SEMIMONTHLY"
 )
 
 func (e HrisBenefitFrequency) ToPointer() *HrisBenefitFrequency {
@@ -76,13 +79,14 @@ func (e HrisBenefitFrequency) ToPointer() *HrisBenefitFrequency {
 func (e *HrisBenefitFrequency) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK":
+		case "ONE_TIME", "DAY", "QUARTER", "YEAR", "HOUR", "MONTH", "WEEK", "BIWEEKLY", "SEMIMONTHLY":
 			return true
 		}
 	}
 	return false
 }
 
+// Tax describes the tax treatment of the benefit
 type Tax string
 
 const (
@@ -127,6 +131,10 @@ const (
 	HrisBenefitTypeLoanRepayment           HrisBenefitType = "LOAN_REPAYMENT"
 	HrisBenefitTypeCharitableContribution  HrisBenefitType = "CHARITABLE_CONTRIBUTION"
 	HrisBenefitTypeOther                   HrisBenefitType = "OTHER"
+	HrisBenefitTypeRetirementRoth          HrisBenefitType = "RETIREMENT_ROTH"
+	HrisBenefitTypeCommuter                HrisBenefitType = "COMMUTER"
+	HrisBenefitTypeDependentCare           HrisBenefitType = "DEPENDENT_CARE"
+	HrisBenefitTypePension                 HrisBenefitType = "PENSION"
 )
 
 func (e HrisBenefitType) ToPointer() *HrisBenefitType {
@@ -137,7 +145,7 @@ func (e HrisBenefitType) ToPointer() *HrisBenefitType {
 func (e *HrisBenefitType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "RETIREMENT", "HEALTH", "DENTAL", "VISION", "LIFE", "HSA", "FSA", "SHORT_TERM_DISABILITY", "LONG_TERM_DISABILITY", "WORKERS_COMP", "HOUSING_STIPEND", "EMPLOYER_TAX_CONTRIBUTION", "GARNISHMENT", "LOAN_REPAYMENT", "CHARITABLE_CONTRIBUTION", "OTHER":
+		case "RETIREMENT", "HEALTH", "DENTAL", "VISION", "LIFE", "HSA", "FSA", "SHORT_TERM_DISABILITY", "LONG_TERM_DISABILITY", "WORKERS_COMP", "HOUSING_STIPEND", "EMPLOYER_TAX_CONTRIBUTION", "GARNISHMENT", "LOAN_REPAYMENT", "CHARITABLE_CONTRIBUTION", "OTHER", "RETIREMENT_ROTH", "COMMUTER", "DEPENDENT_CARE", "PENSION":
 			return true
 		}
 	}
@@ -146,22 +154,31 @@ func (e *HrisBenefitType) IsExact() bool {
 
 // HrisBenefit - Company-wide benefit plans available to employees.
 type HrisBenefit struct {
-	CompanyID                     *string                   `json:"company_id,omitempty"`
-	CoverageLevel                 *CoverageLevel            `json:"coverage_level,omitempty"`
-	CreatedAt                     *time.Time                `json:"created_at,omitempty"`
-	Currency                      *string                   `json:"currency,omitempty"`
-	Description                   *string                   `json:"description,omitempty"`
-	EmployerContributionAmount    *float64                  `json:"employer_contribution_amount,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID     *string        `json:"company_id,omitempty"`
+	CoverageLevel *CoverageLevel `json:"coverage_level,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// e.g. "Company 401(k) retirement plan"
+	Description *string `json:"description,omitempty"`
+	// percentage or money
+	EmployerContributionAmount *float64 `json:"employer_contribution_amount,omitempty"`
+	// always money
 	EmployerContributionMaxAmount *float64                  `json:"employer_contribution_max_amount,omitempty"`
 	EmployerContributionType      *EmployerContributionType `json:"employer_contribution_type,omitempty"`
-	Frequency                     *HrisBenefitFrequency     `json:"frequency,omitempty"`
-	ID                            *string                   `json:"id,omitempty"`
-	IsActive                      *bool                     `json:"is_active,omitempty"`
-	Name                          *string                   `json:"name,omitempty"`
-	Raw                           map[string]any            `json:"raw,omitempty"`
-	Tax                           *Tax                      `json:"tax,omitempty"`
-	Type                          *HrisBenefitType          `json:"type,omitempty"`
-	UpdatedAt                     *time.Time                `json:"updated_at,omitempty"`
+	// Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
+	Frequency *HrisBenefitFrequency `json:"frequency,omitempty"`
+	ID        *string               `json:"id,omitempty"`
+	IsActive  *bool                 `json:"is_active,omitempty"`
+	// e.g. "401(k) Plan"
+	Name *string        `json:"name,omitempty"`
+	Raw  map[string]any `json:"raw,omitempty"`
+	// Tax describes the tax treatment of the benefit
+	Tax  *Tax             `json:"tax,omitempty"`
+	Type *HrisBenefitType `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (h HrisBenefit) MarshalJSON() ([]byte, error) {

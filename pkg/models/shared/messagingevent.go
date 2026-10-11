@@ -41,9 +41,11 @@ func (e *MessagingEventType) IsExact() bool {
 }
 
 type MessagingEvent struct {
-	Button              *PropertyMessagingEventButton  `json:"button,omitempty"`
-	Channel             *PropertyMessagingEventChannel `json:"channel,omitempty"`
-	CreatedAt           *time.Time                     `json:"created_at,omitempty"`
+	Button  *PropertyMessagingEventButton  `json:"button,omitempty"`
+	Channel *PropertyMessagingEventChannel `json:"channel,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// not used
 	ID                  *string                        `json:"id,omitempty"`
 	IsReplacingOriginal *bool                          `json:"is_replacing_original,omitempty"`
 	Message             *PropertyMessagingEventMessage `json:"message,omitempty"`

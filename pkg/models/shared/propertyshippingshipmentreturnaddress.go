@@ -4,21 +4,29 @@ package shared
 
 // PropertyShippingShipmentReturnAddress - Return address (may differ from from_address)
 type PropertyShippingShipmentReturnAddress struct {
-	Address1             *string `json:"address1,omitempty"`
-	Address2             *string `json:"address2,omitempty"`
-	City                 *string `json:"city,omitempty"`
-	CompanyName          *string `json:"company_name,omitempty"`
-	Country              *string `json:"country,omitempty"`
-	CountryCode          *string `json:"country_code,omitempty"`
+	Address1 *string `json:"address1,omitempty"`
+	Address2 *string `json:"address2,omitempty"`
+	City     *string `json:"city,omitempty"`
+	// Company name (for commercial addresses)
+	CompanyName *string `json:"company_name,omitempty"`
+	Country     *string `json:"country,omitempty"`
+	// ISO 2-digit country code
+	CountryCode *string `json:"country_code,omitempty"`
+	// Special delivery notes
 	DeliveryInstructions *string `json:"delivery_instructions,omitempty"`
-	Email                *string `json:"email,omitempty"`
-	IsResidential        *bool   `json:"is_residential,omitempty"`
-	IsValidated          *bool   `json:"is_validated,omitempty"`
-	Name                 *string `json:"name,omitempty"`
-	PostalCode           *string `json:"postal_code,omitempty"`
-	Region               *string `json:"region,omitempty"`
-	RegionCode           *string `json:"region_code,omitempty"`
-	Telephone            *string `json:"telephone,omitempty"`
+	// Email address (for delivery notifications)
+	Email *string `json:"email,omitempty"`
+	// Alias for address_type === 'RESIDENTIAL'
+	IsResidential *bool `json:"is_residential,omitempty"`
+	// Whether address has been validated
+	IsValidated *bool `json:"is_validated,omitempty"`
+	// Recipientsender name
+	Name       *string `json:"name,omitempty"`
+	PostalCode *string `json:"postal_code,omitempty"`
+	Region     *string `json:"region,omitempty"`
+	RegionCode *string `json:"region_code,omitempty"`
+	// Phone number (required by FedEx, UPS, DHL)
+	Telephone *string `json:"telephone,omitempty"`
 }
 
 func (p *PropertyShippingShipmentReturnAddress) GetAddress1() *string {

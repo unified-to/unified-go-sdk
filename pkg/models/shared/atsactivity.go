@@ -35,9 +35,11 @@ type AtsActivity struct {
 	Bcc           []AtsEmail `json:"bcc,omitempty"`
 	CandidateID   *string    `json:"candidate_id,omitempty"`
 	Cc            []AtsEmail `json:"cc,omitempty"`
-	CompanyID     *string    `json:"company_id,omitempty"`
-	CreatedAt     *time.Time `json:"created_at,omitempty"`
-	Description   *string    `json:"description,omitempty"`
+	// (reference to AtsCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
 	// IDs for AtsDocument.get
 	DocumentIds []string                 `json:"document_ids,omitempty"`
 	From        *PropertyAtsActivityFrom `json:"from,omitempty"`
@@ -51,7 +53,8 @@ type AtsActivity struct {
 	Title       *string                  `json:"title,omitempty"`
 	To          []AtsEmail               `json:"to,omitempty"`
 	Type        *AtsActivityType         `json:"type,omitempty"`
-	UpdatedAt   *time.Time               `json:"updated_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// id values of the recruiters associated with the activity.
 	UserIds []string `json:"user_ids,omitempty"`
 }

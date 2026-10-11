@@ -8,14 +8,18 @@ import (
 )
 
 type DatastoreRecord struct {
-	CreatedAt  *time.Time                     `json:"created_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// source Database ID
 	DatabaseID *string                        `json:"database_id,omitempty"`
 	Fields     map[string]DatastoreFieldValue `json:"fields"`
 	ID         *string                        `json:"id,omitempty"`
 	Raw        map[string]any                 `json:"raw,omitempty"`
 	RowNumber  *float64                       `json:"row_number,omitempty"`
-	TableID    *string                        `json:"table_id,omitempty"`
-	UpdatedAt  *time.Time                     `json:"updated_at,omitempty"`
+	// source Database Table ID
+	TableID *string `json:"table_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (d DatastoreRecord) MarshalJSON() ([]byte, error) {

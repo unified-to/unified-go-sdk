@@ -30,4 +30,5 @@ value := operations.CreateAccountingPurchaseorderQueryParamFieldsID
 | `CreateAccountingPurchaseorderQueryParamFieldsOrganizationID`  | organization_id                                                |
 | `CreateAccountingPurchaseorderQueryParamFieldsCategoryIds`     | category_ids                                                   |
 | `CreateAccountingPurchaseorderQueryParamFieldsMetadata`        | metadata                                                       |
+| `CreateAccountingPurchaseorderQueryParamFieldsAttachments`     | attachments                                                    |
 | `CreateAccountingPurchaseorderQueryParamFieldsRaw`             | raw                                                            |

@@ -8,6 +8,7 @@ import (
 )
 
 type DatastoreDatabase struct {
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
@@ -16,8 +17,9 @@ type DatastoreDatabase struct {
 	Password    *string        `json:"password,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	Region      *string        `json:"region,omitempty"`
-	UpdatedAt   *time.Time     `json:"updated_at,omitempty"`
-	WebURL      *string        `json:"web_url,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	WebURL    *string    `json:"web_url,omitempty"`
 }
 
 func (d DatastoreDatabase) MarshalJSON() ([]byte, error) {

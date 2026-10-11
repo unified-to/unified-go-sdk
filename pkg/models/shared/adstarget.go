@@ -2,6 +2,7 @@
 
 package shared
 
+// AdsTargetType - Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
 type AdsTargetType string
 
 const (
@@ -44,7 +45,8 @@ type AdsTarget struct {
 	Name             *string        `json:"name,omitempty"`
 	ParentID         *string        `json:"parent_id,omitempty"`
 	Raw              map[string]any `json:"raw,omitempty"`
-	Type             *AdsTargetType `json:"type,omitempty"`
+	// Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
+	Type *AdsTargetType `json:"type,omitempty"`
 }
 
 func (a *AdsTarget) GetAudienceCountMax() *float64 {

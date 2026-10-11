@@ -27,4 +27,11 @@ value := operations.GetHrisBankaccountQueryParamFieldsID
 | `GetHrisBankaccountQueryParamFieldsAccountNumberLast4` | account_number_last4                                   |
 | `GetHrisBankaccountQueryParamFieldsName`               | name                                                   |
 | `GetHrisBankaccountQueryParamFieldsIsPrimary`          | is_primary                                             |
+| `GetHrisBankaccountQueryParamFieldsIban`               | iban                                                   |
+| `GetHrisBankaccountQueryParamFieldsBic`                | bic                                                    |
+| `GetHrisBankaccountQueryParamFieldsCountryCode`        | country_code                                           |
+| `GetHrisBankaccountQueryParamFieldsCurrency`           | currency                                               |
+| `GetHrisBankaccountQueryParamFieldsSplitType`          | split_type                                             |
+| `GetHrisBankaccountQueryParamFieldsSplitAmount`        | split_amount                                           |
+| `GetHrisBankaccountQueryParamFieldsPriority`           | priority                                               |
 | `GetHrisBankaccountQueryParamFieldsRaw`                | raw                                                    |

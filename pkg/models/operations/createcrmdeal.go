@@ -30,8 +30,8 @@ const (
 	CreateCrmDealQueryParamFieldsUserID      CreateCrmDealQueryParamFields = "user_id"
 	CreateCrmDealQueryParamFieldsContactIds  CreateCrmDealQueryParamFields = "contact_ids"
 	CreateCrmDealQueryParamFieldsCompanyIds  CreateCrmDealQueryParamFields = "company_ids"
-	CreateCrmDealQueryParamFieldsMetadata    CreateCrmDealQueryParamFields = "metadata"
 	CreateCrmDealQueryParamFieldsDescription CreateCrmDealQueryParamFields = "description"
+	CreateCrmDealQueryParamFieldsMetadata    CreateCrmDealQueryParamFields = "metadata"
 	CreateCrmDealQueryParamFieldsRaw         CreateCrmDealQueryParamFields = "raw"
 )
 
@@ -80,9 +80,9 @@ func (e *CreateCrmDealQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "company_ids":
 		fallthrough
-	case "metadata":
-		fallthrough
 	case "description":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCrmDealQueryParamFields(v)

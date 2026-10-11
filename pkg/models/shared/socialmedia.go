@@ -2,6 +2,7 @@
 
 package shared
 
+// SocialMediaType - Type of media
 type SocialMediaType string
 
 const (
@@ -27,13 +28,20 @@ func (e *SocialMediaType) IsExact() bool {
 }
 
 type SocialMedia struct {
-	Alt      *string          `json:"alt,omitempty"`
-	Height   *float64         `json:"height,omitempty"`
-	ID       *string          `json:"id,omitempty"`
-	Position *float64         `json:"position,omitempty"`
-	Type     *SocialMediaType `json:"type,omitempty"`
-	URL      string           `json:"url"`
-	Width    *float64         `json:"width,omitempty"`
+	// Accessibility caption / alt text
+	Alt *string `json:"alt,omitempty"`
+	// Media height in pixels
+	Height *float64 `json:"height,omitempty"`
+	// Provider media id, when the media is individually addressable
+	ID *string `json:"id,omitempty"`
+	// Ordering of the media within the post; 1 is the first
+	Position *float64 `json:"position,omitempty"`
+	// Type of media
+	Type *SocialMediaType `json:"type,omitempty"`
+	// URL of the media asset
+	URL string `json:"url"`
+	// Media width in pixels
+	Width *float64 `json:"width,omitempty"`
 }
 
 func (s *SocialMedia) GetAlt() *string {

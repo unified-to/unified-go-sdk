@@ -8,12 +8,14 @@ import (
 )
 
 type AccountingAgedRow struct {
-	BalanceAmount *float64                              `json:"balance_amount,omitempty"`
-	Contact       *PropertyAccountingAgedRowContact     `json:"contact,omitempty"`
-	DueAt         *time.Time                            `json:"due_at,omitempty"`
-	PostedAt      *time.Time                            `json:"posted_at,omitempty"`
-	TotalAmount   *float64                              `json:"total_amount,omitempty"`
-	Transaction   *PropertyAccountingAgedRowTransaction `json:"transaction,omitempty"`
+	BalanceAmount *float64                          `json:"balance_amount,omitempty"`
+	Contact       *PropertyAccountingAgedRowContact `json:"contact,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	DueAt *time.Time `json:"due_at,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PostedAt    *time.Time                            `json:"posted_at,omitempty"`
+	TotalAmount *float64                              `json:"total_amount,omitempty"`
+	Transaction *PropertyAccountingAgedRowTransaction `json:"transaction,omitempty"`
 }
 
 func (a AccountingAgedRow) MarshalJSON() ([]byte, error) {

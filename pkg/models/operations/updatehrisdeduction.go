@@ -12,21 +12,26 @@ import (
 type UpdateHrisDeductionQueryParamFields string
 
 const (
-	UpdateHrisDeductionQueryParamFieldsID            UpdateHrisDeductionQueryParamFields = "id"
-	UpdateHrisDeductionQueryParamFieldsCreatedAt     UpdateHrisDeductionQueryParamFields = "created_at"
-	UpdateHrisDeductionQueryParamFieldsUpdatedAt     UpdateHrisDeductionQueryParamFields = "updated_at"
-	UpdateHrisDeductionQueryParamFieldsUserID        UpdateHrisDeductionQueryParamFields = "user_id"
-	UpdateHrisDeductionQueryParamFieldsCompanyID     UpdateHrisDeductionQueryParamFields = "company_id"
-	UpdateHrisDeductionQueryParamFieldsBenefitID     UpdateHrisDeductionQueryParamFields = "benefit_id"
-	UpdateHrisDeductionQueryParamFieldsAmount        UpdateHrisDeductionQueryParamFields = "amount"
-	UpdateHrisDeductionQueryParamFieldsType          UpdateHrisDeductionQueryParamFields = "type"
-	UpdateHrisDeductionQueryParamFieldsCoverageLevel UpdateHrisDeductionQueryParamFields = "coverage_level"
-	UpdateHrisDeductionQueryParamFieldsFrequency     UpdateHrisDeductionQueryParamFields = "frequency"
-	UpdateHrisDeductionQueryParamFieldsStartAt       UpdateHrisDeductionQueryParamFields = "start_at"
-	UpdateHrisDeductionQueryParamFieldsEndAt         UpdateHrisDeductionQueryParamFields = "end_at"
-	UpdateHrisDeductionQueryParamFieldsIsActive      UpdateHrisDeductionQueryParamFields = "is_active"
-	UpdateHrisDeductionQueryParamFieldsNotes         UpdateHrisDeductionQueryParamFields = "notes"
-	UpdateHrisDeductionQueryParamFieldsRaw           UpdateHrisDeductionQueryParamFields = "raw"
+	UpdateHrisDeductionQueryParamFieldsID              UpdateHrisDeductionQueryParamFields = "id"
+	UpdateHrisDeductionQueryParamFieldsCreatedAt       UpdateHrisDeductionQueryParamFields = "created_at"
+	UpdateHrisDeductionQueryParamFieldsUpdatedAt       UpdateHrisDeductionQueryParamFields = "updated_at"
+	UpdateHrisDeductionQueryParamFieldsUserID          UpdateHrisDeductionQueryParamFields = "user_id"
+	UpdateHrisDeductionQueryParamFieldsCompanyID       UpdateHrisDeductionQueryParamFields = "company_id"
+	UpdateHrisDeductionQueryParamFieldsBenefitID       UpdateHrisDeductionQueryParamFields = "benefit_id"
+	UpdateHrisDeductionQueryParamFieldsAmount          UpdateHrisDeductionQueryParamFields = "amount"
+	UpdateHrisDeductionQueryParamFieldsType            UpdateHrisDeductionQueryParamFields = "type"
+	UpdateHrisDeductionQueryParamFieldsCoverageLevel   UpdateHrisDeductionQueryParamFields = "coverage_level"
+	UpdateHrisDeductionQueryParamFieldsFrequency       UpdateHrisDeductionQueryParamFields = "frequency"
+	UpdateHrisDeductionQueryParamFieldsStartAt         UpdateHrisDeductionQueryParamFields = "start_at"
+	UpdateHrisDeductionQueryParamFieldsEndAt           UpdateHrisDeductionQueryParamFields = "end_at"
+	UpdateHrisDeductionQueryParamFieldsIsActive        UpdateHrisDeductionQueryParamFields = "is_active"
+	UpdateHrisDeductionQueryParamFieldsNotes           UpdateHrisDeductionQueryParamFields = "notes"
+	UpdateHrisDeductionQueryParamFieldsEmployerAmount  UpdateHrisDeductionQueryParamFields = "employer_amount"
+	UpdateHrisDeductionQueryParamFieldsEmployerType    UpdateHrisDeductionQueryParamFields = "employer_type"
+	UpdateHrisDeductionQueryParamFieldsMaxAmount       UpdateHrisDeductionQueryParamFields = "max_amount"
+	UpdateHrisDeductionQueryParamFieldsPaycodeID       UpdateHrisDeductionQueryParamFields = "paycode_id"
+	UpdateHrisDeductionQueryParamFieldsGarnishmentType UpdateHrisDeductionQueryParamFields = "garnishment_type"
+	UpdateHrisDeductionQueryParamFieldsRaw             UpdateHrisDeductionQueryParamFields = "raw"
 )
 
 func (e UpdateHrisDeductionQueryParamFields) ToPointer() *UpdateHrisDeductionQueryParamFields {
@@ -65,6 +70,16 @@ func (e *UpdateHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "employer_amount":
+		fallthrough
+	case "employer_type":
+		fallthrough
+	case "max_amount":
+		fallthrough
+	case "paycode_id":
+		fallthrough
+	case "garnishment_type":
 		fallthrough
 	case "raw":
 		*e = UpdateHrisDeductionQueryParamFields(v)

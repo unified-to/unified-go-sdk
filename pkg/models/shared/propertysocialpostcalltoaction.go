@@ -2,6 +2,7 @@
 
 package shared
 
+// PropertySocialPostCallToActionType - The call-to-action button type
 type PropertySocialPostCallToActionType string
 
 const (
@@ -31,8 +32,10 @@ func (e *PropertySocialPostCallToActionType) IsExact() bool {
 
 // PropertySocialPostCallToAction - Call-to-action button on the post
 type PropertySocialPostCallToAction struct {
+	// The call-to-action button type
 	Type *PropertySocialPostCallToActionType `json:"type,omitempty"`
-	URL  *string                             `json:"url,omitempty"`
+	// The URL the call-to-action points to
+	URL *string `json:"url,omitempty"`
 }
 
 func (p *PropertySocialPostCallToAction) GetType() *PropertySocialPostCallToActionType {

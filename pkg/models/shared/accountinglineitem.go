@@ -8,31 +8,41 @@ import (
 )
 
 type AccountingLineitem struct {
-	AccountID       *string               `json:"account_id,omitempty"`
-	CategoryIds     []string              `json:"category_ids,omitempty"`
-	ContactID       *string               `json:"contact_id,omitempty"`
-	CreatedAt       *time.Time            `json:"created_at,omitempty"`
-	DiscountAmount  *float64              `json:"discount_amount,omitempty"`
-	ExchangeRate    *float64              `json:"exchange_rate,omitempty"`
-	Fees            []AccountingFee       `json:"fees,omitempty"`
-	ID              *string               `json:"id,omitempty"`
-	IsBillable      *bool                 `json:"is_billable,omitempty"`
-	ItemDescription *string               `json:"item_description,omitempty"`
-	ItemID          *string               `json:"item_id,omitempty"`
-	ItemName        *string               `json:"item_name,omitempty"`
-	ItemSku         *string               `json:"item_sku,omitempty"`
-	ItemVariants    []AccountingReference `json:"item_variants,omitempty"`
-	Locations       []AccountingReference `json:"locations,omitempty"`
-	Notes           *string               `json:"notes,omitempty"`
-	ProjectID       *string               `json:"project_id,omitempty"`
-	RefundAmount    *float64              `json:"refund_amount,omitempty"`
-	RefundedAt      *time.Time            `json:"refunded_at,omitempty"`
-	TaxAmount       *float64              `json:"tax_amount,omitempty"`
-	TaxrateID       *string               `json:"taxrate_id,omitempty"`
-	TotalAmount     *float64              `json:"total_amount,omitempty"`
-	UnitAmount      *float64              `json:"unit_amount,omitempty"`
-	UnitQuantity    *float64              `json:"unit_quantity,omitempty"`
-	UpdatedAt       *time.Time            `json:"updated_at,omitempty"`
+	// (reference to AccountingAccount)
+	AccountID   *string  `json:"account_id,omitempty"`
+	CategoryIds []string `json:"category_ids,omitempty"`
+	// (reference to AccountingContact)
+	ContactID *string `json:"contact_id,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt      *time.Time `json:"created_at,omitempty"`
+	DiscountAmount *float64   `json:"discount_amount,omitempty"`
+	// The exchange rate applied to this line, for multi-currency documents
+	ExchangeRate *float64        `json:"exchange_rate,omitempty"`
+	Fees         []AccountingFee `json:"fees,omitempty"`
+	ID           *string         `json:"id,omitempty"`
+	// True when the line is rebillable to a customer
+	IsBillable      *bool   `json:"is_billable,omitempty"`
+	ItemDescription *string `json:"item_description,omitempty"`
+	// (reference to CommerceItem)
+	ItemID       *string               `json:"item_id,omitempty"`
+	ItemName     *string               `json:"item_name,omitempty"`
+	ItemSku      *string               `json:"item_sku,omitempty"`
+	ItemVariants []AccountingReference `json:"item_variants,omitempty"`
+	Locations    []AccountingReference `json:"locations,omitempty"`
+	Notes        *string               `json:"notes,omitempty"`
+	// ref -> AccountingProject; the project this line is coded to (reference to TaskProject)
+	ProjectID    *string  `json:"project_id,omitempty"`
+	RefundAmount *float64 `json:"refund_amount,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	RefundedAt *time.Time `json:"refunded_at,omitempty"`
+	TaxAmount  *float64   `json:"tax_amount,omitempty"`
+	TaxrateID  *string    `json:"taxrate_id,omitempty"`
+	// unit_quantity * unit_amount + tax_amount
+	TotalAmount  *float64 `json:"total_amount,omitempty"`
+	UnitAmount   *float64 `json:"unit_amount,omitempty"`
+	UnitQuantity *float64 `json:"unit_quantity,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (a AccountingLineitem) MarshalJSON() ([]byte, error) {

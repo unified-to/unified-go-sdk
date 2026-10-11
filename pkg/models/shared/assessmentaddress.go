@@ -3,14 +3,17 @@
 package shared
 
 type AssessmentAddress struct {
-	Address1    *string `json:"address1,omitempty"`
-	Address2    *string `json:"address2,omitempty"`
-	City        *string `json:"city,omitempty"`
-	Country     *string `json:"country,omitempty"`
+	Address1 *string `json:"address1,omitempty"`
+	Address2 *string `json:"address2,omitempty"`
+	City     *string `json:"city,omitempty"`
+	Country  *string `json:"country,omitempty"`
+	// Country code in ISO 3166 A-2 format
 	CountryCode *string `json:"country_code,omitempty"`
 	PostalCode  *string `json:"postal_code,omitempty"`
-	Region      *string `json:"region,omitempty"`
-	RegionCode  *string `json:"region_code,omitempty"`
+	// Regional area (e.g., state in the U.S., province in Canada)
+	Region *string `json:"region,omitempty"`
+	// Short form for regional area (e.g., two-letter stateprovince abbreviation)
+	RegionCode *string `json:"region_code,omitempty"`
 }
 
 func (a *AssessmentAddress) GetAddress1() *string {

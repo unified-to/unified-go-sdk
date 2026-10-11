@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// SocialPostStatus - Publication status of the post
 type SocialPostStatus string
 
 const (
@@ -34,6 +35,7 @@ func (e *SocialPostStatus) IsExact() bool {
 	return false
 }
 
+// SocialPostType - The kind of post
 type SocialPostType string
 
 const (
@@ -64,25 +66,38 @@ func (e *SocialPostType) IsExact() bool {
 }
 
 type SocialPost struct {
+	// The main text content of the post
 	Body *string `json:"body,omitempty"`
 	// Call-to-action button on the post
 	CallToAction *PropertySocialPostCallToAction `json:"call_to_action,omitempty"`
-	CreatedAt    *time.Time                      `json:"created_at,omitempty"`
-	ID           *string                         `json:"id,omitempty"`
-	Language     *string                         `json:"language,omitempty"`
+	// When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Unique identifier for the post
+	ID *string `json:"id,omitempty"`
+	// Language code of the post content
+	Language *string `json:"language,omitempty"`
 	// Media assets attached to the post
 	Media []SocialMedia `json:"media,omitempty"`
 	// Engagement metrics for the post
-	Metrics      *PropertySocialPostMetrics `json:"metrics,omitempty"`
-	ParentPostID *string                    `json:"parent_post_id,omitempty"`
-	ProfileID    *string                    `json:"profile_id,omitempty"`
-	Raw          map[string]any             `json:"raw,omitempty"`
-	ScheduledAt  *time.Time                 `json:"scheduled_at,omitempty"`
-	Status       *SocialPostStatus          `json:"status,omitempty"`
-	Title        *string                    `json:"title,omitempty"`
-	Type         *SocialPostType            `json:"type,omitempty"`
-	UpdatedAt    *time.Time                 `json:"updated_at,omitempty"`
-	URL          *string                    `json:"url,omitempty"`
+	Metrics *PropertySocialPostMetrics `json:"metrics,omitempty"`
+	// The post this one replies to or references
+	ParentPostID *string `json:"parent_post_id,omitempty"`
+	// The social profile (page/handle/listing) that owns this post
+	ProfileID *string `json:"profile_id,omitempty"`
+	// Raw data from integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	ScheduledAt *time.Time `json:"scheduled_at,omitempty"`
+	// Publication status of the post
+	Status *SocialPostStatus `json:"status,omitempty"`
+	// Optional post title/headline
+	Title *string `json:"title,omitempty"`
+	// The kind of post
+	Type *SocialPostType `json:"type,omitempty"`
+	// When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Public permalink to the post
+	URL *string `json:"url,omitempty"`
 }
 
 func (s SocialPost) MarshalJSON() ([]byte, error) {

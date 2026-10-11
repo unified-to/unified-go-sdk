@@ -12,18 +12,20 @@ import (
 type PatchHrisGroupQueryParamFields string
 
 const (
-	PatchHrisGroupQueryParamFieldsID          PatchHrisGroupQueryParamFields = "id"
-	PatchHrisGroupQueryParamFieldsCreatedAt   PatchHrisGroupQueryParamFields = "created_at"
-	PatchHrisGroupQueryParamFieldsUpdatedAt   PatchHrisGroupQueryParamFields = "updated_at"
-	PatchHrisGroupQueryParamFieldsName        PatchHrisGroupQueryParamFields = "name"
-	PatchHrisGroupQueryParamFieldsDescription PatchHrisGroupQueryParamFields = "description"
-	PatchHrisGroupQueryParamFieldsParentID    PatchHrisGroupQueryParamFields = "parent_id"
-	PatchHrisGroupQueryParamFieldsType        PatchHrisGroupQueryParamFields = "type"
-	PatchHrisGroupQueryParamFieldsUserIds     PatchHrisGroupQueryParamFields = "user_ids"
-	PatchHrisGroupQueryParamFieldsManagerIds  PatchHrisGroupQueryParamFields = "manager_ids"
-	PatchHrisGroupQueryParamFieldsIsActive    PatchHrisGroupQueryParamFields = "is_active"
-	PatchHrisGroupQueryParamFieldsCompanyID   PatchHrisGroupQueryParamFields = "company_id"
-	PatchHrisGroupQueryParamFieldsRaw         PatchHrisGroupQueryParamFields = "raw"
+	PatchHrisGroupQueryParamFieldsID           PatchHrisGroupQueryParamFields = "id"
+	PatchHrisGroupQueryParamFieldsCreatedAt    PatchHrisGroupQueryParamFields = "created_at"
+	PatchHrisGroupQueryParamFieldsUpdatedAt    PatchHrisGroupQueryParamFields = "updated_at"
+	PatchHrisGroupQueryParamFieldsName         PatchHrisGroupQueryParamFields = "name"
+	PatchHrisGroupQueryParamFieldsDescription  PatchHrisGroupQueryParamFields = "description"
+	PatchHrisGroupQueryParamFieldsParentID     PatchHrisGroupQueryParamFields = "parent_id"
+	PatchHrisGroupQueryParamFieldsType         PatchHrisGroupQueryParamFields = "type"
+	PatchHrisGroupQueryParamFieldsUserIds      PatchHrisGroupQueryParamFields = "user_ids"
+	PatchHrisGroupQueryParamFieldsManagerIds   PatchHrisGroupQueryParamFields = "manager_ids"
+	PatchHrisGroupQueryParamFieldsIsActive     PatchHrisGroupQueryParamFields = "is_active"
+	PatchHrisGroupQueryParamFieldsCompanyID    PatchHrisGroupQueryParamFields = "company_id"
+	PatchHrisGroupQueryParamFieldsPayFrequency PatchHrisGroupQueryParamFields = "pay_frequency"
+	PatchHrisGroupQueryParamFieldsNextPaidAt   PatchHrisGroupQueryParamFields = "next_paid_at"
+	PatchHrisGroupQueryParamFieldsRaw          PatchHrisGroupQueryParamFields = "raw"
 )
 
 func (e PatchHrisGroupQueryParamFields) ToPointer() *PatchHrisGroupQueryParamFields {
@@ -56,6 +58,10 @@ func (e *PatchHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "pay_frequency":
+		fallthrough
+	case "next_paid_at":
 		fallthrough
 	case "raw":
 		*e = PatchHrisGroupQueryParamFields(v)

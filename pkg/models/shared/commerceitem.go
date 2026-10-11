@@ -32,19 +32,23 @@ func (e *WeightUnit) IsExact() bool {
 }
 
 type CommerceItem struct {
+	// Reference to Accounting Account (reference to AccountingAccount)
 	AccountID *string `json:"account_id,omitempty"`
 	// points to Collection with id, name, and type fields
-	Collections       []CommerceReference `json:"collections,omitempty"`
-	CreatedAt         *time.Time          `json:"created_at,omitempty"`
-	Description       *string             `json:"description,omitempty"`
-	Duration          *float64            `json:"duration,omitempty"`
-	GlobalCode        *string             `json:"global_code,omitempty"`
-	ID                *string             `json:"id,omitempty"`
-	InventoryID       *string             `json:"inventory_id,omitempty"`
-	IsActive          *bool               `json:"is_active,omitempty"`
-	IsFeatured        *bool               `json:"is_featured,omitempty"`
-	IsTaxable         *bool               `json:"is_taxable,omitempty"`
-	IsVisible         *bool               `json:"is_visible,omitempty"`
+	Collections []CommerceReference `json:"collections,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt   *time.Time `json:"created_at,omitempty"`
+	Description *string    `json:"description,omitempty"`
+	// minutes
+	Duration    *float64 `json:"duration,omitempty"`
+	GlobalCode  *string  `json:"global_code,omitempty"`
+	ID          *string  `json:"id,omitempty"`
+	InventoryID *string  `json:"inventory_id,omitempty"`
+	IsActive    *bool    `json:"is_active,omitempty"`
+	IsFeatured  *bool    `json:"is_featured,omitempty"`
+	IsTaxable   *bool    `json:"is_taxable,omitempty"`
+	IsVisible   *bool    `json:"is_visible,omitempty"`
+	// (reference to CommerceLocation)
 	LocationID        *string             `json:"location_id,omitempty"`
 	Media             []CommerceItemMedia `json:"media,omitempty"`
 	Metadata          []CommerceMetadata  `json:"metadata,omitempty"`
@@ -56,13 +60,16 @@ type CommerceItem struct {
 	RequiresShipping  *bool               `json:"requires_shipping,omitempty"`
 	Slug              *string             `json:"slug,omitempty"`
 	Tags              []string            `json:"tags,omitempty"`
-	TaxrateID         *string             `json:"taxrate_id,omitempty"`
-	TotalStock        *float64            `json:"total_stock,omitempty"`
-	Type              *string             `json:"type,omitempty"`
-	UpdatedAt         *time.Time          `json:"updated_at,omitempty"`
-	VendorName        *string             `json:"vendor_name,omitempty"`
-	Weight            *float64            `json:"weight,omitempty"`
-	WeightUnit        *WeightUnit         `json:"weight_unit,omitempty"`
+	// references AccountingTaxrate
+	TaxrateID  *string  `json:"taxrate_id,omitempty"`
+	TotalStock *float64 `json:"total_stock,omitempty"`
+	// product, service, digital-download, ...
+	Type *string `json:"type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt  *time.Time  `json:"updated_at,omitempty"`
+	VendorName *string     `json:"vendor_name,omitempty"`
+	Weight     *float64    `json:"weight,omitempty"`
+	WeightUnit *WeightUnit `json:"weight_unit,omitempty"`
 }
 
 func (c CommerceItem) MarshalJSON() ([]byte, error) {

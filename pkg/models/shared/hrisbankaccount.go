@@ -29,20 +29,65 @@ func (e *HrisBankaccountAccountType) IsExact() bool {
 	return false
 }
 
+// SplitType - how net pay is split into this account when an employee has several accounts
+type SplitType string
+
+const (
+	SplitTypePercentage SplitType = "PERCENTAGE"
+	SplitTypeFixed      SplitType = "FIXED"
+	SplitTypeRemainder  SplitType = "REMAINDER"
+)
+
+func (e SplitType) ToPointer() *SplitType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SplitType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "PERCENTAGE", "FIXED", "REMAINDER":
+			return true
+		}
+	}
+	return false
+}
+
 type HrisBankaccount struct {
-	AccountNumber      *string                     `json:"account_number,omitempty"`
+	AccountNumber *string `json:"account_number,omitempty"`
+	// when full number not returned
 	AccountNumberLast4 *string                     `json:"account_number_last4,omitempty"`
 	AccountType        *HrisBankaccountAccountType `json:"account_type,omitempty"`
 	BankName           *string                     `json:"bank_name,omitempty"`
-	CompanyID          *string                     `json:"company_id,omitempty"`
-	CreatedAt          *time.Time                  `json:"created_at,omitempty"`
-	ID                 *string                     `json:"id,omitempty"`
-	IsPrimary          *bool                       `json:"is_primary,omitempty"`
-	Name               *string                     `json:"name,omitempty"`
-	Raw                map[string]any              `json:"raw,omitempty"`
-	RoutingNumber      *string                     `json:"routing_number,omitempty"`
-	UpdatedAt          *time.Time                  `json:"updated_at,omitempty"`
-	UserID             *string                     `json:"user_id,omitempty"`
+	// BIC / SWIFT code
+	Bic *string `json:"bic,omitempty"`
+	// (reference to HrisCompany)
+	CompanyID *string `json:"company_id,omitempty"`
+	// ISO 2-digit country code of the bank account
+	CountryCode *string `json:"country_code,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	Currency  *string    `json:"currency,omitempty"`
+	// International Bank Account Number (non-US accounts)
+	Iban *string `json:"iban,omitempty"`
+	ID   *string `json:"id,omitempty"`
+	// primary for direct deposit
+	IsPrimary *bool `json:"is_primary,omitempty"`
+	// account nickname (e.g. "BoA Checking")
+	Name *string `json:"name,omitempty"`
+	// order in which split accounts are funded (1 = first)
+	Priority *float64       `json:"priority,omitempty"`
+	Raw      map[string]any `json:"raw,omitempty"`
+	// 9-digit US routing number
+	RoutingNumber *string `json:"routing_number,omitempty"`
+	// percentage (when split_type is PERCENTAGE) or money (when FIXED)
+	SplitAmount *float64 `json:"split_amount,omitempty"`
+	// how net pay is split into this account when an employee has several accounts
+	SplitType *SplitType `json:"split_type,omitempty"`
+	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// employee ID (required for listcreate) (reference to HrisEmployee)
+	UserID *string `json:"user_id,omitempty"`
 }
 
 func (h HrisBankaccount) MarshalJSON() ([]byte, error) {
@@ -84,6 +129,13 @@ func (h *HrisBankaccount) GetBankName() *string {
 	return h.BankName
 }
 
+func (h *HrisBankaccount) GetBic() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Bic
+}
+
 func (h *HrisBankaccount) GetCompanyID() *string {
 	if h == nil {
 		return nil
@@ -91,11 +143,32 @@ func (h *HrisBankaccount) GetCompanyID() *string {
 	return h.CompanyID
 }
 
+func (h *HrisBankaccount) GetCountryCode() *string {
+	if h == nil {
+		return nil
+	}
+	return h.CountryCode
+}
+
 func (h *HrisBankaccount) GetCreatedAt() *time.Time {
 	if h == nil {
 		return nil
 	}
 	return h.CreatedAt
+}
+
+func (h *HrisBankaccount) GetCurrency() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Currency
+}
+
+func (h *HrisBankaccount) GetIban() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Iban
 }
 
 func (h *HrisBankaccount) GetID() *string {
@@ -119,6 +192,13 @@ func (h *HrisBankaccount) GetName() *string {
 	return h.Name
 }
 
+func (h *HrisBankaccount) GetPriority() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.Priority
+}
+
 func (h *HrisBankaccount) GetRaw() map[string]any {
 	if h == nil {
 		return nil
@@ -131,6 +211,20 @@ func (h *HrisBankaccount) GetRoutingNumber() *string {
 		return nil
 	}
 	return h.RoutingNumber
+}
+
+func (h *HrisBankaccount) GetSplitAmount() *float64 {
+	if h == nil {
+		return nil
+	}
+	return h.SplitAmount
+}
+
+func (h *HrisBankaccount) GetSplitType() *SplitType {
+	if h == nil {
+		return nil
+	}
+	return h.SplitType
 }
 
 func (h *HrisBankaccount) GetUpdatedAt() *time.Time {
