@@ -2,7 +2,7 @@
 
 package unifiedgosdk
 
-// Generated from OpenAPI doc version 1.0 and generator version 2.946.0
+// Generated from OpenAPI doc version 1.0 and generator version 2.948.4
 
 import (
 	"context"
@@ -137,6 +137,19 @@ type UnifiedTo struct {
 	Reservation         *Reservation
 	Review              *Review
 	Saleschannel        *Saleschannel
+	Compute             *Compute
+	Deployment          *Deployment
+	Domain              *Domain
+	Envvar              *Envvar
+	Gputype             *Gputype
+	Instance            *Instance
+	Key                 *Key
+	Region              *Region
+	Service             *Service
+	Snapshot            *Snapshot
+	Template            *Template
+	Usage               *Usage
+	Volume              *Volume
 	Crm                 *Crm
 	Deal                *Deal
 	Lead                *Lead
@@ -159,6 +172,17 @@ type UnifiedTo struct {
 	Prompt              *Prompt
 	Skill               *Skill
 	Task                *Task
+	Healthcare          *Healthcare
+	Allergy             *Allergy
+	Appointment         *Appointment
+	Condition           *Condition
+	Encounter           *Encounter
+	Immunization        *Immunization
+	Medication          *Medication
+	Observation         *Observation
+	Patient             *Patient
+	Practitioner        *Practitioner
+	Slot                *Slot
 	Hris                *Hris
 	Attendance          *Attendance
 	Bankaccount         *Bankaccount
@@ -176,6 +200,10 @@ type UnifiedTo struct {
 	Comment             *Comment
 	Page                *Page
 	Space               *Space
+	Legal               *Legal
+	Matter              *Matter
+	Practicearea        *Practicearea
+	Timeentry           *Timeentry
 	Lms                 *Lms
 	Class               *Class
 	Content             *Content
@@ -212,7 +240,6 @@ type UnifiedTo struct {
 	Tracking            *Tracking
 	Signing             *Signing
 	Signatory           *Signatory
-	Template            *Template
 	Social              *Social
 	Insight             *Insight
 	Post                *Post
@@ -316,11 +343,11 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.37.0",
+		SDKVersion: "0.38.0",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.37.0 2.946.0 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.37.0",
-			GenVersion:        "2.946.0",
+			UserAgent:         "speakeasy-sdk/go 0.38.0 2.948.4 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.38.0",
+			GenVersion:        "2.948.4",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
 		},
@@ -422,6 +449,19 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Reservation = newReservation(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Review = newReview(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Saleschannel = newSaleschannel(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Compute = newCompute(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Deployment = newDeployment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Domain = newDomain(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Envvar = newEnvvar(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Gputype = newGputype(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Instance = newInstance(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Key = newKey(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Region = newRegion(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Service = newService(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Snapshot = newSnapshot(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Template = newTemplate(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Usage = newUsage(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Volume = newVolume(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Crm = newCrm(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Deal = newDeal(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lead = newLead(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -444,6 +484,17 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Skill = newSkill(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Task = newTask(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Healthcare = newHealthcare(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Allergy = newAllergy(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Appointment = newAppointment(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Condition = newCondition(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Encounter = newEncounter(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Immunization = newImmunization(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Medication = newMedication(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Observation = newObservation(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Patient = newPatient(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Practitioner = newPractitioner(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Slot = newSlot(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Hris = newHris(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Attendance = newAttendance(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Bankaccount = newBankaccount(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -461,6 +512,10 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Comment = newComment(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Page = newPage(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Space = newSpace(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Legal = newLegal(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Matter = newMatter(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Practicearea = newPracticearea(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Timeentry = newTimeentry(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Lms = newLms(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Class = newClass(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Content = newContent(sdk, sdk.sdkConfiguration, sdk.hooks)
@@ -497,7 +552,6 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Tracking = newTracking(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Signing = newSigning(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Signatory = newSignatory(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Template = newTemplate(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Social = newSocial(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Insight = newInsight(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Post = newPost(sdk, sdk.sdkConfiguration, sdk.hooks)

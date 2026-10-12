@@ -35,6 +35,7 @@ const (
 	ListCalendarEventsQueryParamFieldsConference        ListCalendarEventsQueryParamFields = "conference"
 	ListCalendarEventsQueryParamFieldsAttachments       ListCalendarEventsQueryParamFields = "attachments"
 	ListCalendarEventsQueryParamFieldsSendNotifications ListCalendarEventsQueryParamFields = "send_notifications"
+	ListCalendarEventsQueryParamFieldsMatterID          ListCalendarEventsQueryParamFields = "matter_id"
 	ListCalendarEventsQueryParamFieldsRaw               ListCalendarEventsQueryParamFields = "raw"
 )
 
@@ -93,6 +94,8 @@ func (e *ListCalendarEventsQueryParamFields) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "send_notifications":
 		fallthrough
+	case "matter_id":
+		fallthrough
 	case "raw":
 		*e = ListCalendarEventsQueryParamFields(v)
 		return nil
@@ -113,8 +116,10 @@ type ListCalendarEventsRequest struct {
 	// Fields to return
 	Fields []ListCalendarEventsQueryParamFields `queryParam:"style=form,explode=true,name=fields"`
 	Limit  *float64                             `queryParam:"style=form,explode=true,name=limit"`
-	Offset *float64                             `queryParam:"style=form,explode=true,name=offset"`
-	Order  *string                              `queryParam:"style=form,explode=true,name=order"`
+	// The matter ID to filter by
+	MatterID *string  `queryParam:"style=form,explode=true,name=matter_id"`
+	Offset   *float64 `queryParam:"style=form,explode=true,name=offset"`
+	Order    *string  `queryParam:"style=form,explode=true,name=order"`
 	// Query string to search. eg. email address or name
 	Query *string `queryParam:"style=form,explode=true,name=query"`
 	// Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -166,6 +171,13 @@ func (l *ListCalendarEventsRequest) GetLimit() *float64 {
 		return nil
 	}
 	return l.Limit
+}
+
+func (l *ListCalendarEventsRequest) GetMatterID() *string {
+	if l == nil {
+		return nil
+	}
+	return l.MatterID
 }
 
 func (l *ListCalendarEventsRequest) GetOffset() *float64 {

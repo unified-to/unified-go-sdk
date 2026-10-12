@@ -38,4 +38,5 @@ value := operations.GetCalendarEventQueryParamFieldsID
 | `GetCalendarEventQueryParamFieldsConference`        | conference                                          |
 | `GetCalendarEventQueryParamFieldsAttachments`       | attachments                                         |
 | `GetCalendarEventQueryParamFieldsSendNotifications` | send_notifications                                  |
+| `GetCalendarEventQueryParamFieldsMatterID`          | matter_id                                           |
 | `GetCalendarEventQueryParamFieldsRaw`               | raw                                                 |

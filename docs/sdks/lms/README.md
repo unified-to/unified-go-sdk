@@ -76,14 +76,14 @@ func main() {
     res, err := s.Lms.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-23T20:06:36.025Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-24T06:10:47.039Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("d0e82a3b-42f0-48e4-b262-a872942dd28d"),
+            ID: unifiedgosdk.Pointer("f1633d54-617d-4738-b848-9629cafe67c2"),
             IsCompleted: unifiedgosdk.Pointer(true),
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
             StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-28T20:12:59.333Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-29T00:45:10.308Z"),
         },
         ConnectionID: "<id>",
     })
@@ -144,7 +144,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("68b65b29-1461-4eba-9bd8-6ee3bf4f088b"),
+            ID: unifiedgosdk.Pointer("5a58d2af-5699-437f-98c1-0409b47e927b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -165,7 +165,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.115Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.234Z"),
         },
         ConnectionID: "<id>",
     })
@@ -226,7 +226,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("30128b09-1db7-40bc-ae0d-ba5c010ccffb"),
+            ID: unifiedgosdk.Pointer("50fa59a9-2ec1-4a53-af01-883027520e5b"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -242,7 +242,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-20T14:44:57.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-21T11:13:30.655Z"),
         },
         ConnectionID: "<id>",
     })
@@ -309,7 +309,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("6e48bd78-118e-448f-8cea-f1a6301bbb7b"),
+            ID: unifiedgosdk.Pointer("2c418a71-b6cb-449b-8fbc-ac88cf7fbab6"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -388,7 +388,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-09-30T22:37:56.394Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-01T05:30:07.685Z"),
         },
         ConnectionID: "<id>",
     })
@@ -455,7 +455,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("a9173954-1215-4da8-a0ae-43d8596c9183"),
+            ID: unifiedgosdk.Pointer("956f8c2c-9f3b-4864-a251-fef1d5fe891e"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -488,7 +488,7 @@ func main() {
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T21:47:35.926Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-08T23:36:13.515Z"),
         },
         ConnectionID: "<id>",
     })
@@ -553,7 +553,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("d0f0bd6a-2cd5-4ba9-9017-28a9e9eff580"),
+            ID: unifiedgosdk.Pointer("dc8b058e-a9a7-4328-9d8c-3943ef049eca"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
@@ -564,7 +564,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-16T21:44:38.070Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-17T13:39:33.556Z"),
         },
         ConnectionID: "<id>",
     })
@@ -638,7 +638,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("53a77618-ece9-4e43-9ccb-c2f44da42463"),
+            ID: unifiedgosdk.Pointer("338f0039-44c9-428a-ae87-a5852bd08339"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Name: unifiedgosdk.Pointer("Marcella Murazik"),
@@ -648,7 +648,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-27T12:36:11.596Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-27T19:54:15.693Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1471,14 +1471,14 @@ func main() {
     res, err := s.Lms.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-23T20:06:36.029Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-24T06:10:47.042Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("5237b4ab-6179-4efd-906f-95427b763e46"),
+            ID: unifiedgosdk.Pointer("adb8695b-8df3-4315-9c31-9951d1fbfb0b"),
             IsCompleted: unifiedgosdk.Pointer(true),
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
             StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-28T20:12:59.335Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-29T00:45:10.309Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1540,7 +1540,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("8ff8ee5f-3111-4798-aba2-ff9737c1316a"),
+            ID: unifiedgosdk.Pointer("ea83d014-a52f-4cf3-aef2-b5dee844714b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -1561,7 +1561,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.135Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.249Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1623,7 +1623,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("18aa9d38-eb63-4b21-aee6-7efe97992759"),
+            ID: unifiedgosdk.Pointer("586614ed-90e2-41ea-b94a-db42f1de2045"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -1639,7 +1639,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-20T14:44:57.242Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-21T11:13:30.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1707,7 +1707,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("f94d21b3-d856-4b9d-bf24-9df215207b76"),
+            ID: unifiedgosdk.Pointer("35b43159-d375-4ded-b684-ff950244e8a1"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -1786,7 +1786,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-09-30T22:37:56.405Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-01T05:30:07.693Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1854,7 +1854,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("c28aae7d-71ca-437b-90b9-82c6133ff3d1"),
+            ID: unifiedgosdk.Pointer("3228b0a6-0cd0-478f-be94-0982dd2c4e9b"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -1887,7 +1887,7 @@ func main() {
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T21:47:35.929Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-08T23:36:13.517Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1953,7 +1953,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("93a7eacd-76a2-4a21-9150-46ea55bf6b47"),
+            ID: unifiedgosdk.Pointer("64634630-90ce-47b9-abfb-151c7e984553"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
@@ -1964,7 +1964,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-16T21:44:38.080Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-17T13:39:33.566Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2039,7 +2039,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("aac6f1c8-f93b-421c-971b-08ae6df8c215"),
+            ID: unifiedgosdk.Pointer("4bf57782-f35f-4799-9f70-73f220178551"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Name: unifiedgosdk.Pointer("Marcella Murazik"),
@@ -2049,7 +2049,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-27T12:36:11.603Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-27T19:54:15.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2495,14 +2495,14 @@ func main() {
     res, err := s.Lms.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-23T20:06:36.029Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-04-24T06:10:47.042Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("5237b4ab-6179-4efd-906f-95427b763e46"),
+            ID: unifiedgosdk.Pointer("adb8695b-8df3-4315-9c31-9951d1fbfb0b"),
             IsCompleted: unifiedgosdk.Pointer(true),
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
             StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-28T20:12:59.335Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-29T00:45:10.309Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2564,7 +2564,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("8ff8ee5f-3111-4798-aba2-ff9737c1316a"),
+            ID: unifiedgosdk.Pointer("ea83d014-a52f-4cf3-aef2-b5dee844714b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -2585,7 +2585,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.135Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.249Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2647,7 +2647,7 @@ func main() {
         LmsCollection: shared.LmsCollection{
             CreatedAt: types.MustNewTimeFromString("2019-08-19T14:40:29.227Z"),
             Description: unifiedgosdk.Pointer("Ab."),
-            ID: unifiedgosdk.Pointer("18aa9d38-eb63-4b21-aee6-7efe97992759"),
+            ID: unifiedgosdk.Pointer("586614ed-90e2-41ea-b94a-db42f1de2045"),
             IsActive: unifiedgosdk.Pointer(true),
             Media: []shared.LmsMedia{
                 shared.LmsMedia{
@@ -2663,7 +2663,7 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("ara"),
-            UpdatedAt: types.MustNewTimeFromString("2026-07-20T14:44:57.242Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-07-21T11:13:30.667Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2731,7 +2731,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("f94d21b3-d856-4b9d-bf24-9df215207b76"),
+            ID: unifiedgosdk.Pointer("35b43159-d375-4ded-b684-ff950244e8a1"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -2810,7 +2810,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-09-30T22:37:56.405Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-01T05:30:07.693Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2878,7 +2878,7 @@ func main() {
             Currency: unifiedgosdk.Pointer("FJD"),
             Description: unifiedgosdk.Pointer("Vinco alias aut capitulus."),
             DurationMinutes: unifiedgosdk.Pointer[float64](148.0),
-            ID: unifiedgosdk.Pointer("c28aae7d-71ca-437b-90b9-82c6133ff3d1"),
+            ID: unifiedgosdk.Pointer("3228b0a6-0cd0-478f-be94-0982dd2c4e9b"),
             Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             IsPrivate: unifiedgosdk.Pointer(false),
@@ -2911,7 +2911,7 @@ func main() {
             },
             Students: []shared.LmsReference{},
             TimeEstimateMinutes: unifiedgosdk.Pointer[float64](100.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-08T21:47:35.929Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-08T23:36:13.517Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2977,7 +2977,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Deangelo"),
-            ID: unifiedgosdk.Pointer("93a7eacd-76a2-4a21-9150-46ea55bf6b47"),
+            ID: unifiedgosdk.Pointer("64634630-90ce-47b9-abfb-151c7e984553"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/20232618"),
             LastName: unifiedgosdk.Pointer("Ritchie"),
             Name: unifiedgosdk.Pointer("Deangelo Ritchie"),
@@ -2988,7 +2988,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Product Solutions Engineer"),
-            UpdatedAt: types.MustNewTimeFromString("2025-07-16T21:44:38.080Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-17T13:39:33.566Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3063,7 +3063,7 @@ func main() {
                 shared.LmsEmail{},
             },
             FirstName: unifiedgosdk.Pointer("Marcella"),
-            ID: unifiedgosdk.Pointer("aac6f1c8-f93b-421c-971b-08ae6df8c215"),
+            ID: unifiedgosdk.Pointer("4bf57782-f35f-4799-9f70-73f220178551"),
             ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/36301374"),
             LastName: unifiedgosdk.Pointer("Murazik"),
             Name: unifiedgosdk.Pointer("Marcella Murazik"),
@@ -3073,7 +3073,7 @@ func main() {
                     Type: shared.LmsTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-06-27T12:36:11.603Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-06-27T19:54:15.700Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

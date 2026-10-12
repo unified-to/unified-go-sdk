@@ -66,7 +66,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -83,7 +83,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -355,6 +355,11 @@ func main() {
 * [RemoveGenaiAgent](docs/sdks/agent/README.md#removegenaiagent) - Remove an agent
 * [UpdateGenaiAgent](docs/sdks/agent/README.md#updategenaiagent) - Update an agent
 
+### [Allergy](docs/sdks/allergy/README.md)
+
+* [GetHealthcareAllergy](docs/sdks/allergy/README.md#gethealthcareallergy) - Retrieve an allergy
+* [ListHealthcareAllergies](docs/sdks/allergy/README.md#listhealthcareallergies) - List all allergies
+
 ### [Analytics](docs/sdks/analytics/README.md)
 
 * [CreateAnalyticsEvent](docs/sdks/analytics/README.md#createanalyticsevent) - Create an event
@@ -394,6 +399,15 @@ func main() {
 
 * [GetAtsApplicationstatus](docs/sdks/applicationstatus/README.md#getatsapplicationstatus) - Retrieve an applicationstatus
 * [ListAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
+
+### [Appointment](docs/sdks/appointment/README.md)
+
+* [CreateHealthcareAppointment](docs/sdks/appointment/README.md#createhealthcareappointment) - Create an appointment
+* [GetHealthcareAppointment](docs/sdks/appointment/README.md#gethealthcareappointment) - Retrieve an appointment
+* [ListHealthcareAppointments](docs/sdks/appointment/README.md#listhealthcareappointments) - List all appointments
+* [PatchHealthcareAppointment](docs/sdks/appointment/README.md#patchhealthcareappointment) - Update an appointment
+* [RemoveHealthcareAppointment](docs/sdks/appointment/README.md#removehealthcareappointment) - Remove an appointment
+* [UpdateHealthcareAppointment](docs/sdks/appointment/README.md#updatehealthcareappointment) - Update an appointment
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
@@ -827,6 +841,71 @@ func main() {
 * [UpdateCrmCompany](docs/sdks/company/README.md#updatecrmcompany) - Update a company
 * [UpdateHrisCompany](docs/sdks/company/README.md#updatehriscompany) - Update a company
 
+### [Compute](docs/sdks/compute/README.md)
+
+* [CreateComputeDeployment](docs/sdks/compute/README.md#createcomputedeployment) - Create a deployment
+* [CreateComputeDomain](docs/sdks/compute/README.md#createcomputedomain) - Create a domain
+* [CreateComputeEnvvar](docs/sdks/compute/README.md#createcomputeenvvar) - Create an envvar
+* [CreateComputeInstance](docs/sdks/compute/README.md#createcomputeinstance) - Create an instance
+* [CreateComputeKey](docs/sdks/compute/README.md#createcomputekey) - Create a key
+* [CreateComputeService](docs/sdks/compute/README.md#createcomputeservice) - Create a service
+* [CreateComputeSnapshot](docs/sdks/compute/README.md#createcomputesnapshot) - Create a snapshot
+* [CreateComputeTemplate](docs/sdks/compute/README.md#createcomputetemplate) - Create a template
+* [CreateComputeVolume](docs/sdks/compute/README.md#createcomputevolume) - Create a volume
+* [GetComputeDeployment](docs/sdks/compute/README.md#getcomputedeployment) - Retrieve a deployment
+* [GetComputeDomain](docs/sdks/compute/README.md#getcomputedomain) - Retrieve a domain
+* [GetComputeEnvvar](docs/sdks/compute/README.md#getcomputeenvvar) - Retrieve an envvar
+* [GetComputeGputype](docs/sdks/compute/README.md#getcomputegputype) - Retrieve a gputype
+* [GetComputeInstance](docs/sdks/compute/README.md#getcomputeinstance) - Retrieve an instance
+* [GetComputeKey](docs/sdks/compute/README.md#getcomputekey) - Retrieve a key
+* [GetComputeRegion](docs/sdks/compute/README.md#getcomputeregion) - Retrieve a region
+* [GetComputeService](docs/sdks/compute/README.md#getcomputeservice) - Retrieve a service
+* [GetComputeSnapshot](docs/sdks/compute/README.md#getcomputesnapshot) - Retrieve a snapshot
+* [GetComputeTemplate](docs/sdks/compute/README.md#getcomputetemplate) - Retrieve a template
+* [GetComputeVolume](docs/sdks/compute/README.md#getcomputevolume) - Retrieve a volume
+* [ListComputeDeployments](docs/sdks/compute/README.md#listcomputedeployments) - List all deployments
+* [ListComputeDomains](docs/sdks/compute/README.md#listcomputedomains) - List all domains
+* [ListComputeEnvvars](docs/sdks/compute/README.md#listcomputeenvvars) - List all envvars
+* [ListComputeGputypes](docs/sdks/compute/README.md#listcomputegputypes) - List all gputypes
+* [ListComputeInstances](docs/sdks/compute/README.md#listcomputeinstances) - List all instances
+* [ListComputeKeys](docs/sdks/compute/README.md#listcomputekeys) - List all keys
+* [ListComputeRegions](docs/sdks/compute/README.md#listcomputeregions) - List all regions
+* [ListComputeServices](docs/sdks/compute/README.md#listcomputeservices) - List all services
+* [ListComputeSnapshots](docs/sdks/compute/README.md#listcomputesnapshots) - List all snapshots
+* [ListComputeTemplates](docs/sdks/compute/README.md#listcomputetemplates) - List all templates
+* [ListComputeUsages](docs/sdks/compute/README.md#listcomputeusages) - List all usages
+* [ListComputeVolumes](docs/sdks/compute/README.md#listcomputevolumes) - List all volumes
+* [PatchComputeDeployment](docs/sdks/compute/README.md#patchcomputedeployment) - Update a deployment
+* [PatchComputeDomain](docs/sdks/compute/README.md#patchcomputedomain) - Update a domain
+* [PatchComputeEnvvar](docs/sdks/compute/README.md#patchcomputeenvvar) - Update an envvar
+* [PatchComputeInstance](docs/sdks/compute/README.md#patchcomputeinstance) - Update an instance
+* [PatchComputeKey](docs/sdks/compute/README.md#patchcomputekey) - Update a key
+* [PatchComputeService](docs/sdks/compute/README.md#patchcomputeservice) - Update a service
+* [PatchComputeTemplate](docs/sdks/compute/README.md#patchcomputetemplate) - Update a template
+* [PatchComputeVolume](docs/sdks/compute/README.md#patchcomputevolume) - Update a volume
+* [RemoveComputeDeployment](docs/sdks/compute/README.md#removecomputedeployment) - Remove a deployment
+* [RemoveComputeDomain](docs/sdks/compute/README.md#removecomputedomain) - Remove a domain
+* [RemoveComputeEnvvar](docs/sdks/compute/README.md#removecomputeenvvar) - Remove an envvar
+* [RemoveComputeInstance](docs/sdks/compute/README.md#removecomputeinstance) - Remove an instance
+* [RemoveComputeKey](docs/sdks/compute/README.md#removecomputekey) - Remove a key
+* [RemoveComputeService](docs/sdks/compute/README.md#removecomputeservice) - Remove a service
+* [RemoveComputeSnapshot](docs/sdks/compute/README.md#removecomputesnapshot) - Remove a snapshot
+* [RemoveComputeTemplate](docs/sdks/compute/README.md#removecomputetemplate) - Remove a template
+* [RemoveComputeVolume](docs/sdks/compute/README.md#removecomputevolume) - Remove a volume
+* [UpdateComputeDeployment](docs/sdks/compute/README.md#updatecomputedeployment) - Update a deployment
+* [UpdateComputeDomain](docs/sdks/compute/README.md#updatecomputedomain) - Update a domain
+* [UpdateComputeEnvvar](docs/sdks/compute/README.md#updatecomputeenvvar) - Update an envvar
+* [UpdateComputeInstance](docs/sdks/compute/README.md#updatecomputeinstance) - Update an instance
+* [UpdateComputeKey](docs/sdks/compute/README.md#updatecomputekey) - Update a key
+* [UpdateComputeService](docs/sdks/compute/README.md#updatecomputeservice) - Update a service
+* [UpdateComputeTemplate](docs/sdks/compute/README.md#updatecomputetemplate) - Update a template
+* [UpdateComputeVolume](docs/sdks/compute/README.md#updatecomputevolume) - Update a volume
+
+### [Condition](docs/sdks/condition/README.md)
+
+* [GetHealthcareCondition](docs/sdks/condition/README.md#gethealthcarecondition) - Retrieve a condition
+* [ListHealthcareConditions](docs/sdks/condition/README.md#listhealthcareconditions) - List all conditions
+
 ### [Connection](docs/sdks/connection/README.md)
 
 * [CreateUnifiedConnection](docs/sdks/connection/README.md#createunifiedconnection) - Create connection
@@ -997,6 +1076,15 @@ func main() {
 * [RemoveHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
 * [UpdateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
 
+### [Deployment](docs/sdks/deployment/README.md)
+
+* [CreateComputeDeployment](docs/sdks/deployment/README.md#createcomputedeployment) - Create a deployment
+* [GetComputeDeployment](docs/sdks/deployment/README.md#getcomputedeployment) - Retrieve a deployment
+* [ListComputeDeployments](docs/sdks/deployment/README.md#listcomputedeployments) - List all deployments
+* [PatchComputeDeployment](docs/sdks/deployment/README.md#patchcomputedeployment) - Update a deployment
+* [RemoveComputeDeployment](docs/sdks/deployment/README.md#removecomputedeployment) - Remove a deployment
+* [UpdateComputeDeployment](docs/sdks/deployment/README.md#updatecomputedeployment) - Update a deployment
+
 ### [Destination](docs/sdks/destination/README.md)
 
 * [CreateCdpDestination](docs/sdks/destination/README.md#createcdpdestination) - Create a destination
@@ -1036,6 +1124,15 @@ func main() {
 * [UpdateHrisDocument](docs/sdks/document/README.md#updatehrisdocument) - Update a document
 * [UpdateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
+### [Domain](docs/sdks/domain/README.md)
+
+* [CreateComputeDomain](docs/sdks/domain/README.md#createcomputedomain) - Create a domain
+* [GetComputeDomain](docs/sdks/domain/README.md#getcomputedomain) - Retrieve a domain
+* [ListComputeDomains](docs/sdks/domain/README.md#listcomputedomains) - List all domains
+* [PatchComputeDomain](docs/sdks/domain/README.md#patchcomputedomain) - Update a domain
+* [RemoveComputeDomain](docs/sdks/domain/README.md#removecomputedomain) - Remove a domain
+* [UpdateComputeDomain](docs/sdks/domain/README.md#updatecomputedomain) - Update a domain
+
 ### [Earning](docs/sdks/earning/README.md)
 
 * [CreateHrisEarning](docs/sdks/earning/README.md#createhrisearning) - Create an earning
@@ -1058,6 +1155,11 @@ func main() {
 * [RemoveHrisEmployee](docs/sdks/employee/README.md#removehrisemployee) - Remove an employee
 * [UpdateHrisEmployee](docs/sdks/employee/README.md#updatehrisemployee) - Update an employee
 
+### [Encounter](docs/sdks/encounter/README.md)
+
+* [GetHealthcareEncounter](docs/sdks/encounter/README.md#gethealthcareencounter) - Retrieve an encounter
+* [ListHealthcareEncounters](docs/sdks/encounter/README.md#listhealthcareencounters) - List all encounters
+
 ### [Enrich](docs/sdks/enrich/README.md)
 
 * [ListEnrichCompanies](docs/sdks/enrich/README.md#listenrichcompanies) - Retrieve enrichment information for a company
@@ -1068,6 +1170,15 @@ func main() {
 * [CreateUnifiedEnvironment](docs/sdks/environment/README.md#createunifiedenvironment) - Create new environments
 * [ListUnifiedEnvironments](docs/sdks/environment/README.md#listunifiedenvironments) - Returns all environments
 * [RemoveUnifiedEnvironment](docs/sdks/environment/README.md#removeunifiedenvironment) - Remove an environment
+
+### [Envvar](docs/sdks/envvar/README.md)
+
+* [CreateComputeEnvvar](docs/sdks/envvar/README.md#createcomputeenvvar) - Create an envvar
+* [GetComputeEnvvar](docs/sdks/envvar/README.md#getcomputeenvvar) - Retrieve an envvar
+* [ListComputeEnvvars](docs/sdks/envvar/README.md#listcomputeenvvars) - List all envvars
+* [PatchComputeEnvvar](docs/sdks/envvar/README.md#patchcomputeenvvar) - Update an envvar
+* [RemoveComputeEnvvar](docs/sdks/envvar/README.md#removecomputeenvvar) - Remove an envvar
+* [UpdateComputeEnvvar](docs/sdks/envvar/README.md#updatecomputeenvvar) - Update an envvar
 
 ### [Event](docs/sdks/event/README.md)
 
@@ -1100,11 +1211,17 @@ func main() {
 ### [Expense](docs/sdks/expense/README.md)
 
 * [CreateAccountingExpense](docs/sdks/expense/README.md#createaccountingexpense) - Create an expense
+* [CreateLegalExpense](docs/sdks/expense/README.md#createlegalexpense) - Create an expense
 * [GetAccountingExpense](docs/sdks/expense/README.md#getaccountingexpense) - Retrieve an expense
+* [GetLegalExpense](docs/sdks/expense/README.md#getlegalexpense) - Retrieve an expense
 * [ListAccountingExpenses](docs/sdks/expense/README.md#listaccountingexpenses) - List all expenses
+* [ListLegalExpenses](docs/sdks/expense/README.md#listlegalexpenses) - List all expenses
 * [PatchAccountingExpense](docs/sdks/expense/README.md#patchaccountingexpense) - Update an expense
+* [PatchLegalExpense](docs/sdks/expense/README.md#patchlegalexpense) - Update an expense
 * [RemoveAccountingExpense](docs/sdks/expense/README.md#removeaccountingexpense) - Remove an expense
+* [RemoveLegalExpense](docs/sdks/expense/README.md#removelegalexpense) - Remove an expense
 * [UpdateAccountingExpense](docs/sdks/expense/README.md#updateaccountingexpense) - Update an expense
+* [UpdateLegalExpense](docs/sdks/expense/README.md#updatelegalexpense) - Update an expense
 
 ### [Expensereport](docs/sdks/expensereport/README.md)
 
@@ -1187,6 +1304,11 @@ func main() {
 * [RemovePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
 * [UpdatePerformanceGoal](docs/sdks/goal/README.md#updateperformancegoal) - Update a goal
 
+### [Gputype](docs/sdks/gputype/README.md)
+
+* [GetComputeGputype](docs/sdks/gputype/README.md#getcomputegputype) - Retrieve a gputype
+* [ListComputeGputypes](docs/sdks/gputype/README.md#listcomputegputypes) - List all gputypes
+
 ### [Group](docs/sdks/group/README.md)
 
 * [CreateAdsGroup](docs/sdks/group/README.md#createadsgroup) - Create a group
@@ -1209,6 +1331,39 @@ func main() {
 * [UpdateAdsGroup](docs/sdks/group/README.md#updateadsgroup) - Update a group
 * [UpdateHrisGroup](docs/sdks/group/README.md#updatehrisgroup) - Update a group
 * [UpdateScimGroups](docs/sdks/group/README.md#updatescimgroups) - Update group
+
+### [Healthcare](docs/sdks/healthcare/README.md)
+
+* [CreateHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
+* [CreateHealthcareObservation](docs/sdks/healthcare/README.md#createhealthcareobservation) - Create an observation
+* [CreateHealthcarePatient](docs/sdks/healthcare/README.md#createhealthcarepatient) - Create a patient
+* [GetHealthcareAllergy](docs/sdks/healthcare/README.md#gethealthcareallergy) - Retrieve an allergy
+* [GetHealthcareAppointment](docs/sdks/healthcare/README.md#gethealthcareappointment) - Retrieve an appointment
+* [GetHealthcareCondition](docs/sdks/healthcare/README.md#gethealthcarecondition) - Retrieve a condition
+* [GetHealthcareEncounter](docs/sdks/healthcare/README.md#gethealthcareencounter) - Retrieve an encounter
+* [GetHealthcareImmunization](docs/sdks/healthcare/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [GetHealthcareLocation](docs/sdks/healthcare/README.md#gethealthcarelocation) - Retrieve a location
+* [GetHealthcareMedication](docs/sdks/healthcare/README.md#gethealthcaremedication) - Retrieve a medication
+* [GetHealthcareObservation](docs/sdks/healthcare/README.md#gethealthcareobservation) - Retrieve an observation
+* [GetHealthcarePatient](docs/sdks/healthcare/README.md#gethealthcarepatient) - Retrieve a patient
+* [GetHealthcarePractitioner](docs/sdks/healthcare/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [GetHealthcareSlot](docs/sdks/healthcare/README.md#gethealthcareslot) - Retrieve a slot
+* [ListHealthcareAllergies](docs/sdks/healthcare/README.md#listhealthcareallergies) - List all allergies
+* [ListHealthcareAppointments](docs/sdks/healthcare/README.md#listhealthcareappointments) - List all appointments
+* [ListHealthcareConditions](docs/sdks/healthcare/README.md#listhealthcareconditions) - List all conditions
+* [ListHealthcareEncounters](docs/sdks/healthcare/README.md#listhealthcareencounters) - List all encounters
+* [ListHealthcareImmunizations](docs/sdks/healthcare/README.md#listhealthcareimmunizations) - List all immunizations
+* [ListHealthcareLocations](docs/sdks/healthcare/README.md#listhealthcarelocations) - List all locations
+* [ListHealthcareMedications](docs/sdks/healthcare/README.md#listhealthcaremedications) - List all medications
+* [ListHealthcareObservations](docs/sdks/healthcare/README.md#listhealthcareobservations) - List all observations
+* [ListHealthcarePatients](docs/sdks/healthcare/README.md#listhealthcarepatients) - List all patients
+* [ListHealthcarePractitioners](docs/sdks/healthcare/README.md#listhealthcarepractitioners) - List all practitioners
+* [ListHealthcareSlots](docs/sdks/healthcare/README.md#listhealthcareslots) - List all slots
+* [PatchHealthcareAppointment](docs/sdks/healthcare/README.md#patchhealthcareappointment) - Update an appointment
+* [PatchHealthcarePatient](docs/sdks/healthcare/README.md#patchhealthcarepatient) - Update a patient
+* [RemoveHealthcareAppointment](docs/sdks/healthcare/README.md#removehealthcareappointment) - Remove an appointment
+* [UpdateHealthcareAppointment](docs/sdks/healthcare/README.md#updatehealthcareappointment) - Update an appointment
+* [UpdateHealthcarePatient](docs/sdks/healthcare/README.md#updatehealthcarepatient) - Update a patient
 
 ### [Hris](docs/sdks/hris/README.md)
 
@@ -1306,6 +1461,11 @@ func main() {
 * [UpdateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [UpdateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
+### [Immunization](docs/sdks/immunization/README.md)
+
+* [GetHealthcareImmunization](docs/sdks/immunization/README.md#gethealthcareimmunization) - Retrieve an immunization
+* [ListHealthcareImmunizations](docs/sdks/immunization/README.md#listhealthcareimmunizations) - List all immunizations
+
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
 
 * [CreateAdsInsertionorder](docs/sdks/insertionorder/README.md#createadsinsertionorder) - Create an insertionorder
@@ -1319,6 +1479,15 @@ func main() {
 
 * [GetSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
 * [ListSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
+
+### [Instance](docs/sdks/instance/README.md)
+
+* [CreateComputeInstance](docs/sdks/instance/README.md#createcomputeinstance) - Create an instance
+* [GetComputeInstance](docs/sdks/instance/README.md#getcomputeinstance) - Retrieve an instance
+* [ListComputeInstances](docs/sdks/instance/README.md#listcomputeinstances) - List all instances
+* [PatchComputeInstance](docs/sdks/instance/README.md#patchcomputeinstance) - Update an instance
+* [RemoveComputeInstance](docs/sdks/instance/README.md#removecomputeinstance) - Remove an instance
+* [UpdateComputeInstance](docs/sdks/instance/README.md#updatecomputeinstance) - Update an instance
 
 ### [Instructor](docs/sdks/instructor/README.md)
 
@@ -1409,6 +1578,15 @@ func main() {
 * [RemoveAccountingJournal](docs/sdks/journal/README.md#removeaccountingjournal) - Remove a journal
 * [UpdateAccountingJournal](docs/sdks/journal/README.md#updateaccountingjournal) - Update a journal
 
+### [Key](docs/sdks/key/README.md)
+
+* [CreateComputeKey](docs/sdks/key/README.md#createcomputekey) - Create a key
+* [GetComputeKey](docs/sdks/key/README.md#getcomputekey) - Retrieve a key
+* [ListComputeKeys](docs/sdks/key/README.md#listcomputekeys) - List all keys
+* [PatchComputeKey](docs/sdks/key/README.md#patchcomputekey) - Update a key
+* [RemoveComputeKey](docs/sdks/key/README.md#removecomputekey) - Remove a key
+* [UpdateComputeKey](docs/sdks/key/README.md#updatecomputekey) - Update a key
+
 ### [Kms](docs/sdks/kms/README.md)
 
 * [CreateKmsComment](docs/sdks/kms/README.md#createkmscomment) - Create a comment
@@ -1447,6 +1625,33 @@ func main() {
 * [PatchCrmLead](docs/sdks/lead/README.md#patchcrmlead) - Update a lead
 * [RemoveCrmLead](docs/sdks/lead/README.md#removecrmlead) - Remove a lead
 * [UpdateCrmLead](docs/sdks/lead/README.md#updatecrmlead) - Update a lead
+
+### [Legal](docs/sdks/legal/README.md)
+
+* [CreateLegalExpense](docs/sdks/legal/README.md#createlegalexpense) - Create an expense
+* [CreateLegalMatter](docs/sdks/legal/README.md#createlegalmatter) - Create a matter
+* [CreateLegalPracticearea](docs/sdks/legal/README.md#createlegalpracticearea) - Create a practicearea
+* [CreateLegalTimeentry](docs/sdks/legal/README.md#createlegaltimeentry) - Create a timeentry
+* [GetLegalExpense](docs/sdks/legal/README.md#getlegalexpense) - Retrieve an expense
+* [GetLegalMatter](docs/sdks/legal/README.md#getlegalmatter) - Retrieve a matter
+* [GetLegalPracticearea](docs/sdks/legal/README.md#getlegalpracticearea) - Retrieve a practicearea
+* [GetLegalTimeentry](docs/sdks/legal/README.md#getlegaltimeentry) - Retrieve a timeentry
+* [ListLegalExpenses](docs/sdks/legal/README.md#listlegalexpenses) - List all expenses
+* [ListLegalMatters](docs/sdks/legal/README.md#listlegalmatters) - List all matters
+* [ListLegalPracticeareas](docs/sdks/legal/README.md#listlegalpracticeareas) - List all practiceareas
+* [ListLegalTimeentries](docs/sdks/legal/README.md#listlegaltimeentries) - List all timeentries
+* [PatchLegalExpense](docs/sdks/legal/README.md#patchlegalexpense) - Update an expense
+* [PatchLegalMatter](docs/sdks/legal/README.md#patchlegalmatter) - Update a matter
+* [PatchLegalPracticearea](docs/sdks/legal/README.md#patchlegalpracticearea) - Update a practicearea
+* [PatchLegalTimeentry](docs/sdks/legal/README.md#patchlegaltimeentry) - Update a timeentry
+* [RemoveLegalExpense](docs/sdks/legal/README.md#removelegalexpense) - Remove an expense
+* [RemoveLegalMatter](docs/sdks/legal/README.md#removelegalmatter) - Remove a matter
+* [RemoveLegalPracticearea](docs/sdks/legal/README.md#removelegalpracticearea) - Remove a practicearea
+* [RemoveLegalTimeentry](docs/sdks/legal/README.md#removelegaltimeentry) - Remove a timeentry
+* [UpdateLegalExpense](docs/sdks/legal/README.md#updatelegalexpense) - Update an expense
+* [UpdateLegalMatter](docs/sdks/legal/README.md#updatelegalmatter) - Update a matter
+* [UpdateLegalPracticearea](docs/sdks/legal/README.md#updatelegalpracticearea) - Update a practicearea
+* [UpdateLegalTimeentry](docs/sdks/legal/README.md#updatelegaltimeentry) - Update a timeentry
 
 ### [Link](docs/sdks/link/README.md)
 
@@ -1523,9 +1728,11 @@ func main() {
 * [CreateHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
 * [GetClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [GetCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
+* [GetHealthcareLocation](docs/sdks/location/README.md#gethealthcarelocation) - Retrieve a location
 * [GetHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
 * [ListClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [ListCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
+* [ListHealthcareLocations](docs/sdks/location/README.md#listhealthcarelocations) - List all locations
 * [ListHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [PatchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
 * [PatchHrisLocation](docs/sdks/location/README.md#patchhrislocation) - Update a location
@@ -1559,6 +1766,20 @@ func main() {
 * [UpdateMartechCampaign](docs/sdks/martech/README.md#updatemartechcampaign) - Update a campaign
 * [UpdateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [UpdateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
+
+### [Matter](docs/sdks/matter/README.md)
+
+* [CreateLegalMatter](docs/sdks/matter/README.md#createlegalmatter) - Create a matter
+* [GetLegalMatter](docs/sdks/matter/README.md#getlegalmatter) - Retrieve a matter
+* [ListLegalMatters](docs/sdks/matter/README.md#listlegalmatters) - List all matters
+* [PatchLegalMatter](docs/sdks/matter/README.md#patchlegalmatter) - Update a matter
+* [RemoveLegalMatter](docs/sdks/matter/README.md#removelegalmatter) - Remove a matter
+* [UpdateLegalMatter](docs/sdks/matter/README.md#updatelegalmatter) - Update a matter
+
+### [Medication](docs/sdks/medication/README.md)
+
+* [GetHealthcareMedication](docs/sdks/medication/README.md#gethealthcaremedication) - Retrieve a medication
+* [ListHealthcareMedications](docs/sdks/medication/README.md#listhealthcaremedications) - List all medications
 
 ### [Member](docs/sdks/member/README.md)
 
@@ -1623,6 +1844,12 @@ func main() {
 ### [Notification](docs/sdks/notification/README.md)
 
 * [ListUnifiedNotifications](docs/sdks/notification/README.md#listunifiednotifications) - List event notifications
+
+### [Observation](docs/sdks/observation/README.md)
+
+* [CreateHealthcareObservation](docs/sdks/observation/README.md#createhealthcareobservation) - Create an observation
+* [GetHealthcareObservation](docs/sdks/observation/README.md#gethealthcareobservation) - Retrieve an observation
+* [ListHealthcareObservations](docs/sdks/observation/README.md#listhealthcareobservations) - List all observations
 
 ### [Order](docs/sdks/order/README.md)
 
@@ -1690,6 +1917,14 @@ func main() {
 * [RemovePassthrough](docs/sdks/passthrough/README.md#removepassthrough) - Passthrough DELETE
 * [UpdatePassthroughJSON](docs/sdks/passthrough/README.md#updatepassthroughjson) - Passthrough PUT
 * [UpdatePassthroughRaw](docs/sdks/passthrough/README.md#updatepassthroughraw) - Passthrough PUT
+
+### [Patient](docs/sdks/patient/README.md)
+
+* [CreateHealthcarePatient](docs/sdks/patient/README.md#createhealthcarepatient) - Create a patient
+* [GetHealthcarePatient](docs/sdks/patient/README.md#gethealthcarepatient) - Retrieve a patient
+* [ListHealthcarePatients](docs/sdks/patient/README.md#listhealthcarepatients) - List all patients
+* [PatchHealthcarePatient](docs/sdks/patient/README.md#patchhealthcarepatient) - Update a patient
+* [UpdateHealthcarePatient](docs/sdks/patient/README.md#updatehealthcarepatient) - Update a patient
 
 ### [Paycode](docs/sdks/paycode/README.md)
 
@@ -1782,6 +2017,20 @@ func main() {
 * [PatchSocialPost](docs/sdks/post/README.md#patchsocialpost) - Update a post
 * [RemoveSocialPost](docs/sdks/post/README.md#removesocialpost) - Remove a post
 * [UpdateSocialPost](docs/sdks/post/README.md#updatesocialpost) - Update a post
+
+### [Practicearea](docs/sdks/practicearea/README.md)
+
+* [CreateLegalPracticearea](docs/sdks/practicearea/README.md#createlegalpracticearea) - Create a practicearea
+* [GetLegalPracticearea](docs/sdks/practicearea/README.md#getlegalpracticearea) - Retrieve a practicearea
+* [ListLegalPracticeareas](docs/sdks/practicearea/README.md#listlegalpracticeareas) - List all practiceareas
+* [PatchLegalPracticearea](docs/sdks/practicearea/README.md#patchlegalpracticearea) - Update a practicearea
+* [RemoveLegalPracticearea](docs/sdks/practicearea/README.md#removelegalpracticearea) - Remove a practicearea
+* [UpdateLegalPracticearea](docs/sdks/practicearea/README.md#updatelegalpracticearea) - Update a practicearea
+
+### [Practitioner](docs/sdks/practitioner/README.md)
+
+* [GetHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [ListHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
 
 ### [Profile](docs/sdks/profile/README.md)
 
@@ -1896,6 +2145,11 @@ func main() {
 
 * [GetPaymentRefund](docs/sdks/refund/README.md#getpaymentrefund) - Retrieve a refund
 * [ListPaymentRefunds](docs/sdks/refund/README.md#listpaymentrefunds) - List all refunds
+
+### [Region](docs/sdks/region/README.md)
+
+* [GetComputeRegion](docs/sdks/region/README.md#getcomputeregion) - Retrieve a region
+* [ListComputeRegions](docs/sdks/region/README.md#listcomputeregions) - List all regions
 
 ### [Repo](docs/sdks/repo/README.md)
 
@@ -2054,6 +2308,15 @@ func main() {
 * [RemoveCdpSegment](docs/sdks/segment/README.md#removecdpsegment) - Remove a segment
 * [UpdateCdpSegment](docs/sdks/segment/README.md#updatecdpsegment) - Update a segment
 
+### [Service](docs/sdks/service/README.md)
+
+* [CreateComputeService](docs/sdks/service/README.md#createcomputeservice) - Create a service
+* [GetComputeService](docs/sdks/service/README.md#getcomputeservice) - Retrieve a service
+* [ListComputeServices](docs/sdks/service/README.md#listcomputeservices) - List all services
+* [PatchComputeService](docs/sdks/service/README.md#patchcomputeservice) - Update a service
+* [RemoveComputeService](docs/sdks/service/README.md#removecomputeservice) - Remove a service
+* [UpdateComputeService](docs/sdks/service/README.md#updatecomputeservice) - Update a service
+
 ### [Session](docs/sdks/session/README.md)
 
 * [GetAnalyticsSession](docs/sdks/session/README.md#getanalyticssession) - Retrieve a session
@@ -2119,6 +2382,18 @@ func main() {
 * [GetGenaiSkill](docs/sdks/skill/README.md#getgenaiskill) - Retrieve a skill
 * [ListGenaiSkills](docs/sdks/skill/README.md#listgenaiskills) - List all skills
 * [RemoveGenaiSkill](docs/sdks/skill/README.md#removegenaiskill) - Remove a skill
+
+### [Slot](docs/sdks/slot/README.md)
+
+* [GetHealthcareSlot](docs/sdks/slot/README.md#gethealthcareslot) - Retrieve a slot
+* [ListHealthcareSlots](docs/sdks/slot/README.md#listhealthcareslots) - List all slots
+
+### [Snapshot](docs/sdks/snapshot/README.md)
+
+* [CreateComputeSnapshot](docs/sdks/snapshot/README.md#createcomputesnapshot) - Create a snapshot
+* [GetComputeSnapshot](docs/sdks/snapshot/README.md#getcomputesnapshot) - Retrieve a snapshot
+* [ListComputeSnapshots](docs/sdks/snapshot/README.md#listcomputesnapshots) - List all snapshots
+* [RemoveComputeSnapshot](docs/sdks/snapshot/README.md#removecomputesnapshot) - Remove a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2248,8 +2523,14 @@ func main() {
 
 ### [Template](docs/sdks/template/README.md)
 
+* [CreateComputeTemplate](docs/sdks/template/README.md#createcomputetemplate) - Create a template
+* [GetComputeTemplate](docs/sdks/template/README.md#getcomputetemplate) - Retrieve a template
 * [GetSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
+* [ListComputeTemplates](docs/sdks/template/README.md#listcomputetemplates) - List all templates
 * [ListSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
+* [PatchComputeTemplate](docs/sdks/template/README.md#patchcomputetemplate) - Update a template
+* [RemoveComputeTemplate](docs/sdks/template/README.md#removecomputetemplate) - Remove a template
+* [UpdateComputeTemplate](docs/sdks/template/README.md#updatecomputetemplate) - Update a template
 
 ### [Ticket](docs/sdks/ticket/README.md)
 
@@ -2286,6 +2567,15 @@ func main() {
 * [UpdateTicketingCustomer](docs/sdks/ticketing/README.md#updateticketingcustomer) - Update a customer
 * [UpdateTicketingNote](docs/sdks/ticketing/README.md#updateticketingnote) - Update a note
 * [UpdateTicketingTicket](docs/sdks/ticketing/README.md#updateticketingticket) - Update a ticket
+
+### [Timeentry](docs/sdks/timeentry/README.md)
+
+* [CreateLegalTimeentry](docs/sdks/timeentry/README.md#createlegaltimeentry) - Create a timeentry
+* [GetLegalTimeentry](docs/sdks/timeentry/README.md#getlegaltimeentry) - Retrieve a timeentry
+* [ListLegalTimeentries](docs/sdks/timeentry/README.md#listlegaltimeentries) - List all timeentries
+* [PatchLegalTimeentry](docs/sdks/timeentry/README.md#patchlegaltimeentry) - Update a timeentry
+* [RemoveLegalTimeentry](docs/sdks/timeentry/README.md#removelegaltimeentry) - Remove a timeentry
+* [UpdateLegalTimeentry](docs/sdks/timeentry/README.md#updatelegaltimeentry) - Update a timeentry
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
@@ -2386,6 +2676,10 @@ func main() {
 * [UpdateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [UpdateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
+### [Usage](docs/sdks/usage/README.md)
+
+* [ListComputeUsages](docs/sdks/usage/README.md#listcomputeusages) - List all usages
+
 ### [User](docs/sdks/user/README.md)
 
 * [CreateScimUsers](docs/sdks/user/README.md#createscimusers) - Create user
@@ -2423,6 +2717,15 @@ func main() {
 * [PatchAnalyticsVisitor](docs/sdks/visitor/README.md#patchanalyticsvisitor) - Update a visitor
 * [RemoveAnalyticsVisitor](docs/sdks/visitor/README.md#removeanalyticsvisitor) - Remove a visitor
 * [UpdateAnalyticsVisitor](docs/sdks/visitor/README.md#updateanalyticsvisitor) - Update a visitor
+
+### [Volume](docs/sdks/volume/README.md)
+
+* [CreateComputeVolume](docs/sdks/volume/README.md#createcomputevolume) - Create a volume
+* [GetComputeVolume](docs/sdks/volume/README.md#getcomputevolume) - Retrieve a volume
+* [ListComputeVolumes](docs/sdks/volume/README.md#listcomputevolumes) - List all volumes
+* [PatchComputeVolume](docs/sdks/volume/README.md#patchcomputevolume) - Update a volume
+* [RemoveComputeVolume](docs/sdks/volume/README.md#removecomputevolume) - Remove a volume
+* [UpdateComputeVolume](docs/sdks/volume/README.md#updatecomputevolume) - Update a volume
 
 ### [Webhook](docs/sdks/webhook/README.md)
 
@@ -2498,7 +2801,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2515,7 +2818,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2576,7 +2879,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2593,7 +2896,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2637,7 +2940,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2654,7 +2957,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2741,7 +3044,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2758,7 +3061,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2807,7 +3110,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2824,7 +3127,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -2887,7 +3190,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("BOB"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
 			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("832b57ad-5e35-4937-9912-7620283aa898"),
+			ID:                  unifiedgosdk.Pointer("b096adb6-85c6-43bd-8b65-9908676ad8f8"),
 			IsPayable:           unifiedgosdk.Pointer(true),
 			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
 			Status:              shared.StatusArchived.ToPointer(),
@@ -2904,7 +3207,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-05T21:03:34.373Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-01-05T23:34:54.694Z"),
 		},
 		ConnectionID: "<id>",
 	})

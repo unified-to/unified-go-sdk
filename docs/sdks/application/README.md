@@ -40,10 +40,10 @@ func main() {
     res, err := s.Application.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-23T07:02:37.948Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-23T20:45:42.303Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-04T05:46:24.575Z"),
-            ID: unifiedgosdk.Pointer("83dcb68d-0cca-4167-902c-7967e1e67e1d"),
+            HiredAt: types.MustNewTimeFromString("2026-05-04T23:49:02.172Z"),
+            ID: unifiedgosdk.Pointer("5325cb93-df77-4344-8105-a5dba4ca6a88"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -63,12 +63,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-01T15:16:13.754Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-02T12:13:56.755Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T10:00:55.541Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T07:06:32.209Z"),
         },
         ConnectionID: "<id>",
     })
@@ -237,10 +237,10 @@ func main() {
     res, err := s.Application.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-23T07:02:37.970Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-23T20:45:42.318Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-04T05:46:24.604Z"),
-            ID: unifiedgosdk.Pointer("b81f79e5-8e55-45d7-aea3-2278a8e75b99"),
+            HiredAt: types.MustNewTimeFromString("2026-05-04T23:49:02.192Z"),
+            ID: unifiedgosdk.Pointer("3d485de1-9ff8-4865-bb20-7bbe2423e40d"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -260,12 +260,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-01T15:16:13.788Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-02T12:13:56.777Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T10:00:55.575Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T07:06:32.232Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -381,10 +381,10 @@ func main() {
     res, err := s.Application.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-23T07:02:37.970Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-23T20:45:42.318Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-04T05:46:24.604Z"),
-            ID: unifiedgosdk.Pointer("b81f79e5-8e55-45d7-aea3-2278a8e75b99"),
+            HiredAt: types.MustNewTimeFromString("2026-05-04T23:49:02.192Z"),
+            ID: unifiedgosdk.Pointer("3d485de1-9ff8-4865-bb20-7bbe2423e40d"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -404,12 +404,12 @@ func main() {
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-01T15:16:13.788Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-02T12:13:56.777Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
             Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-08T10:00:55.575Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-09T07:06:32.232Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

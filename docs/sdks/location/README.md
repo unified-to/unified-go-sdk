@@ -8,9 +8,11 @@
 * [CreateHrisLocation](#createhrislocation) - Create a location
 * [GetClubsLocation](#getclubslocation) - Retrieve a location
 * [GetCommerceLocation](#getcommercelocation) - Retrieve a location
+* [GetHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [GetHrisLocation](#gethrislocation) - Retrieve a location
 * [ListClubsLocations](#listclubslocations) - List all locations
 * [ListCommerceLocations](#listcommercelocations) - List all locations
+* [ListHealthcareLocations](#listhealthcarelocations) - List all locations
 * [ListHrisLocations](#listhrislocations) - List all locations
 * [PatchCommerceLocation](#patchcommercelocation) - Update a location
 * [PatchHrisLocation](#patchhrislocation) - Update a location
@@ -59,7 +61,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("5eb2c8d8-67d7-4993-93ba-0b9210a34d1e"),
+            ID: unifiedgosdk.Pointer("7ac92ab4-ae41-4514-96d1-478c8c218613"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -70,10 +72,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("0fd1a451-74a9-4366-b56e-1cab6cfed93d"),
+                    ID: unifiedgosdk.Pointer("eb8db84d-c9b5-4ebd-ac27-a79341a5b150"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("8ff94f86-ce83-4a5a-82d9-7cdca5e18fcd"),
+                            ID: unifiedgosdk.Pointer("08495af3-76ce-408d-858d-95e28e72981e"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -100,7 +102,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-17T07:27:20.940Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T14:43:33.537Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -172,8 +174,8 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MUR"),
             Description: unifiedgosdk.Pointer("Acervus caries."),
-            ExternalIdentifier: unifiedgosdk.Pointer("cf90be07-bf08-4542-ae05-d6af5965c6f1"),
-            ID: unifiedgosdk.Pointer("1e53dfa8-5595-4dc1-bcc5-10de4c8bdcba"),
+            ExternalIdentifier: unifiedgosdk.Pointer("54889f3b-64bd-4c03-87a4-3046c3f40499"),
+            ID: unifiedgosdk.Pointer("d23bc217-59a3-4e73-a3a3-155cbeeb1978"),
             IsActive: unifiedgosdk.Pointer(true),
             IsHq: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("fr"),
@@ -193,7 +195,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("America/Guyana"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-17T10:41:08.849Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T18:25:17.217Z"),
         },
         ConnectionID: "<id>",
     })
@@ -327,6 +329,61 @@ func main() {
 ### Response
 
 **[*operations.GetCommerceLocationResponse](../../pkg/models/operations/getcommercelocationresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetHealthcareLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getHealthcareLocation" method="get" path="/healthcare/{connection_id}/location/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Location.GetHealthcareLocation(ctx, operations.GetHealthcareLocationRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareLocation != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.GetHealthcareLocationRequest](../../pkg/models/operations/gethealthcarelocationrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../pkg/models/operations/option.md)                                           | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.GetHealthcareLocationResponse](../../pkg/models/operations/gethealthcarelocationresponse.md), error**
 
 ### Errors
 
@@ -497,6 +554,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListHealthcareLocations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listHealthcareLocations" method="get" path="/healthcare/{connection_id}/location" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Location.ListHealthcareLocations(ctx, operations.ListHealthcareLocationsRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.HealthcareLocations != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.ListHealthcareLocationsRequest](../../pkg/models/operations/listhealthcarelocationsrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../pkg/models/operations/option.md)                                               | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.ListHealthcareLocationsResponse](../../pkg/models/operations/listhealthcarelocationsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListHrisLocations
 
 List all locations
@@ -591,7 +702,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("6a2af433-fc3f-4ff5-84e4-0c61128fafdd"),
+            ID: unifiedgosdk.Pointer("602a4d92-5d65-4016-978b-8b03bed67fd9"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -602,10 +713,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("8e0e88b1-254c-4027-93a5-32d4b03fb5a2"),
+                    ID: unifiedgosdk.Pointer("05e11113-6be6-45df-8796-c425ccecdcfc"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("5be152a2-ea26-4af9-96ce-530d98842281"),
+                            ID: unifiedgosdk.Pointer("5c08a4a3-7827-44f7-b4a6-7d08143fe585"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -632,7 +743,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-17T07:27:20.954Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T14:43:33.549Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -705,8 +816,8 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MUR"),
             Description: unifiedgosdk.Pointer("Acervus caries."),
-            ExternalIdentifier: unifiedgosdk.Pointer("514209de-9c29-4060-acaf-75af1d4884d7"),
-            ID: unifiedgosdk.Pointer("710eed80-ff85-4b44-80c5-8b4d22e2ab36"),
+            ExternalIdentifier: unifiedgosdk.Pointer("0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc"),
+            ID: unifiedgosdk.Pointer("d71ba7b1-de46-43ab-a5c9-6f86497eaac1"),
             IsActive: unifiedgosdk.Pointer(true),
             IsHq: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("fr"),
@@ -726,7 +837,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("America/Guyana"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-17T10:41:08.855Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T18:25:17.222Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -908,7 +1019,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-29T04:15:21.195Z"),
             Currency: unifiedgosdk.Pointer("XCD"),
             Description: unifiedgosdk.Pointer("Adsidue audentia."),
-            ID: unifiedgosdk.Pointer("6a2af433-fc3f-4ff5-84e4-0c61128fafdd"),
+            ID: unifiedgosdk.Pointer("602a4d92-5d65-4016-978b-8b03bed67fd9"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/hjFt1/1036/2220"),
             IsActive: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("vulgaris"),
@@ -919,10 +1030,10 @@ func main() {
                 shared.CommerceItemMedia{
                     Alt: unifiedgosdk.Pointer("Addo."),
                     Height: unifiedgosdk.Pointer[float64](283.0),
-                    ID: unifiedgosdk.Pointer("8e0e88b1-254c-4027-93a5-32d4b03fb5a2"),
+                    ID: unifiedgosdk.Pointer("05e11113-6be6-45df-8796-c425ccecdcfc"),
                     Metadata: []shared.CommerceMetadata{
                         shared.CommerceMetadata{
-                            ID: unifiedgosdk.Pointer("5be152a2-ea26-4af9-96ce-530d98842281"),
+                            ID: unifiedgosdk.Pointer("5c08a4a3-7827-44f7-b4a6-7d08143fe585"),
                             Slug: unifiedgosdk.Pointer("abutor"),
                             Value: unifiedgosdk.Pointer(shared.CreateCommerceMetadataValueStr(
                                 "damno",
@@ -949,7 +1060,7 @@ func main() {
                     Type: shared.CommerceTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-04-17T07:27:20.954Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-17T14:43:33.549Z"),
             WebURL: unifiedgosdk.Pointer("https://chilly-edge.info"),
         },
         ConnectionID: "<id>",
@@ -1022,8 +1133,8 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-07-18T10:32:01.414Z"),
             Currency: unifiedgosdk.Pointer("MUR"),
             Description: unifiedgosdk.Pointer("Acervus caries."),
-            ExternalIdentifier: unifiedgosdk.Pointer("514209de-9c29-4060-acaf-75af1d4884d7"),
-            ID: unifiedgosdk.Pointer("710eed80-ff85-4b44-80c5-8b4d22e2ab36"),
+            ExternalIdentifier: unifiedgosdk.Pointer("0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc"),
+            ID: unifiedgosdk.Pointer("d71ba7b1-de46-43ab-a5c9-6f86497eaac1"),
             IsActive: unifiedgosdk.Pointer(true),
             IsHq: unifiedgosdk.Pointer(false),
             LanguageLocale: unifiedgosdk.Pointer("fr"),
@@ -1043,7 +1154,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("America/Guyana"),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-17T10:41:08.855Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-17T18:25:17.222Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

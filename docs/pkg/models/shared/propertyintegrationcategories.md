@@ -53,3 +53,6 @@ custom := shared.PropertyIntegrationCategories("custom_value")
 | `PropertyIntegrationCategoriesCdp`          | cdp                                         |
 | `PropertyIntegrationCategoriesPerformance`  | performance                                 |
 | `PropertyIntegrationCategoriesSocial`       | social                                      |
+| `PropertyIntegrationCategoriesLegal`        | legal                                       |
+| `PropertyIntegrationCategoriesCompute`      | compute                                     |
+| `PropertyIntegrationCategoriesHealthcare`   | healthcare                                  |

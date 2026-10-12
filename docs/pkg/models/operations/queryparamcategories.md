@@ -50,3 +50,6 @@ value := operations.QueryParamCategoriesPassthrough
 | `QueryParamCategoriesCdp`          | cdp                                |
 | `QueryParamCategoriesPerformance`  | performance                        |
 | `QueryParamCategoriesSocial`       | social                             |
+| `QueryParamCategoriesLegal`        | legal                              |
+| `QueryParamCategoriesCompute`      | compute                            |
+| `QueryParamCategoriesHealthcare`   | healthcare                         |

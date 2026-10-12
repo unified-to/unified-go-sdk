@@ -50,3 +50,6 @@ value := operations.ListUnifiedIntegrationsQueryParamCategoriesPassthrough
 | `ListUnifiedIntegrationsQueryParamCategoriesCdp`          | cdp                                                       |
 | `ListUnifiedIntegrationsQueryParamCategoriesPerformance`  | performance                                               |
 | `ListUnifiedIntegrationsQueryParamCategoriesSocial`       | social                                                    |
+| `ListUnifiedIntegrationsQueryParamCategoriesLegal`        | legal                                                     |
+| `ListUnifiedIntegrationsQueryParamCategoriesCompute`      | compute                                                   |
+| `ListUnifiedIntegrationsQueryParamCategoriesHealthcare`   | healthcare                                                |

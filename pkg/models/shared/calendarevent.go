@@ -34,17 +34,19 @@ type CalendarEvent struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *string `json:"created_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt         *string                         `json:"end_at,omitempty"`
-	HasConference *bool                           `json:"has_conference,omitempty"`
-	ID            *string                         `json:"id,omitempty"`
-	IsAllDay      *bool                           `json:"is_all_day,omitempty"`
-	IsFree        *bool                           `json:"is_free,omitempty"`
-	IsPrivate     *bool                           `json:"is_private,omitempty"`
-	Location      *string                         `json:"location,omitempty"`
-	Notes         *string                         `json:"notes,omitempty"`
-	Organizer     *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
-	Raw           map[string]any                  `json:"raw,omitempty"`
-	Recurrence    []CalendarEventRecurrence       `json:"recurrence,omitempty"`
+	EndAt         *string `json:"end_at,omitempty"`
+	HasConference *bool   `json:"has_conference,omitempty"`
+	ID            *string `json:"id,omitempty"`
+	IsAllDay      *bool   `json:"is_all_day,omitempty"`
+	IsFree        *bool   `json:"is_free,omitempty"`
+	IsPrivate     *bool   `json:"is_private,omitempty"`
+	Location      *string `json:"location,omitempty"`
+	// pointer to Legal Matter
+	MatterID   *string                         `json:"matter_id,omitempty"`
+	Notes      *string                         `json:"notes,omitempty"`
+	Organizer  *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
+	Raw        map[string]any                  `json:"raw,omitempty"`
+	Recurrence []CalendarEventRecurrence       `json:"recurrence,omitempty"`
 	// (reference to CalendarEvent)
 	RecurringEventID  *string `json:"recurring_event_id,omitempty"`
 	SendNotifications *bool   `json:"send_notifications,omitempty"`
@@ -140,6 +142,13 @@ func (c *CalendarEvent) GetLocation() *string {
 		return nil
 	}
 	return c.Location
+}
+
+func (c *CalendarEvent) GetMatterID() *string {
+	if c == nil {
+		return nil
+	}
+	return c.MatterID
 }
 
 func (c *CalendarEvent) GetNotes() *string {

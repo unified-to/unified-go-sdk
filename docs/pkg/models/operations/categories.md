@@ -50,3 +50,6 @@ value := operations.CategoriesPassthrough
 | `CategoriesCdp`          | cdp                      |
 | `CategoriesPerformance`  | performance              |
 | `CategoriesSocial`       | social                   |
+| `CategoriesLegal`        | legal                    |
+| `CategoriesCompute`      | compute                  |
+| `CategoriesHealthcare`   | healthcare               |

@@ -38,4 +38,5 @@ value := operations.PatchCalendarEventQueryParamFieldsID
 | `PatchCalendarEventQueryParamFieldsConference`        | conference                                            |
 | `PatchCalendarEventQueryParamFieldsAttachments`       | attachments                                           |
 | `PatchCalendarEventQueryParamFieldsSendNotifications` | send_notifications                                    |
+| `PatchCalendarEventQueryParamFieldsMatterID`          | matter_id                                             |
 | `PatchCalendarEventQueryParamFieldsRaw`               | raw                                                   |

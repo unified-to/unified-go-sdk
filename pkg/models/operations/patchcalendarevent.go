@@ -35,6 +35,7 @@ const (
 	PatchCalendarEventQueryParamFieldsConference        PatchCalendarEventQueryParamFields = "conference"
 	PatchCalendarEventQueryParamFieldsAttachments       PatchCalendarEventQueryParamFields = "attachments"
 	PatchCalendarEventQueryParamFieldsSendNotifications PatchCalendarEventQueryParamFields = "send_notifications"
+	PatchCalendarEventQueryParamFieldsMatterID          PatchCalendarEventQueryParamFields = "matter_id"
 	PatchCalendarEventQueryParamFieldsRaw               PatchCalendarEventQueryParamFields = "raw"
 )
 
@@ -92,6 +93,8 @@ func (e *PatchCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "attachments":
 		fallthrough
 	case "send_notifications":
+		fallthrough
+	case "matter_id":
 		fallthrough
 	case "raw":
 		*e = PatchCalendarEventQueryParamFields(v)

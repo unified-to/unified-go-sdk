@@ -41,7 +41,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("68b65b29-1461-4eba-9bd8-6ee3bf4f088b"),
+            ID: unifiedgosdk.Pointer("5a58d2af-5699-437f-98c1-0409b47e927b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -62,7 +62,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.115Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.234Z"),
         },
         ConnectionID: "<id>",
     })
@@ -232,7 +232,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("8ff8ee5f-3111-4798-aba2-ff9737c1316a"),
+            ID: unifiedgosdk.Pointer("ea83d014-a52f-4cf3-aef2-b5dee844714b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -253,7 +253,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.135Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.249Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -370,7 +370,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("8ff8ee5f-3111-4798-aba2-ff9737c1316a"),
+            ID: unifiedgosdk.Pointer("ea83d014-a52f-4cf3-aef2-b5dee844714b"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -391,7 +391,7 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-07-26T17:16:18.135Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-07-27T10:34:00.249Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
