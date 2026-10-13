@@ -116,7 +116,7 @@ type ComputeGputype struct {
 	Availability []ComputeAvailability `json:"availability,omitempty"`
 	// vCPUs included in one unit of this type
 	CPUCount *float64 `json:"cpu_count,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Local disk in MiB
 	DiskMb *float64 `json:"disk_mb,omitempty"`
@@ -140,7 +140,7 @@ type ComputeGputype struct {
 	Raw map[string]any `json:"raw,omitempty"`
 	// The vendor's own SKU or type name
 	Sku *string `json:"sku,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 

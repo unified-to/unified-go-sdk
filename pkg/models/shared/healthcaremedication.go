@@ -51,7 +51,8 @@ type HealthcareMedication struct {
 	// When the patient should stop taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// Unique identifier for the medication order/prescription
-	ID       *string              `json:"id,omitempty"`
+	ID *string `json:"id,omitempty"`
+	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Human-readable name of the medication
 	Name *string `json:"name,omitempty"`

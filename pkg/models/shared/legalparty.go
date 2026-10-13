@@ -2,6 +2,7 @@
 
 package shared
 
+// LegalPartyRole - the party role on the matter
 type LegalPartyRole string
 
 const (
@@ -37,8 +38,9 @@ type LegalParty struct {
 	// pointer to a CRM Contact
 	ContactID *string `json:"contact_id,omitempty"`
 	// the vendor's free-text relationship description
-	Description *string         `json:"description,omitempty"`
-	Role        *LegalPartyRole `json:"role,omitempty"`
+	Description *string `json:"description,omitempty"`
+	// the party role on the matter
+	Role *LegalPartyRole `json:"role,omitempty"`
 }
 
 func (l *LegalParty) GetCompanyID() *string {

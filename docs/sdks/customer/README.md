@@ -46,7 +46,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("f2753002-98da-4d3d-8265-b547e63b7e31"),
+            ID: unifiedgosdk.Pointer("f9ca90d5-f5b5-42d0-b4b2-42d9e73838a2"),
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
                 "casso",
@@ -66,7 +66,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-05-26T14:01:50.133Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-27T07:37:44.711Z"),
         },
         ConnectionID: "<id>",
     })
@@ -241,7 +241,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("e090390f-9903-4183-a3fa-7061658c126f"),
+            ID: unifiedgosdk.Pointer("6d83e732-25ab-4bd7-951a-6f8044031298"),
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
                 "casso",
@@ -261,7 +261,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-05-26T14:01:50.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-27T07:37:44.725Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -383,7 +383,7 @@ func main() {
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("e090390f-9903-4183-a3fa-7061658c126f"),
+            ID: unifiedgosdk.Pointer("6d83e732-25ab-4bd7-951a-6f8044031298"),
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
                 "casso",
@@ -403,7 +403,7 @@ func main() {
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-05-26T14:01:50.143Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-05-27T07:37:44.725Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

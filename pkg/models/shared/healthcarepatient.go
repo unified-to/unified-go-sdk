@@ -58,7 +58,8 @@ type HealthcarePatient struct {
 	// Preferred language code of the patient
 	Language *string `json:"language,omitempty"`
 	// Family name of the patient
-	LastName *string              `json:"last_name,omitempty"`
+	LastName *string `json:"last_name,omitempty"`
+	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Full name of the patient
 	Name *string `json:"name,omitempty"`

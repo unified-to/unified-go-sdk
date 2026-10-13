@@ -2,6 +2,7 @@
 
 package shared
 
+// HealthcareTelephoneType - The kind of telephone number (work, home, mobile, fax or other)
 type HealthcareTelephoneType string
 
 const (
@@ -28,8 +29,10 @@ func (e *HealthcareTelephoneType) IsExact() bool {
 }
 
 type HealthcareTelephone struct {
-	Telephone string                   `json:"telephone"`
-	Type      *HealthcareTelephoneType `json:"type,omitempty"`
+	// The telephone number
+	Telephone string `json:"telephone"`
+	// The kind of telephone number (work, home, mobile, fax or other)
+	Type *HealthcareTelephoneType `json:"type,omitempty"`
 }
 
 func (h *HealthcareTelephone) GetTelephone() string {

@@ -42,7 +42,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("ba1f5743-aef2-4e85-9c9b-b71b4a283e13"),
+            ID: unifiedgosdk.Pointer("7c319059-dde7-4949-873e-c16ed53353b9"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -62,7 +62,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-12T16:53:15.013Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-13T06:51:07.920Z"),
         },
         ConnectionID: "<id>",
     })
@@ -233,7 +233,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("e773da20-a90b-4501-9c1e-cab21cfc225e"),
+            ID: unifiedgosdk.Pointer("d96cb461-044a-453e-bc7e-4e71a39ab8ec"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -253,7 +253,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-12T16:53:15.031Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-13T06:51:07.937Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -371,7 +371,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("e773da20-a90b-4501-9c1e-cab21cfc225e"),
+            ID: unifiedgosdk.Pointer("d96cb461-044a-453e-bc7e-4e71a39ab8ec"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -391,7 +391,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-12T16:53:15.031Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-13T06:51:07.937Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

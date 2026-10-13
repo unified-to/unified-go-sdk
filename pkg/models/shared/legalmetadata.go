@@ -149,6 +149,7 @@ const (
 	LegalMetadataExtraDataTypeArrayOfLegalMetadata5 LegalMetadataExtraDataType = "arrayOfLegalMetadata5"
 )
 
+// LegalMetadataExtraData - additional data about the custom field
 type LegalMetadataExtraData struct {
 	MapOfAny              map[string]any   `queryParam:"inline" union:"member"`
 	Str                   *string          `queryParam:"inline" union:"member"`
@@ -275,6 +276,7 @@ func (u LegalMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type LegalMetadataExtraData: all fields are null")
 }
 
+// LegalMetadataFormat - the data type of the value
 type LegalMetadataFormat string
 
 const (
@@ -449,6 +451,7 @@ const (
 	LegalMetadataValueTypeArrayOfLegalMetadataSchemas5 LegalMetadataValueType = "arrayOfLegalMetadataSchemas5"
 )
 
+// LegalMetadataValue - the custom field value
 type LegalMetadataValue struct {
 	MapOfAny                     map[string]any          `queryParam:"inline" union:"member"`
 	Str                          *string                 `queryParam:"inline" union:"member"`
@@ -576,12 +579,18 @@ func (u LegalMetadataValue) MarshalJSON() ([]byte, error) {
 }
 
 type LegalMetadata struct {
+	// additional data about the custom field
 	ExtraData *LegalMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *LegalMetadataFormat    `json:"format,omitempty"`
-	ID        *string                 `json:"id,omitempty"`
-	Namespace *string                 `json:"namespace,omitempty"`
-	Slug      *string                 `json:"slug,omitempty"`
-	Value     *LegalMetadataValue     `json:"value,omitempty"`
+	// the data type of the value
+	Format *LegalMetadataFormat `json:"format,omitempty"`
+	// the custom field identifier
+	ID *string `json:"id,omitempty"`
+	// the scope or origin of the custom field
+	Namespace *string `json:"namespace,omitempty"`
+	// the custom field key
+	Slug *string `json:"slug,omitempty"`
+	// the custom field value
+	Value *LegalMetadataValue `json:"value,omitempty"`
 }
 
 func (l *LegalMetadata) GetExtraData() *LegalMetadataExtraData {

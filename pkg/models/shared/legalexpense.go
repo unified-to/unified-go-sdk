@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// LegalExpenseType - hard cost, soft cost or other
 type LegalExpenseType string
 
 const (
@@ -33,30 +34,39 @@ func (e *LegalExpenseType) IsExact() bool {
 type LegalExpense struct {
 	// the vendor's expense category name
 	Category *string `json:"category,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Currency    *string    `json:"currency,omitempty"`
-	Description *string    `json:"description,omitempty"`
+	// when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217 currency code
+	Currency *string `json:"currency,omitempty"`
+	// free-text description of the expense
+	Description *string `json:"description,omitempty"`
 	// UTBMS/LEDES expense code
 	ExpenseCode *string `json:"expense_code,omitempty"`
-	ID          *string `json:"id,omitempty"`
+	// unique identifier for the expense
+	ID *string `json:"id,omitempty"`
 	// date the expense was incurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	IncurredAt *time.Time `json:"incurred_at,omitempty"`
 	// pointer to the Accounting Invoice this expense was billed on (reference to AccountingInvoice)
-	InvoiceID  *string `json:"invoice_id,omitempty"`
-	IsBillable *bool   `json:"is_billable,omitempty"`
-	IsBilled   *bool   `json:"is_billed,omitempty"`
+	InvoiceID *string `json:"invoice_id,omitempty"`
+	// whether the expense is billable
+	IsBillable *bool `json:"is_billable,omitempty"`
+	// whether the expense has been billed
+	IsBilled *bool `json:"is_billed,omitempty"`
 	// pointer to the Legal Matter this expense is recorded against
 	MatterID *string `json:"matter_id,omitempty"`
 	// custom field values
 	Metadata []LegalMetadata `json:"metadata,omitempty"`
 	// unit price
-	PriceAmount *float64          `json:"price_amount,omitempty"`
-	Quantity    *float64          `json:"quantity,omitempty"`
-	Raw         map[string]any    `json:"raw,omitempty"`
-	TotalAmount *float64          `json:"total_amount,omitempty"`
-	Type        *LegalExpenseType `json:"type,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	PriceAmount *float64 `json:"price_amount,omitempty"`
+	// number of units
+	Quantity *float64 `json:"quantity,omitempty"`
+	// raw data from the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// total amount of the expense
+	TotalAmount *float64 `json:"total_amount,omitempty"`
+	// hard cost, soft cost or other
+	Type *LegalExpenseType `json:"type,omitempty"`
+	// when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// HR Employee who incurred or recorded the expense (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`

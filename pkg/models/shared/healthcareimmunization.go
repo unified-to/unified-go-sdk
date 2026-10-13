@@ -48,8 +48,9 @@ type HealthcareImmunization struct {
 	// Where the vaccine was administered
 	LocationID *string `json:"location_id,omitempty"`
 	// Vaccine lot number
-	LotNumber *string              `json:"lot_number,omitempty"`
-	Metadata  []HealthcareMetadata `json:"metadata,omitempty"`
+	LotNumber *string `json:"lot_number,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Human-readable name of the vaccine
 	Name *string `json:"name,omitempty"`
 	// Free-text notes about the immunization

@@ -68,7 +68,8 @@ type HealthcareCondition struct {
 	// The encounter in which the condition was recorded
 	EncounterID *string `json:"encounter_id,omitempty"`
 	// Unique identifier for the condition
-	ID       *string              `json:"id,omitempty"`
+	ID *string `json:"id,omitempty"`
+	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Human-readable name of the condition
 	Name *string `json:"name,omitempty"`

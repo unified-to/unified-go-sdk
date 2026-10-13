@@ -38,11 +38,11 @@ func main() {
         AdsAsset: shared.AdsAsset{
             CreatedAt: types.MustNewTimeFromString("2020-03-27T20:14:38.603Z"),
             Height: unifiedgosdk.Pointer[float64](400.0),
-            ID: unifiedgosdk.Pointer("fff3ebbc-8cd5-4b1a-8f21-9240e42a0c92"),
+            ID: unifiedgosdk.Pointer("526880f7-8fd7-461e-8b21-4b2cd211da6b"),
             MimeType: unifiedgosdk.Pointer("IMAGE_PNG"),
             Name: unifiedgosdk.Pointer("Lockman - DuBuque"),
             Type: shared.AdsAssetTypeImage.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-03-22T10:18:02.328Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-03-22T16:01:37.842Z"),
             URL: unifiedgosdk.Pointer("https://informal-perfection.com/"),
             Width: unifiedgosdk.Pointer[float64](600.0),
         },

@@ -44,8 +44,9 @@ type HealthcareSlot struct {
 	// Whether the slot has been overbooked
 	IsOverbooked *bool `json:"is_overbooked,omitempty"`
 	// Where the slot takes place
-	LocationID *string              `json:"location_id,omitempty"`
-	Metadata   []HealthcareMetadata `json:"metadata,omitempty"`
+	LocationID *string `json:"location_id,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Free-text notes about the slot
 	Notes *string `json:"notes,omitempty"`
 	// The practitioner whose schedule the slot belongs to

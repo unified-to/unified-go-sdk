@@ -10,7 +10,7 @@ import (
 type ComputeRegion struct {
 	// Country code
 	Country *string `json:"country,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// GPU models offered in this region
 	GpuModels []PropertyComputeRegionGpuModels `json:"gpu_models,omitempty"`
@@ -22,7 +22,7 @@ type ComputeRegion struct {
 	Name *string `json:"name,omitempty"`
 	// Raw data from integration
 	Raw map[string]any `json:"raw,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 

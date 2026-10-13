@@ -2,6 +2,7 @@
 
 package shared
 
+// HealthcareEmailType - The kind of email address (work, home or other)
 type HealthcareEmailType string
 
 const (
@@ -26,8 +27,10 @@ func (e *HealthcareEmailType) IsExact() bool {
 }
 
 type HealthcareEmail struct {
-	Email string               `json:"email"`
-	Type  *HealthcareEmailType `json:"type,omitempty"`
+	// The email address
+	Email string `json:"email"`
+	// The kind of email address (work, home or other)
+	Type *HealthcareEmailType `json:"type,omitempty"`
 }
 
 func (h *HealthcareEmail) GetEmail() string {

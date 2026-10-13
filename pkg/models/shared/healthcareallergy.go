@@ -93,7 +93,8 @@ type HealthcareAllergy struct {
 	// The encounter in which the allergy was recorded
 	EncounterID *string `json:"encounter_id,omitempty"`
 	// Unique identifier for the allergy/intolerance
-	ID       *string              `json:"id,omitempty"`
+	ID *string `json:"id,omitempty"`
+	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Human-readable name of the substance
 	Name *string `json:"name,omitempty"`

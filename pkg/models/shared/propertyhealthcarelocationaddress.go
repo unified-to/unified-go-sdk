@@ -4,12 +4,18 @@ package shared
 
 // PropertyHealthcareLocationAddress - Postal address of the location
 type PropertyHealthcareLocationAddress struct {
-	Address1   *string `json:"address1,omitempty"`
-	Address2   *string `json:"address2,omitempty"`
-	City       *string `json:"city,omitempty"`
-	Country    *string `json:"country,omitempty"`
+	// First line of the street address
+	Address1 *string `json:"address1,omitempty"`
+	// Second line of the street address
+	Address2 *string `json:"address2,omitempty"`
+	// City or locality
+	City *string `json:"city,omitempty"`
+	// Country
+	Country *string `json:"country,omitempty"`
+	// Postal or ZIP code
 	PostalCode *string `json:"postal_code,omitempty"`
-	Region     *string `json:"region,omitempty"`
+	// Regional area (e.g., state in the U.S., province in Canada)
+	Region *string `json:"region,omitempty"`
 }
 
 func (p *PropertyHealthcareLocationAddress) GetAddress1() *string {

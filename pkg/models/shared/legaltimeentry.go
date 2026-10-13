@@ -12,15 +12,20 @@ type LegalTimeentry struct {
 	ActivityCode *string `json:"activity_code,omitempty"`
 	// billable duration after rounding, in minutes
 	BillableMinutes *float64 `json:"billable_minutes,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Currency    *string    `json:"currency,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
+	// when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217 currency code
+	Currency *string `json:"currency,omitempty"`
+	// description of the work performed
+	Description *string `json:"description,omitempty"`
+	// unique identifier for the time entry
+	ID *string `json:"id,omitempty"`
 	// pointer to the Accounting Invoice this time was billed on (reference to AccountingInvoice)
-	InvoiceID  *string `json:"invoice_id,omitempty"`
-	IsBillable *bool   `json:"is_billable,omitempty"`
-	IsBilled   *bool   `json:"is_billed,omitempty"`
+	InvoiceID *string `json:"invoice_id,omitempty"`
+	// whether the time entry is billable
+	IsBillable *bool `json:"is_billable,omitempty"`
+	// whether the time entry has been billed
+	IsBilled *bool `json:"is_billed,omitempty"`
 	// pointer to the Legal Matter this time is recorded against
 	MatterID *string `json:"matter_id,omitempty"`
 	// custom field values
@@ -28,12 +33,14 @@ type LegalTimeentry struct {
 	// duration worked, in minutes
 	Minutes *float64 `json:"minutes,omitempty"`
 	// hourly rate, or the flat amount for flat-rate entries
-	RateAmount *float64       `json:"rate_amount,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
+	RateAmount *float64 `json:"rate_amount,omitempty"`
+	// raw data from the integration
+	Raw map[string]any `json:"raw,omitempty"`
 	// UTBMS/LEDES task code
-	TaskCode    *string  `json:"task_code,omitempty"`
+	TaskCode *string `json:"task_code,omitempty"`
+	// total amount of the time entry
 	TotalAmount *float64 `json:"total_amount,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// HR Employee who is the timekeeper (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`

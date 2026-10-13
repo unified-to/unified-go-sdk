@@ -40,7 +40,7 @@ func main() {
     res, err := s.Label.CreateShippingLabel(ctx, operations.CreateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("2ed247a3-c407-439c-87d0-76c21d1ef73f"),
+            ID: unifiedgosdk.Pointer("f3993662-64e6-47db-9990-f601749f762c"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -49,7 +49,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-25T13:22:19.874Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-25T20:19:19.675Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,7 +218,7 @@ func main() {
     res, err := s.Label.PatchShippingLabel(ctx, operations.PatchShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("08aff15b-baa8-4e8d-954e-d4535ca5fb1b"),
+            ID: unifiedgosdk.Pointer("5b3974b9-c5f4-4ea8-b7c9-21e79836d285"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -227,7 +227,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-25T13:22:19.879Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-25T20:19:19.680Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -343,7 +343,7 @@ func main() {
     res, err := s.Label.UpdateShippingLabel(ctx, operations.UpdateShippingLabelRequest{
         ShippingLabel: shared.ShippingLabel{
             CreatedAt: types.MustNewTimeFromString("2022-11-18T16:45:38.067Z"),
-            ID: unifiedgosdk.Pointer("08aff15b-baa8-4e8d-954e-d4535ca5fb1b"),
+            ID: unifiedgosdk.Pointer("5b3974b9-c5f4-4ea8-b7c9-21e79836d285"),
             IsVoided: unifiedgosdk.Pointer(false),
             LabelCost: unifiedgosdk.Pointer[float64](40.83653403213248),
             LabelCostCurrency: unifiedgosdk.Pointer("USD"),
@@ -352,7 +352,7 @@ func main() {
             ServiceCode: unifiedgosdk.Pointer("GIz"),
             Status: shared.ShippingLabelStatusException.ToPointer(),
             TrackingNumber: unifiedgosdk.Pointer("zYv60FOIBUJ6"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-25T13:22:19.879Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-25T20:19:19.680Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

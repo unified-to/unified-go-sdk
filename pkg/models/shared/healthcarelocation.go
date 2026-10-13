@@ -25,8 +25,9 @@ type HealthcareLocation struct {
 	// Latitude of the location
 	Latitude *float64 `json:"latitude,omitempty"`
 	// Longitude of the location
-	Longitude *float64             `json:"longitude,omitempty"`
-	Metadata  []HealthcareMetadata `json:"metadata,omitempty"`
+	Longitude *float64 `json:"longitude,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Name of the location
 	Name *string `json:"name,omitempty"`
 	// Name of the organization that manages the location

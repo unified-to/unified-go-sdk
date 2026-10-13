@@ -51,8 +51,9 @@ type HealthcareAppointment struct {
 	// Unique identifier for the appointment
 	ID *string `json:"id,omitempty"`
 	// Where the appointment takes place
-	LocationID *string              `json:"location_id,omitempty"`
-	Metadata   []HealthcareMetadata `json:"metadata,omitempty"`
+	LocationID *string `json:"location_id,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Free-text notes or comments
 	Notes *string `json:"notes,omitempty"`
 	// The patient attending the appointment

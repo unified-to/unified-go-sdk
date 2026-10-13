@@ -41,10 +41,10 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("2c03429c-bb13-4065-aa44-9cd27d5f8640"),
+            ID: unifiedgosdk.Pointer("a3f3be5a-69f2-41c6-9429-6b5e7eb957b1"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-22T16:35:42.669Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-23T07:38:12.519Z"),
         },
         ConnectionID: "<id>",
     })
@@ -214,10 +214,10 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("48d1084c-18dd-46b5-b263-5c196b273d09"),
+            ID: unifiedgosdk.Pointer("3c954a62-c7f7-449e-ba91-a0782dfbecf9"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-22T16:35:42.673Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-23T07:38:12.525Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -334,10 +334,10 @@ func main() {
         KmsSpace: shared.KmsSpace{
             CreatedAt: types.MustNewTimeFromString("2022-10-31T00:56:54.246Z"),
             Description: unifiedgosdk.Pointer("Acer."),
-            ID: unifiedgosdk.Pointer("48d1084c-18dd-46b5-b263-5c196b273d09"),
+            ID: unifiedgosdk.Pointer("3c954a62-c7f7-449e-ba91-a0782dfbecf9"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("into nor afore"),
-            UpdatedAt: types.MustNewTimeFromString("2025-12-22T16:35:42.673Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-12-23T07:38:12.525Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

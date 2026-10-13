@@ -53,10 +53,10 @@ func main() {
     res, err := s.Company.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("9868f156-530f-4428-bb6e-3076b8862e73"),
+            ID: unifiedgosdk.Pointer("54db26a5-48a9-432d-9d1e-cfb23687dedc"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-29T10:01:52.911Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-29T13:40:16.875Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
         },
         ConnectionID: "<id>",
@@ -147,7 +147,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("d56641bc-d8ca-4fe5-9ff2-b3dee82d5b70"),
+            ID: unifiedgosdk.Pointer("ddb04161-4edb-4c90-a71e-0dc2236b2dfb"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -163,7 +163,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("06b20837-8835-4c6c-85b2-0cd918aa8ec4"),
+                    ID: unifiedgosdk.Pointer("af4e6469-96ec-4f2d-8d25-f03ceebee6dd"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -191,7 +191,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T08:27:37.566Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.060Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -262,10 +262,10 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("PA"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("eecc0e62-f379-4b39-95fb-d09b6a0304a1"),
+            ID: unifiedgosdk.Pointer("0d43f2b8-9866-4f91-bde9-3113a5c99e0e"),
             LegalName: unifiedgosdk.Pointer("Schultz LLC"),
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-29T14:57:59.033Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-30T09:43:50.889Z"),
         },
         ConnectionID: "<id>",
     })
@@ -706,10 +706,10 @@ func main() {
     res, err := s.Company.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("b8304991-4436-483a-8561-34ac4b9394cf"),
+            ID: unifiedgosdk.Pointer("1c1e0f8a-e3e8-466c-b26d-b6cd4392f8bd"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-29T10:01:52.913Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-29T13:40:16.879Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
         },
         ConnectionID: "<id>",
@@ -801,7 +801,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("a6a83f76-920e-4045-9781-5040b9ddec67"),
+            ID: unifiedgosdk.Pointer("51d2c771-f597-4ca7-b994-c5b952df372a"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -817,7 +817,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("00e72570-ff48-4e7a-82e5-24d572654988"),
+                    ID: unifiedgosdk.Pointer("8edcd351-9b09-4ed2-afdd-24064176472d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -845,7 +845,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T08:27:37.589Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.085Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -917,10 +917,10 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("PA"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("3c359f1e-2c03-44d9-b97f-83d7a850ec09"),
+            ID: unifiedgosdk.Pointer("4c0a0aa3-7aec-4f96-8b39-5f5039eb1ab1"),
             LegalName: unifiedgosdk.Pointer("Schultz LLC"),
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-29T14:57:59.043Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-30T09:43:50.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1146,10 +1146,10 @@ func main() {
     res, err := s.Company.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("b8304991-4436-483a-8561-34ac4b9394cf"),
+            ID: unifiedgosdk.Pointer("1c1e0f8a-e3e8-466c-b26d-b6cd4392f8bd"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
             Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-29T10:01:52.913Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-29T13:40:16.879Z"),
             WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
         },
         ConnectionID: "<id>",
@@ -1241,7 +1241,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("a6a83f76-920e-4045-9781-5040b9ddec67"),
+            ID: unifiedgosdk.Pointer("51d2c771-f597-4ca7-b994-c5b952df372a"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -1257,7 +1257,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("00e72570-ff48-4e7a-82e5-24d572654988"),
+                    ID: unifiedgosdk.Pointer("8edcd351-9b09-4ed2-afdd-24064176472d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1285,7 +1285,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T08:27:37.589Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.085Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -1357,10 +1357,10 @@ func main() {
                 RegionCode: unifiedgosdk.Pointer("PA"),
             },
             CreatedAt: types.MustNewTimeFromString("2021-05-02T22:27:38.970Z"),
-            ID: unifiedgosdk.Pointer("3c359f1e-2c03-44d9-b97f-83d7a850ec09"),
+            ID: unifiedgosdk.Pointer("4c0a0aa3-7aec-4f96-8b39-5f5039eb1ab1"),
             LegalName: unifiedgosdk.Pointer("Schultz LLC"),
             Name: unifiedgosdk.Pointer("Gottlieb Group"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-29T14:57:59.043Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-30T09:43:50.904Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

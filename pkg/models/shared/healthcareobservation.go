@@ -110,7 +110,8 @@ type HealthcareObservation struct {
 	// Interpretation of the result (e.g. high, low)
 	Interpretation *Interpretation `json:"interpretation,omitempty"`
 	// When the result was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	IssuedAt *time.Time           `json:"issued_at,omitempty"`
+	IssuedAt *time.Time `json:"issued_at,omitempty"`
+	// Custom field values
 	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Human-readable name of what was observed
 	Name *string `json:"name,omitempty"`

@@ -149,6 +149,7 @@ const (
 	ComputeMetadataExtraDataTypeArrayOfComputeMetadata5 ComputeMetadataExtraDataType = "arrayOfComputeMetadata5"
 )
 
+// ComputeMetadataExtraData - Additional data about the value
 type ComputeMetadataExtraData struct {
 	MapOfAny                map[string]any     `queryParam:"inline" union:"member"`
 	Str                     *string            `queryParam:"inline" union:"member"`
@@ -571,10 +572,12 @@ func (u ComputeMetadataValue) MarshalJSON() ([]byte, error) {
 }
 
 type ComputeMetadata struct {
+	// Additional data about the value
 	ExtraData *ComputeMetadataExtraData `json:"extra_data,omitempty"`
 	// The data type of the value
 	Format *ComputeMetadataFormat `json:"format,omitempty"`
-	ID     *string                `json:"id,omitempty"`
+	// The label, tag or metadata identifier
+	ID *string `json:"id,omitempty"`
 	// The origin of the value (eg. labels, tags, metadata)
 	Namespace *string `json:"namespace,omitempty"`
 	// The label, tag or metadata key

@@ -56,8 +56,9 @@ type HealthcarePractitioner struct {
 	// Family name of the practitioner
 	LastName *string `json:"last_name,omitempty"`
 	// Locations where the practitioner provides care
-	LocationIds []string             `json:"location_ids,omitempty"`
-	Metadata    []HealthcareMetadata `json:"metadata,omitempty"`
+	LocationIds []string `json:"location_ids,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// Full name of the practitioner
 	Name *string `json:"name,omitempty"`
 	// Codings for certifications, licenses and degrees

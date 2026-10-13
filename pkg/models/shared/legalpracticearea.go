@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// LegalPracticeareaType - the normalized practice area type
 type LegalPracticeareaType string
 
 const (
@@ -86,17 +87,23 @@ func (e *LegalPracticeareaType) IsExact() bool {
 }
 
 type LegalPracticearea struct {
+	// the practice area code
 	Code *string `json:"code,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
-	ID        *string    `json:"id,omitempty"`
-	IsActive  *bool      `json:"is_active,omitempty"`
+	// unique identifier for the practice area
+	ID *string `json:"id,omitempty"`
+	// whether the practice area is active
+	IsActive *bool `json:"is_active,omitempty"`
 	// custom field values
-	Metadata []LegalMetadata        `json:"metadata,omitempty"`
-	Name     *string                `json:"name,omitempty"`
-	Raw      map[string]any         `json:"raw,omitempty"`
-	Type     *LegalPracticeareaType `json:"type,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	Metadata []LegalMetadata `json:"metadata,omitempty"`
+	// the practice area name
+	Name *string `json:"name,omitempty"`
+	// raw data from the integration
+	Raw map[string]any `json:"raw,omitempty"`
+	// the normalized practice area type
+	Type *LegalPracticeareaType `json:"type,omitempty"`
+	// when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 

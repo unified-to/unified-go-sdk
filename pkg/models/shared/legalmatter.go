@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+// BillingMethod - how the matter is billed
 type BillingMethod string
 
 const (
@@ -31,6 +32,7 @@ func (e *BillingMethod) IsExact() bool {
 	return false
 }
 
+// LegalMatterStatus - the matter status
 type LegalMatterStatus string
 
 const (
@@ -56,43 +58,51 @@ func (e *LegalMatterStatus) IsExact() bool {
 }
 
 type LegalMatter struct {
+	// how the matter is billed
 	BillingMethod *BillingMethod `json:"billing_method,omitempty"`
 	// the client's own reference number for this matter
 	ClientReference *string `json:"client_reference,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ClosedAt *time.Time `json:"closed_at,omitempty"`
 	// CRM Companies that are clients on this matter
 	CompanyIds []string `json:"company_ids,omitempty"`
 	// CRM Contacts that are clients on this matter
 	ContactIds []string `json:"contact_ids,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Currency    *string    `json:"currency,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	IsBillable  *bool      `json:"is_billable,omitempty"`
+	// when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// ISO 4217 currency code
+	Currency *string `json:"currency,omitempty"`
+	// free-text description of the matter
+	Description *string `json:"description,omitempty"`
+	// unique identifier for the matter
+	ID *string `json:"id,omitempty"`
+	// whether the matter is billable
+	IsBillable *bool `json:"is_billable,omitempty"`
 	// custom field values
 	Metadata []LegalMetadata `json:"metadata,omitempty"`
-	Name     *string         `json:"name,omitempty"`
+	// the matter name
+	Name *string `json:"name,omitempty"`
 	// the firm's display/matter number
 	Number *string `json:"number,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	OpenedAt *time.Time `json:"opened_at,omitempty"`
 	// HR Employee who is the originating attorney (reference to HrisEmployee)
 	OriginatingUserID *string `json:"originating_user_id,omitempty"`
 	// all people and organizations related to this matter, with their role
 	Parties []LegalParty `json:"parties,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PendingAt *time.Time `json:"pending_at,omitempty"`
 	// pointer to the Legal Practicearea object
-	PracticeareaID *string        `json:"practicearea_id,omitempty"`
-	Raw            map[string]any `json:"raw,omitempty"`
+	PracticeareaID *string `json:"practicearea_id,omitempty"`
+	// raw data from the integration
+	Raw map[string]any `json:"raw,omitempty"`
 	// the matter stage name
-	Stage  *string            `json:"stage,omitempty"`
+	Stage *string `json:"stage,omitempty"`
+	// the matter status
 	Status *LegalMatterStatus `json:"status,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StatuteOfLimitationsAt *time.Time `json:"statute_of_limitations_at,omitempty"`
-	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+	// when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// HR Employee who is the responsible attorney (reference to HrisEmployee)
 	UserID *string `json:"user_id,omitempty"`

@@ -149,6 +149,7 @@ const (
 	HealthcareMetadataExtraDataTypeArrayOfHealthcareMetadata5 HealthcareMetadataExtraDataType = "arrayOfHealthcareMetadata5"
 )
 
+// HealthcareMetadataExtraData - Additional data about the custom field
 type HealthcareMetadataExtraData struct {
 	MapOfAny                   map[string]any        `queryParam:"inline" union:"member"`
 	Str                        *string               `queryParam:"inline" union:"member"`
@@ -275,6 +276,7 @@ func (u HealthcareMetadataExtraData) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type HealthcareMetadataExtraData: all fields are null")
 }
 
+// HealthcareMetadataFormat - The data type of the value
 type HealthcareMetadataFormat string
 
 const (
@@ -442,6 +444,7 @@ const (
 	HealthcareMetadataValueTypeArrayOfHealthcareMetadataSchemas5 HealthcareMetadataValueType = "arrayOfHealthcareMetadataSchemas5"
 )
 
+// HealthcareMetadataValue - The custom field value
 type HealthcareMetadataValue struct {
 	MapOfAny                          map[string]any               `queryParam:"inline" union:"member"`
 	Str                               *string                      `queryParam:"inline" union:"member"`
@@ -569,12 +572,18 @@ func (u HealthcareMetadataValue) MarshalJSON() ([]byte, error) {
 }
 
 type HealthcareMetadata struct {
+	// Additional data about the custom field
 	ExtraData *HealthcareMetadataExtraData `json:"extra_data,omitempty"`
-	Format    *HealthcareMetadataFormat    `json:"format,omitempty"`
-	ID        *string                      `json:"id,omitempty"`
-	Namespace *string                      `json:"namespace,omitempty"`
-	Slug      *string                      `json:"slug,omitempty"`
-	Value     *HealthcareMetadataValue     `json:"value,omitempty"`
+	// The data type of the value
+	Format *HealthcareMetadataFormat `json:"format,omitempty"`
+	// Identifier of the custom field
+	ID *string `json:"id,omitempty"`
+	// The scope or origin of the custom field
+	Namespace *string `json:"namespace,omitempty"`
+	// The custom field key
+	Slug *string `json:"slug,omitempty"`
+	// The custom field value
+	Value *HealthcareMetadataValue `json:"value,omitempty"`
 }
 
 func (h *HealthcareMetadata) GetExtraData() *HealthcareMetadataExtraData {

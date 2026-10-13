@@ -48,7 +48,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("99a0fb08-7800-49d5-a67a-6c3eb103f8f7"),
+            ID: unifiedgosdk.Pointer("fcad62bc-0f28-431b-abb1-9a0d84ee0d0a"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -62,7 +62,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T09:48:16.168Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T13:53:55.297Z"),
         },
         ConnectionID: "<id>",
     })
@@ -346,7 +346,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("89f76ed0-16ad-4451-b6e6-4d3e05a1bfe6"),
+            ID: unifiedgosdk.Pointer("baca1910-5713-4ff9-800b-7d33792007d6"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -360,7 +360,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T09:48:16.172Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T13:53:55.301Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -482,7 +482,7 @@ func main() {
             Description: unifiedgosdk.Pointer("Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla."),
             HasRedirectURL: unifiedgosdk.Pointer(true),
             HasTargetURL: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("89f76ed0-16ad-4451-b6e6-4d3e05a1bfe6"),
+            ID: unifiedgosdk.Pointer("baca1910-5713-4ff9-800b-7d33792007d6"),
             InfoURL: unifiedgosdk.Pointer("https://ugly-instance.biz/"),
             IntegrationTypes: []string{
                 "viridis",
@@ -496,7 +496,7 @@ func main() {
                 "clamo",
             },
             Type: shared.AssessmentPackageTypeVideoInterview,
-            UpdatedAt: types.MustNewTimeFromString("2023-09-23T09:48:16.172Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T13:53:55.301Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

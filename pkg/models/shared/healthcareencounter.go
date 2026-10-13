@@ -78,8 +78,9 @@ type HealthcareEncounter struct {
 	// Unique identifier for the encounter
 	ID *string `json:"id,omitempty"`
 	// Where the encounter took place
-	LocationID *string              `json:"location_id,omitempty"`
-	Metadata   []HealthcareMetadata `json:"metadata,omitempty"`
+	LocationID *string `json:"location_id,omitempty"`
+	// Custom field values
+	Metadata []HealthcareMetadata `json:"metadata,omitempty"`
 	// The patient seen in the encounter
 	PatientID *string `json:"patient_id,omitempty"`
 	// The practitioners who participated in the encounter
