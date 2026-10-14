@@ -101,7 +101,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("ddb04161-4edb-4c90-a71e-0dc2236b2dfb"),
+            ID: unifiedgosdk.Pointer("f144b218-2627-4fe4-a4f1-2480132d9ee3"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -117,7 +117,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("af4e6469-96ec-4f2d-8d25-f03ceebee6dd"),
+                    ID: unifiedgosdk.Pointer("cb30c311-5ef6-448b-852a-72ed94dd1d85"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -145,7 +145,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-25T20:36:38.805Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -233,7 +233,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("9c8da678-d1b4-4260-8b60-921814bf3fca"),
+            ID: unifiedgosdk.Pointer("a0b4d33c-ddcd-429b-a170-f2e5e7fa021b"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -249,7 +249,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("be46a3ff-3e2f-4182-a430-c8d0cbc2f078"),
+                    ID: unifiedgosdk.Pointer("ca4afb47-9e13-4d5a-9ba9-198ce4de6308"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -273,7 +273,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:05:22.935Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:49:54.582Z"),
         },
         ConnectionID: "<id>",
     })
@@ -333,12 +333,12 @@ func main() {
     res, err := s.Crm.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-08T16:38:25.252Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-26T01:41:44.976Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-08T22:46:18.713Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-26T21:03:19.553Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("0b92fe76-b5a7-4b1c-b6fb-b263de3c9ab2"),
+            ID: unifiedgosdk.Pointer("c691f012-ff37-427c-968d-f027d587d051"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -347,7 +347,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("28441ec3-43d8-4945-860f-6b98996b234e"),
+                    ID: unifiedgosdk.Pointer("c8c8066c-ee15-404b-ab57-c9caf981ce4e"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -358,7 +358,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("7851dce6-954c-4554-9d63-4d4e9dea7078"),
+                    ID: unifiedgosdk.Pointer("24b3740e-6b0d-4109-888c-297117606605"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -366,11 +366,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("090c90f0-082d-4a69-b4a7-8818e185d837"),
+                    ID: unifiedgosdk.Pointer("222e380e-6e5c-404d-8836-f827a83fc987"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("11b2ff91-1dc5-4f50-953d-00a384a1e3e6"),
+                    ID: unifiedgosdk.Pointer("933e8623-2e91-4e21-b6af-b463aa896ad2"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -378,7 +378,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-08T15:59:23.744Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-09T03:24:29.816Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -441,12 +441,12 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-05T04:11:27.446Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-06T00:58:53.871Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("15c4b91e-b57f-4905-ad52-282abdd5edda"),
+            ID: unifiedgosdk.Pointer("de8ae3c0-ff59-4861-aec0-ac7363bf4497"),
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-03T05:52:15.471Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-04T11:18:10.128Z"),
         },
         ConnectionID: "<id>",
     })
@@ -527,7 +527,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("6cfd8538-df56-4de9-938d-ae0ec7681f40"),
+            ID: unifiedgosdk.Pointer("29c650fa-1040-4b86-849d-a52212e6b854"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -541,7 +541,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("33fb636c-f9b8-4c51-bf05-60f431d35d39"),
+                    ID: unifiedgosdk.Pointer("7deacc28-860c-4761-b424-a2b26eed4839"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -563,7 +563,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T04:33:46.880Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.987Z"),
         },
         ConnectionID: "<id>",
     })
@@ -625,7 +625,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("29f58939-f7f8-4a3c-b30b-5450a91d92ac"),
+            ID: unifiedgosdk.Pointer("c3b7e33b-635a-47b1-92fe-5b4da9bb0c60"),
             IsActive: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
             Stages: []shared.CrmStage{
@@ -634,13 +634,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("910995bc-d696-4327-963b-38bfe0d869fb"),
+                    ID: unifiedgosdk.Pointer("5a656b6a-98f7-49f1-bbab-9e032937a469"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-04T10:29:29.743Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-05T08:04:34.153Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-10-26T00:48:41.394Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-26T22:51:25.924Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1438,7 +1438,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("51d2c771-f597-4ca7-b994-c5b952df372a"),
+            ID: unifiedgosdk.Pointer("f8cf6e8d-3407-42c7-965b-8779a0dd74a7"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -1454,7 +1454,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8edcd351-9b09-4ed2-afdd-24064176472d"),
+                    ID: unifiedgosdk.Pointer("647db15d-b8de-44e8-9705-ab5c5899da2e"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1482,7 +1482,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-25T20:36:38.829Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -1571,7 +1571,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("0349eae1-c708-4dae-8baf-2086ecd9da6d"),
+            ID: unifiedgosdk.Pointer("9cd0d66d-c5cb-4ab5-a4e9-dce6a0d73ed3"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -1587,7 +1587,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("7c754bd3-c75b-479d-9ba0-fe248ded28d9"),
+                    ID: unifiedgosdk.Pointer("c80d6922-758e-41b8-b8a2-a698d33b9a43"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1611,7 +1611,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:05:22.936Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:49:54.583Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1672,12 +1672,12 @@ func main() {
     res, err := s.Crm.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-08T16:38:25.259Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-26T01:41:44.999Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-08T22:46:18.717Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-26T21:03:19.565Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("58f9fa22-aa37-4a1d-b1a0-1e873aef26a0"),
+            ID: unifiedgosdk.Pointer("82b19baa-c458-448f-9143-4af7bee0991a"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -1686,7 +1686,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("23416269-d21c-460b-b685-8d7ef09f2868"),
+                    ID: unifiedgosdk.Pointer("2e916af8-eb13-40a6-a47d-29440ecd0db6"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1697,7 +1697,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("61f347ac-c7e5-4c4f-8f7e-99f8e13e5922"),
+                    ID: unifiedgosdk.Pointer("c4fc7a44-5caf-48d1-99f3-2d2c0b5b05fd"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -1705,11 +1705,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("644c3f48-a487-48da-80fe-34bdc6e4732a"),
+                    ID: unifiedgosdk.Pointer("af0bfe7f-93b3-4305-88b9-c12c5a68f87a"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("e1e67ab3-cf3e-4155-aae6-2e52598c1dbe"),
+                    ID: unifiedgosdk.Pointer("ca4d8c47-7af3-4b9a-b1ef-66d7f76853ee"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -1717,7 +1717,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-08T15:59:23.757Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-09T03:24:29.823Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -1781,12 +1781,12 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-05T04:11:27.490Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-06T00:58:53.911Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("0bc38be6-c685-4028-ba6a-14e2e6609bc4"),
+            ID: unifiedgosdk.Pointer("382e8257-dca7-44ee-b52a-84a7e0b44885"),
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-03T05:52:15.534Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-04T11:18:10.184Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1868,7 +1868,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("9b0424eb-87ec-440f-b997-7234a5b41bba"),
+            ID: unifiedgosdk.Pointer("de787ace-8e5a-415f-9ec5-06a036e8f57f"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -1882,7 +1882,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5591e11c-c6a5-472b-a8e6-135e45d96dda"),
+                    ID: unifiedgosdk.Pointer("ab189151-523b-4e4f-976a-37801ca8c02d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1904,7 +1904,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T04:33:46.884Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.989Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1967,7 +1967,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("50bfa9a9-9435-4f13-b4a5-6979f482baae"),
+            ID: unifiedgosdk.Pointer("da61ded0-7050-4540-995c-74ab063dc87b"),
             IsActive: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
             Stages: []shared.CrmStage{
@@ -1976,13 +1976,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("bf41da9d-c06a-4516-98b8-4d792e4ad923"),
+                    ID: unifiedgosdk.Pointer("fb30d4f5-47de-432e-8786-48c9d53ddd3c"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-04T10:29:29.752Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-05T08:04:34.161Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-10-26T00:48:41.403Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-26T22:51:25.933Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2403,7 +2403,7 @@ func main() {
                 },
             },
             Employees: unifiedgosdk.Pointer[float64](967.0),
-            ID: unifiedgosdk.Pointer("51d2c771-f597-4ca7-b994-c5b952df372a"),
+            ID: unifiedgosdk.Pointer("f8cf6e8d-3407-42c7-965b-8779a0dd74a7"),
             Industry: unifiedgosdk.Pointer("Infrastructure"),
             IsActive: unifiedgosdk.Pointer(true),
             LinkUrls: []string{
@@ -2419,7 +2419,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("8edcd351-9b09-4ed2-afdd-24064176472d"),
+                    ID: unifiedgosdk.Pointer("647db15d-b8de-44e8-9705-ab5c5899da2e"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -2447,7 +2447,7 @@ func main() {
                 },
             },
             Timezone: unifiedgosdk.Pointer("Europe/San_Marino"),
-            UpdatedAt: types.MustNewTimeFromString("2025-02-24T22:33:09.085Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-02-25T20:36:38.829Z"),
             Websites: []string{
                 "https://wise-possession.org",
             },
@@ -2536,7 +2536,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("0349eae1-c708-4dae-8baf-2086ecd9da6d"),
+            ID: unifiedgosdk.Pointer("9cd0d66d-c5cb-4ab5-a4e9-dce6a0d73ed3"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -2552,7 +2552,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("7c754bd3-c75b-479d-9ba0-fe248ded28d9"),
+                    ID: unifiedgosdk.Pointer("c80d6922-758e-41b8-b8a2-a698d33b9a43"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -2576,7 +2576,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:05:22.936Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T00:49:54.583Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2637,12 +2637,12 @@ func main() {
     res, err := s.Crm.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-08T16:38:25.259Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-26T01:41:44.999Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-08T22:46:18.717Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-26T21:03:19.565Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("IQD"),
             Description: unifiedgosdk.Pointer("Tabula cicuta sophismata comis tepidus sit cavus."),
-            ID: unifiedgosdk.Pointer("58f9fa22-aa37-4a1d-b1a0-1e873aef26a0"),
+            ID: unifiedgosdk.Pointer("82b19baa-c458-448f-9143-4af7bee0991a"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -2651,7 +2651,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("23416269-d21c-460b-b685-8d7ef09f2868"),
+                    ID: unifiedgosdk.Pointer("2e916af8-eb13-40a6-a47d-29440ecd0db6"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -2662,7 +2662,7 @@ func main() {
             Name: unifiedgosdk.Pointer("Frozen Silk Chicken"),
             Pipelines: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("61f347ac-c7e5-4c4f-8f7e-99f8e13e5922"),
+                    ID: unifiedgosdk.Pointer("c4fc7a44-5caf-48d1-99f3-2d2c0b5b05fd"),
                     Name: unifiedgosdk.Pointer("trans"),
                 },
             },
@@ -2670,11 +2670,11 @@ func main() {
             Source: unifiedgosdk.Pointer("cubo"),
             Stages: []shared.CrmReference{
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("644c3f48-a487-48da-80fe-34bdc6e4732a"),
+                    ID: unifiedgosdk.Pointer("af0bfe7f-93b3-4305-88b9-c12c5a68f87a"),
                     Name: unifiedgosdk.Pointer("tubineus"),
                 },
                 shared.CrmReference{
-                    ID: unifiedgosdk.Pointer("e1e67ab3-cf3e-4155-aae6-2e52598c1dbe"),
+                    ID: unifiedgosdk.Pointer("ca4d8c47-7af3-4b9a-b1ef-66d7f76853ee"),
                     Name: unifiedgosdk.Pointer("adfectus"),
                 },
             },
@@ -2682,7 +2682,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-08T15:59:23.757Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-09T03:24:29.823Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -2746,12 +2746,12 @@ func main() {
             Call: &shared.PropertyCrmEventCall{
                 Description: unifiedgosdk.Pointer("Arbitro aptus."),
                 Duration: unifiedgosdk.Pointer[float64](64.0),
-                StartAt: types.MustNewTimeFromString("2024-12-05T04:11:27.490Z"),
+                StartAt: types.MustNewTimeFromString("2024-12-06T00:58:53.911Z"),
             },
             CreatedAt: types.MustNewTimeFromString("2020-07-14T04:53:23.784Z"),
-            ID: unifiedgosdk.Pointer("0bc38be6-c685-4028-ba6a-14e2e6609bc4"),
+            ID: unifiedgosdk.Pointer("382e8257-dca7-44ee-b52a-84a7e0b44885"),
             Type: shared.CrmEventTypeCall.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-03T05:52:15.534Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-04T11:18:10.184Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2833,7 +2833,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("9b0424eb-87ec-440f-b997-7234a5b41bba"),
+            ID: unifiedgosdk.Pointer("de787ace-8e5a-415f-9ec5-06a036e8f57f"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -2847,7 +2847,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("5591e11c-c6a5-472b-a8e6-135e45d96dda"),
+                    ID: unifiedgosdk.Pointer("ab189151-523b-4e4f-976a-37801ca8c02d"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -2869,7 +2869,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T04:33:46.884Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.989Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2932,7 +2932,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
             DealProbability: unifiedgosdk.Pointer[float64](99.0),
             DisplayOrder: unifiedgosdk.Pointer[float64](8.0),
-            ID: unifiedgosdk.Pointer("50bfa9a9-9435-4f13-b4a5-6979f482baae"),
+            ID: unifiedgosdk.Pointer("da61ded0-7050-4540-995c-74ab063dc87b"),
             IsActive: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("Small Steel Bacon"),
             Stages: []shared.CrmStage{
@@ -2941,13 +2941,13 @@ func main() {
                     CreatedAt: types.MustNewTimeFromString("2022-12-28T13:45:38.446Z"),
                     DealProbability: unifiedgosdk.Pointer[float64](84.0),
                     DisplayOrder: unifiedgosdk.Pointer[float64](72.0),
-                    ID: unifiedgosdk.Pointer("bf41da9d-c06a-4516-98b8-4d792e4ad923"),
+                    ID: unifiedgosdk.Pointer("fb30d4f5-47de-432e-8786-48c9d53ddd3c"),
                     IsClosed: unifiedgosdk.Pointer(true),
                     Name: unifiedgosdk.Pointer("Veniam."),
-                    UpdatedAt: types.MustNewTimeFromString("2025-10-04T10:29:29.752Z"),
+                    UpdatedAt: types.MustNewTimeFromString("2025-10-05T08:04:34.161Z"),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2025-10-26T00:48:41.403Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-26T22:51:25.933Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

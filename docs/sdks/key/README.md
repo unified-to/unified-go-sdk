@@ -40,10 +40,10 @@ func main() {
     res, err := s.Key.CreateComputeKey(ctx, operations.CreateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("7a203069-8b53-4c68-8d44-2327ab752561"),
+            ID: unifiedgosdk.Pointer("62ac1cb0-d317-4456-b981-3a7cf4c86aef"),
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-03T23:50:42.059Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-04T10:25:00.114Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,10 +212,10 @@ func main() {
     res, err := s.Key.PatchComputeKey(ctx, operations.PatchComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("35085b74-4294-480e-830e-06dc015ea998"),
+            ID: unifiedgosdk.Pointer("a051a36b-63f6-4942-af37-cd55198a6e8a"),
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-03T23:50:42.063Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-04T10:25:00.117Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -331,10 +331,10 @@ func main() {
     res, err := s.Key.UpdateComputeKey(ctx, operations.UpdateComputeKeyRequest{
         ComputeKey: shared.ComputeKey{
             CreatedAt: types.MustNewTimeFromString("2023-08-19T14:31:46.492Z"),
-            ID: unifiedgosdk.Pointer("35085b74-4294-480e-830e-06dc015ea998"),
+            ID: unifiedgosdk.Pointer("a051a36b-63f6-4942-af37-cd55198a6e8a"),
             Name: unifiedgosdk.Pointer("nienow-secret"),
             Type: shared.ComputeKeyTypeSecret.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2024-10-03T23:50:42.063Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-04T10:25:00.117Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
