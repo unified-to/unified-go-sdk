@@ -48,11 +48,11 @@ func main() {
     res, err := s.Signing.CreateSigningDocument(ctx, operations.CreateSigningDocumentRequest{
         SigningDocument: shared.SigningDocument{
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
-            ExpiresAt: types.MustNewTimeFromString("2027-01-11T08:01:03.997Z"),
-            ID: unifiedgosdk.Pointer("a36acb3f-96ba-4781-a264-d4fd15074bb8"),
+            ExpiresAt: types.MustNewTimeFromString("2027-01-12T07:08:18.029Z"),
+            ID: unifiedgosdk.Pointer("5975251e-d5d3-43e0-8dc5-8a002121b028"),
             Name: unifiedgosdk.Pointer("nam audax absens"),
             Status: shared.SigningDocumentStatusVoided.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T07:22:14.013Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-29T01:42:37.388Z"),
         },
         ConnectionID: "<id>",
     })
@@ -113,11 +113,11 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
-            ID: unifiedgosdk.Pointer("dc18e6bf-1b3c-49ac-a5a7-49e8066dcf62"),
+            ID: unifiedgosdk.Pointer("b3f5f6a4-e05e-4187-a423-3d427fbe6aaf"),
             Order: unifiedgosdk.Pointer[float64](5.0),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusSigned.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:05:39.994Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-06T00:40:06.023Z"),
         },
         ConnectionID: "<id>",
     })
@@ -504,11 +504,11 @@ func main() {
     res, err := s.Signing.PatchSigningDocument(ctx, operations.PatchSigningDocumentRequest{
         SigningDocument: shared.SigningDocument{
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
-            ExpiresAt: types.MustNewTimeFromString("2027-01-11T08:01:04.010Z"),
-            ID: unifiedgosdk.Pointer("e6846abc-8d8f-4729-a693-deb337e816d4"),
+            ExpiresAt: types.MustNewTimeFromString("2027-01-12T07:08:18.040Z"),
+            ID: unifiedgosdk.Pointer("90c8b14a-0488-4c1c-ab28-02678982a06b"),
             Name: unifiedgosdk.Pointer("nam audax absens"),
             Status: shared.SigningDocumentStatusVoided.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T07:22:14.023Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-29T01:42:37.396Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -570,11 +570,11 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
-            ID: unifiedgosdk.Pointer("597de357-ac0f-44cc-8fd0-0e6939dc5843"),
+            ID: unifiedgosdk.Pointer("c6d382b5-e775-48a3-a751-dedcefbe33f7"),
             Order: unifiedgosdk.Pointer[float64](5.0),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusSigned.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:05:40.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-06T00:40:06.031Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -745,11 +745,11 @@ func main() {
     res, err := s.Signing.UpdateSigningDocument(ctx, operations.UpdateSigningDocumentRequest{
         SigningDocument: shared.SigningDocument{
             CreatedAt: types.MustNewTimeFromString("2021-05-02T09:35:23.679Z"),
-            ExpiresAt: types.MustNewTimeFromString("2027-01-11T08:01:04.010Z"),
-            ID: unifiedgosdk.Pointer("e6846abc-8d8f-4729-a693-deb337e816d4"),
+            ExpiresAt: types.MustNewTimeFromString("2027-01-12T07:08:18.040Z"),
+            ID: unifiedgosdk.Pointer("90c8b14a-0488-4c1c-ab28-02678982a06b"),
             Name: unifiedgosdk.Pointer("nam audax absens"),
             Status: shared.SigningDocumentStatusVoided.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-28T07:22:14.023Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-29T01:42:37.396Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -811,11 +811,11 @@ func main() {
         SigningSignatory: shared.SigningSignatory{
             CreatedAt: types.MustNewTimeFromString("2022-04-16T19:25:01.966Z"),
             Email: unifiedgosdk.Pointer("Hardy.Wehner@gmail.com"),
-            ID: unifiedgosdk.Pointer("597de357-ac0f-44cc-8fd0-0e6939dc5843"),
+            ID: unifiedgosdk.Pointer("c6d382b5-e775-48a3-a751-dedcefbe33f7"),
             Order: unifiedgosdk.Pointer[float64](5.0),
             Role: shared.SigningSignatoryRoleSigner.ToPointer(),
             Status: shared.SigningSignatoryStatusSigned.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-05T02:05:40.007Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-06T00:40:06.031Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

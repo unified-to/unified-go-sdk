@@ -61,7 +61,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("29c650fa-1040-4b86-849d-a52212e6b854"),
+            ID: unifiedgosdk.Pointer("a8b22a76-479d-4e74-8830-ac4ba8c13193"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -75,7 +75,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("7deacc28-860c-4761-b424-a2b26eed4839"),
+                    ID: unifiedgosdk.Pointer("ac0d6adc-e135-4144-9ac9-9c09fd73b999"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -97,7 +97,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.987Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T09:02:51.333Z"),
         },
         ConnectionID: "<id>",
     })
@@ -287,7 +287,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("de787ace-8e5a-415f-9ec5-06a036e8f57f"),
+            ID: unifiedgosdk.Pointer("f25afdba-289a-4cfd-ab09-201bae9c02f0"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -301,7 +301,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ab189151-523b-4e4f-976a-37801ca8c02d"),
+                    ID: unifiedgosdk.Pointer("047afa60-66ba-444e-af7c-8ef74a8c5f28"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -323,7 +323,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.989Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T09:02:51.335Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -460,7 +460,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("de787ace-8e5a-415f-9ec5-06a036e8f57f"),
+            ID: unifiedgosdk.Pointer("f25afdba-289a-4cfd-ab09-201bae9c02f0"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
@@ -474,7 +474,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ab189151-523b-4e4f-976a-37801ca8c02d"),
+                    ID: unifiedgosdk.Pointer("047afa60-66ba-444e-af7c-8ef74a8c5f28"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -496,7 +496,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T07:04:44.989Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T09:02:51.335Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
