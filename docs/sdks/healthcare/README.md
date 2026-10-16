@@ -66,7 +66,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("7ac1d8cd-fb99-475f-a108-57c94836886b"),
+            ID: unifiedgosdk.Pointer("521b813a-88d1-4f4b-a5a0-37c06f316bad"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -86,7 +86,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-14T21:48:38.989Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-15T15:36:00.138Z"),
         },
         ConnectionID: "<id>",
     })
@@ -177,15 +177,15 @@ func main() {
                 },
             },
             CreatedAt: types.MustNewTimeFromString("2022-12-06T21:34:04.293Z"),
-            ID: unifiedgosdk.Pointer("ca987d52-0df4-40e0-8b3f-8a966198e840"),
+            ID: unifiedgosdk.Pointer("a9ef3008-4419-4f92-9319-f2d0127c4f54"),
             Interpretation: shared.InterpretationCriticalHigh.ToPointer(),
-            IssuedAt: types.MustNewTimeFromString("2025-05-07T14:12:07.973Z"),
+            IssuedAt: types.MustNewTimeFromString("2025-05-08T05:16:52.228Z"),
             Metadata: []shared.HealthcareMetadata{},
             Name: unifiedgosdk.Pointer("Blood pressure panel"),
-            ObservedAt: types.MustNewTimeFromString("2025-01-16T19:17:55.925Z"),
+            ObservedAt: types.MustNewTimeFromString("2025-01-17T08:29:06.912Z"),
             Status: shared.HealthcareObservationStatusCorrected.ToPointer(),
             Type: shared.HealthcareObservationTypeVitalSigns.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-19T01:08:21.730Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-03-19T21:36:26.023Z"),
         },
         ConnectionID: "<id>",
     })
@@ -252,7 +252,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("31579"),
                 Region: unifiedgosdk.Pointer("Minnesota"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-05"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-06"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -262,7 +262,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("8aac5e84-e5c3-401b-ae56-189cf751d0b9"),
+            ID: unifiedgosdk.Pointer("fa0832c8-326f-44bd-9936-c13289808281"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -282,7 +282,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-17T02:06:34.781Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-18T00:41:22.709Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1543,7 +1543,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("6cff8659-8ffb-4c59-8b23-6a85696af36f"),
+            ID: unifiedgosdk.Pointer("f974c88b-79f7-4a8c-b139-282b29c5c64e"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1563,7 +1563,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-14T21:48:39.000Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-15T15:36:00.152Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1631,7 +1631,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("31579"),
                 Region: unifiedgosdk.Pointer("Minnesota"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-05"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-06"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1641,7 +1641,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("6192fe28-97be-4971-a4f3-e5d6d87c0608"),
+            ID: unifiedgosdk.Pointer("c9db9aee-974c-4437-9110-b9de7bd93968"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1661,7 +1661,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-17T02:06:34.815Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-18T00:41:22.737Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1779,7 +1779,7 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-04-11T08:16:20.874Z"),
             Description: unifiedgosdk.Pointer("clarus aptus cetera"),
             EndAt: types.MustNewTimeFromString("2023-12-12T13:04:41.451Z"),
-            ID: unifiedgosdk.Pointer("6cff8659-8ffb-4c59-8b23-6a85696af36f"),
+            ID: unifiedgosdk.Pointer("f974c88b-79f7-4a8c-b139-282b29c5c64e"),
             Metadata: []shared.HealthcareMetadata{},
             PractitionerIds: []string{},
             Reasons: []shared.HealthcareCode{
@@ -1799,7 +1799,7 @@ func main() {
             SlotIds: []string{},
             StartAt: types.MustNewTimeFromString("2023-12-12T12:34:41.451Z"),
             Status: shared.HealthcareAppointmentStatusBooked.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-14T21:48:39.000Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-11-15T15:36:00.152Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1867,7 +1867,7 @@ func main() {
                 PostalCode: unifiedgosdk.Pointer("31579"),
                 Region: unifiedgosdk.Pointer("Minnesota"),
             },
-            Birthdate: unifiedgosdk.Pointer("2025-02-05"),
+            Birthdate: unifiedgosdk.Pointer("2025-02-06"),
             CreatedAt: types.MustNewTimeFromString("2021-06-05T21:08:04.917Z"),
             Emails: []shared.HealthcareEmail{
                 shared.HealthcareEmail{
@@ -1877,7 +1877,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("6192fe28-97be-4971-a4f3-e5d6d87c0608"),
+            ID: unifiedgosdk.Pointer("c9db9aee-974c-4437-9110-b9de7bd93968"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -1897,7 +1897,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-17T02:06:34.815Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-18T00:41:22.737Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

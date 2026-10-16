@@ -41,7 +41,7 @@ func main() {
             Dimension: unifiedgosdk.Pointer[float64](423.0),
             Embeddings: unifiedgosdk.Pointer("Est."),
             EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("a02e3497-1203-48a1-8549-da08a9726b60"),
+            ID: unifiedgosdk.Pointer("8c07de78-9626-4b75-9534-90fed7449b21"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),

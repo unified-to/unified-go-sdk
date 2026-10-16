@@ -41,10 +41,10 @@ func main() {
         CalendarWebinar: shared.CalendarWebinar{
             Conference: []shared.CalendarConference{},
             CreatedAt: types.MustNewTimeFromString("2022-07-06T11:45:14.631Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-23T23:42:20.950Z"),
+            EndAt: types.MustNewTimeFromString("2025-10-24T18:16:32.535Z"),
             HasPolls: unifiedgosdk.Pointer(false),
             HasRecording: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("9fd9f736-0aa2-4246-8f8c-64b14f557308"),
+            ID: unifiedgosdk.Pointer("3b16c913-e2dd-47bb-ba97-0e1dbb1425bd"),
             IsAutoApprove: unifiedgosdk.Pointer(false),
             IsEnabled: unifiedgosdk.Pointer(true),
             IsWebcast: unifiedgosdk.Pointer(false),
@@ -57,13 +57,13 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](10.0),
-                    EndAt: types.MustNewTimeFromString("2023-08-29T23:15:30.969Z"),
+                    EndAt: types.MustNewTimeFromString("2023-08-30T05:43:13.438Z"),
                     ExcludedDates: []string{
-                        "2025-02-09T07:08:41.709Z",
+                        "2025-02-09T21:45:38.400Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyMonthly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-04-25T16:38:19.864Z",
+                        "2024-04-26T02:47:36.375Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -454,16 +454,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](3.0),
-                    EndAt: types.MustNewTimeFromString("2022-09-30T08:08:01.028Z"),
+                    EndAt: types.MustNewTimeFromString("2022-09-30T09:27:21.842Z"),
                     ExcludedDates: []string{
-                        "2024-08-29T16:04:38.110Z",
-                        "2024-08-14T04:34:09.838Z",
+                        "2024-08-30T04:10:20.726Z",
+                        "2024-08-14T16:25:34.030Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyDaily.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-22T17:15:24.749Z",
-                        "2026-01-08T08:49:30.484Z",
-                        "2023-08-12T16:27:08.689Z",
+                        "2024-03-23T02:53:17.199Z",
+                        "2026-01-09T04:34:17.764Z",
+                        "2023-08-12T22:38:52.687Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](1.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -607,16 +607,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](8.0),
-                    EndAt: types.MustNewTimeFromString("2026-07-20T17:44:04.315Z"),
+                    EndAt: types.MustNewTimeFromString("2026-07-21T16:27:35.107Z"),
                     ExcludedDates: []string{
-                        "2023-06-17T05:53:35.258Z",
-                        "2023-06-06T07:45:51.362Z",
+                        "2023-06-17T11:13:09.345Z",
+                        "2023-06-06T12:55:19.761Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyWeekly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-30T17:22:26.678Z",
-                        "2023-08-18T11:20:02.281Z",
-                        "2024-09-23T18:29:34.631Z",
+                        "2024-03-31T03:07:43.043Z",
+                        "2023-08-18T17:37:07.185Z",
+                        "2024-09-24T06:58:29.218Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -769,11 +769,11 @@ func main() {
             RegistrantPassword: unifiedgosdk.Pointer("OxwWzr0C"),
             RequireAddress: unifiedgosdk.Pointer(false),
             RequireJobTitle: unifiedgosdk.Pointer(false),
-            StartAt: types.MustNewTimeFromString("2025-04-26T13:10:12.304Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-27T04:57:37.541Z"),
             Status: shared.CalendarWebinarStatusTentative.ToPointer(),
             Subject: unifiedgosdk.Pointer("Harum culpa decipio ex cubo ancilla cresco."),
             Timezone: unifiedgosdk.Pointer("Europe/Kaliningrad"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-24T10:48:31.733Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-25T10:32:46.590Z"),
             WebURL: unifiedgosdk.Pointer("https://classic-recovery.biz"),
         },
         ConnectionID: "<id>",
@@ -944,10 +944,10 @@ func main() {
         CalendarWebinar: shared.CalendarWebinar{
             Conference: []shared.CalendarConference{},
             CreatedAt: types.MustNewTimeFromString("2022-07-06T11:45:14.631Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-23T23:42:20.991Z"),
+            EndAt: types.MustNewTimeFromString("2025-10-24T18:16:32.571Z"),
             HasPolls: unifiedgosdk.Pointer(false),
             HasRecording: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("9eb84ce4-47cd-4f79-8152-76fbe3d3e7b4"),
+            ID: unifiedgosdk.Pointer("394ddce9-a881-4fe2-a30f-34550c270e22"),
             IsAutoApprove: unifiedgosdk.Pointer(false),
             IsEnabled: unifiedgosdk.Pointer(true),
             IsWebcast: unifiedgosdk.Pointer(false),
@@ -960,13 +960,13 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](10.0),
-                    EndAt: types.MustNewTimeFromString("2023-08-29T23:15:30.983Z"),
+                    EndAt: types.MustNewTimeFromString("2023-08-30T05:43:13.450Z"),
                     ExcludedDates: []string{
-                        "2025-02-09T07:08:41.742Z",
+                        "2025-02-09T21:45:38.429Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyMonthly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-04-25T16:38:19.887Z",
+                        "2024-04-26T02:47:36.395Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -1357,16 +1357,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](3.0),
-                    EndAt: types.MustNewTimeFromString("2022-09-30T08:08:01.031Z"),
+                    EndAt: types.MustNewTimeFromString("2022-09-30T09:27:21.845Z"),
                     ExcludedDates: []string{
-                        "2024-08-29T16:04:38.137Z",
-                        "2024-08-14T04:34:09.865Z",
+                        "2024-08-30T04:10:20.749Z",
+                        "2024-08-14T16:25:34.053Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyDaily.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-22T17:15:24.770Z",
-                        "2026-01-08T08:49:30.527Z",
-                        "2023-08-12T16:27:08.703Z",
+                        "2024-03-23T02:53:17.218Z",
+                        "2026-01-09T04:34:17.802Z",
+                        "2023-08-12T22:38:52.699Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](1.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -1510,16 +1510,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](8.0),
-                    EndAt: types.MustNewTimeFromString("2026-07-20T17:44:04.366Z"),
+                    EndAt: types.MustNewTimeFromString("2026-07-21T16:27:35.152Z"),
                     ExcludedDates: []string{
-                        "2023-06-17T05:53:35.270Z",
-                        "2023-06-06T07:45:51.374Z",
+                        "2023-06-17T11:13:09.355Z",
+                        "2023-06-06T12:55:19.771Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyWeekly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-30T17:22:26.700Z",
-                        "2023-08-18T11:20:02.295Z",
-                        "2024-09-23T18:29:34.659Z",
+                        "2024-03-31T03:07:43.063Z",
+                        "2023-08-18T17:37:07.198Z",
+                        "2024-09-24T06:58:29.243Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -1672,11 +1672,11 @@ func main() {
             RegistrantPassword: unifiedgosdk.Pointer("OxwWzr0C"),
             RequireAddress: unifiedgosdk.Pointer(false),
             RequireJobTitle: unifiedgosdk.Pointer(false),
-            StartAt: types.MustNewTimeFromString("2025-04-26T13:10:12.339Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-27T04:57:37.572Z"),
             Status: shared.CalendarWebinarStatusTentative.ToPointer(),
             Subject: unifiedgosdk.Pointer("Harum culpa decipio ex cubo ancilla cresco."),
             Timezone: unifiedgosdk.Pointer("Europe/Kaliningrad"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-24T10:48:31.785Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-25T10:32:46.637Z"),
             WebURL: unifiedgosdk.Pointer("https://classic-recovery.biz"),
         },
         ConnectionID: "<id>",
@@ -1794,10 +1794,10 @@ func main() {
         CalendarWebinar: shared.CalendarWebinar{
             Conference: []shared.CalendarConference{},
             CreatedAt: types.MustNewTimeFromString("2022-07-06T11:45:14.631Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-23T23:42:20.991Z"),
+            EndAt: types.MustNewTimeFromString("2025-10-24T18:16:32.571Z"),
             HasPolls: unifiedgosdk.Pointer(false),
             HasRecording: unifiedgosdk.Pointer(false),
-            ID: unifiedgosdk.Pointer("9eb84ce4-47cd-4f79-8152-76fbe3d3e7b4"),
+            ID: unifiedgosdk.Pointer("394ddce9-a881-4fe2-a30f-34550c270e22"),
             IsAutoApprove: unifiedgosdk.Pointer(false),
             IsEnabled: unifiedgosdk.Pointer(true),
             IsWebcast: unifiedgosdk.Pointer(false),
@@ -1810,13 +1810,13 @@ func main() {
             Recurrence: []shared.CalendarEventRecurrence{
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](10.0),
-                    EndAt: types.MustNewTimeFromString("2023-08-29T23:15:30.983Z"),
+                    EndAt: types.MustNewTimeFromString("2023-08-30T05:43:13.450Z"),
                     ExcludedDates: []string{
-                        "2025-02-09T07:08:41.742Z",
+                        "2025-02-09T21:45:38.429Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyMonthly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-04-25T16:38:19.887Z",
+                        "2024-04-26T02:47:36.395Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -2207,16 +2207,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](3.0),
-                    EndAt: types.MustNewTimeFromString("2022-09-30T08:08:01.031Z"),
+                    EndAt: types.MustNewTimeFromString("2022-09-30T09:27:21.845Z"),
                     ExcludedDates: []string{
-                        "2024-08-29T16:04:38.137Z",
-                        "2024-08-14T04:34:09.865Z",
+                        "2024-08-30T04:10:20.749Z",
+                        "2024-08-14T16:25:34.053Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyDaily.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-22T17:15:24.770Z",
-                        "2026-01-08T08:49:30.527Z",
-                        "2023-08-12T16:27:08.703Z",
+                        "2024-03-23T02:53:17.218Z",
+                        "2026-01-09T04:34:17.802Z",
+                        "2023-08-12T22:38:52.699Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](1.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -2360,16 +2360,16 @@ func main() {
                 },
                 shared.CalendarEventRecurrence{
                     Count: unifiedgosdk.Pointer[float64](8.0),
-                    EndAt: types.MustNewTimeFromString("2026-07-20T17:44:04.366Z"),
+                    EndAt: types.MustNewTimeFromString("2026-07-21T16:27:35.152Z"),
                     ExcludedDates: []string{
-                        "2023-06-17T05:53:35.270Z",
-                        "2023-06-06T07:45:51.374Z",
+                        "2023-06-17T11:13:09.355Z",
+                        "2023-06-06T12:55:19.771Z",
                     },
                     Frequency: shared.CalendarEventRecurrenceFrequencyWeekly.ToPointer(),
                     IncludedDates: []string{
-                        "2024-03-30T17:22:26.700Z",
-                        "2023-08-18T11:20:02.295Z",
-                        "2024-09-23T18:29:34.659Z",
+                        "2024-03-31T03:07:43.063Z",
+                        "2023-08-18T17:37:07.198Z",
+                        "2024-09-24T06:58:29.243Z",
                     },
                     Interval: unifiedgosdk.Pointer[float64](8.0),
                     OnDays: []shared.PropertyCalendarEventRecurrenceOnDays{
@@ -2522,11 +2522,11 @@ func main() {
             RegistrantPassword: unifiedgosdk.Pointer("OxwWzr0C"),
             RequireAddress: unifiedgosdk.Pointer(false),
             RequireJobTitle: unifiedgosdk.Pointer(false),
-            StartAt: types.MustNewTimeFromString("2025-04-26T13:10:12.339Z"),
+            StartAt: types.MustNewTimeFromString("2025-04-27T04:57:37.572Z"),
             Status: shared.CalendarWebinarStatusTentative.ToPointer(),
             Subject: unifiedgosdk.Pointer("Harum culpa decipio ex cubo ancilla cresco."),
             Timezone: unifiedgosdk.Pointer("Europe/Kaliningrad"),
-            UpdatedAt: types.MustNewTimeFromString("2026-09-24T10:48:31.785Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-09-25T10:32:46.637Z"),
             WebURL: unifiedgosdk.Pointer("https://classic-recovery.biz"),
         },
         ConnectionID: "<id>",
