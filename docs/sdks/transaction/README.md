@@ -41,12 +41,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("ab063b63-1037-4692-8790-f03b69228bbe"),
+            ID: unifiedgosdk.Pointer("15958020-df2f-4977-a0d2-62b934d189dc"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("575c071a-8215-40e1-8854-3204db736126"),
+                    ID: unifiedgosdk.Pointer("adc861cb-9f1b-474d-8fe7-1c03d46b5f46"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -59,7 +59,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-17T22:22:05.679Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-18T06:05:04.478Z"),
         },
         ConnectionID: "<id>",
     })
@@ -229,12 +229,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("819589e8-319c-46dc-a074-02b5508f4a77"),
+            ID: unifiedgosdk.Pointer("5d0a6385-2e15-42ef-80f5-3138548100dc"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("24247fbd-74f3-4866-a465-87eaeb700fad"),
+                    ID: unifiedgosdk.Pointer("71d02ae0-6bab-4d3a-9806-1fb36a199888"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -247,7 +247,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-17T22:22:05.687Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-18T06:05:04.486Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -364,12 +364,12 @@ func main() {
         AccountingTransaction: shared.AccountingTransaction{
             CreatedAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
             ExchangeRate: unifiedgosdk.Pointer[float64](0.5674),
-            ID: unifiedgosdk.Pointer("819589e8-319c-46dc-a074-02b5508f4a77"),
+            ID: unifiedgosdk.Pointer("5d0a6385-2e15-42ef-80f5-3138548100dc"),
             Lineitems: []shared.AccountingTransactionLineItem{
                 shared.AccountingTransactionLineItem{
                     CategoryIds: []string{},
                     Description: unifiedgosdk.Pointer("The Nikolas Table is the latest in a series of downright products from Beier and Sons"),
-                    ID: unifiedgosdk.Pointer("24247fbd-74f3-4866-a465-87eaeb700fad"),
+                    ID: unifiedgosdk.Pointer("71d02ae0-6bab-4d3a-9806-1fb36a199888"),
                     Name: unifiedgosdk.Pointer("Salad"),
                     ObjectType: unifiedgosdk.Pointer("delicate"),
                     TotalAmount: unifiedgosdk.Pointer[float64](58531.0),
@@ -382,7 +382,7 @@ func main() {
             TaxAmount: unifiedgosdk.Pointer[float64](0.0),
             TotalAmount: unifiedgosdk.Pointer[float64](94452.0),
             TransactionAt: types.MustNewTimeFromString("2019-09-25T11:40:42.574Z"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-17T22:22:05.687Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-18T06:05:04.486Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

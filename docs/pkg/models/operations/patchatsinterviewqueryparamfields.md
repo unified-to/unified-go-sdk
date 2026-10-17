@@ -26,5 +26,6 @@ value := operations.PatchAtsInterviewQueryParamFieldsID
 | `PatchAtsInterviewQueryParamFieldsStartAt`           | start_at                                             |
 | `PatchAtsInterviewQueryParamFieldsEndAt`             | end_at                                               |
 | `PatchAtsInterviewQueryParamFieldsLocation`          | location                                             |
+| `PatchAtsInterviewQueryParamFieldsMeetingURL`        | meeting_url                                          |
 | `PatchAtsInterviewQueryParamFieldsExternalEventXref` | external_event_xref                                  |
 | `PatchAtsInterviewQueryParamFieldsRaw`               | raw                                                  |

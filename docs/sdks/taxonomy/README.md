@@ -49,7 +49,7 @@ func main() {
             },
             Subcategory: unifiedgosdk.Pointer("Bamboo"),
             Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-28T04:54:48.524Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-28T10:49:46.535Z"),
             URL: unifiedgosdk.Pointer("https://our-polarisation.name"),
         },
         ConnectionID: "<id>",

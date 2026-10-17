@@ -40,13 +40,13 @@ func main() {
     res, err := s.Commit.CreateRepoCommit(ctx, operations.CreateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("d8d4a639-88d0-4353-8eed-40184d44897e"),
+            ID: unifiedgosdk.Pointer("778b7fc5-1332-4780-87dc-3cba37e7b66e"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-28T22:16:50.302Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-29T10:54:33.993Z"),
         },
         ConnectionID: "<id>",
     })
@@ -215,13 +215,13 @@ func main() {
     res, err := s.Commit.PatchRepoCommit(ctx, operations.PatchRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("e6b9705e-f46c-4704-a1ad-8328c05009ef"),
+            ID: unifiedgosdk.Pointer("638b706c-35f9-4e12-8c3c-31f86bc51477"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-28T22:16:50.307Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-29T10:54:33.997Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -337,13 +337,13 @@ func main() {
     res, err := s.Commit.UpdateRepoCommit(ctx, operations.UpdateRepoCommitRequest{
         RepoCommit: shared.RepoCommit{
             CreatedAt: types.MustNewTimeFromString("2020-07-12T16:20:42.520Z"),
-            ID: unifiedgosdk.Pointer("e6b9705e-f46c-4704-a1ad-8328c05009ef"),
+            ID: unifiedgosdk.Pointer("638b706c-35f9-4e12-8c3c-31f86bc51477"),
             LinesAdded: unifiedgosdk.Pointer[float64](313.0),
             LinesChanged: unifiedgosdk.Pointer[float64](659.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](482.0),
             Message: unifiedgosdk.Pointer("Auctus ascisco esse attollo clarus odio tum bis rerum."),
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2023-05-28T22:16:50.307Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-29T10:54:33.997Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

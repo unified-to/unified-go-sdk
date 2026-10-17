@@ -47,7 +47,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("e1c6dbc9-e6cc-41f9-9a9f-fa8d84da16a6"),
+            ID: unifiedgosdk.Pointer("0fc09bc3-801d-4802-a301-c388b5576a04"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -126,7 +126,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-02T12:33:58.306Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-02T21:29:53.499Z"),
         },
         ConnectionID: "<id>",
     })
@@ -302,7 +302,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("7fd75ce7-931e-4615-984d-324a95f9a801"),
+            ID: unifiedgosdk.Pointer("d1690171-be6c-48d3-aed4-4d3dc6d780bb"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -381,7 +381,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-02T12:33:58.319Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-02T21:29:53.510Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -504,7 +504,7 @@ func main() {
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
             ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("7fd75ce7-931e-4615-984d-324a95f9a801"),
+            ID: unifiedgosdk.Pointer("d1690171-be6c-48d3-aed4-4d3dc6d780bb"),
             Instructors: []shared.LmsReference{
                 shared.LmsReference{
                     ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
@@ -583,7 +583,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-02T12:33:58.319Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-02T21:29:53.510Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -23,6 +23,7 @@ const (
 	CreateAtsInterviewQueryParamFieldsStartAt           CreateAtsInterviewQueryParamFields = "start_at"
 	CreateAtsInterviewQueryParamFieldsEndAt             CreateAtsInterviewQueryParamFields = "end_at"
 	CreateAtsInterviewQueryParamFieldsLocation          CreateAtsInterviewQueryParamFields = "location"
+	CreateAtsInterviewQueryParamFieldsMeetingURL        CreateAtsInterviewQueryParamFields = "meeting_url"
 	CreateAtsInterviewQueryParamFieldsExternalEventXref CreateAtsInterviewQueryParamFields = "external_event_xref"
 	CreateAtsInterviewQueryParamFieldsRaw               CreateAtsInterviewQueryParamFields = "raw"
 )
@@ -57,6 +58,8 @@ func (e *CreateAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "end_at":
 		fallthrough
 	case "location":
+		fallthrough
+	case "meeting_url":
 		fallthrough
 	case "external_event_xref":
 		fallthrough

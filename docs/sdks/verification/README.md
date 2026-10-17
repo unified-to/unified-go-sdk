@@ -42,7 +42,7 @@ func main() {
     res, err := s.Verification.CreateVerificationRequest(ctx, operations.CreateVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("4a8892b2-7f62-4806-a904-3233719875b6"),
+            ID: unifiedgosdk.Pointer("06a82497-aeb0-4cef-b2b1-67ae39021d71"),
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
             ProfileEmails: []string{},
@@ -51,7 +51,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T02:44:56.226Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T03:42:07.474Z"),
         },
         ConnectionID: "<id>",
     })
@@ -329,7 +329,7 @@ func main() {
     res, err := s.Verification.PatchVerificationRequest(ctx, operations.PatchVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("ca96517c-bd87-4208-ae3c-b8dac9bc90aa"),
+            ID: unifiedgosdk.Pointer("e5c432ce-9206-408f-a06a-7c4ac1ef8d91"),
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
             ProfileEmails: []string{},
@@ -338,7 +338,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T02:44:56.227Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T03:42:07.475Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -454,7 +454,7 @@ func main() {
     res, err := s.Verification.UpdateVerificationRequest(ctx, operations.UpdateVerificationRequestRequest{
         VerificationRequest: shared.VerificationRequest{
             CreatedAt: types.MustNewTimeFromString("2023-11-20T08:17:29.950Z"),
-            ID: unifiedgosdk.Pointer("ca96517c-bd87-4208-ae3c-b8dac9bc90aa"),
+            ID: unifiedgosdk.Pointer("e5c432ce-9206-408f-a06a-7c4ac1ef8d91"),
             Parameters: []shared.VerificationParameterInput{},
             ProfileAddresses: []shared.VerificationAddress{},
             ProfileEmails: []string{},
@@ -463,7 +463,7 @@ func main() {
             ResponseDownloadUrls: []string{},
             ResponseSource: unifiedgosdk.Pointer("Implemented regional protocol"),
             ResponseStatus: shared.VerificationRequestResponseStatusPending.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-27T02:44:56.227Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-27T03:42:07.475Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

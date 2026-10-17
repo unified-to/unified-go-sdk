@@ -43,10 +43,10 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("98f895be-6740-4b15-8020-bac2e65f6b95"),
+            ID: unifiedgosdk.Pointer("d9ac437d-4e52-4f00-ab10-d51d59c157cd"),
             IsSecret: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T18:05:49.045Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T14:41:36.011Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,10 +218,10 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("1dc7e191-68bd-4478-bacf-ad4bee42fcbb"),
+            ID: unifiedgosdk.Pointer("2fdcda27-e033-4e72-96f2-ecb8d9585562"),
             IsSecret: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T18:05:49.049Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T14:41:36.018Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -340,10 +340,10 @@ func main() {
             Environments: []shared.PropertyComputeEnvvarEnvironments{
                 shared.PropertyComputeEnvvarEnvironmentsPreview,
             },
-            ID: unifiedgosdk.Pointer("1dc7e191-68bd-4478-bacf-ad4bee42fcbb"),
+            ID: unifiedgosdk.Pointer("2fdcda27-e033-4e72-96f2-ecb8d9585562"),
             IsSecret: unifiedgosdk.Pointer(true),
             Name: unifiedgosdk.Pointer("AEGER_SUBSTANTIA"),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-29T18:05:49.049Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-30T14:41:36.018Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

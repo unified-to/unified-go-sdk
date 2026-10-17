@@ -47,7 +47,7 @@ func main() {
     res, err := s.Performance.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
             CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
-            ID: unifiedgosdk.Pointer("c753161a-13d2-4de9-9043-eef5f94fd1a0"),
+            ID: unifiedgosdk.Pointer("631f3719-4876-4b86-9b4b-a0f42bf24f8d"),
             IsVisible: unifiedgosdk.Pointer(true),
             Message: unifiedgosdk.Pointer("Tabernus corpus voluptate aestus."),
             Tags: []string{
@@ -55,7 +55,7 @@ func main() {
                 "hexagon",
             },
             Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-08-31T14:41:06.597Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-01T09:23:11.738Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",
@@ -117,12 +117,12 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-24T19:23:43.513Z"),
-            ID: unifiedgosdk.Pointer("e29a45ea-3e53-42b8-b8f8-93d1a09ae93a"),
+            DueAt: types.MustNewTimeFromString("2026-07-25T21:57:42.738Z"),
+            ID: unifiedgosdk.Pointer("1249627e-fbca-44ea-bed6-7b1d8264902a"),
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-05-30T00:52:21.030Z"),
+                    DueAt: types.MustNewTimeFromString("2026-05-31T02:49:06.547Z"),
                     ID: unifiedgosdk.Pointer("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Front-line asynchronous hub",
@@ -132,7 +132,7 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-03T11:45:34.579Z"),
+                    DueAt: types.MustNewTimeFromString("2026-08-04T14:26:01.569Z"),
                     ID: unifiedgosdk.Pointer("09e04b09-7197-4fc4-9c32-077230408c26"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Organized encompassing archive",
@@ -142,7 +142,7 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Nobis tremo debitis."),
-                    DueAt: types.MustNewTimeFromString("2026-10-05T07:27:42.935Z"),
+                    DueAt: types.MustNewTimeFromString("2026-10-06T10:50:05.957Z"),
                     ID: unifiedgosdk.Pointer("bbe63683-c1d0-4932-89ac-ef81e73ae6f1"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Devolved directional middleware",
@@ -152,10 +152,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-19T04:39:08.822Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-20T03:05:44.630Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-11T00:52:52.397Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-11T11:43:48.924Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",
@@ -653,12 +653,12 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-24T19:23:43.533Z"),
-            ID: unifiedgosdk.Pointer("5acd162d-71b9-4054-a5e2-94e14e5fc8ad"),
+            DueAt: types.MustNewTimeFromString("2026-07-25T21:57:42.759Z"),
+            ID: unifiedgosdk.Pointer("1e8c0277-3431-4038-b76f-7b3be9d2ab90"),
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-05-30T00:52:21.049Z"),
+                    DueAt: types.MustNewTimeFromString("2026-05-31T02:49:06.567Z"),
                     ID: unifiedgosdk.Pointer("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Front-line asynchronous hub",
@@ -668,7 +668,7 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-03T11:45:34.598Z"),
+                    DueAt: types.MustNewTimeFromString("2026-08-04T14:26:01.590Z"),
                     ID: unifiedgosdk.Pointer("09e04b09-7197-4fc4-9c32-077230408c26"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Organized encompassing archive",
@@ -678,7 +678,7 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Nobis tremo debitis."),
-                    DueAt: types.MustNewTimeFromString("2026-10-05T07:27:42.955Z"),
+                    DueAt: types.MustNewTimeFromString("2026-10-06T10:50:05.978Z"),
                     ID: unifiedgosdk.Pointer("bbe63683-c1d0-4932-89ac-ef81e73ae6f1"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Devolved directional middleware",
@@ -688,10 +688,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-19T04:39:08.839Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-20T03:05:44.647Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-11T00:52:52.405Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-11T11:43:48.932Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",
@@ -809,12 +809,12 @@ func main() {
         PerformanceGoal: shared.PerformanceGoal{
             CreatedAt: types.MustNewTimeFromString("2020-01-09T20:43:07.380Z"),
             Description: unifiedgosdk.Pointer("Suscipit suspendo vulnero vel facere valeo vallum degero."),
-            DueAt: types.MustNewTimeFromString("2026-07-24T19:23:43.533Z"),
-            ID: unifiedgosdk.Pointer("5acd162d-71b9-4054-a5e2-94e14e5fc8ad"),
+            DueAt: types.MustNewTimeFromString("2026-07-25T21:57:42.759Z"),
+            ID: unifiedgosdk.Pointer("1e8c0277-3431-4038-b76f-7b3be9d2ab90"),
             Milestones: []shared.PerformanceGoalMilestone{
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](10.0),
-                    DueAt: types.MustNewTimeFromString("2026-05-30T00:52:21.049Z"),
+                    DueAt: types.MustNewTimeFromString("2026-05-31T02:49:06.567Z"),
                     ID: unifiedgosdk.Pointer("ec90d3e3-23bd-4d9f-a5d7-e388979f90d9"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Front-line asynchronous hub",
@@ -824,7 +824,7 @@ func main() {
                 },
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](0.0),
-                    DueAt: types.MustNewTimeFromString("2026-08-03T11:45:34.598Z"),
+                    DueAt: types.MustNewTimeFromString("2026-08-04T14:26:01.590Z"),
                     ID: unifiedgosdk.Pointer("09e04b09-7197-4fc4-9c32-077230408c26"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Organized encompassing archive",
@@ -834,7 +834,7 @@ func main() {
                 shared.PerformanceGoalMilestone{
                     CurrentValue: unifiedgosdk.Pointer[float64](31.0),
                     Description: unifiedgosdk.Pointer("Nobis tremo debitis."),
-                    DueAt: types.MustNewTimeFromString("2026-10-05T07:27:42.955Z"),
+                    DueAt: types.MustNewTimeFromString("2026-10-06T10:50:05.978Z"),
                     ID: unifiedgosdk.Pointer("bbe63683-c1d0-4932-89ac-ef81e73ae6f1"),
                     IsCompleted: unifiedgosdk.Pointer(true),
                     Name: "Devolved directional middleware",
@@ -844,10 +844,10 @@ func main() {
             },
             Name: unifiedgosdk.Pointer("Proactive national protocol"),
             Progress: unifiedgosdk.Pointer[float64](3.0),
-            StartAt: types.MustNewTimeFromString("2025-07-19T04:39:08.839Z"),
+            StartAt: types.MustNewTimeFromString("2025-07-20T03:05:44.647Z"),
             Status: shared.PerformanceGoalStatusClosed.ToPointer(),
             Type: shared.PerformanceGoalSchemasTypeCompany.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-09-11T00:52:52.405Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-09-11T11:43:48.932Z"),
             Weight: unifiedgosdk.Pointer[float64](5.0),
         },
         ConnectionID: "<id>",

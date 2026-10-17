@@ -26,5 +26,6 @@ value := operations.UpdateAtsInterviewQueryParamFieldsID
 | `UpdateAtsInterviewQueryParamFieldsStartAt`           | start_at                                              |
 | `UpdateAtsInterviewQueryParamFieldsEndAt`             | end_at                                                |
 | `UpdateAtsInterviewQueryParamFieldsLocation`          | location                                              |
+| `UpdateAtsInterviewQueryParamFieldsMeetingURL`        | meeting_url                                           |
 | `UpdateAtsInterviewQueryParamFieldsExternalEventXref` | external_event_xref                                   |
 | `UpdateAtsInterviewQueryParamFieldsRaw`               | raw                                                   |

@@ -40,11 +40,13 @@ type AtsInterview struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// the ID of the event in a calendar
-	ExternalEventXref *string        `json:"external_event_xref,omitempty"`
-	ID                *string        `json:"id,omitempty"`
-	JobID             *string        `json:"job_id,omitempty"`
-	Location          *string        `json:"location,omitempty"`
-	Raw               map[string]any `json:"raw,omitempty"`
+	ExternalEventXref *string `json:"external_event_xref,omitempty"`
+	ID                *string `json:"id,omitempty"`
+	JobID             *string `json:"job_id,omitempty"`
+	Location          *string `json:"location,omitempty"`
+	// the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+	MeetingURL *string        `json:"meeting_url,omitempty"`
+	Raw        map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time          `json:"start_at,omitempty"`
 	Status  *AtsInterviewStatus `json:"status,omitempty"`
@@ -118,6 +120,13 @@ func (a *AtsInterview) GetLocation() *string {
 		return nil
 	}
 	return a.Location
+}
+
+func (a *AtsInterview) GetMeetingURL() *string {
+	if a == nil {
+		return nil
+	}
+	return a.MeetingURL
 }
 
 func (a *AtsInterview) GetRaw() map[string]any {

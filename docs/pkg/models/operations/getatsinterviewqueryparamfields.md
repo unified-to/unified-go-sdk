@@ -26,5 +26,6 @@ value := operations.GetAtsInterviewQueryParamFieldsID
 | `GetAtsInterviewQueryParamFieldsStartAt`           | start_at                                           |
 | `GetAtsInterviewQueryParamFieldsEndAt`             | end_at                                             |
 | `GetAtsInterviewQueryParamFieldsLocation`          | location                                           |
+| `GetAtsInterviewQueryParamFieldsMeetingURL`        | meeting_url                                        |
 | `GetAtsInterviewQueryParamFieldsExternalEventXref` | external_event_xref                                |
 | `GetAtsInterviewQueryParamFieldsRaw`               | raw                                                |
