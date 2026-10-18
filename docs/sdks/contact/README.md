@@ -53,11 +53,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("cea62f56-461a-456e-b163-d5e63073d34b"),
+                    ID: unifiedgosdk.Pointer("a5184677-f693-4347-85d6-0d924dd4cdaa"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("260eb32c-ea18-46d1-97d6-94099c31027c"),
+                    ID: unifiedgosdk.Pointer("f5a5e3a4-721b-4a26-870e-90f038103b46"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -80,7 +80,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("e993079a-8d41-49fd-a298-bf1998077a50"),
+            ID: unifiedgosdk.Pointer("2b1b34c1-1ae9-4b93-bd1d-00359d39989b"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -90,7 +90,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("e7917dea-0aca-4f80-ab41-12402a67d2a5"),
+                    ID: unifiedgosdk.Pointer("01365535-0f87-4e71-9b5b-a16319a5867a"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -117,7 +117,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-18T01:34:13.231Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T12:40:31.525Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -203,7 +203,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("576c8ed9-fb0e-4a8d-827e-dcc9b345544d"),
+            ID: unifiedgosdk.Pointer("9b562877-4a27-4246-b483-ab58015584af"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -219,7 +219,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("b19889ea-1492-4c0b-b03f-6cd99db5d512"),
+                    ID: unifiedgosdk.Pointer("e85486b6-7bc6-49c3-9d98-7d4038411781"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -243,7 +243,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T02:42:24.035Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T03:19:22.723Z"),
         },
         ConnectionID: "<id>",
     })
@@ -311,7 +311,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("00c0aaa9-3388-4caf-a6a8-badac886a96c"),
+            ID: unifiedgosdk.Pointer("b04d2084-60b8-4940-80c8-1a3f3f3462a5"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -329,7 +329,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T00:45:14.842Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-06T15:12:44.572Z"),
         },
         ConnectionID: "<id>",
     })
@@ -717,11 +717,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("f58ea1af-bacf-48c1-8e3f-078e458b8270"),
+                    ID: unifiedgosdk.Pointer("cd1d3a3c-2745-4f1a-be1c-428a81922822"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("8e741743-5b04-4422-a63d-fd3504136bb3"),
+                    ID: unifiedgosdk.Pointer("30c56e01-818f-46a2-8f4b-207f72b7ae82"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -744,7 +744,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("9946fd0f-b656-4619-bdd6-3c0ee9a6e868"),
+            ID: unifiedgosdk.Pointer("e7b3417f-5b56-41b2-b622-40960b89586f"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -754,7 +754,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("a486bbad-0cb4-4aeb-b2b8-c3c0681031a1"),
+                    ID: unifiedgosdk.Pointer("9f18e77b-2b99-49b4-a0f0-d8713c0356dd"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -781,7 +781,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-18T01:34:13.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T12:40:31.547Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -868,7 +868,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("383b6e7e-192d-463d-a167-01dcbfbc7077"),
+            ID: unifiedgosdk.Pointer("162d3ef7-29b1-4290-aec3-79b2e32e9a23"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -884,7 +884,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("e0156edc-d243-4a2f-8c41-b8cb6de5182a"),
+                    ID: unifiedgosdk.Pointer("ed846e15-5996-456c-a893-16bb7eb0cd14"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -908,7 +908,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T02:42:24.036Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T03:19:22.724Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -977,7 +977,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("6f304219-18c8-4430-9d1b-36d697a987eb"),
+            ID: unifiedgosdk.Pointer("463d2061-1f9a-4235-acdc-db3ac7704b2b"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -995,7 +995,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T00:45:14.850Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-06T15:12:44.581Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1222,11 +1222,11 @@ func main() {
         AccountingContact: shared.AccountingContact{
             AssociatedContacts: []shared.AccountingAssociatedContact{
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("f58ea1af-bacf-48c1-8e3f-078e458b8270"),
+                    ID: unifiedgosdk.Pointer("cd1d3a3c-2745-4f1a-be1c-428a81922822"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
                 shared.AccountingAssociatedContact{
-                    ID: unifiedgosdk.Pointer("8e741743-5b04-4422-a63d-fd3504136bb3"),
+                    ID: unifiedgosdk.Pointer("30c56e01-818f-46a2-8f4b-207f72b7ae82"),
                     Name: unifiedgosdk.Pointer("Delores Reynolds"),
                 },
             },
@@ -1249,7 +1249,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Delores"),
-            ID: unifiedgosdk.Pointer("9946fd0f-b656-4619-bdd6-3c0ee9a6e868"),
+            ID: unifiedgosdk.Pointer("e7b3417f-5b56-41b2-b622-40960b89586f"),
             Identification: unifiedgosdk.Pointer("amicitia"),
             IsActive: unifiedgosdk.Pointer(true),
             IsCustomer: unifiedgosdk.Pointer(true),
@@ -1259,7 +1259,7 @@ func main() {
             PaymentMethods: []shared.AccountingContactPaymentMethod{
                 shared.AccountingContactPaymentMethod{
                     Default: unifiedgosdk.Pointer(true),
-                    ID: unifiedgosdk.Pointer("a486bbad-0cb4-4aeb-b2b8-c3c0681031a1"),
+                    ID: unifiedgosdk.Pointer("9f18e77b-2b99-49b4-a0f0-d8713c0356dd"),
                     Name: unifiedgosdk.Pointer("Visa 1234"),
                     Type: shared.AccountingContactPaymentMethodTypeCard,
                 },
@@ -1286,7 +1286,7 @@ func main() {
                     Type: shared.AccountingTelephoneTypeFax.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2023-12-18T01:34:13.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-18T12:40:31.547Z"),
             Website: unifiedgosdk.Pointer("https://noxious-advertisement.org"),
         },
         ConnectionID: "<id>",
@@ -1373,7 +1373,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Mohammad"),
-            ID: unifiedgosdk.Pointer("383b6e7e-192d-463d-a167-01dcbfbc7077"),
+            ID: unifiedgosdk.Pointer("162d3ef7-29b1-4290-aec3-79b2e32e9a23"),
             ImageURL: unifiedgosdk.Pointer("https://picsum.photos/seed/zmbPeg/2905/378"),
             LastName: unifiedgosdk.Pointer("Bartell"),
             LinkUrls: []string{
@@ -1389,7 +1389,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("e0156edc-d243-4a2f-8c41-b8cb6de5182a"),
+                    ID: unifiedgosdk.Pointer("ed846e15-5996-456c-a893-16bb7eb0cd14"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -1413,7 +1413,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("National Tactics Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2021-02-24T02:42:24.036Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-02-24T03:19:22.724Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1482,7 +1482,7 @@ func main() {
                 },
             },
             FirstName: unifiedgosdk.Pointer("Luther"),
-            ID: unifiedgosdk.Pointer("6f304219-18c8-4430-9d1b-36d697a987eb"),
+            ID: unifiedgosdk.Pointer("463d2061-1f9a-4235-acdc-db3ac7704b2b"),
             LastName: unifiedgosdk.Pointer("Rogahn"),
             Name: unifiedgosdk.Pointer("Luther Rogahn"),
             Telephones: []shared.UcTelephone{
@@ -1500,7 +1500,7 @@ func main() {
                 },
             },
             Title: unifiedgosdk.Pointer("Chief Optimization Executive"),
-            UpdatedAt: types.MustNewTimeFromString("2023-12-06T00:45:14.850Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-12-06T15:12:44.581Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
