@@ -56,7 +56,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("7cfa768c-7e51-42c5-839c-f7757079f53d"),
+            ID: unifiedgosdk.Pointer("59db3007-e218-4f2b-b8d1-f550cab94adc"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -76,7 +76,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-20T01:32:17.776Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-20T16:37:55.500Z"),
         },
         ConnectionID: "<id>",
     })
@@ -262,7 +262,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("b688d808-08a0-4673-8836-c7e280a13025"),
+            ID: unifiedgosdk.Pointer("30c60663-6768-42e5-9cc1-6658719a80ed"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -282,7 +282,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-20T01:32:17.795Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-20T16:37:55.520Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -360,7 +360,7 @@ func main() {
             },
             FirstName: unifiedgosdk.Pointer("Alejandrin"),
             Gender: shared.HealthcarePatientGenderFemale.ToPointer(),
-            ID: unifiedgosdk.Pointer("b688d808-08a0-4673-8836-c7e280a13025"),
+            ID: unifiedgosdk.Pointer("30c60663-6768-42e5-9cc1-6658719a80ed"),
             Identifiers: []shared.HealthcareIdentifier{
                 shared.HealthcareIdentifier{
                     Type: shared.HealthcareIdentifierTypeMrn.ToPointer(),
@@ -380,7 +380,7 @@ func main() {
                     Type: shared.HealthcareTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-20T01:32:17.795Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-20T16:37:55.520Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
