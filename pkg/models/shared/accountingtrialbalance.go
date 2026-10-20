@@ -12,10 +12,11 @@ type AccountingTrialbalance struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Currency  *string    `json:"currency,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt *time.Time     `json:"end_at,omitempty"`
-	ID    *string        `json:"id,omitempty"`
-	Name  *string        `json:"name,omitempty"`
-	Raw   map[string]any `json:"raw,omitempty"`
+	EndAt    *time.Time           `json:"end_at,omitempty"`
+	ID       *string              `json:"id,omitempty"`
+	Metadata []AccountingMetadata `json:"metadata,omitempty"`
+	Name     *string              `json:"name,omitempty"`
+	Raw      map[string]any       `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt           *time.Time                      `json:"start_at,omitempty"`
 	SubItems          []AccountingTrialbalanceSubItem `json:"sub_items,omitempty"`
@@ -62,6 +63,13 @@ func (a *AccountingTrialbalance) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AccountingTrialbalance) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingTrialbalance) GetName() *string {

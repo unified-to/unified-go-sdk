@@ -63,10 +63,11 @@ type PerformanceCycle struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	DueAt *time.Time `json:"due_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt *time.Time     `json:"end_at,omitempty"`
-	ID    *string        `json:"id,omitempty"`
-	Name  *string        `json:"name,omitempty"`
-	Raw   map[string]any `json:"raw,omitempty"`
+	EndAt    *time.Time            `json:"end_at,omitempty"`
+	ID       *string               `json:"id,omitempty"`
+	Metadata []PerformanceMetadata `json:"metadata,omitempty"`
+	Name     *string               `json:"name,omitempty"`
+	Raw      map[string]any        `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time              `json:"start_at,omitempty"`
 	Status  *PerformanceCycleStatus `json:"status,omitempty"`
@@ -120,6 +121,13 @@ func (p *PerformanceCycle) GetID() *string {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PerformanceCycle) GetMetadata() []PerformanceMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PerformanceCycle) GetName() *string {

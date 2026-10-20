@@ -37,4 +37,5 @@ value := operations.CreateAdsAdQueryParamFieldsID
 | `CreateAdsAdQueryParamFieldsPath2`            | path2                                         |
 | `CreateAdsAdQueryParamFieldsPromoted`         | promoted                                      |
 | `CreateAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                              |
+| `CreateAdsAdQueryParamFieldsMetadata`         | metadata                                      |
 | `CreateAdsAdQueryParamFieldsRaw`              | raw                                           |

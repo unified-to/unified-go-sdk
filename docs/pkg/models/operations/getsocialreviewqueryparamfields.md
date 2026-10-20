@@ -27,4 +27,5 @@ value := operations.GetSocialReviewQueryParamFieldsID
 | `GetSocialReviewQueryParamFieldsAuthorLocation`  | author_location                                  |
 | `GetSocialReviewQueryParamFieldsReply`           | reply                                            |
 | `GetSocialReviewQueryParamFieldsURL`             | url                                              |
+| `GetSocialReviewQueryParamFieldsMetadata`        | metadata                                         |
 | `GetSocialReviewQueryParamFieldsRaw`             | raw                                              |

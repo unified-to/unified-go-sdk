@@ -27,4 +27,5 @@ value := operations.GetPaymentPayoutQueryParamFieldsID
 | `GetPaymentPayoutQueryParamFieldsNetAmount`   | net_amount                                    |
 | `GetPaymentPayoutQueryParamFieldsAccountID`   | account_id                                    |
 | `GetPaymentPayoutQueryParamFieldsLineitems`   | lineitems                                     |
+| `GetPaymentPayoutQueryParamFieldsMetadata`    | metadata                                      |
 | `GetPaymentPayoutQueryParamFieldsRaw`         | raw                                           |

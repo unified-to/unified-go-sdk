@@ -13,10 +13,11 @@ value := operations.ListCrmTaxonomiesQueryParamFieldsID
 
 ## Values
 
-| Name                                     | Value                                    |
-| ---------------------------------------- | ---------------------------------------- |
-| `ListCrmTaxonomiesQueryParamFieldsID`    | id                                       |
-| `ListCrmTaxonomiesQueryParamFieldsName`  | name                                     |
-| `ListCrmTaxonomiesQueryParamFieldsLabel` | label                                    |
-| `ListCrmTaxonomiesQueryParamFieldsType`  | type                                     |
-| `ListCrmTaxonomiesQueryParamFieldsRaw`   | raw                                      |
+| Name                                        | Value                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| `ListCrmTaxonomiesQueryParamFieldsID`       | id                                          |
+| `ListCrmTaxonomiesQueryParamFieldsName`     | name                                        |
+| `ListCrmTaxonomiesQueryParamFieldsLabel`    | label                                       |
+| `ListCrmTaxonomiesQueryParamFieldsType`     | type                                        |
+| `ListCrmTaxonomiesQueryParamFieldsMetadata` | metadata                                    |
+| `ListCrmTaxonomiesQueryParamFieldsRaw`      | raw                                         |

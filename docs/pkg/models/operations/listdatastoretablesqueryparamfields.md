@@ -25,4 +25,5 @@ value := operations.ListDatastoreTablesQueryParamFieldsID
 | `ListDatastoreTablesQueryParamFieldsRelationships` | relationships                                      |
 | `ListDatastoreTablesQueryParamFieldsWebURL`        | web_url                                            |
 | `ListDatastoreTablesQueryParamFieldsParentID`      | parent_id                                          |
+| `ListDatastoreTablesQueryParamFieldsMetadata`      | metadata                                           |
 | `ListDatastoreTablesQueryParamFieldsRaw`           | raw                                                |

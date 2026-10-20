@@ -22,6 +22,7 @@ const (
 	PatchAdsOrganizationQueryParamFieldsStatus        PatchAdsOrganizationQueryParamFields = "status"
 	PatchAdsOrganizationQueryParamFieldsAccountNumber PatchAdsOrganizationQueryParamFields = "account_number"
 	PatchAdsOrganizationQueryParamFieldsManagers      PatchAdsOrganizationQueryParamFields = "managers"
+	PatchAdsOrganizationQueryParamFieldsMetadata      PatchAdsOrganizationQueryParamFields = "metadata"
 	PatchAdsOrganizationQueryParamFieldsRaw           PatchAdsOrganizationQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *PatchAdsOrganizationQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "account_number":
 		fallthrough
 	case "managers":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAdsOrganizationQueryParamFields(v)

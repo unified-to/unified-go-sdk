@@ -33,4 +33,5 @@ value := operations.CreateAccountingBankfeedtransactionQueryParamFieldsID
 | `CreateAccountingBankfeedtransactionQueryParamFieldsContactID`         | contact_id                                                             |
 | `CreateAccountingBankfeedtransactionQueryParamFieldsAccountID`         | account_id                                                             |
 | `CreateAccountingBankfeedtransactionQueryParamFieldsCategoryIds`       | category_ids                                                           |
+| `CreateAccountingBankfeedtransactionQueryParamFieldsMetadata`          | metadata                                                               |
 | `CreateAccountingBankfeedtransactionQueryParamFieldsRaw`               | raw                                                                    |

@@ -26,6 +26,7 @@ const (
 	PatchAccountingAccountQueryParamFieldsParentID            PatchAccountingAccountQueryParamFields = "parent_id"
 	PatchAccountingAccountQueryParamFieldsTaxonomy            PatchAccountingAccountQueryParamFields = "taxonomy"
 	PatchAccountingAccountQueryParamFieldsOrganizationID      PatchAccountingAccountQueryParamFields = "organization_id"
+	PatchAccountingAccountQueryParamFieldsMetadata            PatchAccountingAccountQueryParamFields = "metadata"
 	PatchAccountingAccountQueryParamFieldsRaw                 PatchAccountingAccountQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *PatchAccountingAccountQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "taxonomy":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingAccountQueryParamFields(v)

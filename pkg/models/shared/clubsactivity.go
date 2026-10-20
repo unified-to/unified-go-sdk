@@ -96,7 +96,8 @@ type ClubsActivity struct {
 	// The activity's max speed, in meters per second
 	MaxSpeed *float64 `json:"max_speed,omitempty"`
 	// The activity's max power output, in watts
-	MaxWatts *float64 `json:"max_watts,omitempty"`
+	MaxWatts *float64        `json:"max_watts,omitempty"`
+	Metadata []ClubsMetadata `json:"metadata,omitempty"`
 	// The activity's moving time, in seconds
 	MovingTime *float64 `json:"moving_time,omitempty"`
 	// The name of the activity
@@ -344,6 +345,13 @@ func (c *ClubsActivity) GetMaxWatts() *float64 {
 		return nil
 	}
 	return c.MaxWatts
+}
+
+func (c *ClubsActivity) GetMetadata() []ClubsMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ClubsActivity) GetMovingTime() *float64 {

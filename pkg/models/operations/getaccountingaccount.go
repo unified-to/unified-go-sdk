@@ -26,6 +26,7 @@ const (
 	QueryParamFieldsParentID            QueryParamFields = "parent_id"
 	QueryParamFieldsTaxonomy            QueryParamFields = "taxonomy"
 	QueryParamFieldsOrganizationID      QueryParamFields = "organization_id"
+	QueryParamFieldsMetadata            QueryParamFields = "metadata"
 	QueryParamFieldsRaw                 QueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *QueryParamFields) UnmarshalJSON(data []byte) error {
 	case "taxonomy":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = QueryParamFields(v)

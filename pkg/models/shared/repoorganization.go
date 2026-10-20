@@ -13,6 +13,7 @@ type RepoOrganization struct {
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	Description *string        `json:"description,omitempty"`
 	ID          *string        `json:"id,omitempty"`
+	Metadata    []RepoMetadata `json:"metadata,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -59,6 +60,13 @@ func (r *RepoOrganization) GetID() *string {
 		return nil
 	}
 	return r.ID
+}
+
+func (r *RepoOrganization) GetMetadata() []RepoMetadata {
+	if r == nil {
+		return nil
+	}
+	return r.Metadata
 }
 
 func (r *RepoOrganization) GetName() *string {

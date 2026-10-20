@@ -30,4 +30,5 @@ value := operations.UpdateSocialPostQueryParamFieldsID
 | `UpdateSocialPostQueryParamFieldsScheduledAt`  | scheduled_at                                   |
 | `UpdateSocialPostQueryParamFieldsCallToAction` | call_to_action                                 |
 | `UpdateSocialPostQueryParamFieldsMetrics`      | metrics                                        |
+| `UpdateSocialPostQueryParamFieldsMetadata`     | metadata                                       |
 | `UpdateSocialPostQueryParamFieldsRaw`          | raw                                            |

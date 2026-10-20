@@ -25,7 +25,8 @@ type SocialProfile struct {
 	// Whether the profile is verified
 	IsVerified *bool `json:"is_verified,omitempty"`
 	// Free-text location/locale string
-	Location *string `json:"location,omitempty"`
+	Location *string          `json:"location,omitempty"`
+	Metadata []SocialMetadata `json:"metadata,omitempty"`
 	// Audience metrics for the profile
 	Metrics *PropertySocialProfileMetrics `json:"metrics,omitempty"`
 	// Display name of the profile
@@ -118,6 +119,13 @@ func (s *SocialProfile) GetLocation() *string {
 		return nil
 	}
 	return s.Location
+}
+
+func (s *SocialProfile) GetMetadata() []SocialMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SocialProfile) GetMetrics() *PropertySocialProfileMetrics {

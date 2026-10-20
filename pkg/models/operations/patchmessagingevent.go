@@ -19,6 +19,7 @@ const (
 	PatchMessagingEventQueryParamFieldsMessage             PatchMessagingEventQueryParamFields = "message"
 	PatchMessagingEventQueryParamFieldsButton              PatchMessagingEventQueryParamFields = "button"
 	PatchMessagingEventQueryParamFieldsUser                PatchMessagingEventQueryParamFields = "user"
+	PatchMessagingEventQueryParamFieldsMetadata            PatchMessagingEventQueryParamFields = "metadata"
 	PatchMessagingEventQueryParamFieldsRaw                 PatchMessagingEventQueryParamFields = "raw"
 	PatchMessagingEventQueryParamFieldsIsReplacingOriginal PatchMessagingEventQueryParamFields = "is_replacing_original"
 )
@@ -45,6 +46,8 @@ func (e *PatchMessagingEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "button":
 		fallthrough
 	case "user":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		fallthrough

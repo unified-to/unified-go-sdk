@@ -32,4 +32,5 @@ value := operations.GetPerformanceReviewQueryParamFieldsID
 | `GetPerformanceReviewQueryParamFieldsIsAcknowledged`     | is_acknowledged                                          |
 | `GetPerformanceReviewQueryParamFieldsSubmittedAt`        | submitted_at                                             |
 | `GetPerformanceReviewQueryParamFieldsCompletedAt`        | completed_at                                             |
+| `GetPerformanceReviewQueryParamFieldsMetadata`           | metadata                                                 |
 | `GetPerformanceReviewQueryParamFieldsRaw`                | raw                                                      |

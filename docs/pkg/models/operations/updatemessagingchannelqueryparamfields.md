@@ -26,4 +26,5 @@ value := operations.UpdateMessagingChannelQueryParamFieldsID
 | `UpdateMessagingChannelQueryParamFieldsIsActive`       | is_active                                              |
 | `UpdateMessagingChannelQueryParamFieldsIsPrivate`      | is_private                                             |
 | `UpdateMessagingChannelQueryParamFieldsWebURL`         | web_url                                                |
+| `UpdateMessagingChannelQueryParamFieldsMetadata`       | metadata                                               |
 | `UpdateMessagingChannelQueryParamFieldsRaw`            | raw                                                    |

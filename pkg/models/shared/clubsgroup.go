@@ -117,6 +117,7 @@ type ClubsGroup struct {
 	MemberCount *float64 `json:"member_count,omitempty"`
 	// The authenticated user's membership status
 	MembershipStatus *MembershipStatus `json:"membership_status,omitempty"`
+	Metadata         []ClubsMetadata   `json:"metadata,omitempty"`
 	// The group's name
 	Name *string `json:"name,omitempty"`
 	// The number of posts in the group
@@ -247,6 +248,13 @@ func (c *ClubsGroup) GetMembershipStatus() *MembershipStatus {
 		return nil
 	}
 	return c.MembershipStatus
+}
+
+func (c *ClubsGroup) GetMetadata() []ClubsMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ClubsGroup) GetName() *string {

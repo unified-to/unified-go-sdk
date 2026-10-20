@@ -30,4 +30,5 @@ value := operations.UpdateHrisBenefitQueryParamFieldsID
 | `UpdateHrisBenefitQueryParamFieldsEmployerContributionMaxAmount` | employer_contribution_max_amount                                 |
 | `UpdateHrisBenefitQueryParamFieldsCoverageLevel`                 | coverage_level                                                   |
 | `UpdateHrisBenefitQueryParamFieldsCurrency`                      | currency                                                         |
+| `UpdateHrisBenefitQueryParamFieldsMetadata`                      | metadata                                                         |
 | `UpdateHrisBenefitQueryParamFieldsRaw`                           | raw                                                              |

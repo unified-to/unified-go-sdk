@@ -10,9 +10,10 @@ import (
 type CalendarBusy struct {
 	Description *string `json:"description,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt time.Time      `json:"end_at"`
-	ID    *string        `json:"id,omitempty"`
-	Raw   map[string]any `json:"raw,omitempty"`
+	EndAt    time.Time          `json:"end_at"`
+	ID       *string            `json:"id,omitempty"`
+	Metadata []CalendarMetadata `json:"metadata,omitempty"`
+	Raw      map[string]any     `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt  time.Time `json:"start_at"`
 	Timezone *string   `json:"timezone,omitempty"`
@@ -48,6 +49,13 @@ func (c *CalendarBusy) GetID() *string {
 		return nil
 	}
 	return c.ID
+}
+
+func (c *CalendarBusy) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarBusy) GetRaw() map[string]any {

@@ -21,6 +21,7 @@ const (
 	UpdateKmsSpaceQueryParamFieldsIsActive     UpdateKmsSpaceQueryParamFields = "is_active"
 	UpdateKmsSpaceQueryParamFieldsUserID       UpdateKmsSpaceQueryParamFields = "user_id"
 	UpdateKmsSpaceQueryParamFieldsParentPageID UpdateKmsSpaceQueryParamFields = "parent_page_id"
+	UpdateKmsSpaceQueryParamFieldsMetadata     UpdateKmsSpaceQueryParamFields = "metadata"
 	UpdateKmsSpaceQueryParamFieldsRaw          UpdateKmsSpaceQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *UpdateKmsSpaceQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "parent_page_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateKmsSpaceQueryParamFields(v)

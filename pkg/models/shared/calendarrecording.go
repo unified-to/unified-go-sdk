@@ -18,6 +18,7 @@ type CalendarRecording struct {
 	ExpiresAt *time.Time               `json:"expires_at,omitempty"`
 	ID        *string                  `json:"id,omitempty"`
 	Media     []CalendarRecordingMedia `json:"media,omitempty"`
+	Metadata  []CalendarMetadata       `json:"metadata,omitempty"`
 	Raw       map[string]any           `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time `json:"start_at,omitempty"`
@@ -77,6 +78,13 @@ func (c *CalendarRecording) GetMedia() []CalendarRecordingMedia {
 		return nil
 	}
 	return c.Media
+}
+
+func (c *CalendarRecording) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarRecording) GetRaw() map[string]any {

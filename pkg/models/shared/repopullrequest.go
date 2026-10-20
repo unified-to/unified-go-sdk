@@ -38,6 +38,7 @@ type RepoPullrequest struct {
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	Labels    []string       `json:"labels,omitempty"`
+	Metadata  []RepoMetadata `json:"metadata,omitempty"`
 	Notes     *string        `json:"notes,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	// (reference to RepoRepository)
@@ -95,6 +96,13 @@ func (r *RepoPullrequest) GetLabels() []string {
 		return nil
 	}
 	return r.Labels
+}
+
+func (r *RepoPullrequest) GetMetadata() []RepoMetadata {
+	if r == nil {
+		return nil
+	}
+	return r.Metadata
 }
 
 func (r *RepoPullrequest) GetNotes() *string {

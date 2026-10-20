@@ -39,6 +39,7 @@ const (
 	UpdateAccountingContactQueryParamFieldsBalanceAmount      UpdateAccountingContactQueryParamFields = "balance_amount"
 	UpdateAccountingContactQueryParamFieldsWebsite            UpdateAccountingContactQueryParamFields = "website"
 	UpdateAccountingContactQueryParamFieldsNotes              UpdateAccountingContactQueryParamFields = "notes"
+	UpdateAccountingContactQueryParamFieldsMetadata           UpdateAccountingContactQueryParamFields = "metadata"
 	UpdateAccountingContactQueryParamFieldsRaw                UpdateAccountingContactQueryParamFields = "raw"
 )
 
@@ -104,6 +105,8 @@ func (e *UpdateAccountingContactQueryParamFields) UnmarshalJSON(data []byte) err
 	case "website":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingContactQueryParamFields(v)

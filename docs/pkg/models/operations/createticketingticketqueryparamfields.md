@@ -32,4 +32,5 @@ value := operations.CreateTicketingTicketQueryParamFieldsID
 | `CreateTicketingTicketQueryParamFieldsURL`           | url                                                  |
 | `CreateTicketingTicketQueryParamFieldsAttachmentIds` | attachment_ids                                       |
 | `CreateTicketingTicketQueryParamFieldsDueAt`         | due_at                                               |
+| `CreateTicketingTicketQueryParamFieldsMetadata`      | metadata                                             |
 | `CreateTicketingTicketQueryParamFieldsRaw`           | raw                                                  |

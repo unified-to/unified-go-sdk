@@ -24,6 +24,7 @@ const (
 	UpdateSocialReviewQueryParamFieldsAuthorLocation  UpdateSocialReviewQueryParamFields = "author_location"
 	UpdateSocialReviewQueryParamFieldsReply           UpdateSocialReviewQueryParamFields = "reply"
 	UpdateSocialReviewQueryParamFieldsURL             UpdateSocialReviewQueryParamFields = "url"
+	UpdateSocialReviewQueryParamFieldsMetadata        UpdateSocialReviewQueryParamFields = "metadata"
 	UpdateSocialReviewQueryParamFieldsRaw             UpdateSocialReviewQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *UpdateSocialReviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "reply":
 		fallthrough
 	case "url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateSocialReviewQueryParamFields(v)

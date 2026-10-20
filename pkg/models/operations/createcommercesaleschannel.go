@@ -19,6 +19,7 @@ const (
 	CreateCommerceSaleschannelQueryParamFieldsDescription CreateCommerceSaleschannelQueryParamFields = "description"
 	CreateCommerceSaleschannelQueryParamFieldsIsActive    CreateCommerceSaleschannelQueryParamFields = "is_active"
 	CreateCommerceSaleschannelQueryParamFieldsCollections CreateCommerceSaleschannelQueryParamFields = "collections"
+	CreateCommerceSaleschannelQueryParamFieldsMetadata    CreateCommerceSaleschannelQueryParamFields = "metadata"
 	CreateCommerceSaleschannelQueryParamFieldsRaw         CreateCommerceSaleschannelQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *CreateCommerceSaleschannelQueryParamFields) UnmarshalJSON(data []byte) 
 	case "is_active":
 		fallthrough
 	case "collections":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCommerceSaleschannelQueryParamFields(v)

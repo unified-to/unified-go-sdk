@@ -9,11 +9,12 @@ import (
 
 type AnalyticsProperty struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time `json:"created_at,omitempty"`
-	Currency  *string    `json:"currency,omitempty"`
-	ID        *string    `json:"id,omitempty"`
-	Industry  *string    `json:"industry,omitempty"`
-	Name      *string    `json:"name,omitempty"`
+	CreatedAt *time.Time          `json:"created_at,omitempty"`
+	Currency  *string             `json:"currency,omitempty"`
+	ID        *string             `json:"id,omitempty"`
+	Industry  *string             `json:"industry,omitempty"`
+	Metadata  []AnalyticsMetadata `json:"metadata,omitempty"`
+	Name      *string             `json:"name,omitempty"`
 	// points to AnalyticsProperty
 	ParentID *string        `json:"parent_id,omitempty"`
 	Raw      map[string]any `json:"raw,omitempty"`
@@ -59,6 +60,13 @@ func (a *AnalyticsProperty) GetIndustry() *string {
 		return nil
 	}
 	return a.Industry
+}
+
+func (a *AnalyticsProperty) GetMetadata() []AnalyticsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AnalyticsProperty) GetName() *string {

@@ -18,6 +18,7 @@ const (
 	PatchHrisCompanyQueryParamFieldsName      PatchHrisCompanyQueryParamFields = "name"
 	PatchHrisCompanyQueryParamFieldsLegalName PatchHrisCompanyQueryParamFields = "legal_name"
 	PatchHrisCompanyQueryParamFieldsAddress   PatchHrisCompanyQueryParamFields = "address"
+	PatchHrisCompanyQueryParamFieldsMetadata  PatchHrisCompanyQueryParamFields = "metadata"
 	PatchHrisCompanyQueryParamFieldsRaw       PatchHrisCompanyQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *PatchHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "legal_name":
 		fallthrough
 	case "address":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisCompanyQueryParamFields(v)

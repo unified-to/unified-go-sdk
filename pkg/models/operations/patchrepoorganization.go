@@ -20,6 +20,7 @@ const (
 	PatchRepoOrganizationQueryParamFieldsAvatarURL   PatchRepoOrganizationQueryParamFields = "avatar_url"
 	PatchRepoOrganizationQueryParamFieldsWebURL      PatchRepoOrganizationQueryParamFields = "web_url"
 	PatchRepoOrganizationQueryParamFieldsUserIds     PatchRepoOrganizationQueryParamFields = "user_ids"
+	PatchRepoOrganizationQueryParamFieldsMetadata    PatchRepoOrganizationQueryParamFields = "metadata"
 	PatchRepoOrganizationQueryParamFieldsRaw         PatchRepoOrganizationQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchRepoOrganizationQueryParamFields) UnmarshalJSON(data []byte) error
 	case "web_url":
 		fallthrough
 	case "user_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchRepoOrganizationQueryParamFields(v)

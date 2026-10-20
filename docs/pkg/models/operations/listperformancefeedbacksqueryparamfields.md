@@ -24,4 +24,5 @@ value := operations.ListPerformanceFeedbacksQueryParamFieldsID
 | `ListPerformanceFeedbacksQueryParamFieldsMessage`      | message                                                |
 | `ListPerformanceFeedbacksQueryParamFieldsTags`         | tags                                                   |
 | `ListPerformanceFeedbacksQueryParamFieldsIsVisible`    | is_visible                                             |
+| `ListPerformanceFeedbacksQueryParamFieldsMetadata`     | metadata                                               |
 | `ListPerformanceFeedbacksQueryParamFieldsRaw`          | raw                                                    |

@@ -21,6 +21,7 @@ type AccountingProfitloss struct {
 	ID                  *string                       `json:"id,omitempty"`
 	IncomeSections      []AccountingProfitlossSection `json:"income_sections,omitempty"`
 	IncomeTotalAmount   *float64                      `json:"income_total_amount,omitempty"`
+	Metadata            []AccountingMetadata          `json:"metadata,omitempty"`
 	Name                *string                       `json:"name,omitempty"`
 	NetIncomeAmount     *float64                      `json:"net_income_amount,omitempty"`
 	Raw                 map[string]any                `json:"raw,omitempty"`
@@ -116,6 +117,13 @@ func (a *AccountingProfitloss) GetIncomeTotalAmount() *float64 {
 		return nil
 	}
 	return a.IncomeTotalAmount
+}
+
+func (a *AccountingProfitloss) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingProfitloss) GetName() *string {

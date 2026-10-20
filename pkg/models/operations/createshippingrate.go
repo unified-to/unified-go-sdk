@@ -21,6 +21,7 @@ const (
 	CreateShippingRateQueryParamFieldsCarrierID   CreateShippingRateQueryParamFields = "carrier_id"
 	CreateShippingRateQueryParamFieldsID          CreateShippingRateQueryParamFields = "id"
 	CreateShippingRateQueryParamFieldsRates       CreateShippingRateQueryParamFields = "rates"
+	CreateShippingRateQueryParamFieldsMetadata    CreateShippingRateQueryParamFields = "metadata"
 	CreateShippingRateQueryParamFieldsRaw         CreateShippingRateQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *CreateShippingRateQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "id":
 		fallthrough
 	case "rates":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateShippingRateQueryParamFields(v)

@@ -29,4 +29,5 @@ value := operations.UpdateFormsFormQueryParamFieldsID
 | `UpdateFormsFormQueryParamFieldsHasShuffleQuestions`     | has_shuffle_questions                                    |
 | `UpdateFormsFormQueryParamFieldsConfirmationMessage`     | confirmation_message                                     |
 | `UpdateFormsFormQueryParamFieldsConfirmationRedirectURL` | confirmation_redirect_url                                |
+| `UpdateFormsFormQueryParamFieldsMetadata`                | metadata                                                 |
 | `UpdateFormsFormQueryParamFieldsRaw`                     | raw                                                      |

@@ -24,8 +24,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -40,7 +40,9 @@ func main() {
     res, err := s.Inventory.CreateCommerceInventory(ctx, operations.CreateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-18T13:27:29.375Z"),
+            ID: unifiedgosdk.Pointer("deae5c33-28c4-4543-9d55-574ff9377cdd"),
+            Metadata: []shared.CommerceMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2025-11-19T14:18:13.805Z"),
         },
         ConnectionID: "<id>",
     })
@@ -193,8 +195,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -209,7 +211,9 @@ func main() {
     res, err := s.Inventory.PatchCommerceInventory(ctx, operations.PatchCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-18T13:27:29.378Z"),
+            ID: unifiedgosdk.Pointer("4e3a1786-fa23-4475-bdbb-4d86fbcdcebc"),
+            Metadata: []shared.CommerceMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2025-11-19T14:18:13.817Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -309,8 +313,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -325,7 +329,9 @@ func main() {
     res, err := s.Inventory.UpdateCommerceInventory(ctx, operations.UpdateCommerceInventoryRequest{
         CommerceInventory: shared.CommerceInventory{
             Available: unifiedgosdk.Pointer[float64](337.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-11-18T13:27:29.378Z"),
+            ID: unifiedgosdk.Pointer("4e3a1786-fa23-4475-bdbb-4d86fbcdcebc"),
+            Metadata: []shared.CommerceMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2025-11-19T14:18:13.817Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

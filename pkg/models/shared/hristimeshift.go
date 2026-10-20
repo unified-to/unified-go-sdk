@@ -28,6 +28,7 @@ type HrisTimeshift struct {
 	IsApproved *bool    `json:"is_approved,omitempty"`
 	// (reference to HrisLocation)
 	LocationID *string        `json:"location_id,omitempty"`
+	Metadata   []HrisMetadata `json:"metadata,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time `json:"start_at,omitempty"`
@@ -128,6 +129,13 @@ func (h *HrisTimeshift) GetLocationID() *string {
 		return nil
 	}
 	return h.LocationID
+}
+
+func (h *HrisTimeshift) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisTimeshift) GetRaw() map[string]any {

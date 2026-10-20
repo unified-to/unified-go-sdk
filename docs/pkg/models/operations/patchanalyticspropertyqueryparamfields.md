@@ -23,4 +23,5 @@ value := operations.PatchAnalyticsPropertyQueryParamFieldsID
 | `PatchAnalyticsPropertyQueryParamFieldsCurrency`  | currency                                          |
 | `PatchAnalyticsPropertyQueryParamFieldsIndustry`  | industry                                          |
 | `PatchAnalyticsPropertyQueryParamFieldsParentID`  | parent_id                                         |
+| `PatchAnalyticsPropertyQueryParamFieldsMetadata`  | metadata                                          |
 | `PatchAnalyticsPropertyQueryParamFieldsRaw`       | raw                                               |

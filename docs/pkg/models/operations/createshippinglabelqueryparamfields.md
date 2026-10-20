@@ -28,4 +28,5 @@ value := operations.CreateShippingLabelQueryParamFieldsID
 | `CreateShippingLabelQueryParamFieldsLabelCostCurrency` | label_cost_currency                                    |
 | `CreateShippingLabelQueryParamFieldsRateID`            | rate_id                                                |
 | `CreateShippingLabelQueryParamFieldsServiceCode`       | service_code                                           |
+| `CreateShippingLabelQueryParamFieldsMetadata`          | metadata                                               |
 | `CreateShippingLabelQueryParamFieldsRaw`               | raw                                                    |

@@ -20,4 +20,5 @@ value := operations.ListAtsApplicationstatusesQueryParamFieldsID
 | `ListAtsApplicationstatusesQueryParamFieldsStatus`         | status                                                     |
 | `ListAtsApplicationstatusesQueryParamFieldsOriginalStatus` | original_status                                            |
 | `ListAtsApplicationstatusesQueryParamFieldsDescription`    | description                                                |
+| `ListAtsApplicationstatusesQueryParamFieldsMetadata`       | metadata                                                   |
 | `ListAtsApplicationstatusesQueryParamFieldsRaw`            | raw                                                        |

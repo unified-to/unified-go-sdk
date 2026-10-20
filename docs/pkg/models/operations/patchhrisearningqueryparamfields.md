@@ -32,4 +32,5 @@ value := operations.PatchHrisEarningQueryParamFieldsID
 | `PatchHrisEarningQueryParamFieldsPayrollID`  | payroll_id                                   |
 | `PatchHrisEarningQueryParamFieldsPayslipID`  | payslip_id                                   |
 | `PatchHrisEarningQueryParamFieldsNotes`      | notes                                        |
+| `PatchHrisEarningQueryParamFieldsMetadata`   | metadata                                     |
 | `PatchHrisEarningQueryParamFieldsRaw`        | raw                                          |

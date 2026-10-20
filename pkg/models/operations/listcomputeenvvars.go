@@ -20,6 +20,7 @@ const (
 	ListComputeEnvvarsQueryParamFieldsValue        ListComputeEnvvarsQueryParamFields = "value"
 	ListComputeEnvvarsQueryParamFieldsEnvironments ListComputeEnvvarsQueryParamFields = "environments"
 	ListComputeEnvvarsQueryParamFieldsIsSecret     ListComputeEnvvarsQueryParamFields = "is_secret"
+	ListComputeEnvvarsQueryParamFieldsMetadata     ListComputeEnvvarsQueryParamFields = "metadata"
 	ListComputeEnvvarsQueryParamFieldsRaw          ListComputeEnvvarsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListComputeEnvvarsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "environments":
 		fallthrough
 	case "is_secret":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListComputeEnvvarsQueryParamFields(v)

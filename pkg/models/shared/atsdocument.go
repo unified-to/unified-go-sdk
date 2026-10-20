@@ -45,6 +45,7 @@ type AtsDocument struct {
 	Filename    *string          `json:"filename,omitempty"`
 	ID          *string          `json:"id,omitempty"`
 	JobID       *string          `json:"job_id,omitempty"`
+	Metadata    []AtsMetadata    `json:"metadata,omitempty"`
 	Raw         map[string]any   `json:"raw,omitempty"`
 	Type        *AtsDocumentType `json:"type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -118,6 +119,13 @@ func (a *AtsDocument) GetJobID() *string {
 		return nil
 	}
 	return a.JobID
+}
+
+func (a *AtsDocument) GetMetadata() []AtsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AtsDocument) GetRaw() map[string]any {

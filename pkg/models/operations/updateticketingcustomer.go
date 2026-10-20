@@ -19,6 +19,7 @@ const (
 	UpdateTicketingCustomerQueryParamFieldsEmails     UpdateTicketingCustomerQueryParamFields = "emails"
 	UpdateTicketingCustomerQueryParamFieldsTelephones UpdateTicketingCustomerQueryParamFields = "telephones"
 	UpdateTicketingCustomerQueryParamFieldsTags       UpdateTicketingCustomerQueryParamFields = "tags"
+	UpdateTicketingCustomerQueryParamFieldsMetadata   UpdateTicketingCustomerQueryParamFields = "metadata"
 	UpdateTicketingCustomerQueryParamFieldsRaw        UpdateTicketingCustomerQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *UpdateTicketingCustomerQueryParamFields) UnmarshalJSON(data []byte) err
 	case "telephones":
 		fallthrough
 	case "tags":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateTicketingCustomerQueryParamFields(v)

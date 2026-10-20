@@ -23,6 +23,7 @@ const (
 	CreateAtsDocumentQueryParamFieldsApplicationID CreateAtsDocumentQueryParamFields = "application_id"
 	CreateAtsDocumentQueryParamFieldsJobID         CreateAtsDocumentQueryParamFields = "job_id"
 	CreateAtsDocumentQueryParamFieldsUserID        CreateAtsDocumentQueryParamFields = "user_id"
+	CreateAtsDocumentQueryParamFieldsMetadata      CreateAtsDocumentQueryParamFields = "metadata"
 	CreateAtsDocumentQueryParamFieldsRaw           CreateAtsDocumentQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *CreateAtsDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "job_id":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateAtsDocumentQueryParamFields(v)

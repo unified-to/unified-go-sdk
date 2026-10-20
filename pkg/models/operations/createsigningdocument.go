@@ -25,6 +25,7 @@ const (
 	CreateSigningDocumentQueryParamFieldsDownloadURL CreateSigningDocumentQueryParamFields = "download_url"
 	CreateSigningDocumentQueryParamFieldsCreatorID   CreateSigningDocumentQueryParamFields = "creator_id"
 	CreateSigningDocumentQueryParamFieldsRaw         CreateSigningDocumentQueryParamFields = "raw"
+	CreateSigningDocumentQueryParamFieldsMetadata    CreateSigningDocumentQueryParamFields = "metadata"
 )
 
 func (e CreateSigningDocumentQueryParamFields) ToPointer() *CreateSigningDocumentQueryParamFields {
@@ -61,6 +62,8 @@ func (e *CreateSigningDocumentQueryParamFields) UnmarshalJSON(data []byte) error
 	case "creator_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "metadata":
 		*e = CreateSigningDocumentQueryParamFields(v)
 		return nil
 	default:

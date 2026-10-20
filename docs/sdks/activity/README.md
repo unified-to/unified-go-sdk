@@ -32,8 +32,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -47,43 +47,9 @@ func main() {
 
     res, err := s.Activity.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("1fc5a178-b81e-4d28-b7e7-2c723e88d15a"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("8f55333d-a88d-4eb4-919d-770f60e3f548"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -93,39 +59,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f2982774-7fed-415b-abdc-bbe092684f44"),
+                    ID: unifiedgosdk.Pointer("37936e3c-c58c-4106-a14d-b1025308431d"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("603fb398-6e6a-473b-b18c-bde93aa71acd"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.285Z"),
         },
         ConnectionID: "<id>",
     })
@@ -185,14 +130,15 @@ func main() {
     res, err := s.Activity.CreateLmsActivity(ctx, operations.CreateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-27T12:09:05.954Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-05T11:02:58.304Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("5eedca13-ca3b-4ec0-a4ed-ec300168cfa3"),
+            ID: unifiedgosdk.Pointer("d7349ae7-aecd-466b-9f4d-698cc26f399d"),
             IsCompleted: unifiedgosdk.Pointer(true),
+            Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T11:52:44.340Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T02:17:43.415Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-30T18:29:41.837Z"),
         },
         ConnectionID: "<id>",
     })
@@ -563,8 +509,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -578,43 +524,9 @@ func main() {
 
     res, err := s.Activity.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("f6df80cf-ca9d-4b94-b8d3-37c6ebaad839"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("3ef89bf1-1610-4a55-a5e3-a18a7208cacb"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -624,39 +536,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("fffb345b-ba51-44ff-a8bf-88efcbda7eb1"),
+                    ID: unifiedgosdk.Pointer("49d55d35-1906-4619-a55a-3b1d0851c333"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("17490d44-1e2c-4150-916a-d42daf068273"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.447Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -717,14 +608,15 @@ func main() {
     res, err := s.Activity.PatchLmsActivity(ctx, operations.PatchLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-27T12:09:05.957Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-05T11:02:58.315Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("91d85be3-ced7-47ca-9585-c71fb39fceef"),
+            ID: unifiedgosdk.Pointer("78c46443-a02c-43f6-bd6d-fe6d13b0fc5c"),
             IsCompleted: unifiedgosdk.Pointer(true),
+            Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T11:52:44.342Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T02:17:43.417Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-30T18:29:41.841Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -879,8 +771,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -894,43 +786,9 @@ func main() {
 
     res, err := s.Activity.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("f6df80cf-ca9d-4b94-b8d3-37c6ebaad839"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("3ef89bf1-1610-4a55-a5e3-a18a7208cacb"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -940,39 +798,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("fffb345b-ba51-44ff-a8bf-88efcbda7eb1"),
+                    ID: unifiedgosdk.Pointer("49d55d35-1906-4619-a55a-3b1d0851c333"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("17490d44-1e2c-4150-916a-d42daf068273"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.447Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1033,14 +870,15 @@ func main() {
     res, err := s.Activity.UpdateLmsActivity(ctx, operations.UpdateLmsActivityRequest{
         LmsActivity: shared.LmsActivity{
             AssignedGrade: unifiedgosdk.Pointer("summopere"),
-            CompletedAt: types.MustNewTimeFromString("2025-04-27T12:09:05.957Z"),
+            CompletedAt: types.MustNewTimeFromString("2023-12-05T11:02:58.315Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-17T01:25:21.745Z"),
             DurationMinutes: unifiedgosdk.Pointer[float64](55.0),
-            ID: unifiedgosdk.Pointer("91d85be3-ced7-47ca-9585-c71fb39fceef"),
+            ID: unifiedgosdk.Pointer("78c46443-a02c-43f6-bd6d-fe6d13b0fc5c"),
             IsCompleted: unifiedgosdk.Pointer(true),
+            Metadata: []shared.LmsMetadata{},
             ProgressPercentage: unifiedgosdk.Pointer[float64](100.0),
-            StartedAt: types.MustNewTimeFromString("2023-12-24T04:54:05.825Z"),
-            UpdatedAt: types.MustNewTimeFromString("2022-01-30T11:52:44.342Z"),
+            StartedAt: types.MustNewTimeFromString("2021-04-25T02:17:43.417Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-01-30T18:29:41.841Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

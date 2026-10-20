@@ -34,4 +34,5 @@ value := operations.ListHrisBankaccountsQueryParamFieldsID
 | `ListHrisBankaccountsQueryParamFieldsSplitType`          | split_type                                               |
 | `ListHrisBankaccountsQueryParamFieldsSplitAmount`        | split_amount                                             |
 | `ListHrisBankaccountsQueryParamFieldsPriority`           | priority                                                 |
+| `ListHrisBankaccountsQueryParamFieldsMetadata`           | metadata                                                 |
 | `ListHrisBankaccountsQueryParamFieldsRaw`                | raw                                                      |

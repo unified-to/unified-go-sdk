@@ -17,6 +17,7 @@ type LmsClass struct {
 	Instructors []LmsReference `json:"instructors,omitempty"`
 	Languages   []string       `json:"languages,omitempty"`
 	Media       []LmsMedia     `json:"media,omitempty"`
+	Metadata    []LmsMetadata  `json:"metadata,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	Students    []LmsReference `json:"students,omitempty"`
@@ -82,6 +83,13 @@ func (l *LmsClass) GetMedia() []LmsMedia {
 		return nil
 	}
 	return l.Media
+}
+
+func (l *LmsClass) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsClass) GetName() *string {

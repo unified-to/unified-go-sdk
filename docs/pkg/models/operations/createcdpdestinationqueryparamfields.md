@@ -23,4 +23,5 @@ value := operations.CreateCdpDestinationQueryParamFieldsID
 | `CreateCdpDestinationQueryParamFieldsType`      | type                                            |
 | `CreateCdpDestinationQueryParamFieldsDirection` | direction                                       |
 | `CreateCdpDestinationQueryParamFieldsIsEnabled` | is_enabled                                      |
+| `CreateCdpDestinationQueryParamFieldsMetadata`  | metadata                                        |
 | `CreateCdpDestinationQueryParamFieldsRaw`       | raw                                             |

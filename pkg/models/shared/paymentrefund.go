@@ -89,10 +89,11 @@ func (e *PaymentRefundTenderType) IsExact() bool {
 
 type PaymentRefund struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time `json:"created_at,omitempty"`
-	Currency  *string    `json:"currency,omitempty"`
-	ID        *string    `json:"id,omitempty"`
-	Notes     *string    `json:"notes,omitempty"`
+	CreatedAt *time.Time        `json:"created_at,omitempty"`
+	Currency  *string           `json:"currency,omitempty"`
+	ID        *string           `json:"id,omitempty"`
+	Metadata  []PaymentMetadata `json:"metadata,omitempty"`
+	Notes     *string           `json:"notes,omitempty"`
 	// (reference to PaymentPayment)
 	PaymentID *string        `json:"payment_id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
@@ -139,6 +140,13 @@ func (p *PaymentRefund) GetID() *string {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PaymentRefund) GetMetadata() []PaymentMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PaymentRefund) GetNotes() *string {

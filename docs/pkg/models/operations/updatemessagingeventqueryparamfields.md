@@ -22,5 +22,6 @@ value := operations.UpdateMessagingEventQueryParamFieldsID
 | `UpdateMessagingEventQueryParamFieldsMessage`             | message                                                   |
 | `UpdateMessagingEventQueryParamFieldsButton`              | button                                                    |
 | `UpdateMessagingEventQueryParamFieldsUser`                | user                                                      |
+| `UpdateMessagingEventQueryParamFieldsMetadata`            | metadata                                                  |
 | `UpdateMessagingEventQueryParamFieldsRaw`                 | raw                                                       |
 | `UpdateMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                     |

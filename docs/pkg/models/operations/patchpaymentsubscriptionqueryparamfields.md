@@ -35,4 +35,5 @@ value := operations.PatchPaymentSubscriptionQueryParamFieldsID
 | `PatchPaymentSubscriptionQueryParamFieldsDayOfWeek`            | day_of_week                                                    |
 | `PatchPaymentSubscriptionQueryParamFieldsInterval`             | interval                                                       |
 | `PatchPaymentSubscriptionQueryParamFieldsLineitems`            | lineitems                                                      |
+| `PatchPaymentSubscriptionQueryParamFieldsMetadata`             | metadata                                                       |
 | `PatchPaymentSubscriptionQueryParamFieldsRaw`                  | raw                                                            |

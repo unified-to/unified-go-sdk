@@ -27,6 +27,7 @@ const (
 	ListUcRecordingsQueryParamFieldsUserPhone              ListUcRecordingsQueryParamFields = "user_phone"
 	ListUcRecordingsQueryParamFieldsType                   ListUcRecordingsQueryParamFields = "type"
 	ListUcRecordingsQueryParamFieldsConversationIdentifier ListUcRecordingsQueryParamFields = "conversation_identifier"
+	ListUcRecordingsQueryParamFieldsMetadata               ListUcRecordingsQueryParamFields = "metadata"
 	ListUcRecordingsQueryParamFieldsRaw                    ListUcRecordingsQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *ListUcRecordingsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "conversation_identifier":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListUcRecordingsQueryParamFields(v)

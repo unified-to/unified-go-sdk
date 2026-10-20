@@ -20,6 +20,7 @@ const (
 	GetShippingCarrierQueryParamFieldsIsActive   GetShippingCarrierQueryParamFields = "is_active"
 	GetShippingCarrierQueryParamFieldsLogoURL    GetShippingCarrierQueryParamFields = "logo_url"
 	GetShippingCarrierQueryParamFieldsWebsiteURL GetShippingCarrierQueryParamFields = "website_url"
+	GetShippingCarrierQueryParamFieldsMetadata   GetShippingCarrierQueryParamFields = "metadata"
 	GetShippingCarrierQueryParamFieldsRaw        GetShippingCarrierQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *GetShippingCarrierQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "logo_url":
 		fallthrough
 	case "website_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetShippingCarrierQueryParamFields(v)

@@ -17,8 +17,9 @@ type UcContact struct {
 	Emails    []UcEmail `json:"emails,omitempty"`
 	FirstName *string   `json:"first_name,omitempty"`
 	// Unique identifier for this contact object
-	ID       *string `json:"id,omitempty"`
-	LastName *string `json:"last_name,omitempty"`
+	ID       *string      `json:"id,omitempty"`
+	LastName *string      `json:"last_name,omitempty"`
+	Metadata []UcMetadata `json:"metadata,omitempty"`
 	// The name of the contact
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this contact
@@ -82,6 +83,13 @@ func (u *UcContact) GetLastName() *string {
 		return nil
 	}
 	return u.LastName
+}
+
+func (u *UcContact) GetMetadata() []UcMetadata {
+	if u == nil {
+		return nil
+	}
+	return u.Metadata
 }
 
 func (u *UcContact) GetName() *string {

@@ -49,6 +49,7 @@ type ClubsMember struct {
 	LastName *string `json:"last_name,omitempty"`
 	// The member's membership status
 	MembershipStatus *ClubsMemberMembershipStatus `json:"membership_status,omitempty"`
+	Metadata         []ClubsMetadata              `json:"metadata,omitempty"`
 	// The full name of the member (first name + last initial for Strava)
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this member
@@ -122,6 +123,13 @@ func (c *ClubsMember) GetMembershipStatus() *ClubsMemberMembershipStatus {
 		return nil
 	}
 	return c.MembershipStatus
+}
+
+func (c *ClubsMember) GetMetadata() []ClubsMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ClubsMember) GetName() *string {

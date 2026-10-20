@@ -36,6 +36,7 @@ const (
 	PatchAdsCampaignQueryParamFieldsHasEuPoliticalAds        PatchAdsCampaignQueryParamFields = "has_eu_political_ads"
 	PatchAdsCampaignQueryParamFieldsLabels                   PatchAdsCampaignQueryParamFields = "labels"
 	PatchAdsCampaignQueryParamFieldsKpi                      PatchAdsCampaignQueryParamFields = "kpi"
+	PatchAdsCampaignQueryParamFieldsMetadata                 PatchAdsCampaignQueryParamFields = "metadata"
 	PatchAdsCampaignQueryParamFieldsRaw                      PatchAdsCampaignQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *PatchAdsCampaignQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "labels":
 		fallthrough
 	case "kpi":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAdsCampaignQueryParamFields(v)

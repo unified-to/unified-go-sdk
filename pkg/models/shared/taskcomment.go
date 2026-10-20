@@ -12,6 +12,7 @@ type TaskComment struct {
 	CreatedAt   *time.Time     `json:"created_at,omitempty"`
 	HasChildren *bool          `json:"has_children,omitempty"`
 	ID          *string        `json:"id,omitempty"`
+	Metadata    []TaskMetadata `json:"metadata,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	// (reference to TaskTask)
@@ -54,6 +55,13 @@ func (t *TaskComment) GetID() *string {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TaskComment) GetMetadata() []TaskMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TaskComment) GetParentID() *string {

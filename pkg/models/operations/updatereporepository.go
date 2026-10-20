@@ -21,6 +21,7 @@ const (
 	UpdateRepoRepositoryQueryParamFieldsIsPrivate   UpdateRepoRepositoryQueryParamFields = "is_private"
 	UpdateRepoRepositoryQueryParamFieldsWebURL      UpdateRepoRepositoryQueryParamFields = "web_url"
 	UpdateRepoRepositoryQueryParamFieldsOrgID       UpdateRepoRepositoryQueryParamFields = "org_id"
+	UpdateRepoRepositoryQueryParamFieldsMetadata    UpdateRepoRepositoryQueryParamFields = "metadata"
 	UpdateRepoRepositoryQueryParamFieldsRaw         UpdateRepoRepositoryQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *UpdateRepoRepositoryQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "web_url":
 		fallthrough
 	case "org_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateRepoRepositoryQueryParamFields(v)

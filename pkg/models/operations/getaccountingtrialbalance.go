@@ -22,6 +22,7 @@ const (
 	GetAccountingTrialbalanceQueryParamFieldsTotalDebitAmount  GetAccountingTrialbalanceQueryParamFields = "total_debit_amount"
 	GetAccountingTrialbalanceQueryParamFieldsTotalCreditAmount GetAccountingTrialbalanceQueryParamFields = "total_credit_amount"
 	GetAccountingTrialbalanceQueryParamFieldsSubItems          GetAccountingTrialbalanceQueryParamFields = "sub_items"
+	GetAccountingTrialbalanceQueryParamFieldsMetadata          GetAccountingTrialbalanceQueryParamFields = "metadata"
 	GetAccountingTrialbalanceQueryParamFieldsRaw               GetAccountingTrialbalanceQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetAccountingTrialbalanceQueryParamFields) UnmarshalJSON(data []byte) e
 	case "total_credit_amount":
 		fallthrough
 	case "sub_items":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingTrialbalanceQueryParamFields(v)

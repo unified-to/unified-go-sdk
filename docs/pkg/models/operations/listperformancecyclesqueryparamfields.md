@@ -25,4 +25,5 @@ value := operations.ListPerformanceCyclesQueryParamFieldsID
 | `ListPerformanceCyclesQueryParamFieldsStartAt`     | start_at                                           |
 | `ListPerformanceCyclesQueryParamFieldsEndAt`       | end_at                                             |
 | `ListPerformanceCyclesQueryParamFieldsDueAt`       | due_at                                             |
+| `ListPerformanceCyclesQueryParamFieldsMetadata`    | metadata                                           |
 | `ListPerformanceCyclesQueryParamFieldsRaw`         | raw                                                |

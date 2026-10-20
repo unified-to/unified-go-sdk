@@ -32,4 +32,5 @@ value := operations.CreateHrisTimeoffQueryParamFieldsID
 | `CreateHrisTimeoffQueryParamFieldsType`           | type                                              |
 | `CreateHrisTimeoffQueryParamFieldsDuration`       | duration                                          |
 | `CreateHrisTimeoffQueryParamFieldsDurationType`   | duration_type                                     |
+| `CreateHrisTimeoffQueryParamFieldsMetadata`       | metadata                                          |
 | `CreateHrisTimeoffQueryParamFieldsRaw`            | raw                                               |

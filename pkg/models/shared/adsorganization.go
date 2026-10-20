@@ -44,6 +44,7 @@ type AdsOrganization struct {
 	ID        *string    `json:"id,omitempty"`
 	// Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
 	Managers []AdsManager           `json:"managers,omitempty"`
+	Metadata []AdsMetadata          `json:"metadata,omitempty"`
 	Name     *string                `json:"name,omitempty"`
 	ParentID *string                `json:"parent_id,omitempty"`
 	Raw      map[string]any         `json:"raw,omitempty"`
@@ -97,6 +98,13 @@ func (a *AdsOrganization) GetManagers() []AdsManager {
 		return nil
 	}
 	return a.Managers
+}
+
+func (a *AdsOrganization) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsOrganization) GetName() *string {

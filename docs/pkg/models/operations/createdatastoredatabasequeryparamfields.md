@@ -24,4 +24,5 @@ value := operations.CreateDatastoreDatabaseQueryParamFieldsID
 | `CreateDatastoreDatabaseQueryParamFieldsIsActive`    | is_active                                            |
 | `CreateDatastoreDatabaseQueryParamFieldsPassword`    | password                                             |
 | `CreateDatastoreDatabaseQueryParamFieldsRegion`      | region                                               |
+| `CreateDatastoreDatabaseQueryParamFieldsMetadata`    | metadata                                             |
 | `CreateDatastoreDatabaseQueryParamFieldsRaw`         | raw                                                  |

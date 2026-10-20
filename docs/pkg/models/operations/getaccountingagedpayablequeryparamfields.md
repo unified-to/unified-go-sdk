@@ -26,4 +26,5 @@ value := operations.GetAccountingAgedpayableQueryParamFieldsID
 | `GetAccountingAgedpayableQueryParamFieldsTotalAmount`        | total_amount                                                 |
 | `GetAccountingAgedpayableQueryParamFieldsPeriods`            | periods                                                      |
 | `GetAccountingAgedpayableQueryParamFieldsOrganizationID`     | organization_id                                              |
+| `GetAccountingAgedpayableQueryParamFieldsMetadata`           | metadata                                                     |
 | `GetAccountingAgedpayableQueryParamFieldsRaw`                | raw                                                          |

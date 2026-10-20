@@ -31,4 +31,5 @@ value := operations.UpdateMartechListQueryParamFieldsID
 | `UpdateMartechListQueryParamFieldsLanguage`      | language                                         |
 | `UpdateMartechListQueryParamFieldsSenderCompany` | sender_company                                   |
 | `UpdateMartechListQueryParamFieldsSenderPhone`   | sender_phone                                     |
+| `UpdateMartechListQueryParamFieldsMetadata`      | metadata                                         |
 | `UpdateMartechListQueryParamFieldsRaw`           | raw                                              |

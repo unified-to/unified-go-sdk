@@ -20,6 +20,7 @@ const (
 	ListSocialInsightsQueryParamFieldsPeriod    ListSocialInsightsQueryParamFields = "period"
 	ListSocialInsightsQueryParamFieldsMetric    ListSocialInsightsQueryParamFields = "metric"
 	ListSocialInsightsQueryParamFieldsValue     ListSocialInsightsQueryParamFields = "value"
+	ListSocialInsightsQueryParamFieldsMetadata  ListSocialInsightsQueryParamFields = "metadata"
 	ListSocialInsightsQueryParamFieldsRaw       ListSocialInsightsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListSocialInsightsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metric":
 		fallthrough
 	case "value":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListSocialInsightsQueryParamFields(v)

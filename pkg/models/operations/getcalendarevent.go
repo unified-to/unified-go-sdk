@@ -36,6 +36,7 @@ const (
 	GetCalendarEventQueryParamFieldsAttachments       GetCalendarEventQueryParamFields = "attachments"
 	GetCalendarEventQueryParamFieldsSendNotifications GetCalendarEventQueryParamFields = "send_notifications"
 	GetCalendarEventQueryParamFieldsMatterID          GetCalendarEventQueryParamFields = "matter_id"
+	GetCalendarEventQueryParamFieldsMetadata          GetCalendarEventQueryParamFields = "metadata"
 	GetCalendarEventQueryParamFieldsRaw               GetCalendarEventQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *GetCalendarEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "send_notifications":
 		fallthrough
 	case "matter_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetCalendarEventQueryParamFields(v)

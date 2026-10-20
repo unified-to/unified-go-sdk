@@ -26,4 +26,5 @@ value := operations.GetAtsScorecardQueryParamFieldsID
 | `GetAtsScorecardQueryParamFieldsRecommendation` | recommendation                                  |
 | `GetAtsScorecardQueryParamFieldsComment`        | comment                                         |
 | `GetAtsScorecardQueryParamFieldsQuestions`      | questions                                       |
+| `GetAtsScorecardQueryParamFieldsMetadata`       | metadata                                        |
 | `GetAtsScorecardQueryParamFieldsRaw`            | raw                                             |

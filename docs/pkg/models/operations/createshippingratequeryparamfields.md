@@ -24,4 +24,5 @@ value := operations.CreateShippingRateQueryParamFieldsShipmentID
 | `CreateShippingRateQueryParamFieldsCarrierID`   | carrier_id                                      |
 | `CreateShippingRateQueryParamFieldsID`          | id                                              |
 | `CreateShippingRateQueryParamFieldsRates`       | rates                                           |
+| `CreateShippingRateQueryParamFieldsMetadata`    | metadata                                        |
 | `CreateShippingRateQueryParamFieldsRaw`         | raw                                             |

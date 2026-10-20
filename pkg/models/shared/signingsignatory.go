@@ -70,7 +70,8 @@ type SigningSignatory struct {
 	// Email address of the signatory
 	Email *string `json:"email,omitempty"`
 	// Unique identifier for this signatory
-	ID *string `json:"id,omitempty"`
+	ID       *string           `json:"id,omitempty"`
+	Metadata []SigningMetadata `json:"metadata,omitempty"`
 	// Full name of the signatory
 	Name *string `json:"name,omitempty"`
 	// Signing order (1, 2, 3...)
@@ -131,6 +132,13 @@ func (s *SigningSignatory) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *SigningSignatory) GetMetadata() []SigningMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SigningSignatory) GetName() *string {

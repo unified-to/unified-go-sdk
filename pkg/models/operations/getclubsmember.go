@@ -22,6 +22,7 @@ const (
 	GetClubsMemberQueryParamFieldsIsAdmin          GetClubsMemberQueryParamFields = "is_admin"
 	GetClubsMemberQueryParamFieldsIsOwner          GetClubsMemberQueryParamFields = "is_owner"
 	GetClubsMemberQueryParamFieldsMembershipStatus GetClubsMemberQueryParamFields = "membership_status"
+	GetClubsMemberQueryParamFieldsMetadata         GetClubsMemberQueryParamFields = "metadata"
 	GetClubsMemberQueryParamFieldsRaw              GetClubsMemberQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetClubsMemberQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_owner":
 		fallthrough
 	case "membership_status":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetClubsMemberQueryParamFields(v)

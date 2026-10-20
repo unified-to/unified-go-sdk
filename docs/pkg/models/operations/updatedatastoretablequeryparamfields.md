@@ -25,4 +25,5 @@ value := operations.UpdateDatastoreTableQueryParamFieldsID
 | `UpdateDatastoreTableQueryParamFieldsRelationships` | relationships                                       |
 | `UpdateDatastoreTableQueryParamFieldsWebURL`        | web_url                                             |
 | `UpdateDatastoreTableQueryParamFieldsParentID`      | parent_id                                           |
+| `UpdateDatastoreTableQueryParamFieldsMetadata`      | metadata                                            |
 | `UpdateDatastoreTableQueryParamFieldsRaw`           | raw                                                 |

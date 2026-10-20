@@ -22,6 +22,7 @@ const (
 	PatchDatastoreTableQueryParamFieldsRelationships PatchDatastoreTableQueryParamFields = "relationships"
 	PatchDatastoreTableQueryParamFieldsWebURL        PatchDatastoreTableQueryParamFields = "web_url"
 	PatchDatastoreTableQueryParamFieldsParentID      PatchDatastoreTableQueryParamFields = "parent_id"
+	PatchDatastoreTableQueryParamFieldsMetadata      PatchDatastoreTableQueryParamFields = "metadata"
 	PatchDatastoreTableQueryParamFieldsRaw           PatchDatastoreTableQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *PatchDatastoreTableQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchDatastoreTableQueryParamFields(v)

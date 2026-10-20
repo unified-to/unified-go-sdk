@@ -12,6 +12,7 @@ type TicketingCustomer struct {
 	CreatedAt  *time.Time           `json:"created_at,omitempty"`
 	Emails     []TicketingEmail     `json:"emails,omitempty"`
 	ID         *string              `json:"id,omitempty"`
+	Metadata   []TicketingMetadata  `json:"metadata,omitempty"`
 	Name       *string              `json:"name,omitempty"`
 	Raw        map[string]any       `json:"raw,omitempty"`
 	Tags       []string             `json:"tags,omitempty"`
@@ -50,6 +51,13 @@ func (t *TicketingCustomer) GetID() *string {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TicketingCustomer) GetMetadata() []TicketingMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TicketingCustomer) GetName() *string {

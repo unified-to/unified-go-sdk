@@ -19,6 +19,7 @@ const (
 	PatchDatastoreRecordQueryParamFieldsTableID    PatchDatastoreRecordQueryParamFields = "table_id"
 	PatchDatastoreRecordQueryParamFieldsFields     PatchDatastoreRecordQueryParamFields = "fields"
 	PatchDatastoreRecordQueryParamFieldsRowNumber  PatchDatastoreRecordQueryParamFields = "row_number"
+	PatchDatastoreRecordQueryParamFieldsMetadata   PatchDatastoreRecordQueryParamFields = "metadata"
 	PatchDatastoreRecordQueryParamFieldsRaw        PatchDatastoreRecordQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *PatchDatastoreRecordQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "fields":
 		fallthrough
 	case "row_number":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchDatastoreRecordQueryParamFields(v)

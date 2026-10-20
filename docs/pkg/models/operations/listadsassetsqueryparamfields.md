@@ -27,4 +27,5 @@ value := operations.ListAdsAssetsQueryParamFieldsID
 | `ListAdsAssetsQueryParamFieldsWidth`          | width                                         |
 | `ListAdsAssetsQueryParamFieldsHeight`         | height                                        |
 | `ListAdsAssetsQueryParamFieldsFileSize`       | file_size                                     |
+| `ListAdsAssetsQueryParamFieldsMetadata`       | metadata                                      |
 | `ListAdsAssetsQueryParamFieldsRaw`            | raw                                           |

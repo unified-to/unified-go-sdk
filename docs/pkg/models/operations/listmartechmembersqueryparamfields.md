@@ -26,4 +26,5 @@ value := operations.ListMartechMembersQueryParamFieldsID
 | `ListMartechMembersQueryParamFieldsListIds`   | list_ids                                      |
 | `ListMartechMembersQueryParamFieldsTags`      | tags                                          |
 | `ListMartechMembersQueryParamFieldsStatus`    | status                                        |
+| `ListMartechMembersQueryParamFieldsMetadata`  | metadata                                      |
 | `ListMartechMembersQueryParamFieldsRaw`       | raw                                           |

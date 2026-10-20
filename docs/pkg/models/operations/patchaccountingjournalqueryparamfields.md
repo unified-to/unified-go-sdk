@@ -34,4 +34,5 @@ value := operations.PatchAccountingJournalQueryParamFieldsID
 | `PatchAccountingJournalQueryParamFieldsExchangeRate`     | exchange_rate                                            |
 | `PatchAccountingJournalQueryParamFieldsStatus`           | status                                                   |
 | `PatchAccountingJournalQueryParamFieldsIsInclusiveOfTax` | is_inclusive_of_tax                                      |
+| `PatchAccountingJournalQueryParamFieldsMetadata`         | metadata                                                 |
 | `PatchAccountingJournalQueryParamFieldsRaw`              | raw                                                      |

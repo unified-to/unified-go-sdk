@@ -22,5 +22,6 @@ value := operations.PatchMessagingEventQueryParamFieldsID
 | `PatchMessagingEventQueryParamFieldsMessage`             | message                                                  |
 | `PatchMessagingEventQueryParamFieldsButton`              | button                                                   |
 | `PatchMessagingEventQueryParamFieldsUser`                | user                                                     |
+| `PatchMessagingEventQueryParamFieldsMetadata`            | metadata                                                 |
 | `PatchMessagingEventQueryParamFieldsRaw`                 | raw                                                      |
 | `PatchMessagingEventQueryParamFieldsIsReplacingOriginal` | is_replacing_original                                    |

@@ -26,4 +26,5 @@ value := operations.CreateAtsDocumentQueryParamFieldsID
 | `CreateAtsDocumentQueryParamFieldsApplicationID` | application_id                                   |
 | `CreateAtsDocumentQueryParamFieldsJobID`         | job_id                                           |
 | `CreateAtsDocumentQueryParamFieldsUserID`        | user_id                                          |
+| `CreateAtsDocumentQueryParamFieldsMetadata`      | metadata                                         |
 | `CreateAtsDocumentQueryParamFieldsRaw`           | raw                                              |

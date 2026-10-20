@@ -29,6 +29,7 @@ const (
 	PatchTicketingTicketQueryParamFieldsURL           PatchTicketingTicketQueryParamFields = "url"
 	PatchTicketingTicketQueryParamFieldsAttachmentIds PatchTicketingTicketQueryParamFields = "attachment_ids"
 	PatchTicketingTicketQueryParamFieldsDueAt         PatchTicketingTicketQueryParamFields = "due_at"
+	PatchTicketingTicketQueryParamFieldsMetadata      PatchTicketingTicketQueryParamFields = "metadata"
 	PatchTicketingTicketQueryParamFieldsRaw           PatchTicketingTicketQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *PatchTicketingTicketQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "attachment_ids":
 		fallthrough
 	case "due_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchTicketingTicketQueryParamFields(v)

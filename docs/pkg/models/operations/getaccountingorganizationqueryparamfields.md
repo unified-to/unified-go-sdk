@@ -31,4 +31,5 @@ value := operations.GetAccountingOrganizationQueryParamFieldsID
 | `GetAccountingOrganizationQueryParamFieldsType`               | type                                                          |
 | `GetAccountingOrganizationQueryParamFieldsIsElimination`      | is_elimination                                                |
 | `GetAccountingOrganizationQueryParamFieldsBooksCloseAt`       | books_close_at                                                |
+| `GetAccountingOrganizationQueryParamFieldsMetadata`           | metadata                                                      |
 | `GetAccountingOrganizationQueryParamFieldsRaw`                | raw                                                           |

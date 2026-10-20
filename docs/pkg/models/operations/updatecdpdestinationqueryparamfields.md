@@ -23,4 +23,5 @@ value := operations.UpdateCdpDestinationQueryParamFieldsID
 | `UpdateCdpDestinationQueryParamFieldsType`      | type                                            |
 | `UpdateCdpDestinationQueryParamFieldsDirection` | direction                                       |
 | `UpdateCdpDestinationQueryParamFieldsIsEnabled` | is_enabled                                      |
+| `UpdateCdpDestinationQueryParamFieldsMetadata`  | metadata                                        |
 | `UpdateCdpDestinationQueryParamFieldsRaw`       | raw                                             |

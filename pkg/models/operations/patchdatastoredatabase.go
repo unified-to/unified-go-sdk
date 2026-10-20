@@ -21,6 +21,7 @@ const (
 	PatchDatastoreDatabaseQueryParamFieldsIsActive    PatchDatastoreDatabaseQueryParamFields = "is_active"
 	PatchDatastoreDatabaseQueryParamFieldsPassword    PatchDatastoreDatabaseQueryParamFields = "password"
 	PatchDatastoreDatabaseQueryParamFieldsRegion      PatchDatastoreDatabaseQueryParamFields = "region"
+	PatchDatastoreDatabaseQueryParamFieldsMetadata    PatchDatastoreDatabaseQueryParamFields = "metadata"
 	PatchDatastoreDatabaseQueryParamFieldsRaw         PatchDatastoreDatabaseQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *PatchDatastoreDatabaseQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "password":
 		fallthrough
 	case "region":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchDatastoreDatabaseQueryParamFields(v)

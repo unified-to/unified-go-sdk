@@ -21,6 +21,7 @@ const (
 	ListHrisDocumentsQueryParamFieldsType         ListHrisDocumentsQueryParamFields = "type"
 	ListHrisDocumentsQueryParamFieldsUserID       ListHrisDocumentsQueryParamFields = "user_id"
 	ListHrisDocumentsQueryParamFieldsCompanyID    ListHrisDocumentsQueryParamFields = "company_id"
+	ListHrisDocumentsQueryParamFieldsMetadata     ListHrisDocumentsQueryParamFields = "metadata"
 	ListHrisDocumentsQueryParamFieldsRaw          ListHrisDocumentsQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *ListHrisDocumentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisDocumentsQueryParamFields(v)

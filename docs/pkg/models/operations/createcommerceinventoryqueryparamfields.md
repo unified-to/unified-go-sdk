@@ -22,4 +22,5 @@ value := operations.CreateCommerceInventoryQueryParamFieldsID
 | `CreateCommerceInventoryQueryParamFieldsItemOptionID`  | item_option_id                                         |
 | `CreateCommerceInventoryQueryParamFieldsLocationID`    | location_id                                            |
 | `CreateCommerceInventoryQueryParamFieldsAvailable`     | available                                              |
+| `CreateCommerceInventoryQueryParamFieldsMetadata`      | metadata                                               |
 | `CreateCommerceInventoryQueryParamFieldsRaw`           | raw                                                    |

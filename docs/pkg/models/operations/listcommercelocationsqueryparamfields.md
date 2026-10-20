@@ -35,5 +35,6 @@ value := operations.ListCommerceLocationsQueryParamFieldsID
 | `ListCommerceLocationsQueryParamFieldsImageURL`       | image_url                                             |
 | `ListCommerceLocationsQueryParamFieldsWebURL`         | web_url                                               |
 | `ListCommerceLocationsQueryParamFieldsMedia`          | media                                                 |
+| `ListCommerceLocationsQueryParamFieldsMetadata`       | metadata                                              |
 | `ListCommerceLocationsQueryParamFieldsRaw`            | raw                                                   |
 | `ListCommerceLocationsQueryParamFieldsCategories`     | categories                                            |

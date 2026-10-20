@@ -29,4 +29,5 @@ value := operations.ListAccountingAccountsQueryParamFieldsID
 | `ListAccountingAccountsQueryParamFieldsParentID`            | parent_id                                                   |
 | `ListAccountingAccountsQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `ListAccountingAccountsQueryParamFieldsOrganizationID`      | organization_id                                             |
+| `ListAccountingAccountsQueryParamFieldsMetadata`            | metadata                                                    |
 | `ListAccountingAccountsQueryParamFieldsRaw`                 | raw                                                         |

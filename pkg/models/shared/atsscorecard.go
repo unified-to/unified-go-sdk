@@ -41,6 +41,7 @@ type AtsScorecard struct {
 	InterviewID    *string                `json:"interview_id,omitempty"`
 	InterviewerID  *string                `json:"interviewer_id,omitempty"`
 	JobID          *string                `json:"job_id,omitempty"`
+	Metadata       []AtsMetadata          `json:"metadata,omitempty"`
 	Questions      []AtsScorecardQuestion `json:"questions,omitempty"`
 	Raw            map[string]any         `json:"raw,omitempty"`
 	Recommendation *Recommendation        `json:"recommendation,omitempty"`
@@ -113,6 +114,13 @@ func (a *AtsScorecard) GetJobID() *string {
 		return nil
 	}
 	return a.JobID
+}
+
+func (a *AtsScorecard) GetMetadata() []AtsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AtsScorecard) GetQuestions() []AtsScorecardQuestion {

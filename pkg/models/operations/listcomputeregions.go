@@ -19,6 +19,7 @@ const (
 	ListComputeRegionsQueryParamFieldsLocation  ListComputeRegionsQueryParamFields = "location"
 	ListComputeRegionsQueryParamFieldsCountry   ListComputeRegionsQueryParamFields = "country"
 	ListComputeRegionsQueryParamFieldsGpuModels ListComputeRegionsQueryParamFields = "gpu_models"
+	ListComputeRegionsQueryParamFieldsMetadata  ListComputeRegionsQueryParamFields = "metadata"
 	ListComputeRegionsQueryParamFieldsRaw       ListComputeRegionsQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *ListComputeRegionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "country":
 		fallthrough
 	case "gpu_models":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListComputeRegionsQueryParamFields(v)

@@ -26,4 +26,5 @@ value := operations.ListMessagingChannelsQueryParamFieldsID
 | `ListMessagingChannelsQueryParamFieldsIsActive`       | is_active                                             |
 | `ListMessagingChannelsQueryParamFieldsIsPrivate`      | is_private                                            |
 | `ListMessagingChannelsQueryParamFieldsWebURL`         | web_url                                               |
+| `ListMessagingChannelsQueryParamFieldsMetadata`       | metadata                                              |
 | `ListMessagingChannelsQueryParamFieldsRaw`            | raw                                                   |

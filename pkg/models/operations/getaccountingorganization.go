@@ -28,6 +28,7 @@ const (
 	GetAccountingOrganizationQueryParamFieldsType               GetAccountingOrganizationQueryParamFields = "type"
 	GetAccountingOrganizationQueryParamFieldsIsElimination      GetAccountingOrganizationQueryParamFields = "is_elimination"
 	GetAccountingOrganizationQueryParamFieldsBooksCloseAt       GetAccountingOrganizationQueryParamFields = "books_close_at"
+	GetAccountingOrganizationQueryParamFieldsMetadata           GetAccountingOrganizationQueryParamFields = "metadata"
 	GetAccountingOrganizationQueryParamFieldsRaw                GetAccountingOrganizationQueryParamFields = "raw"
 )
 
@@ -71,6 +72,8 @@ func (e *GetAccountingOrganizationQueryParamFields) UnmarshalJSON(data []byte) e
 	case "is_elimination":
 		fallthrough
 	case "books_close_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingOrganizationQueryParamFields(v)

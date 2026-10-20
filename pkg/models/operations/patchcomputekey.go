@@ -25,6 +25,7 @@ const (
 	PatchComputeKeyQueryParamFieldsSecret      PatchComputeKeyQueryParamFields = "secret"
 	PatchComputeKeyQueryParamFieldsInstanceID  PatchComputeKeyQueryParamFields = "instance_id"
 	PatchComputeKeyQueryParamFieldsExpiresAt   PatchComputeKeyQueryParamFields = "expires_at"
+	PatchComputeKeyQueryParamFieldsMetadata    PatchComputeKeyQueryParamFields = "metadata"
 	PatchComputeKeyQueryParamFieldsRaw         PatchComputeKeyQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *PatchComputeKeyQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "instance_id":
 		fallthrough
 	case "expires_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchComputeKeyQueryParamFields(v)

@@ -39,4 +39,5 @@ value := operations.ListVerificationRequestsQueryParamFieldsID
 | `ListVerificationRequestsQueryParamFieldsResponseDownloadUrls`      | response_download_urls                                              |
 | `ListVerificationRequestsQueryParamFieldsResponseDetails`           | response_details                                                    |
 | `ListVerificationRequestsQueryParamFieldsResponseSource`            | response_source                                                     |
+| `ListVerificationRequestsQueryParamFieldsMetadata`                  | metadata                                                            |
 | `ListVerificationRequestsQueryParamFieldsRaw`                       | raw                                                                 |

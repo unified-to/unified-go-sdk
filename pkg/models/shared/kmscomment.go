@@ -57,8 +57,9 @@ type KmsComment struct {
 	Content     *string      `json:"content,omitempty"`
 	ContentType *ContentType `json:"content_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt *time.Time `json:"created_at,omitempty"`
-	ID        *string    `json:"id,omitempty"`
+	CreatedAt *time.Time        `json:"created_at,omitempty"`
+	ID        *string           `json:"id,omitempty"`
+	Metadata  []KmsPageMetadata `json:"metadata,omitempty"`
 	// (reference to KmsPage)
 	PageID   *string         `json:"page_id,omitempty"`
 	ParentID *string         `json:"parent_id,omitempty"`
@@ -107,6 +108,13 @@ func (k *KmsComment) GetID() *string {
 		return nil
 	}
 	return k.ID
+}
+
+func (k *KmsComment) GetMetadata() []KmsPageMetadata {
+	if k == nil {
+		return nil
+	}
+	return k.Metadata
 }
 
 func (k *KmsComment) GetPageID() *string {

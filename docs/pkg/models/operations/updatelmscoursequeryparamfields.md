@@ -35,4 +35,5 @@ value := operations.UpdateLmsCourseQueryParamFieldsID
 | `UpdateLmsCourseQueryParamFieldsProviderName`        | provider_name                                        |
 | `UpdateLmsCourseQueryParamFieldsPublishedAt`         | published_at                                         |
 | `UpdateLmsCourseQueryParamFieldsTimeEstimateMinutes` | time_estimate_minutes                                |
+| `UpdateLmsCourseQueryParamFieldsMetadata`            | metadata                                             |
 | `UpdateLmsCourseQueryParamFieldsRaw`                 | raw                                                  |

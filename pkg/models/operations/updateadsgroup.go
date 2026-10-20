@@ -43,6 +43,7 @@ const (
 	UpdateAdsGroupQueryParamFieldsPromoted             UpdateAdsGroupQueryParamFields = "promoted"
 	UpdateAdsGroupQueryParamFieldsLanguageLocale       UpdateAdsGroupQueryParamFields = "language_locale"
 	UpdateAdsGroupQueryParamFieldsCreativeSelection    UpdateAdsGroupQueryParamFields = "creative_selection"
+	UpdateAdsGroupQueryParamFieldsMetadata             UpdateAdsGroupQueryParamFields = "metadata"
 	UpdateAdsGroupQueryParamFieldsRaw                  UpdateAdsGroupQueryParamFields = "raw"
 )
 
@@ -116,6 +117,8 @@ func (e *UpdateAdsGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "language_locale":
 		fallthrough
 	case "creative_selection":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAdsGroupQueryParamFields(v)

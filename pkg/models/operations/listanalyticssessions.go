@@ -34,6 +34,7 @@ const (
 	ListAnalyticsSessionsQueryParamFieldsCity            ListAnalyticsSessionsQueryParamFields = "city"
 	ListAnalyticsSessionsQueryParamFieldsIsBounce        ListAnalyticsSessionsQueryParamFields = "is_bounce"
 	ListAnalyticsSessionsQueryParamFieldsIsConversion    ListAnalyticsSessionsQueryParamFields = "is_conversion"
+	ListAnalyticsSessionsQueryParamFieldsMetadata        ListAnalyticsSessionsQueryParamFields = "metadata"
 	ListAnalyticsSessionsQueryParamFieldsRaw             ListAnalyticsSessionsQueryParamFields = "raw"
 )
 
@@ -89,6 +90,8 @@ func (e *ListAnalyticsSessionsQueryParamFields) UnmarshalJSON(data []byte) error
 	case "is_bounce":
 		fallthrough
 	case "is_conversion":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAnalyticsSessionsQueryParamFields(v)

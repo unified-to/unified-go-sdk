@@ -51,6 +51,7 @@ const (
 	PatchShippingShipmentQueryParamFieldsCarrierName               PatchShippingShipmentQueryParamFields = "carrier_name"
 	PatchShippingShipmentQueryParamFieldsTrackingURL               PatchShippingShipmentQueryParamFields = "tracking_url"
 	PatchShippingShipmentQueryParamFieldsLineitems                 PatchShippingShipmentQueryParamFields = "lineitems"
+	PatchShippingShipmentQueryParamFieldsMetadata                  PatchShippingShipmentQueryParamFields = "metadata"
 	PatchShippingShipmentQueryParamFieldsRaw                       PatchShippingShipmentQueryParamFields = "raw"
 )
 
@@ -140,6 +141,8 @@ func (e *PatchShippingShipmentQueryParamFields) UnmarshalJSON(data []byte) error
 	case "tracking_url":
 		fallthrough
 	case "lineitems":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchShippingShipmentQueryParamFields(v)

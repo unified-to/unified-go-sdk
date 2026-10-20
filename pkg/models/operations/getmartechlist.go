@@ -28,6 +28,7 @@ const (
 	GetMartechListQueryParamFieldsLanguage      GetMartechListQueryParamFields = "language"
 	GetMartechListQueryParamFieldsSenderCompany GetMartechListQueryParamFields = "sender_company"
 	GetMartechListQueryParamFieldsSenderPhone   GetMartechListQueryParamFields = "sender_phone"
+	GetMartechListQueryParamFieldsMetadata      GetMartechListQueryParamFields = "metadata"
 	GetMartechListQueryParamFieldsRaw           GetMartechListQueryParamFields = "raw"
 )
 
@@ -71,6 +72,8 @@ func (e *GetMartechListQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "sender_company":
 		fallthrough
 	case "sender_phone":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetMartechListQueryParamFields(v)

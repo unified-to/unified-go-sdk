@@ -19,6 +19,7 @@ type PaymentLink struct {
 	IsActive        *bool             `json:"is_active,omitempty"`
 	IsChargeableNow *bool             `json:"is_chargeable_now,omitempty"`
 	Lineitems       []PaymentLineitem `json:"lineitems,omitempty"`
+	Metadata        []PaymentMetadata `json:"metadata,omitempty"`
 	// (reference to PaymentPayment)
 	PaymentID  *string        `json:"payment_id,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
@@ -101,6 +102,13 @@ func (p *PaymentLink) GetLineitems() []PaymentLineitem {
 		return nil
 	}
 	return p.Lineitems
+}
+
+func (p *PaymentLink) GetMetadata() []PaymentMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PaymentLink) GetPaymentID() *string {

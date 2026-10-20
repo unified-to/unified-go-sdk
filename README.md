@@ -63,27 +63,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -1271,27 +1267,33 @@ func main() {
 
 * [CreateGenaiAgent](docs/sdks/genai/README.md#creategenaiagent) - Create an agent
 * [CreateGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
+* [CreateGenaiMemory](docs/sdks/genai/README.md#creategenaimemory) - Create a memory
 * [CreateGenaiOrganization](docs/sdks/genai/README.md#creategenaiorganization) - Create an organization
 * [CreateGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [CreateGenaiTask](docs/sdks/genai/README.md#creategenaitask) - Create a task
 * [GetGenaiAgent](docs/sdks/genai/README.md#getgenaiagent) - Retrieve an agent
+* [GetGenaiMemory](docs/sdks/genai/README.md#getgenaimemory) - Retrieve a memory
 * [GetGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [GetGenaiOrganization](docs/sdks/genai/README.md#getgenaiorganization) - Retrieve an organization
 * [GetGenaiSkill](docs/sdks/genai/README.md#getgenaiskill) - Retrieve a skill
 * [GetGenaiTask](docs/sdks/genai/README.md#getgenaitask) - Retrieve a task
 * [ListGenaiAgents](docs/sdks/genai/README.md#listgenaiagents) - List all agents
+* [ListGenaiMemories](docs/sdks/genai/README.md#listgenaimemories) - List all memories
 * [ListGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 * [ListGenaiOrganizations](docs/sdks/genai/README.md#listgenaiorganizations) - List all organizations
 * [ListGenaiSkills](docs/sdks/genai/README.md#listgenaiskills) - List all skills
 * [ListGenaiTasks](docs/sdks/genai/README.md#listgenaitasks) - List all tasks
 * [PatchGenaiAgent](docs/sdks/genai/README.md#patchgenaiagent) - Update an agent
+* [PatchGenaiMemory](docs/sdks/genai/README.md#patchgenaimemory) - Update a memory
 * [PatchGenaiOrganization](docs/sdks/genai/README.md#patchgenaiorganization) - Update an organization
 * [PatchGenaiTask](docs/sdks/genai/README.md#patchgenaitask) - Update a task
 * [RemoveGenaiAgent](docs/sdks/genai/README.md#removegenaiagent) - Remove an agent
+* [RemoveGenaiMemory](docs/sdks/genai/README.md#removegenaimemory) - Remove a memory
 * [RemoveGenaiOrganization](docs/sdks/genai/README.md#removegenaiorganization) - Remove an organization
 * [RemoveGenaiSkill](docs/sdks/genai/README.md#removegenaiskill) - Remove a skill
 * [RemoveGenaiTask](docs/sdks/genai/README.md#removegenaitask) - Remove a task
 * [UpdateGenaiAgent](docs/sdks/genai/README.md#updategenaiagent) - Update an agent
+* [UpdateGenaiMemory](docs/sdks/genai/README.md#updategenaimemory) - Update a memory
 * [UpdateGenaiOrganization](docs/sdks/genai/README.md#updategenaiorganization) - Update an organization
 * [UpdateGenaiTask](docs/sdks/genai/README.md#updategenaitask) - Update a task
 
@@ -1791,6 +1793,15 @@ func main() {
 * [PatchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [RemoveMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [UpdateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
+
+### [Memory](docs/sdks/memory/README.md)
+
+* [CreateGenaiMemory](docs/sdks/memory/README.md#creategenaimemory) - Create a memory
+* [GetGenaiMemory](docs/sdks/memory/README.md#getgenaimemory) - Retrieve a memory
+* [ListGenaiMemories](docs/sdks/memory/README.md#listgenaimemories) - List all memories
+* [PatchGenaiMemory](docs/sdks/memory/README.md#patchgenaimemory) - Update a memory
+* [RemoveGenaiMemory](docs/sdks/memory/README.md#removegenaimemory) - Remove a memory
+* [UpdateGenaiMemory](docs/sdks/memory/README.md#updategenaimemory) - Update a memory
 
 ### [Message](docs/sdks/message/README.md)
 
@@ -2798,27 +2809,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2876,27 +2883,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -2937,27 +2940,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3041,27 +3040,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})
@@ -3107,27 +3102,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	}, operations.WithRetries(
@@ -3187,27 +3178,23 @@ func main() {
 		AccountingAccount: shared.AccountingAccount{
 			Balance:             unifiedgosdk.Pointer[float64](12092.0),
 			CreatedAt:           types.MustNewTimeFromString("2022-07-03T17:57:07.391Z"),
-			Currency:            unifiedgosdk.Pointer("BOB"),
-			CustomerDefinedCode: unifiedgosdk.Pointer("quo"),
-			Description:         unifiedgosdk.Pointer("Spoliatio comedo vilitas harum cupiditate."),
-			ID:                  unifiedgosdk.Pointer("fa951eb9-1756-4fbe-95ba-cc1115a4960a"),
-			IsPayable:           unifiedgosdk.Pointer(true),
-			Name:                unifiedgosdk.Pointer("Electronic Aluminum Tuna"),
+			Currency:            unifiedgosdk.Pointer("CAD"),
+			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
+			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
+			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			IsPayable:           unifiedgosdk.Pointer(false),
+			Metadata:            []shared.AccountingMetadata{},
+			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
 			Status:              shared.StatusArchived.ToPointer(),
 			Taxonomy: []shared.AccountingAccountTaxonomy{
 				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("vesper"),
+					OriginalType: unifiedgosdk.Pointer("vilitas"),
 					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "iste",
-				},
-				shared.AccountingAccountTaxonomy{
-					OriginalType: unifiedgosdk.Pointer("adamo"),
-					Type:         shared.AccountingAccountTaxonomyTypeSubgroup,
-					Value:        "peccatus",
+					Value:        "comedo",
 				},
 			},
-			Type:      shared.TypeBank.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-01-06T19:06:45.461Z"),
+			Type:      shared.TypeAccountsReceivable.ToPointer(),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
 		},
 		ConnectionID: "<id>",
 	})

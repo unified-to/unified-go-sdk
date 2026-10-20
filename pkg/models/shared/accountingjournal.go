@@ -46,6 +46,7 @@ type AccountingJournal struct {
 	IsInclusiveOfTax *bool `json:"is_inclusive_of_tax,omitempty"`
 	// new field name
 	Lineitems      []AccountingJournalLineitem `json:"lineitems,omitempty"`
+	Metadata       []AccountingMetadata        `json:"metadata,omitempty"`
 	OrganizationID *string                     `json:"organization_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PostedAt *time.Time `json:"posted_at,omitempty"`
@@ -136,6 +137,13 @@ func (a *AccountingJournal) GetLineitems() []AccountingJournalLineitem {
 		return nil
 	}
 	return a.Lineitems
+}
+
+func (a *AccountingJournal) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingJournal) GetOrganizationID() *string {

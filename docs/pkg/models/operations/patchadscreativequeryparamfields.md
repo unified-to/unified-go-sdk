@@ -44,4 +44,5 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsPath2`                      | path2                                                        |
 | `PatchAdsCreativeQueryParamFieldsData`                       | data                                                         |
 | `PatchAdsCreativeQueryParamFieldsLabels`                     | labels                                                       |
+| `PatchAdsCreativeQueryParamFieldsMetadata`                   | metadata                                                     |
 | `PatchAdsCreativeQueryParamFieldsRaw`                        | raw                                                          |

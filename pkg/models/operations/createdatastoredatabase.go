@@ -21,6 +21,7 @@ const (
 	CreateDatastoreDatabaseQueryParamFieldsIsActive    CreateDatastoreDatabaseQueryParamFields = "is_active"
 	CreateDatastoreDatabaseQueryParamFieldsPassword    CreateDatastoreDatabaseQueryParamFields = "password"
 	CreateDatastoreDatabaseQueryParamFieldsRegion      CreateDatastoreDatabaseQueryParamFields = "region"
+	CreateDatastoreDatabaseQueryParamFieldsMetadata    CreateDatastoreDatabaseQueryParamFields = "metadata"
 	CreateDatastoreDatabaseQueryParamFieldsRaw         CreateDatastoreDatabaseQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *CreateDatastoreDatabaseQueryParamFields) UnmarshalJSON(data []byte) err
 	case "password":
 		fallthrough
 	case "region":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateDatastoreDatabaseQueryParamFields(v)

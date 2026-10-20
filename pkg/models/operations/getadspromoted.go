@@ -12,10 +12,11 @@ import (
 type GetAdsPromotedQueryParamFields string
 
 const (
-	GetAdsPromotedQueryParamFieldsID   GetAdsPromotedQueryParamFields = "id"
-	GetAdsPromotedQueryParamFieldsName GetAdsPromotedQueryParamFields = "name"
-	GetAdsPromotedQueryParamFieldsType GetAdsPromotedQueryParamFields = "type"
-	GetAdsPromotedQueryParamFieldsRaw  GetAdsPromotedQueryParamFields = "raw"
+	GetAdsPromotedQueryParamFieldsID       GetAdsPromotedQueryParamFields = "id"
+	GetAdsPromotedQueryParamFieldsName     GetAdsPromotedQueryParamFields = "name"
+	GetAdsPromotedQueryParamFieldsType     GetAdsPromotedQueryParamFields = "type"
+	GetAdsPromotedQueryParamFieldsMetadata GetAdsPromotedQueryParamFields = "metadata"
+	GetAdsPromotedQueryParamFieldsRaw      GetAdsPromotedQueryParamFields = "raw"
 )
 
 func (e GetAdsPromotedQueryParamFields) ToPointer() *GetAdsPromotedQueryParamFields {
@@ -32,6 +33,8 @@ func (e *GetAdsPromotedQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAdsPromotedQueryParamFields(v)

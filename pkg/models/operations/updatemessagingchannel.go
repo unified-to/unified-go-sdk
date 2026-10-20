@@ -23,6 +23,7 @@ const (
 	UpdateMessagingChannelQueryParamFieldsIsActive       UpdateMessagingChannelQueryParamFields = "is_active"
 	UpdateMessagingChannelQueryParamFieldsIsPrivate      UpdateMessagingChannelQueryParamFields = "is_private"
 	UpdateMessagingChannelQueryParamFieldsWebURL         UpdateMessagingChannelQueryParamFields = "web_url"
+	UpdateMessagingChannelQueryParamFieldsMetadata       UpdateMessagingChannelQueryParamFields = "metadata"
 	UpdateMessagingChannelQueryParamFieldsRaw            UpdateMessagingChannelQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *UpdateMessagingChannelQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "is_private":
 		fallthrough
 	case "web_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateMessagingChannelQueryParamFields(v)

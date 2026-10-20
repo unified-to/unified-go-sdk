@@ -201,6 +201,7 @@ type AdsCampaign struct {
 	ID                 *string                          `json:"id,omitempty"`
 	Kpi                *PropertyAdsCampaignKpi          `json:"kpi,omitempty"`
 	Labels             []string                         `json:"labels,omitempty"`
+	Metadata           []AdsMetadata                    `json:"metadata,omitempty"`
 	Name               *string                          `json:"name,omitempty"`
 	OrganizationID     *string                          `json:"organization_id,omitempty"`
 	PlannedSpendAmount *float64                         `json:"planned_spend_amount,omitempty"`
@@ -335,6 +336,13 @@ func (a *AdsCampaign) GetLabels() []string {
 		return nil
 	}
 	return a.Labels
+}
+
+func (a *AdsCampaign) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsCampaign) GetName() *string {

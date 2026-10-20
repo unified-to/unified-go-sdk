@@ -57,4 +57,5 @@ value := operations.GetClubsActivityQueryParamFieldsID
 | `GetClubsActivityQueryParamFieldsWorkoutType`          | workout_type                                           |
 | `GetClubsActivityQueryParamFieldsSufferScore`          | suffer_score                                           |
 | `GetClubsActivityQueryParamFieldsPrCount`              | pr_count                                               |
+| `GetClubsActivityQueryParamFieldsMetadata`             | metadata                                               |
 | `GetClubsActivityQueryParamFieldsRaw`                  | raw                                                    |

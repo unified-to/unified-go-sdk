@@ -42,4 +42,5 @@ value := operations.ListMartechReportsQueryParamFieldsID
 | `ListMartechReportsQueryParamFieldsHumanOpensTotal`        | human_opens_total                                          |
 | `ListMartechReportsQueryParamFieldsHumanUniqueOpens`       | human_unique_opens                                         |
 | `ListMartechReportsQueryParamFieldsHumanOpenRate`          | human_open_rate                                            |
+| `ListMartechReportsQueryParamFieldsMetadata`               | metadata                                                   |
 | `ListMartechReportsQueryParamFieldsRaw`                    | raw                                                        |

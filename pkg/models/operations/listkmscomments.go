@@ -21,6 +21,7 @@ const (
 	ListKmsCommentsQueryParamFieldsUserID      ListKmsCommentsQueryParamFields = "user_id"
 	ListKmsCommentsQueryParamFieldsPageID      ListKmsCommentsQueryParamFields = "page_id"
 	ListKmsCommentsQueryParamFieldsParentID    ListKmsCommentsQueryParamFields = "parent_id"
+	ListKmsCommentsQueryParamFieldsMetadata    ListKmsCommentsQueryParamFields = "metadata"
 	ListKmsCommentsQueryParamFieldsRaw         ListKmsCommentsQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *ListKmsCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "page_id":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListKmsCommentsQueryParamFields(v)

@@ -14,6 +14,7 @@ type AdsReport struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt          *time.Time         `json:"end_at,omitempty"`
 	ID             *string            `json:"id,omitempty"`
+	Metadata       []AdsMetadata      `json:"metadata,omitempty"`
 	Metrics        []AdsReportMetrics `json:"metrics,omitempty"`
 	OrganizationID *string            `json:"organization_id,omitempty"`
 	Raw            map[string]any     `json:"raw,omitempty"`
@@ -60,6 +61,13 @@ func (a *AdsReport) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AdsReport) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsReport) GetMetrics() []AdsReportMetrics {

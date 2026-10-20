@@ -23,4 +23,5 @@ value := operations.ListSocialInsightsQueryParamFieldsID
 | `ListSocialInsightsQueryParamFieldsPeriod`    | period                                        |
 | `ListSocialInsightsQueryParamFieldsMetric`    | metric                                        |
 | `ListSocialInsightsQueryParamFieldsValue`     | value                                         |
+| `ListSocialInsightsQueryParamFieldsMetadata`  | metadata                                      |
 | `ListSocialInsightsQueryParamFieldsRaw`       | raw                                           |

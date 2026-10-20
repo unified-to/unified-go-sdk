@@ -35,6 +35,7 @@ const (
 	UpdateLmsContentQueryParamFieldsCollectionIds     UpdateLmsContentQueryParamFields = "collection_ids"
 	UpdateLmsContentQueryParamFieldsInstructors       UpdateLmsContentQueryParamFields = "instructors"
 	UpdateLmsContentQueryParamFieldsPublishedAt       UpdateLmsContentQueryParamFields = "published_at"
+	UpdateLmsContentQueryParamFieldsMetadata          UpdateLmsContentQueryParamFields = "metadata"
 	UpdateLmsContentQueryParamFieldsRaw               UpdateLmsContentQueryParamFields = "raw"
 )
 
@@ -92,6 +93,8 @@ func (e *UpdateLmsContentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "instructors":
 		fallthrough
 	case "published_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateLmsContentQueryParamFields(v)

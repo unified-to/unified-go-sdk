@@ -66,7 +66,8 @@ type CdpSegment struct {
 	// Unique identifier for this segment object
 	ID *string `json:"id,omitempty"`
 	// Whether the segment is active/enabled
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive *bool         `json:"is_active,omitempty"`
+	Metadata []CdpMetadata `json:"metadata,omitempty"`
 	// The name of the segment/audience
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this segment
@@ -134,6 +135,13 @@ func (c *CdpSegment) GetIsActive() *bool {
 		return nil
 	}
 	return c.IsActive
+}
+
+func (c *CdpSegment) GetMetadata() []CdpMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CdpSegment) GetName() *string {

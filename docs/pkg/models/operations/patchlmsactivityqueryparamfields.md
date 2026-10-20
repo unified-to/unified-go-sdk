@@ -27,4 +27,5 @@ value := operations.PatchLmsActivityQueryParamFieldsID
 | `PatchLmsActivityQueryParamFieldsProgressPercentage` | progress_percentage                                  |
 | `PatchLmsActivityQueryParamFieldsStartedAt`          | started_at                                           |
 | `PatchLmsActivityQueryParamFieldsCompletedAt`        | completed_at                                         |
+| `PatchLmsActivityQueryParamFieldsMetadata`           | metadata                                             |
 | `PatchLmsActivityQueryParamFieldsRaw`                | raw                                                  |

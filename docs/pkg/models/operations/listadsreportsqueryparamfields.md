@@ -23,4 +23,5 @@ value := operations.ListAdsReportsQueryParamFieldsID
 | `ListAdsReportsQueryParamFieldsStartAt`        | start_at                                       |
 | `ListAdsReportsQueryParamFieldsEndAt`          | end_at                                         |
 | `ListAdsReportsQueryParamFieldsOrganizationID` | organization_id                                |
+| `ListAdsReportsQueryParamFieldsMetadata`       | metadata                                       |
 | `ListAdsReportsQueryParamFieldsRaw`            | raw                                            |

@@ -27,4 +27,5 @@ value := operations.ListCdpSegmentsQueryParamFieldsID
 | `ListCdpSegmentsQueryParamFieldsSize`        | size                                         |
 | `ListCdpSegmentsQueryParamFieldsIsActive`    | is_active                                    |
 | `ListCdpSegmentsQueryParamFieldsSourceID`    | source_id                                    |
+| `ListCdpSegmentsQueryParamFieldsMetadata`    | metadata                                     |
 | `ListCdpSegmentsQueryParamFieldsRaw`         | raw                                          |

@@ -24,4 +24,5 @@ value := operations.CreateHrisDocumentQueryParamFieldsID
 | `CreateHrisDocumentQueryParamFieldsType`         | type                                             |
 | `CreateHrisDocumentQueryParamFieldsUserID`       | user_id                                          |
 | `CreateHrisDocumentQueryParamFieldsCompanyID`    | company_id                                       |
+| `CreateHrisDocumentQueryParamFieldsMetadata`     | metadata                                         |
 | `CreateHrisDocumentQueryParamFieldsRaw`          | raw                                              |

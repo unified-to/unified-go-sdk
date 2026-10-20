@@ -29,4 +29,5 @@ value := operations.CreateFormsFormQueryParamFieldsID
 | `CreateFormsFormQueryParamFieldsHasShuffleQuestions`     | has_shuffle_questions                                    |
 | `CreateFormsFormQueryParamFieldsConfirmationMessage`     | confirmation_message                                     |
 | `CreateFormsFormQueryParamFieldsConfirmationRedirectURL` | confirmation_redirect_url                                |
+| `CreateFormsFormQueryParamFieldsMetadata`                | metadata                                                 |
 | `CreateFormsFormQueryParamFieldsRaw`                     | raw                                                      |

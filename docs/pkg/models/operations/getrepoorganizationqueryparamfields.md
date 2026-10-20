@@ -23,4 +23,5 @@ value := operations.GetRepoOrganizationQueryParamFieldsID
 | `GetRepoOrganizationQueryParamFieldsAvatarURL`   | avatar_url                                       |
 | `GetRepoOrganizationQueryParamFieldsWebURL`      | web_url                                          |
 | `GetRepoOrganizationQueryParamFieldsUserIds`     | user_ids                                         |
+| `GetRepoOrganizationQueryParamFieldsMetadata`    | metadata                                         |
 | `GetRepoOrganizationQueryParamFieldsRaw`         | raw                                              |

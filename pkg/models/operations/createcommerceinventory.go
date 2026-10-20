@@ -19,6 +19,7 @@ const (
 	CreateCommerceInventoryQueryParamFieldsItemOptionID  CreateCommerceInventoryQueryParamFields = "item_option_id"
 	CreateCommerceInventoryQueryParamFieldsLocationID    CreateCommerceInventoryQueryParamFields = "location_id"
 	CreateCommerceInventoryQueryParamFieldsAvailable     CreateCommerceInventoryQueryParamFields = "available"
+	CreateCommerceInventoryQueryParamFieldsMetadata      CreateCommerceInventoryQueryParamFields = "metadata"
 	CreateCommerceInventoryQueryParamFieldsRaw           CreateCommerceInventoryQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *CreateCommerceInventoryQueryParamFields) UnmarshalJSON(data []byte) err
 	case "location_id":
 		fallthrough
 	case "available":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCommerceInventoryQueryParamFields(v)

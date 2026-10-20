@@ -24,4 +24,5 @@ value := operations.GetTaskCommentQueryParamFieldsID
 | `GetTaskCommentQueryParamFieldsTaskID`      | task_id                                     |
 | `GetTaskCommentQueryParamFieldsParentID`    | parent_id                                   |
 | `GetTaskCommentQueryParamFieldsHasChildren` | has_children                                |
+| `GetTaskCommentQueryParamFieldsMetadata`    | metadata                                    |
 | `GetTaskCommentQueryParamFieldsRaw`         | raw                                         |

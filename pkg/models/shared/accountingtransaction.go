@@ -46,6 +46,7 @@ type AccountingTransaction struct {
 	ID             *string                         `json:"id,omitempty"`
 	Lineitems      []AccountingTransactionLineItem `json:"lineitems,omitempty"`
 	Memo           *string                         `json:"memo,omitempty"`
+	Metadata       []AccountingMetadata            `json:"metadata,omitempty"`
 	OrganizationID *string                         `json:"organization_id,omitempty"`
 	PaymentMethod  *string                         `json:"payment_method,omitempty"`
 	PaymentTerms   *string                         `json:"payment_terms,omitempty"`
@@ -148,6 +149,13 @@ func (a *AccountingTransaction) GetMemo() *string {
 		return nil
 	}
 	return a.Memo
+}
+
+func (a *AccountingTransaction) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingTransaction) GetOrganizationID() *string {

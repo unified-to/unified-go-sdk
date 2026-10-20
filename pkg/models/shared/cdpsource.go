@@ -39,7 +39,8 @@ type CdpSource struct {
 	// Unique identifier for this source object
 	ID *string `json:"id,omitempty"`
 	// Whether the source is active/enabled
-	IsEnabled *bool `json:"is_enabled,omitempty"`
+	IsEnabled *bool         `json:"is_enabled,omitempty"`
+	Metadata  []CdpMetadata `json:"metadata,omitempty"`
 	// The name of the inbound data source
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this source
@@ -89,6 +90,13 @@ func (c *CdpSource) GetIsEnabled() *bool {
 		return nil
 	}
 	return c.IsEnabled
+}
+
+func (c *CdpSource) GetMetadata() []CdpMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CdpSource) GetName() *string {

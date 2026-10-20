@@ -76,7 +76,8 @@ type ComputeUsage struct {
 	// Unique identifier for the usage record
 	ID *string `json:"id,omitempty"`
 	// The instance the usage belongs to, when per-instance
-	InstanceID *string `json:"instance_id,omitempty"`
+	InstanceID *string           `json:"instance_id,omitempty"`
+	Metadata   []ComputeMetadata `json:"metadata,omitempty"`
 	// Amount consumed, in unit
 	Quantity *float64 `json:"quantity,omitempty"`
 	// Raw data from integration
@@ -147,6 +148,13 @@ func (c *ComputeUsage) GetInstanceID() *string {
 		return nil
 	}
 	return c.InstanceID
+}
+
+func (c *ComputeUsage) GetMetadata() []ComputeMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ComputeUsage) GetQuantity() *float64 {

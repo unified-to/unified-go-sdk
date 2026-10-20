@@ -28,4 +28,5 @@ value := operations.CreateAtsInterviewQueryParamFieldsID
 | `CreateAtsInterviewQueryParamFieldsLocation`          | location                                              |
 | `CreateAtsInterviewQueryParamFieldsMeetingURL`        | meeting_url                                           |
 | `CreateAtsInterviewQueryParamFieldsExternalEventXref` | external_event_xref                                   |
+| `CreateAtsInterviewQueryParamFieldsMetadata`          | metadata                                              |
 | `CreateAtsInterviewQueryParamFieldsRaw`               | raw                                                   |

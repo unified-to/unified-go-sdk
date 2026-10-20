@@ -32,4 +32,5 @@ value := operations.GetHrisTimeoffQueryParamFieldsID
 | `GetHrisTimeoffQueryParamFieldsType`           | type                                           |
 | `GetHrisTimeoffQueryParamFieldsDuration`       | duration                                       |
 | `GetHrisTimeoffQueryParamFieldsDurationType`   | duration_type                                  |
+| `GetHrisTimeoffQueryParamFieldsMetadata`       | metadata                                       |
 | `GetHrisTimeoffQueryParamFieldsRaw`            | raw                                            |

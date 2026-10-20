@@ -28,4 +28,5 @@ value := operations.UpdateMartechCampaignQueryParamFieldsID
 | `UpdateMartechCampaignQueryParamFieldsFromEmail`    | from_email                                          |
 | `UpdateMartechCampaignQueryParamFieldsReplyToEmail` | reply_to_email                                      |
 | `UpdateMartechCampaignQueryParamFieldsSendAt`       | send_at                                             |
+| `UpdateMartechCampaignQueryParamFieldsMetadata`     | metadata                                            |
 | `UpdateMartechCampaignQueryParamFieldsRaw`          | raw                                                 |

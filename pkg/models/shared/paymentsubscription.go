@@ -81,6 +81,7 @@ type PaymentSubscription struct {
 	// a reference to an Accounting Invoice (reference to AccountingInvoice)
 	InvoiceID *string           `json:"invoice_id,omitempty"`
 	Lineitems []PaymentLineitem `json:"lineitems,omitempty"`
+	Metadata  []PaymentMetadata `json:"metadata,omitempty"`
 	// the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
 	Month *float64       `json:"month,omitempty"`
 	Raw   map[string]any `json:"raw,omitempty"`
@@ -206,6 +207,13 @@ func (p *PaymentSubscription) GetLineitems() []PaymentLineitem {
 		return nil
 	}
 	return p.Lineitems
+}
+
+func (p *PaymentSubscription) GetMetadata() []PaymentMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PaymentSubscription) GetMonth() *float64 {

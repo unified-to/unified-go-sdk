@@ -32,6 +32,7 @@ const (
 	PatchLmsCourseQueryParamFieldsProviderName        PatchLmsCourseQueryParamFields = "provider_name"
 	PatchLmsCourseQueryParamFieldsPublishedAt         PatchLmsCourseQueryParamFields = "published_at"
 	PatchLmsCourseQueryParamFieldsTimeEstimateMinutes PatchLmsCourseQueryParamFields = "time_estimate_minutes"
+	PatchLmsCourseQueryParamFieldsMetadata            PatchLmsCourseQueryParamFields = "metadata"
 	PatchLmsCourseQueryParamFieldsRaw                 PatchLmsCourseQueryParamFields = "raw"
 )
 
@@ -83,6 +84,8 @@ func (e *PatchLmsCourseQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "published_at":
 		fallthrough
 	case "time_estimate_minutes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchLmsCourseQueryParamFields(v)

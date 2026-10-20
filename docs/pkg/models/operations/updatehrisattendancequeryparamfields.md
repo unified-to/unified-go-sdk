@@ -37,4 +37,5 @@ value := operations.UpdateHrisAttendanceQueryParamFieldsID
 | `UpdateHrisAttendanceQueryParamFieldsHourlyRate`         | hourly_rate                                              |
 | `UpdateHrisAttendanceQueryParamFieldsApproverUserID`     | approver_user_id                                         |
 | `UpdateHrisAttendanceQueryParamFieldsApprovedAt`         | approved_at                                              |
+| `UpdateHrisAttendanceQueryParamFieldsMetadata`           | metadata                                                 |
 | `UpdateHrisAttendanceQueryParamFieldsRaw`                | raw                                                      |

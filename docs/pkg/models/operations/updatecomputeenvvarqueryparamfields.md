@@ -23,4 +23,5 @@ value := operations.UpdateComputeEnvvarQueryParamFieldsID
 | `UpdateComputeEnvvarQueryParamFieldsValue`        | value                                             |
 | `UpdateComputeEnvvarQueryParamFieldsEnvironments` | environments                                      |
 | `UpdateComputeEnvvarQueryParamFieldsIsSecret`     | is_secret                                         |
+| `UpdateComputeEnvvarQueryParamFieldsMetadata`     | metadata                                          |
 | `UpdateComputeEnvvarQueryParamFieldsRaw`          | raw                                               |

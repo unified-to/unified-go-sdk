@@ -38,4 +38,5 @@ value := operations.PatchAccountingTransactionQueryParamFieldsID
 | `PatchAccountingTransactionQueryParamFieldsTransactionAt`   | transaction_at                                              |
 | `PatchAccountingTransactionQueryParamFieldsExchangeRate`    | exchange_rate                                               |
 | `PatchAccountingTransactionQueryParamFieldsStatus`          | status                                                      |
+| `PatchAccountingTransactionQueryParamFieldsMetadata`        | metadata                                                    |
 | `PatchAccountingTransactionQueryParamFieldsRaw`             | raw                                                         |

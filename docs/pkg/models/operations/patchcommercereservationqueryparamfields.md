@@ -32,4 +32,5 @@ value := operations.PatchCommerceReservationQueryParamFieldsID
 | `PatchCommerceReservationQueryParamFieldsCreatedAt`   | created_at                                            |
 | `PatchCommerceReservationQueryParamFieldsUpdatedAt`   | updated_at                                            |
 | `PatchCommerceReservationQueryParamFieldsURL`         | url                                                   |
+| `PatchCommerceReservationQueryParamFieldsMetadata`    | metadata                                              |
 | `PatchCommerceReservationQueryParamFieldsRaw`         | raw                                                   |

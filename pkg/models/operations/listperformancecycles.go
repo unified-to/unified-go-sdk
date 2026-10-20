@@ -22,6 +22,7 @@ const (
 	ListPerformanceCyclesQueryParamFieldsStartAt     ListPerformanceCyclesQueryParamFields = "start_at"
 	ListPerformanceCyclesQueryParamFieldsEndAt       ListPerformanceCyclesQueryParamFields = "end_at"
 	ListPerformanceCyclesQueryParamFieldsDueAt       ListPerformanceCyclesQueryParamFields = "due_at"
+	ListPerformanceCyclesQueryParamFieldsMetadata    ListPerformanceCyclesQueryParamFields = "metadata"
 	ListPerformanceCyclesQueryParamFieldsRaw         ListPerformanceCyclesQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListPerformanceCyclesQueryParamFields) UnmarshalJSON(data []byte) error
 	case "end_at":
 		fallthrough
 	case "due_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListPerformanceCyclesQueryParamFields(v)

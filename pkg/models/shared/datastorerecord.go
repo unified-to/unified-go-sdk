@@ -14,6 +14,7 @@ type DatastoreRecord struct {
 	DatabaseID *string                        `json:"database_id,omitempty"`
 	Fields     map[string]DatastoreFieldValue `json:"fields"`
 	ID         *string                        `json:"id,omitempty"`
+	Metadata   []DatastoreMetadata            `json:"metadata,omitempty"`
 	Raw        map[string]any                 `json:"raw,omitempty"`
 	RowNumber  *float64                       `json:"row_number,omitempty"`
 	// source Database Table ID
@@ -59,6 +60,13 @@ func (d *DatastoreRecord) GetID() *string {
 		return nil
 	}
 	return d.ID
+}
+
+func (d *DatastoreRecord) GetMetadata() []DatastoreMetadata {
+	if d == nil {
+		return nil
+	}
+	return d.Metadata
 }
 
 func (d *DatastoreRecord) GetRaw() map[string]any {

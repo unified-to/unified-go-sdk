@@ -32,6 +32,7 @@ const (
 	CreateCommerceLocationQueryParamFieldsImageURL       CreateCommerceLocationQueryParamFields = "image_url"
 	CreateCommerceLocationQueryParamFieldsWebURL         CreateCommerceLocationQueryParamFields = "web_url"
 	CreateCommerceLocationQueryParamFieldsMedia          CreateCommerceLocationQueryParamFields = "media"
+	CreateCommerceLocationQueryParamFieldsMetadata       CreateCommerceLocationQueryParamFields = "metadata"
 	CreateCommerceLocationQueryParamFieldsRaw            CreateCommerceLocationQueryParamFields = "raw"
 	CreateCommerceLocationQueryParamFieldsCategories     CreateCommerceLocationQueryParamFields = "categories"
 )
@@ -84,6 +85,8 @@ func (e *CreateCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "web_url":
 		fallthrough
 	case "media":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		fallthrough

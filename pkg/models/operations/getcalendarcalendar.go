@@ -19,6 +19,7 @@ const (
 	GetCalendarCalendarQueryParamFieldsDescription GetCalendarCalendarQueryParamFields = "description"
 	GetCalendarCalendarQueryParamFieldsTimezone    GetCalendarCalendarQueryParamFields = "timezone"
 	GetCalendarCalendarQueryParamFieldsIsPrimary   GetCalendarCalendarQueryParamFields = "is_primary"
+	GetCalendarCalendarQueryParamFieldsMetadata    GetCalendarCalendarQueryParamFields = "metadata"
 	GetCalendarCalendarQueryParamFieldsRaw         GetCalendarCalendarQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *GetCalendarCalendarQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "timezone":
 		fallthrough
 	case "is_primary":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetCalendarCalendarQueryParamFields(v)

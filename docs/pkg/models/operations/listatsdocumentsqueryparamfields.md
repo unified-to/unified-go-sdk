@@ -26,4 +26,5 @@ value := operations.ListAtsDocumentsQueryParamFieldsID
 | `ListAtsDocumentsQueryParamFieldsApplicationID` | application_id                                  |
 | `ListAtsDocumentsQueryParamFieldsJobID`         | job_id                                          |
 | `ListAtsDocumentsQueryParamFieldsUserID`        | user_id                                         |
+| `ListAtsDocumentsQueryParamFieldsMetadata`      | metadata                                        |
 | `ListAtsDocumentsQueryParamFieldsRaw`           | raw                                             |

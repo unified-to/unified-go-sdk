@@ -21,4 +21,5 @@ value := operations.GetTaskChangeQueryParamFieldsID
 | `GetTaskChangeQueryParamFieldsTaskID`    | task_id                                  |
 | `GetTaskChangeQueryParamFieldsUserID`    | user_id                                  |
 | `GetTaskChangeQueryParamFieldsItems`     | items                                    |
+| `GetTaskChangeQueryParamFieldsMetadata`  | metadata                                 |
 | `GetTaskChangeQueryParamFieldsRaw`       | raw                                      |

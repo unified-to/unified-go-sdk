@@ -22,4 +22,5 @@ value := operations.CreateDatastoreRecordQueryParamFieldsID
 | `CreateDatastoreRecordQueryParamFieldsTableID`    | table_id                                          |
 | `CreateDatastoreRecordQueryParamFieldsFields`     | fields                                            |
 | `CreateDatastoreRecordQueryParamFieldsRowNumber`  | row_number                                        |
+| `CreateDatastoreRecordQueryParamFieldsMetadata`   | metadata                                          |
 | `CreateDatastoreRecordQueryParamFieldsRaw`        | raw                                               |

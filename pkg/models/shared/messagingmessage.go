@@ -29,7 +29,8 @@ type MessagingMessage struct {
 	MessageHTML      *string           `json:"message_html,omitempty"`
 	MessageMarkdown  *string           `json:"message_markdown,omitempty"`
 	// the opaque identifier for the first message in a thread
-	MessageThreadIdentifier *string `json:"message_thread_identifier,omitempty"`
+	MessageThreadIdentifier *string             `json:"message_thread_identifier,omitempty"`
+	Metadata                []MessagingMetadata `json:"metadata,omitempty"`
 	// Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
 	ParentID  *string             `json:"parent_id,omitempty"`
 	Raw       map[string]any      `json:"raw,omitempty"`
@@ -156,6 +157,13 @@ func (m *MessagingMessage) GetMessageThreadIdentifier() *string {
 		return nil
 	}
 	return m.MessageThreadIdentifier
+}
+
+func (m *MessagingMessage) GetMetadata() []MessagingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MessagingMessage) GetParentID() *string {

@@ -23,6 +23,7 @@ const (
 	GetAtsDocumentQueryParamFieldsApplicationID GetAtsDocumentQueryParamFields = "application_id"
 	GetAtsDocumentQueryParamFieldsJobID         GetAtsDocumentQueryParamFields = "job_id"
 	GetAtsDocumentQueryParamFieldsUserID        GetAtsDocumentQueryParamFields = "user_id"
+	GetAtsDocumentQueryParamFieldsMetadata      GetAtsDocumentQueryParamFields = "metadata"
 	GetAtsDocumentQueryParamFieldsRaw           GetAtsDocumentQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *GetAtsDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "job_id":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAtsDocumentQueryParamFields(v)

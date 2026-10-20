@@ -24,4 +24,5 @@ value := operations.ListTaskCommentsQueryParamFieldsID
 | `ListTaskCommentsQueryParamFieldsTaskID`      | task_id                                       |
 | `ListTaskCommentsQueryParamFieldsParentID`    | parent_id                                     |
 | `ListTaskCommentsQueryParamFieldsHasChildren` | has_children                                  |
+| `ListTaskCommentsQueryParamFieldsMetadata`    | metadata                                      |
 | `ListTaskCommentsQueryParamFieldsRaw`         | raw                                           |

@@ -34,4 +34,5 @@ value := operations.PatchHrisDeviceQueryParamFieldsID
 | `PatchHrisDeviceQueryParamFieldsHasHdEncrypted`     | has_hd_encrypted                                    |
 | `PatchHrisDeviceQueryParamFieldsHasScreenlock`      | has_screenlock                                      |
 | `PatchHrisDeviceQueryParamFieldsIsMissing`          | is_missing                                          |
+| `PatchHrisDeviceQueryParamFieldsMetadata`           | metadata                                            |
 | `PatchHrisDeviceQueryParamFieldsRaw`                | raw                                                 |

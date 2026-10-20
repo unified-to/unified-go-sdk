@@ -25,4 +25,5 @@ value := operations.ListLmsClassesQueryParamFieldsID
 | `ListLmsClassesQueryParamFieldsLanguages`   | languages                                   |
 | `ListLmsClassesQueryParamFieldsInstructors` | instructors                                 |
 | `ListLmsClassesQueryParamFieldsStudents`    | students                                    |
+| `ListLmsClassesQueryParamFieldsMetadata`    | metadata                                    |
 | `ListLmsClassesQueryParamFieldsRaw`         | raw                                         |

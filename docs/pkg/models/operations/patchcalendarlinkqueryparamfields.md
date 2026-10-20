@@ -25,4 +25,5 @@ value := operations.PatchCalendarLinkQueryParamFieldsID
 | `PatchCalendarLinkQueryParamFieldsIsActive`      | is_active                                        |
 | `PatchCalendarLinkQueryParamFieldsPriceAmount`   | price_amount                                     |
 | `PatchCalendarLinkQueryParamFieldsPriceCurrency` | price_currency                                   |
+| `PatchCalendarLinkQueryParamFieldsMetadata`      | metadata                                         |
 | `PatchCalendarLinkQueryParamFieldsRaw`           | raw                                              |

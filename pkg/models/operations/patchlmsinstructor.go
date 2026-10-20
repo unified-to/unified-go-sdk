@@ -22,6 +22,7 @@ const (
 	PatchLmsInstructorQueryParamFieldsTitle      PatchLmsInstructorQueryParamFields = "title"
 	PatchLmsInstructorQueryParamFieldsTelephones PatchLmsInstructorQueryParamFields = "telephones"
 	PatchLmsInstructorQueryParamFieldsImageURL   PatchLmsInstructorQueryParamFields = "image_url"
+	PatchLmsInstructorQueryParamFieldsMetadata   PatchLmsInstructorQueryParamFields = "metadata"
 	PatchLmsInstructorQueryParamFieldsRaw        PatchLmsInstructorQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *PatchLmsInstructorQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "telephones":
 		fallthrough
 	case "image_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchLmsInstructorQueryParamFields(v)

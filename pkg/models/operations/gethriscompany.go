@@ -18,6 +18,7 @@ const (
 	GetHrisCompanyQueryParamFieldsName      GetHrisCompanyQueryParamFields = "name"
 	GetHrisCompanyQueryParamFieldsLegalName GetHrisCompanyQueryParamFields = "legal_name"
 	GetHrisCompanyQueryParamFieldsAddress   GetHrisCompanyQueryParamFields = "address"
+	GetHrisCompanyQueryParamFieldsMetadata  GetHrisCompanyQueryParamFields = "metadata"
 	GetHrisCompanyQueryParamFieldsRaw       GetHrisCompanyQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *GetHrisCompanyQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "legal_name":
 		fallthrough
 	case "address":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetHrisCompanyQueryParamFields(v)

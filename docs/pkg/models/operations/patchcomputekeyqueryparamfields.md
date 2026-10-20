@@ -28,4 +28,5 @@ value := operations.PatchComputeKeyQueryParamFieldsID
 | `PatchComputeKeyQueryParamFieldsSecret`      | secret                                       |
 | `PatchComputeKeyQueryParamFieldsInstanceID`  | instance_id                                  |
 | `PatchComputeKeyQueryParamFieldsExpiresAt`   | expires_at                                   |
+| `PatchComputeKeyQueryParamFieldsMetadata`    | metadata                                     |
 | `PatchComputeKeyQueryParamFieldsRaw`         | raw                                          |

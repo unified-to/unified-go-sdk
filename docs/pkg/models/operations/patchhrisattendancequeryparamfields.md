@@ -37,4 +37,5 @@ value := operations.PatchHrisAttendanceQueryParamFieldsID
 | `PatchHrisAttendanceQueryParamFieldsHourlyRate`         | hourly_rate                                             |
 | `PatchHrisAttendanceQueryParamFieldsApproverUserID`     | approver_user_id                                        |
 | `PatchHrisAttendanceQueryParamFieldsApprovedAt`         | approved_at                                             |
+| `PatchHrisAttendanceQueryParamFieldsMetadata`           | metadata                                                |
 | `PatchHrisAttendanceQueryParamFieldsRaw`                | raw                                                     |

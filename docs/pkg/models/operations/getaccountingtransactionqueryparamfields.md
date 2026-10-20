@@ -38,4 +38,5 @@ value := operations.GetAccountingTransactionQueryParamFieldsID
 | `GetAccountingTransactionQueryParamFieldsTransactionAt`   | transaction_at                                            |
 | `GetAccountingTransactionQueryParamFieldsExchangeRate`    | exchange_rate                                             |
 | `GetAccountingTransactionQueryParamFieldsStatus`          | status                                                    |
+| `GetAccountingTransactionQueryParamFieldsMetadata`        | metadata                                                  |
 | `GetAccountingTransactionQueryParamFieldsRaw`             | raw                                                       |

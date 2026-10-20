@@ -52,6 +52,7 @@ const (
 	CreateAssessmentOrderQueryParamFieldsResponseDetails           CreateAssessmentOrderQueryParamFields = "response_details"
 	CreateAssessmentOrderQueryParamFieldsResponseSource            CreateAssessmentOrderQueryParamFields = "response_source"
 	CreateAssessmentOrderQueryParamFieldsResponseAttributes        CreateAssessmentOrderQueryParamFields = "response_attributes"
+	CreateAssessmentOrderQueryParamFieldsMetadata                  CreateAssessmentOrderQueryParamFields = "metadata"
 	CreateAssessmentOrderQueryParamFieldsRaw                       CreateAssessmentOrderQueryParamFields = "raw"
 )
 
@@ -143,6 +144,8 @@ func (e *CreateAssessmentOrderQueryParamFields) UnmarshalJSON(data []byte) error
 	case "response_source":
 		fallthrough
 	case "response_attributes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateAssessmentOrderQueryParamFields(v)

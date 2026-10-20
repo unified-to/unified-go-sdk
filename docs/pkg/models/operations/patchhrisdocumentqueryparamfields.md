@@ -24,4 +24,5 @@ value := operations.PatchHrisDocumentQueryParamFieldsID
 | `PatchHrisDocumentQueryParamFieldsType`         | type                                            |
 | `PatchHrisDocumentQueryParamFieldsUserID`       | user_id                                         |
 | `PatchHrisDocumentQueryParamFieldsCompanyID`    | company_id                                      |
+| `PatchHrisDocumentQueryParamFieldsMetadata`     | metadata                                        |
 | `PatchHrisDocumentQueryParamFieldsRaw`          | raw                                             |

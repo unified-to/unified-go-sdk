@@ -29,6 +29,7 @@ const (
 	GetSocialProfileQueryParamFieldsIsVerified  GetSocialProfileQueryParamFields = "is_verified"
 	GetSocialProfileQueryParamFieldsIsPrivate   GetSocialProfileQueryParamFields = "is_private"
 	GetSocialProfileQueryParamFieldsMetrics     GetSocialProfileQueryParamFields = "metrics"
+	GetSocialProfileQueryParamFieldsMetadata    GetSocialProfileQueryParamFields = "metadata"
 	GetSocialProfileQueryParamFieldsRaw         GetSocialProfileQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *GetSocialProfileQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_private":
 		fallthrough
 	case "metrics":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetSocialProfileQueryParamFields(v)

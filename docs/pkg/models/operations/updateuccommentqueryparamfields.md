@@ -21,4 +21,5 @@ value := operations.UpdateUcCommentQueryParamFieldsID
 | `UpdateUcCommentQueryParamFieldsContent`   | content                                    |
 | `UpdateUcCommentQueryParamFieldsUserID`    | user_id                                    |
 | `UpdateUcCommentQueryParamFieldsCallID`    | call_id                                    |
+| `UpdateUcCommentQueryParamFieldsMetadata`  | metadata                                   |
 | `UpdateUcCommentQueryParamFieldsRaw`       | raw                                        |

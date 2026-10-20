@@ -40,16 +40,15 @@ func main() {
     res, err := s.Visitor.CreateAnalyticsVisitor(ctx, operations.CreateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("34b0e612-9789-4ac0-b11d-cd565b80c47b"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.676Z"),
+            ID: unifiedgosdk.Pointer("2682a1aa-0b89-4c28-9ad2-ea0e1a4025d7"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.943Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.946Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.800Z"),
         },
         ConnectionID: "<id>",
     })
@@ -218,16 +217,15 @@ func main() {
     res, err := s.Visitor.PatchAnalyticsVisitor(ctx, operations.PatchAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("485fc49d-1bec-440b-96af-c2c6b5b6e199"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.679Z"),
+            ID: unifiedgosdk.Pointer("5ef24960-9b3f-4c4d-89c4-03b5ab972dda"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.955Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.955Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.812Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -343,16 +341,15 @@ func main() {
     res, err := s.Visitor.UpdateAnalyticsVisitor(ctx, operations.UpdateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("485fc49d-1bec-440b-96af-c2c6b5b6e199"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.679Z"),
+            ID: unifiedgosdk.Pointer("5ef24960-9b3f-4c4d-89c4-03b5ab972dda"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.955Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.955Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.812Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

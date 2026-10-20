@@ -28,4 +28,5 @@ value := operations.UpdateShippingLabelQueryParamFieldsID
 | `UpdateShippingLabelQueryParamFieldsLabelCostCurrency` | label_cost_currency                                    |
 | `UpdateShippingLabelQueryParamFieldsRateID`            | rate_id                                                |
 | `UpdateShippingLabelQueryParamFieldsServiceCode`       | service_code                                           |
+| `UpdateShippingLabelQueryParamFieldsMetadata`          | metadata                                               |
 | `UpdateShippingLabelQueryParamFieldsRaw`               | raw                                                    |

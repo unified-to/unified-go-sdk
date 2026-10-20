@@ -36,4 +36,5 @@ value := operations.PatchMessagingMessageQueryParamFieldsID
 | `PatchMessagingMessageQueryParamFieldsHasChildren`             | has_children                                                   |
 | `PatchMessagingMessageQueryParamFieldsIsUnread`                | is_unread                                                      |
 | `PatchMessagingMessageQueryParamFieldsButtons`                 | buttons                                                        |
+| `PatchMessagingMessageQueryParamFieldsMetadata`                | metadata                                                       |
 | `PatchMessagingMessageQueryParamFieldsRaw`                     | raw                                                            |

@@ -39,6 +39,7 @@ type StorageFile struct {
 	DownloadURL *string             `json:"download_url,omitempty"`
 	Hash        *string             `json:"hash,omitempty"`
 	ID          *string             `json:"id,omitempty"`
+	Metadata    []StorageMetadata   `json:"metadata,omitempty"`
 	MimeType    *string             `json:"mime_type,omitempty"`
 	Name        *string             `json:"name,omitempty"`
 	ParentID    *string             `json:"parent_id,omitempty"`
@@ -108,6 +109,13 @@ func (s *StorageFile) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *StorageFile) GetMetadata() []StorageMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *StorageFile) GetMimeType() *string {

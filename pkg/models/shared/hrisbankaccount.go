@@ -72,7 +72,8 @@ type HrisBankaccount struct {
 	Iban *string `json:"iban,omitempty"`
 	ID   *string `json:"id,omitempty"`
 	// primary for direct deposit
-	IsPrimary *bool `json:"is_primary,omitempty"`
+	IsPrimary *bool          `json:"is_primary,omitempty"`
+	Metadata  []HrisMetadata `json:"metadata,omitempty"`
 	// account nickname (e.g. "BoA Checking")
 	Name *string `json:"name,omitempty"`
 	// order in which split accounts are funded (1 = first)
@@ -183,6 +184,13 @@ func (h *HrisBankaccount) GetIsPrimary() *bool {
 		return nil
 	}
 	return h.IsPrimary
+}
+
+func (h *HrisBankaccount) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisBankaccount) GetName() *string {

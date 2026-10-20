@@ -68,8 +68,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -83,43 +83,9 @@ func main() {
 
     res, err := s.Ats.CreateAtsActivity(ctx, operations.CreateAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("1fc5a178-b81e-4d28-b7e7-2c723e88d15a"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("8f55333d-a88d-4eb4-919d-770f60e3f548"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -129,39 +95,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("f2982774-7fed-415b-abdc-bbe092684f44"),
+                    ID: unifiedgosdk.Pointer("37936e3c-c58c-4106-a14d-b1025308431d"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("603fb398-6e6a-473b-b18c-bde93aa71acd"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.431Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.285Z"),
         },
         ConnectionID: "<id>",
     })
@@ -221,10 +166,10 @@ func main() {
     res, err := s.Ats.CreateAtsApplication(ctx, operations.CreateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-28T06:58:55.335Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-29T02:59:17.095Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-10T19:32:01.970Z"),
-            ID: unifiedgosdk.Pointer("fa8e015f-246c-45f1-a9b5-ad8e0cc8343b"),
+            HiredAt: types.MustNewTimeFromString("2026-05-11T21:50:55.628Z"),
+            ID: unifiedgosdk.Pointer("f9ea140a-5ff7-41c8-ad75-854e2ebc1709"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -233,23 +178,23 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    ID: unifiedgosdk.Pointer("dc554102-424d-48bc-806a-645595343dc6"),
                     Namespace: unifiedgosdk.Pointer("application"),
-                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                        "Caput.",
                     )),
                 },
             },
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-09T06:32:42.014Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-10T13:06:56.671Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-16T02:26:25.172Z"),
+            Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-17T09:12:10.621Z"),
         },
         ConnectionID: "<id>",
     })
@@ -309,55 +254,62 @@ func main() {
     res, err := s.Ats.CreateAtsCandidate(ctx, operations.CreateAtsCandidateRequest{
         AtsCandidate: shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.Pointer("802 Roberts Squares"),
-                Address2: unifiedgosdk.Pointer("Suite 550"),
-                City: unifiedgosdk.Pointer("Lake Raeganside"),
+                Address1: unifiedgosdk.Pointer("6790 S 1st Street"),
+                City: unifiedgosdk.Pointer("Ferrystad"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("44530-0054"),
-                Region: unifiedgosdk.Pointer("Tennessee"),
-                RegionCode: unifiedgosdk.Pointer("NV"),
+                PostalCode: unifiedgosdk.Pointer("91605"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("HI"),
             },
-            CompanyName: unifiedgosdk.Pointer("Ferry, Legros and Feest"),
+            CompanyName: unifiedgosdk.Pointer("Lehner and Sons"),
             CreatedAt: types.MustNewTimeFromString("2023-10-16T05:42:56.049Z"),
+            DateOfBirth: types.MustNewTimeFromString("1994-07-05T19:48:57.631Z"),
             Education: []shared.AtsCandidateEducation{
                 shared.AtsCandidateEducation{
-                    Degree: unifiedgosdk.Pointer("mouser throughout"),
-                    EndAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
-                    FieldOfStudy: unifiedgosdk.Pointer("solutio"),
-                    Institution: unifiedgosdk.Pointer("Heller - Lubowitz"),
+                    Degree: unifiedgosdk.Pointer("emphasize tricky"),
+                    EndAt: types.MustNewTimeFromString("1978-04-14T07:58:36.326Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("curtus"),
+                    Institution: unifiedgosdk.Pointer("Abbott - Batz"),
                     Level: unifiedgosdk.Pointer("phd"),
-                    StartAt: types.MustNewTimeFromString("2001-03-26T08:12:11.510Z"),
+                    StartAt: types.MustNewTimeFromString("1994-06-09T13:31:39.059Z"),
+                },
+                shared.AtsCandidateEducation{
+                    Degree: unifiedgosdk.Pointer("blah cappelletti"),
+                    EndAt: types.MustNewTimeFromString("1989-09-06T03:32:39.901Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("crustulum"),
+                    Institution: unifiedgosdk.Pointer("Herman, Franey and Lebsack"),
+                    Level: unifiedgosdk.Pointer("highschool"),
+                    StartAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
                 },
             },
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Ardith.Beatty@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Opal Lindgren"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Ardith_Beatty@gmail.com",
-                    Name: unifiedgosdk.Pointer("Kristi Nader"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                    Email: "ardith.beatty@outlook.com",
+                    Name: unifiedgosdk.Pointer("Ardith Beatty"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
                 },
             },
             Experiences: []shared.AtsCandidateExperience{
                 shared.AtsCandidateExperience{
-                    CompanyName: unifiedgosdk.Pointer("Donnelly, Buckridge and Steuber"),
-                    EndAt: types.MustNewTimeFromString("1978-06-20T02:53:48.383Z"),
-                    StartAt: types.MustNewTimeFromString("1980-02-06T17:16:53.798Z"),
-                    Title: unifiedgosdk.Pointer("Principal Brand Strategist"),
+                    CompanyName: unifiedgosdk.Pointer("Kutch, Lind and Marks"),
+                    EndAt: types.MustNewTimeFromString("1974-03-01T17:02:58.824Z"),
+                    StartAt: types.MustNewTimeFromString("1999-09-21T22:12:51.663Z"),
+                    Title: unifiedgosdk.Pointer("Lead Security Technician"),
+                },
+                shared.AtsCandidateExperience{
+                    CompanyName: unifiedgosdk.Pointer("Trantow, Sipes and Witting"),
+                    EndAt: types.MustNewTimeFromString("2004-10-14T14:01:00.717Z"),
+                    StartAt: types.MustNewTimeFromString("1996-12-15T04:12:04.582Z"),
+                    Title: unifiedgosdk.Pointer("Regional Applications Planner"),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("e8ac0677-804c-4a28-bfca-30b0b1c9345d"),
-            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/40/3693?lock=5634712403880328"),
+            ID: unifiedgosdk.Pointer("488c8bcd-e083-436e-a093-8629e30883a9"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
             LinkUrls: []string{
-                "https://sizzling-legislature.com",
-                "https://soupy-interchange.net",
-                "https://troubled-substitution.info",
+                "https://www.linkedin.com/in/ardith-beatty",
             },
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -367,36 +319,37 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("55a5f0ef-f141-44a7-8b1a-739aad6549a0"),
+                    ID: unifiedgosdk.Pointer("057fb74c-2376-4d41-9d46-78f5e6e87b4c"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "cariosus",
+                        "officia",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Ardith Beatty"),
-            Origin: shared.OriginSourced.ToPointer(),
+            Origin: shared.OriginAgency.ToPointer(),
             Skills: []string{
-                "vita",
-                "cohors",
+                "trepide",
+                "voveo",
             },
             Sources: []string{
-                "tactus",
+                "vesper",
+                "utroque",
             },
-            Summary: unifiedgosdk.Pointer("Denego barba rerum similique via templum totam suus voluptatem. Depraedor virgo cui comminor commodi curvo. Chirographum pax spero nostrum damnatio averto pecus cervus aspicio absens."),
+            Summary: unifiedgosdk.Pointer("Laborum trado carcer delibero patruus totam. Vita cohors cariosus trans denego barba rerum similique. Templum totam suus voluptatem cui depraedor virgo cui comminor commodi."),
             Tags: []string{
-                "aliquid",
+                "voro",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "(779) 296-5994",
-                    Type: shared.AtsTelephoneTypeHome.ToPointer(),
+                    Telephone: "(837) 251-3896",
+                    Type: shared.AtsTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Principal Implementation Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T08:00:56.535Z"),
-            WebURL: unifiedgosdk.Pointer("https://expert-lender.name/"),
+            Title: unifiedgosdk.Pointer("Customer Division Producer"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T13:29:32.490Z"),
+            WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",
     })
@@ -456,11 +409,11 @@ func main() {
     res, err := s.Ats.CreateAtsCompany(ctx, operations.CreateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("8af53a80-7925-461e-b633-03076f784bd0"),
+            ID: unifiedgosdk.Pointer("5a122c44-3371-43a2-89e9-4e4f706b1731"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
-            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-30T17:35:39.740Z"),
-            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+            Phone: unifiedgosdk.Pointer("1-882-360-2010"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-30T23:32:20.779Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
     })
@@ -521,10 +474,11 @@ func main() {
         AtsDocument: shared.AtsDocument{
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
-            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
-            ID: unifiedgosdk.Pointer("1ca533e4-b2aa-4ca3-93d8-41f30acc8c9c"),
-            Type: shared.AtsDocumentTypeResume.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-06T15:10:48.049Z"),
+            Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
+            ID: unifiedgosdk.Pointer("3c50cf53-b42b-475c-ae0e-52d04391db3f"),
+            Metadata: []shared.AtsMetadata{},
+            Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-06T22:55:15.273Z"),
         },
         ConnectionID: "<id>",
     })
@@ -584,14 +538,14 @@ func main() {
     res, err := s.Ats.CreateAtsInterview(ctx, operations.CreateAtsInterviewRequest{
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-17T18:16:37.110Z"),
-            ExternalEventXref: unifiedgosdk.Pointer("c7ddda1a-8e03-403f-9ed8-ee371b381df8"),
-            ID: unifiedgosdk.Pointer("6a91cdb9-1a2e-445e-9bb5-51ebd4d5f34a"),
+            EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
+            ID: unifiedgosdk.Pointer("ad262e11-3df3-4131-b97d-2280b4fab69d"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
-            StartAt: types.MustNewTimeFromString("2025-06-10T11:02:18.844Z"),
+            Metadata: []shared.AtsMetadata{},
+            StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-02T18:44:43.546Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T07:39:14.679Z"),
         },
         ConnectionID: "<id>",
     })
@@ -679,14 +633,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-16T12:51:44.518Z"),
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
-            HiringManagers: []shared.AtsReference{
-                shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
-                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
-                },
-            },
-            ID: unifiedgosdk.Pointer("d6a06475-5431-43b1-941f-3386fab7ceed"),
-            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
+            HiringManagers: []shared.AtsReference{},
+            ID: unifiedgosdk.Pointer("cf21975e-40fb-4c72-a229-d6d28666c257"),
+            Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -696,11 +645,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("ec653bf5-94e5-4c74-8567-6eb293d7d60f"),
+                    ID: unifiedgosdk.Pointer("0322c5b3-2298-4069-a0ce-f6795b9ef710"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "vomica",
+                        "desolo",
                     )),
                 },
             },
@@ -711,28 +660,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-05T20:30:22.170Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-06T23:56:02.285Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
-                        City: unifiedgosdk.Pointer("Logancester"),
+                        Address1: unifiedgosdk.Pointer("75008 Medhurst Road"),
+                        City: unifiedgosdk.Pointer("Madelynnshire"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
-                        Region: unifiedgosdk.Pointer("Vermont"),
-                        RegionCode: unifiedgosdk.Pointer("MO"),
+                        PostalCode: unifiedgosdk.Pointer("98754"),
+                        Region: unifiedgosdk.Pointer("Wisconsin"),
+                        RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-30T21:02:44.330Z"),
-                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
-                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-01T01:51:50.281Z"),
+                    Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
+                    ID: unifiedgosdk.Pointer("b3013093-a359-459f-aa9a-7a6cdb996d39"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
-                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
-                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-08-26T03:14:39.264Z"),
+                    Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
+                    Name: unifiedgosdk.Pointer("International Identity Manager"),
+                    PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-27T08:43:34.139Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -741,52 +690,52 @@ func main() {
             },
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
-                    ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
-                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
+                    ID: unifiedgosdk.Pointer("d2077000-94f4-4690-8197-6c1cd031ff39"),
+                    MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "censura",
-                        "tum",
+                        "tactus",
+                        "vehemens",
                     },
-                    Prompt: unifiedgosdk.Pointer("Spectaculum mollitia arcus compello."),
-                    Question: "Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.",
+                    Prompt: unifiedgosdk.Pointer("Totam maxime tres tergiversatio."),
+                    Question: "Doloribus mollitia.",
                     Required: unifiedgosdk.Pointer(true),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
-                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    ID: unifiedgosdk.Pointer("1e856297-5dbb-4e8c-812c-b4418806184d"),
+                    MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "aetas",
+                        "constans",
                     },
-                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
-                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
+                    Prompt: unifiedgosdk.Pointer("Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono."),
+                    Question: "Nam.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
-                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
+                    ID: unifiedgosdk.Pointer("1b528858-6176-437c-a3b4-0655b2ef74ed"),
+                    MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "utroque",
+                        "repellendus",
                     },
-                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
-                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
+                    Prompt: unifiedgosdk.Pointer("Tum tamisium autus."),
+                    Question: "Confero trepide.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "coaegresco",
-                "appello",
+                "suadeo",
+                "utrimque",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Iste sto communis."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-25T13:21:01.749Z"),
+            Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-26T14:14:36.937Z"),
         },
         ConnectionID: "<id>",
     })
@@ -847,7 +796,8 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("05b8443c-b966-4de5-8261-963dd99e4efa"),
+            ID: unifiedgosdk.Pointer("ce89861c-6de8-420e-8413-9d4277850653"),
+            Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -860,7 +810,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-04T22:28:59.845Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T06:59:21.743Z"),
         },
         ConnectionID: "<id>",
     })
@@ -1885,8 +1835,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -1900,43 +1850,9 @@ func main() {
 
     res, err := s.Ats.PatchAtsActivity(ctx, operations.PatchAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("f6df80cf-ca9d-4b94-b8d3-37c6ebaad839"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("3ef89bf1-1610-4a55-a5e3-a18a7208cacb"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -1946,39 +1862,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("fffb345b-ba51-44ff-a8bf-88efcbda7eb1"),
+                    ID: unifiedgosdk.Pointer("49d55d35-1906-4619-a55a-3b1d0851c333"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("17490d44-1e2c-4150-916a-d42daf068273"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.447Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2039,10 +1934,10 @@ func main() {
     res, err := s.Ats.PatchAtsApplication(ctx, operations.PatchAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-28T06:58:55.353Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-29T02:59:17.127Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-10T19:32:01.994Z"),
-            ID: unifiedgosdk.Pointer("76506938-e578-487a-a7cf-f339eecc7b46"),
+            HiredAt: types.MustNewTimeFromString("2026-05-11T21:50:55.670Z"),
+            ID: unifiedgosdk.Pointer("1eb6663a-75d5-49a1-aef1-aaafb98abb7f"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -2051,23 +1946,23 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    ID: unifiedgosdk.Pointer("42c51c55-8eb3-4147-846d-75a676cd7ff1"),
                     Namespace: unifiedgosdk.Pointer("application"),
-                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                        "Caput.",
                     )),
                 },
             },
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-09T06:32:42.042Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-10T13:06:56.720Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-16T02:26:25.200Z"),
+            Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-17T09:12:10.670Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2128,55 +2023,62 @@ func main() {
     res, err := s.Ats.PatchAtsCandidate(ctx, operations.PatchAtsCandidateRequest{
         AtsCandidate: shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.Pointer("802 Roberts Squares"),
-                Address2: unifiedgosdk.Pointer("Suite 550"),
-                City: unifiedgosdk.Pointer("Lake Raeganside"),
+                Address1: unifiedgosdk.Pointer("6790 S 1st Street"),
+                City: unifiedgosdk.Pointer("Ferrystad"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("44530-0054"),
-                Region: unifiedgosdk.Pointer("Tennessee"),
-                RegionCode: unifiedgosdk.Pointer("NV"),
+                PostalCode: unifiedgosdk.Pointer("91605"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("HI"),
             },
-            CompanyName: unifiedgosdk.Pointer("Ferry, Legros and Feest"),
+            CompanyName: unifiedgosdk.Pointer("Lehner and Sons"),
             CreatedAt: types.MustNewTimeFromString("2023-10-16T05:42:56.049Z"),
+            DateOfBirth: types.MustNewTimeFromString("1994-07-05T19:48:57.631Z"),
             Education: []shared.AtsCandidateEducation{
                 shared.AtsCandidateEducation{
-                    Degree: unifiedgosdk.Pointer("mouser throughout"),
-                    EndAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
-                    FieldOfStudy: unifiedgosdk.Pointer("solutio"),
-                    Institution: unifiedgosdk.Pointer("Heller - Lubowitz"),
+                    Degree: unifiedgosdk.Pointer("emphasize tricky"),
+                    EndAt: types.MustNewTimeFromString("1978-04-14T07:58:36.326Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("curtus"),
+                    Institution: unifiedgosdk.Pointer("Abbott - Batz"),
                     Level: unifiedgosdk.Pointer("phd"),
-                    StartAt: types.MustNewTimeFromString("2001-03-26T08:12:11.510Z"),
+                    StartAt: types.MustNewTimeFromString("1994-06-09T13:31:39.059Z"),
+                },
+                shared.AtsCandidateEducation{
+                    Degree: unifiedgosdk.Pointer("blah cappelletti"),
+                    EndAt: types.MustNewTimeFromString("1989-09-06T03:32:39.901Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("crustulum"),
+                    Institution: unifiedgosdk.Pointer("Herman, Franey and Lebsack"),
+                    Level: unifiedgosdk.Pointer("highschool"),
+                    StartAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
                 },
             },
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Ardith.Beatty@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Opal Lindgren"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Ardith_Beatty@gmail.com",
-                    Name: unifiedgosdk.Pointer("Kristi Nader"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                    Email: "ardith.beatty@outlook.com",
+                    Name: unifiedgosdk.Pointer("Ardith Beatty"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
                 },
             },
             Experiences: []shared.AtsCandidateExperience{
                 shared.AtsCandidateExperience{
-                    CompanyName: unifiedgosdk.Pointer("Donnelly, Buckridge and Steuber"),
-                    EndAt: types.MustNewTimeFromString("1978-06-20T02:53:48.383Z"),
-                    StartAt: types.MustNewTimeFromString("1980-02-06T17:16:53.798Z"),
-                    Title: unifiedgosdk.Pointer("Principal Brand Strategist"),
+                    CompanyName: unifiedgosdk.Pointer("Kutch, Lind and Marks"),
+                    EndAt: types.MustNewTimeFromString("1974-03-01T17:02:58.824Z"),
+                    StartAt: types.MustNewTimeFromString("1999-09-21T22:12:51.663Z"),
+                    Title: unifiedgosdk.Pointer("Lead Security Technician"),
+                },
+                shared.AtsCandidateExperience{
+                    CompanyName: unifiedgosdk.Pointer("Trantow, Sipes and Witting"),
+                    EndAt: types.MustNewTimeFromString("2004-10-14T14:01:00.717Z"),
+                    StartAt: types.MustNewTimeFromString("1996-12-15T04:12:04.582Z"),
+                    Title: unifiedgosdk.Pointer("Regional Applications Planner"),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("cecc94f2-8126-4e7c-bdb3-85e65c67f17b"),
-            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/40/3693?lock=5634712403880328"),
+            ID: unifiedgosdk.Pointer("b50f41cb-8b7b-499a-b93e-94c3fc4c846f"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
             LinkUrls: []string{
-                "https://sizzling-legislature.com",
-                "https://soupy-interchange.net",
-                "https://troubled-substitution.info",
+                "https://www.linkedin.com/in/ardith-beatty",
             },
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -2186,36 +2088,37 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3fcc8b62-f607-40ee-8fac-22278e2259c4"),
+                    ID: unifiedgosdk.Pointer("8964f1d8-17db-4b92-ad88-dfddee557c88"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "cariosus",
+                        "officia",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Ardith Beatty"),
-            Origin: shared.OriginSourced.ToPointer(),
+            Origin: shared.OriginAgency.ToPointer(),
             Skills: []string{
-                "vita",
-                "cohors",
+                "trepide",
+                "voveo",
             },
             Sources: []string{
-                "tactus",
+                "vesper",
+                "utroque",
             },
-            Summary: unifiedgosdk.Pointer("Denego barba rerum similique via templum totam suus voluptatem. Depraedor virgo cui comminor commodi curvo. Chirographum pax spero nostrum damnatio averto pecus cervus aspicio absens."),
+            Summary: unifiedgosdk.Pointer("Laborum trado carcer delibero patruus totam. Vita cohors cariosus trans denego barba rerum similique. Templum totam suus voluptatem cui depraedor virgo cui comminor commodi."),
             Tags: []string{
-                "aliquid",
+                "voro",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "(779) 296-5994",
-                    Type: shared.AtsTelephoneTypeHome.ToPointer(),
+                    Telephone: "(837) 251-3896",
+                    Type: shared.AtsTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Principal Implementation Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T08:00:56.541Z"),
-            WebURL: unifiedgosdk.Pointer("https://expert-lender.name/"),
+            Title: unifiedgosdk.Pointer("Customer Division Producer"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T13:29:32.498Z"),
+            WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2276,11 +2179,11 @@ func main() {
     res, err := s.Ats.PatchAtsCompany(ctx, operations.PatchAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("50754994-0c61-41b3-8268-fb80a493180e"),
+            ID: unifiedgosdk.Pointer("1b1f5164-8c4c-4cea-8c30-6d30f18c7ca5"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
-            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-30T17:35:39.744Z"),
-            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+            Phone: unifiedgosdk.Pointer("1-882-360-2010"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-30T23:32:20.783Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2342,10 +2245,11 @@ func main() {
         AtsDocument: shared.AtsDocument{
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
-            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
-            ID: unifiedgosdk.Pointer("aac93522-5f75-4235-bcfa-e6d24a36ba40"),
-            Type: shared.AtsDocumentTypeResume.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-06T15:10:48.051Z"),
+            Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
+            ID: unifiedgosdk.Pointer("17f896e5-91ed-478a-a14d-3288dc1cc86b"),
+            Metadata: []shared.AtsMetadata{},
+            Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-06T22:55:15.277Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2406,14 +2310,14 @@ func main() {
     res, err := s.Ats.PatchAtsInterview(ctx, operations.PatchAtsInterviewRequest{
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-17T18:16:37.115Z"),
-            ExternalEventXref: unifiedgosdk.Pointer("006acc24-dc94-4ea9-b5e5-cda2f5135604"),
-            ID: unifiedgosdk.Pointer("f9cad4f1-5f01-4e52-80e2-e4d76c2ce890"),
+            EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
+            ID: unifiedgosdk.Pointer("c69ae2a9-5107-44d4-911d-3b2aa4312f8c"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
-            StartAt: types.MustNewTimeFromString("2025-06-10T11:02:18.849Z"),
+            Metadata: []shared.AtsMetadata{},
+            StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-02T18:44:43.551Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T07:39:14.686Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2502,14 +2406,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-16T12:51:44.518Z"),
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
-            HiringManagers: []shared.AtsReference{
-                shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
-                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
-                },
-            },
-            ID: unifiedgosdk.Pointer("77d2aec6-b22a-4f6c-8462-ce26e603c40f"),
-            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
+            HiringManagers: []shared.AtsReference{},
+            ID: unifiedgosdk.Pointer("50afac23-cf7b-4017-b775-0e0e5884f72e"),
+            Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -2519,11 +2418,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("e3b17c7b-b767-4973-a7f2-413578944d27"),
+                    ID: unifiedgosdk.Pointer("c7aa8c97-3da7-472b-87bd-6575c55739f3"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "vomica",
+                        "desolo",
                     )),
                 },
             },
@@ -2534,28 +2433,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-05T20:30:22.208Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-06T23:56:02.346Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
-                        City: unifiedgosdk.Pointer("Logancester"),
+                        Address1: unifiedgosdk.Pointer("75008 Medhurst Road"),
+                        City: unifiedgosdk.Pointer("Madelynnshire"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
-                        Region: unifiedgosdk.Pointer("Vermont"),
-                        RegionCode: unifiedgosdk.Pointer("MO"),
+                        PostalCode: unifiedgosdk.Pointer("98754"),
+                        Region: unifiedgosdk.Pointer("Wisconsin"),
+                        RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-30T21:02:44.371Z"),
-                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
-                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-01T01:51:50.346Z"),
+                    Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
+                    ID: unifiedgosdk.Pointer("8f92f857-85f4-4af4-984a-3502ccf833a7"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
-                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
-                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-08-26T03:14:39.305Z"),
+                    Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
+                    Name: unifiedgosdk.Pointer("International Identity Manager"),
+                    PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-27T08:43:34.205Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -2564,52 +2463,52 @@ func main() {
             },
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
-                    ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
-                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
+                    ID: unifiedgosdk.Pointer("34193e36-c479-413a-af54-b8d83f2c5475"),
+                    MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "censura",
-                        "tum",
+                        "tactus",
+                        "vehemens",
                     },
-                    Prompt: unifiedgosdk.Pointer("Spectaculum mollitia arcus compello."),
-                    Question: "Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.",
+                    Prompt: unifiedgosdk.Pointer("Totam maxime tres tergiversatio."),
+                    Question: "Doloribus mollitia.",
                     Required: unifiedgosdk.Pointer(true),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
-                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    ID: unifiedgosdk.Pointer("a1839dd1-6b0e-4c3f-bb1f-f22d3a092839"),
+                    MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "aetas",
+                        "constans",
                     },
-                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
-                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
+                    Prompt: unifiedgosdk.Pointer("Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono."),
+                    Question: "Nam.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
-                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
+                    ID: unifiedgosdk.Pointer("969ea144-bade-4b43-97ff-f7f441d9e912"),
+                    MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "utroque",
+                        "repellendus",
                     },
-                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
-                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
+                    Prompt: unifiedgosdk.Pointer("Tum tamisium autus."),
+                    Question: "Confero trepide.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "coaegresco",
-                "appello",
+                "suadeo",
+                "utrimque",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Iste sto communis."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-25T13:21:01.783Z"),
+            Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-26T14:14:36.993Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -2671,7 +2570,8 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("7d0fd2bb-234f-4b1f-ad9e-1f8c26a39e9a"),
+            ID: unifiedgosdk.Pointer("c8397f0b-d982-4003-a272-984bc00b5105"),
+            Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -2684,7 +2584,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-04T22:28:59.848Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T06:59:21.748Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3169,8 +3069,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -3184,43 +3084,9 @@ func main() {
 
     res, err := s.Ats.UpdateAtsActivity(ctx, operations.UpdateAtsActivityRequest{
         AtsActivity: shared.AtsActivity{
-            Bcc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Rochelle Franey-Bechtelar"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-            },
-            Cc: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sasha24@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Dr. Elbert Kuvalis"),
-                    Type: shared.AtsEmailTypeHome.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Rosetta_Donnelly@gmail.com",
-                    Name: unifiedgosdk.Pointer("Ramon Daniel"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Kathryne_Jast@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Christian Jacobson"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Eldred95@yahoo.com",
-                    Name: unifiedgosdk.Pointer("Edna Bogan"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
-                },
-            },
             CreatedAt: types.MustNewTimeFromString("2022-08-07T03:16:43.865Z"),
-            Description: unifiedgosdk.Pointer("Amplus."),
-            From: &shared.PropertyAtsActivityFrom{
-                Email: "Norwood.Wiza47@yahoo.com",
-                Name: unifiedgosdk.Pointer("Toby Grant"),
-                Type: shared.PropertyAtsActivityFromTypeOther.ToPointer(),
-            },
-            ID: unifiedgosdk.Pointer("f6df80cf-ca9d-4b94-b8d3-37c6ebaad839"),
+            Description: unifiedgosdk.Pointer("Sapiente."),
+            ID: unifiedgosdk.Pointer("3ef89bf1-1610-4a55-a5e3-a18a7208cacb"),
             IsPrivate: unifiedgosdk.Pointer(false),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -3230,39 +3096,18 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("fffb345b-ba51-44ff-a8bf-88efcbda7eb1"),
+                    ID: unifiedgosdk.Pointer("49d55d35-1906-4619-a55a-3b1d0851c333"),
                     Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("acer"),
+                    Slug: unifiedgosdk.Pointer("cimentarius"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                    )),
-                },
-                shared.AtsMetadata{
-                    ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
-                        map[string]any{
-
-                        },
-                    )),
-                    Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("17490d44-1e2c-4150-916a-d42daf068273"),
-                    Namespace: unifiedgosdk.Pointer("activity"),
-                    Slug: unifiedgosdk.Pointer("tremo"),
-                    Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Amita delectus dicta temptatio utroque ex.",
+                        "Reprehenderit verto.",
                     )),
                 },
             },
             SubType: unifiedgosdk.Pointer("TASK"),
-            Title: unifiedgosdk.Pointer("Senior Interactions Manager"),
-            To: []shared.AtsEmail{
-                shared.AtsEmail{
-                    Email: "Sister91@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Eddie Nienow PhD"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-            },
+            Title: unifiedgosdk.Pointer("Venio blandior aureus."),
             Type: shared.AtsActivityTypeTask.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-04-02T06:44:58.447Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-04-03T09:34:31.307Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3323,10 +3168,10 @@ func main() {
     res, err := s.Ats.UpdateAtsApplication(ctx, operations.UpdateAtsApplicationRequest{
         AtsApplication: shared.AtsApplication{
             Answers: []shared.AtsApplicationAnswer{},
-            AppliedAt: types.MustNewTimeFromString("2025-09-28T06:58:55.353Z"),
+            AppliedAt: types.MustNewTimeFromString("2025-09-29T02:59:17.127Z"),
             CreatedAt: types.MustNewTimeFromString("2023-10-17T07:19:48.787Z"),
-            HiredAt: types.MustNewTimeFromString("2026-05-10T19:32:01.994Z"),
-            ID: unifiedgosdk.Pointer("76506938-e578-487a-a7cf-f339eecc7b46"),
+            HiredAt: types.MustNewTimeFromString("2026-05-11T21:50:55.670Z"),
+            ID: unifiedgosdk.Pointer("1eb6663a-75d5-49a1-aef1-aaafb98abb7f"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateAtsMetadataExtraDataMapOfAny(
@@ -3335,23 +3180,23 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("a1302a79-0341-40e6-b91a-daeb95584617"),
+                    ID: unifiedgosdk.Pointer("42c51c55-8eb3-4147-846d-75a676cd7ff1"),
                     Namespace: unifiedgosdk.Pointer("application"),
-                    Slug: unifiedgosdk.Pointer("despecto"),
+                    Slug: unifiedgosdk.Pointer("stella"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "Argentum decretum cultellus aveho distinctio verecundia stella depono.",
+                        "Caput.",
                     )),
                 },
             },
             Offers: []shared.AtsOffer{},
             OriginalStatus: unifiedgosdk.Pointer("vomica"),
             OriginalSubstatus: unifiedgosdk.Pointer("allatus"),
-            RejectedAt: types.MustNewTimeFromString("2026-10-09T06:32:42.042Z"),
+            RejectedAt: types.MustNewTimeFromString("2026-10-10T13:06:56.720Z"),
             RejectedReason: unifiedgosdk.Pointer("Cometes amplitudo videlicet talio."),
             Source: unifiedgosdk.Pointer("credo"),
             Status: shared.AtsApplicationStatusReviewing.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia."),
-            UpdatedAt: types.MustNewTimeFromString("2026-10-16T02:26:25.200Z"),
+            Summary: unifiedgosdk.Pointer("Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam."),
+            UpdatedAt: types.MustNewTimeFromString("2026-10-17T09:12:10.670Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3412,55 +3257,62 @@ func main() {
     res, err := s.Ats.UpdateAtsCandidate(ctx, operations.UpdateAtsCandidateRequest{
         AtsCandidate: shared.AtsCandidate{
             Address: &shared.PropertyAtsCandidateAddress{
-                Address1: unifiedgosdk.Pointer("802 Roberts Squares"),
-                Address2: unifiedgosdk.Pointer("Suite 550"),
-                City: unifiedgosdk.Pointer("Lake Raeganside"),
+                Address1: unifiedgosdk.Pointer("6790 S 1st Street"),
+                City: unifiedgosdk.Pointer("Ferrystad"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("44530-0054"),
-                Region: unifiedgosdk.Pointer("Tennessee"),
-                RegionCode: unifiedgosdk.Pointer("NV"),
+                PostalCode: unifiedgosdk.Pointer("91605"),
+                Region: unifiedgosdk.Pointer("Idaho"),
+                RegionCode: unifiedgosdk.Pointer("HI"),
             },
-            CompanyName: unifiedgosdk.Pointer("Ferry, Legros and Feest"),
+            CompanyName: unifiedgosdk.Pointer("Lehner and Sons"),
             CreatedAt: types.MustNewTimeFromString("2023-10-16T05:42:56.049Z"),
+            DateOfBirth: types.MustNewTimeFromString("1994-07-05T19:48:57.631Z"),
             Education: []shared.AtsCandidateEducation{
                 shared.AtsCandidateEducation{
-                    Degree: unifiedgosdk.Pointer("mouser throughout"),
-                    EndAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
-                    FieldOfStudy: unifiedgosdk.Pointer("solutio"),
-                    Institution: unifiedgosdk.Pointer("Heller - Lubowitz"),
+                    Degree: unifiedgosdk.Pointer("emphasize tricky"),
+                    EndAt: types.MustNewTimeFromString("1978-04-14T07:58:36.326Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("curtus"),
+                    Institution: unifiedgosdk.Pointer("Abbott - Batz"),
                     Level: unifiedgosdk.Pointer("phd"),
-                    StartAt: types.MustNewTimeFromString("2001-03-26T08:12:11.510Z"),
+                    StartAt: types.MustNewTimeFromString("1994-06-09T13:31:39.059Z"),
+                },
+                shared.AtsCandidateEducation{
+                    Degree: unifiedgosdk.Pointer("blah cappelletti"),
+                    EndAt: types.MustNewTimeFromString("1989-09-06T03:32:39.901Z"),
+                    FieldOfStudy: unifiedgosdk.Pointer("crustulum"),
+                    Institution: unifiedgosdk.Pointer("Herman, Franey and Lebsack"),
+                    Level: unifiedgosdk.Pointer("highschool"),
+                    StartAt: types.MustNewTimeFromString("1992-11-28T20:23:20.311Z"),
                 },
             },
             Emails: []shared.AtsEmail{
                 shared.AtsEmail{
-                    Email: "Ardith.Beatty@hotmail.com",
-                    Name: unifiedgosdk.Pointer("Opal Lindgren"),
-                    Type: shared.AtsEmailTypeWork.ToPointer(),
-                },
-                shared.AtsEmail{
-                    Email: "Ardith_Beatty@gmail.com",
-                    Name: unifiedgosdk.Pointer("Kristi Nader"),
-                    Type: shared.AtsEmailTypeOther.ToPointer(),
+                    Email: "ardith.beatty@outlook.com",
+                    Name: unifiedgosdk.Pointer("Ardith Beatty"),
+                    Type: shared.AtsEmailTypeHome.ToPointer(),
                 },
             },
             Experiences: []shared.AtsCandidateExperience{
                 shared.AtsCandidateExperience{
-                    CompanyName: unifiedgosdk.Pointer("Donnelly, Buckridge and Steuber"),
-                    EndAt: types.MustNewTimeFromString("1978-06-20T02:53:48.383Z"),
-                    StartAt: types.MustNewTimeFromString("1980-02-06T17:16:53.798Z"),
-                    Title: unifiedgosdk.Pointer("Principal Brand Strategist"),
+                    CompanyName: unifiedgosdk.Pointer("Kutch, Lind and Marks"),
+                    EndAt: types.MustNewTimeFromString("1974-03-01T17:02:58.824Z"),
+                    StartAt: types.MustNewTimeFromString("1999-09-21T22:12:51.663Z"),
+                    Title: unifiedgosdk.Pointer("Lead Security Technician"),
+                },
+                shared.AtsCandidateExperience{
+                    CompanyName: unifiedgosdk.Pointer("Trantow, Sipes and Witting"),
+                    EndAt: types.MustNewTimeFromString("2004-10-14T14:01:00.717Z"),
+                    StartAt: types.MustNewTimeFromString("1996-12-15T04:12:04.582Z"),
+                    Title: unifiedgosdk.Pointer("Regional Applications Planner"),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Ardith"),
-            ID: unifiedgosdk.Pointer("cecc94f2-8126-4e7c-bdb3-85e65c67f17b"),
-            ImageURL: unifiedgosdk.Pointer("https://loremflickr.com/40/3693?lock=5634712403880328"),
+            ID: unifiedgosdk.Pointer("b50f41cb-8b7b-499a-b93e-94c3fc4c846f"),
+            ImageURL: unifiedgosdk.Pointer("https://avatars.githubusercontent.com/u/27464445"),
             JobIds: []string{},
             LastName: unifiedgosdk.Pointer("Beatty"),
             LinkUrls: []string{
-                "https://sizzling-legislature.com",
-                "https://soupy-interchange.net",
-                "https://troubled-substitution.info",
+                "https://www.linkedin.com/in/ardith-beatty",
             },
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -3470,36 +3322,37 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("3fcc8b62-f607-40ee-8fac-22278e2259c4"),
+                    ID: unifiedgosdk.Pointer("8964f1d8-17db-4b92-ad88-dfddee557c88"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_field"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "cariosus",
+                        "officia",
                     )),
                 },
             },
             Name: unifiedgosdk.Pointer("Ardith Beatty"),
-            Origin: shared.OriginSourced.ToPointer(),
+            Origin: shared.OriginAgency.ToPointer(),
             Skills: []string{
-                "vita",
-                "cohors",
+                "trepide",
+                "voveo",
             },
             Sources: []string{
-                "tactus",
+                "vesper",
+                "utroque",
             },
-            Summary: unifiedgosdk.Pointer("Denego barba rerum similique via templum totam suus voluptatem. Depraedor virgo cui comminor commodi curvo. Chirographum pax spero nostrum damnatio averto pecus cervus aspicio absens."),
+            Summary: unifiedgosdk.Pointer("Laborum trado carcer delibero patruus totam. Vita cohors cariosus trans denego barba rerum similique. Templum totam suus voluptatem cui depraedor virgo cui comminor commodi."),
             Tags: []string{
-                "aliquid",
+                "voro",
             },
             Telephones: []shared.AtsTelephone{
                 shared.AtsTelephone{
-                    Telephone: "(779) 296-5994",
-                    Type: shared.AtsTelephoneTypeHome.ToPointer(),
+                    Telephone: "(837) 251-3896",
+                    Type: shared.AtsTelephoneTypeMobile.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Principal Implementation Analyst"),
-            UpdatedAt: types.MustNewTimeFromString("2024-04-28T08:00:56.541Z"),
-            WebURL: unifiedgosdk.Pointer("https://expert-lender.name/"),
+            Title: unifiedgosdk.Pointer("Customer Division Producer"),
+            UpdatedAt: types.MustNewTimeFromString("2024-04-28T13:29:32.498Z"),
+            WebURL: unifiedgosdk.Pointer("https://fragrant-husband.net/"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3560,11 +3413,11 @@ func main() {
     res, err := s.Ats.UpdateAtsCompany(ctx, operations.UpdateAtsCompanyRequest{
         AtsCompany: shared.AtsCompany{
             CreatedAt: types.MustNewTimeFromString("2019-04-22T03:50:02.920Z"),
-            ID: unifiedgosdk.Pointer("50754994-0c61-41b3-8268-fb80a493180e"),
+            ID: unifiedgosdk.Pointer("1b1f5164-8c4c-4cea-8c30-6d30f18c7ca5"),
             Name: unifiedgosdk.Pointer("Gulgowski, Dibbert and Wilderman"),
-            Phone: unifiedgosdk.Pointer("1-602-210-4548"),
-            UpdatedAt: types.MustNewTimeFromString("2020-09-30T17:35:39.744Z"),
-            WebsiteURL: unifiedgosdk.Pointer("https://somber-substitution.com/"),
+            Phone: unifiedgosdk.Pointer("1-882-360-2010"),
+            UpdatedAt: types.MustNewTimeFromString("2020-09-30T23:32:20.783Z"),
+            WebsiteURL: unifiedgosdk.Pointer("https://www.gulgowskidibbert.com"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3626,10 +3479,11 @@ func main() {
         AtsDocument: shared.AtsDocument{
             CreatedAt: types.MustNewTimeFromString("2021-08-20T08:00:27.437Z"),
             DocumentURL: unifiedgosdk.Pointer("https://vengeful-lashes.biz"),
-            Filename: unifiedgosdk.Pointer("bah_white_frantically.bz"),
-            ID: unifiedgosdk.Pointer("aac93522-5f75-4235-bcfa-e6d24a36ba40"),
-            Type: shared.AtsDocumentTypeResume.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2022-12-06T15:10:48.051Z"),
+            Filename: unifiedgosdk.Pointer("lonzo_schowalter_resume.pdf"),
+            ID: unifiedgosdk.Pointer("17f896e5-91ed-478a-a14d-3288dc1cc86b"),
+            Metadata: []shared.AtsMetadata{},
+            Type: shared.AtsDocumentTypeCoverLetter.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2022-12-06T22:55:15.277Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3690,14 +3544,14 @@ func main() {
     res, err := s.Ats.UpdateAtsInterview(ctx, operations.UpdateAtsInterviewRequest{
         AtsInterview: shared.AtsInterview{
             CreatedAt: types.MustNewTimeFromString("2021-11-28T03:14:47.774Z"),
-            EndAt: types.MustNewTimeFromString("2025-10-17T18:16:37.115Z"),
-            ExternalEventXref: unifiedgosdk.Pointer("006acc24-dc94-4ea9-b5e5-cda2f5135604"),
-            ID: unifiedgosdk.Pointer("f9cad4f1-5f01-4e52-80e2-e4d76c2ce890"),
+            EndAt: types.MustNewTimeFromString("2021-12-08T06:33:19.583Z"),
+            ID: unifiedgosdk.Pointer("c69ae2a9-5107-44d4-911d-3b2aa4312f8c"),
             Location: unifiedgosdk.Pointer("26596 Halle Trafficway"),
             MeetingURL: unifiedgosdk.Pointer("https://immaculate-foodstuffs.biz"),
-            StartAt: types.MustNewTimeFromString("2025-06-10T11:02:18.849Z"),
+            Metadata: []shared.AtsMetadata{},
+            StartAt: types.MustNewTimeFromString("2021-12-08T06:03:19.583Z"),
             Status: shared.AtsInterviewStatusScheduled.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2026-03-02T18:44:43.551Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-23T07:39:14.686Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3786,14 +3640,9 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2023-06-16T12:51:44.518Z"),
             Description: unifiedgosdk.Pointer("Global"),
             EmploymentType: shared.EmploymentTypeFreelance.ToPointer(),
-            HiringManagers: []shared.AtsReference{
-                shared.AtsReference{
-                    ID: unifiedgosdk.Pointer("eb3bbf4e-4022-4122-9d44-39fd5b501e80"),
-                    Name: unifiedgosdk.Pointer("Troy Greenholt"),
-                },
-            },
-            ID: unifiedgosdk.Pointer("77d2aec6-b22a-4f6c-8462-ce26e603c40f"),
-            Industry: unifiedgosdk.Pointer("Modern Granite Gloves"),
+            HiringManagers: []shared.AtsReference{},
+            ID: unifiedgosdk.Pointer("50afac23-cf7b-4017-b775-0e0e5884f72e"),
+            Industry: unifiedgosdk.Pointer("Handcrafted Bamboo Soap"),
             LanguageLocale: unifiedgosdk.Pointer("en"),
             Metadata: []shared.AtsMetadata{
                 shared.AtsMetadata{
@@ -3803,11 +3652,11 @@ func main() {
                         },
                     )),
                     Format: shared.AtsMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("e3b17c7b-b767-4973-a7f2-413578944d27"),
+                    ID: unifiedgosdk.Pointer("c7aa8c97-3da7-472b-87bd-6575c55739f3"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateAtsMetadataValueStr(
-                        "vomica",
+                        "desolo",
                     )),
                 },
             },
@@ -3818,28 +3667,28 @@ func main() {
             Openings: []shared.AtsJobOpening{
                 shared.AtsJobOpening{
                     CloseReason: unifiedgosdk.Pointer("Admoveo trado textilis."),
-                    OpenedAt: types.MustNewTimeFromString("2026-06-05T20:30:22.208Z"),
+                    OpenedAt: types.MustNewTimeFromString("2026-06-06T23:56:02.346Z"),
                     Status: shared.AtsJobOpeningStatusOpen.ToPointer(),
                 },
             },
             Postings: []shared.AtsJobPosting{
                 shared.AtsJobPosting{
                     Address: &shared.PropertyAtsJobPostingAddress{
-                        Address1: unifiedgosdk.Pointer("51372 Kshlerin Creek"),
-                        City: unifiedgosdk.Pointer("Logancester"),
+                        Address1: unifiedgosdk.Pointer("75008 Medhurst Road"),
+                        City: unifiedgosdk.Pointer("Madelynnshire"),
                         CountryCode: unifiedgosdk.Pointer("US"),
-                        PostalCode: unifiedgosdk.Pointer("85013-9865"),
-                        Region: unifiedgosdk.Pointer("Vermont"),
-                        RegionCode: unifiedgosdk.Pointer("MO"),
+                        PostalCode: unifiedgosdk.Pointer("98754"),
+                        Region: unifiedgosdk.Pointer("Wisconsin"),
+                        RegionCode: unifiedgosdk.Pointer("CO"),
                     },
-                    CreatedAt: types.MustNewTimeFromString("2026-07-30T21:02:44.371Z"),
-                    Description: unifiedgosdk.Pointer("Provident turbo cunabula spoliatio agnitio."),
-                    ID: unifiedgosdk.Pointer("372178cd-2056-4388-870e-e7c199761c7c"),
+                    CreatedAt: types.MustNewTimeFromString("2026-08-01T01:51:50.346Z"),
+                    Description: unifiedgosdk.Pointer("Beatus eum volutabrum balbus victus ipsa tubineus claustrum."),
+                    ID: unifiedgosdk.Pointer("8f92f857-85f4-4af4-984a-3502ccf833a7"),
                     IsActive: unifiedgosdk.Pointer(false),
-                    Location: unifiedgosdk.Pointer("2925 Connie Green"),
-                    Name: unifiedgosdk.Pointer("Lead Intranet Developer"),
-                    PostingURL: unifiedgosdk.Pointer("https://smart-summer.name/"),
-                    UpdatedAt: types.MustNewTimeFromString("2026-08-26T03:14:39.305Z"),
+                    Location: unifiedgosdk.Pointer("1725 Hessel Keys"),
+                    Name: unifiedgosdk.Pointer("International Identity Manager"),
+                    PostingURL: unifiedgosdk.Pointer("https://obedient-yak.com"),
+                    UpdatedAt: types.MustNewTimeFromString("2026-08-27T08:43:34.205Z"),
                 },
             },
             PublicJobUrls: []string{
@@ -3848,52 +3697,52 @@ func main() {
             },
             Questions: []shared.AtsJobQuestion{
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Trepide provident taceo rem."),
-                    ID: unifiedgosdk.Pointer("289f27c0-311c-41e5-ad9d-cbe2097332c2"),
-                    MaxLength: unifiedgosdk.Pointer[float64](387.0),
+                    Description: unifiedgosdk.Pointer("Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado."),
+                    ID: unifiedgosdk.Pointer("34193e36-c479-413a-af54-b8d83f2c5475"),
+                    MaxLength: unifiedgosdk.Pointer[float64](117.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "censura",
-                        "tum",
+                        "tactus",
+                        "vehemens",
                     },
-                    Prompt: unifiedgosdk.Pointer("Spectaculum mollitia arcus compello."),
-                    Question: "Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.",
+                    Prompt: unifiedgosdk.Pointer("Totam maxime tres tergiversatio."),
+                    Question: "Doloribus mollitia.",
                     Required: unifiedgosdk.Pointer(true),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    ID: unifiedgosdk.Pointer("3a0b53b3-8f3e-48d4-ab9f-413a900d79b0"),
-                    MaxLength: unifiedgosdk.Pointer[float64](430.0),
+                    ID: unifiedgosdk.Pointer("a1839dd1-6b0e-4c3f-bb1f-f22d3a092839"),
+                    MaxLength: unifiedgosdk.Pointer[float64](453.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "aetas",
+                        "constans",
                     },
-                    Prompt: unifiedgosdk.Pointer("Contra damno desolo suadeo utrimque cresco."),
-                    Question: "Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.",
+                    Prompt: unifiedgosdk.Pointer("Veritatis sodalitas nemo natus attonbitus reprehenderit voro depono."),
+                    Question: "Nam.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
                 shared.AtsJobQuestion{
-                    Description: unifiedgosdk.Pointer("Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium."),
-                    ID: unifiedgosdk.Pointer("060ed8c8-ab8a-417c-8b25-edf38cb19b1c"),
-                    MaxLength: unifiedgosdk.Pointer[float64](381.0),
+                    Description: unifiedgosdk.Pointer("Taceo rem compello spectaculum mollitia arcus compello."),
+                    ID: unifiedgosdk.Pointer("969ea144-bade-4b43-97ff-f7f441d9e912"),
+                    MaxLength: unifiedgosdk.Pointer[float64](66.0),
                     MinLength: unifiedgosdk.Pointer[float64](1.0),
                     Options: []string{
-                        "utroque",
+                        "repellendus",
                     },
-                    Prompt: unifiedgosdk.Pointer("Vir crepusculum ait adeptio ait defendo cotidie porro uterque."),
-                    Question: "Vulticulus depono abstergo possimus quibusdam deinde amoveo.",
+                    Prompt: unifiedgosdk.Pointer("Tum tamisium autus."),
+                    Question: "Confero trepide.",
                     Required: unifiedgosdk.Pointer(false),
                     Type: shared.AtsJobQuestionTypeText,
                 },
             },
             Skills: []string{
-                "coaegresco",
-                "appello",
+                "suadeo",
+                "utrimque",
             },
             Status: shared.AtsJobStatusArchived.ToPointer(),
-            Summary: unifiedgosdk.Pointer("Iste sto communis."),
-            UpdatedAt: types.MustNewTimeFromString("2026-02-25T13:21:01.783Z"),
+            Summary: unifiedgosdk.Pointer("Crepusculum adsuesco vere."),
+            UpdatedAt: types.MustNewTimeFromString("2026-02-26T14:14:36.993Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -3955,7 +3804,8 @@ func main() {
         AtsScorecard: shared.AtsScorecard{
             Comment: unifiedgosdk.Pointer("Maiores enim."),
             CreatedAt: types.MustNewTimeFromString("2022-02-20T17:09:45.498Z"),
-            ID: unifiedgosdk.Pointer("7d0fd2bb-234f-4b1f-ad9e-1f8c26a39e9a"),
+            ID: unifiedgosdk.Pointer("c8397f0b-d982-4003-a272-984bc00b5105"),
+            Metadata: []shared.AtsMetadata{},
             Questions: []shared.AtsScorecardQuestion{
                 shared.AtsScorecardQuestion{
                     Description: unifiedgosdk.Pointer("Sulum textor eveniet facere vita."),
@@ -3968,7 +3818,7 @@ func main() {
                 },
             },
             Recommendation: shared.RecommendationStrongYes.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-06-04T22:28:59.848Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-06-05T06:59:21.748Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -48,4 +48,5 @@ value := operations.PatchCalendarWebinarQueryParamFieldsID
 | `PatchCalendarWebinarQueryParamFieldsHasQa`              | has_qa                                                   |
 | `PatchCalendarWebinarQueryParamFieldsHasPolls`           | has_polls                                                |
 | `PatchCalendarWebinarQueryParamFieldsHasRecording`       | has_recording                                            |
+| `PatchCalendarWebinarQueryParamFieldsMetadata`           | metadata                                                 |
 | `PatchCalendarWebinarQueryParamFieldsRaw`                | raw                                                      |

@@ -38,4 +38,5 @@ value := operations.ListAccountingTransactionsQueryParamFieldsID
 | `ListAccountingTransactionsQueryParamFieldsTransactionAt`   | transaction_at                                              |
 | `ListAccountingTransactionsQueryParamFieldsExchangeRate`    | exchange_rate                                               |
 | `ListAccountingTransactionsQueryParamFieldsStatus`          | status                                                      |
+| `ListAccountingTransactionsQueryParamFieldsMetadata`        | metadata                                                    |
 | `ListAccountingTransactionsQueryParamFieldsRaw`             | raw                                                         |

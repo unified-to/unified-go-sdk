@@ -23,4 +23,5 @@ value := operations.PatchLmsCollectionQueryParamFieldsID
 | `PatchLmsCollectionQueryParamFieldsMedia`       | media                                           |
 | `PatchLmsCollectionQueryParamFieldsIsActive`    | is_active                                       |
 | `PatchLmsCollectionQueryParamFieldsParentID`    | parent_id                                       |
+| `PatchLmsCollectionQueryParamFieldsMetadata`    | metadata                                        |
 | `PatchLmsCollectionQueryParamFieldsRaw`         | raw                                             |

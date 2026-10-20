@@ -22,4 +22,5 @@ value := operations.PatchCalendarCalendarQueryParamFieldsID
 | `PatchCalendarCalendarQueryParamFieldsDescription` | description                                        |
 | `PatchCalendarCalendarQueryParamFieldsTimezone`    | timezone                                           |
 | `PatchCalendarCalendarQueryParamFieldsIsPrimary`   | is_primary                                         |
+| `PatchCalendarCalendarQueryParamFieldsMetadata`    | metadata                                           |
 | `PatchCalendarCalendarQueryParamFieldsRaw`         | raw                                                |

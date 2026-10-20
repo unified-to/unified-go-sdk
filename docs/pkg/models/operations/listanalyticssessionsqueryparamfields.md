@@ -37,4 +37,5 @@ value := operations.ListAnalyticsSessionsQueryParamFieldsID
 | `ListAnalyticsSessionsQueryParamFieldsCity`            | city                                                   |
 | `ListAnalyticsSessionsQueryParamFieldsIsBounce`        | is_bounce                                              |
 | `ListAnalyticsSessionsQueryParamFieldsIsConversion`    | is_conversion                                          |
+| `ListAnalyticsSessionsQueryParamFieldsMetadata`        | metadata                                               |
 | `ListAnalyticsSessionsQueryParamFieldsRaw`             | raw                                                    |

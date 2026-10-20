@@ -55,4 +55,5 @@ value := operations.GetAssessmentOrderQueryParamFieldsID
 | `GetAssessmentOrderQueryParamFieldsResponseDetails`           | response_details                                              |
 | `GetAssessmentOrderQueryParamFieldsResponseSource`            | response_source                                               |
 | `GetAssessmentOrderQueryParamFieldsResponseAttributes`        | response_attributes                                           |
+| `GetAssessmentOrderQueryParamFieldsMetadata`                  | metadata                                                      |
 | `GetAssessmentOrderQueryParamFieldsRaw`                       | raw                                                           |

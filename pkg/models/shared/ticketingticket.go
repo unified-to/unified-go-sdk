@@ -42,10 +42,11 @@ type TicketingTicket struct {
 	// Full description of ticket issue
 	Description *string `json:"description,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	DueAt    *time.Time     `json:"due_at,omitempty"`
-	ID       *string        `json:"id,omitempty"`
-	Priority *string        `json:"priority,omitempty"`
-	Raw      map[string]any `json:"raw,omitempty"`
+	DueAt    *time.Time          `json:"due_at,omitempty"`
+	ID       *string             `json:"id,omitempty"`
+	Metadata []TicketingMetadata `json:"metadata,omitempty"`
+	Priority *string             `json:"priority,omitempty"`
+	Raw      map[string]any      `json:"raw,omitempty"`
 	// Channel where ticket was originally submitted
 	Source *string `json:"source,omitempty"`
 	// Reference to source-specific object
@@ -126,6 +127,13 @@ func (t *TicketingTicket) GetID() *string {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TicketingTicket) GetMetadata() []TicketingMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TicketingTicket) GetPriority() *string {

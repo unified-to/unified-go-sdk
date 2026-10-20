@@ -22,4 +22,5 @@ value := operations.UpdateDatastoreRecordQueryParamFieldsID
 | `UpdateDatastoreRecordQueryParamFieldsTableID`    | table_id                                          |
 | `UpdateDatastoreRecordQueryParamFieldsFields`     | fields                                            |
 | `UpdateDatastoreRecordQueryParamFieldsRowNumber`  | row_number                                        |
+| `UpdateDatastoreRecordQueryParamFieldsMetadata`   | metadata                                          |
 | `UpdateDatastoreRecordQueryParamFieldsRaw`        | raw                                               |

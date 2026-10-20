@@ -29,4 +29,5 @@ value := operations.PatchAdsInsertionorderQueryParamFieldsID
 | `PatchAdsInsertionorderQueryParamFieldsBudgetSegments` | budget_segments                                        |
 | `PatchAdsInsertionorderQueryParamFieldsBidStrategy`    | bid_strategy                                           |
 | `PatchAdsInsertionorderQueryParamFieldsReference`      | reference                                              |
+| `PatchAdsInsertionorderQueryParamFieldsMetadata`       | metadata                                               |
 | `PatchAdsInsertionorderQueryParamFieldsRaw`            | raw                                                    |

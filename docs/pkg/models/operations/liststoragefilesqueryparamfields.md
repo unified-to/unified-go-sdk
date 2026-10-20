@@ -33,4 +33,5 @@ value := operations.ListStorageFilesQueryParamFieldsID
 | `ListStorageFilesQueryParamFieldsWebURL`      | web_url                                       |
 | `ListStorageFilesQueryParamFieldsReferences`  | references                                    |
 | `ListStorageFilesQueryParamFieldsTags`        | tags                                          |
+| `ListStorageFilesQueryParamFieldsMetadata`    | metadata                                      |
 | `ListStorageFilesQueryParamFieldsRaw`         | raw                                           |

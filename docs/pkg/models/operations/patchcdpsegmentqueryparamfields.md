@@ -27,4 +27,5 @@ value := operations.PatchCdpSegmentQueryParamFieldsID
 | `PatchCdpSegmentQueryParamFieldsSize`        | size                                         |
 | `PatchCdpSegmentQueryParamFieldsIsActive`    | is_active                                    |
 | `PatchCdpSegmentQueryParamFieldsSourceID`    | source_id                                    |
+| `PatchCdpSegmentQueryParamFieldsMetadata`    | metadata                                     |
 | `PatchCdpSegmentQueryParamFieldsRaw`         | raw                                          |

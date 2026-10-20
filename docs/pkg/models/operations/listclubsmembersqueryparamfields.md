@@ -25,4 +25,5 @@ value := operations.ListClubsMembersQueryParamFieldsID
 | `ListClubsMembersQueryParamFieldsIsAdmin`          | is_admin                                           |
 | `ListClubsMembersQueryParamFieldsIsOwner`          | is_owner                                           |
 | `ListClubsMembersQueryParamFieldsMembershipStatus` | membership_status                                  |
+| `ListClubsMembersQueryParamFieldsMetadata`         | metadata                                           |
 | `ListClubsMembersQueryParamFieldsRaw`              | raw                                                |

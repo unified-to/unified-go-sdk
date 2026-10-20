@@ -22,7 +22,8 @@ type HrisDevice struct {
 	// pointer to HR Location object (reference to HrisLocation)
 	LocationID *string `json:"location_id,omitempty"`
 	// device manufacturer
-	Manufacturer *string `json:"manufacturer,omitempty"`
+	Manufacturer *string        `json:"manufacturer,omitempty"`
+	Metadata     []HrisMetadata `json:"metadata,omitempty"`
 	// device model
 	Model *string `json:"model,omitempty"`
 	Name  *string `json:"name,omitempty"`
@@ -131,6 +132,13 @@ func (h *HrisDevice) GetManufacturer() *string {
 		return nil
 	}
 	return h.Manufacturer
+}
+
+func (h *HrisDevice) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisDevice) GetModel() *string {

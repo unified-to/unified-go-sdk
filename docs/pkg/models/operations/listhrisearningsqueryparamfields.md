@@ -32,4 +32,5 @@ value := operations.ListHrisEarningsQueryParamFieldsID
 | `ListHrisEarningsQueryParamFieldsPayrollID`  | payroll_id                                   |
 | `ListHrisEarningsQueryParamFieldsPayslipID`  | payslip_id                                   |
 | `ListHrisEarningsQueryParamFieldsNotes`      | notes                                        |
+| `ListHrisEarningsQueryParamFieldsMetadata`   | metadata                                     |
 | `ListHrisEarningsQueryParamFieldsRaw`        | raw                                          |

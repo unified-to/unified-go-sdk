@@ -78,9 +78,10 @@ type HrisPayroll struct {
 	EndAt       *time.Time `json:"end_at,omitempty"`
 	GrossAmount *float64   `json:"gross_amount,omitempty"`
 	// the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
-	GroupID   *string  `json:"group_id,omitempty"`
-	ID        *string  `json:"id,omitempty"`
-	NetAmount *float64 `json:"net_amount,omitempty"`
+	GroupID   *string        `json:"group_id,omitempty"`
+	ID        *string        `json:"id,omitempty"`
+	Metadata  []HrisMetadata `json:"metadata,omitempty"`
+	NetAmount *float64       `json:"net_amount,omitempty"`
 	// pay/check date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	PaidAt     *time.Time     `json:"paid_at,omitempty"`
 	PayslipIds []string       `json:"payslip_ids,omitempty"`
@@ -190,6 +191,13 @@ func (h *HrisPayroll) GetID() *string {
 		return nil
 	}
 	return h.ID
+}
+
+func (h *HrisPayroll) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisPayroll) GetNetAmount() *float64 {

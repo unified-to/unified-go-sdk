@@ -25,4 +25,5 @@ value := operations.GetUcContactQueryParamFieldsID
 | `GetUcContactQueryParamFieldsCompany`    | company                                  |
 | `GetUcContactQueryParamFieldsEmails`     | emails                                   |
 | `GetUcContactQueryParamFieldsTelephones` | telephones                               |
+| `GetUcContactQueryParamFieldsMetadata`   | metadata                                 |
 | `GetUcContactQueryParamFieldsRaw`        | raw                                      |

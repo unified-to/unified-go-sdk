@@ -25,6 +25,7 @@ const (
 	GetComputeKeyQueryParamFieldsSecret      GetComputeKeyQueryParamFields = "secret"
 	GetComputeKeyQueryParamFieldsInstanceID  GetComputeKeyQueryParamFields = "instance_id"
 	GetComputeKeyQueryParamFieldsExpiresAt   GetComputeKeyQueryParamFields = "expires_at"
+	GetComputeKeyQueryParamFieldsMetadata    GetComputeKeyQueryParamFields = "metadata"
 	GetComputeKeyQueryParamFieldsRaw         GetComputeKeyQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *GetComputeKeyQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "instance_id":
 		fallthrough
 	case "expires_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetComputeKeyQueryParamFields(v)

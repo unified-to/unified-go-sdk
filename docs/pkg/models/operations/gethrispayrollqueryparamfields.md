@@ -36,4 +36,5 @@ value := operations.GetHrisPayrollQueryParamFieldsID
 | `GetHrisPayrollQueryParamFieldsTotalCostAmount`            | total_cost_amount                                          |
 | `GetHrisPayrollQueryParamFieldsUserIds`                    | user_ids                                                   |
 | `GetHrisPayrollQueryParamFieldsPayslipIds`                 | payslip_ids                                                |
+| `GetHrisPayrollQueryParamFieldsMetadata`                   | metadata                                                   |
 | `GetHrisPayrollQueryParamFieldsRaw`                        | raw                                                        |

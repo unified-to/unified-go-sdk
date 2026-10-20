@@ -39,4 +39,5 @@ value := operations.UpdateAdsCampaignQueryParamFieldsID
 | `UpdateAdsCampaignQueryParamFieldsHasEuPoliticalAds`        | has_eu_political_ads                                        |
 | `UpdateAdsCampaignQueryParamFieldsLabels`                   | labels                                                      |
 | `UpdateAdsCampaignQueryParamFieldsKpi`                      | kpi                                                         |
+| `UpdateAdsCampaignQueryParamFieldsMetadata`                 | metadata                                                    |
 | `UpdateAdsCampaignQueryParamFieldsRaw`                      | raw                                                         |

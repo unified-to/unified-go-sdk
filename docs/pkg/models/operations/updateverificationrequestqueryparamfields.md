@@ -39,4 +39,5 @@ value := operations.UpdateVerificationRequestQueryParamFieldsID
 | `UpdateVerificationRequestQueryParamFieldsResponseDownloadUrls`      | response_download_urls                                               |
 | `UpdateVerificationRequestQueryParamFieldsResponseDetails`           | response_details                                                     |
 | `UpdateVerificationRequestQueryParamFieldsResponseSource`            | response_source                                                      |
+| `UpdateVerificationRequestQueryParamFieldsMetadata`                  | metadata                                                             |
 | `UpdateVerificationRequestQueryParamFieldsRaw`                       | raw                                                                  |

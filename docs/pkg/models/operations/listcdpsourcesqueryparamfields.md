@@ -23,4 +23,5 @@ value := operations.ListCdpSourcesQueryParamFieldsID
 | `ListCdpSourcesQueryParamFieldsType`      | type                                      |
 | `ListCdpSourcesQueryParamFieldsDirection` | direction                                 |
 | `ListCdpSourcesQueryParamFieldsIsEnabled` | is_enabled                                |
+| `ListCdpSourcesQueryParamFieldsMetadata`  | metadata                                  |
 | `ListCdpSourcesQueryParamFieldsRaw`       | raw                                       |

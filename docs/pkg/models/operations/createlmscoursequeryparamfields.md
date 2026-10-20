@@ -35,4 +35,5 @@ value := operations.CreateLmsCourseQueryParamFieldsID
 | `CreateLmsCourseQueryParamFieldsProviderName`        | provider_name                                        |
 | `CreateLmsCourseQueryParamFieldsPublishedAt`         | published_at                                         |
 | `CreateLmsCourseQueryParamFieldsTimeEstimateMinutes` | time_estimate_minutes                                |
+| `CreateLmsCourseQueryParamFieldsMetadata`            | metadata                                             |
 | `CreateLmsCourseQueryParamFieldsRaw`                 | raw                                                  |

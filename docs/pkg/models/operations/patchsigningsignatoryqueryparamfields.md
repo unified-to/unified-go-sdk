@@ -27,3 +27,4 @@ value := operations.PatchSigningSignatoryQueryParamFieldsID
 | `PatchSigningSignatoryQueryParamFieldsSignedAt`      | signed_at                                            |
 | `PatchSigningSignatoryQueryParamFieldsDeclineReason` | decline_reason                                       |
 | `PatchSigningSignatoryQueryParamFieldsRaw`           | raw                                                  |
+| `PatchSigningSignatoryQueryParamFieldsMetadata`      | metadata                                             |

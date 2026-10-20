@@ -29,6 +29,7 @@ const (
 	GetCrmEventQueryParamFieldsContactIds     GetCrmEventQueryParamFields = "contact_ids"
 	GetCrmEventQueryParamFieldsLeadIds        GetCrmEventQueryParamFields = "lead_ids"
 	GetCrmEventQueryParamFieldsUserID         GetCrmEventQueryParamFields = "user_id"
+	GetCrmEventQueryParamFieldsMetadata       GetCrmEventQueryParamFields = "metadata"
 	GetCrmEventQueryParamFieldsRaw            GetCrmEventQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *GetCrmEventQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "lead_ids":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetCrmEventQueryParamFields(v)

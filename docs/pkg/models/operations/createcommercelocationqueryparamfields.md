@@ -35,5 +35,6 @@ value := operations.CreateCommerceLocationQueryParamFieldsID
 | `CreateCommerceLocationQueryParamFieldsImageURL`       | image_url                                              |
 | `CreateCommerceLocationQueryParamFieldsWebURL`         | web_url                                                |
 | `CreateCommerceLocationQueryParamFieldsMedia`          | media                                                  |
+| `CreateCommerceLocationQueryParamFieldsMetadata`       | metadata                                               |
 | `CreateCommerceLocationQueryParamFieldsRaw`            | raw                                                    |
 | `CreateCommerceLocationQueryParamFieldsCategories`     | categories                                             |

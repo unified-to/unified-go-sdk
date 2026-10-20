@@ -76,7 +76,8 @@ type AccountingAccount struct {
 	// Identifier used by the SaaS application to uniquely identify the Account
 	ID *string `json:"id,omitempty"`
 	// True if the account is an “accounts payable” account
-	IsPayable *bool `json:"is_payable,omitempty"`
+	IsPayable *bool                `json:"is_payable,omitempty"`
+	Metadata  []AccountingMetadata `json:"metadata,omitempty"`
 	// Account name
 	Name           *string `json:"name,omitempty"`
 	OrganizationID *string `json:"organization_id,omitempty"`
@@ -151,6 +152,13 @@ func (a *AccountingAccount) GetIsPayable() *bool {
 		return nil
 	}
 	return a.IsPayable
+}
+
+func (a *AccountingAccount) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingAccount) GetName() *string {

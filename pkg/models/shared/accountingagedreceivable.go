@@ -16,6 +16,7 @@ type AccountingAgedreceivable struct {
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// synthetic, one row per currency / date window
 	ID             *string                `json:"id,omitempty"`
+	Metadata       []AccountingMetadata   `json:"metadata,omitempty"`
 	OrganizationID *string                `json:"organization_id,omitempty"`
 	Periods        []AccountingAgedPeriod `json:"periods,omitempty"`
 	Raw            map[string]any         `json:"raw,omitempty"`
@@ -67,6 +68,13 @@ func (a *AccountingAgedreceivable) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AccountingAgedreceivable) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingAgedreceivable) GetOrganizationID() *string {

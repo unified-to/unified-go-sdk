@@ -15,7 +15,8 @@ type ComputeEnvvar struct {
 	// Unique identifier for the environment variable
 	ID *string `json:"id,omitempty"`
 	// Whether the vendor stores the value as a secret
-	IsSecret *bool `json:"is_secret,omitempty"`
+	IsSecret *bool             `json:"is_secret,omitempty"`
+	Metadata []ComputeMetadata `json:"metadata,omitempty"`
 	// Variable name
 	Name *string `json:"name,omitempty"`
 	// Raw data from integration
@@ -65,6 +66,13 @@ func (c *ComputeEnvvar) GetIsSecret() *bool {
 		return nil
 	}
 	return c.IsSecret
+}
+
+func (c *ComputeEnvvar) GetMetadata() []ComputeMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ComputeEnvvar) GetName() *string {

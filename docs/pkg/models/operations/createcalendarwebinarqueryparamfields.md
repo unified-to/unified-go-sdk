@@ -48,4 +48,5 @@ value := operations.CreateCalendarWebinarQueryParamFieldsID
 | `CreateCalendarWebinarQueryParamFieldsHasQa`              | has_qa                                                    |
 | `CreateCalendarWebinarQueryParamFieldsHasPolls`           | has_polls                                                 |
 | `CreateCalendarWebinarQueryParamFieldsHasRecording`       | has_recording                                             |
+| `CreateCalendarWebinarQueryParamFieldsMetadata`           | metadata                                                  |
 | `CreateCalendarWebinarQueryParamFieldsRaw`                | raw                                                       |

@@ -21,4 +21,5 @@ value := operations.PatchUcCommentQueryParamFieldsID
 | `PatchUcCommentQueryParamFieldsContent`   | content                                   |
 | `PatchUcCommentQueryParamFieldsUserID`    | user_id                                   |
 | `PatchUcCommentQueryParamFieldsCallID`    | call_id                                   |
+| `PatchUcCommentQueryParamFieldsMetadata`  | metadata                                  |
 | `PatchUcCommentQueryParamFieldsRaw`       | raw                                       |

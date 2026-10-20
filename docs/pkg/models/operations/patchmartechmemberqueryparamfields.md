@@ -26,4 +26,5 @@ value := operations.PatchMartechMemberQueryParamFieldsID
 | `PatchMartechMemberQueryParamFieldsListIds`   | list_ids                                      |
 | `PatchMartechMemberQueryParamFieldsTags`      | tags                                          |
 | `PatchMartechMemberQueryParamFieldsStatus`    | status                                        |
+| `PatchMartechMemberQueryParamFieldsMetadata`  | metadata                                      |
 | `PatchMartechMemberQueryParamFieldsRaw`       | raw                                           |

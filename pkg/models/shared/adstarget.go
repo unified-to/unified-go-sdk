@@ -42,6 +42,7 @@ type AdsTarget struct {
 	AudienceCountMin *float64       `json:"audience_count_min,omitempty"`
 	ID               string         `json:"id"`
 	IsActive         *bool          `json:"is_active,omitempty"`
+	Metadata         []AdsMetadata  `json:"metadata,omitempty"`
 	Name             *string        `json:"name,omitempty"`
 	ParentID         *string        `json:"parent_id,omitempty"`
 	Raw              map[string]any `json:"raw,omitempty"`
@@ -75,6 +76,13 @@ func (a *AdsTarget) GetIsActive() *bool {
 		return nil
 	}
 	return a.IsActive
+}
+
+func (a *AdsTarget) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsTarget) GetName() *string {

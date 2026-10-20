@@ -1,0 +1,13 @@
+# AdsMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ExtraData`                                                                        | [*shared.AdsMetadataExtraData](../../../pkg/models/shared/adsmetadataextradata.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Format`                                                                           | [*shared.AdsMetadataFormat](../../../pkg/models/shared/adsmetadataformat.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `ID`                                                                               | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Namespace`                                                                        | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Slug`                                                                             | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Value`                                                                            | [*shared.AdsMetadataValue](../../../pkg/models/shared/adsmetadatavalue.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |

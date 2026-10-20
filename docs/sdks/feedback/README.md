@@ -37,15 +37,16 @@ func main() {
     res, err := s.Feedback.CreatePerformanceFeedback(ctx, operations.CreatePerformanceFeedbackRequest{
         PerformanceFeedback: shared.PerformanceFeedback{
             CreatedAt: types.MustNewTimeFromString("2023-04-11T16:21:53.862Z"),
-            ID: unifiedgosdk.Pointer("56fc76de-7493-4ff8-acfc-d09e21655a52"),
+            ID: unifiedgosdk.Pointer("7a30fc75-4e9c-4910-9a6d-2d2876cad061"),
             IsVisible: unifiedgosdk.Pointer(true),
             Message: unifiedgosdk.Pointer("Tabernus corpus voluptate aestus."),
+            Metadata: []shared.PerformanceMetadata{},
             Tags: []string{
                 "well-to-do",
                 "hexagon",
             },
             Type: shared.PerformanceFeedbackTypePraise.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2025-09-02T13:01:12.988Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-09-03T09:59:52.240Z"),
             UserID: "<id>",
         },
         ConnectionID: "<id>",

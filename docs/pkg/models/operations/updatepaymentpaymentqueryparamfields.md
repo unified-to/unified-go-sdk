@@ -44,4 +44,5 @@ value := operations.UpdatePaymentPaymentQueryParamFieldsID
 | `UpdatePaymentPaymentQueryParamFieldsExchangeRate`   | exchange_rate                                        |
 | `UpdatePaymentPaymentQueryParamFieldsCategoryIds`    | category_ids                                         |
 | `UpdatePaymentPaymentQueryParamFieldsNetAmount`      | net_amount                                           |
+| `UpdatePaymentPaymentQueryParamFieldsMetadata`       | metadata                                             |
 | `UpdatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |

@@ -25,4 +25,5 @@ value := operations.GetLmsStudentQueryParamFieldsID
 | `GetLmsStudentQueryParamFieldsTelephones` | telephones                                |
 | `GetLmsStudentQueryParamFieldsAddress`    | address                                   |
 | `GetLmsStudentQueryParamFieldsImageURL`   | image_url                                 |
+| `GetLmsStudentQueryParamFieldsMetadata`   | metadata                                  |
 | `GetLmsStudentQueryParamFieldsRaw`        | raw                                       |

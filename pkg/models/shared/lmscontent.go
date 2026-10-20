@@ -24,6 +24,7 @@ type LmsContent struct {
 	Languages         []string                 `json:"languages,omitempty"`
 	Localizations     []LmsContentLocalization `json:"localizations,omitempty"`
 	Media             []LmsMedia               `json:"media,omitempty"`
+	Metadata          []LmsMetadata            `json:"metadata,omitempty"`
 	Name              *string                  `json:"name,omitempty"`
 	ProviderName      *string                  `json:"provider_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -146,6 +147,13 @@ func (l *LmsContent) GetMedia() []LmsMedia {
 		return nil
 	}
 	return l.Media
+}
+
+func (l *LmsContent) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsContent) GetName() *string {

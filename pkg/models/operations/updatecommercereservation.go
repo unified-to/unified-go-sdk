@@ -29,6 +29,7 @@ const (
 	UpdateCommerceReservationQueryParamFieldsCreatedAt   UpdateCommerceReservationQueryParamFields = "created_at"
 	UpdateCommerceReservationQueryParamFieldsUpdatedAt   UpdateCommerceReservationQueryParamFields = "updated_at"
 	UpdateCommerceReservationQueryParamFieldsURL         UpdateCommerceReservationQueryParamFields = "url"
+	UpdateCommerceReservationQueryParamFieldsMetadata    UpdateCommerceReservationQueryParamFields = "metadata"
 	UpdateCommerceReservationQueryParamFieldsRaw         UpdateCommerceReservationQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *UpdateCommerceReservationQueryParamFields) UnmarshalJSON(data []byte) e
 	case "updated_at":
 		fallthrough
 	case "url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateCommerceReservationQueryParamFields(v)

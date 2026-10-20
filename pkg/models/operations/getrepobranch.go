@@ -17,6 +17,7 @@ const (
 	GetRepoBranchQueryParamFieldsUpdatedAt GetRepoBranchQueryParamFields = "updated_at"
 	GetRepoBranchQueryParamFieldsName      GetRepoBranchQueryParamFields = "name"
 	GetRepoBranchQueryParamFieldsRepoID    GetRepoBranchQueryParamFields = "repo_id"
+	GetRepoBranchQueryParamFieldsMetadata  GetRepoBranchQueryParamFields = "metadata"
 	GetRepoBranchQueryParamFieldsRaw       GetRepoBranchQueryParamFields = "raw"
 )
 
@@ -38,6 +39,8 @@ func (e *GetRepoBranchQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "repo_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetRepoBranchQueryParamFields(v)

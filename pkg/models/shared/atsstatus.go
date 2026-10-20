@@ -41,6 +41,7 @@ type AtsStatus struct {
 	ID          *string `json:"id,omitempty"`
 	// The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
 	JobID          *string          `json:"job_id,omitempty"`
+	Metadata       []AtsMetadata    `json:"metadata,omitempty"`
 	OriginalStatus *string          `json:"original_status,omitempty"`
 	Raw            map[string]any   `json:"raw,omitempty"`
 	Status         *AtsStatusStatus `json:"status,omitempty"`
@@ -65,6 +66,13 @@ func (a *AtsStatus) GetJobID() *string {
 		return nil
 	}
 	return a.JobID
+}
+
+func (a *AtsStatus) GetMetadata() []AtsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AtsStatus) GetOriginalStatus() *string {

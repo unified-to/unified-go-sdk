@@ -1,0 +1,13 @@
+# LmsMetadata
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ExtraData`                                                                        | [*shared.LmsMetadataExtraData](../../../pkg/models/shared/lmsmetadataextradata.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Format`                                                                           | [*shared.LmsMetadataFormat](../../../pkg/models/shared/lmsmetadataformat.md)       | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `ID`                                                                               | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Namespace`                                                                        | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Slug`                                                                             | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Value`                                                                            | [*shared.LmsMetadataValue](../../../pkg/models/shared/lmsmetadatavalue.md)         | :heavy_minus_sign:                                                                 | N/A                                                                                |

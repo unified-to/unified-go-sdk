@@ -27,6 +27,7 @@ const (
 	GetAccountingProfitlossQueryParamFieldsIncomeSections             GetAccountingProfitlossQueryParamFields = "income_sections"
 	GetAccountingProfitlossQueryParamFieldsExpensesSections           GetAccountingProfitlossQueryParamFields = "expenses_sections"
 	GetAccountingProfitlossQueryParamFieldsCostOfGoodsSoldSections    GetAccountingProfitlossQueryParamFields = "cost_of_goods_sold_sections"
+	GetAccountingProfitlossQueryParamFieldsMetadata                   GetAccountingProfitlossQueryParamFields = "metadata"
 	GetAccountingProfitlossQueryParamFieldsRaw                        GetAccountingProfitlossQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *GetAccountingProfitlossQueryParamFields) UnmarshalJSON(data []byte) err
 	case "expenses_sections":
 		fallthrough
 	case "cost_of_goods_sold_sections":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingProfitlossQueryParamFields(v)

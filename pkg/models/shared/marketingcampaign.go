@@ -46,7 +46,8 @@ type MarketingCampaign struct {
 	// Unique identifier for the campaign
 	ID *string `json:"id,omitempty"`
 	// Associated listaudience IDs
-	ListIds []string `json:"list_ids,omitempty"`
+	ListIds  []string            `json:"list_ids,omitempty"`
+	Metadata []MarketingMetadata `json:"metadata,omitempty"`
 	// Campaign nametitle
 	Name *string `json:"name,omitempty"`
 	// Email preview text
@@ -111,6 +112,13 @@ func (m *MarketingCampaign) GetListIds() []string {
 		return nil
 	}
 	return m.ListIds
+}
+
+func (m *MarketingCampaign) GetMetadata() []MarketingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MarketingCampaign) GetName() *string {

@@ -12,11 +12,12 @@ import (
 type ListCrmTaxonomiesQueryParamFields string
 
 const (
-	ListCrmTaxonomiesQueryParamFieldsID    ListCrmTaxonomiesQueryParamFields = "id"
-	ListCrmTaxonomiesQueryParamFieldsName  ListCrmTaxonomiesQueryParamFields = "name"
-	ListCrmTaxonomiesQueryParamFieldsLabel ListCrmTaxonomiesQueryParamFields = "label"
-	ListCrmTaxonomiesQueryParamFieldsType  ListCrmTaxonomiesQueryParamFields = "type"
-	ListCrmTaxonomiesQueryParamFieldsRaw   ListCrmTaxonomiesQueryParamFields = "raw"
+	ListCrmTaxonomiesQueryParamFieldsID       ListCrmTaxonomiesQueryParamFields = "id"
+	ListCrmTaxonomiesQueryParamFieldsName     ListCrmTaxonomiesQueryParamFields = "name"
+	ListCrmTaxonomiesQueryParamFieldsLabel    ListCrmTaxonomiesQueryParamFields = "label"
+	ListCrmTaxonomiesQueryParamFieldsType     ListCrmTaxonomiesQueryParamFields = "type"
+	ListCrmTaxonomiesQueryParamFieldsMetadata ListCrmTaxonomiesQueryParamFields = "metadata"
+	ListCrmTaxonomiesQueryParamFieldsRaw      ListCrmTaxonomiesQueryParamFields = "raw"
 )
 
 func (e ListCrmTaxonomiesQueryParamFields) ToPointer() *ListCrmTaxonomiesQueryParamFields {
@@ -35,6 +36,8 @@ func (e *ListCrmTaxonomiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "label":
 		fallthrough
 	case "type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCrmTaxonomiesQueryParamFields(v)

@@ -25,4 +25,5 @@ value := operations.ListAccountingTrialbalancesQueryParamFieldsID
 | `ListAccountingTrialbalancesQueryParamFieldsTotalDebitAmount`  | total_debit_amount                                             |
 | `ListAccountingTrialbalancesQueryParamFieldsTotalCreditAmount` | total_credit_amount                                            |
 | `ListAccountingTrialbalancesQueryParamFieldsSubItems`          | sub_items                                                      |
+| `ListAccountingTrialbalancesQueryParamFieldsMetadata`          | metadata                                                       |
 | `ListAccountingTrialbalancesQueryParamFieldsRaw`               | raw                                                            |

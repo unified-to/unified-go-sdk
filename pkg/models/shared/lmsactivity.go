@@ -19,6 +19,7 @@ type LmsActivity struct {
 	DurationMinutes    *float64       `json:"duration_minutes,omitempty"`
 	ID                 *string        `json:"id,omitempty"`
 	IsCompleted        *bool          `json:"is_completed,omitempty"`
+	Metadata           []LmsMetadata  `json:"metadata,omitempty"`
 	ProgressPercentage *float64       `json:"progress_percentage,omitempty"`
 	Raw                map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -94,6 +95,13 @@ func (l *LmsActivity) GetIsCompleted() *bool {
 		return nil
 	}
 	return l.IsCompleted
+}
+
+func (l *LmsActivity) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsActivity) GetProgressPercentage() *float64 {

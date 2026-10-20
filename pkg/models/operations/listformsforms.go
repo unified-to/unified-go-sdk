@@ -26,6 +26,7 @@ const (
 	ListFormsFormsQueryParamFieldsHasShuffleQuestions     ListFormsFormsQueryParamFields = "has_shuffle_questions"
 	ListFormsFormsQueryParamFieldsConfirmationMessage     ListFormsFormsQueryParamFields = "confirmation_message"
 	ListFormsFormsQueryParamFieldsConfirmationRedirectURL ListFormsFormsQueryParamFields = "confirmation_redirect_url"
+	ListFormsFormsQueryParamFieldsMetadata                ListFormsFormsQueryParamFields = "metadata"
 	ListFormsFormsQueryParamFieldsRaw                     ListFormsFormsQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *ListFormsFormsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "confirmation_message":
 		fallthrough
 	case "confirmation_redirect_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListFormsFormsQueryParamFields(v)

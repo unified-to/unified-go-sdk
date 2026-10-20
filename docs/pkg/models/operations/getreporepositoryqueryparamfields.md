@@ -24,4 +24,5 @@ value := operations.GetRepoRepositoryQueryParamFieldsID
 | `GetRepoRepositoryQueryParamFieldsIsPrivate`   | is_private                                     |
 | `GetRepoRepositoryQueryParamFieldsWebURL`      | web_url                                        |
 | `GetRepoRepositoryQueryParamFieldsOrgID`       | org_id                                         |
+| `GetRepoRepositoryQueryParamFieldsMetadata`    | metadata                                       |
 | `GetRepoRepositoryQueryParamFieldsRaw`         | raw                                            |

@@ -42,7 +42,8 @@ type CdpActivation struct {
 	// Whether the activation is active/enabled
 	IsEnabled *bool `json:"is_enabled,omitempty"`
 	// When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	LastRunAt *time.Time `json:"last_run_at,omitempty"`
+	LastRunAt *time.Time    `json:"last_run_at,omitempty"`
+	Metadata  []CdpMetadata `json:"metadata,omitempty"`
 	// The name of the activation/sync job
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this activation
@@ -103,6 +104,13 @@ func (c *CdpActivation) GetLastRunAt() *time.Time {
 		return nil
 	}
 	return c.LastRunAt
+}
+
+func (c *CdpActivation) GetMetadata() []CdpMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CdpActivation) GetName() *string {

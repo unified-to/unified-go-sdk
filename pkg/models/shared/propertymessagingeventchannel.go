@@ -9,16 +9,17 @@ import (
 
 type PropertyMessagingEventChannel struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt      *time.Time        `json:"created_at,omitempty"`
-	Description    *string           `json:"description,omitempty"`
-	HasSubchannels *bool             `json:"has_subchannels,omitempty"`
-	ID             *string           `json:"id,omitempty"`
-	IsActive       *bool             `json:"is_active,omitempty"`
-	IsPrivate      *bool             `json:"is_private,omitempty"`
-	Members        []MessagingMember `json:"members,omitempty"`
-	Name           *string           `json:"name,omitempty"`
-	ParentID       *string           `json:"parent_id,omitempty"`
-	Raw            map[string]any    `json:"raw,omitempty"`
+	CreatedAt      *time.Time          `json:"created_at,omitempty"`
+	Description    *string             `json:"description,omitempty"`
+	HasSubchannels *bool               `json:"has_subchannels,omitempty"`
+	ID             *string             `json:"id,omitempty"`
+	IsActive       *bool               `json:"is_active,omitempty"`
+	IsPrivate      *bool               `json:"is_private,omitempty"`
+	Members        []MessagingMember   `json:"members,omitempty"`
+	Metadata       []MessagingMetadata `json:"metadata,omitempty"`
+	Name           *string             `json:"name,omitempty"`
+	ParentID       *string             `json:"parent_id,omitempty"`
+	Raw            map[string]any      `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	WebURL    *string    `json:"web_url,omitempty"`
@@ -82,6 +83,13 @@ func (p *PropertyMessagingEventChannel) GetMembers() []MessagingMember {
 		return nil
 	}
 	return p.Members
+}
+
+func (p *PropertyMessagingEventChannel) GetMetadata() []MessagingMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyMessagingEventChannel) GetName() *string {

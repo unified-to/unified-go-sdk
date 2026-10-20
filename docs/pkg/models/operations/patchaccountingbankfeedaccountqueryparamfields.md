@@ -30,4 +30,5 @@ value := operations.PatchAccountingBankfeedaccountQueryParamFieldsID
 | `PatchAccountingBankfeedaccountQueryParamFieldsBalance`            | balance                                                            |
 | `PatchAccountingBankfeedaccountQueryParamFieldsFeedStartAt`        | feed_start_at                                                      |
 | `PatchAccountingBankfeedaccountQueryParamFieldsStatus`             | status                                                             |
+| `PatchAccountingBankfeedaccountQueryParamFieldsMetadata`           | metadata                                                           |
 | `PatchAccountingBankfeedaccountQueryParamFieldsRaw`                | raw                                                                |

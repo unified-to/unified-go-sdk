@@ -30,4 +30,5 @@ value := operations.PatchHrisBenefitQueryParamFieldsID
 | `PatchHrisBenefitQueryParamFieldsEmployerContributionMaxAmount` | employer_contribution_max_amount                                |
 | `PatchHrisBenefitQueryParamFieldsCoverageLevel`                 | coverage_level                                                  |
 | `PatchHrisBenefitQueryParamFieldsCurrency`                      | currency                                                        |
+| `PatchHrisBenefitQueryParamFieldsMetadata`                      | metadata                                                        |
 | `PatchHrisBenefitQueryParamFieldsRaw`                           | raw                                                             |

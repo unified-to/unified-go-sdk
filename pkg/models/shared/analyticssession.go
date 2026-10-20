@@ -28,9 +28,10 @@ type AnalyticsSession struct {
 	// Engagement
 	IsConversion *bool `json:"is_conversion,omitempty"`
 	// Session attributes
-	LandingPage *string `json:"landing_page,omitempty"`
-	Medium      *string `json:"medium,omitempty"`
-	Os          *string `json:"os,omitempty"`
+	LandingPage *string             `json:"landing_page,omitempty"`
+	Medium      *string             `json:"medium,omitempty"`
+	Metadata    []AnalyticsMetadata `json:"metadata,omitempty"`
+	Os          *string             `json:"os,omitempty"`
 	// Session attributes
 	PageViews *float64 `json:"page_views,omitempty"`
 	// points to AnalyticsProperty
@@ -159,6 +160,13 @@ func (a *AnalyticsSession) GetMedium() *string {
 		return nil
 	}
 	return a.Medium
+}
+
+func (a *AnalyticsSession) GetMetadata() []AnalyticsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AnalyticsSession) GetOs() *string {

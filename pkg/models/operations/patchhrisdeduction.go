@@ -31,6 +31,7 @@ const (
 	PatchHrisDeductionQueryParamFieldsMaxAmount       PatchHrisDeductionQueryParamFields = "max_amount"
 	PatchHrisDeductionQueryParamFieldsPaycodeID       PatchHrisDeductionQueryParamFields = "paycode_id"
 	PatchHrisDeductionQueryParamFieldsGarnishmentType PatchHrisDeductionQueryParamFields = "garnishment_type"
+	PatchHrisDeductionQueryParamFieldsMetadata        PatchHrisDeductionQueryParamFields = "metadata"
 	PatchHrisDeductionQueryParamFieldsRaw             PatchHrisDeductionQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *PatchHrisDeductionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "paycode_id":
 		fallthrough
 	case "garnishment_type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisDeductionQueryParamFields(v)

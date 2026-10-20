@@ -29,4 +29,5 @@ value := operations.CreateHrisTaxonomyQueryParamFieldsID
 | `CreateHrisTaxonomyQueryParamFieldsURL`              | url                                                  |
 | `CreateHrisTaxonomyQueryParamFieldsRoleIds`          | role_ids                                             |
 | `CreateHrisTaxonomyQueryParamFieldsIsActive`         | is_active                                            |
+| `CreateHrisTaxonomyQueryParamFieldsMetadata`         | metadata                                             |
 | `CreateHrisTaxonomyQueryParamFieldsRaw`              | raw                                                  |

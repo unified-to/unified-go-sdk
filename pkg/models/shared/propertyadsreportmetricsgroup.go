@@ -287,8 +287,9 @@ type PropertyAdsReportMetricsGroup struct {
 	ID                *string                                    `json:"id,omitempty"`
 	InsertionorderID  *string                                    `json:"insertionorder_id,omitempty"`
 	// Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
-	LanguageLocale *string `json:"language_locale,omitempty"`
-	Name           *string `json:"name,omitempty"`
+	LanguageLocale *string       `json:"language_locale,omitempty"`
+	Metadata       []AdsMetadata `json:"metadata,omitempty"`
+	Name           *string       `json:"name,omitempty"`
 	// Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
 	OptimizationGoal *PropertyAdsReportMetricsGroupOptimizationGoal `json:"optimization_goal,omitempty"`
 	OrganizationID   *string                                        `json:"organization_id,omitempty"`
@@ -454,6 +455,13 @@ func (p *PropertyAdsReportMetricsGroup) GetLanguageLocale() *string {
 		return nil
 	}
 	return p.LanguageLocale
+}
+
+func (p *PropertyAdsReportMetricsGroup) GetMetadata() []AdsMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyAdsReportMetricsGroup) GetName() *string {

@@ -34,4 +34,5 @@ value := operations.UpdateHrisDeviceQueryParamFieldsID
 | `UpdateHrisDeviceQueryParamFieldsHasHdEncrypted`     | has_hd_encrypted                                     |
 | `UpdateHrisDeviceQueryParamFieldsHasScreenlock`      | has_screenlock                                       |
 | `UpdateHrisDeviceQueryParamFieldsIsMissing`          | is_missing                                           |
+| `UpdateHrisDeviceQueryParamFieldsMetadata`           | metadata                                             |
 | `UpdateHrisDeviceQueryParamFieldsRaw`                | raw                                                  |

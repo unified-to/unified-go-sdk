@@ -29,4 +29,5 @@ value := operations.UpdateHrisTimeshiftQueryParamFieldsID
 | `UpdateHrisTimeshiftQueryParamFieldsApprovedAt`     | approved_at                                         |
 | `UpdateHrisTimeshiftQueryParamFieldsHours`          | hours                                               |
 | `UpdateHrisTimeshiftQueryParamFieldsIsApproved`     | is_approved                                         |
+| `UpdateHrisTimeshiftQueryParamFieldsMetadata`       | metadata                                            |
 | `UpdateHrisTimeshiftQueryParamFieldsRaw`            | raw                                                 |

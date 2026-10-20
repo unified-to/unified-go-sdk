@@ -27,6 +27,7 @@ const (
 	GetHrisLocationQueryParamFieldsIsActive           GetHrisLocationQueryParamFields = "is_active"
 	GetHrisLocationQueryParamFieldsIsHq               GetHrisLocationQueryParamFields = "is_hq"
 	GetHrisLocationQueryParamFieldsCompanyID          GetHrisLocationQueryParamFields = "company_id"
+	GetHrisLocationQueryParamFieldsMetadata           GetHrisLocationQueryParamFields = "metadata"
 	GetHrisLocationQueryParamFieldsRaw                GetHrisLocationQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *GetHrisLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_hq":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetHrisLocationQueryParamFields(v)

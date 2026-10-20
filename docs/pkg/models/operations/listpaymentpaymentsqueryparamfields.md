@@ -44,4 +44,5 @@ value := operations.ListPaymentPaymentsQueryParamFieldsID
 | `ListPaymentPaymentsQueryParamFieldsExchangeRate`   | exchange_rate                                       |
 | `ListPaymentPaymentsQueryParamFieldsCategoryIds`    | category_ids                                        |
 | `ListPaymentPaymentsQueryParamFieldsNetAmount`      | net_amount                                          |
+| `ListPaymentPaymentsQueryParamFieldsMetadata`       | metadata                                            |
 | `ListPaymentPaymentsQueryParamFieldsRaw`            | raw                                                 |

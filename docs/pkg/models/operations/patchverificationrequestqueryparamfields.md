@@ -39,4 +39,5 @@ value := operations.PatchVerificationRequestQueryParamFieldsID
 | `PatchVerificationRequestQueryParamFieldsResponseDownloadUrls`      | response_download_urls                                              |
 | `PatchVerificationRequestQueryParamFieldsResponseDetails`           | response_details                                                    |
 | `PatchVerificationRequestQueryParamFieldsResponseSource`            | response_source                                                     |
+| `PatchVerificationRequestQueryParamFieldsMetadata`                  | metadata                                                            |
 | `PatchVerificationRequestQueryParamFieldsRaw`                       | raw                                                                 |

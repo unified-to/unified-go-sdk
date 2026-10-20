@@ -13,6 +13,7 @@ type HrisCompany struct {
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
 	LegalName *string        `json:"legal_name,omitempty"`
+	Metadata  []HrisMetadata `json:"metadata,omitempty"`
 	Name      *string        `json:"name,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -56,6 +57,13 @@ func (h *HrisCompany) GetLegalName() *string {
 		return nil
 	}
 	return h.LegalName
+}
+
+func (h *HrisCompany) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisCompany) GetName() *string {

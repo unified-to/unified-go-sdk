@@ -9,11 +9,12 @@ import (
 
 type RepoRepository struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	IsPrivate   *bool      `json:"is_private,omitempty"`
-	Name        string     `json:"name"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	IsPrivate   *bool          `json:"is_private,omitempty"`
+	Metadata    []RepoMetadata `json:"metadata,omitempty"`
+	Name        string         `json:"name"`
 	// (reference to RepoOrganization)
 	OrgID *string        `json:"org_id,omitempty"`
 	Owner *string        `json:"owner,omitempty"`
@@ -60,6 +61,13 @@ func (r *RepoRepository) GetIsPrivate() *bool {
 		return nil
 	}
 	return r.IsPrivate
+}
+
+func (r *RepoRepository) GetMetadata() []RepoMetadata {
+	if r == nil {
+		return nil
+	}
+	return r.Metadata
 }
 
 func (r *RepoRepository) GetName() string {

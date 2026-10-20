@@ -24,4 +24,5 @@ value := operations.CreatePerformanceFeedbackQueryParamFieldsID
 | `CreatePerformanceFeedbackQueryParamFieldsMessage`      | message                                                 |
 | `CreatePerformanceFeedbackQueryParamFieldsTags`         | tags                                                    |
 | `CreatePerformanceFeedbackQueryParamFieldsIsVisible`    | is_visible                                              |
+| `CreatePerformanceFeedbackQueryParamFieldsMetadata`     | metadata                                                |
 | `CreatePerformanceFeedbackQueryParamFieldsRaw`          | raw                                                     |

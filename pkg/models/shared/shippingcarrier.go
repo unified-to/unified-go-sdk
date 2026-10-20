@@ -17,7 +17,8 @@ type ShippingCarrier struct {
 	// Whether the carrier is currently active
 	IsActive *bool `json:"is_active,omitempty"`
 	// Carrier logo URL
-	LogoURL *string `json:"logo_url,omitempty"`
+	LogoURL  *string            `json:"logo_url,omitempty"`
+	Metadata []ShippingMetadata `json:"metadata,omitempty"`
 	// The name of the carrier
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this carrier
@@ -72,6 +73,13 @@ func (s *ShippingCarrier) GetLogoURL() *string {
 		return nil
 	}
 	return s.LogoURL
+}
+
+func (s *ShippingCarrier) GetMetadata() []ShippingMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *ShippingCarrier) GetName() *string {

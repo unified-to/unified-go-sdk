@@ -25,4 +25,5 @@ value := operations.UpdateLmsStudentQueryParamFieldsID
 | `UpdateLmsStudentQueryParamFieldsTelephones` | telephones                                   |
 | `UpdateLmsStudentQueryParamFieldsAddress`    | address                                      |
 | `UpdateLmsStudentQueryParamFieldsImageURL`   | image_url                                    |
+| `UpdateLmsStudentQueryParamFieldsMetadata`   | metadata                                     |
 | `UpdateLmsStudentQueryParamFieldsRaw`        | raw                                          |

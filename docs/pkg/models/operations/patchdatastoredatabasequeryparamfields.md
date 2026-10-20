@@ -24,4 +24,5 @@ value := operations.PatchDatastoreDatabaseQueryParamFieldsID
 | `PatchDatastoreDatabaseQueryParamFieldsIsActive`    | is_active                                           |
 | `PatchDatastoreDatabaseQueryParamFieldsPassword`    | password                                            |
 | `PatchDatastoreDatabaseQueryParamFieldsRegion`      | region                                              |
+| `PatchDatastoreDatabaseQueryParamFieldsMetadata`    | metadata                                            |
 | `PatchDatastoreDatabaseQueryParamFieldsRaw`         | raw                                                 |

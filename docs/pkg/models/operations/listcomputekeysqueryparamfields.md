@@ -28,4 +28,5 @@ value := operations.ListComputeKeysQueryParamFieldsID
 | `ListComputeKeysQueryParamFieldsSecret`      | secret                                       |
 | `ListComputeKeysQueryParamFieldsInstanceID`  | instance_id                                  |
 | `ListComputeKeysQueryParamFieldsExpiresAt`   | expires_at                                   |
+| `ListComputeKeysQueryParamFieldsMetadata`    | metadata                                     |
 | `ListComputeKeysQueryParamFieldsRaw`         | raw                                          |

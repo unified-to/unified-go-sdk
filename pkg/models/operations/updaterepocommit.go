@@ -23,6 +23,7 @@ const (
 	UpdateRepoCommitQueryParamFieldsLinesAdded     UpdateRepoCommitQueryParamFields = "lines_added"
 	UpdateRepoCommitQueryParamFieldsLinesDeleted   UpdateRepoCommitQueryParamFields = "lines_deleted"
 	UpdateRepoCommitQueryParamFieldsLinesChanged   UpdateRepoCommitQueryParamFields = "lines_changed"
+	UpdateRepoCommitQueryParamFieldsMetadata       UpdateRepoCommitQueryParamFields = "metadata"
 	UpdateRepoCommitQueryParamFieldsRaw            UpdateRepoCommitQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *UpdateRepoCommitQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "lines_deleted":
 		fallthrough
 	case "lines_changed":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateRepoCommitQueryParamFields(v)

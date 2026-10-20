@@ -38,4 +38,5 @@ value := operations.UpdateLmsContentQueryParamFieldsID
 | `UpdateLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                      |
 | `UpdateLmsContentQueryParamFieldsInstructors`       | instructors                                         |
 | `UpdateLmsContentQueryParamFieldsPublishedAt`       | published_at                                        |
+| `UpdateLmsContentQueryParamFieldsMetadata`          | metadata                                            |
 | `UpdateLmsContentQueryParamFieldsRaw`               | raw                                                 |

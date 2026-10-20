@@ -107,6 +107,7 @@ type HrisPaycode struct {
 	IsActive   *bool            `json:"is_active,omitempty"`
 	IsEmployer *bool            `json:"is_employer,omitempty"`
 	IsPreTax   *bool            `json:"is_pre_tax,omitempty"`
+	Metadata   []HrisMetadata   `json:"metadata,omitempty"`
 	Name       *string          `json:"name,omitempty"`
 	Raw        map[string]any   `json:"raw,omitempty"`
 	Type       *HrisPaycodeType `json:"type,omitempty"`
@@ -186,6 +187,13 @@ func (h *HrisPaycode) GetIsPreTax() *bool {
 		return nil
 	}
 	return h.IsPreTax
+}
+
+func (h *HrisPaycode) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisPaycode) GetName() *string {

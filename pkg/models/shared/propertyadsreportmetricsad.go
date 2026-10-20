@@ -90,6 +90,7 @@ type PropertyAdsReportMetricsAd struct {
 	Headline       *string                           `json:"headline,omitempty"`
 	ID             *string                           `json:"id,omitempty"`
 	LogoCreativeID *string                           `json:"logo_creative_id,omitempty"`
+	Metadata       []AdsMetadata                     `json:"metadata,omitempty"`
 	Name           *string                           `json:"name,omitempty"`
 	OrganizationID *string                           `json:"organization_id,omitempty"`
 	Path1          *string                           `json:"path1,omitempty"`
@@ -215,6 +216,13 @@ func (p *PropertyAdsReportMetricsAd) GetLogoCreativeID() *string {
 		return nil
 	}
 	return p.LogoCreativeID
+}
+
+func (p *PropertyAdsReportMetricsAd) GetMetadata() []AdsMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyAdsReportMetricsAd) GetName() *string {

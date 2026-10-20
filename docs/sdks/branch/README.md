@@ -40,10 +40,11 @@ func main() {
     res, err := s.Branch.CreateRepoBranch(ctx, operations.CreateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("e21a5f7b-314f-4760-8bed-0ac909da926c"),
-            Name: "voluptas",
+            ID: unifiedgosdk.Pointer("890b1645-9ce2-4af7-b68a-d8d0b9246955"),
+            Metadata: []shared.RepoMetadata{},
+            Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T01:48:29.895Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T05:18:15.140Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,10 +213,11 @@ func main() {
     res, err := s.Branch.PatchRepoBranch(ctx, operations.PatchRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("495e2e86-246f-4531-9396-d33159b20254"),
-            Name: "voluptas",
+            ID: unifiedgosdk.Pointer("61c304ed-d1af-437d-ac27-aee0e66129ff"),
+            Metadata: []shared.RepoMetadata{},
+            Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T01:48:29.895Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T05:18:15.141Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -331,10 +333,11 @@ func main() {
     res, err := s.Branch.UpdateRepoBranch(ctx, operations.UpdateRepoBranchRequest{
         RepoBranch: shared.RepoBranch{
             CreatedAt: types.MustNewTimeFromString("2019-02-24T09:33:48.540Z"),
-            ID: unifiedgosdk.Pointer("495e2e86-246f-4531-9396-d33159b20254"),
-            Name: "voluptas",
+            ID: unifiedgosdk.Pointer("61c304ed-d1af-437d-ac27-aee0e66129ff"),
+            Metadata: []shared.RepoMetadata{},
+            Name: "transmitter-calculate",
             RepoID: "<id>",
-            UpdatedAt: types.MustNewTimeFromString("2020-01-07T01:48:29.895Z"),
+            UpdatedAt: types.MustNewTimeFromString("2020-01-07T05:18:15.141Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

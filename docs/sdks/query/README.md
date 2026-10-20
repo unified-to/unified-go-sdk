@@ -33,6 +33,7 @@ func main() {
 
     res, err := s.Query.CreateDatastoreQuery(ctx, operations.CreateDatastoreQueryRequest{
         DatastoreQuery: shared.DatastoreQuery{
+            Metadata: []shared.DatastoreMetadata{},
             Query: &shared.PropertyDatastoreQueryQuery{
                 Filter: &shared.PropertyDatastoreQueryQueryFilter{
                     Type: shared.PropertyDatastoreQueryQueryFilterTypeOr,

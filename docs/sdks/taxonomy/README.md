@@ -37,20 +37,21 @@ func main() {
 
     res, err := s.Taxonomy.CreateHrisTaxonomy(ctx, operations.CreateHrisTaxonomyRequest{
         HrisTaxonomy: shared.HrisTaxonomy{
-            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
-            Description: unifiedgosdk.Pointer("Apto demonstro audacia adstringo cursim tristis solio careo."),
-            Domain: unifiedgosdk.Pointer("Electronics"),
-            ID: unifiedgosdk.Pointer("ede085db-5709-4d53-a490-746f3de5be17"),
-            IsActive: unifiedgosdk.Pointer(false),
-            Name: unifiedgosdk.Pointer("International Functionality Architect"),
-            ParentID: unifiedgosdk.Pointer("6524b2a7-6520-4e15-8c4e-1aa6793db837"),
-            RoleIds: []string{
-                "2b1ef757-eb4c-4207-8af1-929afe49cd65",
+            AlternativeNames: []string{
+                "Facilitator",
+                "National",
             },
-            Subcategory: unifiedgosdk.Pointer("Bamboo"),
+            CreatedAt: types.MustNewTimeFromString("2022-06-23T02:10:00.789Z"),
+            Description: unifiedgosdk.Pointer("Uterque vespillo adnuo ea commodo turbo suscipio condico."),
+            Domain: unifiedgosdk.Pointer("Health"),
+            ID: unifiedgosdk.Pointer("38467467-c4af-4c56-84d9-307f0280ce2f"),
+            IsActive: unifiedgosdk.Pointer(false),
+            Metadata: []shared.HrisMetadata{},
+            Name: unifiedgosdk.Pointer("International Functionality Architect"),
+            Subcategory: unifiedgosdk.Pointer("Marble"),
             Type: shared.HrisTaxonomyTypeKnowledge.ToPointer(),
-            UpdatedAt: types.MustNewTimeFromString("2023-05-28T19:34:17.172Z"),
-            URL: unifiedgosdk.Pointer("https://our-polarisation.name"),
+            UpdatedAt: types.MustNewTimeFromString("2023-05-29T02:12:26.824Z"),
+            URL: unifiedgosdk.Pointer("https://fixed-membership.biz/"),
         },
         ConnectionID: "<id>",
     })

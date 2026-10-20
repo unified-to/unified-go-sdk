@@ -49,6 +49,7 @@ type MessagingEvent struct {
 	ID                  *string                        `json:"id,omitempty"`
 	IsReplacingOriginal *bool                          `json:"is_replacing_original,omitempty"`
 	Message             *PropertyMessagingEventMessage `json:"message,omitempty"`
+	Metadata            []MessagingMetadata            `json:"metadata,omitempty"`
 	Raw                 map[string]any                 `json:"raw,omitempty"`
 	Type                *MessagingEventType            `json:"type,omitempty"`
 	User                *PropertyMessagingEventUser    `json:"user,omitempty"`
@@ -105,6 +106,13 @@ func (m *MessagingEvent) GetMessage() *PropertyMessagingEventMessage {
 		return nil
 	}
 	return m.Message
+}
+
+func (m *MessagingEvent) GetMetadata() []MessagingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MessagingEvent) GetRaw() map[string]any {

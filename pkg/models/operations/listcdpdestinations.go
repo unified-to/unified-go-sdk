@@ -20,6 +20,7 @@ const (
 	ListCdpDestinationsQueryParamFieldsType      ListCdpDestinationsQueryParamFields = "type"
 	ListCdpDestinationsQueryParamFieldsDirection ListCdpDestinationsQueryParamFields = "direction"
 	ListCdpDestinationsQueryParamFieldsIsEnabled ListCdpDestinationsQueryParamFields = "is_enabled"
+	ListCdpDestinationsQueryParamFieldsMetadata  ListCdpDestinationsQueryParamFields = "metadata"
 	ListCdpDestinationsQueryParamFieldsRaw       ListCdpDestinationsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListCdpDestinationsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "direction":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCdpDestinationsQueryParamFields(v)

@@ -30,4 +30,5 @@ value := operations.GetUcRecordingQueryParamFieldsID
 | `GetUcRecordingQueryParamFieldsUserPhone`              | user_phone                                             |
 | `GetUcRecordingQueryParamFieldsType`                   | type                                                   |
 | `GetUcRecordingQueryParamFieldsConversationIdentifier` | conversation_identifier                                |
+| `GetUcRecordingQueryParamFieldsMetadata`               | metadata                                               |
 | `GetUcRecordingQueryParamFieldsRaw`                    | raw                                                    |

@@ -32,4 +32,5 @@ value := operations.PatchCrmEventQueryParamFieldsID
 | `PatchCrmEventQueryParamFieldsContactIds`     | contact_ids                                   |
 | `PatchCrmEventQueryParamFieldsLeadIds`        | lead_ids                                      |
 | `PatchCrmEventQueryParamFieldsUserID`         | user_id                                       |
+| `PatchCrmEventQueryParamFieldsMetadata`       | metadata                                      |
 | `PatchCrmEventQueryParamFieldsRaw`            | raw                                           |

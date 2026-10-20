@@ -32,6 +32,7 @@ const (
 	PatchCommerceLocationQueryParamFieldsImageURL       PatchCommerceLocationQueryParamFields = "image_url"
 	PatchCommerceLocationQueryParamFieldsWebURL         PatchCommerceLocationQueryParamFields = "web_url"
 	PatchCommerceLocationQueryParamFieldsMedia          PatchCommerceLocationQueryParamFields = "media"
+	PatchCommerceLocationQueryParamFieldsMetadata       PatchCommerceLocationQueryParamFields = "metadata"
 	PatchCommerceLocationQueryParamFieldsRaw            PatchCommerceLocationQueryParamFields = "raw"
 	PatchCommerceLocationQueryParamFieldsCategories     PatchCommerceLocationQueryParamFields = "categories"
 )
@@ -84,6 +85,8 @@ func (e *PatchCommerceLocationQueryParamFields) UnmarshalJSON(data []byte) error
 	case "web_url":
 		fallthrough
 	case "media":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		fallthrough

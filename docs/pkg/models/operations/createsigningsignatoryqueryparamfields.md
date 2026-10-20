@@ -27,3 +27,4 @@ value := operations.CreateSigningSignatoryQueryParamFieldsID
 | `CreateSigningSignatoryQueryParamFieldsSignedAt`      | signed_at                                             |
 | `CreateSigningSignatoryQueryParamFieldsDeclineReason` | decline_reason                                        |
 | `CreateSigningSignatoryQueryParamFieldsRaw`           | raw                                                   |
+| `CreateSigningSignatoryQueryParamFieldsMetadata`      | metadata                                              |

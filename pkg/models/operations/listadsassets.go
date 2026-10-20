@@ -24,6 +24,7 @@ const (
 	ListAdsAssetsQueryParamFieldsWidth          ListAdsAssetsQueryParamFields = "width"
 	ListAdsAssetsQueryParamFieldsHeight         ListAdsAssetsQueryParamFields = "height"
 	ListAdsAssetsQueryParamFieldsFileSize       ListAdsAssetsQueryParamFields = "file_size"
+	ListAdsAssetsQueryParamFieldsMetadata       ListAdsAssetsQueryParamFields = "metadata"
 	ListAdsAssetsQueryParamFieldsRaw            ListAdsAssetsQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *ListAdsAssetsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "height":
 		fallthrough
 	case "file_size":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAdsAssetsQueryParamFields(v)

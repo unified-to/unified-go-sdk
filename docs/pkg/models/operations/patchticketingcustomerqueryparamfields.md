@@ -22,4 +22,5 @@ value := operations.PatchTicketingCustomerQueryParamFieldsID
 | `PatchTicketingCustomerQueryParamFieldsEmails`     | emails                                             |
 | `PatchTicketingCustomerQueryParamFieldsTelephones` | telephones                                         |
 | `PatchTicketingCustomerQueryParamFieldsTags`       | tags                                               |
+| `PatchTicketingCustomerQueryParamFieldsMetadata`   | metadata                                           |
 | `PatchTicketingCustomerQueryParamFieldsRaw`        | raw                                                |

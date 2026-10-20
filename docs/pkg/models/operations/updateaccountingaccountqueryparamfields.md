@@ -29,4 +29,5 @@ value := operations.UpdateAccountingAccountQueryParamFieldsID
 | `UpdateAccountingAccountQueryParamFieldsParentID`            | parent_id                                                    |
 | `UpdateAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                     |
 | `UpdateAccountingAccountQueryParamFieldsOrganizationID`      | organization_id                                              |
+| `UpdateAccountingAccountQueryParamFieldsMetadata`            | metadata                                                     |
 | `UpdateAccountingAccountQueryParamFieldsRaw`                 | raw                                                          |

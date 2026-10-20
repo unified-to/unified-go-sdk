@@ -24,6 +24,7 @@ const (
 	PatchSigningSignatoryQueryParamFieldsSignedAt      PatchSigningSignatoryQueryParamFields = "signed_at"
 	PatchSigningSignatoryQueryParamFieldsDeclineReason PatchSigningSignatoryQueryParamFields = "decline_reason"
 	PatchSigningSignatoryQueryParamFieldsRaw           PatchSigningSignatoryQueryParamFields = "raw"
+	PatchSigningSignatoryQueryParamFieldsMetadata      PatchSigningSignatoryQueryParamFields = "metadata"
 )
 
 func (e PatchSigningSignatoryQueryParamFields) ToPointer() *PatchSigningSignatoryQueryParamFields {
@@ -58,6 +59,8 @@ func (e *PatchSigningSignatoryQueryParamFields) UnmarshalJSON(data []byte) error
 	case "decline_reason":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "metadata":
 		*e = PatchSigningSignatoryQueryParamFields(v)
 		return nil
 	default:

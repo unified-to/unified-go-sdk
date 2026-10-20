@@ -63,6 +63,7 @@ type VerificationRequest struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt        *time.Time                   `json:"created_at,omitempty"`
 	ID               *string                      `json:"id,omitempty"`
+	Metadata         []VerificationMetadata       `json:"metadata,omitempty"`
 	PackageID        *string                      `json:"package_id,omitempty"`
 	Parameters       []VerificationParameterInput `json:"parameters,omitempty"`
 	ProfileAddresses []VerificationAddress        `json:"profile_addresses,omitempty"`
@@ -127,6 +128,13 @@ func (v *VerificationRequest) GetID() *string {
 		return nil
 	}
 	return v.ID
+}
+
+func (v *VerificationRequest) GetMetadata() []VerificationMetadata {
+	if v == nil {
+		return nil
+	}
+	return v.Metadata
 }
 
 func (v *VerificationRequest) GetPackageID() *string {

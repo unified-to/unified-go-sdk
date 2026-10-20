@@ -24,4 +24,5 @@ value := operations.ListKmsCommentsQueryParamFieldsID
 | `ListKmsCommentsQueryParamFieldsUserID`      | user_id                                      |
 | `ListKmsCommentsQueryParamFieldsPageID`      | page_id                                      |
 | `ListKmsCommentsQueryParamFieldsParentID`    | parent_id                                    |
+| `ListKmsCommentsQueryParamFieldsMetadata`    | metadata                                     |
 | `ListKmsCommentsQueryParamFieldsRaw`         | raw                                          |

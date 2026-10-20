@@ -22,4 +22,5 @@ value := operations.ListDatastoreRecordsQueryParamFieldsID
 | `ListDatastoreRecordsQueryParamFieldsTableID`    | table_id                                         |
 | `ListDatastoreRecordsQueryParamFieldsFields`     | fields                                           |
 | `ListDatastoreRecordsQueryParamFieldsRowNumber`  | row_number                                       |
+| `ListDatastoreRecordsQueryParamFieldsMetadata`   | metadata                                         |
 | `ListDatastoreRecordsQueryParamFieldsRaw`        | raw                                              |

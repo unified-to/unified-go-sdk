@@ -39,6 +39,7 @@ const (
 	ListAccountingContactsQueryParamFieldsBalanceAmount      ListAccountingContactsQueryParamFields = "balance_amount"
 	ListAccountingContactsQueryParamFieldsWebsite            ListAccountingContactsQueryParamFields = "website"
 	ListAccountingContactsQueryParamFieldsNotes              ListAccountingContactsQueryParamFields = "notes"
+	ListAccountingContactsQueryParamFieldsMetadata           ListAccountingContactsQueryParamFields = "metadata"
 	ListAccountingContactsQueryParamFieldsRaw                ListAccountingContactsQueryParamFields = "raw"
 )
 
@@ -104,6 +105,8 @@ func (e *ListAccountingContactsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "website":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingContactsQueryParamFields(v)

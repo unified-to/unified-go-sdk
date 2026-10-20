@@ -84,7 +84,8 @@ type ShippingLabel struct {
 	// Format of the label (PDF, PNG, ZPL, EPL2)
 	LabelFormat *LabelFormat `json:"label_format,omitempty"`
 	// URL to download the label
-	LabelURL *string `json:"label_url,omitempty"`
+	LabelURL *string            `json:"label_url,omitempty"`
+	Metadata []ShippingMetadata `json:"metadata,omitempty"`
 	// Rate used for this label; points to ShippingRate
 	RateID *string `json:"rate_id,omitempty"`
 	// The raw data returned by the integration for this label
@@ -159,6 +160,13 @@ func (s *ShippingLabel) GetLabelURL() *string {
 		return nil
 	}
 	return s.LabelURL
+}
+
+func (s *ShippingLabel) GetMetadata() []ShippingMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *ShippingLabel) GetRateID() *string {

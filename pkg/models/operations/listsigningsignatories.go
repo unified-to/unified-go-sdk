@@ -24,6 +24,7 @@ const (
 	ListSigningSignatoriesQueryParamFieldsSignedAt      ListSigningSignatoriesQueryParamFields = "signed_at"
 	ListSigningSignatoriesQueryParamFieldsDeclineReason ListSigningSignatoriesQueryParamFields = "decline_reason"
 	ListSigningSignatoriesQueryParamFieldsRaw           ListSigningSignatoriesQueryParamFields = "raw"
+	ListSigningSignatoriesQueryParamFieldsMetadata      ListSigningSignatoriesQueryParamFields = "metadata"
 )
 
 func (e ListSigningSignatoriesQueryParamFields) ToPointer() *ListSigningSignatoriesQueryParamFields {
@@ -58,6 +59,8 @@ func (e *ListSigningSignatoriesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "decline_reason":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "metadata":
 		*e = ListSigningSignatoriesQueryParamFields(v)
 		return nil
 	default:

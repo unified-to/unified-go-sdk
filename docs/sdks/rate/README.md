@@ -19,8 +19,8 @@ package main
 import(
 	"context"
 	unifiedgosdk "github.com/unified-to/unified-go-sdk"
-	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
 	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
 	"log"
 )
@@ -35,20 +35,21 @@ func main() {
     res, err := s.Rate.CreateShippingRate(ctx, operations.CreateShippingRateRequest{
         ShippingRate: shared.ShippingRate{
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("0eadb51b-61e6-44d2-a7a5-43d8012224ff"),
+            ID: unifiedgosdk.Pointer("40c33687-70b3-4691-8ec4-136fcda45ff9"),
+            Metadata: []shared.ShippingMetadata{},
             Rates: []shared.ShippingRateRate{
                 shared.ShippingRateRate{
-                    Amount: unifiedgosdk.Pointer[float64](54.679719475097954),
-                    BaseAmount: unifiedgosdk.Pointer[float64](76.45537888631225),
+                    Amount: unifiedgosdk.Pointer[float64](44.72),
+                    BaseAmount: unifiedgosdk.Pointer[float64](46.01),
                     Currency: unifiedgosdk.Pointer("USD"),
-                    DeliveryDays: unifiedgosdk.Pointer[float64](8.0),
-                    Description: unifiedgosdk.Pointer("Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum."),
-                    EstimatedDays: unifiedgosdk.Pointer[float64](10.0),
-                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2024-02-15T15:54:11.839Z"),
-                    IsGuaranteed: unifiedgosdk.Pointer(true),
+                    DeliveryDays: unifiedgosdk.Pointer[float64](2.0),
+                    Description: unifiedgosdk.Pointer("Veniam denego vulgo bos turpis pax."),
+                    DiscountAmount: unifiedgosdk.Pointer[float64](4.6),
+                    EstimatedDays: unifiedgosdk.Pointer[float64](2.0),
+                    EstimatedDeliveryEndAt: types.MustNewTimeFromString("2021-09-03T01:03:36.021Z"),
                     IsNegotiatedRate: unifiedgosdk.Pointer(true),
-                    TaxAmount: unifiedgosdk.Pointer[float64](2.2701712837442756),
-                    Title: "Turcotte Inc",
+                    TaxAmount: unifiedgosdk.Pointer[float64](3.31),
+                    Title: "Express",
                 },
             },
         },

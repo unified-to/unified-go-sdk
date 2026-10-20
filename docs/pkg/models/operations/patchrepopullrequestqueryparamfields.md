@@ -28,4 +28,5 @@ value := operations.PatchRepoPullrequestQueryParamFieldsID
 | `PatchRepoPullrequestQueryParamFieldsLabels`         | labels                                               |
 | `PatchRepoPullrequestQueryParamFieldsClosedAt`       | closed_at                                            |
 | `PatchRepoPullrequestQueryParamFieldsCommitIds`      | commit_ids                                           |
+| `PatchRepoPullrequestQueryParamFieldsMetadata`       | metadata                                             |
 | `PatchRepoPullrequestQueryParamFieldsRaw`            | raw                                                  |

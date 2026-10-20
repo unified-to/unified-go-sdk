@@ -8,6 +8,7 @@ type UcComment struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *string        `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
+	Metadata  []UcMetadata   `json:"metadata,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *string `json:"updated_at,omitempty"`
@@ -41,6 +42,13 @@ func (u *UcComment) GetID() *string {
 		return nil
 	}
 	return u.ID
+}
+
+func (u *UcComment) GetMetadata() []UcMetadata {
+	if u == nil {
+		return nil
+	}
+	return u.Metadata
 }
 
 func (u *UcComment) GetRaw() map[string]any {

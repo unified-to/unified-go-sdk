@@ -22,4 +22,5 @@ value := operations.ListComputeRegionsQueryParamFieldsID
 | `ListComputeRegionsQueryParamFieldsLocation`  | location                                      |
 | `ListComputeRegionsQueryParamFieldsCountry`   | country                                       |
 | `ListComputeRegionsQueryParamFieldsGpuModels` | gpu_models                                    |
+| `ListComputeRegionsQueryParamFieldsMetadata`  | metadata                                      |
 | `ListComputeRegionsQueryParamFieldsRaw`       | raw                                           |

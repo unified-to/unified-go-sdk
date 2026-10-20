@@ -7,13 +7,14 @@ type CalendarLink struct {
 	CreatedAt   *string `json:"created_at,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// minutes
-	Duration      *float64       `json:"duration,omitempty"`
-	ID            *string        `json:"id,omitempty"`
-	IsActive      *bool          `json:"is_active,omitempty"`
-	Name          *string        `json:"name,omitempty"`
-	PriceAmount   *float64       `json:"price_amount,omitempty"`
-	PriceCurrency *string        `json:"price_currency,omitempty"`
-	Raw           map[string]any `json:"raw,omitempty"`
+	Duration      *float64           `json:"duration,omitempty"`
+	ID            *string            `json:"id,omitempty"`
+	IsActive      *bool              `json:"is_active,omitempty"`
+	Metadata      []CalendarMetadata `json:"metadata,omitempty"`
+	Name          *string            `json:"name,omitempty"`
+	PriceAmount   *float64           `json:"price_amount,omitempty"`
+	PriceCurrency *string            `json:"price_currency,omitempty"`
+	Raw           map[string]any     `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *string `json:"updated_at,omitempty"`
 	URL       string  `json:"url"`
@@ -52,6 +53,13 @@ func (c *CalendarLink) GetIsActive() *bool {
 		return nil
 	}
 	return c.IsActive
+}
+
+func (c *CalendarLink) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarLink) GetName() *string {

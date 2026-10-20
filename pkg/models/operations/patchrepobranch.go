@@ -17,6 +17,7 @@ const (
 	PatchRepoBranchQueryParamFieldsUpdatedAt PatchRepoBranchQueryParamFields = "updated_at"
 	PatchRepoBranchQueryParamFieldsName      PatchRepoBranchQueryParamFields = "name"
 	PatchRepoBranchQueryParamFieldsRepoID    PatchRepoBranchQueryParamFields = "repo_id"
+	PatchRepoBranchQueryParamFieldsMetadata  PatchRepoBranchQueryParamFields = "metadata"
 	PatchRepoBranchQueryParamFieldsRaw       PatchRepoBranchQueryParamFields = "raw"
 )
 
@@ -38,6 +39,8 @@ func (e *PatchRepoBranchQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "repo_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchRepoBranchQueryParamFields(v)

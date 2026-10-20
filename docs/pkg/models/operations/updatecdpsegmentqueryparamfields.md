@@ -27,4 +27,5 @@ value := operations.UpdateCdpSegmentQueryParamFieldsID
 | `UpdateCdpSegmentQueryParamFieldsSize`        | size                                          |
 | `UpdateCdpSegmentQueryParamFieldsIsActive`    | is_active                                     |
 | `UpdateCdpSegmentQueryParamFieldsSourceID`    | source_id                                     |
+| `UpdateCdpSegmentQueryParamFieldsMetadata`    | metadata                                      |
 | `UpdateCdpSegmentQueryParamFieldsRaw`         | raw                                           |

@@ -47,6 +47,7 @@ type CalendarWebinar struct {
 	IsEnabled          *bool                             `json:"is_enabled,omitempty"`
 	IsWebcast          *bool                             `json:"is_webcast,omitempty"`
 	JoinURL            *string                           `json:"join_url,omitempty"`
+	Metadata           []CalendarMetadata                `json:"metadata,omitempty"`
 	Notes              *string                           `json:"notes,omitempty"`
 	Organizer          *PropertyCalendarWebinarOrganizer `json:"organizer,omitempty"`
 	PanelistPassword   *string                           `json:"panelist_password,omitempty"`
@@ -173,6 +174,13 @@ func (c *CalendarWebinar) GetJoinURL() *string {
 		return nil
 	}
 	return c.JoinURL
+}
+
+func (c *CalendarWebinar) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarWebinar) GetNotes() *string {

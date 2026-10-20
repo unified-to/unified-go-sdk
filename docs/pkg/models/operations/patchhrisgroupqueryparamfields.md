@@ -28,4 +28,5 @@ value := operations.PatchHrisGroupQueryParamFieldsID
 | `PatchHrisGroupQueryParamFieldsCompanyID`    | company_id                                   |
 | `PatchHrisGroupQueryParamFieldsPayFrequency` | pay_frequency                                |
 | `PatchHrisGroupQueryParamFieldsNextPaidAt`   | next_paid_at                                 |
+| `PatchHrisGroupQueryParamFieldsMetadata`     | metadata                                     |
 | `PatchHrisGroupQueryParamFieldsRaw`          | raw                                          |

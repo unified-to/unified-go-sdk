@@ -25,6 +25,7 @@ const (
 	ListMartechCampaignsQueryParamFieldsFromEmail    ListMartechCampaignsQueryParamFields = "from_email"
 	ListMartechCampaignsQueryParamFieldsReplyToEmail ListMartechCampaignsQueryParamFields = "reply_to_email"
 	ListMartechCampaignsQueryParamFieldsSendAt       ListMartechCampaignsQueryParamFields = "send_at"
+	ListMartechCampaignsQueryParamFieldsMetadata     ListMartechCampaignsQueryParamFields = "metadata"
 	ListMartechCampaignsQueryParamFieldsRaw          ListMartechCampaignsQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *ListMartechCampaignsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "reply_to_email":
 		fallthrough
 	case "send_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListMartechCampaignsQueryParamFields(v)

@@ -171,6 +171,7 @@ type HrisBenefit struct {
 	Frequency *HrisBenefitFrequency `json:"frequency,omitempty"`
 	ID        *string               `json:"id,omitempty"`
 	IsActive  *bool                 `json:"is_active,omitempty"`
+	Metadata  []HrisMetadata        `json:"metadata,omitempty"`
 	// e.g. "401(k) Plan"
 	Name *string        `json:"name,omitempty"`
 	Raw  map[string]any `json:"raw,omitempty"`
@@ -267,6 +268,13 @@ func (h *HrisBenefit) GetIsActive() *bool {
 		return nil
 	}
 	return h.IsActive
+}
+
+func (h *HrisBenefit) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisBenefit) GetName() *string {

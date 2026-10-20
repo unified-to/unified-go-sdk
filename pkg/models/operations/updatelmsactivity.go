@@ -24,6 +24,7 @@ const (
 	UpdateLmsActivityQueryParamFieldsProgressPercentage UpdateLmsActivityQueryParamFields = "progress_percentage"
 	UpdateLmsActivityQueryParamFieldsStartedAt          UpdateLmsActivityQueryParamFields = "started_at"
 	UpdateLmsActivityQueryParamFieldsCompletedAt        UpdateLmsActivityQueryParamFields = "completed_at"
+	UpdateLmsActivityQueryParamFieldsMetadata           UpdateLmsActivityQueryParamFields = "metadata"
 	UpdateLmsActivityQueryParamFieldsRaw                UpdateLmsActivityQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *UpdateLmsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "started_at":
 		fallthrough
 	case "completed_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateLmsActivityQueryParamFields(v)

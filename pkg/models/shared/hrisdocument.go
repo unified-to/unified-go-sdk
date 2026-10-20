@@ -53,6 +53,7 @@ type HrisDocument struct {
 	DocumentURL *string        `json:"document_url,omitempty"`
 	Filename    *string        `json:"filename,omitempty"`
 	ID          *string        `json:"id,omitempty"`
+	Metadata    []HrisMetadata `json:"metadata,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
 	// unified, normalized document type (OTHER when unmappable)
 	Type *HrisDocumentType `json:"type,omitempty"`
@@ -113,6 +114,13 @@ func (h *HrisDocument) GetID() *string {
 		return nil
 	}
 	return h.ID
+}
+
+func (h *HrisDocument) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisDocument) GetRaw() map[string]any {

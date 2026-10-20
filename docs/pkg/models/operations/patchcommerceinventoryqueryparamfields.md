@@ -22,4 +22,5 @@ value := operations.PatchCommerceInventoryQueryParamFieldsID
 | `PatchCommerceInventoryQueryParamFieldsItemOptionID`  | item_option_id                                        |
 | `PatchCommerceInventoryQueryParamFieldsLocationID`    | location_id                                           |
 | `PatchCommerceInventoryQueryParamFieldsAvailable`     | available                                             |
+| `PatchCommerceInventoryQueryParamFieldsMetadata`      | metadata                                              |
 | `PatchCommerceInventoryQueryParamFieldsRaw`           | raw                                                   |

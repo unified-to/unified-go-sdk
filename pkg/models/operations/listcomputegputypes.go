@@ -27,6 +27,7 @@ const (
 	ListComputeGputypesQueryParamFieldsArchitecture    ListComputeGputypesQueryParamFields = "architecture"
 	ListComputeGputypesQueryParamFieldsPrices          ListComputeGputypesQueryParamFields = "prices"
 	ListComputeGputypesQueryParamFieldsAvailability    ListComputeGputypesQueryParamFields = "availability"
+	ListComputeGputypesQueryParamFieldsMetadata        ListComputeGputypesQueryParamFields = "metadata"
 	ListComputeGputypesQueryParamFieldsRaw             ListComputeGputypesQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *ListComputeGputypesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "prices":
 		fallthrough
 	case "availability":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListComputeGputypesQueryParamFields(v)

@@ -24,4 +24,5 @@ value := operations.PatchKmsCommentQueryParamFieldsID
 | `PatchKmsCommentQueryParamFieldsUserID`      | user_id                                      |
 | `PatchKmsCommentQueryParamFieldsPageID`      | page_id                                      |
 | `PatchKmsCommentQueryParamFieldsParentID`    | parent_id                                    |
+| `PatchKmsCommentQueryParamFieldsMetadata`    | metadata                                     |
 | `PatchKmsCommentQueryParamFieldsRaw`         | raw                                          |

@@ -19,7 +19,8 @@ type ClubsLocation struct {
 	// The latitude
 	Latitude *float64 `json:"latitude,omitempty"`
 	// The longitude
-	Longitude *float64 `json:"longitude,omitempty"`
+	Longitude *float64        `json:"longitude,omitempty"`
+	Metadata  []ClubsMetadata `json:"metadata,omitempty"`
 	// The location name
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this location
@@ -83,6 +84,13 @@ func (c *ClubsLocation) GetLongitude() *float64 {
 		return nil
 	}
 	return c.Longitude
+}
+
+func (c *ClubsLocation) GetMetadata() []ClubsMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ClubsLocation) GetName() *string {

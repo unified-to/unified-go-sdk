@@ -25,6 +25,7 @@ const (
 	PatchShippingLabelQueryParamFieldsLabelCostCurrency PatchShippingLabelQueryParamFields = "label_cost_currency"
 	PatchShippingLabelQueryParamFieldsRateID            PatchShippingLabelQueryParamFields = "rate_id"
 	PatchShippingLabelQueryParamFieldsServiceCode       PatchShippingLabelQueryParamFields = "service_code"
+	PatchShippingLabelQueryParamFieldsMetadata          PatchShippingLabelQueryParamFields = "metadata"
 	PatchShippingLabelQueryParamFieldsRaw               PatchShippingLabelQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *PatchShippingLabelQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "rate_id":
 		fallthrough
 	case "service_code":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchShippingLabelQueryParamFields(v)

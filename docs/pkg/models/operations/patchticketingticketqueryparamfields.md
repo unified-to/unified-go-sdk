@@ -32,4 +32,5 @@ value := operations.PatchTicketingTicketQueryParamFieldsID
 | `PatchTicketingTicketQueryParamFieldsURL`           | url                                                 |
 | `PatchTicketingTicketQueryParamFieldsAttachmentIds` | attachment_ids                                      |
 | `PatchTicketingTicketQueryParamFieldsDueAt`         | due_at                                              |
+| `PatchTicketingTicketQueryParamFieldsMetadata`      | metadata                                            |
 | `PatchTicketingTicketQueryParamFieldsRaw`           | raw                                                 |

@@ -32,4 +32,5 @@ value := operations.CreateCrmEventQueryParamFieldsID
 | `CreateCrmEventQueryParamFieldsContactIds`     | contact_ids                                    |
 | `CreateCrmEventQueryParamFieldsLeadIds`        | lead_ids                                       |
 | `CreateCrmEventQueryParamFieldsUserID`         | user_id                                        |
+| `CreateCrmEventQueryParamFieldsMetadata`       | metadata                                       |
 | `CreateCrmEventQueryParamFieldsRaw`            | raw                                            |

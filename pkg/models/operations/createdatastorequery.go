@@ -16,6 +16,7 @@ const (
 	CreateDatastoreQueryQueryParamFieldsDatabaseID CreateDatastoreQueryQueryParamFields = "database_id"
 	CreateDatastoreQueryQueryParamFieldsQuery      CreateDatastoreQueryQueryParamFields = "query"
 	CreateDatastoreQueryQueryParamFieldsResponse   CreateDatastoreQueryQueryParamFields = "response"
+	CreateDatastoreQueryQueryParamFieldsMetadata   CreateDatastoreQueryQueryParamFields = "metadata"
 	CreateDatastoreQueryQueryParamFieldsRaw        CreateDatastoreQueryQueryParamFields = "raw"
 )
 
@@ -35,6 +36,8 @@ func (e *CreateDatastoreQueryQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "query":
 		fallthrough
 	case "response":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateDatastoreQueryQueryParamFields(v)

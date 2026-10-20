@@ -22,4 +22,5 @@ value := operations.CreateCalendarCalendarQueryParamFieldsID
 | `CreateCalendarCalendarQueryParamFieldsDescription` | description                                         |
 | `CreateCalendarCalendarQueryParamFieldsTimezone`    | timezone                                            |
 | `CreateCalendarCalendarQueryParamFieldsIsPrimary`   | is_primary                                          |
+| `CreateCalendarCalendarQueryParamFieldsMetadata`    | metadata                                            |
 | `CreateCalendarCalendarQueryParamFieldsRaw`         | raw                                                 |

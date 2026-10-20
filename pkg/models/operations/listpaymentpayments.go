@@ -41,6 +41,7 @@ const (
 	ListPaymentPaymentsQueryParamFieldsExchangeRate   ListPaymentPaymentsQueryParamFields = "exchange_rate"
 	ListPaymentPaymentsQueryParamFieldsCategoryIds    ListPaymentPaymentsQueryParamFields = "category_ids"
 	ListPaymentPaymentsQueryParamFieldsNetAmount      ListPaymentPaymentsQueryParamFields = "net_amount"
+	ListPaymentPaymentsQueryParamFieldsMetadata       ListPaymentPaymentsQueryParamFields = "metadata"
 	ListPaymentPaymentsQueryParamFieldsRaw            ListPaymentPaymentsQueryParamFields = "raw"
 )
 
@@ -110,6 +111,8 @@ func (e *ListPaymentPaymentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "category_ids":
 		fallthrough
 	case "net_amount":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListPaymentPaymentsQueryParamFields(v)

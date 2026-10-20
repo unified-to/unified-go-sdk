@@ -90,6 +90,7 @@ type AdsAd struct {
 	Headline       *string        `json:"headline,omitempty"`
 	ID             *string        `json:"id,omitempty"`
 	LogoCreativeID *string        `json:"logo_creative_id,omitempty"`
+	Metadata       []AdsMetadata  `json:"metadata,omitempty"`
 	Name           *string        `json:"name,omitempty"`
 	OrganizationID *string        `json:"organization_id,omitempty"`
 	Path1          *string        `json:"path1,omitempty"`
@@ -215,6 +216,13 @@ func (a *AdsAd) GetLogoCreativeID() *string {
 		return nil
 	}
 	return a.LogoCreativeID
+}
+
+func (a *AdsAd) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsAd) GetName() *string {

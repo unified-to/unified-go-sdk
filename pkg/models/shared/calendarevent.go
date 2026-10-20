@@ -43,6 +43,7 @@ type CalendarEvent struct {
 	Location      *string `json:"location,omitempty"`
 	// pointer to Legal Matter
 	MatterID   *string                         `json:"matter_id,omitempty"`
+	Metadata   []CalendarMetadata              `json:"metadata,omitempty"`
 	Notes      *string                         `json:"notes,omitempty"`
 	Organizer  *PropertyCalendarEventOrganizer `json:"organizer,omitempty"`
 	Raw        map[string]any                  `json:"raw,omitempty"`
@@ -149,6 +150,13 @@ func (c *CalendarEvent) GetMatterID() *string {
 		return nil
 	}
 	return c.MatterID
+}
+
+func (c *CalendarEvent) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarEvent) GetNotes() *string {

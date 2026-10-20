@@ -9,14 +9,15 @@ import (
 
 type DatastoreDatabase struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	Password    *string        `json:"password,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	Region      *string        `json:"region,omitempty"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	Description *string             `json:"description,omitempty"`
+	ID          *string             `json:"id,omitempty"`
+	IsActive    *bool               `json:"is_active,omitempty"`
+	Metadata    []DatastoreMetadata `json:"metadata,omitempty"`
+	Name        *string             `json:"name,omitempty"`
+	Password    *string             `json:"password,omitempty"`
+	Raw         map[string]any      `json:"raw,omitempty"`
+	Region      *string             `json:"region,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	WebURL    *string    `json:"web_url,omitempty"`
@@ -59,6 +60,13 @@ func (d *DatastoreDatabase) GetIsActive() *bool {
 		return nil
 	}
 	return d.IsActive
+}
+
+func (d *DatastoreDatabase) GetMetadata() []DatastoreMetadata {
+	if d == nil {
+		return nil
+	}
+	return d.Metadata
 }
 
 func (d *DatastoreDatabase) GetName() *string {

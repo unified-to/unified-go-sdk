@@ -23,4 +23,5 @@ value := operations.UpdateLmsCollectionQueryParamFieldsID
 | `UpdateLmsCollectionQueryParamFieldsMedia`       | media                                            |
 | `UpdateLmsCollectionQueryParamFieldsIsActive`    | is_active                                        |
 | `UpdateLmsCollectionQueryParamFieldsParentID`    | parent_id                                        |
+| `UpdateLmsCollectionQueryParamFieldsMetadata`    | metadata                                         |
 | `UpdateLmsCollectionQueryParamFieldsRaw`         | raw                                              |

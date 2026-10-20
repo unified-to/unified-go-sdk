@@ -23,6 +23,7 @@ const (
 	GetAccountingAgedreceivableQueryParamFieldsTotalAmount        GetAccountingAgedreceivableQueryParamFields = "total_amount"
 	GetAccountingAgedreceivableQueryParamFieldsPeriods            GetAccountingAgedreceivableQueryParamFields = "periods"
 	GetAccountingAgedreceivableQueryParamFieldsOrganizationID     GetAccountingAgedreceivableQueryParamFields = "organization_id"
+	GetAccountingAgedreceivableQueryParamFieldsMetadata           GetAccountingAgedreceivableQueryParamFields = "metadata"
 	GetAccountingAgedreceivableQueryParamFieldsRaw                GetAccountingAgedreceivableQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *GetAccountingAgedreceivableQueryParamFields) UnmarshalJSON(data []byte)
 	case "periods":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingAgedreceivableQueryParamFields(v)

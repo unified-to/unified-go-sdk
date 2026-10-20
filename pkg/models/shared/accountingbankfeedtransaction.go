@@ -53,7 +53,8 @@ type AccountingBankfeedtransaction struct {
 	// true if not yet cleared
 	IsPending *bool `json:"is_pending,omitempty"`
 	// counterparty as reported by the bank
-	MerchantName *string `json:"merchant_name,omitempty"`
+	MerchantName *string              `json:"merchant_name,omitempty"`
+	Metadata     []AccountingMetadata `json:"metadata,omitempty"`
 	// ref -> accounting Organization this record belongs to
 	OrganizationID *string `json:"organization_id,omitempty"`
 	// when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -163,6 +164,13 @@ func (a *AccountingBankfeedtransaction) GetMerchantName() *string {
 		return nil
 	}
 	return a.MerchantName
+}
+
+func (a *AccountingBankfeedtransaction) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingBankfeedtransaction) GetOrganizationID() *string {

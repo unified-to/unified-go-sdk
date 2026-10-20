@@ -13,9 +13,10 @@ value := operations.GetAdsPromotedQueryParamFieldsID
 
 ## Values
 
-| Name                                 | Value                                |
-| ------------------------------------ | ------------------------------------ |
-| `GetAdsPromotedQueryParamFieldsID`   | id                                   |
-| `GetAdsPromotedQueryParamFieldsName` | name                                 |
-| `GetAdsPromotedQueryParamFieldsType` | type                                 |
-| `GetAdsPromotedQueryParamFieldsRaw`  | raw                                  |
+| Name                                     | Value                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| `GetAdsPromotedQueryParamFieldsID`       | id                                       |
+| `GetAdsPromotedQueryParamFieldsName`     | name                                     |
+| `GetAdsPromotedQueryParamFieldsType`     | type                                     |
+| `GetAdsPromotedQueryParamFieldsMetadata` | metadata                                 |
+| `GetAdsPromotedQueryParamFieldsRaw`      | raw                                      |

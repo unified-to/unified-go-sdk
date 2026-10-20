@@ -26,4 +26,5 @@ value := operations.ListAccountingBalancesheetsQueryParamFieldsID
 | `ListAccountingBalancesheetsQueryParamFieldsAssets`          | assets                                                       |
 | `ListAccountingBalancesheetsQueryParamFieldsLiabilities`     | liabilities                                                  |
 | `ListAccountingBalancesheetsQueryParamFieldsEquity`          | equity                                                       |
+| `ListAccountingBalancesheetsQueryParamFieldsMetadata`        | metadata                                                     |
 | `ListAccountingBalancesheetsQueryParamFieldsRaw`             | raw                                                          |

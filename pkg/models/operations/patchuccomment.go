@@ -18,6 +18,7 @@ const (
 	PatchUcCommentQueryParamFieldsContent   PatchUcCommentQueryParamFields = "content"
 	PatchUcCommentQueryParamFieldsUserID    PatchUcCommentQueryParamFields = "user_id"
 	PatchUcCommentQueryParamFieldsCallID    PatchUcCommentQueryParamFields = "call_id"
+	PatchUcCommentQueryParamFieldsMetadata  PatchUcCommentQueryParamFields = "metadata"
 	PatchUcCommentQueryParamFieldsRaw       PatchUcCommentQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *PatchUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "call_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchUcCommentQueryParamFields(v)

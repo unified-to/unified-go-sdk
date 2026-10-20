@@ -6,27 +6,33 @@
 
 * [CreateGenaiAgent](#creategenaiagent) - Create an agent
 * [CreateGenaiEmbedding](#creategenaiembedding) - Create an embedding
+* [CreateGenaiMemory](#creategenaimemory) - Create a memory
 * [CreateGenaiOrganization](#creategenaiorganization) - Create an organization
 * [CreateGenaiPrompt](#creategenaiprompt) - Create a prompt
 * [CreateGenaiTask](#creategenaitask) - Create a task
 * [GetGenaiAgent](#getgenaiagent) - Retrieve an agent
+* [GetGenaiMemory](#getgenaimemory) - Retrieve a memory
 * [GetGenaiModel](#getgenaimodel) - Retrieve a model
 * [GetGenaiOrganization](#getgenaiorganization) - Retrieve an organization
 * [GetGenaiSkill](#getgenaiskill) - Retrieve a skill
 * [GetGenaiTask](#getgenaitask) - Retrieve a task
 * [ListGenaiAgents](#listgenaiagents) - List all agents
+* [ListGenaiMemories](#listgenaimemories) - List all memories
 * [ListGenaiModels](#listgenaimodels) - List all models
 * [ListGenaiOrganizations](#listgenaiorganizations) - List all organizations
 * [ListGenaiSkills](#listgenaiskills) - List all skills
 * [ListGenaiTasks](#listgenaitasks) - List all tasks
 * [PatchGenaiAgent](#patchgenaiagent) - Update an agent
+* [PatchGenaiMemory](#patchgenaimemory) - Update a memory
 * [PatchGenaiOrganization](#patchgenaiorganization) - Update an organization
 * [PatchGenaiTask](#patchgenaitask) - Update a task
 * [RemoveGenaiAgent](#removegenaiagent) - Remove an agent
+* [RemoveGenaiMemory](#removegenaimemory) - Remove a memory
 * [RemoveGenaiOrganization](#removegenaiorganization) - Remove an organization
 * [RemoveGenaiSkill](#removegenaiskill) - Remove a skill
 * [RemoveGenaiTask](#removegenaitask) - Remove a task
 * [UpdateGenaiAgent](#updategenaiagent) - Update an agent
+* [UpdateGenaiMemory](#updategenaimemory) - Update a memory
 * [UpdateGenaiOrganization](#updategenaiorganization) - Update an organization
 * [UpdateGenaiTask](#updategenaitask) - Update a task
 
@@ -60,11 +66,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("62f1f2a6-a08f-4500-83e8-500f7d3d469a"),
+            ID: unifiedgosdk.Pointer("d9f735f0-935e-4c95-8d59-a8f116c184b7"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T13:18:49.775Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T14:47:34.059Z"),
         },
         ConnectionID: "<id>",
     })
@@ -130,7 +136,7 @@ func main() {
             Dimension: unifiedgosdk.Pointer[float64](423.0),
             Embeddings: unifiedgosdk.Pointer("Est."),
             EncondingFormat: shared.EncondingFormatFloat.ToPointer(),
-            ID: unifiedgosdk.Pointer("6718107c-9716-4061-a744-6d653edd6605"),
+            ID: unifiedgosdk.Pointer("0cd5aa63-0015-451e-b89f-0332abdf22df"),
             MaxTokens: unifiedgosdk.Pointer[float64](223.0),
             TokensUsed: unifiedgosdk.Pointer[float64](836.0),
             Type: unifiedgosdk.Pointer("classification"),
@@ -157,6 +163,87 @@ func main() {
 ### Response
 
 **[*operations.CreateGenaiEmbeddingResponse](../../pkg/models/operations/creategenaiembeddingresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateGenaiMemory
+
+Create a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.CreateGenaiMemory(ctx, operations.CreateGenaiMemoryRequest{
+        GenaiMemory: shared.GenaiMemory{
+            Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
+            ID: unifiedgosdk.Pointer("787f8ed8-aa2d-41b9-a58b-8455734b1f44"),
+            Metadata: []shared.GenaiMetadata{
+                shared.GenaiMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.GenaiMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e"),
+                    Namespace: unifiedgosdk.Pointer("memory"),
+                    Slug: unifiedgosdk.Pointer("cribro"),
+                    Value: unifiedgosdk.Pointer(shared.CreateGenaiMetadataValueStr(
+                        "aiunt",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("sponte.md"),
+            Type: shared.GenaiMemoryTypeMemory.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-25T14:10:34.096Z"),
+            UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
+        },
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiMemory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.CreateGenaiMemoryRequest](../../pkg/models/operations/creategenaimemoryrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.CreateGenaiMemoryResponse](../../pkg/models/operations/creategenaimemoryresponse.md), error**
 
 ### Errors
 
@@ -194,10 +281,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("ed2d36b4-edbb-4b14-81d8-73b91574e018"),
+            ID: unifiedgosdk.Pointer("9c0e41cf-b9fa-414c-80a7-bdcb0ed06ea2"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T13:57:32.616Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T01:32:45.277Z"),
         },
         ConnectionID: "<id>",
     })
@@ -385,10 +472,10 @@ func main() {
 
     res, err := s.Genai.CreateGenaiTask(ctx, operations.CreateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-09-29T09:18:48.378Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-09-30T10:43:22.798Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("c1da3f04-2362-4df1-85cd-fe0a5e00d662"),
+            ID: unifiedgosdk.Pointer("db8e384e-84a3-48f2-9d29-78b1b86c5c67"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -403,12 +490,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-20T01:40:29.541Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-20T20:03:44.239Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-25T09:45:48.981Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-25T21:48:06.375Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -488,6 +575,61 @@ func main() {
 ### Response
 
 **[*operations.GetGenaiAgentResponse](../../pkg/models/operations/getgenaiagentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetGenaiMemory
+
+Retrieve a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="getGenaiMemory" method="get" path="/genai/{connection_id}/memory/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.GetGenaiMemory(ctx, operations.GetGenaiMemoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiMemory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.GetGenaiMemoryRequest](../../pkg/models/operations/getgenaimemoryrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../pkg/models/operations/option.md)                             | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.GetGenaiMemoryResponse](../../pkg/models/operations/getgenaimemoryresponse.md), error**
 
 ### Errors
 
@@ -769,6 +911,60 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
+## ListGenaiMemories
+
+List all memories
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="listGenaiMemories" method="get" path="/genai/{connection_id}/memory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.ListGenaiMemories(ctx, operations.ListGenaiMemoriesRequest{
+        ConnectionID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiMemories != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListGenaiMemoriesRequest](../../pkg/models/operations/listgenaimemoriesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListGenaiMemoriesResponse](../../pkg/models/operations/listgenaimemoriesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
 ## ListGenaiModels
 
 List all models
@@ -1015,11 +1211,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("f3fd9a29-1a01-47a5-bb42-d86528edf993"),
+            ID: unifiedgosdk.Pointer("6e14848f-0469-4ed8-8dfd-ddeb6fae543a"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T13:18:49.782Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T14:47:34.066Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1044,6 +1240,88 @@ func main() {
 ### Response
 
 **[*operations.PatchGenaiAgentResponse](../../pkg/models/operations/patchgenaiagentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## PatchGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.PatchGenaiMemory(ctx, operations.PatchGenaiMemoryRequest{
+        GenaiMemory: shared.GenaiMemory{
+            Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
+            ID: unifiedgosdk.Pointer("06002283-556d-4c53-a7aa-f69a1fae53ac"),
+            Metadata: []shared.GenaiMetadata{
+                shared.GenaiMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.GenaiMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e"),
+                    Namespace: unifiedgosdk.Pointer("memory"),
+                    Slug: unifiedgosdk.Pointer("cribro"),
+                    Value: unifiedgosdk.Pointer(shared.CreateGenaiMetadataValueStr(
+                        "aiunt",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("sponte.md"),
+            Type: shared.GenaiMemoryTypeMemory.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-25T14:10:34.101Z"),
+            UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiMemory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.PatchGenaiMemoryRequest](../../pkg/models/operations/patchgenaimemoryrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../pkg/models/operations/option.md)                                 | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.PatchGenaiMemoryResponse](../../pkg/models/operations/patchgenaimemoryresponse.md), error**
 
 ### Errors
 
@@ -1081,10 +1359,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("7294496b-b4e0-45f7-b39b-afa32d2395f9"),
+            ID: unifiedgosdk.Pointer("791cc7be-8e94-463a-842c-50a2a4a2f035"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T13:57:32.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T01:32:45.280Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1144,10 +1422,10 @@ func main() {
 
     res, err := s.Genai.PatchGenaiTask(ctx, operations.PatchGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-09-29T09:18:48.392Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-09-30T10:43:22.816Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("03af4cc0-2e4e-497b-b29c-912254615cde"),
+            ID: unifiedgosdk.Pointer("b4518b42-37d9-4f2e-98e6-b695b1f3d354"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -1162,12 +1440,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-20T01:40:29.551Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-20T20:03:44.252Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-25T09:45:48.988Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-25T21:48:06.383Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",
@@ -1248,6 +1526,61 @@ func main() {
 ### Response
 
 **[*operations.RemoveGenaiAgentResponse](../../pkg/models/operations/removegenaiagentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## RemoveGenaiMemory
+
+Remove a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="removeGenaiMemory" method="delete" path="/genai/{connection_id}/memory/{id}" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.RemoveGenaiMemory(ctx, operations.RemoveGenaiMemoryRequest{
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.RemoveGenaiMemoryRequest](../../pkg/models/operations/removegenaimemoryrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.RemoveGenaiMemoryResponse](../../pkg/models/operations/removegenaimemoryresponse.md), error**
 
 ### Errors
 
@@ -1450,11 +1783,11 @@ func main() {
         GenaiAgent: shared.GenaiAgent{
             CreatedAt: types.MustNewTimeFromString("2020-12-18T02:23:33.723Z"),
             Description: unifiedgosdk.Pointer("Assentator tero sequi."),
-            ID: unifiedgosdk.Pointer("f3fd9a29-1a01-47a5-bb42-d86528edf993"),
+            ID: unifiedgosdk.Pointer("6e14848f-0469-4ed8-8dfd-ddeb6fae543a"),
             Instructions: unifiedgosdk.Pointer("Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum."),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("daughter with"),
-            UpdatedAt: types.MustNewTimeFromString("2025-10-13T13:18:49.782Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-10-14T14:47:34.066Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1479,6 +1812,88 @@ func main() {
 ### Response
 
 **[*operations.UpdateGenaiAgentResponse](../../pkg/models/operations/updategenaiagentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```go
+package main
+
+import(
+	"context"
+	unifiedgosdk "github.com/unified-to/unified-go-sdk"
+	"github.com/unified-to/unified-go-sdk/pkg/types"
+	"github.com/unified-to/unified-go-sdk/pkg/models/shared"
+	"github.com/unified-to/unified-go-sdk/pkg/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := unifiedgosdk.New(
+        unifiedgosdk.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    res, err := s.Genai.UpdateGenaiMemory(ctx, operations.UpdateGenaiMemoryRequest{
+        GenaiMemory: shared.GenaiMemory{
+            Content: unifiedgosdk.Pointer("Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus."),
+            CreatedAt: types.MustNewTimeFromString("2021-10-22T04:14:41.668Z"),
+            ID: unifiedgosdk.Pointer("06002283-556d-4c53-a7aa-f69a1fae53ac"),
+            Metadata: []shared.GenaiMetadata{
+                shared.GenaiMetadata{
+                    ExtraData: unifiedgosdk.Pointer(shared.CreateGenaiMetadataExtraDataMapOfAny(
+                        map[string]any{
+
+                        },
+                    )),
+                    Format: shared.GenaiMetadataFormatText.ToPointer(),
+                    ID: unifiedgosdk.Pointer("7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e"),
+                    Namespace: unifiedgosdk.Pointer("memory"),
+                    Slug: unifiedgosdk.Pointer("cribro"),
+                    Value: unifiedgosdk.Pointer(shared.CreateGenaiMetadataValueStr(
+                        "aiunt",
+                    )),
+                },
+            },
+            Name: unifiedgosdk.Pointer("sponte.md"),
+            Type: shared.GenaiMemoryTypeMemory.ToPointer(),
+            UpdatedAt: types.MustNewTimeFromString("2023-04-25T14:10:34.101Z"),
+            UserIdentifier: unifiedgosdk.Pointer("9d170613-4338-447d-bdb6-8ea96a2d7513"),
+        },
+        ConnectionID: "<id>",
+        ID: "<id>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.GenaiMemory != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.UpdateGenaiMemoryRequest](../../pkg/models/operations/updategenaimemoryrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../pkg/models/operations/option.md)                                   | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.UpdateGenaiMemoryResponse](../../pkg/models/operations/updategenaimemoryresponse.md), error**
 
 ### Errors
 
@@ -1516,10 +1931,10 @@ func main() {
         GenaiOrganization: shared.GenaiOrganization{
             CreatedAt: types.MustNewTimeFromString("2020-10-27T16:03:47.122Z"),
             Description: unifiedgosdk.Pointer("Voluptates abeo subseco."),
-            ID: unifiedgosdk.Pointer("7294496b-b4e0-45f7-b39b-afa32d2395f9"),
+            ID: unifiedgosdk.Pointer("791cc7be-8e94-463a-842c-50a2a4a2f035"),
             IsActive: unifiedgosdk.Pointer(false),
             Name: unifiedgosdk.Pointer("officially about"),
-            UpdatedAt: types.MustNewTimeFromString("2023-01-25T13:57:32.618Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-01-26T01:32:45.280Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1579,10 +1994,10 @@ func main() {
 
     res, err := s.Genai.UpdateGenaiTask(ctx, operations.UpdateGenaiTaskRequest{
         GenaiTask: shared.GenaiTask{
-            CompletedAt: types.MustNewTimeFromString("2025-09-29T09:18:48.392Z"),
+            CompletedAt: types.MustNewTimeFromString("2025-09-30T10:43:22.816Z"),
             CreatedAt: types.MustNewTimeFromString("2020-10-25T20:19:33.247Z"),
             FilesChanged: unifiedgosdk.Pointer[float64](19.0),
-            ID: unifiedgosdk.Pointer("03af4cc0-2e4e-497b-b29c-912254615cde"),
+            ID: unifiedgosdk.Pointer("b4518b42-37d9-4f2e-98e6-b695b1f3d354"),
             Instructions: unifiedgosdk.Pointer("Benigne canonicus officiis solvo adsidue deleo angustus."),
             LinesAdded: unifiedgosdk.Pointer[float64](244.0),
             LinesDeleted: unifiedgosdk.Pointer[float64](118.0),
@@ -1597,12 +2012,12 @@ func main() {
             PullrequestURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance/pull/383"),
             RepoURL: unifiedgosdk.Pointer("https://github.com/berenice.satterfield/joshingly-ignorance"),
             SourceBranchIdentifier: unifiedgosdk.Pointer("main"),
-            StartedAt: types.MustNewTimeFromString("2024-05-20T01:40:29.551Z"),
+            StartedAt: types.MustNewTimeFromString("2024-05-20T20:03:44.252Z"),
             Status: shared.GenaiTaskStatusBlocked.ToPointer(),
             Summary: unifiedgosdk.Pointer("Cur aeternus cogito vesper."),
             TargetBranchIdentifier: unifiedgosdk.Pointer("agent/joshingly-ignorance"),
             TokensUsed: unifiedgosdk.Pointer[float64](2165.0),
-            UpdatedAt: types.MustNewTimeFromString("2023-02-25T09:45:48.988Z"),
+            UpdatedAt: types.MustNewTimeFromString("2023-02-25T21:48:06.383Z"),
             WebURL: unifiedgosdk.Pointer("https://inexperienced-adrenalin.biz/"),
         },
         ConnectionID: "<id>",

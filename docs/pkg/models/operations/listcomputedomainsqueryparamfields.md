@@ -23,4 +23,5 @@ value := operations.ListComputeDomainsQueryParamFieldsID
 | `ListComputeDomainsQueryParamFieldsStatus`      | status                                          |
 | `ListComputeDomainsQueryParamFieldsIsPrimary`   | is_primary                                      |
 | `ListComputeDomainsQueryParamFieldsRedirectURL` | redirect_url                                    |
+| `ListComputeDomainsQueryParamFieldsMetadata`    | metadata                                        |
 | `ListComputeDomainsQueryParamFieldsRaw`         | raw                                             |

@@ -19,6 +19,7 @@ const (
 	GetTicketingNoteQueryParamFieldsDescription GetTicketingNoteQueryParamFields = "description"
 	GetTicketingNoteQueryParamFieldsTicketID    GetTicketingNoteQueryParamFields = "ticket_id"
 	GetTicketingNoteQueryParamFieldsUserID      GetTicketingNoteQueryParamFields = "user_id"
+	GetTicketingNoteQueryParamFieldsMetadata    GetTicketingNoteQueryParamFields = "metadata"
 	GetTicketingNoteQueryParamFieldsRaw         GetTicketingNoteQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *GetTicketingNoteQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "ticket_id":
 		fallthrough
 	case "user_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetTicketingNoteQueryParamFields(v)

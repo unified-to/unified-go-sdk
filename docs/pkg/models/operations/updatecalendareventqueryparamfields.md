@@ -39,4 +39,5 @@ value := operations.UpdateCalendarEventQueryParamFieldsID
 | `UpdateCalendarEventQueryParamFieldsAttachments`       | attachments                                            |
 | `UpdateCalendarEventQueryParamFieldsSendNotifications` | send_notifications                                     |
 | `UpdateCalendarEventQueryParamFieldsMatterID`          | matter_id                                              |
+| `UpdateCalendarEventQueryParamFieldsMetadata`          | metadata                                               |
 | `UpdateCalendarEventQueryParamFieldsRaw`               | raw                                                    |

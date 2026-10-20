@@ -23,6 +23,7 @@ const (
 	ListAccountingBalancesheetsQueryParamFieldsAssets          ListAccountingBalancesheetsQueryParamFields = "assets"
 	ListAccountingBalancesheetsQueryParamFieldsLiabilities     ListAccountingBalancesheetsQueryParamFields = "liabilities"
 	ListAccountingBalancesheetsQueryParamFieldsEquity          ListAccountingBalancesheetsQueryParamFields = "equity"
+	ListAccountingBalancesheetsQueryParamFieldsMetadata        ListAccountingBalancesheetsQueryParamFields = "metadata"
 	ListAccountingBalancesheetsQueryParamFieldsRaw             ListAccountingBalancesheetsQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *ListAccountingBalancesheetsQueryParamFields) UnmarshalJSON(data []byte)
 	case "liabilities":
 		fallthrough
 	case "equity":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingBalancesheetsQueryParamFields(v)

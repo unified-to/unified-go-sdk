@@ -18,6 +18,7 @@ const (
 	ListCommerceAvailabilitiesQueryParamFieldsSize        ListCommerceAvailabilitiesQueryParamFields = "size"
 	ListCommerceAvailabilitiesQueryParamFieldsItemID      ListCommerceAvailabilitiesQueryParamFields = "item_id"
 	ListCommerceAvailabilitiesQueryParamFieldsStaffUserID ListCommerceAvailabilitiesQueryParamFields = "staff_user_id"
+	ListCommerceAvailabilitiesQueryParamFieldsMetadata    ListCommerceAvailabilitiesQueryParamFields = "metadata"
 	ListCommerceAvailabilitiesQueryParamFieldsRaw         ListCommerceAvailabilitiesQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *ListCommerceAvailabilitiesQueryParamFields) UnmarshalJSON(data []byte) 
 	case "item_id":
 		fallthrough
 	case "staff_user_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCommerceAvailabilitiesQueryParamFields(v)

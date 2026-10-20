@@ -26,4 +26,5 @@ value := operations.ListAccountingAgedreceivablesQueryParamFieldsID
 | `ListAccountingAgedreceivablesQueryParamFieldsTotalAmount`        | total_amount                                                      |
 | `ListAccountingAgedreceivablesQueryParamFieldsPeriods`            | periods                                                           |
 | `ListAccountingAgedreceivablesQueryParamFieldsOrganizationID`     | organization_id                                                   |
+| `ListAccountingAgedreceivablesQueryParamFieldsMetadata`           | metadata                                                          |
 | `ListAccountingAgedreceivablesQueryParamFieldsRaw`                | raw                                                               |

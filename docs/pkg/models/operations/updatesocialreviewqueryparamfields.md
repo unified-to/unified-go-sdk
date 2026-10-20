@@ -27,4 +27,5 @@ value := operations.UpdateSocialReviewQueryParamFieldsID
 | `UpdateSocialReviewQueryParamFieldsAuthorLocation`  | author_location                                     |
 | `UpdateSocialReviewQueryParamFieldsReply`           | reply                                               |
 | `UpdateSocialReviewQueryParamFieldsURL`             | url                                                 |
+| `UpdateSocialReviewQueryParamFieldsMetadata`        | metadata                                            |
 | `UpdateSocialReviewQueryParamFieldsRaw`             | raw                                                 |

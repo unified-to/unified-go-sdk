@@ -34,4 +34,5 @@ value := operations.ListHrisDeductionsQueryParamFieldsID
 | `ListHrisDeductionsQueryParamFieldsMaxAmount`       | max_amount                                          |
 | `ListHrisDeductionsQueryParamFieldsPaycodeID`       | paycode_id                                          |
 | `ListHrisDeductionsQueryParamFieldsGarnishmentType` | garnishment_type                                    |
+| `ListHrisDeductionsQueryParamFieldsMetadata`        | metadata                                            |
 | `ListHrisDeductionsQueryParamFieldsRaw`             | raw                                                 |

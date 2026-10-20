@@ -26,4 +26,5 @@ value := operations.PatchRepoCommitQueryParamFieldsID
 | `PatchRepoCommitQueryParamFieldsLinesAdded`     | lines_added                                     |
 | `PatchRepoCommitQueryParamFieldsLinesDeleted`   | lines_deleted                                   |
 | `PatchRepoCommitQueryParamFieldsLinesChanged`   | lines_changed                                   |
+| `PatchRepoCommitQueryParamFieldsMetadata`       | metadata                                        |
 | `PatchRepoCommitQueryParamFieldsRaw`            | raw                                             |

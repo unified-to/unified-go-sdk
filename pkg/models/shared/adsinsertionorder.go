@@ -69,6 +69,7 @@ type AdsInsertionorder struct {
 	FrequencyCap   *PropertyAdsInsertionorderFrequencyCap `json:"frequency_cap,omitempty"`
 	ID             *string                                `json:"id,omitempty"`
 	Kpi            *PropertyAdsInsertionorderKpi          `json:"kpi,omitempty"`
+	Metadata       []AdsMetadata                          `json:"metadata,omitempty"`
 	Name           *string                                `json:"name,omitempty"`
 	OrganizationID *string                                `json:"organization_id,omitempty"`
 	Pacing         *PropertyAdsInsertionorderPacing       `json:"pacing,omitempty"`
@@ -145,6 +146,13 @@ func (a *AdsInsertionorder) GetKpi() *PropertyAdsInsertionorderKpi {
 		return nil
 	}
 	return a.Kpi
+}
+
+func (a *AdsInsertionorder) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsInsertionorder) GetName() *string {

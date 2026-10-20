@@ -22,6 +22,7 @@ const (
 	ListClubsLocationsQueryParamFieldsLongitude ListClubsLocationsQueryParamFields = "longitude"
 	ListClubsLocationsQueryParamFieldsTelephone ListClubsLocationsQueryParamFields = "telephone"
 	ListClubsLocationsQueryParamFieldsURL       ListClubsLocationsQueryParamFields = "url"
+	ListClubsLocationsQueryParamFieldsMetadata  ListClubsLocationsQueryParamFields = "metadata"
 	ListClubsLocationsQueryParamFieldsRaw       ListClubsLocationsQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListClubsLocationsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "telephone":
 		fallthrough
 	case "url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListClubsLocationsQueryParamFields(v)

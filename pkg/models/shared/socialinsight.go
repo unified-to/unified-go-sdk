@@ -75,7 +75,8 @@ type SocialInsight struct {
 	// The day/timestamp of the data point
 	Date *time.Time `json:"date,omitempty"`
 	// Unique identifier for the insight data point
-	ID *string `json:"id,omitempty"`
+	ID       *string          `json:"id,omitempty"`
+	Metadata []SocialMetadata `json:"metadata,omitempty"`
 	// The metric being reported
 	Metric *Metric `json:"metric,omitempty"`
 	// The aggregation period of the value
@@ -120,6 +121,13 @@ func (s *SocialInsight) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *SocialInsight) GetMetadata() []SocialMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SocialInsight) GetMetric() *Metric {

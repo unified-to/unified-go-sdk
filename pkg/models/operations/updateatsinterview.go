@@ -25,6 +25,7 @@ const (
 	UpdateAtsInterviewQueryParamFieldsLocation          UpdateAtsInterviewQueryParamFields = "location"
 	UpdateAtsInterviewQueryParamFieldsMeetingURL        UpdateAtsInterviewQueryParamFields = "meeting_url"
 	UpdateAtsInterviewQueryParamFieldsExternalEventXref UpdateAtsInterviewQueryParamFields = "external_event_xref"
+	UpdateAtsInterviewQueryParamFieldsMetadata          UpdateAtsInterviewQueryParamFields = "metadata"
 	UpdateAtsInterviewQueryParamFieldsRaw               UpdateAtsInterviewQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *UpdateAtsInterviewQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "meeting_url":
 		fallthrough
 	case "external_event_xref":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAtsInterviewQueryParamFields(v)

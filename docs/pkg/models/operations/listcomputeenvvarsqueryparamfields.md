@@ -23,4 +23,5 @@ value := operations.ListComputeEnvvarsQueryParamFieldsID
 | `ListComputeEnvvarsQueryParamFieldsValue`        | value                                            |
 | `ListComputeEnvvarsQueryParamFieldsEnvironments` | environments                                     |
 | `ListComputeEnvvarsQueryParamFieldsIsSecret`     | is_secret                                        |
+| `ListComputeEnvvarsQueryParamFieldsMetadata`     | metadata                                         |
 | `ListComputeEnvvarsQueryParamFieldsRaw`          | raw                                              |

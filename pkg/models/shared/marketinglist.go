@@ -16,9 +16,10 @@ type MarketingList struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	EndAt *time.Time `json:"end_at,omitempty"`
 	// Identifier for this list
-	ID       *string `json:"id,omitempty"`
-	IsActive *bool   `json:"is_active,omitempty"`
-	Language *string `json:"language,omitempty"`
+	ID       *string             `json:"id,omitempty"`
+	IsActive *bool               `json:"is_active,omitempty"`
+	Language *string             `json:"language,omitempty"`
+	Metadata []MarketingMetadata `json:"metadata,omitempty"`
 	// The list's name
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this list
@@ -94,6 +95,13 @@ func (m *MarketingList) GetLanguage() *string {
 		return nil
 	}
 	return m.Language
+}
+
+func (m *MarketingList) GetMetadata() []MarketingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MarketingList) GetName() *string {

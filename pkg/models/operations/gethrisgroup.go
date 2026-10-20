@@ -25,6 +25,7 @@ const (
 	GetHrisGroupQueryParamFieldsCompanyID    GetHrisGroupQueryParamFields = "company_id"
 	GetHrisGroupQueryParamFieldsPayFrequency GetHrisGroupQueryParamFields = "pay_frequency"
 	GetHrisGroupQueryParamFieldsNextPaidAt   GetHrisGroupQueryParamFields = "next_paid_at"
+	GetHrisGroupQueryParamFieldsMetadata     GetHrisGroupQueryParamFields = "metadata"
 	GetHrisGroupQueryParamFieldsRaw          GetHrisGroupQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *GetHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "pay_frequency":
 		fallthrough
 	case "next_paid_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetHrisGroupQueryParamFields(v)

@@ -44,6 +44,7 @@ type PaymentPayout struct {
 	ID        *string  `json:"id,omitempty"`
 	// The transactions included in this payout
 	Lineitems []PaymentPayoutLineitem `json:"lineitems,omitempty"`
+	Metadata  []PaymentMetadata       `json:"metadata,omitempty"`
 	// total_amount minus fee_amount
 	NetAmount   *float64             `json:"net_amount,omitempty"`
 	Notes       *string              `json:"notes,omitempty"`
@@ -112,6 +113,13 @@ func (p *PaymentPayout) GetLineitems() []PaymentPayoutLineitem {
 		return nil
 	}
 	return p.Lineitems
+}
+
+func (p *PaymentPayout) GetMetadata() []PaymentMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PaymentPayout) GetNetAmount() *float64 {

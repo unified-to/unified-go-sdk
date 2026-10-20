@@ -22,6 +22,7 @@ const (
 	ListAdsOrganizationsQueryParamFieldsStatus        ListAdsOrganizationsQueryParamFields = "status"
 	ListAdsOrganizationsQueryParamFieldsAccountNumber ListAdsOrganizationsQueryParamFields = "account_number"
 	ListAdsOrganizationsQueryParamFieldsManagers      ListAdsOrganizationsQueryParamFields = "managers"
+	ListAdsOrganizationsQueryParamFieldsMetadata      ListAdsOrganizationsQueryParamFields = "metadata"
 	ListAdsOrganizationsQueryParamFieldsRaw           ListAdsOrganizationsQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListAdsOrganizationsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "account_number":
 		fallthrough
 	case "managers":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAdsOrganizationsQueryParamFields(v)

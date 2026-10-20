@@ -22,4 +22,5 @@ value := operations.ListTicketingNotesQueryParamFieldsID
 | `ListTicketingNotesQueryParamFieldsDescription` | description                                     |
 | `ListTicketingNotesQueryParamFieldsTicketID`    | ticket_id                                       |
 | `ListTicketingNotesQueryParamFieldsUserID`      | user_id                                         |
+| `ListTicketingNotesQueryParamFieldsMetadata`    | metadata                                        |
 | `ListTicketingNotesQueryParamFieldsRaw`         | raw                                             |

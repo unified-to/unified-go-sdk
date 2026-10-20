@@ -26,4 +26,5 @@ value := operations.PatchAtsDocumentQueryParamFieldsID
 | `PatchAtsDocumentQueryParamFieldsApplicationID` | application_id                                  |
 | `PatchAtsDocumentQueryParamFieldsJobID`         | job_id                                          |
 | `PatchAtsDocumentQueryParamFieldsUserID`        | user_id                                         |
+| `PatchAtsDocumentQueryParamFieldsMetadata`      | metadata                                        |
 | `PatchAtsDocumentQueryParamFieldsRaw`           | raw                                             |

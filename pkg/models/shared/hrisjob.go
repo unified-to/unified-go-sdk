@@ -54,6 +54,7 @@ type HrisJob struct {
 	IsActive *bool       `json:"is_active,omitempty"`
 	// where this job is worked. May not have all of the Location fields present, but should have id and name
 	Locations []HrisLocation `json:"locations,omitempty"`
+	Metadata  []HrisMetadata `json:"metadata,omitempty"`
 	// the job or position title
 	Name *string `json:"name,omitempty"`
 	// the hris_job this job reports to (position hierarchy)
@@ -144,6 +145,13 @@ func (h *HrisJob) GetLocations() []HrisLocation {
 		return nil
 	}
 	return h.Locations
+}
+
+func (h *HrisJob) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisJob) GetName() *string {

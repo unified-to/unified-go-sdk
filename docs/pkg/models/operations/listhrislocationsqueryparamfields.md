@@ -30,4 +30,5 @@ value := operations.ListHrisLocationsQueryParamFieldsID
 | `ListHrisLocationsQueryParamFieldsIsActive`           | is_active                                             |
 | `ListHrisLocationsQueryParamFieldsIsHq`               | is_hq                                                 |
 | `ListHrisLocationsQueryParamFieldsCompanyID`          | company_id                                            |
+| `ListHrisLocationsQueryParamFieldsMetadata`           | metadata                                              |
 | `ListHrisLocationsQueryParamFieldsRaw`                | raw                                                   |

@@ -14,6 +14,7 @@ type CrmPipeline struct {
 	DisplayOrder    *float64       `json:"display_order,omitempty"`
 	ID              *string        `json:"id,omitempty"`
 	IsActive        *bool          `json:"is_active,omitempty"`
+	Metadata        []CrmMetadata  `json:"metadata,omitempty"`
 	Name            *string        `json:"name,omitempty"`
 	Raw             map[string]any `json:"raw,omitempty"`
 	Stages          []CrmStage     `json:"stages,omitempty"`
@@ -65,6 +66,13 @@ func (c *CrmPipeline) GetIsActive() *bool {
 		return nil
 	}
 	return c.IsActive
+}
+
+func (c *CrmPipeline) GetMetadata() []CrmMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CrmPipeline) GetName() *string {

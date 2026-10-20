@@ -34,4 +34,5 @@ value := operations.CreateAccountingJournalQueryParamFieldsID
 | `CreateAccountingJournalQueryParamFieldsExchangeRate`     | exchange_rate                                             |
 | `CreateAccountingJournalQueryParamFieldsStatus`           | status                                                    |
 | `CreateAccountingJournalQueryParamFieldsIsInclusiveOfTax` | is_inclusive_of_tax                                       |
+| `CreateAccountingJournalQueryParamFieldsMetadata`         | metadata                                                  |
 | `CreateAccountingJournalQueryParamFieldsRaw`              | raw                                                       |

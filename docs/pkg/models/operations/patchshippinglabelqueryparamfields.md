@@ -28,4 +28,5 @@ value := operations.PatchShippingLabelQueryParamFieldsID
 | `PatchShippingLabelQueryParamFieldsLabelCostCurrency` | label_cost_currency                                   |
 | `PatchShippingLabelQueryParamFieldsRateID`            | rate_id                                               |
 | `PatchShippingLabelQueryParamFieldsServiceCode`       | service_code                                          |
+| `PatchShippingLabelQueryParamFieldsMetadata`          | metadata                                              |
 | `PatchShippingLabelQueryParamFieldsRaw`               | raw                                                   |

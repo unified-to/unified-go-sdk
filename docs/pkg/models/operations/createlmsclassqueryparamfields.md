@@ -25,4 +25,5 @@ value := operations.CreateLmsClassQueryParamFieldsID
 | `CreateLmsClassQueryParamFieldsLanguages`   | languages                                   |
 | `CreateLmsClassQueryParamFieldsInstructors` | instructors                                 |
 | `CreateLmsClassQueryParamFieldsStudents`    | students                                    |
+| `CreateLmsClassQueryParamFieldsMetadata`    | metadata                                    |
 | `CreateLmsClassQueryParamFieldsRaw`         | raw                                         |

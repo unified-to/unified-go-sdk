@@ -19,4 +19,5 @@ value := operations.CreateDatastoreQueryQueryParamFieldsTableID
 | `CreateDatastoreQueryQueryParamFieldsDatabaseID` | database_id                                      |
 | `CreateDatastoreQueryQueryParamFieldsQuery`      | query                                            |
 | `CreateDatastoreQueryQueryParamFieldsResponse`   | response                                         |
+| `CreateDatastoreQueryQueryParamFieldsMetadata`   | metadata                                         |
 | `CreateDatastoreQueryQueryParamFieldsRaw`        | raw                                              |

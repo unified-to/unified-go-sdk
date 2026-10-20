@@ -21,4 +21,5 @@ value := operations.PatchHrisCompanyQueryParamFieldsID
 | `PatchHrisCompanyQueryParamFieldsName`      | name                                        |
 | `PatchHrisCompanyQueryParamFieldsLegalName` | legal_name                                  |
 | `PatchHrisCompanyQueryParamFieldsAddress`   | address                                     |
+| `PatchHrisCompanyQueryParamFieldsMetadata`  | metadata                                    |
 | `PatchHrisCompanyQueryParamFieldsRaw`       | raw                                         |

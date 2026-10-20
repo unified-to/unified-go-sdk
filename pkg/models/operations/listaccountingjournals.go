@@ -31,6 +31,7 @@ const (
 	ListAccountingJournalsQueryParamFieldsExchangeRate     ListAccountingJournalsQueryParamFields = "exchange_rate"
 	ListAccountingJournalsQueryParamFieldsStatus           ListAccountingJournalsQueryParamFields = "status"
 	ListAccountingJournalsQueryParamFieldsIsInclusiveOfTax ListAccountingJournalsQueryParamFields = "is_inclusive_of_tax"
+	ListAccountingJournalsQueryParamFieldsMetadata         ListAccountingJournalsQueryParamFields = "metadata"
 	ListAccountingJournalsQueryParamFieldsRaw              ListAccountingJournalsQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *ListAccountingJournalsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "status":
 		fallthrough
 	case "is_inclusive_of_tax":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingJournalsQueryParamFields(v)

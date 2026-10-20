@@ -20,6 +20,7 @@ const (
 	UpdateCrmPipelineQueryParamFieldsDealProbability UpdateCrmPipelineQueryParamFields = "deal_probability"
 	UpdateCrmPipelineQueryParamFieldsDisplayOrder    UpdateCrmPipelineQueryParamFields = "display_order"
 	UpdateCrmPipelineQueryParamFieldsStages          UpdateCrmPipelineQueryParamFields = "stages"
+	UpdateCrmPipelineQueryParamFieldsMetadata        UpdateCrmPipelineQueryParamFields = "metadata"
 	UpdateCrmPipelineQueryParamFieldsRaw             UpdateCrmPipelineQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *UpdateCrmPipelineQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "display_order":
 		fallthrough
 	case "stages":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateCrmPipelineQueryParamFields(v)

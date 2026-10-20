@@ -26,6 +26,7 @@ const (
 	UpdateHrisJobQueryParamFieldsParentID       UpdateHrisJobQueryParamFields = "parent_id"
 	UpdateHrisJobQueryParamFieldsUsers          UpdateHrisJobQueryParamFields = "users"
 	UpdateHrisJobQueryParamFieldsCompensation   UpdateHrisJobQueryParamFields = "compensation"
+	UpdateHrisJobQueryParamFieldsMetadata       UpdateHrisJobQueryParamFields = "metadata"
 	UpdateHrisJobQueryParamFieldsRaw            UpdateHrisJobQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *UpdateHrisJobQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "users":
 		fallthrough
 	case "compensation":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateHrisJobQueryParamFields(v)

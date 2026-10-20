@@ -33,6 +33,7 @@ const (
 	ListClubsGroupsQueryParamFieldsProfileImageURL  ListClubsGroupsQueryParamFields = "profile_image_url"
 	ListClubsGroupsQueryParamFieldsCoverImageURL    ListClubsGroupsQueryParamFields = "cover_image_url"
 	ListClubsGroupsQueryParamFieldsActivityTypes    ListClubsGroupsQueryParamFields = "activity_types"
+	ListClubsGroupsQueryParamFieldsMetadata         ListClubsGroupsQueryParamFields = "metadata"
 	ListClubsGroupsQueryParamFieldsRaw              ListClubsGroupsQueryParamFields = "raw"
 )
 
@@ -86,6 +87,8 @@ func (e *ListClubsGroupsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "cover_image_url":
 		fallthrough
 	case "activity_types":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListClubsGroupsQueryParamFields(v)

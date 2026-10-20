@@ -44,9 +44,10 @@ type AccountingOrganization struct {
 	FiscalYearEndMonth *float64 `json:"fiscal_year_end_month,omitempty"`
 	ID                 *string  `json:"id,omitempty"`
 	// True for consolidation/elimination entities
-	IsElimination *bool   `json:"is_elimination,omitempty"`
-	LegalName     *string `json:"legal_name,omitempty"`
-	Name          *string `json:"name,omitempty"`
+	IsElimination *bool                `json:"is_elimination,omitempty"`
+	LegalName     *string              `json:"legal_name,omitempty"`
+	Metadata      []AccountingMetadata `json:"metadata,omitempty"`
+	Name          *string              `json:"name,omitempty"`
 	// Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer
 	OrganizationCode *string        `json:"organization_code,omitempty"`
 	ParentID         *string        `json:"parent_id,omitempty"`
@@ -126,6 +127,13 @@ func (a *AccountingOrganization) GetLegalName() *string {
 		return nil
 	}
 	return a.LegalName
+}
+
+func (a *AccountingOrganization) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingOrganization) GetName() *string {

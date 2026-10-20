@@ -44,4 +44,5 @@ value := operations.CreatePaymentPaymentQueryParamFieldsID
 | `CreatePaymentPaymentQueryParamFieldsExchangeRate`   | exchange_rate                                        |
 | `CreatePaymentPaymentQueryParamFieldsCategoryIds`    | category_ids                                         |
 | `CreatePaymentPaymentQueryParamFieldsNetAmount`      | net_amount                                           |
+| `CreatePaymentPaymentQueryParamFieldsMetadata`       | metadata                                             |
 | `CreatePaymentPaymentQueryParamFieldsRaw`            | raw                                                  |

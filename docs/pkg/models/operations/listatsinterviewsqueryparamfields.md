@@ -28,4 +28,5 @@ value := operations.ListAtsInterviewsQueryParamFieldsID
 | `ListAtsInterviewsQueryParamFieldsLocation`          | location                                             |
 | `ListAtsInterviewsQueryParamFieldsMeetingURL`        | meeting_url                                          |
 | `ListAtsInterviewsQueryParamFieldsExternalEventXref` | external_event_xref                                  |
+| `ListAtsInterviewsQueryParamFieldsMetadata`          | metadata                                             |
 | `ListAtsInterviewsQueryParamFieldsRaw`               | raw                                                  |

@@ -20,6 +20,7 @@ const (
 	CreateCdpSourceQueryParamFieldsType      CreateCdpSourceQueryParamFields = "type"
 	CreateCdpSourceQueryParamFieldsDirection CreateCdpSourceQueryParamFields = "direction"
 	CreateCdpSourceQueryParamFieldsIsEnabled CreateCdpSourceQueryParamFields = "is_enabled"
+	CreateCdpSourceQueryParamFieldsMetadata  CreateCdpSourceQueryParamFields = "metadata"
 	CreateCdpSourceQueryParamFieldsRaw       CreateCdpSourceQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *CreateCdpSourceQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "direction":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCdpSourceQueryParamFields(v)

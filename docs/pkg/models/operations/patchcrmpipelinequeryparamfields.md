@@ -23,4 +23,5 @@ value := operations.PatchCrmPipelineQueryParamFieldsID
 | `PatchCrmPipelineQueryParamFieldsDealProbability` | deal_probability                                  |
 | `PatchCrmPipelineQueryParamFieldsDisplayOrder`    | display_order                                     |
 | `PatchCrmPipelineQueryParamFieldsStages`          | stages                                            |
+| `PatchCrmPipelineQueryParamFieldsMetadata`        | metadata                                          |
 | `PatchCrmPipelineQueryParamFieldsRaw`             | raw                                               |

@@ -24,4 +24,5 @@ value := operations.PatchRepoRepositoryQueryParamFieldsID
 | `PatchRepoRepositoryQueryParamFieldsIsPrivate`   | is_private                                       |
 | `PatchRepoRepositoryQueryParamFieldsWebURL`      | web_url                                          |
 | `PatchRepoRepositoryQueryParamFieldsOrgID`       | org_id                                           |
+| `PatchRepoRepositoryQueryParamFieldsMetadata`    | metadata                                         |
 | `PatchRepoRepositoryQueryParamFieldsRaw`         | raw                                              |

@@ -20,6 +20,7 @@ const (
 	CreateComputeDomainQueryParamFieldsStatus      CreateComputeDomainQueryParamFields = "status"
 	CreateComputeDomainQueryParamFieldsIsPrimary   CreateComputeDomainQueryParamFields = "is_primary"
 	CreateComputeDomainQueryParamFieldsRedirectURL CreateComputeDomainQueryParamFields = "redirect_url"
+	CreateComputeDomainQueryParamFieldsMetadata    CreateComputeDomainQueryParamFields = "metadata"
 	CreateComputeDomainQueryParamFieldsRaw         CreateComputeDomainQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *CreateComputeDomainQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_primary":
 		fallthrough
 	case "redirect_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateComputeDomainQueryParamFields(v)

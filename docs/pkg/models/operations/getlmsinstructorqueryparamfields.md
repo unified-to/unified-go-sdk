@@ -25,4 +25,5 @@ value := operations.GetLmsInstructorQueryParamFieldsID
 | `GetLmsInstructorQueryParamFieldsTitle`      | title                                        |
 | `GetLmsInstructorQueryParamFieldsTelephones` | telephones                                   |
 | `GetLmsInstructorQueryParamFieldsImageURL`   | image_url                                    |
+| `GetLmsInstructorQueryParamFieldsMetadata`   | metadata                                     |
 | `GetLmsInstructorQueryParamFieldsRaw`        | raw                                          |

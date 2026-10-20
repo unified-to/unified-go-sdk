@@ -17,6 +17,7 @@ type AccountingBalancesheet struct {
 	Equity          []AccountingBalancesheetItem `json:"equity,omitempty"`
 	ID              *string                      `json:"id,omitempty"`
 	Liabilities     []AccountingBalancesheetItem `json:"liabilities,omitempty"`
+	Metadata        []AccountingMetadata         `json:"metadata,omitempty"`
 	Name            *string                      `json:"name,omitempty"`
 	NetAssetsAmount *float64                     `json:"net_assets_amount,omitempty"`
 	Raw             map[string]any               `json:"raw,omitempty"`
@@ -84,6 +85,13 @@ func (a *AccountingBalancesheet) GetLiabilities() []AccountingBalancesheetItem {
 		return nil
 	}
 	return a.Liabilities
+}
+
+func (a *AccountingBalancesheet) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingBalancesheet) GetName() *string {

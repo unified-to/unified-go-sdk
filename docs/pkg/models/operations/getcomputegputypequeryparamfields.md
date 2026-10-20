@@ -30,4 +30,5 @@ value := operations.GetComputeGputypeQueryParamFieldsID
 | `GetComputeGputypeQueryParamFieldsArchitecture`    | architecture                                       |
 | `GetComputeGputypeQueryParamFieldsPrices`          | prices                                             |
 | `GetComputeGputypeQueryParamFieldsAvailability`    | availability                                       |
+| `GetComputeGputypeQueryParamFieldsMetadata`        | metadata                                           |
 | `GetComputeGputypeQueryParamFieldsRaw`             | raw                                                |

@@ -24,4 +24,5 @@ value := operations.UpdateHrisDocumentQueryParamFieldsID
 | `UpdateHrisDocumentQueryParamFieldsType`         | type                                             |
 | `UpdateHrisDocumentQueryParamFieldsUserID`       | user_id                                          |
 | `UpdateHrisDocumentQueryParamFieldsCompanyID`    | company_id                                       |
+| `UpdateHrisDocumentQueryParamFieldsMetadata`     | metadata                                         |
 | `UpdateHrisDocumentQueryParamFieldsRaw`          | raw                                              |

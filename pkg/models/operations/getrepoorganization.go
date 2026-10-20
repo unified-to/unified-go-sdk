@@ -20,6 +20,7 @@ const (
 	GetRepoOrganizationQueryParamFieldsAvatarURL   GetRepoOrganizationQueryParamFields = "avatar_url"
 	GetRepoOrganizationQueryParamFieldsWebURL      GetRepoOrganizationQueryParamFields = "web_url"
 	GetRepoOrganizationQueryParamFieldsUserIds     GetRepoOrganizationQueryParamFields = "user_ids"
+	GetRepoOrganizationQueryParamFieldsMetadata    GetRepoOrganizationQueryParamFields = "metadata"
 	GetRepoOrganizationQueryParamFieldsRaw         GetRepoOrganizationQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *GetRepoOrganizationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "user_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetRepoOrganizationQueryParamFields(v)

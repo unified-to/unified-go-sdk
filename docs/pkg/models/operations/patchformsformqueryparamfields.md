@@ -29,4 +29,5 @@ value := operations.PatchFormsFormQueryParamFieldsID
 | `PatchFormsFormQueryParamFieldsHasShuffleQuestions`     | has_shuffle_questions                                   |
 | `PatchFormsFormQueryParamFieldsConfirmationMessage`     | confirmation_message                                    |
 | `PatchFormsFormQueryParamFieldsConfirmationRedirectURL` | confirmation_redirect_url                               |
+| `PatchFormsFormQueryParamFieldsMetadata`                | metadata                                                |
 | `PatchFormsFormQueryParamFieldsRaw`                     | raw                                                     |

@@ -19,6 +19,7 @@ const (
 	GetFormsSubmissionQueryParamFieldsRespondentEmail GetFormsSubmissionQueryParamFields = "respondent_email"
 	GetFormsSubmissionQueryParamFieldsRespondentName  GetFormsSubmissionQueryParamFields = "respondent_name"
 	GetFormsSubmissionQueryParamFieldsAnswers         GetFormsSubmissionQueryParamFields = "answers"
+	GetFormsSubmissionQueryParamFieldsMetadata        GetFormsSubmissionQueryParamFields = "metadata"
 	GetFormsSubmissionQueryParamFieldsRaw             GetFormsSubmissionQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *GetFormsSubmissionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "respondent_name":
 		fallthrough
 	case "answers":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetFormsSubmissionQueryParamFields(v)

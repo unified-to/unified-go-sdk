@@ -35,4 +35,5 @@ value := operations.GetPaymentSubscriptionQueryParamFieldsID
 | `GetPaymentSubscriptionQueryParamFieldsDayOfWeek`            | day_of_week                                                  |
 | `GetPaymentSubscriptionQueryParamFieldsInterval`             | interval                                                     |
 | `GetPaymentSubscriptionQueryParamFieldsLineitems`            | lineitems                                                    |
+| `GetPaymentSubscriptionQueryParamFieldsMetadata`             | metadata                                                     |
 | `GetPaymentSubscriptionQueryParamFieldsRaw`                  | raw                                                          |

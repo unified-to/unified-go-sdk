@@ -29,6 +29,7 @@ const (
 	GetPerformanceGoalQueryParamFieldsDueAt       GetPerformanceGoalQueryParamFields = "due_at"
 	GetPerformanceGoalQueryParamFieldsCompletedAt GetPerformanceGoalQueryParamFields = "completed_at"
 	GetPerformanceGoalQueryParamFieldsMilestones  GetPerformanceGoalQueryParamFields = "milestones"
+	GetPerformanceGoalQueryParamFieldsMetadata    GetPerformanceGoalQueryParamFields = "metadata"
 	GetPerformanceGoalQueryParamFieldsRaw         GetPerformanceGoalQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *GetPerformanceGoalQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "completed_at":
 		fallthrough
 	case "milestones":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetPerformanceGoalQueryParamFields(v)

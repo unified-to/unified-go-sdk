@@ -22,4 +22,5 @@ value := operations.ListAnalyticsReportsQueryParamFieldsID
 | `ListAnalyticsReportsQueryParamFieldsStartAt`    | start_at                                         |
 | `ListAnalyticsReportsQueryParamFieldsEndAt`      | end_at                                           |
 | `ListAnalyticsReportsQueryParamFieldsMetrics`    | metrics                                          |
+| `ListAnalyticsReportsQueryParamFieldsMetadata`   | metadata                                         |
 | `ListAnalyticsReportsQueryParamFieldsRaw`        | raw                                              |

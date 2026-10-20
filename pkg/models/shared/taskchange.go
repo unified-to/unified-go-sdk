@@ -12,6 +12,7 @@ type TaskChange struct {
 	CreatedAt *time.Time       `json:"created_at,omitempty"`
 	ID        *string          `json:"id,omitempty"`
 	Items     []TaskChangeItem `json:"items,omitempty"`
+	Metadata  []TaskMetadata   `json:"metadata,omitempty"`
 	Raw       map[string]any   `json:"raw,omitempty"`
 	// (reference to TaskTask)
 	TaskID *string `json:"task_id,omitempty"`
@@ -51,6 +52,13 @@ func (t *TaskChange) GetItems() []TaskChangeItem {
 		return nil
 	}
 	return t.Items
+}
+
+func (t *TaskChange) GetMetadata() []TaskMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TaskChange) GetRaw() map[string]any {

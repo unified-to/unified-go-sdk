@@ -28,4 +28,5 @@ value := operations.PatchPaymentLinkQueryParamFieldsID
 | `PatchPaymentLinkQueryParamFieldsDescription`     | description                                       |
 | `PatchPaymentLinkQueryParamFieldsIsChargeableNow` | is_chargeable_now                                 |
 | `PatchPaymentLinkQueryParamFieldsSuccessURL`      | success_url                                       |
+| `PatchPaymentLinkQueryParamFieldsMetadata`        | metadata                                          |
 | `PatchPaymentLinkQueryParamFieldsRaw`             | raw                                               |

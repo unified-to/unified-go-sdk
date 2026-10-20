@@ -21,4 +21,5 @@ value := operations.ListCommerceAvailabilitiesQueryParamFieldsLocationID
 | `ListCommerceAvailabilitiesQueryParamFieldsSize`        | size                                                    |
 | `ListCommerceAvailabilitiesQueryParamFieldsItemID`      | item_id                                                 |
 | `ListCommerceAvailabilitiesQueryParamFieldsStaffUserID` | staff_user_id                                           |
+| `ListCommerceAvailabilitiesQueryParamFieldsMetadata`    | metadata                                                |
 | `ListCommerceAvailabilitiesQueryParamFieldsRaw`         | raw                                                     |

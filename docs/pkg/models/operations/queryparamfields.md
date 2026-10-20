@@ -29,4 +29,5 @@ value := operations.QueryParamFieldsID
 | `QueryParamFieldsParentID`            | parent_id                             |
 | `QueryParamFieldsTaxonomy`            | taxonomy                              |
 | `QueryParamFieldsOrganizationID`      | organization_id                       |
+| `QueryParamFieldsMetadata`            | metadata                              |
 | `QueryParamFieldsRaw`                 | raw                                   |

@@ -23,6 +23,7 @@ const (
 	ListAccountingAgedpayablesQueryParamFieldsTotalAmount        ListAccountingAgedpayablesQueryParamFields = "total_amount"
 	ListAccountingAgedpayablesQueryParamFieldsPeriods            ListAccountingAgedpayablesQueryParamFields = "periods"
 	ListAccountingAgedpayablesQueryParamFieldsOrganizationID     ListAccountingAgedpayablesQueryParamFields = "organization_id"
+	ListAccountingAgedpayablesQueryParamFieldsMetadata           ListAccountingAgedpayablesQueryParamFields = "metadata"
 	ListAccountingAgedpayablesQueryParamFieldsRaw                ListAccountingAgedpayablesQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *ListAccountingAgedpayablesQueryParamFields) UnmarshalJSON(data []byte) 
 	case "periods":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingAgedpayablesQueryParamFields(v)

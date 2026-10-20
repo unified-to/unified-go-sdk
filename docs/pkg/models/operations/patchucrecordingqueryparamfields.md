@@ -30,4 +30,5 @@ value := operations.PatchUcRecordingQueryParamFieldsID
 | `PatchUcRecordingQueryParamFieldsUserPhone`              | user_phone                                               |
 | `PatchUcRecordingQueryParamFieldsType`                   | type                                                     |
 | `PatchUcRecordingQueryParamFieldsConversationIdentifier` | conversation_identifier                                  |
+| `PatchUcRecordingQueryParamFieldsMetadata`               | metadata                                                 |
 | `PatchUcRecordingQueryParamFieldsRaw`                    | raw                                                      |

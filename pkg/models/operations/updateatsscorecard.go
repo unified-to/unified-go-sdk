@@ -23,6 +23,7 @@ const (
 	UpdateAtsScorecardQueryParamFieldsRecommendation UpdateAtsScorecardQueryParamFields = "recommendation"
 	UpdateAtsScorecardQueryParamFieldsComment        UpdateAtsScorecardQueryParamFields = "comment"
 	UpdateAtsScorecardQueryParamFieldsQuestions      UpdateAtsScorecardQueryParamFields = "questions"
+	UpdateAtsScorecardQueryParamFieldsMetadata       UpdateAtsScorecardQueryParamFields = "metadata"
 	UpdateAtsScorecardQueryParamFieldsRaw            UpdateAtsScorecardQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *UpdateAtsScorecardQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "comment":
 		fallthrough
 	case "questions":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAtsScorecardQueryParamFields(v)

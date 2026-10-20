@@ -26,4 +26,5 @@ value := operations.UpdateAtsDocumentQueryParamFieldsID
 | `UpdateAtsDocumentQueryParamFieldsApplicationID` | application_id                                   |
 | `UpdateAtsDocumentQueryParamFieldsJobID`         | job_id                                           |
 | `UpdateAtsDocumentQueryParamFieldsUserID`        | user_id                                          |
+| `UpdateAtsDocumentQueryParamFieldsMetadata`      | metadata                                         |
 | `UpdateAtsDocumentQueryParamFieldsRaw`           | raw                                              |

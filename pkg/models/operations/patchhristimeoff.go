@@ -29,6 +29,7 @@ const (
 	PatchHrisTimeoffQueryParamFieldsType           PatchHrisTimeoffQueryParamFields = "type"
 	PatchHrisTimeoffQueryParamFieldsDuration       PatchHrisTimeoffQueryParamFields = "duration"
 	PatchHrisTimeoffQueryParamFieldsDurationType   PatchHrisTimeoffQueryParamFields = "duration_type"
+	PatchHrisTimeoffQueryParamFieldsMetadata       PatchHrisTimeoffQueryParamFields = "metadata"
 	PatchHrisTimeoffQueryParamFieldsRaw            PatchHrisTimeoffQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *PatchHrisTimeoffQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "duration":
 		fallthrough
 	case "duration_type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisTimeoffQueryParamFields(v)

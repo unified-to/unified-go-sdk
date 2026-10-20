@@ -25,4 +25,5 @@ value := operations.PatchLmsInstructorQueryParamFieldsID
 | `PatchLmsInstructorQueryParamFieldsTitle`      | title                                          |
 | `PatchLmsInstructorQueryParamFieldsTelephones` | telephones                                     |
 | `PatchLmsInstructorQueryParamFieldsImageURL`   | image_url                                      |
+| `PatchLmsInstructorQueryParamFieldsMetadata`   | metadata                                       |
 | `PatchLmsInstructorQueryParamFieldsRaw`        | raw                                            |

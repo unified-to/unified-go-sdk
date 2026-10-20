@@ -47,6 +47,7 @@ type CommerceLocation struct {
 	LocationType   *LocationType       `json:"location_type,omitempty"`
 	Longitude      *float64            `json:"longitude,omitempty"`
 	Media          []CommerceItemMedia `json:"media,omitempty"`
+	Metadata       []CommerceMetadata  `json:"metadata,omitempty"`
 	Name           *string             `json:"name,omitempty"`
 	ParentID       *string             `json:"parent_id,omitempty"`
 	PriceLevel     *string             `json:"price_level,omitempty"`
@@ -159,6 +160,13 @@ func (c *CommerceLocation) GetMedia() []CommerceItemMedia {
 		return nil
 	}
 	return c.Media
+}
+
+func (c *CommerceLocation) GetMetadata() []CommerceMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CommerceLocation) GetName() *string {

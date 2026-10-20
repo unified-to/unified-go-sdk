@@ -22,4 +22,5 @@ value := operations.CreateCommerceSaleschannelQueryParamFieldsID
 | `CreateCommerceSaleschannelQueryParamFieldsDescription` | description                                             |
 | `CreateCommerceSaleschannelQueryParamFieldsIsActive`    | is_active                                               |
 | `CreateCommerceSaleschannelQueryParamFieldsCollections` | collections                                             |
+| `CreateCommerceSaleschannelQueryParamFieldsMetadata`    | metadata                                                |
 | `CreateCommerceSaleschannelQueryParamFieldsRaw`         | raw                                                     |

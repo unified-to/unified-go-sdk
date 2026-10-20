@@ -71,6 +71,7 @@ type PerformanceReview struct {
 	ID      *string `json:"id,omitempty"`
 	// whether the reviewee acknowledged this review
 	IsAcknowledged *bool                       `json:"is_acknowledged,omitempty"`
+	Metadata       []PerformanceMetadata       `json:"metadata,omitempty"`
 	Questions      []PerformanceReviewQuestion `json:"questions,omitempty"`
 	// the overall rating/score of this review
 	Rating *float64 `json:"rating,omitempty"`
@@ -144,6 +145,13 @@ func (p *PerformanceReview) GetIsAcknowledged() *bool {
 		return nil
 	}
 	return p.IsAcknowledged
+}
+
+func (p *PerformanceReview) GetMetadata() []PerformanceMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PerformanceReview) GetQuestions() []PerformanceReviewQuestion {

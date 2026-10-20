@@ -114,9 +114,10 @@ type PropertyAdsReportMetricsCreative struct {
 	ItemID *string  `json:"item_id,omitempty"`
 	Labels []string `json:"labels,omitempty"`
 	// Destination URL for creatives with links
-	LinkURL        *string `json:"link_url,omitempty"`
-	Name           *string `json:"name,omitempty"`
-	OrganizationID *string `json:"organization_id,omitempty"`
+	LinkURL        *string       `json:"link_url,omitempty"`
+	Metadata       []AdsMetadata `json:"metadata,omitempty"`
+	Name           *string       `json:"name,omitempty"`
+	OrganizationID *string       `json:"organization_id,omitempty"`
 	// Display URL path 1 (Microsoft RSA Path1)
 	Path1 *string `json:"path1,omitempty"`
 	// Display URL path 2 (Microsoft RSA Path2)
@@ -262,6 +263,13 @@ func (p *PropertyAdsReportMetricsCreative) GetLinkURL() *string {
 		return nil
 	}
 	return p.LinkURL
+}
+
+func (p *PropertyAdsReportMetricsCreative) GetMetadata() []AdsMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyAdsReportMetricsCreative) GetName() *string {

@@ -57,4 +57,5 @@ value := operations.ListClubsActivitiesQueryParamFieldsID
 | `ListClubsActivitiesQueryParamFieldsWorkoutType`          | workout_type                                              |
 | `ListClubsActivitiesQueryParamFieldsSufferScore`          | suffer_score                                              |
 | `ListClubsActivitiesQueryParamFieldsPrCount`              | pr_count                                                  |
+| `ListClubsActivitiesQueryParamFieldsMetadata`             | metadata                                                  |
 | `ListClubsActivitiesQueryParamFieldsRaw`                  | raw                                                       |

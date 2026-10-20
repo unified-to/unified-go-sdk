@@ -24,4 +24,5 @@ value := operations.PatchTaskCommentQueryParamFieldsID
 | `PatchTaskCommentQueryParamFieldsTaskID`      | task_id                                       |
 | `PatchTaskCommentQueryParamFieldsParentID`    | parent_id                                     |
 | `PatchTaskCommentQueryParamFieldsHasChildren` | has_children                                  |
+| `PatchTaskCommentQueryParamFieldsMetadata`    | metadata                                      |
 | `PatchTaskCommentQueryParamFieldsRaw`         | raw                                           |

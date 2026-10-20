@@ -36,6 +36,7 @@ const (
 	PatchVerificationRequestQueryParamFieldsResponseDownloadUrls      PatchVerificationRequestQueryParamFields = "response_download_urls"
 	PatchVerificationRequestQueryParamFieldsResponseDetails           PatchVerificationRequestQueryParamFields = "response_details"
 	PatchVerificationRequestQueryParamFieldsResponseSource            PatchVerificationRequestQueryParamFields = "response_source"
+	PatchVerificationRequestQueryParamFieldsMetadata                  PatchVerificationRequestQueryParamFields = "metadata"
 	PatchVerificationRequestQueryParamFieldsRaw                       PatchVerificationRequestQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *PatchVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) er
 	case "response_details":
 		fallthrough
 	case "response_source":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchVerificationRequestQueryParamFields(v)

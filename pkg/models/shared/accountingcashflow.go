@@ -25,6 +25,7 @@ type AccountingCashflow struct {
 	FinancingSections []AccountingCashflowSection `json:"financing_sections,omitempty"`
 	ID                *string                     `json:"id,omitempty"`
 	InvestingSections []AccountingCashflowSection `json:"investing_sections,omitempty"`
+	Metadata          []AccountingMetadata        `json:"metadata,omitempty"`
 	// e.g. "Cash Flow Statement Q1 2020"
 	Name *string `json:"name,omitempty"`
 	// Usually ending - beginning
@@ -117,6 +118,13 @@ func (a *AccountingCashflow) GetInvestingSections() []AccountingCashflowSection 
 		return nil
 	}
 	return a.InvestingSections
+}
+
+func (a *AccountingCashflow) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingCashflow) GetName() *string {

@@ -131,7 +131,8 @@ type ComputeGputype struct {
 	// Unique identifier for the GPU or instance type (vendor SKU)
 	ID *string `json:"id,omitempty"`
 	// System memory in MiB
-	MemoryMb *float64 `json:"memory_mb,omitempty"`
+	MemoryMb *float64          `json:"memory_mb,omitempty"`
+	Metadata []ComputeMetadata `json:"metadata,omitempty"`
 	// Display name of the type
 	Name *string `json:"name,omitempty"`
 	// List prices by market and region
@@ -230,6 +231,13 @@ func (c *ComputeGputype) GetMemoryMb() *float64 {
 		return nil
 	}
 	return c.MemoryMb
+}
+
+func (c *ComputeGputype) GetMetadata() []ComputeMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ComputeGputype) GetName() *string {

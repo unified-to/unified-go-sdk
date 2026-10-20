@@ -22,4 +22,5 @@ value := operations.PatchDatastoreRecordQueryParamFieldsID
 | `PatchDatastoreRecordQueryParamFieldsTableID`    | table_id                                         |
 | `PatchDatastoreRecordQueryParamFieldsFields`     | fields                                           |
 | `PatchDatastoreRecordQueryParamFieldsRowNumber`  | row_number                                       |
+| `PatchDatastoreRecordQueryParamFieldsMetadata`   | metadata                                         |
 | `PatchDatastoreRecordQueryParamFieldsRaw`        | raw                                              |

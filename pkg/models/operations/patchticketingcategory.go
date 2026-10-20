@@ -19,6 +19,7 @@ const (
 	PatchTicketingCategoryQueryParamFieldsDescription PatchTicketingCategoryQueryParamFields = "description"
 	PatchTicketingCategoryQueryParamFieldsIsActive    PatchTicketingCategoryQueryParamFields = "is_active"
 	PatchTicketingCategoryQueryParamFieldsParentID    PatchTicketingCategoryQueryParamFields = "parent_id"
+	PatchTicketingCategoryQueryParamFieldsMetadata    PatchTicketingCategoryQueryParamFields = "metadata"
 	PatchTicketingCategoryQueryParamFieldsRaw         PatchTicketingCategoryQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *PatchTicketingCategoryQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchTicketingCategoryQueryParamFields(v)

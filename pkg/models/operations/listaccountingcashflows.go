@@ -27,6 +27,7 @@ const (
 	ListAccountingCashflowsQueryParamFieldsOperatingSections     ListAccountingCashflowsQueryParamFields = "operating_sections"
 	ListAccountingCashflowsQueryParamFieldsInvestingSections     ListAccountingCashflowsQueryParamFields = "investing_sections"
 	ListAccountingCashflowsQueryParamFieldsFinancingSections     ListAccountingCashflowsQueryParamFields = "financing_sections"
+	ListAccountingCashflowsQueryParamFieldsMetadata              ListAccountingCashflowsQueryParamFields = "metadata"
 	ListAccountingCashflowsQueryParamFieldsRaw                   ListAccountingCashflowsQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *ListAccountingCashflowsQueryParamFields) UnmarshalJSON(data []byte) err
 	case "investing_sections":
 		fallthrough
 	case "financing_sections":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingCashflowsQueryParamFields(v)

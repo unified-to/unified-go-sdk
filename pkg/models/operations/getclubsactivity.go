@@ -54,6 +54,7 @@ const (
 	GetClubsActivityQueryParamFieldsWorkoutType          GetClubsActivityQueryParamFields = "workout_type"
 	GetClubsActivityQueryParamFieldsSufferScore          GetClubsActivityQueryParamFields = "suffer_score"
 	GetClubsActivityQueryParamFieldsPrCount              GetClubsActivityQueryParamFields = "pr_count"
+	GetClubsActivityQueryParamFieldsMetadata             GetClubsActivityQueryParamFields = "metadata"
 	GetClubsActivityQueryParamFieldsRaw                  GetClubsActivityQueryParamFields = "raw"
 )
 
@@ -149,6 +150,8 @@ func (e *GetClubsActivityQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "suffer_score":
 		fallthrough
 	case "pr_count":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetClubsActivityQueryParamFields(v)

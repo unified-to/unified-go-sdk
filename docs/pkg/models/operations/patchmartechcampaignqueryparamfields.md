@@ -28,4 +28,5 @@ value := operations.PatchMartechCampaignQueryParamFieldsID
 | `PatchMartechCampaignQueryParamFieldsFromEmail`    | from_email                                         |
 | `PatchMartechCampaignQueryParamFieldsReplyToEmail` | reply_to_email                                     |
 | `PatchMartechCampaignQueryParamFieldsSendAt`       | send_at                                            |
+| `PatchMartechCampaignQueryParamFieldsMetadata`     | metadata                                           |
 | `PatchMartechCampaignQueryParamFieldsRaw`          | raw                                                |

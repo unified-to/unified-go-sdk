@@ -26,6 +26,7 @@ const (
 	ListHrisTimeshiftsQueryParamFieldsApprovedAt     ListHrisTimeshiftsQueryParamFields = "approved_at"
 	ListHrisTimeshiftsQueryParamFieldsHours          ListHrisTimeshiftsQueryParamFields = "hours"
 	ListHrisTimeshiftsQueryParamFieldsIsApproved     ListHrisTimeshiftsQueryParamFields = "is_approved"
+	ListHrisTimeshiftsQueryParamFieldsMetadata       ListHrisTimeshiftsQueryParamFields = "metadata"
 	ListHrisTimeshiftsQueryParamFieldsRaw            ListHrisTimeshiftsQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *ListHrisTimeshiftsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "hours":
 		fallthrough
 	case "is_approved":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisTimeshiftsQueryParamFields(v)

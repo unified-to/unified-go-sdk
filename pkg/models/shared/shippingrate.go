@@ -14,7 +14,8 @@ type ShippingRate struct {
 	// Origin address
 	FromAddress *PropertyShippingRateFromAddress `json:"from_address,omitempty"`
 	// Unique identifier for this rate object
-	ID *string `json:"id,omitempty"`
+	ID       *string            `json:"id,omitempty"`
+	Metadata []ShippingMetadata `json:"metadata,omitempty"`
 	// Multiple packages (alternative to package)
 	Packages []ShippingPackage  `json:"packages,omitempty"`
 	Rates    []ShippingRateRate `json:"rates,omitempty"`
@@ -64,6 +65,13 @@ func (s *ShippingRate) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *ShippingRate) GetMetadata() []ShippingMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *ShippingRate) GetPackages() []ShippingPackage {

@@ -38,4 +38,5 @@ value := operations.PatchLmsContentQueryParamFieldsID
 | `PatchLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                     |
 | `PatchLmsContentQueryParamFieldsInstructors`       | instructors                                        |
 | `PatchLmsContentQueryParamFieldsPublishedAt`       | published_at                                       |
+| `PatchLmsContentQueryParamFieldsMetadata`          | metadata                                           |
 | `PatchLmsContentQueryParamFieldsRaw`               | raw                                                |

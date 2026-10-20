@@ -30,4 +30,5 @@ value := operations.ListUcRecordingsQueryParamFieldsID
 | `ListUcRecordingsQueryParamFieldsUserPhone`              | user_phone                                               |
 | `ListUcRecordingsQueryParamFieldsType`                   | type                                                     |
 | `ListUcRecordingsQueryParamFieldsConversationIdentifier` | conversation_identifier                                  |
+| `ListUcRecordingsQueryParamFieldsMetadata`               | metadata                                                 |
 | `ListUcRecordingsQueryParamFieldsRaw`                    | raw                                                      |

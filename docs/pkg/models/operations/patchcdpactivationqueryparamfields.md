@@ -26,4 +26,5 @@ value := operations.PatchCdpActivationQueryParamFieldsID
 | `PatchCdpActivationQueryParamFieldsStatus`        | status                                            |
 | `PatchCdpActivationQueryParamFieldsLastRunAt`     | last_run_at                                       |
 | `PatchCdpActivationQueryParamFieldsIsEnabled`     | is_enabled                                        |
+| `PatchCdpActivationQueryParamFieldsMetadata`      | metadata                                          |
 | `PatchCdpActivationQueryParamFieldsRaw`           | raw                                               |

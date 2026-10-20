@@ -37,4 +37,5 @@ value := operations.PatchAdsAdQueryParamFieldsID
 | `PatchAdsAdQueryParamFieldsPath2`            | path2                                        |
 | `PatchAdsAdQueryParamFieldsPromoted`         | promoted                                     |
 | `PatchAdsAdQueryParamFieldsLogoCreativeID`   | logo_creative_id                             |
+| `PatchAdsAdQueryParamFieldsMetadata`         | metadata                                     |
 | `PatchAdsAdQueryParamFieldsRaw`              | raw                                          |

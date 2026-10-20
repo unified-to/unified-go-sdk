@@ -25,4 +25,5 @@ value := operations.PatchDatastoreTableQueryParamFieldsID
 | `PatchDatastoreTableQueryParamFieldsRelationships` | relationships                                      |
 | `PatchDatastoreTableQueryParamFieldsWebURL`        | web_url                                            |
 | `PatchDatastoreTableQueryParamFieldsParentID`      | parent_id                                          |
+| `PatchDatastoreTableQueryParamFieldsMetadata`      | metadata                                           |
 | `PatchDatastoreTableQueryParamFieldsRaw`           | raw                                                |

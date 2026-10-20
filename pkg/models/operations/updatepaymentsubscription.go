@@ -32,6 +32,7 @@ const (
 	UpdatePaymentSubscriptionQueryParamFieldsDayOfWeek            UpdatePaymentSubscriptionQueryParamFields = "day_of_week"
 	UpdatePaymentSubscriptionQueryParamFieldsInterval             UpdatePaymentSubscriptionQueryParamFields = "interval"
 	UpdatePaymentSubscriptionQueryParamFieldsLineitems            UpdatePaymentSubscriptionQueryParamFields = "lineitems"
+	UpdatePaymentSubscriptionQueryParamFieldsMetadata             UpdatePaymentSubscriptionQueryParamFields = "metadata"
 	UpdatePaymentSubscriptionQueryParamFieldsRaw                  UpdatePaymentSubscriptionQueryParamFields = "raw"
 )
 
@@ -83,6 +84,8 @@ func (e *UpdatePaymentSubscriptionQueryParamFields) UnmarshalJSON(data []byte) e
 	case "interval":
 		fallthrough
 	case "lineitems":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdatePaymentSubscriptionQueryParamFields(v)

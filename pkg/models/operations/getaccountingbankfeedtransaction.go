@@ -30,6 +30,7 @@ const (
 	GetAccountingBankfeedtransactionQueryParamFieldsContactID         GetAccountingBankfeedtransactionQueryParamFields = "contact_id"
 	GetAccountingBankfeedtransactionQueryParamFieldsAccountID         GetAccountingBankfeedtransactionQueryParamFields = "account_id"
 	GetAccountingBankfeedtransactionQueryParamFieldsCategoryIds       GetAccountingBankfeedtransactionQueryParamFields = "category_ids"
+	GetAccountingBankfeedtransactionQueryParamFieldsMetadata          GetAccountingBankfeedtransactionQueryParamFields = "metadata"
 	GetAccountingBankfeedtransactionQueryParamFieldsRaw               GetAccountingBankfeedtransactionQueryParamFields = "raw"
 )
 
@@ -77,6 +78,8 @@ func (e *GetAccountingBankfeedtransactionQueryParamFields) UnmarshalJSON(data []
 	case "account_id":
 		fallthrough
 	case "category_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAccountingBankfeedtransactionQueryParamFields(v)

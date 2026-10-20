@@ -34,6 +34,7 @@ const (
 	PatchHrisAttendanceQueryParamFieldsHourlyRate         PatchHrisAttendanceQueryParamFields = "hourly_rate"
 	PatchHrisAttendanceQueryParamFieldsApproverUserID     PatchHrisAttendanceQueryParamFields = "approver_user_id"
 	PatchHrisAttendanceQueryParamFieldsApprovedAt         PatchHrisAttendanceQueryParamFields = "approved_at"
+	PatchHrisAttendanceQueryParamFieldsMetadata           PatchHrisAttendanceQueryParamFields = "metadata"
 	PatchHrisAttendanceQueryParamFieldsRaw                PatchHrisAttendanceQueryParamFields = "raw"
 )
 
@@ -89,6 +90,8 @@ func (e *PatchHrisAttendanceQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "approver_user_id":
 		fallthrough
 	case "approved_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisAttendanceQueryParamFields(v)

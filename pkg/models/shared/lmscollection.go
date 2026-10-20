@@ -14,6 +14,7 @@ type LmsCollection struct {
 	ID          *string        `json:"id,omitempty"`
 	IsActive    *bool          `json:"is_active,omitempty"`
 	Media       []LmsMedia     `json:"media,omitempty"`
+	Metadata    []LmsMetadata  `json:"metadata,omitempty"`
 	Name        *string        `json:"name,omitempty"`
 	ParentID    *string        `json:"parent_id,omitempty"`
 	Raw         map[string]any `json:"raw,omitempty"`
@@ -65,6 +66,13 @@ func (l *LmsCollection) GetMedia() []LmsMedia {
 		return nil
 	}
 	return l.Media
+}
+
+func (l *LmsCollection) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsCollection) GetName() *string {

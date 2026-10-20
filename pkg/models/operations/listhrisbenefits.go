@@ -27,6 +27,7 @@ const (
 	ListHrisBenefitsQueryParamFieldsEmployerContributionMaxAmount ListHrisBenefitsQueryParamFields = "employer_contribution_max_amount"
 	ListHrisBenefitsQueryParamFieldsCoverageLevel                 ListHrisBenefitsQueryParamFields = "coverage_level"
 	ListHrisBenefitsQueryParamFieldsCurrency                      ListHrisBenefitsQueryParamFields = "currency"
+	ListHrisBenefitsQueryParamFieldsMetadata                      ListHrisBenefitsQueryParamFields = "metadata"
 	ListHrisBenefitsQueryParamFieldsRaw                           ListHrisBenefitsQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *ListHrisBenefitsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "coverage_level":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisBenefitsQueryParamFields(v)

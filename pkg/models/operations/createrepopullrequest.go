@@ -25,6 +25,7 @@ const (
 	CreateRepoPullrequestQueryParamFieldsLabels         CreateRepoPullrequestQueryParamFields = "labels"
 	CreateRepoPullrequestQueryParamFieldsClosedAt       CreateRepoPullrequestQueryParamFields = "closed_at"
 	CreateRepoPullrequestQueryParamFieldsCommitIds      CreateRepoPullrequestQueryParamFields = "commit_ids"
+	CreateRepoPullrequestQueryParamFieldsMetadata       CreateRepoPullrequestQueryParamFields = "metadata"
 	CreateRepoPullrequestQueryParamFieldsRaw            CreateRepoPullrequestQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *CreateRepoPullrequestQueryParamFields) UnmarshalJSON(data []byte) error
 	case "closed_at":
 		fallthrough
 	case "commit_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateRepoPullrequestQueryParamFields(v)

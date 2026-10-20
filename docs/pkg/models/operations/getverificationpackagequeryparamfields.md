@@ -33,4 +33,5 @@ value := operations.GetVerificationPackageQueryParamFieldsID
 | `GetVerificationPackageQueryParamFieldsMaxScore`               | max_score                                                      |
 | `GetVerificationPackageQueryParamFieldsInfoURL`                | info_url                                                       |
 | `GetVerificationPackageQueryParamFieldsValidRegions`           | valid_regions                                                  |
+| `GetVerificationPackageQueryParamFieldsMetadata`               | metadata                                                       |
 | `GetVerificationPackageQueryParamFieldsRaw`                    | raw                                                            |

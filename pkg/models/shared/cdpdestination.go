@@ -39,7 +39,8 @@ type CdpDestination struct {
 	// Unique identifier for this destination object
 	ID *string `json:"id,omitempty"`
 	// Whether the destination is active/enabled
-	IsEnabled *bool `json:"is_enabled,omitempty"`
+	IsEnabled *bool         `json:"is_enabled,omitempty"`
+	Metadata  []CdpMetadata `json:"metadata,omitempty"`
 	// The name of the outbound activation destination
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this destination
@@ -89,6 +90,13 @@ func (c *CdpDestination) GetIsEnabled() *bool {
 		return nil
 	}
 	return c.IsEnabled
+}
+
+func (c *CdpDestination) GetMetadata() []CdpMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CdpDestination) GetName() *string {

@@ -25,6 +25,7 @@ const (
 	UpdateHrisGroupQueryParamFieldsCompanyID    UpdateHrisGroupQueryParamFields = "company_id"
 	UpdateHrisGroupQueryParamFieldsPayFrequency UpdateHrisGroupQueryParamFields = "pay_frequency"
 	UpdateHrisGroupQueryParamFieldsNextPaidAt   UpdateHrisGroupQueryParamFields = "next_paid_at"
+	UpdateHrisGroupQueryParamFieldsMetadata     UpdateHrisGroupQueryParamFields = "metadata"
 	UpdateHrisGroupQueryParamFieldsRaw          UpdateHrisGroupQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *UpdateHrisGroupQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "pay_frequency":
 		fallthrough
 	case "next_paid_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateHrisGroupQueryParamFields(v)

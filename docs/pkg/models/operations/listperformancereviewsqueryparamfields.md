@@ -32,4 +32,5 @@ value := operations.ListPerformanceReviewsQueryParamFieldsID
 | `ListPerformanceReviewsQueryParamFieldsIsAcknowledged`     | is_acknowledged                                            |
 | `ListPerformanceReviewsQueryParamFieldsSubmittedAt`        | submitted_at                                               |
 | `ListPerformanceReviewsQueryParamFieldsCompletedAt`        | completed_at                                               |
+| `ListPerformanceReviewsQueryParamFieldsMetadata`           | metadata                                                   |
 | `ListPerformanceReviewsQueryParamFieldsRaw`                | raw                                                        |

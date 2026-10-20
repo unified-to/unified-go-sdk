@@ -26,4 +26,5 @@ value := operations.ListComputeUsagesQueryParamFieldsID
 | `ListComputeUsagesQueryParamFieldsUnit`       | unit                                          |
 | `ListComputeUsagesQueryParamFieldsCostAmount` | cost_amount                                   |
 | `ListComputeUsagesQueryParamFieldsCurrency`   | currency                                      |
+| `ListComputeUsagesQueryParamFieldsMetadata`   | metadata                                      |
 | `ListComputeUsagesQueryParamFieldsRaw`        | raw                                           |

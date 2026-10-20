@@ -22,6 +22,7 @@ const (
 	ListLmsStudentsQueryParamFieldsTelephones ListLmsStudentsQueryParamFields = "telephones"
 	ListLmsStudentsQueryParamFieldsAddress    ListLmsStudentsQueryParamFields = "address"
 	ListLmsStudentsQueryParamFieldsImageURL   ListLmsStudentsQueryParamFields = "image_url"
+	ListLmsStudentsQueryParamFieldsMetadata   ListLmsStudentsQueryParamFields = "metadata"
 	ListLmsStudentsQueryParamFieldsRaw        ListLmsStudentsQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListLmsStudentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "address":
 		fallthrough
 	case "image_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListLmsStudentsQueryParamFields(v)

@@ -22,4 +22,5 @@ value := operations.GetFormsSubmissionQueryParamFieldsID
 | `GetFormsSubmissionQueryParamFieldsRespondentEmail` | respondent_email                                    |
 | `GetFormsSubmissionQueryParamFieldsRespondentName`  | respondent_name                                     |
 | `GetFormsSubmissionQueryParamFieldsAnswers`         | answers                                             |
+| `GetFormsSubmissionQueryParamFieldsMetadata`        | metadata                                            |
 | `GetFormsSubmissionQueryParamFieldsRaw`             | raw                                                 |

@@ -33,6 +33,7 @@ const (
 	PatchMessagingMessageQueryParamFieldsHasChildren             PatchMessagingMessageQueryParamFields = "has_children"
 	PatchMessagingMessageQueryParamFieldsIsUnread                PatchMessagingMessageQueryParamFields = "is_unread"
 	PatchMessagingMessageQueryParamFieldsButtons                 PatchMessagingMessageQueryParamFields = "buttons"
+	PatchMessagingMessageQueryParamFieldsMetadata                PatchMessagingMessageQueryParamFields = "metadata"
 	PatchMessagingMessageQueryParamFieldsRaw                     PatchMessagingMessageQueryParamFields = "raw"
 )
 
@@ -86,6 +87,8 @@ func (e *PatchMessagingMessageQueryParamFields) UnmarshalJSON(data []byte) error
 	case "is_unread":
 		fallthrough
 	case "buttons":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchMessagingMessageQueryParamFields(v)

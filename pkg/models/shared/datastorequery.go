@@ -4,6 +4,7 @@ package shared
 
 type DatastoreQuery struct {
 	DatabaseID *string                         `json:"database_id,omitempty"`
+	Metadata   []DatastoreMetadata             `json:"metadata,omitempty"`
 	Query      *PropertyDatastoreQueryQuery    `json:"query,omitempty"`
 	Raw        map[string]any                  `json:"raw,omitempty"`
 	Response   *PropertyDatastoreQueryResponse `json:"response,omitempty"`
@@ -15,6 +16,13 @@ func (d *DatastoreQuery) GetDatabaseID() *string {
 		return nil
 	}
 	return d.DatabaseID
+}
+
+func (d *DatastoreQuery) GetMetadata() []DatastoreMetadata {
+	if d == nil {
+		return nil
+	}
+	return d.Metadata
 }
 
 func (d *DatastoreQuery) GetQuery() *PropertyDatastoreQueryQuery {

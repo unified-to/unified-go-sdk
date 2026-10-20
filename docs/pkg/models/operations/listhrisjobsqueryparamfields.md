@@ -29,4 +29,5 @@ value := operations.ListHrisJobsQueryParamFieldsID
 | `ListHrisJobsQueryParamFieldsParentID`       | parent_id                                    |
 | `ListHrisJobsQueryParamFieldsUsers`          | users                                        |
 | `ListHrisJobsQueryParamFieldsCompensation`   | compensation                                 |
+| `ListHrisJobsQueryParamFieldsMetadata`       | metadata                                     |
 | `ListHrisJobsQueryParamFieldsRaw`            | raw                                          |

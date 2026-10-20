@@ -33,4 +33,5 @@ value := operations.ListVerificationPackagesQueryParamFieldsID
 | `ListVerificationPackagesQueryParamFieldsMaxScore`               | max_score                                                        |
 | `ListVerificationPackagesQueryParamFieldsInfoURL`                | info_url                                                         |
 | `ListVerificationPackagesQueryParamFieldsValidRegions`           | valid_regions                                                    |
+| `ListVerificationPackagesQueryParamFieldsMetadata`               | metadata                                                         |
 | `ListVerificationPackagesQueryParamFieldsRaw`                    | raw                                                              |

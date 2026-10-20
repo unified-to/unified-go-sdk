@@ -19,6 +19,7 @@ const (
 	PatchCommerceInventoryQueryParamFieldsItemOptionID  PatchCommerceInventoryQueryParamFields = "item_option_id"
 	PatchCommerceInventoryQueryParamFieldsLocationID    PatchCommerceInventoryQueryParamFields = "location_id"
 	PatchCommerceInventoryQueryParamFieldsAvailable     PatchCommerceInventoryQueryParamFields = "available"
+	PatchCommerceInventoryQueryParamFieldsMetadata      PatchCommerceInventoryQueryParamFields = "metadata"
 	PatchCommerceInventoryQueryParamFieldsRaw           PatchCommerceInventoryQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *PatchCommerceInventoryQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "location_id":
 		fallthrough
 	case "available":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCommerceInventoryQueryParamFields(v)

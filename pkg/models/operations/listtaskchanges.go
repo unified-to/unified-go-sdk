@@ -18,6 +18,7 @@ const (
 	ListTaskChangesQueryParamFieldsTaskID    ListTaskChangesQueryParamFields = "task_id"
 	ListTaskChangesQueryParamFieldsUserID    ListTaskChangesQueryParamFields = "user_id"
 	ListTaskChangesQueryParamFieldsItems     ListTaskChangesQueryParamFields = "items"
+	ListTaskChangesQueryParamFieldsMetadata  ListTaskChangesQueryParamFields = "metadata"
 	ListTaskChangesQueryParamFieldsRaw       ListTaskChangesQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *ListTaskChangesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "items":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListTaskChangesQueryParamFields(v)

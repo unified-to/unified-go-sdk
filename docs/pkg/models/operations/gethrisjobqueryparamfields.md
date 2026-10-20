@@ -29,4 +29,5 @@ value := operations.GetHrisJobQueryParamFieldsID
 | `GetHrisJobQueryParamFieldsParentID`       | parent_id                                  |
 | `GetHrisJobQueryParamFieldsUsers`          | users                                      |
 | `GetHrisJobQueryParamFieldsCompensation`   | compensation                               |
+| `GetHrisJobQueryParamFieldsMetadata`       | metadata                                   |
 | `GetHrisJobQueryParamFieldsRaw`            | raw                                        |

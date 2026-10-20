@@ -55,4 +55,5 @@ value := operations.PatchAssessmentOrderQueryParamFieldsID
 | `PatchAssessmentOrderQueryParamFieldsResponseDetails`           | response_details                                                |
 | `PatchAssessmentOrderQueryParamFieldsResponseSource`            | response_source                                                 |
 | `PatchAssessmentOrderQueryParamFieldsResponseAttributes`        | response_attributes                                             |
+| `PatchAssessmentOrderQueryParamFieldsMetadata`                  | metadata                                                        |
 | `PatchAssessmentOrderQueryParamFieldsRaw`                       | raw                                                             |

@@ -21,6 +21,7 @@ const (
 	ListDatastoreDatabasesQueryParamFieldsIsActive    ListDatastoreDatabasesQueryParamFields = "is_active"
 	ListDatastoreDatabasesQueryParamFieldsPassword    ListDatastoreDatabasesQueryParamFields = "password"
 	ListDatastoreDatabasesQueryParamFieldsRegion      ListDatastoreDatabasesQueryParamFields = "region"
+	ListDatastoreDatabasesQueryParamFieldsMetadata    ListDatastoreDatabasesQueryParamFields = "metadata"
 	ListDatastoreDatabasesQueryParamFieldsRaw         ListDatastoreDatabasesQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *ListDatastoreDatabasesQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "password":
 		fallthrough
 	case "region":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListDatastoreDatabasesQueryParamFields(v)

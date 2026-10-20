@@ -53,12 +53,13 @@ func main() {
         AnalyticsEvent: shared.AnalyticsEvent{
             CreatedAt: types.MustNewTimeFromString("2023-06-21T03:13:22.954Z"),
             EventType: shared.EventTypeScreenView.ToPointer(),
-            ID: unifiedgosdk.Pointer("4e2c5574-868d-49b3-b7e4-4825b61cbbe0"),
+            ID: unifiedgosdk.Pointer("b32830ea-07ef-4178-bcda-2177927a36b4"),
             Metadata: map[string]shared.PropertyAnalyticsEventMetadata{
                 "key": shared.PropertyAnalyticsEventMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Xk707ttsb51v"),
-            UpdatedAt: types.MustNewTimeFromString("2023-09-24T12:03:56.367Z"),
+            Name: unifiedgosdk.Pointer("page_view"),
+            PageURL: unifiedgosdk.Pointer("https://golden-carboxyl.biz"),
+            UpdatedAt: types.MustNewTimeFromString("2023-09-24T14:29:05.834Z"),
         },
         ConnectionID: "<id>",
     })
@@ -119,10 +120,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("078f798f-7a4b-41ad-b275-04a559837f6a"),
+            ID: unifiedgosdk.Pointer("3ec90f5f-6d92-43b8-867d-2ffb3fd73158"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:10:19.194Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:19:16.478Z"),
         },
         ConnectionID: "<id>",
     })
@@ -182,16 +183,15 @@ func main() {
     res, err := s.Analytics.CreateAnalyticsVisitor(ctx, operations.CreateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("34b0e612-9789-4ac0-b11d-cd565b80c47b"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.676Z"),
+            ID: unifiedgosdk.Pointer("2682a1aa-0b89-4c28-9ad2-ea0e1a4025d7"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.943Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.946Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.800Z"),
         },
         ConnectionID: "<id>",
     })
@@ -742,10 +742,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("e8383881-b4d2-4f1c-b849-011f43d3f3e6"),
+            ID: unifiedgosdk.Pointer("6f2b0560-a2ec-4296-9487-725355aadc47"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:10:19.194Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:19:16.478Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -806,16 +806,15 @@ func main() {
     res, err := s.Analytics.PatchAnalyticsVisitor(ctx, operations.PatchAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("485fc49d-1bec-440b-96af-c2c6b5b6e199"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.679Z"),
+            ID: unifiedgosdk.Pointer("5ef24960-9b3f-4c4d-89c4-03b5ab972dda"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.955Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.955Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.812Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -987,10 +986,10 @@ func main() {
         AnalyticsProperty: shared.AnalyticsProperty{
             CreatedAt: types.MustNewTimeFromString("2021-09-05T19:04:58.430Z"),
             Currency: unifiedgosdk.Pointer("USD"),
-            ID: unifiedgosdk.Pointer("e8383881-b4d2-4f1c-b849-011f43d3f3e6"),
+            ID: unifiedgosdk.Pointer("6f2b0560-a2ec-4296-9487-725355aadc47"),
             Name: unifiedgosdk.Pointer("Daniel, Goldner and Dickinson"),
             Timezone: unifiedgosdk.Pointer("UTC"),
-            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:10:19.194Z"),
+            UpdatedAt: types.MustNewTimeFromString("2021-09-14T20:19:16.478Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -1051,16 +1050,15 @@ func main() {
     res, err := s.Analytics.UpdateAnalyticsVisitor(ctx, operations.UpdateAnalyticsVisitorRequest{
         AnalyticsVisitor: shared.AnalyticsVisitor{
             CreatedAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            Email: unifiedgosdk.Pointer("Dallas_Mitchell@yahoo.com"),
+            Email: unifiedgosdk.Pointer("desiree.o.hara@icloud.com"),
             FirstSeenAt: types.MustNewTimeFromString("2020-04-16T20:29:48.281Z"),
-            ID: unifiedgosdk.Pointer("485fc49d-1bec-440b-96af-c2c6b5b6e199"),
-            LastSeenAt: types.MustNewTimeFromString("2021-12-12T13:44:55.679Z"),
+            ID: unifiedgosdk.Pointer("5ef24960-9b3f-4c4d-89c4-03b5ab972dda"),
+            LastSeenAt: types.MustNewTimeFromString("2025-01-10T13:54:54.955Z"),
             Metadata: map[string]shared.PropertyAnalyticsVisitorMetadata{
                 "segment": shared.PropertyAnalyticsVisitorMetadata{},
             },
-            Name: unifiedgosdk.Pointer("Desiree O'Hara"),
-            TotalEvents: unifiedgosdk.Pointer[float64](3639.0),
-            UpdatedAt: types.MustNewTimeFromString("2025-06-27T21:16:19.955Z"),
+            TotalEvents: unifiedgosdk.Pointer[float64](2916.0),
+            UpdatedAt: types.MustNewTimeFromString("2025-06-28T21:54:24.812Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

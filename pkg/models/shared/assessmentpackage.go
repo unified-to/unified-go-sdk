@@ -54,7 +54,8 @@ type AssessmentPackage struct {
 	// Integration types that support this package
 	IntegrationTypes []string `json:"integration_types,omitempty"`
 	// Maximum possible score if this assessment returns a score
-	MaxScore *float64 `json:"max_score,omitempty"`
+	MaxScore *float64             `json:"max_score,omitempty"`
+	Metadata []AssessmentMetadata `json:"metadata,omitempty"`
 	// Name of the assessment package
 	Name *string `json:"name,omitempty"`
 	// Whether IP address is required
@@ -151,6 +152,13 @@ func (a *AssessmentPackage) GetMaxScore() *float64 {
 		return nil
 	}
 	return a.MaxScore
+}
+
+func (a *AssessmentPackage) GetMetadata() []AssessmentMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AssessmentPackage) GetName() *string {

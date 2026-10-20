@@ -25,6 +25,7 @@ const (
 	PatchSigningDocumentQueryParamFieldsDownloadURL PatchSigningDocumentQueryParamFields = "download_url"
 	PatchSigningDocumentQueryParamFieldsCreatorID   PatchSigningDocumentQueryParamFields = "creator_id"
 	PatchSigningDocumentQueryParamFieldsRaw         PatchSigningDocumentQueryParamFields = "raw"
+	PatchSigningDocumentQueryParamFieldsMetadata    PatchSigningDocumentQueryParamFields = "metadata"
 )
 
 func (e PatchSigningDocumentQueryParamFields) ToPointer() *PatchSigningDocumentQueryParamFields {
@@ -61,6 +62,8 @@ func (e *PatchSigningDocumentQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "creator_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "metadata":
 		*e = PatchSigningDocumentQueryParamFields(v)
 		return nil
 	default:

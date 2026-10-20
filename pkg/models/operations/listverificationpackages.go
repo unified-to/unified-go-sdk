@@ -30,6 +30,7 @@ const (
 	ListVerificationPackagesQueryParamFieldsMaxScore               ListVerificationPackagesQueryParamFields = "max_score"
 	ListVerificationPackagesQueryParamFieldsInfoURL                ListVerificationPackagesQueryParamFields = "info_url"
 	ListVerificationPackagesQueryParamFieldsValidRegions           ListVerificationPackagesQueryParamFields = "valid_regions"
+	ListVerificationPackagesQueryParamFieldsMetadata               ListVerificationPackagesQueryParamFields = "metadata"
 	ListVerificationPackagesQueryParamFieldsRaw                    ListVerificationPackagesQueryParamFields = "raw"
 )
 
@@ -77,6 +78,8 @@ func (e *ListVerificationPackagesQueryParamFields) UnmarshalJSON(data []byte) er
 	case "info_url":
 		fallthrough
 	case "valid_regions":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListVerificationPackagesQueryParamFields(v)

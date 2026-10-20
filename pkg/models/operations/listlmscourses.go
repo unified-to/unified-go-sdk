@@ -32,6 +32,7 @@ const (
 	ListLmsCoursesQueryParamFieldsProviderName        ListLmsCoursesQueryParamFields = "provider_name"
 	ListLmsCoursesQueryParamFieldsPublishedAt         ListLmsCoursesQueryParamFields = "published_at"
 	ListLmsCoursesQueryParamFieldsTimeEstimateMinutes ListLmsCoursesQueryParamFields = "time_estimate_minutes"
+	ListLmsCoursesQueryParamFieldsMetadata            ListLmsCoursesQueryParamFields = "metadata"
 	ListLmsCoursesQueryParamFieldsRaw                 ListLmsCoursesQueryParamFields = "raw"
 )
 
@@ -83,6 +84,8 @@ func (e *ListLmsCoursesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "published_at":
 		fallthrough
 	case "time_estimate_minutes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListLmsCoursesQueryParamFields(v)

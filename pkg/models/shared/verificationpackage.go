@@ -54,7 +54,8 @@ type VerificationPackage struct {
 	// where to find additional information
 	InfoURL *string `json:"info_url,omitempty"`
 	// if this verification returns a score, what is the maximum?
-	MaxScore *float64 `json:"max_score,omitempty"`
+	MaxScore *float64               `json:"max_score,omitempty"`
+	Metadata []VerificationMetadata `json:"metadata,omitempty"`
 	// Name of the verification type
 	Name           string `json:"name"`
 	NeedsIPAddress *bool  `json:"needs_ip_address,omitempty"`
@@ -156,6 +157,13 @@ func (v *VerificationPackage) GetMaxScore() *float64 {
 		return nil
 	}
 	return v.MaxScore
+}
+
+func (v *VerificationPackage) GetMetadata() []VerificationMetadata {
+	if v == nil {
+		return nil
+	}
+	return v.Metadata
 }
 
 func (v *VerificationPackage) GetName() string {

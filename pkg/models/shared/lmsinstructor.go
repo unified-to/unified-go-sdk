@@ -15,6 +15,7 @@ type LmsInstructor struct {
 	ID         *string        `json:"id,omitempty"`
 	ImageURL   *string        `json:"image_url,omitempty"`
 	LastName   *string        `json:"last_name,omitempty"`
+	Metadata   []LmsMetadata  `json:"metadata,omitempty"`
 	Name       *string        `json:"name,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
 	Telephones []LmsTelephone `json:"telephones,omitempty"`
@@ -74,6 +75,13 @@ func (l *LmsInstructor) GetLastName() *string {
 		return nil
 	}
 	return l.LastName
+}
+
+func (l *LmsInstructor) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsInstructor) GetName() *string {

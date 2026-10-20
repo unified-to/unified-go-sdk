@@ -9,13 +9,14 @@ import (
 
 type CalendarCalendar struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsPrimary   *bool          `json:"is_primary,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	Timezone    *string        `json:"timezone,omitempty"`
+	CreatedAt   *time.Time         `json:"created_at,omitempty"`
+	Description *string            `json:"description,omitempty"`
+	ID          *string            `json:"id,omitempty"`
+	IsPrimary   *bool              `json:"is_primary,omitempty"`
+	Metadata    []CalendarMetadata `json:"metadata,omitempty"`
+	Name        *string            `json:"name,omitempty"`
+	Raw         map[string]any     `json:"raw,omitempty"`
+	Timezone    *string            `json:"timezone,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -57,6 +58,13 @@ func (c *CalendarCalendar) GetIsPrimary() *bool {
 		return nil
 	}
 	return c.IsPrimary
+}
+
+func (c *CalendarCalendar) GetMetadata() []CalendarMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CalendarCalendar) GetName() *string {

@@ -38,4 +38,5 @@ value := operations.GetLmsContentQueryParamFieldsID
 | `GetLmsContentQueryParamFieldsCollectionIds`     | collection_ids                                   |
 | `GetLmsContentQueryParamFieldsInstructors`       | instructors                                      |
 | `GetLmsContentQueryParamFieldsPublishedAt`       | published_at                                     |
+| `GetLmsContentQueryParamFieldsMetadata`          | metadata                                         |
 | `GetLmsContentQueryParamFieldsRaw`               | raw                                              |

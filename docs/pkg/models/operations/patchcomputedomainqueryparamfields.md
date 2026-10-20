@@ -23,4 +23,5 @@ value := operations.PatchComputeDomainQueryParamFieldsID
 | `PatchComputeDomainQueryParamFieldsStatus`      | status                                          |
 | `PatchComputeDomainQueryParamFieldsIsPrimary`   | is_primary                                      |
 | `PatchComputeDomainQueryParamFieldsRedirectURL` | redirect_url                                    |
+| `PatchComputeDomainQueryParamFieldsMetadata`    | metadata                                        |
 | `PatchComputeDomainQueryParamFieldsRaw`         | raw                                             |

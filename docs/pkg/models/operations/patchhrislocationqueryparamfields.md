@@ -30,4 +30,5 @@ value := operations.PatchHrisLocationQueryParamFieldsID
 | `PatchHrisLocationQueryParamFieldsIsActive`           | is_active                                             |
 | `PatchHrisLocationQueryParamFieldsIsHq`               | is_hq                                                 |
 | `PatchHrisLocationQueryParamFieldsCompanyID`          | company_id                                            |
+| `PatchHrisLocationQueryParamFieldsMetadata`           | metadata                                              |
 | `PatchHrisLocationQueryParamFieldsRaw`                | raw                                                   |

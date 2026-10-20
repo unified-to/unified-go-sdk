@@ -26,4 +26,5 @@ value := operations.UpdateCdpActivationQueryParamFieldsID
 | `UpdateCdpActivationQueryParamFieldsStatus`        | status                                             |
 | `UpdateCdpActivationQueryParamFieldsLastRunAt`     | last_run_at                                        |
 | `UpdateCdpActivationQueryParamFieldsIsEnabled`     | is_enabled                                         |
+| `UpdateCdpActivationQueryParamFieldsMetadata`      | metadata                                           |
 | `UpdateCdpActivationQueryParamFieldsRaw`           | raw                                                |

@@ -27,4 +27,5 @@ value := operations.ListSocialReviewsQueryParamFieldsID
 | `ListSocialReviewsQueryParamFieldsAuthorLocation`  | author_location                                    |
 | `ListSocialReviewsQueryParamFieldsReply`           | reply                                              |
 | `ListSocialReviewsQueryParamFieldsURL`             | url                                                |
+| `ListSocialReviewsQueryParamFieldsMetadata`        | metadata                                           |
 | `ListSocialReviewsQueryParamFieldsRaw`             | raw                                                |

@@ -74,8 +74,9 @@ type AccountingBankfeedaccount struct {
 	// ISO 4217 currency of the account
 	Currency *string `json:"currency,omitempty"`
 	// date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	FeedStartAt *time.Time `json:"feed_start_at,omitempty"`
-	ID          *string    `json:"id,omitempty"`
+	FeedStartAt *time.Time           `json:"feed_start_at,omitempty"`
+	ID          *string              `json:"id,omitempty"`
+	Metadata    []AccountingMetadata `json:"metadata,omitempty"`
 	// account nickname / source name
 	Name *string `json:"name,omitempty"`
 	// ref -> accounting Organization this record belongs to
@@ -169,6 +170,13 @@ func (a *AccountingBankfeedaccount) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AccountingBankfeedaccount) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingBankfeedaccount) GetName() *string {

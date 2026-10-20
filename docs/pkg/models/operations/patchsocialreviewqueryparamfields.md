@@ -27,4 +27,5 @@ value := operations.PatchSocialReviewQueryParamFieldsID
 | `PatchSocialReviewQueryParamFieldsAuthorLocation`  | author_location                                    |
 | `PatchSocialReviewQueryParamFieldsReply`           | reply                                              |
 | `PatchSocialReviewQueryParamFieldsURL`             | url                                                |
+| `PatchSocialReviewQueryParamFieldsMetadata`        | metadata                                           |
 | `PatchSocialReviewQueryParamFieldsRaw`             | raw                                                |

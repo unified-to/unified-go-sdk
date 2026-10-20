@@ -9,12 +9,13 @@ import (
 
 type TicketingNote struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	CustomerID  *string        `json:"customer_id,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
-	TicketID    *string        `json:"ticket_id,omitempty"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	CustomerID  *string             `json:"customer_id,omitempty"`
+	Description *string             `json:"description,omitempty"`
+	ID          *string             `json:"id,omitempty"`
+	Metadata    []TicketingMetadata `json:"metadata,omitempty"`
+	Raw         map[string]any      `json:"raw,omitempty"`
+	TicketID    *string             `json:"ticket_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 	// (reference to HrisEmployee)
@@ -58,6 +59,13 @@ func (t *TicketingNote) GetID() *string {
 		return nil
 	}
 	return t.ID
+}
+
+func (t *TicketingNote) GetMetadata() []TicketingMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TicketingNote) GetRaw() map[string]any {

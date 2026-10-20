@@ -17,6 +17,7 @@ const (
 	ListAtsApplicationstatusesQueryParamFieldsStatus         ListAtsApplicationstatusesQueryParamFields = "status"
 	ListAtsApplicationstatusesQueryParamFieldsOriginalStatus ListAtsApplicationstatusesQueryParamFields = "original_status"
 	ListAtsApplicationstatusesQueryParamFieldsDescription    ListAtsApplicationstatusesQueryParamFields = "description"
+	ListAtsApplicationstatusesQueryParamFieldsMetadata       ListAtsApplicationstatusesQueryParamFields = "metadata"
 	ListAtsApplicationstatusesQueryParamFieldsRaw            ListAtsApplicationstatusesQueryParamFields = "raw"
 )
 
@@ -38,6 +39,8 @@ func (e *ListAtsApplicationstatusesQueryParamFields) UnmarshalJSON(data []byte) 
 	case "original_status":
 		fallthrough
 	case "description":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAtsApplicationstatusesQueryParamFields(v)

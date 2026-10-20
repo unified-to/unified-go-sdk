@@ -23,6 +23,7 @@ const (
 	PatchCdpActivationQueryParamFieldsStatus        PatchCdpActivationQueryParamFields = "status"
 	PatchCdpActivationQueryParamFieldsLastRunAt     PatchCdpActivationQueryParamFields = "last_run_at"
 	PatchCdpActivationQueryParamFieldsIsEnabled     PatchCdpActivationQueryParamFields = "is_enabled"
+	PatchCdpActivationQueryParamFieldsMetadata      PatchCdpActivationQueryParamFields = "metadata"
 	PatchCdpActivationQueryParamFieldsRaw           PatchCdpActivationQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *PatchCdpActivationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "last_run_at":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCdpActivationQueryParamFields(v)

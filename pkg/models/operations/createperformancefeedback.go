@@ -21,6 +21,7 @@ const (
 	CreatePerformanceFeedbackQueryParamFieldsMessage      CreatePerformanceFeedbackQueryParamFields = "message"
 	CreatePerformanceFeedbackQueryParamFieldsTags         CreatePerformanceFeedbackQueryParamFields = "tags"
 	CreatePerformanceFeedbackQueryParamFieldsIsVisible    CreatePerformanceFeedbackQueryParamFields = "is_visible"
+	CreatePerformanceFeedbackQueryParamFieldsMetadata     CreatePerformanceFeedbackQueryParamFields = "metadata"
 	CreatePerformanceFeedbackQueryParamFieldsRaw          CreatePerformanceFeedbackQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *CreatePerformanceFeedbackQueryParamFields) UnmarshalJSON(data []byte) e
 	case "tags":
 		fallthrough
 	case "is_visible":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreatePerformanceFeedbackQueryParamFields(v)

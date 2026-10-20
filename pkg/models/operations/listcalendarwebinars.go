@@ -45,6 +45,7 @@ const (
 	ListCalendarWebinarsQueryParamFieldsHasQa              ListCalendarWebinarsQueryParamFields = "has_qa"
 	ListCalendarWebinarsQueryParamFieldsHasPolls           ListCalendarWebinarsQueryParamFields = "has_polls"
 	ListCalendarWebinarsQueryParamFieldsHasRecording       ListCalendarWebinarsQueryParamFields = "has_recording"
+	ListCalendarWebinarsQueryParamFieldsMetadata           ListCalendarWebinarsQueryParamFields = "metadata"
 	ListCalendarWebinarsQueryParamFieldsRaw                ListCalendarWebinarsQueryParamFields = "raw"
 )
 
@@ -122,6 +123,8 @@ func (e *ListCalendarWebinarsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "has_polls":
 		fallthrough
 	case "has_recording":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCalendarWebinarsQueryParamFields(v)

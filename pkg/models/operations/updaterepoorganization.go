@@ -20,6 +20,7 @@ const (
 	UpdateRepoOrganizationQueryParamFieldsAvatarURL   UpdateRepoOrganizationQueryParamFields = "avatar_url"
 	UpdateRepoOrganizationQueryParamFieldsWebURL      UpdateRepoOrganizationQueryParamFields = "web_url"
 	UpdateRepoOrganizationQueryParamFieldsUserIds     UpdateRepoOrganizationQueryParamFields = "user_ids"
+	UpdateRepoOrganizationQueryParamFieldsMetadata    UpdateRepoOrganizationQueryParamFields = "metadata"
 	UpdateRepoOrganizationQueryParamFieldsRaw         UpdateRepoOrganizationQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *UpdateRepoOrganizationQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "web_url":
 		fallthrough
 	case "user_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateRepoOrganizationQueryParamFields(v)

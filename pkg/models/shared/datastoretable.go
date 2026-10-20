@@ -15,6 +15,7 @@ type DatastoreTable struct {
 	Description   *string                 `json:"description,omitempty"`
 	Fields        []DatastoreField        `json:"fields,omitempty"`
 	ID            *string                 `json:"id,omitempty"`
+	Metadata      []DatastoreMetadata     `json:"metadata,omitempty"`
 	Name          *string                 `json:"name,omitempty"`
 	ParentID      *string                 `json:"parent_id,omitempty"`
 	Raw           map[string]any          `json:"raw,omitempty"`
@@ -68,6 +69,13 @@ func (d *DatastoreTable) GetID() *string {
 		return nil
 	}
 	return d.ID
+}
+
+func (d *DatastoreTable) GetMetadata() []DatastoreMetadata {
+	if d == nil {
+		return nil
+	}
+	return d.Metadata
 }
 
 func (d *DatastoreTable) GetName() *string {

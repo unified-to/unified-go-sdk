@@ -36,4 +36,5 @@ value := operations.ListClubsGroupsQueryParamFieldsID
 | `ListClubsGroupsQueryParamFieldsProfileImageURL`  | profile_image_url                                 |
 | `ListClubsGroupsQueryParamFieldsCoverImageURL`    | cover_image_url                                   |
 | `ListClubsGroupsQueryParamFieldsActivityTypes`    | activity_types                                    |
+| `ListClubsGroupsQueryParamFieldsMetadata`         | metadata                                          |
 | `ListClubsGroupsQueryParamFieldsRaw`              | raw                                               |

@@ -23,4 +23,5 @@ value := operations.ListCrmPipelinesQueryParamFieldsID
 | `ListCrmPipelinesQueryParamFieldsDealProbability` | deal_probability                                  |
 | `ListCrmPipelinesQueryParamFieldsDisplayOrder`    | display_order                                     |
 | `ListCrmPipelinesQueryParamFieldsStages`          | stages                                            |
+| `ListCrmPipelinesQueryParamFieldsMetadata`        | metadata                                          |
 | `ListCrmPipelinesQueryParamFieldsRaw`             | raw                                               |

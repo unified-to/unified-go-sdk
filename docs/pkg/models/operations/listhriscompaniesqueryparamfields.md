@@ -21,4 +21,5 @@ value := operations.ListHrisCompaniesQueryParamFieldsID
 | `ListHrisCompaniesQueryParamFieldsName`      | name                                         |
 | `ListHrisCompaniesQueryParamFieldsLegalName` | legal_name                                   |
 | `ListHrisCompaniesQueryParamFieldsAddress`   | address                                      |
+| `ListHrisCompaniesQueryParamFieldsMetadata`  | metadata                                     |
 | `ListHrisCompaniesQueryParamFieldsRaw`       | raw                                          |

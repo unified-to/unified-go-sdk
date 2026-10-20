@@ -22,6 +22,7 @@ const (
 	ListAccountingTrialbalancesQueryParamFieldsTotalDebitAmount  ListAccountingTrialbalancesQueryParamFields = "total_debit_amount"
 	ListAccountingTrialbalancesQueryParamFieldsTotalCreditAmount ListAccountingTrialbalancesQueryParamFields = "total_credit_amount"
 	ListAccountingTrialbalancesQueryParamFieldsSubItems          ListAccountingTrialbalancesQueryParamFields = "sub_items"
+	ListAccountingTrialbalancesQueryParamFieldsMetadata          ListAccountingTrialbalancesQueryParamFields = "metadata"
 	ListAccountingTrialbalancesQueryParamFieldsRaw               ListAccountingTrialbalancesQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListAccountingTrialbalancesQueryParamFields) UnmarshalJSON(data []byte)
 	case "total_credit_amount":
 		fallthrough
 	case "sub_items":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingTrialbalancesQueryParamFields(v)

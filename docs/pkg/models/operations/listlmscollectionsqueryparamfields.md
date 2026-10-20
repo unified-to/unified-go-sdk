@@ -23,4 +23,5 @@ value := operations.ListLmsCollectionsQueryParamFieldsID
 | `ListLmsCollectionsQueryParamFieldsMedia`       | media                                           |
 | `ListLmsCollectionsQueryParamFieldsIsActive`    | is_active                                       |
 | `ListLmsCollectionsQueryParamFieldsParentID`    | parent_id                                       |
+| `ListLmsCollectionsQueryParamFieldsMetadata`    | metadata                                        |
 | `ListLmsCollectionsQueryParamFieldsRaw`         | raw                                             |

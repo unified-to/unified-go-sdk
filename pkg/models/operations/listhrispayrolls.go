@@ -33,6 +33,7 @@ const (
 	ListHrisPayrollsQueryParamFieldsTotalCostAmount            ListHrisPayrollsQueryParamFields = "total_cost_amount"
 	ListHrisPayrollsQueryParamFieldsUserIds                    ListHrisPayrollsQueryParamFields = "user_ids"
 	ListHrisPayrollsQueryParamFieldsPayslipIds                 ListHrisPayrollsQueryParamFields = "payslip_ids"
+	ListHrisPayrollsQueryParamFieldsMetadata                   ListHrisPayrollsQueryParamFields = "metadata"
 	ListHrisPayrollsQueryParamFieldsRaw                        ListHrisPayrollsQueryParamFields = "raw"
 )
 
@@ -86,6 +87,8 @@ func (e *ListHrisPayrollsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_ids":
 		fallthrough
 	case "payslip_ids":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisPayrollsQueryParamFields(v)

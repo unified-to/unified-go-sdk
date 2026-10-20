@@ -36,4 +36,5 @@ value := operations.UpdateMessagingMessageQueryParamFieldsID
 | `UpdateMessagingMessageQueryParamFieldsHasChildren`             | has_children                                                    |
 | `UpdateMessagingMessageQueryParamFieldsIsUnread`                | is_unread                                                       |
 | `UpdateMessagingMessageQueryParamFieldsButtons`                 | buttons                                                         |
+| `UpdateMessagingMessageQueryParamFieldsMetadata`                | metadata                                                        |
 | `UpdateMessagingMessageQueryParamFieldsRaw`                     | raw                                                             |

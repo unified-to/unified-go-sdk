@@ -46,4 +46,5 @@ value := operations.ListAdsGroupsQueryParamFieldsID
 | `ListAdsGroupsQueryParamFieldsPromoted`             | promoted                                            |
 | `ListAdsGroupsQueryParamFieldsLanguageLocale`       | language_locale                                     |
 | `ListAdsGroupsQueryParamFieldsCreativeSelection`    | creative_selection                                  |
+| `ListAdsGroupsQueryParamFieldsMetadata`             | metadata                                            |
 | `ListAdsGroupsQueryParamFieldsRaw`                  | raw                                                 |

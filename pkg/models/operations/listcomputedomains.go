@@ -20,6 +20,7 @@ const (
 	ListComputeDomainsQueryParamFieldsStatus      ListComputeDomainsQueryParamFields = "status"
 	ListComputeDomainsQueryParamFieldsIsPrimary   ListComputeDomainsQueryParamFields = "is_primary"
 	ListComputeDomainsQueryParamFieldsRedirectURL ListComputeDomainsQueryParamFields = "redirect_url"
+	ListComputeDomainsQueryParamFieldsMetadata    ListComputeDomainsQueryParamFields = "metadata"
 	ListComputeDomainsQueryParamFieldsRaw         ListComputeDomainsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListComputeDomainsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_primary":
 		fallthrough
 	case "redirect_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListComputeDomainsQueryParamFields(v)

@@ -29,4 +29,5 @@ value := operations.ListFormsFormsQueryParamFieldsID
 | `ListFormsFormsQueryParamFieldsHasShuffleQuestions`     | has_shuffle_questions                                   |
 | `ListFormsFormsQueryParamFieldsConfirmationMessage`     | confirmation_message                                    |
 | `ListFormsFormsQueryParamFieldsConfirmationRedirectURL` | confirmation_redirect_url                               |
+| `ListFormsFormsQueryParamFieldsMetadata`                | metadata                                                |
 | `ListFormsFormsQueryParamFieldsRaw`                     | raw                                                     |

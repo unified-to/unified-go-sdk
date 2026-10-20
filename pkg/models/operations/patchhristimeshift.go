@@ -26,6 +26,7 @@ const (
 	PatchHrisTimeshiftQueryParamFieldsApprovedAt     PatchHrisTimeshiftQueryParamFields = "approved_at"
 	PatchHrisTimeshiftQueryParamFieldsHours          PatchHrisTimeshiftQueryParamFields = "hours"
 	PatchHrisTimeshiftQueryParamFieldsIsApproved     PatchHrisTimeshiftQueryParamFields = "is_approved"
+	PatchHrisTimeshiftQueryParamFieldsMetadata       PatchHrisTimeshiftQueryParamFields = "metadata"
 	PatchHrisTimeshiftQueryParamFieldsRaw            PatchHrisTimeshiftQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *PatchHrisTimeshiftQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "hours":
 		fallthrough
 	case "is_approved":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisTimeshiftQueryParamFields(v)

@@ -29,6 +29,7 @@ const (
 	ListHrisTimeoffsQueryParamFieldsType           ListHrisTimeoffsQueryParamFields = "type"
 	ListHrisTimeoffsQueryParamFieldsDuration       ListHrisTimeoffsQueryParamFields = "duration"
 	ListHrisTimeoffsQueryParamFieldsDurationType   ListHrisTimeoffsQueryParamFields = "duration_type"
+	ListHrisTimeoffsQueryParamFieldsMetadata       ListHrisTimeoffsQueryParamFields = "metadata"
 	ListHrisTimeoffsQueryParamFieldsRaw            ListHrisTimeoffsQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *ListHrisTimeoffsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "duration":
 		fallthrough
 	case "duration_type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisTimeoffsQueryParamFields(v)

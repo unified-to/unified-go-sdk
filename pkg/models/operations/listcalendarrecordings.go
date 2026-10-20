@@ -21,6 +21,7 @@ const (
 	ListCalendarRecordingsQueryParamFieldsEventID   ListCalendarRecordingsQueryParamFields = "event_id"
 	ListCalendarRecordingsQueryParamFieldsWebURL    ListCalendarRecordingsQueryParamFields = "web_url"
 	ListCalendarRecordingsQueryParamFieldsMedia     ListCalendarRecordingsQueryParamFields = "media"
+	ListCalendarRecordingsQueryParamFieldsMetadata  ListCalendarRecordingsQueryParamFields = "metadata"
 	ListCalendarRecordingsQueryParamFieldsRaw       ListCalendarRecordingsQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *ListCalendarRecordingsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "web_url":
 		fallthrough
 	case "media":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCalendarRecordingsQueryParamFields(v)

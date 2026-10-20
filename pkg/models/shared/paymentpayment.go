@@ -112,7 +112,8 @@ type PaymentPayment struct {
 	InvoiceID *string `json:"invoice_id,omitempty"`
 	LinkID    *string `json:"link_id,omitempty"`
 	// store/site where the payment was taken (commerce_location)
-	LocationID *string `json:"location_id,omitempty"`
+	LocationID *string           `json:"location_id,omitempty"`
+	Metadata   []PaymentMetadata `json:"metadata,omitempty"`
 	// total_amount minus fee_amount
 	NetAmount *float64 `json:"net_amount,omitempty"`
 	Notes     *string  `json:"notes,omitempty"`
@@ -256,6 +257,13 @@ func (p *PaymentPayment) GetLocationID() *string {
 		return nil
 	}
 	return p.LocationID
+}
+
+func (p *PaymentPayment) GetMetadata() []PaymentMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PaymentPayment) GetNetAmount() *float64 {

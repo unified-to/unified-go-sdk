@@ -42,6 +42,7 @@ type UcRecording struct {
 	ExpiresAt *time.Time         `json:"expires_at,omitempty"`
 	ID        *string            `json:"id,omitempty"`
 	Media     []UcRecordingMedia `json:"media,omitempty"`
+	Metadata  []UcMetadata       `json:"metadata,omitempty"`
 	Raw       map[string]any     `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time       `json:"start_at,omitempty"`
@@ -120,6 +121,13 @@ func (u *UcRecording) GetMedia() []UcRecordingMedia {
 		return nil
 	}
 	return u.Media
+}
+
+func (u *UcRecording) GetMetadata() []UcMetadata {
+	if u == nil {
+		return nil
+	}
+	return u.Metadata
 }
 
 func (u *UcRecording) GetRaw() map[string]any {

@@ -41,7 +41,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("039d2591-c60e-49a1-8985-c733d82bb08d"),
+            ID: unifiedgosdk.Pointer("460231d5-4d42-4146-aee2-650a48b959a7"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -60,9 +60,10 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-02T00:29:08.042Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T01:42:32.526Z"),
         },
         ConnectionID: "<id>",
     })
@@ -232,7 +233,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("1b5cb92e-fa5b-4162-927b-1cc9dfb666f8"),
+            ID: unifiedgosdk.Pointer("da01b0ee-ade6-4aba-a7fc-51cf6ba21d7c"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -251,9 +252,10 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-02T00:29:08.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T01:42:32.546Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -370,7 +372,7 @@ func main() {
         LmsClass: shared.LmsClass{
             CreatedAt: types.MustNewTimeFromString("2020-02-20T14:48:51.845Z"),
             Description: unifiedgosdk.Pointer("Anser sperno decerno."),
-            ID: unifiedgosdk.Pointer("1b5cb92e-fa5b-4162-927b-1cc9dfb666f8"),
+            ID: unifiedgosdk.Pointer("da01b0ee-ade6-4aba-a7fc-51cf6ba21d7c"),
             Instructors: []shared.LmsReference{},
             Languages: []string{
                 "in",
@@ -389,9 +391,10 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/487/921?lock=5127962071241632"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("virtus"),
             Students: []shared.LmsReference{},
-            UpdatedAt: types.MustNewTimeFromString("2025-08-02T00:29:08.060Z"),
+            UpdatedAt: types.MustNewTimeFromString("2025-08-03T01:42:32.546Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

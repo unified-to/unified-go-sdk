@@ -41,6 +41,7 @@ type AdsAsset struct {
 	Height    *float64   `json:"height,omitempty"`
 	// provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)
 	ID             *string        `json:"id,omitempty"`
+	Metadata       []AdsMetadata  `json:"metadata,omitempty"`
 	MimeType       *string        `json:"mime_type,omitempty"`
 	Name           *string        `json:"name,omitempty"`
 	OrganizationID *string        `json:"organization_id,omitempty"`
@@ -97,6 +98,13 @@ func (a *AdsAsset) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AdsAsset) GetMetadata() []AdsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AdsAsset) GetMimeType() *string {

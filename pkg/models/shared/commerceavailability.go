@@ -13,9 +13,10 @@ type CommerceAvailability struct {
 	// (reference to CommerceItem)
 	ItemID *string `json:"item_id,omitempty"`
 	// (reference to CommerceLocation)
-	LocationID *string        `json:"location_id,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	Size       *float64       `json:"size,omitempty"`
+	LocationID *string            `json:"location_id,omitempty"`
+	Metadata   []CommerceMetadata `json:"metadata,omitempty"`
+	Raw        map[string]any     `json:"raw,omitempty"`
+	Size       *float64           `json:"size,omitempty"`
 	// (reference to HrisEmployee)
 	StaffUserID *string `json:"staff_user_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -52,6 +53,13 @@ func (c *CommerceAvailability) GetLocationID() *string {
 		return nil
 	}
 	return c.LocationID
+}
+
+func (c *CommerceAvailability) GetMetadata() []CommerceMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CommerceAvailability) GetRaw() map[string]any {

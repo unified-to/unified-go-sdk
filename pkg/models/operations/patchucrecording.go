@@ -27,6 +27,7 @@ const (
 	PatchUcRecordingQueryParamFieldsUserPhone              PatchUcRecordingQueryParamFields = "user_phone"
 	PatchUcRecordingQueryParamFieldsType                   PatchUcRecordingQueryParamFields = "type"
 	PatchUcRecordingQueryParamFieldsConversationIdentifier PatchUcRecordingQueryParamFields = "conversation_identifier"
+	PatchUcRecordingQueryParamFieldsMetadata               PatchUcRecordingQueryParamFields = "metadata"
 	PatchUcRecordingQueryParamFieldsRaw                    PatchUcRecordingQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *PatchUcRecordingQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "type":
 		fallthrough
 	case "conversation_identifier":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchUcRecordingQueryParamFields(v)

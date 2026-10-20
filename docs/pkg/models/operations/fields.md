@@ -29,4 +29,5 @@ value := operations.FieldsID
 | `FieldsParentID`            | parent_id                   |
 | `FieldsTaxonomy`            | taxonomy                    |
 | `FieldsOrganizationID`      | organization_id             |
+| `FieldsMetadata`            | metadata                    |
 | `FieldsRaw`                 | raw                         |

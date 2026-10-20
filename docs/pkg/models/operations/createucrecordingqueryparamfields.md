@@ -30,4 +30,5 @@ value := operations.CreateUcRecordingQueryParamFieldsID
 | `CreateUcRecordingQueryParamFieldsUserPhone`              | user_phone                                                |
 | `CreateUcRecordingQueryParamFieldsType`                   | type                                                      |
 | `CreateUcRecordingQueryParamFieldsConversationIdentifier` | conversation_identifier                                   |
+| `CreateUcRecordingQueryParamFieldsMetadata`               | metadata                                                  |
 | `CreateUcRecordingQueryParamFieldsRaw`                    | raw                                                       |

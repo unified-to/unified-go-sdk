@@ -168,6 +168,7 @@ type UnifiedTo struct {
 	Genai               *Genai
 	Agent               *Agent
 	Embedding           *Embedding
+	Memory              *Memory
 	Model               *Model
 	Prompt              *Prompt
 	Skill               *Skill
@@ -343,10 +344,10 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *UnifiedTo {
 	sdk := &UnifiedTo{
-		SDKVersion: "0.38.7",
+		SDKVersion: "0.38.8",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.38.7 2.948.4 1.0 github.com/unified-to/unified-go-sdk",
-			SDKVersion:        "0.38.7",
+			UserAgent:         "speakeasy-sdk/go 0.38.8 2.948.4 1.0 github.com/unified-to/unified-go-sdk",
+			SDKVersion:        "0.38.8",
 			GenVersion:        "2.948.4",
 			OpenAPIDocVersion: "1.0",
 			ServerList:        ServerList,
@@ -480,6 +481,7 @@ func New(opts ...SDKOption) *UnifiedTo {
 	sdk.Genai = newGenai(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Agent = newAgent(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Embedding = newEmbedding(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.Memory = newMemory(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Model = newModel(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Prompt = newPrompt(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Skill = newSkill(sdk, sdk.sdkConfiguration, sdk.hooks)

@@ -26,4 +26,5 @@ value := operations.PatchMessagingChannelQueryParamFieldsID
 | `PatchMessagingChannelQueryParamFieldsIsActive`       | is_active                                             |
 | `PatchMessagingChannelQueryParamFieldsIsPrivate`      | is_private                                            |
 | `PatchMessagingChannelQueryParamFieldsWebURL`         | web_url                                               |
+| `PatchMessagingChannelQueryParamFieldsMetadata`       | metadata                                              |
 | `PatchMessagingChannelQueryParamFieldsRaw`            | raw                                                   |

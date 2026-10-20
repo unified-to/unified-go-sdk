@@ -42,4 +42,5 @@ value := operations.CreateAccountingContactQueryParamFieldsID
 | `CreateAccountingContactQueryParamFieldsBalanceAmount`      | balance_amount                                              |
 | `CreateAccountingContactQueryParamFieldsWebsite`            | website                                                     |
 | `CreateAccountingContactQueryParamFieldsNotes`              | notes                                                       |
+| `CreateAccountingContactQueryParamFieldsMetadata`           | metadata                                                    |
 | `CreateAccountingContactQueryParamFieldsRaw`                | raw                                                         |

@@ -31,6 +31,7 @@ const (
 	PatchHrisDeviceQueryParamFieldsHasHdEncrypted     PatchHrisDeviceQueryParamFields = "has_hd_encrypted"
 	PatchHrisDeviceQueryParamFieldsHasScreenlock      PatchHrisDeviceQueryParamFields = "has_screenlock"
 	PatchHrisDeviceQueryParamFieldsIsMissing          PatchHrisDeviceQueryParamFields = "is_missing"
+	PatchHrisDeviceQueryParamFieldsMetadata           PatchHrisDeviceQueryParamFields = "metadata"
 	PatchHrisDeviceQueryParamFieldsRaw                PatchHrisDeviceQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *PatchHrisDeviceQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "has_screenlock":
 		fallthrough
 	case "is_missing":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisDeviceQueryParamFields(v)

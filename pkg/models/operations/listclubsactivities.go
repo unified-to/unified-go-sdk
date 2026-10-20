@@ -54,6 +54,7 @@ const (
 	ListClubsActivitiesQueryParamFieldsWorkoutType          ListClubsActivitiesQueryParamFields = "workout_type"
 	ListClubsActivitiesQueryParamFieldsSufferScore          ListClubsActivitiesQueryParamFields = "suffer_score"
 	ListClubsActivitiesQueryParamFieldsPrCount              ListClubsActivitiesQueryParamFields = "pr_count"
+	ListClubsActivitiesQueryParamFieldsMetadata             ListClubsActivitiesQueryParamFields = "metadata"
 	ListClubsActivitiesQueryParamFieldsRaw                  ListClubsActivitiesQueryParamFields = "raw"
 )
 
@@ -149,6 +150,8 @@ func (e *ListClubsActivitiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "suffer_score":
 		fallthrough
 	case "pr_count":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListClubsActivitiesQueryParamFields(v)

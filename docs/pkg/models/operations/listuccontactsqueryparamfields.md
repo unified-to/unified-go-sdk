@@ -25,4 +25,5 @@ value := operations.ListUcContactsQueryParamFieldsID
 | `ListUcContactsQueryParamFieldsCompany`    | company                                    |
 | `ListUcContactsQueryParamFieldsEmails`     | emails                                     |
 | `ListUcContactsQueryParamFieldsTelephones` | telephones                                 |
+| `ListUcContactsQueryParamFieldsMetadata`   | metadata                                   |
 | `ListUcContactsQueryParamFieldsRaw`        | raw                                        |

@@ -24,4 +24,5 @@ value := operations.UpdateKmsCommentQueryParamFieldsID
 | `UpdateKmsCommentQueryParamFieldsUserID`      | user_id                                       |
 | `UpdateKmsCommentQueryParamFieldsPageID`      | page_id                                       |
 | `UpdateKmsCommentQueryParamFieldsParentID`    | parent_id                                     |
+| `UpdateKmsCommentQueryParamFieldsMetadata`    | metadata                                      |
 | `UpdateKmsCommentQueryParamFieldsRaw`         | raw                                           |

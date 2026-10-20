@@ -18,6 +18,7 @@ const (
 	ListUcCommentsQueryParamFieldsContent   ListUcCommentsQueryParamFields = "content"
 	ListUcCommentsQueryParamFieldsUserID    ListUcCommentsQueryParamFields = "user_id"
 	ListUcCommentsQueryParamFieldsCallID    ListUcCommentsQueryParamFields = "call_id"
+	ListUcCommentsQueryParamFieldsMetadata  ListUcCommentsQueryParamFields = "metadata"
 	ListUcCommentsQueryParamFieldsRaw       ListUcCommentsQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *ListUcCommentsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "call_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListUcCommentsQueryParamFields(v)

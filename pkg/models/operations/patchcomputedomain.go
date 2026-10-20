@@ -20,6 +20,7 @@ const (
 	PatchComputeDomainQueryParamFieldsStatus      PatchComputeDomainQueryParamFields = "status"
 	PatchComputeDomainQueryParamFieldsIsPrimary   PatchComputeDomainQueryParamFields = "is_primary"
 	PatchComputeDomainQueryParamFieldsRedirectURL PatchComputeDomainQueryParamFields = "redirect_url"
+	PatchComputeDomainQueryParamFieldsMetadata    PatchComputeDomainQueryParamFields = "metadata"
 	PatchComputeDomainQueryParamFieldsRaw         PatchComputeDomainQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchComputeDomainQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_primary":
 		fallthrough
 	case "redirect_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchComputeDomainQueryParamFields(v)

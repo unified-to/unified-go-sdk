@@ -54,4 +54,5 @@ value := operations.ListShippingShipmentsQueryParamFieldsID
 | `ListShippingShipmentsQueryParamFieldsCarrierName`               | carrier_name                                                     |
 | `ListShippingShipmentsQueryParamFieldsTrackingURL`               | tracking_url                                                     |
 | `ListShippingShipmentsQueryParamFieldsLineitems`                 | lineitems                                                        |
+| `ListShippingShipmentsQueryParamFieldsMetadata`                  | metadata                                                         |
 | `ListShippingShipmentsQueryParamFieldsRaw`                       | raw                                                              |

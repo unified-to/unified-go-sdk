@@ -20,6 +20,7 @@ const (
 	PatchCdpDestinationQueryParamFieldsType      PatchCdpDestinationQueryParamFields = "type"
 	PatchCdpDestinationQueryParamFieldsDirection PatchCdpDestinationQueryParamFields = "direction"
 	PatchCdpDestinationQueryParamFieldsIsEnabled PatchCdpDestinationQueryParamFields = "is_enabled"
+	PatchCdpDestinationQueryParamFieldsMetadata  PatchCdpDestinationQueryParamFields = "metadata"
 	PatchCdpDestinationQueryParamFieldsRaw       PatchCdpDestinationQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchCdpDestinationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "direction":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCdpDestinationQueryParamFields(v)

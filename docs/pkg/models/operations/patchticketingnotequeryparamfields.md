@@ -22,4 +22,5 @@ value := operations.PatchTicketingNoteQueryParamFieldsID
 | `PatchTicketingNoteQueryParamFieldsDescription` | description                                     |
 | `PatchTicketingNoteQueryParamFieldsTicketID`    | ticket_id                                       |
 | `PatchTicketingNoteQueryParamFieldsUserID`      | user_id                                         |
+| `PatchTicketingNoteQueryParamFieldsMetadata`    | metadata                                        |
 | `PatchTicketingNoteQueryParamFieldsRaw`         | raw                                             |

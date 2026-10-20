@@ -11,18 +11,19 @@ type FormsForm struct {
 	ConfirmationMessage     *string `json:"confirmation_message,omitempty"`
 	ConfirmationRedirectURL *string `json:"confirmation_redirect_url,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt              *time.Time     `json:"created_at,omitempty"`
-	Description            *string        `json:"description,omitempty"`
-	Fields                 []FormField    `json:"fields,omitempty"`
-	HasMultipleSubmissions *bool          `json:"has_multiple_submissions,omitempty"`
-	HasProgressBar         *bool          `json:"has_progress_bar,omitempty"`
-	HasShuffleQuestions    *bool          `json:"has_shuffle_questions,omitempty"`
-	ID                     *string        `json:"id,omitempty"`
-	IsActive               *bool          `json:"is_active,omitempty"`
-	Name                   *string        `json:"name,omitempty"`
-	PublishedURL           *string        `json:"published_url,omitempty"`
-	Raw                    map[string]any `json:"raw,omitempty"`
-	ResponseCount          *float64       `json:"response_count,omitempty"`
+	CreatedAt              *time.Time      `json:"created_at,omitempty"`
+	Description            *string         `json:"description,omitempty"`
+	Fields                 []FormField     `json:"fields,omitempty"`
+	HasMultipleSubmissions *bool           `json:"has_multiple_submissions,omitempty"`
+	HasProgressBar         *bool           `json:"has_progress_bar,omitempty"`
+	HasShuffleQuestions    *bool           `json:"has_shuffle_questions,omitempty"`
+	ID                     *string         `json:"id,omitempty"`
+	IsActive               *bool           `json:"is_active,omitempty"`
+	Metadata               []FormsMetadata `json:"metadata,omitempty"`
+	Name                   *string         `json:"name,omitempty"`
+	PublishedURL           *string         `json:"published_url,omitempty"`
+	Raw                    map[string]any  `json:"raw,omitempty"`
+	ResponseCount          *float64        `json:"response_count,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -106,6 +107,13 @@ func (f *FormsForm) GetIsActive() *bool {
 		return nil
 	}
 	return f.IsActive
+}
+
+func (f *FormsForm) GetMetadata() []FormsMetadata {
+	if f == nil {
+		return nil
+	}
+	return f.Metadata
 }
 
 func (f *FormsForm) GetName() *string {

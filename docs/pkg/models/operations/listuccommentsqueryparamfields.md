@@ -21,4 +21,5 @@ value := operations.ListUcCommentsQueryParamFieldsID
 | `ListUcCommentsQueryParamFieldsContent`   | content                                   |
 | `ListUcCommentsQueryParamFieldsUserID`    | user_id                                   |
 | `ListUcCommentsQueryParamFieldsCallID`    | call_id                                   |
+| `ListUcCommentsQueryParamFieldsMetadata`  | metadata                                  |
 | `ListUcCommentsQueryParamFieldsRaw`       | raw                                       |

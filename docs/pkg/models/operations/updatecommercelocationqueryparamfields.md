@@ -35,5 +35,6 @@ value := operations.UpdateCommerceLocationQueryParamFieldsID
 | `UpdateCommerceLocationQueryParamFieldsImageURL`       | image_url                                              |
 | `UpdateCommerceLocationQueryParamFieldsWebURL`         | web_url                                                |
 | `UpdateCommerceLocationQueryParamFieldsMedia`          | media                                                  |
+| `UpdateCommerceLocationQueryParamFieldsMetadata`       | metadata                                               |
 | `UpdateCommerceLocationQueryParamFieldsRaw`            | raw                                                    |
 | `UpdateCommerceLocationQueryParamFieldsCategories`     | categories                                             |

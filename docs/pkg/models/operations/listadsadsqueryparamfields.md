@@ -37,4 +37,5 @@ value := operations.ListAdsAdsQueryParamFieldsID
 | `ListAdsAdsQueryParamFieldsPath2`            | path2                                        |
 | `ListAdsAdsQueryParamFieldsPromoted`         | promoted                                     |
 | `ListAdsAdsQueryParamFieldsLogoCreativeID`   | logo_creative_id                             |
+| `ListAdsAdsQueryParamFieldsMetadata`         | metadata                                     |
 | `ListAdsAdsQueryParamFieldsRaw`              | raw                                          |

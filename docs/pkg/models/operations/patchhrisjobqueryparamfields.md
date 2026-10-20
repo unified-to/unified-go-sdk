@@ -29,4 +29,5 @@ value := operations.PatchHrisJobQueryParamFieldsID
 | `PatchHrisJobQueryParamFieldsParentID`       | parent_id                                    |
 | `PatchHrisJobQueryParamFieldsUsers`          | users                                        |
 | `PatchHrisJobQueryParamFieldsCompensation`   | compensation                                 |
+| `PatchHrisJobQueryParamFieldsMetadata`       | metadata                                     |
 | `PatchHrisJobQueryParamFieldsRaw`            | raw                                          |

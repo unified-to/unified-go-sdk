@@ -25,4 +25,5 @@ value := operations.UpdateCalendarLinkQueryParamFieldsID
 | `UpdateCalendarLinkQueryParamFieldsIsActive`      | is_active                                         |
 | `UpdateCalendarLinkQueryParamFieldsPriceAmount`   | price_amount                                      |
 | `UpdateCalendarLinkQueryParamFieldsPriceCurrency` | price_currency                                    |
+| `UpdateCalendarLinkQueryParamFieldsMetadata`      | metadata                                          |
 | `UpdateCalendarLinkQueryParamFieldsRaw`           | raw                                               |

@@ -22,4 +22,5 @@ value := operations.GetTicketingCustomerQueryParamFieldsID
 | `GetTicketingCustomerQueryParamFieldsEmails`     | emails                                           |
 | `GetTicketingCustomerQueryParamFieldsTelephones` | telephones                                       |
 | `GetTicketingCustomerQueryParamFieldsTags`       | tags                                             |
+| `GetTicketingCustomerQueryParamFieldsMetadata`   | metadata                                         |
 | `GetTicketingCustomerQueryParamFieldsRaw`        | raw                                              |

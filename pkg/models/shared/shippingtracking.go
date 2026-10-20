@@ -58,7 +58,8 @@ type ShippingTracking struct {
 	// Array of tracking events
 	Events []ShippingTrackingEvent `json:"events,omitempty"`
 	// Unique identifier for this tracking object
-	ID *string `json:"id,omitempty"`
+	ID       *string            `json:"id,omitempty"`
+	Metadata []ShippingMetadata `json:"metadata,omitempty"`
 	// The raw data returned by the integration for this tracking
 	Raw map[string]any `json:"raw,omitempty"`
 	// Reference to the shipment
@@ -138,6 +139,13 @@ func (s *ShippingTracking) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *ShippingTracking) GetMetadata() []ShippingMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *ShippingTracking) GetRaw() map[string]any {

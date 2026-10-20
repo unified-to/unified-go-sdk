@@ -21,6 +21,7 @@ const (
 	GetKmsCommentQueryParamFieldsUserID      GetKmsCommentQueryParamFields = "user_id"
 	GetKmsCommentQueryParamFieldsPageID      GetKmsCommentQueryParamFields = "page_id"
 	GetKmsCommentQueryParamFieldsParentID    GetKmsCommentQueryParamFields = "parent_id"
+	GetKmsCommentQueryParamFieldsMetadata    GetKmsCommentQueryParamFields = "metadata"
 	GetKmsCommentQueryParamFieldsRaw         GetKmsCommentQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *GetKmsCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "page_id":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetKmsCommentQueryParamFields(v)

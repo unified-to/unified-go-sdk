@@ -10,12 +10,13 @@ import (
 type FormsSubmission struct {
 	Answers []FormAnswer `json:"answers"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt       *time.Time     `json:"created_at,omitempty"`
-	FormID          string         `json:"form_id"`
-	ID              *string        `json:"id,omitempty"`
-	Raw             map[string]any `json:"raw,omitempty"`
-	RespondentEmail *string        `json:"respondent_email,omitempty"`
-	RespondentName  *string        `json:"respondent_name,omitempty"`
+	CreatedAt       *time.Time      `json:"created_at,omitempty"`
+	FormID          string          `json:"form_id"`
+	ID              *string         `json:"id,omitempty"`
+	Metadata        []FormsMetadata `json:"metadata,omitempty"`
+	Raw             map[string]any  `json:"raw,omitempty"`
+	RespondentEmail *string         `json:"respondent_email,omitempty"`
+	RespondentName  *string         `json:"respondent_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -57,6 +58,13 @@ func (f *FormsSubmission) GetID() *string {
 		return nil
 	}
 	return f.ID
+}
+
+func (f *FormsSubmission) GetMetadata() []FormsMetadata {
+	if f == nil {
+		return nil
+	}
+	return f.Metadata
 }
 
 func (f *FormsSubmission) GetRaw() map[string]any {

@@ -16,8 +16,9 @@ type CommerceInventory struct {
 	// (reference to CommerceCommerceItemvariant)
 	ItemVariantID *string `json:"item_variant_id,omitempty"`
 	// (reference to CommerceLocation)
-	LocationID *string        `json:"location_id,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
+	LocationID *string            `json:"location_id,omitempty"`
+	Metadata   []CommerceMetadata `json:"metadata,omitempty"`
+	Raw        map[string]any     `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -73,6 +74,13 @@ func (c *CommerceInventory) GetLocationID() *string {
 		return nil
 	}
 	return c.LocationID
+}
+
+func (c *CommerceInventory) GetMetadata() []CommerceMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CommerceInventory) GetRaw() map[string]any {

@@ -24,11 +24,12 @@ func (e *CrmTaxonomyType) IsExact() bool {
 }
 
 type CrmTaxonomy struct {
-	ID    string           `json:"id"`
-	Label *string          `json:"label,omitempty"`
-	Name  *string          `json:"name,omitempty"`
-	Raw   map[string]any   `json:"raw,omitempty"`
-	Type  *CrmTaxonomyType `json:"type,omitempty"`
+	ID       string           `json:"id"`
+	Label    *string          `json:"label,omitempty"`
+	Metadata []CrmMetadata    `json:"metadata,omitempty"`
+	Name     *string          `json:"name,omitempty"`
+	Raw      map[string]any   `json:"raw,omitempty"`
+	Type     *CrmTaxonomyType `json:"type,omitempty"`
 }
 
 func (c *CrmTaxonomy) GetID() string {
@@ -43,6 +44,13 @@ func (c *CrmTaxonomy) GetLabel() *string {
 		return nil
 	}
 	return c.Label
+}
+
+func (c *CrmTaxonomy) GetMetadata() []CrmMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CrmTaxonomy) GetName() *string {

@@ -18,6 +18,7 @@ const (
 	CreateUcCommentQueryParamFieldsContent   CreateUcCommentQueryParamFields = "content"
 	CreateUcCommentQueryParamFieldsUserID    CreateUcCommentQueryParamFields = "user_id"
 	CreateUcCommentQueryParamFieldsCallID    CreateUcCommentQueryParamFields = "call_id"
+	CreateUcCommentQueryParamFieldsMetadata  CreateUcCommentQueryParamFields = "metadata"
 	CreateUcCommentQueryParamFieldsRaw       CreateUcCommentQueryParamFields = "raw"
 )
 
@@ -41,6 +42,8 @@ func (e *CreateUcCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "call_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateUcCommentQueryParamFields(v)

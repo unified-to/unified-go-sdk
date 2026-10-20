@@ -21,6 +21,7 @@ type HrisLocation struct {
 	// if this location is the headquarters of the company
 	IsHq           *bool           `json:"is_hq,omitempty"`
 	LanguageLocale *string         `json:"language_locale,omitempty"`
+	Metadata       []HrisMetadata  `json:"metadata,omitempty"`
 	Name           *string         `json:"name,omitempty"`
 	ParentID       *string         `json:"parent_id,omitempty"`
 	Raw            map[string]any  `json:"raw,omitempty"`
@@ -109,6 +110,13 @@ func (h *HrisLocation) GetLanguageLocale() *string {
 		return nil
 	}
 	return h.LanguageLocale
+}
+
+func (h *HrisLocation) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisLocation) GetName() *string {

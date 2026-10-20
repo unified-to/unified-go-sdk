@@ -21,6 +21,7 @@ const (
 	PatchRepoRepositoryQueryParamFieldsIsPrivate   PatchRepoRepositoryQueryParamFields = "is_private"
 	PatchRepoRepositoryQueryParamFieldsWebURL      PatchRepoRepositoryQueryParamFields = "web_url"
 	PatchRepoRepositoryQueryParamFieldsOrgID       PatchRepoRepositoryQueryParamFields = "org_id"
+	PatchRepoRepositoryQueryParamFieldsMetadata    PatchRepoRepositoryQueryParamFields = "metadata"
 	PatchRepoRepositoryQueryParamFieldsRaw         PatchRepoRepositoryQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *PatchRepoRepositoryQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "org_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchRepoRepositoryQueryParamFields(v)

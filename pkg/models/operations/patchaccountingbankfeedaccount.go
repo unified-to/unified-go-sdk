@@ -27,6 +27,7 @@ const (
 	PatchAccountingBankfeedaccountQueryParamFieldsBalance            PatchAccountingBankfeedaccountQueryParamFields = "balance"
 	PatchAccountingBankfeedaccountQueryParamFieldsFeedStartAt        PatchAccountingBankfeedaccountQueryParamFields = "feed_start_at"
 	PatchAccountingBankfeedaccountQueryParamFieldsStatus             PatchAccountingBankfeedaccountQueryParamFields = "status"
+	PatchAccountingBankfeedaccountQueryParamFieldsMetadata           PatchAccountingBankfeedaccountQueryParamFields = "metadata"
 	PatchAccountingBankfeedaccountQueryParamFieldsRaw                PatchAccountingBankfeedaccountQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *PatchAccountingBankfeedaccountQueryParamFields) UnmarshalJSON(data []by
 	case "feed_start_at":
 		fallthrough
 	case "status":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAccountingBankfeedaccountQueryParamFields(v)

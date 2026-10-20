@@ -31,6 +31,7 @@ const (
 	ListHrisBankaccountsQueryParamFieldsSplitType          ListHrisBankaccountsQueryParamFields = "split_type"
 	ListHrisBankaccountsQueryParamFieldsSplitAmount        ListHrisBankaccountsQueryParamFields = "split_amount"
 	ListHrisBankaccountsQueryParamFieldsPriority           ListHrisBankaccountsQueryParamFields = "priority"
+	ListHrisBankaccountsQueryParamFieldsMetadata           ListHrisBankaccountsQueryParamFields = "metadata"
 	ListHrisBankaccountsQueryParamFieldsRaw                ListHrisBankaccountsQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *ListHrisBankaccountsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "split_amount":
 		fallthrough
 	case "priority":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisBankaccountsQueryParamFields(v)

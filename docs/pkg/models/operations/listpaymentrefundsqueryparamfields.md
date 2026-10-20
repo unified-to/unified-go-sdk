@@ -27,4 +27,5 @@ value := operations.ListPaymentRefundsQueryParamFieldsID
 | `ListPaymentRefundsQueryParamFieldsRefundedAt`  | refunded_at                                     |
 | `ListPaymentRefundsQueryParamFieldsReason`      | reason                                          |
 | `ListPaymentRefundsQueryParamFieldsTenderType`  | tender_type                                     |
+| `ListPaymentRefundsQueryParamFieldsMetadata`    | metadata                                        |
 | `ListPaymentRefundsQueryParamFieldsRaw`         | raw                                             |

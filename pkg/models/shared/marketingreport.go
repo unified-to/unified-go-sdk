@@ -41,7 +41,8 @@ type MarketingReport struct {
 	// URL-specific click data
 	Links []MarketingReportLink `json:"links,omitempty"`
 	// Associated list ID
-	ListID *string `json:"list_id,omitempty"`
+	ListID   *string             `json:"list_id,omitempty"`
+	Metadata []MarketingMetadata `json:"metadata,omitempty"`
 	// Open rate (decimal)
 	OpenRate *float64 `json:"open_rate,omitempty"`
 	// Total opens
@@ -194,6 +195,13 @@ func (m *MarketingReport) GetListID() *string {
 		return nil
 	}
 	return m.ListID
+}
+
+func (m *MarketingReport) GetMetadata() []MarketingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MarketingReport) GetOpenRate() *float64 {

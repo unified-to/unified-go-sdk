@@ -24,4 +24,5 @@ value := operations.ListCalendarRecordingsQueryParamFieldsID
 | `ListCalendarRecordingsQueryParamFieldsEventID`   | event_id                                          |
 | `ListCalendarRecordingsQueryParamFieldsWebURL`    | web_url                                           |
 | `ListCalendarRecordingsQueryParamFieldsMedia`     | media                                             |
+| `ListCalendarRecordingsQueryParamFieldsMetadata`  | metadata                                          |
 | `ListCalendarRecordingsQueryParamFieldsRaw`       | raw                                               |

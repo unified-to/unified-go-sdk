@@ -29,4 +29,5 @@ value := operations.CreateAdsInsertionorderQueryParamFieldsID
 | `CreateAdsInsertionorderQueryParamFieldsBudgetSegments` | budget_segments                                         |
 | `CreateAdsInsertionorderQueryParamFieldsBidStrategy`    | bid_strategy                                            |
 | `CreateAdsInsertionorderQueryParamFieldsReference`      | reference                                               |
+| `CreateAdsInsertionorderQueryParamFieldsMetadata`       | metadata                                                |
 | `CreateAdsInsertionorderQueryParamFieldsRaw`            | raw                                                     |

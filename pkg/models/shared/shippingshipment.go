@@ -97,6 +97,7 @@ type ShippingShipment struct {
 	LabelID *string `json:"label_id,omitempty"`
 	// Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
 	Lineitems []ShippingShipmentLineitem `json:"lineitems,omitempty"`
+	Metadata  []ShippingMetadata         `json:"metadata,omitempty"`
 	// Reference to commerce_order or accounting_order
 	OrderID *string `json:"order_id,omitempty"`
 	// ref -> accounting Organization this shipment belongs to (multi-company ERPs)
@@ -258,6 +259,13 @@ func (s *ShippingShipment) GetLineitems() []ShippingShipmentLineitem {
 		return nil
 	}
 	return s.Lineitems
+}
+
+func (s *ShippingShipment) GetMetadata() []ShippingMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *ShippingShipment) GetOrderID() *string {

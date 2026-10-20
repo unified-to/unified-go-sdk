@@ -19,6 +19,7 @@ const (
 	ListDatastoreRecordsQueryParamFieldsTableID    ListDatastoreRecordsQueryParamFields = "table_id"
 	ListDatastoreRecordsQueryParamFieldsFields     ListDatastoreRecordsQueryParamFields = "fields"
 	ListDatastoreRecordsQueryParamFieldsRowNumber  ListDatastoreRecordsQueryParamFields = "row_number"
+	ListDatastoreRecordsQueryParamFieldsMetadata   ListDatastoreRecordsQueryParamFields = "metadata"
 	ListDatastoreRecordsQueryParamFieldsRaw        ListDatastoreRecordsQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *ListDatastoreRecordsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "fields":
 		fallthrough
 	case "row_number":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListDatastoreRecordsQueryParamFields(v)

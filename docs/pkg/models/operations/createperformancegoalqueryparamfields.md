@@ -32,4 +32,5 @@ value := operations.CreatePerformanceGoalQueryParamFieldsID
 | `CreatePerformanceGoalQueryParamFieldsDueAt`       | due_at                                             |
 | `CreatePerformanceGoalQueryParamFieldsCompletedAt` | completed_at                                       |
 | `CreatePerformanceGoalQueryParamFieldsMilestones`  | milestones                                         |
+| `CreatePerformanceGoalQueryParamFieldsMetadata`    | metadata                                           |
 | `CreatePerformanceGoalQueryParamFieldsRaw`         | raw                                                |

@@ -32,4 +32,5 @@ value := operations.GetSocialProfileQueryParamFieldsID
 | `GetSocialProfileQueryParamFieldsIsVerified`  | is_verified                                   |
 | `GetSocialProfileQueryParamFieldsIsPrivate`   | is_private                                    |
 | `GetSocialProfileQueryParamFieldsMetrics`     | metrics                                       |
+| `GetSocialProfileQueryParamFieldsMetadata`    | metadata                                      |
 | `GetSocialProfileQueryParamFieldsRaw`         | raw                                           |

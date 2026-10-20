@@ -54,4 +54,5 @@ value := operations.CreateShippingShipmentQueryParamFieldsID
 | `CreateShippingShipmentQueryParamFieldsCarrierName`               | carrier_name                                                      |
 | `CreateShippingShipmentQueryParamFieldsTrackingURL`               | tracking_url                                                      |
 | `CreateShippingShipmentQueryParamFieldsLineitems`                 | lineitems                                                         |
+| `CreateShippingShipmentQueryParamFieldsMetadata`                  | metadata                                                          |
 | `CreateShippingShipmentQueryParamFieldsRaw`                       | raw                                                               |

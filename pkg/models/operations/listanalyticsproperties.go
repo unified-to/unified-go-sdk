@@ -20,6 +20,7 @@ const (
 	ListAnalyticsPropertiesQueryParamFieldsCurrency  ListAnalyticsPropertiesQueryParamFields = "currency"
 	ListAnalyticsPropertiesQueryParamFieldsIndustry  ListAnalyticsPropertiesQueryParamFields = "industry"
 	ListAnalyticsPropertiesQueryParamFieldsParentID  ListAnalyticsPropertiesQueryParamFields = "parent_id"
+	ListAnalyticsPropertiesQueryParamFieldsMetadata  ListAnalyticsPropertiesQueryParamFields = "metadata"
 	ListAnalyticsPropertiesQueryParamFieldsRaw       ListAnalyticsPropertiesQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListAnalyticsPropertiesQueryParamFields) UnmarshalJSON(data []byte) err
 	case "industry":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAnalyticsPropertiesQueryParamFields(v)

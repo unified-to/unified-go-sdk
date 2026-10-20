@@ -20,6 +20,7 @@ const (
 	ListLmsCollectionsQueryParamFieldsMedia       ListLmsCollectionsQueryParamFields = "media"
 	ListLmsCollectionsQueryParamFieldsIsActive    ListLmsCollectionsQueryParamFields = "is_active"
 	ListLmsCollectionsQueryParamFieldsParentID    ListLmsCollectionsQueryParamFields = "parent_id"
+	ListLmsCollectionsQueryParamFieldsMetadata    ListLmsCollectionsQueryParamFields = "metadata"
 	ListLmsCollectionsQueryParamFieldsRaw         ListLmsCollectionsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListLmsCollectionsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListLmsCollectionsQueryParamFields(v)

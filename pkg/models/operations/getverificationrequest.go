@@ -36,6 +36,7 @@ const (
 	GetVerificationRequestQueryParamFieldsResponseDownloadUrls      GetVerificationRequestQueryParamFields = "response_download_urls"
 	GetVerificationRequestQueryParamFieldsResponseDetails           GetVerificationRequestQueryParamFields = "response_details"
 	GetVerificationRequestQueryParamFieldsResponseSource            GetVerificationRequestQueryParamFields = "response_source"
+	GetVerificationRequestQueryParamFieldsMetadata                  GetVerificationRequestQueryParamFields = "metadata"
 	GetVerificationRequestQueryParamFieldsRaw                       GetVerificationRequestQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *GetVerificationRequestQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "response_details":
 		fallthrough
 	case "response_source":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetVerificationRequestQueryParamFields(v)

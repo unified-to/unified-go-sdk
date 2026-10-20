@@ -23,4 +23,5 @@ value := operations.PatchCdpDestinationQueryParamFieldsID
 | `PatchCdpDestinationQueryParamFieldsType`      | type                                           |
 | `PatchCdpDestinationQueryParamFieldsDirection` | direction                                      |
 | `PatchCdpDestinationQueryParamFieldsIsEnabled` | is_enabled                                     |
+| `PatchCdpDestinationQueryParamFieldsMetadata`  | metadata                                       |
 | `PatchCdpDestinationQueryParamFieldsRaw`       | raw                                            |

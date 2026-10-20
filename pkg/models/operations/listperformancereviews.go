@@ -29,6 +29,7 @@ const (
 	ListPerformanceReviewsQueryParamFieldsIsAcknowledged     ListPerformanceReviewsQueryParamFields = "is_acknowledged"
 	ListPerformanceReviewsQueryParamFieldsSubmittedAt        ListPerformanceReviewsQueryParamFields = "submitted_at"
 	ListPerformanceReviewsQueryParamFieldsCompletedAt        ListPerformanceReviewsQueryParamFields = "completed_at"
+	ListPerformanceReviewsQueryParamFieldsMetadata           ListPerformanceReviewsQueryParamFields = "metadata"
 	ListPerformanceReviewsQueryParamFieldsRaw                ListPerformanceReviewsQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *ListPerformanceReviewsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "submitted_at":
 		fallthrough
 	case "completed_at":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListPerformanceReviewsQueryParamFields(v)

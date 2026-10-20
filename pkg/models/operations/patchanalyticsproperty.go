@@ -20,6 +20,7 @@ const (
 	PatchAnalyticsPropertyQueryParamFieldsCurrency  PatchAnalyticsPropertyQueryParamFields = "currency"
 	PatchAnalyticsPropertyQueryParamFieldsIndustry  PatchAnalyticsPropertyQueryParamFields = "industry"
 	PatchAnalyticsPropertyQueryParamFieldsParentID  PatchAnalyticsPropertyQueryParamFields = "parent_id"
+	PatchAnalyticsPropertyQueryParamFieldsMetadata  PatchAnalyticsPropertyQueryParamFields = "metadata"
 	PatchAnalyticsPropertyQueryParamFieldsRaw       PatchAnalyticsPropertyQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchAnalyticsPropertyQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "industry":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAnalyticsPropertyQueryParamFields(v)

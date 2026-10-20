@@ -29,4 +29,5 @@ value := operations.PatchHrisTimeshiftQueryParamFieldsID
 | `PatchHrisTimeshiftQueryParamFieldsApprovedAt`     | approved_at                                        |
 | `PatchHrisTimeshiftQueryParamFieldsHours`          | hours                                              |
 | `PatchHrisTimeshiftQueryParamFieldsIsApproved`     | is_approved                                        |
+| `PatchHrisTimeshiftQueryParamFieldsMetadata`       | metadata                                           |
 | `PatchHrisTimeshiftQueryParamFieldsRaw`            | raw                                                |

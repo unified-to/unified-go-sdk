@@ -24,4 +24,5 @@ value := operations.PatchKmsSpaceQueryParamFieldsID
 | `PatchKmsSpaceQueryParamFieldsIsActive`     | is_active                                   |
 | `PatchKmsSpaceQueryParamFieldsUserID`       | user_id                                     |
 | `PatchKmsSpaceQueryParamFieldsParentPageID` | parent_page_id                              |
+| `PatchKmsSpaceQueryParamFieldsMetadata`     | metadata                                    |
 | `PatchKmsSpaceQueryParamFieldsRaw`          | raw                                         |

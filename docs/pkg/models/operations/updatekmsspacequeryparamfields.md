@@ -24,4 +24,5 @@ value := operations.UpdateKmsSpaceQueryParamFieldsID
 | `UpdateKmsSpaceQueryParamFieldsIsActive`     | is_active                                    |
 | `UpdateKmsSpaceQueryParamFieldsUserID`       | user_id                                      |
 | `UpdateKmsSpaceQueryParamFieldsParentPageID` | parent_page_id                               |
+| `UpdateKmsSpaceQueryParamFieldsMetadata`     | metadata                                     |
 | `UpdateKmsSpaceQueryParamFieldsRaw`          | raw                                          |

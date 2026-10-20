@@ -97,7 +97,8 @@ type AssessmentOrder struct {
 	EmployeeID *string `json:"employee_id,omitempty"`
 	ID         *string `json:"id,omitempty"`
 	// ATS job ID
-	JobID *string `json:"job_id,omitempty"`
+	JobID    *string              `json:"job_id,omitempty"`
+	Metadata []AssessmentMetadata `json:"metadata,omitempty"`
 	// Assessment package ID
 	PackageID *string `json:"package_id,omitempty"`
 	// Filled-in answers to the package's parameter questions
@@ -216,6 +217,13 @@ func (a *AssessmentOrder) GetJobID() *string {
 		return nil
 	}
 	return a.JobID
+}
+
+func (a *AssessmentOrder) GetMetadata() []AssessmentMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AssessmentOrder) GetPackageID() *string {

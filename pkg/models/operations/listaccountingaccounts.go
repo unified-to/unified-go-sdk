@@ -26,6 +26,7 @@ const (
 	ListAccountingAccountsQueryParamFieldsParentID            ListAccountingAccountsQueryParamFields = "parent_id"
 	ListAccountingAccountsQueryParamFieldsTaxonomy            ListAccountingAccountsQueryParamFields = "taxonomy"
 	ListAccountingAccountsQueryParamFieldsOrganizationID      ListAccountingAccountsQueryParamFields = "organization_id"
+	ListAccountingAccountsQueryParamFieldsMetadata            ListAccountingAccountsQueryParamFields = "metadata"
 	ListAccountingAccountsQueryParamFieldsRaw                 ListAccountingAccountsQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *ListAccountingAccountsQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "taxonomy":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAccountingAccountsQueryParamFields(v)

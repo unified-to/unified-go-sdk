@@ -22,4 +22,5 @@ value := operations.ListCommerceInventoriesQueryParamFieldsID
 | `ListCommerceInventoriesQueryParamFieldsItemOptionID`  | item_option_id                                         |
 | `ListCommerceInventoriesQueryParamFieldsLocationID`    | location_id                                            |
 | `ListCommerceInventoriesQueryParamFieldsAvailable`     | available                                              |
+| `ListCommerceInventoriesQueryParamFieldsMetadata`      | metadata                                               |
 | `ListCommerceInventoriesQueryParamFieldsRaw`           | raw                                                    |

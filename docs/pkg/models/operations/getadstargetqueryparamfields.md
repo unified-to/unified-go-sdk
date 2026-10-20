@@ -22,4 +22,5 @@ value := operations.GetAdsTargetQueryParamFieldsID
 | `GetAdsTargetQueryParamFieldsParentID`         | parent_id                                      |
 | `GetAdsTargetQueryParamFieldsAudienceCountMin` | audience_count_min                             |
 | `GetAdsTargetQueryParamFieldsAudienceCountMax` | audience_count_max                             |
+| `GetAdsTargetQueryParamFieldsMetadata`         | metadata                                       |
 | `GetAdsTargetQueryParamFieldsRaw`              | raw                                            |

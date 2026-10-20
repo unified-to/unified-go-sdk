@@ -19,7 +19,8 @@ type SocialReview struct {
 	// When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Unique identifier for the review
-	ID *string `json:"id,omitempty"`
+	ID       *string          `json:"id,omitempty"`
+	Metadata []SocialMetadata `json:"metadata,omitempty"`
 	// The social profile (page/handle/listing) being reviewed
 	ProfileID *string `json:"profile_id,omitempty"`
 	// Star rating, typically 1-5
@@ -87,6 +88,13 @@ func (s *SocialReview) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *SocialReview) GetMetadata() []SocialMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SocialReview) GetProfileID() *string {

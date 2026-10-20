@@ -25,4 +25,5 @@ value := operations.GetDatastoreTableQueryParamFieldsID
 | `GetDatastoreTableQueryParamFieldsRelationships` | relationships                                    |
 | `GetDatastoreTableQueryParamFieldsWebURL`        | web_url                                          |
 | `GetDatastoreTableQueryParamFieldsParentID`      | parent_id                                        |
+| `GetDatastoreTableQueryParamFieldsMetadata`      | metadata                                         |
 | `GetDatastoreTableQueryParamFieldsRaw`           | raw                                              |

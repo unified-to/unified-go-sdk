@@ -45,11 +45,12 @@ type CommerceReservation struct {
 	ItemID   *string `json:"item_id,omitempty"`
 	ItemName *string `json:"item_name,omitempty"`
 	// (reference to CommerceLocation)
-	LocationID *string        `json:"location_id,omitempty"`
-	Notes      *string        `json:"notes,omitempty"`
-	Raw        map[string]any `json:"raw,omitempty"`
-	Size       *float64       `json:"size,omitempty"`
-	StaffName  *string        `json:"staff_name,omitempty"`
+	LocationID *string            `json:"location_id,omitempty"`
+	Metadata   []CommerceMetadata `json:"metadata,omitempty"`
+	Notes      *string            `json:"notes,omitempty"`
+	Raw        map[string]any     `json:"raw,omitempty"`
+	Size       *float64           `json:"size,omitempty"`
+	StaffName  *string            `json:"staff_name,omitempty"`
 	// (reference to HrisEmployee)
 	StaffUserID *string `json:"staff_user_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -132,6 +133,13 @@ func (c *CommerceReservation) GetLocationID() *string {
 		return nil
 	}
 	return c.LocationID
+}
+
+func (c *CommerceReservation) GetMetadata() []CommerceMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CommerceReservation) GetNotes() *string {

@@ -23,4 +23,5 @@ value := operations.PatchComputeEnvvarQueryParamFieldsID
 | `PatchComputeEnvvarQueryParamFieldsValue`        | value                                            |
 | `PatchComputeEnvvarQueryParamFieldsEnvironments` | environments                                     |
 | `PatchComputeEnvvarQueryParamFieldsIsSecret`     | is_secret                                        |
+| `PatchComputeEnvvarQueryParamFieldsMetadata`     | metadata                                         |
 | `PatchComputeEnvvarQueryParamFieldsRaw`          | raw                                              |

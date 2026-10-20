@@ -26,6 +26,7 @@ const (
 	PatchAdsInsertionorderQueryParamFieldsBudgetSegments PatchAdsInsertionorderQueryParamFields = "budget_segments"
 	PatchAdsInsertionorderQueryParamFieldsBidStrategy    PatchAdsInsertionorderQueryParamFields = "bid_strategy"
 	PatchAdsInsertionorderQueryParamFieldsReference      PatchAdsInsertionorderQueryParamFields = "reference"
+	PatchAdsInsertionorderQueryParamFieldsMetadata       PatchAdsInsertionorderQueryParamFields = "metadata"
 	PatchAdsInsertionorderQueryParamFieldsRaw            PatchAdsInsertionorderQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *PatchAdsInsertionorderQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "bid_strategy":
 		fallthrough
 	case "reference":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchAdsInsertionorderQueryParamFields(v)

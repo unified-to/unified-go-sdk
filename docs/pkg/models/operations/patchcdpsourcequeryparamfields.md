@@ -23,4 +23,5 @@ value := operations.PatchCdpSourceQueryParamFieldsID
 | `PatchCdpSourceQueryParamFieldsType`      | type                                      |
 | `PatchCdpSourceQueryParamFieldsDirection` | direction                                 |
 | `PatchCdpSourceQueryParamFieldsIsEnabled` | is_enabled                                |
+| `PatchCdpSourceQueryParamFieldsMetadata`  | metadata                                  |
 | `PatchCdpSourceQueryParamFieldsRaw`       | raw                                       |

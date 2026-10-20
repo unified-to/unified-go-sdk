@@ -25,4 +25,5 @@ value := operations.ListAdsOrganizationsQueryParamFieldsID
 | `ListAdsOrganizationsQueryParamFieldsStatus`        | status                                              |
 | `ListAdsOrganizationsQueryParamFieldsAccountNumber` | account_number                                      |
 | `ListAdsOrganizationsQueryParamFieldsManagers`      | managers                                            |
+| `ListAdsOrganizationsQueryParamFieldsMetadata`      | metadata                                            |
 | `ListAdsOrganizationsQueryParamFieldsRaw`           | raw                                                 |

@@ -30,6 +30,7 @@ const (
 	ListStorageFilesQueryParamFieldsWebURL      ListStorageFilesQueryParamFields = "web_url"
 	ListStorageFilesQueryParamFieldsReferences  ListStorageFilesQueryParamFields = "references"
 	ListStorageFilesQueryParamFieldsTags        ListStorageFilesQueryParamFields = "tags"
+	ListStorageFilesQueryParamFieldsMetadata    ListStorageFilesQueryParamFields = "metadata"
 	ListStorageFilesQueryParamFieldsRaw         ListStorageFilesQueryParamFields = "raw"
 )
 
@@ -77,6 +78,8 @@ func (e *ListStorageFilesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "references":
 		fallthrough
 	case "tags":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListStorageFilesQueryParamFields(v)

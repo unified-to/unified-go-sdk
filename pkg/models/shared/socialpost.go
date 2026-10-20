@@ -77,7 +77,8 @@ type SocialPost struct {
 	// Language code of the post content
 	Language *string `json:"language,omitempty"`
 	// Media assets attached to the post
-	Media []SocialMedia `json:"media,omitempty"`
+	Media    []SocialMedia    `json:"media,omitempty"`
+	Metadata []SocialMetadata `json:"metadata,omitempty"`
 	// Engagement metrics for the post
 	Metrics *PropertySocialPostMetrics `json:"metrics,omitempty"`
 	// The post this one replies to or references
@@ -151,6 +152,13 @@ func (s *SocialPost) GetMedia() []SocialMedia {
 		return nil
 	}
 	return s.Media
+}
+
+func (s *SocialPost) GetMetadata() []SocialMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SocialPost) GetMetrics() *PropertySocialPostMetrics {

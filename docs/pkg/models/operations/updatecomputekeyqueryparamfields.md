@@ -28,4 +28,5 @@ value := operations.UpdateComputeKeyQueryParamFieldsID
 | `UpdateComputeKeyQueryParamFieldsSecret`      | secret                                        |
 | `UpdateComputeKeyQueryParamFieldsInstanceID`  | instance_id                                   |
 | `UpdateComputeKeyQueryParamFieldsExpiresAt`   | expires_at                                    |
+| `UpdateComputeKeyQueryParamFieldsMetadata`    | metadata                                      |
 | `UpdateComputeKeyQueryParamFieldsRaw`         | raw                                           |

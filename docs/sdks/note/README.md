@@ -41,8 +41,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("35e5cbaa-503d-4851-aedb-c765beb87301"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-27T15:18:45.799Z"),
+            ID: unifiedgosdk.Pointer("f1db24ef-ac97-4de0-a029-4eb40f27d374"),
+            Metadata: []shared.TicketingMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2024-09-28T13:23:21.048Z"),
         },
         ConnectionID: "<id>",
     })
@@ -212,8 +213,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("473d8bff-58dd-4db9-a85b-5da329478508"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-27T15:18:45.802Z"),
+            ID: unifiedgosdk.Pointer("f2648d61-1839-45e1-9be1-7f782c074ae8"),
+            Metadata: []shared.TicketingMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2024-09-28T13:23:21.058Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -330,8 +332,9 @@ func main() {
         TicketingNote: shared.TicketingNote{
             CreatedAt: types.MustNewTimeFromString("2019-07-23T15:05:03.241Z"),
             Description: unifiedgosdk.Pointer("Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum."),
-            ID: unifiedgosdk.Pointer("473d8bff-58dd-4db9-a85b-5da329478508"),
-            UpdatedAt: types.MustNewTimeFromString("2024-09-27T15:18:45.802Z"),
+            ID: unifiedgosdk.Pointer("f2648d61-1839-45e1-9be1-7f782c074ae8"),
+            Metadata: []shared.TicketingMetadata{},
+            UpdatedAt: types.MustNewTimeFromString("2024-09-28T13:23:21.058Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

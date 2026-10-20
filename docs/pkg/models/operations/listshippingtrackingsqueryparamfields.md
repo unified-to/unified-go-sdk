@@ -28,4 +28,5 @@ value := operations.ListShippingTrackingsQueryParamFieldsID
 | `ListShippingTrackingsQueryParamFieldsCarrierID`                | carrier_id                                                      |
 | `ListShippingTrackingsQueryParamFieldsCarrierStatusCode`        | carrier_status_code                                             |
 | `ListShippingTrackingsQueryParamFieldsCarrierStatusDescription` | carrier_status_description                                      |
+| `ListShippingTrackingsQueryParamFieldsMetadata`                 | metadata                                                        |
 | `ListShippingTrackingsQueryParamFieldsRaw`                      | raw                                                             |

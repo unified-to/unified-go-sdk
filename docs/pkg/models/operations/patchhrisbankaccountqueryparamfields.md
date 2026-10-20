@@ -34,4 +34,5 @@ value := operations.PatchHrisBankaccountQueryParamFieldsID
 | `PatchHrisBankaccountQueryParamFieldsSplitType`          | split_type                                               |
 | `PatchHrisBankaccountQueryParamFieldsSplitAmount`        | split_amount                                             |
 | `PatchHrisBankaccountQueryParamFieldsPriority`           | priority                                                 |
+| `PatchHrisBankaccountQueryParamFieldsMetadata`           | metadata                                                 |
 | `PatchHrisBankaccountQueryParamFieldsRaw`                | raw                                                      |

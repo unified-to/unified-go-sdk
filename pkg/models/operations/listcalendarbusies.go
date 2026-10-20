@@ -17,6 +17,7 @@ const (
 	ListCalendarBusiesQueryParamFieldsEndAt       ListCalendarBusiesQueryParamFields = "end_at"
 	ListCalendarBusiesQueryParamFieldsTimezone    ListCalendarBusiesQueryParamFields = "timezone"
 	ListCalendarBusiesQueryParamFieldsDescription ListCalendarBusiesQueryParamFields = "description"
+	ListCalendarBusiesQueryParamFieldsMetadata    ListCalendarBusiesQueryParamFields = "metadata"
 	ListCalendarBusiesQueryParamFieldsRaw         ListCalendarBusiesQueryParamFields = "raw"
 )
 
@@ -38,6 +39,8 @@ func (e *ListCalendarBusiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "timezone":
 		fallthrough
 	case "description":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCalendarBusiesQueryParamFields(v)

@@ -32,4 +32,5 @@ value := operations.ListCommerceReservationsQueryParamFieldsID
 | `ListCommerceReservationsQueryParamFieldsCreatedAt`   | created_at                                            |
 | `ListCommerceReservationsQueryParamFieldsUpdatedAt`   | updated_at                                            |
 | `ListCommerceReservationsQueryParamFieldsURL`         | url                                                   |
+| `ListCommerceReservationsQueryParamFieldsMetadata`    | metadata                                              |
 | `ListCommerceReservationsQueryParamFieldsRaw`         | raw                                                   |

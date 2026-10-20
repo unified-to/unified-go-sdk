@@ -20,6 +20,7 @@ const (
 	GetSigningTemplateQueryParamFieldsIsActive    GetSigningTemplateQueryParamFields = "is_active"
 	GetSigningTemplateQueryParamFieldsCreatorID   GetSigningTemplateQueryParamFields = "creator_id"
 	GetSigningTemplateQueryParamFieldsRaw         GetSigningTemplateQueryParamFields = "raw"
+	GetSigningTemplateQueryParamFieldsMetadata    GetSigningTemplateQueryParamFields = "metadata"
 )
 
 func (e GetSigningTemplateQueryParamFields) ToPointer() *GetSigningTemplateQueryParamFields {
@@ -46,6 +47,8 @@ func (e *GetSigningTemplateQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "creator_id":
 		fallthrough
 	case "raw":
+		fallthrough
+	case "metadata":
 		*e = GetSigningTemplateQueryParamFields(v)
 		return nil
 	default:

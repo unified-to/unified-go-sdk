@@ -17,7 +17,8 @@ type ComputeRegion struct {
 	// Unique identifier for the region or data center
 	ID *string `json:"id,omitempty"`
 	// Free-text location (eg. city or state)
-	Location *string `json:"location,omitempty"`
+	Location *string           `json:"location,omitempty"`
+	Metadata []ComputeMetadata `json:"metadata,omitempty"`
 	// Display name of the region
 	Name *string `json:"name,omitempty"`
 	// Raw data from integration
@@ -70,6 +71,13 @@ func (c *ComputeRegion) GetLocation() *string {
 		return nil
 	}
 	return c.Location
+}
+
+func (c *ComputeRegion) GetMetadata() []ComputeMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ComputeRegion) GetName() *string {

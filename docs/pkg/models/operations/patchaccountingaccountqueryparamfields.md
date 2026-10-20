@@ -29,4 +29,5 @@ value := operations.PatchAccountingAccountQueryParamFieldsID
 | `PatchAccountingAccountQueryParamFieldsParentID`            | parent_id                                                   |
 | `PatchAccountingAccountQueryParamFieldsTaxonomy`            | taxonomy                                                    |
 | `PatchAccountingAccountQueryParamFieldsOrganizationID`      | organization_id                                             |
+| `PatchAccountingAccountQueryParamFieldsMetadata`            | metadata                                                    |
 | `PatchAccountingAccountQueryParamFieldsRaw`                 | raw                                                         |

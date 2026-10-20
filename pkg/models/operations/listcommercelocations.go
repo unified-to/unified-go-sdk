@@ -32,6 +32,7 @@ const (
 	ListCommerceLocationsQueryParamFieldsImageURL       ListCommerceLocationsQueryParamFields = "image_url"
 	ListCommerceLocationsQueryParamFieldsWebURL         ListCommerceLocationsQueryParamFields = "web_url"
 	ListCommerceLocationsQueryParamFieldsMedia          ListCommerceLocationsQueryParamFields = "media"
+	ListCommerceLocationsQueryParamFieldsMetadata       ListCommerceLocationsQueryParamFields = "metadata"
 	ListCommerceLocationsQueryParamFieldsRaw            ListCommerceLocationsQueryParamFields = "raw"
 	ListCommerceLocationsQueryParamFieldsCategories     ListCommerceLocationsQueryParamFields = "categories"
 )
@@ -84,6 +85,8 @@ func (e *ListCommerceLocationsQueryParamFields) UnmarshalJSON(data []byte) error
 	case "web_url":
 		fallthrough
 	case "media":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		fallthrough

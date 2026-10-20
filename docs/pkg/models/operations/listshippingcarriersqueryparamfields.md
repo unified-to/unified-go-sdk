@@ -23,4 +23,5 @@ value := operations.ListShippingCarriersQueryParamFieldsID
 | `ListShippingCarriersQueryParamFieldsIsActive`   | is_active                                        |
 | `ListShippingCarriersQueryParamFieldsLogoURL`    | logo_url                                         |
 | `ListShippingCarriersQueryParamFieldsWebsiteURL` | website_url                                      |
+| `ListShippingCarriersQueryParamFieldsMetadata`   | metadata                                         |
 | `ListShippingCarriersQueryParamFieldsRaw`        | raw                                              |

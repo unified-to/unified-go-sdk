@@ -28,4 +28,5 @@ value := operations.ListRepoPullrequestsQueryParamFieldsID
 | `ListRepoPullrequestsQueryParamFieldsLabels`         | labels                                               |
 | `ListRepoPullrequestsQueryParamFieldsClosedAt`       | closed_at                                            |
 | `ListRepoPullrequestsQueryParamFieldsCommitIds`      | commit_ids                                           |
+| `ListRepoPullrequestsQueryParamFieldsMetadata`       | metadata                                             |
 | `ListRepoPullrequestsQueryParamFieldsRaw`            | raw                                                  |

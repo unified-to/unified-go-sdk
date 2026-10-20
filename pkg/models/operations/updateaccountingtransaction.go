@@ -35,6 +35,7 @@ const (
 	UpdateAccountingTransactionQueryParamFieldsTransactionAt   UpdateAccountingTransactionQueryParamFields = "transaction_at"
 	UpdateAccountingTransactionQueryParamFieldsExchangeRate    UpdateAccountingTransactionQueryParamFields = "exchange_rate"
 	UpdateAccountingTransactionQueryParamFieldsStatus          UpdateAccountingTransactionQueryParamFields = "status"
+	UpdateAccountingTransactionQueryParamFieldsMetadata        UpdateAccountingTransactionQueryParamFields = "metadata"
 	UpdateAccountingTransactionQueryParamFieldsRaw             UpdateAccountingTransactionQueryParamFields = "raw"
 )
 
@@ -92,6 +93,8 @@ func (e *UpdateAccountingTransactionQueryParamFields) UnmarshalJSON(data []byte)
 	case "exchange_rate":
 		fallthrough
 	case "status":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAccountingTransactionQueryParamFields(v)

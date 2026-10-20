@@ -36,4 +36,5 @@ value := operations.GetClubsGroupQueryParamFieldsID
 | `GetClubsGroupQueryParamFieldsProfileImageURL`  | profile_image_url                               |
 | `GetClubsGroupQueryParamFieldsCoverImageURL`    | cover_image_url                                 |
 | `GetClubsGroupQueryParamFieldsActivityTypes`    | activity_types                                  |
+| `GetClubsGroupQueryParamFieldsMetadata`         | metadata                                        |
 | `GetClubsGroupQueryParamFieldsRaw`              | raw                                             |

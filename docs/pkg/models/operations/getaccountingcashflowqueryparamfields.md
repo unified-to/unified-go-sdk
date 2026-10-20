@@ -30,4 +30,5 @@ value := operations.GetAccountingCashflowQueryParamFieldsID
 | `GetAccountingCashflowQueryParamFieldsOperatingSections`     | operating_sections                                           |
 | `GetAccountingCashflowQueryParamFieldsInvestingSections`     | investing_sections                                           |
 | `GetAccountingCashflowQueryParamFieldsFinancingSections`     | financing_sections                                           |
+| `GetAccountingCashflowQueryParamFieldsMetadata`              | metadata                                                     |
 | `GetAccountingCashflowQueryParamFieldsRaw`                   | raw                                                          |

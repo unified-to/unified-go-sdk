@@ -28,3 +28,4 @@ value := operations.ListSigningDocumentsQueryParamFieldsID
 | `ListSigningDocumentsQueryParamFieldsDownloadURL` | download_url                                      |
 | `ListSigningDocumentsQueryParamFieldsCreatorID`   | creator_id                                        |
 | `ListSigningDocumentsQueryParamFieldsRaw`         | raw                                               |
+| `ListSigningDocumentsQueryParamFieldsMetadata`    | metadata                                          |

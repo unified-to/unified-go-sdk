@@ -23,4 +23,5 @@ value := operations.PatchRepoOrganizationQueryParamFieldsID
 | `PatchRepoOrganizationQueryParamFieldsAvatarURL`   | avatar_url                                         |
 | `PatchRepoOrganizationQueryParamFieldsWebURL`      | web_url                                            |
 | `PatchRepoOrganizationQueryParamFieldsUserIds`     | user_ids                                           |
+| `PatchRepoOrganizationQueryParamFieldsMetadata`    | metadata                                           |
 | `PatchRepoOrganizationQueryParamFieldsRaw`         | raw                                                |

@@ -94,9 +94,10 @@ type HrisTimeoff struct {
 	Duration     *float64      `json:"duration,omitempty"`
 	DurationType *DurationType `json:"duration_type,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt  *time.Time `json:"end_at,omitempty"`
-	ID     *string    `json:"id,omitempty"`
-	IsPaid *bool      `json:"is_paid,omitempty"`
+	EndAt    *time.Time     `json:"end_at,omitempty"`
+	ID       *string        `json:"id,omitempty"`
+	IsPaid   *bool          `json:"is_paid,omitempty"`
+	Metadata []HrisMetadata `json:"metadata,omitempty"`
 	// integration leave-type label before normalization
 	OriginalType *string        `json:"original_type,omitempty"`
 	Raw          map[string]any `json:"raw,omitempty"`
@@ -190,6 +191,13 @@ func (h *HrisTimeoff) GetIsPaid() *bool {
 		return nil
 	}
 	return h.IsPaid
+}
+
+func (h *HrisTimeoff) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisTimeoff) GetOriginalType() *string {

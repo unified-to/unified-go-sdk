@@ -35,5 +35,6 @@ value := operations.PatchCommerceLocationQueryParamFieldsID
 | `PatchCommerceLocationQueryParamFieldsImageURL`       | image_url                                             |
 | `PatchCommerceLocationQueryParamFieldsWebURL`         | web_url                                               |
 | `PatchCommerceLocationQueryParamFieldsMedia`          | media                                                 |
+| `PatchCommerceLocationQueryParamFieldsMetadata`       | metadata                                              |
 | `PatchCommerceLocationQueryParamFieldsRaw`            | raw                                                   |
 | `PatchCommerceLocationQueryParamFieldsCategories`     | categories                                            |

@@ -26,6 +26,7 @@ const (
 	ListHrisTaxonomiesQueryParamFieldsURL              ListHrisTaxonomiesQueryParamFields = "url"
 	ListHrisTaxonomiesQueryParamFieldsRoleIds          ListHrisTaxonomiesQueryParamFields = "role_ids"
 	ListHrisTaxonomiesQueryParamFieldsIsActive         ListHrisTaxonomiesQueryParamFields = "is_active"
+	ListHrisTaxonomiesQueryParamFieldsMetadata         ListHrisTaxonomiesQueryParamFields = "metadata"
 	ListHrisTaxonomiesQueryParamFieldsRaw              ListHrisTaxonomiesQueryParamFields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *ListHrisTaxonomiesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "role_ids":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisTaxonomiesQueryParamFields(v)

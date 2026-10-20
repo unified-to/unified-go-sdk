@@ -40,32 +40,27 @@ func main() {
     res, err := s.Lead.CreateCrmLead(ctx, operations.CreateCrmLeadRequest{
         CrmLead: shared.CrmLead{
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.Pointer("528 Forest Road"),
-                Address2: unifiedgosdk.Pointer("Apt. 643"),
-                City: unifiedgosdk.Pointer("Palm Springs"),
+                Address1: unifiedgosdk.Pointer("87206 Hudson Street"),
+                City: unifiedgosdk.Pointer("Leslieboro"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("55624-6499"),
-                Region: unifiedgosdk.Pointer("New Jersey"),
-                RegionCode: unifiedgosdk.Pointer("LA"),
+                PostalCode: unifiedgosdk.Pointer("49909-1183"),
+                Region: unifiedgosdk.Pointer("Michigan"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CompanyName: unifiedgosdk.Pointer("Tillman - Wiegand"),
             CreatedAt: types.MustNewTimeFromString("2019-10-12T11:27:59.003Z"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer16@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
-                },
-                shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer@yahoo.com"),
-                    Type: shared.CrmEmailTypeHome.ToPointer(),
+                    Email: unifiedgosdk.Pointer("velda.sporer@icloud.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("27b4cbaa-fb3e-41a6-a2d2-eb8bed4e8b54"),
+            ID: unifiedgosdk.Pointer("cd15be41-6a64-4826-9cf3-20aeb116e3b3"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
-                "https://ruddy-unblinking.info/",
+                "https://www.linkedin.com/in/velda-sporer",
             },
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
@@ -75,7 +70,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("badeb73b-540f-4812-8d0a-499ccc788f85"),
+                    ID: unifiedgosdk.Pointer("a50c215b-2d1d-4046-82be-bb341efe7ea4"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -84,20 +79,24 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Velda Sporer"),
-            Source: unifiedgosdk.Pointer("aetas"),
-            Status: unifiedgosdk.Pointer("vesco"),
+            Source: unifiedgosdk.Pointer("Advertisement"),
+            Status: unifiedgosdk.Pointer("New"),
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "(955) 643-9849",
-                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                    Telephone: "(841) 271-0595",
+                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
                 shared.CrmTelephone{
-                    Telephone: "(621) 811-8800",
-                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
+                    Telephone: "(664) 498-4952",
+                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(281) 288-0037",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T16:53:38.889Z"),
+            Title: unifiedgosdk.Pointer("International Factors Administrator"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T19:31:09.767Z"),
         },
         ConnectionID: "<id>",
     })
@@ -266,32 +265,27 @@ func main() {
     res, err := s.Lead.PatchCrmLead(ctx, operations.PatchCrmLeadRequest{
         CrmLead: shared.CrmLead{
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.Pointer("528 Forest Road"),
-                Address2: unifiedgosdk.Pointer("Apt. 643"),
-                City: unifiedgosdk.Pointer("Palm Springs"),
+                Address1: unifiedgosdk.Pointer("87206 Hudson Street"),
+                City: unifiedgosdk.Pointer("Leslieboro"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("55624-6499"),
-                Region: unifiedgosdk.Pointer("New Jersey"),
-                RegionCode: unifiedgosdk.Pointer("LA"),
+                PostalCode: unifiedgosdk.Pointer("49909-1183"),
+                Region: unifiedgosdk.Pointer("Michigan"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CompanyName: unifiedgosdk.Pointer("Tillman - Wiegand"),
             CreatedAt: types.MustNewTimeFromString("2019-10-12T11:27:59.003Z"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer16@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
-                },
-                shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer@yahoo.com"),
-                    Type: shared.CrmEmailTypeHome.ToPointer(),
+                    Email: unifiedgosdk.Pointer("velda.sporer@icloud.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("d66deae8-f0c8-4d3c-ba87-28a8786c6cd8"),
+            ID: unifiedgosdk.Pointer("3d5070ab-180a-4e57-9cc9-1c4662692b21"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
-                "https://ruddy-unblinking.info/",
+                "https://www.linkedin.com/in/velda-sporer",
             },
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
@@ -301,7 +295,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("826e7dc9-8b08-4fb5-81a7-777865df44b9"),
+                    ID: unifiedgosdk.Pointer("c3d2733d-cb9a-4ccf-85ae-e34c30364b96"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -310,20 +304,24 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Velda Sporer"),
-            Source: unifiedgosdk.Pointer("aetas"),
-            Status: unifiedgosdk.Pointer("vesco"),
+            Source: unifiedgosdk.Pointer("Advertisement"),
+            Status: unifiedgosdk.Pointer("New"),
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "(955) 643-9849",
-                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                    Telephone: "(841) 271-0595",
+                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
                 shared.CrmTelephone{
-                    Telephone: "(621) 811-8800",
-                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
+                    Telephone: "(664) 498-4952",
+                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(281) 288-0037",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T16:53:38.891Z"),
+            Title: unifiedgosdk.Pointer("International Factors Administrator"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T19:31:09.770Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -439,32 +437,27 @@ func main() {
     res, err := s.Lead.UpdateCrmLead(ctx, operations.UpdateCrmLeadRequest{
         CrmLead: shared.CrmLead{
             Address: &shared.PropertyCrmLeadAddress{
-                Address1: unifiedgosdk.Pointer("528 Forest Road"),
-                Address2: unifiedgosdk.Pointer("Apt. 643"),
-                City: unifiedgosdk.Pointer("Palm Springs"),
+                Address1: unifiedgosdk.Pointer("87206 Hudson Street"),
+                City: unifiedgosdk.Pointer("Leslieboro"),
                 CountryCode: unifiedgosdk.Pointer("US"),
-                PostalCode: unifiedgosdk.Pointer("55624-6499"),
-                Region: unifiedgosdk.Pointer("New Jersey"),
-                RegionCode: unifiedgosdk.Pointer("LA"),
+                PostalCode: unifiedgosdk.Pointer("49909-1183"),
+                Region: unifiedgosdk.Pointer("Michigan"),
+                RegionCode: unifiedgosdk.Pointer("MO"),
             },
             CompanyName: unifiedgosdk.Pointer("Tillman - Wiegand"),
             CreatedAt: types.MustNewTimeFromString("2019-10-12T11:27:59.003Z"),
             Emails: []shared.CrmEmail{
                 shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer16@yahoo.com"),
-                    Type: shared.CrmEmailTypeOther.ToPointer(),
-                },
-                shared.CrmEmail{
-                    Email: unifiedgosdk.Pointer("Velda.Sporer@yahoo.com"),
-                    Type: shared.CrmEmailTypeHome.ToPointer(),
+                    Email: unifiedgosdk.Pointer("velda.sporer@icloud.com"),
+                    Type: shared.CrmEmailTypeWork.ToPointer(),
                 },
             },
             FirstName: unifiedgosdk.Pointer("Velda"),
-            ID: unifiedgosdk.Pointer("d66deae8-f0c8-4d3c-ba87-28a8786c6cd8"),
+            ID: unifiedgosdk.Pointer("3d5070ab-180a-4e57-9cc9-1c4662692b21"),
             IsActive: unifiedgosdk.Pointer(true),
             LastName: unifiedgosdk.Pointer("Sporer"),
             LinkUrls: []string{
-                "https://ruddy-unblinking.info/",
+                "https://www.linkedin.com/in/velda-sporer",
             },
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
@@ -474,7 +467,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("826e7dc9-8b08-4fb5-81a7-777865df44b9"),
+                    ID: unifiedgosdk.Pointer("c3d2733d-cb9a-4ccf-85ae-e34c30364b96"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -483,20 +476,24 @@ func main() {
                 },
             },
             Name: unifiedgosdk.Pointer("Velda Sporer"),
-            Source: unifiedgosdk.Pointer("aetas"),
-            Status: unifiedgosdk.Pointer("vesco"),
+            Source: unifiedgosdk.Pointer("Advertisement"),
+            Status: unifiedgosdk.Pointer("New"),
             Telephones: []shared.CrmTelephone{
                 shared.CrmTelephone{
-                    Telephone: "(955) 643-9849",
-                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
+                    Telephone: "(841) 271-0595",
+                    Type: shared.CrmTelephoneTypeFax.ToPointer(),
                 },
                 shared.CrmTelephone{
-                    Telephone: "(621) 811-8800",
-                    Type: shared.CrmTelephoneTypeWork.ToPointer(),
+                    Telephone: "(664) 498-4952",
+                    Type: shared.CrmTelephoneTypeHome.ToPointer(),
+                },
+                shared.CrmTelephone{
+                    Telephone: "(281) 288-0037",
+                    Type: shared.CrmTelephoneTypeOther.ToPointer(),
                 },
             },
-            Title: unifiedgosdk.Pointer("Direct Research Assistant"),
-            UpdatedAt: types.MustNewTimeFromString("2020-05-17T16:53:38.891Z"),
+            Title: unifiedgosdk.Pointer("International Factors Administrator"),
+            UpdatedAt: types.MustNewTimeFromString("2020-05-17T19:31:09.770Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

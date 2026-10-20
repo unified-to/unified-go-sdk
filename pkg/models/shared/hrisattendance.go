@@ -58,7 +58,8 @@ type HrisAttendance struct {
 	ID      *string  `json:"id,omitempty"`
 	JobName *string  `json:"job_name,omitempty"`
 	// (reference to HrisLocation)
-	LocationID *string `json:"location_id,omitempty"`
+	LocationID *string        `json:"location_id,omitempty"`
+	Metadata   []HrisMetadata `json:"metadata,omitempty"`
 	// card/non-cash tips attributed to this attendance record
 	NonCashTipsAmount *float64       `json:"non_cash_tips_amount,omitempty"`
 	Raw               map[string]any `json:"raw,omitempty"`
@@ -193,6 +194,13 @@ func (h *HrisAttendance) GetLocationID() *string {
 		return nil
 	}
 	return h.LocationID
+}
+
+func (h *HrisAttendance) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisAttendance) GetNonCashTipsAmount() *float64 {

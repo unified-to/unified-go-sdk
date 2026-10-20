@@ -39,6 +39,7 @@ const (
 	ListMartechReportsQueryParamFieldsHumanOpensTotal        ListMartechReportsQueryParamFields = "human_opens_total"
 	ListMartechReportsQueryParamFieldsHumanUniqueOpens       ListMartechReportsQueryParamFields = "human_unique_opens"
 	ListMartechReportsQueryParamFieldsHumanOpenRate          ListMartechReportsQueryParamFields = "human_open_rate"
+	ListMartechReportsQueryParamFieldsMetadata               ListMartechReportsQueryParamFields = "metadata"
 	ListMartechReportsQueryParamFieldsRaw                    ListMartechReportsQueryParamFields = "raw"
 )
 
@@ -104,6 +105,8 @@ func (e *ListMartechReportsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "human_unique_opens":
 		fallthrough
 	case "human_open_rate":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListMartechReportsQueryParamFields(v)

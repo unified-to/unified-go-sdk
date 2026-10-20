@@ -23,4 +23,5 @@ value := operations.GetLmsCollectionQueryParamFieldsID
 | `GetLmsCollectionQueryParamFieldsMedia`       | media                                         |
 | `GetLmsCollectionQueryParamFieldsIsActive`    | is_active                                     |
 | `GetLmsCollectionQueryParamFieldsParentID`    | parent_id                                     |
+| `GetLmsCollectionQueryParamFieldsMetadata`    | metadata                                      |
 | `GetLmsCollectionQueryParamFieldsRaw`         | raw                                           |

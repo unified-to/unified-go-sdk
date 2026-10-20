@@ -23,4 +23,5 @@ value := operations.UpdateCdpSourceQueryParamFieldsID
 | `UpdateCdpSourceQueryParamFieldsType`      | type                                       |
 | `UpdateCdpSourceQueryParamFieldsDirection` | direction                                  |
 | `UpdateCdpSourceQueryParamFieldsIsEnabled` | is_enabled                                 |
+| `UpdateCdpSourceQueryParamFieldsMetadata`  | metadata                                   |
 | `UpdateCdpSourceQueryParamFieldsRaw`       | raw                                        |

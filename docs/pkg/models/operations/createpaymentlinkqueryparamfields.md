@@ -28,4 +28,5 @@ value := operations.CreatePaymentLinkQueryParamFieldsID
 | `CreatePaymentLinkQueryParamFieldsDescription`     | description                                        |
 | `CreatePaymentLinkQueryParamFieldsIsChargeableNow` | is_chargeable_now                                  |
 | `CreatePaymentLinkQueryParamFieldsSuccessURL`      | success_url                                        |
+| `CreatePaymentLinkQueryParamFieldsMetadata`        | metadata                                           |
 | `CreatePaymentLinkQueryParamFieldsRaw`             | raw                                                |

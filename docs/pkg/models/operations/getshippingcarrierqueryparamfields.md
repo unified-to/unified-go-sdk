@@ -23,4 +23,5 @@ value := operations.GetShippingCarrierQueryParamFieldsID
 | `GetShippingCarrierQueryParamFieldsIsActive`   | is_active                                      |
 | `GetShippingCarrierQueryParamFieldsLogoURL`    | logo_url                                       |
 | `GetShippingCarrierQueryParamFieldsWebsiteURL` | website_url                                    |
+| `GetShippingCarrierQueryParamFieldsMetadata`   | metadata                                       |
 | `GetShippingCarrierQueryParamFieldsRaw`        | raw                                            |

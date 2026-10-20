@@ -23,4 +23,5 @@ value := operations.GetComputeEnvvarQueryParamFieldsID
 | `GetComputeEnvvarQueryParamFieldsValue`        | value                                          |
 | `GetComputeEnvvarQueryParamFieldsEnvironments` | environments                                   |
 | `GetComputeEnvvarQueryParamFieldsIsSecret`     | is_secret                                      |
+| `GetComputeEnvvarQueryParamFieldsMetadata`     | metadata                                       |
 | `GetComputeEnvvarQueryParamFieldsRaw`          | raw                                            |

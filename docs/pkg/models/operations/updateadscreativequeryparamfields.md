@@ -44,4 +44,5 @@ value := operations.UpdateAdsCreativeQueryParamFieldsID
 | `UpdateAdsCreativeQueryParamFieldsPath2`                      | path2                                                         |
 | `UpdateAdsCreativeQueryParamFieldsData`                       | data                                                          |
 | `UpdateAdsCreativeQueryParamFieldsLabels`                     | labels                                                        |
+| `UpdateAdsCreativeQueryParamFieldsMetadata`                   | metadata                                                      |
 | `UpdateAdsCreativeQueryParamFieldsRaw`                        | raw                                                           |

@@ -25,4 +25,5 @@ value := operations.PatchUcContactQueryParamFieldsID
 | `PatchUcContactQueryParamFieldsCompany`    | company                                    |
 | `PatchUcContactQueryParamFieldsEmails`     | emails                                     |
 | `PatchUcContactQueryParamFieldsTelephones` | telephones                                 |
+| `PatchUcContactQueryParamFieldsMetadata`   | metadata                                   |
 | `PatchUcContactQueryParamFieldsRaw`        | raw                                        |

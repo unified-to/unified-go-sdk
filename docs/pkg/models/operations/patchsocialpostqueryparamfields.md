@@ -30,4 +30,5 @@ value := operations.PatchSocialPostQueryParamFieldsID
 | `PatchSocialPostQueryParamFieldsScheduledAt`  | scheduled_at                                  |
 | `PatchSocialPostQueryParamFieldsCallToAction` | call_to_action                                |
 | `PatchSocialPostQueryParamFieldsMetrics`      | metrics                                       |
+| `PatchSocialPostQueryParamFieldsMetadata`     | metadata                                      |
 | `PatchSocialPostQueryParamFieldsRaw`          | raw                                           |

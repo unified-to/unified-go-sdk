@@ -24,4 +24,5 @@ value := operations.UpdateDatastoreDatabaseQueryParamFieldsID
 | `UpdateDatastoreDatabaseQueryParamFieldsIsActive`    | is_active                                            |
 | `UpdateDatastoreDatabaseQueryParamFieldsPassword`    | password                                             |
 | `UpdateDatastoreDatabaseQueryParamFieldsRegion`      | region                                               |
+| `UpdateDatastoreDatabaseQueryParamFieldsMetadata`    | metadata                                             |
 | `UpdateDatastoreDatabaseQueryParamFieldsRaw`         | raw                                                  |

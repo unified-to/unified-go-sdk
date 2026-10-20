@@ -35,4 +35,5 @@ value := operations.PatchLmsCourseQueryParamFieldsID
 | `PatchLmsCourseQueryParamFieldsProviderName`        | provider_name                                       |
 | `PatchLmsCourseQueryParamFieldsPublishedAt`         | published_at                                        |
 | `PatchLmsCourseQueryParamFieldsTimeEstimateMinutes` | time_estimate_minutes                               |
+| `PatchLmsCourseQueryParamFieldsMetadata`            | metadata                                            |
 | `PatchLmsCourseQueryParamFieldsRaw`                 | raw                                                 |

@@ -26,6 +26,7 @@ const (
 	FieldsParentID            Fields = "parent_id"
 	FieldsTaxonomy            Fields = "taxonomy"
 	FieldsOrganizationID      Fields = "organization_id"
+	FieldsMetadata            Fields = "metadata"
 	FieldsRaw                 Fields = "raw"
 )
 
@@ -65,6 +66,8 @@ func (e *Fields) UnmarshalJSON(data []byte) error {
 	case "taxonomy":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = Fields(v)

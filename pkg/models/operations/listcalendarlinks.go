@@ -22,6 +22,7 @@ const (
 	ListCalendarLinksQueryParamFieldsIsActive      ListCalendarLinksQueryParamFields = "is_active"
 	ListCalendarLinksQueryParamFieldsPriceAmount   ListCalendarLinksQueryParamFields = "price_amount"
 	ListCalendarLinksQueryParamFieldsPriceCurrency ListCalendarLinksQueryParamFields = "price_currency"
+	ListCalendarLinksQueryParamFieldsMetadata      ListCalendarLinksQueryParamFields = "metadata"
 	ListCalendarLinksQueryParamFieldsRaw           ListCalendarLinksQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *ListCalendarLinksQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "price_amount":
 		fallthrough
 	case "price_currency":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListCalendarLinksQueryParamFields(v)

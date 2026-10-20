@@ -23,4 +23,5 @@ value := operations.UpdateAnalyticsPropertyQueryParamFieldsID
 | `UpdateAnalyticsPropertyQueryParamFieldsCurrency`  | currency                                           |
 | `UpdateAnalyticsPropertyQueryParamFieldsIndustry`  | industry                                           |
 | `UpdateAnalyticsPropertyQueryParamFieldsParentID`  | parent_id                                          |
+| `UpdateAnalyticsPropertyQueryParamFieldsMetadata`  | metadata                                           |
 | `UpdateAnalyticsPropertyQueryParamFieldsRaw`       | raw                                                |

@@ -20,6 +20,7 @@ const (
 	PatchLmsCollectionQueryParamFieldsMedia       PatchLmsCollectionQueryParamFields = "media"
 	PatchLmsCollectionQueryParamFieldsIsActive    PatchLmsCollectionQueryParamFields = "is_active"
 	PatchLmsCollectionQueryParamFieldsParentID    PatchLmsCollectionQueryParamFields = "parent_id"
+	PatchLmsCollectionQueryParamFieldsMetadata    PatchLmsCollectionQueryParamFields = "metadata"
 	PatchLmsCollectionQueryParamFieldsRaw         PatchLmsCollectionQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchLmsCollectionQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchLmsCollectionQueryParamFields(v)

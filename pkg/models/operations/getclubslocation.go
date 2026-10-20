@@ -22,6 +22,7 @@ const (
 	GetClubsLocationQueryParamFieldsLongitude GetClubsLocationQueryParamFields = "longitude"
 	GetClubsLocationQueryParamFieldsTelephone GetClubsLocationQueryParamFields = "telephone"
 	GetClubsLocationQueryParamFieldsURL       GetClubsLocationQueryParamFields = "url"
+	GetClubsLocationQueryParamFieldsMetadata  GetClubsLocationQueryParamFields = "metadata"
 	GetClubsLocationQueryParamFieldsRaw       GetClubsLocationQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetClubsLocationQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "telephone":
 		fallthrough
 	case "url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetClubsLocationQueryParamFields(v)

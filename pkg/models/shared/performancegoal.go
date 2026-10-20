@@ -67,8 +67,9 @@ type PerformanceGoal struct {
 	CycleID     *string `json:"cycle_id,omitempty"`
 	Description *string `json:"description,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	DueAt *time.Time `json:"due_at,omitempty"`
-	ID    *string    `json:"id,omitempty"`
+	DueAt    *time.Time            `json:"due_at,omitempty"`
+	ID       *string               `json:"id,omitempty"`
+	Metadata []PerformanceMetadata `json:"metadata,omitempty"`
 	// milestones or key results for this goal
 	Milestones []PerformanceGoalMilestone `json:"milestones,omitempty"`
 	Name       *string                    `json:"name,omitempty"`
@@ -147,6 +148,13 @@ func (p *PerformanceGoal) GetID() *string {
 		return nil
 	}
 	return p.ID
+}
+
+func (p *PerformanceGoal) GetMetadata() []PerformanceMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PerformanceGoal) GetMilestones() []PerformanceGoalMilestone {

@@ -27,3 +27,4 @@ value := operations.GetSigningSignatoryQueryParamFieldsID
 | `GetSigningSignatoryQueryParamFieldsSignedAt`      | signed_at                                          |
 | `GetSigningSignatoryQueryParamFieldsDeclineReason` | decline_reason                                     |
 | `GetSigningSignatoryQueryParamFieldsRaw`           | raw                                                |
+| `GetSigningSignatoryQueryParamFieldsMetadata`      | metadata                                           |

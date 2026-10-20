@@ -56,7 +56,8 @@ type CrmEvent struct {
 	LeadIds        []string                        `json:"lead_ids,omitempty"`
 	MarketingEmail *PropertyCrmEventMarketingEmail `json:"marketing_email,omitempty"`
 	// The meeting object, when type = meeting
-	Meeting *PropertyCrmEventMeeting `json:"meeting,omitempty"`
+	Meeting  *PropertyCrmEventMeeting `json:"meeting,omitempty"`
+	Metadata []CrmMetadata            `json:"metadata,omitempty"`
 	// The note object, when type = note
 	Note     *PropertyCrmEventNote     `json:"note,omitempty"`
 	PageView *PropertyCrmEventPageView `json:"page_view,omitempty"`
@@ -158,6 +159,13 @@ func (c *CrmEvent) GetMeeting() *PropertyCrmEventMeeting {
 		return nil
 	}
 	return c.Meeting
+}
+
+func (c *CrmEvent) GetMetadata() []CrmMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *CrmEvent) GetNote() *PropertyCrmEventNote {

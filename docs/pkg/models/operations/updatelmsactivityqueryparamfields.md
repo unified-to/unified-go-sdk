@@ -27,4 +27,5 @@ value := operations.UpdateLmsActivityQueryParamFieldsID
 | `UpdateLmsActivityQueryParamFieldsProgressPercentage` | progress_percentage                                   |
 | `UpdateLmsActivityQueryParamFieldsStartedAt`          | started_at                                            |
 | `UpdateLmsActivityQueryParamFieldsCompletedAt`        | completed_at                                          |
+| `UpdateLmsActivityQueryParamFieldsMetadata`           | metadata                                              |
 | `UpdateLmsActivityQueryParamFieldsRaw`                | raw                                                   |

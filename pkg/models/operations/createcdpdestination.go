@@ -20,6 +20,7 @@ const (
 	CreateCdpDestinationQueryParamFieldsType      CreateCdpDestinationQueryParamFields = "type"
 	CreateCdpDestinationQueryParamFieldsDirection CreateCdpDestinationQueryParamFields = "direction"
 	CreateCdpDestinationQueryParamFieldsIsEnabled CreateCdpDestinationQueryParamFields = "is_enabled"
+	CreateCdpDestinationQueryParamFieldsMetadata  CreateCdpDestinationQueryParamFields = "metadata"
 	CreateCdpDestinationQueryParamFieldsRaw       CreateCdpDestinationQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *CreateCdpDestinationQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "direction":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCdpDestinationQueryParamFields(v)

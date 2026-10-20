@@ -24,6 +24,7 @@ const (
 	CreateCdpSegmentQueryParamFieldsSize        CreateCdpSegmentQueryParamFields = "size"
 	CreateCdpSegmentQueryParamFieldsIsActive    CreateCdpSegmentQueryParamFields = "is_active"
 	CreateCdpSegmentQueryParamFieldsSourceID    CreateCdpSegmentQueryParamFields = "source_id"
+	CreateCdpSegmentQueryParamFieldsMetadata    CreateCdpSegmentQueryParamFields = "metadata"
 	CreateCdpSegmentQueryParamFieldsRaw         CreateCdpSegmentQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *CreateCdpSegmentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_active":
 		fallthrough
 	case "source_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateCdpSegmentQueryParamFields(v)

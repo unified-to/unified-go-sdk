@@ -36,4 +36,5 @@ value := operations.GetMessagingMessageQueryParamFieldsID
 | `GetMessagingMessageQueryParamFieldsHasChildren`             | has_children                                                 |
 | `GetMessagingMessageQueryParamFieldsIsUnread`                | is_unread                                                    |
 | `GetMessagingMessageQueryParamFieldsButtons`                 | buttons                                                      |
+| `GetMessagingMessageQueryParamFieldsMetadata`                | metadata                                                     |
 | `GetMessagingMessageQueryParamFieldsRaw`                     | raw                                                          |

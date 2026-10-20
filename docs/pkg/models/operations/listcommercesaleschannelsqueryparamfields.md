@@ -22,4 +22,5 @@ value := operations.ListCommerceSaleschannelsQueryParamFieldsID
 | `ListCommerceSaleschannelsQueryParamFieldsDescription` | description                                            |
 | `ListCommerceSaleschannelsQueryParamFieldsIsActive`    | is_active                                              |
 | `ListCommerceSaleschannelsQueryParamFieldsCollections` | collections                                            |
+| `ListCommerceSaleschannelsQueryParamFieldsMetadata`    | metadata                                               |
 | `ListCommerceSaleschannelsQueryParamFieldsRaw`         | raw                                                    |

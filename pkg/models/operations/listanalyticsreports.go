@@ -19,6 +19,7 @@ const (
 	ListAnalyticsReportsQueryParamFieldsStartAt    ListAnalyticsReportsQueryParamFields = "start_at"
 	ListAnalyticsReportsQueryParamFieldsEndAt      ListAnalyticsReportsQueryParamFields = "end_at"
 	ListAnalyticsReportsQueryParamFieldsMetrics    ListAnalyticsReportsQueryParamFields = "metrics"
+	ListAnalyticsReportsQueryParamFieldsMetadata   ListAnalyticsReportsQueryParamFields = "metadata"
 	ListAnalyticsReportsQueryParamFieldsRaw        ListAnalyticsReportsQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *ListAnalyticsReportsQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "end_at":
 		fallthrough
 	case "metrics":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAnalyticsReportsQueryParamFields(v)

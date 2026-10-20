@@ -34,6 +34,7 @@ const (
 	UpdateAdsAdQueryParamFieldsPath2            UpdateAdsAdQueryParamFields = "path2"
 	UpdateAdsAdQueryParamFieldsPromoted         UpdateAdsAdQueryParamFields = "promoted"
 	UpdateAdsAdQueryParamFieldsLogoCreativeID   UpdateAdsAdQueryParamFields = "logo_creative_id"
+	UpdateAdsAdQueryParamFieldsMetadata         UpdateAdsAdQueryParamFields = "metadata"
 	UpdateAdsAdQueryParamFieldsRaw              UpdateAdsAdQueryParamFields = "raw"
 )
 
@@ -89,6 +90,8 @@ func (e *UpdateAdsAdQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "promoted":
 		fallthrough
 	case "logo_creative_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateAdsAdQueryParamFields(v)

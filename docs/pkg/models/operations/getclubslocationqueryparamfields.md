@@ -25,4 +25,5 @@ value := operations.GetClubsLocationQueryParamFieldsID
 | `GetClubsLocationQueryParamFieldsLongitude` | longitude                                   |
 | `GetClubsLocationQueryParamFieldsTelephone` | telephone                                   |
 | `GetClubsLocationQueryParamFieldsURL`       | url                                         |
+| `GetClubsLocationQueryParamFieldsMetadata`  | metadata                                    |
 | `GetClubsLocationQueryParamFieldsRaw`       | raw                                         |

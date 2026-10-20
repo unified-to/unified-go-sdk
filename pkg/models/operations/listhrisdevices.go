@@ -31,6 +31,7 @@ const (
 	ListHrisDevicesQueryParamFieldsHasHdEncrypted     ListHrisDevicesQueryParamFields = "has_hd_encrypted"
 	ListHrisDevicesQueryParamFieldsHasScreenlock      ListHrisDevicesQueryParamFields = "has_screenlock"
 	ListHrisDevicesQueryParamFieldsIsMissing          ListHrisDevicesQueryParamFields = "is_missing"
+	ListHrisDevicesQueryParamFieldsMetadata           ListHrisDevicesQueryParamFields = "metadata"
 	ListHrisDevicesQueryParamFieldsRaw                ListHrisDevicesQueryParamFields = "raw"
 )
 
@@ -80,6 +81,8 @@ func (e *ListHrisDevicesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "has_screenlock":
 		fallthrough
 	case "is_missing":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListHrisDevicesQueryParamFields(v)

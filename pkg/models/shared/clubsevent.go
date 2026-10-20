@@ -83,7 +83,8 @@ type ClubsEvent struct {
 	// The id of the location for this event (reference to ClubsLocation)
 	LocationID *string `json:"location_id,omitempty"`
 	// The name of the location for this event
-	LocationName *string `json:"location_name,omitempty"`
+	LocationName *string         `json:"location_name,omitempty"`
+	Metadata     []ClubsMetadata `json:"metadata,omitempty"`
 	// The event name (or a "Home vs Away" matchup label)
 	Name *string `json:"name,omitempty"`
 	// The id of the opposing team (single-opponent providers)
@@ -210,6 +211,13 @@ func (c *ClubsEvent) GetLocationName() *string {
 		return nil
 	}
 	return c.LocationName
+}
+
+func (c *ClubsEvent) GetMetadata() []ClubsMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ClubsEvent) GetName() *string {

@@ -26,4 +26,5 @@ value := operations.PatchAtsScorecardQueryParamFieldsID
 | `PatchAtsScorecardQueryParamFieldsRecommendation` | recommendation                                    |
 | `PatchAtsScorecardQueryParamFieldsComment`        | comment                                           |
 | `PatchAtsScorecardQueryParamFieldsQuestions`      | questions                                         |
+| `PatchAtsScorecardQueryParamFieldsMetadata`       | metadata                                          |
 | `PatchAtsScorecardQueryParamFieldsRaw`            | raw                                               |

@@ -45,6 +45,7 @@ const (
 	PatchCalendarWebinarQueryParamFieldsHasQa              PatchCalendarWebinarQueryParamFields = "has_qa"
 	PatchCalendarWebinarQueryParamFieldsHasPolls           PatchCalendarWebinarQueryParamFields = "has_polls"
 	PatchCalendarWebinarQueryParamFieldsHasRecording       PatchCalendarWebinarQueryParamFields = "has_recording"
+	PatchCalendarWebinarQueryParamFieldsMetadata           PatchCalendarWebinarQueryParamFields = "metadata"
 	PatchCalendarWebinarQueryParamFieldsRaw                PatchCalendarWebinarQueryParamFields = "raw"
 )
 
@@ -122,6 +123,8 @@ func (e *PatchCalendarWebinarQueryParamFields) UnmarshalJSON(data []byte) error 
 	case "has_polls":
 		fallthrough
 	case "has_recording":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCalendarWebinarQueryParamFields(v)

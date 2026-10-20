@@ -22,4 +22,5 @@ value := operations.PatchCommerceSaleschannelQueryParamFieldsID
 | `PatchCommerceSaleschannelQueryParamFieldsDescription` | description                                            |
 | `PatchCommerceSaleschannelQueryParamFieldsIsActive`    | is_active                                              |
 | `PatchCommerceSaleschannelQueryParamFieldsCollections` | collections                                            |
+| `PatchCommerceSaleschannelQueryParamFieldsMetadata`    | metadata                                               |
 | `PatchCommerceSaleschannelQueryParamFieldsRaw`         | raw                                                    |

@@ -20,6 +20,7 @@ const (
 	GetSocialInsightQueryParamFieldsPeriod    GetSocialInsightQueryParamFields = "period"
 	GetSocialInsightQueryParamFieldsMetric    GetSocialInsightQueryParamFields = "metric"
 	GetSocialInsightQueryParamFieldsValue     GetSocialInsightQueryParamFields = "value"
+	GetSocialInsightQueryParamFieldsMetadata  GetSocialInsightQueryParamFields = "metadata"
 	GetSocialInsightQueryParamFieldsRaw       GetSocialInsightQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *GetSocialInsightQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "metric":
 		fallthrough
 	case "value":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetSocialInsightQueryParamFields(v)

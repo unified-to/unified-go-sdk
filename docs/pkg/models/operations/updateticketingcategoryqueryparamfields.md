@@ -22,4 +22,5 @@ value := operations.UpdateTicketingCategoryQueryParamFieldsID
 | `UpdateTicketingCategoryQueryParamFieldsDescription` | description                                          |
 | `UpdateTicketingCategoryQueryParamFieldsIsActive`    | is_active                                            |
 | `UpdateTicketingCategoryQueryParamFieldsParentID`    | parent_id                                            |
+| `UpdateTicketingCategoryQueryParamFieldsMetadata`    | metadata                                             |
 | `UpdateTicketingCategoryQueryParamFieldsRaw`         | raw                                                  |

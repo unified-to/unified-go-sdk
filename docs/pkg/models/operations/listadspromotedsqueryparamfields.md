@@ -13,9 +13,10 @@ value := operations.ListAdsPromotedsQueryParamFieldsID
 
 ## Values
 
-| Name                                   | Value                                  |
-| -------------------------------------- | -------------------------------------- |
-| `ListAdsPromotedsQueryParamFieldsID`   | id                                     |
-| `ListAdsPromotedsQueryParamFieldsName` | name                                   |
-| `ListAdsPromotedsQueryParamFieldsType` | type                                   |
-| `ListAdsPromotedsQueryParamFieldsRaw`  | raw                                    |
+| Name                                       | Value                                      |
+| ------------------------------------------ | ------------------------------------------ |
+| `ListAdsPromotedsQueryParamFieldsID`       | id                                         |
+| `ListAdsPromotedsQueryParamFieldsName`     | name                                       |
+| `ListAdsPromotedsQueryParamFieldsType`     | type                                       |
+| `ListAdsPromotedsQueryParamFieldsMetadata` | metadata                                   |
+| `ListAdsPromotedsQueryParamFieldsRaw`      | raw                                        |

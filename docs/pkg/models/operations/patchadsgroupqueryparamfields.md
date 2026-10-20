@@ -46,4 +46,5 @@ value := operations.PatchAdsGroupQueryParamFieldsID
 | `PatchAdsGroupQueryParamFieldsPromoted`             | promoted                                            |
 | `PatchAdsGroupQueryParamFieldsLanguageLocale`       | language_locale                                     |
 | `PatchAdsGroupQueryParamFieldsCreativeSelection`    | creative_selection                                  |
+| `PatchAdsGroupQueryParamFieldsMetadata`             | metadata                                            |
 | `PatchAdsGroupQueryParamFieldsRaw`                  | raw                                                 |

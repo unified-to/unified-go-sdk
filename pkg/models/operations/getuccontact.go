@@ -22,6 +22,7 @@ const (
 	GetUcContactQueryParamFieldsCompany    GetUcContactQueryParamFields = "company"
 	GetUcContactQueryParamFieldsEmails     GetUcContactQueryParamFields = "emails"
 	GetUcContactQueryParamFieldsTelephones GetUcContactQueryParamFields = "telephones"
+	GetUcContactQueryParamFieldsMetadata   GetUcContactQueryParamFields = "metadata"
 	GetUcContactQueryParamFieldsRaw        GetUcContactQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetUcContactQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "emails":
 		fallthrough
 	case "telephones":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetUcContactQueryParamFields(v)

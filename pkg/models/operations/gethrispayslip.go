@@ -37,6 +37,7 @@ const (
 	GetHrisPayslipQueryParamFieldsEmployerContributionAmount GetHrisPayslipQueryParamFields = "employer_contribution_amount"
 	GetHrisPayslipQueryParamFieldsGrossYtdAmount             GetHrisPayslipQueryParamFields = "gross_ytd_amount"
 	GetHrisPayslipQueryParamFieldsNetYtdAmount               GetHrisPayslipQueryParamFields = "net_ytd_amount"
+	GetHrisPayslipQueryParamFieldsMetadata                   GetHrisPayslipQueryParamFields = "metadata"
 	GetHrisPayslipQueryParamFieldsRaw                        GetHrisPayslipQueryParamFields = "raw"
 )
 
@@ -98,6 +99,8 @@ func (e *GetHrisPayslipQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "gross_ytd_amount":
 		fallthrough
 	case "net_ytd_amount":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetHrisPayslipQueryParamFields(v)

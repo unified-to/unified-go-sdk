@@ -87,6 +87,7 @@ type AccountingContact struct {
 	IsCustomer     *bool                            `json:"is_customer,omitempty"`
 	IsSupplier     *bool                            `json:"is_supplier,omitempty"`
 	LastName       *string                          `json:"last_name,omitempty"`
+	Metadata       []AccountingMetadata             `json:"metadata,omitempty"`
 	Name           *string                          `json:"name,omitempty"`
 	Notes          *string                          `json:"notes,omitempty"`
 	OrganizationID *string                          `json:"organization_id,omitempty"`
@@ -213,6 +214,13 @@ func (a *AccountingContact) GetLastName() *string {
 		return nil
 	}
 	return a.LastName
+}
+
+func (a *AccountingContact) GetMetadata() []AccountingMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AccountingContact) GetName() *string {

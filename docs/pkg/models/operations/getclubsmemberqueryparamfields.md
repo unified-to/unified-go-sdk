@@ -25,4 +25,5 @@ value := operations.GetClubsMemberQueryParamFieldsID
 | `GetClubsMemberQueryParamFieldsIsAdmin`          | is_admin                                         |
 | `GetClubsMemberQueryParamFieldsIsOwner`          | is_owner                                         |
 | `GetClubsMemberQueryParamFieldsMembershipStatus` | membership_status                                |
+| `GetClubsMemberQueryParamFieldsMetadata`         | metadata                                         |
 | `GetClubsMemberQueryParamFieldsRaw`              | raw                                              |

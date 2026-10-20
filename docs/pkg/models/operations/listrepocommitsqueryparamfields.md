@@ -26,4 +26,5 @@ value := operations.ListRepoCommitsQueryParamFieldsID
 | `ListRepoCommitsQueryParamFieldsLinesAdded`     | lines_added                                     |
 | `ListRepoCommitsQueryParamFieldsLinesDeleted`   | lines_deleted                                   |
 | `ListRepoCommitsQueryParamFieldsLinesChanged`   | lines_changed                                   |
+| `ListRepoCommitsQueryParamFieldsMetadata`       | metadata                                        |
 | `ListRepoCommitsQueryParamFieldsRaw`            | raw                                             |

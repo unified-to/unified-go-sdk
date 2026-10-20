@@ -21,6 +21,7 @@ const (
 	PatchHrisDocumentQueryParamFieldsType         PatchHrisDocumentQueryParamFields = "type"
 	PatchHrisDocumentQueryParamFieldsUserID       PatchHrisDocumentQueryParamFields = "user_id"
 	PatchHrisDocumentQueryParamFieldsCompanyID    PatchHrisDocumentQueryParamFields = "company_id"
+	PatchHrisDocumentQueryParamFieldsMetadata     PatchHrisDocumentQueryParamFields = "metadata"
 	PatchHrisDocumentQueryParamFieldsRaw          PatchHrisDocumentQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *PatchHrisDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisDocumentQueryParamFields(v)

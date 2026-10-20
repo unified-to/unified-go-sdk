@@ -29,6 +29,7 @@ const (
 	PatchHrisEarningQueryParamFieldsPayrollID  PatchHrisEarningQueryParamFields = "payroll_id"
 	PatchHrisEarningQueryParamFieldsPayslipID  PatchHrisEarningQueryParamFields = "payslip_id"
 	PatchHrisEarningQueryParamFieldsNotes      PatchHrisEarningQueryParamFields = "notes"
+	PatchHrisEarningQueryParamFieldsMetadata   PatchHrisEarningQueryParamFields = "metadata"
 	PatchHrisEarningQueryParamFieldsRaw        PatchHrisEarningQueryParamFields = "raw"
 )
 
@@ -74,6 +75,8 @@ func (e *PatchHrisEarningQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "payslip_id":
 		fallthrough
 	case "notes":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchHrisEarningQueryParamFields(v)

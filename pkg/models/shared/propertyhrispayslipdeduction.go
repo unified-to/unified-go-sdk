@@ -159,8 +159,9 @@ type PropertyHrisPayslipDeduction struct {
 	ID              *string                                      `json:"id,omitempty"`
 	IsActive        *bool                                        `json:"is_active,omitempty"`
 	// annual maximum employee amount (always money)
-	MaxAmount *float64 `json:"max_amount,omitempty"`
-	Notes     *string  `json:"notes,omitempty"`
+	MaxAmount *float64       `json:"max_amount,omitempty"`
+	Metadata  []HrisMetadata `json:"metadata,omitempty"`
+	Notes     *string        `json:"notes,omitempty"`
 	// the hris_paycode (deduction code) this deduction uses
 	PaycodeID *string        `json:"paycode_id,omitempty"`
 	Raw       map[string]any `json:"raw,omitempty"`
@@ -273,6 +274,13 @@ func (p *PropertyHrisPayslipDeduction) GetMaxAmount() *float64 {
 		return nil
 	}
 	return p.MaxAmount
+}
+
+func (p *PropertyHrisPayslipDeduction) GetMetadata() []HrisMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PropertyHrisPayslipDeduction) GetNotes() *string {

@@ -20,6 +20,7 @@ const (
 	ListAdsReportsQueryParamFieldsStartAt        ListAdsReportsQueryParamFields = "start_at"
 	ListAdsReportsQueryParamFieldsEndAt          ListAdsReportsQueryParamFields = "end_at"
 	ListAdsReportsQueryParamFieldsOrganizationID ListAdsReportsQueryParamFields = "organization_id"
+	ListAdsReportsQueryParamFieldsMetadata       ListAdsReportsQueryParamFields = "metadata"
 	ListAdsReportsQueryParamFieldsRaw            ListAdsReportsQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *ListAdsReportsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "end_at":
 		fallthrough
 	case "organization_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAdsReportsQueryParamFields(v)

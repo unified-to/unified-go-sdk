@@ -22,4 +22,5 @@ value := operations.PatchTicketingCategoryQueryParamFieldsID
 | `PatchTicketingCategoryQueryParamFieldsDescription` | description                                         |
 | `PatchTicketingCategoryQueryParamFieldsIsActive`    | is_active                                           |
 | `PatchTicketingCategoryQueryParamFieldsParentID`    | parent_id                                           |
+| `PatchTicketingCategoryQueryParamFieldsMetadata`    | metadata                                            |
 | `PatchTicketingCategoryQueryParamFieldsRaw`         | raw                                                 |

@@ -25,4 +25,5 @@ value := operations.PatchAdsOrganizationQueryParamFieldsID
 | `PatchAdsOrganizationQueryParamFieldsStatus`        | status                                              |
 | `PatchAdsOrganizationQueryParamFieldsAccountNumber` | account_number                                      |
 | `PatchAdsOrganizationQueryParamFieldsManagers`      | managers                                            |
+| `PatchAdsOrganizationQueryParamFieldsMetadata`      | metadata                                            |
 | `PatchAdsOrganizationQueryParamFieldsRaw`           | raw                                                 |

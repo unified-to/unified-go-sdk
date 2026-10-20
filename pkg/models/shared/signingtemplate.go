@@ -17,7 +17,8 @@ type SigningTemplate struct {
 	// Unique identifier for this template
 	ID *string `json:"id,omitempty"`
 	// Whether the template is active/available
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive *bool             `json:"is_active,omitempty"`
+	Metadata []SigningMetadata `json:"metadata,omitempty"`
 	// Template name
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration
@@ -70,6 +71,13 @@ func (s *SigningTemplate) GetIsActive() *bool {
 		return nil
 	}
 	return s.IsActive
+}
+
+func (s *SigningTemplate) GetMetadata() []SigningMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SigningTemplate) GetName() *string {

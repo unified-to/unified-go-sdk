@@ -23,3 +23,4 @@ value := operations.GetSigningTemplateQueryParamFieldsID
 | `GetSigningTemplateQueryParamFieldsIsActive`    | is_active                                       |
 | `GetSigningTemplateQueryParamFieldsCreatorID`   | creator_id                                      |
 | `GetSigningTemplateQueryParamFieldsRaw`         | raw                                             |
+| `GetSigningTemplateQueryParamFieldsMetadata`    | metadata                                        |

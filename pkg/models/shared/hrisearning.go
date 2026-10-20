@@ -77,6 +77,7 @@ type HrisEarning struct {
 	Frequency *HrisEarningFrequency `json:"frequency,omitempty"`
 	Hours     *float64              `json:"hours,omitempty"`
 	ID        *string               `json:"id,omitempty"`
+	Metadata  []HrisMetadata        `json:"metadata,omitempty"`
 	Notes     *string               `json:"notes,omitempty"`
 	// the hris_paycode (earning code) this earning is paid under
 	PaycodeID *string `json:"paycode_id,omitempty"`
@@ -161,6 +162,13 @@ func (h *HrisEarning) GetID() *string {
 		return nil
 	}
 	return h.ID
+}
+
+func (h *HrisEarning) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisEarning) GetNotes() *string {

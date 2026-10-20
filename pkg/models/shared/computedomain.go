@@ -38,7 +38,8 @@ type ComputeDomain struct {
 	// Unique identifier for the domain
 	ID *string `json:"id,omitempty"`
 	// Whether this is the service's primary domain
-	IsPrimary *bool `json:"is_primary,omitempty"`
+	IsPrimary *bool             `json:"is_primary,omitempty"`
+	Metadata  []ComputeMetadata `json:"metadata,omitempty"`
 	// The hostname (eg. app.example.com)
 	Name *string `json:"name,omitempty"`
 	// Raw data from integration
@@ -83,6 +84,13 @@ func (c *ComputeDomain) GetIsPrimary() *bool {
 		return nil
 	}
 	return c.IsPrimary
+}
+
+func (c *ComputeDomain) GetMetadata() []ComputeMetadata {
+	if c == nil {
+		return nil
+	}
+	return c.Metadata
 }
 
 func (c *ComputeDomain) GetName() *string {

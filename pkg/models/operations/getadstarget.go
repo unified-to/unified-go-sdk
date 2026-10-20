@@ -19,6 +19,7 @@ const (
 	GetAdsTargetQueryParamFieldsParentID         GetAdsTargetQueryParamFields = "parent_id"
 	GetAdsTargetQueryParamFieldsAudienceCountMin GetAdsTargetQueryParamFields = "audience_count_min"
 	GetAdsTargetQueryParamFieldsAudienceCountMax GetAdsTargetQueryParamFields = "audience_count_max"
+	GetAdsTargetQueryParamFieldsMetadata         GetAdsTargetQueryParamFields = "metadata"
 	GetAdsTargetQueryParamFieldsRaw              GetAdsTargetQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *GetAdsTargetQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "audience_count_min":
 		fallthrough
 	case "audience_count_max":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetAdsTargetQueryParamFields(v)

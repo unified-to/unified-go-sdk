@@ -55,4 +55,5 @@ value := operations.CreateAssessmentOrderQueryParamFieldsID
 | `CreateAssessmentOrderQueryParamFieldsResponseDetails`           | response_details                                                 |
 | `CreateAssessmentOrderQueryParamFieldsResponseSource`            | response_source                                                  |
 | `CreateAssessmentOrderQueryParamFieldsResponseAttributes`        | response_attributes                                              |
+| `CreateAssessmentOrderQueryParamFieldsMetadata`                  | metadata                                                         |
 | `CreateAssessmentOrderQueryParamFieldsRaw`                       | raw                                                              |

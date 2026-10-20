@@ -46,14 +46,8 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("df7f21b5-6098-4d49-a562-9c9807c80873"),
-            Instructors: []shared.LmsReference{
-                shared.LmsReference{
-                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
-                    Name: unifiedgosdk.Pointer("Winston Ferry"),
-                },
-            },
+            ID: unifiedgosdk.Pointer("a0a715b3-e642-4bcc-83cd-4f0a6d97d19a"),
+            Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
                 "despecto",
@@ -61,14 +55,14 @@ func main() {
             },
             Localizations: []shared.LmsContentLocalization{
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Description: unifiedgosdk.Pointer("Acervus."),
                     Language: unifiedgosdk.Pointer("es"),
-                    Name: unifiedgosdk.Pointer("validus"),
+                    Name: unifiedgosdk.Pointer("talis"),
                 },
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Callide."),
-                    Language: unifiedgosdk.Pointer("fr"),
-                    Name: unifiedgosdk.Pointer("crux"),
+                    Description: unifiedgosdk.Pointer("Ratione."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("sint"),
                 },
             },
             Media: []shared.LmsMedia{
@@ -109,10 +103,11 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
-            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
-            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
-            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            ProviderName: unifiedgosdk.Pointer("Bins LLC"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-02T22:47:07.902Z"),
+            ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
             },
@@ -126,7 +121,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-03T10:41:46.954Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-03T20:42:55.650Z"),
         },
         ConnectionID: "<id>",
     })
@@ -301,14 +296,8 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("1a7e6046-0066-4bc0-b2b3-35cf1983119a"),
-            Instructors: []shared.LmsReference{
-                shared.LmsReference{
-                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
-                    Name: unifiedgosdk.Pointer("Winston Ferry"),
-                },
-            },
+            ID: unifiedgosdk.Pointer("eb55b6fb-a023-4549-9d38-0040a04e7758"),
+            Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
                 "despecto",
@@ -316,14 +305,14 @@ func main() {
             },
             Localizations: []shared.LmsContentLocalization{
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Description: unifiedgosdk.Pointer("Acervus."),
                     Language: unifiedgosdk.Pointer("es"),
-                    Name: unifiedgosdk.Pointer("validus"),
+                    Name: unifiedgosdk.Pointer("talis"),
                 },
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Callide."),
-                    Language: unifiedgosdk.Pointer("fr"),
-                    Name: unifiedgosdk.Pointer("crux"),
+                    Description: unifiedgosdk.Pointer("Ratione."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("sint"),
                 },
             },
             Media: []shared.LmsMedia{
@@ -364,10 +353,11 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
-            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
-            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
-            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            ProviderName: unifiedgosdk.Pointer("Bins LLC"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-02T22:47:07.914Z"),
+            ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
             },
@@ -381,7 +371,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-03T10:41:46.963Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-03T20:42:55.661Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -503,14 +493,8 @@ func main() {
             Description: unifiedgosdk.Pointer("Usque laboriosam ventosus adflicto."),
             Difficulty: unifiedgosdk.Pointer("Beginner"),
             DurationMinutes: unifiedgosdk.Pointer[float64](19.0),
-            ExternalReference: unifiedgosdk.Pointer("0d230e31-a9c4-4a35-a5b9-9168e91ffff5"),
-            ID: unifiedgosdk.Pointer("1a7e6046-0066-4bc0-b2b3-35cf1983119a"),
-            Instructors: []shared.LmsReference{
-                shared.LmsReference{
-                    ID: unifiedgosdk.Pointer("91a23b20-a7a3-4323-9548-0897c09eb49e"),
-                    Name: unifiedgosdk.Pointer("Winston Ferry"),
-                },
-            },
+            ID: unifiedgosdk.Pointer("eb55b6fb-a023-4549-9d38-0040a04e7758"),
+            Instructors: []shared.LmsReference{},
             IsActive: unifiedgosdk.Pointer(true),
             Languages: []string{
                 "despecto",
@@ -518,14 +502,14 @@ func main() {
             },
             Localizations: []shared.LmsContentLocalization{
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Numquam."),
+                    Description: unifiedgosdk.Pointer("Acervus."),
                     Language: unifiedgosdk.Pointer("es"),
-                    Name: unifiedgosdk.Pointer("validus"),
+                    Name: unifiedgosdk.Pointer("talis"),
                 },
                 shared.LmsContentLocalization{
-                    Description: unifiedgosdk.Pointer("Callide."),
-                    Language: unifiedgosdk.Pointer("fr"),
-                    Name: unifiedgosdk.Pointer("crux"),
+                    Description: unifiedgosdk.Pointer("Ratione."),
+                    Language: unifiedgosdk.Pointer("es"),
+                    Name: unifiedgosdk.Pointer("sint"),
                 },
             },
             Media: []shared.LmsMedia{
@@ -566,10 +550,11 @@ func main() {
                     URL: unifiedgosdk.Pointer("https://loremflickr.com/3927/2086?lock=5199784913821481"),
                 },
             },
+            Metadata: []shared.LmsMetadata{},
             Name: unifiedgosdk.Pointer("ut"),
-            ProviderName: unifiedgosdk.Pointer("Berge LLC"),
-            PublishedAt: types.MustNewTimeFromString("2023-11-08T11:32:09.080Z"),
-            ShortDescription: unifiedgosdk.Pointer("Commemoro."),
+            ProviderName: unifiedgosdk.Pointer("Bins LLC"),
+            PublishedAt: types.MustNewTimeFromString("2022-09-02T22:47:07.914Z"),
+            ShortDescription: unifiedgosdk.Pointer("Caritas."),
             Skills: []string{
                 "trucido",
             },
@@ -583,7 +568,7 @@ func main() {
             Tags: []string{
                 "dens",
             },
-            UpdatedAt: types.MustNewTimeFromString("2022-10-03T10:41:46.963Z"),
+            UpdatedAt: types.MustNewTimeFromString("2022-10-03T20:42:55.661Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

@@ -39,9 +39,10 @@ type PerformanceFeedback struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	ID        *string    `json:"id,omitempty"`
 	// true when publicly visible (e.g. praise wall); false when private or manager-only
-	IsVisible *bool          `json:"is_visible,omitempty"`
-	Message   *string        `json:"message,omitempty"`
-	Raw       map[string]any `json:"raw,omitempty"`
+	IsVisible *bool                 `json:"is_visible,omitempty"`
+	Message   *string               `json:"message,omitempty"`
+	Metadata  []PerformanceMetadata `json:"metadata,omitempty"`
+	Raw       map[string]any        `json:"raw,omitempty"`
 	// badges or company values attached to this feedback
 	Tags []string `json:"tags,omitempty"`
 	// praise/recognition, constructive feedback, or a response to a feedback request
@@ -96,6 +97,13 @@ func (p *PerformanceFeedback) GetMessage() *string {
 		return nil
 	}
 	return p.Message
+}
+
+func (p *PerformanceFeedback) GetMetadata() []PerformanceMetadata {
+	if p == nil {
+		return nil
+	}
+	return p.Metadata
 }
 
 func (p *PerformanceFeedback) GetRaw() map[string]any {

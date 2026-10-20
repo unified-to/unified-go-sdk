@@ -20,6 +20,7 @@ const (
 	PatchCdpSourceQueryParamFieldsType      PatchCdpSourceQueryParamFields = "type"
 	PatchCdpSourceQueryParamFieldsDirection PatchCdpSourceQueryParamFields = "direction"
 	PatchCdpSourceQueryParamFieldsIsEnabled PatchCdpSourceQueryParamFields = "is_enabled"
+	PatchCdpSourceQueryParamFieldsMetadata  PatchCdpSourceQueryParamFields = "metadata"
 	PatchCdpSourceQueryParamFieldsRaw       PatchCdpSourceQueryParamFields = "raw"
 )
 
@@ -47,6 +48,8 @@ func (e *PatchCdpSourceQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "direction":
 		fallthrough
 	case "is_enabled":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchCdpSourceQueryParamFields(v)

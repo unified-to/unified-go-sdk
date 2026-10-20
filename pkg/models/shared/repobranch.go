@@ -11,6 +11,7 @@ type RepoBranch struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time     `json:"created_at,omitempty"`
 	ID        *string        `json:"id,omitempty"`
+	Metadata  []RepoMetadata `json:"metadata,omitempty"`
 	Name      string         `json:"name"`
 	Raw       map[string]any `json:"raw,omitempty"`
 	// (reference to RepoRepository)
@@ -42,6 +43,13 @@ func (r *RepoBranch) GetID() *string {
 		return nil
 	}
 	return r.ID
+}
+
+func (r *RepoBranch) GetMetadata() []RepoMetadata {
+	if r == nil {
+		return nil
+	}
+	return r.Metadata
 }
 
 func (r *RepoBranch) GetName() string {

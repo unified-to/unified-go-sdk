@@ -28,4 +28,5 @@ value := operations.ListHrisGroupsQueryParamFieldsID
 | `ListHrisGroupsQueryParamFieldsCompanyID`    | company_id                                   |
 | `ListHrisGroupsQueryParamFieldsPayFrequency` | pay_frequency                                |
 | `ListHrisGroupsQueryParamFieldsNextPaidAt`   | next_paid_at                                 |
+| `ListHrisGroupsQueryParamFieldsMetadata`     | metadata                                     |
 | `ListHrisGroupsQueryParamFieldsRaw`          | raw                                          |

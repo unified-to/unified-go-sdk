@@ -24,6 +24,7 @@ const (
 	GetPaymentRefundQueryParamFieldsRefundedAt  GetPaymentRefundQueryParamFields = "refunded_at"
 	GetPaymentRefundQueryParamFieldsReason      GetPaymentRefundQueryParamFields = "reason"
 	GetPaymentRefundQueryParamFieldsTenderType  GetPaymentRefundQueryParamFields = "tender_type"
+	GetPaymentRefundQueryParamFieldsMetadata    GetPaymentRefundQueryParamFields = "metadata"
 	GetPaymentRefundQueryParamFieldsRaw         GetPaymentRefundQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *GetPaymentRefundQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "reason":
 		fallthrough
 	case "tender_type":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetPaymentRefundQueryParamFields(v)

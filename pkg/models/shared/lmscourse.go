@@ -22,6 +22,7 @@ type LmsCourse struct {
 	IsPrivate       *bool          `json:"is_private,omitempty"`
 	Languages       []string       `json:"languages,omitempty"`
 	Media           []LmsMedia     `json:"media,omitempty"`
+	Metadata        []LmsMetadata  `json:"metadata,omitempty"`
 	Name            *string        `json:"name,omitempty"`
 	// How much the course costs
 	PriceAmount  *float64 `json:"price_amount,omitempty"`
@@ -129,6 +130,13 @@ func (l *LmsCourse) GetMedia() []LmsMedia {
 		return nil
 	}
 	return l.Media
+}
+
+func (l *LmsCourse) GetMetadata() []LmsMetadata {
+	if l == nil {
+		return nil
+	}
+	return l.Metadata
 }
 
 func (l *LmsCourse) GetName() *string {

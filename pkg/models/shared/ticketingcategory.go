@@ -9,13 +9,14 @@ import (
 
 type TicketingCategory struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time     `json:"created_at,omitempty"`
-	Description *string        `json:"description,omitempty"`
-	ID          *string        `json:"id,omitempty"`
-	IsActive    *bool          `json:"is_active,omitempty"`
-	Name        *string        `json:"name,omitempty"`
-	ParentID    *string        `json:"parent_id,omitempty"`
-	Raw         map[string]any `json:"raw,omitempty"`
+	CreatedAt   *time.Time          `json:"created_at,omitempty"`
+	Description *string             `json:"description,omitempty"`
+	ID          *string             `json:"id,omitempty"`
+	IsActive    *bool               `json:"is_active,omitempty"`
+	Metadata    []TicketingMetadata `json:"metadata,omitempty"`
+	Name        *string             `json:"name,omitempty"`
+	ParentID    *string             `json:"parent_id,omitempty"`
+	Raw         map[string]any      `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
@@ -57,6 +58,13 @@ func (t *TicketingCategory) GetIsActive() *bool {
 		return nil
 	}
 	return t.IsActive
+}
+
+func (t *TicketingCategory) GetMetadata() []TicketingMetadata {
+	if t == nil {
+		return nil
+	}
+	return t.Metadata
 }
 
 func (t *TicketingCategory) GetName() *string {

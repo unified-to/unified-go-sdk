@@ -41,6 +41,7 @@ const (
 	ListAdsCreativesQueryParamFieldsPath2                      ListAdsCreativesQueryParamFields = "path2"
 	ListAdsCreativesQueryParamFieldsData                       ListAdsCreativesQueryParamFields = "data"
 	ListAdsCreativesQueryParamFieldsLabels                     ListAdsCreativesQueryParamFields = "labels"
+	ListAdsCreativesQueryParamFieldsMetadata                   ListAdsCreativesQueryParamFields = "metadata"
 	ListAdsCreativesQueryParamFieldsRaw                        ListAdsCreativesQueryParamFields = "raw"
 )
 
@@ -110,6 +111,8 @@ func (e *ListAdsCreativesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "data":
 		fallthrough
 	case "labels":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListAdsCreativesQueryParamFields(v)

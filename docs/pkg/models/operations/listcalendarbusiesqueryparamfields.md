@@ -20,4 +20,5 @@ value := operations.ListCalendarBusiesQueryParamFieldsID
 | `ListCalendarBusiesQueryParamFieldsEndAt`       | end_at                                          |
 | `ListCalendarBusiesQueryParamFieldsTimezone`    | timezone                                        |
 | `ListCalendarBusiesQueryParamFieldsDescription` | description                                     |
+| `ListCalendarBusiesQueryParamFieldsMetadata`    | metadata                                        |
 | `ListCalendarBusiesQueryParamFieldsRaw`         | raw                                             |

@@ -29,4 +29,5 @@ value := operations.UpdateHrisJobQueryParamFieldsID
 | `UpdateHrisJobQueryParamFieldsParentID`       | parent_id                                     |
 | `UpdateHrisJobQueryParamFieldsUsers`          | users                                         |
 | `UpdateHrisJobQueryParamFieldsCompensation`   | compensation                                  |
+| `UpdateHrisJobQueryParamFieldsMetadata`       | metadata                                      |
 | `UpdateHrisJobQueryParamFieldsRaw`            | raw                                           |

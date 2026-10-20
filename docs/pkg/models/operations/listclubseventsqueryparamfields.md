@@ -39,4 +39,5 @@ value := operations.ListClubsEventsQueryParamFieldsID
 | `ListClubsEventsQueryParamFieldsScoreAgainst`    | score_against                                    |
 | `ListClubsEventsQueryParamFieldsIsHome`          | is_home                                          |
 | `ListClubsEventsQueryParamFieldsURL`             | url                                              |
+| `ListClubsEventsQueryParamFieldsMetadata`        | metadata                                         |
 | `ListClubsEventsQueryParamFieldsRaw`             | raw                                              |

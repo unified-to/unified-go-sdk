@@ -23,6 +23,7 @@ const (
 	ListComputeUsagesQueryParamFieldsUnit       ListComputeUsagesQueryParamFields = "unit"
 	ListComputeUsagesQueryParamFieldsCostAmount ListComputeUsagesQueryParamFields = "cost_amount"
 	ListComputeUsagesQueryParamFieldsCurrency   ListComputeUsagesQueryParamFields = "currency"
+	ListComputeUsagesQueryParamFieldsMetadata   ListComputeUsagesQueryParamFields = "metadata"
 	ListComputeUsagesQueryParamFieldsRaw        ListComputeUsagesQueryParamFields = "raw"
 )
 
@@ -56,6 +57,8 @@ func (e *ListComputeUsagesQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "cost_amount":
 		fallthrough
 	case "currency":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListComputeUsagesQueryParamFields(v)

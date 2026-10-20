@@ -26,4 +26,5 @@ value := operations.GetMessagingChannelQueryParamFieldsID
 | `GetMessagingChannelQueryParamFieldsIsActive`       | is_active                                           |
 | `GetMessagingChannelQueryParamFieldsIsPrivate`      | is_private                                          |
 | `GetMessagingChannelQueryParamFieldsWebURL`         | web_url                                             |
+| `GetMessagingChannelQueryParamFieldsMetadata`       | metadata                                            |
 | `GetMessagingChannelQueryParamFieldsRaw`            | raw                                                 |

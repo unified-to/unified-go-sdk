@@ -50,7 +50,8 @@ type SigningDocument struct {
 	// Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	ExpiresAt *time.Time `json:"expires_at,omitempty"`
 	// Unique identifier for this signing document
-	ID *string `json:"id,omitempty"`
+	ID       *string           `json:"id,omitempty"`
+	Metadata []SigningMetadata `json:"metadata,omitempty"`
 	// Document/envelope title
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration
@@ -123,6 +124,13 @@ func (s *SigningDocument) GetID() *string {
 		return nil
 	}
 	return s.ID
+}
+
+func (s *SigningDocument) GetMetadata() []SigningMetadata {
+	if s == nil {
+		return nil
+	}
+	return s.Metadata
 }
 
 func (s *SigningDocument) GetName() *string {

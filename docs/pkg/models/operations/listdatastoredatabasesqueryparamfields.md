@@ -24,4 +24,5 @@ value := operations.ListDatastoreDatabasesQueryParamFieldsID
 | `ListDatastoreDatabasesQueryParamFieldsIsActive`    | is_active                                           |
 | `ListDatastoreDatabasesQueryParamFieldsPassword`    | password                                            |
 | `ListDatastoreDatabasesQueryParamFieldsRegion`      | region                                              |
+| `ListDatastoreDatabasesQueryParamFieldsMetadata`    | metadata                                            |
 | `ListDatastoreDatabasesQueryParamFieldsRaw`         | raw                                                 |

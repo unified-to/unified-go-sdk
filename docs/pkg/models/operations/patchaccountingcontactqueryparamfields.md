@@ -42,4 +42,5 @@ value := operations.PatchAccountingContactQueryParamFieldsID
 | `PatchAccountingContactQueryParamFieldsBalanceAmount`      | balance_amount                                             |
 | `PatchAccountingContactQueryParamFieldsWebsite`            | website                                                    |
 | `PatchAccountingContactQueryParamFieldsNotes`              | notes                                                      |
+| `PatchAccountingContactQueryParamFieldsMetadata`           | metadata                                                   |
 | `PatchAccountingContactQueryParamFieldsRaw`                | raw                                                        |

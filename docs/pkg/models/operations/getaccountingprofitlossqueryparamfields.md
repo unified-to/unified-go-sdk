@@ -30,4 +30,5 @@ value := operations.GetAccountingProfitlossQueryParamFieldsID
 | `GetAccountingProfitlossQueryParamFieldsIncomeSections`             | income_sections                                                     |
 | `GetAccountingProfitlossQueryParamFieldsExpensesSections`           | expenses_sections                                                   |
 | `GetAccountingProfitlossQueryParamFieldsCostOfGoodsSoldSections`    | cost_of_goods_sold_sections                                         |
+| `GetAccountingProfitlossQueryParamFieldsMetadata`                   | metadata                                                            |
 | `GetAccountingProfitlossQueryParamFieldsRaw`                        | raw                                                                 |

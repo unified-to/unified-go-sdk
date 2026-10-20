@@ -27,4 +27,5 @@ value := operations.ListHrisPaycodesQueryParamFieldsID
 | `ListHrisPaycodesQueryParamFieldsIsPreTax`    | is_pre_tax                                    |
 | `ListHrisPaycodesQueryParamFieldsIsEmployer`  | is_employer                                   |
 | `ListHrisPaycodesQueryParamFieldsIsActive`    | is_active                                     |
+| `ListHrisPaycodesQueryParamFieldsMetadata`    | metadata                                      |
 | `ListHrisPaycodesQueryParamFieldsRaw`         | raw                                           |

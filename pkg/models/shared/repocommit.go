@@ -17,6 +17,7 @@ type RepoCommit struct {
 	LinesChanged   *float64       `json:"lines_changed,omitempty"`
 	LinesDeleted   *float64       `json:"lines_deleted,omitempty"`
 	Message        *string        `json:"message,omitempty"`
+	Metadata       []RepoMetadata `json:"metadata,omitempty"`
 	PullrequestIds []string       `json:"pullrequest_ids,omitempty"`
 	Raw            map[string]any `json:"raw,omitempty"`
 	// (reference to RepoRepository)
@@ -85,6 +86,13 @@ func (r *RepoCommit) GetMessage() *string {
 		return nil
 	}
 	return r.Message
+}
+
+func (r *RepoCommit) GetMetadata() []RepoMetadata {
+	if r == nil {
+		return nil
+	}
+	return r.Metadata
 }
 
 func (r *RepoCommit) GetPullrequestIds() []string {

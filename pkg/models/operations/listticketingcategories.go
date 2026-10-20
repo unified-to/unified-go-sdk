@@ -19,6 +19,7 @@ const (
 	ListTicketingCategoriesQueryParamFieldsDescription ListTicketingCategoriesQueryParamFields = "description"
 	ListTicketingCategoriesQueryParamFieldsIsActive    ListTicketingCategoriesQueryParamFields = "is_active"
 	ListTicketingCategoriesQueryParamFieldsParentID    ListTicketingCategoriesQueryParamFields = "parent_id"
+	ListTicketingCategoriesQueryParamFieldsMetadata    ListTicketingCategoriesQueryParamFields = "metadata"
 	ListTicketingCategoriesQueryParamFieldsRaw         ListTicketingCategoriesQueryParamFields = "raw"
 )
 
@@ -44,6 +45,8 @@ func (e *ListTicketingCategoriesQueryParamFields) UnmarshalJSON(data []byte) err
 	case "is_active":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListTicketingCategoriesQueryParamFields(v)

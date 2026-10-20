@@ -24,4 +24,5 @@ value := operations.ListHrisDocumentsQueryParamFieldsID
 | `ListHrisDocumentsQueryParamFieldsType`         | type                                            |
 | `ListHrisDocumentsQueryParamFieldsUserID`       | user_id                                         |
 | `ListHrisDocumentsQueryParamFieldsCompanyID`    | company_id                                      |
+| `ListHrisDocumentsQueryParamFieldsMetadata`     | metadata                                        |
 | `ListHrisDocumentsQueryParamFieldsRaw`          | raw                                             |

@@ -30,6 +30,7 @@ const (
 	CreateStorageFileQueryParamFieldsWebURL      CreateStorageFileQueryParamFields = "web_url"
 	CreateStorageFileQueryParamFieldsReferences  CreateStorageFileQueryParamFields = "references"
 	CreateStorageFileQueryParamFieldsTags        CreateStorageFileQueryParamFields = "tags"
+	CreateStorageFileQueryParamFieldsMetadata    CreateStorageFileQueryParamFields = "metadata"
 	CreateStorageFileQueryParamFieldsRaw         CreateStorageFileQueryParamFields = "raw"
 )
 
@@ -77,6 +78,8 @@ func (e *CreateStorageFileQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "references":
 		fallthrough
 	case "tags":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = CreateStorageFileQueryParamFields(v)

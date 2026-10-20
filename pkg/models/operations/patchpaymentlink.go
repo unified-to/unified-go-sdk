@@ -25,6 +25,7 @@ const (
 	PatchPaymentLinkQueryParamFieldsDescription     PatchPaymentLinkQueryParamFields = "description"
 	PatchPaymentLinkQueryParamFieldsIsChargeableNow PatchPaymentLinkQueryParamFields = "is_chargeable_now"
 	PatchPaymentLinkQueryParamFieldsSuccessURL      PatchPaymentLinkQueryParamFields = "success_url"
+	PatchPaymentLinkQueryParamFieldsMetadata        PatchPaymentLinkQueryParamFields = "metadata"
 	PatchPaymentLinkQueryParamFieldsRaw             PatchPaymentLinkQueryParamFields = "raw"
 )
 
@@ -62,6 +63,8 @@ func (e *PatchPaymentLinkQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_chargeable_now":
 		fallthrough
 	case "success_url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchPaymentLinkQueryParamFields(v)

@@ -21,6 +21,7 @@ const (
 	UpdateHrisDocumentQueryParamFieldsType         UpdateHrisDocumentQueryParamFields = "type"
 	UpdateHrisDocumentQueryParamFieldsUserID       UpdateHrisDocumentQueryParamFields = "user_id"
 	UpdateHrisDocumentQueryParamFieldsCompanyID    UpdateHrisDocumentQueryParamFields = "company_id"
+	UpdateHrisDocumentQueryParamFieldsMetadata     UpdateHrisDocumentQueryParamFields = "metadata"
 	UpdateHrisDocumentQueryParamFieldsRaw          UpdateHrisDocumentQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *UpdateHrisDocumentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "user_id":
 		fallthrough
 	case "company_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = UpdateHrisDocumentQueryParamFields(v)

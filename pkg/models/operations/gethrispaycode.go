@@ -24,6 +24,7 @@ const (
 	GetHrisPaycodeQueryParamFieldsIsPreTax    GetHrisPaycodeQueryParamFields = "is_pre_tax"
 	GetHrisPaycodeQueryParamFieldsIsEmployer  GetHrisPaycodeQueryParamFields = "is_employer"
 	GetHrisPaycodeQueryParamFieldsIsActive    GetHrisPaycodeQueryParamFields = "is_active"
+	GetHrisPaycodeQueryParamFieldsMetadata    GetHrisPaycodeQueryParamFields = "metadata"
 	GetHrisPaycodeQueryParamFieldsRaw         GetHrisPaycodeQueryParamFields = "raw"
 )
 
@@ -59,6 +60,8 @@ func (e *GetHrisPaycodeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_employer":
 		fallthrough
 	case "is_active":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetHrisPaycodeQueryParamFields(v)

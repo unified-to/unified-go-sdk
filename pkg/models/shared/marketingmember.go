@@ -45,7 +45,8 @@ type MarketingMember struct {
 	ID       *string `json:"id,omitempty"`
 	LastName *string `json:"last_name,omitempty"`
 	// An array of list IDs associated with this member
-	ListIds []string `json:"list_ids,omitempty"`
+	ListIds  []string            `json:"list_ids,omitempty"`
+	Metadata []MarketingMetadata `json:"metadata,omitempty"`
 	// The name of the member
 	Name *string `json:"name,omitempty"`
 	// The raw data returned by the integration for this member
@@ -115,6 +116,13 @@ func (m *MarketingMember) GetListIds() []string {
 		return nil
 	}
 	return m.ListIds
+}
+
+func (m *MarketingMember) GetMetadata() []MarketingMetadata {
+	if m == nil {
+		return nil
+	}
+	return m.Metadata
 }
 
 func (m *MarketingMember) GetName() *string {

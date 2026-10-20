@@ -22,6 +22,7 @@ const (
 	GetDatastoreTableQueryParamFieldsRelationships GetDatastoreTableQueryParamFields = "relationships"
 	GetDatastoreTableQueryParamFieldsWebURL        GetDatastoreTableQueryParamFields = "web_url"
 	GetDatastoreTableQueryParamFieldsParentID      GetDatastoreTableQueryParamFields = "parent_id"
+	GetDatastoreTableQueryParamFieldsMetadata      GetDatastoreTableQueryParamFields = "metadata"
 	GetDatastoreTableQueryParamFieldsRaw           GetDatastoreTableQueryParamFields = "raw"
 )
 
@@ -53,6 +54,8 @@ func (e *GetDatastoreTableQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "web_url":
 		fallthrough
 	case "parent_id":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetDatastoreTableQueryParamFields(v)

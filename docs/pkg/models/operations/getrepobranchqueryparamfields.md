@@ -20,4 +20,5 @@ value := operations.GetRepoBranchQueryParamFieldsID
 | `GetRepoBranchQueryParamFieldsUpdatedAt` | updated_at                               |
 | `GetRepoBranchQueryParamFieldsName`      | name                                     |
 | `GetRepoBranchQueryParamFieldsRepoID`    | repo_id                                  |
+| `GetRepoBranchQueryParamFieldsMetadata`  | metadata                                 |
 | `GetRepoBranchQueryParamFieldsRaw`       | raw                                      |

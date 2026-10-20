@@ -45,9 +45,10 @@ type HrisTaxonomy struct {
 	CreatedAt   *time.Time `json:"created_at,omitempty"`
 	Description *string    `json:"description,omitempty"`
 	// 1st-level grouping (broadest)
-	Domain   *string `json:"domain,omitempty"`
-	ID       *string `json:"id,omitempty"`
-	IsActive *bool   `json:"is_active,omitempty"`
+	Domain   *string        `json:"domain,omitempty"`
+	ID       *string        `json:"id,omitempty"`
+	IsActive *bool          `json:"is_active,omitempty"`
+	Metadata []HrisMetadata `json:"metadata,omitempty"`
 	// the preferred label of the skill/role
 	Name *string `json:"name,omitempty"`
 	// id of the parent taxonomy item, for providers exposing arbitrary-depth trees
@@ -123,6 +124,13 @@ func (h *HrisTaxonomy) GetIsActive() *bool {
 		return nil
 	}
 	return h.IsActive
+}
+
+func (h *HrisTaxonomy) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisTaxonomy) GetName() *string {

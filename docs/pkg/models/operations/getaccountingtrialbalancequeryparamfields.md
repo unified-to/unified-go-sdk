@@ -25,4 +25,5 @@ value := operations.GetAccountingTrialbalanceQueryParamFieldsID
 | `GetAccountingTrialbalanceQueryParamFieldsTotalDebitAmount`  | total_debit_amount                                           |
 | `GetAccountingTrialbalanceQueryParamFieldsTotalCreditAmount` | total_credit_amount                                          |
 | `GetAccountingTrialbalanceQueryParamFieldsSubItems`          | sub_items                                                    |
+| `GetAccountingTrialbalanceQueryParamFieldsMetadata`          | metadata                                                     |
 | `GetAccountingTrialbalanceQueryParamFieldsRaw`               | raw                                                          |

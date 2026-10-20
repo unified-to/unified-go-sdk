@@ -36,6 +36,7 @@ const (
 	ListClubsEventsQueryParamFieldsScoreAgainst    ListClubsEventsQueryParamFields = "score_against"
 	ListClubsEventsQueryParamFieldsIsHome          ListClubsEventsQueryParamFields = "is_home"
 	ListClubsEventsQueryParamFieldsURL             ListClubsEventsQueryParamFields = "url"
+	ListClubsEventsQueryParamFieldsMetadata        ListClubsEventsQueryParamFields = "metadata"
 	ListClubsEventsQueryParamFieldsRaw             ListClubsEventsQueryParamFields = "raw"
 )
 
@@ -95,6 +96,8 @@ func (e *ListClubsEventsQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "is_home":
 		fallthrough
 	case "url":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = ListClubsEventsQueryParamFields(v)

@@ -28,3 +28,4 @@ value := operations.PatchSigningDocumentQueryParamFieldsID
 | `PatchSigningDocumentQueryParamFieldsDownloadURL` | download_url                                      |
 | `PatchSigningDocumentQueryParamFieldsCreatorID`   | creator_id                                        |
 | `PatchSigningDocumentQueryParamFieldsRaw`         | raw                                               |
+| `PatchSigningDocumentQueryParamFieldsMetadata`    | metadata                                          |

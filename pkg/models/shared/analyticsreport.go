@@ -11,9 +11,10 @@ type AnalyticsReport struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	EndAt   *time.Time               `json:"end_at,omitempty"`
-	ID      *string                  `json:"id,omitempty"`
-	Metrics []AnalyticsReportMetrics `json:"metrics,omitempty"`
+	EndAt    *time.Time               `json:"end_at,omitempty"`
+	ID       *string                  `json:"id,omitempty"`
+	Metadata []AnalyticsMetadata      `json:"metadata,omitempty"`
+	Metrics  []AnalyticsReportMetrics `json:"metrics,omitempty"`
 	// points to AnalyticsProperty
 	PropertyID *string        `json:"property_id,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
@@ -53,6 +54,13 @@ func (a *AnalyticsReport) GetID() *string {
 		return nil
 	}
 	return a.ID
+}
+
+func (a *AnalyticsReport) GetMetadata() []AnalyticsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AnalyticsReport) GetMetrics() []AnalyticsReportMetrics {

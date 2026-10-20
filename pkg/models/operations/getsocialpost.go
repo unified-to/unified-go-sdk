@@ -27,6 +27,7 @@ const (
 	GetSocialPostQueryParamFieldsScheduledAt  GetSocialPostQueryParamFields = "scheduled_at"
 	GetSocialPostQueryParamFieldsCallToAction GetSocialPostQueryParamFields = "call_to_action"
 	GetSocialPostQueryParamFieldsMetrics      GetSocialPostQueryParamFields = "metrics"
+	GetSocialPostQueryParamFieldsMetadata     GetSocialPostQueryParamFields = "metadata"
 	GetSocialPostQueryParamFieldsRaw          GetSocialPostQueryParamFields = "raw"
 )
 
@@ -68,6 +69,8 @@ func (e *GetSocialPostQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "call_to_action":
 		fallthrough
 	case "metrics":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = GetSocialPostQueryParamFields(v)

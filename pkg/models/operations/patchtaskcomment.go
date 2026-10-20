@@ -21,6 +21,7 @@ const (
 	PatchTaskCommentQueryParamFieldsTaskID      PatchTaskCommentQueryParamFields = "task_id"
 	PatchTaskCommentQueryParamFieldsParentID    PatchTaskCommentQueryParamFields = "parent_id"
 	PatchTaskCommentQueryParamFieldsHasChildren PatchTaskCommentQueryParamFields = "has_children"
+	PatchTaskCommentQueryParamFieldsMetadata    PatchTaskCommentQueryParamFields = "metadata"
 	PatchTaskCommentQueryParamFieldsRaw         PatchTaskCommentQueryParamFields = "raw"
 )
 
@@ -50,6 +51,8 @@ func (e *PatchTaskCommentQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "parent_id":
 		fallthrough
 	case "has_children":
+		fallthrough
+	case "metadata":
 		fallthrough
 	case "raw":
 		*e = PatchTaskCommentQueryParamFields(v)

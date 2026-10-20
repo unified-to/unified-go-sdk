@@ -46,6 +46,7 @@ type AtsInterview struct {
 	Location          *string `json:"location,omitempty"`
 	// the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
 	MeetingURL *string        `json:"meeting_url,omitempty"`
+	Metadata   []AtsMetadata  `json:"metadata,omitempty"`
 	Raw        map[string]any `json:"raw,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	StartAt *time.Time          `json:"start_at,omitempty"`
@@ -127,6 +128,13 @@ func (a *AtsInterview) GetMeetingURL() *string {
 		return nil
 	}
 	return a.MeetingURL
+}
+
+func (a *AtsInterview) GetMetadata() []AtsMetadata {
+	if a == nil {
+		return nil
+	}
+	return a.Metadata
 }
 
 func (a *AtsInterview) GetRaw() map[string]any {

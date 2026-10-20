@@ -25,4 +25,5 @@ value := operations.CreateLmsInstructorQueryParamFieldsID
 | `CreateLmsInstructorQueryParamFieldsTitle`      | title                                           |
 | `CreateLmsInstructorQueryParamFieldsTelephones` | telephones                                      |
 | `CreateLmsInstructorQueryParamFieldsImageURL`   | image_url                                       |
+| `CreateLmsInstructorQueryParamFieldsMetadata`   | metadata                                        |
 | `CreateLmsInstructorQueryParamFieldsRaw`        | raw                                             |

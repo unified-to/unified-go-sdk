@@ -42,31 +42,32 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Christian_Windler@gmail.com",
+                    Email: "christian.windler@gmail.com",
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("9a469be6-905e-4016-bab6-463cda56ac52"),
+            ID: unifiedgosdk.Pointer("78a32a28-f68d-4941-872d-3580f64116df"),
+            Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
-                "casso",
-                "peccatus",
+                "quidem",
+                "una",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "(532) 242-0482",
+                    Telephone: "(299) 843-2042",
                     Type: shared.TicketingTelephoneTypeOther.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(826) 283-7431",
+                    Telephone: "(248) 482-6083",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(483) 314-6826",
+                    Telephone: "(743) 328-3214",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-01T22:37:50.248Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-03T03:22:19.020Z"),
         },
         ConnectionID: "<id>",
     })
@@ -237,31 +238,32 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Christian_Windler@gmail.com",
+                    Email: "christian.windler@gmail.com",
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("bbfd99b0-2965-4230-9c4b-2fea0bc3e495"),
+            ID: unifiedgosdk.Pointer("f58e0d11-c2c3-4ea3-ae0c-5ef5b365aea7"),
+            Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
-                "casso",
-                "peccatus",
+                "quidem",
+                "una",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "(532) 242-0482",
+                    Telephone: "(299) 843-2042",
                     Type: shared.TicketingTelephoneTypeOther.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(826) 283-7431",
+                    Telephone: "(248) 482-6083",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(483) 314-6826",
+                    Telephone: "(743) 328-3214",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-01T22:37:50.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-03T03:22:19.036Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",
@@ -379,31 +381,32 @@ func main() {
             CreatedAt: types.MustNewTimeFromString("2021-03-15T12:33:14.875Z"),
             Emails: []shared.TicketingEmail{
                 shared.TicketingEmail{
-                    Email: "Christian_Windler@gmail.com",
+                    Email: "christian.windler@gmail.com",
                     Type: shared.TicketingEmailTypeHome.ToPointer(),
                 },
             },
-            ID: unifiedgosdk.Pointer("bbfd99b0-2965-4230-9c4b-2fea0bc3e495"),
+            ID: unifiedgosdk.Pointer("f58e0d11-c2c3-4ea3-ae0c-5ef5b365aea7"),
+            Metadata: []shared.TicketingMetadata{},
             Name: unifiedgosdk.Pointer("Christian Windler"),
             Tags: []string{
-                "casso",
-                "peccatus",
+                "quidem",
+                "una",
             },
             Telephones: []shared.TicketingTelephone{
                 shared.TicketingTelephone{
-                    Telephone: "(532) 242-0482",
+                    Telephone: "(299) 843-2042",
                     Type: shared.TicketingTelephoneTypeOther.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(826) 283-7431",
+                    Telephone: "(248) 482-6083",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
                 shared.TicketingTelephone{
-                    Telephone: "(483) 314-6826",
+                    Telephone: "(743) 328-3214",
                     Type: shared.TicketingTelephoneTypeMobile.ToPointer(),
                 },
             },
-            UpdatedAt: types.MustNewTimeFromString("2026-06-01T22:37:50.254Z"),
+            UpdatedAt: types.MustNewTimeFromString("2026-06-03T03:22:19.036Z"),
         },
         ConnectionID: "<id>",
         ID: "<id>",

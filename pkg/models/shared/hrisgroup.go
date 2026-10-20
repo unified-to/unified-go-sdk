@@ -69,12 +69,13 @@ type HrisGroup struct {
 	// (reference to HrisCompany)
 	CompanyID *string `json:"company_id,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-	CreatedAt   *time.Time `json:"created_at,omitempty"`
-	Description *string    `json:"description,omitempty"`
-	ID          *string    `json:"id,omitempty"`
-	IsActive    *bool      `json:"is_active,omitempty"`
-	ManagerIds  []string   `json:"manager_ids,omitempty"`
-	Name        *string    `json:"name,omitempty"`
+	CreatedAt   *time.Time     `json:"created_at,omitempty"`
+	Description *string        `json:"description,omitempty"`
+	ID          *string        `json:"id,omitempty"`
+	IsActive    *bool          `json:"is_active,omitempty"`
+	ManagerIds  []string       `json:"manager_ids,omitempty"`
+	Metadata    []HrisMetadata `json:"metadata,omitempty"`
+	Name        *string        `json:"name,omitempty"`
 	// next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	NextPaidAt *time.Time `json:"next_paid_at,omitempty"`
 	ParentID   *string    `json:"parent_id,omitempty"`
@@ -138,6 +139,13 @@ func (h *HrisGroup) GetManagerIds() []string {
 		return nil
 	}
 	return h.ManagerIds
+}
+
+func (h *HrisGroup) GetMetadata() []HrisMetadata {
+	if h == nil {
+		return nil
+	}
+	return h.Metadata
 }
 
 func (h *HrisGroup) GetName() *string {
