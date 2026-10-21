@@ -18,6 +18,8 @@ const (
 	UpdateAnalyticsVisitorQueryParamFieldsPropertyID     UpdateAnalyticsVisitorQueryParamFields = "property_id"
 	UpdateAnalyticsVisitorQueryParamFieldsEmail          UpdateAnalyticsVisitorQueryParamFields = "email"
 	UpdateAnalyticsVisitorQueryParamFieldsName           UpdateAnalyticsVisitorQueryParamFields = "name"
+	UpdateAnalyticsVisitorQueryParamFieldsFirstName      UpdateAnalyticsVisitorQueryParamFields = "first_name"
+	UpdateAnalyticsVisitorQueryParamFieldsLastName       UpdateAnalyticsVisitorQueryParamFields = "last_name"
 	UpdateAnalyticsVisitorQueryParamFieldsAge            UpdateAnalyticsVisitorQueryParamFields = "age"
 	UpdateAnalyticsVisitorQueryParamFieldsGender         UpdateAnalyticsVisitorQueryParamFields = "gender"
 	UpdateAnalyticsVisitorQueryParamFieldsCountry        UpdateAnalyticsVisitorQueryParamFields = "country"
@@ -54,6 +56,10 @@ func (e *UpdateAnalyticsVisitorQueryParamFields) UnmarshalJSON(data []byte) erro
 	case "email":
 		fallthrough
 	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
 		fallthrough
 	case "age":
 		fallthrough

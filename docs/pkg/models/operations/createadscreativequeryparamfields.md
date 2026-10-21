@@ -29,6 +29,7 @@ value := operations.CreateAdsCreativeQueryParamFieldsID
 | `CreateAdsCreativeQueryParamFieldsWidth`                      | width                                                         |
 | `CreateAdsCreativeQueryParamFieldsHeight`                     | height                                                        |
 | `CreateAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                    |
+| `CreateAdsCreativeQueryParamFieldsCards`                      | cards                                                         |
 | `CreateAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                      |
 | `CreateAdsCreativeQueryParamFieldsURLTags`                    | url_tags                                                      |
 | `CreateAdsCreativeQueryParamFieldsBody`                       | body                                                          |

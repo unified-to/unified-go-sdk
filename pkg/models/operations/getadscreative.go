@@ -26,6 +26,7 @@ const (
 	GetAdsCreativeQueryParamFieldsWidth                      GetAdsCreativeQueryParamFields = "width"
 	GetAdsCreativeQueryParamFieldsHeight                     GetAdsCreativeQueryParamFields = "height"
 	GetAdsCreativeQueryParamFieldsAssetUrls                  GetAdsCreativeQueryParamFields = "asset_urls"
+	GetAdsCreativeQueryParamFieldsCards                      GetAdsCreativeQueryParamFields = "cards"
 	GetAdsCreativeQueryParamFieldsLinkURL                    GetAdsCreativeQueryParamFields = "link_url"
 	GetAdsCreativeQueryParamFieldsURLTags                    GetAdsCreativeQueryParamFields = "url_tags"
 	GetAdsCreativeQueryParamFieldsBody                       GetAdsCreativeQueryParamFields = "body"
@@ -81,6 +82,8 @@ func (e *GetAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "height":
 		fallthrough
 	case "asset_urls":
+		fallthrough
+	case "cards":
 		fallthrough
 	case "link_url":
 		fallthrough

@@ -25,7 +25,7 @@ func main() {
 			Currency:            unifiedgosdk.Pointer("CAD"),
 			CustomerDefinedCode: unifiedgosdk.Pointer("6170"),
 			Description:         unifiedgosdk.Pointer("Voluptatibus valde spoliatio."),
-			ID:                  unifiedgosdk.Pointer("0ee48059-7602-4c30-ad5a-8c546240f008"),
+			ID:                  unifiedgosdk.Pointer("e1ef892f-3b71-470e-9366-7d11f6594355"),
 			IsPayable:           unifiedgosdk.Pointer(false),
 			Metadata:            []shared.AccountingMetadata{},
 			Name:                unifiedgosdk.Pointer("Auto Loan Account"),
@@ -38,7 +38,7 @@ func main() {
 				},
 			},
 			Type:      shared.TypeAccountsReceivable.ToPointer(),
-			UpdatedAt: types.MustNewTimeFromString("2023-08-06T15:31:38.765Z"),
+			UpdatedAt: types.MustNewTimeFromString("2023-08-06T21:40:54.101Z"),
 		},
 		ConnectionID: "<id>",
 	})

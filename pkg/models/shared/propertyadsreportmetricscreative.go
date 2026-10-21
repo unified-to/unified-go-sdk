@@ -97,6 +97,8 @@ type PropertyAdsReportMetricsCreative struct {
 	AssetUrls  []string `json:"asset_urls,omitempty"`
 	Body       *string  `json:"body,omitempty"`
 	CampaignID *string  `json:"campaign_id,omitempty"`
+	// Carousel cards, in display order
+	Cards []AdsCreativeCard `json:"cards,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt                  *time.Time                                    `json:"created_at,omitempty"`
 	CreativeType               *PropertyAdsReportMetricsCreativeCreativeType `json:"creative_type,omitempty"`
@@ -165,6 +167,13 @@ func (p *PropertyAdsReportMetricsCreative) GetCampaignID() *string {
 		return nil
 	}
 	return p.CampaignID
+}
+
+func (p *PropertyAdsReportMetricsCreative) GetCards() []AdsCreativeCard {
+	if p == nil {
+		return nil
+	}
+	return p.Cards
 }
 
 func (p *PropertyAdsReportMetricsCreative) GetCreatedAt() *time.Time {

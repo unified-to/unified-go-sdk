@@ -40,11 +40,13 @@ type AnalyticsVisitor struct {
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	Email     *string    `json:"email,omitempty"`
+	FirstName *string    `json:"first_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	FirstSeenAt *time.Time `json:"first_seen_at,omitempty"`
 	Gender      *Gender    `json:"gender,omitempty"`
 	ID          *string    `json:"id,omitempty"`
 	Language    *string    `json:"language,omitempty"`
+	LastName    *string    `json:"last_name,omitempty"`
 	// (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
 	LastSeenAt *time.Time                                  `json:"last_seen_at,omitempty"`
 	Metadata   map[string]PropertyAnalyticsVisitorMetadata `json:"metadata,omitempty"`
@@ -113,6 +115,13 @@ func (a *AnalyticsVisitor) GetEmail() *string {
 	return a.Email
 }
 
+func (a *AnalyticsVisitor) GetFirstName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.FirstName
+}
+
 func (a *AnalyticsVisitor) GetFirstSeenAt() *time.Time {
 	if a == nil {
 		return nil
@@ -139,6 +148,13 @@ func (a *AnalyticsVisitor) GetLanguage() *string {
 		return nil
 	}
 	return a.Language
+}
+
+func (a *AnalyticsVisitor) GetLastName() *string {
+	if a == nil {
+		return nil
+	}
+	return a.LastName
 }
 
 func (a *AnalyticsVisitor) GetLastSeenAt() *time.Time {

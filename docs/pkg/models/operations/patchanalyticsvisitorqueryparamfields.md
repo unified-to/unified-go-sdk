@@ -21,6 +21,8 @@ value := operations.PatchAnalyticsVisitorQueryParamFieldsID
 | `PatchAnalyticsVisitorQueryParamFieldsPropertyID`     | property_id                                           |
 | `PatchAnalyticsVisitorQueryParamFieldsEmail`          | email                                                 |
 | `PatchAnalyticsVisitorQueryParamFieldsName`           | name                                                  |
+| `PatchAnalyticsVisitorQueryParamFieldsFirstName`      | first_name                                            |
+| `PatchAnalyticsVisitorQueryParamFieldsLastName`       | last_name                                             |
 | `PatchAnalyticsVisitorQueryParamFieldsAge`            | age                                                   |
 | `PatchAnalyticsVisitorQueryParamFieldsGender`         | gender                                                |
 | `PatchAnalyticsVisitorQueryParamFieldsCountry`        | country                                               |

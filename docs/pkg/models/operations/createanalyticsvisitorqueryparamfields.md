@@ -21,6 +21,8 @@ value := operations.CreateAnalyticsVisitorQueryParamFieldsID
 | `CreateAnalyticsVisitorQueryParamFieldsPropertyID`     | property_id                                            |
 | `CreateAnalyticsVisitorQueryParamFieldsEmail`          | email                                                  |
 | `CreateAnalyticsVisitorQueryParamFieldsName`           | name                                                   |
+| `CreateAnalyticsVisitorQueryParamFieldsFirstName`      | first_name                                             |
+| `CreateAnalyticsVisitorQueryParamFieldsLastName`       | last_name                                              |
 | `CreateAnalyticsVisitorQueryParamFieldsAge`            | age                                                    |
 | `CreateAnalyticsVisitorQueryParamFieldsGender`         | gender                                                 |
 | `CreateAnalyticsVisitorQueryParamFieldsCountry`        | country                                                |

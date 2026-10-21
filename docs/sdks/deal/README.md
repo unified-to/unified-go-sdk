@@ -40,12 +40,12 @@ func main() {
     res, err := s.Deal.CreateCrmDeal(ctx, operations.CreateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T05:05:13.525Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-30T20:46:20.975Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.060Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.634Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("590f8f60-5ca2-48a5-b308-06a43ec32206"),
+            ID: unifiedgosdk.Pointer("7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -54,7 +54,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("7730a308-efbe-4534-aab7-8f0d24043f46"),
+                    ID: unifiedgosdk.Pointer("de172c9b-9f28-4356-b8cd-d329d4ff5974"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -69,7 +69,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T11:51:44.981Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.993Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -239,12 +239,12 @@ func main() {
     res, err := s.Deal.PatchCrmDeal(ctx, operations.PatchCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T05:05:13.531Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-30T20:46:20.994Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.063Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.643Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("ad9be5ad-0080-4c2b-a288-c6ae97f16b43"),
+            ID: unifiedgosdk.Pointer("25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -253,7 +253,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c60ae12e-fc05-4753-b0b7-d6f80d30a202"),
+                    ID: unifiedgosdk.Pointer("4ce364e7-3ae1-4d8c-8353-0bcb57c73575"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -268,7 +268,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T11:51:44.992Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.999Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",
@@ -385,12 +385,12 @@ func main() {
     res, err := s.Deal.UpdateCrmDeal(ctx, operations.UpdateCrmDealRequest{
         CrmDeal: shared.CrmDeal{
             Amount: unifiedgosdk.Pointer[float64](98162.0),
-            ClosedAt: types.MustNewTimeFromString("2024-03-10T05:05:13.531Z"),
-            ClosingAt: types.MustNewTimeFromString("2025-08-30T20:46:20.994Z"),
+            ClosedAt: types.MustNewTimeFromString("2024-03-10T10:06:36.063Z"),
+            ClosingAt: types.MustNewTimeFromString("2025-08-31T12:37:54.643Z"),
             CreatedAt: types.MustNewTimeFromString("2023-07-04T12:48:48.470Z"),
             Currency: unifiedgosdk.Pointer("USD"),
             Description: unifiedgosdk.Pointer("Comis tepidus sit cavus crustulum trans tubineus adfectus."),
-            ID: unifiedgosdk.Pointer("ad9be5ad-0080-4c2b-a288-c6ae97f16b43"),
+            ID: unifiedgosdk.Pointer("25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3"),
             Metadata: []shared.CrmMetadata{
                 shared.CrmMetadata{
                     ExtraData: unifiedgosdk.Pointer(shared.CreateCrmMetadataExtraDataMapOfAny(
@@ -399,7 +399,7 @@ func main() {
                         },
                     )),
                     Format: shared.CrmMetadataFormatText.ToPointer(),
-                    ID: unifiedgosdk.Pointer("c60ae12e-fc05-4753-b0b7-d6f80d30a202"),
+                    ID: unifiedgosdk.Pointer("4ce364e7-3ae1-4d8c-8353-0bcb57c73575"),
                     Namespace: unifiedgosdk.Pointer("custom"),
                     Slug: unifiedgosdk.Pointer("custom_property"),
                     Value: unifiedgosdk.Pointer(shared.CreateCrmMetadataValueStr(
@@ -414,7 +414,7 @@ func main() {
                 "causa",
                 "suus",
             },
-            UpdatedAt: types.MustNewTimeFromString("2024-10-11T11:51:44.992Z"),
+            UpdatedAt: types.MustNewTimeFromString("2024-10-11T21:12:58.999Z"),
             WonReason: unifiedgosdk.Pointer("Usque libero soleo."),
         },
         ConnectionID: "<id>",

@@ -26,6 +26,7 @@ const (
 	PatchAdsCreativeQueryParamFieldsWidth                      PatchAdsCreativeQueryParamFields = "width"
 	PatchAdsCreativeQueryParamFieldsHeight                     PatchAdsCreativeQueryParamFields = "height"
 	PatchAdsCreativeQueryParamFieldsAssetUrls                  PatchAdsCreativeQueryParamFields = "asset_urls"
+	PatchAdsCreativeQueryParamFieldsCards                      PatchAdsCreativeQueryParamFields = "cards"
 	PatchAdsCreativeQueryParamFieldsLinkURL                    PatchAdsCreativeQueryParamFields = "link_url"
 	PatchAdsCreativeQueryParamFieldsURLTags                    PatchAdsCreativeQueryParamFields = "url_tags"
 	PatchAdsCreativeQueryParamFieldsBody                       PatchAdsCreativeQueryParamFields = "body"
@@ -81,6 +82,8 @@ func (e *PatchAdsCreativeQueryParamFields) UnmarshalJSON(data []byte) error {
 	case "height":
 		fallthrough
 	case "asset_urls":
+		fallthrough
+	case "cards":
 		fallthrough
 	case "link_url":
 		fallthrough

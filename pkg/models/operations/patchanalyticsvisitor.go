@@ -18,6 +18,8 @@ const (
 	PatchAnalyticsVisitorQueryParamFieldsPropertyID     PatchAnalyticsVisitorQueryParamFields = "property_id"
 	PatchAnalyticsVisitorQueryParamFieldsEmail          PatchAnalyticsVisitorQueryParamFields = "email"
 	PatchAnalyticsVisitorQueryParamFieldsName           PatchAnalyticsVisitorQueryParamFields = "name"
+	PatchAnalyticsVisitorQueryParamFieldsFirstName      PatchAnalyticsVisitorQueryParamFields = "first_name"
+	PatchAnalyticsVisitorQueryParamFieldsLastName       PatchAnalyticsVisitorQueryParamFields = "last_name"
 	PatchAnalyticsVisitorQueryParamFieldsAge            PatchAnalyticsVisitorQueryParamFields = "age"
 	PatchAnalyticsVisitorQueryParamFieldsGender         PatchAnalyticsVisitorQueryParamFields = "gender"
 	PatchAnalyticsVisitorQueryParamFieldsCountry        PatchAnalyticsVisitorQueryParamFields = "country"
@@ -54,6 +56,10 @@ func (e *PatchAnalyticsVisitorQueryParamFields) UnmarshalJSON(data []byte) error
 	case "email":
 		fallthrough
 	case "name":
+		fallthrough
+	case "first_name":
+		fallthrough
+	case "last_name":
 		fallthrough
 	case "age":
 		fallthrough

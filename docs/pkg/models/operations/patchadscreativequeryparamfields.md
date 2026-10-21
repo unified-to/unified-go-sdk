@@ -29,6 +29,7 @@ value := operations.PatchAdsCreativeQueryParamFieldsID
 | `PatchAdsCreativeQueryParamFieldsWidth`                      | width                                                        |
 | `PatchAdsCreativeQueryParamFieldsHeight`                     | height                                                       |
 | `PatchAdsCreativeQueryParamFieldsAssetUrls`                  | asset_urls                                                   |
+| `PatchAdsCreativeQueryParamFieldsCards`                      | cards                                                        |
 | `PatchAdsCreativeQueryParamFieldsLinkURL`                    | link_url                                                     |
 | `PatchAdsCreativeQueryParamFieldsURLTags`                    | url_tags                                                     |
 | `PatchAdsCreativeQueryParamFieldsBody`                       | body                                                         |
